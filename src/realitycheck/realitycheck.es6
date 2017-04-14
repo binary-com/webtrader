@@ -171,7 +171,7 @@ const oauthLogin = () => {
       promises.push(p);
       Promise.all(promises).then(() => {
          resetWindow(true);
-         win.dialog('open');
+         setTimeout(_ => win.dialog('open'), 1000);
          promises = [];
       });
    }
@@ -188,11 +188,11 @@ liveapi.events.on('login', (data) => {
    const realityCheck_fromStorage = local_storage.get("realitycheck");
    if (realityCheck_fromStorage && !local_storage.get("authorize").is_virtual) {
       const durationInMins = (moment.utc().valueOf() - (realityCheck_fromStorage.accepted_time)) / 60 / 1000;
-      init().then(() => {
+      setTimeout( _ => init().then(() => {
          const timeout = durationInMins >= realityCheck_fromStorage.timeOutInMins ? 0 :
             Math.abs(realityCheck_fromStorage.timeOutInMins - durationInMins);
          setOrRefreshTimer(timeout);
-      });
+      }), 1000);
    } else {
       oauthLogin();
    }

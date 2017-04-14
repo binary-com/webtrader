@@ -197,6 +197,16 @@
         }
     }
   }
+
+  /* data-balloon styling */ 
+  .barriers-high-barrier-row, .barriers-low-barrier-row, .barriers-barrier-row{
+    li:first-of-type span:before {
+      transform: translate(-20%,0);
+    }
+    li:last-of-type span:before {
+      transform: translate(-90%,0);
+    }
+  }
 }
 
 /* style elments in the drop down*/
@@ -354,9 +364,9 @@
 }
 
 .trade-fields .purchase-row { bottom: 5px;}
-.trade-fields .purchase-row li:nth-child(1) { position: relative; left: 20px; width: 200px; line-height: 34px;}
+.trade-fields .purchase-row li:nth-child(1) { position: relative; left: 20px; width: 200px; line-height: 34px;margin-right:5px;}
 .trade-fields .purchase-row li:nth-child(2) { right:5px; position: relative;}
-.trade-fields .purchase-row li span { font-weight: bolder; font-size: larger; text-overflow: ellipsis; overflow: hidden; width: 205px;}
+.trade-fields .purchase-row li span { font-weight: bolder; font-size: 18px; text-overflow: ellipsis; overflow: hidden; width: 205px;}
 
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px !important; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}

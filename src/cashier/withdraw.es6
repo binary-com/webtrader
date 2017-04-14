@@ -10,7 +10,6 @@ import currencyDialog from 'cashier/currency';
 import { debounce } from 'lodash'
 import moment from 'moment';
 import tncApprovalWin from 'cashier/uk_funds_protection';
-import checkAccountStatus from 'shownotice/shownotice';
 import html from 'text!cashier/withdraw.html';
 
 require(['text!cashier/withdraw.html']);
@@ -27,8 +26,8 @@ class Withdraw {
     init = li => {
         li.click(() => {
             if (!win) {
-                Promise.all([liveapi.cached.authorize(), checkAccountStatus.init("withdrawal")]).then(data => {
-                    if (!data[0].authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
+                liveapi.cached.authorize().then(data => {
+                    if (!data.authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
                         return currencyDialog.check_currency();
                     return true; // OK
                 }).then(() => {
@@ -74,7 +73,6 @@ class Withdraw {
             left: offset.left + 'px',
             top: offset.top + 'px'
         });
-        win.fixFooterPosition();
         win.track({
             module_id: 'withdraw',
             is_unique: true
@@ -126,6 +124,7 @@ class Withdraw {
                 account: '',
                 amount: '',
                 loginid: local_storage.get('authorize').loginid,
+                value: []
             },
             standard: {
                 url: '',
@@ -294,29 +293,51 @@ class Withdraw {
 
         transfer.submit = () => {
             if (transfer.account === '' || transfer.amount === '') {
+                console.log(transfer);
                 empty_fields.show();
                 return;
             }
             var req = {
                 transfer_between_accounts: 1,
-                account_from: transfer.loginid,
-                account_to: transfer.account,
+                account_from: transfer.account.split("_to_")[0],
+                account_to: transfer.account.split("_to_")[1],
                 currency: agent.currency,
                 amount: transfer.amount
             };
             transfer.disabled = true;
             liveapi.send(req)
                 .then(data => {
-                    if (data.transfer_between_accounts === 0) {
-                        $.growl.error({ message: 'Transfering funds between accounts failed'.i18n() });
-                        return;
-                    }
+                    transfer.account = transfer.account.split("_to_")[1];
                     route.update('transfer-done');
                 })
                 .catch(err => {
                     error_handler(err);
                     transfer.disabled = false;
                 });
+        }
+
+        transfer.isAvailable = () => {
+            if (state.login_details.is_mlt || state.login_details.is_mf) {
+                let is_upgradable = true;
+                Cookies.loginids().forEach((id) => {
+                    if (id.id !== state.login_details.id && (id.is_mf || id.is_mlt)) {
+                        is_upgradable = false;
+                        transfer.value = [{
+                            value: state.login_details.id + "_to_" + id.id,
+                            text: "from account (" + state.login_details.id +
+                                ") to account (" + id.id + ")"
+                        }];
+                        transfer.value.push({
+                            value: id.id + "_to_" + state.login_details.id,
+                            text: "from account (" + id.id +
+                                ") to account (" + state.login_details.id + ")"
+                        });
+                        transfer.account = transfer.value[0].value;
+                    }
+                });
+
+                return !is_upgradable;
+            }
         }
 
         liveapi.send({ get_settings: 1 })

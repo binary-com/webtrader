@@ -10,7 +10,6 @@ import chartWindow from "charts/chartWindow";
 import "jquery-growl";
 import "common/util";
 
-
 function refresh_active_symbols() {
     liveapi
         .send({ active_symbols: 'brief' })

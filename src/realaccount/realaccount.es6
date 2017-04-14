@@ -30,8 +30,7 @@ export const init = (li) => {
                (what_todo) => init_real_win(html, what_todo)
             )
             .catch(error_handler);
-      }
-      else {
+      } else {
          real_win.moveToTop();
       }
    });
@@ -77,7 +76,6 @@ const init_real_win = (root, what_todo) => {
       left: offset.left + 'px',
       top: offset.top + 'px'
    });
-   real_win.fixFooterPosition();
 }
 
 const init_state = (root, what_todo) => {
@@ -95,7 +93,7 @@ const init_state = (root, what_todo) => {
          }
       },
       what_todo: what_todo,
-      input_disabled: what_todo === "upgrade-mf" ? true : false,
+      input_disabled: false,
       risk: {
          visible: false,
       },
@@ -175,14 +173,26 @@ const init_state = (root, what_todo) => {
       }
    };
 
+   state.input_disabled = local_storage.get("oauth").reduce((a,b)=>{
+         return a || /MLT/.test(b.id)
+      },false) && what_todo === "upgrade-mf";
+
    state.user.is_valid = () => {
       const user = state.user;
-      return user.first_name !== '' && user.last_name !== '' &&
+      return user.first_name !== '' &&
+         !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.first_name) &&
+         user.last_name !== '' &&
+         !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.last_name) &&
          moment(user.date_of_birth, 'YYYY-MM-DD', true).isValid() &&
-         user.residence !== '-' && user.address_line_1 !== '' &&
-         user.city_address !== '' && /^[^+]{0,20}$/.test(user.address_postcode) &&
+         user.residence !== '-' &&
+         user.address_line_1 !== '' &&
+         !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_1) &&
+         !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_2) &&
+         user.city_address !== '' &&
+         !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.city_address) &&
+         /^[^+]{0,20}$/.test(user.address_postcode) &&
          user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
-         (state.what_todo != "upgrade-mlt" || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
+         (state.input_disabled || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
          (state.what_todo != "upgrade-mf" || (state.user.place_of_birth &&
             state.user.tax_residence && state.user.tax_identification_number && /^[\w-]{0,20}$/.test(state.user.tax_identification_number)));
    };
@@ -321,6 +331,7 @@ const init_state = (root, what_todo) => {
       };
       return request;
    };
+
    state.financial.new_account_maltainvest = () => {
       const request = state.financial.create_request();
       console.warn(request);
@@ -328,6 +339,10 @@ const init_state = (root, what_todo) => {
 
    state.risk.accept = () => {
       const request = state.financial.create_request();
+      if(!state.input_disabled) {
+         request.secret_question = state.user.secret_question_array[state.user.secret_question_inx];
+         request.secret_answer = state.user.secret_answer;
+      }
       state.risk.visible = false;
       state.financial.disabled = true;
       liveapi.send(request)
@@ -371,17 +386,17 @@ const init_state = (root, what_todo) => {
       .then((data) => {
          data = data.get_settings;
          state.user.salutation = data.salutation || state.user.salutation;
-         state.user.first_name = data.first_name;
-         state.user.last_name = data.last_name;
-         state.user.date_of_birth = moment.unix(data.date_of_birth).format("YYYY-MM-DD");
-         state.user.address_line_1 = data.address_line_1;
-         state.user.address_line_2 = data.address_line_2;
-         state.user.city_address = data.address_city;
-         state.user.state_address = data.address_state;
-         state.user.address_postcode = data.address_postcode;
-         state.user.phone = data.phone;
-         state.user.residence = data.country_code;
-         state.user.residence_name = data.country;
+         state.user.first_name = data.first_name || '';
+         state.user.last_name = data.last_name || '';
+         state.user.date_of_birth = data.date_of_birth ? moment.unix(data.date_of_birth).format("YYYY-MM-DD") : moment().subtract(18, "years").format("YYYY-MM-DD");
+         state.user.address_line_1 = data.address_line_1 || '';
+         state.user.address_line_2 = data.address_line_2 || '';
+         state.user.city_address = data.address_city || '';
+         state.user.state_address = data.address_state || '';
+         state.user.address_postcode = data.address_postcode || '';
+         state.user.phone = data.phone || '';
+         state.user.residence = data.country_code || '';
+         state.user.residence_name = data.country || '';
       })
       .catch(error_handler);
 
@@ -408,4 +423,4 @@ const init_state = (root, what_todo) => {
       .catch(error_handler);
 }
 
-export default  { init }
+export default { init }

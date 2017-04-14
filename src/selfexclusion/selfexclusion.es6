@@ -92,10 +92,13 @@ const settingsData = {
         let message = [];
 
         if (scope.timeout_until_date) {
+
             const time_out = moment(scope.timeout_until_date);
             if (scope.timeout_until_time) {
-                time_out.add(scope.timeout_until_time.format('HH'), 'hours')
-                    .add(scope.timeout_until_time.format('mm'), 'minutes')
+                const time = moment(scope.timeout_until_time, "HH:mm");
+                time_out.add(time.format('HH'), 'hours')
+                    .add(time.format('mm'), 'minutes');
+                console.log(time_out, time.format('HH'),time.format('mm'));
             }
             if (time_out.isAfter(moment().add(6, "weeks"))) {
                 message.push("Please enter a value less than 6 weeks for time out until.".i18n());
@@ -114,15 +117,28 @@ const settingsData = {
         //validation
         $.each(limits, function(index, value) {
             if (scope[index] || value.set) {
-                if (index === "exclude_until" && moment.utc(scope.exclude_until, "YYYY-MM-DD").isBefore(moment.utc().startOf('day').add(6, "months"))) {
-                    message.push("Exclude until time cannot be less than 6 months.".i18n());
+                if (index === "exclude_until") {
+                    if(moment.utc(scope.exclude_until, "YYYY-MM-DD").isBefore(moment.utc().startOf('day').add(6, "months"))){
+                        message.push("Exclude until time cannot be less than 6 months.".i18n());
+                        return;
+                    }
+                    if(moment.utc(scope.exclude_until, "YYYY-MM-DD").isAfter(moment.utc().startOf('day').add(5, "years"))){
+                        message.push("Exclude until time cannot be more than 5 years.".i18n());
+                        return;
+                    }
+                }
+                if(scope[index] && scope[index].indexOf("e")!==-1) {
+                    message.push("Please enter a valid value for ".i18n() + value.name);
                     return;
                 }
                 if (!scope[index] || scope[index] <= 0 || (value.limit && scope[index] > value.limit)) {
                     message.push("Please enter a value between 0 and ".i18n() + value.limit + " for ".i18n() + value.name);
                     return;
                 }
+
                 data[index] = scope[index];
+            } else {
+                scope[index] = undefined;
             }
         });
 

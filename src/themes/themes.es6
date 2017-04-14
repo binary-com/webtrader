@@ -32,18 +32,6 @@ else { // Setting candle-stick color incase there's no theme set.
    });
 }
 
-// Localizing Highcharts.
-const lang = Highcharts.getOptions().lang;
-Object.keys(lang).forEach((key) => {
-   if(typeof lang[key] === 'object') {
-      lang[key].forEach(
-         (value, index) => { lang[key][index] = value.i18n(); }
-      );
-      return;
-   }
-   lang[key] = lang[key].i18n();
-});
-
 $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.theme_grid, ' +
    'a.theme_grid_light, a.theme_sand_signika, a.theme_skies, a.theme_default')
    .off('click')

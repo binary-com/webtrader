@@ -14,8 +14,12 @@ import 'highcharts-exporting';
 import 'common/util';
 import 'paralleljs';
 import 'jquery-growl';
-import $Hmw from 'common/highcharts.mousewheel';
+import $Hmw from 'common/highchartsMousewheel';
 import ins from 'instruments/instruments';
+
+const lang = local_storage.get("i18n") ? local_storage.get("i18n").value.replace("_","-") : 'en';
+if(lang !== "en") // Load moment js locale file.
+    require(['moment-locale/'+lang]); 
 
 const indicator_values = _(JSON.parse(indicators_json)).values().value();
 Highcharts.Chart.prototype.get_indicators = function() {
@@ -35,7 +39,7 @@ Highcharts.Chart.prototype.get_indicators = function() {
 
 Highcharts.Chart.prototype.set_indicators = function(indicators) {
     const chart = this;
-    if (chart.series[0]) {
+    if (chart.series && chart.series[0]) {
         indicators.forEach((ind) => {
             if (ind.options.onSeriesID) { //make sure that we are using the new onSeriesID value
                 ind.options.onSeriesID = chart.series[0].options.id;
@@ -59,7 +63,7 @@ Highcharts.Chart.prototype.get_indicator_series = function() {
 
 Highcharts.Chart.prototype.set_indicator_series = function(series) {
     const chart = this;
-    if (chart.series.length == 0) {
+    if (!chart.series || chart.series.length == 0) {
         return;
     }
     series.forEach((seri) => {
@@ -87,6 +91,17 @@ $(() => {
         lang: { thousandsSep: ',' } /* format numbers with comma (instead of space) */
     });
 
+    // Localizing Highcharts.
+    const lang = Highcharts.getOptions().lang;
+    Object.keys(lang).forEach((key) => {
+    if(typeof lang[key] === 'object') {
+        lang[key].forEach(
+            (value, index) => { lang[key][index] = value.i18n();}
+        );
+        return;
+    }
+    lang[key] = lang[key].i18n();
+    });
 });
 
 indicators.initHighchartIndicators(chartingRequestMap.barsTable);
@@ -213,6 +228,11 @@ export const generate_csv = (chart, data) => {
 export const drawChart = (containerIDWithHash, options, onload) => {
     let indicators = [];
     let overlays = [];
+    let current_symbol = [];
+
+    liveapi.cached.send({active_symbols: "brief"}).then((data)=>{
+        current_symbol = _.filter(data.active_symbols,{symbol: options.instrumentCode})[0];
+    });
 
     if ($(containerIDWithHash).highcharts()) {
         //Just making sure that everything has been cleared out before starting a new thread
@@ -286,23 +306,12 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                         onload();
                     }
 
-                    if (isAffiliates() && isHideFooter()) {
-                        $(this.credits.element).remove();
-                        this.margin[2] = 5;
-                        this.spacing[2] = 0;
-                    } else {
-                        this.credits.element.onclick = () => {
-                            window.open(
-                                'http://webtrader.binary.com',
-                                '_blank'
-                            );
-                        }
-                    }
-
+                    this.margin[2] = 5;
+                    this.spacing[2] = 0;
                 }
             },
             spacingLeft: 0,
-            marginLeft: 45,
+            marginLeft: 55,
             /* disable the auto size labels so the Y axes become aligned */
             marginBottom: 15,
             spacingBottom: 15
@@ -349,8 +358,8 @@ export const drawChart = (containerIDWithHash, options, onload) => {
         },
 
         credits: {
-            href: 'http://webtrader.binary.com',
-            text: 'Binary.com : Webtrader',
+            href: '#',
+            text: '',
         },
 
         xAxis: {
@@ -378,12 +387,14 @@ export const drawChart = (containerIDWithHash, options, onload) => {
         yAxis: [{
             opposite: false,
             labels: {
+                reserveSpace: true,
                 formatter: function() {
+                    if(!current_symbol || !current_symbol.pip) return;
+                    const digits_after_decimal = (current_symbol.pip+"").split(".")[1].length;
                     if ($(containerIDWithHash).data("overlayIndicator")) {
                         return (this.value > 0 ? ' + ' : '') + this.value + '%';
-                    } else {
-                        return this.value;
-                    }
+                    } 
+                    return this.value.toFixed(digits_after_decimal);
                 },
                 align: 'center'
             }
@@ -403,6 +414,24 @@ export const drawChart = (containerIDWithHash, options, onload) => {
                 color: 'red',
                 dashStyle: 'dash'
             }],
+            formatter: function() {
+                moment.locale(lang); //Setting locale
+                var s = "<i>" + moment.utc(this.x).format("dddd, DD MMM YYYY, HH:mm:ss") + "</i><br>";
+                $.each(this.points, function(i){
+                    s += '<span style="color:' + this.point.color + '">\u25CF </span>';
+                    if(typeof this.point.open !=="undefined") { //OHLC chart
+                        s += "<b>" + this.series.name + "</b>"
+                        s += "<br>" + "  Open".i18n() + ": " + this.point.open;
+                        s += "<br>" + "  High".i18n() + ": " + this.point.high;
+                        s += "<br>" + "  Low".i18n() + ": " + this.point.low;
+                        s += "<br>" + "  Close".i18n() + ": " + this.point.close;
+                    } else {
+                        s += this.series.name + ": <b>" + this.point.y + "</b>";
+                    }
+                    s += "<br>";
+                })
+                return s;
+            },
             enabled: true,
             enabledIndicators: true
         },
@@ -530,6 +559,9 @@ export const overlay = (containerIDWithHash, overlayInsCode, overlayInsName, del
                     delayAmount: delayAmount
                 }).then(() => {
                     chart && chart.set_indicator_series(indicator_series);
+                    if(chart.series[0].data.length ===0){
+                        console.trace();
+                    }
                     resolve();
                 }).catch(resolve);
             });

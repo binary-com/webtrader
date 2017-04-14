@@ -50,6 +50,7 @@ let timeoutIsSet = false;
 const onclose = () => {
    require(['windows/tracker'], (tracker) => {
       const trade_dialogs = tracker.get_trade_dialogs();
+      const unique_dialogs = tracker.get_unique_dialogs();
       is_authenitcated_session = false;
       fire_event('logout');
       /**
@@ -63,7 +64,10 @@ const onclose = () => {
             socket = connect();
             if(local_storage.get('oauth')) {
               api.cached.authorize().then(
-                 () => tracker.reopen_trade_dialogs(trade_dialogs)
+                 () => {
+                       tracker.reopen_trade_dialogs(trade_dialogs);
+                       setTimeout( () => tracker.reopen_unique_dialogs(unique_dialogs), 0);
+                 }
               );
             }
             require(['charts/chartingRequestMap'], (chartingRequestMap) => {
@@ -136,11 +140,13 @@ const onmessage = (message) => {
    /* do not block the main thread */
    /* note: this will prevent subscribers from altering callbacks[data.msg_type] array
            while we are iterating on it. this is especially important for tick trades */
-   (callbacks[data.msg_type] || []).forEach((cb) => {
+   callbacks[data.msg_type] = callbacks[data.msg_type] || [];
+   for(let i = 0; i < callbacks[data.msg_type].length; i++){
+      const cb = callbacks[data.msg_type][i];
       setTimeout(
          () => cb(data)
          , 0);
-   });
+   };
 
    const key = data.req_id;
    const promise = unresolved_promises[key];

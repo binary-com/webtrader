@@ -15,6 +15,7 @@ const symbols_promise = liveapi.cached
    .then((data) => {
       const markets = menu.extractChartableMarkets(data);
       const symbols = _(markets).map('submarkets').flatten().map('instruments').flatten().map('symbol').value();
+      symbols.instruments = _(markets).map('submarkets').flatten().map('instruments').flatten().value();
       return symbols;
    })
    .catch((err) =>{
@@ -64,6 +65,8 @@ const reopen_dialogs = (symbols, saved_states) => {
       }
       else if(module_id === 'chartWindow') {
          const symbol = data.data.instrumentCode;
+         const instrument = _.find(symbols.instruments, (i) => { return i.symbol==symbol; });
+         data.data.instrumentName = instrument.display_name;
          if(symbols.length > 0 && symbols.indexOf(symbol) === -1) {
             /* Since we get the list of ins from trading_times API,
              * backend/quant might change the list of instruments they are offering.
@@ -272,6 +275,18 @@ export const reopen_trade_dialogs = (trade_dialogs) => {
 
 export const get_trade_dialogs = () => _.cloneDeep(states.tradeDialog || []);
 
+export const get_unique_dialogs = () => _.filter(states, {is_unique: true});
+
+export const reopen_unique_dialogs = (unique_dialogs) => {
+      const copy = {};
+      _.forEach(unique_dialogs, data => {
+            copy[data.module_id] = copy[data.module_id] || [];
+            data.position.mode = 'normal';
+            copy[data.module_id].push(data);
+      });
+      reopen_dialogs(null, copy);
+} 
+
 export const is_empty = () => {
    const ok = _.values(states).filter(
       (s) => (_.isArray(s) || s.position.mode !== 'closed')
@@ -284,5 +299,7 @@ export default {
    reopen,
    reopen_trade_dialogs,
    get_trade_dialogs,
-   is_empty
+   is_empty,
+   get_unique_dialogs,
+   reopen_unique_dialogs
 }

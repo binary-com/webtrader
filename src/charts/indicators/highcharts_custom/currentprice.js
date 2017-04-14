@@ -5,12 +5,13 @@ define(['common/util', 'highstock'], function () {
 
     function removePlotLine() {
         var series = this;
-        this.yAxis.plotLinesAndBands.forEach(function (plotLine) {
+        for(var i=0; i< this.yAxis.plotLinesAndBands.length; i++) {
+            var plotLine = this.yAxis.plotLinesAndBands[i];
             if (plotLine.options.id && plotLine.options.id.indexOf(series.options.id + '_CurrentPrice') == 0) {
                 series.yAxis.removePlotLine(plotLine.options.id);
                 return false;
             }
-        });
+        };
     }
 
     return {
@@ -41,11 +42,12 @@ define(['common/util', 'highstock'], function () {
                     {
 
                         var lastData = data[data.length - 1];
-                        var price = lastData.y || lastData.close || lastData[4];
-                        if (price > 0.0) {
-                            addPlotLines.call(this, currentPriceOptions, price);
+                        if(lastData){
+                            var price = lastData.y || lastData.close || lastData[4];
+                            if (price > 0.0) {
+                                addPlotLines.call(this, currentPriceOptions, price);
+                            }
                         }
-
                     }
 
                 };

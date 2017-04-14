@@ -11,7 +11,6 @@ import _ from 'lodash';
 import moment from 'moment';
 import tncApprovalWin from "cashier/uk_funds_protection"
 import html from 'text!cashier/deposit.html';
-import checkAccountStatus from 'shownotice/shownotice';
 
 require(['text!cashier/deposit.html']);
 require(['css!cashier/deposit.css']);
@@ -26,8 +25,8 @@ const error_handler = function(err) {
 export function init(li) {
     li.click(() => {
         if (!deposit_win) {
-            Promise.all([liveapi.cached.authorize(), checkAccountStatus.init("deposit")]).then(data => {
-                if (!data[0].authorize.currency || !local_storage.get("currency")) // if currency is not set ask for currency
+            liveapi.cached.authorize().then(data => {
+                if (!data.authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
                     return currencyDialog.check_currency();
                 return true; // OK
             }).then(() => {
@@ -73,7 +72,6 @@ function init_deposit_win(root) {
         left: offset.left + 'px',
         top: offset.top + 'px'
     });
-    deposit_win.fixFooterPosition();
     deposit_win.track({
         module_id: 'deposit',
         is_unique: true

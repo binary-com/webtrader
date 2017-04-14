@@ -44,7 +44,8 @@
             rv-on-click='indicators.add | bind ind'></span>
       <span class='question-mark'
             rv-show='ind.description'
-            rv-tooltip='ind.description'> ? </span>
+            rv-data-balloon='ind.description' data-balloon-length='large'
+            data-balloon-pos='down'> ? </span>
       <span class='ui-icon ui-icon-star'
             rv-on-click='indicators.favorite | bind ind'></span>
     </div>
@@ -58,7 +59,9 @@
               rv-on-click='indicators.add | bind ind'></span>
         <span class='question-mark'
               rv-show='ind.description'
-              rv-tooltip='ind.description'> ? </span>
+              rv-data-balloon='ind.description'
+              data-balloon-length='large'
+              data-balloon-pos='down'> ? </span>
         <span class='ui-icon ui-icon-star-b'
               rv-on-click='indicators.favorite | bind ind'></span>
       </div>

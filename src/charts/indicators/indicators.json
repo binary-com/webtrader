@@ -2073,5 +2073,50 @@
       "Bill Williams"
     ],
     "description": "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart."
+  },
+  "alligator": {
+    "id": "alligator",
+    "long_display_name": "Alligator",
+    "short_display_name": "ALLIGATOR",
+    "onChartIndicator": true,
+    "editable": true,
+    "fields": [
+      {"title": "Jaw Line Stroke", "key": "jawStroke", "value": "#0070ff", "type": "colorpicker"},
+      {"title": "Teeth Line Stroke", "key": "teethStroke", "value": "#ff003c", "type": "colorpicker"},
+      {"title": "Lips Line Stroke", "key": "lipsStroke", "value": "#00c176", "type": "colorpicker"},
+      {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Dash", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "category": [
+      "Bill Williams"
+    ],
+    "description": "Bill Williams introduced the Alligator indicator in 1995.  The Alligator is as much a metaphor as it is an indicator.  It consists of three lines, overlaid on a pricing chart, that represent the jaw, the teeth and the lips of the beast, and was created to help the trader confirm the presence of a trend and its direction.  The Alligator indicator can also help traders designate impulse and corrective wave formations, but the tool works best when combined with a momentum indicator."
+  },
+  "ichimoku": {
+    "id": "ichimoku",
+    "long_display_name": "Ichimoku",
+    "short_display_name": "ICHIMOKU",
+    "onChartIndicator": true,
+    "editable": true,
+    "fields": [
+      {"title": "Tenkan Sen Stroke", "key": "tenkanSenStroke", "value": "#ff003c", "type": "colorpicker"},
+      {"title": "Tenkan Sen Period", "key": "tenkanSenPeriod", "min": 1, "max": 100, "value": 7, "type": "slider"},
+      {"title": "Kijun Sen Stroke", "key": "kijunSenStroke", "value": "#640e22", "type": "colorpicker"},
+      {"title": "Kijun Sen Period", "key": "kijunSenPeriod", "min": 1, "max": 100, "value": 22, "type": "slider"},
+      {"title": "Chikou Span Stroke", "key": "chikouSpanStroke", "value": "#ffabbf", "type": "colorpicker"},
+      {"title": "Chikou Span Period", "key": "chikouSpanPeriod", "min": 1, "max": 100, "value": 22, "type": "slider"},
+      {"title": "Senkou Span-A Stroke", "key": "senkouSpanAStroke", "value": "#73d351", "type": "colorpicker"},
+      {"title": "Senkou Span-A Period", "key": "senkouSpanAPeriod", "min": 1, "max": 100, "value": 26, "type": "slider"},
+      {"title": "Senkou Span-B Stroke", "key": "senkouSpanBStroke", "value": "#003fa1", "type": "colorpicker"},
+      {"title": "Senkou Span-B Period", "key": "senkouSpanBPeriod", "min": 1, "max": 100, "value": 44, "type": "slider"},
+      {"title": "Stroke width", "key": "width", "min": 1, "max": 10, "value": 1, "type": "slider"},
+      {"title": "Dash style", "key": "dashStyle", "value": "Solid", "type": "dashstyle"},
+      {"title": "Applied to", "key": "appliedTo", "value": 3, "type": "appliedto"}
+    ],
+    "category": [
+      "Momentum Indicators"
+    ],
+    "description": "The Ichimoku Cloud, also known as Ichimoku Kinko Hyo, is a versatile indicator that defines support and resistance, identifies trend direction, gauges momentum and provides trading signals. Ichimoku Kinko Hyo translates into “one look equilibrium chart”."
   }
 }

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2017-01-04 09:39+0000\n"
+"PO-Revision-Date: 2017-04-02 00:01+0000\n"
 "Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-webtrader/"
 "translations/ru/>\n"
@@ -13,62 +13,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.11-dev\n"
+"X-Generator: Weblate 2.13-dev\n"
 
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
 "funds.aspx\""
 msgstr ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
 "ticks during the trade"
 msgstr ""
+"\"Азиатские–Падение\" – Вы выигрываете, когда последний тик окажется ниже, "
+"чем общее среднее значение тиков на протяжении контракта"
 
 msgid ""
 "'Asian Rise' - You win when the last tick is higher than the average of the "
 "ticks during the trade"
 msgstr ""
+"\"Азиатские – Повышение\" – Вы выигрываете, когда последний тик оказывается "
+"выше общего среднего значения тиков на протяжении контракта"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr ""
+"Награда “Лучшая компания в области коммуникации с клиентами“ от Investors "
+"Chronicle"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
 msgstr ""
+"Серебряная награда “Лучший брокер по опционам с фиксированным выигрышем“ от "
+"Trade2Win"
 
 msgid ""
 "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
 "Chronicle UK"
 msgstr ""
+"Победа в номинации “Лучший предоставитель услуг по опционам с фиксированным "
+"коэффициентом выигрыша“ от Financial Times и Investors Chronicle UK"
 
 msgid ""
 "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr ""
+"Награда “Лучший предоставитель финансового трейдинга с фиксированным "
+"коэффициентом выигрыша“ от Shares Magazine UK"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr ""
+"Награда \"Лучшая компания по опционам с фиксированным коэффициентом выигрыша "
+"2012\" от Global Banking and Finance Review"
 
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
 "prediction"
 msgstr ""
+"\"Отличается\" – Вы выигрываете, если последняя десятичная последнего тика "
+"не совпадёт с Вашим прогнозом"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr ""
+msgstr "Награда \"Оператор года по финансовому беттингу\" от eGaming Review"
 
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
 msgstr ""
+"\"Совпадет\" – Вы выигрываете, если последняя десятичная последнего тика "
+"совпадает с Вашим прогнозом"
 
 msgid "'contract period'"
-msgstr ""
+msgstr "\"период контракта\""
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "Контракты Касание"
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "(ранее известный как"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -82,15 +102,22 @@ msgid ""
 "variety of financial indices. Business grows quickly, and we soon become the "
 "market leader in fixed-odds financial betting"
 msgstr ""
+"), предоставляющий круглосуточный сервис финансовых ставок на нескольких "
+"индексах. Бизнес быстро растёт, и вскоре сайт становится лидером в индустрии "
+"финансовых ставок с фиксированным коэффициентом выигрыша"
 
 msgid ""
 "- Binary.com benchmarks its prices daily against inter-bank derivatives "
 "markets"
 msgstr ""
+"– Binary.com ежедневно сопоставляет свои цены с данными рынка межбанковских "
+"производных"
 
 msgid ""
 "- Binary.com ensures your personal data and transactions are always secure"
 msgstr ""
+"– Binary.com гарантирует, что информация о Ваших данных и контрактах всегда "
+"будет надёжно защищена"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -113,152 +140,189 @@ msgstr ""
 msgid ""
 "- Binary.com is the industry pioneer and holds patented pricing technology"
 msgstr ""
+"– Binary.com – признанный новатор в данной индустрии, обладающий "
+"запатентованной ценовой технологией"
 
 msgid ""
 "- Binary.com offers many payment methods, such as credit/debit cards, bank "
 "wires, e-cash and e-wallets"
 msgstr ""
+"– Binary.com предлагает много способов оплаты, включая кредитные/дебетовые "
+"карты, банковские переводы, электронные деньги и кошельки"
 
 msgid ""
 "- Binary.com quotes a trade and the counter-trade, so you always get "
 "unbiased, transparent prices"
 msgstr ""
+"– Binary.com предоставляет котировку для контракта и встречного контракта, "
+"чтобы Вы всегда получали точные и прозрачные цены"
 
 msgid ""
 "- binaries are licensed as a betting activity in the UK, so your winnings "
 "are tax-free"
 msgstr ""
+"– торговля бинарными опционами лицензируется в Великобритании в качестве "
+"игорной деятельности, поэтому Ваши выигрыши не облагаются налогами"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
 msgstr ""
+"– выберите внутридневные контракты продолжительностью от 1 минуты до 24 часов"
 
 msgid ""
 "- choose the falls trade, lower trade, one-touch trade with a low barrier, "
 "or no-touch trade with a high barrier"
 msgstr ""
+"– выберите один из следующих типов контрактов: Падение, Ниже, контракты с "
+"одним касанием нижнего барьера или без касания верхнего барьера"
 
 msgid ""
 "- choose the no-touch trade, the stays-between trade, or the ends-between "
 "trade"
 msgstr ""
+"– выберите контракт Нет касания, Останется внутри, или Закончится внутри"
 
 msgid ""
 "- choose the one-touch trade, the goes-outside trade, or the ends outside "
 "trade"
-msgstr ""
+msgstr "– выберите контракты Касание, Выйдет за пределы или Закончится вне"
 
 msgid ""
 "- choose the rise trade, higher trade, one-touch trade with a high barrier, "
 "or no-touch trade with a low barrier"
 msgstr ""
+"– выберите контракты Повышение, Выше, Касание с верхним барьером или Нет "
+"касания с нижним барьером"
 
 msgid "- choose timeframes from 10 seconds to 365 days"
 msgstr ""
+"– выбирайте любую продолжительность контрактов: от 10 секунд до 365 дней"
 
 msgid "- choose trades with durations of up to 365 days"
-msgstr ""
+msgstr "– выберите контракты сроком действия до 365 дней"
 
 msgid ""
 "- choose trades with high returns and a low probability to win, or with low "
 "returns and a high probability to win"
 msgstr ""
+"– выбирайте контракты с высокой прибылью и низкой вероятностью выигрыша, а "
+"также с низкой прибылью и высокой вероятностью выигрыша"
 
 msgid "- currencies, stock indices, and commodities"
-msgstr ""
+msgstr "– валютными парами, индексами и сырьевыми материалами"
 
 msgid "- customize your trades to meet your needs"
-msgstr ""
+msgstr "– выбирайте параметры контрактов согласно своим нуждам"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
 msgstr ""
+"– попробуйте свои силы с маленького выигрыша $2 или откройте крупную сделку "
+"с потенциальной прибылью в $50 000"
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "– от $1 до $50 000"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "– от 10 секунд до 365 дней"
 
 msgid "- get pricing that is normally reserved for big institutional players"
-msgstr ""
+msgstr "– получите цены, которые зачастую доступны лишь крупным инвесторам"
 
 msgid ""
 "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden "
 "fees or commissions"
 msgstr ""
+"– никакого \"проскальзывания\", приостановки контрактов, никаких запросов на "
+"повышение маржевых требований, скрытых взносов и комиссий"
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "– откройте счет в считанные минуты"
 
 msgid ""
 "- open, fund, or withdraw from your account within minutes, 24 hours a day"
 msgstr ""
+"– откройте, пополните или выведите средства со счета за считанные минуты, в "
+"любое время суток"
 
 msgid "- predict if the market will end higher or lower than a price target"
 msgstr ""
+"– сделайте прогноз, окончится ли контракт выше или ниже заданного барьера"
 
 msgid "- predict if the market will rise or fall from its current level"
 msgstr ""
+"– сделайте прогноз, упадет или поднимется цена относительно текущего уровня"
 
 msgid ""
 "- predict if the market will stay inside two price targets, or end between "
 "or outside them"
 msgstr ""
+"– сделайте прогноз, останется ли рынок внутри двух ценовых барьеров или "
+"выйдет за них"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr ""
+msgstr "– сделайте прогноз, коснется ли рынок выбранного ценового барьера"
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "– досрочно продайте свои долгосрочные контракты по рыночной цене"
 
 msgid ""
 "- set your trades on 'gut feel', or use technical or fundamental analysis"
 msgstr ""
+"– устанавливайте контракты, руководствуясь своим чутьем или применяйте "
+"технический и фундаментальный анализа рынка"
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "– начните торговлю с минимальной инвестиции в размере всего лишь $5"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "– торгуйте 24/7, даже на выходных"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr ""
+"– круглосуточно торгуйте Индексами волатильности, собственной разработкой "
+"Binary.com"
 
 msgid "- trade Binary.com's proprietary volatility indices"
-msgstr ""
+msgstr "– торгуйте Индексами волатильности – уникальной разработкой Binary.com"
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "– торгуйте всеми основными валютными парами"
 
 msgid "- trade all major FX pairs, around the clock"
-msgstr ""
+msgstr "– круглосуточно торгуйте всеми основными валюными парами"
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "– торгуйте крупнейшими мировыми биржевыми индексами"
 
 msgid ""
 "- trade currencies, indices and commodities in rising, falling, sideways, "
 "quiet and volatile markets"
 msgstr ""
+"– торгуйте валютами, индексами и сырьевыми товарами в условиях снижающихся "
+"или растущих, волатильных или неподвижных рынков"
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "– торгуйте золотом и нефтью – самыми популярными сырьевыми товарами"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "– вверх/вниз, касание/нет касания, внутри/вне"
 
 msgid "- we challenge you to find better returns on any competing website"
 msgstr ""
+"– Вы едва ли сможете найти более выгодное предложение на сайтах конкурентов"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr ""
+msgstr "– получайте прибыль, пропорциональную Вашей инвестиции"
 
 msgid "- you know from the start what you will win or lose"
 msgstr ""
+"– Вы всегда знаете сумму возможной прибыли или потерь ещё до начала контракта"
 
 msgid ""
 "- you will never have margin calls, gap risk, slippage costs, hidden fees or "
 "commissions"
 msgstr ""
+"– Вы никогда не столкнётесь с запросом на увеличение маржи, риском гэпов, "
+"проскальзыванием, скрытыми взносами или комиссиями"
 
 msgid "0-1 year"
 msgstr "0-1 года"
@@ -282,7 +346,7 @@ msgid "1 Tick"
 msgstr "1 тик"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1 миллион транзакций в день"
 
 msgid "1-2 years"
 msgstr "1-2 года"
@@ -306,7 +370,7 @@ msgid "15m"
 msgstr "15м"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1д"
@@ -330,40 +394,40 @@ msgid "2 Minutes"
 msgstr "2 Минуты"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "Оцените движение рынка в двух направлениях"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2ч"
@@ -404,9 +468,6 @@ msgstr "4 часа"
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 или более транзакций за последние 12 мес"
 
-msgid "404"
-msgstr "404"
-
 msgid "4h"
 msgstr "4ч"
 
@@ -443,11 +504,19 @@ msgid ""
 "within the body of the first candle and in doing so confirming the reversal. "
 "It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
+"Вечерняя звезда Дожи состоит из длинной бычьей свечи, за которой следует "
+"Дожи с гэпом над ней, а затем третья, медвежья свеча, закрывающаяся на "
+"уровне тела первой свечи и таким образом подтверждающая наличие разворота. "
+"Данная фигура считается сильным индикатором медвежьего разворота на свечном "
+"графике"
 
 msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
 "and an Exponential Moving Average, only with a longer period applied"
 msgstr ""
+"Сглаженная скользящая средняя – это своего рода смесь простой скользящей "
+"средней и экспоненциальной скользящей средней, но с более продолжительным "
+"периодом"
 
 msgid ""
 "A Spinning Top Candlestick is a bullish or bearish candlestick with a small "
@@ -455,6 +524,10 @@ msgid ""
 "Candlestick it represents a point of indecision with buyers and seller "
 "matched"
 msgstr ""
+"Свеча \"волчок\" – это бычья или медвежья свеча с маленьким телом. У таких "
+"свечей может быть разная длина верхней и нижней тени. Как и свеча дожи, "
+"свеча \"волчок\" демонстрирует наличие неопределённости на рынке с равной "
+"силой бычьих и медвежьих настроений"
 
 msgid ""
 "A Stays Between trade pays out if the market stays between (does not touch) "
@@ -463,6 +536,11 @@ msgid ""
 "EITHER the high barrier or the low barrier at any time during the period "
 "chosen by a trader"
 msgstr ""
+"Если Вы выбираете \"Останется между\", Вы получите прибыль, если на "
+"протяжении всего указанного Вами периода цена останется между верхним и "
+"нижним барьерами (не коснётся НИ ОДНОГО из них). Контракт \"Выйдет за пределы"
+"\" принесёт прибыль, если на протяжении указанного Вами периода цена "
+"коснётся верхнего или нижнего барьера"
 
 msgid ""
 "A bearish candlestick pattern consisting of three candles that have "
@@ -472,6 +550,12 @@ msgid ""
 "a large red candle that opens below the middle candle and closes near the "
 "center of the first bar's body"
 msgstr ""
+"Фигура \"медвежий подсвечник\", состоящая из трёх свечей, имеет следующие "
+"характеристики: первый столбик – большая белая свеча, относящаяся к "
+"восходящему тренду; средний столбик – короткая свеча (красная или белая), "
+"закрывающаяся выше первого белого столбика; последний столбик представляет "
+"собой большую красную свечу, которая открывается ниже средней свечи и "
+"закрывается в районе середины тела первой свечи"
 
 msgid ""
 "A bearish candlestick pattern that is used to predict the reversal of the "
@@ -479,6 +563,10 @@ msgid ""
 "candlesticks that have closed lower than the previous day with each "
 "session's open occurring within the body of the previous candle"
 msgstr ""
+"Фигура \"медвежий подсвечник\" предвещает разворот текущего восходящего "
+"тренда. Данная фигура состоит из трёх свечей с длинным телом, закрывшихся "
+"ниже уровня предыдущего дня, а открытие каждой сессии происходит на уровне "
+"тела предыдущей свечи"
 
 msgid ""
 "A bearish counterattack is a long white candle in an uptrend, followed by a "
@@ -487,6 +575,11 @@ msgid ""
 "followed by a long white candle. Closing prices of both candles are at the "
 "same price level"
 msgstr ""
+"Медвежья контратака – это длинная белая свеча в рамках восходящего тренда, "
+"за которой следует длинная чёрная свеча. Цены закрытия обеих свечей "
+"находятся на одном и том же ценовом уровне. Бычья контратака – это длинная "
+"чёрная свеча в рамках нисходящего тренда, за которой следует длинная белая "
+"свеча. Цены закрытия обеих свечей находятся на одном и том же ценовом уровне"
 
 msgid ""
 "A bearish separating line is a bearish continuation pattern. It is the exact "
@@ -494,11 +587,19 @@ msgid ""
 "bearish separating line: The first day is a green candlestick and the second "
 "day gaps down, opens at the first candlestick's open and closes weakly"
 msgstr ""
+"Медвежья разделительная линия – это фигура продолжающегося нисходящего "
+"движения. Дання фигура является прямой противоположностью бычьей "
+"разделительной линии. Медвежья разделительная линия состоит из двух "
+"компонентов: первый день представлен зелёной свечой, а второй денб "
+"начинается нисходящим гэпом, открывается на уровне открытия первой свечи и "
+"закрывается со слабой динамикой"
 
 msgid ""
 "A binary option is a contract purchased by a trader, which pays a pre-"
 "determined amount if their prediction is correct"
 msgstr ""
+"Бинарный опцион – это контракт, приобретаемый трейдером, который приносит "
+"заранее установленную прибыль, если прогноз окажется правильным"
 
 msgid ""
 "A binary option is an option with a fixed payout that is determined at the "
@@ -506,6 +607,11 @@ msgid ""
 "payout. If not, you lose your initial stake, and no more. The options are "
 "called 'binary' because there can be only two outcomes - win or lose"
 msgstr ""
+"Бинарный опцион – это опцион с фиксированной прибылью, которая определяется "
+"до начала контракта. Если прогноз сбывается, трейдер получает указанную "
+"прибыль. В противном случае, он теряет только свою ставку (цену покупки), но "
+"не более того. Опционы называются \"бинарными\", потому что они предлагают "
+"два возможных исхода контракта – прибыль или убыток"
 
 msgid ""
 "A bullish candlestick pattern that consists of five candles, the first day "
@@ -514,6 +620,13 @@ msgid ""
 "pattern, but stay within the range of the first day and the fifth day is a "
 "long white day that closes above the close of the first day"
 msgstr ""
+"Фигура \"бычий подсвечник\", состоящая из пяти свечей. Первый день "
+"представлен длинной белой свечой; второй день начинается восходящим гэпом и "
+"представлен чёрной свечой; свечи на второй, третий и четвёртый день "
+"отличаются коротким телом и относятся к краткосрочному нисходящему тренду, "
+"но находятся в пределах тела первой свечи. На пятый день на графике "
+"формируется длинная белая свеча, которая закрывается выше уровня закрытия "
+"первого дня"
 
 msgid ""
 "A bullish candlestick pattern that consists of three candles, the first bar "
@@ -522,6 +635,11 @@ msgid ""
 "first red bar and the last bar is a large white candle that opens above the "
 "middle candle and closes near the center of the first bar's body"
 msgstr ""
+"Фигура \"бычий подсвечник\", состоящая из трёх свечей: первая – большая "
+"красная свеча, относящаяся к чёткому нисходящему тренду; вторая – короткая "
+"свеча (красная или белая), которая закрывается ниже первой красной свечи; "
+"последняя свеча – большая белая свеча, которая открывается выше второй свечи "
+"и закрывается вблизи середины первой свечи"
 
 msgid ""
 "A bullish candlestick pattern that consists of three candles, the first bar "
@@ -530,11 +648,18 @@ msgid ""
 "first red bar., he last bar is a large white candle that opens above the "
 "middle candle and closes near the center of the first bar's body"
 msgstr ""
+"Фигура \"бычий подсвечник\", состоящая из трёх свечей: первая – большая "
+"красная свеча, относящаяся к чёткому нисходящему тренду; вторая – короткая "
+"свеча (красная или белая), которая закрывается ниже первой красной свечи; "
+"последняя свеча – большая белая свеча, которая открывается выше второй свечи "
+"и закрывается вблизи середины первой свечи"
 
 msgid ""
 "A bullish or bearish candle followed by a doji with with a downward or "
 "uptrend gap"
 msgstr ""
+"Бычья или медвежья свеча, за которой идёт дожи с восходящим или нисходящим "
+"гэпом"
 
 msgid ""
 "A candlestick chart pattern in which a large candlestick is followed by a "
@@ -544,6 +669,11 @@ msgid ""
 "positive (white) candlestick, giving a sign of a reversal of the downward "
 "trend"
 msgstr ""
+"Фигура на графике японских свечей, в рамках которой за длинной свечой "
+"следует короткая свеча, тело которой находится в пределах диапазона длинной "
+"свечи. Если обратить внимание на цвет, бычье харами представлено нисходящим "
+"трендом и нисходящимии (чёрными) свечами, поглощающими небольшую восходящую "
+"(белую) свечу, показывающую признаки разворота в нисходящем тренде"
 
 msgid ""
 "A candlestick with a long black body (long line) represents a bearish force "
@@ -553,29 +683,46 @@ msgid ""
 "was up and down in a wide range, opening near the low of the day and closing "
 "near the high"
 msgstr ""
+"Свеча с длинным чёрным телом (длинной линией) демонстрирует медвежьи "
+"настроения на рынке. Цена актива колебалась в широком диапазоне, открывшись "
+"вблизи дневного максимума и закрывшись вблизи дневного минимума. Свеча с "
+"длинным белым телом демонстрирует бычьи настроения на рынке. Цена актива "
+"колебалась в широком диапазоне, открывшись вблизи дневного минимума и "
+"закрывшись вблизи дневного максимума"
 
 msgid ""
 "A candlestick with very long upper and lower shadows and a small real body "
 "on a Japanese candlestick chart. It shows that the market is losing its "
 "direction bias that it had before this candle appeared"
 msgstr ""
+"Свеча на графике японских свечей с очень длинной верхней и нежней тенью, но "
+"маленьким телом. Свеча показывает, что до её появления рынок терял "
+"направление движения"
 
 msgid ""
 "A chart pattern that consists of a small white candlestick with short "
 "shadows or tails followed by a large black candlestick that eclipses or "
 "'engulfs' the small white one"
 msgstr ""
+"Фигура на графике, состоящая из короткой белой свечи с короткими тенями, за "
+"которой идёт длинная чёрная свеча, \"поглощающая\" предыдущую белую свечу"
 
 msgid ""
 "A derivative is a financial instrument whose value is determined by "
 "reference to an underlying market. Derivatives are commonly traded in the "
 "inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr ""
+"Производные – это финансовые инструменты, стоимость которых определяется "
+"отношением к конкретному рынку. Производными (деривативами) обычно торгуют в "
+"межбанковской системе, а бинарные опционы являются самой простой формой "
+"производных"
 
 msgid ""
 "A medium to long bullish or bearish candlestick with the key defining trait "
 "being no head or tail shadows"
 msgstr ""
+"Средняя или длинная бычья или медвежья свеча, не имеющая ни нижней, ни "
+"верхней тени"
 
 msgid ""
 "A panel featuring industry leaders awards BetOnMarkets.com 'Financial "
@@ -583,6 +730,11 @@ msgid ""
 "for our brand and further recognition of our world-beating service. Ten "
 "years on, and going from strength to strength"
 msgstr ""
+"Жюри с участием лидеров в данной индустрии награждает BetOnMarkets.com "
+"премией в номинации ‘Financial Betting Operator of the Year’ (финансовый "
+"оператор года по беттингу), предпочтя нас двум другим финалистам. Это "
+"большая победа для нашего бренда и важный знак признания нашего сервиса. "
+"Десять лет спустя мы не останавливаемся на достигнутом"
 
 msgid ""
 "A technical indicator invented by Larry Williams that uses the weighted "
@@ -590,6 +742,11 @@ msgid ""
 "transaction signals that are associated with many other indicators that "
 "mainly rely on a single time period"
 msgstr ""
+"Технический индикатор, придуманный Ларри Вилльямсом и использующий "
+"взвешенную скользящую среднюю, которая основана на трёх разных временных "
+"периодах, чтобы уменьшить волатильность и ложные сигналы, ассоциируемые со "
+"многими другими индикаторами (преимущественно полагающимися всего на один "
+"период времени)"
 
 msgid ""
 "A technical momentum indicator that compares a security's closing price to "
@@ -597,6 +754,10 @@ msgid ""
 "market movements can be reduced by adjusting the time period or by taking a "
 "moving average of the result"
 msgstr ""
+"Технический индикатор темпа, который сравнивает цену закрытия ценной бумаги "
+"с диапазоном её цен на протяжении заданного периода времени. Уменьшить "
+"чувствительность осциллятора к рыночным движениям можно путём регулирования "
+"временного периода или воспользовавшись скользящей средней"
 
 msgid ""
 "A technical trading pattern in which three candlesticks form what appears to "
@@ -605,31 +766,38 @@ msgid ""
 "both of which will have a larger trading range than the middle candlestick. "
 "Stick sandwich patterns can occur in both bearish and bullish indications"
 msgstr ""
+"Фигура технического анализа, в которой три свечи формируют \"сэндвич\" на "
+"графике. Центральная свеча в таких сэндвичах отличается от боковых цветом и "
+"размером (она всегда короче). Свечной сэндвич может появиться как при "
+"восходящей динамике, так и при нисходящей"
 
 msgid ""
 "A tick is the minimum upward or downward movement in the price of a market"
-msgstr ""
+msgstr "Тик – это минимальное движение рыночной цены вверх или вниз"
 
 msgid ""
 "A trend indicated by a large candlestick followed by a doji that is located "
 "within the top and bottom of the candlestick's body. This indicates that the "
 "previous trend is about to reverse"
 msgstr ""
+"Тренд, обозначенный длинной свечой, за которой следует дожи, расположенный "
+"внутри тела свечи. Это означает, что на предыдущем тренде ожидается разворот"
 
 msgid ""
 "A white candle in an upward price trend followed by a doji whose lower "
 "shadow remains above the prior candle's high. The third day is a black "
 "candle with an upper shadow below the doji's low"
 msgstr ""
-
-msgid "AM"
-msgstr "утра"
+"Белая свеча в рамках восходящего тренда, за которой следует дожи, нижняя "
+"тень которого находится выше верхней точки предыдущей свечи. На третий день "
+"образуется чёрная свеча, верхняя тень которой находится ниже нижней точки "
+"дожи"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Брошенный младенец (CDLABANDONEDBABY)"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "Абсолютный ценовой осциллятор (APO)"
 
 msgid "Accept"
 msgstr "Принять"
@@ -637,14 +805,11 @@ msgstr "Принять"
 msgid "Account balance"
 msgstr "Баланс счёта"
 
-msgid "Account opening"
-msgstr "Открытие счёта"
-
 msgid "Action"
 msgstr "Действие"
 
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 msgid "Add comparisons"
 msgstr "Добавить сравнения"
@@ -655,35 +820,29 @@ msgstr "Добавить индикатор"
 msgid "Add level"
 msgstr "Добавить уровень"
 
-msgid "Add/remove comparisons"
-msgstr "Добавить/удалить сравнения"
-
 msgid "Add/remove indicators"
 msgstr "Добавить/удалить индикаторы"
-
-msgid "Add/remove overlays"
-msgstr "Добавить/удалить наложение"
 
 msgid "Admin"
 msgstr "Администратор"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "Отбитое наступление (CDLADVANCEBLOCK)"
 
 msgid "All durations"
-msgstr ""
+msgstr "С любой длительностью"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "При любых условиях рынка"
 
 msgid "All markets"
-msgstr ""
+msgstr "На всех рынках"
 
 msgid "All markets, all conditions"
-msgstr ""
+msgstr "На любых рынках, при любых условиях"
 
 msgid "All payouts"
-msgstr ""
+msgstr "С выплатами по контрактам"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Всё время указано в GMT (по Гринвичу)"
@@ -703,6 +862,11 @@ msgid ""
 "Ends Outside binary pays out if the market exit price is EITHER strictly "
 "higher than the high price target OR strictly lower than the low price target"
 msgstr ""
+"Контракт \"Закончится внутри\" приносит прибыль, если выходная цена рынка "
+"будет строго выше, чем нижний ценовой барьер И строго ниже, чем верхний "
+"ценовой барьер. Контракт \"Закончится вне\" приносит прибыль, если выходная "
+"цена рынка ЛИБО строго выше, чем верхний ценовой барьер, ЛИБО строго ниже, "
+"чем нижний ценовой барьер"
 
 msgid ""
 "Another major award. This time we're nominated by the online readers of "
@@ -710,6 +874,11 @@ msgid ""
 "and analysts who recognise our 13 years of platform reliability, range of "
 "trades, pricing, customer service and extensive knowledge"
 msgstr ""
+"Еще одна крупная награда: на этот раз мы были номинированы читателями онлайн "
+"изданий Global Banking и Finance Review. Нас судило жюри из экспертов "
+"индустрии и аналитиков, которое высоко оценило наш 13-летний опыт, "
+"надежность, широкий выбор контрактов, политику ценообразования, высокий "
+"уровень поддержки клиентов и общие знания нашей команды о бизнесе"
 
 msgid "Answer"
 msgstr "Ответ"
@@ -733,13 +902,13 @@ msgid "Are you sure you want to delete this token?"
 msgstr "Вы уверены, что хотите удалить этот ключ?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
-msgstr ""
+msgstr "Скользящая средняя Арно Легу (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Арун (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Осциллятор Арун (AROONOSC)"
 
 msgid "Asian down"
 msgstr "Азиатские вниз"
@@ -762,26 +931,27 @@ msgstr "Авг"
 msgid "August"
 msgstr "Август"
 
-msgid "Average"
-msgstr "Среднее"
-
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "Индекс среднего направления (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Мощность индекса среднего направления движения (ADXR)"
 
 msgid ""
 "Average Directional Movement Rating quantifies momentum change in the ADX. "
 "It is calculated by adding two values of ADX (the current value and a value "
 "n periods back), then dividing by two"
 msgstr ""
+"Мощность индекса среднего направления измеряет изменение темпа в индексе "
+"среднего направления (ADX). Она рассчитывается путём сложения двух значений "
+"индекса ADX (текущего значения и значения за определённый период в прошлом), "
+"а затем деления полученной суммы на два"
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "Средний истинный диапазон (ATR)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Чудесный осциллятор (AO)"
 
 msgid "Back"
 msgstr "Назад"
@@ -790,13 +960,17 @@ msgid "Back to list"
 msgstr "Вернуться к списку"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Баланс сил (BOP)"
 
 msgid ""
 "Banks, hedge funds and professional investors routinely trade binary options "
 "in over-the-counter derivatives markets. Many market professionals use and "
 "trust the Binary.com platform for high-volume flexible trades"
 msgstr ""
+"Банки, хеджинговые фонды и профессиональные инвесторы часто торгуют "
+"бинарными опционами на внебиржевых рынках производных. Многие профессионалы "
+"рынка выбирают платформу Binary.com для торговли в больших объемах и с "
+"гибкими условиями контрактов"
 
 msgid "Barrier"
 msgstr "Барьер"
@@ -805,7 +979,7 @@ msgid "Barrier offset"
 msgstr "Изменение барьера"
 
 msgid "Barrier(s)"
-msgstr ""
+msgstr "Барьер(ы)"
 
 msgid ""
 "Bearish: This is an end-of-trend pattern composed of three candlesticks in "
@@ -818,91 +992,127 @@ msgid ""
 "last candlestick must be shore. The pattern represents a weakness and "
 "consolidation and a possible reversal in trend"
 msgstr ""
+"Медвежья фигура: это фигура окончания тренда, состоящая из трёх свечей в "
+"рамках восходящего тренда. Вторая свеча должна открываться в вблизи уровня "
+"закрытия предыдущего дня. Последняя свеча должна быть короткой и может "
+"образовать гэп при попытке роста. Также может присутствовать тень продажи. "
+"Фигура демонстрирует слабость восходящей динамики с риском консолидации и "
+"возможным разворотом. Бычья фигура: Это фигура окончания тренда, состоящая "
+"из трёх свечей, относящихся к нисходящему тренду. Вторая свеча должна "
+"открываться вбдизи уровня закрытия предыдущего дня. Последняя свеча должна "
+"быть короткой. Фигура демонстрирует слабость и консолидацию, а также "
+"возможный разворот тренда"
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Захват за пояс (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
-msgstr ""
+msgstr "Стандартизированные цены"
 
 msgid "Benefits of binary trading"
-msgstr ""
+msgstr "Преимущества торговли бинарными опционами"
 
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr ""
+"Награда “Лучший предоставитель финансового трейдинга с фиксированным "
+"коэффициентом выигрыша“ от Shares Magazine UK"
 
 msgid "BetOnMarkets goes live"
-msgstr ""
+msgstr "Запуск сайта BetOnMarkets"
 
 msgid ""
 "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ "
 "1 billion milestone in only our 13th year, making us one of the leading "
 "fixed-odds trading providers"
 msgstr ""
+"У BetOnMarkets.com более 400 000 клиентов. Оборот компании достиг отметки 1 "
+"миллиард долларов уже к 13-му году её существования, что делает нас одной из "
+"ведущих платформ для торговли опционами с фиксированным уровнем прибыли"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
 msgstr ""
+"BetOnMarkets.com увеличивает максимальные выплаты до 100 000 USD, EUR, GBP и "
+"AUD"
 
 msgid "BetOnMarkets.com is successfully rebranded Binary.com"
-msgstr ""
+msgstr "Портал BetOnMarkets.com успешно переименован в Binary.com"
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr ""
+"BetOnMarkets.com достигает оборота в 1 миллиард долларов, начав работу в "
+"1999 г."
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Билл Вилльямс"
 
 msgid "Binary Bot released"
-msgstr ""
+msgstr "Запущен робот Binary Bot"
 
 msgid "Binary KK granted Japan license"
-msgstr ""
+msgstr "Binary KK получил японскую лицензию"
 
 msgid "Binary Trading is simple to learn and to execute"
-msgstr ""
+msgstr "Торговля бинарными опционами проста в теории и на практике"
 
 msgid "Binary granted Investment Services license"
-msgstr ""
+msgstr "Binary получает лицензию на оказание инвестиционных услуг"
 
 msgid "Binary opens Japan office"
-msgstr ""
+msgstr "Binary открыл офис в Японии"
 
 msgid "Binary option"
-msgstr ""
+msgstr "Бинарный опцион"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Бинарные опционы и другие деривативы"
 
-msgid "Binary trading is flexible"
+msgid "Binary options or other financial derivatives trading experience"
 msgstr ""
+
+msgid "Binary options or other financial derivatives trading frequency"
+msgstr ""
+
+msgid "Binary trading is flexible"
+msgstr "Торговля на бинарных опционах характеризуется гибкостью"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
 msgstr ""
+"Торговля бинарными опционами идеально подходит как частным лицам, так и "
+"профессионалам рынка"
 
 msgid "Binary trading is very simple"
-msgstr ""
+msgstr "Торговля бинарными опционами очень проста"
 
 msgid ""
 "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 "
 "Financial Instruments Business in Japan"
 msgstr ""
+"Binary KK – японский филиал Binary, лицензированный Управлением по "
+"финансовому регулированию Японии (KLFB) в качестве Организации в сфере "
+"финансовых инструментов 1-го типа"
 
 msgid ""
 "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts "
 "the process of applying for relevant licenses"
 msgstr ""
+"Binary KK – дочерняя компания Binary в Японии – открыла офис в Токио и "
+"начала процесс получения соответствующих лицензий"
 
 msgid ""
 "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a "
 "Category 3 Investment Services license by the Malta Financial Services "
 "Authority"
 msgstr ""
+"Мальтийская дочерняя компания Binary под названием Binary Investments "
+"(Europe) Ltd. получает лицензию на инвестиционные услуги категории 3 от "
+"Мальтийского управления финансовых услуг (Malta Financial Services Authority)"
 
 msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr ""
+"Платформа Binary работает 24/7 и в среднем исполняет 15 контрактов в секунду"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -911,95 +1121,128 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com Shop introduced"
-msgstr ""
+msgstr "Начал работу Магазин Binary.com"
 
 msgid "Binary.com continues to innovate and grow"
-msgstr ""
+msgstr "Binary.com продолжает расти и развиваться"
 
 msgid ""
 "Binary.com has earned an enviable reputation for our commitment to high "
 "ethical standards and the quality of the trading experience we provide"
 msgstr ""
+"Binary.com заслужил завидную репутацию за стремление к высоким этическим "
+"стандартам и качество предоставляемого нами торгового опыта"
 
 msgid ""
 "Binary.com has over 800,000 clients in its database and reaches the US$ 2 "
 "billion milestone in our 15th year, making us one of the leading binary "
 "options providers"
 msgstr ""
+"У Binary.com более 800,000 клиентов. Уже к 15-ому году своего существования "
+"компания достигла оборота в размере 2 миллиарда долларов, что делает нас "
+"одной из ведущих платформ для торговли бинарными опционами"
 
 msgid ""
 "Binary.com has thousands of clients taking a variety of positions on the "
 "financial markets at any one time, and earns a small margin on these trades"
 msgstr ""
+"Помогая тысячам клиентов приобретать самые различные контракты в любое "
+"время, Binary.com зарабатывает при этом лишь минимальную ценовую маржу"
 
 msgid ""
 "Binary.com hits 1 million users, reaching a historic milestone. The company "
 "continues to see exponential growth and this reconfirms its position as an "
 "industry leader"
 msgstr ""
+"Число пользователей Binary.com достигло 1 миллиона, что является "
+"историческим рубежом. Компания продолжает расти в геометрической прогрессии "
+"и подтверждает позицию лидера в данной индустрии"
 
 msgid "Binary.com introduces an"
-msgstr ""
+msgstr "Binary.com представляет"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr ""
+"Binary.com функционирует полностью онлайн и не требует специального "
+"программного обеспечения"
 
 msgid ""
 "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the "
 "16th annual MENA International Financial Conference and Exhibition, hosted "
 "in Dubai"
 msgstr ""
+"Binary.com завоевал награду в категории “Лучший брокер бинарных опционов” на "
+"16-й Международной финансовой конференции и выставке стран MENA, которая "
+"состоялась в Дубае"
 
 msgid ""
 "Binary.com is one of the oldest and most respected names in online binary "
 "trading"
 msgstr ""
+"Binary.com – одно из первых и самых авторитетных имён в онлайн торговле "
+"бинарными опционами"
 
 msgid ""
 "Binary.com is owned and operated by the Binary Ltd. group of companies. For "
 "more information, visit our history page"
 msgstr ""
+"Binary.com принадлежит и находится под управлением группы компаний Binary "
+"Ltd. Для получения дополнительной информации, пожалуйста, посетите страницу "
+"нашей истории"
 
 msgid "Binary.com is tailored to traders of all levels"
-msgstr ""
+msgstr "Binary.com предназначен для трейдеров любого уровня"
 
 msgid "Binary.com launches an"
-msgstr ""
+msgstr "Binary.com запускает"
 
 msgid ""
 "Binary.com offers a range of common deposit and withdrawal methods, from "
 "credit and debit cards to bank wires, e-cash and e-wallets"
 msgstr ""
+"Binary.com предлагает широкий выбор способов пополнения и вывода средств, от "
+"кредитных карт и банковского перевода до электронных кошельков и валют"
 
 msgid ""
 "Binary.com offers a virtual-money account so you can get the hang of trading "
 "binaries. Why not open a free $10k fully-functional virtual-money account, "
 "and start learning how to trade"
 msgstr ""
+"Binary.com предлагает демо-счета, на которых Вы можете научиться торговать "
+"бинарными опционами. Откройте бесплатный демо-счет с 10 000 виртуальных "
+"денег и научитесь работе на рынках"
 
 msgid "Binary.com offers new ways to trade"
-msgstr ""
+msgstr "Binary.com предлагает новые способы торговли"
 
 msgid ""
 "Binary.com opens an office in the QSentral office building in central Kuala "
 "Lumpur to further expand its IT development team"
 msgstr ""
+"Binary.com открывает офис в здании QSentral, в самом центре Куала-Лумпура, "
+"чтобы продолжить расширять свою команду разработчиков IT"
 
 msgid ""
 "Binary.com prices are benchmarked against the interbank options market, so "
 "you always get best-in-class prices for your trades"
 msgstr ""
+"Binary.com оценивает все основные активы по курсу межбанковского рынка, "
+"чтобы всегда предоставлять Вам наиболее выгодные цены для контрактов"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
 msgstr ""
+"Binary.com достигает оборота в 2 миллиарда долларов, начав работу в 1999 г."
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr ""
+msgstr "Binary.com достигает 1 миллиона пользователей"
 
 msgid ""
 "Binary.com takes home first prize in the Financial Betting Operator category "
 "at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
 msgstr ""
+"Binary.com завоевал первое место в категории Оператор по финансовому "
+"беттингу (Financial Betting Operator) на престижной церемонии 2015 EGR "
+"Operator Awards, которая состоялась в Лондоне"
 
 msgid ""
 "Binary.com's Spread Contracts are leveraged derivative contracts, the value "
@@ -1008,6 +1251,11 @@ msgid ""
 "those movements with much less investment than would be required in the live "
 "market"
 msgstr ""
+"Контракты со спредами от Binary.com представляют собой производные контракты "
+"с кредитным рычагом, стоимость которых напрямую зависит от динамики "
+"основного рынка. Клиенты, открывающие “длинные позиции” на растущем рынке (и "
+"“короткие позиции” на снижающемся рынке), получают прибыль от данных "
+"движений, внося гораздо меньшие инвестиции, чем на живом рынке"
 
 msgid ""
 "Binary.com's Spread Contracts require a 'stop loss' which limits the maximum "
@@ -1016,19 +1264,29 @@ msgid ""
 "closed. Spread Contracts are closed when sold by the client, upon hitting "
 "the 'stop loss' or 'stop profit' level"
 msgstr ""
+"Контракты со спредами от Binary.com требуют наличия функции ‘стоп-лосс’, "
+"ограничивающей максимальные потери, которые может понести клиент. Сумма, "
+"необходимая для активации функции ‘стоп-лосс’, послужит в качестве депозита "
+"и не может быть использована для дальнейшей торговли, пока не будет закрыт "
+"контракт со спредом. Контракты со спредом закрываются тогда, когда они будут "
+"проданы клиентом или по достижении уровней ‘стоп-лосс’ и 'стоп-профит'"
 
 msgid ""
 "Binary.com's systems are now processing in excess of 1 million transactions/"
 "day (including virtual accounts)"
 msgstr ""
+"Системы Binary.com обрабатывают более 1 миллиона транзакций в день (включая "
+"демо-счета)"
 
 msgid "Bollinger Bands (BBANDS)"
-msgstr ""
+msgstr "Полосы Боллинджера (BBANDS)"
 
 msgid ""
 "Bollinger Bands can be used to measure the highness or lowness of the price "
 "relative to previous trades"
 msgstr ""
+"Полосы Боллинджера измеряют максимум или минимум цены по отношению к "
+"предыдущим контрактам"
 
 msgid "Bought"
 msgstr "Куплено"
@@ -1037,7 +1295,7 @@ msgid "Brand of first car"
 msgstr "Марка первой машины"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Разрыв (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr "Необходимо обновление браузера"
@@ -1046,6 +1304,9 @@ msgid ""
 "But there's no need to wait until expiry. You can sell back long-term trades "
 "at any time to profit from changing market conditions"
 msgstr ""
+"Но не нужно ждать окончания действия контракта. Вы можете в любое время "
+"продать долгосрочные контракты и получить прибыль от изменений рыночных "
+"условий"
 
 msgid "Buy Price"
 msgstr "Цена покупки"
@@ -1071,20 +1332,28 @@ msgid ""
 "Can be used to buy and sell contracts, renew expired purchases, and top-up "
 "virtual-money accounts."
 msgstr ""
+"Может использоваться для покупки и продажи контрактов, возобновления "
+"закончившихся сделок, а также для пополнения демо-счетов."
 
 msgid ""
 "Can be used to open accounts, set settings, manage token usage, and more."
 msgstr ""
+"Может использоваться для открытия счетов, создания настроек, управления "
+"ключами и других действий."
 
 msgid ""
 "Can be used to view account activity, including settings, limits, balance "
 "sheets, trade purchase history, and more."
 msgstr ""
+"Может использоваться для просмотра активности на счете, в том числе "
+"настроек, лимитов, баланса, истории торговли и др."
 
 msgid ""
 "Can be used to withdraw to payment agents, transfer funds between accounts, "
 "and set / clear cashier passwords."
 msgstr ""
+"Может использоваться для вывода денег через платёжных агентов, перевода "
+"средств между счетами, установки / изменения паролей для Кассы."
 
 msgid "Cancel"
 msgstr "Отмена"
@@ -1108,10 +1377,10 @@ msgid "Cash Balance"
 msgstr "Баланс счёта"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Chande Momentum Oscillator (CMO)"
 
 msgid "Change Backend Server"
 msgstr "Изменить сервер"
@@ -1141,73 +1410,88 @@ msgid ""
 "Choose Asian Rise/Fall when you want to profit from the market ending higher "
 "or lower than the average price"
 msgstr ""
+"Выберите Азиатские – Повышение/Падение и предскажите, будет ли цена актива "
+"выше или ниже средней рыночной цены на момент окончания контракта"
 
 msgid ""
 "Choose Ends In/Out to profit from the market stopping inside or outside two "
 "price targets at the end of the time period"
 msgstr ""
+"Выберите Закончится Внутри/Вне и получите прибыль, предсказав, окажется ли "
+"цена внутри или вне двух целевых уровней на момент окончания действия "
+"контракта"
 
 msgid ""
 "Choose Higher/Lower when you want to profit from the market ending higher or "
 "lower than a price target"
 msgstr ""
+"Выберите Выше/Ниже, если Вы хотите получить прибыль, предсказав, окончится "
+"ли контракт выше или ниже заданной цены"
 
 msgid ""
 "Choose Rise/Fall when you want to profit from the market rising or falling "
 "from its current level"
 msgstr ""
+"Выберите Повышение/Падение и предскажите, вырастет или снизится цена по "
+"отношению к текущему уровню"
 
 msgid ""
 "Choose Stays In/Out to profit from the market staying inside or going "
 "outside two price targets any time during the contract period"
 msgstr ""
+"Выберите Останется Внутри/Вне и предскажите, будет ли цена находиться внутри "
+"или вне двух целевых уровней на протяжении действия контракта"
 
 msgid ""
 "Choose Touch / No Touch when you want to profit from the market touching or "
 "not touching a target any time during the contract period"
 msgstr ""
+"Выберите Касание/Нет касания и предскажите, коснётся ли рынок целевого "
+"уровня в любой момент на протяжении действия контракта"
 
 msgid "Choose a trade type"
-msgstr ""
+msgstr "Выберите тип контракта"
 
 msgid ""
 "Choose digit if you want to profit from predicting the last decimal digit of "
 "the spot"
 msgstr ""
+"Выберите десятичную и получите прибыль, правильно предсказав последнюю "
+"десятичную цифру котировки"
 
 msgid "Choose from over 1 million trades"
-msgstr ""
+msgstr "Выберите один из миллиона доступных контрактов"
 
 msgid "Choose from over a million possible trades at any time"
-msgstr ""
+msgstr "Выберите один из миллиона контрактов, доступных в любое время"
 
 msgid "Choose password"
 msgstr "Выберите пароль"
 
 msgid "Choose the barrier(s)"
-msgstr ""
+msgstr "Выберите барьер(ы)"
 
 msgid "Choose the duration"
-msgstr ""
+msgstr "Укажите длительность"
 
 msgid ""
 "Choose the market, the price target, the time period, and how much you wish "
 "to win"
-msgstr ""
+msgstr "Выберите рынок, ценовой барьер, период и желаемую выплату"
 
 msgid ""
 "Choose the market, the price targets, the time period, and how much you wish "
 "to win"
-msgstr ""
+msgstr "Выберите рынок, ценовой барьер, период и желаемую выплату"
 
 msgid "Choose the market, the time period, and how much you wish to win"
-msgstr ""
+msgstr "Выберите рынок, период и желаемую выплату"
 
 msgid "Choose the payout"
-msgstr ""
+msgstr "Выберите выплату"
 
 msgid "Choose the underlying market"
-msgstr ""
+msgstr "Выберите основной актив"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Выберите платёжного агента"
@@ -1216,7 +1500,7 @@ msgid "Choose your pereferred withdrawal method"
 msgstr "Выберите способ вывода средств"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "Индекс переменчивости (CHOP)"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -1226,6 +1510,9 @@ msgstr "Нажмите на Тест"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Нажмите, чтобы войти через счёт на Binary.com"
+
+msgid "Close"
+msgstr ""
 
 msgid "Close Price"
 msgstr "Цена закрытия"
@@ -1237,15 +1524,18 @@ msgid "Closes"
 msgstr "Закрытие"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "Закрытый марубозу (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
-msgstr ""
+msgstr "Сырьевые товары"
 
 msgid ""
 "Commodities are resources that are grown or extracted from the ground, such "
 "as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr ""
+"Сырьевые товары – это материалы, которые растут или добываются из недр "
+"земли, как серебро, золото и нефть. На Binary.com они оцениваются в "
+"американских долларах"
 
 msgid "Commodities trading experience"
 msgstr "Опыт торговли сырьевыми товарами"
@@ -1254,16 +1544,13 @@ msgid "Commodities trading frequency"
 msgstr "Частота торговли сырьевыми товарами"
 
 msgid "Commodity Channel Index (CCI)"
-msgstr ""
+msgstr "Индекс товарного канала (CCI)"
 
 msgid "Comparisons"
 msgstr "Сравнение"
 
 msgid "Conditions"
 msgstr "Условия"
-
-msgid "Config changes successful"
-msgstr "Конфигурация изменена успешно"
 
 msgid "Confirm transfer"
 msgstr "Подтвердить перевод"
@@ -1283,20 +1570,17 @@ msgstr "Продолжить торговлю"
 msgid "Contract"
 msgstr "Контракт"
 
-msgid "Contract Confirmation"
-msgstr "Подтверждение контракта"
-
 msgid "Contract period"
-msgstr ""
+msgstr "Период контракта"
 
 msgid "Contracts"
 msgstr "Контракты"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Кривая Коппока (CC)"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "Контратака (CDLCOUNTERATTACK)"
 
 msgid "Country of residence"
 msgstr "Страна проживания"
@@ -1314,7 +1598,7 @@ msgid "Crosshair"
 msgstr "Пересечение"
 
 msgid "Currencies"
-msgstr ""
+msgstr "Валюты"
 
 msgid "Current Level"
 msgstr "Текущий уровень"
@@ -1343,9 +1627,6 @@ msgstr "Текущее время"
 msgid "Custom Theme"
 msgstr "Индивид. настройка"
 
-msgid "Customize chart appearance"
-msgstr "Настройка вида графика"
-
 msgid "Daily limit on losses"
 msgstr "Дневной лимит на убытки"
 
@@ -1356,7 +1637,7 @@ msgid "Dark Blue"
 msgstr "Тёмно-синий"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
-msgstr ""
+msgstr "Тёмная завеса (CDLDARKCLOUDCOVER)"
 
 msgid ""
 "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when "
@@ -1365,15 +1646,18 @@ msgid ""
 "price). We will be using this pattern to sell rallies in a bearish currency "
 "market"
 msgstr ""
+"Тёмная завеса – это свечная фигура, которая появляется, когда красная "
+"медвежья свеча (цена закрытия которой находится ниже цены открытия) "
+"закрывается на 2-й день ниже середины бычьей свечи, образованной в 1-й день "
+"(цена закрытия которой находится выше цены открытия). Мы будем использовать "
+"данную фигуру для продажи на подъёме во время медвежьей динамики на валютном "
+"рынке"
 
 msgid "Dark Green"
 msgstr "Тёмно-зелёный"
 
 msgid "Dark Unica"
 msgstr "Dark Unica"
-
-msgid "Dash style"
-msgstr "Стиль штрихов"
 
 msgid "Date"
 msgstr "Дата"
@@ -1385,7 +1669,7 @@ msgid "Days"
 msgstr "Дни"
 
 msgid "Debt-free"
-msgstr ""
+msgstr "Никаких долгов"
 
 msgid "Dec"
 msgstr "Дек"
@@ -1400,7 +1684,7 @@ msgid "Default"
 msgstr "По умолчанию"
 
 msgid "Define your position"
-msgstr ""
+msgstr "Выберите свои условия"
 
 msgid "Delete"
 msgstr "Удалить"
@@ -1420,19 +1704,16 @@ msgid "Deposit of USD"
 msgstr "Депозит в USD"
 
 msgid "Depositing and withdrawing funds"
-msgstr ""
+msgstr "Пополнение и вывод средств"
 
 msgid "Derivative"
-msgstr ""
+msgstr "Производные"
 
 msgid "Describe what this token is for to find it later"
 msgstr "Опишите, для чего нужен данный ключ, чтобы найти его позже"
 
 msgid "Description"
 msgstr "Описание"
-
-msgid "Deselect"
-msgstr "Отменить"
 
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
@@ -1441,6 +1722,12 @@ msgid ""
 "Instead, the Mass Index identifies range bulges that can foreshadow a "
 "reversal of the current trend"
 msgstr ""
+"Индекс массы, разработанный Дональдом Дорси, использует верхнюю и нижнюю "
+"границу диапазона для определения разворота на тренде (на основании "
+"расширения границ диапазона). В этой связи, Индекс массы скорее является "
+"индикатором волатильности, который не зависит от направления движения. "
+"Вместо этого Индекс массы определяет расширения границ диапазона, что также "
+"может оказаться предвестником разворота текущего тренда"
 
 msgid ""
 "Developed by Larry Williams, Williams %R is a momentum indicator that is the "
@@ -1448,6 +1735,10 @@ msgid ""
 "%R reflects the level of the close relative to the highest high for the look-"
 "back period"
 msgstr ""
+"Диапазон Вильямса (%R), разработанный Ларри Вильямсом, служит индикатором "
+"темпа, который противоположен быстрому стохастическому индикатору. Также "
+"индекс часто называют %R и Процентным диапазоном Вильямса. Индекс показывает "
+"уровень цены закрытия относительно максимума за определенный период"
 
 msgid ""
 "Developed by Tushar Chande in 1995, Aroon is an indicator system that "
@@ -1456,6 +1747,12 @@ msgid ""
 "Up measures the number of days since a 25-day high. A 25-day Aroon-Down "
 "measures the number of days since a 25-day low"
 msgstr ""
+"Арун – это система индикаторов, разработанная Тюшаром Чэйндом в 1995 году. "
+"Система определяет, развивает ли инструмент какой-либо тренд, а также силу "
+"данного тренда. Выделяют две разновидности индикатора: Арун-Вверх и Арун-"
+"Вниз. 25-дневный Арун-Вверх измеряет количество дней после 25-дневного "
+"максимума. 25-дневный Арун-Вниз измеряет количество дней после 25-дневного "
+"минимума"
 
 msgid "Differs"
 msgstr "Отличается"
@@ -1469,42 +1766,46 @@ msgid ""
 "Directional Index (ADX), Plus Directional Indicator (+DI) and Minus "
 "Directional Indicator (-DI)"
 msgstr ""
+"Индикатор направленного движения (DMI) фактически представляет собой набор "
+"из трёх отдельных индикаторов, объединённых в один индекс. Индикатор "
+"направленного движения включает Индекс среднего направления (ADX), Индикатор "
+"направления вверх (+DI) и Индикатор направления вниз (-DI)"
 
 msgid "Directional Movement Index (DX)"
-msgstr ""
+msgstr "Индикатор направленного движения (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr ""
+msgstr "Нужно ли вносить средства, чтобы открыть счёт?"
 
 msgid "Do I need to send any documents?"
-msgstr ""
+msgstr "Нужно ли отправлять копии документов?"
 
 msgid "Do you offer virtual-money accounts?"
-msgstr ""
+msgstr "Есть ли у Вас демо-счета?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Хотите установить расширение Webtrader для Chrome?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Дожи (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Звезда дожи (CDLDOJISTAR)"
 
 msgid ""
 "Doji form when a security's open and close are virtually equal. The length "
 "of the upper and lower shadows can vary and the resulting candlestick looks "
 "like a cross, inverted cross or plus sign"
 msgstr ""
+"Дожи образуется на графике, когда уровень открытия актива практически "
+"совпадает с уровнем его закрытия. Длина верхней и нижней тени может "
+"варьироваться, а образовавшаяся в результате свеча напоминает крест или плюс"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
-
-msgid "Done"
-msgstr "Готово"
+msgstr "Индикатор канала Дончиана (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Готово. Средства переведены платёжному агенту"
@@ -1516,7 +1817,7 @@ msgid "Dot"
 msgstr "Точечный"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "Двойная экспоненциальная скользящая средняя (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr "Дважды нажмите на объект, чтобы удалить его"
@@ -1548,20 +1849,23 @@ msgstr "Загрузить векторное изображение в SVG"
 msgid "Download as"
 msgstr "Загрузить как"
 
-msgid "Downloading .csv"
-msgstr "Загружается в формате .csv"
-
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "Дожи-стрекоза (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "Ср-ва отображения"
+
+msgid ""
+"Due to recent changes in the regulations, we are required to ask our clients "
+"to complete the following Financial Assessment. Please note that you will "
+"not be able to continue trading until this is completed"
+msgstr ""
 
 msgid "Duration"
 msgstr "Продолжит."
 
 msgid "EGR Operator Award"
-msgstr ""
+msgstr "Церемония EGR Operator Award"
 
 msgid "EMA"
 msgstr "ЭСС"
@@ -1573,11 +1877,15 @@ msgid ""
 "Each binary option is a prediction on the future movement of an underlying "
 "market"
 msgstr ""
+"Каждый бинарный опцион является прогнозом будущего движения конкретного "
+"актива"
 
 msgid ""
 "Each binary trade is for a pre-determined payout amount. You win the payout "
 "if your prediction is correct"
 msgstr ""
+"Каждый контракт на бинарных опционах имеет заранее установленную выплату. "
+"Если Ваш прогноз верен, Вы получаете выплату"
 
 msgid "Edge"
 msgstr "Граница"
@@ -1588,9 +1896,6 @@ msgstr "Редактировать"
 msgid "Education"
 msgstr "Образование"
 
-msgid "Email verification failed"
-msgstr "Не удалось подтвердить эл. адрес"
-
 msgid "Embed code"
 msgstr "Код для вставки"
 
@@ -1598,7 +1903,7 @@ msgid "End Time"
 msgstr "Окончание"
 
 msgid "Ends Between/Ends Outside trades"
-msgstr ""
+msgstr "Закончится между/Закончится вне"
 
 msgid "Ends In/Out"
 msgstr "Заканчивается Внутри/Вне"
@@ -1610,12 +1915,7 @@ msgid "Ends out"
 msgstr "Закончится вне"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
-msgstr ""
-
-msgid "Ensure you are entering valid inputs else your account will get locked"
-msgstr ""
-"Проверьте правильность вводимых Вами данных; в противном случае Ваш счёт "
-"будет заблокирован"
+msgstr "Фигура поглощение (CDLENGULFING)"
 
 msgid "Enter your current password"
 msgstr "Введите текущий пароль"
@@ -1627,13 +1927,7 @@ msgid "Entry spot"
 msgstr "Входная котировка"
 
 msgid "Entry spot price"
-msgstr ""
-
-msgid "Error downloading .csv"
-msgstr "Ошибка при загрузке файла в формате .csv"
-
-msgid "Error getting data for %1"
-msgstr "Ошибка при получении данных для %1"
+msgstr "Спот-котировка на входе"
 
 msgid "Estimated Net Worth"
 msgstr "Собственный капитал"
@@ -1642,13 +1936,13 @@ msgid "Even"
 msgstr "Чётное"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "Вечерняя звезда дожи (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Вечерняя звезда (CDLEVENINGSTAR)"
 
 msgid "Example"
-msgstr ""
+msgstr "Пример"
 
 msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
@@ -1656,26 +1950,26 @@ msgstr "Исключите меня с сайта до"
 msgid "Exit Spot"
 msgstr "Выходная котировка"
 
+msgid "Exit Spot Time"
+msgstr ""
+
 msgid "Exit spot"
 msgstr "Выходная котировка"
 
 msgid "Expiry price"
-msgstr ""
+msgstr "Цена при окончании"
 
 msgid "Explanation"
 msgstr "Пояснение"
 
 msgid "Exponential Moving Average (EMA)"
-msgstr ""
-
-msgid "Failed to update the password"
-msgstr "Не удалось изменить пароль"
+msgstr "Экспоненциальная скользящая средняя (EMA)"
 
 msgid "Fall"
 msgstr "Падение"
 
 msgid "Falling markets"
-msgstr ""
+msgstr "Рынки на понижение"
 
 msgid "Family name"
 msgstr "Фамилия"
@@ -1702,6 +1996,12 @@ msgid ""
 "we have the most competitive and comprehensive digital options platform "
 "available to the retail public"
 msgstr ""
+"Пятнадцать лет спустя, мы всё ещё вносим инновации, растём и работаем над "
+"новыми способами предложения лучших услуг нашим клиентам. Недавно мы начали "
+"предлагать краткосрочные контракты Касание/Нет касания и ввели новые "
+"приложения для построения графиков. Мы уверены, что у нас самая "
+"конкурентоспособная онлайн платформа для торговли бинарными опционами, "
+"которая доступна для всех пользователей"
 
 msgid "Final Price"
 msgstr "Цена продажи"
@@ -1712,20 +2012,23 @@ msgstr "Цена продажи"
 msgid "Finance"
 msgstr "Финансы"
 
-msgid "Financial Account Opening form"
-msgstr "Форма для открытия реального счёта"
+msgid "Financial Information"
+msgstr ""
 
 msgid "Financial Security"
-msgstr ""
+msgstr "Финансовая безопасность"
 
 msgid "Financial information"
 msgstr "Финансовая информация"
 
 msgid "Financial rewards"
-msgstr ""
+msgstr "Финансовые преимущества"
 
 msgid "Firefox"
 msgstr "Firefox"
+
+msgid "First line of home address"
+msgstr ""
 
 msgid "First name"
 msgstr "Имя"
@@ -1734,18 +2037,25 @@ msgid ""
 "First, you need to set the parameters of your trade. Here's what you need to "
 "consider"
 msgstr ""
+"Сначала необходимо задать параметры Вашего контракта. Вам нужно определиться "
+"со следующими аспектами"
 
 msgid "Flexibility"
-msgstr ""
+msgstr "Гибкость"
 
 msgid ""
 "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds "
 "Financial Trading Provider' by Shares Magazine UK. It's the last time we win "
 "it because Shares Magazine stops awarding in this category"
 msgstr ""
+"Третий год подряд BetOnMarkets.com становится лучшей компанией в номинации "
+"\"Лучший поставщик услуг в торговле опционами с фиксированным коэффициентом "
+"прибыли\" по версии британского журнала Shares Magazine. Это последний раз, "
+"когда мы выиграли этот приз, так как Shares Magazine перестал предлагать эту "
+"категорию номинаций"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Опыт торговли на Forex"
@@ -1754,10 +2064,10 @@ msgid "Forex trading frequency"
 msgstr "Частота торговли на Forex"
 
 msgid "Founded October 1999"
-msgstr ""
+msgstr "Время основания: октябрь 1999 г."
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Фрактал (FRACTAL)"
 
 msgid ""
 "Fractals are indicators on candlestick charts that identify reversal points "
@@ -1765,6 +2075,10 @@ msgid ""
 "in which the price will develop. A fractal will form when a particular price "
 "pattern happens on a chart"
 msgstr ""
+"Фракталы - это индикаторы на графике японских свечей, которые определяют "
+"уровни разворота на рынке. Трейдеры часто используют фракталы, чтобы "
+"определить направление, в котором будет двигаться цена. Фракталы образуются "
+"при появлении на графике определённых фигур"
 
 msgid "Fri"
 msgstr "Пят"
@@ -1779,22 +2093,26 @@ msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid ""
 "GMT stands for Greenwich Mean Time, the official time used in the UK during "
 "winter. In summer, the UK changes to British Summer Time, which is GMT + 1 "
 "hour. All times on the Binary.com site use GMT all year round"
 msgstr ""
+"GMT – время по Гринвичу или Greenwich Mean Time – это официальное время, "
+"используемое в зимний период в Великобритании. Летом время в Великобритании "
+"меняется на британское летнее время, которое составляет GMT +1 час. Всё "
+"время на сайте Binary.com всегда указывается в GMT"
 
 msgid "Get your price"
-msgstr ""
+msgstr "Узнайте цену"
 
 msgid "Goes out"
 msgstr "Выйдет за пределы"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "Дожи-надгробие (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
 msgstr "Серый"
@@ -1806,31 +2124,34 @@ msgid "Grid Light"
 msgstr "Светлая сетка"
 
 msgid "Group History"
-msgstr ""
+msgstr "История компании"
 
 msgid "HIGH"
 msgstr "ВЕРХНЕЕ ЗНАЧЕНИЕ"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Молот (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "Повешенный (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr ""
+msgstr "Крест Харами (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
-msgstr ""
-
-msgid "Have better luck at trading!"
-msgstr "Удачи в торговле!"
+msgstr "Модель Харами (CDLHARAMI)"
 
 msgid "Health"
 msgstr "Здравоохранение"
 
 msgid "Help"
+msgstr "Помощь"
+
+msgid "High"
 msgstr ""
+
+msgid "High Barrier"
+msgstr "Верхний барьер"
 
 msgid "High Price"
 msgstr "Верхняя цена"
@@ -1842,64 +2163,58 @@ msgid "High barrier offset"
 msgstr "Изменение верхнего барьера"
 
 msgid "High returns"
-msgstr ""
+msgstr "Высокая прибыль"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "Высокая волна (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr "Выше"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "Выше/Ниже"
 
 msgid "Higher/Lower trades"
-msgstr ""
+msgstr "Контракты Выше/Ниже"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
-msgstr ""
+msgstr "Фигура Хиккаке (CDLHIKKAKE)"
 
 msgid "Home Address"
 msgstr "Адрес"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
-
-msgid "Horizontal Line"
-msgstr "Горизонтальная линия"
+msgstr "Почтовый голубь (CDLHOMINGPIGEON)"
 
 msgid "Horizontal line"
 msgstr "Горизонтальная линия"
-
-msgid "Hour"
-msgstr "Час"
 
 msgid "Hours"
 msgstr "Часы"
 
 msgid "How do I fund my account?"
-msgstr ""
+msgstr "Как пополнить счёт?"
 
 msgid "How does Binary.com make money?"
-msgstr ""
+msgstr "Как зарабатывает Binary.com?"
 
 msgid "How safe is my money with Binary.com?"
-msgstr ""
+msgstr "Находятся ли мои деньги в безопасности на Binary.com?"
 
 msgid "How soon can I start trading?"
-msgstr ""
+msgstr "Как быстро можно начать торговать?"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "Как торговать бинарными опционами?"
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "Скользящая средняя Хала (HMA)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "Я ознакомился и согласился с условиями Binary.com"
 
 msgid "I'm new to binaries, where do I start?"
-msgstr ""
+msgstr "Я новичок в торговле бинарными опционами. С чего начать?"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "ВАЖНАЯ ИНФОРМАЦИЯ"
@@ -1923,13 +2238,10 @@ msgstr ""
 "платёжными агентами"
 
 msgid "Ideal for both pros and novices"
-msgstr ""
+msgstr "Идеально как для профессионалов, так и новичков"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
-
-msgid "If the issue keeps happening, please contact"
-msgstr "Если проблема повторится, пожалуйста свяжитесь с"
+msgstr "Три одинаковые вороны (CDLIDENTICAL3CROWS)"
 
 msgid "If you select a"
 msgstr "Если Вы выбираете"
@@ -1943,9 +2255,14 @@ msgid ""
 "minimum stakes, you'll soon learn how to trade with skill and confidence. "
 "And if you have any questions, you're free to access"
 msgstr ""
+"Если Вы являетесь частным лицом, Вам понравится простота, гибкость и "
+"ограниченный риск торговли бинарными опционами на нашей платформе. Binary."
+"com предлагает минимальные ставки, благодаря которым Вы быстро сможете "
+"научиться работе и обретёте уверенность. Если у Вас возникли вопросы, к "
+"Вашим услугам наша"
 
 msgid "In April"
-msgstr ""
+msgstr "В апреле"
 
 msgid ""
 "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or "
@@ -1957,6 +2274,15 @@ msgid ""
 "resulting in a long black candlestick with a short lower shadow and no upper "
 "shadow"
 msgstr ""
+"В бычьей фигуре \"Захват за пояс\" после череды медвежьих свечей на графике "
+"формируется бычья или белая свеча. Цена открытия (которая становится "
+"минимумом дня) находится значительно ниже цены закрытия. В результате "
+"формируется длинная белая свеча с короткой верхней тенью и без нижней тени. "
+"В медвежьей фигуре \"Захват за пояс\" на графике формируется медвежья или "
+"чёрная свеча, цена открытия которой становится дневным максимумом и "
+"находится выше уровня закрытия предыдущего дня. В результате образуется "
+"длинная чёрная свеча с короткой нижней тенью и полным отсутствием верхней "
+"тени"
 
 msgid ""
 "In Bullish Hikkake Pattern After the downward move, the bullish candle "
@@ -1967,18 +2293,33 @@ msgid ""
 "which most likely triggers a number of stop loss orders. This additional "
 "selling leads to a more distinct downward move"
 msgstr ""
+"В бычьей фигуре Хиккаке после нисходящей динамики бычья свеча поднимается "
+"выше диапазона, образованного тремя предыдущими свечами, что может вызвать "
+"серию ордеров стоп-лосс в кругах трейдеров. Дополнительная покупка "
+"контрактов поддерживает более отчётливую дальнейшую восходящую динамику. В "
+"медвежьей фигуре Хиккаке после восходящей динамики на графике медвежья свеча "
+"опускается ниже диапазона из трёх предыдущей свечей, что способно вызвать "
+"серию ордеров стоп-лосс в кругах трейдеров. Дополнительная покупка "
+"контрактов поддерживает более отчётливую дальнейшую нисходящую динамику"
 
 msgid ""
 "In October 1999, Regent Markets receives US$ 2 million investment funding "
 "from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund "
 "management company"
 msgstr ""
+"В октябре 1999 года Regent Markets получает от Джима Меллона инвестицию в "
+"размере 2 миллионов долларов США через его группу компаний Regent Pacific "
+"Group – компанию по управлению фондами, находящуюся в Гонконге"
 
 msgid ""
 "In a downtrend, one small short body candlestick has a long lower shadow at "
 "least three times the real body, and little or no upper shadow. Confirmation "
 "from prices closing higher the next day"
 msgstr ""
+"В рамках нисходящего тренда формируется одна короткая свеча с длинной нижней "
+"тенью (которая в три раза превышает длину самой свечи) и короткой верхней "
+"тенью (или вообще без неё). Подтверждением будет служить закрытие рынка выше "
+"данной свечи на следующий день"
 
 msgid ""
 "In a downward price trend, a black candle appears followed by a white candle "
@@ -1987,12 +2328,21 @@ msgid ""
 "three line candle is another white candle in this example. It shows a higher "
 "close"
 msgstr ""
+"Если в рамках нисходящего тренда формируется чёрная свеча, за которой идёт "
+"белая свеча, открывшаяся ниже тела предышущей свечи, разглядеть данное "
+"формирование на графике бывает непросто. Белая свеча также закрывается выше. "
+"На третий день формируется ещё одна аналогичная белая свеча. Данное "
+"формирование показывает, что цена завершит день выше"
 
 msgid ""
 "In an uptrend three successive days opens at or near the previous day's "
 "close and close down on the day. This pattern is more severe than the Three "
 "Black Crows pattern and thus has a higher reliability as a reversal pattern"
 msgstr ""
+"В рамках восходящего тренда на протяжении трёх дней подряд свечи открываются "
+"на или вблизи уровня закрытия предыдущего дня и завершают день снижением. "
+"Данная фигура более точна, чем фигура \"Три чёрные вороны\" и таким образом "
+"служит более надёжным подтверждением разворота"
 
 msgid ""
 "In classic Silicon Valley style, Hong Kong based hedge fund manager and "
@@ -2003,6 +2353,14 @@ msgid ""
 "and to offer ordinary investors the chance to make small bets. Until his "
 "innovation, binary options are normally only traded in large quantities"
 msgstr ""
+"В классическом стиле Силиконовой долины, хедж-менеджер фонда и "
+"предприниматель Жан-Ив Сиро основал проект Regent Markets в своей квартире в "
+"Гонконге. Он развивает системы, методы и алгоритмы для системы финансовых "
+"ставок с фиксированным коэффициентом выигрыша. Идея Жан-Ива: создать из всех "
+"производных контрактов простой рынок (с фиксированным коэффициентом "
+"выигрыша) и дать обычным инвесторам шанс делать ставки на небольшие суммы. "
+"До этой инновации торговля на бинарных опционах была возможна только в "
+"больших объемах"
 
 msgid ""
 "In foreign exchange markets, traders can enter contracts based on the change "
@@ -2010,6 +2368,10 @@ msgid ""
 "trader selects Rise in the EUR/USD market, they are predicting that the "
 "value of the Euro will rise in relation to the value of the US dollar"
 msgstr ""
+"На рынке Forex трейдеры могут заключать контракты, основанные на цене одной "
+"валюты по отношению к другой. Например, если трейдер выбирает контракт "
+"\"Повышение\" на EUR/USD, он делает прогноз, что цена евро поднимется по "
+"отношению к американскому доллару"
 
 msgid ""
 "In order to properly apply theme, a full refresh of page is required. Are "
@@ -2042,15 +2404,20 @@ msgid ""
 "trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In "
 "the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr ""
+"Наши клиенты из Великобритании и с Острова Мэн торгуют через Binary (IOM) "
+"Ltd. Трейдеров из Японии обслуживает компания Binary KK. Клиенты из "
+"Европейского Союза (за исключением Великобритании) торгуют через Binary "
+"(Europe) Ltd и Binary Investments (Europe) Ltd. Клиенты из других стран мира "
+"торгуют через Binary (C.R.) S.A."
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "Фигура \"В основании\" (CDLINNECK)"
 
 msgid "In/Out"
 msgstr "Внутри/Вне"
 
 msgid "In/Out trades"
-msgstr ""
+msgstr "Контракты Внутри/Вне"
 
 msgid "Income Source"
 msgstr "Источник дохода"
@@ -2062,7 +2429,7 @@ msgid "Indicators"
 msgstr "Индикаторы"
 
 msgid "Indices"
-msgstr ""
+msgstr "Индексы"
 
 msgid "Indices trading experience"
 msgstr "Опыт торговли индексами"
@@ -2071,16 +2438,16 @@ msgid "Indices trading frequency"
 msgstr "Частота торговли индексами"
 
 msgid "Individual Traders"
-msgstr ""
+msgstr "Частные трейдеры"
 
 msgid "Industry of Employment"
 msgstr "Сфера занятости"
 
 msgid "Instant access"
-msgstr ""
+msgstr "Мгновенный доступ"
 
 msgid "Instant funding"
-msgstr ""
+msgstr "Мгновенное пополнение"
 
 msgid "Instrument"
 msgstr "Инструмент"
@@ -2089,14 +2456,14 @@ msgid "Instruments"
 msgstr "Инструменты"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
-msgstr ""
+msgstr "Перевернутый молот (CDLINVERTEDHAMMER)"
 
 msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"
 
 msgid ""
 "Is it possible to deposit the same funds through different payment methods?"
-msgstr ""
+msgstr "Можно ли внести одну и ту же сумму различными способами оплаты?"
 
 msgid ""
 "It has a long white candle, followed by another that opens above the first "
@@ -2104,17 +2471,27 @@ msgid ""
 "close of the second day (gaps down) and has a low below the close of the "
 "first day. The upward trend is expected to continue"
 msgstr ""
+"Фигура состоит из длинной белой свечи, за которой следует другая свеча, "
+"открывающаяся выше первой (гэп или разрыв при повышении), а затем чёрная "
+"медвежья свеча, которая открывается ниже уровня закрытия второй свечи (гэп "
+"при снижении) и минимум которой находится ниже уровня закрытия первого дня. "
+"После подобной фигуры ожидается продолжение восходящего тренда"
 
 msgid ""
 "It is sometimes possible to sell an option before the expiry of a trade, but "
 "only if a fair price can be determined. If this option is available, you "
 "will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr ""
+"Иногда бывает доступна кнопка досрочной продажи контракта, но только в "
+"случаях, когда может быть предложена справедливая рыночная цена. Если данная "
+"опция доступна, Вы увидите синюю кнопку \"Продать\" рядом с контрактом"
 
 msgid ""
 "It's time to expand. We set up a programming center in Cyberjaya - the "
 "Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr ""
+"Время расширяться. Для улучшения работы BetOnMarkets.com мы открыли центр "
+"программирования в Киберджайя – Силиконовой долине Куала-Лумпура"
 
 msgid "Jan"
 msgstr "Янв"
@@ -2128,9 +2505,6 @@ msgstr "Июль"
 msgid "July"
 msgstr "Июль"
 
-msgid "Jump to"
-msgstr "Перейти к"
-
 msgid "Jun"
 msgstr "Июнь"
 
@@ -2141,17 +2515,19 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Просто нажмите кнопку  Разрешить  на открывшейся странице"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "Адаптивная скользящая средняя Кауфмана (KAMA)"
 
 msgid "Key facts"
-msgstr ""
+msgstr "Основные факты"
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Высокий прыжок (CDLKICKING)"
 
 msgid ""
 "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
 msgstr ""
+"Высокий прыжок – бычья/медвежья динамика определяется длинным марубозу "
+"(CDLKICKINGBYLENGTH)"
 
 msgid ""
 "Kicking patterns on a candlestick chart are formed when there are two long "
@@ -2160,6 +2536,11 @@ msgid ""
 "wicks (shadows) followed by a gap higher with a white or hollow candlestick "
 "that is also without wicks"
 msgstr ""
+"Фигура \"Высокий прыжок\" на графике японских свечей формируется при наличии "
+"двух длинных марубозу – белого и чёрного, с гэпом между ними. Фигура бычьего "
+"прыжка будет представлена в виде чёрной или закрашенной свечи без теней, за "
+"которой будет следовать гэп на повышение с белой или незакрвшенной свечой, у "
+"которой нет теней"
 
 msgid ""
 "Kicking patterns on a candlestick chart are formed when there are two "
@@ -2168,27 +2549,32 @@ msgid ""
 "wicks (shadows) followed by a gap higher with a white or hollow candlestick "
 "that is also without wicks"
 msgstr ""
+"Фигуры \"Высокий прыжок\" на графике японских свечей формируются при наличии "
+"двух марубозу – белого и чёрного, с гэпом между ними. Бычья фигура \"Высокий "
+"прыжок\" представлена чёрной или закрашенной свечой без теней, за которой "
+"следует гэп на повышение и белая или незакрашенная свеча, у которой также "
+"нет теней"
 
 msgid "Known risks"
-msgstr ""
+msgstr "Заранее известный риск"
 
 msgid "Kuala Lumpur Office"
-msgstr ""
+msgstr "Офис в Куала-Лумпуре"
 
 msgid "LOW"
 msgstr "НИЖНЕЕ ЗНАЧЕНИЕ"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "Ступенчатое дно (CDLLADDERBOTTOM)"
 
 msgid "Last used"
 msgstr "Недавние"
 
 msgid "Learning to trade"
-msgstr ""
+msgstr "Научитесь торговле"
 
 msgid "Least Squares Moving Average (LSMA)"
-msgstr ""
+msgstr "Скользящая средняя по наименьшему количеству клеток (LSMA)"
 
 msgid "Less than"
 msgstr "Менее"
@@ -2196,25 +2582,29 @@ msgstr "Менее"
 msgid "Let's do it"
 msgstr "Приступим"
 
-msgid "Level"
-msgstr "Уровень"
-
 msgid "Level of Education"
 msgstr "Уровень образования"
 
 msgid "Levels"
-msgstr ""
+msgstr "Уровни"
 
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
 "Ireland, and Japan"
 msgstr ""
+"Компания лицензирована и регулируется на Мальте, в Великобритании, на "
+"Острове Мэн, в Ирландии и Японии"
 
 msgid ""
 "Like the EMA, the LWMA assigns more meaning to the recent prices and less to "
 "the closing price from the period's beginning. Thus they are faster at "
 "detecting a trend reversal, though it they can be more prone to market noise"
 msgstr ""
+"Как и экспоненциальная скользящая средняя (EMA), линейно-взвешенная "
+"скользящая средняя (LWMA) уделяет больше внимания недавним ценам и меньше "
+"внимания цене закрытия со времени начала периода. Таким образом, этот "
+"инструмент быстрее определяет разворот на тренде, но всё же остаётся "
+"восприимчивым к рыночному шуму"
 
 msgid "Line"
 msgstr "Линейный"
@@ -2223,7 +2613,7 @@ msgid "Line Dot"
 msgstr "Линейно-точечн."
 
 msgid "Linearly Weighted Moving Average (LWMA)"
-msgstr ""
+msgstr "Линейно-взвешенная скользящая средняя (LWMA)"
 
 msgid "Link"
 msgstr "Ссылка"
@@ -2274,7 +2664,7 @@ msgid "Loading custom theme configuration"
 msgstr "Загрузка индивидуальных настроек"
 
 msgid "Loading help docs"
-msgstr ""
+msgstr "Загрузка пособий"
 
 msgid "Loading portfolio"
 msgstr "Загрузка портфеля"
@@ -2295,10 +2685,10 @@ msgid "Logout"
 msgstr "Выход"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Длинноногий дожи (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Длинная свеча (CDLLONGLINE)"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2308,15 +2698,24 @@ msgid ""
 "yelling and screaming, the end result showed little change from the initial "
 "open"
 msgstr ""
+"Длинноногий дожи обладает длинной верхней и нижней тенями, которые "
+"практически равны по длине. Данный дожи говорит о значительной "
+"неопределённости на рынке. Длинноногий дожи обозначает, что цена торговалась "
+"выше и ниже уровня открытия сессии, но закрыла сессию практически на уровне "
+"открытия. После многочисленных ценовых колебаний конечный результат не "
+"показал значительных изменений, по сравнению с уровнем открытия"
 
 msgid "Long-term action"
-msgstr ""
+msgstr "Долгосрочные сделки"
 
 msgid ""
 "Look for a black candle in a downward price trend followed by a white candle "
 "that opens below the prior low but closes near but below the midpoint of the "
 "black candle's body"
 msgstr ""
+"Обратите внимание на чёрную свечу в рамках нисходящего тренда, за которой "
+"следует белая свеча, которая открывается ниже предыдущего минимума, но "
+"закрывается вблизи и чуть ниже середины тела чёрной свечи"
 
 msgid ""
 "Look for a tall black candle with a long lower shadow to appear in a "
@@ -2324,6 +2723,11 @@ msgid ""
 "smaller and with a higher low. The last day is a black marubozu that "
 "squeezes inside the high-low range of the prior day"
 msgstr ""
+"Обратите внимание на длинную чёрную свечу с длинной нижней тенью, "
+"образовавуюся в рамках нисходящего тренда. Свеча во второй день должна быть "
+"похожа на свечу первого дня, но меньше по длине и с более высоким минимумом. "
+"В последний день на графике формируется чёрный марубозу, который находится в "
+"пределах диапазона между минимумом и максимумом предыдущего дня"
 
 msgid ""
 "Look for a tall white candle in an upward price trend. Following that, a "
@@ -2331,6 +2735,16 @@ msgid ""
 "day is another black candle, but this one engulfs the previous bearish "
 "candle but closes above first bar's open"
 msgstr ""
+"Обратите внимание на длинную белую свечу в рамках восходящего тренда. За ней "
+"идёт чёрная свеча с гэпом над телом предыдущей свечи. В последний день "
+"образуется ещё одна чёрная свеча, поглощающая предыдущую медвежью свечу, но "
+"закрывающаяся выше открытия первой свечи"
+
+msgid "Low"
+msgstr ""
+
+msgid "Low Barrier"
+msgstr "Нижний барьер"
 
 msgid "Low Price"
 msgstr "Нижняя цена"
@@ -2342,7 +2756,7 @@ msgid "Low barrier offset"
 msgstr "Изменение нижнего барьера"
 
 msgid "Low minimum stakes"
-msgstr ""
+msgstr "Низкие минимальные ставки"
 
 msgid "Lower"
 msgstr "Ниже"
@@ -2352,9 +2766,12 @@ msgid ""
 "supposed to reveal changes in the strength, direction, momentum, and "
 "duration of a trend in a stock's price"
 msgstr ""
+"MACD – это индикатор, использующийся для технического анализа цены акций. Он "
+"выявляет изменение силы, направления, темпа и продолжительности тренда, "
+"отмечающегося на цене акции"
 
 msgid "MENA FFXPO Award"
-msgstr ""
+msgstr "Награда на MENA FFXPO"
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -2370,7 +2787,7 @@ msgstr ""
 "вычетом комиссии) выбранным способом оплаты"
 
 msgid "Make your trade"
-msgstr ""
+msgstr "Купите контракт"
 
 msgid "Mar"
 msgstr "Мар"
@@ -2379,28 +2796,28 @@ msgid "March"
 msgstr "Март"
 
 msgid "Market Professionals"
-msgstr ""
+msgstr "Профессионалы рынка"
 
 msgid "Market exit price"
-msgstr ""
+msgstr "Выходная цена рынка"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "МАРУБОЗУ (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Индекс массы (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Подстилка (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Совпадёт"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
-msgstr ""
+msgstr "Совпадение по нижнему уровню (CDLMATCHINGLOW)"
 
 msgid "Maximum (MAX)"
-msgstr ""
+msgstr "Максимум (MAX)"
 
 msgid "Maximum account cash balance"
 msgstr "Максимальный баланс счёта"
@@ -2428,7 +2845,7 @@ msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
 
 msgid "Maximum price over selected period"
-msgstr ""
+msgstr "Максимальная цена за выбранный период"
 
 msgid "May"
 msgstr "Май"
@@ -2440,25 +2857,31 @@ msgid "Memorable town/city"
 msgstr "Любимый город"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
-msgstr ""
+msgstr "MESA адаптивная скользящая средняя (MAMA)"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Мин: 10; Макс: 2000"
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "Минимум (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Минимум 6 символов и минимум 1 цифра"
 
-msgid "Minimum price over selected period"
+msgid "Minimum of 2 characters required"
 msgstr ""
+
+msgid "Minimum of 4 characters required"
+msgstr ""
+
+msgid "Minimum of 6 characters required"
+msgstr ""
+
+msgid "Minimum price over selected period"
+msgstr "Минимальная цена за выбранный период"
 
 msgid "Minus the agent's commission"
 msgstr "Минус комиссия агента"
-
-msgid "Minute"
-msgstr "Мин."
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -2467,10 +2890,10 @@ msgid "Miss"
 msgstr "Госпожа"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
-msgstr ""
+msgstr "Индикаторы темпа"
 
 msgid "Mon"
 msgstr "Пон"
@@ -2479,16 +2902,16 @@ msgid "Monday"
 msgstr "Понедельник"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
-msgstr ""
+msgstr "Утрeнняя звeзда доджи (CDLMORNINGDOJISTAR)"
 
 msgid "Morning Star (CDLMORNINGSTAR)"
-msgstr ""
+msgstr "Утрeнняя звeзда (CDLMORNINGSTAR)"
 
 msgid "Mother's maiden name"
 msgstr "Девичья фамилия матери"
 
 msgid "Moving Average Convergence/Divergence (MACD)"
-msgstr ""
+msgstr "Схождение/расхождение скользящих средних (MACD)"
 
 msgid "Mr"
 msgstr "Господин"
@@ -2539,26 +2962,31 @@ msgid "No"
 msgstr "Нет"
 
 msgid "No Touch trades"
-msgstr ""
+msgstr "Контракты Нет касания"
 
 msgid ""
 "No matter the market - rising or falling, quiet or volatile - you'll find a "
 "trade to suit your outlook"
 msgstr ""
+"Не важно, на каком рынке Вы работаете – растущем или падающем, спокойном или "
+"волатильном"
 
 msgid "No surprises"
-msgstr ""
+msgstr "Никаких сюрпризов"
 
 msgid "No touch"
 msgstr "Нет касания"
 
 msgid "Normalized Average True Range (NATR)"
-msgstr ""
+msgstr "Нормализованный средний истинный диапазон (NATR)"
 
 msgid ""
 "Normalized Average True Range (NATR) attempts to normalize the average true "
 "range values across instruments by using the formula below"
 msgstr ""
+"Нормализованный средний истинный диапазон (NATR) предпринимает попытку "
+"нормализовать значения среднего истинного диапазона инструментов, используя "
+"следующую формулу"
 
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
@@ -2590,7 +3018,7 @@ msgid "OPEN"
 msgstr "ОТКРЫТИЕ"
 
 msgid "Occupation"
-msgstr ""
+msgstr "Вид деятельности"
 
 msgid "Oct"
 msgstr "Окт."
@@ -2602,7 +3030,7 @@ msgid "Odd"
 msgstr "Нечётное"
 
 msgid "Offices in Malta, Malaysia and Japan"
-msgstr ""
+msgstr "Офисы на Мальте, в Малайзии и Японии"
 
 msgid "Ok"
 msgstr "Ok"
@@ -2616,7 +3044,7 @@ msgstr ""
 "что инвестиции, предоставляемые на данном сайте, не подходят для Вас"
 
 msgid "On-Neck Pattern (CDLONNECK)"
-msgstr ""
+msgstr "Фигура \"У основания\" (CDLONNECK)"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Когда данный лимит будет достигнут, Вы не сможете вносить средства"
@@ -2630,12 +3058,32 @@ msgid ""
 "secure online trading for novice and expert traders. At this time, our "
 "website has received over 15 million trades"
 msgstr ""
+"Уже через пять лет после создания сайта мы получили этот крупный приз за "
+"свои услуги онлайн трейдинга. Награда признает надежный, быстрый и "
+"безопасный трейдинг, предлагаемый BetOnMarkets.com как новичкам, так и "
+"опытным трейдерам. На тот момент на сайте было выполнено более 15 миллионов "
+"сделок"
 
-msgid "Only letters, numbers, space, period, comma, dash(-)"
+msgid "Only letters, numbers, hyphen are allowed"
 msgstr ""
 
-msgid "Oops... Page Not Available"
-msgstr "Упс... Страница недоступна"
+msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+msgstr ""
+
+msgid "Only letters, numbers, space, period, comma, dash(-)"
+msgstr "Только буквы, цифры, пробелы, точки, запятые, тире (-)"
+
+msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+msgstr ""
+
+msgid "Only numbers and space are allowed"
+msgstr ""
+
+msgid "Only numbers, letters, hyphens are allowed"
+msgstr ""
 
 msgid "Open"
 msgstr "Открытие"
@@ -2653,10 +3101,10 @@ msgid "Open account"
 msgstr "Открыть счёт"
 
 msgid "Opening an account"
-msgstr ""
+msgstr "Открытие счёта"
 
 msgid "Opens"
-msgstr "Открывается"
+msgstr "Открытие"
 
 msgid "Opera"
 msgstr "Opera"
@@ -2671,9 +3119,6 @@ msgstr ""
 "возникновения подобной зависимости, мы проводим проверку реальности и "
 "предоставляем регулярный отчёт о Ваших сделках и счетах"
 
-msgid "Optional field, within 20 characters and may not contain '+'"
-msgstr "Опциональное поле (20 символов и не допускается '+')"
-
 msgid "Other"
 msgstr "Другое"
 
@@ -2687,67 +3132,56 @@ msgid ""
 "Our company continues to thrive and obtains a license in the Isle of Man to "
 "better service our UK clients"
 msgstr ""
+"Наша компания продолжает процветать и получает лицензию на Острове Мэн, "
+"чтобы предлагать лучшее обслуживание нашим клиентам из Великобритании"
 
 msgid ""
 "Our customers clearly like us. In mid-2014, Binary.com has over 100 million "
 "historical transactions and over 130,000 new daily transactions"
 msgstr ""
+"Без сомнения, нашим клиентам по душе наш сервис. В середине 2014 года Binary."
+"com зарегистрировал в истории своего архива более 100 миллионов сделок и "
+"провёл более 130 тысяч новых ежедневных контрактов"
 
 msgid ""
 "Our fast organic growth is supplemented by the acquisition of the client "
 "base of BetsForTraders, one of our main competitors"
 msgstr ""
+"Наш быстрый рост дополняется приобретением клиентской базы BetsForTraders, "
+"одного из наших основных конкурентов"
 
 msgid "Over"
 msgstr "Более"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "Свыше 1 миллиона зарегистрированных счетов по всему миру"
 
 msgid "Over 3 years"
 msgstr "Более 3 лет"
 
 msgid "Over 90 staff and contractors worldwide"
-msgstr ""
+msgstr "Более 90 сотрудников и наёмных работников по всему миру"
 
 msgid "Overlap Studies"
-msgstr ""
+msgstr "Перекрытие графиков"
 
 msgid "PDF"
 msgstr "PDF"
 
-msgid "PM"
-msgstr "вечера"
-
 msgid "PNG"
 msgstr "PNG"
 
-msgid "Page Not Found"
-msgstr "Страница не найдена"
-
 msgid "Parabolic SAR (SAR)"
-msgstr ""
-
-msgid "Password must be 6 characters minimum"
-msgstr "Минимальная длина пароля: 6 знаков"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "Пароль должен содержать заглавные, строчные буквы и цифры"
-
-msgid "Password must contain uppercase letters and numbers"
-msgstr "Пароль должен содержать заглавные буквы и цифры"
-
-msgid "Password successfully updated"
-msgstr "Пароль изменён успешно"
+msgstr "Параболическая Система SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Пароли не совпали. Пожалуйста, введите пароли снова"
 
 msgid "Patented technology"
-msgstr ""
+msgstr "Запатентованная технология"
 
 msgid "Pattern Recognition"
-msgstr ""
+msgstr "Распознавание фигуры"
 
 msgid "Payment agent"
 msgstr "Платёжный агент"
@@ -2756,7 +3190,7 @@ msgid "Payment agents"
 msgstr "Платёжные агенты"
 
 msgid "Payment options"
-msgstr ""
+msgstr "Способы оплаты"
 
 msgid "Payments"
 msgstr "Платежи"
@@ -2768,7 +3202,7 @@ msgid "Pension"
 msgstr "Пенсия"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "Процентный ценовой осциллятор (ПЦО)"
 
 msgid "Permissions"
 msgstr "Разрешения"
@@ -2780,21 +3214,23 @@ msgid "Phone"
 msgstr "Телефон"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Просвет в облаках (CDLPIERCING)"
 
 msgid "Pip"
-msgstr ""
+msgstr "Пипс"
 
 msgid ""
 "Pip stands for 'percentage in point' which is generally the fourth decimal "
 "place (i.e. 0.0001)"
 msgstr ""
+"\"Пипс\" обозначает \"соответствующую процентную долю\", что обычно "
+"соответствует четвертой десятичной (т. е. 0.0001)"
+
+msgid "Place of birth"
+msgstr ""
 
 msgid "Please"
 msgstr "Пожалуйста"
-
-msgid "Please answer to secret question, within 4-50 characters"
-msgstr "Пожалуйста, ответьте на секретный вопрос (4-50 знаков)"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Пожалуйста, выберите валюту, в которой Вы хотите выполнить транзакцию"
@@ -2802,17 +3238,11 @@ msgstr "Пожалуйста, выберите валюту, в которой �
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Пожалуйста, подтвердите следующие данные, чтобы завершить перевод"
 
-msgid "Please enter a number between"
-msgstr "Пожалуйста, введите число в следующем диапазоне:"
-
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Пожалуйста, введите точную дату в формате: гггг-мм-дд"
 
-msgid "Please enter a value for"
-msgstr "Пожалуйста, введите значение для"
-
-msgid "Please enter a vlaid phone number"
-msgstr "Пожалуйста, введите действующий номер телефона"
+msgid "Please enter a value greater than 0"
+msgstr ""
 
 msgid "Please enter correct email"
 msgstr "Пожалуйста, введите правильный email"
@@ -2820,15 +3250,8 @@ msgstr "Пожалуйста, введите правильный email"
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
 
-msgid "Please enter the verification code sent to your email"
-msgstr ""
-"Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
-
 msgid "Please enter time in the format HH:MM"
 msgstr "Пожалуйста, введите время в формате ЧЧ:ММ"
-
-msgid "Please enter your city address"
-msgstr "Пожалуйста, введите адрес"
 
 msgid "Please enter your current password"
 msgstr "Пожалуйста, введите текущий пароль"
@@ -2836,38 +3259,23 @@ msgstr "Пожалуйста, введите текущий пароль"
 msgid "Please enter your email"
 msgstr "Пожалуйста, введите Ваш эл. адрес"
 
-msgid "Please enter your family name"
-msgstr "Пожалуйста, введите фамилию"
-
-msgid "Please enter your first name"
-msgstr "Пожалуйста, введите имя"
-
-msgid "Please enter your new password"
-msgstr "Пожалуйста, введите новый пароль"
-
-msgid "Please enter your password"
-msgstr "Пожалуйста, введите пароль"
-
-msgid "Please enter your phone number"
-msgstr "Пожалуйста, введите номер телефона"
-
-msgid "Please enter your street address"
-msgstr "Пожалуйста, введите адрес"
-
 msgid "Please input correct token"
-msgstr ""
+msgstr "Пожалуйста, введите правильный ключ"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Пожалуйста, установите последнюю версию одного из следующих браузеров"
 
+msgid "Please provide your tax information"
+msgstr ""
+
 msgid "Please select"
 msgstr "Пожалуйста, выберите"
 
+msgid "Please submit a valid verification token"
+msgstr ""
+
 msgid "Please try again after 1 minute"
 msgstr "Пожалуйста, повторите попытку через 1 минуту"
-
-msgid "Please use your new password to login"
-msgstr "Пожалуйста, используйте для входа новый пароль"
 
 msgid "Plot"
 msgstr "Тема"
@@ -2897,6 +3305,8 @@ msgid ""
 "Potential profit and losses are limited to stop profit and stop loss levels "
 "respectively"
 msgstr ""
+"Потенциальная прибыль и убыток ограничены уровнями стоп-профит и стоп-лосс, "
+"соответственно"
 
 msgid "Pre-Defined"
 msgstr "Стандартные"
@@ -2908,7 +3318,7 @@ msgid "Press Create token button on the right to create your first token"
 msgstr "Нажмите кнопку \"Создать ключ\" справа, чтобы создать Ваш первый ключ"
 
 msgid "Price Transformation"
-msgstr ""
+msgstr "Трансформация цены"
 
 msgid ""
 "Price forms three black candles, each with lower closes, in a downward price "
@@ -2916,9 +3326,14 @@ msgid ""
 "The candle acts as a bullish reversal when price breaks out upward, and "
 "closes above the top of the candle pattern"
 msgstr ""
+"В рамках нисходящего тренда цена формирует на графике три чёрные свечи, "
+"каждая из которых закрывается снижением. Длинная белая свеча охватывает "
+"ценовую динамику трёх предыдущих дней. Свеча является бычьей фигурой "
+"разворота, когда цена совершает пробой вверх и закрывается выше верхнего "
+"уровня свечной фигуры"
 
 msgid "Price the trade"
-msgstr ""
+msgstr "Укажите цену контракта"
 
 msgid ""
 "Price trends downward into the start of the pattern, a tall black candle. "
@@ -2927,18 +3342,21 @@ msgid ""
 "of the pattern is the confirming candle, a white one that closes above the "
 "prior close, which it does. The combination suggests price has reversed trend"
 msgstr ""
+"В начале фигуры – высокой чёрной свечи – цена стремится вниз. Затем "
+"формируется белая свеча, тело которой находится в пределах тела предыдущей "
+"свечи. Это завершает формирование бычьей свечи харами. В последний день "
+"фигуры образуется подтверждающая свеча – белая свеча, закрывающаяся выше "
+"уровня закрытия предыдущей свечи. Данная фигура предполагает, что цена "
+"совершила разворот на тренде"
 
 msgid "Primary"
-msgstr "Первичн."
+msgstr "Начальное"
 
 msgid "Print chart"
 msgstr "Напечатать график"
 
 msgid "Profit"
 msgstr "Прибыль"
-
-msgid "Profit Table"
-msgstr "Анализ счёта"
 
 msgid "Profit table"
 msgstr "Анализ счёта"
@@ -2953,6 +3371,9 @@ msgid ""
 "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, "
 "Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr ""
+"Сайт работает на русском, английском, индонезийском, японском, китайском, "
+"польском, немецком, французском, испанском, португальском, итальянском, "
+"русском и тайском языках"
 
 msgid "Purchase"
 msgstr "Купить"
@@ -2964,46 +3385,41 @@ msgid "Purchase Price"
 msgstr "Цена покупки"
 
 msgid "Quiet markets"
-msgstr ""
+msgstr "Неподвижные рынки"
 
 msgid "Rate Of Change (ROC)"
-msgstr ""
+msgstr "Скорость изменения (ROC)"
 
 msgid "Rate Of Change Percentage (ROCP)"
-msgstr ""
+msgstr "Процент скорости изменения (ROCP)"
 
 msgid "Rate Of Change Ratio (ROCR)"
-msgstr ""
+msgstr "Коэффициент скорости изменения (ROCR)"
 
 msgid "Read"
 msgstr "Читать"
 
-msgid "Real Money Account Opening"
-msgstr "Открытие реального счёта"
-
-msgid "Reality check"
-msgstr "Проверка реальности"
-
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
-
-msgid "Redirecting to oauth login page"
-msgstr "Перенаправление на страницу входа в oauth"
+"Наслаждайтесь торговлей бинарными опционами, зная, что Ваши средства всегда "
+"в безопасности"
 
 msgid "Ref"
 msgstr "Номер"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
-msgstr ""
+msgstr "Компания Regent Markets Group Limited переименована в Binary Ltd."
 
 msgid ""
 "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and "
 "website branding throughout the organisation"
 msgstr ""
+"Regent Markets Group Ltd. переименована в Binary Ltd., для гармонизации "
+"брендов компании и вебсайта нашей организации"
 
 msgid "Regent Markets acquires BetsForTraders client base"
-msgstr ""
+msgstr "Regent Markets приобретает базу данных клиентов BetsForTraders"
 
 msgid ""
 "Regent Markets files for a patent in March 2000 on the basis of our unique "
@@ -3011,49 +3427,56 @@ msgid ""
 "financial betting. In May, we register the trading name BetOnMarkets and "
 "move to Malta to receive an internet betting licence"
 msgstr ""
+"Regent Markets подаёт на патент в марте 2000 на основе своей уникальной "
+"позиции единственного серьезного участника в бизнесе финансового беттинга с "
+"фиксированным коэффициентом выигрыша. В мае мы регистрируем торговую марку "
+"BetOnMarkets и переезжаем на Мальту для получения игровой лицензии на "
+"предоставление услуг в интернете"
 
 msgid ""
 "Regent Markets files for patent, and registers BetOnMarkets trading name"
 msgstr ""
+"Regent Markets подает на патент и регистрирует торговое имя BetOnMarkets"
 
 msgid "Regent Markets granted US patent for 'Betting system and method'"
-msgstr ""
+msgstr "Regent Markets получает патент в США как “Система и метод беттинга”"
 
 msgid "Regent Markets granted two new US patents"
-msgstr ""
+msgstr "Regent Markets получает два новых патента в США"
 
 msgid "Regent Markets is founded by Jean-Yves Sireau"
-msgstr ""
+msgstr "Проект Regent Markets основан Жан-Ивом Сиро"
 
 msgid "Regent Markets obtains a licence in the Isle of Man"
-msgstr ""
+msgstr "Regent Markets получает лицензию на Острове Мэн"
 
 msgid ""
 "Regent Markets receives funding to provide on-line financial betting services"
 msgstr ""
+"Regent Markets получает финансирование для предоставления сервиса "
+"финансового онлайн-беттинга"
 
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
-msgstr ""
+msgstr "Regent Markets открывает центр программирования в Cyberjaya, Малайзия"
 
 msgid ""
 "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of "
 "Binary.com"
 msgstr ""
+"Regent Pacific Group Ltd., акционер Binary.com, зарегистрированный в "
+"Гонконге,"
 
 msgid "Regent Pacific transaction"
-msgstr ""
+msgstr "Выкуп доли у Regent Pacific"
 
 msgid "Register free account"
 msgstr "Откройте бесплатный счёт"
 
-msgid "Registration"
-msgstr "Регистрация"
-
 msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgstr "Индекс относительной силы (RSI)"
 
-msgid "Reloading page"
-msgstr "Перезагрузка страницы"
+msgid "Remove"
+msgstr ""
 
 msgid "Remove Selected"
 msgstr "Удалить выбранное"
@@ -3065,10 +3488,7 @@ msgid "Repeat password"
 msgstr "Повторите пароль"
 
 msgid "Resale price"
-msgstr ""
-
-msgid "Reset to Defaults"
-msgstr "Возврат к настройкам по умолчанию"
+msgstr "Цена перепродажи"
 
 msgid "Reset zoom"
 msgstr "Сбросить масштаб"
@@ -3088,26 +3508,23 @@ msgstr "Результаты"
 msgid "Return"
 msgstr "Прибыль"
 
-msgid "Return to trading page"
-msgstr "Вернуться к странице торговли"
-
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Рикша (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr "Повышение"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Повышение/Падение"
 
 msgid "Rise/Fall trades"
-msgstr ""
+msgstr "Контракты Повышение/Падение"
 
 msgid "Rising markets"
-msgstr ""
+msgstr "Растущие рынки"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "Метод трёх поднимающихся/падающих (CDLRISEFALL3METHODS)"
 
 msgid "SMA"
 msgstr "ПСС"
@@ -3146,10 +3563,13 @@ msgid "Save changes"
 msgstr "Сохранить изменения"
 
 msgid "Scalable trading"
+msgstr "Масштабируемость торговли"
+
+msgid "Second line of home address"
 msgstr ""
 
 msgid "Secondary"
-msgstr "Вторичн."
+msgstr "Среднее"
 
 msgid "Security"
 msgstr "Безопасность"
@@ -3169,20 +3589,8 @@ msgstr "Самоисключение"
 msgid "Sell At Market"
 msgstr "Продать по текущей цене"
 
-msgid "Sell Price"
-msgstr "Цена продажи"
-
-msgid "Sell Spot"
-msgstr "Котировка продажи"
-
-msgid "Sell Time"
-msgstr "Время продажи"
-
 msgid "Sell option"
-msgstr ""
-
-msgid "Send to account #"
-msgstr "Отправить на счёт #"
+msgstr "Продажа опциона"
 
 msgid "Sent to account"
 msgstr "Отправлено на счёт"
@@ -3191,7 +3599,7 @@ msgid "Sep"
 msgstr "Сент"
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
-msgstr ""
+msgstr "Разделение (CDLSEPARATINGLINES)"
 
 msgid "September"
 msgstr "Сентябрь"
@@ -3203,7 +3611,7 @@ msgid "Session duration limit, in minutes"
 msgstr "Ограничение на длительность сессии, в минутах"
 
 msgid "Set your probability of winning"
-msgstr ""
+msgstr "Установите вероятность выигрыша"
 
 msgid "Settles"
 msgstr "Заканч."
@@ -3215,13 +3623,13 @@ msgid "Share chart"
 msgstr "Поделиться графиком"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
-msgstr ""
+msgstr "Падающая звезда (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
-msgstr ""
+msgstr "От краткосрочных до долгосрочных сделок"
 
 msgid "Short-term action"
-msgstr ""
+msgstr "Краткосрочное действие"
 
 msgid "Show"
 msgstr "Показать"
@@ -3239,28 +3647,25 @@ msgid ""
 msgstr ""
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "Простая скользящая средняя (SMA)"
 
 msgid "Simplicity"
-msgstr ""
+msgstr "Простота"
 
 msgid "Smoothed Moving Average (SMMA)"
-msgstr ""
+msgstr "Сглаженная скользящая средняя (SMMA)"
 
 msgid "Sold"
 msgstr "Продано"
 
-msgid "Some random index"
-msgstr "Случайный индекс"
-
 msgid "Spinning Top (CDLSPINNINGTOP)"
-msgstr ""
+msgstr "Волчок (CDLSPINNINGTOP)"
 
 msgid "Spline"
 msgstr "Кривая"
 
 msgid "Spot price"
-msgstr ""
+msgstr "Спот-цена"
 
 msgid "Spreads"
 msgstr "Спреды"
@@ -3275,10 +3680,10 @@ msgid "Stake"
 msgstr "Ставка"
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
-msgstr ""
+msgstr "Торможение (CDLSTALLEDPATTERN)"
 
 msgid "Standard Deviation (STDDEV)"
-msgstr ""
+msgstr "Стандартное отклонение (STDDEV)"
 
 msgid ""
 "Standard Deviation is a statistical calculation used to measure the "
@@ -3287,6 +3692,11 @@ msgid ""
 "whereas high standard deviation indicates that the data points are spread "
 "out over a large range of values"
 msgstr ""
+"Стандартное отклонение – это статистический рассчёт, используемый для "
+"измерения изменчивости рынков. Его значение в торговле называется "
+"волатильностью. Низкое стандартное отклонение обозначает, что элементы "
+"данных стремятся к среднему значению, а высокое стандартное отклонение "
+"обозначает, что элементы данных имеют широкий диапазон значений"
 
 msgid "Standard methods"
 msgstr "Стандартные методы"
@@ -3307,13 +3717,13 @@ msgid "Statement"
 msgstr "История счёта"
 
 msgid "Statistical Functions"
-msgstr ""
+msgstr "Статистические функции"
 
 msgid "Status"
 msgstr "Статус"
 
 msgid "Stays Between/Goes Outside trades"
-msgstr ""
+msgstr "Контракты Останется между/Выйдет за пределы"
 
 msgid "Stays In/Goes Out"
 msgstr "Останется Внутри/Выйдет за пределы"
@@ -3322,39 +3732,41 @@ msgid "Stays in"
 msgstr "Останется внутри"
 
 msgid "Step 1: Define your position"
-msgstr ""
+msgstr "Шаг 1: Выберите условия"
 
 msgid "Step 2: Get your trade price"
-msgstr ""
+msgstr "Шаг 2: Получите цену контракта"
 
 msgid "Step 3: Make your trade"
-msgstr ""
+msgstr "Шаг 3: Купите контракт"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "Бутерброд (CDLSTICKSANDWICH)"
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "Стохастик (STOCH )"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "Быстрый стохастик (STOCHF)"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
-msgstr ""
+msgstr "Стохастический индекс относительной силы (STOCHRSI)"
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr ""
+msgstr "Медленный стохастик (STOCHS)"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "Фондовые индексы"
 
 msgid "Stock indices"
-msgstr ""
+msgstr "Фондовые индексы"
 
 msgid ""
 "Stock market indices measure the value of a selection of companies in the "
 "stock market"
 msgstr ""
+"Индексы показывают стоимость определенного набора акций компаний, "
+"котирующихся на бирже"
 
 msgid "Stocks trading experience"
 msgstr "Опыт торговли акциями"
@@ -3377,23 +3789,11 @@ msgstr "Стоп-профит"
 msgid "Stop-type"
 msgstr "Тип стопа"
 
-msgid "Street address"
-msgstr "Адрес"
-
-msgid "Stroke"
-msgstr "Штрих"
-
-msgid "Stroke color"
-msgstr "Цвет штриха"
-
-msgid "Stroke width"
-msgstr "Ширина штриха"
-
 msgid "Submit"
 msgstr "Подтвердить"
 
 msgid "Summation (SUM)"
-msgstr ""
+msgstr "Суммирование (SUM)"
 
 msgid "Sun"
 msgstr "Вск"
@@ -3411,16 +3811,25 @@ msgid "Table"
 msgstr "Таблица"
 
 msgid "Take early profits"
-msgstr ""
+msgstr "Получите прибыль до окончания контракта"
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
-msgstr ""
+msgstr "Такури (Дожи-стрекоза с очень длинной нижней тенью) (CDLTAKURI)"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
+msgstr "Гэп тасуки (CDLTASUKIGAP)"
+
+msgid "Tax identification number"
+msgstr ""
+
+msgid "Tax information"
+msgstr ""
+
+msgid "Tax residence"
 msgstr ""
 
 msgid "Tax-free"
-msgstr ""
+msgstr "Без налогов"
 
 msgid "Tel"
 msgstr "Тел"
@@ -3431,11 +3840,8 @@ msgstr "Название шаблона"
 msgid "Terms"
 msgstr "Условия"
 
-msgid "Terms and Conditions"
-msgstr "Правила и условия"
-
 msgid "Tertiary"
-msgstr "Третичн."
+msgstr "Высшее"
 
 msgid "The"
 msgstr " "
@@ -3445,6 +3851,9 @@ msgid ""
 "between two moving averages of different lengths, a  Fast  and a  Slow  "
 "moving average"
 msgstr ""
+"Абсолютный ценовой осциллятор (APO) основан на абсолютной разнице между "
+"двумя скользящими средними разной длины: быстрой и медленной скользящей "
+"средней"
 
 msgid ""
 "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. "
@@ -3486,6 +3895,10 @@ msgid ""
 "is followed by a long white day that gaps down at the open and closes below "
 "the close of the black day"
 msgstr ""
+"Медвежья фигура \"У основания\" возникает на графике после нисходящего "
+"тренда, когда после длинной чёрной свечи следует длинная белая свеча, "
+"которая начинается с нижнего гэпа перед открытием и закрывается ниже уровня "
+"закрытия чёрной свечи"
 
 msgid ""
 "The Bullish Three Star appears after a downtrend and it consists of three "
@@ -3763,6 +4176,10 @@ msgid ""
 "of the Company's assets. This meets the Gambling Commission's requirements "
 "for the segregation of customer funds at the level"
 msgstr ""
+"Компания держит средства клиентов на отдельных от рабочих счетов банковских "
+"счетах, которые в случае неплатежеспособности Компании не войдут в состав её "
+"активов. Это отвечает требованиям Комиссии по азартным играм по сегрегации "
+"средств клиентов на следующем уровне:"
 
 msgid ""
 "The contract period is the timeframe of a trade. It is also called the "
@@ -3795,6 +4212,15 @@ msgstr ""
 
 msgid ""
 "The expiry price is the price of the underlying when the contract expires"
+msgstr ""
+
+msgid ""
+"The financial trading services contained within this site are only suitable "
+"for customers who are able to bear the loss of all the money they invest and "
+"who understand and have experience of the risk involved in the acquistion of "
+"financial contracts. Transactions in financial contracts carry a high degree "
+"of risk. If purchased contracts expire worthless, you will suffer a total "
+"loss of your investment, which consists of the contract premium"
 msgstr ""
 
 msgid ""
@@ -3847,13 +4273,6 @@ msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr ""
-
-msgid ""
-"The page you requested could not be found. Either it no longer exists or the "
-"address is wrong. Please check for any typos"
-msgstr ""
-"Страница не найдена. Данная страница не существует или Вы ввели неправильный "
-"адрес. Пожалуйста, проверьте, не допустили ли Вы опечатку"
 
 msgid ""
 "The parabolic SAR is calculated almost independently for each trend in the "
@@ -3969,12 +4388,6 @@ msgid ""
 "parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
 
-msgid "This contract lost"
-msgstr "Контракт проиграл"
-
-msgid "This contract won"
-msgstr "Контракт выиграл"
-
 msgid "This field is required"
 msgstr "Данное поле является обязательным"
 
@@ -4007,7 +4420,7 @@ msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr ""
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "Три чёрные вороны (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
 msgstr ""
@@ -4094,9 +4507,6 @@ msgid ""
 msgstr ""
 "Чтобы вывести средства, пожалуйста, введите специальный проверочный код, "
 "отправленный на Ваш электронный адрес"
-
-msgid "Today"
-msgstr "Сегодня"
 
 msgid "Token"
 msgstr "Ключ"
@@ -4204,6 +4614,9 @@ msgstr ""
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview для Binary.com"
 
+msgid "Transfer"
+msgstr ""
+
 msgid "Transfer to another Binary account"
 msgstr "Перевести на другой счёт на Binary"
 
@@ -4287,6 +4700,9 @@ msgstr ""
 msgid "Upcoming Events"
 msgstr "Ближайшие события"
 
+msgid "Update"
+msgstr ""
+
 msgid "Update Settings"
 msgstr "Обновить настройки"
 
@@ -4328,17 +4744,11 @@ msgstr ""
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
 
-msgid "Verification code sent to"
-msgstr "Проверочный код отправлен"
-
 msgid "Verification token"
 msgstr "Проверочный ключ"
 
 msgid "Verify new password"
 msgstr "Подтвердите новый пароль"
-
-msgid "Vertical Line"
-msgstr "Вертикальная линия"
 
 msgid "Vertical line"
 msgstr "Вертикальная линия"
@@ -4449,7 +4859,7 @@ msgid "Will I need to install any software?"
 msgstr ""
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Диапазон Вильямса (%R, WILLR)"
 
 msgid ""
 "Win 10-1000% on your stake if you are correct. Increase your winning return "
@@ -4514,28 +4924,39 @@ msgid ""
 "You can choose payouts from $1 to $50,000. This wide payout range is ideal "
 "for both small and large traders"
 msgstr ""
+"Вы можете выбрать любую выплату от $1 до $50 000. Столь широкий диапазон "
+"выплат идеален для крупных и небольших трейдеров"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr ""
+"Вы можете открыть счёт, пополнить его и начать торговлю за считанные минуты"
 
 msgid ""
 "You can sell back long-term trades at any time to profit from changing "
 "market conditions"
 msgstr ""
+"Вы можете в любое время досрочно продать долгосрочные контракты, чтобы "
+"получить уже имеющуюся прибыль при меняющихся рыночных условиях"
 
 msgid "You can set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "Установите длительность сделки, от 10 секунд до 365 дней"
 
 msgid "You can trade a range of markets, timescales and indices - 24/7"
 msgstr ""
+"Вы можете круглосуточно торговать на широком спектре рынков, сроков и "
+"индексов, семь дней в неделю"
 
 msgid ""
 "You don't need to deposit any money to open an account, but you need to "
 "deposit funds before you can start trading"
 msgstr ""
+"Вам не нужно вносить средства для открытия счёта, но Вам необходимо будет "
+"пополнить счёт для начала торговли и покупки контрактов"
 
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr ""
+"Вы получаете справедливую и прозрачную оценку контракта, независимо от его "
+"параметров"
 
 msgid "You have sold the following contract"
 msgstr "Вы продали следующий контракт"
@@ -4556,13 +4977,13 @@ msgid "You pay"
 msgstr "Вы платите"
 
 msgid "You set the barrier(s) to define your position"
-msgstr ""
+msgstr "Вы задаёте параметры позиции"
 
 msgid "You will be automatically logged out after such time"
 msgstr "По истечении данного времени Вы автоматически выйдете из системы"
 
 msgid "You'll be surprised by the returns you can make"
-msgstr ""
+msgstr "Вы удивитесь, узнав, какую прибыль Вы можете получить"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
@@ -4570,11 +4991,6 @@ msgid ""
 msgstr ""
 "Вы успешно открыли счёт на Binary.com, но для начала торговли Вы должны "
 "открыть Webtrader доступ к нему"
-
-msgid "Your account is locked, please contact customer support for more info"
-msgstr ""
-"Ваш счёт заблокирован; пожалуйста, свяжитесь со службой поддержки клиентов "
-"для получения дополнительной информации"
 
 msgid "Your browser is not supported"
 msgstr "Ваш браузер не поддерживается"
@@ -4586,12 +5002,14 @@ msgid ""
 "Your money is always safe with Binary.com. At all times, it is held in "
 "segregated AAA-rated banks, which is a condition of our trading licenses"
 msgstr ""
+"Ваши деньги на Binary.com всегда в безопасности. Мы отделяем и держим "
+"средства клиентов в банках рейтинга ААА, что является условием нашей лицензии"
 
 msgid "Your new account balance is"
 msgstr "Новый баланс Вашего счёта"
 
 msgid "Your risks are known"
-msgstr ""
+msgstr "Ваш риск заранее известен"
 
 msgid "Your transaction reference is"
 msgstr "Ссылка на Вашу сделку"
@@ -4606,18 +5024,17 @@ msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
 msgstr ""
-
-msgid "and"
-msgstr "и"
+", позволяющий трейдерам разрабатывать собственных торговых роботов с помощью "
+"простой функции \"перетаскивания объектов\""
 
 msgid "apostrophe (') are allowed"
-msgstr ""
+msgstr "разрешен апостроф (')"
 
 msgid "at a valuation of US$ 50.5 million"
-msgstr ""
+msgstr ", оцениваемую в 50.5 миллионов долларов США"
 
 msgid "auto-trader programming tool"
-msgstr ""
+msgstr "программный инструмент для автоматизированной торговли"
 
 msgid ""
 "below and proceeding with the Account Opening you should note that you may "
@@ -4629,9 +5046,6 @@ msgstr ""
 "подвергаете себя риску (который может оказаться весьма значительным и "
 "включать риск потери всей инвестиции), для оценки и смягчения которого у Вас "
 "может быть недостаточно знаний и опыта"
-
-msgid "between"
-msgstr "между"
 
 msgid "commission"
 msgstr "комиссия"
@@ -4649,10 +5063,10 @@ msgid "days"
 msgstr "дн."
 
 msgid "disposes of its stake"
-msgstr ""
+msgstr "продает свою долю"
 
 msgid "e-commerce site for branded merchandise"
-msgstr ""
+msgstr "сайт для электронной коммерции и фирменных товаров"
 
 msgid "e.g"
 msgstr "напр."
@@ -4732,7 +5146,7 @@ msgid "main site"
 msgstr "основной сайт"
 
 msgid "medium protection"
-msgstr ""
+msgstr "средняя защита"
 
 msgid "minute"
 msgstr "мин."
@@ -4750,7 +5164,7 @@ msgid "of \"Now\", the"
 msgstr "\"Сейчас\","
 
 msgid "our helpful support desk"
-msgstr ""
+msgstr "служба поддержки"
 
 msgid "payment agent"
 msgstr "платёжный агент"
@@ -4798,7 +5212,7 @@ msgid "websocket"
 msgstr "Websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "да"
@@ -4806,13 +5220,254 @@ msgstr "да"
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
-msgid "| Return"
-msgstr "| Прибыль"
+msgid "| Payout"
+msgstr ""
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr ""
+"позволяющий клиентам, партнёрам и разработчикам покупать и продавать "
+"продукты Binary.com"
+
+#~ msgid "Dash style"
+#~ msgstr "Стиль штрихов"
+
+#~ msgid "Level"
+#~ msgstr "Уровень"
+
+#~ msgid "Price"
+#~ msgstr "Цена"
+
+#~ msgid "Stroke"
+#~ msgstr "Штрих"
+
+#~ msgid "Stroke width"
+#~ msgstr "Ширина штриха"
+
+#~ msgid "| Return"
+#~ msgstr "| Прибыль"
+
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "AM"
+#~ msgstr "утра"
+
+#~ msgid "Account opening"
+#~ msgstr "Открытие счёта"
+
+#~ msgid "Add/remove comparisons"
+#~ msgstr "Добавить/удалить сравнения"
+
+#~ msgid "Add/remove overlays"
+#~ msgstr "Добавить/удалить наложение"
+
+#~ msgid "Average"
+#~ msgstr "Среднее"
+
+#~ msgid "Config changes successful"
+#~ msgstr "Конфигурация изменена успешно"
+
+#~ msgid "Contract Confirmation"
+#~ msgstr "Подтверждение контракта"
+
+#~ msgid "Customize chart appearance"
+#~ msgstr "Настройка вида графика"
+
+#~ msgid "Deselect"
+#~ msgstr "Отменить"
+
+#~ msgid "Done"
+#~ msgstr "Готово"
+
+#~ msgid "Downloading .csv"
+#~ msgstr "Загружается в формате .csv"
+
+#~ msgid "Email verification failed"
+#~ msgstr "Не удалось подтвердить эл. адрес"
+
+#~ msgid ""
+#~ "Ensure you are entering valid inputs else your account will get locked"
+#~ msgstr ""
+#~ "Проверьте правильность вводимых Вами данных; в противном случае Ваш счёт "
+#~ "будет заблокирован"
+
+#~ msgid "Error downloading .csv"
+#~ msgstr "Ошибка при загрузке файла в формате .csv"
+
+#~ msgid "Error getting data for %1"
+#~ msgstr "Ошибка при получении данных для %1"
+
+#~ msgid "Failed to update the password"
+#~ msgstr "Не удалось изменить пароль"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Форма для открытия реального счёта"
+
+#~ msgid "Have better luck at trading!"
+#~ msgstr "Удачи в торговле!"
+
+#~ msgid "Horizontal Line"
+#~ msgstr "Горизонтальная линия"
+
+#~ msgid "Hour"
+#~ msgstr "Час"
+
+#~ msgid "If the issue keeps happening, please contact"
+#~ msgstr "Если проблема повторится, пожалуйста свяжитесь с"
+
+#~ msgid "Jump to"
+#~ msgstr "Перейти к"
+
+#~ msgid "Minute"
+#~ msgstr "Мин."
+
+#~ msgid "Oops... Page Not Available"
+#~ msgstr "Упс... Страница недоступна"
+
+#~ msgid "Optional field, within 20 characters and may not contain '+'"
+#~ msgstr "Опциональное поле (20 символов и не допускается '+')"
+
+#~ msgid "PM"
+#~ msgstr "вечера"
+
+#~ msgid "Page Not Found"
+#~ msgstr "Страница не найдена"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "Минимальная длина пароля: 6 знаков"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "Пароль должен содержать заглавные, строчные буквы и цифры"
+
+#~ msgid "Password must contain uppercase letters and numbers"
+#~ msgstr "Пароль должен содержать заглавные буквы и цифры"
+
+#~ msgid "Password successfully updated"
+#~ msgstr "Пароль изменён успешно"
+
+#~ msgid "Please answer to secret question, within 4-50 characters"
+#~ msgstr "Пожалуйста, ответьте на секретный вопрос (4-50 знаков)"
+
+#~ msgid "Please enter a number between"
+#~ msgstr "Пожалуйста, введите число в следующем диапазоне:"
+
+#~ msgid "Please enter a value for"
+#~ msgstr "Пожалуйста, введите значение для"
+
+#~ msgid "Please enter a vlaid phone number"
+#~ msgstr "Пожалуйста, введите действующий номер телефона"
+
+#~ msgid "Please enter the verification code sent to your email"
+#~ msgstr ""
+#~ "Пожалуйста, введите проверочный код, отправленный на Ваш электронный адрес"
+
+#~ msgid "Please enter your city address"
+#~ msgstr "Пожалуйста, введите адрес"
+
+#~ msgid "Please enter your family name"
+#~ msgstr "Пожалуйста, введите фамилию"
+
+#~ msgid "Please enter your first name"
+#~ msgstr "Пожалуйста, введите имя"
+
+#~ msgid "Please enter your new password"
+#~ msgstr "Пожалуйста, введите новый пароль"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Пожалуйста, введите пароль"
+
+#~ msgid "Please enter your phone number"
+#~ msgstr "Пожалуйста, введите номер телефона"
+
+#~ msgid "Please enter your street address"
+#~ msgstr "Пожалуйста, введите адрес"
+
+#~ msgid "Please use your new password to login"
+#~ msgstr "Пожалуйста, используйте для входа новый пароль"
+
+#~ msgid "Profit Table"
+#~ msgstr "Анализ счёта"
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Открытие реального счёта"
+
+#~ msgid "Reality check"
+#~ msgstr "Проверка реальности"
+
+#~ msgid "Redirecting to oauth login page"
+#~ msgstr "Перенаправление на страницу входа в oauth"
+
+#~ msgid "Registration"
+#~ msgstr "Регистрация"
+
+#~ msgid "Reloading page"
+#~ msgstr "Перезагрузка страницы"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Возврат к настройкам по умолчанию"
+
+#~ msgid "Return to trading page"
+#~ msgstr "Вернуться к странице торговли"
+
+#~ msgid "Sell Price"
+#~ msgstr "Цена продажи"
+
+#~ msgid "Sell Spot"
+#~ msgstr "Котировка продажи"
+
+#~ msgid "Sell Time"
+#~ msgstr "Время продажи"
+
+#~ msgid "Send to account #"
+#~ msgstr "Отправить на счёт #"
+
+#~ msgid "Some random index"
+#~ msgstr "Случайный индекс"
+
+#~ msgid "Street address"
+#~ msgstr "Адрес"
+
+#~ msgid "Stroke color"
+#~ msgstr "Цвет штриха"
+
+#~ msgid "Terms and Conditions"
+#~ msgstr "Правила и условия"
+
+#~ msgid ""
+#~ "The page you requested could not be found. Either it no longer exists or "
+#~ "the address is wrong. Please check for any typos"
+#~ msgstr ""
+#~ "Страница не найдена. Данная страница не существует или Вы ввели "
+#~ "неправильный адрес. Пожалуйста, проверьте, не допустили ли Вы опечатку"
+
+#~ msgid "This contract lost"
+#~ msgstr "Контракт проиграл"
+
+#~ msgid "This contract won"
+#~ msgstr "Контракт выиграл"
+
+#~ msgid "Today"
+#~ msgstr "Сегодня"
+
+#~ msgid "Verification code sent to"
+#~ msgstr "Проверочный код отправлен"
+
+#~ msgid "Vertical Line"
+#~ msgstr "Вертикальная линия"
+
+#~ msgid ""
+#~ "Your account is locked, please contact customer support for more info"
+#~ msgstr ""
+#~ "Ваш счёт заблокирован; пожалуйста, свяжитесь со службой поддержки "
+#~ "клиентов для получения дополнительной информации"
+
+#~ msgid "and"
+#~ msgstr "и"
+
+#~ msgid "between"
+#~ msgstr "между"
 
 #~ msgid "%D MA Type"
 #~ msgstr "Тип СС %D"
@@ -4913,9 +5568,6 @@ msgstr ""
 #~ msgid "Fast Period"
 #~ msgstr "Быстрый период"
 
-#~ msgid "High Barrier"
-#~ msgstr "Верхний барьер"
-
 #~ msgid "High Stroke"
 #~ msgstr "Верхний штрих"
 
@@ -4957,9 +5609,6 @@ msgstr ""
 
 #~ msgid "Long Term Period"
 #~ msgstr "Долгосрочный период"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Нижний барьер"
 
 #~ msgid "Low Stroke"
 #~ msgstr "Нижний штрих"
@@ -5040,9 +5689,6 @@ msgstr ""
 
 #~ msgid "Plot Color"
 #~ msgstr "Цвет темы"
-
-#~ msgid "Price"
-#~ msgstr "Цена"
 
 #~ msgid "Purchase Time"
 #~ msgstr "Время покупки"
