@@ -187,7 +187,7 @@
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
         }
 
-        var lang = getParameterByName('lang') || 'en';
+        var lang = getParameterByName('lang') || local_storage.get('i18n').value || 'en';
         if (isLangSupported(lang)) {
             local_storage.set('i18n', { value: lang });
         } else { // In case of invalid language fallback to EN
@@ -210,9 +210,12 @@
                 });
                 // Show hidden languages
                 $('#select_language').find('.invisible').removeClass('invisible');
-                var curr_lang = $('#select_language').find('.'+lang.toUpperCase());
-                curr_lang.addClass('invisible');
-                console.log(curr_lang.text());
+                var selected_lang = $('#select_language').find('.'+lang.toUpperCase());
+                var curr_ele = $('#select_language .current .language');
+                var disp_lang = $("#display_language .language");
+                disp_lang.text(selected_lang.text());
+                curr_ele.text(selected_lang.text());
+                selected_lang.addClass('invisible');
             }
         }
         function setTime() {
