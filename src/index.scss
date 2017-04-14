@@ -9,6 +9,16 @@ body {
 .fr {
     margin: auto;
     width: 90%;
+    .languages {
+        display: inline-block;
+    }
+    a, ul {
+        margin-left: 10px;
+    }
+    ul li a {
+        color: black !important;
+        font-weight: normal !important;
+    }
 }
 .ln29 {
     line-height: 29px;
@@ -36,7 +46,7 @@ body {
     width: 100%;
 }
 #regulatory-image {
-    display: flex
+    display: flex;
 }
 #regulatory-image div:first-child img {
     width: 80px;
@@ -87,13 +97,13 @@ body {
     width: 35%;
     margin: 40px 0 10px 10px;
 }
-@media screen and (min-width: 832px) and (min-height: 800px) {
+@media screen and (min-width:832px) and (min-height:800px) {
     #footer {
         position: fixed;
         bottom: 0;
     }
 }
-#doorbell-button  {
+#doorbell-button {
     right: -37px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
