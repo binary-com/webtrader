@@ -43,6 +43,7 @@ body {
 }
 #regulatory-image div:last-child img {
     width: 100px;
+    margin: 10px 0;
 }
 #images {
     display: flex;
@@ -57,7 +58,7 @@ body {
 }
 .social-icons a {
     padding: 4px;
-    min-width: 35px;
+    min-width: 25px;
 }
 #footer a {
     display: inline-block;
