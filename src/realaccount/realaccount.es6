@@ -76,7 +76,6 @@ const init_real_win = (root, what_todo) => {
       left: offset.left + 'px',
       top: offset.top + 'px'
    });
-   real_win.fixFooterPosition();
 }
 
 const init_state = (root, what_todo) => {
@@ -101,6 +100,7 @@ const init_state = (root, what_todo) => {
       user: {
          disabled: false,
          accepted: what_todo === 'upgrade-mf',
+         pep: false,
          salutation: 'Mr',
          salutation_array: ['Mr', 'Mrs', 'Ms', 'Miss'],
          first_name: '',

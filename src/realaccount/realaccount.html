@@ -117,6 +117,18 @@
                 </span>
             </div>
         </div>
+        <div class='row'>
+            <span class="title-big">PEP Declaration</span>
+        </div>
+        <div class='row'>
+            <span class='title'>A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates.</span>
+        </div>
+        <div class='row'>
+            <br>
+            <label>
+                <input type='checkbox' rv-checked='user.pep' /> I acknowledge that I am not a politically exposed person (PEP).
+            </label>
+        </div>
         <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
             <span class="title-big">Tax information</span>
         </div>
@@ -143,6 +155,7 @@
                 <span rv-show='user.tax_identification_number | is-valid-regex "^[\w-]{0,20}$" | eq false' class='validation error-msg '>Only numbers, letters, hyphens are allowed.</span>
             </div>
         </div>
+        <br>
         <div class='row'>
             <label rv-if='what_todo | eq "upgrade-mlt"'>
                 <input type='checkbox' rv-checked='user.accepted' /> I have read and agree to Binary.com
@@ -150,7 +163,7 @@
             </label>
         </div>
         <div class='row'>
-            <button rv-on-click='user.click' rv-disabled='user.disabled | or-not user.accepted' rv-css-opacity='user.disabled | or-not user.accepted| ternary 0.5 1'>
+            <button rv-on-click='user.click' rv-disabled='user.disabled | or-not user.accepted | or-not user.pep' rv-css-opacity='user.disabled | or-not user.accepted | or-not user.pep | ternary 0.5 1'>
                 <span rv-if='what_todo | eq "upgrade-mlt"'>Open Account</span>
                 <span rv-if='what_todo | not-eq "upgrade-mlt"'>Continue</span>
             </button>
