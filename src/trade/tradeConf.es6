@@ -164,7 +164,6 @@ const register_ticks = (state, extra) => {
       const contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
-      // contract.date_epxiry is WRONG with odd numbers.
       // DONT TRUST BACKEND! I'm really angry right now :/
       // Try everything before calculating expiry.
       expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
