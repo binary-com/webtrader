@@ -57,7 +57,7 @@ class TradeTemplateManager {
 
     menu.save_as = () => {
       const tmpl = dialog.get_template();
-      tmpl.name = `${tmpl.categories_value} ${_.capitalize(tmpl.categoriy_displays_selected)}`;
+      tmpl.name = `${tmpl.categories_value.contract_category_display} ${_.capitalize(tmpl.categoriy_displays_selected.name)}`;
       templates.save_as_value = tmpl.name;
       route.update('save-as');
     }

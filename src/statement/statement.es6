@@ -181,7 +181,7 @@ const on_arrow_click = (e) =>{
    transaction = _.last(transaction);
    $target.addClass('button-disabled');
    viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-      .then(() => $target.removeClass('button-disabled'));
+      .then(() => $target.removeClass('button-disabled')).catch((err)=>{});
 }
 
 export default  { init }

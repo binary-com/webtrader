@@ -448,6 +448,11 @@ msgstr ""
 "完整收盤並同時確認翻轉的第三看跌燭圖。被視為強大的看跌價逆轉K 線圖形態"
 
 msgid ""
+"A PEP is an individual who is or has been entrusted with a prominent public "
+"function. This status extends to a PEP's relatives and close associates"
+msgstr ""
+
+msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
 "and an Exponential Moving Average, only with a longer period applied"
 msgstr "平滑移動平均線類似簡單移動平均線與指數移動平均線的混合，但應用期限較長"
@@ -1087,28 +1092,6 @@ msgstr ""
 "Binary.com在久負盛名的倫敦EGR操作員頒獎儀式中榮獲2015年金融搏彩操作員第一獎"
 
 msgid ""
-"Binary.com's Spread Contracts are leveraged derivative contracts, the value "
-"of which is directly tied to the underlying market movements. Clients who "
-"'Long' a rising market (and those who 'Short' a falling market) profit from "
-"those movements with much less investment than would be required in the live "
-"market"
-msgstr ""
-"Binary.com的價差合約為槓桿型衍生合約，其價值直接與基礎市場走勢掛勾。  以比實"
-"時市場較低之投資對上漲市場購入「長倉」合同（及對下降市場購入「短倉」合同）的"
-"客戶從以上價格走勢中獲利"
-
-msgid ""
-"Binary.com's Spread Contracts require a 'stop loss' which limits the maximum "
-"losses incurred by a client. This 'stop loss' amount will act as a deposit "
-"and may not be used for further trading until that Spread Contract is "
-"closed. Spread Contracts are closed when sold by the client, upon hitting "
-"the 'stop loss' or 'stop profit' level"
-msgstr ""
-"Binary.com%1 的價差合約需要可以制定客戶最大損失限額的「止損」。此「止損」額將"
-"當作訂金，在價差合約平倉前不可用於繼續交易。價差合約在接觸「止損」或「止盈」"
-"水平時由客戶售出完成平倉"
-
-msgid ""
 "Binary.com's systems are now processing in excess of 1 million transactions/"
 "day (including virtual accounts)"
 msgstr "Binary.com每天處理超過百萬筆交易(包括虛擬帳戶)"
@@ -1520,6 +1503,9 @@ msgstr "權杖用途說明，以備稍後找尋"
 msgid "Description"
 msgstr "說明"
 
+msgid "Deutsch"
+msgstr ""
+
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
 "identify trend reversals based on range expansions. In this sense, the Mass "
@@ -1705,6 +1691,9 @@ msgstr "範圍之內收盤"
 msgid "Ends out"
 msgstr "範圍之外收盤"
 
+msgid "English"
+msgstr ""
+
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "吞沒形態 (CDLENGULFING)"
 
@@ -1720,6 +1709,9 @@ msgstr "入市現價"
 msgid "Entry spot price"
 msgstr "入市現價"
 
+msgid "Espa ol"
+msgstr ""
+
 msgid "Estimated Net Worth"
 msgstr "估計淨值"
 
@@ -1731,9 +1723,6 @@ msgstr "十字夜星 (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
 msgstr "夜星 (CDLEVENINGSTAR)"
-
-msgid "Example"
-msgstr "例如"
 
 msgid "Exclude me from the website until"
 msgstr "禁止我訪問本網站直到"
@@ -1860,6 +1849,9 @@ msgid ""
 msgstr ""
 "分形是K 線圖圖表上用於識別市場價格反轉點的指標。交易員一般通過使用分形來判斷"
 "價格的走勢方向。當圖表出現某一價格形態時即會形成分形"
+
+msgid "Fran ais"
+msgstr ""
 
 msgid "Fri"
 msgstr "星期五"
@@ -1988,6 +1980,9 @@ msgstr "二元期權如何交易?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "赫爾移動平均線 (HMA)"
+
+msgid "I acknowledge that I am not a politically exposed person (PEP)"
+msgstr ""
 
 msgid "I have read and agree to Binary.com"
 msgstr "本人已經閱讀並同意Binary.com的"
@@ -2140,11 +2135,6 @@ msgstr ""
 "就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
 
 msgid ""
-"In regards to binary options which are gambling products, remember that "
-"gambling can be addictive"
-msgstr "關於進行博彩產品交易之二元期權，請務必要記住博彩活動可能會上癮"
-
-msgid ""
 "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In "
 "Japan, they trade through Binary KK. In the European Union (except UK), they "
 "trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In "
@@ -2184,6 +2174,9 @@ msgstr "指數交易頻率"
 
 msgid "Individual Traders"
 msgstr "個人交易者"
+
+msgid "Indonesia"
+msgstr ""
 
 msgid "Industry of Employment"
 msgstr "職業領域"
@@ -2234,6 +2227,16 @@ msgid ""
 msgstr ""
 "擴大規模的時機到了。我們在有「吉隆坡矽谷」美譽的 Cyberjaya 成立了一個編程中"
 "心，旨在維持和提高 BetOnMarkets.com 的效率"
+
+msgid "Italiano"
+msgstr ""
+
+msgid ""
+"Its multi window interface allows pro traders to monitor the movements of "
+"multiple assets and markets at the same time. Thanks to multiple tools and "
+"indicators available, it allows tradingn and analyzing market with maximum "
+"flexibility"
+msgstr ""
 
 msgid "Jan"
 msgstr "一月"
@@ -2870,6 +2873,9 @@ msgstr "重疊研究"
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PEP Declaration"
+msgstr ""
+
 msgid "PNG"
 msgstr "PNG"
 
@@ -2987,8 +2993,14 @@ msgstr "利潤/虧損"
 msgid "Points"
 msgstr "點"
 
+msgid "Polski"
+msgstr ""
+
 msgid "Portfolio"
 msgstr "投資組合"
+
+msgid "Portugu s"
+msgstr ""
 
 msgid "Postal code/ZIP"
 msgstr "郵區編號"
@@ -3001,11 +3013,6 @@ msgstr "潛在利潤"
 
 msgid "Potential profit"
 msgstr "潛在利潤"
-
-msgid ""
-"Potential profit and losses are limited to stop profit and stop loss levels "
-"respectively"
-msgstr "潛在盈虧分別受止盈、止損價位所限制"
 
 msgid "Pre-Defined"
 msgstr "預定義"
@@ -3091,6 +3098,9 @@ msgstr "變動率比例 (ROCR)"
 
 msgid "Read"
 msgstr "閱讀"
+
+msgid "Read about"
+msgstr ""
 
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
@@ -3391,6 +3401,9 @@ msgstr "標準提款方式"
 
 msgid "Start Time"
 msgstr "開始時間"
+
+msgid "Start Trading"
+msgstr ""
 
 msgid "Start time"
 msgstr "開始時間"
@@ -3967,27 +3980,6 @@ msgid "The duration is the length of a purchased trade (see"
 msgstr "期限是所買入交易的時間週期（參考"
 
 msgid ""
-"The entry level for a long contract is 1001, which is entry spot + half "
-"spread. At exit, the spot is at 1100 and hence the exit level for a long "
-"contract is 1099, which is exit spot - half spread"
-msgstr ""
-"長倉合約的進場價位為1001，即進場現價 + 一半價差。退出時，現價為 1100，因此長"
-"倉合約的退市價位為 1099，即退場現價 - 一半價差"
-
-msgid ""
-"The entry level for a short contract is 999, which is entry spot - half "
-"spread. At exit, the spot is at 1100 and hence the exit level for a short "
-"contract is 1101, which is exit spot + half spread"
-msgstr ""
-"短倉合約的進場價位為999，即進場現價 - 一半價差。退出時，現價為 1100，因此短倉"
-"合約的退市價位為 1101，即退場現價 + 一半價差"
-
-msgid ""
-"The entry spot of an instrument XYZ is 1000 and the spread on this "
-"instrument is 2 points"
-msgstr "XYZ 工具的進場現價為1000，而此工具的價差為2點"
-
-msgid ""
 "The entry spot price is the starting price of the trade purchased by a trader"
 msgstr "入市現價是交易者所買入交易的初始價格"
 
@@ -4050,11 +4042,6 @@ msgstr ""
 "值調整平滑度"
 
 msgid ""
-"The loss of USD 306 is the difference between the exit and entry level "
-"multiplied by the amount per point"
-msgstr "306美元虧損是以退出和進場價位的相差額乘以每一點的金額算出"
-
-msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr "市場平倉價為合約期限到期時的有效價格"
@@ -4102,11 +4089,6 @@ msgid ""
 "The profit is the difference between the purchase price (the stake) and the "
 "payout on a winning trade"
 msgstr "利潤即盈利交易中所得賠付金額與購買價格（成本）之間的差額"
-
-msgid ""
-"The profit of USD 294 is the difference between the exit and entry level "
-"multiplied by the amount per point"
-msgstr "294美元盈利是以退出和進場價位的相差額乘以每一點的金額算出"
 
 msgid ""
 "The rebranding is a natural evolution for the platform as it continues to "
@@ -4229,6 +4211,26 @@ msgstr ""
 "此形態發生時兩個黑色交易日以相同收盤價出現在下降趨勢中。相符最低價顯示已達到"
 "谷底，雖然測試了新的最低價，但沒有加速現象，表示價格強勁"
 
+msgid ""
+"This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., "
+"First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, "
+"British Isles, licenced and regulated by (1) the Gambling Supervision "
+"Commission in the Isle of Man, British Isles, current online gambling "
+"licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling "
+"Commission -"
+msgstr ""
+
+msgid ""
+"This website is marketed in the rest of the EU, for investment products by "
+"Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, "
+"Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment "
+"Services provider by the Malta Financial Services Authority (license no. "
+"IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao "
+"Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated "
+"by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, "
+"26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+msgstr ""
+
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "上升三白兵 (CDL3WHITESOLDIERS)"
 
@@ -4301,6 +4303,9 @@ msgstr "時代在變。我們增加了賠付金額，以便我們的客戶從盈
 
 msgid "Title"
 msgstr "職稱"
+
+msgid "Ti ng Vi t"
+msgstr ""
 
 msgid "To"
 msgstr "到"
@@ -4397,10 +4402,9 @@ msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
 "that you fully understand the risks involved. Your losses can exceed your "
 "initial deposit and you do not own or have any interest in the underlying "
-"asset"
+"asset. In regards to binary options which are gambling products, remember "
+"that gambling can be addictive - please play responsibly"
 msgstr ""
-"二元期權交易不一定適合每一個人。因此，請確保您完全明白有關的風險。您的虧損可"
-"能會超越起始資金存款，而您並不擁有或占有任何標的資產"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -4641,6 +4645,9 @@ msgstr "Websocket 伺服器"
 msgid "Webtrader"
 msgstr "Webtrader"
 
+msgid "Webtrader is a Binary.com's advanced desktop trading platform"
+msgstr ""
+
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader採用新型網絡技術，為您提供豐富而充滿樂趣的交易體驗"
@@ -4656,6 +4663,9 @@ msgstr "加權收盤價 (WCLPRICE)"
 
 msgid "Weighted Moving Average (WMA)"
 msgstr "加權移動平均指標 (WMA)"
+
+msgid "Welcome to Binary Webtrader"
+msgstr ""
 
 msgid ""
 "When you are satisfied with the trade price, instantly execute your trade"
@@ -4837,6 +4847,13 @@ msgid ""
 "and-drop  simplicity"
 msgstr "讓客戶輕鬆採用「拖放」功能開發自己的自動化交易機器人"
 
+msgid ""
+"and for Irish clients by (3) the Revenue Commissioners in Ireland, current "
+"remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). "
+"This website's services are not made available in certain countries such as "
+"the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
+
 msgid "apostrophe (') are allowed"
 msgstr "允許使用所有格號(')"
 
@@ -4977,9 +4994,6 @@ msgstr "我們熱心的支援人員"
 msgid "payment agent"
 msgstr "支付代理"
 
-msgid "please play responsibly. Read about"
-msgstr "請在玩時提醒自己要承擔責任。請查閱"
-
 msgid "points"
 msgstr "點"
 
@@ -5016,6 +5030,9 @@ msgstr "交易經驗"
 msgid "trading frequency"
 msgstr "交易頻率"
 
+msgid "view license"
+msgstr ""
+
 msgid "websocket"
 msgstr "websocket"
 
@@ -5035,6 +5052,84 @@ msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
 "products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
+
+#~ msgid ""
+#~ "Binary.com's Spread Contracts are leveraged derivative contracts, the "
+#~ "value of which is directly tied to the underlying market movements. "
+#~ "Clients who 'Long' a rising market (and those who 'Short' a falling "
+#~ "market) profit from those movements with much less investment than would "
+#~ "be required in the live market"
+#~ msgstr ""
+#~ "Binary.com的價差合約為槓桿型衍生合約，其價值直接與基礎市場走勢掛勾。  以比"
+#~ "實時市場較低之投資對上漲市場購入「長倉」合同（及對下降市場購入「短倉」合"
+#~ "同）的客戶從以上價格走勢中獲利"
+
+#~ msgid ""
+#~ "Binary.com's Spread Contracts require a 'stop loss' which limits the "
+#~ "maximum losses incurred by a client. This 'stop loss' amount will act as "
+#~ "a deposit and may not be used for further trading until that Spread "
+#~ "Contract is closed. Spread Contracts are closed when sold by the client, "
+#~ "upon hitting the 'stop loss' or 'stop profit' level"
+#~ msgstr ""
+#~ "Binary.com%1 的價差合約需要可以制定客戶最大損失限額的「止損」。此「止損」"
+#~ "額將當作訂金，在價差合約平倉前不可用於繼續交易。價差合約在接觸「止損」或"
+#~ "「止盈」水平時由客戶售出完成平倉"
+
+#~ msgid "Example"
+#~ msgstr "例如"
+
+#~ msgid ""
+#~ "In regards to binary options which are gambling products, remember that "
+#~ "gambling can be addictive"
+#~ msgstr "關於進行博彩產品交易之二元期權，請務必要記住博彩活動可能會上癮"
+
+#~ msgid ""
+#~ "Potential profit and losses are limited to stop profit and stop loss "
+#~ "levels respectively"
+#~ msgstr "潛在盈虧分別受止盈、止損價位所限制"
+
+#~ msgid ""
+#~ "The entry level for a long contract is 1001, which is entry spot + half "
+#~ "spread. At exit, the spot is at 1100 and hence the exit level for a long "
+#~ "contract is 1099, which is exit spot - half spread"
+#~ msgstr ""
+#~ "長倉合約的進場價位為1001，即進場現價 + 一半價差。退出時，現價為 1100，因此"
+#~ "長倉合約的退市價位為 1099，即退場現價 - 一半價差"
+
+#~ msgid ""
+#~ "The entry level for a short contract is 999, which is entry spot - half "
+#~ "spread. At exit, the spot is at 1100 and hence the exit level for a short "
+#~ "contract is 1101, which is exit spot + half spread"
+#~ msgstr ""
+#~ "短倉合約的進場價位為999，即進場現價 - 一半價差。退出時，現價為 1100，因此"
+#~ "短倉合約的退市價位為 1101，即退場現價 + 一半價差"
+
+#~ msgid ""
+#~ "The entry spot of an instrument XYZ is 1000 and the spread on this "
+#~ "instrument is 2 points"
+#~ msgstr "XYZ 工具的進場現價為1000，而此工具的價差為2點"
+
+#~ msgid ""
+#~ "The loss of USD 306 is the difference between the exit and entry level "
+#~ "multiplied by the amount per point"
+#~ msgstr "306美元虧損是以退出和進場價位的相差額乘以每一點的金額算出"
+
+#~ msgid ""
+#~ "The profit of USD 294 is the difference between the exit and entry level "
+#~ "multiplied by the amount per point"
+#~ msgstr "294美元盈利是以退出和進場價位的相差額乘以每一點的金額算出"
+
+#~ msgid ""
+#~ "Trading binary options may not be suitable for everyone, so please ensure "
+#~ "that you fully understand the risks involved. Your losses can exceed your "
+#~ "initial deposit and you do not own or have any interest in the underlying "
+#~ "asset"
+#~ msgstr ""
+#~ "二元期權交易不一定適合每一個人。因此，請確保您完全明白有關的風險。您的虧損"
+#~ "可能會超越起始資金存款，而您並不擁有或占有任何標的資產"
+
+#~ msgid "please play responsibly. Read about"
+#~ msgstr "請在玩時提醒自己要承擔責任。請查閱"
 
 #~ msgid "404"
 #~ msgstr "404"
