@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-07 15:45+0200\n"
-"PO-Revision-Date: 2017-02-27 17:33+0000\n"
+"PO-Revision-Date: 2017-04-12 14:10+0000\n"
 "Last-Translator: Karin Graf <karin_graf@hotmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/binary-webtrader/"
-"translations/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Weblate 2.13\n"
 
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
@@ -1084,10 +1084,10 @@ msgid "Binary options or other financial derivatives"
 msgstr "Binäre Optionen oder andere Finanzderivate"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "Erfahrung mit Binären Optionen oder Handel mit anderen Finanzderivaten"
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "Handelshäufigkeit mit Binären Optionen oder anderen Finanzderivaten"
 
 msgid "Binary trading is flexible"
 msgstr "Der Handel mit binären Optionen ist flexibel"
@@ -1537,7 +1537,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "Anklicken, um sich mit Ihrem Binary.com Konto anzumelden"
 
 msgid "Close"
-msgstr ""
+msgstr "Schluss"
 
 msgid "Close Price"
 msgstr "Kurs schließen"
@@ -1890,6 +1890,10 @@ msgid ""
 "to complete the following Financial Assessment. Please note that you will "
 "not be able to continue trading until this is completed"
 msgstr ""
+"Wegen der kürzlich vorgenommenen Änderungen der Vorschriften sind wir "
+"gezwungen, unsere Kunden zu bitten, die folgende Finanzielle Beurteilung "
+"auszufüllen. Bitte beachten Sie, dass Sie, bis diese ausgefüllt ist, nicht "
+"weiter Handel treiben können"
 
 msgid "Duration"
 msgstr "Dauer"
@@ -1981,7 +1985,7 @@ msgid "Exit Spot"
 msgstr "Schlusskurs"
 
 msgid "Exit Spot Time"
-msgstr ""
+msgstr "Schlusskurszeit"
 
 msgid "Exit spot"
 msgstr "Schlusskurs"
@@ -2044,7 +2048,7 @@ msgid "Finance"
 msgstr "Finanzen"
 
 msgid "Financial Information"
-msgstr ""
+msgstr "Finanzinformationen"
 
 msgid "Financial Security"
 msgstr "Finanzielle Sicherheit"
@@ -2059,7 +2063,7 @@ msgid "Firefox"
 msgstr "Firefox"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "1. Zeile der Privatanschrift"
 
 msgid "First name"
 msgstr "Vorname"
@@ -2179,7 +2183,7 @@ msgid "Help"
 msgstr "Hilfe"
 
 msgid "High"
-msgstr ""
+msgstr "Hoch"
 
 msgid "High Barrier"
 msgstr "Obere Schwelle"
@@ -2778,7 +2782,7 @@ msgstr ""
 "des ersten Balken"
 
 msgid "Low"
-msgstr ""
+msgstr "Tief"
 
 msgid "Low Barrier"
 msgstr "Untere Schwelle"
@@ -2905,13 +2909,13 @@ msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Mindestens 6 Zeichen und muss zumindest 1 Ziffer beinhalten"
 
 msgid "Minimum of 2 characters required"
-msgstr ""
+msgstr "Mindestens 2 Zeichen sind erforderlich"
 
 msgid "Minimum of 4 characters required"
-msgstr ""
+msgstr "Mindestens 4 Zeichen sind erforderlich"
 
 msgid "Minimum of 6 characters required"
-msgstr ""
+msgstr "Mindestens 6 Zeichen sind erforderlich"
 
 msgid "Minimum price over selected period"
 msgstr "Minimaler Kurs über den ausgewählten Zeitraum"
@@ -3103,25 +3107,31 @@ msgstr ""
 "durchgeführt"
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "Es sind nur Buchstaben, Zahlen und Bindestriche erlaubt"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
 msgstr ""
+"Es sind nur Buchstaben, Zahlen, Leerzeichen, Bindestriche, Punkte und "
+"Apostrophe erlaubt"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
 msgstr ""
+"Es sind nur Buchstaben, Zahlen, Leerzeichen, Punkte, Beistriche und - / @ ' "
+"erlaubt"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "Nur Buchstaben, Zahlen, Abstand, Punkt, Komma, Querstrich(-)"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
 msgstr ""
+"Es sind nur Buchstaben, Leerzeichen, Bindestriche, Punkte und Apostrophe "
+"erlaubt"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "Es sind nur Zahlen und Leerzeichen erlaubt"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "Es sind nur Zahlen, Buchstaben und Bindestriche erlaubt"
 
 msgid "Open"
 msgstr "Offen"
@@ -3265,7 +3275,7 @@ msgstr ""
 "Dezimalstelle (d.h. 0,0001) ist"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "Geburtsort"
 
 msgid "Please"
 msgstr "Bitte"
@@ -3283,7 +3293,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Bitte geben Sie ein gültiges Datum im Format jjjj-mm-tt an"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "Bitte geben Sie einen Wert größer als 0 ein"
 
 msgid "Please enter correct email"
 msgstr "Bitte geben Sie eine korrekte E-mail Adresse ein"
@@ -3307,13 +3317,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Bitte installieren Sie die letzte Version einer dieser Browser"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "Bitte geben Sie Ihre Steuerinformationen an"
 
 msgid "Please select"
 msgstr "Bitte auswählen"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "Bitte übermitteln Sie einen gültigen Verifikationstoken"
 
 msgid "Please try again after 1 minute"
 msgstr "Bitte nach 1 Minute erneut versuchen"
@@ -3522,7 +3532,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "Relative Stärke Index (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 msgid "Remove Selected"
 msgstr "Auswahl entfernen"
@@ -3612,7 +3622,7 @@ msgid "Scalable trading"
 msgstr "Skalierbarer Handel"
 
 msgid "Second line of home address"
-msgstr ""
+msgstr "2. Zeile der Wohnadresse"
 
 msgid "Secondary"
 msgstr "Sekundär"
@@ -3878,13 +3888,13 @@ msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "Tasuki Gap (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "Steuer-Identifizierungsnummer"
 
 msgid "Tax information"
-msgstr ""
+msgstr "Steuerinformation"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "Steuerdomizil"
 
 msgid "Tax-free"
 msgstr "Steuerfrei"
@@ -4489,6 +4499,13 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract premium"
 msgstr ""
+"Die Finanzhandelsdienstleistungen, die diese Site enthält, eignen sich nur "
+"für Kunden, die einen Verlust ihres gesamten investierten Geldes verkraften "
+"können und die die Risiken erkennen, die mit dem Erwerb von Finanzverträgen "
+"im Zusammenhang stehen und damit Erfahrung haben. Transaktionen mit "
+"Finanzkontrakten beinhalten ein hohes Risiko. Wenn erworbene Kontrakte "
+"wertlos auslaufen, geht Ihre gesamte Investition, die aus der Kontraktprämie "
+"besteht, verloren"
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -4996,7 +5013,7 @@ msgid "Tradingview for Binary.com"
 msgstr "Tradingansicht für Binary.com"
 
 msgid "Transfer"
-msgstr ""
+msgstr "Überweisung"
 
 msgid "Transfer to another Binary account"
 msgstr "Auf ein anderes Binary Konto überweisen"
@@ -5097,7 +5114,7 @@ msgid "Upcoming Events"
 msgstr "Bevorstehende Veranstaltungen"
 
 msgid "Update"
-msgstr ""
+msgstr "Aktualisierung"
 
 msgid "Update Settings"
 msgstr "Einstellungen aktualisieren"
@@ -5665,7 +5682,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Payout"
-msgstr ""
+msgstr "| Auszahlung"
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
