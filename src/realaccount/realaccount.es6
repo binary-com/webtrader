@@ -100,6 +100,7 @@ const init_state = (root, what_todo) => {
       user: {
          disabled: false,
          accepted: what_todo === 'upgrade-mf',
+         pep: false,
          salutation: 'Mr',
          salutation_array: ['Mr', 'Mrs', 'Ms', 'Miss'],
          first_name: '',
