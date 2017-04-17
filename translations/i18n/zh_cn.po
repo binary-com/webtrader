@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 08:49+0200\n"
-"PO-Revision-Date: 2017-02-28 07:22+0000\n"
+"PO-Revision-Date: 2017-04-17 07:00+0000\n"
 "Last-Translator: Freddy Hew <hewfreddy@gmail.com>\n"
-"Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary-"
-"webtrader/translations/zh_CN/>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects"
+"/binary-webtrader/translations/zh_Hans/>\n"
 "Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Weblate 2.14-dev\n"
 
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
@@ -449,7 +449,7 @@ msgstr ""
 msgid ""
 "A PEP is an individual who is or has been entrusted with a prominent public "
 "function. This status extends to a PEP's relatives and close associates"
-msgstr ""
+msgstr "PEP是被委托进行特出公众任务的个人。此荣誉包括了PEP的亲属和亲近的人"
 
 msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
@@ -940,10 +940,10 @@ msgid "Binary options or other financial derivatives"
 msgstr "二元期权或其他金融衍生品"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "二元期权或其他金融衍生品交易经验"
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "二元期权或其他金融衍生品交易频率"
 
 msgid "Binary trading is flexible"
 msgstr "二元期权交易很灵活"
@@ -1307,7 +1307,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "点击登录Binary.com账户"
 
 msgid "Close"
-msgstr ""
+msgstr "关"
 
 msgid "Close Price"
 msgstr ":收盘价"
@@ -1505,7 +1505,7 @@ msgid "Description"
 msgstr "说明"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "德文"
 
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
@@ -1641,7 +1641,7 @@ msgid ""
 "Due to recent changes in the regulations, we are required to ask our clients "
 "to complete the following Financial Assessment. Please note that you will "
 "not be able to continue trading until this is completed"
-msgstr ""
+msgstr "由于最近的法规变更，客户必须填写以下金融评估。您须填写完成才能继续交易"
 
 msgid "Duration"
 msgstr "持续时间"
@@ -1693,7 +1693,7 @@ msgid "Ends out"
 msgstr "范围之外收盘"
 
 msgid "English"
-msgstr ""
+msgstr "英语"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "吞没形态 (CDLENGULFING)"
@@ -1711,7 +1711,7 @@ msgid "Entry spot price"
 msgstr "入市现价"
 
 msgid "Espa ol"
-msgstr ""
+msgstr "西班牙文"
 
 msgid "Estimated Net Worth"
 msgstr "估计净值"
@@ -1732,7 +1732,7 @@ msgid "Exit Spot"
 msgstr "退市现价"
 
 msgid "Exit Spot Time"
-msgstr ""
+msgstr "退市现价时间"
 
 msgid "Exit spot"
 msgstr "退市现价"
@@ -1791,7 +1791,7 @@ msgid "Finance"
 msgstr "金融"
 
 msgid "Financial Information"
-msgstr ""
+msgstr "金融信息"
 
 msgid "Financial Security"
 msgstr "财务安全"
@@ -1806,7 +1806,7 @@ msgid "Firefox"
 msgstr "Firefox"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "家庭地址第一行"
 
 msgid "First name"
 msgstr "名字"
@@ -1852,7 +1852,7 @@ msgstr ""
 "价格的走势方向。当图表出现某一价格形态时即会形成分形"
 
 msgid "Fran ais"
-msgstr ""
+msgstr "法文"
 
 msgid "Fri"
 msgstr "星期五"
@@ -1920,7 +1920,7 @@ msgid "Help"
 msgstr "帮助"
 
 msgid "High"
-msgstr ""
+msgstr "高"
 
 msgid "High Barrier"
 msgstr "高障碍"
@@ -1983,7 +1983,7 @@ msgid "Hull Moving Average (HMA)"
 msgstr "赫尔移动平均线 (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
+msgstr "我确认本人不是政治公众人士(PEP)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "本人已经阅读并同意Binary.com的"
@@ -2177,7 +2177,7 @@ msgid "Individual Traders"
 msgstr "个人交易者"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "印度尼西亚"
 
 msgid "Industry of Employment"
 msgstr "职业领域"
@@ -2230,14 +2230,14 @@ msgstr ""
 "旨在维持和提高BetOnMarkets.com的效率"
 
 msgid "Italiano"
-msgstr ""
+msgstr "意大利文"
 
 msgid ""
 "Its multi window interface allows pro traders to monitor the movements of "
 "multiple assets and markets at the same time. Thanks to multiple tools and "
 "indicators available, it allows tradingn and analyzing market with maximum "
 "flexibility"
-msgstr ""
+msgstr "其多窗口界面允许专业操盘手同时监控多个资产和市场的变动。得益于多种工具和指标，它可以充分发挥交易操作和市场分析的灵活度"
 
 msgid "Jan"
 msgstr "一月"
@@ -2468,7 +2468,7 @@ msgstr ""
 "高于第一支烛形线的开盘价"
 
 msgid "Low"
-msgstr ""
+msgstr "低"
 
 msgid "Low Barrier"
 msgstr "低障碍"
@@ -2589,13 +2589,13 @@ msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "需至少6个字符与1个数字"
 
 msgid "Minimum of 2 characters required"
-msgstr ""
+msgstr "需要至少2个字符"
 
 msgid "Minimum of 4 characters required"
-msgstr ""
+msgstr "需要至少4个字符"
 
 msgid "Minimum of 6 characters required"
-msgstr ""
+msgstr "需要至少6个字符"
 
 msgid "Minimum price over selected period"
 msgstr "选定期内最低价"
@@ -2776,25 +2776,25 @@ msgstr ""
 "我们网站的交易数量已超过1500万笔"
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "只允许字母、数字和连字号"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "只允许使用字母、数字、空格、连字符、句点和省略号"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+msgstr "只允许使用字母、数字、空格、句点、逗号和- / @ '"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "只允许使用字母、数字、空格、句号、逗号和虚线(-)"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "只允许使用字母、空格、连字符、句点和省略号"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "只允许使用数字和空格"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "只允许使用数字、字母和连字号"
 
 msgid "Open"
 msgstr "开盘"
@@ -2876,7 +2876,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PEP Declaration"
-msgstr ""
+msgstr "PEP 声明"
 
 msgid "PNG"
 msgstr "PNG"
@@ -2936,7 +2936,7 @@ msgstr ""
 "点（percentage in point，缩写为pip）一般来说是指小数点后第4位数（如0.0001）"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "出生地"
 
 msgid "Please"
 msgstr "请"
@@ -2951,7 +2951,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "请输入有效日期，格式为年-月-日"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "请输入大于0的数值"
 
 msgid "Please enter correct email"
 msgstr "请输入正确的电子邮件"
@@ -2975,13 +2975,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "以下浏览器请选择一个并安装最新版本"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "请提供税务信息"
 
 msgid "Please select"
 msgstr "请选择"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "请提供有效的验证令牌"
 
 msgid "Please try again after 1 minute"
 msgstr "请于1分钟后重试"
@@ -2996,13 +2996,13 @@ msgid "Points"
 msgstr "点"
 
 msgid "Polski"
-msgstr ""
+msgstr "波兰文"
 
 msgid "Portfolio"
 msgstr "投资组合"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "葡萄牙文"
 
 msgid "Postal code/ZIP"
 msgstr "邮编"
@@ -3102,7 +3102,7 @@ msgid "Read"
 msgstr "阅读"
 
 msgid "Read about"
-msgstr ""
+msgstr "阅读关于"
 
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
@@ -3171,7 +3171,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "相对强弱指标 (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 msgid "Remove Selected"
 msgstr "移除选定项目"
@@ -3261,7 +3261,7 @@ msgid "Scalable trading"
 msgstr "灵活交易"
 
 msgid "Second line of home address"
-msgstr ""
+msgstr "家庭地址第二行"
 
 msgid "Secondary"
 msgstr "次要"
@@ -3405,7 +3405,7 @@ msgid "Start Time"
 msgstr "开始时间"
 
 msgid "Start Trading"
-msgstr ""
+msgstr "开始交易"
 
 msgid "Start time"
 msgstr "开始时间"
@@ -3518,13 +3518,13 @@ msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "探水竿缺口 (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "税务编号"
 
 msgid "Tax information"
-msgstr ""
+msgstr "税务信息"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "税务居住地"
 
 msgid "Tax-free"
 msgstr "免税"
@@ -3996,6 +3996,8 @@ msgid ""
 "of risk. If purchased contracts expire worthless, you will suffer a total "
 "loss of your investment, which consists of the contract premium"
 msgstr ""
+"本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约到"
+"期时一文不值，您将损失全部投资，包括合约费用"
 
 msgid ""
 "The financial trading services contained within this site are only suitable "
@@ -4221,6 +4223,10 @@ msgid ""
 "licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling "
 "Commission -"
 msgstr ""
+"本网站由Binary (IOM) Ltd.在英国和马恩岛经营，地址为：First Floor, Millennium House, Victoria "
+"Road, Douglas, IM2 4RW, Isle of Man, British "
+"Isles；由(1)不列颠群岛马恩岛投资监管委员会授予牌照和监管，当前在线博彩牌照于2012 年8 月31 "
+"日颁发；而英国客户由(2)英国博采委员会授予牌照和监管-"
 
 msgid ""
 "This website is marketed in the rest of the EU, for investment products by "
@@ -4232,6 +4238,11 @@ msgid ""
 "by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, "
 "26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 msgstr ""
+"此网站市场在欧盟其他地区，投资产品由Binary Investments (Europe) Ltd.管理，地址为  Mompalao Building, "
+"Suite 2, Tower Road, Msida MSD1825, Malta，由马耳他金融服务机构授予牌照及监管为3级投资服务提供商（牌照号码为 "
+"IS/70156)），而博彩产品由Binary (Europe) Ltd.,管理，地址为：Mompalao Building, Suite 2, "
+"Tower Road, Msida MSD1825, Malta，由(1)位于马耳他的马耳他博彩管理局授予牌照和监管，牌照号码为 "
+"MGA/CL2/118/2000（2015年5 月26 日），而英国客户由(2)英国博采委员会授予牌照和监管-"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "上升三白兵 (CDL3WHITESOLDIERS)"
@@ -4307,7 +4318,7 @@ msgid "Title"
 msgstr "职务"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "越南语"
 
 msgid "To"
 msgstr "到"
@@ -4407,6 +4418,8 @@ msgid ""
 "asset. In regards to binary options which are gambling products, remember "
 "that gambling can be addictive - please play responsibly"
 msgstr ""
+"二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会超越起始资金存款，而您并不拥有或占有任何标的资产。在进行博彩产品交易的二元期权"
+"交易时，请务必记住博彩活动可能会上瘾，并提醒自己要承担责任"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -4424,7 +4437,7 @@ msgid "Tradingview for Binary.com"
 msgstr "通过Binary.com使用Tradingview"
 
 msgid "Transfer"
-msgstr ""
+msgstr "转账"
 
 msgid "Transfer to another Binary account"
 msgstr "转账到另一个Binary账户"
@@ -4515,7 +4528,7 @@ msgid "Upcoming Events"
 msgstr "未来事件"
 
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 msgid "Update Settings"
 msgstr "更新设置"
@@ -4648,7 +4661,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
-msgstr ""
+msgstr "Webtrader是Binary.com的先进桌面交易平台"
 
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
@@ -4667,7 +4680,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "加权移动平均指标 (WMA)"
 
 msgid "Welcome to Binary Webtrader"
-msgstr ""
+msgstr "欢迎来到Binary Webtrader"
 
 msgid ""
 "When you are satisfied with the trade price, instantly execute your trade"
@@ -4855,6 +4868,8 @@ msgid ""
 "This website's services are not made available in certain countries such as "
 "the USA, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
+"以及爱尔兰客户由 (3) 爱尔兰税务专员办事处授予牌照和监管，当前远程博彩牌照号码为 "
+"1010285（2015年9月29日)。本网站不向一些国家如美国、哥斯达黎加、香港及18岁以下的用户提供服务"
 
 msgid "apostrophe (') are allowed"
 msgstr "允许使用省略号(')"
@@ -5034,7 +5049,7 @@ msgid "trading frequency"
 msgstr "交易频率"
 
 msgid "view license"
-msgstr ""
+msgstr "查看牌照"
 
 msgid "websocket"
 msgstr "websocket"
@@ -5049,7 +5064,7 @@ msgid "{agent.commission}%"
 msgstr "{代理.佣金}%"
 
 msgid "| Payout"
-msgstr ""
+msgstr "| 赔付"
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
