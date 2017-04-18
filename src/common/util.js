@@ -357,7 +357,7 @@ var local_storage = {
 function isLangSupported(lang) {
     lang = (lang || '').trim().toLowerCase();
     return lang === 'ar' || lang === 'de' || lang === 'en' || lang === 'es' || lang === 'fr' || lang === 'id' || lang === 'it' || lang === 'th'
-            || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_tw';
+            || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_cn' || lang === 'zh_tw';
 }
 
 var Cookies = {

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2017-04-03 05:22+0000\n"
+"PO-Revision-Date: 2017-04-11 20:58+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/binary-webtrader/"
 "translations/it/>\n"
@@ -485,6 +485,11 @@ msgid ""
 "that has gapped above it, then a third bearish candle that closes well "
 "within the body of the first candle and in doing so confirming the reversal. "
 "It is considered a strong bearish price reversal candlestick pattern"
+msgstr ""
+
+msgid ""
+"A PEP is an individual who is or has been entrusted with a prominent public "
+"function. This status extends to a PEP's relatives and close associates"
 msgstr ""
 
 msgid ""
@@ -1059,22 +1064,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Binary.com's Spread Contracts are leveraged derivative contracts, the value "
-"of which is directly tied to the underlying market movements. Clients who "
-"'Long' a rising market (and those who 'Short' a falling market) profit from "
-"those movements with much less investment than would be required in the live "
-"market"
-msgstr ""
-
-msgid ""
-"Binary.com's Spread Contracts require a 'stop loss' which limits the maximum "
-"losses incurred by a client. This 'stop loss' amount will act as a deposit "
-"and may not be used for further trading until that Spread Contract is "
-"closed. Spread Contracts are closed when sold by the client, upon hitting "
-"the 'stop loss' or 'stop profit' level"
-msgstr ""
-
-msgid ""
 "Binary.com's systems are now processing in excess of 1 million transactions/"
 "day (including virtual accounts)"
 msgstr ""
@@ -1475,6 +1464,9 @@ msgstr "Descrivi a cosa serve questo token per trovarlo più tardi"
 msgid "Description"
 msgstr "Descrizione"
 
+msgid "Deutsch"
+msgstr ""
+
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
 "identify trend reversals based on range expansions. In this sense, the Mass "
@@ -1649,6 +1641,9 @@ msgstr "Ends in"
 msgid "Ends out"
 msgstr "Ends out"
 
+msgid "English"
+msgstr ""
+
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
@@ -1664,6 +1659,9 @@ msgstr "Spot d'ingresso"
 msgid "Entry spot price"
 msgstr ""
 
+msgid "Espa ol"
+msgstr ""
+
 msgid "Estimated Net Worth"
 msgstr "Valore netto stimato"
 
@@ -1674,9 +1672,6 @@ msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr ""
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
-
-msgid "Example"
 msgstr ""
 
 msgid "Exclude me from the website until"
@@ -1796,6 +1791,9 @@ msgid ""
 "in the market. Traders often use fractals to get an idea about the direction "
 "in which the price will develop. A fractal will form when a particular price "
 "pattern happens on a chart"
+msgstr ""
+
+msgid "Fran ais"
 msgstr ""
 
 msgid "Fri"
@@ -1922,6 +1920,9 @@ msgid "How to trade binaries?"
 msgstr ""
 
 msgid "Hull Moving Average (HMA)"
+msgstr ""
+
+msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr ""
 
 msgid "I have read and agree to Binary.com"
@@ -2055,13 +2056,6 @@ msgstr ""
 "possiedi l'esperienza e la conoscenza per comprendere i rischi connessi)"
 
 msgid ""
-"In regards to binary options which are gambling products, remember that "
-"gambling can be addictive"
-msgstr ""
-"In merito alle opzioni binarie che sono prodotti d'azzardo, ricorda che il "
-"gioco d'azzardo può creare dipendenza"
-
-msgid ""
 "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In "
 "Japan, they trade through Binary KK. In the European Union (except UK), they "
 "trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In "
@@ -2096,6 +2090,9 @@ msgid "Indices trading frequency"
 msgstr "Frequenza di trading sugli indici"
 
 msgid "Individual Traders"
+msgstr ""
+
+msgid "Indonesia"
 msgstr ""
 
 msgid "Industry of Employment"
@@ -2139,6 +2136,16 @@ msgstr ""
 msgid ""
 "It's time to expand. We set up a programming center in Cyberjaya - the "
 "Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
+msgstr ""
+
+msgid "Italiano"
+msgstr ""
+
+msgid ""
+"Its multi window interface allows pro traders to monitor the movements of "
+"multiple assets and markets at the same time. Thanks to multiple tools and "
+"indicators available, it allows tradingn and analyzing market with maximum "
+"flexibility"
 msgstr ""
 
 msgid "Jan"
@@ -2756,6 +2763,9 @@ msgstr ""
 msgid "PDF"
 msgstr "PDF"
 
+msgid "PEP Declaration"
+msgstr ""
+
 msgid "PNG"
 msgstr "PNG"
 
@@ -2872,8 +2882,14 @@ msgstr "Profitto/Perdita"
 msgid "Points"
 msgstr "Punti"
 
+msgid "Polski"
+msgstr ""
+
 msgid "Portfolio"
 msgstr "Portafoglio"
+
+msgid "Portugu s"
+msgstr ""
 
 msgid "Postal code/ZIP"
 msgstr "Codice postale/CAP"
@@ -2886,11 +2902,6 @@ msgstr "Profitto potenziale"
 
 msgid "Potential profit"
 msgstr "Profitto potenziale"
-
-msgid ""
-"Potential profit and losses are limited to stop profit and stop loss levels "
-"respectively"
-msgstr ""
 
 msgid "Pre-Defined"
 msgstr "Predefinito"
@@ -2969,6 +2980,9 @@ msgstr ""
 
 msgid "Read"
 msgstr "Leggi"
+
+msgid "Read about"
+msgstr ""
 
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
@@ -3258,6 +3272,9 @@ msgstr "Prelievo standard"
 
 msgid "Start Time"
 msgstr "Orario d'inizio"
+
+msgid "Start Trading"
+msgstr ""
 
 msgid "Start time"
 msgstr "Orario d'inizio"
@@ -3729,23 +3746,6 @@ msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid ""
-"The entry level for a long contract is 1001, which is entry spot + half "
-"spread. At exit, the spot is at 1100 and hence the exit level for a long "
-"contract is 1099, which is exit spot - half spread"
-msgstr ""
-
-msgid ""
-"The entry level for a short contract is 999, which is entry spot - half "
-"spread. At exit, the spot is at 1100 and hence the exit level for a short "
-"contract is 1101, which is exit spot + half spread"
-msgstr ""
-
-msgid ""
-"The entry spot of an instrument XYZ is 1000 and the spread on this "
-"instrument is 2 points"
-msgstr ""
-
-msgid ""
 "The entry spot price is the starting price of the trade purchased by a trader"
 msgstr ""
 
@@ -3805,11 +3805,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The loss of USD 306 is the difference between the exit and entry level "
-"multiplied by the amount per point"
-msgstr ""
-
-msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr ""
@@ -3849,11 +3844,6 @@ msgstr ""
 msgid ""
 "The profit is the difference between the purchase price (the stake) and the "
 "payout on a winning trade"
-msgstr ""
-
-msgid ""
-"The profit of USD 294 is the difference between the exit and entry level "
-"multiplied by the amount per point"
 msgstr ""
 
 msgid ""
@@ -3956,6 +3946,26 @@ msgid ""
 "good support price"
 msgstr ""
 
+msgid ""
+"This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., "
+"First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, "
+"British Isles, licenced and regulated by (1) the Gambling Supervision "
+"Commission in the Isle of Man, British Isles, current online gambling "
+"licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling "
+"Commission -"
+msgstr ""
+
+msgid ""
+"This website is marketed in the rest of the EU, for investment products by "
+"Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, "
+"Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment "
+"Services provider by the Malta Financial Services Authority (license no. "
+"IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao "
+"Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated "
+"by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, "
+"26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+msgstr ""
+
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr ""
 
@@ -4026,6 +4036,9 @@ msgstr ""
 
 msgid "Title"
 msgstr "Titolo"
+
+msgid "Ti ng Vi t"
+msgstr ""
 
 msgid "To"
 msgstr "A"
@@ -4127,12 +4140,9 @@ msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
 "that you fully understand the risks involved. Your losses can exceed your "
 "initial deposit and you do not own or have any interest in the underlying "
-"asset"
+"asset. In regards to binary options which are gambling products, remember "
+"that gambling can be addictive - please play responsibly"
 msgstr ""
-"Il trading in opzioni binarie può non essere adatto a tutti pertanto "
-"assicurati di aver pienamente compreso i rischi connessi. Le perdite possono "
-"superare il deposito iniziale e senza avere alcun interesse nell'asset "
-"sottostante"
 
 msgid ""
 "Trading the financial markets can become addictive. Fill in the form below "
@@ -4361,6 +4371,9 @@ msgstr "Server di Websocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
+msgid "Webtrader is a Binary.com's advanced desktop trading platform"
+msgstr ""
+
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr ""
@@ -4378,6 +4391,9 @@ msgstr ""
 
 msgid "Weighted Moving Average (WMA)"
 msgstr "Media mobile ponderata (WMA)"
+
+msgid "Welcome to Binary Webtrader"
+msgstr ""
 
 msgid ""
 "When you are satisfied with the trade price, instantly execute your trade"
@@ -4577,6 +4593,13 @@ msgstr ""
 "consentire ai clienti di sviluppare i propri robot di trading automatici con "
 "una semplicità tipo trascina e rilascia"
 
+msgid ""
+"and for Irish clients by (3) the Revenue Commissioners in Ireland, current "
+"remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). "
+"This website's services are not made available in certain countries such as "
+"the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
+
 msgid "apostrophe (') are allowed"
 msgstr "è consentito l'apostrofo (')"
 
@@ -4722,9 +4745,6 @@ msgstr "il nostro servizio assistenza disponibile"
 msgid "payment agent"
 msgstr "agente di pagamento"
 
-msgid "please play responsibly. Read about"
-msgstr "gioca in modo saggio. Leggi"
-
 msgid "points"
 msgstr "punti"
 
@@ -4761,6 +4781,9 @@ msgstr "esperienza di trading"
 msgid "trading frequency"
 msgstr "frequenza del trading"
 
+msgid "view license"
+msgstr ""
+
 msgid "websocket"
 msgstr "websocket"
 
@@ -4774,7 +4797,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Payout"
-msgstr ""
+msgstr "| Payout"
 
 msgid ""
 "enabling clients, affiliates, and developers to buy and sell Binary.com "
@@ -4782,6 +4805,27 @@ msgid ""
 msgstr ""
 "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e "
 "vendere prodotti di Binary.com"
+
+#~ msgid ""
+#~ "In regards to binary options which are gambling products, remember that "
+#~ "gambling can be addictive"
+#~ msgstr ""
+#~ "In merito alle opzioni binarie che sono prodotti d'azzardo, ricorda che "
+#~ "il gioco d'azzardo può creare dipendenza"
+
+#~ msgid ""
+#~ "Trading binary options may not be suitable for everyone, so please ensure "
+#~ "that you fully understand the risks involved. Your losses can exceed your "
+#~ "initial deposit and you do not own or have any interest in the underlying "
+#~ "asset"
+#~ msgstr ""
+#~ "Il trading in opzioni binarie può non essere adatto a tutti pertanto "
+#~ "assicurati di aver pienamente compreso i rischi connessi. Le perdite "
+#~ "possono superare il deposito iniziale e senza avere alcun interesse "
+#~ "nell'asset sottostante"
+
+#~ msgid "please play responsibly. Read about"
+#~ msgstr "gioca in modo saggio. Leggi"
 
 #~ msgid "Dash style"
 #~ msgstr "Stile trattino"
