@@ -184,7 +184,7 @@
             local_storage.set('oauth', oauth);
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
         }
-        var lang = getParameterByName('lang') || local_storage.get('i18n').value || 'en';
+        var lang = getParameterByName('lang') || (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
         if (isLangSupported(lang)) {
             local_storage.set('i18n', { value: lang });
         } else { // In case of invalid language fallback to EN
