@@ -10,6 +10,8 @@
     <script src="v<version>/lib/intl/dist/Intl.complete.js"></script>
     <script src="v<version>/common/util.js"></script>
     <script src="v<version>/lib/jquery/dist/jquery.min.js"></script>
+    <script src="v<version>/lib/moment/min/moment.min.js"></script>
+    <script src="<style-url>/binary.js"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="<style-url>/images/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="<style-url>/images/favicons/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<style-url>/images/favicons/apple-touch-icon-72x72.png">
@@ -24,28 +26,57 @@
     <link rel="icon" type="image/png" sizes="96x96" href="<style-url>/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<style-url>/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<style-url>/images/favicons/favicon-32x32.png">
-    <link rel="stylesheet" type="text/css" href="<style-url>/binary.css">
     <link rel="stylesheet" type="text/css" href="v<version>/index.css">
+    <link rel="stylesheet" type="text/css" href="<style-url>/binary.css">
 </head>
 
 <body style="display:none">
     <div id="topbar" class="topbar primary-bg-color-dark">
         <div class="fr ln29">
-            <a target="_blank" href="https://www.binary.com/en/contact.html"><b>Contact us</b></a>
+            <span class="time"></span>
+            <a target="_blank" href="https://www.binary.com/en/contact.html"><b>Contact Us</b></a>
+            <div class="languages">
+                <ul id="display_language">
+                    <li class="EN">
+                        <span class="world world-white"></span>
+                        <span class="language">English</span>
+                        <span class="nav-caret"></span>
+                    </li>
+                </ul>
+                <ul id="select_language">
+                    <li class="current">
+                        <span class="world world-black"></span>
+                        <span class="language">English</span>
+                        <span class="nav-caret"></span>
+                    </li>
+                    <li class="ID"><a href="?lang=id">Indonesia</a></li>
+                    <li class="DE"><a href="?lang=de">Deutsch</a></li>
+                    <li class="EN invisible"><a href="?lang=en">English</a></li>
+                    <li class="ES"><a href="?lang=es">Español</a></li>
+                    <li class="FR"><a href="?lang=fr">Français</a></li>
+                    <li class="IT"><a href="?lang=it">Italiano</a></li>
+                    <li class="PL"><a href="?lang=pl">Polski</a></li>
+                    <li class="PT"><a href="?lang=pt">Português</a></li>
+                    <li class="RU"><a href="?lang=ru">Русский</a></li>
+                    <li class="VI"><a href="?lang=vi">Tiếng Việt</a></li>
+                    <li class="ZH_CN"><a href="?lang=zh_cn">简体中文</a></li>
+                    <li class="ZH_TW"><a href="?lang=zh_tw">繁體中文</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div id="header">
         <div id="container">
-            <a id="logo" href="https://www.binary.com">
-                <div class="logo-parent">
+            <div class="logo-parent">
+                <a id="logo" href="https://www.binary.com">
                     <div class="logo">
                         <div></div>
                     </div>
                     <div class="binary-logo-text">
                         <div></div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
     <div id="content">
@@ -55,7 +86,7 @@
                 <p>Webtrader is a Binary.com's advanced desktop trading platform.</p>
                 <p>
                     Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks
-                    to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility.
+                    to multiple tools and indicators available, it allows trading and analyzing market with maximum flexibility.
                 </p>
                 <br>
                 <br>
@@ -135,12 +166,10 @@
     <script>
         var affiliates = isAffiliates() || 'false';
         var suffix = "";
-
         if (affiliates === true) {
             var url = window.location.href;
             suffix = url.substring(url.indexOf('?')); //Pass all parameters
         }
-
         /* oauth login ? */
         var href = window.location.href;
         if (/acct1=/.test(href) && /token1=/.test(href)) {
@@ -155,8 +184,7 @@
             local_storage.set('oauth', oauth);
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
         }
-
-        var lang = getParameterByName('lang') || 'en';
+        var lang = getParameterByName('lang') || (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
         if (isLangSupported(lang)) {
             local_storage.set('i18n', { value: lang });
         } else { // In case of invalid language fallback to EN
@@ -167,7 +195,29 @@
         } else {
             window.onload = function () {
                 $('body').css('display', 'block');
+                setTime();
+                setInterval(setTime, 15 * 1000);
+                translate();
             }
+        }
+        function translate() {
+            if (isLangSupported(lang)) {
+                $.getJSON('v<version>/i18n/' + lang + '.json', function (data) {
+                    setup_i18n_translation(data);
+                });
+                // Show hidden languages
+                $('#select_language').find('.invisible').removeClass('invisible');
+                var selected_lang = $('#select_language').find('.' + lang.toUpperCase());
+                var curr_ele = $('#select_language .current .language');
+                var disp_lang = $("#display_language .language");
+                disp_lang.text(selected_lang.text());
+                curr_ele.text(selected_lang.text());
+                selected_lang.addClass('invisible');
+            }
+        }
+        function setTime() {
+            var time = moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'
+            $(".time").text(time);
         }
         function openTradingPage() {
             window.location.href = 'v<version>/main.html' + suffix;
