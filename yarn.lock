@@ -887,6 +887,10 @@ binary-com-jquery-ui-timepicker@^1.0.1:
   dependencies:
     jquery "^3.0.0"
 
+binary-com-longcode@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/binary-com-longcode/-/binary-com-longcode-0.0.3.tgz#4cd8fbc7df85cbbb4c729d2c8350d51c04fc791c"
+
 bind-obj-methods@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/bind-obj-methods/-/bind-obj-methods-1.0.0.tgz#4f5979cac15793adf70e488161e463e209ca509c"
@@ -2136,11 +2140,11 @@ got@^5.0.0:
     unzip-response "^1.0.2"
     url-parse-lax "^1.0.0"
 
-graceful-fs@4.1.5, graceful-fs@^4.1.0, graceful-fs@^4.1.2:
+graceful-fs@4.1.5, graceful-fs@^4.0.0, graceful-fs@^4.1.0, graceful-fs@^4.1.2:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.5.tgz#f4745e8caed5e0dd2ef21bb5e2d229a32e8093c0"
 
-graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@^4.1.11, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -3061,18 +3065,11 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js-yaml@3.6.1, js-yaml@^3.2.7, js-yaml@~3.6.0:
+js-yaml@3.6.1, js-yaml@^3.2.7, js-yaml@^3.3.1, js-yaml@~3.6.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
   dependencies:
     argparse "^1.0.7"
-    esprima "^2.6.0"
-
-js-yaml@^3.3.1, js-yaml@~3.5.2:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.5.5.tgz#0377c38017cabc7322b0d1fbcd25a491641f2fbe"
-  dependencies:
-    argparse "^1.0.2"
     esprima "^2.6.0"
 
 js-yaml@~2.0.5:
@@ -3081,6 +3078,13 @@ js-yaml@~2.0.5:
   dependencies:
     argparse "~ 0.1.11"
     esprima "~ 1.0.2"
+
+js-yaml@~3.5.2:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.5.5.tgz#0377c38017cabc7322b0d1fbcd25a491641f2fbe"
+  dependencies:
+    argparse "^1.0.2"
+    esprima "^2.6.0"
 
 jsbn@~0.1.0:
   version "0.1.1"

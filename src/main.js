@@ -32,7 +32,8 @@ requirejs.config({
         'paralleljs': 'lib/parallel_js/lib/parallel',
         'binary-style': '<style-url>/binary',
         'babel-runtime/regenerator': 'lib/regenerator-runtime/runtime',
-        'chosen': 'lib/chosen-js/chosen.jquery'
+        'chosen': 'lib/chosen-js/chosen.jquery',
+        'binary-longcode': 'lib/binary-com-longcode/dist/main'
     },
     map: {
         '*': {
@@ -79,6 +80,9 @@ requirejs.config({
         },
         "color-picker": {
             deps: ["jquery"] //This should fix the widget not found error
+        },
+        "binary-longcode":{
+            deps: ['moment']
         }
     }
 });
