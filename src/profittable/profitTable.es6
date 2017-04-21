@@ -107,7 +107,7 @@ const on_arrow_click = (e) =>{
    viewTransaction.init(transaction.contract_id, transaction.transaction_id)
       .then(
          () =>$target.removeClass('button-disabled')
-      );
+      ).catch(err => console.error(err));
 }
 
 const initProfitWin = () => {
