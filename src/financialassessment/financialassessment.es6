@@ -37,7 +37,9 @@ export const init = () => {
       financial: {
         experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
         frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
+        account_opening_reason_array: ['Speculative Income Earning Assets', 'Saving Hedging'],
 
+        account_opening_reason: '',
         forex_trading_experience: '',
         forex_trading_frequency: '',
         indices_trading_experience: '',
@@ -65,6 +67,9 @@ export const init = () => {
         estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
         estimated_worth: '',
 
+        account_turnover_array: ['Less than $25,000', '$25,000 - $50,000', '$50,001 - $100,000', '$100,001 - $500,000', 'Over $500,000'],
+        account_turnover: '',
+
         occupation_array: ["Chief Executives, Senior Officials and Legislators", "Managers", "Professionals", "Clerks",
           "Personal Care, Sales and Service Workers", "Agricultural, Forestry and Fishery Workers",
           "Craft, Metal, Electrical and Electronics Workers", "Plant and Machine Operators and Assemblers",
@@ -76,16 +81,16 @@ export const init = () => {
       },
       empty_field: false,
       validate: () => {
-        return state.financial.forex_trading_experience === '' || state.financial.forex_trading_frequency === '' ||
-          state.financial.indices_trading_experience === '' || state.financial.indices_trading_frequency === '' ||
-          state.financial.commodities_trading_experience === '' || state.financial.commodities_trading_frequency === '' ||
-          state.financial.stocks_trading_experience === '' || state.financial.stocks_trading_frequency === '' ||
-          state.financial.other_derivatives_trading_experience === '' ||
-          state.financial.other_derivatives_trading_frequency === '' ||
-          state.financial.other_instruments_trading_experience === '' ||
+        return state.financial.account_opening_reason === '' || state.financial.forex_trading_experience === '' ||
+          state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
+          state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
+          state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
+          state.financial.stocks_trading_frequency === '' || state.financial.other_derivatives_trading_experience === '' ||
+          state.financial.other_derivatives_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
           state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
           state.financial.occupation === '' || state.financial.education_level === '' ||
-          state.financial.income_source === '' || state.financial.net_income === '' || state.financial.estimated_worth === '';
+          state.financial.income_source === '' || state.financial.net_income === '' ||
+          state.financial.account_turnover === '' || state.financial.estimated_worth === '';
       },
     };
     state.submit = () => {
@@ -96,6 +101,7 @@ export const init = () => {
       state.financial.disabled = true;
       const request = {
         set_financial_assessment: 1,
+        account_opening_reason: state.financial.account_opening_reason,
         forex_trading_experience: state.financial.forex_trading_experience,
         forex_trading_frequency: state.financial.forex_trading_frequency,
         indices_trading_experience: state.financial.indices_trading_experience,
@@ -113,6 +119,7 @@ export const init = () => {
         income_source: state.financial.income_source,
         net_income: state.financial.net_income,
         estimated_worth: state.financial.estimated_worth,
+        account_turnover: state.financial.account_turnover,
         occupation: state.financial.occupation
       }
       liveapi.send(request).then((data) => {
