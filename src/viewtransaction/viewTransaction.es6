@@ -12,6 +12,7 @@ import _ from 'lodash';
 import 'jquery-growl';
 import 'common/util';
 import { Longcode } from 'binary-longcode';
+import {getActiveSymbols} from '../instruments/instruments';
 
 const open_dialogs = {};
 
@@ -163,12 +164,10 @@ export const init = (contract_id, transaction_id) => {
          resolve();
          return;
       }
-      Promise.all([
-            liveapi.send({proposal_open_contract: 1, contract_id: contract_id}),
-            liveapi.cached.send({active_symbols:'brief'})
-      ]).then((data) => {
-            const proposal = data[0].proposal_open_contract;
-            const active_symbols = data[1].active_symbols;
+      liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
+            .then((data) => {
+            const proposal = data.proposal_open_contract;
+            const active_symbols = getActiveSymbols();
             const currency = local_storage.get('currency') || 'USD';
             const i18n = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
             longcode = new Longcode(active_symbols, i18n, currency);

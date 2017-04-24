@@ -9,12 +9,16 @@ import 'jquery-ui';
 import 'datatables';
 import 'jquery-growl';
 import 'css!./portfolio.css';
+import {getActiveSymbols} from '../instruments/instruments';
+import { Longcode } from 'binary-longcode';
 
 let portfolioWin = null;
 let table = null;
 let balance_span = null;
 let currency = 'USD';
 let subscribed_contracts = [];
+const lng = (local_storage.get('i18n') || {value:'en'}).value;
+let longcodeGenerator = null;
 
 export const init = (li) => {
     li.click(() => {
@@ -135,12 +139,13 @@ const initPortfolioWin = () => {
     /* refresh portfolio when a new contract is added or closed */
     const on_transaction = liveapi.events.on('transaction',(data) => {
         const transaction = data.transaction;
-
+        if(!longcodeGenerator)
+            longcodeGenerator = new Longcode(getActiveSymbols(), lng, currency);
         if(transaction.action === 'buy') {
             const view_button = '<button>View</button>'.i18n();
             const row = [
                 transaction.transaction_id,
-                transaction.longcode,
+                longcodeGenerator.get(transaction.shortcode),
                 Math.abs(transaction.amount),
                 '0.00',
                 view_button,
@@ -262,6 +267,8 @@ const forget_the_contracts = (contracts) => {
 
 const init_table = async () => {
     const processing_msg = $('#' + table.attr('id') + '_processing').show();
+    if(!longcodeGenerator)
+            longcodeGenerator = new Longcode(getActiveSymbols(), lng, currency);
     try {
         const data = await liveapi.send({ portfolio: 1 });
         const contracts = (data.portfolio && data.portfolio.contracts);
@@ -276,7 +283,7 @@ const init_table = async () => {
         const rows = contracts.map((contract) => {
             return [
                 contract.transaction_id,
-                contract.longcode,
+                longcodeGenerator.get(contract.shortcode),
                 contract.buy_price,
                 '0.00',
                 view_button,

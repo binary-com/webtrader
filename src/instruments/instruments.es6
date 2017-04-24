@@ -10,10 +10,13 @@ import chartWindow from "charts/chartWindow";
 import "jquery-growl";
 import "common/util";
 
+let actv_symbols = [];
+
 function refresh_active_symbols() {
     liveapi
         .send({ active_symbols: 'brief' })
         .then(function(data) {
+            actv_symbols = data.active_symbols;
             const active_symbols = [];
             const active_markets = _(data.active_symbols).groupBy('market').map(function(symbols) {
                 const sym = _.head(symbols);
@@ -141,9 +144,12 @@ export const getSpecificMarketData = function(marketDataDisplayName, marketData)
     return present;
 }
 
+export const getActiveSymbols = () => actv_symbols;
+
 export default {
     init,
     getMarketData,
     isMarketDataPresent,
-    getSpecificMarketData
+    getSpecificMarketData,
+    getActiveSymbols
 }

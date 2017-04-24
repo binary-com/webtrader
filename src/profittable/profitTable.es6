@@ -11,10 +11,14 @@ import "jquery-growl";
 import '../common/util';
 import "css!./profitTable.css";
 import html from 'text!./profitTable.html';
+import {getActiveSymbols} from '../instruments/instruments';
+import { Longcode } from 'binary-longcode';
 
 let profitWin = null,
    table = null,
    currency = local_storage.get("currency"),
+   lng = (local_storage.get('i18n') || {value:'en'}).value,
+   longcodeGenerator = null,
    datepicker = null;
 
 export const init = ($menuLink) => {
@@ -64,14 +68,21 @@ const refreshTable = (yyyy_mm_dd) => {
 
    /* refresh the table with result of { profit_table:1 } from WS */
    const refresh = (data) => {
+      if(!longcodeGenerator)
+          longcodeGenerator = new Longcode(getActiveSymbols(), lng, currency);
       const transactions = (data.profit_table && data.profit_table.transactions) || [];
       const rows = transactions.map((trans) => {
          const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
          const view_button = '<button>View</button>'.i18n();
+         try{
+            longcodeGenerator.get(trans.shortcode);            
+         }catch(err){
+            console.log(trans);
+         }
          return [
             epoch_to_string(trans.purchase_time, { utc: true }),
             trans.transaction_id,
-            trans.longcode,
+            longcodeGenerator.get(trans.shortcode),
             formatPrice(trans.buy_price,currency),
             epoch_to_string(trans.sell_time, { utc: true }),
             formatPrice(trans.sell_price,currency),
