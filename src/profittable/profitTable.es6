@@ -11,14 +11,11 @@ import "jquery-growl";
 import '../common/util';
 import "css!./profitTable.css";
 import html from 'text!./profitTable.html';
-import {getActiveSymbols} from '../instruments/instruments';
 import { Longcode } from 'binary-longcode';
 
 let profitWin = null,
    table = null,
    currency = local_storage.get("currency"),
-   lng = (local_storage.get('i18n') || {value:'en'}).value,
-   longcodeGenerator = null,
    datepicker = null;
 
 export const init = ($menuLink) => {
@@ -68,8 +65,9 @@ const refreshTable = (yyyy_mm_dd) => {
 
    /* refresh the table with result of { profit_table:1 } from WS */
    const refresh = (data) => {
-      if(!longcodeGenerator)
-          longcodeGenerator = new Longcode(getActiveSymbols(), lng, currency);
+      const lang = (local_storage.get('i18n') || {value:'en'}).value;
+      const active_symbols = local_storage.get('active_symbols');
+      const longcodeGenerator = new Longcode(active_symbols, lang, currency);
       const transactions = (data.profit_table && data.profit_table.transactions) || [];
       const rows = transactions.map((trans) => {
          const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */

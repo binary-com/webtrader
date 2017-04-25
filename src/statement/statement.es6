@@ -10,7 +10,6 @@ import "jquery-growl";
 import 'css!./statement.css';
 import html from 'text!./statement.html';
 import viewTransaction from '../viewtransaction/viewTransaction';
-import { getActiveSymbols } from '../instruments/instruments';
 import { Longcode } from 'binary-longcode';
 
 let statement = null,
@@ -40,7 +39,8 @@ const refreshTable  = (yyy_mm_dd) => {
    loading = true;
    const lng = (local_storage.get('i18n') || {value:'en'}).value;
    const currency = local_storage.get('currency') || 'USD';
-   let longcodeGenerator = null;
+   const active_symbols = local_storage.get('active_symbols');
+   const longcodeGenerator = new Longcode(active_symbols, lng, currency);;
 
    const request = {
       statement: 1,
@@ -66,8 +66,6 @@ const refreshTable  = (yyy_mm_dd) => {
    
    /* refresh the table with result of { profit_table:1 } from WS */
    const refresh = (data) => {
-      if(!longcodeGenerator)
-          longcodeGenerator = new Longcode(getActiveSymbols(), lng, currency);
       const transactions = (data.statement && data.statement.transactions) || [];
       const view_button_text = 'View'.i18n();
       const rows = transactions.map((trans) => {

@@ -12,7 +12,6 @@ import _ from 'lodash';
 import 'jquery-growl';
 import 'common/util';
 import { Longcode } from 'binary-longcode';
-import {getActiveSymbols} from '../instruments/instruments';
 
 const open_dialogs = {};
 
@@ -20,7 +19,6 @@ require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
 
 let market_data_disruption_win = null;
-let longcode = null;
 const show_market_data_disruption_win = (proposal) => {
    if(market_data_disruption_win){
       market_data_disruption_win.moveToTop();
@@ -167,10 +165,6 @@ export const init = (contract_id, transaction_id) => {
       liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
             .then((data) => {
             const proposal = data.proposal_open_contract;
-            const active_symbols = getActiveSymbols();
-            const currency = local_storage.get('currency') || 'USD';
-            const i18n = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
-            longcode = new Longcode(active_symbols, i18n, currency);
             /* check for market data disruption error */
             if(proposal.underlying === undefined && proposal.longcode === undefined) {
                show_market_data_disruption_win(proposal);
@@ -352,6 +346,10 @@ const sell_at_market = (state, root) => {
 }
 
 const init_state = (proposal, root) =>{   
+   const active_symbols = local_storage.get('active_symbols');
+   const currency = local_storage.get('currency') || 'USD';
+   const i18n = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
+   const longcode = new Longcode(active_symbols, i18n, currency);
    const state = {
       route: {
          value: 'table',
