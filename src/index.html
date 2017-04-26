@@ -34,7 +34,7 @@
     <div id="topbar" class="topbar primary-bg-color-dark">
         <div class="fr ln29">
             <span class="time"></span>
-            <a target="_blank" href="https://www.binary.com/en/contact.html"><b>Contact Us</b></a>
+            <a target="_blank" href="#" onclick="openContactUs()"><b>Contact Us</b></a>
             <div class="languages">
                 <ul id="display_language">
                     <li class="EN">
@@ -67,16 +67,16 @@
     </div>
     <div id="header">
         <div id="container">
-            <a id="logo" href="https://www.binary.com">
-                <div class="logo-parent">
+            <div class="logo-parent">
+                <a id="logo" href="https://www.binary.com">
                     <div class="logo">
                         <div></div>
                     </div>
                     <div class="binary-logo-text">
                         <div></div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
     <div id="content">
@@ -224,6 +224,11 @@
         }
         function openTradingPage() {
             window.location.href = 'v<version>/main.html' + suffix;
+        }
+        function openContactUs() {
+            var url = 'https://www.binary.com/' + (local_storage.get('i18n') || { value: 'en' }).value + '/contact.html'
+            var win = window.open(url, '_blank');
+            win.focus();
         }
     </script>
     <!-- Google Tag Manager -->
