@@ -14,6 +14,7 @@ function refresh_active_symbols() {
     liveapi
         .send({ active_symbols: 'brief' })
         .then(function(data) {
+            local_storage.set('active_symbols', data.active_symbols);
             const active_symbols = [];
             const active_markets = _(data.active_symbols).groupBy('market').map(function(symbols) {
                 const sym = _.head(symbols);
@@ -87,12 +88,8 @@ export const init = function() {
         .then(function(data) {
             chartable_markets = menu.extractChartableMarkets(data);
             refresh_active_symbols();
-            require(['websockets/binary_websockets'], function(liveapi) {
-                liveapi.events.on('login', refresh_active_symbols);
-                liveapi.events.on('logout', refresh_active_symbols);
-            });
-            /* refresh menu on mouse leave */
-            const instruments = $("#nav-menu").find(".instruments").on('mouseleave', refresh_active_symbols);
+            liveapi.events.on('login', refresh_active_symbols);
+            liveapi.events.on('logout', refresh_active_symbols);
             return chartable_markets;
         });
 }

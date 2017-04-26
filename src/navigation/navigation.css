@@ -11,7 +11,7 @@ body {
     text-align: right;
     padding: 3px 0;
     height: 23px;
-    min-width: 1025px;
+    min-width: 1280px;
 }
 
 #topbar span.time {
@@ -36,7 +36,7 @@ body {
 }
 
 #nav-menu {
-  min-width: 1025px;
+  min-width: 1280px;
 }
 
 #nav-menu .container {

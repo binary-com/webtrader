@@ -52,6 +52,7 @@ module.exports = function (grunt) {
                             'jquery-ui-iconfont/font/*',
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
+                            'binary-com-longcode/dist/main.js',
                             'text/text.js',
                             'regenerator-runtime/*',
                             'chosen-js/*'

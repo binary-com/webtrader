@@ -870,7 +870,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
             extra.tick_count += 1; /* we are shwoing X ticks arfter the initial tick so the total will be X+1 */
           }
           /* for higher/lower final barrier value is entry_quote + barrrier */
-          if(extra.category.contract_category === 'callput' && _(['higher','lower']).includes(extra.category_display.name)) {
+          if(extra.category.contract_category === 'callput' && !_(['rise','fall']).includes(extra.category_display.name)) {
             extra.barrier = state.barriers.barrier;
           }
           extra.show_tick_chart = true;
