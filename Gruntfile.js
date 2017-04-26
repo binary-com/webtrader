@@ -1,7 +1,8 @@
 "use strict";
 
 module.exports = function (grunt) {
-
+    var nightwatch = require('nightwatch');
+    nightwatch.initGrunt(grunt);
     var pkg = grunt.file.readJSON('package.json');
     for (var key in pkg.devDependencies) {
         if (key.indexOf('grunt') !== -1) {
@@ -23,6 +24,28 @@ module.exports = function (grunt) {
             all: [
                 'Gruntfile.js'//, 'src/**/*.js', 'src/*.js' TODO
             ]
+        },
+        nightwatch: {
+            options: {
+            cwd: './'
+            },
+
+            'default' : {},
+
+            browserstack: {
+            argv: {
+                env: 'browserstack'
+            },
+            settings: {
+                silent: true
+            }
+            },
+
+            'all' : {
+            argv: {
+                env: 'default,browserstack'
+            }
+            },
         },
         clean: {
             compressed: ['dist/compressed'],
