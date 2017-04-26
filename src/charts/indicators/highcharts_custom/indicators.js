@@ -42,6 +42,26 @@ define(['jquery', 'lodash', 'common/util', 'highcharts-more'], function ($, _) {
                             .find({instrumentCdAndTp: this.options.id})
                             .simplesort('time', false)
                             .data();
+                if(!(data && data.length)) { //View historical Data
+                    data = [];
+                    const series_data = this.options.data;
+                    for(let i = 0; i < series_data.length; i++) {
+                        const temp_obj = {}
+                        temp_obj.time = series_data[i][0];                        
+                        if(series_data[i].length > 2){
+                            temp_obj.open = series_data[i][1];
+                            temp_obj.high = series_data[i][2];
+                            temp_obj.low = series_data[i][3];
+                            temp_obj.close = series_data[i][4];                            
+                        } else {
+                            temp_obj.open = series_data[i][1];
+                            temp_obj.high = series_data[i][1];
+                            temp_obj.low = series_data[i][1];
+                            temp_obj.close = series_data[i][1];
+                        }
+                        data.push(temp_obj); 
+                    }
+                }
                 //Class name for all CDL type of indicators is CDL
                 var indicatorObject = new window[_.startsWith(indicatorID.toUpperCase(), 'CDL') ? 'CDL' : indicatorID.toUpperCase()](data, options, indicators);
                 var series = this;

@@ -14,6 +14,7 @@ import 'highstock';
 import 'highcharts-exporting';
 import 'css!./download.css';
 import html from 'text!./download.html';
+import indicatorManagement from 'charts/indicators/indicatorManagement';
 
     let downloadWin = null, markets = [], timePeriods = [
         {
@@ -387,6 +388,10 @@ import html from 'text!./download.html';
                        () => $html.find(".overlay").toggle()
                     );
 
+                    $html.find(".indicator-button").click(
+                        () => indicatorManagement.openDialog('.downloadChart', "View Historical Data")
+                    );
+
                     initDownloadChartOptions();
 
             }
@@ -412,6 +417,8 @@ import html from 'text!./download.html';
             $download_timePeriod.find("ul")[0].remove();
         }
         const rootUL_timePeriod = $("<ul>");
+        // Set timeperiod on init
+        $('.downloadChart').data("timePeriod", '1d');        
         timePeriods.forEach((timePeriodParent) => {
             const subMenu = $("<ul>");
             timePeriodParent.timePeriods.forEach((timePeriod) => {
@@ -421,6 +428,7 @@ import html from 'text!./download.html';
                 tp.data("timePeriodObject", timePeriod);
                 tp.click(function() {
                     const timePeriodObject = $(this).data("timePeriodObject");
+                    $('.downloadChart').data("timePeriod", timePeriodObject.code);
                     $(".download_timePeriod")
                         .data("timePeriodObject", timePeriodObject)
                         .html($(this).data("timePeriodObject").name);
