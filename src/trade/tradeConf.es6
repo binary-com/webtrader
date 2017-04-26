@@ -198,7 +198,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
    const longcodeGenerator = new Longcode(active_symbols, lang, currency);
    extra.getbarrier = (tick) => {
       let barrier = tick.quote*1;
-      if(extra.barrier && _(['higher','lower']).includes(extra.category_display.name)) {
+      if(extra.barrier && !_(['rise','fall']).includes(extra.category_display.name)) {
          barrier += extra.barrier*1;
       }
       return barrier.toFixed(decimal_digits);
