@@ -37,7 +37,7 @@ export const init = () => {
       financial: {
         experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
         frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
-        account_opening_reason_array: ['Speculative Income Earning Assets', 'Saving Hedging'],
+        account_opening_reason_array: ['Speculative', 'Income Earning', 'Assets Saving', 'Hedging'],
 
         account_opening_reason: '',
         forex_trading_experience: '',
