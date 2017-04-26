@@ -11,6 +11,7 @@ import moment from 'moment';
 import _ from 'lodash';
 import 'jquery-growl';
 import 'common/util';
+import { Longcode } from 'binary-longcode';
 
 const open_dialogs = {};
 
@@ -162,7 +163,7 @@ export const init = (contract_id, transaction_id) => {
          return;
       }
       liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
-         .then((data) => {
+            .then((data) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */
             if(proposal.underlying === undefined && proposal.longcode === undefined) {
@@ -344,14 +345,18 @@ const sell_at_market = (state, root) => {
       });
 }
 
-const init_state = (proposal, root) =>{
+const init_state = (proposal, root) =>{   
+   const active_symbols = local_storage.get('active_symbols');
+   const currency = local_storage.get('currency') || 'USD';
+   const i18n = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
+   const longcode = new Longcode(active_symbols, i18n, currency);
    const state = {
       route: {
          value: 'table',
          update:(value) => { state.route.value = value; }
       },
       contract_id: proposal.contract_id,
-      longcode: proposal.longcode,
+      longcode: longcode.get(proposal.shortcode),
       validation: proposal.validation_error
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
