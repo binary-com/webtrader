@@ -52,6 +52,7 @@ module.exports = function (grunt) {
                             'jquery-ui-iconfont/font/*',
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
+                            'binary-com-longcode/dist/main.js',
                             'text/text.js',
                             'webtrader-charts/dist/webtrader-charts.js',
                             'regenerator-runtime/*',
@@ -160,7 +161,7 @@ module.exports = function (grunt) {
                 }]
             },
             style : {
-                src: ['dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
+                src: ['dist/uncompressed/index.html', 'dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
                 overwrite: true,
                 replacements: [{
                     from: '<style-url>',

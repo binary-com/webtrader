@@ -10,6 +10,7 @@ import rv from '../common/rivetsExtra';
 import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
+import { Longcode } from 'binary-longcode';
 
 /* rv binder to show tick chart for this confirmation dialog */
 rv.binders['tick-chart'] = {
@@ -161,11 +162,11 @@ const register_ticks = (state, extra) => {
       const contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
-      const tick_interval = last_1000_ticks[1].epoch*1 - last_1000_ticks[0].epoch*1;
-      // contract.date_epxiry is WRONG with odd numbers.
       // DONT TRUST BACKEND! I'm really angry right now :/
-      expiry = entry +  (tick_interval * (extra.tick_count-1));
-      if(!tracking_timeout_set)
+      // Try everything before calculating expiry.
+      expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
+      console.log(contract, expiry);
+      if(!tracking_timeout_set && entry && expiry)
          track_ticks();
       return;
    });
@@ -188,9 +189,13 @@ export const init = (data, extra, show_callback, hide_callback) => {
    const root = $(html).i18n();
    const buy = data.buy;
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+   const currency = local_storage.get('currency');
+   const lang = (local_storage.get('i18n') || {value:'en'}).value;
+   const active_symbols = local_storage.get('active_symbols');
+   const longcodeGenerator = new Longcode(active_symbols, lang, currency);
    extra.getbarrier = (tick) => {
       let barrier = tick.quote*1;
-      if(extra.barrier && _(['higher','lower']).includes(extra.category_display.name)) {
+      if(extra.barrier && !_(['rise','fall']).includes(extra.category_display.name)) {
          barrier += extra.barrier*1;
       }
       return barrier.toFixed(decimal_digits);
@@ -201,7 +206,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
       },
       buy: {
          barrier: null,
-         message: buy.longcode,
+         message: longcodeGenerator.get(buy.shortcode),
          balance_after: buy.balance_after,
          buy_price: buy.buy_price,
          purchase_time: buy.purchase_time,

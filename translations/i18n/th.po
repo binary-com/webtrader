@@ -1,57 +1,88 @@
 msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-15 18:04+0200\n"
+"PO-Revision-Date: 2017-04-15 18:29+0000\n"
+"Last-Translator: Jutawan <bubbleblythe@gmail.com>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/binary-"
+"webtrader/translations/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.14-dev\n"
+
+msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
 "funds.aspx\""
 msgstr ""
+"\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
+"funds.aspx\""
 
 msgid ""
 "'Asian Fall' - You win when the last tick is lower than the average of the "
 "ticks during the trade"
 msgstr ""
+"'Asian Fall' - "
+"ท่านได้รับกำไรเมื่อราคาสุดท้ายต่ำกว่าค่าเฉลี่ยของช่วงราคาในระหว่างการซื้อขาย"
 
 msgid ""
 "'Asian Rise' - You win when the last tick is higher than the average of the "
 "ticks during the trade"
 msgstr ""
+"'Asian Rise' - "
+"ท่านได้รับกำไรเมื่อราคาสุดท้ายสูงกว่าค่าเฉลี่ยของช่วงราคาในระหว่างการซื้อขาย"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr ""
+msgstr "'Best Customer Communication Firm' มอบรางวัลให้โดย Investors Chronicle"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
-msgstr ""
+msgstr "รางวัลซิลเวอร์ 'Best Fixed-Odds Broker' โดย Trade2Win"
 
 msgid ""
 "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors "
 "Chronicle UK"
 msgstr ""
+"'Best Fixed-Odds Financial Provider' มอบรางวัลให้โดย Financial Times and "
+"Investors Chronicle UK"
 
 msgid ""
 "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr ""
+"'Best Fixed-Odds Financial Trading Provider' มอบรางวัลให้โดย Shares Magazine "
+"UK"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr ""
+"'Best Fixed-Odds Firm 2012' มอบรางวัลให้โดย Global Banking and Finance Review"
 
 msgid ""
 "'Differs' - You win when the last digit of the last tick does not match your "
 "prediction"
 msgstr ""
+"'Differs' - "
+"ท่านได้รับกำไรเมื่อหลักสุดท้ายของราคาสุดท้ายไม่ตรงกับค่าที่ท่านพยากรณ์"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr ""
+msgstr "'Financial Betting Operator of the Year' มอบรางวัลให้โดย eGaming Review"
 
 msgid ""
 "'Matches' - You win when the last digit of the last tick matches your "
 "prediction"
 msgstr ""
+"'Matches' - "
+"ท่านได้รับกำไรเมื่อหลักสุดท้ายของราคาสุดท้ายตรงกับค่าที่ท่านพยากรณ์"
 
 msgid "'contract period'"
-msgstr ""
+msgstr "'ระยะเวลาของสัญญา'"
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "(One) Touch trades"
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "(รู้จักในนาม"
 
 msgid ""
 "(if less than one day in duration), or at the end of the trading day (if one "
@@ -68,10 +99,14 @@ msgid ""
 "- Binary.com benchmarks its prices daily against inter-bank derivatives "
 "markets"
 msgstr ""
+"- เบนช์มาร์ก หรือ เกณฑ์มาตรฐานราคาของ Binary.com "
+"ดำเนินการรายวันโดยเทียบกับตลาดอนุพันธ์ต่างๆ ของธนาคารพาณิชย์"
 
 msgid ""
 "- Binary.com ensures your personal data and transactions are always secure"
 msgstr ""
+"- Binary.com ทำให้ท่านมั่นใจว่า "
+"ข้อมูลส่วนบุคคลและธุรกรรมของท่านจะถูกเก็บอย่างปลอดภัยเสมอ"
 
 msgid ""
 "- Binary.com is not affiliated with any of the Payment Agents listed above. "
@@ -85,25 +120,31 @@ msgstr ""
 
 msgid ""
 "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr ""
+msgstr "- Binary.com เป็นผู้บุกเบิกตลาดและได้รับสิทธิบัตรเทคโนโลยีด้านราคา"
 
 msgid ""
 "- Binary.com offers many payment methods, such as credit/debit cards, bank "
 "wires, e-cash and e-wallets"
 msgstr ""
+"- Binary.com รองรับความหลากหลายของช่องทางชำระเงิน เช่น บัตรเครดิต/เดบิต "
+"การโอนเงินผ่านธนาคาร เงินอิเล็กทรอนิกส์ และกระเป๋าเงินอิเล็กทรอนิกส์"
 
 msgid ""
 "- Binary.com quotes a trade and the counter-trade, so you always get "
 "unbiased, transparent prices"
 msgstr ""
+"- Binary.com ตั้งราคาซื้อขายและการซื้อขายผ่านเคาน์เตอร์ ดังนั้นรับรองได้ว่า "
+"ท่านจะได้ราคาที่ปราศจากอคติและโปร่งใส"
 
 msgid ""
 "- binaries are licensed as a betting activity in the UK, so your winnings "
 "are tax-free"
 msgstr ""
+"- binaries ได้รับใบอนุญาตในทุกกิจกรรมการซื้อขายที่เกิดขึ้น ณ สหราชอาณาจักร "
+"และปราศจากภาษี"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
-msgstr ""
+msgstr "- กำหนดการซื้อขายในวันจาก 1 นาที ถึง 24 ชั่วโมง"
 
 msgid ""
 "- choose the falls trade, lower trade, one-touch trade with a low barrier, "
@@ -126,10 +167,10 @@ msgid ""
 msgstr ""
 
 msgid "- choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- กำหนดระยะเวลาสัญญาจาก 10 วินาที ถึง 365 วัน"
 
 msgid "- choose trades with durations of up to 365 days"
-msgstr ""
+msgstr "- กำหนดการซื้อขายด้วยระยะเวลายาวถึง 365 วัน"
 
 msgid ""
 "- choose trades with high returns and a low probability to win, or with low "
@@ -137,19 +178,19 @@ msgid ""
 msgstr ""
 
 msgid "- currencies, stock indices, and commodities"
-msgstr ""
+msgstr "- สกุลเงินต่างๆ ดัชนีหลักทรัพย์ และสินค้าโภคภัณฑ์"
 
 msgid "- customize your trades to meet your needs"
-msgstr ""
+msgstr "- ปรับแต่งการซื้อขายของท่านให้เป็นไปตามความต้องการของท่าน"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
 msgstr ""
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "- จาก 1 to 50,000 เหรียญสหรัฐ"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "- จาก 10 วินาที to 365 วัน"
 
 msgid "- get pricing that is normally reserved for big institutional players"
 msgstr ""
@@ -160,11 +201,13 @@ msgid ""
 msgstr ""
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "- เปิดบัญชีซื้อขายได้ในเวลาไม่กี่นาที"
 
 msgid ""
 "- open, fund, or withdraw from your account within minutes, 24 hours a day"
 msgstr ""
+"- เปิดบัญชี ฝากเงิน หรือ ถอนเงิน จากบัญชีของท่านในเวลาไม่กี่นาที ตลอด 24 "
+"ชั่วโมง"
 
 msgid "- predict if the market will end higher or lower than a price target"
 msgstr ""
@@ -181,32 +224,32 @@ msgid "- predict if the market will touch or not touch a price target"
 msgstr ""
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "- ขายสัญญาระยะยาวของท่านที่ราคาตลาดก่อนที่สัญญาจะหมดอายุ"
 
 msgid ""
 "- set your trades on 'gut feel', or use technical or fundamental analysis"
 msgstr ""
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "- เริ่มการซื้อขายด้วยเงินขั้นต่ำเพียง 5 เหรียญสหรัฐ"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "- ซื้อขายได้ 24 ชั่วโมง 7 วัน แม้ในวันหยุด"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr ""
+msgstr "- ซื้อขายดัชนีผันผวนของ Binary.com ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid "- trade Binary.com's proprietary volatility indices"
 msgstr ""
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "- ซื้อขายทุกคู่สกุลเงินหลัก"
 
 msgid "- trade all major FX pairs, around the clock"
 msgstr ""
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "- ซื้อขายดัชนีหลักทรัพย์ทั่วโลก"
 
 msgid ""
 "- trade currencies, indices and commodities in rising, falling, sideways, "
@@ -214,7 +257,7 @@ msgid ""
 msgstr ""
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "- ซื้อขายสินค้าโภคภัณฑ์หลัก ได้แก่ ทองคำ และ น้ำมัน"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
 msgstr ""
@@ -234,184 +277,189 @@ msgid ""
 msgstr ""
 
 msgid "0-1 year"
-msgstr ""
+msgstr "0-1 ปี"
 
 msgid "0-5 transactions in the past 12 months"
-msgstr ""
+msgstr "0-5 ธุรกรรม ใน 12 เดือนที่ผ่านมา"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
-msgstr ""
+msgstr "1 วัน"
 
 msgid "1 Hour"
-msgstr ""
+msgstr "1 ชั่วโมง"
 
 msgid "1 Minute"
-msgstr ""
+msgstr "1 นาที"
 
 msgid "1 Tick"
-msgstr ""
+msgstr "1 ช่วงราคา"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1 ล้านธุรกรรม/วัน"
 
 msgid "1-2 years"
-msgstr ""
+msgstr "1-2 ปี"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
-msgstr ""
+msgstr "10 นาที"
 
 msgid "10m"
-msgstr ""
+msgstr "10 นาที"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
-msgstr ""
+msgstr "15 นาที"
 
 msgid "15m"
-msgstr ""
+msgstr "15 นาที"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1 วัน"
 
 msgid "1h"
-msgstr ""
+msgstr "1 ชม."
 
 msgid "1m"
-msgstr ""
+msgstr "1 นาที"
 
 msgid "1t"
 msgstr ""
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
-msgstr ""
+msgstr "2 ชั่วโมง"
 
 msgid "2 Minutes"
-msgstr ""
+msgstr "2 นาที"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "ราคา 2 ทาง"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
-msgstr ""
+msgstr "2 ชั่วโมง"
 
 msgid "2m"
-msgstr ""
+msgstr "2 นาที"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
-msgstr ""
+msgstr "3 นาที"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
-msgstr ""
+msgstr "30 นาที"
 
 msgid "30-day limit on losses"
-msgstr ""
+msgstr "วงเงินส่วนขาดทุนสำหรับ 30 วัน"
 
 msgid "30-day turnover limit"
-msgstr ""
+msgstr "วงเงินซื้อขายสำหรับ 30 วัน"
 
 msgid "30m"
-msgstr ""
+msgstr "30 นาที"
 
 msgid "3m"
-msgstr ""
+msgstr "3 นาที"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
-msgstr ""
+msgstr "4 ชั่วโมง"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr ""
+msgstr "40 ธุรกรรม หรือ มากกว่า ใน 12 เดือนที่ผ่านมา"
 
 msgid "4h"
-msgstr ""
+msgstr "4 ชั่วโมง"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
-msgstr ""
+msgstr "5 นาที"
 
 msgid "5m"
-msgstr ""
+msgstr "5 นาที"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr ""
+msgstr "6-10 ธุรกรรม ใน 12 เดือนที่ผ่านมา"
 
 msgid "7-day limit on losses"
-msgstr ""
+msgstr "วงเงินส่วนขาดทุนสำหรับ 7 วัน"
 
 msgid "7-day turnover limit"
-msgstr ""
+msgstr "วงเงินซื้อขายสำหรับ 7 วัน"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
-msgstr ""
+msgstr "8 ชั่วโมง"
 
 msgid "8h"
-msgstr ""
+msgstr "8 ชั่วโมง"
 
 msgid ""
 "A Evening Doji Star consists of a long bullish candle, followed by a Doji "
 "that has gapped above it, then a third bearish candle that closes well "
 "within the body of the first candle and in doing so confirming the reversal. "
 "It is considered a strong bearish price reversal candlestick pattern"
+msgstr ""
+
+msgid ""
+"A PEP is an individual who is or has been entrusted with a prominent public "
+"function. This status extends to a PEP's relatives and close associates"
 msgstr ""
 
 msgid ""
@@ -541,6 +589,9 @@ msgid ""
 "reference to an underlying market. Derivatives are commonly traded in the "
 "inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr ""
+"อนุพันธ์ คือ เครื่องมือทางการเงินประเภทหนึ่งซึ่งมูลค่าถูกกำหนดโดยการอ้างอิ"
+"งของตลาด โดยทั่วไปการซื้อขายอนุพันธ์เกิดขึ้นในตลาดฟอเร็กซ์ "
+"และไบนารีเป็นรูปแบบที่ง่ายที่สุดของอนุพันธ์"
 
 msgid ""
 "A medium to long bullish or bearish candlestick with the key defining trait "
@@ -599,43 +650,43 @@ msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
 msgid "Accept"
-msgstr ""
+msgstr "ยอมรับ"
 
 msgid "Account balance"
-msgstr ""
+msgstr "ยอดคงเหลือ"
 
 msgid "Action"
 msgstr ""
 
 msgid "Add"
-msgstr ""
+msgstr "เพิ่ม"
 
 msgid "Add comparisons"
-msgstr ""
+msgstr "เพิ่มตัวเปรียบเทียบ"
 
 msgid "Add indicator"
-msgstr ""
+msgstr "เพิ่มดัชนี"
 
 msgid "Add level"
-msgstr ""
+msgstr "เพิ่มระดับ"
 
 msgid "Add/remove indicators"
-msgstr ""
+msgstr "เพิ่ม/ลบดัชนี"
 
 msgid "Admin"
-msgstr ""
+msgstr "ผู้ดูแลระบบ"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr ""
 
 msgid "All durations"
-msgstr ""
+msgstr "ทุกช่วงเวลา"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "ทุกเงื่อนไขตลาด"
 
 msgid "All markets"
-msgstr ""
+msgstr "ทุกตลาด"
 
 msgid "All markets, all conditions"
 msgstr ""
@@ -823,7 +874,7 @@ msgid "Binary granted Investment Services license"
 msgstr ""
 
 msgid "Binary opens Japan office"
-msgstr ""
+msgstr "Binary.com เปิดสาขาที่ประเทศญี่ปุ่น"
 
 msgid "Binary option"
 msgstr ""
@@ -866,10 +917,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr ""
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com Shop introduced"
 msgstr ""
@@ -963,22 +1014,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Binary.com's Spread Contracts are leveraged derivative contracts, the value "
-"of which is directly tied to the underlying market movements. Clients who "
-"'Long' a rising market (and those who 'Short' a falling market) profit from "
-"those movements with much less investment than would be required in the live "
-"market"
-msgstr ""
-
-msgid ""
-"Binary.com's Spread Contracts require a 'stop loss' which limits the maximum "
-"losses incurred by a client. This 'stop loss' amount will act as a deposit "
-"and may not be used for further trading until that Spread Contract is "
-"closed. Spread Contracts are closed when sold by the client, upon hitting "
-"the 'stop loss' or 'stop profit' level"
-msgstr ""
-
-msgid ""
 "Binary.com's systems are now processing in excess of 1 million transactions/"
 "day (including virtual accounts)"
 msgstr ""
@@ -995,10 +1030,10 @@ msgid "Bought"
 msgstr ""
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "ยี่ห้อรถยนต์คันแรก"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr ""
@@ -1021,7 +1056,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
 
 msgid "CLOSE"
-msgstr ""
+msgstr "ปิด"
 
 msgid "CSV"
 msgstr ""
@@ -1187,16 +1222,16 @@ msgid "Click to log in with your Binary.com account"
 msgstr ""
 
 msgid "Close"
-msgstr ""
+msgstr "ปิด"
 
 msgid "Close Price"
-msgstr ""
+msgstr "ราคาปิด"
 
 msgid "Close all"
-msgstr ""
+msgstr "ปิดทั้งหมด"
 
 msgid "Closes"
-msgstr ""
+msgstr "ปิด"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 msgstr ""
@@ -1341,7 +1376,7 @@ msgid "Dec"
 msgstr ""
 
 msgid "December"
-msgstr ""
+msgstr "ธันวาคม"
 
 msgid "Decline"
 msgstr ""
@@ -1353,7 +1388,7 @@ msgid "Define your position"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "ลบ"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
@@ -1377,6 +1412,9 @@ msgid "Describe what this token is for to find it later"
 msgstr ""
 
 msgid "Description"
+msgstr ""
+
+msgid "Deutsch"
 msgstr ""
 
 msgid ""
@@ -1551,6 +1589,9 @@ msgstr ""
 msgid "Ends out"
 msgstr ""
 
+msgid "English"
+msgstr ""
+
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
@@ -1566,6 +1607,9 @@ msgstr ""
 msgid "Entry spot price"
 msgstr ""
 
+msgid "Espa ol"
+msgstr ""
+
 msgid "Estimated Net Worth"
 msgstr ""
 
@@ -1576,9 +1620,6 @@ msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr ""
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
-
-msgid "Example"
 msgstr ""
 
 msgid "Exclude me from the website until"
@@ -1698,6 +1739,9 @@ msgid ""
 "in the market. Traders often use fractals to get an idea about the direction "
 "in which the price will develop. A fractal will form when a particular price "
 "pattern happens on a chart"
+msgstr ""
+
+msgid "Fran ais"
 msgstr ""
 
 msgid "Fri"
@@ -1826,6 +1870,9 @@ msgstr ""
 msgid "Hull Moving Average (HMA)"
 msgstr ""
 
+msgid "I acknowledge that I am not a politically exposed person (PEP)"
+msgstr ""
+
 msgid "I have read and agree to Binary.com"
 msgstr ""
 
@@ -1944,16 +1991,16 @@ msgid ""
 msgstr ""
 
 msgid ""
-"In regards to binary options which are gambling products, remember that "
-"gambling can be addictive"
-msgstr ""
-
-msgid ""
 "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In "
 "Japan, they trade through Binary KK. In the European Union (except UK), they "
 "trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In "
 "the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr ""
+"ในสหราชอาณาจักร และเกาะ Isle of Man ลูกค้าของเราซื้อขายผ่านบริษัท Binary "
+"(IOM) Ltd และประเทศญี่ปุ่น ดำเนินการซื้อขายผ่าน Binary KK ในสหพันธ์ยุโรป "
+"(ยกเว้นสหราชอาณาจักร) ลูกค้าซื้อขายผ่านบริษัท Binary (Europe) Ltd และ Binary "
+"Investments (Europe) Ltd และประเทศอื่นๆ ในภูมิภาคอื่น พวกเขาซื้อขายผ่านบริษั"
+"ท Binary (C.R.) S.A."
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr ""
@@ -1983,6 +2030,9 @@ msgid "Indices trading frequency"
 msgstr ""
 
 msgid "Individual Traders"
+msgstr ""
+
+msgid "Indonesia"
 msgstr ""
 
 msgid "Industry of Employment"
@@ -2026,6 +2076,16 @@ msgstr ""
 msgid ""
 "It's time to expand. We set up a programming center in Cyberjaya - the "
 "Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
+msgstr ""
+
+msgid "Italiano"
+msgstr ""
+
+msgid ""
+"Its multi window interface allows pro traders to monitor the movements of "
+"multiple assets and markets at the same time. Thanks to multiple tools and "
+"indicators available, it allows tradingn and analyzing market with maximum "
+"flexibility"
 msgstr ""
 
 msgid "Jan"
@@ -2322,7 +2382,7 @@ msgid "Maximum aggregate contract purchases per day"
 msgstr ""
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr ""
+msgstr "ผลรวมขาดทุนสูงสุดในช่วง 30 วัน"
 
 msgid "Maximum aggregate loss per day"
 msgstr ""
@@ -2508,7 +2568,7 @@ msgid "Odd"
 msgstr ""
 
 msgid "Offices in Malta, Malaysia and Japan"
-msgstr ""
+msgstr "สำนักงานต่างๆ ในมอลตา มาเลเซีย และญี่ปุ่น"
 
 msgid "Ok"
 msgstr ""
@@ -2628,6 +2688,9 @@ msgstr ""
 msgid "PDF"
 msgstr ""
 
+msgid "PEP Declaration"
+msgstr ""
+
 msgid "PNG"
 msgstr ""
 
@@ -2744,7 +2807,13 @@ msgstr ""
 msgid "Points"
 msgstr ""
 
+msgid "Polski"
+msgstr ""
+
 msgid "Portfolio"
+msgstr ""
+
+msgid "Portugu s"
 msgstr ""
 
 msgid "Postal code/ZIP"
@@ -2757,11 +2826,6 @@ msgid "Potential Profit"
 msgstr ""
 
 msgid "Potential profit"
-msgstr ""
-
-msgid ""
-"Potential profit and losses are limited to stop profit and stop loss levels "
-"respectively"
 msgstr ""
 
 msgid "Pre-Defined"
@@ -2839,6 +2903,9 @@ msgid "Rate Of Change Ratio (ROCR)"
 msgstr ""
 
 msgid "Read"
+msgstr ""
+
+msgid "Read about"
 msgstr ""
 
 msgid ""
@@ -3128,6 +3195,9 @@ msgid "Standard withdrawal"
 msgstr ""
 
 msgid "Start Time"
+msgstr ""
+
+msgid "Start Trading"
 msgstr ""
 
 msgid "Start time"
@@ -3600,23 +3670,6 @@ msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid ""
-"The entry level for a long contract is 1001, which is entry spot + half "
-"spread. At exit, the spot is at 1100 and hence the exit level for a long "
-"contract is 1099, which is exit spot - half spread"
-msgstr ""
-
-msgid ""
-"The entry level for a short contract is 999, which is entry spot - half "
-"spread. At exit, the spot is at 1100 and hence the exit level for a short "
-"contract is 1101, which is exit spot + half spread"
-msgstr ""
-
-msgid ""
-"The entry spot of an instrument XYZ is 1000 and the spread on this "
-"instrument is 2 points"
-msgstr ""
-
-msgid ""
 "The entry spot price is the starting price of the trade purchased by a trader"
 msgstr ""
 
@@ -3669,11 +3722,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The loss of USD 306 is the difference between the exit and entry level "
-"multiplied by the amount per point"
-msgstr ""
-
-msgid ""
 "The market exit price is the price in effect at the end of the contract "
 "period"
 msgstr ""
@@ -3713,11 +3761,6 @@ msgstr ""
 msgid ""
 "The profit is the difference between the purchase price (the stake) and the "
 "payout on a winning trade"
-msgstr ""
-
-msgid ""
-"The profit of USD 294 is the difference between the exit and entry level "
-"multiplied by the amount per point"
 msgstr ""
 
 msgid ""
@@ -3820,6 +3863,26 @@ msgid ""
 "good support price"
 msgstr ""
 
+msgid ""
+"This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., "
+"First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, "
+"British Isles, licenced and regulated by (1) the Gambling Supervision "
+"Commission in the Isle of Man, British Isles, current online gambling "
+"licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling "
+"Commission -"
+msgstr ""
+
+msgid ""
+"This website is marketed in the rest of the EU, for investment products by "
+"Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, "
+"Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment "
+"Services provider by the Malta Financial Services Authority (license no. "
+"IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao "
+"Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated "
+"by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, "
+"26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+msgstr ""
+
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr ""
 
@@ -3889,6 +3952,9 @@ msgid ""
 msgstr ""
 
 msgid "Title"
+msgstr ""
+
+msgid "Ti ng Vi t"
 msgstr ""
 
 msgid "To"
@@ -3985,7 +4051,8 @@ msgid ""
 "Trading binary options may not be suitable for everyone, so please ensure "
 "that you fully understand the risks involved. Your losses can exceed your "
 "initial deposit and you do not own or have any interest in the underlying "
-"asset"
+"asset. In regards to binary options which are gambling products, remember "
+"that gambling can be addictive - please play responsibly"
 msgstr ""
 
 msgid ""
@@ -4205,6 +4272,9 @@ msgstr ""
 msgid "Webtrader"
 msgstr ""
 
+msgid "Webtrader is a Binary.com's advanced desktop trading platform"
+msgstr ""
+
 msgid ""
 "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr ""
@@ -4219,6 +4289,9 @@ msgid "Weighted Close Price (WCLPRICE)"
 msgstr ""
 
 msgid "Weighted Moving Average (WMA)"
+msgstr ""
+
+msgid "Welcome to Binary Webtrader"
 msgstr ""
 
 msgid ""
@@ -4388,6 +4461,13 @@ msgid ""
 "and-drop  simplicity"
 msgstr ""
 
+msgid ""
+"and for Irish clients by (3) the Revenue Commissioners in Ireland, current "
+"remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). "
+"This website's services are not made available in certain countries such as "
+"the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
+
 msgid "apostrophe (') are allowed"
 msgstr ""
 
@@ -4414,10 +4494,10 @@ msgid "customer support"
 msgstr ""
 
 msgid "day"
-msgstr ""
+msgstr "วัน"
 
 msgid "days"
-msgstr ""
+msgstr "วัน"
 
 msgid "disposes of its stake"
 msgstr ""
@@ -4426,10 +4506,10 @@ msgid "e-commerce site for branded merchandise"
 msgstr ""
 
 msgid "e.g"
-msgstr ""
+msgstr "เช่น"
 
 msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr ""
+msgstr "เช่น www2.binary.com, www.binaryqa36.com"
 
 msgid "end time"
 msgstr ""
@@ -4447,16 +4527,16 @@ msgid "has updated its"
 msgstr ""
 
 msgid "hour"
-msgstr ""
+msgstr "ชั่วโมง"
 
 msgid "hours"
-msgstr ""
+msgstr "ชั่วโมง"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr ""
@@ -4498,16 +4578,16 @@ msgid "is when the contract is processed by our servers and the"
 msgstr ""
 
 msgid "main site"
-msgstr ""
+msgstr "หน้าหลัก"
 
 msgid "medium protection"
 msgstr ""
 
 msgid "minute"
-msgstr ""
+msgstr "นาที"
 
 msgid "minutes"
-msgstr ""
+msgstr "นาที"
 
 msgid "next tick"
 msgstr ""
@@ -4524,26 +4604,23 @@ msgstr ""
 msgid "payment agent"
 msgstr ""
 
-msgid "please play responsibly. Read about"
-msgstr ""
-
 msgid "points"
 msgstr ""
 
 msgid "second"
-msgstr ""
+msgstr "วินาที"
 
 msgid "seconds"
-msgstr ""
+msgstr "วินาที"
 
 msgid "session overview"
 msgstr ""
 
 msgid "start time"
-msgstr ""
+msgstr "เวลาเริ่ม"
 
 msgid "terms and conditions"
-msgstr ""
+msgstr "ข้อตกลงและเงื่อนไข"
 
 msgid "the"
 msgstr ""
@@ -4552,25 +4629,28 @@ msgid "thereafter"
 msgstr ""
 
 msgid "tick"
-msgstr ""
+msgstr "ช่วงราคา"
 
 msgid "ticks"
-msgstr ""
+msgstr "ช่วงราคา"
 
 msgid "trading experience"
-msgstr ""
+msgstr "ประสบการณ์ซื้อขาย"
 
 msgid "trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขาย"
+
+msgid "view license"
+msgstr "ดูใบอนุญาต"
 
 msgid "websocket"
 msgstr ""
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
-msgstr ""
+msgstr "ใช่"
 
 msgid "{agent.commission}%"
 msgstr ""

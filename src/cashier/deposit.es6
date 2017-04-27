@@ -72,7 +72,6 @@ function init_deposit_win(root) {
         left: offset.left + 'px',
         top: offset.top + 'px'
     });
-    deposit_win.fixFooterPosition();
     deposit_win.track({
         module_id: 'deposit',
         is_unique: true

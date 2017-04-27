@@ -126,9 +126,6 @@ const tileDialogs = () => {
          };
          y += row_height + 20;
       }
-      if(perform) { // fix footer postion on tile action
-         setTimeout(fixFooterPosition, 1500 + 100);
-      }
       return total_free_space;
    }
 
@@ -431,7 +428,6 @@ export const init = function($parentObj) {
    require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], (chartWindowObj,liveapi, menu) => {
       if(!tracker.is_empty()) {
          tracker.reopen();
-         setTimeout(fixFooterPosition, 800);
          return;
       }
       const counts = calculateChartCount();
@@ -519,24 +515,9 @@ export const init = function($parentObj) {
             $(".login").trigger("login-error");
          });
    });
-   $(window).resize(fixFooterPosition);
    $(window).scroll(fixMinimizedDialogsPosition);
    return this;
 }
-
-export const fixFooterPosition = (only_on_expand) => {
-   $('body > .footer').width($('body').width());
-   const scroll_height = getScrollHeight(true);
-   const body_height = $('body').height();
-   const footer_height = $('.addiction-warning').height();
-   const current_height = $('body > .footer').height();
-   const new_height = Math.max(scroll_height + footer_height + 15, body_height);
-   if(current_height > new_height && only_on_expand === true) {
-      return;
-   }
-   $('body > .footer').css("margin-top", new_height - 100);
-}
-
 
 //Trigger close even on all dialogs
 export const closeAll = () => closeAllObject && closeAllObject.click();
@@ -625,11 +606,6 @@ export const createBlankWindow = function($html,options) {
       }
    });
 
-   dialog.on('dragstop', fixFooterPosition);
-   dialog.on('drag',() => fixFooterPosition(true));
-   blankWindow.on('dialogextendminimize', fixFooterPosition);
-   dialog.on('dialogresizestop', fixFooterPosition);
-
    if(options.destroy) { /* register for destroy event which have been patched */
       blankWindow.on('dialogdestroy', options.destroy);
    }
@@ -661,12 +637,10 @@ export const createBlankWindow = function($html,options) {
    blankWindow.on('dialogclose', () => {
       li && li.remove();
       li = null;
-      fixFooterPosition();
    });
    blankWindow.on('dialogopen',
       () => !li && !options.ignoreTileAction && add_to_windows_menu()
    );
-   blankWindow.on('dialogextendrestore', fixFooterPosition);
 
    if (options.resize) {
       options.resize.call($html[0]);
@@ -761,7 +735,6 @@ export default {
    init,
    tile,
    closeAll,
-   fixFooterPosition,
    createBlankWindow,
    makeSelectmenu,
    event_on, event_off

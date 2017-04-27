@@ -30,7 +30,8 @@ requirejs.config({
         'babel-runtime/regenerator': 'lib/regenerator-runtime/runtime',
         'webtrader-charts' : 'lib/webtrader-charts/dist/webtrader-charts',
         'chosen': 'lib/chosen-js/chosen.jquery',
-        'highstock-release': 'lib/highstock'
+        'highstock-release': 'lib/highstock',
+        'binary-longcode': 'lib/binary-com-longcode/dist/main'
     },
     map: {
         '*': {
@@ -81,6 +82,9 @@ requirejs.config({
         },
         "color-picker": {
             deps: ["jquery"] //This should fix the widget not found error
+        },
+        "binary-longcode":{
+            deps: ['moment']
         }
     }
 });
@@ -293,8 +297,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
                 // hide the main loading spinner,
                 // after the `last module` has been loaded.
                 $(".sk-spinner-container").hide();
-                // show the footer
-                windows.fixFooterPosition();
                 $('body > .footer').show();
             });
         });
