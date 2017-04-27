@@ -81,7 +81,8 @@
     "chosen-js": "^1.6.2",
     "jquery-ui-iconfont": "^2.1.0",
     "regenerator-runtime": "^0.10.1",
-    "text": "requirejs/text"
+    "text": "requirejs/text",
+    "webtrader-charts": "^0.0.2"
   },
   "contributors": [
     {

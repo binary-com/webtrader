@@ -53,6 +53,7 @@ module.exports = function (grunt) {
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'text/text.js',
+                            'webtrader-charts/dist/webtrader-charts.js',
                             'regenerator-runtime/*',
                             'chosen-js/*'
                         ],
@@ -69,7 +70,6 @@ module.exports = function (grunt) {
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
-                            'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'clipboard/dist/clipboard.min.js',
                             'es6-promise/promise.min.js',

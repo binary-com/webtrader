@@ -6,14 +6,10 @@ requirejs.config({
     paths: {
         'jquery': "lib/jquery/dist/jquery.min",
         'jquery-ui': "lib/jquery-ui/jquery-ui.min",
-        'highstock': "lib/highstock/highstock",
-        'highcharts-more': "lib/highstock/highcharts-more",
-        'highcharts-exporting': 'lib/highstock/modules/offline-exporting',
         'jquery.dialogextend': "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
-        'lokijs': 'lib/lokijs/build/lokijs.min',
         'color-picker': "lib/colorpicker/jquery.colorpicker",
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
@@ -32,7 +28,9 @@ requirejs.config({
         'paralleljs': 'lib/parallel_js/lib/parallel',
         'binary-style': '<style-url>/binary',
         'babel-runtime/regenerator': 'lib/regenerator-runtime/runtime',
-        'chosen': 'lib/chosen-js/chosen.jquery'
+        'webtrader-charts' : 'lib/webtrader-charts/dist/webtrader-charts',
+        'chosen': 'lib/chosen-js/chosen.jquery',
+        'highstock-release': 'lib/highstock'
     },
     map: {
         '*': {
@@ -52,11 +50,15 @@ requirejs.config({
         "jquery-ui": {
             deps: ["jquery"]
         },
-        "highstock": {
-            deps: ["jquery"]
+        "highstock-release/highstock": {
+            deps: ["jquery"],
+            exports: "Highcharts"
         },
-        "highcharts-exporting": {
-            deps: ["highstock", 'lib/highstock/modules/exporting']
+        "highstock-release/modules/exporting": {
+            deps: ["highstock-release/highstock"]
+        },
+        "highstock-release/modules/offline-exporting": {
+            deps: ["highstock-release/modules/exporting"]
         },
         "jquery-growl": {
             deps: ["jquery"]
@@ -65,7 +67,7 @@ requirejs.config({
             deps: ["jquery-ui"]
         },
         "currentPriceIndicator": {
-            deps: ["highstock"]
+            deps: ["highstock-release/highstock"]
         },
         sightglass: { //fix for rivets not playing nice with requriejs (https://github.com/mikeric/rivets/issues/427)
             exports: 'sightglass'
@@ -74,8 +76,8 @@ requirejs.config({
             deps: ['sightglass'],
             exports: 'rivets'
         },
-        "highcharts-more": {
-            deps: ["highstock"]
+        "highstock-release/highcharts-more": {
+            deps: ["highstock-release/highstock"]
         },
         "color-picker": {
             deps: ["jquery"] //This should fix the widget not found error
@@ -118,7 +120,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
-    require(['jquery-ui', 'highstock', 'lokijs']);
+    require(['jquery-ui', 'highstock-release/highstock']);
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css',
@@ -127,8 +129,8 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         'css!lib/growl/stylesheets/jquery.growl.css',
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
-        'css!lib/colorpicker/jquery.colorpicker.css',
-        'css!charts/charts.css']);
+        'css!lib/colorpicker/jquery.colorpicker.css',]);
+        // 'css!charts/charts.css']);
 
     function handle_affiliate_route() {
         require(['affiliates/affiliates', 'css!main.css', 'css!binary-style'], function(affiliates) {

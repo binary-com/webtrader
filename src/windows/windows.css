@@ -55,10 +55,6 @@ img.reload {
 
 .webtrader-dialog img.disabled { opacity: 0.5; }
 
-.custom-icon-close {
-    cursor: pointer;
-    background-image: url('../images/close.svg')!important;
-}
 .custom-icon-maximize {
     cursor: pointer;
     background-image: url('../images/maximize.svg')!important;
