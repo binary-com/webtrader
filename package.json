@@ -43,7 +43,9 @@
     "grunt-string-replace": "^1.0.0",
     "grunt-text-replace": "^0.4.0",
     "lodash": "^4.17.4",
+    "nightwatch": "^0.9.14",
     "node-sass": "^3.10.0",
+    "selenium-download": "^2.0.10",
     "showdown": "^1.6.3"
   },
   "scripts": {
@@ -57,7 +59,8 @@
     "major-rel": "grunt bump:major",
     "minor-rel": "grunt bump:minor",
     "patch-rel": "grunt bump:patch",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "test": "nightwatch --config nightwatch.conf.BASIC.js"
   },
   "repository": {
     "type": "git",

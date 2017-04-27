@@ -20,3 +20,7 @@ npm-debug.log
 _references.js
 src/.vsdoc/
 jsconfig.json
+
+# Nightwatch files
+screenshots/
+reports/
