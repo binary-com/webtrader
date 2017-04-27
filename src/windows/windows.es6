@@ -664,7 +664,7 @@ export const createBlankWindow = function($html,options) {
     *    data: { } // arbitary data object for this dialog
     * } */
    blankWindow.track = (options) => tracker.track(options, blankWindow);
-   blankWindow.fixFooterPosition = fixFooterPosition;
+
    blankWindow.destroy = () => {
       if(blankWindow.data('ui-dialog')) {
          blankWindow.dialog('destroy');

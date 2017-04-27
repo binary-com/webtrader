@@ -100,7 +100,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
+                            '**', '!**/*.js','v<%=pkg.version%>/lib/**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -211,7 +211,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/uncompressed',
-                    src: ['**/*.js'],
+                    src: ['**/*.js', '!v<%=pkg.version%>/lib/**/*.js'],
                     dest: 'dist/compressed'
                 }],
                 options: {
