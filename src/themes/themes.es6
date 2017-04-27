@@ -4,7 +4,7 @@
 import $ from 'jquery';
 import windows from '../windows/windows';
 import '../common/util';
-import 'highstock';
+import 'highstock-release/highstock';
 import 'jquery-growl';
 
 let win = null;

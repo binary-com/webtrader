@@ -664,9 +664,15 @@ export const createBlankWindow = function($html,options) {
     *    data: { } // arbitary data object for this dialog
     * } */
    blankWindow.track = (options) => tracker.track(options, blankWindow);
-   blankWindow.destroy = () => blankWindow.dialog('destroy').remove();
+   blankWindow.fixFooterPosition = fixFooterPosition;
+   blankWindow.destroy = () => {
+      if(blankWindow.data('ui-dialog')) {
+         blankWindow.dialog('destroy');
+      }
+      blankWindow.remove();
+   };
    return blankWindow;
-}
+};
 
 /*
    Uses a jquery-ui spinner to display a list of strings.

@@ -103,8 +103,9 @@ const initStatement = () => {
       title: 'Statement'.i18n(),
       width: 700 ,
       height: 400,
-      destroy: () => {
+      close: () => {
          table && table.DataTable().destroy(true);
+         statement && statement.remove();
          statement = null;
       },
       refresh: () => {

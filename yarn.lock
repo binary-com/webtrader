@@ -833,6 +833,10 @@ beeper@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
 
+big.js@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.1.3.tgz#4cada2193652eb3ca9ec8e55c9015669c9806978"
+
 bin-build@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/bin-build/-/bin-build-2.2.0.tgz#11f8dd61f70ffcfa2bdcaa5b46f5e8fedd4221cc"
@@ -1407,6 +1411,19 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+datatables.net-dt@^1.10.15:
+  version "1.10.15"
+  resolved "https://registry.yarnpkg.com/datatables.net-dt/-/datatables.net-dt-1.10.15.tgz#cc67136c569888acf34687e34a0aeaa99378bbc6"
+  dependencies:
+    datatables.net ">=1.10.9"
+    jquery ">=1.7"
+
+datatables.net@>=1.10.9, datatables.net@^1.10.15:
+  version "1.10.15"
+  resolved "https://registry.yarnpkg.com/datatables.net/-/datatables.net-1.10.15.tgz#c789077bbfe385e75ff5a233fa5f23251a72df68"
+  dependencies:
+    jquery ">=1.7"
+
 date-fns@^1.23.0:
   version "1.27.2"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.27.2.tgz#ce82f420bc028356cc661fc55c0494a56a990c9c"
@@ -1653,6 +1670,10 @@ ecc-jsbn@~0.1.1:
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
+
+emojis-list@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
 encodeurl@~1.0.1:
   version "1.0.1"
@@ -2606,6 +2627,10 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
+highstock-release@4.2.6:
+  version v4.2.6
+  resolved "https://registry.yarnpkg.com/highstock-release/-/highstock-release-4.2.6.tgz#caa6382eeae311ea5d1bbb4ffd587a29a6acb374"
+
 hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
@@ -2744,6 +2769,13 @@ imagemin@^4.0.0:
     imagemin-jpegtran "^4.0.0"
     imagemin-optipng "^4.0.0"
     imagemin-svgo "^4.0.0"
+
+imports-loader@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/imports-loader/-/imports-loader-0.7.1.tgz#f204b5f34702a32c1db7d48d89d5e867a0441253"
+  dependencies:
+    loader-utils "^1.0.2"
+    source-map "^0.5.6"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -3057,9 +3089,17 @@ jquery-ui-iconfont@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jquery-ui-iconfont/-/jquery-ui-iconfont-2.2.0.tgz#6f83c3896af96ef521b817ca951fa12b7ee77413"
 
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+
 jquery@>=1.4.4, jquery@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
+
+jquery@>=1.7, jquery@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
 js-tokens@^3.0.0:
   version "3.0.1"
@@ -3213,6 +3253,14 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
+loader-utils@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
+  dependencies:
+    big.js "^3.1.3"
+    emojis-list "^2.0.0"
+    json5 "^0.5.0"
+
 lodash._basecopy@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
@@ -3346,6 +3394,10 @@ logalot@^2.0.0:
   dependencies:
     figures "^1.3.5"
     squeak "^1.0.0"
+
+lokijs@1.3.19:
+  version "1.3.19"
+  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.3.19.tgz#33002c87594ad190df9da2ac66888e1a85b3ca2b"
 
 longest@^1.0.0, longest@^1.0.1:
   version "1.0.1"
@@ -3831,6 +3883,10 @@ pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
 
+paralleljs@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/paralleljs/-/paralleljs-0.2.1.tgz#ebca745d3e09c01e2bebcc14858891ff4510e926"
+
 param-case@^1.1.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/param-case/-/param-case-1.1.2.tgz#dcb091a43c259b9228f1c341e7b6a44ea0bf9743"
@@ -4307,6 +4363,12 @@ rimraf@~2.2.1, rimraf@~2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
+rivets@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/rivets/-/rivets-0.8.1.tgz#8e37af7cf54264172dd9ca4b45f1d02d321c20d7"
+  dependencies:
+    sightglass "~0.2.4"
+
 rx@2.3.24:
   version "2.3.24"
   resolved "https://registry.yarnpkg.com/rx/-/rx-2.3.24.tgz#14f950a4217d7e35daa71bbcbe58eff68ea4b2b7"
@@ -4418,6 +4480,10 @@ showdown@^1.6.3:
   dependencies:
     yargs "^6.6.0"
 
+sightglass@~0.2.4:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/sightglass/-/sightglass-0.2.6.tgz#9120bb852d259cf821274856375bbdf900983841"
+
 sigmund@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sigmund/-/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
@@ -4489,7 +4555,7 @@ source-map@^0.3.0:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.5.0, source-map@^0.5.3, source-map@~0.5.1:
+source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
 
@@ -4525,6 +4591,10 @@ spdx-expression-parse@~1.0.0:
 spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
+
+spectrum-colorpicker@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/spectrum-colorpicker/-/spectrum-colorpicker-1.8.0.tgz#b926cf5002c0a77860b5f8351e1c093c65200107"
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -5119,6 +5189,22 @@ websocket-driver@>=0.5.1:
 websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
+
+webtrader-charts@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.0.2.tgz#01b890416f043152196d349eb14f37cbb69f29e0"
+  dependencies:
+    datatables.net "^1.10.15"
+    datatables.net-dt "^1.10.15"
+    highstock-release "4.2.6"
+    imports-loader "^0.7.1"
+    jquery "^3.2.1"
+    jquery-ui "^1.12.1"
+    lodash "^4.17.4"
+    lokijs "1.3.19"
+    paralleljs "^0.2.1"
+    rivets "0.8.1"
+    spectrum-colorpicker "^1.8.0"
 
 whet.extend@~0.9.9:
   version "0.9.9"

@@ -12,9 +12,6 @@ import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
 import { Longcode } from 'binary-longcode';
 
-require(['websockets/stream_handler']);
-const barsTable = chartingRequestMap.barsTable;
-
 /* rv binder to show tick chart for this confirmation dialog */
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */

@@ -10,17 +10,18 @@
  	 chartContainerID - chart container ID which will have chart header and highchart chart
  */
 import $ from 'jquery';
-import liveapi from '../websockets/binary_websockets';
 import menu from '../navigation/menu';
 import _ from 'lodash';
 import '../common/util';
-import chartOptions from '../charts/chartOptions';
-import tableView from "../charts/tableView";
+import {
+   chartOptions,
+   tableView,
+   charts,
+   chartWindow
+} from 'webtrader-charts';
 import html from 'text!../charts/chartWindow.html';
-import charts from '../charts/charts';
 import instruments from '../instruments/instruments';
 import 'jquery-growl';
-import chartWindow from '../charts/chartWindow';
 
 const init_chart_options = (dialog, timePeriod, type, instrumentName, instrumentCode, hideShare, hideOverlay) => {
     const id = dialog.attr('id');
@@ -145,8 +146,8 @@ export const init = () => {
         $('#' + newTabId + " .chartSubContainer").height($(window).height() - 50).width($(window).width());
         $('#' + newTabId + " .table-view").width($(window).width());
     });
-}
+};
 
 export default {
 	init
-}
+};

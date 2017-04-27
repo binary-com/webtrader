@@ -3,7 +3,7 @@
  */
 import $ from 'jquery';
 import _ from 'lodash';
-import 'highstock';
+import 'highstock-release/highstock';
 import './util';
 
 
