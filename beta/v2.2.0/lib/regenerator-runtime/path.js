@@ -1,4 +1,1 @@
-exports.path = require("path").join(
-  __dirname,
-  "runtime.js"
-);
+exports.path=require("path").join(__dirname,"runtime.js");
