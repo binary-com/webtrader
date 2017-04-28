@@ -14,7 +14,7 @@ module.exports = { // adapted from: https://git.io/vodU0
         .assert.containsText('.time', result.value);
     });
   },
-  'Check language': (browser) => {
+  'Check current language': (browser) => {
     browser.execute('return local_storage.get("i18n")', [], (result) => {
       const lang = result.value.value.toUpperCase();
       browser
@@ -22,6 +22,17 @@ module.exports = { // adapted from: https://git.io/vodU0
         .assert.visible('#select_language')
         .assert.attributeContains('#select_language .' + lang, 'class', 'invisible');
     });
+  },
+  'Change current language': (browser) => {
+    browser
+      .click('.languages .ID')
+      .assert.urlContains('lang=id')
+      .waitForElementVisible('body')
+      .execute('return local_storage.get("i18n").value', [], (result) => {
+        result.value = result.value.toUpperCase();
+        browser
+          .assert.attributeContains('#select_language .' + result.value, 'class', 'invisible');
+      });
   },
   'Navigate to trading page': (browser) => {
     browser
