@@ -1,20 +1,20 @@
-#Webtrader ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
+# Webtrader ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master)
 
 This repository contains HTML, Javascript, CSS, and images for [WebTrader](http://binary-com.github.io/webtrader) website.
 
-##Project goal
+## Project goal
 The goal of this project is to create a full-screen trading interface for [Binary.com](https://www.binary.com) according to the following design:
 ![Webtrader](https://banners.binary.com/misc/webtrader-layout.jpg)
 
-##How to work with this project
-####Linux Users
+## How to work with this project
+#### Linux Users
         $ sudo apt-get install git
         $ git clone https://github.com/binary-com/webtrader.git
         $ cd webtrader
         $ sudo apt-get install node npm nodejs-legacy yarn
         $ yarn
 
-####Windows Users
+#### Windows Users
     * Download and install Git from [the official website](https://git-scm.com/download). Git Bash is included.
     * Download and install NodeJS from [the official website](https://www.nodejs.org). NPM is included.
     * Download and install yarn from [the official website](https://yarnpkg.com/docs/install/#windows-tab).
@@ -69,7 +69,7 @@ Every check-in or merge into master will trigger travis-ci build and do a releas
 
 Every check-in or merge of PR into development will trigger travis-ci build and do a beta release
 
-####Translation-related command
+#### Translation-related command
 
 Translation related files are in `/translations` folder.
     
@@ -83,7 +83,7 @@ Translation related files are in `/translations` folder.
 The tool should be available on linux, if you are on Osx try `brew install gettext && brew link gettext --force`.
 to submit text to translators: push to *translation* branch, weblate hook will be triggered.
 
-####Including Webtrader charts in your application
+#### Including Webtrader charts in your application
 You can generate the embedding code from any webtrader chart. There are several parameters that could be passed to webtrader to control the charts.
 Some of these parameters are 
 
@@ -94,8 +94,16 @@ Some of these parameters are
     * hideOverlay - true/false
     * hideShare - true/false
     * timezone
+## Testing
+Use the following command to download nightwatch dependency.
+```
+$ node nightwatch.conf.BASIC.js
+```
+To run tests:
 
-###Contribution
+- First run: `yarn server`
+- Then in a new instance of terminal run: `yarn test`
+### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
 
