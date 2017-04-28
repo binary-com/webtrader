@@ -1,8 +1,5 @@
-//var moment = require('moment');
-
-module.exports = { // adapted from: https://git.io/vodU0
+module.exports = {
   'Index file': function (browser) {
-    //console.dir(browser);
     browser
       .url('http://localhost:9001')
       .waitForElementVisible('body')
@@ -18,7 +15,9 @@ module.exports = { // adapted from: https://git.io/vodU0
     browser.execute('return local_storage.get("i18n")', [], (result) => {
       const lang = result.value.value.toUpperCase();
       browser
+        .waitForElementVisible('.languages')
         .click('.languages')
+        .waitForElementVisible('#select_language')
         .assert.visible('#select_language')
         .assert.attributeContains('#select_language .' + lang, 'class', 'invisible');
     });
