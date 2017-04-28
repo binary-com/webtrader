@@ -133,7 +133,9 @@ const init_state = (root, what_todo) => {
       financial: {
          experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
          frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
+         account_opening_reason_array: ['Speculative', 'Income Earning', 'Assets Saving', 'Hedging'],
 
+         account_opening_reason: '',
          forex_trading_experience: '',
          forex_trading_frequency: '',
          indices_trading_experience: '',
@@ -160,6 +162,9 @@ const init_state = (root, what_todo) => {
 
          estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
          estimated_worth: '',
+
+         account_turnover_array: ['Less than $25,000', '$25,000 - $50,000', '$50,001 - $100,000', '$100,001 - $500,000', 'Over $500,000'],
+         account_turnover: '',
 
          occupation_array: ["Chief Executives, Senior Officials and Legislators", "Managers", "Professionals", "Clerks",
             "Personal Care, Sales and Service Workers", "Agricultural, Forestry and Fishery Workers",
@@ -254,30 +259,21 @@ const init_state = (root, what_todo) => {
          });
    };
 
-   state.financial.all_selected = () => {
-      const financial = state.financial;
-      return financial.forex_trading_experience !== '' &&
-         financial.forex_trading_frequency !== '' &&
-         financial.indices_trading_experience !== '' &&
-         financial.indices_trading_frequency !== '' &&
-         financial.commodities_trading_experience !== '' &&
-         financial.commodities_trading_frequency !== '' &&
-         financial.stocks_trading_experience !== '' &&
-         financial.stocks_trading_frequency !== '' &&
-         financial.other_derivatives_trading_experience !== '' &&
-         financial.other_derivatives_trading_frequency !== '' &&
-         financial.other_instruments_trading_experience !== '' &&
-         financial.other_instruments_trading_frequency !== '' &&
-         financial.employment_industry !== '' &&
-         financial.occupation !== '' &&
-         financial.education_level !== '' &&
-         financial.income_source !== '' &&
-         financial.net_income !== '' &&
-         financial.estimated_worth !== '';
+   state.financial.empty_fields = () => {
+      return state.financial.account_opening_reason === '' || state.financial.forex_trading_experience === '' ||
+          state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
+          state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
+          state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
+          state.financial.stocks_trading_frequency === '' || state.financial.other_derivatives_trading_experience === '' ||
+          state.financial.other_derivatives_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
+          state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
+          state.financial.occupation === '' || state.financial.education_level === '' ||
+          state.financial.income_source === '' || state.financial.net_income === '' ||
+          state.financial.account_turnover === '' || state.financial.estimated_worth === '';
    };
 
    state.financial.click = () => {
-      if (!state.financial.all_selected()) {
+      if (state.financial.empty_fields()) {
          state.empty_fields.show();
          $.growl.error({ message: 'Not all financial information are completed' });
          return;
@@ -371,12 +367,8 @@ const init_state = (root, what_todo) => {
    }
 
    state.route.update = (route) => {
-      const routes = {
-         'user': 1010,
-         'financial': 1540
-      };
       state.route.value = route;
-      real_win.dialog('option', 'height', routes[route]);
+      //real_win.dialog('option', 'height', routes[route]);
       real_win.dialog('widget').trigger('dialogresizestop');
    };
 

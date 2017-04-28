@@ -12,9 +12,6 @@ import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
 import { Longcode } from 'binary-longcode';
 
-require(['websockets/stream_handler']);
-const barsTable = chartingRequestMap.barsTable;
-
 /* rv binder to show tick chart for this confirmation dialog */
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
@@ -198,7 +195,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
    const longcodeGenerator = new Longcode(active_symbols, lang, currency);
    extra.getbarrier = (tick) => {
       let barrier = tick.quote*1;
-      if(extra.barrier && _(['higher','lower']).includes(extra.category_display.name)) {
+      if(extra.barrier && !_(['rise','fall']).includes(extra.category_display.name)) {
          barrier += extra.barrier*1;
       }
       return barrier.toFixed(decimal_digits);

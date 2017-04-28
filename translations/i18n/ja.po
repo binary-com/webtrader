@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-13 21:38+0200\n"
-"PO-Revision-Date: 2017-03-14 07:32+0000\n"
+"PO-Revision-Date: 2017-04-24 23:37+0000\n"
 "Last-Translator: Haruna Sekiya <hrnmyrn@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ja/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.12\n"
+"X-Generator: Weblate 2.14-dev\n"
 
 msgid ""
 "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-"
@@ -479,7 +479,7 @@ msgstr ""
 msgid ""
 "A PEP is an individual who is or has been entrusted with a prominent public "
 "function. This status extends to a PEP's relatives and close associates"
-msgstr ""
+msgstr "PEPとは公的地位に有するまたは委託されている個人をいいます。親族や親しい友人にPEP がいる場合も該当します。"
 
 msgid ""
 "A Smoothed Moving Average is sort of a blend between a Simple Moving Average "
@@ -654,7 +654,7 @@ msgid ""
 "A chart pattern that consists of a small white candlestick with short "
 "shadows or tails followed by a large black candlestick that eclipses or "
 "'engulfs' the small white one"
-msgstr ""
+msgstr "小さく白いローソクを覆うまたは包む長く黒いローソクが続く短いヒゲがある白く短いローソクからなるチャートパターン"
 
 msgid ""
 "A derivative is a financial instrument whose value is determined by "
@@ -668,7 +668,7 @@ msgstr ""
 msgid ""
 "A medium to long bullish or bearish candlestick with the key defining trait "
 "being no head or tail shadows"
-msgstr ""
+msgstr "上ヒゲまたは下ヒゲのない中〜大の陰線または陽線のローソク足"
 
 msgid ""
 "A panel featuring industry leaders awards BetOnMarkets.com 'Financial "
@@ -687,6 +687,8 @@ msgid ""
 "transaction signals that are associated with many other indicators that "
 "mainly rely on a single time period"
 msgstr ""
+"Larry "
+"Williamsによって発明された、3つの異なる期間の加重平均と主に単一期間に依存したその他の指標に関連する誤った取引の信号を用いたテクニカル指標です。"
 
 msgid ""
 "A technical momentum indicator that compares a security's closing price to "
@@ -694,6 +696,8 @@ msgid ""
 "market movements can be reduced by adjusting the time period or by taking a "
 "moving average of the result"
 msgstr ""
+"証券価格の終値と期間を超える価格範囲を比較するテクニカルモメンタム指標。オシレーターの市場動向への感度は期間を調整するか、結果の動向平均をとることで減らす"
+"ことができます。"
 
 msgid ""
 "A technical trading pattern in which three candlesticks form what appears to "
@@ -871,6 +875,8 @@ msgid ""
 "It is calculated by adding two values of ADX (the current value and a value "
 "n periods back), then dividing by two"
 msgstr ""
+"アベレージ・ダイレクショナル・ムーブメント・インデックス・レーティングはADXの変化を計ります。ADXの2つの値（現在値とある期間戻った値）を足して2で割"
+"ったものをいいます。"
 
 msgid "Average True Range (ATR)"
 msgstr "アベレージ・トゥルー・レンジ（ATR）"
@@ -980,10 +986,10 @@ msgid "Binary options or other financial derivatives"
 msgstr "バイナリーオプション または その他金融派生商品"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "バイナリーオプションの取引経験"
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "バイナリーオプションの取引頻度"
 
 msgid "Binary trading is flexible"
 msgstr "柔軟な取引"
@@ -1375,7 +1381,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 msgid "Close Price"
 msgstr "：終値"
@@ -1573,7 +1579,7 @@ msgid "Description"
 msgstr "取引内容"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "ドイツ語"
 
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
@@ -1582,6 +1588,8 @@ msgid ""
 "Instead, the Mass Index identifies range bulges that can foreshadow a "
 "reversal of the current trend"
 msgstr ""
+"マスインデックスはDonald Dorseyによって開発され、レンジの拡大に基づいて反転傾向を導くためにラダー取引に使用します。そのため、マスインデックス"
+"は指向方向バイアスを持たないボラティリティ指標です。 代わりに、マスインデックスは現在の傾向からの反転が起こりうる範囲の膨らみを特定します。"
 
 msgid ""
 "Developed by Larry Williams, Williams %R is a momentum indicator that is the "
@@ -1589,6 +1597,8 @@ msgid ""
 "%R reflects the level of the close relative to the highest high for the look-"
 "back period"
 msgstr ""
+"ウィリアムズ％RはLarry Williamsによって開発されたストキャスティクスとは真逆のモメンタム指標です。%R、Williams "
+"%R、ウィリアムズ%Rと表記され、ルックバック期間の最高値に対するクローズレベルを反映します。"
 
 msgid ""
 "Developed by Tushar Chande in 1995, Aroon is an indicator system that "
@@ -1707,7 +1717,7 @@ msgid ""
 "Due to recent changes in the regulations, we are required to ask our clients "
 "to complete the following Financial Assessment. Please note that you will "
 "not be able to continue trading until this is completed"
-msgstr ""
+msgstr "規制の変更により、次の財務評価にご入力いただく必要があります。完了するまで取引を継続することができませんのでご注意ください。"
 
 msgid "Duration"
 msgstr "期間"
@@ -1761,7 +1771,7 @@ msgid "Ends out"
 msgstr "END-OUT"
 
 msgid "English"
-msgstr ""
+msgstr "英語"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "つつみ線（CDLENGULFING）"
@@ -1779,7 +1789,7 @@ msgid "Entry spot price"
 msgstr "取引時レート"
 
 msgid "Espa ol"
-msgstr ""
+msgstr "スペイン語"
 
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
@@ -1800,7 +1810,7 @@ msgid "Exit Spot"
 msgstr "終値"
 
 msgid "Exit Spot Time"
-msgstr ""
+msgstr "売却/判定時刻"
 
 msgid "Exit spot"
 msgstr "終値"
@@ -1861,7 +1871,7 @@ msgid "Finance"
 msgstr "金融"
 
 msgid "Financial Information"
-msgstr ""
+msgstr "財務情報"
 
 msgid "Financial Security"
 msgstr "金融セキュリティ"
@@ -1876,7 +1886,7 @@ msgid "Firefox"
 msgstr "Firefox"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "番地"
 
 msgid "First name"
 msgstr "名前（名）"
@@ -1925,7 +1935,7 @@ msgstr ""
 "チャートで起こる特定のパターンを形にします。"
 
 msgid "Fran ais"
-msgstr ""
+msgstr "フランス語"
 
 msgid "Fri"
 msgstr "金曜日"
@@ -1994,7 +2004,7 @@ msgid "Help"
 msgstr "ヘルプ"
 
 msgid "High"
-msgstr ""
+msgstr "HIGH"
 
 msgid "High Barrier"
 msgstr "高限バリア"
@@ -2057,7 +2067,7 @@ msgid "Hull Moving Average (HMA)"
 msgstr "ハル移動平均（HMA）"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
+msgstr "私はPEP（重要な公的地位を有する者）ではありません"
 
 msgid "I have read and agree to Binary.com"
 msgstr "よく読んだうえで、Binary.comに同意します"
@@ -2240,7 +2250,7 @@ msgid "Individual Traders"
 msgstr "個人投資家"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "インドネシア語"
 
 msgid "Industry of Employment"
 msgstr "雇用産業"
@@ -2290,7 +2300,7 @@ msgstr ""
 "レーと称されるサイバージャヤに開発センターを開設。"
 
 msgid "Italiano"
-msgstr ""
+msgstr "イタリア語"
 
 msgid ""
 "Its multi window interface allows pro traders to monitor the movements of "
@@ -2490,7 +2500,7 @@ msgid ""
 msgstr ""
 
 msgid "Long-term action"
-msgstr ""
+msgstr "長期間取引"
 
 msgid ""
 "Look for a black candle in a downward price trend followed by a white candle "
@@ -2513,7 +2523,7 @@ msgid ""
 msgstr ""
 
 msgid "Low"
-msgstr ""
+msgstr "LOW"
 
 msgid "Low Barrier"
 msgstr "下限バリア"
@@ -2610,7 +2620,7 @@ msgid "Maximum number of open positions"
 msgstr "最大保有ポジション"
 
 msgid "Maximum price over selected period"
-msgstr ""
+msgstr "最大金額を超えています"
 
 msgid "May"
 msgstr "5月"
@@ -2634,13 +2644,13 @@ msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "数字を含む6文字以上でご入力ください"
 
 msgid "Minimum of 2 characters required"
-msgstr ""
+msgstr "2文字以上でご入力ください"
 
 msgid "Minimum of 4 characters required"
-msgstr ""
+msgstr "4文字以上でご入力ください"
 
 msgid "Minimum of 6 characters required"
-msgstr ""
+msgstr "6文字以上でご入力ください"
 
 msgid "Minimum price over selected period"
 msgstr "特定期間の最安値"
@@ -2827,26 +2837,26 @@ msgstr ""
 "され、この時点で当社の口座数は1,500万以上となりました。"
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "文字、数字、ハイフンのみご利用いただけます"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "文字、数字、スペース、ハイフン、ピリオド、アポストロフィのみご利用いただけます"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+msgstr "文字、数字、スペース、ピリオド、カンマ、- / @のみご利用いただけます"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 "文字、数字、スペース、ピリオド、カンマ、ダッシュ（-）のみご利用いただけます"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "文字、スペース、ハイフン、ピリオド、アポストロフィのみご利用いただけます"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "数字とスペースのみご利用いただけます"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "数字、文字、ハイフンのみご利用いただけます"
 
 msgid "Open"
 msgstr "Open"
@@ -2929,7 +2939,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PEP Declaration"
-msgstr ""
+msgstr "PEP宣言書"
 
 msgid "PNG"
 msgstr "PNG"
@@ -2990,7 +3000,7 @@ msgstr ""
 "例）0.0001"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "出生地"
 
 msgid "Please"
 msgstr "どうぞ"
@@ -3005,7 +3015,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "有効な日付をご入力ください（年月日）"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "0より大きい値をご入力ください"
 
 msgid "Please enter correct email"
 msgstr "正しいメールアドレスをご入力ください"
@@ -3030,13 +3040,13 @@ msgstr ""
 "いずれかのブラウザをご利用の方は最新バージョンをインストールしてください"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "税務情報をご入力ください"
 
 msgid "Please select"
 msgstr "選択してください"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "有効なワンタイムパスワードをご入力ください"
 
 msgid "Please try again after 1 minute"
 msgstr "1分後に再度お試しください"
@@ -3051,13 +3061,13 @@ msgid "Points"
 msgstr "ポイント"
 
 msgid "Polski"
-msgstr ""
+msgstr "ポーランド語"
 
 msgid "Portfolio"
 msgstr "ポジション一覧"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "ポルトガル語"
 
 msgid "Postal code/ZIP"
 msgstr "郵便番号"
@@ -3152,7 +3162,7 @@ msgid "Read"
 msgstr "読む"
 
 msgid "Read about"
-msgstr ""
+msgstr "詳しく読む"
 
 msgid ""
 "Reap the rewards of trading binaries, knowing your funds are always safe"
@@ -3225,7 +3235,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "相対力指数（RSI）"
 
 msgid "Remove"
-msgstr ""
+msgstr "削除"
 
 msgid "Remove Selected"
 msgstr "選択項目を削除"
@@ -3315,7 +3325,7 @@ msgid "Scalable trading"
 msgstr "スケーラブルな取引"
 
 msgid "Second line of home address"
-msgstr ""
+msgstr "マンション（建物）名"
 
 msgid "Secondary"
 msgstr "第二"
@@ -3378,7 +3388,7 @@ msgid "Short to long-term"
 msgstr "短期から長期のお取引"
 
 msgid "Short-term action"
-msgstr ""
+msgstr "短期間取引"
 
 msgid "Show"
 msgstr "表示"
@@ -3452,7 +3462,7 @@ msgid "Start Time"
 msgstr "取引時刻"
 
 msgid "Start Trading"
-msgstr ""
+msgstr "取引を始める"
 
 msgid "Start time"
 msgstr "取引時刻"
@@ -3565,13 +3575,13 @@ msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "たすきギャップ（CDLTASUKIGAP）"
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "マイナンバー"
 
 msgid "Tax information"
-msgstr ""
+msgstr "税務情報"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "税務上の居住地"
 
 msgid "Tax-free"
 msgstr "非課税"

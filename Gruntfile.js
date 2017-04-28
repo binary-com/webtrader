@@ -77,6 +77,7 @@ module.exports = function (grunt) {
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'binary-com-longcode/dist/main.js',
                             'text/text.js',
+                            'webtrader-charts/dist/webtrader-charts.js',
                             'regenerator-runtime/*',
                             'chosen-js/*'
                         ],
@@ -93,7 +94,6 @@ module.exports = function (grunt) {
                             '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
-                            'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'clipboard/dist/clipboard.min.js',
                             'es6-promise/promise.min.js',
@@ -123,7 +123,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
+                            '**', '!**/*.js','v<%=pkg.version%>/lib/**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -234,7 +234,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/uncompressed',
-                    src: ['**/*.js'],
+                    src: ['**/*.js', '!v<%=pkg.version%>/lib/**/*.js'],
                     dest: 'dist/compressed'
                 }],
                 options: {

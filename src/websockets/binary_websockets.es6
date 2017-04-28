@@ -24,7 +24,7 @@ const get_app_id = () => {
       }
    }
    return token;
-}
+};
 
 export const app_id = get_app_id();
 
@@ -70,33 +70,6 @@ const onclose = () => {
                  }
               );
             }
-            require(['charts/chartingRequestMap'], (chartingRequestMap) => {
-                const chart_registration_promises = [];
-               Object.keys(chartingRequestMap).forEach((key) => {
-                  const req = chartingRequestMap[key];
-                  if (req && req.symbol && !req.timerHandler) { /* resubscribe */
-                     const promise = chartingRequestMap.register({
-                        symbol: req.symbol,
-                        granularity: req.granularity,
-                        subscribe: 1,
-                        count: 1,
-                        style: req.granularity > 0 ? 'candles' : 'ticks'
-                     })
-                        .catch((err) => console.error(err));
-                     chart_registration_promises.push(promise);
-                  }
-               });
-
-               /* refresh the charts when they are reregistered.  */
-               Promise.all(chart_registration_promises)
-                  .then(() => {
-                     require(['charts/charts', 'charts/chartOptions'], (charts, chartOptions) => {
-                        chartOptions.getAllChartsWithTheirTypes().forEach(
-                           (chart) => charts.refresh('#' + chart.id + '_chart', null, chart.chartType)
-                        );
-                     });
-                  })
-            });
         }, 1000);
    });
 }
@@ -146,7 +119,7 @@ const onmessage = (message) => {
       setTimeout(
          () => cb(data)
          , 0);
-   };
+   }
 
    const key = data.req_id;
    const promise = unresolved_promises[key];
@@ -163,10 +136,6 @@ const onmessage = (message) => {
 }
 
 socket = connect(); // connect
-
-//This is triggering asycn loading of tick_handler.
-//The module will automatically start working as soon as its loaded
-require(['websockets/stream_handler']); // require tick_handler to handle ticks.
 
 /* whether the given request needs authentication or not */
 const needs_authentication = (data) => {

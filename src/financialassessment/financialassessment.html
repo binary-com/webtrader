@@ -149,7 +149,7 @@
             <div class="column-2">
                 <select rv-value="financial.account_turnover">
                     <option value="" selected="selected">Please select</option>
-                    <option rv-each-row="financial.account_turnover" rv-value="row">{row | i18n}</option>
+                    <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
                 </select>
                 <div class="error-msg" rv-show="empty_field | and financial.account_turnover | eq ''">This field is required.</div>
             </div>

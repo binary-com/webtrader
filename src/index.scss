@@ -98,13 +98,7 @@ body {
     width: 35%;
     margin: 40px 0 10px 10px;
 }
-@media screen and (min-width:832px) and (min-height:800px) {
-    #footer {
-        position: fixed;
-        bottom: 0;
-    }
-}
-#doorbell-button {
+#doorbell-button  {
     right: -37px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);

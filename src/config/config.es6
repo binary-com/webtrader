@@ -60,8 +60,9 @@ const init_state = (root) => {
    };
 
    state.apply = () => {
+      const lang = (local_storage.get('i18n') || {value:'en'}).value;
       const config = {
-         websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=EN',
+         websocket_url: 'wss://' + state.websocket_url + '/websockets/v3?l=' + lang,
          oauth_url: 'https://' + state.oauth_url + '/oauth2/authorize',
          app_id: state.app_id
       }

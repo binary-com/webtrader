@@ -76,7 +76,7 @@ const refreshTable  = (yyy_mm_dd) => {
             epoch_to_string(trans.transaction_time, { utc: true }),
             trans.transaction_id,
             _.capitalize(trans.action_type),
-            longcodeGenerator.get(trans.shortcode) ,
+            /(Buy|Sell)/i.test(trans.action_type) ? longcodeGenerator.get(trans.shortcode) : trans.longcode,
             (trans.amount * 1).toFixed(2),
             '<b>' + formatPrice(trans.balance_after,currency) + '</b>',
             view_button,
@@ -103,8 +103,9 @@ const initStatement = () => {
       title: 'Statement'.i18n(),
       width: 700 ,
       height: 400,
-      destroy: () => {
+      close: () => {
          table && table.DataTable().destroy(true);
+         statement && statement.remove();
          statement = null;
       },
       refresh: () => {

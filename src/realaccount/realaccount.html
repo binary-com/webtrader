@@ -184,6 +184,14 @@
         </span>
             </div>
         </div>
+        <div class="row">
+            <span class='title'>Account opening reason</span>
+            <span class="please-select" rv-show="financial.account_opening_reason | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.account_opening_reason" rv-selectrefresh="financial.account_opening_reason_array">
+                <option value="" selected="selected" disabled="disabled">Please select</option>
+                <option rv-each-row="financial.account_opening_reason_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
         <div class='row'>
             <span class='title'>Forex trading experience</span>
             <span class="please-select" rv-show="financial.forex_trading_experience | eq '' | and empty_fields.validate">*</span>
@@ -276,6 +284,14 @@
             <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.employment_industry" rv-selectrefresh="financial.employment_industry_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.employment_industry_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
+        <div class='row'>
+            <span class='title'>Account turnover</span>
+            <span class="please-select" rv-show="financial.account_turnover | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.account_turnover" rv-selectrefresh="financial.account_turnover_array">
+                    <option value="" selected="selected" disabled="disabled">Please select</option>
+                    <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class="row">
