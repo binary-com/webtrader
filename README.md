@@ -100,9 +100,9 @@ Use the following command to download nightwatch dependency.
 $ node nightwatch.conf.BASIC.js
 ```
 To run tests:
-
-- First run: `yarn server`
-- Then in a new instance of terminal run: `yarn test`
+```
+yarn test
+```
 ### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:

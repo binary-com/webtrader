@@ -1,7 +1,15 @@
+var server = require('./server.js');
+
 module.exports = {
+  before: () => {
+    server.connect();
+  },
+  after: () => {
+    server.disconnect();
+  },
   'Index file': function (browser) {
     browser
-      .url('http://localhost:9001')
+      .url('http://localhost:3000')
       .waitForElementVisible('body')
       .assert.title('Binary.com : Webtrader');
   },

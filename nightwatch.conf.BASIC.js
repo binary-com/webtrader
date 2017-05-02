@@ -18,9 +18,11 @@ module.exports = {
   },
   "test_settings": {
     "default": {
+    "filter" : "tests/\*test.js",
       "screenshots": {
         "enabled": true, // if you want to keep screenshots
-        "path": './screenshots' // save screenshots here
+        "path": './screenshots', // save screenshots here
+        "on_failure": true
       },
       "globals": {
         "waitForConditionTimeout": 5000 // sometimes internet is slow so wait.
