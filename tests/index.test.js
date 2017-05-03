@@ -1,15 +1,22 @@
 var server = require('./server.js');
 
 module.exports = {
-  before: () => {
+  before: (browser) => {
+    if(browser.globals.test_settings.global === 'browserstack')
+      return;
     server.connect();
   },
-  after: () => {
+  after: (browser) => {
+    if(browser.globals.test_settings.global === 'browserstack')
+      return;
     server.disconnect();
   },
-  'Index file': function (browser) {
+  'Index file': (browser) => {
+    var url = 'http://localhost:3000';
+    if(browser.globals.test_settings.global === 'browserstack')
+      url = 'https://webtrader.binary.com/beta';    
     browser
-      .url('http://localhost:3000')
+      .url(url)
       .waitForElementVisible('body')
       .assert.title('Binary.com : Webtrader');
   },
