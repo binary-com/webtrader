@@ -1,8 +1,6 @@
 "use strict";
 
 module.exports = function (grunt) {
-    var nightwatch = require('nightwatch');
-    nightwatch.initGrunt(grunt);
     var pkg = grunt.file.readJSON('package.json');
     for (var key in pkg.devDependencies) {
         if (key.indexOf('grunt') !== -1) {
