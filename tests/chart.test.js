@@ -73,7 +73,7 @@ module.exports = {
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       //Crosshair enabled
       .assert.cssClassPresent('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]', 'bold')
-      .click('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]')
+      .click('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]') //Make changes here
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       .assert.cssClassNotPresent('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]', 'bold')
       .click('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]')
