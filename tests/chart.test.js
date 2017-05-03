@@ -2,19 +2,19 @@ var server = require('./server.js');
 
 module.exports = {
   before: (browser) => {
-    if(browser.globals.test_settings.global === 'browserstack')
+    if (browser.globals.test_settings.global === 'browserstack')
       return;
     server.connect();
   },
   after: (browser) => {
-    if(browser.globals.test_settings.global === 'browserstack')
+    if (browser.globals.test_settings.global === 'browserstack')
       return;
     server.disconnect();
   },
   'Open trading page': (browser) => {
     var url = 'http://localhost:3000';
-    if(browser.globals.test_settings.global === 'browserstack')
-      url = 'https://webtrader.binary.com/beta';    
+    if (browser.globals.test_settings.global === 'browserstack')
+      url = 'https://webtrader.binary.com/beta';
     browser
       .url(url)
       .waitForElementVisible('body')
@@ -87,7 +87,18 @@ module.exports = {
       .waitForElementPresent('.overlay-dialog')
       .execute("$('.overlay-dialog').parent().find('.ui-dialog-titlebar-close').click()")
       .assert.hidden('.overlay-dialog')
-
+      .click('div[role=\'dialog\'] .webtrader-dialog .chartOptions_button span.drawButton')
+      .assert.visible('div[role=\'dialog\'] .webtrader-dialog .drawingToolOverlay')
+      .execute('$(\'div[role="dialog"] .webtrader-dialog span[data-balloon="Horizontal line"] img\').click()')
+      .waitForElementPresent('.cssPopup')
+      .execute("$('.cssPopup').parent().find('.ui-dialog-buttonset .ui-button')[0].click()")
+      .assert.elementNotPresent('.cssPopup')
+      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg', 90, 100)
+      .mouseButtonClick('left')
+      .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"]')
+      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"]', 0, 0)
+      .doubleClick()
+      .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"]')      
 
     /**
      * To-Do 
