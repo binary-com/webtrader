@@ -61,11 +61,11 @@ module.exports = {
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       //Open table view
       .click('div[role="dialog"]:last-of-type .chartTypeOverlay .row .cell[data-charttype="table"]')
-      .pause(500)
+      .pause(750)
       .assert.cssProperty('div[role="dialog"]:last-of-type .table-view', 'left', '0px')
       //Close table view
       .click('div[role="dialog"]:last-of-type span.close')
-      .pause(500)
+      .pause(250)
       .assert.cssProperty('div[role="dialog"]:last-of-type .table-view', 'left', '350px')
       //Change chart type to candle
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
@@ -73,10 +73,10 @@ module.exports = {
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       //Crosshair enabled
       .assert.cssClassPresent('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]', 'bold')
-      .click('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]') //Make changes here
+      .execute('$(\'div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]\').parent().click()')
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       .assert.cssClassNotPresent('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]', 'bold')
-      .click('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]')
+      .execute('$(\'div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]\').parent().click()')
       //Indicator pop-up
       .click('div[role="dialog"]:last-of-type .chartOptions_button span[data-balloon="Indicators"]')
       .waitForElementPresent('.indicator-dialog')
@@ -87,19 +87,22 @@ module.exports = {
       .waitForElementPresent('.overlay-dialog')
       .execute("$('.overlay-dialog').parent().find('.ui-dialog-titlebar-close').click()")
       .assert.hidden('.overlay-dialog')
+      // Draw
       .click('div[role=\'dialog\'] .webtrader-dialog .chartOptions_button span.drawButton')
       .assert.visible('div[role=\'dialog\'] .webtrader-dialog .drawingToolOverlay')
       .execute('$(\'div[role="dialog"] .webtrader-dialog span[data-balloon="Horizontal line"] img\').click()')
       .waitForElementPresent('.cssPopup')
+      // Draw horizontal line
       .execute("$('.cssPopup').parent().find('.ui-dialog-buttonset .ui-button')[0].click()")
       .assert.elementNotPresent('.cssPopup')
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg', 90, 100)
       .mouseButtonClick('left')
       .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"]')
-      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"]', 0, 0)
+      //Remove horizontal line from chart
+      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', 90, 100)
       .doubleClick()
-      .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"]')      
-
+      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', -50, -50)
+      .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"][visibility="visible"]')
     /**
      * To-Do 
      * Figure out a way to simulate mouse hover over highcharts
@@ -113,14 +116,6 @@ module.exports = {
     .saveScreenshot('screenshots/crosshair.png')
     .click('div[role="dialog"]:last-of-type .highcharts-container svg > path')
     .assert.elementPresent('div[role="dialog"]:last-of-type .highcharts-container svg > path[stroke-width="2"]')*/
-
-    /*
-    //Dialog maximize
-    .click('div[role="dialog"]:last-of-type .custom-icon-maximize')
-    //Dialog minimize
-    .click('div[role="dialog"]:last-of-type .custom-icon-minimize')
-    //Dialog restore
-    .click('div[role="dialog"]:last-of-type .ui-icon[title="restore"]')*/
   },
   'End': (browser) => {
     browser
