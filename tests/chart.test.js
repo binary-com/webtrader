@@ -54,7 +54,7 @@ module.exports = {
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       //Open table view
       .click('div[role="dialog"]:last-of-type .chartTypeOverlay .row .cell[data-charttype="table"]')
-      .pause(100)
+      .pause(500)
       .assert.cssProperty('div[role="dialog"]:last-of-type .table-view', 'left', '0px')
       //Close table view
       .click('div[role="dialog"]:last-of-type span.close')
