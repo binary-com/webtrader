@@ -19,6 +19,7 @@ branches:
     - master
     - development
 script:
+  - yarn test-browserstack
   - git config --global user.email "arnab@binary.com"
   - git config --global user.name "Arnab Karmakar"
   - yarn deploy-gh-pages
