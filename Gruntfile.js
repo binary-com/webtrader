@@ -25,28 +25,6 @@ module.exports = function (grunt) {
                 'Gruntfile.js'//, 'src/**/*.js', 'src/*.js' TODO
             ]
         },
-        nightwatch: {
-            options: {
-            cwd: './'
-            },
-
-            'default' : {},
-
-            browserstack: {
-            argv: {
-                env: 'browserstack'
-            },
-            settings: {
-                silent: true
-            }
-            },
-
-            'all' : {
-            argv: {
-                env: 'default,browserstack'
-            }
-            },
-        },
         clean: {
             compressed: ['dist/compressed'],
             uncompressed: ['dist/uncompressed'],

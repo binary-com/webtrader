@@ -6,6 +6,11 @@ matrix:
 language: node_js
 node_js:
   - "6"
+addons:
+  browserstack:
+    username: 'jeanyvessireau1'
+    access_key:
+      secure: "r6j+AREzj151bb8GPnM5sm3cjxCLB+9axUsul0twvGrOIeeE/c3fX3PfigfATVbiIXuu8CkxAkzbYFIfuTgjw++TXu4eaV7NssA/p9LOvI/4J1dgSveRZke+ljRFqdyPsFyg+5hIoTUwITsQQ9jVOd6ExapBWvoWEGdtrFuU3+i/h1k/SzY3MnFWLWlhouky6n8DqhvpVB9T2Rpv1cgklVVcpLXoEFT5Zuav5CHFHnI/1c3UYUcrQGi9cJ6lBEpkdmZtIEVns3Vkmop5SqRhE2dMz+53yU86O4vFDEBaFPODwJoR/O6Ye2urYm1Xt7XJ00YD0eyEOjZaQvQsAg9sp4Zsffae05Bxpibm+VMLq8hsuA9zQef88sJQ8weY5r+KvqvAJPPIh4Pulvz83B/3l7301TbC/GOzOpQx2igDSdmb45l7eeRWjVymX8yqe1xgei/OCKMbujLm60BTQrpH3YEjEf93+cSOap5ybgtetQiK/o6CPhFV/9f1lLWmOKfWFXoPieXQabnjBrjdIrOGM9ZhCD5ocjVT1cLvMo6cYx9hVfyEkb/FiziwzrH8BWYJuF8gjpXM6iKqq0Kjc9Q8AEAUUEJZDG5bmyHg2xSSv29gGL75jaIED1ZhNDL71wBaQpzMPZRKk8X2eHYBKPBl+wSS63g5uKVBvrWPVWkBuMQ="
 notifications:
   email:
     - arnab@binary.com
