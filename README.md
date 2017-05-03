@@ -95,14 +95,18 @@ Some of these parameters are
     * hideShare - true/false
     * timezone
 ## Testing
-Use the following command to download nightwatch dependency.
-```
-$ node nightwatch.conf.BASIC.js
-```
-To run tests:
+To run tests locally:
 ```
 yarn test
 ```
+To run tests on *BrowserStack*:
+
+- Edit `~/.bash_profile` and append the following lines:
+  ```
+  export BROWSERSTACK_USERNAME="${BrowserStack-Username}"
+  export BROWSERSTACK_KEY="${BrowserStack-API-key}"
+  ```
+- Run: `yarn test-browserstack`
 ### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
