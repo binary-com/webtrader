@@ -410,8 +410,9 @@ const init_state = (root, what_todo) => {
          () => liveapi.cached.send({ states_list: state.user.residence })
       )
       .then((data) => {
-         state.user.state_address_array = data.states_list;
-         state.user.state_address = data.states_list[0].value;
+         console.log(data.states_list);
+         state.user.state_address_array = [{text:'Please select', value:''}, ...data.states_list];
+         state.user.state_address = state.user.state_address_array[0].value;
       })
       .catch(error_handler);
 }
