@@ -116,7 +116,7 @@ const settingsData = {
 
         //validation
         $.each(limits, function(index, value) {
-            scope[index] = scope[index] && '' + scope[index];
+            scope[index] = scope[index] && scope[index].toString();
             if (scope[index] || value.set) {
                 if (index === "exclude_until") {
                     if(moment.utc(scope.exclude_until, "YYYY-MM-DD").isBefore(moment.utc().startOf('day').add(6, "months"))){
