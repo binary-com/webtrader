@@ -26,7 +26,8 @@ module.exports = {
         "on_failure": true
       },
       "globals": {
-        "waitForConditionTimeout": 5000 // sometimes internet is slow so wait.
+        "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
+        "waitForConditionPollInterval": 200
       },
       "desiredCapabilities": { // use Chrome as the default browser for tests
         "browserName": "chrome",
@@ -35,11 +36,15 @@ module.exports = {
       }
     },
     "browserstack": {
-      global: 'browserstack',
       selenium: {
         "start_process": false,
         "host": "hub-cloud.browserstack.com",
         "port": 80
+      },
+      "globals": {
+        "env": 'browserstack',
+        "waitForConditionTimeout": 20000, // sometimes internet is slow so wait.
+        "waitForConditionPollInterval": 1000
       },
       desiredCapabilities: {
         'browserstack.user': process.env.BROWSERSTACK_USERNAME,

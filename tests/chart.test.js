@@ -2,18 +2,18 @@ var server = require('./server.js');
 
 module.exports = {
   before: (browser) => {
-    if (browser.globals.test_settings.global === 'browserstack')
+    if (browser.globals.env === 'browserstack')
       return;
     server.connect();
   },
   after: (browser) => {
-    if (browser.globals.test_settings.global === 'browserstack')
+    if (browser.globals.env === 'browserstack')
       return;
     server.disconnect();
   },
   'Open trading page': (browser) => {
     var url = 'http://localhost:3000';
-    if (browser.globals.test_settings.global === 'browserstack')
+    if (browser.globals.env === 'browserstack')
       url = 'https://webtrader.binary.com/beta';
     browser
       .url(url)
@@ -24,13 +24,13 @@ module.exports = {
   'Chart drop down': (browser) => {
     browser
       .assert.containsText('.top-nav-menu .instruments', 'Chart')
+      .waitForElementVisible('.chrome_extension')
+      //Close chrome pop-up
+      .click('.chrome_extension #cancel')
       .waitForElementPresent('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
       .click('.top-nav-menu .windows')
       //Close all dialogs.
       .click('.top-nav-menu .windows .closeAll')
-      .waitForElementVisible('.chrome_extension')
-      //Close chrome pop-up
-      .click('.chrome_extension #cancel')
       .click('.top-nav-menu .instruments')
       .waitForElementVisible('.top-nav-menu .instruments ul:first-of-type')
       .click('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
@@ -104,8 +104,9 @@ module.exports = {
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', -50, -50)
       .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"][visibility="visible"]')
     /**
-     * To-Do 
-     * Figure out a way to simulate mouse hover over highcharts
+     * To-Do:
+     *  - Figure out a way to simulate mouse hover over highcharts
+     *  - Add tests for chart template.
      */
     /*
     //Check crosshair
