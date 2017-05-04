@@ -14,7 +14,7 @@ let themeName = local_storage.get("theme");
 const custom_theme = local_storage.get("custom_theme");
 themeName = themeName && themeName.name;
 if (themeName) {
-   require(['lib/highstock/themes/' + themeName]);
+   require(['lib/highstock-release/themes/' + themeName]);
 }
 else if(custom_theme) {
    Highcharts.setOptions(custom_theme);
