@@ -22,15 +22,13 @@ requirejs.config({
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
         'moment-locale':'lib/moment/locale',
-        'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels": 'charts/indicators/level',
-        'paralleljs': 'lib/parallel_js/lib/parallel',
         'binary-style': '<style-url>/binary',
         'babel-runtime/regenerator': 'lib/regenerator-runtime/runtime',
         'webtrader-charts' : 'lib/webtrader-charts/dist/webtrader-charts',
         'chosen': 'lib/chosen-js/chosen.jquery',
-        'highstock-release': 'lib/highstock',
+        'highstock-release': 'lib/highstock-release',
         'binary-longcode': 'lib/binary-com-longcode/dist/main'
     },
     map: {
@@ -39,6 +37,7 @@ requirejs.config({
             'text': 'lib/text/text.js'
         }
     },
+
     waitSeconds: 0,
     /* fix for requriejs timeout on slow internet connectins */
     "shim": {
