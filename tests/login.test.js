@@ -14,7 +14,7 @@ module.exports = {
   'Login': (browser) => {
     var url = 'http://localhost:3000';
     if (browser.globals.env === 'browserstack')
-      url = 'https://webtrader.binary.com/';
+      url = 'https://webtrader.binary.com/beta';
     browser
       .url(url)
       .waitForElementVisible('body')
@@ -33,7 +33,7 @@ module.exports = {
       //Navigate to oauth.binary.com
       .assert.urlContains('oauth.binary.com')
       //Login
-      .url(url + '/?acct1=VRTC1418840&token1=a1-tIIhnnqmjl8q7QqtftDGnQgDZFA5f')
+      .url(url + '/?acct1=VRTC1418840&token1=vFXoxzTlyaFm6wU')
       .waitForElementVisible('body')
       .waitForElementNotVisible('.sk-spinner-container')
       //Check if logged in
@@ -58,7 +58,20 @@ module.exports = {
   },
   'Statement': (browser) => {
     browser
+      .click('.main-account')
+      .assert.visible('#all-accounts-top')
+      //Open statement
       .click('.link.statement')
+      .waitForElementPresent('.statement-dialog-content')
+      .waitForElementPresent('.statement-dialog-content button')
+      //Open view popup
+      .execute('$(".statement-dialog-content button:not(.button-disabled):first").click()')
+      .waitForElementPresent('.view-transaction-dialog')
+      .click('.view-transaction-dialog .tabs li[rv-on-click="route.update | bind \'chart\'"]')
+      .assert.cssClassPresent('.view-transaction-dialog .tabs li[rv-on-click="route.update | bind \'chart\'"]', 'active')
+      .assert.visible('.view-transaction-dialog .content .chart-container')
+      .waitForElementNotVisible('.view-transaction-dialog .content .chart-container .loading')
+      .assert.elementPresent('.view-transaction-dialog .content .chart-container .transaction-chart .highcharts-container svg')
       .end()
   }
 }

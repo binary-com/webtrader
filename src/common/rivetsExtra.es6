@@ -8,9 +8,8 @@ import rv from 'rivets';
 import moment from 'moment';
 import 'jquery-ui';
 import 'jquery-sparkline';
-import 'ddslick';
 import 'chosen';
-import 'color-picker'
+import 'color-picker';
 
 /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -19,7 +18,7 @@ rivets._.View.prototype.observe = function (keypath, callback) {
    while ((inx = keypath.indexOf('.')) !== -1) {
       model = model[keypath.substring(0,inx)];
       keypath = keypath.substring(inx + 1);
-   };
+   }
    this.adapters['.'].observe(model, keypath,
       () => callback(model[keypath])
    );
@@ -170,48 +169,6 @@ rv.formatters.debounce = (value, callback, timeout = 250) => {
    callback._timer_notify = setTimeout(callback.bind(undefined,value), timeout);
    return value;
 }
-
-/*************************************  binding *****************************************/
-rv.binders.ddslick = {
-   priority: 101,
-   publishes: true,
-   bind: function (el) {
-      const publish = this.publish,
-         model = this.model,
-         select = $(el);
-      const parent = select.parent();
-      const values = select.find('option').map((inx, opt) => $(opt).val()).get();
-
-      const update = (value) => {
-         const inx = values.indexOf(value);
-
-         parent.find('.dd-select input').val(value);
-         const selected_img = parent.find('img.dd-selected-image');
-         const img = parent.find('img')[inx+1];
-
-         selected_img.attr('src', $(img).attr('src'));
-      }
-
-      el._update = update;
-
-      let model_value = model.value;
-      select.ddslick({
-         imagePosition: "left",
-         data: [],
-         // width: 155,
-         background: "white",
-         onSelected: (data) => {
-            let value = data.selectedData.value
-            value = model_value || value;
-            model_value = null;
-            model.value = value;
-            update(value);
-         }
-      });
-   },
-   unbind: (el) => $(el).ddslick('destroy'),
-   routine: (el, value) => el._update(value)
-};
 
 /* turn current select item into a jquery-ui-selectmenu, update value on change */
 rv.binders.selectmenu = {

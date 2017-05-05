@@ -52,6 +52,8 @@ module.exports = function (grunt) {
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
                             'binary-com-longcode/dist/main.js',
+                            '!highstock-release/**', 'highstock-release/highstock.js', 'highstock-release/themes/**', 'highstock-release/modules/exporting.js', 'highstock-release/modules/offline-exporting.js', 'highstock-release/highcharts-more.js',
+                            'moment/min/moment.min.js', 'moment/locale/**',
                             'text/text.js',
                             'webtrader-charts/dist/webtrader-charts.js',
                             'regenerator-runtime/*',
@@ -67,7 +69,6 @@ module.exports = function (grunt) {
                             '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
                             '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
-                            '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'modernizr/modernizr.js',
@@ -79,17 +80,10 @@ module.exports = function (grunt) {
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
-                            'moment/min/moment.min.js', 'moment/locale/**',
-                            'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
-                            'parallel.js/lib/**',
                             'intl/dist/Intl.complete.js',
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
-                        rename: function(dest, src) {
-                          // grunt uglify complains about folders anding with .js
-                          return dest + src.replace("parallel.js/", "parallel_js/");
-                        }
                     }
                 ]
             },
@@ -99,7 +93,9 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
+                            '**',
+                            '!**/*.js', '**/lib/**/*.min.js', '**/lib/**/highstock.js', '**/lib/**/webtrader-charts.js',
+                            '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -203,7 +199,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/uncompressed',
-                    src: ['**/*.js'],
+                    src: ['**/*.js', '!**/lib/**/*.min.js', '!**/lib/**/highstock.js', '!**/lib/**/webtrader-charts.js'],
                     dest: 'dist/compressed'
                 }],
                 options: {
@@ -307,7 +303,7 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src : ["dist/compressed/**/*.js"],
+                src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
                 options : {
                   "verbose" : false
                 }

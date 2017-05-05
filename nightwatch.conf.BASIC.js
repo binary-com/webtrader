@@ -27,7 +27,7 @@ module.exports = {
       },
       "globals": {
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
-        "waitForConditionPollInterval": 200
+        "waitForConditionPollInterval": 500
       },
       "desiredCapabilities": { // use Chrome as the default browser for tests
         "browserName": "chrome",

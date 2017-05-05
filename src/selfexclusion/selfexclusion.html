@@ -12,7 +12,7 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">Maximum account cash balance</div>
             <div class="selfexclusion_col">
-                <input type="number" maxlength="20" class="selfexclusion_input" autofocus rv-value="max_balance">
+                <input maxlength="20" class="selfexclusion_input" autofocus rv-value="max_balance" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">Once this limit is reached, you may no longer deposit.</span>
             </div>
@@ -20,7 +20,7 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">Daily turnover limit</div>
             <div class="selfexclusion_col">
-                <input type="number" maxlength="20" class="selfexclusion_input" rv-value="max_turnover">
+                <input maxlength="20" class="selfexclusion_input" rv-value="max_turnover" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">Maximum aggregate contract purchases per day</span>
             </div>
@@ -28,7 +28,7 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">Daily limit on losses</div>
             <div class="selfexclusion_col">
-                <input type="number" maxlength="20" class="selfexclusion_input" rv-value="max_losses">
+                <input maxlength="20" class="selfexclusion_input" rv-value="max_losses" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">Maximum aggregate loss per day</span>
             </div>
@@ -36,7 +36,7 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">7-day turnover limit</div>
             <div class="selfexclusion_col">
-                <input type="number" maxlength="20" class="selfexclusion_input" rv-value="max_7day_turnover">
+                <input maxlength="20" class="selfexclusion_input" rv-value="max_7day_turnover" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">Maximum aggregate contract purchases over a 7-day period</span>
             </div>
@@ -44,7 +44,7 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">7-day limit on losses</div>
             <div class="selfexclusion_col">
-                <input type="number" maxlength="20" class="selfexclusion_input" rv-value="max_7day_losses">
+                <input maxlength="20" class="selfexclusion_input" rv-value="max_7day_losses" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">Maximum aggregate contract purchases over a 7-day period</span>
             </div>
@@ -52,7 +52,7 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">30-day turnover limit</div>
             <div class="selfexclusion_col">
-                <input type="number" maxlength="20" class="selfexclusion_input" rv-value="max_30day_turnover" min="0" >
+                <input maxlength="20" class="selfexclusion_input" rv-value="max_30day_turnover" min="0" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">Maximum aggregate contract purchases over a 30-day period</span>
             </div>
@@ -60,7 +60,7 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">30-day limit on losses</div>
             <div class="selfexclusion_col">
-                <input type="number" maxlength="20" class="selfexclusion_input" rv-value="max_30day_losses" min="0" >
+                <input maxlength="20" class="selfexclusion_input" rv-value="max_30day_losses" min="0" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">Maximum aggregate loss over a 30-day period</span>
             </div>
@@ -68,13 +68,13 @@
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">Maximum number of open positions</div>
             <div class="selfexclusion_col">
-                <input type="number" class="selfexclusion_input" rv-value="max_open_bets" maxlength="3">
+                <input class="selfexclusion_input" rv-value="max_open_bets" maxlength="3" rv-on-input='trimString'>
             </div>
         </div>
         <div class="selfexclusion_row">
             <div class="selfexclusion_col">Session duration limit, in minutes</div>
             <div class="selfexclusion_col">
-                <input type="number" class="selfexclusion_input" rv-value="session_duration_limit" min="0" max="99999">
+                <input class="selfexclusion_input" rv-value="session_duration_limit" maxlength="5" rv-on-input='trimString'>
                 <br>
                 <span class="selfexclusion_inputHint">You will be automatically logged out after such time</span>
             </div>
