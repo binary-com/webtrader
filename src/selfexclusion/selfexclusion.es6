@@ -86,6 +86,13 @@ const settingsData = {
     exclude_until: null,
     timeout_until_date: null,
     timeout_until_time: null,
+    trimString: (event, scope) => {
+        const $el = $(event.target),
+            length = $el.attr('maxlength'),
+            val = $el.val().toString().replace(/[^\d]/g,''),
+            field = $el.attr('rv-value');
+        scope[field] = val;
+    },
     update: function(event, scope) {
 
         const data = { "set_self_exclusion": 1 };
