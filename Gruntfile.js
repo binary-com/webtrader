@@ -304,7 +304,7 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src : ["dist/compressed/**/*.js"],
+                src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
                 options : {
                   "verbose" : false
                 }
