@@ -97,12 +97,12 @@ module.exports = {
       .assert.elementNotPresent('.cssPopup')
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg', 90, 100)
       .mouseButtonClick('left')
-      .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"]')
+      .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
       //Remove horizontal line from chart
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', 90, 100)
       .doubleClick()
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', -50, -50)
-      .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg > path[stroke-width="2"][visibility="visible"]')
+      .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
     /**
      * To-Do:
      *  - Figure out a way to simulate mouse hover over highcharts
