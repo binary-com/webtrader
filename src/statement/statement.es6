@@ -101,6 +101,7 @@ const refreshTable  = (yyy_mm_dd) => {
 const initStatement = () => {
    statement = windows.createBlankWindow($('<div/>'), {
       title: 'Statement'.i18n(),
+      dialogClass: 'statement',
       width: 700 ,
       height: 400,
       close: () => {

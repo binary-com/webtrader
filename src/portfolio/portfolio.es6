@@ -168,6 +168,7 @@ const initPortfolioWin = () => {
         .then((data) => {
             portfolioWin = windows.createBlankWindow($('<div/>'), {
                 title: 'Portfolio'.i18n(),
+                dialogClass: 'portfolio',
                 width: 700 ,
                 height: 400,
                 'data-authorized': 'true',

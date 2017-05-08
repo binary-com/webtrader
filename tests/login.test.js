@@ -33,7 +33,7 @@ module.exports = {
       //Navigate to oauth.binary.com
       .assert.urlContains('oauth.binary.com')
       //Login
-      .url(url + '/?acct1=VRTC1418840&token1=vFXoxzTlyaFm6wU')
+      .url(url + '/?acct1=VRTC1418840&token1=z2d7JWm4TS4Fei1')
       .waitForElementVisible('body')
       .waitForElementNotVisible('.sk-spinner-container')
       //Check if logged in
@@ -52,8 +52,9 @@ module.exports = {
   'Portfolio': (browser) => {
     browser
       .click('.link.portfolio')
-      .waitForElementPresent('.webtrader-dialog[data-authorized="true"]')
-      .assert.containsText('.ui-dialog .ui-dialog-title', 'Portfolio')
+      .waitForElementPresent('.portfolio')
+      .waitForElementVisible('.portfolio .ui-dialog-title')
+      .assert.containsText('.portfolio .ui-dialog-title', 'Portfolio')
       .click('.custom-icon-close')
   },
   'Statement': (browser) => {
@@ -72,6 +73,50 @@ module.exports = {
       .assert.visible('.view-transaction-dialog .content .chart-container')
       .waitForElementNotVisible('.view-transaction-dialog .content .chart-container .loading')
       .assert.elementPresent('.view-transaction-dialog .content .chart-container .transaction-chart .highcharts-container svg')
+      // Close view transaction
+      .execute("$('.view-transaction-dialog').parent().find('.custom-icon-close').click()")
+      .waitForElementNotPresent('.view-transaction-dialog')
+      .execute('$(".webtrader-dialog").parent().find(".custom-icon-close").click()')
+      .waitForElementNotPresent('.statement-dialog-content')
+  },
+  'Profit Table': (browser) => {
+    browser
+      .click('.main-account')
+      //Open Profit table
+      .click('.link.profitTable')
+      .waitForElementPresent('.profitTable')
+      .waitForElementNotVisible('.profitTable .dataTables_processing')
+      // Close profit table
+      .click('.profitTable .custom-icon-close')
+      .waitForElementNotVisible('.profitTable')
+  },
+  'Token Mangement': (browser) => {
+    browser
+      .click('.main-account')
+      //Open token management
+      .click('.link.token-management')
+      .waitForElementPresent('.token-dialog')
+      // Create token button
+      .execute('$(".token-dialog > button").click()')
+      .assert.visible('.token-dialog .create-token-pane')
+      .setValue('.create-token-pane .token-input', 'Example token')
+      //Create token
+      .click('.create-token-pane button')
+      .waitForElementNotVisible('.token-dialog .create-token-pane')
+      .setValue('.token-dialog .token-search', 'Example token')
+      .assert.containsText('.token-dialog table tbody tr td:nth-of-type(1)', 'Example token')
+      .assert.containsText('.token-dialog table tbody tr td:nth-of-type(3)', 'read')
+      //Remove token
+      .execute('$(".token-dialog table tbody tr td:nth-of-type(5) .ui-icon-delete").click()')
+      .assert.visible('.token-dialog .confirm')
+      .click('.token-dialog .confirm button:first-of-type')
+      .waitForElementNotPresent('.token-dialog table tbody tr')
+  },
+  'Logout': (browser) => {
+    browser
+      .click('.main-account')
+      .click('a[rv-on-click="logout"]')
+      .waitForElementVisible('.login')
       .end()
   }
 }
