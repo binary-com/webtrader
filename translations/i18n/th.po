@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-15 18:04+0200\n"
-"PO-Revision-Date: 2017-04-25 20:45+0000\n"
+"PO-Revision-Date: 2017-05-01 14:49+0000\n"
 "Last-Translator: Jutawan <bubbleblythe@gmail.com>\n"
 "Language-Team: Thai <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/th/>\n"
@@ -2406,16 +2406,16 @@ msgid "Log in time"
 msgstr "เวลาเข้าสู่ระบบ"
 
 msgid "Login"
-msgstr ""
+msgstr "เข้าสู่ระบบ"
 
 msgid "Logout"
-msgstr ""
+msgstr "ออกจากระบบ"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Long Legged Doji (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Long Line Candle (CDLLONGLINE)"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2427,7 +2427,7 @@ msgid ""
 msgstr ""
 
 msgid "Long-term action"
-msgstr ""
+msgstr "การดำเนินการระยะยาว"
 
 msgid ""
 "Look for a black candle in a downward price trend followed by a white candle "
@@ -2450,25 +2450,25 @@ msgid ""
 msgstr ""
 
 msgid "Low"
-msgstr ""
+msgstr "ต่ำ"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "แบริเออร์ต่ำ"
 
 msgid "Low Price"
-msgstr ""
+msgstr "ราคาต่ำ"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "แบริเออร์ต่ำ"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "แบริเออร์ออฟเซ็ตต่ำ"
 
 msgid "Low minimum stakes"
-msgstr ""
+msgstr "วางเงินขั้นต่ำที่สุด"
 
 msgid "Lower"
-msgstr ""
+msgstr "ต่ำกว่า"
 
 msgid ""
 "MACD is a trading indicator used in technical analysis of stock prices.It is "
@@ -2477,7 +2477,7 @@ msgid ""
 msgstr ""
 
 msgid "MENA FFXPO Award"
-msgstr ""
+msgstr "รางวัล MENA FFXPO"
 
 msgid ""
 "Make sure that you have first agreed with the Agent on the terms of payment "
@@ -2488,22 +2488,22 @@ msgid ""
 msgstr ""
 
 msgid "Make your trade"
-msgstr ""
+msgstr "ดำเนินการซื้อขายของท่าน"
 
 msgid "Mar"
-msgstr ""
+msgstr "มี.ค."
 
 msgid "March"
-msgstr ""
+msgstr "มีนาคม"
 
 msgid "Market Professionals"
-msgstr ""
+msgstr "ผู้เชี่ยวชาญการตลาด"
 
 msgid "Market exit price"
-msgstr ""
+msgstr "ราคาปิดของตลาด"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
 msgstr "Mass Index (MASS)"
@@ -2521,7 +2521,7 @@ msgid "Maximum (MAX)"
 msgstr "Maximum (MAX)"
 
 msgid "Maximum account cash balance"
-msgstr ""
+msgstr "บัญชีแคชบาลานซ์สูงสุด"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr "มูลค่าสัญญารวมสูงสุดที่ซื้อในระยะเวลา 30 วัน"
@@ -2681,6 +2681,8 @@ msgid ""
 "Normalized Average True Range (NATR) attempts to normalize the average true "
 "range values across instruments by using the formula below"
 msgstr ""
+"Normalized Average True Range (NATR) "
+"พยายามปรับค่าเฉลี่ยของของข้อมูลโดยใช้เครื่องมือต่างๆ และสูตรข้างล่าง"
 
 msgid ""
 "Note: withdrawal via payment agent is available only if you deposit "
@@ -3834,7 +3836,7 @@ msgstr ""
 
 msgid ""
 "The barrier(s) you choose defines your position and triggers your payout"
-msgstr ""
+msgstr "แบริเออร์ที่ท่านเลือกกำหนดโพซิชั่นของท่านและกระตุ้นการชำระเงินของท่าน"
 
 msgid ""
 "The breakaway pattern begins with a long candle representing the current "
@@ -4427,7 +4429,7 @@ msgid ""
 msgstr ""
 
 msgid "Up to 100% returns on rise/fall trades"
-msgstr ""
+msgstr "ผลตอบแทนสูงถึง 100% เมื่อซื้อขายแบบ ขึ้น/ลง"
 
 msgid "Up/Down"
 msgstr "Up/Down"
@@ -4463,9 +4465,11 @@ msgid ""
 "Use the \"Save as ...\" button to save the chart settings, type, time "
 "period, indicators and comparisons"
 msgstr ""
+"ใช้ปุ่ม \"บันทึกเป็น ...\" เพื่อบันทึกการตั้งค่าของกราฟ ประเภท ช่วงเวลา ดัชนี"
+" และการเปรียบเทียบ"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "ใช้ปุ่ม \"บันทึกเป็น ...\" เพื่อบันทึกการตั้งค่าการซื้อขาย"
 
 msgid ""
 "Using our website, customers can trade currencies, indices, stocks and "
@@ -4616,7 +4620,7 @@ msgstr ""
 "ามไว้วางใจในการดูแลและไม่ถูกนำไปใช้เพื่อวัตถุประสงค์อื่น"
 
 msgid "While on the go, you can"
-msgstr ""
+msgstr "เมื่อใช้งาน ท่านสามารถ"
 
 msgid "Why Choose Binary Trading?"
 msgstr "ทำไมต้องใช้ระบบ Binary ในการซื้อขาย?"
@@ -4653,17 +4657,21 @@ msgid ""
 "With Binary.com's unique platform, there's no risk of 'slippage' or gapping "
 "markets. And no hidden fees"
 msgstr ""
+"ด้วยแพลตฟอร์ม Binary.com ที่เป็นเอกลักษณ์ ไม่มีความเสี่ยงของสลิปเพจ หรือ "
+"ช่องว่างของตลาด และไม่มีค่าธรรมเนียมแอบแฝง"
 
 msgid ""
 "With Binary.com, the most you can lose is the amount you stake at the start "
 "of your trade"
 msgstr ""
+"ด้วย Binary.com เงินที่ท่านจะขาดทุนมากที่สุด คือ "
+"จำนวนเงินที่ท่านวางเมื่อท่านเริ่มซื้อขาย"
 
 msgid "Withdraw funds"
-msgstr ""
+msgstr "ถอนเงิน"
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "ถอนเงินผ่านตัวแทนรับชำระเงิน"
 
 msgid "X-axis labels"
 msgstr "ชื่อแกน X"
@@ -4710,11 +4718,14 @@ msgstr "ท่านสามารถกำหนดระยะเวลาก
 
 msgid "You can trade a range of markets, timescales and indices - 24/7"
 msgstr ""
+"ท่านสามารถซื้อขายตลาดต่างๆ ช่วงเวลาต่างๆ และดัชนีต่างๆ ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid ""
 "You don't need to deposit any money to open an account, but you need to "
 "deposit funds before you can start trading"
 msgstr ""
+"ท่านไม่จำเป็นต้องฝากเงินเพื่อเปิดบัญชี หากแต่ท่านต้องดำเนินการฝากเงิน "
+"ก่อนทำการซื้อขาย"
 
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr "ท่านจะได้รับราคาที่ยุติธรรมและโปร่งใสเสมอในการซื้อขายของท่าน"
@@ -4727,29 +4738,34 @@ msgid ""
 "OAuth server for authentication. For more information refer to OAuth details "
 "on"
 msgstr ""
+"ท่านต้องลงทะเบียนเว็บเทรดเดอร์และได้รับ App ID ก่อน ท่านสามารถใช้เซิร์ฟเวอร์ "
+"OAuth ใดๆ สำหรับการตรวจสอบตัวตน สำหรับข้อมูลอื่นๆ ขอให้ศึกษาจากรายละเอียดของ "
+"OAuth"
 
 msgid "You haven't saved any templates yet"
-msgstr ""
+msgstr "ท่านยังไม่ได้บันทึกเท็มเพลตใดๆ"
 
 msgid "You pay"
-msgstr ""
+msgstr "ท่านชำระ"
 
 msgid "You set the barrier(s) to define your position"
-msgstr ""
+msgstr "ท่านตั้งค่าแบริเออร์เพื่อกำหนดโพซิชั่นของท่าน"
 
 msgid "You will be automatically logged out after such time"
-msgstr ""
+msgstr "ท่านจะออกจากระบบโดยอัตโนมัติหลังจากเวลาดังกล่าว"
 
 msgid "You'll be surprised by the returns you can make"
-msgstr ""
+msgstr "ท่านจะประหลาดใจกับผลตอบแทนที่ท่านได้รับ"
 
 msgid ""
 "Your Binary.com account is created, but to start trading you need to allow "
 "Webtrader access it"
 msgstr ""
+"บัญชี Binary.com ของท่านได้ถูกสร้างขึ้นแล้ว "
+"แต่ในการเริ่มซื้อขายท่านต้องใช้ผ่านเว็บเทรดเดอร์"
 
 msgid "Your browser is not supported"
-msgstr ""
+msgstr "เบราเซอร์ของท่านไม่รองรับการทำงาน"
 
 msgid "Your email"
 msgstr "อีเมล์ของท่าน"
@@ -4758,18 +4774,21 @@ msgid ""
 "Your money is always safe with Binary.com. At all times, it is held in "
 "segregated AAA-rated banks, which is a condition of our trading licenses"
 msgstr ""
+"เงินของท่านจะมีความปลอดภัยเสมอเมื่ออยู่กับ Binary.com "
+"ทุกขณะจะถูกแยกดูแลโดยสถาบันการเงินระดับ AAA "
+"ตามเงื่อนไขของการซื้อขายโดยได้รับใบอนุญาต"
 
 msgid "Your new account balance is"
 msgstr "มูลค่าคงเหลือใหม่ของท่าน คือ"
 
 msgid "Your risks are known"
-msgstr ""
+msgstr "ความเสี่ยงของท่านถูกรับทราบแล้ว"
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "ธุรกรรมอ้างอิงของท่าน คือ"
 
 msgid "Your transaction reference number is"
-msgstr ""
+msgstr "หมายเลขธุรกรรมอ้างอิงของท่าน คือ"
 
 msgid "Zoom"
 msgstr "ขยาย"
@@ -4778,6 +4797,8 @@ msgid ""
 "allowing clients to develop their own automated trading robots with  drag-"
 "and-drop  simplicity"
 msgstr ""
+"อนุญาตให้ลูกค้าพัฒนาเครื่องมือการซื้อขายแบบอัตโนมัติด้วยการ ลากแล้ววาง "
+"อย่างง่ายดาย"
 
 msgid ""
 "and for Irish clients by (3) the Revenue Commissioners in Ireland, current "
@@ -4849,7 +4870,7 @@ msgid "for mobile charts"
 msgstr "สำหรับกราฟโมบาย"
 
 msgid "has updated its"
-msgstr ""
+msgstr "ได้รับการปรับปรุง"
 
 msgid "hour"
 msgstr "ชั่วโมง"
@@ -4864,13 +4885,13 @@ msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
-msgstr ""
+msgstr "หากข้อมูลนี้ไม่ใช่ประเทศที่พำนักของท่าน"
 
 msgid "in the future, the"
 msgstr "ในอนาคต"
 
 msgid "information about your trading exprience and personal finance"
-msgstr ""
+msgstr "ข้อมูลเกี่ยวกับประสบการณ์การซื้อขายและการเงินส่วนบุคคลของท่าน"
 
 msgid ""
 "is Binary's advanced desktop trading platform. Its multi-window interface "
@@ -4882,13 +4903,13 @@ msgid "is required. Current spread"
 msgstr "มีความจำเป็น สเปรดปัจจุบัน"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "คือ สิ่งที่ได้เลือกและ"
 
 msgid "is the"
-msgstr ""
+msgstr "คือ"
 
 msgid "is the price in effect at that time"
-msgstr ""
+msgstr "คือ ราคาที่มีผลในเวลานั้น"
 
 msgid "is the selected number of minutes/hours after the"
 msgstr ""
@@ -4906,7 +4927,7 @@ msgid "main site"
 msgstr "หน้าหลัก"
 
 msgid "medium protection"
-msgstr ""
+msgstr "การป้องกันระดับกลาง"
 
 msgid "minute"
 msgstr "นาที"
@@ -4915,22 +4936,22 @@ msgid "minutes"
 msgstr "นาที"
 
 msgid "next tick"
-msgstr ""
+msgstr "ช่วงเวลาถัดไป"
 
 msgid "oauth"
-msgstr ""
+msgstr "Oauth"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "ของ \"ขณะนี้\""
 
 msgid "our helpful support desk"
-msgstr ""
+msgstr "ทีมงานสนับสนุนของเรา"
 
 msgid "payment agent"
 msgstr "ตัวแทนรับชำระเงิน"
 
 msgid "points"
-msgstr ""
+msgstr "จุด"
 
 msgid "second"
 msgstr "วินาที"
@@ -4939,7 +4960,7 @@ msgid "seconds"
 msgstr "วินาที"
 
 msgid "session overview"
-msgstr ""
+msgstr "บทนำ"
 
 msgid "start time"
 msgstr "เวลาเริ่ม"
