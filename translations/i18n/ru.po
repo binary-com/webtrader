@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 12:21+0200\n"
-"PO-Revision-Date: 2017-05-09 06:47+0000\n"
-"Last-Translator: Alina Demidova <alinademidova1@gmail.com>\n"
+"PO-Revision-Date: 2017-05-09 06:48+0000\n"
+"Last-Translator: Ruslan <ruslan.mukhametdinov.90@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/ru/>\n"
 "Language: ru\n"
@@ -2072,6 +2072,7 @@ msgstr ""
 "определить направление, в котором будет двигаться цена. Фракталы образуются "
 "при появлении на графике определённых фигур"
 
+#, fuzzy
 msgid "Fran ais"
 msgstr ""
 
