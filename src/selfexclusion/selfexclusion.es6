@@ -86,6 +86,13 @@ const settingsData = {
     exclude_until: null,
     timeout_until_date: null,
     timeout_until_time: null,
+    trimString: (event, scope) => {
+        const $el = $(event.target),
+            length = $el.attr('maxlength'),
+            val = $el.val().toString().replace(/[^\d]/g,''),
+            field = $el.attr('rv-value');
+        scope[field] = val;
+    },
     update: function(event, scope) {
 
         const data = { "set_self_exclusion": 1 };
@@ -116,6 +123,7 @@ const settingsData = {
 
         //validation
         $.each(limits, function(index, value) {
+            scope[index] = scope[index] && scope[index].toString();
             if (scope[index] || value.set) {
                 if (index === "exclude_until") {
                     if(moment.utc(scope.exclude_until, "YYYY-MM-DD").isBefore(moment.utc().startOf('day').add(6, "months"))){
