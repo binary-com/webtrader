@@ -14,7 +14,7 @@ let win = null, timerHandler = null, promises= [];
 const FIRST_SCREEN_HEIGHT = 260, SECOND_SCREEN_HEIGHT = 310;
 const settingsData = {
    timeOutInMins: (local_storage.get("realitycheck") || {}).timeOutInMins || 10,
-   timeOutMin: 10, timeOutMax: 120,
+   timeOutMin: 10, timeOutMax: 60,
    loginId: null,
    durationInMins: null,
    bought: null,
