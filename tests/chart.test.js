@@ -2,21 +2,17 @@ var server = require('./server.js');
 
 module.exports = {
   before: (browser) => {
-    if (browser.globals.env === 'browserstack')
-      return;
-    server.connect();
+    if (browser.globals.env !== 'browserstack')
+      server.connect();
+
   },
   after: (browser) => {
-    if (browser.globals.env === 'browserstack')
-      return;
-    server.disconnect();
+    if (browser.globals.env !== 'browserstack')
+      server.disconnect();
   },
   'Open trading page': (browser) => {
-    var url = 'http://localhost:3000';
-    if (browser.globals.env === 'browserstack')
-      url = 'https://webtrader.binary.com/beta';
     browser
-      .url(url)
+      .url(browser.globals.url)
       .waitForElementVisible('body')
       .click('button')
       .waitForElementNotVisible('.sk-spinner-container')

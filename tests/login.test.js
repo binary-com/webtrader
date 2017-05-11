@@ -1,22 +1,21 @@
+/**
+ * This file contains test for:
+ * - Login process
+ * - Portfolio
+ * - Profit table
+ * - Statement
+ * - Token Management
+ * - Logout
+ */
 var server = require('./server.js');
 
 module.exports = {
   before: (browser) => {
-    if (browser.globals.env === 'browserstack')
-      return;
-    server.connect();
-  },
-  after: (browser) => {
-    if (browser.globals.env === 'browserstack')
-      return;
-    server.disconnect();
-  },
-  'Login': (browser) => {
-    var url = 'http://localhost:3000';
-    if (browser.globals.env === 'browserstack')
-      url = 'https://webtrader.binary.com/beta';
+    if (browser.globals.env !== 'browserstack')
+      server.connect();
+
     browser
-      .url(url)
+      .url(browser.globals.url)
       .waitForElementVisible('body')
       .click('button')
       .waitForElementNotVisible('.sk-spinner-container')
@@ -27,13 +26,20 @@ module.exports = {
       .click('.top-nav-menu .windows')
       //Close all dialogs.
       .click('.top-nav-menu .windows .closeAll')
+  },
+  after: (browser) => {
+    if (browser.globals.env !== 'browserstack')
+      server.disconnect();
+  },
+  'Login': (browser) => {
+    browser
       .click('.login button')
       .waitForElementVisible('.oauth-dialog')
       .click('.login-pane button')
       //Navigate to oauth.binary.com
       .assert.urlContains('oauth.binary.com')
       //Login
-      .url(url + '/?acct1=VRTC1418840&token1=z2d7JWm4TS4Fei1')
+      .url(browser.globals.url + '/?acct1=VRTC1418840&token1=z2d7JWm4TS4Fei1')
       .waitForElementVisible('body')
       .waitForElementNotVisible('.sk-spinner-container')
       //Check if logged in
@@ -96,6 +102,7 @@ module.exports = {
       //Open token management
       .click('.link.token-management')
       .waitForElementPresent('.token-dialog')
+      .pause(500)
       // Create token button
       .execute('$(".token-dialog > button").click()')
       .assert.visible('.token-dialog .create-token-pane')

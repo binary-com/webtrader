@@ -2,21 +2,18 @@ var server = require('./server.js');
 
 module.exports = {
   before: (browser) => {
-    if(browser.globals.env === 'browserstack')
+    if (browser.globals.env === 'browserstack')
       return;
     server.connect();
   },
   after: (browser) => {
-    if(browser.globals.env === 'browserstack')
+    if (browser.globals.env === 'browserstack')
       return;
     server.disconnect();
   },
   'Index file': (browser) => {
-    var url = 'http://localhost:3000';
-    if(browser.globals.env === 'browserstack')
-      url = 'https://webtrader.binary.com/beta';    
     browser
-      .url(url)
+      .url(browser.globals.url)
       .waitForElementVisible('body')
       .assert.title('Binary.com : Webtrader');
   },

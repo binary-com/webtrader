@@ -1,6 +1,12 @@
 const SCREENSHOT_PATH = "./screenshots/";
 const BINPATH = './node_modules/nightwatch/bin/';
 
+/**
+ * Set URL based on travis branch
+ */
+const url = process.env.TRAVIS_BRANCH === 'master' ? 'https://webtrader.binary.com' :
+  process.env.TRAVIS_BRANCH === 'development' ? 'https://webtrader.binary.com/beta' : 'http://localhost:3000';
+
 // we use a nightwatch.conf.js file so we can include comments and helper functions
 module.exports = {
   "src_folders": [
@@ -26,6 +32,7 @@ module.exports = {
         "on_failure": true
       },
       "globals": {
+        "url": url,
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 500
       },
@@ -42,6 +49,7 @@ module.exports = {
         "port": 80
       },
       "globals": {
+        "url": url,
         "env": 'browserstack',
         "waitForConditionTimeout": 20000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 1000
