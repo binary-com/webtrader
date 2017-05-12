@@ -78,7 +78,7 @@
   "dependencies": {
     "binary-com-jquery-dialogextended": "binary-com/jquery-dialogextend#master",
     "binary-com-jquery-ui-timepicker": "^1.0.1",
-    "binary-com-longcode": "^0.0.7",
+    "binary-com-longcode": "^0.0.10",
     "chosen-js": "^1.6.2",
     "highstock-release": "^5.0.10",
     "jquery-ui-iconfont": "^2.1.0",

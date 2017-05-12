@@ -891,9 +891,9 @@ binary-com-jquery-ui-timepicker@^1.0.1:
   dependencies:
     jquery "^3.0.0"
 
-binary-com-longcode@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/binary-com-longcode/-/binary-com-longcode-0.0.7.tgz#93836d0f1fb60fb5151c3ad826596524a754edbc"
+binary-com-longcode@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/binary-com-longcode/-/binary-com-longcode-0.0.10.tgz#afcc0f431584901a9c146fa5d8da662cf0a9561e"
 
 bind-obj-methods@^1.0.0:
   version "1.0.0"
