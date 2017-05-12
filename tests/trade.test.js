@@ -65,5 +65,11 @@ module.exports = {
       .assert.containsText('.trade-dialog .trade-fields .contract-displays > .active', 'Lower')
       .assert.visible('.trade-dialog .trade-fields .barriers-barrier-row')
       .end()
+  },
+  'Tick trade': (browser) => {
+    browser
+      // Purchase contract
+      .click()
+      .waitForElementPresent('.trade-fields .trade-conf');
   }
 }
