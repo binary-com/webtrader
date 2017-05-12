@@ -8,9 +8,8 @@ module.exports = {
     if (browser.globals.env !== 'browserstack')
       server.connect();
     browser
-      .url(browser.globals.url)
+      .url(browser.globals.url + '/?acct1=VRTC1418840&token1=z2d7JWm4TS4Fei1')
       .waitForElementVisible('body')
-      .click('button')
       .waitForElementNotVisible('.sk-spinner-container')
       .waitForElementVisible('.chrome_extension')
       //Close chrome pop-up
@@ -64,12 +63,54 @@ module.exports = {
       .click('.trade-dialog .trade-fields .contract-displays [data-name="lower"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays > .active', 'Lower')
       .assert.visible('.trade-dialog .trade-fields .barriers-barrier-row')
-      .end()
   },
+  // This can be made optional.
   'Tick trade': (browser) => {
     browser
+      // Check if the purchase button is enabled
+      .perform((browser, done) => {
+        var test_count = 0;
+        var check_opacity = () => {
+
+          browser.getCssProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', (result) => {
+            if (result.value === '1') {
+              browser.assert.cssProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1');
+              done();
+            } else if (test_count >= 20) {
+              browser.assert.fail('purchase-row (style : opacity) to be 1', 'purchase-row (style : opacity) to be ' + result.value,
+                'Timed out while waiting for proposal response', '');
+            } else {
+              test_count++;
+              setTimeout(check_opacity, 500)
+            }
+          });
+        }
+        check_opacity();
+      })
       // Purchase contract
-      .click()
-      .waitForElementPresent('.trade-fields .trade-conf');
+      .execute("$('.trade-dialog .trade-fields .purchase-row > li > button').click()")
+      .waitForElementPresent('.trade-dialog .trade-conf')
+      .waitForElementVisible('.trade-dialog .trade-conf .tick-chart')
+      .waitForElementPresent('.trade-dialog .trade-conf .highcharts-container svg \
+        .highcharts-series-group .highcharts-markers .highcharts-point')
+      //Pause for 10 seconds for trade to finish
+      .pause(10000)
+      .waitForElementVisible('.trade-dialog .trade-conf .close')
+      .execute('$(".trade-dialog .trade-conf .close").click()')
+      .assert.elementNotPresent('.trade-dialog .trade-conf')
+  },
+  'Trade template': (browser) => {
+    browser
+      .click('.trade-fields .categories-row .trade-template-manager > .img')
+      .assert.visible('.trade-fields .categories-row .trade-template-manager-root')
+      .click('.trade-fields .categories-row .trade-template-manager-root .button-secondary[rv-on-click="menu.save_as"]')
+      .assert.visible('.trade-fields .categories-row .trade-template-manager-root .save-as')
+      .setValue('.trade-fields .categories-row .trade-template-manager-root .save-as form > input', '(Some)')
+      .click('.trade-fields .categories-row .trade-template-manager-root .save-as form > button')
+      .assert.visible('.trade-fields .categories-row .trade-template-manager-root .menu')
+      .click('.trade-fields .categories-row .trade-template-manager-root .menu [rv-on-click="menu.templates"]')
+      .assert.visible('.trade-fields .categories-row .trade-template-manager-root .templates')
+      .assert.containsText('.trade-fields .categories-row .trade-template-manager-root .templates > div > .template .name', 'Up/Down Lower(Some)')
+      .end()
   }
 }
