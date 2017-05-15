@@ -16,6 +16,9 @@ class AccountStatus {
     liveapi.events.on("login", async (response) => {
       if (+response.authorize.is_virtual === 1) {
         $ele.is(":visible") && $ele.slideUp(500);
+        $('.webtrader-dialog').parent().animate({
+          top: '110px'
+        })
         return;
       }
 
@@ -111,9 +114,16 @@ class AccountStatus {
 
       if ($ele.is(":hidden")) {
         $ele.slideDown(500);
+        $('.webtrader-dialog').parent().animate({
+          top: '140px'
+        })
       }
-    } else
+    } else {
       $ele.is(":visible") && $ele.slideUp(500);
+      $('.webtrader-dialog').parent().animate({
+        top: '110px'
+      })
+    }
 
   }
 }
