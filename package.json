@@ -91,7 +91,7 @@
     "moment": "^2.18.1",
     "regenerator-runtime": "^0.10.1",
     "text": "requirejs/text",
-    "webtrader-charts": "^0.0.5"
+    "webtrader-charts": "^0.0.7"
   },
   "contributors": [
     {
