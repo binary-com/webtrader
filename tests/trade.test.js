@@ -8,23 +8,16 @@ module.exports = {
     if (browser.globals.env !== 'browserstack')
       server.connect();
     browser
-      .url(browser.globals.url + '/?acct1=VRTC1418840&token1=z2d7JWm4TS4Fei1')
+      .url(browser.globals.url + browser.globals.auth_url)
       .waitForElementVisible('body')
       .waitForElementNotVisible('.sk-spinner-container')
       .waitForElementVisible('.chrome_extension')
       //Close chrome pop-up
       .click('.chrome_extension #cancel')
-      .waitForElementPresent('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
+      .waitForElementPresent('.top-nav-menu .instruments > ul > li:first-of-type')
       .click('.top-nav-menu .windows')
       //Close all dialogs.
       .click('.top-nav-menu .windows .closeAll')
-  },
-  after: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.disconnect();
-  },
-  'Up/Down (RISE)': (browser) => {
-    browser
       // Open volatility 10 index dialog
       .click('.trade')
       .waitForElementVisible('.trade > ul > li:last-of-type')
@@ -34,7 +27,13 @@ module.exports = {
       .waitForElementVisible('.trade > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
       .click('.trade > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
       .waitForElementPresent('.trade-dialog')
-      .assert.containsText('.proposal-message', 'Loading ...')
+  },
+  after: (browser) => {
+    if (browser.globals.env !== 'browserstack')
+      server.disconnect();
+  },
+  'Up/Down (RISE)': (browser) => {
+    browser
       //Check that RISE is selected by default
       .assert.cssProperty('.trade-dialog .trade-fields .contract-displays [data-name="rise"]', 'font-weight', 'bold')
       .waitForElementPresent('.trade-dialog .trade-fields .date-start-row')
@@ -71,7 +70,6 @@ module.exports = {
       .perform((browser, done) => {
         var test_count = 0;
         var check_opacity = () => {
-
           browser.getCssProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', (result) => {
             if (result.value === '1') {
               browser.assert.cssProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1');
@@ -81,7 +79,7 @@ module.exports = {
                 'Timed out while waiting for proposal response', '');
             } else {
               test_count++;
-              setTimeout(check_opacity, 500)
+              setTimeout(check_opacity, browser.globals.waitForConditionPollInterval)
             }
           });
         }
@@ -91,13 +89,18 @@ module.exports = {
       .execute("$('.trade-dialog .trade-fields .purchase-row > li > button').click()")
       .waitForElementPresent('.trade-dialog .trade-conf')
       .waitForElementVisible('.trade-dialog .trade-conf .tick-chart')
+      /*
       .waitForElementPresent('.trade-dialog .trade-conf .highcharts-container svg \
-        .highcharts-series-group .highcharts-markers .highcharts-point')
-      //Pause for 10 seconds for trade to finish
-      .pause(10000)
+        .highcharts-series-group .highcharts-markers .highcharts-point')*/
+      // Monitoring tick trade
+      .perform((browser, done) => {
+
+      })
       .waitForElementVisible('.trade-dialog .trade-conf .close')
       .execute('$(".trade-dialog .trade-conf .close").click()')
       .assert.elementNotPresent('.trade-dialog .trade-conf')
+      //Remove this
+      .end()
   },
   'Trade template': (browser) => {
     browser

@@ -39,7 +39,7 @@ module.exports = {
       //Navigate to oauth.binary.com
       .assert.urlContains('oauth.binary.com')
       //Login
-      .url(browser.globals.url + '/?acct1=VRTC1418840&token1=z2d7JWm4TS4Fei1')
+      .url(browser.globals.url + browser.globals.auth_url)
       .waitForElementVisible('body')
       .waitForElementNotVisible('.sk-spinner-container')
       //Check if logged in

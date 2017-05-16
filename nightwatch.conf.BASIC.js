@@ -1,11 +1,24 @@
 const SCREENSHOT_PATH = "./screenshots/";
 const BINPATH = './node_modules/nightwatch/bin/';
 
+let config = undefined;
+/**
+ * For local testing create a file named test-config.js in root of project. It should have the following values:
+ module.exports = {
+   BROWSERSTACK_USERNAME: 'username', //Optional
+   BROWSERSTACK_KEY: 'key', //Optional
+   AUTHENTICATION_URL: '/?acct1={acct-1}&token1={token-1-value}' //Required
+  }
+ */
+if (process.argv.indexOf('--local') !== -1)
+  config = require('./test-config');
+
 /**
  * Set URL based on travis branch
  */
 const url = process.env.TRAVIS_BRANCH === 'master' ? 'https://webtrader.binary.com' :
-  process.env.TRAVIS_BRANCH === 'development' ? 'https://webtrader.binary.com/beta' : 'http://localhost:3000';
+  process.env.TRAVIS_BRANCH === 'development'|| process.argv.indexOf('browserstack') !== -1 ? 
+  'https://webtrader.binary.com/beta' : 'http://localhost:3000';
 
 // we use a nightwatch.conf.js file so we can include comments and helper functions
 module.exports = {
@@ -33,6 +46,7 @@ module.exports = {
       },
       "globals": {
         "url": url,
+        "auth_url": config ? config.AUTHENTICATION_URL : process.env.AUTHENTICATION_URL,
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 500
       },
@@ -50,13 +64,14 @@ module.exports = {
       },
       "globals": {
         "url": url,
+        "auth_url": config ? config.AUTHENTICATION_URL : process.env.AUTHENTICATION_URL,
         "env": 'browserstack',
         "waitForConditionTimeout": 20000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 1000
       },
       desiredCapabilities: {
-        'browserstack.user': process.env.BROWSERSTACK_USERNAME,
-        'browserstack.key': process.env.BROWSERSTACK_KEY,
+        'browserstack.user': config ? config.BROWSERSTACK_USERNAME : process.env.BROWSERSTACK_USERNAME,
+        'browserstack.key': config ? config.BROWSERSTACK_KEY : process.env.BROWSERSTACK_KEY,
         'browser': 'chrome'
       },
       'selenium_host': 'hub-cloud.browserstack.com',

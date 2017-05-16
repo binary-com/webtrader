@@ -4,44 +4,37 @@ module.exports = {
   before: (browser) => {
     if (browser.globals.env !== 'browserstack')
       server.connect();
-
-  },
-  after: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.disconnect();
-  },
-  'Open trading page': (browser) => {
     browser
       .url(browser.globals.url)
       .waitForElementVisible('body')
       .click('button')
       .waitForElementNotVisible('.sk-spinner-container')
-  },
-  'Chart drop down': (browser) => {
-    browser
       .assert.containsText('.top-nav-menu .instruments', 'Chart')
       .waitForElementVisible('.chrome_extension')
       //Close chrome pop-up
       .click('.chrome_extension #cancel')
-      .waitForElementPresent('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
+      .waitForElementPresent('.top-nav-menu .instruments > ul > li:first-of-type')
       .click('.top-nav-menu .windows')
       //Close all dialogs.
       .click('.top-nav-menu .windows .closeAll')
       .click('.top-nav-menu .instruments')
-      .waitForElementVisible('.top-nav-menu .instruments ul:first-of-type')
-      .click('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
-      .assert.visible('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
-      .click('.top-nav-menu .instruments ul:first-of-type li:first-of-type ul:first-of-type li:first-of-type')
-      .assert.visible('.top-nav-menu .instruments ul:first-of-type li:first-of-type ul:first-of-type li:first-of-type')
-      .click('.top-nav-menu .instruments ul:first-of-type li:first-of-type ul:first-of-type li:first-of-type ul:first-of-type li:first-of-type')
+      .waitForElementVisible('.top-nav-menu .instruments > ul')
+      .click('.top-nav-menu .instruments > ul > li:last-of-type')
+      .assert.visible('.top-nav-menu .instruments > ul > li:last-of-type')
+      .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
+      .assert.visible('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
+      .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
+  },
+  after: (browser) => {
+    if (browser.globals.env !== 'browserstack')
+      server.disconnect();
   },
   'Chart functions': (browser) => {
     browser
       .waitForElementVisible('div[role="dialog"]:last-of-type')
       .waitForElementNotVisible('div[role="dialog"]:last-of-type .webtrader-dialog .highcharts-loading')
       //Dialog reload
-      .click('div[role="dialog"]:last-of-type img.reload');
-    browser
+      .click('div[role="dialog"]:last-of-type img.reload')
       //Show time period dropdown
       .click('div[role="dialog"]:last-of-type .chartOptions_button.timeperiod')
       .assert.visible('div[role="dialog"]:last-of-type .timePeriodOverlay')
@@ -113,6 +106,10 @@ module.exports = {
     .saveScreenshot('screenshots/crosshair.png')
     .click('div[role="dialog"]:last-of-type .highcharts-container svg > path')
     .assert.elementPresent('div[role="dialog"]:last-of-type .highcharts-container svg > path[stroke-width="2"]')*/
+  },
+  'Chart template': (browser) => {
+    console.log(browser)
+    browser.end();
   },
   'End': (browser) => {
     browser
