@@ -19,7 +19,7 @@ import {
    charts,
    chartWindow
 } from 'webtrader-charts';
-import html from 'text!../charts/chartWindow.html';
+import html from 'text!./affiliates.html';
 import instruments from '../instruments/instruments';
 import 'jquery-growl';
 
@@ -70,6 +70,7 @@ export const init = () => {
     $html.attr("id", newTabId)
         .find('div.chartSubContainerHeader').attr('id', newTabId + "_header").end()
         .find('div.chartSubContainer').attr('id', newTabId + "_chart").end();
+    $html.css({ height: '100%' });
 
     // load market information (instruments) from API.
     //Trigger async loading of instruments and trade menu and refresh
