@@ -47,6 +47,7 @@ import 'timepicker';
 import 'jquery-ui';
 import 'common/util';
 import help from 'help/help';
+import { Longcode } from 'binary-longcode';
 
 require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
 var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
@@ -941,6 +942,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           state.ticks.array.push(data.tick);
       }
   });
+  // Longcode generator
+  const active_symbols = local_storage.get('active_symbols');
+  const currency = local_storage.get('currency') || 'USD';
+  const i18n = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
+  const longcode = new Longcode(active_symbols, i18n, currency);
   /* register for proposal event */
   liveapi.events.on('proposal', function (data) {
       // Specifically for microsoft products. Need to wait for other functions to finish
@@ -959,7 +965,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           state.proposal.ask_price = proposal.ask_price;
           state.proposal.date_start = proposal.date_start;
           state.proposal.display_value = proposal.display_value;
-          state.proposal.message = proposal.longcode;
+          state.proposal.message = longcode.get(data);
           state.proposal.payout = proposal.payout;
           state.proposal.spot = proposal.spot;
           state.proposal.spot_time = proposal.spot_time;

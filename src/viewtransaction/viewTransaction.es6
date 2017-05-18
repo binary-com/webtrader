@@ -166,7 +166,7 @@ export const init = (contract_id, transaction_id) => {
             .then((data) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */
-            if(proposal.underlying === undefined && proposal.longcode === undefined) {
+            if(proposal.underlying === undefined && proposal.shortcode === undefined) {
                show_market_data_disruption_win(proposal);
                return;
             }
