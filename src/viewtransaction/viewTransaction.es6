@@ -11,7 +11,6 @@ import moment from 'moment';
 import _ from 'lodash';
 import 'jquery-growl';
 import 'common/util';
-import { Longcode } from 'binary-longcode';
 
 const open_dialogs = {};
 
@@ -346,17 +345,13 @@ const sell_at_market = (state, root) => {
 }
 
 const init_state = (proposal, root) =>{   
-   const active_symbols = local_storage.get('active_symbols');
-   const currency = local_storage.get('currency') || 'USD';
-   const i18n = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
-   const longcode = new Longcode(active_symbols, i18n, currency);
    const state = {
       route: {
          value: 'table',
          update:(value) => { state.route.value = value; }
       },
       contract_id: proposal.contract_id,
-      longcode: longcode.get(proposal.shortcode),
+      longcode: proposal.longcode,
       validation: proposal.validation_error
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
