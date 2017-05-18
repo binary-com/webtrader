@@ -10,7 +10,6 @@ import "jquery-growl";
 import 'css!./statement.css';
 import html from 'text!./statement.html';
 import viewTransaction from '../viewtransaction/viewTransaction';
-import { Longcode } from 'binary-longcode';
 
 let statement = null,
    table = null,
@@ -37,10 +36,6 @@ let is_specific_date_shown = false; /* is data for a specific date is shown */
 const refreshTable  = (yyy_mm_dd) => {
    const processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
    loading = true;
-   const lng = (local_storage.get('i18n') || {value:'en'}).value;
-   const currency = local_storage.get('currency') || 'USD';
-   const active_symbols = local_storage.get('active_symbols');
-   const longcodeGenerator = new Longcode(active_symbols, lng, currency);;
 
    const request = {
       statement: 1,
@@ -76,7 +71,7 @@ const refreshTable  = (yyy_mm_dd) => {
             epoch_to_string(trans.transaction_time, { utc: true }),
             trans.transaction_id,
             _.capitalize(trans.action_type),
-            /(Buy|Sell)/i.test(trans.action_type) ? longcodeGenerator.get(trans.shortcode) : trans.longcode,
+            trans.longcode,
             (trans.amount * 1).toFixed(2),
             '<b>' + formatPrice(trans.balance_after,currency) + '</b>',
             view_button,

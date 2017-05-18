@@ -9,14 +9,12 @@ import 'jquery-ui';
 import 'datatables';
 import 'jquery-growl';
 import 'css!./portfolio.css';
-import { Longcode } from 'binary-longcode';
 
 let portfolioWin = null;
 let table = null;
 let balance_span = null;
 let currency = 'USD';
 let subscribed_contracts = [];
-let longcodeGenerator = null;
 
 export const init = (li) => {
     li.click(() => {
@@ -139,13 +137,11 @@ const initPortfolioWin = () => {
     /* refresh portfolio when a new contract is added or closed */
     const on_transaction = liveapi.events.on('transaction',(data) => {
         const transaction = data.transaction;
-        if(!longcodeGenerator)
-            longcodeGenerator = new Longcode(active_symbols, lng, currency);
         if(transaction.action === 'buy') {
             const view_button = '<button>View</button>'.i18n();
             const row = [
                 transaction.transaction_id,
-                longcodeGenerator.get(transaction.shortcode),
+                transaction.longcode,
                 Math.abs(transaction.amount),
                 '0.00',
                 view_button,
@@ -266,11 +262,7 @@ const forget_the_contracts = (contracts) => {
 }
 
 const init_table = async () => {
-    const processing_msg = $('#' + table.attr('id') + '_processing').show();
-    const lang = (local_storage.get('i18n') || {value:'en'}).value;
-    const active_symbols = local_storage.get('active_symbols');
-    if(!longcodeGenerator)
-        longcodeGenerator = new Longcode(active_symbols, lang, currency);        
+    const processing_msg = $('#' + table.attr('id') + '_processing').show();   
     try {
         const data = await liveapi.send({ portfolio: 1 });
         const contracts = (data.portfolio && data.portfolio.contracts);
@@ -285,7 +277,7 @@ const init_table = async () => {
         const rows = contracts.map((contract) => {
             return [
                 contract.transaction_id,
-                longcodeGenerator.get(contract.shortcode),
+                contract.longcode,
                 contract.buy_price,
                 '0.00',
                 view_button,
