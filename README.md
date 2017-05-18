@@ -100,13 +100,16 @@ To run tests locally:
 yarn test
 ```
 To run tests on *BrowserStack*:
-
-- Edit `~/.bash_profile` and append the following lines:
-  ```
-  export BROWSERSTACK_USERNAME="${BrowserStack-Username}"
-  export BROWSERSTACK_KEY="${BrowserStack-API-key}"
-  ```
 - Run: `yarn test-browserstack`
+
+> **Note to developers:** Please add a file `test-config.js` in project root with the following contents:
+```
+module.exports = {
+   BROWSERSTACK_USERNAME: 'username', //Optional
+   BROWSERSTACK_KEY: 'key', //Optional
+   AUTHENTICATION_URL: '/?acct1={acct-1}&token1={token-1-value}' //Required
+  }
+```
 ### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
