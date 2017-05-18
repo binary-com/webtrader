@@ -108,8 +108,7 @@ module.exports = {
     .assert.elementPresent('div[role="dialog"]:last-of-type .highcharts-container svg > path[stroke-width="2"]')*/
   },
   'Chart template': (browser) => {
-    console.log(browser)
-    browser.end();
+    
   },
   'End': (browser) => {
     browser
