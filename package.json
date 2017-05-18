@@ -62,7 +62,7 @@
     "minor-rel": "grunt bump:minor",
     "patch-rel": "grunt bump:patch",
     "postinstall": "bower install && node nightwatch.conf.BASIC.js",
-    "test": "nightwatch --config nightwatch.conf.BASIC.js",
+    "test": "nightwatch --local --config nightwatch.conf.BASIC.js",
     "test-browserstack": "nightwatch --config nightwatch.conf.BASIC.js --env browserstack"
   },
   "repository": {

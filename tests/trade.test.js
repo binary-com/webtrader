@@ -93,14 +93,10 @@ module.exports = {
       .waitForElementPresent('.trade-dialog .trade-conf .highcharts-container svg \
         .highcharts-series-group .highcharts-markers .highcharts-point')*/
       // Monitoring tick trade
-      .perform((browser, done) => {
-
-      })
+      .browser.pause(10000)
       .waitForElementVisible('.trade-dialog .trade-conf .close')
       .execute('$(".trade-dialog .trade-conf .close").click()')
       .assert.elementNotPresent('.trade-dialog .trade-conf')
-      //Remove this
-      .end()
   },
   'Trade template': (browser) => {
     browser
