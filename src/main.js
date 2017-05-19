@@ -29,7 +29,6 @@ requirejs.config({
         'webtrader-charts' : 'lib/webtrader-charts/dist/webtrader-charts',
         'chosen': 'lib/chosen-js/chosen.jquery',
         'highstock-release': 'lib/highstock-release',
-        'binary-longcode': 'lib/binary-com-longcode/dist/main'
     },
     map: {
         '*': {
@@ -81,9 +80,6 @@ requirejs.config({
         },
         "color-picker": {
             deps: ["jquery"] //This should fix the widget not found error
-        },
-        "binary-longcode":{
-            deps: ['moment']
         }
     }
 });

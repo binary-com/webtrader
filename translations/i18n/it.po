@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 07:57+0200\n"
-"PO-Revision-Date: 2017-04-27 06:15+0000\n"
+"PO-Revision-Date: 2017-05-09 13:51+0000\n"
 "Last-Translator: Annalisa <ligiu@me.com>\n"
-"Language-Team: Italian <http://hosted.weblate.org/projects/binary-"
+"Language-Team: Italian <https://hosted.weblate.org/projects/binary-"
 "webtrader/translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -882,7 +882,7 @@ msgstr ""
 "Premio \"Best Fixed-Odds Financial Trading Provider\" di Shares Magazine UK"
 
 msgid "BetOnMarkets goes live"
-msgstr ""
+msgstr "BetOnMarkets va online"
 
 msgid ""
 "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ "
@@ -928,10 +928,11 @@ msgid "Binary options or other financial derivatives"
 msgstr "Opzioni binarie o altri derivati finanziari"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "Esperienza di trading in opzioni binarie o altri derivati finanziari"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr ""
+"Frequenza di trading delle opzioni binarie o di altri derivati finanziari"
 
 msgid "Binary trading is flexible"
 msgstr "Il trading binario è flessibile"
@@ -1016,22 +1017,28 @@ msgid ""
 "Binary.com is one of the oldest and most respected names in online binary "
 "trading"
 msgstr ""
+"Binary.com è uno dei nomi storici e più rispettati nel trading in opzioni "
+"binarie"
 
 msgid ""
 "Binary.com is owned and operated by the Binary Ltd. group of companies. For "
 "more information, visit our history page"
 msgstr ""
+"Binary.com è di proprietà e gestita dal gruppo di società di Binary Ltd. Per "
+"ulteriori informazioni, visita la pagina della nostra storia"
 
 msgid "Binary.com is tailored to traders of all levels"
 msgstr ""
 
 msgid "Binary.com launches an"
-msgstr ""
+msgstr "Binary.com lancia un"
 
 msgid ""
 "Binary.com offers a range of common deposit and withdrawal methods, from "
 "credit and debit cards to bank wires, e-cash and e-wallets"
 msgstr ""
+"Binary.com offre una gamma di metodi di deposito e di prelievo comuni, dalle "
+"carte di credito e di debito ai bonifici bancari, e-cash e e-wallet"
 
 msgid ""
 "Binary.com offers a virtual-money account so you can get the hang of trading "
@@ -1040,7 +1047,7 @@ msgid ""
 msgstr ""
 
 msgid "Binary.com offers new ways to trade"
-msgstr ""
+msgstr "Binary.com offre nuovi modi per fare trading"
 
 msgid ""
 "Binary.com opens an office in the QSentral office building in central Kuala "
@@ -1053,10 +1060,10 @@ msgid ""
 msgstr ""
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr ""
+msgstr "Binary.com ha raggiunto i 2 miliardi di turnover dal 1999"
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr ""
+msgstr "Binary.com ha raggiunto 1 milione di utenti registrati"
 
 msgid ""
 "Binary.com takes home first prize in the Financial Betting Operator category "
@@ -1075,6 +1082,8 @@ msgid ""
 "Bollinger Bands can be used to measure the highness or lowness of the price "
 "relative to previous trades"
 msgstr ""
+"Le Bande di Bollinger possono essere usate per misurare l'altezza o la "
+"bassezza del prezzo relativo ai trade precedenti"
 
 msgid "Bought"
 msgstr "Comprato"
@@ -1083,7 +1092,7 @@ msgid "Brand of first car"
 msgstr "Marca della prima auto"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr "Aggiornamento del browser richiesto"
@@ -1092,6 +1101,9 @@ msgid ""
 "But there's no need to wait until expiry. You can sell back long-term trades "
 "at any time to profit from changing market conditions"
 msgstr ""
+"Non c'è bisogno di aspettare fino alla scadenza. Puoi rivendere in qualsiasi "
+"momento trade a lungo termine per sfruttare il cambiamento delle condizioni "
+"di mercato"
 
 msgid "Buy Price"
 msgstr "Prezzo d'acquisto"
@@ -1152,10 +1164,10 @@ msgid "Cash Balance"
 msgstr "Saldo della cassa"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Chande Momentum Oscillator (CMO)"
 
 msgid "Change Backend Server"
 msgstr "Modifica del server posteriore"
@@ -1212,7 +1224,7 @@ msgid ""
 msgstr ""
 
 msgid "Choose a trade type"
-msgstr ""
+msgstr "Scegli una tipologia di trade"
 
 msgid ""
 "Choose digit if you want to profit from predicting the last decimal digit of "
@@ -1220,19 +1232,19 @@ msgid ""
 msgstr ""
 
 msgid "Choose from over 1 million trades"
-msgstr ""
+msgstr "Scegli tra oltre un milione di trade"
 
 msgid "Choose from over a million possible trades at any time"
-msgstr ""
+msgstr "Scegli in qualsiasi momento tra oltre un milione di trade possibili"
 
 msgid "Choose password"
 msgstr "Scegli password"
 
 msgid "Choose the barrier(s)"
-msgstr ""
+msgstr "Sceglia la barriera(e)"
 
 msgid "Choose the duration"
-msgstr ""
+msgstr "Scegli la durata"
 
 msgid ""
 "Choose the market, the price target, the time period, and how much you wish "
@@ -1245,13 +1257,13 @@ msgid ""
 msgstr ""
 
 msgid "Choose the market, the time period, and how much you wish to win"
-msgstr ""
+msgstr "Scegli il mercato, il periodo di tempo e quanto desideri vincere"
 
 msgid "Choose the payout"
-msgstr ""
+msgstr "Scegli il payout"
 
 msgid "Choose the underlying market"
-msgstr ""
+msgstr "Scegli il mercato sottostante"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Scegli il tuo agente di pagamento preferito"
@@ -1260,7 +1272,7 @@ msgid "Choose your pereferred withdrawal method"
 msgstr "Scegli la tua modalità di prelievo preferita"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "Choppiness Index (CHOP)"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -1272,7 +1284,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "Clicca per accedere con il tuo account Binary.com"
 
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 msgid "Close Price"
 msgstr "Prezzo di chiusura"
@@ -1284,10 +1296,10 @@ msgid "Closes"
 msgstr "Chiude"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
-msgstr ""
+msgstr "Materie prime"
 
 msgid ""
 "Commodities are resources that are grown or extracted from the ground, such "
@@ -1301,7 +1313,7 @@ msgid "Commodities trading frequency"
 msgstr "Frequenza del trading nelle materie prime"
 
 msgid "Commodity Channel Index (CCI)"
-msgstr ""
+msgstr "Commodity Channel Index (CCI)"
 
 msgid "Comparisons"
 msgstr "Confronti"
@@ -1328,16 +1340,16 @@ msgid "Contract"
 msgstr "Contratto"
 
 msgid "Contract period"
-msgstr ""
+msgstr "Periodo del contratto"
 
 msgid "Contracts"
 msgstr "Contratti"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Coppock Curve (CC)"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "Counterattack (CDLCOUNTERATTACK)"
 
 msgid "Country of residence"
 msgstr "Paese di residenza"
@@ -1355,7 +1367,7 @@ msgid "Crosshair"
 msgstr "Mirino"
 
 msgid "Currencies"
-msgstr ""
+msgstr "Valute"
 
 msgid "Current Level"
 msgstr "Livello attuale"
@@ -1394,7 +1406,7 @@ msgid "Dark Blue"
 msgstr "Blu scuro"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
-msgstr ""
+msgstr "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 
 msgid ""
 "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when "
@@ -1420,7 +1432,7 @@ msgid "Days"
 msgstr "Giorni"
 
 msgid "Debt-free"
-msgstr ""
+msgstr "Senza debiti"
 
 msgid "Dec"
 msgstr "Dic"
@@ -1435,7 +1447,7 @@ msgid "Default"
 msgstr "Default"
 
 msgid "Define your position"
-msgstr ""
+msgstr "Definisci la tua posizione"
 
 msgid "Delete"
 msgstr "Cancella"
@@ -1453,10 +1465,10 @@ msgid "Deposit of USD"
 msgstr "Deposito in USD"
 
 msgid "Depositing and withdrawing funds"
-msgstr ""
+msgstr "Depositare e prelevare fondi"
 
 msgid "Derivative"
-msgstr ""
+msgstr "Derivativo"
 
 msgid "Describe what this token is for to find it later"
 msgstr "Descrivi a cosa serve questo token per trovarlo più tardi"
@@ -1465,7 +1477,7 @@ msgid "Description"
 msgstr "Descrizione"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
 msgid ""
 "Developed by Donald Dorsey, the Mass Index uses the high-low range to "
@@ -1504,13 +1516,13 @@ msgid ""
 msgstr ""
 
 msgid "Directional Movement Index (DX)"
-msgstr ""
+msgstr "Directional Movement Index (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr ""
+msgstr "Per aprire un account devo depositare dei fondi?"
 
 msgid "Do I need to send any documents?"
-msgstr ""
+msgstr "Devo inviare dei documenti?"
 
 msgid "Do you offer virtual-money accounts?"
 msgstr ""
@@ -1519,10 +1531,10 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Desideri installare l'estensione chrome di Webtrader?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Doji Star (CDLDOJISTAR)"
 
 msgid ""
 "Doji form when a security's open and close are virtually equal. The length "
@@ -1536,7 +1548,7 @@ msgstr ""
 "10.000"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "Donchian Channel (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Fatto. I fondi sono stati trasferiti all'agente di pagamento"
@@ -1548,7 +1560,7 @@ msgid "Dot"
 msgstr "Punto"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "Double Exponential Moving Average (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr "Doppio clic sull'oggetto per rimuovere"
@@ -1581,7 +1593,7 @@ msgid "Download as"
 msgstr "Scarica come"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "Strumenti grafici"
@@ -1608,11 +1620,15 @@ msgid ""
 "Each binary option is a prediction on the future movement of an underlying "
 "market"
 msgstr ""
+"Ogni opzione binaria è una previsione su un movimento futuro di un mercato "
+"sottostante"
 
 msgid ""
 "Each binary trade is for a pre-determined payout amount. You win the payout "
 "if your prediction is correct"
 msgstr ""
+"Ogni trade binario si riferisce a un payout prestabilito. Vinci il payout se "
+"la tua previsione è corretta"
 
 msgid "Edge"
 msgstr "Vantaggio"
@@ -1642,10 +1658,10 @@ msgid "Ends out"
 msgstr "Ends out"
 
 msgid "English"
-msgstr ""
+msgstr "Inglese"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
-msgstr ""
+msgstr "Modello Engulfing (CDLENGULFING)"
 
 msgid "Enter your current password"
 msgstr "Inserisci la tua password attuale"
@@ -1660,7 +1676,7 @@ msgid "Entry spot price"
 msgstr ""
 
 msgid "Espa ol"
-msgstr ""
+msgstr "Spagnolo"
 
 msgid "Estimated Net Worth"
 msgstr "Valore netto stimato"
@@ -1669,10 +1685,10 @@ msgid "Even"
 msgstr "Pari"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "Evening Doji Star (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Evening Star (CDLEVENINGSTAR)"
 
 msgid "Exclude me from the website until"
 msgstr "Escludimi dal sito internet fino al"
@@ -1687,19 +1703,19 @@ msgid "Exit spot"
 msgstr "Spot d'uscita"
 
 msgid "Expiry price"
-msgstr ""
+msgstr "Prezzo alla scadenza"
 
 msgid "Explanation"
 msgstr "Spiegazione"
 
 msgid "Exponential Moving Average (EMA)"
-msgstr ""
+msgstr "Media mobile esponenziale (EMA)"
 
 msgid "Fall"
 msgstr "Ribasso"
 
 msgid "Falling markets"
-msgstr ""
+msgstr "Mercati al ribasso"
 
 msgid "Family name"
 msgstr "Cognome"
@@ -1737,22 +1753,22 @@ msgid "Finance"
 msgstr "Finanza"
 
 msgid "Financial Information"
-msgstr ""
+msgstr "Informazioni finanziarie"
 
 msgid "Financial Security"
-msgstr ""
+msgstr "Sicurezza finanziaria"
 
 msgid "Financial information"
 msgstr "Informazioni finanziarie"
 
 msgid "Financial rewards"
-msgstr ""
+msgstr "Riconoscimenti finanziari"
 
 msgid "Firefox"
 msgstr "Firefox"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "Prima riga dell'indirizzo"
 
 msgid "First name"
 msgstr "Nome"
@@ -1761,9 +1777,11 @@ msgid ""
 "First, you need to set the parameters of your trade. Here's what you need to "
 "consider"
 msgstr ""
+"Innanzitutto devi impostare i parametri del tuo trade. Ecco cosa devi "
+"considerare"
 
 msgid "Flexibility"
-msgstr ""
+msgstr "Flessibilità"
 
 msgid ""
 "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds "
@@ -1772,7 +1790,7 @@ msgid ""
 msgstr ""
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Esperienza di trading Forex"
@@ -1781,10 +1799,10 @@ msgid "Forex trading frequency"
 msgstr "Frequenza di trading Forex"
 
 msgid "Founded October 1999"
-msgstr ""
+msgstr "Fondato a Ottobre 1999"
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid ""
 "Fractals are indicators on candlestick charts that identify reversal points "
@@ -1794,7 +1812,7 @@ msgid ""
 msgstr ""
 
 msgid "Fran ais"
-msgstr ""
+msgstr "Francese"
 
 msgid "Fri"
 msgstr "Ven"
@@ -1809,7 +1827,7 @@ msgid "Further instructions"
 msgstr "Ulteriori istruzioni"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid ""
 "GMT stands for Greenwich Mean Time, the official time used in the UK during "
@@ -1824,7 +1842,7 @@ msgid "Goes out"
 msgstr "Goes out"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
 msgstr "Grigio"
@@ -1836,22 +1854,22 @@ msgid "Grid Light"
 msgstr "Griglia light"
 
 msgid "Group History"
-msgstr ""
+msgstr "Storia del gruppo"
 
 msgid "HIGH"
 msgstr "HIGH"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Hammer (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "Hanging Man (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr ""
+msgstr "Modello Harami Cross (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
-msgstr ""
+msgstr "Modello Harami (CDLHARAMI)"
 
 msgid "Health"
 msgstr "Salute"
@@ -1878,7 +1896,7 @@ msgid "High returns"
 msgstr ""
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "High-Wave Candle (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr "Superiore"
@@ -1890,13 +1908,13 @@ msgid "Higher/Lower trades"
 msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
-msgstr ""
+msgstr "Modello Hikkake (CDLHIKKAKE)"
 
 msgid "Home Address"
 msgstr "Indirizzo di casa"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
+msgstr "Homing Pigeon (CDLHOMINGPIGEON)"
 
 msgid "Horizontal line"
 msgstr "Linea orizzontale"
@@ -1920,7 +1938,7 @@ msgid "How to trade binaries?"
 msgstr ""
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "Hull Moving Average (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr ""
@@ -1953,10 +1971,10 @@ msgstr ""
 "eseguite tra i clienti e gli Agenti di pagamento"
 
 msgid "Ideal for both pros and novices"
-msgstr ""
+msgstr "Ideale sia per gli esperti che per i novizi"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
+msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
 
 msgid "If you select a"
 msgstr "Se selezioni un"
@@ -1972,7 +1990,7 @@ msgid ""
 msgstr ""
 
 msgid "In April"
-msgstr ""
+msgstr "Ad Aprile"
 
 msgid ""
 "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or "
@@ -2063,13 +2081,13 @@ msgid ""
 msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "Modello In-Neck (CDLINNECK)"
 
 msgid "In/Out"
 msgstr "In/Out"
 
 msgid "In/Out trades"
-msgstr ""
+msgstr "Trade In/Out"
 
 msgid "Income Source"
 msgstr "Fonte di reddito"
@@ -2081,7 +2099,7 @@ msgid "Indicators"
 msgstr "Indicatori"
 
 msgid "Indices"
-msgstr ""
+msgstr "Indici"
 
 msgid "Indices trading experience"
 msgstr "Esperienza di trading sugli indici"
@@ -2090,16 +2108,16 @@ msgid "Indices trading frequency"
 msgstr "Frequenza di trading sugli indici"
 
 msgid "Individual Traders"
-msgstr ""
+msgstr "Trader individuali"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonesia"
 
 msgid "Industry of Employment"
 msgstr "Settore lavorativo"
 
 msgid "Instant access"
-msgstr ""
+msgstr "Accesso istantaneo"
 
 msgid "Instant funding"
 msgstr ""
@@ -2111,7 +2129,7 @@ msgid "Instruments"
 msgstr "Strumenti"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
-msgstr ""
+msgstr "Inverted Hammer (CDLINVERTEDHAMMER)"
 
 msgid "Investments & Dividends"
 msgstr "Investimenti e dividendi"
@@ -2119,6 +2137,8 @@ msgstr "Investimenti e dividendi"
 msgid ""
 "Is it possible to deposit the same funds through different payment methods?"
 msgstr ""
+"È possibile depositare gli stessi fondi attraverso diverse modalità di "
+"pagamento?"
 
 msgid ""
 "It has a long white candle, followed by another that opens above the first "
@@ -2139,7 +2159,7 @@ msgid ""
 msgstr ""
 
 msgid "Italiano"
-msgstr ""
+msgstr "Italiano"
 
 msgid ""
 "Its multi window interface allows pro traders to monitor the movements of "
@@ -2170,13 +2190,13 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Basta cliccare sul pulsante Grant sulla pagina da adottare"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "Media mobile adattiva Kaufman (KAMA)"
 
 msgid "Key facts"
 msgstr ""
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Kicking (CDLKICKING)"
 
 msgid ""
 "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
@@ -2199,16 +2219,16 @@ msgid ""
 msgstr ""
 
 msgid "Known risks"
-msgstr ""
+msgstr "Rischi noti"
 
 msgid "Kuala Lumpur Office"
-msgstr ""
+msgstr "Sede di Kuala Lumpur"
 
 msgid "LOW"
 msgstr "LOW"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last used"
 msgstr "Ultima volta"
@@ -2217,7 +2237,7 @@ msgid "Learning to trade"
 msgstr ""
 
 msgid "Least Squares Moving Average (LSMA)"
-msgstr ""
+msgstr "Least Squares Moving Average (LSMA)"
 
 msgid "Less than"
 msgstr "Meno di"
@@ -2229,7 +2249,7 @@ msgid "Level of Education"
 msgstr "Livello d'istruzione"
 
 msgid "Levels"
-msgstr ""
+msgstr "Livelli"
 
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
@@ -2249,7 +2269,7 @@ msgid "Line Dot"
 msgstr "Punto linea"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
-msgstr ""
+msgstr "Media mobile ponderata lineare (LWMA)"
 
 msgid "Link"
 msgstr "Link"
@@ -2300,7 +2320,7 @@ msgid "Loading custom theme configuration"
 msgstr "Caricamento della configurazione dello sfondo personalizzata"
 
 msgid "Loading help docs"
-msgstr ""
+msgstr "Caricamento dei documenti di supporto"
 
 msgid "Loading portfolio"
 msgstr "Caricamento del portafoglio"
@@ -2321,10 +2341,10 @@ msgid "Logout"
 msgstr "Logout"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Long Legged Doji (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Long Line Candle (CDLLONGLINE)"
 
 msgid ""
 "Long-legged doji have long upper and lower shadows that are almost equal in "
@@ -2336,7 +2356,7 @@ msgid ""
 msgstr ""
 
 msgid "Long-term action"
-msgstr ""
+msgstr "Azione a lungo termine"
 
 msgid ""
 "Look for a black candle in a downward price trend followed by a white candle "
@@ -2412,28 +2432,28 @@ msgid "March"
 msgstr "Marzo"
 
 msgid "Market Professionals"
-msgstr ""
+msgstr "Professionisti dei mercati"
 
 msgid "Market exit price"
-msgstr ""
+msgstr "Prezzo di uscita del mercato"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Mass Index (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Mat Hold (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Corrisponde"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
-msgstr ""
+msgstr "Matching Low (CDLMATCHINGLOW)"
 
 msgid "Maximum (MAX)"
-msgstr ""
+msgstr "Massimo (MAX)"
 
 msgid "Maximum account cash balance"
 msgstr "Saldo massimo della cassa dell'account"
@@ -2457,7 +2477,7 @@ msgid "Maximum number of open positions"
 msgstr "Numero massimo di posizioni aperte"
 
 msgid "Maximum price over selected period"
-msgstr ""
+msgstr "Prezzo massimo per il periodo selezionato"
 
 msgid "May"
 msgstr "Maggio"
@@ -2469,28 +2489,28 @@ msgid "Memorable town/city"
 msgstr "Città indimenticabile"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
-msgstr ""
+msgstr "Media mobile adattiva Mesa (MAMA)"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "Minimo (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimo 6 caratteri e deve contenere almeno 1 cifra"
 
 msgid "Minimum of 2 characters required"
-msgstr ""
+msgstr "Minimo 2 caratteri obbligatori"
 
 msgid "Minimum of 4 characters required"
-msgstr ""
+msgstr "Minimo 4 caratteri obbligatori"
 
 msgid "Minimum of 6 characters required"
-msgstr ""
+msgstr "Minimo 6 caratteri obbligatori"
 
 msgid "Minimum price over selected period"
-msgstr ""
+msgstr "Prezzo minimo per il periodo selezionato"
 
 msgid "Minus the agent's commission"
 msgstr "Meno la commissione dell'agente"
@@ -2502,10 +2522,10 @@ msgid "Miss"
 msgstr "Sig.ra"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
-msgstr ""
+msgstr "Indicatori Momentum"
 
 msgid "Mon"
 msgstr "Lun"
@@ -2514,16 +2534,16 @@ msgid "Monday"
 msgstr "Lunedì"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
-msgstr ""
+msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
 
 msgid "Morning Star (CDLMORNINGSTAR)"
-msgstr ""
+msgstr "Morning Star (CDLMORNINGSTAR)"
 
 msgid "Mother's maiden name"
 msgstr "Cognome della madre"
 
 msgid "Moving Average Convergence/Divergence (MACD)"
-msgstr ""
+msgstr "Convergenza/Divergenza di medie mobili (MACD)"
 
 msgid "Mr"
 msgstr "Sig."
@@ -2574,7 +2594,7 @@ msgid "No"
 msgstr "No"
 
 msgid "No Touch trades"
-msgstr ""
+msgstr "Trade No Touch"
 
 msgid ""
 "No matter the market - rising or falling, quiet or volatile - you'll find a "
@@ -2582,13 +2602,13 @@ msgid ""
 msgstr ""
 
 msgid "No surprises"
-msgstr ""
+msgstr "Nessuna sorpresa"
 
 msgid "No touch"
 msgstr "No touch"
 
 msgid "Normalized Average True Range (NATR)"
-msgstr ""
+msgstr "Normalized Average True Range (NATR)"
 
 msgid ""
 "Normalized Average True Range (NATR) attempts to normalize the average true "
@@ -2624,7 +2644,7 @@ msgid "OPEN"
 msgstr "APRI"
 
 msgid "Occupation"
-msgstr ""
+msgstr "Occupazione"
 
 msgid "Oct"
 msgstr "Ott"
@@ -2636,7 +2656,7 @@ msgid "Odd"
 msgstr "Dispari"
 
 msgid "Offices in Malta, Malaysia and Japan"
-msgstr ""
+msgstr "Sedi a Malta, in Malesia e in Giappone"
 
 msgid "Ok"
 msgstr "Ok"
@@ -2651,7 +2671,7 @@ msgstr ""
 "internet non sono adatti a te"
 
 msgid "On-Neck Pattern (CDLONNECK)"
-msgstr ""
+msgstr "Modello On-Neck (CDLONNECK)"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una volta raggiunto questo limite, non puoi più depositare"
