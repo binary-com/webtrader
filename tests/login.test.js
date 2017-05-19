@@ -7,30 +7,11 @@
  * - Token Management
  * - Logout
  */
-var server = require('./server.js');
+import {before, after} from './default';
 
 module.exports = {
-  before: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.connect();
-
-    browser
-      .url(browser.globals.url)
-      .waitForElementVisible('body')
-      .click('button')
-      .waitForElementNotVisible('.sk-spinner-container')
-      .waitForElementVisible('.chrome_extension')
-      //Close chrome pop-up
-      .click('.chrome_extension #cancel')
-      .waitForElementPresent('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
-      .click('.top-nav-menu .windows')
-      //Close all dialogs.
-      .click('.top-nav-menu .windows .closeAll')
-  },
-  after: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.disconnect();
-  },
+  before: before,
+  after: after,
   'Login': (browser) => {
     browser
       .click('.login button')

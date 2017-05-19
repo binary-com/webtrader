@@ -2,14 +2,13 @@ var server = require('./server.js');
 
 module.exports = {
   before: (browser) => {
-    if (browser.globals.env === 'browserstack')
-      return;
-    server.connect();
+    if (browser.globals.env !== 'browserstack')
+      server.connect();
   },
   after: (browser) => {
-    if (browser.globals.env === 'browserstack')
-      return;
-    server.disconnect();
+    if (browser.globals.env !== 'browserstack')
+      server.disconnect();
+    browser.end();
   },
   'Index file': (browser) => {
     browser
@@ -50,9 +49,5 @@ module.exports = {
       .waitForElementVisible('button')
       .click('button')
       .assert.urlContains('main.html');
-
-  },
-  'End': (browser) => {
-    browser.end();
   }
 };

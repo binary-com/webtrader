@@ -1,22 +1,12 @@
-var server = require('./server.js');
+import { before, after } from './default';
+var chartTemplateTest = require('./chartTemplateTest');
 
 module.exports = {
-  before: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.connect();
+  before: before,
+  after: after,
+  'Chart functions': (browser) => {
     browser
-      .url(browser.globals.url)
-      .waitForElementVisible('body')
-      .click('button')
-      .waitForElementNotVisible('.sk-spinner-container')
-      .assert.containsText('.top-nav-menu .instruments', 'Chart')
-      .waitForElementVisible('.chrome_extension')
-      //Close chrome pop-up
-      .click('.chrome_extension #cancel')
-      .waitForElementPresent('.top-nav-menu .instruments > ul > li:first-of-type')
-      .click('.top-nav-menu .windows')
-      //Close all dialogs.
-      .click('.top-nav-menu .windows .closeAll')
+      //Open Dialog
       .click('.top-nav-menu .instruments')
       .waitForElementVisible('.top-nav-menu .instruments > ul')
       .click('.top-nav-menu .instruments > ul > li:last-of-type')
@@ -24,13 +14,6 @@ module.exports = {
       .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
       .assert.visible('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
       .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
-  },
-  after: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.disconnect();
-  },
-  'Chart functions': (browser) => {
-    browser
       .waitForElementVisible('div[role="dialog"]:last-of-type')
       .waitForElementNotVisible('div[role="dialog"]:last-of-type .webtrader-dialog .highcharts-loading')
       //Dialog reload
@@ -107,11 +90,5 @@ module.exports = {
     .click('div[role="dialog"]:last-of-type .highcharts-container svg > path')
     .assert.elementPresent('div[role="dialog"]:last-of-type .highcharts-container svg > path[stroke-width="2"]')*/
   },
-  'Chart template': (browser) => {
-    
-  },
-  'End': (browser) => {
-    browser
-      .end()
-  }
+  'Chart template': chartTemplateTest,
 }
