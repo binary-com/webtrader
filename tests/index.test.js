@@ -1,6 +1,6 @@
 var server = require('./server.js');
 
-module.exports = {
+export default {
   before: (browser) => {
     if (browser.globals.env !== 'browserstack')
       server.connect();

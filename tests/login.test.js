@@ -7,9 +7,9 @@
  * - Token Management
  * - Logout
  */
-import {before, after} from './default';
+import { before, after } from './default';
 
-module.exports = {
+export default {
   before: before,
   after: after,
   'Login': (browser) => {

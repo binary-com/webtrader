@@ -1,23 +1,12 @@
 /**
  * Tests for trade dialog
  */
-var server = require('./server.js');
+import { beforeLogin, after } from './default';
 
 module.exports = {
   before: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.connect();
+    beforeLogin(browser);
     browser
-      .url(browser.globals.url + browser.globals.auth_url)
-      .waitForElementVisible('body')
-      .waitForElementNotVisible('.sk-spinner-container')
-      .waitForElementVisible('.chrome_extension')
-      //Close chrome pop-up
-      .click('.chrome_extension #cancel')
-      .waitForElementPresent('.top-nav-menu .instruments > ul > li:first-of-type')
-      .click('.top-nav-menu .windows')
-      //Close all dialogs.
-      .click('.top-nav-menu .windows .closeAll')
       // Open volatility 10 index dialog
       .click('.trade')
       .waitForElementVisible('.trade > ul > li:last-of-type')
@@ -28,10 +17,7 @@ module.exports = {
       .click('.trade > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
       .waitForElementPresent('.trade-dialog')
   },
-  after: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      server.disconnect();
-  },
+  after: after,
   'Up/Down (RISE)': (browser) => {
     browser
       //Check that RISE is selected by default
@@ -67,24 +53,7 @@ module.exports = {
   'Tick trade': (browser) => {
     browser
       // Check if the purchase button is enabled
-      .perform((browser, done) => {
-        var test_count = 0;
-        var check_opacity = () => {
-          browser.getCssProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', (result) => {
-            if (result.value === '1') {
-              browser.assert.cssProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1');
-              done();
-            } else if (test_count >= 20) {
-              browser.assert.fail('purchase-row (style : opacity) to be 1', 'purchase-row (style : opacity) to be ' + result.value,
-                'Timed out while waiting for proposal response', '');
-            } else {
-              test_count++;
-              setTimeout(check_opacity, browser.globals.waitForConditionPollInterval)
-            }
-          });
-        }
-        check_opacity();
-      })
+      .waitForCSSProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1')
       // Purchase contract
       .execute("$('.trade-dialog .trade-fields .purchase-row > li > button').click()")
       .waitForElementPresent('.trade-dialog .trade-conf')
@@ -110,6 +79,5 @@ module.exports = {
       .click('.trade-fields .categories-row .trade-template-manager-root .menu [rv-on-click="menu.templates"]')
       .assert.visible('.trade-fields .categories-row .trade-template-manager-root .templates')
       .assert.containsText('.trade-fields .categories-row .trade-template-manager-root .templates > div > .template .name', 'Up/Down Lower(Some)')
-      .end()
   }
 }

@@ -28,6 +28,8 @@ module.exports = {
     "tests"// Where you are storing your Nightwatch e2e tests
   ],
   "output_folder": "./reports", // reports (test outcome) output by nightwatch
+  "page_objects_path": './tests/pages',
+  "custom_commands_path":'./tests/custom_commands',
 
   "test_settings": {
     "default": {

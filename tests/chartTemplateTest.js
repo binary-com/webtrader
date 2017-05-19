@@ -1,3 +1,5 @@
-module.exports = (browser) => {
-  console.log(1);
+export default {
+  chartTemplateTest: (browser) => {
+    
+  }
 }

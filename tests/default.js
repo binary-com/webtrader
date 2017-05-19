@@ -4,20 +4,17 @@ import { start, close } from './server';
 export const before = (browser) => {
   if (browser.globals.env !== 'browserstack')
     start(); //Start server
-  browser
-    //Navigate to index page
-    .url(browser.globals.url)
-    .waitForElementVisible('body')
-    .click('button')
-    .waitForElementNotVisible('.sk-spinner-container')
-    .assert.containsText('.top-nav-menu .instruments', 'Chart')
-    .waitForElementVisible('.chrome_extension')
-    //Close chrome pop-up
-    .click('.chrome_extension #cancel')
-    .waitForElementPresent('.top-nav-menu .instruments > ul > li:first-of-type')
-    .click('.top-nav-menu .windows')
-    //Close all dialogs.
-    .click('.top-nav-menu .windows .closeAll')
+  const mainPage = browser.page.mainPage();
+  //Open Main page
+  mainPage.navigate().open();
+};
+
+export const beforeLogin = (browser) => {
+  if (browser.globals.env !== 'browserstack')
+    start(); //Start server
+  const mainPage = browser.page.mainPage();
+  //Open Main page
+  mainPage.login();
 };
 
 export const after = (browser) => {
