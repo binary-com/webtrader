@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "「亞洲下跌」期權 - 交易期內當最新價格低於平均價格時，您將獲得賠付"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "過去12月內0-5次交易"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 天"
@@ -206,7 +206,7 @@ msgid "1-2 years"
 msgstr "1-2 年"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10分鐘"
@@ -215,7 +215,7 @@ msgid "10m"
 msgstr "10分鐘"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15分鐘"
@@ -224,7 +224,7 @@ msgid "15m"
 msgstr "15分鐘"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1天"
@@ -239,7 +239,7 @@ msgid "1t"
 msgstr "1期"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2小時"
@@ -251,19 +251,19 @@ msgid "2-way pricing"
 msgstr "雙向報價"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
 msgstr ""
