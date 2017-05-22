@@ -266,22 +266,22 @@ msgid "2009"
 msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2小時"
@@ -290,13 +290,13 @@ msgid "2m"
 msgstr "2分鐘"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3分鐘"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30分鐘"
@@ -314,7 +314,7 @@ msgid "3m"
 msgstr "3分鐘"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4小時"
@@ -326,7 +326,7 @@ msgid "4h"
 msgstr "4小時"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5分鐘"
@@ -344,7 +344,7 @@ msgid "7-day turnover limit"
 msgstr "7天期交易限額"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8小時"
@@ -623,10 +623,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com 於1999年推出，目前營業額達10億美元"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr "Binary Bot 已發行"
@@ -677,10 +677,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "Binary平台平均每秒鐘進行15宗交易，全天候提供服務，整年無休"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com Shop introduced"
 msgstr "Binary.com新商店"
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "關"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用於合同購入與售出、給到期的購入合同延期、及給虛擬金錢帳戶存入資金。"
@@ -914,7 +914,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr "波動指數 (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "點擊劫持測試"
@@ -1217,7 +1217,7 @@ msgid "EGR Operator Award"
 msgstr "EGR操作員獎"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "EURUSD"
 msgstr "歐元美元"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "金融獎勵"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "家庭地址第一行"
@@ -2192,13 +2192,13 @@ msgid "Overlap Studies"
 msgstr "重疊研究"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr "PEP 聲明"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "拋物線轉向指標 (SAR)"
