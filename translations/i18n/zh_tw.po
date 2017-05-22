@@ -2510,7 +2510,7 @@ msgid "SVG"
 msgstr "聖文森特和格林納丁斯"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "支薪員工"
@@ -3389,7 +3389,7 @@ msgid "Websocket Server"
 msgstr "Websocket 伺服器"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
 msgstr "Webtrader是Binary.com的先進桌面交易平台"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "X-軸跳動點"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Y-軸方格線"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "小時"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "如不是您的居住國"
@@ -3671,7 +3671,7 @@ msgid "next tick"
 msgstr "下一個跳動點"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "是「現在」"
@@ -3722,10 +3722,10 @@ msgid "view license"
 msgstr "檢視執照"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "是"
