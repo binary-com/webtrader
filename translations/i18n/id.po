@@ -164,7 +164,7 @@ msgid "- trade major commodities such as gold and oil"
 msgstr "- trading komoditas utama seperti emas dan minyak"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "- up/down, touch/no-touch, stays in/goes out"
 
 msgid "- we challenge you to find better returns on any competing website"
 msgstr "- kami menantang Anda untuk menemukan hasil yang lebih baik pada website lain"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transaksi pada 12 bulan terakhir"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 Hari"
@@ -206,40 +206,40 @@ msgid "1-2 years"
 msgstr "1-2 tahun"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 Menit"
 
 msgid "10m"
-msgstr ""
+msgstr "10m"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 Menit"
 
 msgid "15m"
-msgstr ""
+msgstr "15m"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1d"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1m"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 Jam"
@@ -251,52 +251,52 @@ msgid "2-way pricing"
 msgstr "harga 2-arah"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
-msgstr ""
+msgstr "2h"
 
 msgid "2m"
-msgstr ""
+msgstr "2m"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 Menit"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 Menit"
@@ -308,13 +308,13 @@ msgid "30-day turnover limit"
 msgstr "batas pembelian 30-hari"
 
 msgid "30m"
-msgstr ""
+msgstr "30m"
 
 msgid "3m"
-msgstr ""
+msgstr "3m"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 Jam"
@@ -323,16 +323,16 @@ msgid "40 transactions or more in the past 12 months"
 msgstr "40 transaksi atau lebih dalam 12 bulan terakhir"
 
 msgid "4h"
-msgstr ""
+msgstr "4h"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 Menit"
 
 msgid "5m"
-msgstr ""
+msgstr "5m"
 
 msgid "6-10 transactions in the past 12 months"
 msgstr "6-10 transaksi pada 12 bulan terakhir"
@@ -344,13 +344,13 @@ msgid "7-day turnover limit"
 msgstr "batas pembelian 7-hari"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 Jam"
 
 msgid "8h"
-msgstr ""
+msgstr "8h"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Evening Doji Star terdiri dari candle bullish yang panjang, diikuti oleh Doji yang mengalami gapped, kemudian candle bearish ketiga yang tertutup dengan baik oleh candle pertama yaitu mengkonfirmasi pembalikan. Hal ini dianggap sebagai bearish reversal harga pola candlestick yang kuat"
@@ -437,10 +437,10 @@ msgid "A white candle in an upward price trend followed by a doji whose lower sh
 msgstr "Sebuah candle putih dalam tren harga naik diikuti oleh doji yang bayangan bawahnya tetap di atas harga lilin sebelumnya. Hari ketiga adalah candle hitam dengan bayangan bagian atas di bawah doji yang rendah"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Abandoned Baby (CDLABANDONEDBABY)"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "Absolute Price Oscillator (APO)"
 
 msgid "Accept"
 msgstr "Menerima"
@@ -467,10 +467,10 @@ msgid "Add/remove indicators"
 msgstr "Tambah/hapus indikator"
 
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "Advance Block (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "Semua durasi"
@@ -518,28 +518,28 @@ msgid "Appropriateness Test: WARNING"
 msgstr "Uji Kelayakan: PERINGATAN"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 msgid "April"
-msgstr ""
+msgstr "April"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Apakah Anda yakin ingin menghapus token ini?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
-msgstr ""
+msgstr "Arnaud Legoux Moving Average (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Aroon Oscillator (AROONOSC)"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Asian down"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Asian up"
 
 msgid "Asians"
 msgstr "Asia"
@@ -557,19 +557,19 @@ msgid "August"
 msgstr "Agustus"
 
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "Average Directional Movement Index (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
 msgstr "Average Directional Movement Rating mengkuantifikasi perubahan momentum pada ADX. Hal ini dihitung dengan menambahkan dua nilai ADX (nilai sekarang dan nilai n periode sebelumnya), kemudian dibagi dua"
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "Average True Range (ATR)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Awesome Oscillator (AO)"
 
 msgid "Back"
 msgstr "Kembali"
@@ -1421,13 +1421,13 @@ msgid "Goes out"
 msgstr ""
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
 msgstr "Abu-abu"
 
 msgid "Grid"
-msgstr ""
+msgstr "Grid"
 
 msgid "Grid Light"
 msgstr "Grid Muda"
@@ -1439,16 +1439,16 @@ msgid "HIGH"
 msgstr "TINGGI"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Hammer (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "Hanging Man (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr ""
+msgstr "Harami Cross Pattern (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
-msgstr ""
+msgstr "Harami Pattern (CDLHARAMI)"
 
 msgid "Health"
 msgstr "Kesehatan"
@@ -1475,25 +1475,25 @@ msgid "High returns"
 msgstr "Laba tinggi"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "High-Wave Candle (CDLHIGHWAVE)"
 
 msgid "Higher"
-msgstr ""
+msgstr "Higher"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "Higher/Lower"
 
 msgid "Higher/Lower trades"
 msgstr "Kontrak Higher/Lower"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
-msgstr ""
+msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
 msgid "Home Address"
 msgstr "Alamat Rumah"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
+msgstr "Homing Pigeon (CDLHOMINGPIGEON)"
 
 msgid "Horizontal line"
 msgstr "Garis horisontal"
@@ -1517,7 +1517,7 @@ msgid "How to trade binaries?"
 msgstr "Bagaimana cara bertrading binary?"
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "Hull Moving Average (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Saya menyatakan bahwa saya bukan orang yang terlibat dengan politik (PEP)"
