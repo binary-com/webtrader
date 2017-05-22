@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "“亚洲下跌”期权 - 交易期内当最新价格低于平均价格时，您将获得赔付"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "过去12月内0-5次交易"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 天"
@@ -206,7 +206,7 @@ msgid "1-2 years"
 msgstr "1-2 年"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10分钟"
@@ -215,7 +215,7 @@ msgid "10m"
 msgstr "10分钟"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15分钟"
@@ -224,7 +224,7 @@ msgid "15m"
 msgstr "15分钟"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1天"
@@ -239,7 +239,7 @@ msgid "1t"
 msgstr "1期"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2小时"
@@ -251,37 +251,37 @@ msgid "2-way pricing"
 msgstr "双向报价"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2小时"
@@ -290,13 +290,13 @@ msgid "2m"
 msgstr "2分钟"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3分钟"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30分钟"
@@ -314,7 +314,7 @@ msgid "3m"
 msgstr "3分钟"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4小时"
@@ -326,7 +326,7 @@ msgid "4h"
 msgstr "4小时"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5分钟"
@@ -344,7 +344,7 @@ msgid "7-day turnover limit"
 msgstr "7天交易限额"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8小时"
@@ -623,10 +623,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com 于1999年推出，目前营业额达10亿美元"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr "Binary Bot 已发布"
@@ -677,10 +677,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "Binary 平台平均每秒钟进行15宗交易，全天候提供服务，整年无休"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com︰ Webtrader"
 
 msgid "Binary.com Shop introduced"
 msgstr "新增Binary.com商店"
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "关闭"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用于合同购入与售出，给到期的购入合同延期，以及给虚拟金钱账户存入资金。"
@@ -914,7 +914,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr "波动指数 (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "点击劫持测试"
@@ -1217,7 +1217,7 @@ msgid "EGR Operator Award"
 msgstr "EGR操作员奖"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "EURUSD"
 msgstr "欧元美元"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "金融奖励"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "家庭地址第一行"
@@ -2192,13 +2192,13 @@ msgid "Overlap Studies"
 msgstr "重叠研究"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr "PEP 声明"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "抛物线转向指标 (SAR)"
@@ -2510,7 +2510,7 @@ msgid "SVG"
 msgstr "圣文森特和格林纳丁斯"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "受薪雇员"
@@ -3389,7 +3389,7 @@ msgid "Websocket Server"
 msgstr "Websocket 服务器"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
 msgstr "Webtrader是Binary.com的先进桌面交易平台"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "X-轴跳动点"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Y-轴网格线"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "小时"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "如不是您的居住国"
@@ -3671,7 +3671,7 @@ msgid "next tick"
 msgstr "下一个跳动点"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "是“现在”，"
@@ -3722,10 +3722,10 @@ msgid "view license"
 msgstr "查看牌照"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "是"
