@@ -105,6 +105,5 @@ export default {
       .click('.main-account')
       .click('a[rv-on-click="logout"]')
       .waitForElementVisible('.login')
-      .end()
   }
 }

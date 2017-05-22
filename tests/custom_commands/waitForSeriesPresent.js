@@ -10,9 +10,8 @@ exports.command = function waitForSeriesPresent(selector, seriesName) {
             console.log(' \x1b[1;32m✔\x1b[m Series "' + seriesName + '" found after ' + test_count * timeout + ' milliseconds.');
             done();
           } else if (test_count >= 20) {
-            browser.assert.fail('purchase-row (style : ' + property + ') to be ' +
-              value, 'purchase-row (style : opacity) to be ' + result.value,
-              'Timed out while waiting for proposal response', '');
+            browser.assert.fail('Series ' + seriesName + ' not found.', 'Series ' + seriesName + ' to be present.', 
+              'Timed out while waiting for Series "' + seriesName + '".', '');
           } else {
             test_count++;
             setTimeout(check_property, timeout)
