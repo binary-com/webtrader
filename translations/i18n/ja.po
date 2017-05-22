@@ -3410,7 +3410,7 @@ msgid "Webtrader"
 msgstr "ウェブトレーダー"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
-msgstr ""
+msgstr "Webtraderはデスクトップでご利用ただける、Binary.comの高度な取引プラットフォームです"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "ウェブトレーダーは取引経験をより豊かに、より楽しめるものへとする全く新しいウェブテクノロジーを使用しています"
