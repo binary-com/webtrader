@@ -2211,7 +2211,7 @@ msgid "PDF"
 msgstr "PDF"
 
 msgid "PEP Declaration"
-msgstr ""
+msgstr "PDP宣言書"
 
 msgid "PNG"
 msgstr "PNG"
@@ -2268,7 +2268,7 @@ msgid "Pip stands for 'percentage in point' which is generally the fourth decima
 msgstr "Pipとは ‘percentage in point’の略語であり、通常は小数第４位の値を示します。例）0.0001"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "出生地"
 
 msgid "Please"
 msgstr "どうぞ"
@@ -2283,7 +2283,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "有効な日付をご入力ください（年月日）"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "0より大きい値をご入力ください"
 
 msgid "Please enter correct email"
 msgstr "正しいメールアドレスをご入力ください"
@@ -2307,13 +2307,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "いずれかのブラウザをご利用の方は最新バージョンをインストールしてください"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "税務情報をご入力ください"
 
 msgid "Please select"
 msgstr "選択してください"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "有効なワンタイムパスワードをご入力ください"
 
 msgid "Please try again after 1 minute"
 msgstr "1分後に再度お試しください"
@@ -2328,7 +2328,7 @@ msgid "Points"
 msgstr "ポイント"
 
 msgid "Polski"
-msgstr ""
+msgstr "ポーランド語"
 
 msgid "Portfolio"
 msgstr "ポジション一覧"
@@ -2793,13 +2793,13 @@ msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "たすきギャップ（CDLTASUKIGAP）"
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "マイナンバー"
 
 msgid "Tax information"
-msgstr ""
+msgstr "税務情報"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "税務上の居住地"
 
 msgid "Tax-free"
 msgstr "非課税"
