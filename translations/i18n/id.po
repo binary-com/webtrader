@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr " "
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "'Asian Fall' - Untung jika tik terakhir lebih rendah dari rata-rata tik selama trading berlangsung"
@@ -578,7 +578,7 @@ msgid "Back to list"
 msgstr "Kembali ke daftar"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
 msgstr "Banyak bank, pengelola dana dan investor profesional secara rutin bertrading binary pada pasar derivatif over-the-counter. Banyak profesional menggunakan dan mempercayai platform %1 untuk trading fleksibel dengan volume tinggi"
@@ -596,7 +596,7 @@ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks i
 msgstr "Bearish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam uptrend. Candlestick kedua harus dibuka mendekati penutupan hari sebelumnya. Candlestick terakhir harus lebih pendek dan bisa membentuk gap terbalik. Bisa juga ada bayangan penjualan. Pola ini merupakan kelemahan dalam suatu kenaikan dengan risiko konsolidasi dan kemungkinan pembalikan. Bullish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam tren turun. Candlestick kedua harus mendekati penutupan hari sebelumnya. Candlestick terakhir pasti ditepi. Pola ini merupakan kelemahan dan konsolidasi dan kemungkinan pembalikan tren"
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr "Harga benchmark"
@@ -623,7 +623,7 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com mencapai $1 milyar omset sejak tahun 1999"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
 msgstr ""
@@ -1538,7 +1538,7 @@ msgid "Ideal for both pros and novices"
 msgstr "Ideal untuk pro dan pemula"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
+msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
 
 msgid "If you select a"
 msgstr "Jika Anda memilih"
@@ -1586,10 +1586,10 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr "Di Inggris dan Isle of Man, klien kami bertrading melalui Binary (IOM) Ltd. Di Jepang, mereka bertrading melalui Binary KK. Di Uni Eropa (kecuali Inggris), mereka bertrading melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sisa bagian dunia lainnya, mereka bertrading melalui Binary (C.R.) S.A"
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "In-Neck Pattern (CDLINNECK)"
 
 msgid "In/Out"
-msgstr ""
+msgstr "In/Out"
 
 msgid "In/Out trades"
 msgstr "Kontrak In/Out"
@@ -1616,7 +1616,7 @@ msgid "Individual Traders"
 msgstr "Trader Perorangan"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonesia"
 
 msgid "Industry of Employment"
 msgstr "Industri Tenaga Kerja"
@@ -1634,7 +1634,7 @@ msgid "Instruments"
 msgstr "Instrumen"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
-msgstr ""
+msgstr "Inverted Hammer (CDLINVERTEDHAMMER)"
 
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
@@ -1652,25 +1652,25 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "Sudah saatnya untuk memperluas. Kami mendirikan pusat pemrograman di Cyberjaya - Silicon Valley Kuala Lumpur - untuk mempertahankan dan meningkatkan BetOnMarkets.com"
 
 msgid "Italiano"
-msgstr ""
+msgstr "Italiano"
 
 msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
 msgstr "Merupakan interface dengan berbagai window yang membolehkan trader pro untuk memonitor pergerakan berbagai aset dan pasar pada waktu yang sama. Terima kasih pada peralatan multi dan indikator yang tersedia, membolehkan trading dan analisa pasar dengan leksibilitas maksimum"
 
 msgid "Jan"
-msgstr ""
+msgstr "Jan"
 
 msgid "January"
 msgstr "Januari"
 
 msgid "Jul"
-msgstr ""
+msgstr "Jul"
 
 msgid "July"
 msgstr "Juli"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 msgid "June"
 msgstr "Juni"
@@ -1679,13 +1679,13 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Cukup klik tombol  Hibah  pada halaman dan Anda akan dibawa ke"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "Kaufman's Adaptive Moving Average (KAMA)"
 
 msgid "Key facts"
 msgstr "Fakta kunci"
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Kicking (CDLKICKING)"
 
 msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
 msgstr "Kicking - bull/bear ditentukan oleh marubozu yang lebih panjang (CDLKICKINGBYLENGTH)"
@@ -1706,7 +1706,7 @@ msgid "LOW"
 msgstr "RENDAH"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last used"
 msgstr "Terakhir digunakan"
@@ -1715,7 +1715,7 @@ msgid "Learning to trade"
 msgstr "Belajar bertrading"
 
 msgid "Least Squares Moving Average (LSMA)"
-msgstr ""
+msgstr "Least Squares Moving Average (LSMA)"
 
 msgid "Less than"
 msgstr "Kurang dari"
@@ -1742,10 +1742,10 @@ msgid "Line Dot"
 msgstr "Garis Titik"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
-msgstr ""
+msgstr "Linearly Weighted Moving Average (LWMA)"
 
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 msgid "Load chart template"
 msgstr "Memuat template grafik"
@@ -1754,7 +1754,7 @@ msgid "Load trade template"
 msgstr "Muat template trading"
 
 msgid "Loading"
-msgstr ""
+msgstr "Loading"
 
 msgid "Loading Asset Index"
 msgstr "Loading Indeks Aset"
@@ -1808,16 +1808,16 @@ msgid "Log in time"
 msgstr "Waktu masuk"
 
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 msgid "Logout"
 msgstr "Keluar"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Long Legged Doji (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Long Line Candle (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 msgstr "Doji berkaki panjang memiliki bayangan atas dan bawah yang panjangnya hampir sama. Doji ini mencerminkan sejumlah besar keragu-raguan pasar. Doji berkaki panjang menunjukkan bahwa harga ditradingkan jauh di atas dan di bawah tingkat pembukaan sesi, namun tutup hampir bahkan dengan terbuka. Setelah banyak teriakan dan teriakan, hasil akhirnya menunjukkan sedikit perubahan dari awal pembukaan"
@@ -1853,7 +1853,7 @@ msgid "Low minimum stakes"
 msgstr "Minimal modal rendah"
 
 msgid "Lower"
-msgstr ""
+msgstr "Lower"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
 msgstr "MACD adalah indikator trading yang digunakan dalam analisis teknis harga saham. Hal ini seharusnya dapat mengungkap perubahan dalam kekuatan, arah, momentum, dan durasi suatu tren harga saham"
@@ -1868,7 +1868,7 @@ msgid "Make your trade"
 msgstr "Lakukan trading Anda"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
 msgstr "Maret"
@@ -1880,19 +1880,19 @@ msgid "Market exit price"
 msgstr "Harga akhir pasar"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Mass Index (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Mat Hold (CDLMATHOLD)"
 
 msgid "Matches"
-msgstr ""
+msgstr "Matches"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
-msgstr ""
+msgstr "Matching Low (CDLMATCHINGLOW)"
 
 msgid "Maximum (MAX)"
 msgstr "Maksimum (MAK)"
@@ -1931,13 +1931,13 @@ msgid "Memorable town/city"
 msgstr "Kota bersejarah"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
-msgstr ""
+msgstr "Mesa Adaptive Moving Average (MAMA)"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Mak: 2000"
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "Minimum (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
@@ -1964,7 +1964,7 @@ msgid "Miss"
 msgstr "Nona"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
 msgstr "Indikator momentum"
@@ -1976,16 +1976,16 @@ msgid "Monday"
 msgstr "Senin"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
-msgstr ""
+msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
 
 msgid "Morning Star (CDLMORNINGSTAR)"
-msgstr ""
+msgstr "Morning Star (CDLMORNINGSTAR)"
 
 msgid "Mother's maiden name"
 msgstr "Nama panggilan Ibu Anda"
 
 msgid "Moving Average Convergence/Divergence (MACD)"
-msgstr ""
+msgstr "Moving Average Convergence/Divergence (MACD)"
 
 msgid "Mr"
 msgstr "Bapak"
@@ -2012,7 +2012,7 @@ msgid "Navigator handles border"
 msgstr "Navigator menangani perbatasan"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "Navigator mask-fill"
 
 msgid "Navigator outline"
 msgstr "Garis navigator"
@@ -2045,10 +2045,10 @@ msgid "No surprises"
 msgstr "Tanpa kejutan"
 
 msgid "No touch"
-msgstr ""
+msgstr "No touch"
 
 msgid "Normalized Average True Range (NATR)"
-msgstr ""
+msgstr "Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "Normalized Average True Range (NATR) mencoba untuk menormalisasi rata-rata nilai rentang sebenarnya di instrumen dengan menggunakan rumus di bawah ini"
@@ -2072,7 +2072,7 @@ msgid "OAuth Server"
 msgstr "Server OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
 msgstr "BUKA"
@@ -2087,13 +2087,13 @@ msgid "October"
 msgstr "Oktober"
 
 msgid "Odd"
-msgstr ""
+msgstr "Odd"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr "Kantor di Malta, Malaysia dan Jepang"
 
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
 msgstr "Berdasarkan informasi yang diberikan berkaitan dengan pengetahuan dan pengalaman, kami menganggap bahwa investasi yang tersedia melalui website ini tidak sesuai untuk Anda"
@@ -3068,10 +3068,10 @@ msgid "Three Inside Up/Down (CDL3INSIDE)"
 msgstr ""
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "Three Outside Up/Down (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr ""
+msgstr "Three Stars In The South (CDL3STARSSOUTH)"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
 msgstr "Tiga candle putih tinggi, masing-masing dengan tutup yang lebih tinggi, dan badan yang tumpang tindih (harga pembuka di dalam tubuh candle sebelumnya)"
@@ -3080,10 +3080,10 @@ msgid "Three white days occur. Each successive day opens within the body of the 
 msgstr "Tiga hari putih muncul. Pembukaan berturut turut dengan badan hari sebelumnya dan ditutup diatas penutupan hari sebelumnya. Tubuh candle semakin kecil dengan bayangan atas dari hari ke 2 dan ke 3 semakin lama semakin panjang"
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
-msgstr ""
+msgstr "Three-Line Strike (CDL3LINESTRIKE)"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Thrusting Pattern (CDLTHRUSTING)"
 
 msgid "Thu"
 msgstr "Kms"
@@ -3104,7 +3104,7 @@ msgid "Ticks"
 msgstr "Tik"
 
 msgid "Tile"
-msgstr ""
+msgstr "Tile"
 
 msgid "Time interval"
 msgstr "Interval waktu"
@@ -3122,7 +3122,7 @@ msgid "Title"
 msgstr "Judul"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Ti ng Vi t"
 
 msgid "To"
 msgstr "Kepada"
@@ -3137,7 +3137,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Untuk menarik dana silahkan masukkan token verifikasi khusus yang kami baru saja emailkan kepada Anda"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
 msgstr "Manajemen token"
@@ -3164,10 +3164,10 @@ msgid "Total Profit/Loss"
 msgstr "Total Untung/Rugi"
 
 msgid "Touch"
-msgstr ""
+msgstr "Touch"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Touch/No Touch"
 
 msgid "Tourism"
 msgstr "Pariwisata"
@@ -3218,25 +3218,25 @@ msgid "Tradingview for Binary.com"
 msgstr "Tradingview untuk Binary.com"
 
 msgid "Transfer"
-msgstr ""
+msgstr "Transfer"
 
 msgid "Transfer to another Binary account"
 msgstr "Transfer ke akun Binary lainnya"
 
 msgid "Triangular Moving Average (TRIMA)"
-msgstr ""
+msgstr "Triangular Moving Average (TRIMA)"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "Triple Exponential Moving Average (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "Triple Exponential Moving Average (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "Tristar Pattern (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "True Range (TRANGE)"
 
 msgid "Try"
 msgstr "Coba"
@@ -3248,25 +3248,25 @@ msgid "Tuesday"
 msgstr "Selasa"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Turnover"
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "Typical Price (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
-msgstr ""
+msgstr "Under"
 
 msgid "Underlying"
 msgstr "Dasar"
@@ -3278,7 +3278,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "Sayangnya, browser Anda tidak mendukung mereka"
 
 msgid "Unique 3 River (CDLUNIQUE3RIVER)"
-msgstr ""
+msgstr "Unique 3 River (CDLUNIQUE3RIVER)"
 
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 msgstr "Unique Three River Bottom adalah pola candlestick bullish yang terdiri dari tiga candle: Candle pertama memiliki tubuh yang panjang dan bearish, candle kedua adalah palu, dan tubuhnya berada di dalam tubuh bar 1, candle ke-3 kecil dan bullish, harga Close nya lebih rendah dari bar ke 2"
@@ -3287,10 +3287,10 @@ msgid "Up to 100% returns on rise/fall trades"
 msgstr "Laba hingga 100% pada kontrak rise/fall"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Up/Down"
 
 msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
-msgstr ""
+msgstr "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
 
 msgid "Upcoming Events"
 msgstr "Acara Mendatang"
@@ -3308,10 +3308,10 @@ msgid "Upload template"
 msgstr "Memuat template"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
-msgstr ""
+msgstr "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 
 msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
-msgstr ""
+msgstr "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
 
 msgid "Use"
 msgstr "Gunakan"
@@ -3326,7 +3326,7 @@ msgid "Using our website, customers can trade currencies, indices, stocks and co
 msgstr "Pada situs kami, pelanggan dapat bertrading pada pilihan mata uang, indeks, saham dan komoditas 24/7. Kami memiliki harga yang paling fleksibel dan paling komprehensif dari produk yang tersedia"
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Variance (VAR)"
 
 msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
@@ -3362,7 +3362,7 @@ msgid "Volatility indices"
 msgstr "Indeks volatilitas"
 
 msgid "WMA"
-msgstr ""
+msgstr "WMA"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "WMA adalah singkatan dari weighted moving average. Fungsinya adalah untuk membantu melembutkan kurva harga dalam mengidentifikasi tren yang lebih baik. Berperan lebih penting pada data terbaru berbanding fungsi EMA"
@@ -3389,7 +3389,7 @@ msgid "Websocket Server"
 msgstr "Server Websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
 msgstr "Webtrader adalah platform trading desktop Binary.com tingkat lanjut"
@@ -3404,10 +3404,10 @@ msgid "Wednesday"
 msgstr "Rabu"
 
 msgid "Weighted Close Price (WCLPRICE)"
-msgstr ""
+msgstr "Weighted Close Price (WCLPRICE)"
 
 msgid "Weighted Moving Average (WMA)"
-msgstr ""
+msgstr "Weighted Moving Average (WMA)"
 
 msgid "Welcome to Binary Webtrader"
 msgstr "Selamat datang di Binary Webtrader"
@@ -3428,7 +3428,7 @@ msgid "Will I need to install any software?"
 msgstr "Apakah saya perlu menginstal software?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr "Untung 10-1000% dari modal Anda jika Anda benar. Tingkatkan keuntungan Anda dengan memilih 'Stays In' dengan target harga yang lebih sempit"
@@ -3440,7 +3440,7 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr "Untung 10-1000% dari modal jika Anda tepat. Tingkatkan laba keuntungan Anda dengan memilih target harga jauh dari harga terkini"
 
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 msgid "With Binary.com you can trade"
 msgstr "Di Binary.com Anda dapat bertrading"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "Tik x-axis"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Garis grid Y-axis"
@@ -3545,7 +3545,7 @@ msgid "Your transaction reference number is"
 msgstr "Nomor referensi transaksi Anda adalah"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "memungkinkan klien untuk mengembangkan robot trading mereka sendiri secara otomatis dengan konsep sederhana “drag-and-drop”"
@@ -3572,7 +3572,7 @@ msgid "contact support"
 msgstr "hubungi support"
 
 msgid "customer support"
-msgstr ""
+msgstr "customer support"
 
 msgid "day"
 msgstr "hari"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "jam"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "jika ini adalah bukan negara domisili Anda"
@@ -3671,7 +3671,7 @@ msgid "next tick"
 msgstr "tik berikutnya"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "dari \"Sekarang\","
@@ -3722,16 +3722,16 @@ msgid "view license"
 msgstr "lihat lisensi"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "iya"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr "| Hasil"
