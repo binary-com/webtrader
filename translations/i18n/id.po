@@ -626,7 +626,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr "Pelepasan Binary Bot"
@@ -677,10 +677,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "Platform Binary memproses rata-rata 15 transaksi per detik, 24/7"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com Shop introduced"
 msgstr "Toko Binary.com diperkenalkan"
@@ -749,7 +749,7 @@ msgid "Binary.com's systems are now processing in excess of 1 million transactio
 msgstr "Sistem Binary.com telah memproses lebih dari 1 juta transaksi/hari (termasuk pada akun virtual)"
 
 msgid "Bollinger Bands (BBANDS)"
-msgstr ""
+msgstr "Bollinger Bands (BBANDS)"
 
 msgid "Bollinger Bands can be used to measure the highness or lowness of the price relative to previous trades"
 msgstr "Bollinger Bands dapat digunakan untuk mengukur tinggi atau rendahnya harga relatif terhadap trading sebelumnya"
@@ -761,7 +761,7 @@ msgid "Brand of first car"
 msgstr "Merek mobil pertama"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr "Upgrade browser diperlukan"
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "TUTUP"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Dapat digunakan untuk membeli dan menjual kontrak, memperbaharui kontrak yang telah berakhir, dan mengisi ulang akun virtual."
@@ -821,10 +821,10 @@ msgid "Cash Balance"
 msgstr "Saldo"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Chande Momentum Oscillator (CMO)"
 
 msgid "Change Backend Server"
 msgstr "Perubahan Server Backend"
@@ -914,7 +914,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr "Indeks Choppiness (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "Klik Tes Jacking"
@@ -935,7 +935,7 @@ msgid "Closes"
 msgstr "Tutup"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
 msgstr "Komoditas"
@@ -983,10 +983,10 @@ msgid "Contracts"
 msgstr "Kontrak"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Coppock Curve (CC)"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "Counterattack (CDLCOUNTERATTACK)"
 
 msgid "Country of residence"
 msgstr "Negara tempat tinggal"
@@ -1001,7 +1001,7 @@ msgid "Credit/Debit"
 msgstr "Kredit/Debit"
 
 msgid "Crosshair"
-msgstr ""
+msgstr "Crosshair"
 
 msgid "Currencies"
 msgstr "Mata uang"
@@ -1043,7 +1043,7 @@ msgid "Dark Blue"
 msgstr "Biru Tua"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
-msgstr ""
+msgstr "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
 msgstr "Dark Cloud Cover adalah pola pembalikan candlestick bearish yang terjadi saat candlestick bearish merah (Harga close di bawah harga open) pada hari ke 2 ditutup dibawah pertengahan candlestick bullish hari 1 (harga close diatas harga open). Kami akan menggunakan pola ini untuk menjual kenaikan pada pasar mata uang bearish"
@@ -1109,7 +1109,7 @@ msgid "Description"
 msgstr "Deskripsi"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Dikembangkan oleh Donald Dorsey, Indeks Massa menggunakan range high-low untuk mengidentifikasi pembalikan tren berdasarkan ekspansi range. Dalam hal ini, Indeks Massa adalah indikator volatilitas yang tidak memiliki arah bias. Sebaliknya, Indeks Massa mengidentifikasi tonjolan jangkauan yang dapat menandai pembalikan tren saat ini"
@@ -1121,10 +1121,10 @@ msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that det
 msgstr "Dikembangkan oleh Tushar Chande pada tahun 1995, Aroon adalah sistem indikator yang menentukan apakah suatu saham sedang tren atau tidak dan seberapa kuat trennya. Ada dua indikator terpisah: Aroon-Up dan Aroon-Down. Aroon-Up 25 hari mengukur jumlah hari sejak 25 hari tinggi. Sebuah Aroon-Down 25 hari mengukur jumlah hari sejak 25 hari level terendah"
 
 msgid "Differs"
-msgstr ""
+msgstr "Differs"
 
 msgid "Digits"
-msgstr ""
+msgstr "Digits"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "Directional Movement (DMI) sebenarnya merupakan kumpulan dari tiga indikator terpisah yang digabungkan menjadi satu. Directional Movement terdiri dari Average Directional Index (ADX), Indikator Directional Plus (+DI) dan Indikator Directional Minus (-DI)"
@@ -1145,10 +1145,10 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Doji Star (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
 msgstr "Doji terbentuk saat keamanan open dan close hampir sama. Panjang bayangan atas dan bawah dapat bervariasi dan candlestick yang dihasilkan terlihat seperti salib, tanda silang terbalik atau tanda tambah"
@@ -1157,7 +1157,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "Donchian Channel (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Selesai. Dana tersebut telah ditransfer ke agen pembayaran"
@@ -1166,10 +1166,10 @@ msgid "Done. The funds are transferred"
 msgstr "Selesai. Dana telah tertransfer"
 
 msgid "Dot"
-msgstr ""
+msgstr "Dot"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "Double Exponential Moving Average (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr "Klik dua kali untuk menghapus objek"
@@ -1178,7 +1178,7 @@ msgid "Download"
 msgstr "Muat"
 
 msgid "Download CSV"
-msgstr ""
+msgstr "Download CSV"
 
 msgid "Download JPEG image"
 msgstr "Download gambar JPEG"
@@ -1187,13 +1187,13 @@ msgid "Download PDF document"
 msgstr "Download dokumen PDF"
 
 msgid "Download PNG"
-msgstr ""
+msgstr "Download PNG"
 
 msgid "Download PNG image"
 msgstr "Download gambar PNG"
 
 msgid "Download SVG"
-msgstr ""
+msgstr "Download SVG"
 
 msgid "Download SVG vector image"
 msgstr "Download gambar vektor SVG"
@@ -1202,7 +1202,7 @@ msgid "Download as"
 msgstr "Download dalam"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "Alat gambar"
@@ -1217,10 +1217,10 @@ msgid "EGR Operator Award"
 msgstr "Operator Penghargaan EGR"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Setiap opsi binary merupakan analisa pada pergerakan bursa saham pasar dasar"
@@ -1229,10 +1229,10 @@ msgid "Each binary trade is for a pre-determined payout amount. You win the payo
 msgstr "Setiap kontrak binary memiliki hasil yang telah ditentukan. Anda akan memperoleh hasil jika analisa Anda benar"
 
 msgid "Edge"
-msgstr ""
+msgstr "Edge"
 
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 msgid "Education"
 msgstr "Edukasi"
@@ -1247,19 +1247,19 @@ msgid "Ends Between/Ends Outside trades"
 msgstr "Kontrak Ends Between/Ends Outside"
 
 msgid "Ends In/Out"
-msgstr ""
+msgstr "Ends In/Out"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Ends in"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Ends out"
 
 msgid "English"
 msgstr "Inggris"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
-msgstr ""
+msgstr "Engulfing Pattern (CDLENGULFING)"
 
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
@@ -1280,13 +1280,13 @@ msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
 
 msgid "Even"
-msgstr ""
+msgstr "Even"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "Evening Doji Star (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Evening Star (CDLEVENINGSTAR)"
 
 msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari website hingga"
@@ -1307,10 +1307,10 @@ msgid "Explanation"
 msgstr "Penjelasan"
 
 msgid "Exponential Moving Average (EMA)"
-msgstr ""
+msgstr "Exponential Moving Average (EMA)"
 
 msgid "Fall"
-msgstr ""
+msgstr "Fall"
 
 msgid "Falling markets"
 msgstr "Pasar jatuh"
@@ -1328,7 +1328,7 @@ msgid "Favourite dish"
 msgstr "Makanan Favorit"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 msgid "February"
 msgstr "Februari"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "Imbalan keuangan"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "Alamat Rumah"
@@ -1376,7 +1376,7 @@ msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds F
 msgstr "Tiga kali berturut-turut, BetOnMarkets.com dinobatkan sebagai 'Penyedia Trading Financial Fixed-Odds Terbaik' oleh Shares Magazine UK"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Pengalaman trading forex"
@@ -1388,16 +1388,16 @@ msgid "Founded October 1999"
 msgstr "Didirikan Oktober 1999"
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fraktal adalah indikator pada grafik candlestick yang mengidentifikasi titik balik pasar. Trader sering menggunakan fraktal untuk mendapatkan ide tentang arah di mana harga akan berkembang. Fraktal akan terbentuk bila pola harga tertentu terjadi pada grafik"
 
 msgid "Fran ais"
-msgstr ""
+msgstr "Fran ais"
 
 msgid "Fri"
-msgstr ""
+msgstr "Jum"
 
 msgid "Friday"
 msgstr "Jumat"
@@ -1409,7 +1409,7 @@ msgid "Further instructions"
 msgstr "Instruksi lebih lanjut"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT adalah singkatan dari Greenwich Mean Time, waktu resmi digunakan di Inggris selama musim dingin. Di musim panas perubahan waktu Inggris adalah GMT +1 jam. Waktu yang digunakan pada website %1 adalah GMT sepanjang waktu"
@@ -1418,7 +1418,7 @@ msgid "Get your price"
 msgstr "Dapatkan harga"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Goes out"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
 msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
@@ -2099,7 +2099,7 @@ msgid "On the basis of the information provided in relation to your knowledge an
 msgstr "Berdasarkan informasi yang diberikan berkaitan dengan pengetahuan dan pengalaman, kami menganggap bahwa investasi yang tersedia melalui website ini tidak sesuai untuk Anda"
 
 msgid "On-Neck Pattern (CDLONNECK)"
-msgstr ""
+msgstr "On-Neck Pattern (CDLONNECK)"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Saat batasan ini tercapai, Anda tidak dapat mendeposit"
@@ -2153,7 +2153,7 @@ msgid "Opens"
 msgstr "Buka"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
 msgstr "Opsi trading dapat menyebabkan ketagihan seperti kegiatan lain yang dilakukan secara berlebihan. Untuk menghindari bahaya dari ketagihan tersebut, kami telah menyediakan pemeriksaan realitas yang memberi Anda rangkuman trading dan akun secara berkala"
@@ -2192,16 +2192,16 @@ msgid "Overlap Studies"
 msgstr "Studi Tumpang Tindih"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr "Deklarasi PEP"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
-msgstr ""
+msgstr "Parabolic SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Kata sandi tidak cocok. Silahkan ketik ulang"
@@ -2231,7 +2231,7 @@ msgid "Pension"
 msgstr "Pensiun"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "Percentage Price Oscillator (PPO)"
 
 msgid "Permissions"
 msgstr "Izin"
@@ -2243,10 +2243,10 @@ msgid "Phone"
 msgstr "Telepon"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Piercing Pattern (CDLPIERCING)"
 
 msgid "Pip"
-msgstr ""
+msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr "Pip singkatan dari 'titik persentase' yang umumnya angka desimal keempat (yaitu 0,0001)"
@@ -2303,7 +2303,7 @@ msgid "Please try again after 1 minute"
 msgstr "Silahkan coba kembali setelah 1 menit"
 
 msgid "Plot"
-msgstr ""
+msgstr "Plot"
 
 msgid "Pofit/Loss"
 msgstr "Untung/Rugi"
@@ -2312,7 +2312,7 @@ msgid "Points"
 msgstr "Poin"
 
 msgid "Polski"
-msgstr ""
+msgstr "Polski"
 
 msgid "Portfolio"
 msgstr "Portopolio"
@@ -2405,7 +2405,7 @@ msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr "Memetik hasil trading binary, mengetahui dana Anda selalu aman"
 
 msgid "Ref"
-msgstr ""
+msgstr "Ref"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
 msgstr "Regent Markets Group Ltd. mengganti nama ke Binary Ltd"
@@ -2450,7 +2450,7 @@ msgid "Register free account"
 msgstr "Daftar akun gratis"
 
 msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgstr "Relative Strength Index (RSI)"
 
 msgid "Remove"
 msgstr "Hapus"
@@ -2486,13 +2486,13 @@ msgid "Return"
 msgstr "Laba"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
-msgstr ""
+msgstr "Rise"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Rise/Fall"
 
 msgid "Rise/Fall trades"
 msgstr "kontrak Rise/Fall"
@@ -2501,16 +2501,16 @@ msgid "Rising markets"
 msgstr "Pasar naik"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "SMA"
-msgstr ""
+msgstr "SMA"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "Gaji Karyawan"
@@ -2522,7 +2522,7 @@ msgid "Sale Price"
 msgstr "Harga Jual"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
 msgstr "Sab"
@@ -2573,13 +2573,13 @@ msgid "Sent to account"
 msgstr "Kirim ke akun"
 
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
-msgstr ""
+msgstr "Separating Lines (CDLSEPARATINGLINES)"
 
 msgid "September"
-msgstr ""
+msgstr "September"
 
 msgid "Session"
 msgstr "Sesi"
@@ -2600,7 +2600,7 @@ msgid "Share chart"
 msgstr "Bagikan grafik"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
-msgstr ""
+msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
 msgstr "Pendek hingga jangka panjang"
@@ -2615,19 +2615,19 @@ msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish
 msgstr "Berdampingan garis-garis putih pola tiga candlestick. Pola bullish: Dalam sebuah tren, candlestick pertama diikuti oleh kenaikan candlestick lain yang terbuka di atas penutupan pertama (gap up), yang diikuti oleh ke atas candlestick ketiga yang terbuka di bawah penutupan kedua (gap down). Pola bearish: Selama downtrend, candlestick pertama ke bawah, diikuti oleh candlestick ke atas yang terbuka di bawah penutupan yang pertama (gap down), diikuti oleh candlestick ke atas yang terbuka di bawah penutupan yang kedua. Pola ini menunjukkan kelanjutan dari downtrend"
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "Simple Moving Average (SMA)"
 
 msgid "Simplicity"
 msgstr "Kesederhanaan"
 
 msgid "Smoothed Moving Average (SMMA)"
-msgstr ""
+msgstr "Smoothed Moving Average (SMMA)"
 
 msgid "Sold"
 msgstr "Terjual"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
-msgstr ""
+msgstr "Spinning Top (CDLSPINNINGTOP)"
 
 msgid "Spline"
 msgstr ""
