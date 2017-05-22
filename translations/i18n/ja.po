@@ -936,7 +936,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 msgid "Close Price"
 msgstr "：終値"
@@ -1122,7 +1122,7 @@ msgid "Description"
 msgstr "取引内容"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "ドイツ語"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr ""
@@ -1272,7 +1272,7 @@ msgid "Ends out"
 msgstr "END-OUT"
 
 msgid "English"
-msgstr ""
+msgstr "英語"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "つつみ線（CDLENGULFING）"
@@ -1290,7 +1290,7 @@ msgid "Entry spot price"
 msgstr "取引時レート"
 
 msgid "Espa ol"
-msgstr ""
+msgstr "スペイン語"
 
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
@@ -1362,7 +1362,7 @@ msgid "Finance"
 msgstr "金融"
 
 msgid "Financial Information"
-msgstr ""
+msgstr "財務情報"
 
 msgid "Financial Security"
 msgstr "金融セキュリティ"
@@ -1377,7 +1377,7 @@ msgid "Firefox"
 msgstr "Firefox"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "番地"
 
 msgid "First name"
 msgstr "名前（名）"
@@ -1632,7 +1632,7 @@ msgid "Individual Traders"
 msgstr "個人投資家"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "インドネシア語"
 
 msgid "Industry of Employment"
 msgstr "雇用産業"
@@ -1668,7 +1668,7 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "BetOnMarkets.comの機能性強化とサービス向上を目的とし、マレーシアのシリコンバレーと称されるサイバージャヤに開発センターを開設。"
 
 msgid "Italiano"
-msgstr ""
+msgstr "イタリア語"
 
 msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
 msgstr ""
@@ -1839,7 +1839,7 @@ msgid "Long-legged doji have long upper and lower shadows that are almost equal 
 msgstr ""
 
 msgid "Long-term action"
-msgstr ""
+msgstr "長期間取引"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
 msgstr ""
@@ -1959,13 +1959,13 @@ msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "数字を含む6文字以上でご入力ください"
 
 msgid "Minimum of 2 characters required"
-msgstr ""
+msgstr "2文字以上でご入力ください"
 
 msgid "Minimum of 4 characters required"
-msgstr ""
+msgstr "4文字以上でご入力ください"
 
 msgid "Minimum of 6 characters required"
-msgstr ""
+msgstr "6文字以上でご入力ください"
 
 msgid "Minimum price over selected period"
 msgstr "特定期間の最安値"
