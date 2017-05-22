@@ -1935,7 +1935,7 @@ msgid "Maximum number of open positions"
 msgstr "最大保有ポジション"
 
 msgid "Maximum price over selected period"
-msgstr ""
+msgstr "最大金額を超えています"
 
 msgid "May"
 msgstr "5月"
@@ -2127,25 +2127,25 @@ msgid "Only five years after inception, we pick up this major award for our onli
 msgstr "サービス開始からわずか5年にて、当社のオンライントレードサービスに対しこのような主要な賞を受賞。この賞では、BetOnMarkets.com’が信頼できる迅速で安全なオンライントレードの機会をトレード初心者をはじめ、上級者にも提供していることが評価され、この時点で当社の口座数は1,500万以上となりました。"
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "文字、数字、ハイフンのみご利用いただけます"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "文字、数字、スペース、ハイフン、ピリオド、アポストロフィのみご利用いただけます"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+msgstr "文字、数字、スペース、ピリオド、カンマ、- / @のみご利用いただけます"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "文字、数字、スペース、ピリオド、カンマ、ダッシュ（-）のみご利用いただけます"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "文字、スペース、ハイフン、ピリオド、アポストロフィのみご利用いただけます"
 
 msgid "Only numbers and space are allowed"
 msgstr "数字とスペースのみご利用いただけます"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "数字、文字、ハイフンのみご利用いただけます"
 
 msgid "Open"
 msgstr "Open"
@@ -2559,7 +2559,7 @@ msgid "Scalable trading"
 msgstr "スケーラブルな取引"
 
 msgid "Second line of home address"
-msgstr ""
+msgstr "マンション（建物）名"
 
 msgid "Secondary"
 msgstr "第二"
