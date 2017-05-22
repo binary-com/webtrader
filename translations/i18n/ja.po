@@ -2415,7 +2415,7 @@ msgid "Read"
 msgstr "読む"
 
 msgid "Read about"
-msgstr ""
+msgstr "詳しく読む"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr "資金を安全に保管しているため、安心してバイナリー取引を行ってください"
@@ -2469,7 +2469,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "相対力指数（RSI）"
 
 msgid "Remove"
-msgstr ""
+msgstr "削除"
 
 msgid "Remove Selected"
 msgstr "選択項目を削除"
@@ -2622,7 +2622,7 @@ msgid "Short to long-term"
 msgstr "短期から長期のお取引"
 
 msgid "Short-term action"
-msgstr ""
+msgstr "短期間取引"
 
 msgid "Show"
 msgstr "表示"
@@ -2682,7 +2682,7 @@ msgid "Start Time"
 msgstr "取引時刻"
 
 msgid "Start Trading"
-msgstr ""
+msgstr "取引を始める"
 
 msgid "Start time"
 msgstr "取引時刻"
@@ -3139,7 +3139,7 @@ msgid "Title"
 msgstr "敬称"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "ベトナム語"
 
 msgid "To"
 msgstr "宛先"
@@ -3236,7 +3236,7 @@ msgid "Tradingview for Binary.com"
 msgstr "Binary.comのTradingView"
 
 msgid "Transfer"
-msgstr ""
+msgstr "送金"
 
 msgid "Transfer to another Binary account"
 msgstr "他のBinary口座へ送金する"
@@ -3314,7 +3314,7 @@ msgid "Upcoming Events"
 msgstr "取引時間短縮日"
 
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 msgid "Update Settings"
 msgstr "設定内容を更新"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "加重移動平均線 (WMA)"
 
 msgid "Welcome to Binary Webtrader"
-msgstr ""
+msgstr "Binary Webtraderへようそこ"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "価格に満足したら、すぐにトレードを実行しましょう。"
@@ -3554,7 +3554,7 @@ msgid "Your new account balance is"
 msgstr "最新の口座残高："
 
 msgid "Your risks are known"
-msgstr ""
+msgstr "事前にリスクを把握"
 
 msgid "Your transaction reference is"
 msgstr "トレード参照番号："
@@ -3737,7 +3737,7 @@ msgid "trading frequency"
 msgstr "取引の頻度"
 
 msgid "view license"
-msgstr ""
+msgstr "ライセンスを表示する"
 
 msgid "websocket"
 msgstr "websocket"
@@ -3752,7 +3752,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Payout"
-msgstr ""
+msgstr "| ペイアウト"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
