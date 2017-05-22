@@ -1,13 +1,12 @@
-var server = require('./server.js');
-
+import { start, close as stop } from './server';
 export default {
   before: (browser) => {
     if (browser.globals.env !== 'browserstack')
-      server.connect();
+      start();
   },
   after: (browser) => {
     if (browser.globals.env !== 'browserstack')
-      server.disconnect();
+      stop();
     browser.end();
   },
   'Index file': (browser) => {

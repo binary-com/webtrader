@@ -6,7 +6,7 @@ exports.command = function waitForCSSProperty(selector, property, value, timeout
     var check_property = () => {
       browser.getCssProperty(selector, property, (result) => {
         if (result.value === value) {
-          browser.assert.cssProperty(selector, property, value);
+          console.log(' \x1b[1;32m✔\x1b[m Element <' + selector + '> has css property "' + property +'": "'+ value +'".')
           done();
         } else if (test_count >= 20) {
           browser.assert.fail('purchase-row (style : ' + property + ') to be ' +
@@ -20,7 +20,4 @@ exports.command = function waitForCSSProperty(selector, property, value, timeout
     }
     check_property();
   });
-  /*var test_count = 0;
-  var max_tests = this.api.waitForConditionTimeout / timeout;
-  this.perform*/
 }

@@ -1,16 +1,6 @@
 export default {
   chartFunctionTest: (browser) => {
     browser
-      //Open Dialog
-      .click('.top-nav-menu .instruments')
-      .waitForElementVisible('.top-nav-menu .instruments > ul')
-      .click('.top-nav-menu .instruments > ul > li:last-of-type')
-      .assert.visible('.top-nav-menu .instruments > ul > li:last-of-type')
-      .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
-      .assert.visible('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
-      .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
-      .waitForElementVisible('div[role="dialog"]:last-of-type')
-      .waitForElementNotVisible('div[role="dialog"]:last-of-type .webtrader-dialog .highcharts-loading')
       //Dialog reload
       .click('div[role="dialog"]:last-of-type img.reload')
       //Show time period dropdown
@@ -42,32 +32,6 @@ export default {
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       .assert.cssClassNotPresent('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]', 'bold')
       .execute('$(\'div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]\').parent().click()')
-      //Indicator pop-up
-      .click('div[role="dialog"]:last-of-type .chartOptions_button span[data-balloon="Indicators"]')
-      .waitForElementPresent('.indicator-dialog')
-      .execute("$('.indicator-dialog').parent().find('.ui-dialog-titlebar-close').click()")
-      .assert.hidden('.indicator-dialog')
-      //Comparisons/Overlay pop-up
-      .click('div[role=\'dialog\'] .webtrader-dialog .chartOptions_button span[data-balloon="Comparisons"]')
-      .waitForElementPresent('.overlay-dialog')
-      .execute("$('.overlay-dialog').parent().find('.ui-dialog-titlebar-close').click()")
-      .assert.hidden('.overlay-dialog')
-      // Draw
-      .click('div[role=\'dialog\'] .webtrader-dialog .chartOptions_button span.drawButton')
-      .assert.visible('div[role=\'dialog\'] .webtrader-dialog .drawingToolOverlay')
-      .execute('$(\'div[role="dialog"] .webtrader-dialog span[data-balloon="Horizontal line"] img\').click()')
-      .waitForElementPresent('.cssPopup')
-      // Draw horizontal line
-      .execute("$('.cssPopup').parent().find('.ui-dialog-buttonset .ui-button')[0].click()")
-      .assert.elementNotPresent('.cssPopup')
-      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg', 90, 100)
-      .mouseButtonClick('left')
-      .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
-      //Remove horizontal line from chart
-      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', 90, 100)
-      .doubleClick()
-      .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', -50, -50)
-      .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
     /**
      * To-Do:
      *  - Figure out a way to simulate mouse hover over highcharts
