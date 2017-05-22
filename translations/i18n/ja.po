@@ -663,10 +663,10 @@ msgid "Binary options or other financial derivatives"
 msgstr "バイナリーオプション または その他金融派生商品"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "バイナリーオプションの取引経験"
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "バイナリーオプションの取引頻度"
 
 msgid "Binary trading is flexible"
 msgstr "柔軟な取引"
