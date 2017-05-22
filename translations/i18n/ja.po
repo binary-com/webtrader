@@ -1311,7 +1311,7 @@ msgid "Exit Spot"
 msgstr "終値"
 
 msgid "Exit Spot Time"
-msgstr ""
+msgstr "売却/判定時刻"
 
 msgid "Exit spot"
 msgstr "終値"
@@ -1410,7 +1410,7 @@ msgid "Fractals are indicators on candlestick charts that identify reversal poin
 msgstr "フラクタルは市場での反転ポイントを表示する、ローソク足チャートのインジケーターです。価格が変動する方向を判断するのによく用いられます。フラクタルはチャートで起こる特定のパターンを形にします。"
 
 msgid "Fran ais"
-msgstr ""
+msgstr "フランス語"
 
 msgid "Fri"
 msgstr "金曜日"
@@ -1473,7 +1473,7 @@ msgid "Help"
 msgstr "ヘルプ"
 
 msgid "High"
-msgstr ""
+msgstr "HIGH"
 
 msgid "High Barrier"
 msgstr "高限バリア"
@@ -1536,7 +1536,7 @@ msgid "Hull Moving Average (HMA)"
 msgstr "ハル移動平均（HMA）"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
+msgstr "私は、犯罪収益移動防止法に規定されている外国人PEPsに該当しないことを宣言いたします。また、該当することになった場合は、当社カスタマーサポートまですみやかに申し出ることに同意します。"
 
 msgid "I have read and agree to Binary.com"
 msgstr "よく読んだうえで、Binary.comに同意します"
@@ -1851,7 +1851,7 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr ""
 
 msgid "Low"
-msgstr ""
+msgstr "LOW"
 
 msgid "Low Barrier"
 msgstr "下限バリア"
@@ -2142,7 +2142,7 @@ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
 msgstr ""
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "数字とスペースのみご利用いただけます"
 
 msgid "Only numbers, letters, hyphens are allowed"
 msgstr ""
@@ -2334,7 +2334,7 @@ msgid "Portfolio"
 msgstr "ポジション一覧"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "ポルトガル語"
 
 msgid "Postal code/ZIP"
 msgstr "郵便番号"
