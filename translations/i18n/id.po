@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
+msgstr " "
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "'Asian Fall' - Untung jika tik terakhir lebih rendah dari rata-rata tik selama trading berlangsung"
@@ -2630,28 +2630,28 @@ msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spot price"
 msgstr "Harga spot"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Spreads"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "Spreads down"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "Spreads up"
 
 msgid "Stake"
 msgstr "Modal"
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
-msgstr ""
+msgstr "Stalled Pattern (CDLSTALLEDPATTERN)"
 
 msgid "Standard Deviation (STDDEV)"
-msgstr ""
+msgstr "Standard Deviation (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
 msgstr "Standar Deviasi adalah perhitungan statistik yang digunakan untuk mengukur variabilitas. Pada nilai trading ini dikenal sebagai volatilitas. Sebuah standar deviasi rendah menunjukkan bahwa titik data cenderung sangat dekat dengan mean, sedangkan standar deviasi yang tinggi menunjukkan bahwa titik data tersebar di berbagai macam nilai-nilai"
@@ -2681,16 +2681,16 @@ msgid "Statistical Functions"
 msgstr "Fungsi Statistik"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "kontrak Stays Between/Goes Outside"
 
 msgid "Stays In/Goes Out"
-msgstr ""
+msgstr "Stays In/Goes Out"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Stays in"
 
 msgid "Step 1: Define your position"
 msgstr "Langkah 1: Tentukan posisi Anda"
@@ -2702,19 +2702,19 @@ msgid "Step 3: Make your trade"
 msgstr "Langkah 3: Lakukan Trading"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "Stick Sandwich (CDLSTICKSANDWICH)"
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "Stochastic (STOCH )"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "Stochastic Fast (STOCHF)"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
-msgstr ""
+msgstr "Stochastic Relative Strength Index (STOCHRSI)"
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr ""
+msgstr "Stochastic Slow (STOCHS)"
 
 msgid "Stock Indices"
 msgstr "Indeks Saham"
@@ -2738,10 +2738,10 @@ msgid "Stop Profit Level"
 msgstr "Tingkat Stop Profit"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "Stop-loss"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "Stop-profit"
 
 msgid "Stop-type"
 msgstr "Jenis-Berhenti"
@@ -2759,10 +2759,10 @@ msgid "Sunday"
 msgstr "Minggu"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Tabel"
@@ -2774,7 +2774,7 @@ msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr "Takuri (Dragonfly Doji dengan bayangan rendah yang sangat panjang) (CDLTAKURI)"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
-msgstr ""
+msgstr "Tasuki Gap (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
 msgstr "Nomor Pokok Wajib Pajak"
@@ -2789,7 +2789,7 @@ msgid "Tax-free"
 msgstr "Bebas pajak"
 
 msgid "Tel"
-msgstr ""
+msgstr "Tel"
 
 msgid "Template name"
 msgstr "Nama template"
@@ -3059,13 +3059,13 @@ msgid "This website is marketed in the rest of the EU, for investment products b
 msgstr "Website ini dipasarkan di negara Inggris dan Isle of Man melalui Binary (IOM) Ltd. Untuk Uni Eropa (kecuali Inggris) melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sedangkan untuk negara lain di seluruh dunia melalui Binary (C.R.) S.A. Layanan website ini tidak tersedia untuk di bawah usia 18"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
-msgstr ""
+msgstr "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "Three Black Crows (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
-msgstr ""
+msgstr "Three Inside Up/Down (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
 msgstr "Three Outside Up/Down (CDL3OUTSIDE)"
