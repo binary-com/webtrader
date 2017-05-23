@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "„Asiatischer Fall” - Sie gewinnen, wenn der letzte Tick niedriger als der Durchschnitt der Ticks während des Grades ist"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 Transaktionen in den letzten 12 Monaten"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 Tag"
@@ -194,10 +194,10 @@ msgid "1 Hour"
 msgstr "1 Stunde"
 
 msgid "1 Minute"
-msgstr ""
+msgstr "1 Minute"
 
 msgid "1 Tick"
-msgstr ""
+msgstr "1 Tick"
 
 msgid "1 million transactions/day"
 msgstr "1 Million Transaktionen/Tag"
@@ -206,7 +206,7 @@ msgid "1-2 years"
 msgstr "1-2 Jahre"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 Minuten"
@@ -215,7 +215,7 @@ msgid "10m"
 msgstr "10 Min"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 Minuten"
@@ -224,7 +224,7 @@ msgid "15m"
 msgstr "15 Min"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1 Tag"
@@ -239,7 +239,7 @@ msgid "1t"
 msgstr "1T"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 Stunden"
@@ -251,37 +251,37 @@ msgid "2-way pricing"
 msgstr "2-Weg Preispolitik"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2 Std."
@@ -290,13 +290,13 @@ msgid "2m"
 msgstr "2 Min"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 Minuten"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 Minuten"
@@ -314,7 +314,7 @@ msgid "3m"
 msgstr "3 Min"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 Stunden"
@@ -326,7 +326,7 @@ msgid "4h"
 msgstr "4 Std."
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 Minuten"
@@ -344,7 +344,7 @@ msgid "7-day turnover limit"
 msgstr "7-Tage Umsatzlimit"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 Stunden"
@@ -437,7 +437,7 @@ msgid "A white candle in an upward price trend followed by a doji whose lower sh
 msgstr "Eine weiße Kerze in einem aufsteigenden Preistrend, gefolgt von einem Doji, dessen unterer Schatten über dem Hoch der vorigen Kerze bleibt. Der dritte Tag ist eine schwarze Kerze mit einem oberen Schatten unter dem Tief des Dojis"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Abandoned Baby (CDLABANDONEDBABY)"
 
 msgid "Absolute Price Oscillator (APO)"
 msgstr "Absoluter Kurs Oszillator (Absolute Price Oscillator - APO)"
@@ -467,10 +467,10 @@ msgid "Add/remove indicators"
 msgstr "Indikator hinzufügen/entfernen"
 
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "Advance Block (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "Alle Zeiträume"
@@ -518,10 +518,10 @@ msgid "Appropriateness Test: WARNING"
 msgstr "Angemessenheitstest: ACHTUNG"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 msgid "April"
-msgstr ""
+msgstr "April"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Sind Sie sicher, dass Sie diesen Token löschen wollen?"
@@ -530,7 +530,7 @@ msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Gleitender Durchschnitt (Arnaud Legoux Moving Average - ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Aroon Oszillator (AROONOSC)"
@@ -551,22 +551,22 @@ msgid "Asset Index"
 msgstr "Aktienindex"
 
 msgid "Aug"
-msgstr ""
+msgstr "Aug"
 
 msgid "August"
-msgstr ""
+msgstr "August"
 
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "Average Directional Movement Index (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
 msgstr "Average Directional Movement Rating mißt Impulsänderungen im ADX. Er wird berechnet, indem zwei Werte des ADX (der aktuelle Wert und ein Wert der n Perioden zurück liegt) hinzugefügt, dann durch zwei dividiert werden"
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "Average True Range (ATR)"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oszillator (AO)"
@@ -596,7 +596,7 @@ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks i
 msgstr "Bärisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Aufwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze sollte kurz sein und kann ein Upside Gap formen. Es könnte auch einen Verkaufs-Schatten geben. Das Muster repräsentiert eine Schwachstelle in einem Aufstieg mit einem Risiko von Konsolidierung und möglicher Umkehr. Bullisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Abwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze muss kurz sein. Das Muster repräsentiert eine Schwachstelle und Konsolidierung und eine mögliche Umkehrung des Trends"
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr "Vergleichskurse"
@@ -623,7 +623,7 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com erreicht seit der Gründung in 1999 einen Umsatz von 1 Miliarde $"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
 msgstr ""
