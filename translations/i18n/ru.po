@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "\"Азиатские–Падение\" – Вы выигрываете, когда последний тик окажется ниже, чем общее среднее значение тиков на протяжении контракта"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 сделок за последние 12 мес"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 день"
@@ -206,7 +206,7 @@ msgid "1-2 years"
 msgstr "1-2 года"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 Минут"
@@ -215,7 +215,7 @@ msgid "10m"
 msgstr "10м"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 Минут"
@@ -224,7 +224,7 @@ msgid "15m"
 msgstr "15м"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1д"
@@ -239,7 +239,7 @@ msgid "1t"
 msgstr "1т"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 Часа"
@@ -251,37 +251,37 @@ msgid "2-way pricing"
 msgstr "Оцените движение рынка в двух направлениях"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2ч"
@@ -290,13 +290,13 @@ msgid "2m"
 msgstr "2м"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 Минуты"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 минут"
@@ -314,7 +314,7 @@ msgid "3m"
 msgstr "3м"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 часа"
@@ -326,7 +326,7 @@ msgid "4h"
 msgstr "4ч"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 минут"
@@ -344,7 +344,7 @@ msgid "7-day turnover limit"
 msgstr "7-дневный лимит на объём покупок"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 часов"
@@ -623,7 +623,7 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com достигает оборота в 1 миллиард долларов, начав работу в 1999 г."
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
 msgstr "Билл Вилльямс"
@@ -677,7 +677,7 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "Платформа Binary работает 24/7 и в среднем исполняет 15 контрактов в секунду"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "ЗАКРЫТЬ"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Может использоваться для покупки и продажи контрактов, возобновления закончившихся сделок, а также для пополнения демо-счетов."
@@ -821,10 +821,10 @@ msgid "Cash Balance"
 msgstr "Баланс счёта"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Чанд-Кролл Стоп (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Осциллятор темпа Чанде (CMO)"
 
 msgid "Change Backend Server"
 msgstr "Изменить сервер"
@@ -914,7 +914,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr "Индекс переменчивости (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "Нажмите на Тест"
@@ -1052,7 +1052,7 @@ msgid "Dark Green"
 msgstr "Тёмно-зелёный"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica"
 
 msgid "Date"
 msgstr "Дата"
@@ -1109,7 +1109,7 @@ msgid "Description"
 msgstr "Описание"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Индекс массы, разработанный Дональдом Дорси, использует верхнюю и нижнюю границу диапазона для определения разворота на тренде (на основании расширения границ диапазона). В этой связи, Индекс массы скорее является индикатором волатильности, который не зависит от направления движения. Вместо этого Индекс массы определяет расширения границ диапазона, что также может оказаться предвестником разворота текущего тренда"
@@ -1220,7 +1220,7 @@ msgid "EMA"
 msgstr "ЭСС"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Каждый бинарный опцион является прогнозом будущего движения конкретного актива"
@@ -1256,7 +1256,7 @@ msgid "Ends out"
 msgstr "Закончится вне"
 
 msgid "English"
-msgstr ""
+msgstr "English"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Фигура поглощение (CDLENGULFING)"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "Финансовые преимущества"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "Адрес (улица, дом, кв.)"
@@ -1376,7 +1376,7 @@ msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds F
 msgstr "Третий год подряд BetOnMarkets.com становится лучшей компанией в номинации \"Лучший поставщик услуг в торговле опционами с фиксированным коэффициентом прибыли\" по версии британского журнала Shares Magazine. Это последний раз, когда мы выиграли этот приз, так как Shares Magazine перестал предлагать эту категорию номинаций"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Опыт торговли на Forex"
@@ -1409,7 +1409,7 @@ msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT – время по Гринвичу или Greenwich Mean Time – это официальное время, используемое в зимний период в Великобритании. Летом время в Великобритании меняется на британское летнее время, которое составляет GMT +1 час. Всё время на сайте Binary.com всегда указывается в GMT"
@@ -1616,7 +1616,7 @@ msgid "Individual Traders"
 msgstr "Частные трейдеры"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonesia"
 
 msgid "Industry of Employment"
 msgstr "Сфера занятости"
@@ -1652,7 +1652,7 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "Время расширяться. Для улучшения работы BetOnMarkets.com мы открыли центр программирования в Киберджайя – Силиконовой долине Куала-Лумпура"
 
 msgid "Italiano"
-msgstr ""
+msgstr "Italiano"
 
 msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
 msgstr "Многооконный интерфейс позволяет профессиональным трейдерам одновременно следить за динамикой нескольких активов и рынков. Благодаря множеству доступных инструментов и индикаторов, платформа предоставляет максимальную гибкость для торговли и анализа рынка"
@@ -1964,7 +1964,7 @@ msgid "Miss"
 msgstr "Госпожа"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
 msgstr "Индикаторы темпа"
@@ -2072,7 +2072,7 @@ msgid "OAuth Server"
 msgstr "Сервер OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
 msgstr "ОТКРЫТИЕ"
@@ -2093,7 +2093,7 @@ msgid "Offices in Malta, Malaysia and Japan"
 msgstr "Офисы на Мальте, в Малайзии и Японии"
 
 msgid "Ok"
-msgstr ""
+msgstr "OK"
 
 msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
 msgstr "На основе предоставленной информации о Ваших знаниях и опыте, мы считаем, что инвестиции, предоставляемые на данном сайте, не подходят для Вас"
@@ -2153,7 +2153,7 @@ msgid "Opens"
 msgstr "Открытие"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
 msgstr "Торговля бинарными опционами может вызват зависимость, как и любая деятельность, доведённая до крайности. Чтобы избежать опасности возникновения подобной зависимости, мы проводим проверку реальности и предоставляем регулярный отчёт о Ваших сделках и счетах"
@@ -2192,13 +2192,13 @@ msgid "Overlap Studies"
 msgstr "Перекрытие графиков"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr "Декларация ПЗЛ"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Параболическая система SAR (SAR)"
@@ -2312,7 +2312,7 @@ msgid "Points"
 msgstr "Пункты"
 
 msgid "Polski"
-msgstr ""
+msgstr "Polski"
 
 msgid "Portfolio"
 msgstr "Портфель"
@@ -2507,10 +2507,10 @@ msgid "SMA"
 msgstr "ПСС"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "Наёмный работник"
@@ -2522,7 +2522,7 @@ msgid "Sale Price"
 msgstr "Цена продажи"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
 msgstr "Суб"
@@ -3257,10 +3257,10 @@ msgid "Typical Price (TYPPRICE)"
 msgstr "Типичная цена (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
 msgstr "Окончательный осциллятор (ULTOSC)"
@@ -3389,7 +3389,7 @@ msgid "Websocket Server"
 msgstr "Сервер Websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
 msgstr "Webtrader – это усовершенствованная платформа Binary.com для ПК"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "Тик на оси X"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Сетка оси Y"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "час."
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "если Вы живёте в другой стране"
@@ -3725,13 +3725,13 @@ msgid "websocket"
 msgstr "Websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "да"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr "| Выплата"
