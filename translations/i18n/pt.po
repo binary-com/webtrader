@@ -983,7 +983,7 @@ msgid "Contracts"
 msgstr "Contratos"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Coppock Curve (CC)"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Contra-ataque (CDLCOUNTERATTACK)"
@@ -1145,10 +1145,10 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Deseja instalar a extensão do Chrome do Webtrader?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Doji Star (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
 msgstr "Dojis são formados quando a abertura e o fechamento de um título são praticamente iguais. O comprimento das sombras superiores e inferiores pode variar e a vela resultando parece uma cruz, uma cruz invertida ou um sinal de mais"
@@ -1157,7 +1157,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Você ainda não tem uma conta? Inscreva-se e receba uma conta virtual com $10.000"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "Donchian Channel (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Concluído. Os fundos estão sendo transferidos para o agente de pagamentos"
@@ -1217,10 +1217,10 @@ msgid "EGR Operator Award"
 msgstr "Prêmio de operador EGR"
 
 msgid "EMA"
-msgstr ""
+msgstr "MME"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Cada opção binária é uma previsão de um movimento futuro de um mercado subjacente"
@@ -1274,7 +1274,7 @@ msgid "Entry spot price"
 msgstr "Preço à vista de entrada"
 
 msgid "Espa ol"
-msgstr ""
+msgstr "Espanhol"
 
 msgid "Estimated Net Worth"
 msgstr "Patrimônio líquido estimado"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "Prêmios financeiros"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "Primeira linha do endereço residencial"
@@ -1388,7 +1388,7 @@ msgid "Founded October 1999"
 msgstr "Fundada em Outubro de 1999"
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fractais são indicadores em gráficos de velas que identificam pontos de inversão no mercado. Os negociadores usam muitas vezes fractais a fim de ter uma ideia sobre a direção em que o preço irá se desenvolver. Um fractal irá se formar quando um determinado padrão de preço ocorrer num gráfico"
@@ -1409,7 +1409,7 @@ msgid "Further instructions"
 msgstr "Instruções adicionais"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT significa Tempo Médio de Greenwich (ou Greenwich Mean Time em inglês), o horário oficial usado no Reino Unido no inverno. Durante o verão, o Reino Unido muda para o Horário de Verão Britânico, que é GMT + 1 hora. Todas as horas no site da Binary.com usam GMT durante todo o ano"
@@ -1439,7 +1439,7 @@ msgid "HIGH"
 msgstr "ALTA"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Hammer (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
 msgstr "Homem enforcado (CDLHANGINGMAN)"
@@ -1586,7 +1586,7 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr "No Reino Unido e na Ilha de Man, os nossos clientes negociam através da Binary (IOM) Ltd. No Japão, eles negociam através da Binary KK. Na União Europeia (exceto no RU), eles negociam através da Binary (Europe) Ltd. e Binary Investments (Europe) Ltd. No resto do mundo, eles negociam através da Binary (C.R.) S.A"
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "In-Neck Pattern (CDLINNECK)"
 
 msgid "In/Out"
 msgstr "Dentro/Fora"
@@ -1652,25 +1652,25 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "Está na altura de expandir. Criamos um centro de programação em Cyberjaya - o Vale do Silício de Kuala Lumpur - para manter e melhorar a BetOnMarkets.com"
 
 msgid "Italiano"
-msgstr ""
+msgstr "Italiano"
 
 msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
 msgstr "A sua interface multi-janela permite que negociadores profissionais monitorem os movimentos de vários ativos e mercados em simultâneo. Graças à disponibilidade de várias ferramentas e indicadores, ela permite a negociação e a análise do mercado com o máximo de flexibilidade"
 
 msgid "Jan"
-msgstr ""
+msgstr "Jan"
 
 msgid "January"
 msgstr "Janeiro"
 
 msgid "Jul"
-msgstr ""
+msgstr "Jul"
 
 msgid "July"
 msgstr "Julho"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 msgid "June"
 msgstr "Junho"
@@ -1685,7 +1685,7 @@ msgid "Key facts"
 msgstr "Fatores chave"
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Kicking (CDLKICKING)"
 
 msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
 msgstr "Chute - altista/baixista determinado pelo marubozu mais longo (CDLKICKINGBYLENGTH)"
@@ -1706,7 +1706,7 @@ msgid "LOW"
 msgstr "BAIXA"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last used"
 msgstr "Última utilização"
@@ -1745,7 +1745,7 @@ msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr "Média Móvel Ponderada Linearmente (MMPL)"
 
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 msgid "Load chart template"
 msgstr "Carregar modelo do gráfico"
@@ -1868,7 +1868,7 @@ msgid "Make your trade"
 msgstr "Realize a sua negociação"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
 msgstr "Março"
@@ -1880,13 +1880,13 @@ msgid "Market exit price"
 msgstr "Preço de saída do mercado"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Índice de Massa (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Mat Hold (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Combina"
@@ -2057,7 +2057,7 @@ msgid "Note: withdrawal via payment agent is available only if you deposit exclu
 msgstr "Nota: retiradas através de agentes de pagamentos somente estão disponíveis no caso de você depositar exclusivamente por via de agentes de pagamento"
 
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 msgid "November"
 msgstr "Novembro"
@@ -2072,7 +2072,7 @@ msgid "OAuth Server"
 msgstr "Servidor OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
 msgstr "ABERTURA"
@@ -2153,7 +2153,7 @@ msgid "Opens"
 msgstr "Abre"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
 msgstr "A negociação de opções pode se tornar um verdadeiro vício, tal como qualquer outra atividade levado ao extremo. Para evitar os perigos de tais vícios, fornecemos um balanço da realidade que lhe proporciona um resumo das suas negociações e contas numa base regular"
@@ -2192,13 +2192,13 @@ msgid "Overlap Studies"
 msgstr "Estudos sobrepostos"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr "Declaração PPE"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "SAR Parabólico (SAR)"
@@ -2246,7 +2246,7 @@ msgid "Piercing Pattern (CDLPIERCING)"
 msgstr "Padrão Piercing (CDLPIERCING)"
 
 msgid "Pip"
-msgstr ""
+msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr "Pip é abreviatura de \"percentage in point\" (percentagem em pontos), que geralmente é a quarta casa decimal (i.e. 0,0001)"
@@ -2387,7 +2387,7 @@ msgid "Quiet markets"
 msgstr "Mercados parados"
 
 msgid "Rate Of Change (ROC)"
-msgstr ""
+msgstr "Taxa de Variação (ROC)"
 
 msgid "Rate Of Change Percentage (ROCP)"
 msgstr "Percentagem da Taxa de Alteração (PTA)"
@@ -2405,7 +2405,7 @@ msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr "Colha os frutos da negociação de opções binárias, na consciência de que os seus fundos estão sempre seguros"
 
 msgid "Ref"
-msgstr ""
+msgstr "Ref"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
 msgstr "A Regent Markets Group Ltd. é renomeada para Binary Ltd"
@@ -2486,7 +2486,7 @@ msgid "Return"
 msgstr "Voltar"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr "Subir"
@@ -2504,13 +2504,13 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Três métodos de alta/baixa (CDLRISEFALL3METHODS)"
 
 msgid "SMA"
-msgstr ""
+msgstr "MMS"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "Trabalhador assalariado"
@@ -2522,7 +2522,7 @@ msgid "Sale Price"
 msgstr "Preço de venda"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
 msgstr "Sáb"
@@ -2630,13 +2630,13 @@ msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Pião (CDLSPINNINGTOP)"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spot price"
 msgstr "Preço à vista"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Spreads"
 
 msgid "Spreads down"
 msgstr "Spreads de baixa"
@@ -2681,7 +2681,7 @@ msgid "Statistical Functions"
 msgstr "Funções estatísticas"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Negociações Fica entre/Sai fora"
@@ -2702,13 +2702,13 @@ msgid "Step 3: Make your trade"
 msgstr "Etapa 3: Realize a sua negociação"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "Stick Sandwich (CDLSTICKSANDWICH)"
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "Estocástico (STOCH)"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "Estocástico rápido (STOCHS)"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
 msgstr "Índice de Força Relativa Estocástico (STOCHRSI)"
@@ -2717,10 +2717,10 @@ msgid "Stochastic Slow (STOCHS)"
 msgstr "Estocástico lento (STOCHS)"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "Índices de ações"
 
 msgid "Stock indices"
-msgstr ""
+msgstr "Índices de ações"
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
 msgstr "Os índices do mercado da bolsa medem o valor de uma seleção de empresa no mercado da bolsa"
@@ -2759,7 +2759,7 @@ msgid "Sunday"
 msgstr "Domingo"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
 msgstr "TRIMA"
@@ -3356,13 +3356,13 @@ msgid "Volatility Indicators"
 msgstr "Indicadores Volatility"
 
 msgid "Volatility Indices"
-msgstr ""
+msgstr "Índices Volatility"
 
 msgid "Volatility indices"
-msgstr ""
+msgstr "Índices Volatility"
 
 msgid "WMA"
-msgstr ""
+msgstr "MMP"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "MMP é abreviatura de Média Móvel Ponderada. Ajuda na suavização da curva de preço para melhor identificação de tendências. Coloca ainda mais importância em dados recentes do que a MME"
@@ -3389,7 +3389,7 @@ msgid "Websocket Server"
 msgstr "Servidor Websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
 msgstr "Webtrader é a plataforma avançada de negociação de área de trabalho da Binary.com"
@@ -3428,7 +3428,7 @@ msgid "Will I need to install any software?"
 msgstr "Vou precisar instalar qualquer software?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr "Ganhe 10 a 1000% na sua aposta se você estiver correto. Aumente o seu retorno ao escolher \"Fica dentro\" com um preço-alvo estreito"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "Tique-taque eixo X"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Linha de grelha eixo Y"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "horas"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "se este não for o seu país de residência"
@@ -3671,7 +3671,7 @@ msgid "next tick"
 msgstr "próximo tique-taque"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr " para a quantia de "
@@ -3725,13 +3725,13 @@ msgid "websocket"
 msgstr "Websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "sim"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr "| Prêmio"
