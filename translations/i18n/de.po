@@ -1658,19 +1658,19 @@ msgid "Its multi window interface allows pro traders to monitor the movements of
 msgstr "Sein Multi-Fenster-Interface erlaubt professionellen Tradern, die Bewegungen mehrerer Anlagen und Märkte zur selben Zeit zu verfolgen. Dank vieler erhältlicher Tools und Indikatoren, erlaubt es den Handel und die Analyse des Marktes mit maximaler Flexibilität"
 
 msgid "Jan"
-msgstr ""
+msgstr "Jan"
 
 msgid "January"
 msgstr "Januar"
 
 msgid "Jul"
-msgstr ""
+msgstr "Jul"
 
 msgid "July"
 msgstr "Juli"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 msgid "June"
 msgstr "Juni"
@@ -1679,13 +1679,13 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Klicken Sie auf den  Gewähren  Knopf auf der Seite, Sie werden nun weitergeleitet zu"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "Kaufman's Adaptive Moving Average (KAMA)"
 
 msgid "Key facts"
 msgstr "Wichtige Fakten"
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Kicking (CDLKICKING)"
 
 msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
 msgstr "Kicking - steigen/fallen bestimmt von dem längeren marubozu (CDLKICKINGBYLENGTH)"
@@ -1706,7 +1706,7 @@ msgid "LOW"
 msgstr "NIEDRIG"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last used"
 msgstr "Zuletzt verwendet"
@@ -1715,7 +1715,7 @@ msgid "Learning to trade"
 msgstr "Zu Handeln lernen"
 
 msgid "Least Squares Moving Average (LSMA)"
-msgstr ""
+msgstr "Least Squares Moving Average (LSMA)"
 
 msgid "Less than"
 msgstr "Weniger als"
@@ -1742,10 +1742,10 @@ msgid "Line Dot"
 msgstr "Punktlinie"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
-msgstr ""
+msgstr "Linearly Weighted Moving Average (LWMA)"
 
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 msgid "Load chart template"
 msgstr "Chartvorlage wird geladen"
@@ -1808,16 +1808,16 @@ msgid "Log in time"
 msgstr "Login-Zeit"
 
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 msgid "Logout"
 msgstr "Abmelden"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Long Legged Doji (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Long Line Candle (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 msgstr "Langbeinige Doji haben lange obere und untere Schatten, die beinahe gleich lang sind. Diese Doji reflektieren einen Großteil an Unentschlossenheit im Kurs. Langbeinige Doji zeigen an, dass Kurse deutlich über und unter dem Sitzung-Öffnungslevel gehandelt wurden, aber nahezu gleich mit der Öffnung geschlossen haben. Nach vielem Rufen und Schreien, hat des Endergebnis wenig Veränderung zur anfänglichen Öffnung gezeigt"
@@ -1859,7 +1859,7 @@ msgid "MACD is a trading indicator used in technical analysis of stock prices.It
 msgstr "MACD ist ein Handelsindikator, der in der technischen Analyse von Aktienkursen verwendet wird. Er soll Veränderungen in der Stärke, der Richtung, des Momentum, und der Dauer eines Trends im Kurs einer Aktie anzeigen"
 
 msgid "MENA FFXPO Award"
-msgstr ""
+msgstr "MENA FFXPO Award"
 
 msgid "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
 msgstr "Bevor Sie Ihren Antrag absenden können, müssen Sie zuerst den Zahlungsbedingungen des Agenten zustimmen. Wenn Sie auf „Überweisung bestätigen\" klicken, wird das Geld von Ihrem Konto abgebucht und an den von Ihnen ausgewählten Zahlungsagenten geschickt. Der Agent wird Ihnen den Auszahlungsbetrag (abzüglich der Provision) über Ihre angegebene Zahlungsmethode übersenden"
@@ -1880,22 +1880,22 @@ msgid "Market exit price"
 msgstr "Kurs zum Vertragsende"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Mass Index (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Mat Hold (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Gleicht"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
-msgstr ""
+msgstr "Matching Low (CDLMATCHINGLOW)"
 
 msgid "Maximum (MAX)"
-msgstr ""
+msgstr "Maximum (MAX)"
 
 msgid "Maximum account cash balance"
 msgstr "Maximales Kontoguthaben"
@@ -2525,7 +2525,7 @@ msgid "Sand Signika"
 msgstr "Sand Signika"
 
 msgid "Sat"
-msgstr "Sam"
+msgstr "Sa"
 
 msgid "Saturday"
 msgstr "Samstag"
@@ -3092,7 +3092,7 @@ msgid "Thursday"
 msgstr "Donnerstag"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Trade app"
 msgstr "Tick Trade App"
@@ -3101,10 +3101,10 @@ msgid "Tick {row.number}"
 msgstr "Tick {Reihe.Nummer}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Ticks"
 
 msgid "Tile"
-msgstr ""
+msgstr "Tile"
 
 msgid "Time interval"
 msgstr "Zeitinterval"
@@ -3137,7 +3137,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Um Gelder abzuheben, geben Sie bitte den speziellen Verifikationstoken, den wir gerade per E-mail an Sie verschickt haben, ein"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
 msgstr "Tokenmanagement"
@@ -3233,10 +3233,10 @@ msgid "Triple Exponential Moving Average (TEMA)"
 msgstr "Dreifach Exponentiell Gleitender Durchschnitt (Triple Exponential Moving Average - TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "Tristar Pattern (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "True Range (TRANGE)"
 
 msgid "Try"
 msgstr "Versuchen"
@@ -3251,13 +3251,13 @@ msgid "Turnover"
 msgstr "Umsatz"
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "Typical Price (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
 msgstr "USD/JPY"
@@ -3278,7 +3278,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "Leider unterstützt Ihr Browser diese nicht"
 
 msgid "Unique 3 River (CDLUNIQUE3RIVER)"
-msgstr ""
+msgstr "Unique 3 River (CDLUNIQUE3RIVER)"
 
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 msgstr "Das Unique Three River Bottom ist ein aus drei Kerzen bestehendes, bullisches Candlestick-Pattern: Die erste Kerze hat einen langen und bärischen Körper; die zweite Kerze ist ein Hammer, und ihr Körper befindet sich innerhalb des Körpers des ersten Balkens; die dritte Kerze ist klein und bullisch, und ihr Schlusskurs ist niedriger als der des zweiten Balkens"
@@ -3290,7 +3290,7 @@ msgid "Up/Down"
 msgstr "Auf/Ab"
 
 msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
-msgstr ""
+msgstr "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
 
 msgid "Upcoming Events"
 msgstr "Bevorstehende Veranstaltungen"
@@ -3308,10 +3308,10 @@ msgid "Upload template"
 msgstr "Vorlage hochladen"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
-msgstr ""
+msgstr "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 
 msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
-msgstr ""
+msgstr "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
 
 msgid "Use"
 msgstr "Verwenden"
@@ -3362,7 +3362,7 @@ msgid "Volatility indices"
 msgstr "Volatilität Indizes"
 
 msgid "WMA"
-msgstr ""
+msgstr "WMA"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "WMA steht für gewichteter gleitender Durchschnitt (eichtet moving average). Es hilft dabei, die Kurskurve zur besseren Trendidentifizierung zu glätten. Es legt sogar größeren Wert auf jüngste Daten, als der EMA"
@@ -3386,10 +3386,10 @@ msgid "We're really proud of this award. We're strongly committed to offering an
 msgstr "Wir sind auf diese Auszeichnung wirklich sehr stolz. Wir engagieren uns stark im Angebot eines ethischen und kundenbezogenen Handelserlebnisses und die Auszeichnung zeigt, dass BetOnMarkets eine vertrauenswürdige Firma ist, die ihren Kunden, gleichgültig, ob sie erfahrene Trader oder Anfänger sind, zuhört und sich um sie kümmert. Wir bieten unseren Kundendienst in Englisch, Indonesisch, Russisch, Chinesisch und Spanisch an"
 
 msgid "Websocket Server"
-msgstr ""
+msgstr "Websocket Server"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Web trader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
 msgstr "Webtrader ist Binary.coms fortgeschrittene Desktop-Handelsplattform"
@@ -3428,7 +3428,7 @@ msgid "Will I need to install any software?"
 msgstr "Muss ich eine Software installieren?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr "Gewinnen Sie 10-1000% auf Ihre Einsätze, wenn Sie richtig liegen. Erhöhen Sie Ihre gewinnende Rendite, indem Sie \"Bleibt Innerhalb\" mit einem begrenzteren Kursziel auswählen"
@@ -3440,7 +3440,7 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr "Gewinnen Sie 10-1000% auf Ihre Einsätze, wenn Sie richtig liegen. Erhöhen Sie Ihre gewinnende Rendite, indem Sie ein Kursziel auswählen, das weiter vom aktuellen Kurs entfernt liegt"
 
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 msgid "With Binary.com you can trade"
 msgstr "Mit Binary.com können Sie handeln"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "X-Achse Tick"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Y-Achse Gitternetzlinie"
@@ -3545,7 +3545,7 @@ msgid "Your transaction reference number is"
 msgstr "Ihre Überweisungsreferenz-Nummer ist"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "erlaubt Kunden, ihre eigenen automatischen Handelsroboter mit   drag-and-drop  simplicity zu erstellen"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "Stunden"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "Dies ist nicht Ihr Wohnsitzland"
@@ -3725,13 +3725,13 @@ msgid "websocket"
 msgstr "Websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "ja"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr "| Auszahlung"
