@@ -2828,7 +2828,7 @@ msgid "The Bullish Three Star appears after a downtrend and it consists of three
 msgstr "Фигура \"Три бычьи звезды\" формируется на графике после нисходящего тренда и состоит из трёх последовательных дожи, второй из которых образует гэп ниже двух других дожи. Фигура \"Три медвежьи свечи\" появлется после восходящего тренда и состоит из трёх последовательных дожи, второй из которых образует гэп выше двух других дожи"
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
-msgstr ""
+msgstr "Осциллятор темпа Чанде (CMO) основан на расчёте разницы между суммой всех недавних максимумов и минимумов закрытия, а затем деления полученного результата на сумму всех ценовых колебаний за заданный период времени. Результат умножается на 100, чтобы в итоге получить число в диапазоне от -100 до +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
 msgstr "Индекс переменчивости (CHOP) является индикатором, сформированным для определения изменений на рынке (появления бокового движения) или отсутствия изменений (торговля в рамках восходящего или нисходящего тренда). Индекс переменчивости не предназначен для предсказания будущего направления движения рынка. Он указывает лишь наличие тренда на рынке"
