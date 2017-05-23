@@ -533,7 +533,7 @@ msgid "Aroon (AROON)"
 msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr "Oscilador Aroon (AROONOSC)"
+msgstr "Aroon Oscillator (AROONOSC)"
 
 msgid "Asian down"
 msgstr "Asiático abaixo"
@@ -566,7 +566,7 @@ msgid "Average Directional Movement Rating quantifies momentum change in the ADX
 msgstr "A classificação do Movimento Direcional Médio quantifica a alteração do impulso no IMD. É calculada ao adicionar dois valores do IMD (o valor atual e um valor de há n períodos atrás) e depois dividir por dois"
 
 msgid "Average True Range (ATR)"
-msgstr "Invervalo verdadeiro médio (IVM)"
+msgstr "Average True Range (ATR)"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Oscilador Awesome (AO)"
@@ -578,7 +578,7 @@ msgid "Back to list"
 msgstr "Voltar para a lista"
 
 msgid "Balance of Power (BOP)"
-msgstr "Equilíbrio de poder (BOP)"
+msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
 msgstr "Bancos, fundos especulativos e investidores profissionais negociam opções binárias sistematicamente em mercado de derivados de balcão. Muitos profissionais do mercado usam e confiam na plataforma Binary.com para negociações flexíveis de grande volume"
@@ -3122,7 +3122,7 @@ msgid "Title"
 msgstr "Título"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Ti ng Vi t"
 
 msgid "To"
 msgstr "Para"
@@ -3251,16 +3251,16 @@ msgid "Turnover"
 msgstr "Volume de negócios"
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Dois corvos (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Preço Típico (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
 msgstr "Derradeiro Oscilador (ULTOSC)"
@@ -3326,7 +3326,7 @@ msgid "Using our website, customers can trade currencies, indices, stocks and co
 msgstr "Ao usar o nosso site, clientes pode negociar moedas, índices, ações e matérias-primas 24/7. Temos os preços mais flexíveis e o conjunto de produtos mais abrangente do mercado"
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Variância (VAR)"
 
 msgid "Verification code has been sent to your email"
 msgstr "O código de verificação foi enviado para o seu e-mail"
