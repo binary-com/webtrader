@@ -356,7 +356,7 @@ msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji
 msgstr "宵の明星は長い陰線のローソク足から成ります。長めの陽線のあとに、ギャップの明けた十字線が発生しその次に下放れて大陰線で１日目の陽線の下半分あたり確定した状態をいいます。上昇トレンドからの大きな転向サインとなるローソク足のパターンです。"
 
 msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr ""
+msgstr "PEPとは公的地位に有するまたは委託されている個人をいいます。親族や親しい友人にPEPがいる場合も該当します。"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "平滑移動平均は、単純移動平均と指数移動平均を合せたようなもので、長期間のみ適用されます。"
@@ -420,13 +420,13 @@ msgid "A candlestick with very long upper and lower shadows and a small real bod
 msgstr ""
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
-msgstr ""
+msgstr "小さく白いローソクを覆うまたは包む長く黒いローソクが続いた状態の、短いヒゲのある白く短いローソクからなるチャートパターン"
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr "デリバティブとは金融市場で任意の取引対象にて予測される価値のことです。デリバティブはインターバンク市場にて盛んに取引されており、バイナリーはシンプルなデリバティブの一形態です。"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
-msgstr ""
+msgstr "上ヒゲまたは下ヒゲのない中〜大の陰線または陽線のローソク足"
 
 msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Betting Operator of the Year' over two other finalists. It's a major victory for our brand and further recognition of our world-beating service. Ten years on, and going from strength to strength"
 msgstr "他の２社のファイナリストを勝ち抜き、BetOnMarkets.comは最も優秀なベッティングブローカーとして受賞。これは当社のブランドと世界一のサービスを提供していることに関する、素晴らしい評価です。創業１０周年を迎え、当社は年々強みを増しています。"
