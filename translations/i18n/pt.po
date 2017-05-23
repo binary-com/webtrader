@@ -533,7 +533,7 @@ msgid "Aroon (AROON)"
 msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Oscilador Aroon (AROONOSC)"
 
 msgid "Asian down"
 msgstr "Asiático abaixo"
@@ -569,7 +569,7 @@ msgid "Average True Range (ATR)"
 msgstr "Invervalo verdadeiro médio (IVM)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Oscilador Awesome (AO)"
 
 msgid "Back"
 msgstr "Voltar"
@@ -578,7 +578,7 @@ msgid "Back to list"
 msgstr "Voltar para a lista"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Equilíbrio de poder (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
 msgstr "Bancos, fundos especulativos e investidores profissionais negociam opções binárias sistematicamente em mercado de derivados de balcão. Muitos profissionais do mercado usam e confiam na plataforma Binary.com para negociações flexíveis de grande volume"
@@ -596,7 +596,7 @@ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks i
 msgstr "Tendência baixista: é um padrão de fim de tendência composto por três vela numa tendência de alta. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta e pode formar uma lacuna para cima. Também pode haver uma sombra de venda. O padrão representa uma fraqueza numa subida com um risco de consolidação e uma possível inversão. Altista: é um padrão de fim de tendência composto por três velas numa tendência de baixa. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta. O padrão representa uma fraqueza, uma consolidação e uma possível inversão de tendência"
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr "Preços de referência"
@@ -623,10 +623,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "A BetOnMarkets.com atinge $1 bilhões e volume de vendas desde o seu início em 1999"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr "Robô Binary lançado"
@@ -677,10 +677,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "A plataforma da Binary realiza em média 15 transações por segundo, 24/7"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com Shop introduced"
 msgstr "A loja Binary.com foi apresentada"
@@ -761,7 +761,7 @@ msgid "Brand of first car"
 msgstr "Marca do primeiro carro"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr "Atualização de navegador necessária"
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "FECHAMENTO"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Pode ser usado para comprar e vender contratos, renovar aquisições expiradas e financiar contas de dinheiro virtual"
@@ -821,7 +821,7 @@ msgid "Cash Balance"
 msgstr "Saldo de dinheiro"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "Oscilador do Impulso de Alteração"
@@ -911,10 +911,10 @@ msgid "Choose your pereferred withdrawal method"
 msgstr "Escolha o seu método de retirada preferido"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "Choppiness Index (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "Teste de \"Click Jacking\""
@@ -2762,7 +2762,7 @@ msgid "TEMA"
 msgstr ""
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Tabela"
@@ -2789,7 +2789,7 @@ msgid "Tax-free"
 msgstr "Livre de impostos"
 
 msgid "Tel"
-msgstr ""
+msgstr "Tel"
 
 msgid "Template name"
 msgstr "Nome do modelo"
@@ -3092,7 +3092,7 @@ msgid "Thursday"
 msgstr "Quinta-feira"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tique-taque"
 
 msgid "Tick Trade app"
 msgstr "Aplicativo negociações tique-taque"
@@ -3137,7 +3137,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Para retirar fundos, insira o token de verificação especial que acabamos de lhe enviar por e-mail"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
 msgstr "Gerenciamento do token"
@@ -3236,7 +3236,7 @@ msgid "Tristar Pattern (CDLTRISTAR)"
 msgstr "Padrão Três Estrelas (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "True Range (TRANGE)"
 
 msgid "Try"
 msgstr "Experimentar"
