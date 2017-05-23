@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "\"Asian Fall\" - Você ganha quando o último tique-taque fica abaixo da média dos tique-taques durante a negociação"
@@ -38,7 +38,7 @@ msgid "(One) Touch trades"
 msgstr "Negociações de toque (único)"
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "(anteriormente conhecida como"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(se menos de um dia de duração) ou no fim do dia de negociação (se um dia ou mais de duração)"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0 a 5 transações nos últimos 12 meses"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 dia"
@@ -206,16 +206,16 @@ msgid "1-2 years"
 msgstr "1 a 2 anos"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 minutos"
 
 msgid "10m"
-msgstr ""
+msgstr "10m"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 minutos"
@@ -224,22 +224,22 @@ msgid "15m"
 msgstr "10 m"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1d"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1m"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 horas"
@@ -251,52 +251,52 @@ msgid "2-way pricing"
 msgstr "Preços bidirecionais"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
-msgstr ""
+msgstr "2h"
 
 msgid "2m"
-msgstr ""
+msgstr "2m"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 minutos"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 minutos"
@@ -308,13 +308,13 @@ msgid "30-day turnover limit"
 msgstr "Limite de volume de negócios de 30 dias"
 
 msgid "30m"
-msgstr ""
+msgstr "30m"
 
 msgid "3m"
-msgstr ""
+msgstr "3m"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 horas"
@@ -323,16 +323,16 @@ msgid "40 transactions or more in the past 12 months"
 msgstr "40 transações ou mais nos últimos 12 meses"
 
 msgid "4h"
-msgstr ""
+msgstr "4h"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 minutos"
 
 msgid "5m"
-msgstr ""
+msgstr "5m"
 
 msgid "6-10 transactions in the past 12 months"
 msgstr "6 a 10 transações nos últimos 12 meses"
@@ -344,13 +344,13 @@ msgid "7-day turnover limit"
 msgstr "Limite de volume de negócios de 7 dias"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 horas"
 
 msgid "8h"
-msgstr ""
+msgstr "8h"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Uma estrela Doji da noite consiste em uma vela longa de tendência alta, seguida por uma Doji que registra uma lacuna acima dela, depois, uma terceira vela baixista que se fecha bem dentro do corpo da primeira vela e, desse modo, confirmando o reverso. É considerado um padrão de vela baixista forte de reversão de preço."
@@ -530,7 +530,7 @@ msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Média Móvel Arnaud Legoux (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
