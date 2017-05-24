@@ -6,11 +6,11 @@ exports.command = function waitForCSSProperty(selector, property, value, timeout
     var check_property = () => {
       browser.getCssProperty(selector, property, (result) => {
         if (result.value === value) {
-          console.log(' \x1b[1;32m✔\x1b[m Element <' + selector + '> has css property "' + property +'": "'+ value +'".')
+          console.log(' \x1b[1;32m✔\x1b[m Element <' + selector + '> has css property "' + property + '": "' + value + '".')
           done();
         } else if (test_count >= 20) {
           browser.assert.fail('purchase-row (style : ' + property + ') to be ' +
-            value, 'purchase-row (style : opacity) to be ' + result.value,
+            value, 'purchase-row (style : ' + property + ') to be ' + result.value,
             'Timed out while waiting for proposal response', '');
         } else {
           test_count++;

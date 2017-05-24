@@ -1,4 +1,4 @@
-import { before, after } from './default';
+import { before, after } from '../default';
 import { chartTemplateTest } from './chartTemplateTest';
 import { chartFunctionTest } from './chartFunctionTest';
 import chartLineTest from './chartLinesTest';

@@ -1,11 +1,15 @@
 /**
  * Tests for trade dialog
  */
-import { beforeLogin, after } from './default';
+import { beforeLogin, after } from '../default';
 import * as UpDownTests from './upDownTradeTest';
 import * as TouchNoTouchTests from './touchNoTouchTradeTest';
+import * as InOutTests from './inOutTradeTest';
+import * as DigitTests from './digitTradeTest';
+import * as AsianTests from './asianTradeTest';
 import { tradeTemplate } from './tradeTemplateTest';
-module.exports = {
+
+export default {
   before: (browser) => {
     beforeLogin(browser);
     browser
@@ -25,5 +29,16 @@ module.exports = {
   'Higher': UpDownTests.higher,
   'Lower': UpDownTests.lower,
   'Touch': TouchNoTouchTests.touch,
+  'No touch': TouchNoTouchTests.noTouch,
+  'Out': InOutTests.out,
+  'In': InOutTests.in,
+  'Matches': DigitTests.matches,
+  'Differs': DigitTests.differs,
+  'Over': DigitTests.over,
+  'Under': DigitTests.under,
+  'Even': DigitTests.even,
+  'Odd': DigitTests.odd,
+  'Asian up': AsianTests.up,
+  'Asian down': AsianTests.down,
   'Trade template': tradeTemplate
 }

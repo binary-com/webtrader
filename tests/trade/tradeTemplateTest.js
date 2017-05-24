@@ -10,6 +10,6 @@ export default {
       .assert.visible('.trade-fields .categories-row .trade-template-manager-root .menu')
       .click('.trade-fields .categories-row .trade-template-manager-root .menu [rv-on-click="menu.templates"]')
       .assert.visible('.trade-fields .categories-row .trade-template-manager-root .templates')
-      .assert.containsText('.trade-fields .categories-row .trade-template-manager-root .templates > div > .template .name', 'Up/Down Lower(Some)')
+      .assert.containsText('.trade-fields .categories-row .trade-template-manager-root .templates > div > .template .name', 'Asians Asian down(So')
   }
 }

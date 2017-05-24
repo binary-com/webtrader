@@ -29,7 +29,7 @@ module.exports = {
   ],
   "output_folder": "./reports", // reports (test outcome) output by nightwatch
   "page_objects_path": './tests/pages',
-  "custom_commands_path":'./tests/custom_commands',
+  "custom_commands_path": './tests/custom_commands',
 
   "test_settings": {
     "default": {
@@ -42,7 +42,7 @@ module.exports = {
           "webdriver.chrome.driver": "./node_modules/nightwatch/bin/chromedriver"
         }
       },
-      "filter": "tests/\*test.js",
+      "filter": "tests/\*/\*.test.js",
       "screenshots": {
         "enabled": true, // if you want to keep screenshots
         "path": './screenshots', // save screenshots here
@@ -76,7 +76,10 @@ module.exports = {
       desiredCapabilities: {
         'browserstack.user': config ? config.BROWSERSTACK_USERNAME : process.env.BROWSERSTACK_USERNAME,
         'browserstack.key': config ? config.BROWSERSTACK_KEY : process.env.BROWSERSTACK_KEY,
-        'browser': 'chrome'
+        'browser': 'chrome',
+        'browser_version': '58.0',
+        'os': 'Windows',
+        'os_version': '10'
       },
       'selenium_host': 'hub-cloud.browserstack.com',
       'selenium_port': 80

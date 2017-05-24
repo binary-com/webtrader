@@ -14,6 +14,7 @@ export default {
       .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
       //Remove horizontal line from chart
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', 90, 100)
+      .pause(1000)
       .doubleClick()
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', -50, -50)
       .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
@@ -33,6 +34,7 @@ export default {
       .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
       //Remove Vertical line from chart
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', 190, 200)
+      .pause(1000)
       .doubleClick()
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', -50, -50)
       .assert.elementNotPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')

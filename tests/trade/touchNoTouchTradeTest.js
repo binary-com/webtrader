@@ -3,6 +3,7 @@ const changeTradeType = (browser) => {
     .click('.trade-dialog .trade-fields .categories-row li:first-of-type .ui-selectmenu-button')
     .click('.ui-selectmenu-menu.ui-selectmenu-open > ul > li:nth-of-type(2)')
     .assert.containsText('.trade-dialog .trade-fields .categories-row li:first-of-type .ui-selectmenu-button .ui-selectmenu-text', 'Touch/No Touch')
+    .waitForCSSProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1')
 };
 
 export default {
@@ -19,8 +20,6 @@ export default {
       .assert.elementNotPresent('.trade-dialog .trade-conf')
   },
   noTouch: (browser) => {
-    //Can be removed!
-    changeTradeType(browser);
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="no touch"]')
       .waitForCSSProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1')
@@ -31,6 +30,5 @@ export default {
       .waitForElementVisible('.trade-dialog .trade-conf .close')
       .execute(() => { $(".trade-dialog .trade-conf .close").click() })
       .assert.elementNotPresent('.trade-dialog .trade-conf')
-      
   }
 }

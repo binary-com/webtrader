@@ -7,9 +7,6 @@ const buyContract = (browser, direction) => {
     .execute("$('.trade-dialog .trade-fields .purchase-row > li > button').click()")
     .waitForElementPresent('.trade-dialog .trade-conf')
     .waitForElementVisible('.trade-dialog .trade-conf .tick-chart')
-    /*
-    .waitForElementPresent('.trade-dialog .trade-conf .highcharts-container svg \
-      .highcharts-series-group .highcharts-markers .highcharts-point')*/
     // Monitoring tick trade
     .waitForSeriesData('.trade-dialog .trade-conf .tick-chart', 5)
     .waitForElementVisible('.trade-dialog .trade-conf .close')
@@ -44,7 +41,7 @@ export default {
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="higher"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays > .active', 'Higher')
-      .assert.visible('.trade-dialog .trade-fields .barriers-barrier-row');
+      .waitForCSSProperty('.trade-dialog .trade-fields .barriers-barrier-row', 'display', 'flex');
     buyContract(browser, 'Up');
   },
   lower: (browser) => {
