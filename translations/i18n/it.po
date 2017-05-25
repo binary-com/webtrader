@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transazioni negli ultimi 12 mesi"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 giorno"
@@ -206,40 +206,40 @@ msgid "1-2 years"
 msgstr "1-2 anni"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 minuti"
 
 msgid "10m"
-msgstr ""
+msgstr "10 min"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 minuti"
 
 msgid "15m"
-msgstr ""
+msgstr "15 min"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1g"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1 min"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 ore"
@@ -248,55 +248,55 @@ msgid "2 Minutes"
 msgstr "2 minuti"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "Prezzi bidirezionali"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
-msgstr ""
+msgstr "2h"
 
 msgid "2m"
-msgstr ""
+msgstr "2 min"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 minuti"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 minuti"
@@ -308,13 +308,13 @@ msgid "30-day turnover limit"
 msgstr "limite di turnover per 30 giorni"
 
 msgid "30m"
-msgstr ""
+msgstr "30 min"
 
 msgid "3m"
-msgstr ""
+msgstr "3 min"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 ore"
@@ -323,16 +323,16 @@ msgid "40 transactions or more in the past 12 months"
 msgstr "40 transazioni o più negli ultimi 12 mesi"
 
 msgid "4h"
-msgstr ""
+msgstr "4h"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 minuti"
 
 msgid "5m"
-msgstr ""
+msgstr "5 min"
 
 msgid "6-10 transactions in the past 12 months"
 msgstr "6-10 transazioni negli ultimi 12 mesi"
@@ -344,13 +344,13 @@ msgid "7-day turnover limit"
 msgstr "limite di turnover per 7 giorni"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 ore"
 
 msgid "8h"
-msgstr ""
+msgstr "8h"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
@@ -623,10 +623,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com raggiunge 1 milardo di dollari dal suo inizio nel 1999"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr ""
@@ -677,10 +677,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "La piattaforma di Binary effettua in media 15 transazioni al secondo, 24/7"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com Shop introduced"
 msgstr ""
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "CHIUDI"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr ""
@@ -821,7 +821,7 @@ msgid "Cash Balance"
 msgstr "Saldo della cassa"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr ""
@@ -914,7 +914,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr ""
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "Clicca sul test Jacking"
@@ -935,7 +935,7 @@ msgid "Closes"
 msgstr "Chiude"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
 msgstr "Materie prime"
@@ -983,10 +983,10 @@ msgid "Contracts"
 msgstr "Contratti"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Coppock Curve (CC)"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "Counterattack (CDLCOUNTERATTACK)"
 
 msgid "Country of residence"
 msgstr "Paese di residenza"
@@ -1043,7 +1043,7 @@ msgid "Dark Blue"
 msgstr "Blu scuro"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
-msgstr ""
+msgstr "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
 msgstr ""
@@ -1217,10 +1217,10 @@ msgid "EGR Operator Award"
 msgstr ""
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Ogni opzione binaria è una previsione su un movimento futuro di un mercato sottostante"
@@ -1328,7 +1328,7 @@ msgid "Favourite dish"
 msgstr "Piatto preferito"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 msgid "February"
 msgstr "Febbraio"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "Riconoscimenti finanziari"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "Prima riga dell'indirizzo"
@@ -1376,7 +1376,7 @@ msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds F
 msgstr ""
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Esperienza di trading Forex"
@@ -1388,7 +1388,7 @@ msgid "Founded October 1999"
 msgstr "Fondato a Ottobre 1999"
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr ""
@@ -1409,7 +1409,7 @@ msgid "Further instructions"
 msgstr "Ulteriori istruzioni"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr ""
@@ -1439,7 +1439,7 @@ msgid "HIGH"
 msgstr ""
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Hammer (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
 msgstr ""
@@ -1652,7 +1652,7 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr ""
 
 msgid "Italiano"
-msgstr ""
+msgstr "Italiano"
 
 msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
 msgstr ""
@@ -1814,10 +1814,10 @@ msgid "Logout"
 msgstr ""
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Long Legged Doji (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Long Line Candle (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 msgstr ""
@@ -1868,7 +1868,7 @@ msgid "Make your trade"
 msgstr ""
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
 msgstr "Marzo"
@@ -1880,13 +1880,13 @@ msgid "Market exit price"
 msgstr "Prezzo di uscita del mercato"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
 msgstr ""
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Mat Hold (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Corrisponde"
@@ -1934,7 +1934,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Media mobile adattiva Mesa (MAMA)"
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "Min: 10 Max: 2000"
 
 msgid "Minimum (MIN)"
 msgstr "Minimo (MIN)"
@@ -1964,7 +1964,7 @@ msgid "Miss"
 msgstr "Sig.ra"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
 msgstr "Indicatori Momentum"
@@ -1976,10 +1976,10 @@ msgid "Monday"
 msgstr "Lunedì"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
-msgstr ""
+msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
 
 msgid "Morning Star (CDLMORNINGSTAR)"
-msgstr ""
+msgstr "Morning Star (CDLMORNINGSTAR)"
 
 msgid "Mother's maiden name"
 msgstr "Cognome della madre"
@@ -2057,7 +2057,7 @@ msgid "Note: withdrawal via payment agent is available only if you deposit exclu
 msgstr "Nota: il prelievo tramite agente di pagamento è disponibile solo se depositi esclusivamente tramite un agente di pagamento"
 
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 msgid "November"
 msgstr "Novembre"
@@ -2072,7 +2072,7 @@ msgid "OAuth Server"
 msgstr "Server OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
 msgstr "APRI"
@@ -2093,7 +2093,7 @@ msgid "Offices in Malta, Malaysia and Japan"
 msgstr "Sedi a Malta, in Malesia e in Giappone"
 
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
 msgstr "Sulla base delle informazioni fornite in relazione alla tua conoscenza ed esperienza, riteniamo che gli investimenti disponibili su questo sito internet non sono adatti a te"
@@ -2192,13 +2192,13 @@ msgid "Overlap Studies"
 msgstr ""
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr ""
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr ""
@@ -2225,7 +2225,7 @@ msgid "Payments"
 msgstr "Pagamenti"
 
 msgid "Payout"
-msgstr ""
+msgstr "Payout"
 
 msgid "Pension"
 msgstr "Pensione"
@@ -2246,13 +2246,13 @@ msgid "Piercing Pattern (CDLPIERCING)"
 msgstr ""
 
 msgid "Pip"
-msgstr ""
+msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr ""
 
 msgid "Place of birth"
-msgstr ""
+msgstr "Luogo di nascita"
 
 msgid "Please"
 msgstr "Prego"
@@ -2486,7 +2486,7 @@ msgid "Return"
 msgstr "Rendimento"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr "Aumenta"
@@ -2759,10 +2759,10 @@ msgid "Sunday"
 msgstr "Domenica"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Tabella"
@@ -2789,7 +2789,7 @@ msgid "Tax-free"
 msgstr ""
 
 msgid "Tel"
-msgstr ""
+msgstr "Tel"
 
 msgid "Template name"
 msgstr "Nome del modello"
@@ -3092,19 +3092,19 @@ msgid "Thursday"
 msgstr "Giovedì"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Trade app"
 msgstr "App Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Tick {row.number}"
 
 msgid "Ticks"
 msgstr "Tick"
 
 msgid "Tile"
-msgstr ""
+msgstr "Tile"
 
 msgid "Time interval"
 msgstr "Intervallo di tempo"
@@ -3122,7 +3122,7 @@ msgid "Title"
 msgstr "Titolo"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Ti ng Vi t"
 
 msgid "To"
 msgstr "A"
@@ -3137,7 +3137,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Per prelevare fondi, inserisci lo speciale token di verifica che ti abbiamo appena inviato tramite email"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
 msgstr "Gestione dei token"
@@ -3164,10 +3164,10 @@ msgid "Total Profit/Loss"
 msgstr "Profitto/Perdita totale"
 
 msgid "Touch"
-msgstr ""
+msgstr "Touch"
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Touch/No Touch"
 
 msgid "Tourism"
 msgstr "Turismo"
@@ -3176,7 +3176,7 @@ msgid "Town/City"
 msgstr "Città"
 
 msgid "Trade"
-msgstr ""
+msgstr "Trade"
 
 msgid "Trade Confirmation"
 msgstr "Conferma del trade"
@@ -3236,7 +3236,7 @@ msgid "Tristar Pattern (CDLTRISTAR)"
 msgstr ""
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "True Range (TRANGE)"
 
 msgid "Try"
 msgstr "Prova"
@@ -3251,16 +3251,16 @@ msgid "Turnover"
 msgstr ""
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr ""
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
 msgstr ""
@@ -3362,7 +3362,7 @@ msgid "Volatility indices"
 msgstr "Indici di volatilità"
 
 msgid "WMA"
-msgstr ""
+msgstr "WMA"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr ""
@@ -3389,7 +3389,7 @@ msgid "Websocket Server"
 msgstr "Server di Websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
 msgstr ""
@@ -3440,7 +3440,7 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr "Se hai ragione, vinci il 10-1000% della tua puntata. Aumenta il rendimento delle tue vincite scegliendo un prezzo target lontano dal prezzo attuale"
 
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 msgid "With Binary.com you can trade"
 msgstr "Con Binary.com puoi negoziare"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "Tick sull'asse delle X"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Griglia dell'asse delle Y"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "ore"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "se questo non è il tuo paese di residenza"
@@ -3671,7 +3671,7 @@ msgid "next tick"
 msgstr "tick successivo"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "di \"Ora\","
@@ -3707,7 +3707,7 @@ msgid "thereafter"
 msgstr "in seguito"
 
 msgid "tick"
-msgstr ""
+msgstr "tick"
 
 msgid "ticks"
 msgstr "tick"
@@ -3722,19 +3722,19 @@ msgid "view license"
 msgstr ""
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "sì"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
-msgstr ""
+msgstr "| Payout"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
