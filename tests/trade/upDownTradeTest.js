@@ -34,7 +34,7 @@ export default {
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="fall"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays > .active', 'Fall');
-    buyContract(browser, 'Down');
+    //buyContract(browser, 'Down');
   },
   higher: (browser) => {
     // Add tests for barrier
@@ -42,7 +42,7 @@ export default {
       .click('.trade-dialog .trade-fields .contract-displays [data-name="higher"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays > .active', 'Higher')
       .waitForCSSProperty('.trade-dialog .trade-fields .barriers-barrier-row', 'display', 'flex');
-    buyContract(browser, 'Up');
+    //buyContract(browser, 'Up');
   },
   lower: (browser) => {
     // Add tests for barrier
@@ -50,6 +50,6 @@ export default {
       .click('.trade-dialog .trade-fields .contract-displays [data-name="lower"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays > .active', 'Lower')
       .assert.visible('.trade-dialog .trade-fields .barriers-barrier-row');
-    buyContract(browser, 'Down');
+    //buyContract(browser, 'Down');
   }
 }

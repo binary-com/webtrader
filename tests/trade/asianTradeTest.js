@@ -33,6 +33,5 @@ export default {
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="asian down"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays .active', 'Asian down')
-    buyContract(browser, 'Down');
   }
 }

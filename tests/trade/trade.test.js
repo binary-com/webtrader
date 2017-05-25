@@ -7,6 +7,7 @@ import * as TouchNoTouchTests from './touchNoTouchTradeTest';
 import * as InOutTests from './inOutTradeTest';
 import * as DigitTests from './digitTradeTest';
 import * as AsianTests from './asianTradeTest';
+import * as tickerTest from './tickerTest';
 import { tradeTemplate } from './tradeTemplateTest';
 
 export default {
@@ -24,6 +25,7 @@ export default {
       .waitForElementPresent('.trade-dialog')
   },
   after: after,
+  'Sparkline': tickerTest.ticker,
   'Rise': UpDownTests.rise,
   'Fall': UpDownTests.fall,
   'Higher': UpDownTests.higher,

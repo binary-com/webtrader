@@ -13,13 +13,7 @@ export default {
       .assert.containsText('.trade-dialog .trade-fields .contract-displays .active', 'Ends in')
       .assert.visible('.trade-dialog .trade-fields .barriers-high-barrier-row')
       .assert.visible('.trade-dialog .trade-fields .barriers-low-barrier-row')
-      .waitForCSSProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1')
-      .execute(() => { $('.trade-dialog .trade-fields .purchase-row > li > button').click() })
-      .waitForElementPresent('.trade-dialog .trade-conf')
-      .assert.containsText('.trade-dialog .trade-conf .title-row > li > span', 'Contract Confirmation')
-      .waitForElementVisible('.trade-dialog .trade-conf .close')
-      .execute(() => { $(".trade-dialog .trade-conf .close").click() })
-      .assert.elementNotPresent('.trade-dialog .trade-conf')
+      .waitForCSSProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1');
   },
   out: (browser) => {
     changeTradeType(browser);
@@ -28,11 +22,5 @@ export default {
       .assert.visible('.trade-dialog .trade-fields .barriers-high-barrier-row')
       .assert.visible('.trade-dialog .trade-fields .barriers-low-barrier-row')
       .waitForCSSProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1')
-      .execute(() => { $('.trade-dialog .trade-fields .purchase-row > li > button').click() })
-      .waitForElementPresent('.trade-dialog .trade-conf')
-      .assert.containsText('.trade-dialog .trade-conf .title-row > li > span', 'Contract Confirmation')
-      .waitForElementVisible('.trade-dialog .trade-conf .close')
-      .execute(() => { $(".trade-dialog .trade-conf .close").click() })
-      .assert.elementNotPresent('.trade-dialog .trade-conf')
   }
 }

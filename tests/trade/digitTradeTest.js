@@ -34,32 +34,32 @@ export default {
       .click('.trade-dialog .trade-fields .contract-displays [data-name="differs"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays .active', 'Differs')
       .assert.visible('.trade-dialog .trade-fields .digits-row');
-    buyContract(browser, 'Differs', '0');
+    //buyContract(browser, 'Differs', '0');
   },
   over: (browser) => {
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="over"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays .active', 'Over')
       .assert.visible('.trade-dialog .trade-fields .digits-row');
-    buyContract(browser, 'Over', '0');
+    //buyContract(browser, 'Over', '0');
   },
   under: (browser) => {
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="under"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays .active', 'Under')
       .assert.visible('.trade-dialog .trade-fields .digits-row');
-    buyContract(browser, 'Under', '1');
+    //buyContract(browser, 'Under', '1');
   },
   even: (browser) => {
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="even"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays .active', 'Even');
-    buyContract(browser, 'Even');
+    //buyContract(browser, 'Even');
   },
   odd: (browser) => {
     browser
       .click('.trade-dialog .trade-fields .contract-displays [data-name="odd"]')
       .assert.containsText('.trade-dialog .trade-fields .contract-displays .active', 'Odd');
-    buyContract(browser, 'Odd');
+    //buyContract(browser, 'Odd');
   }
 }
