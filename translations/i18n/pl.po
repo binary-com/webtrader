@@ -269,19 +269,19 @@ msgid "2011"
 msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
 msgstr "2 godz."
@@ -290,13 +290,13 @@ msgid "2m"
 msgstr "2 min"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 minuty"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 minut"
@@ -314,7 +314,7 @@ msgid "3m"
 msgstr "3 min"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 godziny"
@@ -326,7 +326,7 @@ msgid "4h"
 msgstr "4 godz."
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 minut"
@@ -344,7 +344,7 @@ msgid "7-day turnover limit"
 msgstr "7-dniowy limit obrotów"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 godzin"
@@ -356,7 +356,7 @@ msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji
 msgstr "Gwiazda wieczorna doji składa się z długiej świecy o trendzie wzrostowym, świecy doji powyżej niej oraz trzeciej świecy o trendzie spadkowym, która zamyka się na wysokości świecy pierwszej i tym samym potwierdza zmianę tendencji. Jest to silna formacja świecowa sygnalizująca zmianę tendencji na rynku na spadkową"
 
 msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr ""
+msgstr "PEP to osoba, która wykonuje lub wykonywała znaczącą funkcję publiczną. Status odnosi się również do członków rodziny takiej osoby i jej bliskich współpracowników"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Wygładzona średnia krocząca jest kombinacją prostej średniej kroczącej i wykładniczej średniej kroczącej, ale o dłuższym okresie"
@@ -467,7 +467,7 @@ msgid "Add/remove indicators"
 msgstr "Dodaj/usuń wskaźnik"
 
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr "Advance Block – blok (CDLADVANCEBLOCK)"
@@ -530,7 +530,7 @@ msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Średnia krocząca Arnauda Legouxa (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscylator Aroon (AROONOSC)"
@@ -623,10 +623,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com osiąga obrót w wysokości miliarda dolarów od rozpoczęcia działalności w 1999 r."
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr "Bot Binary jest dostępny"
@@ -677,7 +677,7 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "Na platformie Binary.com dokonywanych jest średnio 15 transakcji na sekundę, 24 godz. na dobę"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "ZAMKNIJ"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Może być stosowany do zakupu i sprzedaży kontraktów, odnawiania wygasłych zakupów oraz doładowywania kont z wirtualnymi pieniędzmi."
@@ -821,7 +821,7 @@ msgid "Cash Balance"
 msgstr "Saldo gotówki"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr ""
@@ -914,7 +914,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr "Indeks CHOP (Choppiness Index)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "Test Clickjacking"
@@ -1052,7 +1052,7 @@ msgid "Dark Green"
 msgstr "Ciemnozielony"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica"
 
 msgid "Date"
 msgstr "Data"
@@ -1109,7 +1109,7 @@ msgid "Description"
 msgstr "Opis"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Indeks Masy (Mass Index) stworzony przez Donalda Dorseya bierze pod uwagę zakresy cenowe: cenę niską i wysoką. Stosowany jest do sygnalizowania zmian trendów na rynku w oparciu o zakresy cenowe. Można go postrzegać jako wskaźnik zmienności, który nie wskazuje kierunku zmian, ale wykrywając zmiany z zakresach cenowych, sygnalizuje zmianę bieżącego trendu"
@@ -1145,7 +1145,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Czy chcesz zainstalować Webtrader w formie rozszerzenia przeglądarki Chrome?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
 msgstr "Doji Star – gwiazda doji (CDLDOJISTAR)"
@@ -1217,10 +1217,10 @@ msgid "EGR Operator Award"
 msgstr "Nagroda EGR Operator Award"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Każda opcja binarna to prognoza przyszłego zachowania się rynku podstawowego"
@@ -1256,7 +1256,7 @@ msgid "Ends out"
 msgstr "Zakończy się poza"
 
 msgid "English"
-msgstr ""
+msgstr "English"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Engulfing Pattern – formacja objęcia (CDLENGULFING)"
@@ -1274,7 +1274,7 @@ msgid "Entry spot price"
 msgstr "Cena wejściowa"
 
 msgid "Espa ol"
-msgstr ""
+msgstr "Español"
 
 msgid "Estimated Net Worth"
 msgstr "Szacowana wartość netto"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "Korzyści finansowe"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "Pierwsza część adresu zamieszkania"
@@ -1376,7 +1376,7 @@ msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds F
 msgstr "Po raz trzeci z kolei BetOnMarkets.com uzyskał tytuł „Najlepszego dostawcy zakładów o ustalonej stawce” od pisma Shares Magazine UK. Wygraliśmy po raz ostatni, ponieważ Shares Magazine nie przyznaje już nagród w tej kategorii"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Doświadczenie w handlowaniu walutami"
@@ -1388,13 +1388,13 @@ msgid "Founded October 1999"
 msgstr "Firma założona w październiku 1999 r."
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fraktale, czyli wskaźniki Fractal na wykresach świecowych, wskazują punkty zwrotne na rynku. Gracze często posługują się fraktalami, aby zorientować się w którym kierunku będzie kształtować się cena. Fraktale tworzą się, gdy na wykresie występuje określona formacja cenowa"
 
 msgid "Fran ais"
-msgstr ""
+msgstr "Français"
 
 msgid "Fri"
 msgstr "Pt."
@@ -1409,7 +1409,7 @@ msgid "Further instructions"
 msgstr "Dalsze instrukcje"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT, czyli Greenwich Mean Time to oficjalny czas stosowany zimą w Wlk. Brytanii. Latem Wlk. Brytania zmienia czas na British Summer Time, czyli czas GMT + 1 godzina. Wszystkie godziny podawane są na portalu Binary.com według czasu GMT przez cały rok."
@@ -1430,7 +1430,7 @@ msgid "Grid"
 msgstr "Siatka"
 
 msgid "Grid Light"
-msgstr ""
+msgstr "Grid Light"
 
 msgid "Group History"
 msgstr "Historia grupy"
@@ -1520,7 +1520,7 @@ msgid "Hull Moving Average (HMA)"
 msgstr "Średnia krocząca Hulla (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
+msgstr "Oświadczam, że nie jestem osobą zajmującą eksponowane stanowisko polityczne (PEP)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "Przeczytałem/am i akceptuję"
@@ -1616,7 +1616,7 @@ msgid "Individual Traders"
 msgstr "Gracze indywidualni"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonezja"
 
 msgid "Industry of Employment"
 msgstr "Sektor zatrudnienia"
@@ -1628,7 +1628,7 @@ msgid "Instant funding"
 msgstr "Błyskawiczne zasilanie konta"
 
 msgid "Instrument"
-msgstr ""
+msgstr "Instrumenty"
 
 msgid "Instruments"
 msgstr "Instrumenty"
@@ -1652,7 +1652,7 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "Czas się rozwijać. Tworzymy centrum programistyczne w Cyberjaya – Dolinie Krzemowej w pobliżu Kuala Lumpur – aby utrzymywać i usprawniać BetOnMarkets.com"
 
 msgid "Italiano"
-msgstr ""
+msgstr "Italiano"
 
 msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
 msgstr ""
