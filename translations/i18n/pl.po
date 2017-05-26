@@ -2246,7 +2246,7 @@ msgid "Piercing Pattern (CDLPIERCING)"
 msgstr "Piercing Pattern (CDLPIERCING)"
 
 msgid "Pip"
-msgstr "Najmniejsza zmiana ceny"
+msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr "Pip to wartość procentowa w punktach, zwykle jest to czwarte miejsce po przecinku (np. 0,0001)"
