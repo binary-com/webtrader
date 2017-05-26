@@ -4,4 +4,4 @@ export default {
       .assert.visible('.trade-dialog .trade-fields .tick-quote')
       .assert.visible('.trade-dialog .trade-fields .sparkline-chart');
   }
-}
+};
