@@ -3053,10 +3053,10 @@ msgid "This pattern occurs when two black days appear with equal closes in a dow
 msgstr "Formacja występuje, gdy dwie czarne świece mają takie same ceny zamknięcia w trendzie zniżkowym. Jednakowe dołki wskazują, że osiągnięte zostało dno, nawet gdy mamy do czynienia dobrą ceną wsparcia"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "Ten portal jest zarządzany w Wlk. Brytanii i na Wyspie Man przez Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Wyspa Man, Wyspy Brytyjskie; za wydawanie licencji i jego regulację odpowiada (1) Komisja Nadzoru Gier Hazardowych Wyspy Man, na Wyspach Brytyjskich (Gambling Supervision Commission); aktualna licencja na prowadzenie gier hazardowych została wydana dnia 31 sierpnia 2012 r., a w sprawach dotyczących klientów z Wielkiej Brytanii (2) Komisja ds. Gier Hazardowych w Zjednoczonym Królestwie (UK Gambling Commission) –"
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "W pozostałej części Unii Europejskiej portal jest zarządzany przez Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, podmiot świadczący usługi inwestycyjne kategorii 3, za którego licencję i nadzór odpowiada Urząd ds. Usług Finansowych: Malta Financial Services Authority na Malcie (licencja nr IS/70156), w przypadku produktów inwestycyjnych i przez Binary (Europe) Ltd. w przypadku produktów hazardowych, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; za wydawanie licencji i jego regulację odpowiada (1) Urząd ds. Gier Hazardowych na Malcie (Malta Gaming Authority), licencja nr MGA/CL2/118/2000 z dnia 26 maja 2015 r., w sprawach dotyczących klientów ze Zjednoczonego Królestwa (2) Komisja ds. Gier Hazardowych w Zjednoczonym Królestwie (UK Gambling Commission) –"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "Three Advancing White Soldiers – trzech białych żołnierzy (CDL3WHITESOLDIERS)"
@@ -3209,7 +3209,7 @@ msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
 msgstr "Handlowanie opcjami binarnymi jest na prawdę łatwe i wymaga jedynie trzech prostych kroków"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr ""
+msgstr "Handlowanie opcjami binarnymi może nie być odpowiednie dla każdego, więc prosimy o upewnienie się, że w pełni rozumiesz związane z nim ryzyko. Twoje straty mogą przewyższyć Twój wkład początkowy, dodatkowo nie posiadasz żadnego interesu w odniesieniu do aktywów bazowych. W przypadku opcji binarnych, które stanowią produkt hazardowy, należy pamiętać, że hazard może uzależniać – prosimy o rozsądną grę"
 
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Handlowanie na rynkach finansowych może być uzależniające. Wypełnij poniższy formularz, aby ograniczyć swoją działalność na portalu lub wyślij podpisany list lub faks do naszego działu obsługi klienta. Po ustanowieniu limitów, możesz je tylko zwiększać. Limity zostaną usunięte lub zwiększone dopiero po 7 dniach, chyba że obowiązuje okres samodzielnego wyłączenia, który nie może zostać usunięty, ani zmieniony, jeśli został wcześniej potwierdzony. Aby znieść lub zwiększyć limity, proszę skontaktować się z"
@@ -3257,13 +3257,13 @@ msgid "Typical Price (TYPPRICE)"
 msgstr "Typowa cena (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
 msgstr "Poniżej"
@@ -3308,10 +3308,10 @@ msgid "Upload template"
 msgstr "Załaduj szablon"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
-msgstr ""
+msgstr "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 
 msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
-msgstr ""
+msgstr "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
 
 msgid "Use"
 msgstr "Użyj"
@@ -3362,7 +3362,7 @@ msgid "Volatility indices"
 msgstr "Wskaźniki zmienności"
 
 msgid "WMA"
-msgstr ""
+msgstr "WMA"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "Średnia WMA to ważona średnia krocząca. Pomaga wygładzić zmiany ceny, by lepiej dostrzegać trendy. Przykłada bardzo duże znaczenie do najnowszych danych – nawet większe niż średnia EMA"
@@ -3389,10 +3389,10 @@ msgid "Websocket Server"
 msgstr "Serwer Websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is a Binary.com's advanced desktop trading platform"
-msgstr ""
+msgstr "Webtrader to zaawansowana platforma stacjonarna Binary.com"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Aplikacja Webtrader wykorzystuje nowe technologie internetowe, aby zapewnić doskonałe handlowanie"
@@ -3410,7 +3410,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Ważona średnia krocząca (WMA)"
 
 msgid "Welcome to Binary Webtrader"
-msgstr ""
+msgstr "Witamy w Binary Webtrader"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Jeśli satysfakcjonuje Cię cena zakładu, możesz zawrzeć zakład natychmiast"
@@ -3428,7 +3428,7 @@ msgid "Will I need to install any software?"
 msgstr "Czy muszę instalować jakieś oprogramowanie?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr "Wygraj 10–1000%, jeśli Twoja prognoza się sprawdzi. Zwiększ swój zysk z wygranej, wybierając zakłady typu „pozostanie w” z wąskim zakresem cen docelowych"
@@ -3440,7 +3440,7 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr "Wygraj 10–1000%, jeśli Twoja prognoza się sprawdzi. Zwiększ swój zysk z wygranej, ustawiając cenę docelową jako wartość daleką od obecnej ceny"
 
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 msgid "With Binary.com you can trade"
 msgstr "Z Binary.com możesz handlować w następujących warunkach:"
@@ -3467,7 +3467,7 @@ msgid "X-axis tick"
 msgstr "Najmniejsza zmiana na osi X"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Linia siatki osi Y"
@@ -3551,7 +3551,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "pozwalające klientom na tworzenie swoich własnych robotów do automatycznego handlowania, korzystając z prostych narzędzi i funkcji, takich jak „przeciągnij i upuść”"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "zaś w sprawach dotyczących klientów z Irlandii (3) irlandzki urząd skarbowy Revenue Commissioners, obecna licencja wydana 29 września 2015 r. (o numerze 1010285). Usługi niniejszego portalu nie są dostępne w niektórych krajach, takich jak Stany Zjednoczone, Kostaryka czy Hongkong, ani dla osób poniżej 18 roku życia"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrof (') są dozwolone"
