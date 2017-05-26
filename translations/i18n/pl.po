@@ -824,7 +824,7 @@ msgid "Chande Kroll Stop (CKS)"
 msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Chande Momentum Oscillator (CMO)"
 
 msgid "Change Backend Server"
 msgstr "Zmień serwer wewnętrzny"
@@ -1655,7 +1655,7 @@ msgid "Italiano"
 msgstr "Italiano"
 
 msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
-msgstr ""
+msgstr "Interfejs z wieloma oknami umożliwia profesjonalnym graczom monitorować zmiany cen różnorodnych aktywów oraz ruchy na różnych rynkach jednocześnie. Wiele dostępnych funkcji i wskaźników zapewnia maksymalną elastyczność handlowania i analizowania rynków"
 
 msgid "Jan"
 msgstr "Styczeń"
@@ -1880,13 +1880,13 @@ msgid "Market exit price"
 msgstr "Rynkowa cena wyjściowa"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
 msgstr "Indeks Mass (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Mat Hold (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Zgadza się"
@@ -1937,7 +1937,7 @@ msgid "Min: 10 Max: 2000"
 msgstr "Min.: 10 Maks.: 2000"
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "Minimum (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Minimum 6 znaków i przynajmniej jedna cyfra"
@@ -1964,7 +1964,7 @@ msgid "Miss"
 msgstr "Pani"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
 msgstr "Wskaźniki wykupienia (momentum)"
@@ -2072,7 +2072,7 @@ msgid "OAuth Server"
 msgstr "Serwer OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OPEN"
 msgstr "OTWÓRZ"
@@ -2153,7 +2153,7 @@ msgid "Opens"
 msgstr "Otwarcie"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
 msgstr "Handel opcjami może stać się poważnym uzależnieniem, tak jak wszystkie inne czynności, którym poświęcamy zbyt wiele czasu. Aby zapobiec niebezpieczeństwu takiego uzależnienia, umożliwiamy sprawdzanie rzeczywistej sytuacji na bieżąco, co zapewnia Ci regularne zestawienie Twoich zakładów i kont"
@@ -2192,13 +2192,13 @@ msgid "Overlap Studies"
 msgstr "Analiza techniczna „Overlap Studies”"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
-msgstr ""
+msgstr "Oświadczenie ws. PEP"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Wskaźnik SAR (Parabolic SAR)"
@@ -2243,10 +2243,10 @@ msgid "Phone"
 msgstr "Telefon"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Piercing Pattern (CDLPIERCING)"
 
 msgid "Pip"
-msgstr ""
+msgstr "Najmniejsza zmiana ceny"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr "Pip to wartość procentowa w punktach, zwykle jest to czwarte miejsce po przecinku (np. 0,0001)"
@@ -2312,13 +2312,13 @@ msgid "Points"
 msgstr "Punkty"
 
 msgid "Polski"
-msgstr ""
+msgstr "Polski"
 
 msgid "Portfolio"
-msgstr ""
+msgstr "Portfolio"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "Portugués"
 
 msgid "Postal code/ZIP"
 msgstr "Kod pocztowy"
@@ -2399,13 +2399,13 @@ msgid "Read"
 msgstr "Przeczytaj"
 
 msgid "Read about"
-msgstr ""
+msgstr "Przeczytaj o"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr "Ciesz się korzyściami handlu opcjami binarnymi, wiedząc, że Twoje środki są w pełni bezpieczne"
 
 msgid "Ref"
-msgstr ""
+msgstr "Ref"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
 msgstr "Firma Regent Markets Group Ltd. zmienia nazwę na Binary Ltd"
@@ -2486,7 +2486,7 @@ msgid "Return"
 msgstr "Zwrot"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr "Wzrost"
@@ -2501,16 +2501,16 @@ msgid "Rising markets"
 msgstr "Rynki wschodzące"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "SMA"
-msgstr ""
+msgstr "SMA"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "Pracownik ze stałą pensją"
@@ -2522,7 +2522,7 @@ msgid "Sale Price"
 msgstr "Cena sprzedaży"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
 msgstr "Sob."
@@ -2627,7 +2627,7 @@ msgid "Sold"
 msgstr "Sprzedane"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
-msgstr ""
+msgstr "Spinning Top (CDLSPINNINGTOP)"
 
 msgid "Spline"
 msgstr "Funkcja sklejana"
@@ -2648,7 +2648,7 @@ msgid "Stake"
 msgstr "Stawka"
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
-msgstr ""
+msgstr "Stalled Pattern (CDLSTALLEDPATTERN)"
 
 msgid "Standard Deviation (STDDEV)"
 msgstr "Odchylenie standardowe (STDDEV)"
@@ -2666,7 +2666,7 @@ msgid "Start Time"
 msgstr "Czas rozpoczęcia"
 
 msgid "Start Trading"
-msgstr ""
+msgstr "Rozpocznij handlowanie"
 
 msgid "Start time"
 msgstr "Czas rozpoczęcia"
@@ -2681,7 +2681,7 @@ msgid "Statistical Functions"
 msgstr "Funkcje statystyczne"
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Zakłady typu „pozostanie pomiędzy/przekroczy”"
@@ -2759,10 +2759,10 @@ msgid "Sunday"
 msgstr "Niedziela"
 
 msgid "TEMA"
-msgstr ""
+msgstr "TEMA"
 
 msgid "TRIMA"
-msgstr ""
+msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Tabela"
@@ -2801,7 +2801,7 @@ msgid "Tertiary"
 msgstr "Wyższe"
 
 msgid "The"
-msgstr ""
+msgstr " "
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "Oscylator APO (Absolute Price Oscillator) opiera się na wartościach bezwzględnych pomiędzy dwoma średnimi kroczącymi o różnej długości: średniej kroczącej szybkiej i średniej kroczącej wolnej"
@@ -3065,10 +3065,10 @@ msgid "Three Black Crows (CDL3BLACKCROWS)"
 msgstr "Three Black Crows – trzy czarne kruki (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
-msgstr ""
+msgstr "Three Inside Up/Down (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "Three Outside Up/Down (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
 msgstr "Three Stars In The South – południowa potrójna gwiazda (CDL3STARSSOUTH)"
@@ -3083,7 +3083,7 @@ msgid "Three-Line Strike (CDL3LINESTRIKE)"
 msgstr "Three-Line Strike – cios w trzy linie (CDL3LINESTRIKE)"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Thrusting Pattern (CDLTHRUSTING)"
 
 msgid "Thu"
 msgstr "Czw."
@@ -3122,7 +3122,7 @@ msgid "Title"
 msgstr "Tytuł"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Ti ng Vi t"
 
 msgid "To"
 msgstr "Do"
@@ -3137,7 +3137,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Aby wypłacić środki, wpisz specjalny kod weryfikacyjny wysłany na Twój adres e-mail"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
 msgstr "Zarządzanie tokenami"
@@ -3614,10 +3614,10 @@ msgid "hours"
 msgstr "godziny"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "jeśli nie jest to Twój kraj zamieszkania"
@@ -3671,7 +3671,7 @@ msgid "next tick"
 msgstr "następna najmniejsza zmiana ceny"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "jako „Teraz”,"
@@ -3701,7 +3701,7 @@ msgid "terms and conditions"
 msgstr "regulamin"
 
 msgid "the"
-msgstr ""
+msgstr " "
 
 msgid "thereafter"
 msgstr "po tym czasie"
@@ -3719,19 +3719,19 @@ msgid "trading frequency"
 msgstr "częstość handlowania"
 
 msgid "view license"
-msgstr ""
+msgstr "zobacz licencję"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "tak"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr "| Wypłata"
