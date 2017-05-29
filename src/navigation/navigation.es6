@@ -42,7 +42,7 @@ export const updateDropdownToggles = () => {
 
 const getType = (id) => {
    if(!id) return;
-   const type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real"};
+   const type = {MLT:"Gaming", MF:"Investment",VRTC:"Virtual",REAL:"Real"};
    id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
    return type[id]+" Account";
 };
