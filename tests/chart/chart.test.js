@@ -2,7 +2,9 @@ import { before, after } from '../default';
 import { chartTemplateTest } from './chartTemplateTest';
 import { chartFunctionTest } from './chartFunctionTest';
 import chartLineTest from './chartLinesTest';
-import indicatorOverlayTest from './indicatorOverlayTest';
+import { indicator as indicatorTest } from './indicatorTest';
+import { overlay as overlayTest } from './overlayTest';
+import { indicatorAndOverlay as indicatorAndOverlayTest } from './indicatorAndOverlayTest';
 
 export default {
   before: (browser) => {
@@ -24,7 +26,7 @@ export default {
   'Chart template': chartTemplateTest,
   'Horizontal line': chartLineTest.horizontalLine,
   'Vertical line': chartLineTest.verticalLine,
-  'Indicator': indicatorOverlayTest.indicator,
-  'Overlay': indicatorOverlayTest.overlay,
-  'IndicatorAndOverlay': indicatorOverlayTest.indicatorAndOverlay
+  'Indicator': indicatorTest,
+  'Overlay': overlayTest,
+  'IndicatorAndOverlay': indicatorAndOverlayTest
 }

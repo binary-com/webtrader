@@ -35,7 +35,6 @@ export default {
     /**
      * To-Do:
      *  - Figure out a way to simulate mouse hover over highcharts
-     *  - Add tests for chart template.
      */
     /*
     //Check crosshair
