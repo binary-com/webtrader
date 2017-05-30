@@ -327,6 +327,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
+      decimal: /^(BTC|XBT)$/.test(local_storage.get('currency')) ? 8 : 2
     },
     basis: {
       array: ['Payout', 'Stake'],
@@ -410,7 +411,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
              .then(function(data){
                state.currency.value = data.payout_currencies[0];
                state.currency.array = data.payout_currencies;
-             })
+            })
              .catch(function(err) { console.error(err); });
     }
   };

@@ -204,7 +204,7 @@
            </select>
         </li>
         <li rv-attr-dummy="basis.amount | debounce proposal.onchange">
-            <price-spinner class="basis-amount" value="basis.amount" min='0' decimals='2' />
+            <price-spinner class="basis-amount" value="basis.amount" min='0' decimals='currency.decimal' />
         </li>
     </ul>
 

@@ -72,7 +72,7 @@ const refreshTable  = (yyy_mm_dd) => {
             trans.transaction_id,
             _.capitalize(trans.action_type),
             trans.longcode,
-            (trans.amount * 1).toFixed(2),
+            trans.amount * 1,
             '<b>' + formatPrice(trans.balance_after,currency) + '</b>',
             view_button,
             trans, /* data for view transaction dailog - when clicking on arrows */
