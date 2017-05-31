@@ -8,7 +8,8 @@ import 'common/util';
 
 let is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 let socket = null;
-let is_website_up = false;
+let is_website_up = true;
+let queued_requests = {};
 
 const get_app_id = () => {
    const app_ids = JSON.parse(app_ids_json);
@@ -61,10 +62,12 @@ const onclose = () => {
         if (timeoutIsSet) { return; }
         timeoutIsSet = true;
         setTimeout(() => {
-            /* on connection reset resubscribe to website_status */
-            api.send({ website_status: 1, subscribe: 1 });
             timeoutIsSet = false;
             socket = connect();
+            
+            // Resubscribe to website_status
+            api.send({website_status: 1, subscribe: 1});
+
             if(local_storage.get('oauth')) {
               api.cached.authorize().then(
                  () => {
@@ -125,9 +128,11 @@ const onmessage = (message) => {
    }
 
    const key = data.req_id;
-   const promise = unresolved_promises[key];
+   const promise = unresolved_promises[key] || queued_requests[key];
    if (promise) {
       delete unresolved_promises[key];
+      delete queued_requests[key];
+
       if (data.error) {
          data.error.echo_req = data.echo_req;
          data.error.req_id = data.req_id;
@@ -158,8 +163,13 @@ const send_request = (data) => {
    data.req_id = ++req_id_counter;
 
    return new Promise((resolve,reject) => {
+      if(!is_website_up) {
+            //Store any requests sent when website is down.
+            queued_requests[data.req_id] = { resolve: resolve, reject: reject, data: data };
+            return;
+      }
       unresolved_promises[data.req_id] = { resolve: resolve, reject: reject, data: data };
-      if (is_connected() && is_website_up) {
+      if (is_connected()) {
          socket.send(JSON.stringify(data));
       } else
          buffered_sends.push(data);
@@ -470,12 +480,16 @@ const api = {
    invalidate,
    app_id
 }
-/*subscribe to website_status*/
+/* subscribe to website_status */
 api.events.on('website_status', (data) => {
-      is_website_up = data.website_status.site_status.toLowerCase() === 'up';
-      if(is_website_up)
-            onopen(); // send buffered requests;
-})
+   is_website_up = data.website_status.site_status.toLowerCase() === 'up';
+   if(is_website_up) {
+         //Resend all the queued requests
+         for(let i in queued_requests) {
+               socket.send(JSON.stringify(queued_requests[i].data));
+         }
+   }
+});
 /* always register for transaction & balance streams */
 api.events.on('login',() => {
    api.send({transaction: 1, subscribe:1})
