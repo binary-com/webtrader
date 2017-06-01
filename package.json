@@ -80,6 +80,7 @@
     "binary-com-jquery-ui-timepicker": "^1.0.1",
     "chosen-js": "^1.6.2",
     "highstock-release": "^5.0.10",
+    "jquery-ui-dist": "^1.12.1",
     "jquery-ui-iconfont": "^2.1.0",
     "moment": "^2.18.1",
     "regenerator-runtime": "^0.10.1",
