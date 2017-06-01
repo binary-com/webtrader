@@ -8,7 +8,7 @@ import 'common/util';
 
 let is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 let socket = null;
-let is_website_up = true;
+let is_website_up = false;
 let queued_requests = {};
 
 const get_app_id = () => {
@@ -64,9 +64,6 @@ const onclose = () => {
         setTimeout(() => {
             timeoutIsSet = false;
             socket = connect();
-            
-            // Resubscribe to website_status
-            api.send({website_status: 1, subscribe: 1});
 
             if(local_storage.get('oauth')) {
               api.cached.authorize().then(
@@ -89,6 +86,10 @@ const is_connected = () => (socket && socket.readyState === 1);
 
 
 const onopen = () => {
+   /**
+    * First thing to do -> subscribe to website_status
+    */
+   socket.send(JSON.stringify({website_status:1, subscribe:1}));
    /* send buffered sends */
    while (buffered_sends.length > 0) {
       const data = buffered_sends.shift();

@@ -14,4 +14,4 @@ const website_status = (data) => {
 };
 
 liveapi.events.on('website_status', website_status);
-liveapi.send({ website_status: 1, subscribe: 1 });
+liveapi.cached.send({ website_status: 1, subscribe: 1 }).then(website_status);
