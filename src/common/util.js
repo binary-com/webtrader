@@ -14,18 +14,6 @@ function isLineDotType(type) {
     return type === 'linedot';
 }
 
-function isAffiliates(){
-  return getParameterByName("affiliates") === true || (getParameterByName("affiliates") + '').toLowerCase() == 'true';
-}
-
-function isHideOverlay() {
-    return getParameterByName("hideOverlay") === true || (getParameterByName("hideOverlay") + '').toLowerCase() == 'true';
-}
-
-function isHideShare() {
-    return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
-}
-
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {

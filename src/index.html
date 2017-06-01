@@ -174,13 +174,7 @@
         </div>
     </div>
     <script>
-        var affiliates = isAffiliates() || 'false';
         var suffix = "";
-
-        if (affiliates === true) {
-            var url = window.location.href;
-            suffix = url.substring(url.indexOf('?')); //Pass all parameters
-        }
 
         /* oauth login ? */
         var href = window.location.href;
@@ -203,7 +197,7 @@
         } else { // In case of invalid language fallback to EN
             local_storage.set('i18n', { value: 'en' });
         }
-        if (affiliates === true || local_storage.get("oauth") !== null) {
+        if (local_storage.get("oauth") !== null) {
             window.location.href = 'v<version>/main.html' + suffix;
         } else {
             window.onload = function () {
