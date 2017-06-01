@@ -891,10 +891,6 @@ binary-com-jquery-ui-timepicker@^1.0.1:
   dependencies:
     jquery "^3.0.0"
 
-binary-com-longcode@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/binary-com-longcode/-/binary-com-longcode-0.0.15.tgz#921aad7c94ba0f66b6694c81560203a3f86e1a9d"
-
 bind-obj-methods@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/bind-obj-methods/-/bind-obj-methods-1.0.0.tgz#4f5979cac15793adf70e488161e463e209ca509c"
@@ -5190,9 +5186,9 @@ websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
 
-webtrader-charts@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.0.7.tgz#56ca410893cc88ba82caff5a95386ae95c859c72"
+webtrader-charts@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.1.0.tgz#1869ae8ff67a1ad1db6fee08b20906f9b6d4a321"
   dependencies:
     datatables.net-dt "^1.10.15"
     imports-loader "^0.7.1"

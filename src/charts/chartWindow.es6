@@ -7,6 +7,7 @@ import 'highstock-release/modules/offline-exporting';
 import liveapi from '../websockets/binary_websockets';
 import 'common/util';
 import wtcharts from 'webtrader-charts';
+import 'css!./chartWindow.css'
 
 wtcharts.init({
    appId: liveapi.app_id,
