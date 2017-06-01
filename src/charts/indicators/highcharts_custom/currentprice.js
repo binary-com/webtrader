@@ -62,7 +62,10 @@ define(['common/util', 'highstock'], function () {
                  *  Wrap HC's Series.addPoint
                  */
                 H.wrap(H.Series.prototype, 'addPoint', function(proceed, options, redraw, shift, animation) {
-
+                    //this here is series.
+                    if(!this){
+                        return;
+                    }
                     proceed.call(this, options, redraw, shift, animation);
                     updateCurrentPriceSeries.call(this, options[0]);
 
