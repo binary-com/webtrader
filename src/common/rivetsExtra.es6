@@ -551,7 +551,7 @@ const decimalPlaces = (num) => {
 rv.binders['decimal-round'] = {
    priority: 3001,
    routine: (input, places) => {
-      const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000}[places];
+      const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000, '8': 100000000}[places];
       input = $(input);
       input.on('input', () => {
          const prefered_sign = input.attr('prefered-sign') || '';
@@ -639,7 +639,7 @@ const component_twoway_bind = (self, data, keypathes) => {
    }, 0);
 }
 rivets.components['price-spinner'] = {
-   static: ['class', 'min', 'decimals'],
+   static: ['class', 'min'],
    template:
    () => `<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">
                <input rv-class="data.class" type="text" rv-value="data.value" rv-decimal-round="data.decimals | or 5" no-symbol="no-symbol" />
