@@ -593,7 +593,7 @@ msgid "Barrier(s)"
 msgstr "Barriera(e)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Ribassista: questo è un modello di fine trend composto da tre candele rialziste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela dovrebbe essere corta e può formare un gap al rialzo. Potrebbe anche esserci un'ombra di vendita. Il modello rappresenta una debolezza in un rialzo con un rischio di consolidamento e una possibile inversione del trend. Rialzista: questo è un modello di fine trend composto da tre candele ribassiste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela deve essere corta. Il modello rappresenta una debolezza, un consolidamento e una possibile inversione del trend"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr ""
@@ -611,7 +611,7 @@ msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets va online"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr ""
+msgstr "BetOnMarkets.com ha oltre 400.000 clienti nel suo database e raggiunge 1 miliardo di dollari già nel suo 13° anno, diventando uno dei migliori provider di trading con probabilità fisse"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
 msgstr "BetOnMarkets.com aumenta i payout a 100.000 USD, EUR, GBP e AUD"
@@ -629,7 +629,7 @@ msgid "Bill Williams"
 msgstr "Bill Williams"
 
 msgid "Binary Bot released"
-msgstr ""
+msgstr "Rilascio dei Binary Bot"
 
 msgid "Binary KK granted Japan license"
 msgstr "Binary KK ha ottenuto la licenza giapponese"
@@ -638,7 +638,7 @@ msgid "Binary Trading is simple to learn and to execute"
 msgstr "Il trading binario è semplice da imparare e da eseguire"
 
 msgid "Binary granted Investment Services license"
-msgstr ""
+msgstr "Binary ha ricevuto l'autorizzazione per i Servizi d'Investimento"
 
 msgid "Binary opens Japan office"
 msgstr "Binary apre una sede in Giappone"
@@ -665,13 +665,13 @@ msgid "Binary trading is very simple"
 msgstr "Il trading binario è molto semplice"
 
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
-msgstr ""
+msgstr "Binary KK, la sussidiaria giapponese di Binary, è autorizzata dal KLFB come Financial Instruments Business, Tipo 1, in Giappone"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
-msgstr ""
+msgstr "Binary KK, sussidiaria giapponese di Binary, apre un ufficio a Tokyo e avvia la procedura per la richiesta delle relative autorizzazioni"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
-msgstr ""
+msgstr "Binary Investments (Europe) Ltd., sussidiaria maltese del gruppo Binary, ha ricevuto l'autorizzazione per i Servizi d'Investimento, Categoria 3, da parte della Malta Financial Services Authority"
 
 msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "La piattaforma di Binary effettua in media 15 transazioni al secondo, 24/7"
@@ -1583,7 +1583,7 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Per usufruire dei nostri servizi, richiediamo delle informazioni necessarie per valutare se un dato prodotto o servizio è adegutao a te (ossia se possiedi l'esperienza e la conoscenza per comprendere i rischi connessi)"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr ""
+msgstr "Nel Regno Unito e nell'Isola di Man, i nostri clienti negoziano attraverso Binary (IOM) Ltd. In Giappone negoziano attraverso Binary KK. Nell'Unione europea (ad eccezione del Regno Unito), negoziano attraverso Binary (Europe) Ltd e Binary Investments (Europe) Ltd. Nel resto del mondo, negoziano attraverso Binary (C.R.) S.A"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "Modello In-Neck (CDLINNECK)"
