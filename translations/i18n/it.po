@@ -581,7 +581,7 @@ msgid "Balance of Power (BOP)"
 msgstr ""
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
-msgstr ""
+msgstr "Le banche, i fondi speculativi e gli investitori professionisti negoziano abitualmente opzioni binarie nei mercati OTC dei derivati. Molti professionisti dei mercati utilizzano e si affidano alla piattaforma di Binary.com per i trade flessibili ad alto volume"
 
 msgid "Barrier"
 msgstr "Barriera"
