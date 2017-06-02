@@ -1442,7 +1442,7 @@ msgid "Hammer (CDLHAMMER)"
 msgstr "Hammer (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "Hanging Man (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
 msgstr "Modello Harami Cross (CDLHARAMICROSS)"
@@ -1457,7 +1457,7 @@ msgid "Help"
 msgstr ""
 
 msgid "High"
-msgstr ""
+msgstr "High"
 
 msgid "High Barrier"
 msgstr "Barriera superiore"
@@ -1475,7 +1475,7 @@ msgid "High returns"
 msgstr ""
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "High-Wave Candle (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr "Superiore"
@@ -1484,7 +1484,7 @@ msgid "Higher/Lower"
 msgstr ""
 
 msgid "Higher/Lower trades"
-msgstr ""
+msgstr "Trade High/Low"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Modello Hikkake (CDLHIKKAKE)"
@@ -1493,7 +1493,7 @@ msgid "Home Address"
 msgstr "Indirizzo di casa"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
+msgstr "Homing Pigeon (CDLHOMINGPIGEON)"
 
 msgid "Horizontal line"
 msgstr "Linea orizzontale"
@@ -1502,7 +1502,7 @@ msgid "Hours"
 msgstr "Ore"
 
 msgid "How do I fund my account?"
-msgstr ""
+msgstr "Come posso depositare sul mio account?"
 
 msgid "How does Binary.com make money?"
 msgstr ""
@@ -1511,22 +1511,22 @@ msgid "How safe is my money with Binary.com?"
 msgstr ""
 
 msgid "How soon can I start trading?"
-msgstr ""
+msgstr "Quando posso iniziare a fare trading?"
 
 msgid "How to trade binaries?"
 msgstr ""
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "Hull Moving Average (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
+msgstr "Dichiaro di non essere una persona politicamente esposta (PEP)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "Ho letto e accetto i"
 
 msgid "I'm new to binaries, where do I start?"
-msgstr ""
+msgstr "Sono nuovo nel trading binario, da dove posso iniziare?"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "DISCLAIMER IMPORTANTE"
@@ -1538,7 +1538,7 @@ msgid "Ideal for both pros and novices"
 msgstr "Ideale sia per gli esperti che per i novizi"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
+msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
 
 msgid "If you select a"
 msgstr "Se selezioni un"
@@ -1547,7 +1547,7 @@ msgid "If you select a specific"
 msgstr "Se selezioni uno specifico"
 
 msgid "If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access"
-msgstr ""
+msgstr "Se sei un trader individuale, apprezzerai la semplicità, la flessibilità e il rischio limitato del trading binario. Con le puntate minime basse di Binary.com, imparerai presto come negoziare con abilità e fiducia. E per qualsiasi domanda, sei libero di accedere"
 
 msgid "In April"
 msgstr "Ad Aprile"
@@ -1559,7 +1559,7 @@ msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle re
 msgstr ""
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
-msgstr ""
+msgstr "Nell'ottobre del 1999, Regent Markets riceve un finanziamento da $2 milioni di dollari da parte di Jim Mellon attraverso il suo Regent Pacific Group, una società di gestione di fondi con sede a Hong Kong"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
 msgstr ""
