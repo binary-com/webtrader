@@ -118,6 +118,7 @@ const on_arrow_click = (e) =>{
 const initProfitWin = () => {
    profitWin = windows.createBlankWindow($('<div/>'), {
       title: 'Profit Table'.i18n(),
+      dialogClass: 'profitTable',
       width: 700 ,
       height: 400,
       destroy: () => {

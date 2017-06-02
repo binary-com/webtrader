@@ -73,6 +73,7 @@ export const init = ($menuLink) => {
       if (!tradingWin) {
          tradingWin = windows.createBlankWindow($('<div/>'), {
             title: 'Trading Times'.i18n(),
+            dialogClass: 'tradingTimes',
             width: 700 ,
             height: 400
          });
