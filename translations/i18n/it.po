@@ -365,7 +365,7 @@ msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a sma
 msgstr ""
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
-msgstr ""
+msgstr "Un trade Stays Between (Staziona fra) è quello in cui si guadagna se, per tutta la durata dell'intervallo temporale scelto dal trader, il prezzo di mercato rimane fra (non tocca) NESSUNO dei limiti di prezzo più alto e più basso. Un trade Goes Outside (Esce fuori) è quello in cui si guadagna se, in un qualsiasi momento del periodo scelto dal trader, il prezzo di mercato tocca UNO dei limiti di prezzo impostati dal trader"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
 msgstr ""
@@ -410,7 +410,7 @@ msgid "A chart pattern that consists of a small white candlestick with short sha
 msgstr ""
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
-msgstr ""
+msgstr "Un prodotto derivato è uno strumento finanziario il cui valore è determinato con riferimento a un mercato sottostante. I prodotti derivati vengono negoziati comunemente nel mercato interbancario e le opzioni binarie sono una delle forme più semplici di prodotto derivato"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr ""
@@ -683,13 +683,13 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com Shop introduced"
-msgstr ""
+msgstr "È stato introdotto lo Shop di Binary.com"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com continua a innovarsi e a crescere"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
-msgstr ""
+msgstr "Binary.com ha guadagnato un'invidiabile reputazione grazie al nostro impegno nel fornire alti standard etici e un'alta qualità dell'esperienza di trading"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
 msgstr ""
@@ -3383,7 +3383,7 @@ msgid "We're granted patents for 'Computer trading system and method for specula
 msgstr ""
 
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
-msgstr ""
+msgstr "Siamo davvero orgogliosi di questo riconoscimento. Siamo fermamente impegnati nell'offrire un'esperienza di trading etica e concentrata sul cliente, e il riconoscimento mostra che BetOnMarkets è un marchio di fiducia in grado di ascoltare e soddisfare i clienti, siano essi trader esperti o novizi. Offriamo servizi personalizzati in inglese, indonesiano, russo, cinese e spagnolo"
 
 msgid "Websocket Server"
 msgstr "Server di Websocket"
