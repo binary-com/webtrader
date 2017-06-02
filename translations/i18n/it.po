@@ -788,13 +788,13 @@ msgid "CSV"
 msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
-msgstr ""
+msgstr "Può essere utilizzato per acquistare e vendere contratti, rinnovare acquisti scaduti e integrare account di moneta virtuale."
 
 msgid "Can be used to open accounts, set settings, manage token usage, and more."
-msgstr ""
+msgstr "Può essere utilizzato per aprire account, configurare le impostazioni, gestire l'uso dei token e altro."
 
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
-msgstr ""
+msgstr "Può essere utilizzato per visualizzare l'attività dell'account, incluse le impostazioni, limiti, bilanci, storico dei trade e altro."
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
 msgstr ""
@@ -1130,7 +1130,7 @@ msgid "Directional Movement (DMI) is actually a collection of three separate ind
 msgstr ""
 
 msgid "Directional Movement Index (DX)"
-msgstr ""
+msgstr "Directional Movement Index (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
 msgstr "Per aprire un account devo depositare dei fondi?"
@@ -1139,16 +1139,16 @@ msgid "Do I need to send any documents?"
 msgstr "Devo inviare dei documenti?"
 
 msgid "Do you offer virtual-money accounts?"
-msgstr ""
+msgstr "Vengono offerti account con denaro virtuale?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Desideri installare l'estensione chrome di Webtrader?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Doji Star (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
 msgstr ""
@@ -1157,7 +1157,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Non hai ancora un account? Registrati e otterrai un account virtuale di 10.000"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "Donchian Channel (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Fatto. I fondi sono stati trasferiti all'agente di pagamento"
@@ -1169,13 +1169,13 @@ msgid "Dot"
 msgstr "Punto"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "Doppia media mobile esponenziale (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr "Doppio clic sull'oggetto per rimuovere"
 
 msgid "Download"
-msgstr ""
+msgstr "Download"
 
 msgid "Download CSV"
 msgstr "Download di CSV"
@@ -1202,19 +1202,19 @@ msgid "Download as"
 msgstr "Scarica come"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "Strumenti grafici"
 
 msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr ""
+msgstr "A seguito di recenti variazioni normative, ai nostri clienti richiediamo di completare la seguente Valutazione finanziaria. Ti preghiamo di notare che non potrai continuare a fare trading fino a quando non l'avrai completata"
 
 msgid "Duration"
 msgstr "Durata"
 
 msgid "EGR Operator Award"
-msgstr ""
+msgstr "EGR Operator Award"
 
 msgid "EMA"
 msgstr "EMA"
@@ -1244,16 +1244,16 @@ msgid "End Time"
 msgstr "Orario di fine"
 
 msgid "Ends Between/Ends Outside trades"
-msgstr ""
+msgstr "Trade Ends Between (Finisce tra)/Ends Outside (Termina fuori)"
 
 msgid "Ends In/Out"
-msgstr ""
+msgstr "Ends In/Out"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Ends in"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Ends out"
 
 msgid "English"
 msgstr "Inglese"
@@ -1271,7 +1271,7 @@ msgid "Entry spot"
 msgstr "Spot d'ingresso"
 
 msgid "Entry spot price"
-msgstr ""
+msgstr "Prezzo d'ingresso"
 
 msgid "Espa ol"
 msgstr "Spagnolo"
@@ -1283,10 +1283,10 @@ msgid "Even"
 msgstr "Pari"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "Evening Doji Star (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Evening Star (CDLEVENINGSTAR)"
 
 msgid "Exclude me from the website until"
 msgstr "Escludimi dal sito internet fino al"
@@ -1295,7 +1295,7 @@ msgid "Exit Spot"
 msgstr "Spot d'uscita"
 
 msgid "Exit Spot Time"
-msgstr ""
+msgstr "Orario del prezzo di uscita"
 
 msgid "Exit spot"
 msgstr "Spot d'uscita"
@@ -1334,7 +1334,7 @@ msgid "February"
 msgstr "Febbraio"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public"
-msgstr ""
+msgstr "Dopo quindici anni continuiamo ancora a innovarci, a crescere e a lavorare sui nuovi metodi per servire meglio i nostri clienti. Per la prima volta, offriamo trade a breve termine touch/no touch e introduciamo una nuova applicazione di grafici. Riteniamo di avere la piattaforma in opzioni digitali più competitiva e completa, oggi disponibile sul mercato"
 
 msgid "Final Price"
 msgstr "Prezzo finale"
@@ -1373,7 +1373,7 @@ msgid "Flexibility"
 msgstr "Flessibilità"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
-msgstr ""
+msgstr "Per il terzo anno consecutivo, BetOnMarkets.com è stato votato come il \"Miglior provider di opzioni finanziarie con probabilità fisse\" da parte di Shares Magazine UK. Questa sarà l'ultima volta che ci aggiudichiamo tale premio in quanto Shares Magazine smetterà di attribuire premi in questa categoria"
 
 msgid "Forex"
 msgstr "Forex"
@@ -1412,16 +1412,16 @@ msgid "GMT"
 msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
-msgstr ""
+msgstr "GMT è l'acronimo di Greenwich Mean Time, l'ora ufficiale utilizzata nel Regno Unito durante il periodo invernale. In estate, il Regno Unito passa al British Summer Time, ossia GMT +1 ora. Tutti gli orari indicati sul sito di Binary.com utilizzano GMT tutto l'anno"
 
 msgid "Get your price"
-msgstr ""
+msgstr "Ottieni il tuo prezzo"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Goes out"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
 msgstr "Grigio"
@@ -1436,7 +1436,7 @@ msgid "Group History"
 msgstr "Storia del gruppo"
 
 msgid "HIGH"
-msgstr ""
+msgstr "HIGH"
 
 msgid "Hammer (CDLHAMMER)"
 msgstr "Hammer (CDLHAMMER)"
