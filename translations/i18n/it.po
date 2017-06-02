@@ -416,7 +416,7 @@ msgid "A medium to long bullish or bearish candlestick with the key defining tra
 msgstr ""
 
 msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Betting Operator of the Year' over two other finalists. It's a major victory for our brand and further recognition of our world-beating service. Ten years on, and going from strength to strength"
-msgstr ""
+msgstr "Un gruppo di leader nel settore premia BetOnMarkets.com come 'L'operatore di scommesse finanziarie dell'anno' contro altri due finalisti. È una grande vittoria per il nostro brand e un ulteriore riconoscimento del nostro servizio globale. Dieci anni e continuiamo a diventare sempre più forti"
 
 msgid "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period"
 msgstr "Un indicatore tecnico inventato da Larry Williams che utilizza la media ponderata di tre diversi periodi di tempo per ridurre la volatilità e i segnali di transazioni falsi associati a molti altri indicatori che si basano su un periodo di tempo singolo"
@@ -437,10 +437,10 @@ msgid "A white candle in an upward price trend followed by a doji whose lower sh
 msgstr ""
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Abandoned Baby (CDLABANDONEDBABY)"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "Absolute Price Oscillator (APO)"
 
 msgid "Accept"
 msgstr "Accetta"
@@ -470,7 +470,7 @@ msgid "Admin"
 msgstr "Amministratore"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "Advance Block (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "Tutte le durate"
@@ -500,10 +500,10 @@ msgid "Amount per point"
 msgstr "Importo per punto"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr ""
+msgstr "Un trade Ends Between (Finisce tra) è quello in cui si guadagna se il prezzo d'uscita del mercato è superiore al prezzo obiettivo più basso E inferiore al prezzo obiettivo più alto. Un'opzione binaria Ends Outside (Termina fuori) è quella in cui si guadagna se il prezzo d'uscita del mercato è superiore al prezzo obiettivo più alto OPPURE inferiore al prezzo obiettivo più basso"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr ""
+msgstr "Un altro importante riconoscimento. Questa volta siamo stati nominati dai lettori online di Global Banking and Finance Review e siamo stati giudicati da un gruppo di esperti del settore e analisti che hanno riconosciuto i nostri 13 anni investiti nell'affidabilità della piattaforma, in una gamma di trade, nella determinazione dei prezzi, nel servizio clienti e in un'ampia conoscenza"
 
 msgid "Answer"
 msgstr "Risposta"
@@ -518,7 +518,7 @@ msgid "Appropriateness Test: WARNING"
 msgstr "Test di idoneità: ATTENZIONE"
 
 msgid "Apr"
-msgstr ""
+msgstr "Apr"
 
 msgid "April"
 msgstr "Aprile"
@@ -527,25 +527,25 @@ msgid "Are you sure you want to delete this token?"
 msgstr "Sei sicuro di voler eliminare questo token?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
-msgstr ""
+msgstr "Arnaud Legoux Moving Average (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Aroon Oscillator (AROONOSC)"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Asian down"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Asian up"
 
 msgid "Asians"
 msgstr "Asiatiche"
 
 msgid "Asset"
-msgstr ""
+msgstr "Asset"
 
 msgid "Asset Index"
 msgstr "Indice degli asset"
@@ -557,19 +557,19 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "Average Directional Movement Index (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
 msgstr "Average Directional Movement Rating quantifica la variazione del momentum nell'ADX. Si calcola aggiungendo due valori dell'ADX (il valore attuale e un valore di n periodi precedenti), e poi diviso due"
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "Average True Range (ATR)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Awesome Oscillator (AO)"
 
 msgid "Back"
 msgstr "Indietro"
@@ -578,7 +578,7 @@ msgid "Back to list"
 msgstr "Torna all'elenco"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
 msgstr "Le banche, i fondi speculativi e gli investitori professionisti negoziano abitualmente opzioni binarie nei mercati OTC dei derivati. Molti professionisti dei mercati utilizzano e si affidano alla piattaforma di Binary.com per i trade flessibili ad alto volume"
@@ -596,7 +596,7 @@ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks i
 msgstr "Ribassista: questo è un modello di fine trend composto da tre candele rialziste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela dovrebbe essere corta e può formare un gap al rialzo. Potrebbe anche esserci un'ombra di vendita. Il modello rappresenta una debolezza in un rialzo con un rischio di consolidamento e una possibile inversione del trend. Rialzista: questo è un modello di fine trend composto da tre candele ribassiste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela deve essere corta. Il modello rappresenta una debolezza, un consolidamento e una possibile inversione del trend"
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr "Prezzi equiparati"
@@ -692,13 +692,13 @@ msgid "Binary.com has earned an enviable reputation for our commitment to high e
 msgstr "Binary.com ha guadagnato un'invidiabile reputazione grazie al nostro impegno nel fornire alti standard etici e un'alta qualità dell'esperienza di trading"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
-msgstr ""
+msgstr "Binary.com ha oltre 800.000 clienti nel suo database e raggiunge i 2 miliardi di dollari nel 15° anno, diventando uno dei migliori provider di trading in opzioni binarie"
 
 msgid "Binary.com has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades"
-msgstr ""
+msgstr "Binary.com ha migliaia di clienti che ad ogni dato momento mantengono una varietà di posizioni aperte sui mercati finanziari e guadagna un piccolo margine da questi trade"
 
 msgid "Binary.com hits 1 million users, reaching a historic milestone. The company continues to see exponential growth and this reconfirms its position as an industry leader"
-msgstr ""
+msgstr "Binary.com raggiunge il milione di utenti, un traguardo storico. La società continua a crescere in maniera esponenziale e ciò conferma la sua posizione di leader nel settore"
 
 msgid "Binary.com introduces an"
 msgstr "Binary.com introduce un"
@@ -707,7 +707,7 @@ msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com si basa interamente sul web e non richiede l'installazione di alcun software"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
-msgstr ""
+msgstr "Binary.com è stato riconosciuto come il \"Miglior broker in opzioni binarie\" del mondo alla 16^ MENA International Financial Conference and Exhibition annuale tenuta a Dubai"
 
 msgid "Binary.com is one of the oldest and most respected names in online binary trading"
 msgstr "Binary.com è uno dei nomi storici e più rispettati nel trading in opzioni binarie"
@@ -716,7 +716,7 @@ msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. F
 msgstr "Binary.com è di proprietà e gestita dal gruppo di società di Binary Ltd. Per ulteriori informazioni, visita la pagina della nostra storia"
 
 msgid "Binary.com is tailored to traders of all levels"
-msgstr ""
+msgstr "Binary.com è realizzato su misura per i trader di qualsiasi livello"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com lancia un"
@@ -725,13 +725,13 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com offre una gamma di metodi di deposito e di prelievo comuni, dalle carte di credito e di debito ai bonifici bancari, e-cash e e-wallet"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
-msgstr ""
+msgstr "Binary.com offre un account con denaro virtuale in modo da poter fare pratica con il trading binario. Perché non aprire un account con denaro virtuale da $10.000 completamente operativo e iniziare a imparare come fare trading"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com offre nuovi modi per fare trading"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
-msgstr ""
+msgstr "Binary.com apre una sede nella struttura di QSentral, nella centrale Kuala Lumpur, per espandere ulteriormente il suo team addetto all'IT"
 
 msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
 msgstr ""
@@ -743,10 +743,10 @@ msgid "Binary.com reaches 1 million registered users"
 msgstr "Binary.com ha raggiunto 1 milione di utenti registrati"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr ""
+msgstr "Binary.com ottiene il primo premio nella categoria Financial Betting Operator durante la prestigiosa cerimonia degli EGR Operator Awards 2015, tenutasi a Londra"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
-msgstr ""
+msgstr "I sistemi di Binary.com stanno elaborando oltre 1 milione di transazioni al giorno (inclusi gli account virtuali)"
 
 msgid "Bollinger Bands (BBANDS)"
 msgstr "Bande di Bollinger (BBANDS)"
@@ -761,7 +761,7 @@ msgid "Brand of first car"
 msgstr "Marca della prima auto"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr "Aggiornamento del browser richiesto"
