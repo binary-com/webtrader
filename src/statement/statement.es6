@@ -35,7 +35,6 @@ let is_specific_date_shown = false; /* is data for a specific date is shown */
 
 const refreshTable  = (yyy_mm_dd) => {
    const processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
-   loading = true;
 
    const request = {
       statement: 1,
@@ -64,6 +63,7 @@ const refreshTable  = (yyy_mm_dd) => {
       const transactions = (data.statement && data.statement.transactions) || [];
       const view_button_text = 'View'.i18n();
       const rows = transactions.map((trans) => {
+         console.log(trans);
          const view_button_class = _(['buy', 'sell']).includes(trans.action_type) ? '' : 'class="button-disabled"';
          const view_button = '<button '+view_button_class+'>' + view_button_text + '</button>';
          const amount = trans.amount * 1;
@@ -84,13 +84,17 @@ const refreshTable  = (yyy_mm_dd) => {
       processing_msg.hide();
    };
 
-   liveapi.send(request)
-      .then(refresh)
-      .catch((err) => {
-         refresh({});
-         $.growl.error({ message: err.message });
-         console.error(err);
-      });
+   if(!loading) {
+         loading = true;
+         liveapi.send(request)
+            .then(refresh)
+            .catch((err) => {
+                  refresh({});
+                  $.growl.error({ message: err.message });
+                  console.error(err);
+                  loading = false;
+            });
+   }
 }
 
 const initStatement = () => {
