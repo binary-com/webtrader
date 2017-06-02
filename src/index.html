@@ -9,13 +9,13 @@
     <meta http-equiv="Expires" content="0" />
 
     <title>Binary.com : Webtrader</title>
-    
+
     <script src="v<version>/lib/intl/dist/Intl.complete.js"></script>
     <script src="v<version>/common/util.js"></script>
     <script src="v<version>/lib/jquery/dist/jquery.min.js"></script>
     <script src="v<version>/lib/moment/min/moment.min.js"></script>
     <script src="<style-url>/binary.js"></script>
-    
+
     <link rel="apple-touch-icon" sizes="57x57" href="<style-url>/images/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="<style-url>/images/favicons/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<style-url>/images/favicons/apple-touch-icon-72x72.png">
@@ -30,7 +30,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="<style-url>/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<style-url>/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<style-url>/images/favicons/favicon-32x32.png">
-    
+
     <link rel="stylesheet" type="text/css" href="v<version>/index.css">
     <link rel="stylesheet" type="text/css" href="<style-url>/binary.css">
 
@@ -57,7 +57,7 @@
                     </li>
                     <li class="ID"><a href="?lang=id">Indonesia</a></li>
                     <li class="DE"><a href="?lang=de">Deutsch</a></li>
-                    <li class="EN invisible"><a href="/?lang=en">English</a></li>
+                    <li class="EN invisible"><a href="?lang=en">English</a></li>
                     <li class="ES"><a href="?lang=es">Español</a></li>
                     <li class="FR"><a href="?lang=fr">Français</a></li>
                     <li class="IT"><a href="?lang=it">Italiano</a></li>
@@ -91,8 +91,8 @@
                 <h1>Welcome to Binary.com Webtrader</h1>
                 <p>Webtrader is an advanced trading platform that’s fully-customisable according to your personal preferences.</p>
                 <p>
-                    Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets 
-                    and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most 
+                    Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets
+                    at the same time, as well as essential charts, the asset index, trading times, and historical data. Most
                     importantly, you get to choose what you want to see on your screen.
                 </p>
                 <p>
@@ -100,9 +100,11 @@
                 </p>
                 <ul class='bullet'>
                     <li>Full-screen trading interface</li>
-                    <li>Various customisable features –– load and arrange assets, charts, and other resources however you see fit</li>
+                    <li>Various customisable features –– load and arrange assets, charts, and other resources however you see
+                        fit
+                    </li>
                     <li>Robust and secure platform</li>
-                    <li>Accessible from any web browser in 13 languages</li>                    
+                    <li>Accessible from any web browser in 13 languages</li>
                 </ul>
                 <br>
                 <br>
@@ -203,6 +205,7 @@
         } else { // In case of invalid language fallback to EN
             local_storage.set('i18n', { value: 'en' });
         }
+
         if (local_storage.get("oauth") !== null) {
             window.location.href = 'v<version>/main.html' + suffix;
         } else {
@@ -211,8 +214,10 @@
                 setTime();
                 setInterval(setTime, 15 * 1000);
                 translate();
+                addLangChangeListener();
             }
         }
+
         function translate() {
             if (isLangSupported(lang)) {
                 $.getJSON('v<version>/i18n/' + lang + '.json', function (data) {
@@ -228,17 +233,34 @@
                 selected_lang.addClass('invisible');
             }
         }
+
         function setTime() {
             var time = moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'
             $(".time").text(time);
         }
+
         function openTradingPage() {
             window.location.href = 'v<version>/main.html' + suffix;
         }
+
         function openContactUs() {
             var url = 'https://www.binary.com/' + (local_storage.get('i18n') || { value: 'en' }).value + '/contact.html'
             var win = window.open(url, '_blank');
             win.focus();
+        }
+
+        function addLangChangeListener() {
+            $('.languages #select_language li').each((i, el) => {
+                $(el).click(() => {
+                    var anchor = $(el).find('a')[0];
+                    var lang = anchor && /lang=\w+/.test(anchor.href) && anchor.href.match(/lang=(\w+)/)[1];
+                    if (lang) {
+                        local_storage.set('i18n', { value: lang });
+                        window.location.reload()
+                    }
+                    return false;
+                })
+            })
         }
     </script>
 
@@ -257,7 +279,7 @@
                     '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-PDDC6F');
     </script>
-    
+
 </body>
 
 </html>
