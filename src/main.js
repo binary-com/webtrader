@@ -95,8 +95,7 @@ requirejs.onError = function(err) {
 };
 
 require(['modernizr'], function() {
-    //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && !isAffiliates()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
         window.location.href = 'unsupported_browsers/unsupported_browsers.html';
         return;
     }
@@ -130,12 +129,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
         'css!lib/colorpicker/jquery.colorpicker.css',]);
         // 'css!charts/charts.css']);
-
-    function handle_affiliate_route() {
-        require(['affiliates/affiliates', 'css!main.css', 'css!binary-style'], function(affiliates) {
-            affiliates.init();
-        });
-    }
 
     function handle_normal_route() {
 
@@ -300,13 +293,8 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         require(['selfexclusion/selfexclusion', 'chrome/chrome', 'accountstatus/accountstatus', 'realitycheck/realitycheck', 'websitestatus/websitestatus']);
     }
 
-
-    if (isAffiliates()) //Our chart is accessed by other applications
-        handle_affiliate_route();
-    else {
-        //Our chart is accessed directly
-        handle_normal_route();
-    }
+    //Our chart is accessed directly
+    handle_normal_route();
 
 });
 

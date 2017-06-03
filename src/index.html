@@ -2,16 +2,20 @@
 <html>
 
 <head lang="en">
+
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+
     <title>Binary.com : Webtrader</title>
+
     <script src="v<version>/lib/intl/dist/Intl.complete.js"></script>
     <script src="v<version>/common/util.js"></script>
     <script src="v<version>/lib/jquery/dist/jquery.min.js"></script>
     <script src="v<version>/lib/moment/min/moment.min.js"></script>
     <script src="<style-url>/binary.js"></script>
+
     <link rel="apple-touch-icon" sizes="57x57" href="<style-url>/images/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="<style-url>/images/favicons/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<style-url>/images/favicons/apple-touch-icon-72x72.png">
@@ -26,8 +30,10 @@
     <link rel="icon" type="image/png" sizes="96x96" href="<style-url>/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<style-url>/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<style-url>/images/favicons/favicon-32x32.png">
+
     <link rel="stylesheet" type="text/css" href="v<version>/index.css">
     <link rel="stylesheet" type="text/css" href="<style-url>/binary.css">
+
 </head>
 
 <body style="display:none">
@@ -49,18 +55,18 @@
                         <span class="language">English</span>
                         <span class="nav-caret"></span>
                     </li>
-                    <li class="ID"><a href="?lang=id">Indonesia</a></li>
-                    <li class="DE"><a href="?lang=de">Deutsch</a></li>
-                    <li class="EN invisible"><a href="/?lang=en">English</a></li>
-                    <li class="ES"><a href="?lang=es">Español</a></li>
-                    <li class="FR"><a href="?lang=fr">Français</a></li>
-                    <li class="IT"><a href="?lang=it">Italiano</a></li>
-                    <li class="PL"><a href="?lang=pl">Polski</a></li>
-                    <li class="PT"><a href="?lang=pt">Português</a></li>
-                    <li class="RU"><a href="?lang=ru">Русский</a></li>
-                    <li class="VI"><a href="?lang=vi">Tiếng Việt</a></li>
-                    <li class="ZH_CN"><a href="?lang=zh_cn">简体中文</a></li>
-                    <li class="ZH_TW"><a href="?lang=zh_tw">繁體中文</a></li>
+                    <li class="ID"><a href="/" data-lang="id">Indonesia</a></li>
+                    <li class="DE"><a href="/" data-lang="de">Deutsch</a></li>
+                    <li class="EN invisible"><a href="/" data-lang="en">English</a></li>
+                    <li class="ES"><a href="/" data-lang="es">Español</a></li>
+                    <li class="FR"><a href="/" data-lang="fr">Français</a></li>
+                    <li class="IT"><a href="/" data-lang="it">Italiano</a></li>
+                    <li class="PL"><a href="/" data-lang="pl">Polski</a></li>
+                    <li class="PT"><a href="/" data-lang="pt">Português</a></li>
+                    <li class="RU"><a href="/" data-lang=ru">Русский</a></li>
+                    <li class="VI"><a href="/" data-lang="vi">Tiếng Việt</a></li>
+                    <li class="ZH_CN"><a href="/" data-lang="zh_cn">简体中文</a></li>
+                    <li class="ZH_TW"><a href="/" data-lang="zh_tw">繁體中文</a></li>
                 </ul>
             </div>
         </div>
@@ -85,8 +91,8 @@
                 <h1>Welcome to Binary.com Webtrader</h1>
                 <p>Webtrader is an advanced trading platform that’s fully-customisable according to your personal preferences.</p>
                 <p>
-                    Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets 
-                    and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most 
+                    Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets
+                    at the same time, as well as essential charts, the asset index, trading times, and historical data. Most
                     importantly, you get to choose what you want to see on your screen.
                 </p>
                 <p>
@@ -94,9 +100,11 @@
                 </p>
                 <ul class='bullet'>
                     <li>Full-screen trading interface</li>
-                    <li>Various customisable features –– load and arrange assets, charts, and other resources however you see fit</li>
+                    <li>Various customisable features –– load and arrange assets, charts, and other resources however you see
+                        fit
+                    </li>
                     <li>Robust and secure platform</li>
-                    <li>Accessible from any web browser in 13 languages</li>                    
+                    <li>Accessible from any web browser in 13 languages</li>
                 </ul>
                 <br>
                 <br>
@@ -174,14 +182,6 @@
         </div>
     </div>
     <script>
-        var affiliates = isAffiliates() || 'false';
-        var suffix = "";
-
-        if (affiliates === true) {
-            var url = window.location.href;
-            suffix = url.substring(url.indexOf('?')); //Pass all parameters
-        }
-
         /* oauth login ? */
         var href = window.location.href;
         if (/acct1=/.test(href) && /token1=/.test(href)) {
@@ -197,54 +197,71 @@
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
         }
 
-        var lang = getParameterByName('lang') || (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
+        var lang = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
         if (isLangSupported(lang)) {
             local_storage.set('i18n', { value: lang });
         } else { // In case of invalid language fallback to EN
             local_storage.set('i18n', { value: 'en' });
         }
-        if (affiliates === true || local_storage.get("oauth") !== null) {
-            window.location.href = 'v<version>/main.html' + suffix;
+
+        if (local_storage.get("oauth") !== null) {
+            window.location.href = 'v<version>/main.html';
         } else {
-            window.onload = function () {
+            $(function() {
                 $('body').css('display', 'block');
                 setTime();
                 setInterval(setTime, 15 * 1000);
-                translate();
-            }
-        }
-        function translate() {
-            if (isLangSupported(lang)) {
-                $.getJSON('v<version>/i18n/' + lang + '.json', function (data) {
-                    setup_i18n_translation(data);
+
+                if (isLangSupported(lang)) {
+                    $.getJSON('v<version>/i18n/' + lang + '.json', function (data) {
+                        setup_i18n_translation(data);
+                    });
+                    // Show hidden languages
+                    $('#select_language').find('.invisible').removeClass('invisible');
+                    var selected_lang = $('#select_language').find('.' + lang.toUpperCase());
+                    var curr_ele = $('#select_language .current .language');
+                    var disp_lang = $("#display_language .language");
+                    disp_lang.text(selected_lang.text());
+                    curr_ele.text(selected_lang.text());
+                    selected_lang.addClass('invisible');
+                }
+
+                $('.languages #select_language li').each(function(i, el) {
+                    $(el).click(function() {
+                        var lang = $(el).find('a').data('lang');
+                        if (lang) {
+                            local_storage.set('i18n', { value: lang });
+                            window.location.reload();
+                        }
+                        return false;
+                    });
                 });
-                // Show hidden languages
-                $('#select_language').find('.invisible').removeClass('invisible');
-                var selected_lang = $('#select_language').find('.' + lang.toUpperCase());
-                var curr_ele = $('#select_language .current .language');
-                var disp_lang = $("#display_language .language");
-                disp_lang.text(selected_lang.text());
-                curr_ele.text(selected_lang.text());
-                selected_lang.addClass('invisible');
-            }
+
+            });
         }
+
         function setTime() {
             var time = moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'
             $(".time").text(time);
         }
+
         function openTradingPage() {
-            window.location.href = 'v<version>/main.html' + suffix;
+            window.location.href = 'v<version>/main.html';
         }
+
         function openContactUs() {
             var url = 'https://www.binary.com/' + (local_storage.get('i18n') || { value: 'en' }).value + '/contact.html'
             var win = window.open(url, '_blank');
             win.focus();
         }
+
     </script>
+
     <!-- Google Tag Manager -->
     <noscript>
         <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PDDC6F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
+
     <script>
         (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -255,6 +272,7 @@
                     '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-PDDC6F');
     </script>
+
 </body>
 
 </html>
