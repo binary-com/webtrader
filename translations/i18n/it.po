@@ -2111,19 +2111,19 @@ msgid "Only five years after inception, we pick up this major award for our onli
 msgstr "Dopo soli cinque anni dall'inizio, abbiamo ottenuto questo importante premio per i nostri servizi di trading online. BetOnMarkets.com è stata riconosciuta come una piattaforma di trading online affidabile, rapida e sicura sia per i novizi che per i trader professionisti. Fino a quel momento, il nostro sito internet aveva ricevuto oltre 15 milioni di trade"
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "Sono consentiti solo lettere, numeri e trattini"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "Sono consentite solo lettere, numeri, spazi, trattini, punti e apostrofi"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+msgstr "Sono consentiti solo lettere, numeri, spazi, trattini, punti, virgole e - / @ '"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr ""
+msgstr "Sono consentiti solo lettere, numeri, spazi, punti, virgole, trattini (-)"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "Sono consentite solo lettere, spazi, trattini, punti e apostrofi"
 
 msgid "Only numbers and space are allowed"
 msgstr ""
@@ -2390,10 +2390,10 @@ msgid "Rate Of Change (ROC)"
 msgstr ""
 
 msgid "Rate Of Change Percentage (ROCP)"
-msgstr ""
+msgstr "Rate Of Change Percentage (ROCP)"
 
 msgid "Rate Of Change Ratio (ROCR)"
-msgstr ""
+msgstr "Rate Of Change Ratio (ROCR)"
 
 msgid "Read"
 msgstr "Leggi"
@@ -2408,49 +2408,49 @@ msgid "Ref"
 msgstr "Rif"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
-msgstr ""
+msgstr "Regent Markets Group Ltd. viene rinominato Binary Ltd"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and website branding throughout the organisation"
-msgstr ""
+msgstr "Regent Markets Group Ltd. viene rinominato Binary Ltd., armonizzando il brand della società e del sito internet attraverso tutta l'organizzazione"
 
 msgid "Regent Markets acquires BetsForTraders client base"
-msgstr ""
+msgstr "Regent Markets acquisisce la clientela di BetsForTraders"
 
 msgid "Regent Markets files for a patent in March 2000 on the basis of our unique position as the sole serious competitor in the business of fixed-odds financial betting. In May, we register the trading name BetOnMarkets and move to Malta to receive an internet betting licence"
-msgstr ""
+msgstr "Regent Markets ha richiesto a Marzo 2000 un brevetto sulla base della nostra posizione esclusiva di unico competitor serio nell'attività delle scommesse finanziarie con probabilità fisse. A Maggio abbiamo registrato il nome di BetOnMarkets e ci siamo trasferiti a Malta per ricevere un'autorizzazione per le scommesse su Internet"
 
 msgid "Regent Markets files for patent, and registers BetOnMarkets trading name"
-msgstr ""
+msgstr "Regent Markets richiede un brevetto e registra il nome di trading BetOnMarkets"
 
 msgid "Regent Markets granted US patent for 'Betting system and method'"
-msgstr ""
+msgstr "Regent Markets ha ottenuto un brevetto americano per il 'Sistema e metodo di scommessa'"
 
 msgid "Regent Markets granted two new US patents"
-msgstr ""
+msgstr "Regent Markets ha ottenuto due nuovi brevetti americani"
 
 msgid "Regent Markets is founded by Jean-Yves Sireau"
-msgstr ""
+msgstr "Regent Markets è stato fondato da Jean-Yves Sireau"
 
 msgid "Regent Markets obtains a licence in the Isle of Man"
-msgstr ""
+msgstr "Regent Markets ottiene un'autorizzazione nell'Isola di Man"
 
 msgid "Regent Markets receives funding to provide on-line financial betting services"
-msgstr ""
+msgstr "Regent Markets riceve fondi per fornire servizi di scommessa finanziaria online"
 
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
-msgstr ""
+msgstr "Regent Markets fonda un centro di programmazione a Cyberjaya, Malesia"
 
 msgid "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of Binary.com"
 msgstr ""
 
 msgid "Regent Pacific transaction"
-msgstr ""
+msgstr "Transazione di Regent Pacific"
 
 msgid "Register free account"
 msgstr "Registra un account gratis"
 
 msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgstr "Indice di forza relativa (RSI)"
 
 msgid "Remove"
 msgstr ""
@@ -2465,7 +2465,7 @@ msgid "Repeat password"
 msgstr "Ripeti la password"
 
 msgid "Resale price"
-msgstr ""
+msgstr "Prezzo di rivendita"
 
 msgid "Reset zoom"
 msgstr "Ripristina lo zoom"
@@ -2492,25 +2492,25 @@ msgid "Rise"
 msgstr "Aumenta"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Rialzo/Ribasso"
 
 msgid "Rise/Fall trades"
-msgstr ""
+msgstr "Trade di rialzo/ribasso"
 
 msgid "Rising markets"
-msgstr ""
+msgstr "Mercati al rialzo"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "SMA"
-msgstr ""
+msgstr "SMA"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "Impiegato"
@@ -2522,7 +2522,7 @@ msgid "Sale Price"
 msgstr "Prezzo di vendita"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
 msgstr "Sab"
@@ -2543,7 +2543,7 @@ msgid "Scalable trading"
 msgstr ""
 
 msgid "Second line of home address"
-msgstr ""
+msgstr "Seconda riga dell'indirizzo di residenza"
 
 msgid "Secondary"
 msgstr "Secondario"
@@ -2567,7 +2567,7 @@ msgid "Sell At Market"
 msgstr "Vendere sul mercato"
 
 msgid "Sell option"
-msgstr ""
+msgstr "Opzione di vendita"
 
 msgid "Sent to account"
 msgstr "Inviato sull'account"
@@ -2576,7 +2576,7 @@ msgid "Sep"
 msgstr "Set"
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
-msgstr ""
+msgstr "Separating Lines (CDLSEPARATINGLINES)"
 
 msgid "September"
 msgstr "Settembre"
@@ -2600,13 +2600,13 @@ msgid "Share chart"
 msgstr "Condividi il grafico"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
-msgstr ""
+msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
 msgstr ""
 
 msgid "Short-term action"
-msgstr ""
+msgstr "Azione a breve termine"
 
 msgid "Show"
 msgstr "Mostra"
@@ -2618,7 +2618,7 @@ msgid "Simple Moving Average (SMA)"
 msgstr ""
 
 msgid "Simplicity"
-msgstr ""
+msgstr "Semplicità"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
@@ -2627,13 +2627,13 @@ msgid "Sold"
 msgstr "Venduto"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
-msgstr ""
+msgstr "Spinning Top (CDLSPINNINGTOP)"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spot price"
-msgstr ""
+msgstr "Prezzo spot"
 
 msgid "Spreads"
 msgstr "Spread"
@@ -2648,7 +2648,7 @@ msgid "Stake"
 msgstr "Puntata"
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
-msgstr ""
+msgstr "Stalled Pattern (CDLSTALLEDPATTERN)"
 
 msgid "Standard Deviation (STDDEV)"
 msgstr ""
@@ -2684,7 +2684,7 @@ msgid "Status"
 msgstr ""
 
 msgid "Stays Between/Goes Outside trades"
-msgstr ""
+msgstr "Trade Stays Between (Staziona fra) / Goes Outside (Esce fuori)"
 
 msgid "Stays In/Goes Out"
 msgstr ""
