@@ -2933,7 +2933,7 @@ msgid "The balance of power (BOP) indicator measures the strength of the bulls v
 msgstr ""
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
-msgstr ""
+msgstr "La barriera di un trade in opzioni binarie è il prezzo obiettivo impostato per l'asset sottostante. È possibile scegliere trade che rimangano al di sotto o che salgano rispetto al prezzo obiettivo, oppure che rimangano tra i due obiettivi"
 
 msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr ""
@@ -2945,28 +2945,28 @@ msgid "The closing black marubozu candlestick is a tall black candle with an upp
 msgstr ""
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr ""
+msgstr "La società detiene i fondi dei clienti in conti bancari separati da quelli operativi, i quali non faranno parte, in caso di insolvenza, dell'asset della Società. Ciò rispecchia i requisiti della Commissione sul gioco d'azzardo per la segregazione dei fondi dei clienti a livello"
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
-msgstr ""
+msgstr "Il periodo del contratto è l'arco temporale di un trade. Viene anche denominato durata"
 
 msgid "The duration is the length of a purchased trade (see"
-msgstr ""
+msgstr "La durata indica la lunghezza di un trade acquistato (vedi"
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
-msgstr ""
+msgstr "Lo spot d'ingresso è il prezzo iniziale del trade acquistato da un trader"
 
 msgid "The expiry price is the price of the underlying when the contract expires"
-msgstr ""
+msgstr "Il prezzo di scadenza è il prezzo dell'asset sottostante alla scadenza del contratto"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr ""
+msgstr "I servizi di trading finanziario contenuti in questo sito sono adatti solo per i Clienti in grado di subire la perdita di tutti i soldi investiti e che comprendono ed hanno esperienza dei rischi connessi all'acquisizione di contratti finanziari. Le transazioni su contratti finanziari hanno un alto livello di rischio. Se i contratti acquistati scadono in negativo, subirai una perdita totale del tuo investimento che consiste nel premio del contratto"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "I servizi di trading finanziario contenuti nel presente sito sono disponibili solo per i clienti che possono supportare la perdita di tutto il denaro investito e che comprendono e hanno esperienza del rischio connesso all'acquisizione di contratti finanziari. Le transazioni nei contratti finanziari comportano un alto livello di rischio. Se i contratti acquistati scadono senza produrre un profitto, perderai l'intero investimento, consistente nel contratto premium"
 
 msgid "The first step is to open an account. You can apply online in just a few minutes"
-msgstr ""
+msgstr "Il primo passo consiste nell'apertura di un account. È possibile fare una richiesta online in pochi minuti"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr ""
@@ -2978,25 +2978,25 @@ msgid "The indicator is designed for use on a monthly time scale. It is the sum 
 msgstr ""
 
 msgid "The market exit price is the price in effect at the end of the contract period"
-msgstr ""
+msgstr "Il prezzo d'uscita del mercato è il prezzo in vigore alla fine del periodo del contratto"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
 msgstr ""
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
-msgstr ""
+msgstr "Il brevetto significa che Regent Markets è il pioniere riconosciuto delle scommesse binarie. Il brevetto aiuta a proteggere le nostre innovazioni"
 
 msgid "The payout is the amount paid to an options trader if their prediction is correct"
-msgstr ""
+msgstr "Il payout è l'importo pagato ai trader di opzioni se la loro previsione è corretta"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
 msgstr ""
 
 msgid "The premier platform for trading binary options in the world's financial markets"
-msgstr ""
+msgstr "La miglior piattaforma per il trading di opzioni binarie nei mercati finanziari mondiali"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
-msgstr ""
+msgstr "Il profitto è la differenza tra il prezzo d'acquisto (la puntata) e il payout di un trade vincente"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
 msgstr ""
@@ -3041,13 +3041,13 @@ msgid "This field is required"
 msgstr "Questo campo è obbligatorio"
 
 msgid "This is another award we really savour. Trade2win is a portal for active traders seeking to profit from stocks, futures, options and forex, and these traders award us silver (we are just pipped for gold by Betfair). It means active traders worldwide rate our trading platform extremely highly"
-msgstr ""
+msgstr "Questo è un altro riconoscimento che abbiamo davvero gradito. Trade2win è un portale per i trader attivi che vogliono guadagnare con azioni, futures, opzioni e Forex, e questi trader ci hanno premiato con l'argento (siamo stati appena sorpassati per l'oro da Betfair). Questo significa che i trader attivi nel mondo considerano in maniera estremamente elevata la nostra piattaforma di trading"
 
 msgid "This is big. We pick up a double award from the Financial Times and Investors Chronicle, reflecting our success in improving the quality and usability of our website and products"
-msgstr ""
+msgstr "Questo è grandioso. Abbiamo ottenuto un doppio riconoscimento dal Financial Times e da Investors Chronicle a conferma del nostro successo nel migliorare la qualità e la fruibilità del nostro sito internet e dei nostri prodotti"
 
 msgid "This is the current price at which an underlying can be bought or sold at a particular time"
-msgstr ""
+msgstr "Questo è il prezzo attuale al quale un asset sottostante può essere acquistato o venduto in un dato momento"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr ""
@@ -3059,19 +3059,19 @@ msgid "This website is marketed in the rest of the EU, for investment products b
 msgstr ""
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
-msgstr ""
+msgstr "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "Three Black Crows (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
-msgstr ""
+msgstr "Three Inside Up/Down (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "Three Outside Up/Down (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr ""
+msgstr "Three Stars In The South (CDL3STARSSOUTH)"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
 msgstr ""
@@ -3080,10 +3080,10 @@ msgid "Three white days occur. Each successive day opens within the body of the 
 msgstr ""
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
-msgstr ""
+msgstr "Three-Line Strike (CDL3LINESTRIKE)"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Thrusting Pattern (CDLTHRUSTING)"
 
 msgid "Thu"
 msgstr "Gio"
@@ -3110,13 +3110,13 @@ msgid "Time interval"
 msgstr "Intervallo di tempo"
 
 msgid "Time out until"
-msgstr ""
+msgstr "Tempo scaduto fino a"
 
 msgid "Time period"
 msgstr "Periodo di tempo"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
-msgstr ""
+msgstr "I tempi stanno cambiando. Aumentiamo i payout in modo che i nostri clienti possano ottenere il massimo dai loro trade vincenti"
 
 msgid "Title"
 msgstr "Titolo"
@@ -3200,7 +3200,7 @@ msgid "Trade with confidence"
 msgstr ""
 
 msgid "Trade your way"
-msgstr ""
+msgstr "Negozia a modo tuo"
 
 msgid "Trading Times"
 msgstr "Orari di trading"
@@ -3209,7 +3209,7 @@ msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
 msgstr ""
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr ""
+msgstr "Il trading in opzioni binarie può non essere adatto a tutti, quindi assicurati di aver compreso appieno i rischi connessi. Le tue perdite possono superare il deposito iniziale e non possiederai, ne avrai alcun interesse su alcun asset sottostante. In merito alle opzioni binarie, che sono prodotti d'azzardo, si ricorda che il gioco d'azzardo può creare dipendenza, gioca responsabilmente"
 
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Il trading nei mercati finanziari può creare dipendenza. Compila il modulo qui sotto per limitare la tua partecipazione al sito internet oppure invia una lettera firmata o un fax alla nostra assistenza clienti. Una volta impostato, puoi rimanere solo nei tuoi limiti. I limiti verranno rimossi o attenuati solo dopo 7 giorni ad esclusione della data di auto esclusione che, dopo essere stata confermata, non può essere rimossa o alterata. Per rimuovere o aumentare i tuoi limiti, contatta"
@@ -3218,7 +3218,7 @@ msgid "Tradingview for Binary.com"
 msgstr "Tradingview per Binary.com"
 
 msgid "Transfer"
-msgstr ""
+msgstr "Trasferisci"
 
 msgid "Transfer to another Binary account"
 msgstr "Trasferisci a un altro account Binary"
@@ -3233,7 +3233,7 @@ msgid "Triple Exponential Moving Average (TEMA)"
 msgstr ""
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "Tristar Pattern (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
 msgstr "True Range (TRANGE)"
@@ -3248,13 +3248,13 @@ msgid "Tuesday"
 msgstr "Martedì"
 
 msgid "Turnover"
-msgstr ""
+msgstr "Turnover"
 
 msgid "Two Crows (CDL2CROWS)"
 msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "Typical Price (TYPPRICE)"
 
 msgid "USD"
 msgstr "USD"
@@ -3263,7 +3263,7 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
 msgstr ""
@@ -3272,13 +3272,13 @@ msgid "Underlying"
 msgstr ""
 
 msgid "Unfortunately, no - funds initially deposited through one payment method must be withdrawn through the same system; funds cannot be transferred to an alternate system for withdrawal. We do offer a wide variety of payment methods, to suit your specific needs and preferences"
-msgstr ""
+msgstr "Purtroppo no - i fondi inizialmente depositati attraverso una modalità di pagamento devono essere prelevati attraverso lo stesso metodo; i fondi non possono essere trasferiti su un sistema alternativo per i prelievi. Offriamo un'ampia gamma di modalità di pagamento per soddisfare le specifiche esigenze e preferenze"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Purtroppo il tuo browser non li supporta"
 
 msgid "Unique 3 River (CDLUNIQUE3RIVER)"
-msgstr ""
+msgstr "Unique 3 River (CDLUNIQUE3RIVER)"
 
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 msgstr ""
@@ -3287,7 +3287,7 @@ msgid "Up to 100% returns on rise/fall trades"
 msgstr ""
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Up/Down"
 
 msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
 msgstr ""
@@ -3296,7 +3296,7 @@ msgid "Upcoming Events"
 msgstr "Eventi in arrivo"
 
 msgid "Update"
-msgstr ""
+msgstr "Aggiorna"
 
 msgid "Update Settings"
 msgstr "Aggiorna impostazioni"
@@ -3323,7 +3323,7 @@ msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del trade"
 
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available"
-msgstr ""
+msgstr "Utilizzando il nostro sito internet, i clienti possono negoziare valute, indici, azioni e materie prime 24/7. Disponiamo della definizione dei prezzi più flessibile e la più completa gamma di prodotti disponibili"
 
 msgid "Variance (VAR)"
 msgstr "Varianza (VAR)"
@@ -3347,7 +3347,7 @@ msgid "View Historical Data"
 msgstr "Mostra dati storici"
 
 msgid "View Statement"
-msgstr ""
+msgstr "Mostra l'estratto"
 
 msgid "Volatile markets"
 msgstr "Mercati volatili"
@@ -3368,13 +3368,13 @@ msgid "WMA stands for weighted moving average. It helps to smooth the price curv
 msgstr ""
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
-msgstr ""
+msgstr "In base alla nostra autorizzazione, siamo tenuti a informarti su cosa succede ai fondi che teniamo per tuo conto e sul livello di protezione dei fondi in caso di insolvenza"
 
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
-msgstr ""
+msgstr "Ce l'abbiamo fatta ancora una volta. BetOnMarkets.com viene riconfermato, come nel 2007, \"Miglior provider di trading finanziario con probabilità fisse\" per il 2008"
 
 msgid "We don't usually require any documents as we can verify your identity online"
-msgstr ""
+msgstr "Di solito non richiediamo alcun documento poiché possiamo verificare online la tua identità"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr ""
