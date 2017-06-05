@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "\"Asian Fall\" - vinci quando l'ultimo tick è inferiore alla media dei tick durante il trade"
@@ -44,7 +44,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(se dura meno di un giorno), oppure alla fine della giornata di trading (se dura un giorno o più)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
-msgstr ""
+msgstr ") va online, istituendo un servizio di scommesse finanziarie funzionante 24 ore su 24 su una varietà di indici finanziari. L'attività cresce rapidamente e siamo diventati presto il leader nel mercato delle scommesse a probabilità fisse"
 
 msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives markets"
 msgstr "- Binary.com confronta quotidianamente i suoi prezzi rispetto ai mercati interbancari dei derivati"
@@ -62,7 +62,7 @@ msgid "- Binary.com offers many payment methods, such as credit/debit cards, ban
 msgstr "- Binary.com offre molte modalità di pagamento, come carte di credito/debito, bonifici bancari, e-cash e e-wallet"
 
 msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
-msgstr ""
+msgstr "- Binary.com quota un trade e un contro-trade al fine di avere sempre dei prezzi imparziali e trasparenti"
 
 msgid "- binaries are licensed as a betting activity in the UK, so your winnings are tax-free"
 msgstr "- binarie sono autorizzate nel Regno Unito come scommesse pertanto le vincite sono esenti da tasse"
@@ -110,7 +110,7 @@ msgid "- get pricing that is normally reserved for big institutional players"
 msgstr "- ottieni prezzi generalmente riservati ai grandi giocatori istituzionali"
 
 msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions"
-msgstr ""
+msgstr "- nessuno \"slippage\", nessun \"margin call\", nessuno \"stop out\" e nessuna commissione o tariffa nascosta"
 
 msgid "- open an account in minutes"
 msgstr "- apri un account in pochi minuti"
@@ -164,7 +164,7 @@ msgid "- trade major commodities such as gold and oil"
 msgstr "- fai trading sulle principali materie prime come oro e petrolio"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "- up/down, touch/no-touch, stays in/goes out"
 
 msgid "- we challenge you to find better returns on any competing website"
 msgstr "- ti sfidiamo a trovare i rendimenti migliori su qualsiasi sito internet concorrente"
@@ -176,7 +176,7 @@ msgid "- you know from the start what you will win or lose"
 msgstr "- sai dall'inizio quanto vincerai o quanto perderai"
 
 msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees or commissions"
-msgstr ""
+msgstr "- non avrai mai margin call, rischio di divario, costi di slippage, commissioni o tariffe nascoste"
 
 msgid "0-1 year"
 msgstr "0-1 anno"

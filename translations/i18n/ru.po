@@ -2075,7 +2075,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OPEN"
-msgstr "ОТКРЫТИЕ"
+msgstr "ОТКРЫТО"
 
 msgid "Occupation"
 msgstr "Вид деятельности"
@@ -2132,7 +2132,7 @@ msgid "Only numbers, letters, hyphens are allowed"
 msgstr "Разрешены только цифры, буквы и дефисы"
 
 msgid "Open"
-msgstr "Открытие"
+msgstr "Открыто"
 
 msgid "Open Account"
 msgstr "Открыть счёт"
