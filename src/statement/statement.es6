@@ -51,7 +51,7 @@ const refreshTable  = (yyy_mm_dd) => {
    }
    else  { /* request the next 50 items for live scroll */
       request.limit = 50;
-      if(is_specific_date_shown || yyy_mm_dd.clear) {
+      if (is_specific_date_shown || (yyy_mm_dd && yyy_mm_dd.clear)) {
          table.api().rows().remove();
          is_specific_date_shown = false;
       }
@@ -63,7 +63,6 @@ const refreshTable  = (yyy_mm_dd) => {
       const transactions = (data.statement && data.statement.transactions) || [];
       const view_button_text = 'View'.i18n();
       const rows = transactions.map((trans) => {
-         console.log(trans);
          const view_button_class = _(['buy', 'sell']).includes(trans.action_type) ? '' : 'class="button-disabled"';
          const view_button = '<button '+view_button_class+'>' + view_button_text + '</button>';
          const amount = trans.amount * 1;
