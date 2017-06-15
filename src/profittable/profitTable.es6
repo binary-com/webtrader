@@ -54,7 +54,7 @@ const refreshTable = (yyyy_mm_dd) => {
       is_specific_date_shown = true;
    }
    else  { /* request the next 50 items for live scroll */
-      request.limit = 50;
+      request.limit = 250;
       if(is_specific_date_shown || yyyy_mm_dd.clear) {
          table.api().rows().remove();
          is_specific_date_shown = false;
