@@ -58,7 +58,6 @@ module.exports = function (grunt) {
                             'text/text.js',
                             'webtrader-charts/dist/webtrader-charts.js',
                             'regenerator-runtime/*',
-                            '!jquery-ui-dist/**', 'jquery-ui-dist/jquery-ui.min.css', 'jquery-ui-dist/jquery-ui.min.js',
                             'chosen-js/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
@@ -72,6 +71,7 @@ module.exports = function (grunt) {
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
+                            '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
                             'modernizr/modernizr.js',
                             'clipboard/dist/clipboard.min.js',
                             'es6-promise/promise.min.js',
