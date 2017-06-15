@@ -5,7 +5,7 @@ requirejs.config({
     baseUrl: './',
     paths: {
         'jquery': "lib/jquery/dist/jquery.min",
-        'jquery-ui': "lib/jquery-ui-dist/jquery-ui.min",
+        'jquery-ui': "lib/jquery-ui/jquery-ui.min",
         'jquery.dialogextend': "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
@@ -121,7 +121,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
     require(['jquery-ui', 'highstock-release/highstock']);
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui-dist/jquery-ui.min.css',
+    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css',
         'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
         "css!lib/chosen-js/chosen.css",
         'css!lib/growl/stylesheets/jquery.growl.css',
