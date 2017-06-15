@@ -67,16 +67,6 @@ img.reload {
     position: relative;
     right: 6px;
 }
-
-.webtrader-dialog-widget .ui-dialog-titlebar-close {
-   top: 1px !important;
-}
-
-.ui-dialog-titlebar-close:hover,
-.ui-dialog-titlebar-close {
-   border: none !important;
-}
-
 .ui-icon-newwin {
     position: relative;
     right: 3px;

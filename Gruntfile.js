@@ -58,7 +58,6 @@ module.exports = function (grunt) {
                             'text/text.js',
                             'webtrader-charts/dist/webtrader-charts.js',
                             'regenerator-runtime/*',
-                            '!jquery-ui-dist/**', 'jquery-ui-dist/jquery-ui.min.css', 'jquery-ui-dist/jquery-ui.min.js',
                             'chosen-js/*'
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
@@ -70,6 +69,7 @@ module.exports = function (grunt) {
                             '!colorpicker/**', 'colorpicker/jquery.colorpicker.js', 'colorpicker/images/**', 'colorpicker/jquery.colorpicker.css',
                             '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
+                            '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
                             'modernizr/modernizr.js',

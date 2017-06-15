@@ -401,9 +401,6 @@ export const init = function($parentObj) {
    /* wrap jquery ui dialog('destory') to fire an event */
    var original = $.fn.dialog;
    $.fn.dialog = function(cmd) {
-      if(!this.data('ui-dialog')) {
-         return this;
-      }
       if(cmd === 'destroy') {
          this.trigger('dialogdestroy');
          return original.call(this, 'destroy'); // destroy and remove from dom
@@ -599,7 +596,6 @@ export const createBlankWindow = function($html,options) {
 
 
    const dialog = blankWindow.dialog('widget');
-   dialog.addClass('webtrader-dialog-widget');
    /* allow dialogs to be moved though the bottom of the page */
    dialog.draggable( "option", "containment", false );
    dialog.draggable( "option", "scroll", true );
