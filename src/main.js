@@ -6,14 +6,10 @@ requirejs.config({
     paths: {
         'jquery': "lib/jquery/dist/jquery.min",
         'jquery-ui': "lib/jquery-ui/jquery-ui.min",
-        'highstock': "lib/highstock/highstock",
-        'highcharts-more': "lib/highstock/highcharts-more",
-        'highcharts-exporting': 'lib/highstock/modules/offline-exporting',
         'jquery.dialogextend': "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
         'modernizr': 'lib/modernizr/modernizr',
-        'lokijs': 'lib/lokijs/build/lokijs.min',
         'color-picker': "lib/colorpicker/jquery.colorpicker",
         'datatables': "lib/datatables/media/js/jquery.dataTables.min",
         'datatables-jquery-ui': 'lib/datatables/media/js/dataTables.jqueryui.min',
@@ -26,13 +22,13 @@ requirejs.config({
         'jquery-sparkline': 'lib/jquery-sparkline/dist/jquery.sparkline.min',
         'moment': 'lib/moment/min/moment.min',
         'moment-locale':'lib/moment/locale',
-        'ddslick': 'lib/ddslick/jquery.ddslick.min',
         'clipboard': 'lib/clipboard/dist/clipboard.min',
         "indicator_levels": 'charts/indicators/level',
-        'paralleljs': 'lib/parallel_js/lib/parallel',
         'binary-style': '<style-url>/binary',
         'babel-runtime/regenerator': 'lib/regenerator-runtime/runtime',
-        'chosen': 'lib/chosen-js/chosen.jquery'
+        'webtrader-charts' : 'lib/webtrader-charts/dist/webtrader-charts',
+        'chosen': 'lib/chosen-js/chosen.jquery',
+        'highstock-release': 'lib/highstock-release',
     },
     map: {
         '*': {
@@ -40,6 +36,7 @@ requirejs.config({
             'text': 'lib/text/text.js'
         }
     },
+
     waitSeconds: 0,
     /* fix for requriejs timeout on slow internet connectins */
     "shim": {
@@ -52,11 +49,15 @@ requirejs.config({
         "jquery-ui": {
             deps: ["jquery"]
         },
-        "highstock": {
-            deps: ["jquery"]
+        "highstock-release/highstock": {
+            deps: ["jquery"],
+            exports: "Highcharts"
         },
-        "highcharts-exporting": {
-            deps: ["highstock", 'lib/highstock/modules/exporting']
+        "highstock-release/modules/exporting": {
+            deps: ["highstock-release/highstock"]
+        },
+        "highstock-release/modules/offline-exporting": {
+            deps: ["highstock-release/modules/exporting"]
         },
         "jquery-growl": {
             deps: ["jquery"]
@@ -65,7 +66,7 @@ requirejs.config({
             deps: ["jquery-ui"]
         },
         "currentPriceIndicator": {
-            deps: ["highstock"]
+            deps: ["highstock-release/highstock"]
         },
         sightglass: { //fix for rivets not playing nice with requriejs (https://github.com/mikeric/rivets/issues/427)
             exports: 'sightglass'
@@ -74,8 +75,8 @@ requirejs.config({
             deps: ['sightglass'],
             exports: 'rivets'
         },
-        "highcharts-more": {
-            deps: ["highstock"]
+        "highstock-release/highcharts-more": {
+            deps: ["highstock-release/highstock"]
         },
         "color-picker": {
             deps: ["jquery"] //This should fix the widget not found error
@@ -94,8 +95,7 @@ requirejs.onError = function(err) {
 };
 
 require(['modernizr'], function() {
-    //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && !isAffiliates()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
         window.location.href = 'unsupported_browsers/unsupported_browsers.html';
         return;
     }
@@ -118,7 +118,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
-    require(['jquery-ui', 'highstock', 'lokijs']);
+    require(['jquery-ui', 'highstock-release/highstock']);
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css',
@@ -127,14 +127,8 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         'css!lib/growl/stylesheets/jquery.growl.css',
         'css!lib/datatables/media/css/jquery.dataTables.min.css',
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
-        'css!lib/colorpicker/jquery.colorpicker.css',
-        'css!charts/charts.css']);
-
-    function handle_affiliate_route() {
-        require(['affiliates/affiliates', 'css!main.css', 'css!binary-style'], function(affiliates) {
-            affiliates.init();
-        });
-    }
+        'css!lib/colorpicker/jquery.colorpicker.css',]);
+        // 'css!charts/charts.css']);
 
     function handle_normal_route() {
 
@@ -296,16 +290,11 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         });
 
         /*Trigger T&C check, self-exclusion, reality check, chrome extension check, csr_tax_information check*/
-        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'accountstatus/accountstatus', 'realitycheck/realitycheck']);
+        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'accountstatus/accountstatus', 'realitycheck/realitycheck', 'websitestatus/websitestatus']);
     }
 
-
-    if (isAffiliates()) //Our chart is accessed by other applications
-        handle_affiliate_route();
-    else {
-        //Our chart is accessed directly
-        handle_normal_route();
-    }
+    //Our chart is accessed directly
+    handle_normal_route();
 
 });
 

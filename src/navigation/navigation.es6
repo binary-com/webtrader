@@ -42,7 +42,7 @@ export const updateDropdownToggles = () => {
 
 const getType = (id) => {
    if(!id) return;
-   const type = {MLT:"Investment", MF:"Gaming",VRTC:"Virtual",REAL:"Real"};
+   const type = {MLT:"Gaming", MF:"Investment",VRTC:"Virtual",REAL:"Real"};
    id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
    return type[id]+" Account";
 };
@@ -221,6 +221,13 @@ const initLangButton = (root) => {
       local_storage.set('i18n', {value: lang.value});
       window.location.reload();
    };
+
+   // Open contact us page.
+   state.openContactUs = () => {
+      const url = 'https://www.binary.com/' + (local_storage.get('i18n') || { value: 'en' }).value + '/contact.html'
+      const win = window.open(url, '_blank');
+      win.focus();
+   }
 
    state.toggleVisibility = (visible) => {
       state.confirm.visible = visible;

@@ -54,7 +54,7 @@ const refreshTable = (yyyy_mm_dd) => {
       is_specific_date_shown = true;
    }
    else  { /* request the next 50 items for live scroll */
-      request.limit = 50;
+      request.limit = 250;
       if(is_specific_date_shown || yyyy_mm_dd.clear) {
          table.api().rows().remove();
          is_specific_date_shown = false;
@@ -68,6 +68,11 @@ const refreshTable = (yyyy_mm_dd) => {
       const rows = transactions.map((trans) => {
          const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
          const view_button = '<button>View</button>'.i18n();
+         try{
+            trans.longcode;            
+         }catch(err){
+            console.log(trans);
+         }
          return [
             epoch_to_string(trans.purchase_time, { utc: true }),
             trans.transaction_id,
@@ -107,12 +112,13 @@ const on_arrow_click = (e) =>{
    viewTransaction.init(transaction.contract_id, transaction.transaction_id)
       .then(
          () =>$target.removeClass('button-disabled')
-      );
+      ).catch(err => console.error(err));
 }
 
 const initProfitWin = () => {
    profitWin = windows.createBlankWindow($('<div/>'), {
       title: 'Profit Table'.i18n(),
+      dialogClass: 'profitTable',
       width: 700 ,
       height: 400,
       destroy: () => {

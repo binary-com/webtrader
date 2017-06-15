@@ -96,10 +96,10 @@
 
 .real-dialog .user,
 .real-dialog .financial {
-    height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    overflow-y: auto;
 }
 
 .real-dialog .user label {

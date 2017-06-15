@@ -162,10 +162,10 @@ export const init = (contract_id, transaction_id) => {
          return;
       }
       liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
-         .then((data) => {
+            .then((data) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */
-            if(proposal.underlying === undefined && proposal.longcode === undefined) {
+            if(proposal.underlying === undefined && proposal.shortcode === undefined) {
                show_market_data_disruption_win(proposal);
                return;
             }
@@ -344,7 +344,7 @@ const sell_at_market = (state, root) => {
       });
 }
 
-const init_state = (proposal, root) =>{
+const init_state = (proposal, root) =>{   
    const state = {
       route: {
          value: 'table',

@@ -833,6 +833,10 @@ beeper@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
 
+big.js@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.1.3.tgz#4cada2193652eb3ca9ec8e55c9015669c9806978"
+
 bin-build@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/bin-build/-/bin-build-2.2.0.tgz#11f8dd61f70ffcfa2bdcaa5b46f5e8fedd4221cc"
@@ -1403,6 +1407,19 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+datatables.net-dt@^1.10.15:
+  version "1.10.15"
+  resolved "https://registry.yarnpkg.com/datatables.net-dt/-/datatables.net-dt-1.10.15.tgz#cc67136c569888acf34687e34a0aeaa99378bbc6"
+  dependencies:
+    datatables.net ">=1.10.9"
+    jquery ">=1.7"
+
+datatables.net@>=1.10.9:
+  version "1.10.15"
+  resolved "https://registry.yarnpkg.com/datatables.net/-/datatables.net-1.10.15.tgz#c789077bbfe385e75ff5a233fa5f23251a72df68"
+  dependencies:
+    jquery ">=1.7"
+
 date-fns@^1.23.0:
   version "1.27.2"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.27.2.tgz#ce82f420bc028356cc661fc55c0494a56a990c9c"
@@ -1649,6 +1666,10 @@ ecc-jsbn@~0.1.1:
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
+
+emojis-list@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
 encodeurl@~1.0.1:
   version "1.0.1"
@@ -2136,11 +2157,11 @@ got@^5.0.0:
     unzip-response "^1.0.2"
     url-parse-lax "^1.0.0"
 
-graceful-fs@4.1.5, graceful-fs@^4.1.0, graceful-fs@^4.1.2:
+graceful-fs@4.1.5, graceful-fs@^4.0.0, graceful-fs@^4.1.0, graceful-fs@^4.1.2:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.5.tgz#f4745e8caed5e0dd2ef21bb5e2d229a32e8093c0"
 
-graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@^4.1.11, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -2602,6 +2623,10 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
+highstock-release@^5.0.10:
+  version v5.0.10
+  resolved "https://registry.yarnpkg.com/highstock-release/-/highstock-release-5.0.10.tgz#41da1f8fd4694f7c858a0e54e61b233fc6e22cb1"
+
 hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
@@ -2740,6 +2765,13 @@ imagemin@^4.0.0:
     imagemin-jpegtran "^4.0.0"
     imagemin-optipng "^4.0.0"
     imagemin-svgo "^4.0.0"
+
+imports-loader@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/imports-loader/-/imports-loader-0.7.1.tgz#f204b5f34702a32c1db7d48d89d5e867a0441253"
+  dependencies:
+    loader-utils "^1.0.2"
+    source-map "^0.5.6"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -3053,7 +3085,11 @@ jquery-ui-iconfont@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jquery-ui-iconfont/-/jquery-ui-iconfont-2.2.0.tgz#6f83c3896af96ef521b817ca951fa12b7ee77413"
 
-jquery@>=1.4.4, jquery@^3.0.0:
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+
+jquery@>=1.4.4, jquery@>=1.7, jquery@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
 
@@ -3061,18 +3097,11 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js-yaml@3.6.1, js-yaml@^3.2.7, js-yaml@~3.6.0:
+js-yaml@3.6.1, js-yaml@^3.2.7, js-yaml@^3.3.1, js-yaml@~3.6.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
   dependencies:
     argparse "^1.0.7"
-    esprima "^2.6.0"
-
-js-yaml@^3.3.1, js-yaml@~3.5.2:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.5.5.tgz#0377c38017cabc7322b0d1fbcd25a491641f2fbe"
-  dependencies:
-    argparse "^1.0.2"
     esprima "^2.6.0"
 
 js-yaml@~2.0.5:
@@ -3081,6 +3110,13 @@ js-yaml@~2.0.5:
   dependencies:
     argparse "~ 0.1.11"
     esprima "~ 1.0.2"
+
+js-yaml@~3.5.2:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.5.5.tgz#0377c38017cabc7322b0d1fbcd25a491641f2fbe"
+  dependencies:
+    argparse "^1.0.2"
+    esprima "^2.6.0"
 
 jsbn@~0.1.0:
   version "0.1.1"
@@ -3208,6 +3244,14 @@ load-json-file@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
+
+loader-utils@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
+  dependencies:
+    big.js "^3.1.3"
+    emojis-list "^2.0.0"
+    json5 "^0.5.0"
 
 lodash._basecopy@^3.0.0:
   version "3.0.1"
@@ -3342,6 +3386,10 @@ logalot@^2.0.0:
   dependencies:
     figures "^1.3.5"
     squeak "^1.0.0"
+
+lokijs@1.3.19:
+  version "1.3.19"
+  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.3.19.tgz#33002c87594ad190df9da2ac66888e1a85b3ca2b"
 
 longest@^1.0.0, longest@^1.0.1:
   version "1.0.1"
@@ -3531,6 +3579,10 @@ minimist@1.2.0, minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+moment@^2.18.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
 morgan@^1.6.1:
   version "1.8.1"
@@ -3826,6 +3878,10 @@ own-or@^1.0.0:
 pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
+
+paralleljs@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/paralleljs/-/paralleljs-0.2.1.tgz#ebca745d3e09c01e2bebcc14858891ff4510e926"
 
 param-case@^1.1.0:
   version "1.1.2"
@@ -4303,6 +4359,12 @@ rimraf@~2.2.1, rimraf@~2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
+rivets@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/rivets/-/rivets-0.8.1.tgz#8e37af7cf54264172dd9ca4b45f1d02d321c20d7"
+  dependencies:
+    sightglass "~0.2.4"
+
 rx@2.3.24:
   version "2.3.24"
   resolved "https://registry.yarnpkg.com/rx/-/rx-2.3.24.tgz#14f950a4217d7e35daa71bbcbe58eff68ea4b2b7"
@@ -4414,6 +4476,10 @@ showdown@^1.6.3:
   dependencies:
     yargs "^6.6.0"
 
+sightglass@~0.2.4:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/sightglass/-/sightglass-0.2.6.tgz#9120bb852d259cf821274856375bbdf900983841"
+
 sigmund@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sigmund/-/sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590"
@@ -4485,7 +4551,7 @@ source-map@^0.3.0:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.5.0, source-map@^0.5.3, source-map@~0.5.1:
+source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
 
@@ -4521,6 +4587,10 @@ spdx-expression-parse@~1.0.0:
 spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
+
+spectrum-colorpicker@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/spectrum-colorpicker/-/spectrum-colorpicker-1.8.0.tgz#b926cf5002c0a77860b5f8351e1c093c65200107"
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -5115,6 +5185,19 @@ websocket-driver@>=0.5.1:
 websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
+
+webtrader-charts@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.1.0.tgz#1869ae8ff67a1ad1db6fee08b20906f9b6d4a321"
+  dependencies:
+    datatables.net-dt "^1.10.15"
+    imports-loader "^0.7.1"
+    jquery-ui "^1.12.1"
+    lodash "^4.17.4"
+    lokijs "1.3.19"
+    paralleljs "^0.2.1"
+    rivets "0.8.1"
+    spectrum-colorpicker "^1.8.0"
 
 whet.extend@~0.9.9:
   version "0.9.9"

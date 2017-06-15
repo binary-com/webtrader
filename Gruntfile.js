@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'src/',
-                        src: ['**', '!**/*.scss','!**/*.es6', '!charts/indicators/highcharts_custom/**', 'charts/indicators/highcharts_custom/currentprice.js'],
+                        src: ['**', '!**/*.scss','!**/*.es6'],
                         dest: 'dist/uncompressed/v<%=pkg.version%>'
                     }
                 ]
@@ -52,7 +52,11 @@ module.exports = function (grunt) {
                             'jquery-ui-iconfont/font/*',
                             '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
                             'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
+                            'binary-com-longcode/dist/main.js',
+                            '!highstock-release/**', 'highstock-release/highstock.js', 'highstock-release/themes/**', 'highstock-release/modules/exporting.js', 'highstock-release/modules/offline-exporting.js', 'highstock-release/highcharts-more.js',
+                            'moment/min/moment.min.js', 'moment/locale/**',
                             'text/text.js',
+                            'webtrader-charts/dist/webtrader-charts.js',
                             'regenerator-runtime/*',
                             'chosen-js/*'
                         ],
@@ -66,10 +70,8 @@ module.exports = function (grunt) {
                             '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
                             '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
                             '!jquery-ui/**', 'jquery-ui/themes/**', 'jquery-ui/jquery-ui.min.js',
-                            '!highstock/**', 'highstock/highstock.js', 'highstock/themes/**', 'highstock/modules/exporting.js', 'highstock/modules/offline-exporting.js', 'highstock/highcharts-more.js',
                             'jquery/dist/jquery.min.js',
                             'jquery-validation/dist/jquery.validate.min.js',
-                            'lokijs/build/lokijs.min.js',
                             'modernizr/modernizr.js',
                             'clipboard/dist/clipboard.min.js',
                             'es6-promise/promise.min.js',
@@ -79,17 +81,10 @@ module.exports = function (grunt) {
                             'rivets/dist/rivets.min.js',
                             'sightglass/index.js',
                             'jquery-sparkline/dist/jquery.sparkline.min.js',
-                            'moment/min/moment.min.js', 'moment/locale/**',
-                            'ddslick/jquery.ddslick.min.js',
                             '!**/**/favicon.ico',
-                            'parallel.js/lib/**',
                             'intl/dist/Intl.complete.js',
                         ],
                         dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
-                        rename: function(dest, src) {
-                          // grunt uglify complains about folders anding with .js
-                          return dest + src.replace("parallel.js/", "parallel_js/");
-                        }
                     }
                 ]
             },
@@ -99,7 +94,9 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/uncompressed',
                         src: [
-                            '**', '!**/*.js', '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
+                            '**',
+                            '!**/*.js', '**/lib/**/*.min.js', '**/lib/**/highstock.js', '**/lib/**/webtrader-charts.js',
+                            '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
                         ],
                         dest: 'dist/compressed'
                     }
@@ -189,13 +186,6 @@ module.exports = function (grunt) {
             }
         },
         imagemin: {
-          static: {
-            options: {
-              optimizationLevel: 3,
-              svgoPlugins: [{ removeViewBox: false }],
-              use: []
-            }
-          },
           dynamic: {
             files: [{
               expand: true,
@@ -210,7 +200,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/uncompressed',
-                    src: ['**/*.js'],
+                    src: ['**/*.js', '!**/lib/**/*.min.js', '!**/lib/**/highstock.js', '!**/lib/**/webtrader-charts.js'],
                     dest: 'dist/compressed'
                 }],
                 options: {
@@ -314,7 +304,7 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src : ["dist/compressed/**/*.js"],
+                src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
                 options : {
                   "verbose" : false
                 }
@@ -351,7 +341,7 @@ module.exports = function (grunt) {
           scripts: {
             options: { livereload: false },
             files: ['src/**','!src/index.html', '!src/**/*.scss', '!src/**/*.es6'],
-            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:concat:concat_indicators', 'newer:copy:copyChromeManifest', 'replace:style'],
+            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:copy:copyChromeManifest', 'replace:style'],
           },
         },
         shell: {
@@ -381,22 +371,6 @@ module.exports = function (grunt) {
                 },
                 //array of tasks to execute if all tests pass
                 ifTrue: [ 'shell:moveEverythingToBETA_folder', 'gh-pages:travis-deploy' ]
-            }
-        },
-        concat: {
-            concat_indicators: {
-                //Define the sequence here, indicators which require other indicators to be built first, should be explicitly listed here
-                src: ['src/charts/indicators/highcharts_custom/IndicatorBase.js',
-                        'src/charts/indicators/highcharts_custom/WMA.js',
-                        'src/charts/indicators/highcharts_custom/SMA.js',
-                        'src/charts/indicators/highcharts_custom/EMA.js',
-                        'src/charts/indicators/highcharts_custom/TEMA.js',
-                        'src/charts/indicators/highcharts_custom/TRIMA.js',
-                        'src/charts/indicators/highcharts_custom/STDDEV.js',
-                        'src/charts/indicators/highcharts_custom/**/*.js',
-                        '!src/charts/indicators/highcharts_custom/currentprice.js'
-                    ],
-                dest: 'dist/uncompressed/v<%=pkg.version%>/charts/indicators/highcharts_custom/indicators.js'
             }
         },
         compress: {
@@ -510,7 +484,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'markdown:helpDocs', 'copy:copy_i18n', 'concat:concat_indicators', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
+    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'markdown:helpDocs', 'copy:copy_i18n', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
     grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
   	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
 

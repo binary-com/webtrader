@@ -1,6 +1,6 @@
 {
   "name": "webtrader",
-  "version": "2.1.24",
+  "version": "2.2.0",
   "homepage": "https://github.com/binary-com/webtrader.git",
   "authors": [
     "Armin Zia",
@@ -28,10 +28,8 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "jquery-ui": "~1.11.4",
-    "highstock": "highslide-software/highstock-release#4.2.6",
     "colorpicker": "vanderlee/colorpicker#~1.2.2",
     "growl": "ksylvest/jquery-growl#~1.3.1",
-    "lokijs": "1.3.10",
     "datatables": "DataTables/DataTables#~1.10.9",
     "modernizr": "components/modernizr#~2.8.3",
     "requirejs": "~2.1.20",
@@ -41,11 +39,8 @@
     "text": "~2.0.14",
     "rivets": "~0.8.1",
     "lodash": "~4.17.4",
-    "moment": "~2.10.6",
     "jquery-sparkline": "~2.1.3",
-    "ddslick": "prashantchaudhary/ddslick",
     "clipboard": "^1.5.10",
-    "parallel.js": "paralleljs#*",
     "intl": "^1.2.5",
     "alameda": "^1.1.0"
   }

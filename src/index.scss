@@ -9,6 +9,16 @@ body {
 .fr {
     margin: auto;
     width: 90%;
+    .languages {
+        display: inline-block;
+    }
+    a, ul {
+        margin-left: 10px;
+    }
+    ul li a {
+        color: black !important;
+        font-weight: normal !important;
+    }
 }
 .ln29 {
     line-height: 29px;
@@ -36,13 +46,14 @@ body {
     width: 100%;
 }
 #regulatory-image {
-    display: flex
+    display: flex;
 }
 #regulatory-image div:first-child img {
     width: 80px;
 }
 #regulatory-image div:last-child img {
     width: 100px;
+    margin: 10px 0;
 }
 #images {
     display: flex;
@@ -57,7 +68,7 @@ body {
 }
 .social-icons a {
     padding: 4px;
-    min-width: 35px;
+    min-width: 25px;
 }
 #footer a {
     display: inline-block;

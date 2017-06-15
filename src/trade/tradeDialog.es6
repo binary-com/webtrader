@@ -327,6 +327,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
+      decimal: /^(BTC|XBT)$/.test(local_storage.get('currency')) ? 8 : 2
     },
     basis: {
       array: ['Payout', 'Stake'],
@@ -410,7 +411,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
              .then(function(data){
                state.currency.value = data.payout_currencies[0];
                state.currency.array = data.payout_currencies;
-             })
+            })
              .catch(function(err) { console.error(err); });
     }
   };
@@ -1024,7 +1025,6 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
           symbol: symbol.symbol,
           subscribe: 1,
           granularity: 0,
-          count: 1000, /* this will be for the case that the user opens a the same tick chart later */
           style: 'ticks'
         }).catch(function (err) {
           /* if this contract offers tick trades, prevent user from trading */
@@ -1039,19 +1039,18 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
 
     var state = init_state(available,root,dialog, symbol, contracts_for.spot);
     if(!has_digits) { state.ticks.loading = false; }
-    var view = rv.bind(root[0],state)
+    var view = rv.bind(root[0],state);
     state.categories.update();            // trigger update to init categories_display submenu
 
     dialog.dialog('open');
 
     dialog.update_track = function(template) {
       update_track({symbol: symbol, template: template});
-    }
+    };
     dialog.get_template = get_current_template.bind(undefined, state);
     dialog.set_template = set_current_template.bind(undefined, state);
-    saved_template && (saved_template.name !== undefined)
-                  && dialog.set_template(saved_template);
-    dialog.hide_template_menu = function() { state.template.visible = false; }
+    saved_template && (saved_template.name !== undefined) && dialog.set_template(saved_template);
+    dialog.hide_template_menu = () => { state.template.visible = false; };
     require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
       tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
     });
