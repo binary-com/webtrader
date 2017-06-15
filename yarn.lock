@@ -3081,10 +3081,6 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery-ui-dist@^1.12.1:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/jquery-ui-dist/-/jquery-ui-dist-1.12.1.tgz#5c0815d3cc6f90ff5faaf5b268a6e23b4ca904fa"
-
 jquery-ui-iconfont@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jquery-ui-iconfont/-/jquery-ui-iconfont-2.2.0.tgz#6f83c3896af96ef521b817ca951fa12b7ee77413"

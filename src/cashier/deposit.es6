@@ -49,6 +49,7 @@ function init_deposit_win(root) {
         height: 600,
         'data-authorized': true,
         close: function() {
+            deposit_win.dialog('destroy');
             deposit_win.trigger('dialogclose'); // TODO: figure out why event is not fired.
             deposit_win.remove();
             deposit_win = null;
