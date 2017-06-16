@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 giao dịch trong 12 tháng qua"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 ngày"
@@ -206,7 +206,7 @@ msgid "1-2 years"
 msgstr "1-2 năm"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 Phút"
@@ -215,7 +215,7 @@ msgid "10m"
 msgstr "10 tháng"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 Phút"
@@ -224,7 +224,7 @@ msgid "15m"
 msgstr "15 tháng"
 
 msgid "1999"
-msgstr ""
+msgstr "năm 1999"
 
 msgid "1d"
 msgstr "1 ngày"
@@ -236,10 +236,10 @@ msgid "1m"
 msgstr "1 tháng"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 Giờ"
@@ -251,37 +251,37 @@ msgid "2-way pricing"
 msgstr "giá cả 2 chiều"
 
 msgid "2000"
-msgstr ""
+msgstr "năm 2000"
 
 msgid "2004"
-msgstr ""
+msgstr "năm 2004"
 
 msgid "2007"
-msgstr ""
+msgstr "năm 2007"
 
 msgid "2008"
-msgstr ""
+msgstr "năm 2008"
 
 msgid "2009"
-msgstr ""
+msgstr "năm 2009"
 
 msgid "2011"
-msgstr ""
+msgstr "năm 2011"
 
 msgid "2012"
-msgstr ""
+msgstr "năm 2012"
 
 msgid "2013"
-msgstr ""
+msgstr "năm 2013"
 
 msgid "2014"
-msgstr ""
+msgstr "năm 2014"
 
 msgid "2015"
-msgstr ""
+msgstr "năm 2015"
 
 msgid "2016"
-msgstr ""
+msgstr "năm 2016"
 
 msgid "2h"
 msgstr "2 giờ"
@@ -290,13 +290,13 @@ msgid "2m"
 msgstr "2 tháng"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 Phút"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 Phút"
@@ -314,7 +314,7 @@ msgid "3m"
 msgstr "3 tháng"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 Giờ"
@@ -326,7 +326,7 @@ msgid "4h"
 msgstr "4 giờ"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 Phút"
@@ -344,7 +344,7 @@ msgid "7-day turnover limit"
 msgstr "7 ngày giới hạn cho doanh số"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 Giờ"
@@ -467,7 +467,7 @@ msgid "Add/remove indicators"
 msgstr "Thêm/loại bỏ các chỉ số"
 
 msgid "Admin"
-msgstr ""
+msgstr "Quản trị viên"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr "Khối ưu tiên (CDLADVANCEBLOCK)"
@@ -530,7 +530,7 @@ msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Di chuyển trung bình Arnaud Legoux (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Dao động Aroon (AROONOSC)"
@@ -623,10 +623,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com đạt 1 tỷ USD doanh thu kể từ khi bắt đầu vào năm 1999"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr "Bot phát hành nhị phân"
@@ -677,7 +677,7 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "Nền tảng giao dịch của Binary trung bình vào khoảng 15 giao dịch mỗi giây, 24/7"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
@@ -785,7 +785,7 @@ msgid "CLOSE"
 msgstr "ĐÓNG"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Có thể được sử dụng để mua và bán hợp đồng, làm mới mua đã hết hạn, và các tài khoản tiền ảo top-up."
@@ -914,7 +914,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr "Chỉ số độ dồi dào (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "Nhấp vào kiểm tra Jacking"
@@ -1145,7 +1145,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
 msgstr "Sao Doji (CDLDOJISTAR)"
@@ -1217,10 +1217,10 @@ msgid "EGR Operator Award"
 msgstr "Giải thưởng Nhà điều hành EGR"
 
 msgid "EMA"
-msgstr ""
+msgstr "EMA"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Mỗi lựa chọn nhị phân là một dự đoán về chuyển động tương lai của một thị trường tiềm ẩn"
@@ -1358,7 +1358,7 @@ msgid "Financial rewards"
 msgstr "Phần thưởng tài chính"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "Dòng đầu tiên của địa chỉ nhà"
