@@ -446,13 +446,19 @@ msgstr ""
 msgid "Accept"
 msgstr "" 
 
+msgid "Accessible from any web browser in 13 languages"
+msgstr "" 
+
 msgid "Account balance"
 msgstr "" 
 
-msgid "Action"
+msgid "Account opening reason"
 msgstr "" 
 
-msgid "Add"
+msgid "Account turnover"
+msgstr "" 
+
+msgid "Action"
 msgstr "" 
 
 msgid "Add comparisons"
@@ -461,7 +467,10 @@ msgstr ""
 msgid "Add indicator"
 msgstr "" 
 
-msgid "Add level"
+msgid "Add/Remove comparisons"
+msgstr "" 
+
+msgid "Add/Remove indicators"
 msgstr "" 
 
 msgid "Add/remove indicators"
@@ -524,7 +533,13 @@ msgstr ""
 msgid "April"
 msgstr "" 
 
+msgid "Are you sure you want to delete template?"
+msgstr "" 
+
 msgid "Are you sure you want to delete this token?"
+msgstr "" 
+
+msgid "Are you sure you want to overwrite current template?"
 msgstr "" 
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
@@ -782,9 +797,6 @@ msgstr ""
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "" 
 
-msgid "CLOSE"
-msgstr "" 
-
 msgid "CSV"
 msgstr "" 
 
@@ -924,9 +936,6 @@ msgid "Click to log in with your Binary.com account"
 msgstr "" 
 
 msgid "Close"
-msgstr "" 
-
-msgid "Close Price"
 msgstr "" 
 
 msgid "Close all"
@@ -1202,6 +1211,12 @@ msgstr ""
 msgid "Download as"
 msgstr "" 
 
+msgid "Downloading .csv"
+msgstr "" 
+
+msgid "Downloading template as"
+msgstr "" 
+
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "" 
 
@@ -1217,9 +1232,6 @@ msgstr ""
 msgid "EGR Operator Award"
 msgstr "" 
 
-msgid "EMA"
-msgstr "" 
-
 msgid "EURUSD"
 msgstr "" 
 
@@ -1230,9 +1242,6 @@ msgid "Each binary trade is for a pre-determined payout amount. You win the payo
 msgstr "" 
 
 msgid "Edge"
-msgstr "" 
-
-msgid "Edit"
 msgstr "" 
 
 msgid "Education"
@@ -1262,6 +1271,9 @@ msgstr ""
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "" 
 
+msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
+msgstr "" 
+
 msgid "Enter your current password"
 msgstr "" 
 
@@ -1272,6 +1284,9 @@ msgid "Entry spot"
 msgstr "" 
 
 msgid "Entry spot price"
+msgstr "" 
+
+msgid "Error getting data for %1"
 msgstr "" 
 
 msgid "Espa ol"
@@ -1326,6 +1341,9 @@ msgid "Favourite artist"
 msgstr "" 
 
 msgid "Favourite dish"
+msgstr "" 
+
+msgid "Features"
 msgstr "" 
 
 msgid "Feb"
@@ -1406,6 +1424,9 @@ msgstr ""
 msgid "From"
 msgstr "" 
 
+msgid "Full-screen trading interface"
+msgstr "" 
+
 msgid "Further instructions"
 msgstr "" 
 
@@ -1436,9 +1457,6 @@ msgstr ""
 msgid "Group History"
 msgstr "" 
 
-msgid "HIGH"
-msgstr "" 
-
 msgid "Hammer (CDLHAMMER)"
 msgstr "" 
 
@@ -1461,9 +1479,6 @@ msgid "High"
 msgstr "" 
 
 msgid "High Barrier"
-msgstr "" 
-
-msgid "High Price"
 msgstr "" 
 
 msgid "High barrier"
@@ -1634,6 +1649,15 @@ msgstr ""
 msgid "Instruments"
 msgstr "" 
 
+msgid "Invalid JSON file"
+msgstr "" 
+
+msgid "Invalid parameter(s)"
+msgstr "" 
+
+msgid "Invalid template type"
+msgstr "" 
+
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "" 
 
@@ -1653,9 +1677,6 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "" 
 
 msgid "Italiano"
-msgstr "" 
-
-msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
 msgstr "" 
 
 msgid "Jan"
@@ -1703,9 +1724,6 @@ msgstr ""
 msgid "Kuala Lumpur Office"
 msgstr "" 
 
-msgid "LOW"
-msgstr "" 
-
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "" 
 
@@ -1725,9 +1743,6 @@ msgid "Let's do it"
 msgstr "" 
 
 msgid "Level of Education"
-msgstr "" 
-
-msgid "Levels"
 msgstr "" 
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
@@ -1839,9 +1854,6 @@ msgid "Low"
 msgstr "" 
 
 msgid "Low Barrier"
-msgstr "" 
-
-msgid "Low Price"
 msgstr "" 
 
 msgid "Low barrier"
@@ -2075,7 +2087,7 @@ msgstr ""
 msgid "OHLC"
 msgstr "" 
 
-msgid "OPEN"
+msgid "OK"
 msgstr "" 
 
 msgid "Occupation"
@@ -2136,9 +2148,6 @@ msgid "Open"
 msgstr "" 
 
 msgid "Open Account"
-msgstr "" 
-
-msgid "Open Price"
 msgstr "" 
 
 msgid "Open a Financial Account"
@@ -2504,7 +2513,7 @@ msgstr ""
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "" 
 
-msgid "SMA"
+msgid "Robust and secure platform"
 msgstr "" 
 
 msgid "SVG"
@@ -2747,7 +2756,16 @@ msgstr ""
 msgid "Stop-type"
 msgstr "" 
 
+msgid "Stroke color"
+msgstr "" 
+
+msgid "Stroke width"
+msgstr "" 
+
 msgid "Submit"
+msgstr "" 
+
+msgid "Successfully applied the template and saved it as"
 msgstr "" 
 
 msgid "Summation (SUM)"
@@ -2757,12 +2775,6 @@ msgid "Sun"
 msgstr "" 
 
 msgid "Sunday"
-msgstr "" 
-
-msgid "TEMA"
-msgstr "" 
-
-msgid "TRIMA"
 msgstr "" 
 
 msgid "Table"
@@ -2792,7 +2804,13 @@ msgstr ""
 msgid "Tel"
 msgstr "" 
 
+msgid "Template changes saved"
+msgstr "" 
+
 msgid "Template name"
+msgstr "" 
+
+msgid "Template name already exists"
 msgstr "" 
 
 msgid "Terms"
@@ -3329,6 +3347,9 @@ msgstr ""
 msgid "Variance (VAR)"
 msgstr "" 
 
+msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
+msgstr "" 
+
 msgid "Verification code has been sent to your email"
 msgstr "" 
 
@@ -3362,9 +3383,6 @@ msgstr ""
 msgid "Volatility indices"
 msgstr "" 
 
-msgid "WMA"
-msgstr "" 
-
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "" 
 
@@ -3392,7 +3410,7 @@ msgstr ""
 msgid "Webtrader"
 msgstr "" 
 
-msgid "Webtrader is a Binary.com's advanced desktop trading platform"
+msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
 msgstr "" 
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
@@ -3410,7 +3428,7 @@ msgstr ""
 msgid "Weighted Moving Average (WMA)"
 msgstr "" 
 
-msgid "Welcome to Binary Webtrader"
+msgid "Welcome to Binary.com Webtrader"
 msgstr "" 
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
