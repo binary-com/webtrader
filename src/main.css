@@ -85,7 +85,7 @@ body > .footer .addiction-warning a:hover {
     color: #FFFFFF;
 }
 .ui-selectmenu-button span.ui-selectmenu-text {
-  padding-top: 0.2em;
+  padding: 0.2em 0.5em 0 0.5em;
 }
 
 div.ui-tooltip { /* override default jquery ui max tooltip width */
@@ -116,6 +116,23 @@ button.ui-button-text-only {
 
 button.ui-button-text-only .ui-menu {
     border-color: #3F476E;
+}
+
+button.ui-button {
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    text-transform: capitalize;
+    padding: 10px 25px;
+    display: inline-block;
+    font-weight: 400;
+    font-family: inherit;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    border: 0;
+    background: #2E8836;
+    color: #FFF;
 }
 
 .ui-menu {
@@ -391,8 +408,9 @@ input[type="number"] {
 }
 
 /* jquery ui selectmenu on options hover*/
-.ui-menu-item.ui-state-focus {
+.ui-menu-item.ui-state-focus, .ui-menu-item-wrapper.ui-state-active {
   background: #1e90ff;
+  border: none;
   color: #fff;
 }
 
