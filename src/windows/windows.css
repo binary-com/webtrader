@@ -68,9 +68,16 @@ img.reload {
     position: relative;
     right: 6px;
 }
+.custom-icon-close {
+    cursor: pointer;
+    background-image: url('../images/close.svg')!important;
+    position: relative;
+    right: 3px;
+}
 
 .webtrader-dialog-widget .ui-dialog-titlebar-close {
    top: 1px !important;
+   background: transparent !important;
 }
 
 .ui-dialog-titlebar-close:hover,
