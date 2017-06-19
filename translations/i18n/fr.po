@@ -8,13 +8,13 @@ msgid "'Asian Rise' - You win when the last tick is higher than the average of t
 msgstr "« Asiatique/hausse » : vous gagnez si le dernier tick est supérieur à la moyenne des ticks"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr "Prix de la « meilleure relation client » décerné par Investors Chronicle"
+msgstr "Prix de la « Meilleure Communication Client » décerné par Investors Chronicle"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
 msgstr "Médaille d'argent du 'Meilleur Broker à Cotes Fixes' par Trade2Win"
 
 msgid "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors Chronicle UK"
-msgstr "Récompense du 'Meilleur Prestataire Financier à Cotes Fixes' de la part du Financial Times and Investors Chronicle UK"
+msgstr "Récompense du 'Meilleur Prestataire Financier à Cotes Fixes' de la part du Financial Times et d'Investors Chronicle UK"
 
 msgid "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr "Récompense du 'Meilleur Prestataire d’Échanges Financiers à Cotes Fixes' par le Shares Magazine UK"
@@ -35,7 +35,7 @@ msgid "'contract period'"
 msgstr "'période contractuelle'"
 
 msgid "(One) Touch trades"
-msgstr "(Une) échanges de Touche"
+msgstr "Trade (Une) Touche"
 
 msgid "(formerly known as"
 msgstr "(précédemment connu comme"
@@ -3347,7 +3347,7 @@ msgid "Variance (VAR)"
 msgstr "Variance (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "Différentes fonctionnalités personnalisables chargement et organisation des actifs, des graphiques et autres ressources comme vous le voulez"
 
 msgid "Verification code has been sent to your email"
 msgstr "Un code de vérification vous a été envoyé par e-mail"
@@ -3407,10 +3407,10 @@ msgid "Websocket Server"
 msgstr "Serveur websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "WebTrader est une plateforme de trading avancée qui est entièrement personnalisable selon vos préférences personnelles"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilise les nouvelles technologies Web pour une expérience de trading riche et agréable"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Moyenne Mobile Pondérée (MMP)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Bienvenue sur Binary.com Webtrader"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Quand vous êtes satisfait du prix du trade, exécutez votre trade immédiatement"
@@ -3446,7 +3446,7 @@ msgid "Will I need to install any software?"
 msgstr "Vais je avoir besoin d'installer un logiciel ?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr "Gagnez 10-1000% sur votre mise si vous êtes correct. Augmentez vos retours gagnants en choisissant 'Reste dans' avec un prix cible étroit"
@@ -3458,7 +3458,7 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr "Gagnez 10-1000% sur votre mise si vous êtes correct. Augmentez vos retours gagnants en choisissant un prix cible plus éloigné par rapport au prix actuel"
 
 msgid "Windows"
-msgstr ""
+msgstr "Fenêtres"
 
 msgid "With Binary.com you can trade"
 msgstr "Avec Binary.com vous pouvez trader"
@@ -3485,7 +3485,7 @@ msgid "X-axis tick"
 msgstr "Tick de l'axe des X"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Ligne de quadrillage de l'axe des Y"
@@ -3563,7 +3563,7 @@ msgid "Your transaction reference number is"
 msgstr "Votre numéro de référence de transaction est le"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "permettre aux clients de développer leurs propres robots de trading automatisés avec la simplicité d'un glisser-déposer"
@@ -3584,7 +3584,7 @@ msgid "below and proceeding with the Account Opening you should note that you ma
 msgstr "ci-dessous et de procéder à l'ouverture du compte, vous devez savoir que vous pourriez vous exposer à des risques (qui peuvent être importants, notamment la perte de toute la somme d'investissement) que vos connaissances et votre expérience ne vous permettent pas forcément d'évaluer ou de réduire efficacement"
 
 msgid "commission"
-msgstr ""
+msgstr "commission"
 
 msgid "contact support"
 msgstr "contacter le service clientèle"
@@ -3632,10 +3632,10 @@ msgid "hours"
 msgstr "heures"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://Developers.Binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "s'il ne s'agit pas de votre pays de résidence"
@@ -3680,16 +3680,16 @@ msgid "medium protection"
 msgstr "protection moyenne"
 
 msgid "minute"
-msgstr ""
+msgstr "minute"
 
 msgid "minutes"
-msgstr ""
+msgstr "minutes"
 
 msgid "next tick"
 msgstr "prochain tick"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "équivalente à « Maintenant », le"
@@ -3701,7 +3701,7 @@ msgid "payment agent"
 msgstr "agent de paiement Binary.com"
 
 msgid "points"
-msgstr ""
+msgstr "points"
 
 msgid "second"
 msgstr "seconde"
@@ -3725,10 +3725,10 @@ msgid "thereafter"
 msgstr "suivant le traitement de l'opération"
 
 msgid "tick"
-msgstr ""
+msgstr "tick"
 
 msgid "ticks"
-msgstr ""
+msgstr "ticks"
 
 msgid "trading experience"
 msgstr "expérience du trading"
@@ -3740,16 +3740,16 @@ msgid "view license"
 msgstr "regarder la licence"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "oui"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr "| Versement"
