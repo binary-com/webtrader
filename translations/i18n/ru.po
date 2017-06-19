@@ -3347,7 +3347,7 @@ msgid "Variance (VAR)"
 msgstr "Вариация (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "Различные настраиваемые функции: загрузка и упорядочивание активов, графиков и других ресурсов"
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
@@ -3410,7 +3410,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader — передовая торговая платформа, которую можно полностью настраивать, согласно Вашим предпочтениям"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader применяет новые веб технологии для приятного и полноценного торгового опыта"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Взвешенная скользящая средняя (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Добро пожаловать на Webtrader от Binary.com"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Если Вы довольны ценой, незамедлительно исполняйте контракт"
