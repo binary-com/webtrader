@@ -449,7 +449,7 @@ msgid "Accessible from any web browser in 13 languages"
 msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
 
 msgid "Account balance"
-msgstr "Saldo"
+msgstr "Saldo akun"
 
 msgid "Account opening reason"
 msgstr "Alasan pedanftaran akun"
@@ -509,7 +509,7 @@ msgid "Amount per point"
 msgstr "Jumlah per poin"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr "Kontrak Ends Between trade akan memberi hasil jika harga akhir pasar pasti lebih tinggi dari harga target rendah DAN pasti lebih rendah dari harga target tinggi. Kontrak Ends Outside akan menghasilkan jika harga akhir pasar ANTARA pasti lebih tinggi dari harga target tinggi ATAU pasti lebih rendah dari harga target rendah"
+msgstr "Kontrak Ends Between akan memberi hasil jika harga akhir pasar pasti lebih tinggi dari harga target rendah DAN pasti lebih rendah dari harga target tinggi. Kontrak Ends Outside akan menghasilkan jika harga akhir pasar ANTARA pasti lebih tinggi dari harga target tinggi ATAU pasti lebih rendah dari harga target rendah"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
 msgstr "Anugerah terbaik lainnya. Kali ini kami dinominasikan oleh pembaca online dari Global Banking and Finance Review dan dinilai oleh panel juri ahli yang mengakui kehandalan, pilihan trading, harga, pelayanan dan pengetahuan kami selama 13 tahun"
