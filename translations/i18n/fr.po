@@ -119,7 +119,7 @@ msgid "- open, fund, or withdraw from your account within minutes, 24 hours a da
 msgstr "- ouvrez, financez ou retirez de votre compte en quelques minutes, 24 heures sur 24"
 
 msgid "- predict if the market will end higher or lower than a price target"
-msgstr "- prédisez si le marché va augmenter ou baisser par rapport au prix cible"
+msgstr "- prédisez si le marché finira en hausse ou en baisse par rapport au prix cible"
 
 msgid "- predict if the market will rise or fall from its current level"
 msgstr "- prédisez si le marché va augmenter ou baisser par rapport à son niveau actuel"
@@ -353,13 +353,13 @@ msgid "8h"
 msgstr "8h"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr "Une Étoile du Soir Doji consiste en une chandelle de longue hausse, suivie par une Doji qui crée une brèche au dessus, puis une troisième chandelle baissière qui se ferme bien à l'intérieur de la première chandelle et en se faisant confirme le retournement. On considère qu'il s'agit d'un schéma de chandelier à fort retournement baissier de prix"
+msgstr "Une Étoile du Soir Doji consiste en une chandelle haussière longue, suivie par une Doji qui crée une brèche au dessus, puis une troisième chandelle baissière qui se ferme bien à l'intérieur de la première chandelle et en se faisant confirme le retournement. On considère qu'il s'agit d'un schéma de chandelier à fort retournement baissier de prix"
 
 msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
 msgstr "Un PEP est un individu qui est ou a été en charge d'une fonction publique importante. Ce statut s'étend à la famille et proches associés du PEP"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
-msgstr "Une moyenne mobile lissée est une sorte de mélange entre une Moyenne Mobile Simple et une Moyenne Mobile Exponentielle, avec seulement une plus longue période appliquée"
+msgstr "Une Moyenne Mobile Lissée est une sorte de mélange entre une Moyenne Mobile Simple et une Moyenne Mobile Exponentielle, avec seulement une plus longue période appliquée"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
 msgstr "Un Chandelier Toupie est un chandelier haussier ou baissier avec un petit corps. La longueur de l'ombre de la tête et de la queue peut varier. Comme un Chandelier Doji elle représente un point d'indécision entre acheteurs et vendeurs de force égale."
