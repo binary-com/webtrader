@@ -812,10 +812,10 @@ msgid "Can be used to withdraw to payment agents, transfer funds between account
 msgstr "Dapat digunakan untuk menarik dana ke agen pembayaran, transfer dana antar akun, dan mengatur/menghapus kata sandi kasir."
 
 msgid "Cancel"
-msgstr "Batalkan"
+msgstr "Batal"
 
 msgid "Candles"
-msgstr "Lilin"
+msgstr "Candle"
 
 msgid "Candlestick down-color"
 msgstr "Warna menurun Candlestick"
@@ -830,7 +830,7 @@ msgid "Candlestick up-line"
 msgstr "Garis naik candlestick"
 
 msgid "Cash Balance"
-msgstr "Saldo"
+msgstr "Saldo Tunai"
 
 msgid "Chande Kroll Stop (CKS)"
 msgstr "Chande Kroll Stop (CKS)"
@@ -857,7 +857,7 @@ msgid "Chart context menu"
 msgstr "Menu konteks grafik"
 
 msgid "Chart template"
-msgstr "Template Grafik"
+msgstr "Template grafik"
 
 msgid "Chart type"
 msgstr "Jenis grafik"
@@ -1043,10 +1043,10 @@ msgid "Custom Theme"
 msgstr "Tema Wajib"
 
 msgid "Daily limit on losses"
-msgstr "Batas harian rugi"
+msgstr "Batas rugi harian"
 
 msgid "Daily turnover limit"
-msgstr "Batas harian beli"
+msgstr "Batas pembelian harian"
 
 msgid "Dark Blue"
 msgstr "Biru Tua"
@@ -1349,7 +1349,7 @@ msgid "Feb"
 msgstr "Feb"
 
 msgid "February"
-msgstr "Februari"
+msgstr "Pebruari"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public"
 msgstr "Sudah lima belas tahun dan kami terus berinovasi, berkembang dan berusaha menyediakan hal terbaru dalam memberikan pelayanan terbaik untuk pelanggan kami. Untuk pertama kalinya kami menawarkan kontrak jangka pendek menyentuh/tidak dan memperkenalkan aplikasi penggrafikan terbaru. Kami yakin bahwa kami memiliki platform trading paling kompetitif dan komprehensif yang tersedia di pasaran"
