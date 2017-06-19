@@ -1668,10 +1668,10 @@ msgid "Invalid JSON file"
 msgstr "無効な JSONファイルです"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "無効なパラメーターです"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "テンプレートの種類が無効です"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "トンカチ"
@@ -2103,7 +2103,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Occupation"
 msgstr "職業"
@@ -2529,7 +2529,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "上昇/下降スリーメソッド（CDLRISEFALL3METHODS）"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "ロバストで安心なプラットフォーム"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2772,10 +2772,10 @@ msgid "Stop-type"
 msgstr "ストップタイプ"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "境界線の色"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "境界線の幅"
 
 msgid "Submit"
 msgstr "送信"
