@@ -480,10 +480,10 @@ msgid "Add indicator"
 msgstr "指標を追加（英語表示のみ）"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "比較の追加/削除"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "指標の追加/削除"
 
 msgid "Add/remove indicators"
 msgstr "指標を追加/削除（英語表示のみ）"
@@ -546,13 +546,13 @@ msgid "April"
 msgstr "4月"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "テンプレートを完全に削除してもよろしいですか？"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "このトークンを完全に削除してもよろしいですか？"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "現在のテンプレートを上書きしてもよろしいですか？"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Moving Average (ALMA)"
@@ -1227,10 +1227,10 @@ msgid "Download as"
 msgstr "ダウンロード"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr ".csvファイルをダウンロード"
 
 msgid "Downloading template as"
-msgstr ""
+msgstr "でテンプレートをダウンロード"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "たくり線（CDLDRAGONFLYDOJI）"
