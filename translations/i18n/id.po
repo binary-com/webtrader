@@ -1271,7 +1271,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Engulfing Pattern (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "Nikmati antarmuka trading intuitif dengan fungsi lanjutan yang memungkinkan Anda untuk memantau semua aset dan pasar favorit Anda pada saat bersamaan, termasuk grafik penting, indeks aset, waktu trading, dan data historis. Yang terpenting, Anda dapat memilih apa yang ingin Anda tampilkan pada layar Anda"
 
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
@@ -1286,7 +1286,7 @@ msgid "Entry spot price"
 msgstr "Harga spot masuk"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Error dalam memperoleh data %1"
 
 msgid "Espa ol"
 msgstr "Espanol"
@@ -1424,7 +1424,7 @@ msgid "From"
 msgstr "Dari"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Antarmuka trading layar penuh"
 
 msgid "Further instructions"
 msgstr "Instruksi lebih lanjut"
@@ -1649,10 +1649,10 @@ msgid "Instruments"
 msgstr "Instrumen"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "File JSON tidak valid"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "Parameter tidak valid"
 
 msgid "Invalid template type"
 msgstr ""
