@@ -459,16 +459,16 @@ msgid "Accept"
 msgstr "承諾"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "どのブラウザからでも13ヶ国語でアクセスが可能"
 
 msgid "Account balance"
 msgstr "口座残高"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "口座開設の理由"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "口座取引数量"
 
 msgid "Action"
 msgstr "売買"
