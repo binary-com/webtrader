@@ -3365,7 +3365,7 @@ msgid "Variance (VAR)"
 msgstr "偏差 (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "カスタマイズ可能な多彩機能　資産、チャート、その他リソースをお好みでロード＆配置ができます"
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -3428,7 +3428,7 @@ msgid "Webtrader"
 msgstr "ウェブトレーダー"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtraderはお好みに合せてカスタマイズできる高度な取引プラットフォームです。"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "ウェブトレーダーは取引経験をより豊かに、より楽しめるものへとする全く新しいウェブテクノロジーを使用しています"
@@ -3446,7 +3446,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "加重移動平均線 (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr " Binary.com Webtrader へようこそ"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "価格に満足したら、すぐにトレードを実行しましょう。"
