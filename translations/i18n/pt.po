@@ -935,7 +935,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "Clique para conectar-se com a sua conta Binary.com"
 
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 msgid "Close all"
 msgstr "Fechar tudo"
@@ -1475,7 +1475,7 @@ msgid "Help"
 msgstr "Ajuda"
 
 msgid "High"
-msgstr ""
+msgstr "Alta"
 
 msgid "High Barrier"
 msgstr "Barreira alta"
@@ -1850,7 +1850,7 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "Procure uma alta vela branca numa tendência de preços altista. A seguir a isso, uma vela preta tem um corpo que registra uma lacuna acima do corpo da vela anterior. O último dia é outra vela preta, mas esta envolve a vela baixista anterior, fechando-se acima da abertura da primeira barra"
 
 msgid "Low"
-msgstr ""
+msgstr "Baixa"
 
 msgid "Low Barrier"
 msgstr "Barreira baixa"
@@ -2819,7 +2819,7 @@ msgid "Tertiary"
 msgstr "Terciário/Superior"
 
 msgid "The"
-msgstr ""
+msgstr "O"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "O Oscilador de Preço Absoluto (OPA) é baseado nas diferenças absolutas entre duas médias móveis de comprimentos diferentes, uma média móvel rápida e outra lenta"
@@ -3332,7 +3332,7 @@ msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
 msgstr "Lacuna de alta/baixa Dois Corvos (CDLUPSIDEGAP2CROWS)"
 
 msgid "Use"
-msgstr ""
+msgstr "Use"
 
 msgid "Use the \"Save as ...\" button to save the chart settings, type, time period, indicators and comparisons"
 msgstr "Use o botão \"Salvar como ...\" para salvar as configurações, o tipo, o período de tempo, os indicadores e as comparações do gráfico"
@@ -3410,7 +3410,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "O WebTrader é uma plataforma de negociação avançada, totalmente personalizável de acordo com as suas preferências pessoais"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utiliza novas tecnologias web para uma experiência de negociação rica e divertida"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Média Móvel Ponderada (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Bem-vindo(a) ao WebTrader da Binary.com"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Quando você estiver satisfeito com o preço de negociação, execute imediatamente a sua negociação"
@@ -3563,7 +3563,7 @@ msgid "Your transaction reference number is"
 msgstr "O número de referência da sua transação é"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "permitindo que clientes desenvolvam os seus próprios robôs de negociação automatizados com a simplicidade do tipo \"arrastar e soltar\""
