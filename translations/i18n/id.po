@@ -53,7 +53,7 @@ msgid "- Binary.com ensures your personal data and transactions are always secur
 msgstr "- Binary.com memastikan data pribadi dan transaksi Anda selalu aman"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
-msgstr "- Binary.com tidak berafiliasi dengan Agen Pembayaran manapun. Setiap Agen Pembayaran beroperasi sendiri dan Binary.com tidak bertanggung jawab atas risiko penggunaannya. PELANGGAN BERURUSAN DENGAN AGEN PEMBAYARAN ATAS RISIKO SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka"
+msgstr "- Binary.com tidak berafiliasi dengan Agen Pembayaran manapun. Setiap Agen Pembayaran beroperasi sendiri dan Binary.com tidak bertanggung jawab atas risiko penggunaannya. PELANGGAN BERURUSAN DENGAN AGEN PEMBAYARAN ATAS RISIKO SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka. Binary.com dalam keadaan apapun tidak bertanggung jawab atas transaksi yang dilakukan antara Pelanggan dan Agen Pembayaran"
 
 msgid "- Binary.com is the industry pioneer and holds patented pricing technology"
 msgstr "- Binary.com adalah pelopor industri dan memegang teknologi harga yang dipatenkan"
@@ -518,7 +518,7 @@ msgid "Answer"
 msgstr "Jawaban"
 
 msgid "Apply"
-msgstr "Menerapkan"
+msgstr "Daftar"
 
 msgid "Apply to become a Binary.com"
 msgstr "Mendaftar sebagai Agen Pembayaran Binary.com"
