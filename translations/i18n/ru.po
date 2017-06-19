@@ -1271,7 +1271,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Фигура поглощение (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "Воспользуйтесь интуитивно-понятным торговым интерфейсом с улучшенными функциями, которые позволят Вам одновременно следить за всеми любимыми активами и рынками, а также просматривать нужные графики, индекс активов, время торговли и исторические данные. Самый важный аспект: Вы можете самостоятельно выбирать, что будет отображено на экране"
 
 msgid "Enter your current password"
 msgstr "Введите текущий пароль"
@@ -1286,7 +1286,7 @@ msgid "Entry spot price"
 msgstr "Спот-котировка на входе"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Ошибка при получении данных для %1"
 
 msgid "Espa ol"
 msgstr "Espanol"
@@ -1343,7 +1343,7 @@ msgid "Favourite dish"
 msgstr "Любимое блюдо"
 
 msgid "Features"
-msgstr ""
+msgstr "Характеристики"
 
 msgid "Feb"
 msgstr "Фев"
@@ -1424,7 +1424,7 @@ msgid "From"
 msgstr "От"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Полноэкранный интерфейс"
 
 msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
@@ -1649,13 +1649,13 @@ msgid "Instruments"
 msgstr "Инструменты"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "Неправильный файл JSON"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "Неправильный параметр(ы)"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "Неправильный тип шаблона"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "Перевернутый молот (CDLINVERTEDHAMMER)"
@@ -2087,7 +2087,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Occupation"
 msgstr "Вид деятельности"
@@ -2513,7 +2513,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Метод трёх поднимающихся/падающих (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Надёжная и безопасная платформа"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2756,16 +2756,16 @@ msgid "Stop-type"
 msgstr "Тип стопа"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Цвет штриха"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Ширина штриха"
 
 msgid "Submit"
 msgstr "Подтвердить"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Шаблон успешно применён и сохранён как"
 
 msgid "Summation (SUM)"
 msgstr "Суммирование (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "Тел"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Изменения сохранены"
 
 msgid "Template name"
 msgstr "Название шаблона"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Данное имя уже существует"
 
 msgid "Terms"
 msgstr "Условия"
