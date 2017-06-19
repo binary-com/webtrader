@@ -2756,16 +2756,16 @@ msgid "Stop-type"
 msgstr "停止类型"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "笔画颜色"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "笔画宽度"
 
 msgid "Submit"
 msgstr "提交"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "模板已应用成功并保存为"
 
 msgid "Summation (SUM)"
 msgstr "合计 (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "电话"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "模板更改已保存"
 
 msgid "Template name"
 msgstr "模板名称"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "模板名称已存在"
 
 msgid "Terms"
 msgstr "条款"
@@ -3347,7 +3347,7 @@ msgid "Variance (VAR)"
 msgstr "差异 (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "随意设置各种可定制功能加载和安排资产、图表和其他资源"
 
 msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
@@ -3410,7 +3410,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader是先进的交易平台，完全根据个人喜好定制"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader采用新型网络技术为您提供丰富且充满乐趣的交易体验"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "加权移动平均指标 (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "欢迎来到 Binary.com Webtrader"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "一旦您对交易价格感到满意，即可立刻执行交易"
