@@ -2759,13 +2759,13 @@ msgid "Stroke color"
 msgstr "Cor do traço"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Largura do traço"
 
 msgid "Submit"
 msgstr "Enviar"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Modelo aplicado com sucesso e salvo como"
 
 msgid "Summation (SUM)"
 msgstr "Somatório (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Alterações ao modelo salvas"
 
 msgid "Template name"
 msgstr "Nome do modelo"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Esse nome de modelo já existe"
 
 msgid "Terms"
 msgstr "Termos"
@@ -3347,7 +3347,7 @@ msgid "Variance (VAR)"
 msgstr "Variância (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "Vários recursos personalizáveis. Carregue e organize ativos, gráficos e outros recursos, da forma que pretenda"
 
 msgid "Verification code has been sent to your email"
 msgstr "O código de verificação foi enviado para o seu e-mail"
