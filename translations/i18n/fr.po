@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "« Asiatique/baisse » : vous gagnez si le dernier tick est inférieur à la moyenne des ticks"
@@ -8,13 +8,13 @@ msgid "'Asian Rise' - You win when the last tick is higher than the average of t
 msgstr "« Asiatique/hausse » : vous gagnez si le dernier tick est supérieur à la moyenne des ticks"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr "Prix de la « meilleure relation client » décerné par Investors Chronicle"
+msgstr "Prix de la « Meilleure Communication Client » décerné par Investors Chronicle"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
 msgstr "Médaille d'argent du 'Meilleur Broker à Cotes Fixes' par Trade2Win"
 
 msgid "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors Chronicle UK"
-msgstr "Récompense du 'Meilleur Prestataire Financier à Cotes Fixes' de la part du Financial Times and Investors Chronicle UK"
+msgstr "Récompense du 'Meilleur Prestataire Financier à Cotes Fixes' de la part du Financial Times et d'Investors Chronicle UK"
 
 msgid "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr "Récompense du 'Meilleur Prestataire d’Échanges Financiers à Cotes Fixes' par le Shares Magazine UK"
@@ -35,7 +35,7 @@ msgid "'contract period'"
 msgstr "'période contractuelle'"
 
 msgid "(One) Touch trades"
-msgstr "(Une) échanges de Touche"
+msgstr "Trade (Une) Touche"
 
 msgid "(formerly known as"
 msgstr "(précédemment connu comme"
@@ -119,7 +119,7 @@ msgid "- open, fund, or withdraw from your account within minutes, 24 hours a da
 msgstr "- ouvrez, financez ou retirez de votre compte en quelques minutes, 24 heures sur 24"
 
 msgid "- predict if the market will end higher or lower than a price target"
-msgstr "- prédisez si le marché va augmenter ou baisser par rapport au prix cible"
+msgstr "- prédisez si le marché finira en hausse ou en baisse par rapport au prix cible"
 
 msgid "- predict if the market will rise or fall from its current level"
 msgstr "- prédisez si le marché va augmenter ou baisser par rapport à son niveau actuel"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transaction(s) au cours des 12 derniers mois"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 jour"
@@ -206,40 +206,40 @@ msgid "1-2 years"
 msgstr "1-2 ans"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 minutes"
 
 msgid "10m"
-msgstr ""
+msgstr "10m"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 minutes"
 
 msgid "15m"
-msgstr ""
+msgstr "15m"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1j"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1m"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 heures"
@@ -251,52 +251,52 @@ msgid "2-way pricing"
 msgstr "fixation des prix bidirectionnelle"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
-msgstr ""
+msgstr "2h"
 
 msgid "2m"
-msgstr ""
+msgstr "2m"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 minutes"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 minutes"
@@ -308,13 +308,13 @@ msgid "30-day turnover limit"
 msgstr "Limite du volume des transactions sur 30 jours"
 
 msgid "30m"
-msgstr ""
+msgstr "30m"
 
 msgid "3m"
-msgstr ""
+msgstr "3m"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 heures"
@@ -323,16 +323,16 @@ msgid "40 transactions or more in the past 12 months"
 msgstr "40 transactions ou plus au cours des 12 derniers mois"
 
 msgid "4h"
-msgstr ""
+msgstr "4h"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 minutes"
 
 msgid "5m"
-msgstr ""
+msgstr "5m"
 
 msgid "6-10 transactions in the past 12 months"
 msgstr "6-10 transactions au cours des 12 derniers mois"
@@ -344,22 +344,22 @@ msgid "7-day turnover limit"
 msgstr "Limite du volume des transactions sur 7 jours"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 heures"
 
 msgid "8h"
-msgstr ""
+msgstr "8h"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr "Une Étoile du Soir Doji consiste en une chandelle de longue hausse, suivie par une Doji qui crée une brèche au dessus, puis une troisième chandelle baissière qui se ferme bien à l'intérieur de la première chandelle et en se faisant confirme le retournement. On considère qu'il s'agit d'un schéma de chandelier à fort retournement baissier de prix"
+msgstr "Une Étoile du Soir Doji consiste en une chandelle haussière longue, suivie par une Doji qui crée une brèche au dessus, puis une troisième chandelle baissière qui se ferme bien à l'intérieur de la première chandelle et en se faisant confirme le retournement. On considère qu'il s'agit d'un schéma de chandelier à fort retournement baissier de prix"
 
 msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
 msgstr "Un PEP est un individu qui est ou a été en charge d'une fonction publique importante. Ce statut s'étend à la famille et proches associés du PEP"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
-msgstr "Une moyenne mobile lissée est une sorte de mélange entre une Moyenne Mobile Simple et une Moyenne Mobile Exponentielle, avec seulement une plus longue période appliquée"
+msgstr "Une Moyenne Mobile Lissée est une sorte de mélange entre une Moyenne Mobile Simple et une Moyenne Mobile Exponentielle, avec seulement une plus longue période appliquée"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
 msgstr "Un Chandelier Toupie est un chandelier haussier ou baissier avec un petit corps. La longueur de l'ombre de la tête et de la queue peut varier. Comme un Chandelier Doji elle représente un point d'indécision entre acheteurs et vendeurs de force égale."
@@ -446,19 +446,19 @@ msgid "Accept"
 msgstr "Accepter"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accessible depuis n’importe quel navigateur web en 13 langues"
 
 msgid "Account balance"
 msgstr "Solde du compte"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "Motif d’ouverture de compte"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Chiffre d’affaires du compte"
 
 msgid "Action"
-msgstr ""
+msgstr "Action"
 
 msgid "Add comparisons"
 msgstr "Ajouter des comparaisons"
@@ -467,16 +467,16 @@ msgid "Add indicator"
 msgstr "Ajouter un indicateur"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "Ajouter/supprimer des comparaisons"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "Ajouter/supprimer des indicateurs"
 
 msgid "Add/remove indicators"
 msgstr "Ajouter/supprimer des indicateurs"
 
 msgid "Admin"
-msgstr ""
+msgstr "Administration"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr "Bloque avancé (CDLADVANCEBLOCK)"
@@ -533,19 +533,19 @@ msgid "April"
 msgstr "avril"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir supprimer le modèle ?"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Voulez-vous vraiment supprimer ce jeton ?"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "Êtes-vous sûr de que vouloir remplacer le modèle actuel ?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Moyenne Mobile (ALMM)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscillateur Aroon (AROONOSC)"
@@ -608,10 +608,10 @@ msgid "Barrier(s)"
 msgstr "Barrière(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Baissière : Il s’agit d’un modèle de fin de tendance composé de trois chandeliers dans une tendance haussière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier devrait être court et peut former un fossé haussier. Il pourrait aussi y avoir une ombre de vente. Le modèle représente une faiblesse dans une montée avec un risque de consolidation et inversion possible. Haussière : Il s’agit d’un modèle de fin-de-tendance composé de trois chandeliers dans une tendance baissière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. le dernier chandelier doit être étayé. Le modèle représente une faiblesse, une consolidation et un possible renversement de tendance"
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Ceinture-cale (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr "Prix de référence"
@@ -638,10 +638,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com atteint 1 milliard de dollars de chiffre d'affaire depuis le début en 1999"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr "Binary Bot est mise en opération"
@@ -692,10 +692,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr "La plateforme Binary traite en moyenne 15 transactions par seconde, 24 heures sur 24, 7 jours sur 7"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com Shop introduced"
 msgstr "Le magasin Binary.com est introduit"
@@ -2591,7 +2591,7 @@ msgid "September"
 msgstr "septembre"
 
 msgid "Session"
-msgstr ""
+msgstr "Session"
 
 msgid "Session duration limit, in minutes"
 msgstr "Limite de durée de session, en minutes"
@@ -2639,13 +2639,13 @@ msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Toupie (CDLSPINNINGTOP)"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spot price"
 msgstr "Prix spot"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Spreads"
 
 msgid "Spreads down"
 msgstr "Spread baissier"
@@ -2765,7 +2765,7 @@ msgid "Submit"
 msgstr "Envoyer"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Le modèle a été correctement appliqué et enregistré comme"
 
 msgid "Summation (SUM)"
 msgstr "Addition (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "Tél."
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Modifications apportées au modèle enregistrées"
 
 msgid "Template name"
 msgstr "Nom du modèle"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Le nom du modèle existe déjà"
 
 msgid "Terms"
 msgstr "Conditions"
@@ -3110,16 +3110,16 @@ msgid "Thursday"
 msgstr "Jeudi"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Trade app"
 msgstr "Application Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Tick {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Ticks"
 
 msgid "Tile"
 msgstr "Titre"
@@ -3275,10 +3275,10 @@ msgid "Typical Price (TYPPRICE)"
 msgstr "Prix Typique (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
 msgstr "Oscillateur Ultime (ULTOSC)"
@@ -3344,10 +3344,10 @@ msgid "Using our website, customers can trade currencies, indices, stocks and co
 msgstr "En utilisant notre site internet, nos clients peuvent trader des monnaies, indices, actions et matières premières 24 heures sur 24. Nous avons le plus flexible système de fixation des prix et la plus complète offre de produits disponibles"
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Variance (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "Différentes fonctionnalités personnalisables chargement et organisation des actifs, des graphiques et autres ressources comme vous le voulez"
 
 msgid "Verification code has been sent to your email"
 msgstr "Un code de vérification vous a été envoyé par e-mail"
@@ -3407,10 +3407,10 @@ msgid "Websocket Server"
 msgstr "Serveur websocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "WebTrader est une plateforme de trading avancée qui est entièrement personnalisable selon vos préférences personnelles"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilise les nouvelles technologies Web pour une expérience de trading riche et agréable"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Moyenne Mobile Pondérée (MMP)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Bienvenue sur Binary.com Webtrader"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Quand vous êtes satisfait du prix du trade, exécutez votre trade immédiatement"
@@ -3446,7 +3446,7 @@ msgid "Will I need to install any software?"
 msgstr "Vais je avoir besoin d'installer un logiciel ?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr "Gagnez 10-1000% sur votre mise si vous êtes correct. Augmentez vos retours gagnants en choisissant 'Reste dans' avec un prix cible étroit"
@@ -3458,7 +3458,7 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr "Gagnez 10-1000% sur votre mise si vous êtes correct. Augmentez vos retours gagnants en choisissant un prix cible plus éloigné par rapport au prix actuel"
 
 msgid "Windows"
-msgstr ""
+msgstr "Fenêtres"
 
 msgid "With Binary.com you can trade"
 msgstr "Avec Binary.com vous pouvez trader"
@@ -3485,7 +3485,7 @@ msgid "X-axis tick"
 msgstr "Tick de l'axe des X"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Ligne de quadrillage de l'axe des Y"
@@ -3563,7 +3563,7 @@ msgid "Your transaction reference number is"
 msgstr "Votre numéro de référence de transaction est le"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "permettre aux clients de développer leurs propres robots de trading automatisés avec la simplicité d'un glisser-déposer"
@@ -3584,7 +3584,7 @@ msgid "below and proceeding with the Account Opening you should note that you ma
 msgstr "ci-dessous et de procéder à l'ouverture du compte, vous devez savoir que vous pourriez vous exposer à des risques (qui peuvent être importants, notamment la perte de toute la somme d'investissement) que vos connaissances et votre expérience ne vous permettent pas forcément d'évaluer ou de réduire efficacement"
 
 msgid "commission"
-msgstr ""
+msgstr "commission"
 
 msgid "contact support"
 msgstr "contacter le service clientèle"
@@ -3632,10 +3632,10 @@ msgid "hours"
 msgstr "heures"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://Developers.Binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "s'il ne s'agit pas de votre pays de résidence"
@@ -3680,16 +3680,16 @@ msgid "medium protection"
 msgstr "protection moyenne"
 
 msgid "minute"
-msgstr ""
+msgstr "minute"
 
 msgid "minutes"
-msgstr ""
+msgstr "minutes"
 
 msgid "next tick"
 msgstr "prochain tick"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "équivalente à « Maintenant », le"
@@ -3701,7 +3701,7 @@ msgid "payment agent"
 msgstr "agent de paiement Binary.com"
 
 msgid "points"
-msgstr ""
+msgstr "points"
 
 msgid "second"
 msgstr "seconde"
@@ -3725,10 +3725,10 @@ msgid "thereafter"
 msgstr "suivant le traitement de l'opération"
 
 msgid "tick"
-msgstr ""
+msgstr "tick"
 
 msgid "ticks"
-msgstr ""
+msgstr "ticks"
 
 msgid "trading experience"
 msgstr "expérience du trading"
@@ -3740,16 +3740,16 @@ msgid "view license"
 msgstr "regarder la licence"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "oui"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr "| Versement"
