@@ -2639,13 +2639,13 @@ msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Toupie (CDLSPINNINGTOP)"
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spot price"
 msgstr "Prix spot"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Spreads"
 
 msgid "Spreads down"
 msgstr "Spread baissier"
@@ -2765,7 +2765,7 @@ msgid "Submit"
 msgstr "Envoyer"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Le modèle a été correctement appliqué et enregistré comme"
 
 msgid "Summation (SUM)"
 msgstr "Addition (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "Tél."
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Modifications apportées au modèle enregistrées"
 
 msgid "Template name"
 msgstr "Nom du modèle"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Le nom du modèle existe déjà"
 
 msgid "Terms"
 msgstr "Conditions"
@@ -3110,16 +3110,16 @@ msgid "Thursday"
 msgstr "Jeudi"
 
 msgid "Tick"
-msgstr ""
+msgstr "Tick"
 
 msgid "Tick Trade app"
 msgstr "Application Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Tick {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Ticks"
 
 msgid "Tile"
 msgstr "Titre"
@@ -3275,10 +3275,10 @@ msgid "Typical Price (TYPPRICE)"
 msgstr "Prix Typique (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
 msgstr "Oscillateur Ultime (ULTOSC)"
@@ -3344,7 +3344,7 @@ msgid "Using our website, customers can trade currencies, indices, stocks and co
 msgstr "En utilisant notre site internet, nos clients peuvent trader des monnaies, indices, actions et matières premières 24 heures sur 24. Nous avons le plus flexible système de fixation des prix et la plus complète offre de produits disponibles"
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Variance (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
 msgstr ""
