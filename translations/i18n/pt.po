@@ -539,7 +539,7 @@ msgid "Are you sure you want to delete this token?"
 msgstr "Tem certeza que deseja excluir este token?"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "Tem certeza que deseja substituir o modelo atual?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Média Móvel Arnaud Legoux (ALMA)"
@@ -1211,10 +1211,10 @@ msgid "Download as"
 msgstr "Baixar como"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Baixando .csv"
 
 msgid "Downloading template as"
-msgstr ""
+msgstr "Baixando modelo como"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "Doji libélula (CDLDRAGONFLYDOJI)"
