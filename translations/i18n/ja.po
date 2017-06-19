@@ -1287,7 +1287,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "つつみ線（CDLENGULFING）"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "基本チャート、資産インデックス、取引時間や取引履歴データ同様、お気に入りの資産や市場を全て同時に監視することができる高度な機能を兼ね備えた直感的取引インターフェースをお楽しみください。一番のポイントは、ご自身のスクリーンにご希望のものを表示できる点です。"
 
 msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
@@ -1302,7 +1302,7 @@ msgid "Entry spot price"
 msgstr "取引時レート"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "%1のデータ取得中にエラーが発生しました"
 
 msgid "Espa ol"
 msgstr "スペイン語"
@@ -1359,7 +1359,7 @@ msgid "Favourite dish"
 msgstr "好きな料理"
 
 msgid "Features"
-msgstr ""
+msgstr "機能"
 
 msgid "Feb"
 msgstr "2月"
@@ -1440,7 +1440,7 @@ msgid "From"
 msgstr "開始"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "全画面取引インターフェース"
 
 msgid "Further instructions"
 msgstr "詳細説明"
@@ -1665,7 +1665,7 @@ msgid "Instruments"
 msgstr "商品"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "無効な JSONファイルです"
 
 msgid "Invalid parameter(s)"
 msgstr ""
