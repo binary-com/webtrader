@@ -446,16 +446,16 @@ msgid "Accept"
 msgstr "Aceitar"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Acessível a partir de qualquer navegador web em 13 línguas"
 
 msgid "Account balance"
 msgstr "Saldo da conta"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "Motivo de abertura de conta"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Volume de negócios da conta"
 
 msgid "Action"
 msgstr "Ação"
@@ -467,10 +467,10 @@ msgid "Add indicator"
 msgstr "Adicionar indicador"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "Adicionar/Remover comparações"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "Adicionar/Remover indicadores"
 
 msgid "Add/remove indicators"
 msgstr "Adicionar/remover indicadores"
@@ -533,7 +533,7 @@ msgid "April"
 msgstr "Abril"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "Tem certeza que deseja excluir este modelo?"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Tem certeza que deseja excluir este token?"
