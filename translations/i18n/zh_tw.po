@@ -1271,7 +1271,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "吞沒形態 (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "利用擁有先進功能的直觀交易介面，讓您同時監視所有的最愛資產和市場，以及必要的圖表、資產指數、交易時間和歷史資料。最重要的是，您可以選擇想要看到的螢幕畫面"
 
 msgid "Enter your current password"
 msgstr "輸入目前密碼"
@@ -1286,7 +1286,7 @@ msgid "Entry spot price"
 msgstr "入市現價"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "獲取%1資料時出錯"
 
 msgid "Espa ol"
 msgstr "西班牙文"
@@ -1343,7 +1343,7 @@ msgid "Favourite dish"
 msgstr "最愛的菜餚"
 
 msgid "Features"
-msgstr ""
+msgstr "功能"
 
 msgid "Feb"
 msgstr "二月"
@@ -1424,7 +1424,7 @@ msgid "From"
 msgstr "從"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "全螢幕交易介面"
 
 msgid "Further instructions"
 msgstr "詳細說明"
@@ -1649,13 +1649,13 @@ msgid "Instruments"
 msgstr "工具"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "無效的JSON檔"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "無效參數"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "無效範本類型"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "倒鎚 (CDLINVERTEDHAMMER)"
@@ -2087,7 +2087,7 @@ msgid "OHLC"
 msgstr "OHLC條形圖"
 
 msgid "OK"
-msgstr ""
+msgstr "確定"
 
 msgid "Occupation"
 msgstr "職業"
@@ -2513,7 +2513,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "上漲/下跌三法 (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "穩健和安全的平台"
 
 msgid "SVG"
 msgstr "聖文森特和格林納丁斯"
@@ -2756,10 +2756,10 @@ msgid "Stop-type"
 msgstr "停止類型"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "筆畫色彩"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "筆畫寬度"
 
 msgid "Submit"
 msgstr "提交"
