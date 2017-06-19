@@ -1271,7 +1271,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Padrão Engolfo (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "Desfrute de uma interface intuitiva de negociação com funcionalidades avançadas que lhe permitem monitorar todos os seus ativos e mercados favoritos ao mesmo tempo, bem como gráficos essenciais, o índice de ativos, horas de negociação e dados históricos. Mais importante ainda, é possível escolher o que deseja ver na tela"
 
 msgid "Enter your current password"
 msgstr "Insira a sua senha atual"
@@ -1286,7 +1286,7 @@ msgid "Entry spot price"
 msgstr "Preço à vista de entrada"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Erro ao obter dados para %1"
 
 msgid "Espa ol"
 msgstr "Espanhol"
@@ -1343,7 +1343,7 @@ msgid "Favourite dish"
 msgstr "Prato favorito"
 
 msgid "Features"
-msgstr ""
+msgstr "Recursos"
 
 msgid "Feb"
 msgstr "Fev"
@@ -1424,7 +1424,7 @@ msgid "From"
 msgstr "De"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Interface de negociação de tela inteira"
 
 msgid "Further instructions"
 msgstr "Instruções adicionais"
@@ -1649,13 +1649,13 @@ msgid "Instruments"
 msgstr "Instrumento"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "Arquivo JSON inválido"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "Parâmetro(s) inválido(s)"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "Tipo de modelo inválido"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "Martelo invertido (CDLHAMMER)"
@@ -2087,7 +2087,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Occupation"
 msgstr "Emprego"
@@ -2513,7 +2513,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Três métodos de alta/baixa (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Plataforma robusta e segura"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2756,7 +2756,7 @@ msgid "Stop-type"
 msgstr "Tipo de limite"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Cor do traço"
 
 msgid "Stroke width"
 msgstr ""
