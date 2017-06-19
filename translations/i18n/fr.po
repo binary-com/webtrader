@@ -1,5 +1,5 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr "« Asiatique/baisse » : vous gagnez si le dernier tick est inférieur à la moyenne des ticks"
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transaction(s) au cours des 12 derniers mois"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 jour"
@@ -206,40 +206,40 @@ msgid "1-2 years"
 msgstr "1-2 ans"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 minutes"
 
 msgid "10m"
-msgstr ""
+msgstr "10m"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 minutes"
 
 msgid "15m"
-msgstr ""
+msgstr "15m"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
 msgstr "1j"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1m"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 heures"
@@ -251,52 +251,52 @@ msgid "2-way pricing"
 msgstr "fixation des prix bidirectionnelle"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
-msgstr ""
+msgstr "2h"
 
 msgid "2m"
-msgstr ""
+msgstr "2m"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 minutes"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 minutes"
@@ -308,13 +308,13 @@ msgid "30-day turnover limit"
 msgstr "Limite du volume des transactions sur 30 jours"
 
 msgid "30m"
-msgstr ""
+msgstr "30m"
 
 msgid "3m"
-msgstr ""
+msgstr "3m"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 heures"
@@ -323,16 +323,16 @@ msgid "40 transactions or more in the past 12 months"
 msgstr "40 transactions ou plus au cours des 12 derniers mois"
 
 msgid "4h"
-msgstr ""
+msgstr "4h"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 minutes"
 
 msgid "5m"
-msgstr ""
+msgstr "5m"
 
 msgid "6-10 transactions in the past 12 months"
 msgstr "6-10 transactions au cours des 12 derniers mois"
@@ -344,13 +344,13 @@ msgid "7-day turnover limit"
 msgstr "Limite du volume des transactions sur 7 jours"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 heures"
 
 msgid "8h"
-msgstr ""
+msgstr "8h"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Une Étoile du Soir Doji consiste en une chandelle de longue hausse, suivie par une Doji qui crée une brèche au dessus, puis une troisième chandelle baissière qui se ferme bien à l'intérieur de la première chandelle et en se faisant confirme le retournement. On considère qu'il s'agit d'un schéma de chandelier à fort retournement baissier de prix"
@@ -446,16 +446,16 @@ msgid "Accept"
 msgstr "Accepter"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accessible depuis n’importe quel navigateur web en 13 langues"
 
 msgid "Account balance"
 msgstr "Solde du compte"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "Motif d’ouverture de compte"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Chiffre d’affaires du compte"
 
 msgid "Action"
 msgstr ""
