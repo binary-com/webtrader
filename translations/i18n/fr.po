@@ -158,7 +158,7 @@ msgid "- trade all major worldwide stock indices"
 msgstr "- tradez tous les indices actions du monde"
 
 msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
-msgstr "- les monnaies d'échange, les indices et matières premières dans des marchés à la hausse, à la baisse, latéraux, calmes et volatiles"
+msgstr "- les monnaies d'échange, les indices et matières premières dans des marchés à la hausse, à la baisse, sans direction, calmes et volatiles"
 
 msgid "- trade major commodities such as gold and oil"
 msgstr "- tradez les matières premières principales comme l'or ou le pétrole"
@@ -188,16 +188,16 @@ msgid "1"
 msgstr "1"
 
 msgid "1 Day"
-msgstr "1 jour"
+msgstr "1 Jour"
 
 msgid "1 Hour"
-msgstr "1 heure"
+msgstr "1 Heure"
 
 msgid "1 Minute"
-msgstr "1 minute"
+msgstr "1 Minute"
 
 msgid "1 Tick"
-msgstr "1 tick"
+msgstr "1 Tick"
 
 msgid "1 million transactions/day"
 msgstr "1 million de transactions par jour"
@@ -209,7 +209,7 @@ msgid "10"
 msgstr "10"
 
 msgid "10 Minutes"
-msgstr "10 minutes"
+msgstr "10 Minutes"
 
 msgid "10m"
 msgstr "10m"
@@ -218,7 +218,7 @@ msgid "15"
 msgstr "15"
 
 msgid "15 Minutes"
-msgstr "15 minutes"
+msgstr "15 Minutes"
 
 msgid "15m"
 msgstr "15m"
@@ -242,10 +242,10 @@ msgid "2"
 msgstr "2"
 
 msgid "2 Hours"
-msgstr "2 heures"
+msgstr "2 Heures"
 
 msgid "2 Minutes"
-msgstr "2 minutes"
+msgstr "2 Minutes"
 
 msgid "2-way pricing"
 msgstr "fixation des prix bidirectionnelle"
@@ -293,7 +293,7 @@ msgid "3"
 msgstr "3"
 
 msgid "3 Minutes"
-msgstr "3 minutes"
+msgstr "3 Minutes"
 
 msgid "30"
 msgstr "30"
@@ -521,7 +521,7 @@ msgid "Apply"
 msgstr "Appliquer"
 
 msgid "Apply to become a Binary.com"
-msgstr "Postulez pour devenir"
+msgstr "Postuler pour devenir un contributeur Binary.com"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Test de pertinence : AVERTISSEMENT"
