@@ -1649,13 +1649,13 @@ msgid "Instruments"
 msgstr "Instruments"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "Fichier JSON non valide"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "Paramètre(s) non valide(s)"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "Type de modèle non valide"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "Marteau Inversé (CDLINVERTEDHAMMER)"
@@ -1835,7 +1835,7 @@ msgid "Long Line Candle (CDLLONGLINE)"
 msgstr "Bougie de Longue Ligne (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
-msgstr ""
+msgstr "Doji à longues jambes ont de longues ombres supérieures et inférieures qui sont presque égales en longueur. Ces doji reflètent une grande quantité d’indécision sur le marché. Doji à longues pattes indiquent que les prix ont été négociés bien au-dessus et en dessous du niveau d’ouverture de la session, mais ont clôturés pratiquement au même niveau qu'à l'ouverture. Après beaucoup de mouvements, le résultat final a montré peu de changement par rapport à l’ouverture initiale"
 
 msgid "Long-term action"
 msgstr "L'action de long terme"
