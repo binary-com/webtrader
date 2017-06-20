@@ -2756,16 +2756,16 @@ msgid "Stop-type"
 msgstr "Stop-Art"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Konturfarbe"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Strichstärke"
 
 msgid "Submit"
 msgstr "Absenden"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Die Vorlage ist erfolgreich angewendet und wird gespeichert als"
 
 msgid "Summation (SUM)"
 msgstr "Summierung (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Vorlageänderungen gespeichert"
 
 msgid "Template name"
 msgstr "Vorlagenname"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Der Vorlagenname existiert bereits"
 
 msgid "Terms"
 msgstr "Bedingungen"
@@ -3347,7 +3347,7 @@ msgid "Variance (VAR)"
 msgstr "Varianz (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "Verschiedene anpassbare Funktionen; laden Sie und arrangieren Sie Anlagen, Diagramme und andere Rohstoffe, wie Sie es Ihnen gefällt"
 
 msgid "Verification code has been sent to your email"
 msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-mail verschickt wurde, ein"
@@ -3410,7 +3410,7 @@ msgid "Webtrader"
 msgstr "Web trader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader ist eine fortschrittliche Handelsplattform, die ganz individuell Ihren persönlichen Vorlieben angepasst werden kann"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader verwendet neue Webtechnologien für eine reiche und angenehme Handelserfahrung"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Gewichteter Gleitender Durchschnitt (Weighted Moving Average - WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Willkommen bei Binary.com Webtrader"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Wenn Sie mit dem Verkaufskurs zufrieden sind, führen Sie das Geschäft umgehend aus"
