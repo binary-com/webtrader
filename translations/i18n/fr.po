@@ -776,7 +776,7 @@ msgid "Brand of first car"
 msgstr "Marque de votre première voiture"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr "Mise à niveau du navigateur requise"
@@ -797,7 +797,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "En cliquant sur OK, vous confirmez que vous avez lu et accepté la version à jour des"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Peut être utilisé pour acheter et vendre des contrats, renouveler des achats expirés, et abonder des comptes en monnaie virtuelle."
@@ -833,7 +833,7 @@ msgid "Cash Balance"
 msgstr "Solde financier"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "Oscillateur Momentum Chande (OMC)"
@@ -926,7 +926,7 @@ msgid "Choppiness Index (CHOP)"
 msgstr "Indice de volatilité (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click Jacking test"
 msgstr "Test de Click Jacking"
@@ -965,13 +965,13 @@ msgid "Comparisons"
 msgstr "Comparaisons"
 
 msgid "Conditions"
-msgstr ""
+msgstr "Conditions"
 
 msgid "Confirm transfer"
 msgstr "Confirmer le virement"
 
 msgid "Construction"
-msgstr ""
+msgstr "Construction"
 
 msgid "Contact Us"
 msgstr "Contactez-nous"
@@ -1061,10 +1061,10 @@ msgid "Dark Green"
 msgstr "Vert foncé"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica"
 
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 msgid "Date of birth"
 msgstr "Date de naissance"
@@ -1115,7 +1115,7 @@ msgid "Describe what this token is for to find it later"
 msgstr "Décrivez l'utilité de ce jeton pour le retrouver plus tard"
 
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 msgid "Deutsch"
 msgstr "Allemand"
@@ -1154,7 +1154,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Souhaitez-vous installer l'extension Webtrader pour Chrome ?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
 msgstr "Étoile Doji (CDLDOJISTAR)"
@@ -1211,10 +1211,10 @@ msgid "Download as"
 msgstr "Télécharger au format"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Téléchargement de .csv"
 
 msgid "Downloading template as"
-msgstr ""
+msgstr "Téléchargement de modèle comme"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "Doji libellule (CDLDRAGONFLYDOJI)"
@@ -1232,7 +1232,7 @@ msgid "EGR Operator Award"
 msgstr "Récompense de l'Opérateur EGR"
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Chaque option binaire est une prédiction du mouvement futur du marché sous-jacent"
@@ -1241,7 +1241,7 @@ msgid "Each binary trade is for a pre-determined payout amount. You win the payo
 msgstr "Chaque trade binaire est pour un montant de versement pré-déterminé. Vous gagnez le versement si votre prédiction est correcte"
 
 msgid "Edge"
-msgstr ""
+msgstr "Bord"
 
 msgid "Education"
 msgstr "Formation"
@@ -1271,7 +1271,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Schéma d'Engouffrement (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "Profitez d’une interface de trading intuitive avec des fonctionnalités avancées qui vous permet de contrôler tout vos actifs et marchés en même temps, ainsi que les graphiques essentiels, l’index des actifs, les temps de trading, et les données historiques. Plus important encore, vous pouvez choisir ce que vous voulez voir sur votre écran"
 
 msgid "Enter your current password"
 msgstr "Saisissez votre mot de passe actuel"
@@ -1286,10 +1286,10 @@ msgid "Entry spot price"
 msgstr "Prix spot d'entrée"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Erreur d’obtention de données pour %1"
 
 msgid "Espa ol"
-msgstr ""
+msgstr "Espagnol"
 
 msgid "Estimated Net Worth"
 msgstr "Valeur nette estimée"
@@ -1343,7 +1343,7 @@ msgid "Favourite dish"
 msgstr "Plat préféré"
 
 msgid "Features"
-msgstr ""
+msgstr "Caractéristiques"
 
 msgid "Feb"
 msgstr "févr."
@@ -1361,7 +1361,7 @@ msgid "Final price"
 msgstr "Prix final"
 
 msgid "Finance"
-msgstr ""
+msgstr "Finance"
 
 msgid "Financial Information"
 msgstr "Information Financière"
@@ -1376,7 +1376,7 @@ msgid "Financial rewards"
 msgstr "Récompense financière"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
 msgstr "La première ligne de l'adresse du domicile"
@@ -1394,7 +1394,7 @@ msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds F
 msgstr "Pour la troisième année consécutive, BetOnMarkets.com est désigné 'Meilleur Fournisseur Financier à Cotes Fixes' par Shares Magazine UK. C'est la dernière fois que nous gagnons car Share Magazine arrête la récompense de cette catégorie"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Expérience du trading sur le Forex"
@@ -1424,13 +1424,13 @@ msgid "From"
 msgstr "De"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Interface de trading plein écran"
 
 msgid "Further instructions"
 msgstr "Instructions supplémentaires"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT veut dire Temps Moyen de Greenwich, le temps officiel utilisé dans le Royaume-Uni durant l'hiver. Durant l'été, le Royaume-Uni passe au Temps Estivale Britannique, qui est GMT+ 1 heure. Toutes les heures sur le site de Binary.com utilise GMT durant l'ensemble de l'année"
@@ -1619,7 +1619,7 @@ msgid "Indicators"
 msgstr "Indicateurs"
 
 msgid "Indices"
-msgstr ""
+msgstr "Indices"
 
 msgid "Indices trading experience"
 msgstr "Expérience du trading sur indices"
@@ -1643,10 +1643,10 @@ msgid "Instant funding"
 msgstr "Financement instantané"
 
 msgid "Instrument"
-msgstr ""
+msgstr "Instrument"
 
 msgid "Instruments"
-msgstr ""
+msgstr "Instruments"
 
 msgid "Invalid JSON file"
 msgstr ""
