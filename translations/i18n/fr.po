@@ -1847,7 +1847,7 @@ msgid "Look for a tall black candle with a long lower shadow to appear in a down
 msgstr "Cherchez une haute bougie noire avec une longue ombre inférieure pour apparaître dans une tendance de prix baissier. Le second jour devrait être similaire au premier jour, mais plus petit avec un plus bas plus haut. Le dernier jour est un marubozu noir qui s'insérera à l'intérieur de la gamme haute basse du jour précédent"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
-msgstr ""
+msgstr "Recherchez une grande bougie blanche dans une tendance de prix à la hausse. Suite à cela, une bougie noire a un corps qui crée un fossé au-dessus du corps de la précédente bougie. Le dernier jour est une autre bougie noire, mais celle-ci engloutit la bougie baissière précédente mais se ferme au-dessus de l'ouverture du la première barre"
 
 msgid "Low"
 msgstr "Bas"
@@ -1892,7 +1892,7 @@ msgid "Market exit price"
 msgstr "Prix de la sortie de marché"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
 msgstr "Indice de masse (MASS)"
@@ -1907,7 +1907,7 @@ msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Les plus bas correspondants (CDLMATCHINGLOW)"
 
 msgid "Maximum (MAX)"
-msgstr ""
+msgstr "Maximum (MAX)"
 
 msgid "Maximum account cash balance"
 msgstr "Solde financier maximum du compte"
@@ -1949,7 +1949,7 @@ msgid "Min: 10 Max: 2000"
 msgstr "Min : 10 Max : 2000"
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "Minimum (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Au moins 6 caractères et au moins 1 chiffre"
@@ -1970,13 +1970,13 @@ msgid "Minus the agent's commission"
 msgstr "Moins la commission de l'agent"
 
 msgid "Minutes"
-msgstr ""
+msgstr "Minutes"
 
 msgid "Miss"
 msgstr "Mlle"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
 msgstr "Indicateurs de momentum"
@@ -2000,7 +2000,7 @@ msgid "Moving Average Convergence/Divergence (MACD)"
 msgstr "Moyenne Mobile Convergente/Divergente (MMCD)"
 
 msgid "Mr"
-msgstr ""
+msgstr "Mr"
 
 msgid "Mrs"
 msgstr "Mme"
@@ -2084,13 +2084,13 @@ msgid "OAuth Server"
 msgstr "Serveur OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Occupation"
-msgstr ""
+msgstr "Profession"
 
 msgid "Oct"
 msgstr "oct."
@@ -2201,13 +2201,13 @@ msgid "Overlap Studies"
 msgstr "Chevauchement d’Études"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr "Déclaration PEP"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Le parabolique SAR (SAR)"
@@ -2237,13 +2237,13 @@ msgid "Payout"
 msgstr "Paiement"
 
 msgid "Pension"
-msgstr ""
+msgstr "Pension"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Pourcentage d'Oscillateur de Prix (POP)"
 
 msgid "Permissions"
-msgstr ""
+msgstr "Permissions"
 
 msgid "Personal Details"
 msgstr "Informations personnelles"
@@ -2255,7 +2255,7 @@ msgid "Piercing Pattern (CDLPIERCING)"
 msgstr "Schéma de Perçage (CDLPIERCING)"
 
 msgid "Pip"
-msgstr ""
+msgstr "Pip (« pourcentage en point »)"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr "Pip signifie 'pourcentage en point' qui est généralement la place de la quatrième décimal (i.e. 0.0001)"
@@ -2318,7 +2318,7 @@ msgid "Pofit/Loss"
 msgstr "Profits/Pertes"
 
 msgid "Points"
-msgstr ""
+msgstr "Points"
 
 msgid "Polski"
 msgstr "Polonais"
@@ -2513,13 +2513,13 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Trois Méthodes Haussières/Baissières (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Plateforme robuste et sécurisée"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "Employé salarié"
@@ -2531,7 +2531,7 @@ msgid "Sale Price"
 msgstr "Prix de vente"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Signika sable"
 
 msgid "Sat"
 msgstr "sam."
@@ -2747,19 +2747,19 @@ msgid "Stop Profit Level"
 msgstr "Niveau stop-profit"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "Stop-loss"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "Stop-profit"
 
 msgid "Stop-type"
 msgstr "Type d'ordre stop"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Couleur du trait"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Épaisseur du trait"
 
 msgid "Submit"
 msgstr "Envoyer"
@@ -3140,7 +3140,7 @@ msgid "Title"
 msgstr "Titre"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Ti ng Vi t"
 
 msgid "To"
 msgstr "à"
