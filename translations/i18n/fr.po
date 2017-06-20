@@ -575,7 +575,7 @@ msgid "Average Directional Movement Index (ADX)"
 msgstr "Index de Mouvement Directionnel Moyen (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr "Notation d'index de mouvement directionnel moyen (ADXR)"
+msgstr "Notation d'Index de Mouvement Directionnel Moyen (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
 msgstr "La notation de mouvement directionnel moyen quantifie le changement d'impulsion dans l'ADX. Il est calculé en ajoutant deux valeurs de l'ADX (la valeur actuelle et une valeur de n périodes précédentes), puis en les divisant par deux"
