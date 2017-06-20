@@ -459,16 +459,16 @@ msgid "Accept"
 msgstr "承諾"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "どのブラウザからでも13ヶ国語でアクセスが可能"
 
 msgid "Account balance"
 msgstr "口座残高"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "口座開設の理由"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "口座取引数量"
 
 msgid "Action"
 msgstr "売買"
@@ -480,10 +480,10 @@ msgid "Add indicator"
 msgstr "指標を追加（英語表示のみ）"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "比較の追加/削除"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "指標の追加/削除"
 
 msgid "Add/remove indicators"
 msgstr "指標を追加/削除（英語表示のみ）"
@@ -546,13 +546,13 @@ msgid "April"
 msgstr "4月"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "テンプレートを完全に削除してもよろしいですか？"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "このトークンを完全に削除してもよろしいですか？"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "現在のテンプレートを上書きしてもよろしいですか？"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Moving Average (ALMA)"
@@ -1227,10 +1227,10 @@ msgid "Download as"
 msgstr "ダウンロード"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr ".csvファイルをダウンロード"
 
 msgid "Downloading template as"
-msgstr ""
+msgstr "でテンプレートをダウンロード"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "たくり線（CDLDRAGONFLYDOJI）"
@@ -1287,7 +1287,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "つつみ線（CDLENGULFING）"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "基本チャート、資産インデックス、取引時間や取引履歴データ同様、お気に入りの資産や市場を全て同時に監視することができる高度な機能を兼ね備えた直感的取引インターフェースをお楽しみください。一番のポイントは、ご自身のスクリーンにご希望のものを表示できる点です。"
 
 msgid "Enter your current password"
 msgstr "現在のパスワードを入力してください"
@@ -1302,7 +1302,7 @@ msgid "Entry spot price"
 msgstr "取引時レート"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "%1のデータ取得中にエラーが発生しました"
 
 msgid "Espa ol"
 msgstr "スペイン語"
@@ -1359,7 +1359,7 @@ msgid "Favourite dish"
 msgstr "好きな料理"
 
 msgid "Features"
-msgstr ""
+msgstr "機能"
 
 msgid "Feb"
 msgstr "2月"
@@ -1440,7 +1440,7 @@ msgid "From"
 msgstr "開始"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "全画面取引インターフェース"
 
 msgid "Further instructions"
 msgstr "詳細説明"
@@ -1665,13 +1665,13 @@ msgid "Instruments"
 msgstr "商品"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "無効な JSONファイルです"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "無効なパラメーターです"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "テンプレートの種類が無効です"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "トンカチ"
@@ -2103,7 +2103,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Occupation"
 msgstr "職業"
@@ -2529,7 +2529,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "上昇/下降スリーメソッド（CDLRISEFALL3METHODS）"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "ロバストで安心なプラットフォーム"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2772,16 +2772,16 @@ msgid "Stop-type"
 msgstr "ストップタイプ"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "境界線の色"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "境界線の幅"
 
 msgid "Submit"
 msgstr "送信"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "テンプレートが適用され、正常に保存されました"
 
 msgid "Summation (SUM)"
 msgstr "総和（SUM）"
@@ -2820,13 +2820,13 @@ msgid "Tel"
 msgstr "電話番号"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "テンプレートの変更が完了しました"
 
 msgid "Template name"
 msgstr "テンプレート名"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "このテンプレート名は既に存在しています"
 
 msgid "Terms"
 msgstr "各種規約"
@@ -3365,7 +3365,7 @@ msgid "Variance (VAR)"
 msgstr "偏差 (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "カスタマイズ可能な多彩機能　資産、チャート、その他リソースをお好みでロード＆配置ができます"
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -3428,7 +3428,7 @@ msgid "Webtrader"
 msgstr "ウェブトレーダー"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtraderはお好みに合せてカスタマイズできる高度な取引プラットフォームです。"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "ウェブトレーダーは取引経験をより豊かに、より楽しめるものへとする全く新しいウェブテクノロジーを使用しています"
@@ -3446,7 +3446,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "加重移動平均線 (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr " Binary.com Webtrader へようこそ"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "価格に満足したら、すぐにトレードを実行しましょう。"
