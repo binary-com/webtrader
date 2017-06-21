@@ -15,6 +15,7 @@ import html from 'text!./profitTable.html';
 let profitWin = null,
    table = null,
    currency = local_storage.get("currency"),
+   isBTC = currency.toUpperCase() === 'BTC' || currency.toUpperCase() === 'XBT',
    datepicker = null;
 
 export const init = ($menuLink) => {
@@ -28,6 +29,7 @@ export const init = ($menuLink) => {
             });
       else{
          currency = local_storage.get("currency");
+         isBTC = currency.toUpperCase() === 'BTC' || currency.toUpperCase() === 'XBT';         
          profitWin.moveToTop();
       }
    });
@@ -68,7 +70,7 @@ const refreshTable = (yyyy_mm_dd) => {
    const refresh = (data) => {
       const transactions = (data.profit_table && data.profit_table.transactions) || [];
       const rows = transactions.map((trans) => {
-         const profit = compute(trans.sell_price, trans.buy_price, '-'); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
+         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(isBTC ? 8 : 2); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
          const view_button = '<button>View</button>'.i18n();
          try{
             trans.longcode;            
