@@ -452,7 +452,7 @@ msgid "Account balance"
 msgstr "Saldo akun"
 
 msgid "Account opening reason"
-msgstr "Alasan pedanftaran akun"
+msgstr "Alasan pedaftaran akun"
 
 msgid "Account turnover"
 msgstr "Turnover akun"
