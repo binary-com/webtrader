@@ -381,10 +381,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
       /* computed properties */
       netprofit_: function () {
-        return formatPrice(((this.payout - this.ask_price) || 0).toFixed(2), state.currency.value);
+        return formatPrice(((this.payout - this.ask_price) || 0), state.currency.value);
       },
       payout_: function () {
-        return formatPrice((+this.payout || 0).toFixed(2), state.currency.value);
+        return formatPrice((+this.payout || 0), state.currency.value);
       }
     },
     purchase: {
