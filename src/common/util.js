@@ -91,8 +91,8 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-    var minimumFractionDigits = currency.toUpperCase() === 'BTC' || currency.toUpperCase() === 'XBT' ? 8 : 2; //Because backend is confusing
-	var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+    var minimumFractionDigits = currency && (currency.trim().toUpperCase() === 'BTC' || currency.trim().toUpperCase() === 'XBT') ? 8 : 2; //Because backend is confusing
+    var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
 	var currency_symbols = {
 		'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
 		'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
@@ -108,7 +108,7 @@ function formatPrice(float,currency) {
 						minimumFractionDigits: minimumFractionDigits,
 					}).format(float);
 	if(currency){
-		float = (currency_symbols[currency] || currency) + float;
+		float = (currency_symbols[currency.trim().toUpperCase()] || currency) + float;
 	}
 	return float;
 }
@@ -408,4 +408,36 @@ function guessDigits(prices) {
         }
     });
     return defaultDigits || 4;
+}
+
+// Compute operations on floating point numbers.
+function compute(operand1, operand2, operation) {
+    if(!operand1 || !operand2 || !operation) {
+        throw 'Three parameters are required.';
+    }
+    const decimal1 = operand1.toString().split('.').length == 2 ? operand1.toString().split('.')[1].length : 0;
+    const decimal2 = operand2.toString().split('.').length == 2 ? operand2.toString().split('.')[1].length : 0;
+    const max_decimal_places = decimal1 > decimal2 ? decimal1 : decimal2;
+    const cf = 10 ** max_decimal_places; // Correction factor.
+    const operations = {
+        '+': (val1, val2, cf) => {
+            return (val1 * cf + val2 * cf) / cf;
+        },
+        '-': (val1, val2, cf) => {
+            return (val1 * cf - val2 * cf) / cf;
+        },
+        '*': (val1, val2, cf) => {
+            return ((val1 * cf) * (val2 * cf)) / cf*cf;
+        },
+        '/': (val1, val2, cf) => {
+            return ((val1 * cf) * (val2 * cf)) / cf*cf;
+        }
+    }
+    const result = operations[operation](operand1, operand2, cf);
+    let temp_value = result.toString().split('e');
+    if(temp_value.length == 2 && temp_value[1] < 0) {
+        const pow = Math.abs(temp_value[1]);
+        return (temp_value[0]/(10**pow)).toFixed(pow + 1);
+    } else 
+        return result;
 }

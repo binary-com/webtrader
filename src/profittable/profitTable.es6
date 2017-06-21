@@ -26,8 +26,10 @@ export const init = ($menuLink) => {
                console.error(err);
                $.growl.error({ message: err.message });
             });
-      else
+      else{
+         currency = local_storage.get("currency");
          profitWin.moveToTop();
+      }
    });
 }
 
@@ -66,7 +68,7 @@ const refreshTable = (yyyy_mm_dd) => {
    const refresh = (data) => {
       const transactions = (data.profit_table && data.profit_table.transactions) || [];
       const rows = transactions.map((trans) => {
-         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
+         const profit = compute(trans.sell_price, trans.buy_price, '-'); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
          const view_button = '<button>View</button>'.i18n();
          try{
             trans.longcode;            

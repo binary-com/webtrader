@@ -209,7 +209,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          transaction_id: buy.transaction_id,
          payout: buy.payout,
          currency: extra.currency,
-         potential_profit : buy.payout - buy.buy_price,
+         potential_profit : compute(buy.payout, buy.buy_price, '-'), // buy.payout - buy.buy_price
          potential_profit_text : 'Profit'.i18n(),
          show_result: false,
       },

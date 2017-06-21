@@ -376,7 +376,7 @@ const init_state = (proposal, root) =>{
 
          buy_price: proposal.buy_price,
          bid_price: undefined,
-         final_price: proposal.is_sold ? proposal.sell_price && formatPrice(proposal.sell_price) : undefined,
+         final_price: proposal.is_sold ? proposal.sell_price && formatPrice(proposal.sell_price, proposal.currency ||  'USD') : undefined,
 
          tick_count: proposal.tick_count,
          prediction: proposal.prediction,
