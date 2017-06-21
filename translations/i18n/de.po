@@ -2,7 +2,7 @@ msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-f
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr "„Asiatischer Fall” - Sie gewinnen, wenn der letzte Tick niedriger als der Durchschnitt der Ticks während des Grades ist"
+msgstr "„Asiatischer Fall” - Sie gewinnen, wenn der letzte Tick niedriger als der Durchschnitt der Ticks während des Geschäfts ist"
 
 msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
 msgstr "„Asiatischer Anstieg” - Sie gewinnen, wenn der letzte Tick höher als der Durchschnitt der Ticks während des Trades ist"
@@ -128,7 +128,7 @@ msgid "- predict if the market will stay inside two price targets, or end betwee
 msgstr "- sagen Sie voraus, ob der Kurs innerhalb zweier Zielkurse bleiben wird, oder zwischen oder außerhalb dieser enden wird"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr "- sagen Sie voraus, oben der Kurs einen Zielkurs erreichen oder nicht erreichen wird"
+msgstr "- sagen Sie voraus, ob der Kurs einen Zielkurs erreichen oder nicht erreichen wird"
 
 msgid "- sell your long-term trades at market prices before they expire"
 msgstr "- verkaufen Sie Ihre Langezeit-Geschäfte zu Marktpreisen, bevor diese auslaufen"
