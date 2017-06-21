@@ -187,7 +187,6 @@ const register_ticks = (state, extra) => {
 export const init = (data, extra, show_callback, hide_callback) => {
    const root = $(html).i18n();
    const buy = data.buy;
-   const isBTC = extra.currency.toUpperCase() === 'BTC' || extra.currency.toUpperCase() === 'XBT';
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    extra.getbarrier = (tick) => {
       let barrier = tick.quote*1;
@@ -210,7 +209,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          transaction_id: buy.transaction_id,
          payout: buy.payout,
          currency: extra.currency,
-         potential_profit : (buy.payout - buy.buy_price).toFixed(isBTC ? 8 : 2),
+         potential_profit : (buy.payout - buy.buy_price).toFixed(isBTC() ? 8 : 2),
          potential_profit_text : 'Profit'.i18n(),
          show_result: false,
       },

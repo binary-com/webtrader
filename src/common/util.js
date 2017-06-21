@@ -409,3 +409,8 @@ function guessDigits(prices) {
     });
     return defaultDigits || 4;
 }
+
+var isBTC = () => {
+    var currency = local_storage.get('currency');
+    return currency.toUpperCase() === 'BTC' || currency.toUpperCase() === 'XBT';
+}
