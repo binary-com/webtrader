@@ -2756,10 +2756,10 @@ msgid "Stop-type"
 msgstr "Stop-rodzaj"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Kolor pędzla"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Szerokość pędzla"
 
 msgid "Submit"
 msgstr "Wyślij"
@@ -2810,7 +2810,7 @@ msgid "Template name"
 msgstr "Nazwa szablonu"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Ta nazwa szablonu już istnieje"
 
 msgid "Terms"
 msgstr "Warunki"
@@ -3347,7 +3347,7 @@ msgid "Variance (VAR)"
 msgstr "Wariancja (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "Różne funkcje z możliwością dostosowania: ładowanie i rozmieszczanie aktywów, wykresy i wiele innych przydatnych narzędzi"
 
 msgid "Verification code has been sent to your email"
 msgstr "Kod weryfikacyjny został wysłany na Twój adres e-mail"
@@ -3410,7 +3410,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader to zaawansowana platforma handlowa, którą można całkowicie spersonalizować w zależności od osobistych potrzeb"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Aplikacja Webtrader wykorzystuje nowe technologie internetowe, aby zapewnić doskonałe handlowanie"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Ważona średnia krocząca (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Witamy na platformie Webtrader firmy Binary.com"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Jeśli satysfakcjonuje Cię cena zakładu, możesz zawrzeć zakład natychmiast"
