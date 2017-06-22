@@ -1,0 +1,7 @@
+files:
+  - source: /translations/i18n/messages.pot
+    translation: /translations/i18n/%two_letters_code%.po
+    languages_mapping:
+      two_letters_code:
+        zh-CN: zh_cn
+        zh-TW: zh_tw

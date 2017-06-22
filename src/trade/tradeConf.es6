@@ -10,7 +10,6 @@ import rv from '../common/rivetsExtra';
 import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
-import { Longcode } from 'binary-longcode';
 
 /* rv binder to show tick chart for this confirmation dialog */
 rv.binders['tick-chart'] = {
@@ -189,10 +188,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
    const root = $(html).i18n();
    const buy = data.buy;
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-   const currency = local_storage.get('currency');
-   const lang = (local_storage.get('i18n') || {value:'en'}).value;
-   const active_symbols = local_storage.get('active_symbols');
-   const longcodeGenerator = new Longcode(active_symbols, lang, currency);
    extra.getbarrier = (tick) => {
       let barrier = tick.quote*1;
       if(extra.barrier && !_(['rise','fall']).includes(extra.category_display.name)) {
@@ -206,7 +201,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
       },
       buy: {
          barrier: null,
-         message: longcodeGenerator.get(buy.shortcode),
+         message: buy.longcode,
          balance_after: buy.balance_after,
          buy_price: buy.buy_price,
          purchase_time: buy.purchase_time,
@@ -214,7 +209,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          transaction_id: buy.transaction_id,
          payout: buy.payout,
          currency: extra.currency,
-         potential_profit : buy.payout - buy.buy_price,
+         potential_profit : (buy.payout - buy.buy_price).toFixed(isBTC() ? 8 : 2),
          potential_profit_text : 'Profit'.i18n(),
          show_result: false,
       },

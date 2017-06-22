@@ -14,18 +14,6 @@ function isLineDotType(type) {
     return type === 'linedot';
 }
 
-function isAffiliates(){
-  return getParameterByName("affiliates") === true || (getParameterByName("affiliates") + '').toLowerCase() == 'true';
-}
-
-function isHideOverlay() {
-    return getParameterByName("hideOverlay") === true || (getParameterByName("hideOverlay") + '').toLowerCase() == 'true';
-}
-
-function isHideShare() {
-    return getParameterByName("hideShare") === true || (getParameterByName("hideShare") + '').toLowerCase() == 'true';
-}
-
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {
@@ -76,70 +64,6 @@ function isSmallView() {
   return ret;
 }
 
-function getParameterByNameFromURL(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-/**
- * Understand the method behavior before using it. In order to allow other applications to use Webtrader charts, the behavior
- * of this method has been changed. Webtrader has two modes of rendering
- *  1. Full desktop style
- *      - Just access the main URL of webtrader.
- *  2. Chart only style
- *      - In order to render this mode, several URL parameters are needed. Most importantly, affiliates=true parameter.
- *        Check affiliates/affiliates.js for more details on parameter list.
- *        This method will check for global variables (same as parameter). if the global variable is missing, then use the URL
- *        parameter method to get the value
- * @param name
- */
-function getParameterByName(name) {
-    if (window[name]) return window[name];
-    else return getParameterByNameFromURL(name);
-}
-
-/**
-    This method can be used to retrieve any property of an object by its name. Does not matter how deep
-    the property might be in the passed object. This is a recurrsive function to find the target property
-**/
-function getObjects(obj, key, val) {
-    var objects = [];
-    for (var i in obj) {
-        if (!obj.hasOwnProperty(i)) continue;
-        if (typeof obj[i] == 'object') {
-            objects = objects.concat(getObjects(obj[i], key, val));
-        } else if (i == key && obj[key] == val) {
-            objects.push(obj);
-        }
-    }
-    return objects;
-}
-
-/**
-    Currently this is being used to validate the parameters passed by affilates/external applications
-    It will validate instrument and timePeriod passed in URL
-**/
-function validateParameters() {
-      var instrumentCode_param = getParameterByName('instrument');
-      var timePeriod_param = getParameterByName('timePeriod');
-
-      if (!instrumentCode_param || !timePeriod_param) return false;
-
-      var timePeriod_Obj = null;
-      try {
-          timePeriod_Obj = convertToTimeperiodObject(timePeriod_param);
-      } catch(e) {}
-      if (!timePeriod_Obj) return false;
-
-      var isValidTickTF = timePeriod_Obj.suffix() === 't' && timePeriod_Obj.intValue() === 1;
-      var isValidMinTF = timePeriod_Obj.suffix().indexOf('m') != -1 &&  [1,2,3,5,10,15,30].indexOf(timePeriod_Obj.intValue()) != -1;
-      var isValidHourTF = timePeriod_Obj.suffix().indexOf('h') != -1 && [1,2,4,8].indexOf(timePeriod_Obj.intValue()) != -1;
-      var isValidDayTF = timePeriod_Obj.suffix().indexOf('d') != -1 && timePeriod_Obj.intValue() === 1;
-      return isValidTickTF || isValidMinTF || isValidHourTF || isValidDayTF;
-}
-
 /* convert epoch to stirng yyyy-mm-dd hh:mm:ss format
    options: { utc: true/false } */
 function epoch_to_string(epoch, options) {
@@ -167,7 +91,8 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-	var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+    var minimumFractionDigits = currency && (currency.trim().toUpperCase() === 'BTC' || currency.trim().toUpperCase() === 'XBT') ? 8 : 2; //Because backend is confusing
+    var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
 	var currency_symbols = {
 		'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
 		'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
@@ -176,13 +101,14 @@ function formatPrice(float,currency) {
 		'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
 		'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
 		'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
+        'BTC': '฿', /*Bitcoin*/ 'XBT': '฿', /*Bitcoin*/
 	};
 	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
 						style: 'decimal',
-						minimumFractionDigits: 2,
+						minimumFractionDigits: minimumFractionDigits,
 					}).format(float);
 	if(currency){
-		float = (currency_symbols[currency] || currency) + float;
+		float = (currency_symbols[currency.trim().toUpperCase()] || currency) + float;
 	}
 	return float;
 }
@@ -482,4 +408,9 @@ function guessDigits(prices) {
         }
     });
     return defaultDigits || 4;
+}
+
+var isBTC = function () {
+    var currency = local_storage.get('currency');
+    return currency.toUpperCase() === 'BTC' || currency.toUpperCase() === 'XBT';
 }

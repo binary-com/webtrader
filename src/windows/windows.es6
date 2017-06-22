@@ -216,10 +216,10 @@ const addDateToHeader = function(options) {
       }
 
       const dt = opts.date || new Date();
-      let year = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
-      let month = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
-      let day = $('<select />').insertAfter(header).selectmenu({ width: 'auto'});
-      day.selectmenu( "menuWidget" ).addClass('date-day');
+      let year = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
+      let month = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
+      let day = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto'});
+      day.selectmenu( "menuWidget" ).addClass('date-day'); 
       year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
       month = update(month, {
          min: 0, max: 11, initial: dt.getMonth(),
@@ -596,6 +596,7 @@ export const createBlankWindow = function($html,options) {
 
 
    const dialog = blankWindow.dialog('widget');
+   dialog.addClass('webtrader-dialog-widget');
    /* allow dialogs to be moved though the bottom of the page */
    dialog.draggable( "option", "containment", false );
    dialog.draggable( "option", "scroll", true );
@@ -704,7 +705,12 @@ export const makeSelectmenu = function (select, options) {
    update_select(list);
    select.val(list[inx]);
 
-   select = select.selectmenu({ width: options.width });
+   select = select.selectmenu({ 
+         classes: {
+           "ui-selectmenu-button": "ui-selectmenu-button ui-state-default"
+         },
+         width: options.width 
+      });
    select.on('selectmenuchange', function () {
       var val = $(this).val();
       options.changed(val);

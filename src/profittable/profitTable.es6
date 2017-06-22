@@ -11,7 +11,6 @@ import "jquery-growl";
 import '../common/util';
 import "css!./profitTable.css";
 import html from 'text!./profitTable.html';
-import { Longcode } from 'binary-longcode';
 
 let profitWin = null,
    table = null,
@@ -27,8 +26,10 @@ export const init = ($menuLink) => {
                console.error(err);
                $.growl.error({ message: err.message });
             });
-      else
+      else{
+         currency = local_storage.get("currency");        
          profitWin.moveToTop();
+      }
    });
 }
 
@@ -55,7 +56,7 @@ const refreshTable = (yyyy_mm_dd) => {
       is_specific_date_shown = true;
    }
    else  { /* request the next 50 items for live scroll */
-      request.limit = 50;
+      request.limit = 250;
       if(is_specific_date_shown || yyyy_mm_dd.clear) {
          table.api().rows().remove();
          is_specific_date_shown = false;
@@ -65,22 +66,19 @@ const refreshTable = (yyyy_mm_dd) => {
 
    /* refresh the table with result of { profit_table:1 } from WS */
    const refresh = (data) => {
-      const lang = (local_storage.get('i18n') || {value:'en'}).value;
-      const active_symbols = local_storage.get('active_symbols');
-      const longcodeGenerator = new Longcode(active_symbols, lang, currency);
       const transactions = (data.profit_table && data.profit_table.transactions) || [];
       const rows = transactions.map((trans) => {
-         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(2); /* 2 decimal points */
+         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(isBTC() ? 8 : 2); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
          const view_button = '<button>View</button>'.i18n();
          try{
-            longcodeGenerator.get(trans.shortcode);            
+            trans.longcode;            
          }catch(err){
             console.log(trans);
          }
          return [
             epoch_to_string(trans.purchase_time, { utc: true }),
             trans.transaction_id,
-            longcodeGenerator.get(trans.shortcode),
+            trans.longcode,
             formatPrice(trans.buy_price,currency),
             epoch_to_string(trans.sell_time, { utc: true }),
             formatPrice(trans.sell_price,currency),
@@ -122,6 +120,7 @@ const on_arrow_click = (e) =>{
 const initProfitWin = () => {
    profitWin = windows.createBlankWindow($('<div/>'), {
       title: 'Profit Table'.i18n(),
+      dialogClass: 'profitTable',
       width: 700 ,
       height: 400,
       destroy: () => {

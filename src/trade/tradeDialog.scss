@@ -44,8 +44,8 @@
 
 .trade-fields {
   .error { background: #fef1cf; }
-  ul li select.contract-category-display + .ui-selectmenu-button { width: 145px !important; }
-
+  ul.categories-row li select.contract-category-display + .ui-selectmenu-button { max-width: 145px; }
+  .ui-selectmenu-text { margin-top: -4px; }
   .duration-row li,
   .date-start-row li,
   .categories-row {
@@ -79,6 +79,7 @@
       }
     }
     .ui-selectmenu-button .ui-selectmenu-text {
+      width: 70px;
       padding-left: 2em;
       text-align: center;
     }
@@ -210,8 +211,8 @@
 }
 
 /* style elments in the drop down*/
-.trade-dialog-date-start-ul li {
-    height:12px;
+.trade-dialog-date-start-ul li .ui-menu-item-wrapper{
+    padding: 0;
     font-size:13px;
     text-align:center;
 }
@@ -263,18 +264,24 @@
 .trade-fields ul.date-start-row li:nth-child(3) > span { min-width: 85px !important }
 
 .trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { 
-  min-width: 130px !important;
+  max-width: 130px ;
   height: 26px;
   border-radius:3px;
+  padding: 0;
 }
 .trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { 
-  width: 100px !important; 
+  width: 100px; 
   height: 26px;
   border-radius:3px;
+  padding: 0;
+  .ui-selectmenu-text {
+    margin-top: 2px;
+  }
 }
 .trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { 
-  width: 100px !important; 
+  width: 100px; 
   height: 28px;
+  padding: 0;
   border-radius:3px;
 }
 
@@ -291,7 +298,7 @@
 
 .trade-fields ul li:nth-child(2n) input:not([step]),
 .trade-fields ul li:nth-child(2n+3) input:not([step]) {
-  width: 100px !important;
+  width: 95px !important;
 }
 
 .trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px !important }
@@ -365,7 +372,7 @@
 
 .trade-fields .purchase-row { bottom: 5px;}
 .trade-fields .purchase-row li:nth-child(1) { position: relative; left: 20px; width: 200px; line-height: 34px;margin-right:5px;}
-.trade-fields .purchase-row li:nth-child(2) { right:5px; position: relative;}
+.trade-fields .purchase-row li:nth-child(2) { margin-left:10px; right:5px; position: relative;}
 .trade-fields .purchase-row li span { font-weight: bolder; font-size: 18px; text-overflow: ellipsis; overflow: hidden; width: 205px;}
 
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px !important; }

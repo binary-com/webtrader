@@ -178,6 +178,9 @@ rv.binders.selectmenu = {
       const publish = this.publish,
          select = $(el);
       select.selectmenu({
+         classes: {
+           "ui-selectmenu-button": "ui-selectmenu-button ui-state-default"
+         },
          change: () => {
             publish(select.val());
             select.trigger('change');
@@ -551,7 +554,7 @@ const decimalPlaces = (num) => {
 rv.binders['decimal-round'] = {
    priority: 3001,
    routine: (input, places) => {
-      const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000}[places];
+      const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000, '8': 100000000}[places];
       input = $(input);
       input.on('input', () => {
          const prefered_sign = input.attr('prefered-sign') || '';
@@ -639,16 +642,10 @@ const component_twoway_bind = (self, data, keypathes) => {
    }, 0);
 }
 rivets.components['price-spinner'] = {
-   static: ['class', 'min', 'decimals'],
+   static: ['class', 'min'],
    template:
    () => `<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">
                <input rv-class="data.class" type="text" rv-value="data.value" rv-decimal-round="data.decimals | or 5" no-symbol="no-symbol" />
-                 <button rv-on-click="increment" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">
-                   <span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>
-                 </button>
-                 <button rv-on-click="decrement" step="-1" class="ui-spinner-button ui-spinner-down ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 0 5px 0" tabindex="-1" role="button">
-                   <span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-s">▼</span> </span>
-                 </button>
              </span>`,
    initialize: function(el, data) {
       const decimals = (data.decimals || 2)*1;
@@ -656,25 +653,7 @@ rivets.components['price-spinner'] = {
       component_twoway_bind(this, data, ['data.value']);
 
       return {
-         data: data,
-         increment: (e,scope) => {
-            let value = data.value*1;
-            value = value < 1 ? value + 0.1 : value + 1;
-            if((value | 0) !== value) {
-               value = value.toFixed(decimals);
-            }
-            data.value = value;
-         },
-         decrement: () => {
-            let value = data.value*1;
-            value = value > 1 ? value - 1 : value - 0.1;
-            if((value | 0) !== value) { /* is float */
-               value = value.toFixed(decimals);
-            }
-            if(value > min) {
-               data.value = value;
-            }
-         }
+         data: data
       };
    },
 };

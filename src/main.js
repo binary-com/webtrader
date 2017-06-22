@@ -5,7 +5,7 @@ requirejs.config({
     baseUrl: './',
     paths: {
         'jquery': "lib/jquery/dist/jquery.min",
-        'jquery-ui': "lib/jquery-ui/jquery-ui.min",
+        'jquery-ui': "lib/jquery-ui-dist/jquery-ui.min",
         'jquery.dialogextend': "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         'jquery-growl': "lib/growl/javascripts/jquery.growl",
         'jquery-validation': "lib/jquery-validation/dist/jquery.validate.min",
@@ -29,7 +29,6 @@ requirejs.config({
         'webtrader-charts' : 'lib/webtrader-charts/dist/webtrader-charts',
         'chosen': 'lib/chosen-js/chosen.jquery',
         'highstock-release': 'lib/highstock-release',
-        'binary-longcode': 'lib/binary-com-longcode/dist/main'
     },
     map: {
         '*': {
@@ -81,9 +80,6 @@ requirejs.config({
         },
         "color-picker": {
             deps: ["jquery"] //This should fix the widget not found error
-        },
-        "binary-longcode":{
-            deps: ['moment']
         }
     }
 });
@@ -99,8 +95,7 @@ requirejs.onError = function(err) {
 };
 
 require(['modernizr'], function() {
-    //By pass touch check for affiliates=true(because they just embed our charts)
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView() && !isAffiliates()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
         window.location.href = 'unsupported_browsers/unsupported_browsers.html';
         return;
     }
@@ -126,7 +121,7 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
     require(['jquery-ui', 'highstock-release/highstock']);
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
-    require(['css!lib/jquery-ui/themes/base/jquery-ui.min.css',
+    require(['css!lib/jquery-ui-dist/jquery-ui.min.css',
         'css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css',
         "css!lib/chosen-js/chosen.css",
         'css!lib/growl/stylesheets/jquery.growl.css',
@@ -134,12 +129,6 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         'css!lib/datatables/media/css/dataTables.jqueryui.min.css',
         'css!lib/colorpicker/jquery.colorpicker.css',]);
         // 'css!charts/charts.css']);
-
-    function handle_affiliate_route() {
-        require(['affiliates/affiliates', 'css!main.css', 'css!binary-style'], function(affiliates) {
-            affiliates.init();
-        });
-    }
 
     function handle_normal_route() {
 
@@ -301,16 +290,11 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
         });
 
         /*Trigger T&C check, self-exclusion, reality check, chrome extension check, csr_tax_information check*/
-        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'accountstatus/accountstatus', 'realitycheck/realitycheck']);
+        require(['selfexclusion/selfexclusion', 'chrome/chrome', 'accountstatus/accountstatus', 'realitycheck/realitycheck', 'websitestatus/websitestatus']);
     }
 
-
-    if (isAffiliates()) //Our chart is accessed by other applications
-        handle_affiliate_route();
-    else {
-        //Our chart is accessed directly
-        handle_normal_route();
-    }
+    //Our chart is accessed directly
+    handle_normal_route();
 
 });
 
