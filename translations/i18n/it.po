@@ -467,10 +467,10 @@ msgid "Add indicator"
 msgstr "Aggiungi indicatore"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "Aggiungi/Rimuovi i confronti"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "Aggiungi/Rimuovi gli indicatori"
 
 msgid "Add/remove indicators"
 msgstr "Aggiungi/Rimuovi indicatori"
@@ -533,7 +533,7 @@ msgid "April"
 msgstr "Aprile"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "Sei sicuro di voler cancellare il modello?"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Sei sicuro di voler eliminare questo token?"
