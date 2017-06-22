@@ -2,7 +2,7 @@ msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-f
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr "„Asiatischer Fall” - Sie gewinnen, wenn der letzte Tick niedriger als der Durchschnitt der Ticks während des Grades ist"
+msgstr "„Asiatischer Fall” - Sie gewinnen, wenn der letzte Tick niedriger als der Durchschnitt der Ticks während des Geschäfts ist"
 
 msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
 msgstr "„Asiatischer Anstieg” - Sie gewinnen, wenn der letzte Tick höher als der Durchschnitt der Ticks während des Trades ist"
@@ -128,7 +128,7 @@ msgid "- predict if the market will stay inside two price targets, or end betwee
 msgstr "- sagen Sie voraus, ob der Kurs innerhalb zweier Zielkurse bleiben wird, oder zwischen oder außerhalb dieser enden wird"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr "- sagen Sie voraus, oben der Kurs einen Zielkurs erreichen oder nicht erreichen wird"
+msgstr "- sagen Sie voraus, ob der Kurs einen Zielkurs erreichen oder nicht erreichen wird"
 
 msgid "- sell your long-term trades at market prices before they expire"
 msgstr "- verkaufen Sie Ihre Langezeit-Geschäfte zu Marktpreisen, bevor diese auslaufen"
@@ -446,16 +446,16 @@ msgid "Accept"
 msgstr "Akzeptieren"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "In 13 Sprachen von jedem Webbrowser zugänglich"
 
 msgid "Account balance"
 msgstr "Kontostand"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "Kontoeröffnungs-Grund"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Kontoumsatz"
 
 msgid "Action"
 msgstr "Aktion"
@@ -467,10 +467,10 @@ msgid "Add indicator"
 msgstr "Indikator hinzufügen"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "Vergleiche Hinzufügen/Entfernen"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "Indikatoren Hinzufügen/Entfernen"
 
 msgid "Add/remove indicators"
 msgstr "Indikator hinzufügen/entfernen"
@@ -533,13 +533,13 @@ msgid "April"
 msgstr "April"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie diese Vorlage löschen wollen?"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "Sind Sie sicher, dass Sie diesen Token löschen wollen?"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie die aktuelle Vorlage überschreiben wollen?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Gleitender Durchschnitt (Arnaud Legoux Moving Average - ALMA)"
@@ -1211,10 +1211,10 @@ msgid "Download as"
 msgstr "Herunterladen als"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr ".cvs wird heruntergeladen"
 
 msgid "Downloading template as"
-msgstr ""
+msgstr "Herunterladen von Vorlage als"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "Dragonfly Doji (CDLDRAGONFLYDOJI)"
@@ -1271,7 +1271,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Engulfing Pattern (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "Genießen Sie ein intuitives Handels-Interface mit erweiterten Funktionen, mit dem Sie alle Ihre Lieblings-Anlagen und Märkte zur gleichen Zeit, sowie wesentliche Charts, den Anlagen-Index, Handelszeiten, und historische Daten überwachen können. Am wichtigsten ist, dass Sie auswählen können, was Sie auf Ihrem Bildschirm sehen wollen"
 
 msgid "Enter your current password"
 msgstr "Geben Sie Ihr aktuelles Passwort ein"
@@ -1286,7 +1286,7 @@ msgid "Entry spot price"
 msgstr "Einstiegskurs"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Fehler beim Abrufen von Daten für %1"
 
 msgid "Espa ol"
 msgstr "Spanisch"
@@ -1343,7 +1343,7 @@ msgid "Favourite dish"
 msgstr "Bevorzugtes Gericht"
 
 msgid "Features"
-msgstr ""
+msgstr "Funktionen"
 
 msgid "Feb"
 msgstr "Feb"
@@ -1424,7 +1424,7 @@ msgid "From"
 msgstr "Von"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Vollbild-Handels-Schnittstelle"
 
 msgid "Further instructions"
 msgstr "Weitere Anweisungen"
@@ -1649,13 +1649,13 @@ msgid "Instruments"
 msgstr "Instrument"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "Ungültige JSON-Datei"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "Ungültige(r) Parameter"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "Ungültige Vorlageart"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "Inverted Hammer (CDLINVERTEDHAMMER)"
@@ -2087,7 +2087,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "Okay"
 
 msgid "Occupation"
 msgstr "Beruf"
@@ -2513,7 +2513,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Steigende/Fallende Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Robuste und sichere Plattform"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2756,16 +2756,16 @@ msgid "Stop-type"
 msgstr "Stop-Art"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Konturfarbe"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Strichstärke"
 
 msgid "Submit"
 msgstr "Absenden"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Die Vorlage ist erfolgreich angewendet und wird gespeichert als"
 
 msgid "Summation (SUM)"
 msgstr "Summierung (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Vorlageänderungen gespeichert"
 
 msgid "Template name"
 msgstr "Vorlagenname"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Der Vorlagenname existiert bereits"
 
 msgid "Terms"
 msgstr "Bedingungen"
@@ -3347,7 +3347,7 @@ msgid "Variance (VAR)"
 msgstr "Varianz (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr ""
+msgstr "Verschiedene anpassbare Funktionen; laden Sie und arrangieren Sie Anlagen, Diagramme und andere Rohstoffe, wie Sie es Ihnen gefällt"
 
 msgid "Verification code has been sent to your email"
 msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-mail verschickt wurde, ein"
@@ -3410,7 +3410,7 @@ msgid "Webtrader"
 msgstr "Web trader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader ist eine fortschrittliche Handelsplattform, die ganz individuell Ihren persönlichen Vorlieben angepasst werden kann"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader verwendet neue Webtechnologien für eine reiche und angenehme Handelserfahrung"
@@ -3428,7 +3428,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Gewichteter Gleitender Durchschnitt (Weighted Moving Average - WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Willkommen bei Binary.com Webtrader"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Wenn Sie mit dem Verkaufskurs zufrieden sind, führen Sie das Geschäft umgehend aus"
