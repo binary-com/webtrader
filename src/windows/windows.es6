@@ -169,7 +169,8 @@ const addDateToHeader = function(options) {
       title: 'title',
       date: null,
       changed: () => { },
-      cleared: () => { }
+      cleared: () => { },
+      addDateDropDowns: true,
    },options);
 
    const header = this.parent().find('.ui-dialog-title').addClass('with-content');
@@ -349,28 +350,37 @@ const addDateToHeader = function(options) {
    }
 
 
+   const date_string = $('<span style="line-height: 24px; position: relative; left: 10px"></span>');
    const dpicker = addDatePicker({
       date: options.date || new Date(),
       onchange: (yyyy_mm_dd) => {
-         dropdonws.update(yyyy_mm_dd);
+         date_string.text(yyyy_mm_dd);
+         dropdonws && dropdonws.update(yyyy_mm_dd);
          options.changed(yyyy_mm_dd);
       },
       onclear: () => {
-         dropdonws.clear();
+         dropdonws && dropdonws.clear();
          options.cleared();
       }
    });
-   const dropdonws = addDateDropDowns({
-      date: options.date, onchange: (yyyy_mm_dd) => {
-         dpicker.datepicker("setDate", yyyy_mm_dd);
-         options.changed(yyyy_mm_dd);
-      }
-   });
+   let dropdonws = null;
+   if(options.addDateDropDowns) {
+      dropdonws = addDateDropDowns({
+         date: options.date, onchange: (yyyy_mm_dd) => {
+            dpicker.datepicker("setDate", yyyy_mm_dd);
+            options.changed(yyyy_mm_dd);
+         }
+      });
+   }
+   else {
+      date_string.insertAfter(header);
+      date_string.text(options.date.toISOString().slice(0, 10));
+   }
 
    $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
 
    return {
-      clear:() => dropdonws.clear()
+      clear:() => dropdonws && dropdonws.clear()
    };
 }
 

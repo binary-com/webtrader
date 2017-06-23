@@ -228,6 +228,14 @@ require(["jquery", 'text!i18n/' + i18n_name + '.json'], function($, lang_json) {
                     elem.click();
                 });
 
+            //Register async loading of historical-data dialog
+            load_ondemand($navMenu.find("a.historical-data"), 'click', 'Loading Download/View Data ...'.i18n(), 'historical-data/historical-data',
+                function(historicalData) {
+                    var elem = $navMenu.find("a.historical-data");
+                    historicalData.init(elem);
+                    elem.click();
+                });
+
             //Register async loading of self-exclusion dialog
             load_ondemand($navMenu.find("a.selfexclusion"), 'click', 'Loading Self-Exclusion ...'.i18n(), 'selfexclusion/selfexclusion',
                 function(selfexclusion) {

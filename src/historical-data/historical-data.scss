@@ -1,0 +1,55 @@
+.historical-data-dialog {
+   .historical-data {
+      padding : 0 !important;
+      position: relative;
+   }
+   .titlebar {
+      position: absolute;
+      background: linear-gradient(#2A3052,#15212D);
+      height: 34px;
+      width: 170px;
+      left: 160px;
+      top: 0;
+      color: white;
+      z-index: +1;
+      > ul {
+         display: none;
+         border: none;
+      }
+      &:hover > ul {
+         display: block;
+      }
+      li {
+         min-width: 130px;
+         font-size: 14px;
+         background: #2A3052;
+         color: white;
+      }
+      .ui-icon-caret-1-e {
+         background-image: url('../images/double-angle-pointing-to-right.svg') !important;
+         background-size: 12px 12px !important;
+         background-position: 2px 5px !important;
+         margin: 0;
+         top: calc(50% - 12px);
+         right: 2px;
+      }
+      .title {
+         background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
+         padding-left: 20px;
+         line-height: 34px;
+         background-size: 12px 12px !important;
+         background-position: 2px 50% !important;
+         background-repeat: no-repeat;
+         margin: 0;
+      }
+      .ui-state-active {
+         margin: 0 !important;
+      }
+   }
+   .ui-dialog-titlebar {
+      .ui-dialog-title {
+         font-size: 16px;
+         width: 320px;
+      }
+   }
+}
