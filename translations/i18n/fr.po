@@ -1166,7 +1166,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Vous n'avez pas encore de compte ? Inscrivez-vous pour accéder à un compte virtuel de 10 000 dollars US."
 
 msgid "Donchian Channel (DC)"
-msgstr "Le Doji en Pierre Tombale est créé lorsque l'ouverture, le plus bas et la clôture sont au même prix ou quasiment au même prix (il est très rare que l'ouverture, le plus bas et la clôture aient le même prix). La partie la plus importante du Doji en Pierre Tombale est la longue ombre supérieure"
+msgstr "Le Canal Donchian (CD)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Terminé. Le transfert des fonds vers l'agent de paiement est en cours."
@@ -1178,7 +1178,7 @@ msgid "Dot"
 msgstr "Point"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr "Double Moyenne Mobile Exponentielle (DMME)"
+msgstr "Moyenne Mobile Exponentielle Double (MMED)"
 
 msgid "Double click the object to remove"
 msgstr "Double-cliquez sur l'objet pour le supprimer"
@@ -1241,7 +1241,7 @@ msgid "Each binary trade is for a pre-determined payout amount. You win the payo
 msgstr "Chaque trade binaire est pour un montant de versement pré-déterminé. Vous gagnez le versement si votre prédiction est correcte"
 
 msgid "Edge"
-msgstr "Bord"
+msgstr "Navigateur Internet Edge"
 
 msgid "Education"
 msgstr "Formation"
@@ -1412,7 +1412,7 @@ msgid "Fractals are indicators on candlestick charts that identify reversal poin
 msgstr "Les fractales sont des indicateurs sur des graphiques en chandeliers qui identifient les points de retournement du marché. Les traders souvent utilisent les fractales pour avoir une idée à propos de la direction dans laquelle le prix va se diriger. Un fractal sera formera lorsque un schéma de prix particulier se produit sur le graphique"
 
 msgid "Fran ais"
-msgstr "Francais"
+msgstr "Français"
 
 msgid "Fri"
 msgstr "ven."
