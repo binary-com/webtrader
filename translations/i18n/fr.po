@@ -1121,22 +1121,22 @@ msgid "Deutsch"
 msgstr "Allemand"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
-msgstr "Développé par Donald Dorsey, l'Indice de Masse utilise la gamme haute-basse pour identifier les renversements de tendance basés sur des expansions de l'aire. En ce sens, l'Indice de Masse est un indicateur de volatilité qui n'a pas de biais directionnel. Au lieu de cela, l'Indice de Masse identifie dans l'échantillon les renflements qui peuvent présager un retournement de la tendance actuelle"
+msgstr "Développé par Donald Dorsey, l'Indice de Masse utilise la gamme haute-basse pour identifier les renversements de tendance basés sur des expansions de zone. En ce sens, l'Indice de Masse est un indicateur de volatilité qui n'a pas de biais directionnel. Au lieu de cela, l'Indice de Masse identifie dans l'échantillon les renflements qui peuvent présager un retournement de la tendance actuelle"
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr "Développé par Larry Williams, Williams %R est un indicateur d'impulsion qui est l'inverse de l'oscillateur rapide Stochastique. Il est aussi appelé %R, Williams %R reflète le niveau de la clôture par rapport au plus haut pour la période observée"
+msgstr "Développé par Larry Williams, Williams %R est un indicateur d'impulsion qui est l'inverse de l'Oscillateur Rapide Stochastique. Il est aussi appelé %R, Williams %R reflète le niveau de la clôture par rapport au plus haut pour la période observée"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
 msgstr "Développé par Tushar Chande en 1995, Aroon est un système indicateur qui détermine si l'action est orientée à la hausse ou non et quel est la vigueur de la tendance. Il y a deux indicateurs séparés: Aroon-Haut et Aroon-Bas. Un Aroon-Haut de 25 jours mesure le nombre de jours depuis le plus haut parmi ces 25 jours. Un Aroon-Bas de 25 jours mesure le nombre de jours depuis le plus bas parmi ces 25 jours"
 
 msgid "Differs"
-msgstr "Différent"
+msgstr "Diffère"
 
 msgid "Digits"
 msgstr "Chiffres"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
-msgstr "Le Mouvement Directionnel (IMD) est en fait une collection de trois indicateurs séparés combinés en un. Le Mouvement Directionnel consiste de l'Indice Moyen Directionnelle (IMD), l'Indicateur Directionnel Positif (ID+) et l'Indicateur Directionnel négatif (ID-)"
+msgstr "Le Mouvement Directionnel (IMD) est en fait une collection de trois indicateurs séparés combinés en un. Le Mouvement Directionnel consiste en l'Indice Moyen Directionnelle (IMD), l'Indicateur Directionnel Positif (ID+) et l'Indicateur Directionnel négatif (ID-)"
 
 msgid "Directional Movement Index (DX)"
 msgstr "L'indice de Mouvement Directionnel (IMD)"
