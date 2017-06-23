@@ -893,7 +893,7 @@ msgid "Choose from over a million possible trades at any time"
 msgstr "Choisissez parmi plus d'un million de trades possibles à tout moment"
 
 msgid "Choose password"
-msgstr "Choisir un mot de passe"
+msgstr "Choisissez un mot de passe"
 
 msgid "Choose the barrier(s)"
 msgstr "Choisissez la (les) barrière(s)"
@@ -947,7 +947,7 @@ msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 msgstr "Fermeture de Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
-msgstr "Matière premières"
+msgstr "Matières premières"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Les matières premières sont des ressources qui poussent ou sont extraites du sol, comme l'argent, l'or et le pétrole. Sur Binary.com, ils ont leurs prix fixés en dollars américains"
