@@ -608,7 +608,7 @@ msgid "Barrier(s)"
 msgstr "Barrière(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Baissière : Il s’agit d’un modèle de fin de tendance composé de trois chandeliers dans une tendance haussière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier devrait être court et peut former un fossé haussier. Il pourrait aussi y avoir une ombre de vente. Le modèle représente une faiblesse dans une montée avec un risque de consolidation et inversion possible. Haussière : Il s’agit d’un modèle de fin-de-tendance composé de trois chandeliers dans une tendance baissière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. le dernier chandelier doit être étayé. Le modèle représente une faiblesse, une consolidation et un possible renversement de tendance"
+msgstr "Baissière : Il s’agit d’un modèle de fin de tendance composé de trois chandeliers dans une tendance haussière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier devrait être court et peut former un fossé haussier. Il pourrait aussi y avoir une ombre de vente. Le modèle représente une faiblesse dans une montée avec un risque de consolidation et une possible inversion. Haussière : Il s’agit d’un modèle de fin-de-tendance composé de trois chandeliers dans une tendance baissière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier doit être étayé. Le modèle représente une faiblesse, une consolidation et un possible renversement de tendance"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Ceinture-cale (CDLBELTHOLD)"
@@ -656,10 +656,10 @@ msgid "Binary granted Investment Services license"
 msgstr "Binary obtient une licence de Services d'Investissement"
 
 msgid "Binary opens Japan office"
-msgstr "Binary ouvre un bureau au Japan"
+msgstr "Binary ouvre un bureau au Japon"
 
 msgid "Binary option"
-msgstr "option binaire"
+msgstr "Option binaire"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Options binaires ou autres produits financiers dérivés"
@@ -815,7 +815,7 @@ msgid "Cancel"
 msgstr "Annuler"
 
 msgid "Candles"
-msgstr "Chandeliers"
+msgstr "Bougies"
 
 msgid "Candlestick down-color"
 msgstr "Couleur de la partie inférieure du chandelier"
@@ -893,7 +893,7 @@ msgid "Choose from over a million possible trades at any time"
 msgstr "Choisissez parmi plus d'un million de trades possibles à tout moment"
 
 msgid "Choose password"
-msgstr "Choisir un mot de passe"
+msgstr "Choisissez un mot de passe"
 
 msgid "Choose the barrier(s)"
 msgstr "Choisissez la (les) barrière(s)"
@@ -947,7 +947,7 @@ msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 msgstr "Fermeture de Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
-msgstr "Matière premières"
+msgstr "Matières premières"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Les matières premières sont des ressources qui poussent ou sont extraites du sol, comme l'argent, l'or et le pétrole. Sur Binary.com, ils ont leurs prix fixés en dollars américains"
@@ -1121,22 +1121,22 @@ msgid "Deutsch"
 msgstr "Allemand"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
-msgstr "Développé par Donald Dorsey, l'Indice de Masse utilise la gamme haute-basse pour identifier les renversements de tendance basés sur des expansions de l'aire. En ce sens, l'Indice de Masse est un indicateur de volatilité qui n'a pas de biais directionnel. Au lieu de cela, l'Indice de Masse identifie dans l'échantillon les renflements qui peuvent présager un retournement de la tendance actuelle"
+msgstr "Développé par Donald Dorsey, l'Indice de Masse utilise la gamme haute-basse pour identifier les renversements de tendance basés sur des expansions de zone. En ce sens, l'Indice de Masse est un indicateur de volatilité qui n'a pas de biais directionnel. Au lieu de cela, l'Indice de Masse identifie dans l'échantillon les renflements qui peuvent présager un retournement de la tendance actuelle"
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr "Développé par Larry Williams, Williams %R est un indicateur d'impulsion qui est l'inverse de l'oscillateur rapide Stochastique. Il est aussi appelé %R, Williams %R reflète le niveau de la clôture par rapport au plus haut pour la période observée"
+msgstr "Développé par Larry Williams, Williams %R est un indicateur d'impulsion qui est l'inverse de l'Oscillateur Rapide Stochastique. Il est aussi appelé %R, Williams %R reflète le niveau de la clôture par rapport au plus haut pour la période observée"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
 msgstr "Développé par Tushar Chande en 1995, Aroon est un système indicateur qui détermine si l'action est orientée à la hausse ou non et quel est la vigueur de la tendance. Il y a deux indicateurs séparés: Aroon-Haut et Aroon-Bas. Un Aroon-Haut de 25 jours mesure le nombre de jours depuis le plus haut parmi ces 25 jours. Un Aroon-Bas de 25 jours mesure le nombre de jours depuis le plus bas parmi ces 25 jours"
 
 msgid "Differs"
-msgstr "Différent"
+msgstr "Diffère"
 
 msgid "Digits"
 msgstr "Chiffres"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
-msgstr "Le Mouvement Directionnel (IMD) est en fait une collection de trois indicateurs séparés combinés en un. Le Mouvement Directionnel consiste de l'Indice Moyen Directionnelle (IMD), l'Indicateur Directionnel Positif (ID+) et l'Indicateur Directionnel négatif (ID-)"
+msgstr "Le Mouvement Directionnel (IMD) est en fait une collection de trois indicateurs séparés combinés en un. Le Mouvement Directionnel consiste en l'Indice Moyen Directionnelle (IMD), l'Indicateur Directionnel Positif (ID+) et l'Indicateur Directionnel négatif (ID-)"
 
 msgid "Directional Movement Index (DX)"
 msgstr "L'indice de Mouvement Directionnel (IMD)"
@@ -1166,7 +1166,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Vous n'avez pas encore de compte ? Inscrivez-vous pour accéder à un compte virtuel de 10 000 dollars US."
 
 msgid "Donchian Channel (DC)"
-msgstr "Le Doji en Pierre Tombale est créé lorsque l'ouverture, le plus bas et la clôture sont au même prix ou quasiment au même prix (il est très rare que l'ouverture, le plus bas et la clôture aient le même prix). La partie la plus importante du Doji en Pierre Tombale est la longue ombre supérieure"
+msgstr "Le Canal Donchian (CD)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Terminé. Le transfert des fonds vers l'agent de paiement est en cours."
@@ -1178,7 +1178,7 @@ msgid "Dot"
 msgstr "Point"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr "Double Moyenne Mobile Exponentielle (DMME)"
+msgstr "Moyenne Mobile Exponentielle Double (MMED)"
 
 msgid "Double click the object to remove"
 msgstr "Double-cliquez sur l'objet pour le supprimer"
@@ -1241,7 +1241,7 @@ msgid "Each binary trade is for a pre-determined payout amount. You win the payo
 msgstr "Chaque trade binaire est pour un montant de versement pré-déterminé. Vous gagnez le versement si votre prédiction est correcte"
 
 msgid "Edge"
-msgstr "Bord"
+msgstr "Navigateur Internet Edge"
 
 msgid "Education"
 msgstr "Formation"
@@ -1412,7 +1412,7 @@ msgid "Fractals are indicators on candlestick charts that identify reversal poin
 msgstr "Les fractales sont des indicateurs sur des graphiques en chandeliers qui identifient les points de retournement du marché. Les traders souvent utilisent les fractales pour avoir une idée à propos de la direction dans laquelle le prix va se diriger. Un fractal sera formera lorsque un schéma de prix particulier se produit sur le graphique"
 
 msgid "Fran ais"
-msgstr "Francais"
+msgstr "Français"
 
 msgid "Fri"
 msgstr "ven."
@@ -1463,7 +1463,7 @@ msgid "Hanging Man (CDLHANGINGMAN)"
 msgstr "Pendu (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr "Schéma croisé Harami (CDLHARAMICROSS)"
+msgstr "Schéma Croisé Harami (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr "Schéma Harami (CDLHARAMI)"
@@ -1478,28 +1478,28 @@ msgid "High"
 msgstr "Haut"
 
 msgid "High Barrier"
-msgstr "Barrière supérieure"
+msgstr "Barrière Supérieure"
 
 msgid "High barrier"
 msgstr "Barrière supérieure"
 
 msgid "High barrier offset"
-msgstr "Marge de barrière supérieure"
+msgstr "Compensation de barrière supérieure"
 
 msgid "High returns"
 msgstr "Retours élevés"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr "Chandelle de Haute Vague (CDLHIGHWAVE)"
+msgstr "Bougie de Haute Vague (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr "Supérieur"
 
 msgid "Higher/Lower"
-msgstr "Haute/Basse"
+msgstr "Plus Haut/Plus Bas"
 
 msgid "Higher/Lower trades"
-msgstr "Trades hautes/basses"
+msgstr "Trades Plus Hautes/Plus Basses"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Schéma Hikkake (CDLHIKKAKE)"
@@ -1517,7 +1517,7 @@ msgid "Hours"
 msgstr "Heures"
 
 msgid "How do I fund my account?"
-msgstr "Comment dois je financer mon compte ?"
+msgstr "Comment approvisionner mon compte ?"
 
 msgid "How does Binary.com make money?"
 msgstr "Comment Binary.com gagne de l'argent ?"
@@ -1538,7 +1538,7 @@ msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Je reconnais que je ne suis pas une personne politiquement exposée (PEP)"
 
 msgid "I have read and agree to Binary.com"
-msgstr "J'ai lu et j'accepte les"
+msgstr "J'ai lu et j'accepte les Conditions Générales de Binary.com"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Je suis un débutant en options binaires, où dois je commencer ?"
