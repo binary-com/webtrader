@@ -1463,7 +1463,7 @@ msgid "Hanging Man (CDLHANGINGMAN)"
 msgstr "Pendu (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr "Schéma croisé Harami (CDLHARAMICROSS)"
+msgstr "Schéma Croisé Harami (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
 msgstr "Schéma Harami (CDLHARAMI)"
@@ -1478,28 +1478,28 @@ msgid "High"
 msgstr "Haut"
 
 msgid "High Barrier"
-msgstr "Barrière supérieure"
+msgstr "Barrière Supérieure"
 
 msgid "High barrier"
 msgstr "Barrière supérieure"
 
 msgid "High barrier offset"
-msgstr "Marge de barrière supérieure"
+msgstr "Compensation de barrière supérieure"
 
 msgid "High returns"
 msgstr "Retours élevés"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr "Chandelle de Haute Vague (CDLHIGHWAVE)"
+msgstr "Bougie de Haute Vague (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr "Supérieur"
 
 msgid "Higher/Lower"
-msgstr "Haute/Basse"
+msgstr "Plus Haut/Plus Bas"
 
 msgid "Higher/Lower trades"
-msgstr "Trades hautes/basses"
+msgstr "Trades Plus Hautes/Plus Basses"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Schéma Hikkake (CDLHIKKAKE)"
@@ -1517,7 +1517,7 @@ msgid "Hours"
 msgstr "Heures"
 
 msgid "How do I fund my account?"
-msgstr "Comment dois je financer mon compte ?"
+msgstr "Comment approvisionner mon compte ?"
 
 msgid "How does Binary.com make money?"
 msgstr "Comment Binary.com gagne de l'argent ?"
@@ -1538,7 +1538,7 @@ msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Je reconnais que je ne suis pas une personne politiquement exposée (PEP)"
 
 msgid "I have read and agree to Binary.com"
-msgstr "J'ai lu et j'accepte les"
+msgstr "J'ai lu et j'accepte les Conditions Générales de Binary.com"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Je suis un débutant en options binaires, où dois je commencer ?"
