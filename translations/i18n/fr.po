@@ -608,7 +608,7 @@ msgid "Barrier(s)"
 msgstr "Barrière(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Baissière : Il s’agit d’un modèle de fin de tendance composé de trois chandeliers dans une tendance haussière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier devrait être court et peut former un fossé haussier. Il pourrait aussi y avoir une ombre de vente. Le modèle représente une faiblesse dans une montée avec un risque de consolidation et inversion possible. Haussière : Il s’agit d’un modèle de fin-de-tendance composé de trois chandeliers dans une tendance baissière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. le dernier chandelier doit être étayé. Le modèle représente une faiblesse, une consolidation et un possible renversement de tendance"
+msgstr "Baissière : Il s’agit d’un modèle de fin de tendance composé de trois chandeliers dans une tendance haussière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier devrait être court et peut former un fossé haussier. Il pourrait aussi y avoir une ombre de vente. Le modèle représente une faiblesse dans une montée avec un risque de consolidation et une possible inversion. Haussière : Il s’agit d’un modèle de fin-de-tendance composé de trois chandeliers dans une tendance baissière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier doit être étayé. Le modèle représente une faiblesse, une consolidation et un possible renversement de tendance"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Ceinture-cale (CDLBELTHOLD)"
@@ -656,10 +656,10 @@ msgid "Binary granted Investment Services license"
 msgstr "Binary obtient une licence de Services d'Investissement"
 
 msgid "Binary opens Japan office"
-msgstr "Binary ouvre un bureau au Japan"
+msgstr "Binary ouvre un bureau au Japon"
 
 msgid "Binary option"
-msgstr "option binaire"
+msgstr "Option binaire"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Options binaires ou autres produits financiers dérivés"
@@ -815,7 +815,7 @@ msgid "Cancel"
 msgstr "Annuler"
 
 msgid "Candles"
-msgstr "Chandeliers"
+msgstr "Bougies"
 
 msgid "Candlestick down-color"
 msgstr "Couleur de la partie inférieure du chandelier"
