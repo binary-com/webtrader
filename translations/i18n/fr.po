@@ -1604,7 +1604,7 @@ msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "Schéma Dans le Col (CDLINNECK)"
 
 msgid "In/Out"
-msgstr "Zone In/Out"
+msgstr "Dans/Hors De"
 
 msgid "In/Out trades"
 msgstr "Trades Dans/Hors De"
@@ -1673,7 +1673,7 @@ msgid "It is sometimes possible to sell an option before the expiry of a trade, 
 msgstr "Il est parfois possible de vendre une option avant l'expiration du trade, mais seulement si un prix juste peut être déterminé. Si cette option est disponible, vous verrez un bouton bleue \"Vendre\" à coté de votre trade dans votre portefeuille"
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
-msgstr "Il est temps de s'agrandir. Nous définissons un centre de programmation à Cyberjaya - la Silicon Valley de Kuala Lumpur - pour maintenir et améliorer BetOnMarkets.com"
+msgstr "Il est temps de s'agrandir. Nous établissons un centre de programmation à Cyberjaya - la Silicon Valley de Kuala Lumpur - pour maintenir et améliorer BetOnMarkets.com"
 
 msgid "Italiano"
 msgstr "Italien"
@@ -2018,10 +2018,10 @@ msgid "Name of your pet"
 msgstr "Nom de votre animal de compagnie"
 
 msgid "Navigator handles background"
-msgstr "Arrière-plan des poignées du navigateur"
+msgstr "Le navigateur prend en charge l'arrière plan"
 
 msgid "Navigator handles border"
-msgstr "Bordure des poignées du navigateur"
+msgstr "Le navigateur prend en charge les bordures"
 
 msgid "Navigator mask-fill"
 msgstr "Remplissage du navigateur"
