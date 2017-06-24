@@ -3032,19 +3032,19 @@ msgid "The sum of price over selected period"
 msgstr "La somme du prix sur la période sélectionnée"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
-msgstr "La variance et étroitement lié l'écart type sont des mesures de l'étalement de la distribution. En d'autres mots, ce sont des mesures de variabilité. La variance est calculée comme l'écart carré moyen de chaque nombre à partir de la moyenne"
+msgstr "La variance et l'écart type sont des mesures étroitement liées de l'étalement de la distribution. En d'autres mots, ce sont des mesures de variabilité. La variance est calculée comme l'écart carré moyen de chaque nombre à partir de la moyenne"
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
-msgstr "L'indice de volatilité stimule les situations de divers marchés réels et fournisse une plateforme idéal pour s'habituer à trader et tester les stratégies dans les conditions de marchés. Les indices dépendent sur la volatilité et le mouvement, et aide les utilisateurs à essayer des scénarios comme - haute volatilité, faible volatilité, tendances haussières et baissières"
+msgstr "L'indice de volatilité stimule les situations de divers marchés réels et fournisse une plateforme idéal pour s'habituer à trader et tester les stratégies dans les conditions de marchés. Les indices dépendent de la volatilité et du mouvement, et aide les utilisateurs à essayer des scénarios comme - haute volatilité, faible volatilité, tendances haussières et baissières"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
-msgstr "Ce sont les trades où le trader prédit si le marché va finir en hausse ou en baisse par rapport à un prix cible spécifié"
+msgstr "Ce sont des trades où le trader prédit si le marché va finir en hausse ou en baisse par rapport à un prix cible spécifié"
 
 msgid "These are trades where the trader predicts if a market will rise or fall at the end of a selected time period"
-msgstr "Ce sont les trades où le trader prédit si le marché sera en hausse ou en baisse à la fin de la période de temps sélectionnée"
+msgstr "Ce sont des trades où le trader prédit si le marché sera en hausse ou en baisse à la fin de la période de temps sélectionnée"
 
 msgid "These are trades where the trader selects a low and high barrier, and predicts if the market will stay within these barriers or go outside them (see also 'Stays Between/Goes Outside trades')"
-msgstr "Ce sont les trades où le trader sélectionne une faible et haute barrière, et prédit si le marché restera entre ces barrières ou vont en sortir (voir aussi les trades 'Reste Entre/Sort de')"
+msgstr "Ce sont des trades où le trader sélectionne une faible et haute barrière, et prédit si le marché restera entre ces barrières ou va en sortir (voir aussi les trades 'Reste Entre/Sort de')"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will never touch the target before the expiry of the trade"
 msgstr "Ce sont les trades où le trader sélectionne le prix cible, et prédit que le marché ne touchera pas la cible avant l'expiration du trade"
@@ -3053,7 +3053,7 @@ msgid "These are trades where the trader selects a price target, and predicts th
 msgstr "Ce sont les trades où le trader sélectionne un prix cible, et prédit que le marché touchera la cible avant l'expiration du trade"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
-msgstr "Cette Moyenne Mobile utilise la courbe de distribution (Gauss) Normale qui peut être placée par paramètre Offset de 0 à 1. Le paramètre permet de réguler le lissage et la haute sensibilité de la Moyenne Mobile. Sigma est un autre paramètre qui est responsable de la forme des coefficients de la courbe"
+msgstr "Cette Moyenne Mobile utilise la courbe de distribution (Gauss) Normale qui peut être placée par le paramètre de compensation allant de 0 à 1. Le paramètre permet de réguler le lissage et la haute sensibilité de la Moyenne Mobile. Sigma est un autre paramètre qui est responsable de la forme des coefficients de la courbe"
 
 msgid "This field is required"
 msgstr "Ce champ est requis"
