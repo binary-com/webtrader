@@ -806,10 +806,10 @@ msgid "Can be used to open accounts, set settings, manage token usage, and more.
 msgstr "Peut être utilisé pour ouvrir des comptes, définir des paramètres, gérer l'usage des coupons, et plus."
 
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
-msgstr "Peut être utilisé pour regarder l'activité du compte, en incluant les paramètres, les bilans, l'historique des achats de trade, et plus."
+msgstr "Peut être utilisé pour regarder l'activité du compte, en incluant les paramètres, les limites, les bilans, l'historique des achats de trade, et plus."
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
-msgstr "Peut être utilisé pour retirer pour les agents de paiement, transférer des fonds entre comptes, et définir / supprimer les mots de passe de caisse."
+msgstr "Peut être utilisé pour retirer via les agents de paiement, transférer des fonds entre comptes, et définir / supprimer les mots de passe de caisse."
 
 msgid "Cancel"
 msgstr "Annuler"
