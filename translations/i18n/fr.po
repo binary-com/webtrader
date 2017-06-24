@@ -1889,16 +1889,16 @@ msgid "Market Professionals"
 msgstr "Professionnels du marché"
 
 msgid "Market exit price"
-msgstr "Prix de la sortie de marché"
+msgstr "Prix de sortie de marché"
 
 msgid "Marubozu (CDLMARUBOZU)"
 msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr "Indice de masse (MASS)"
+msgstr "Indice de Masse (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr "Prise de tapis (CDLMATHOLD)"
+msgstr "Cale de tapis (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Égal"
