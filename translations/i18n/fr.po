@@ -2894,13 +2894,13 @@ msgid "The Least Squares Moving Average first calculates a least squares regress
 msgstr "La Moyenne Mobile des Moindres Carrés calcule d'abord une ligne de régression des moindres carrés sur les périodes de temps précédentes, ensuite la projette sur la période actuelle. Essentiellement, elle calcule ce que serait la valeur si la ligne de régression continuait"
 
 msgid "The MESA Adaptive Moving Average is developed by John Ehlers of Mesa Software. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
-msgstr "La Moyenne Mobile Adaptative MESA est développée par John Ehlers de Mesa Software. L'indicateur de tendance suivie peut être utilisé pour identifier la tendance globale, les points de retournement et les mouvements de filtrage de prix"
+msgstr "La Moyenne Mobile Adaptative MESA est développée par John Ehlers de Mesa Software. L'indicateur de tendance suivie peut être utilisé pour identifier la tendance globale, les points de retournement et filtrer les mouvements de prix"
 
 msgid "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
 msgstr "L'indicateur de Momentum compare où le prix actuel est par rapport au prix dans le passé. Jusqu'où dans le passé la comparaison est faite dépend de l'analyste technique du trader. Le calcul du Momentum est assez simple (n est le nombre de périodes que le trader technique sélectionne): le prix courant moins le prix de périodes précédentes n"
 
 msgid "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average"
-msgstr "Le Pourcentage de l'Oscillateur de Prix (POP) est un oscillateur de momentum qui mesure la différence entre deux moyenne mobiles comme le pourcentage de la plus grande moyenne mobile"
+msgstr "Le Pourcentage de l'Oscillateur de Prix (POP) est un oscillateur de momentum qui mesure la différence entre deux moyennes mobiles comme le pourcentage de la plus grande moyenne mobile"
 
 msgid "The Price Rate-of-Change (ROC) indicator displays the difference between the current price and the price x-time periods ago. The difference can be displayed in either points or as a percentage"
 msgstr "L'indicateur du prix de Taux de Change (TDC) affiche une différence entre le prix actuel et le prix des périodes précédentes x. La différence peut être affichée soit en points soit en pourcentage"
