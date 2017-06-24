@@ -2963,31 +2963,31 @@ msgid "The closing black marubozu candlestick is a tall black candle with an upp
 msgstr "Le chandelier marubozu de fermeture noir est une haute bougie noire avec une ombre supérieure mais pas inférieure. Le chandelier marubozu de fermeture blanc est une haute bougie blanche avec une ombre inférieure mais pas d'ombre supérieure"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr "L'entreprise détient les fonds des clients dans des comptes en banque séparés pour les comptes opérationnels ce qui dans le cas d'un évènement d'insolvabilité ne feraient pas partie des actifs de l'entreprise. Cela satisfait les conditions de la Commissions des Jeux pour la ségrégation des fonds clients au niveau"
+msgstr "L'entreprise détient les fonds des clients dans des comptes en banque séparés des comptes opérationnels ce qui dans le cas d'un évènement d'insolvabilité ne feraient pas partie des actifs de l'entreprise. Cela satisfait les conditions de la Commissions des Jeux pour la ségrégation des fonds clients au niveau"
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
-msgstr "La période de contrat est la période du trade. Il est aussi appelé duration"
+msgstr "La période de contrat est la période de temps du trade. Il est aussi appelé durée"
 
 msgid "The duration is the length of a purchased trade (see"
 msgstr "La durée est la longueur du trade acheté (voir"
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
-msgstr "Le prix d'entrée spot est le prix débutant le trade acheté par un trader"
+msgstr "Le prix d'entrée spot est le prix débutant du trade acheté par un trader"
 
 msgid "The expiry price is the price of the underlying when the contract expires"
 msgstr "Le prix d'expiration est le prix du sous-jacent quand le contrat expire"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr "Les services de trading financiers contenus à l'intérieur du site sont seulement appropriés pour les clients qui sont capables de soutenir les pertes de tout l'argent investi et qui comprennent et ont l'expérience du risque impliqué par l’acquisition de contrats financiers. Les transactions des contrats financiers portent un haut degré de risque. Si les contrats achetés expirent sans valeur, vous soufrerez d'une perte totale de votre investissement qui se compose de la prime du contrat"
+msgstr "Les services de trading financiers contenus à l'intérieur du site sont seulement appropriés pour les clients qui sont capables de soutenir les pertes de tout l'argent investi et qui comprennent et ont l'expérience du risque impliqué par l’acquisition de contrats financiers. Les transactions des contrats financiers comportent un haut degré de risque. Si les contrats achetés expirent sans valeur, vous soufrerez d'une perte totale de votre investissement qui se compose de la prime du contrat"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "Les services financiers disponibles sur ce site conviennent uniquement aux clients capables d'assumer la perte de l'ensemble des fonds qu'ils investissent, et qui comprennent et ont l'expérience des risques liés à l'acquisition de contrats financiers. Les transactions sur contrats financiers impliquent un degré de risque élevé. Si les contrats achetés expirent hors la monnaie, vous perdrez la totalité de votre investissement, à savoir la prime de l'option."
+msgstr "Les services financiers disponibles sur ce site conviennent uniquement aux clients capables d'assumer la perte de l'ensemble des fonds qu'ils investissent, et qui comprennent et ont l'expérience des risques liés à l'acquisition de contrats financiers. Les transactions sur contrats financiers impliquent un degré de risque élevé. Si les contrats achetés expirent sans valeur, vous perdrez la totalité de votre investissement, à savoir la prime de l'option"
 
 msgid "The first step is to open an account. You can apply online in just a few minutes"
 msgstr "Le première étape est d'ouvrir un compte. Vous pouvez faire une demande en ligne en quelques minutes"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
-msgstr "Les trois premiers jours du Bas de l’Échelle Haussière sont de forts chandeliers noirs avec de plus basses ouvertures et fermetures consécutives. Le quatrième jour est un court chandelier noir, mais il ouvre plus haut et s'échange plus haut, laissant la longue ombre supérieure, puis clôturant en faisant un nouveau plus bas.  Le cinquième jour est un fort chandelier blanc qui fait un corps fossé avec le quatrième jour"
+msgstr "Les trois premiers jours du Bas de l’Échelle Haussière sont de forts chandeliers noirs avec de plus basses ouvertures et fermetures consécutives. Le quatrième jour est un court chandelier noir, mais il ouvre plus haut et s'échange plus haut, laissant la longue ombre supérieure, puis clôturant en faisant un nouveau plus bas. Le cinquième jour est un fort chandelier blanc qui crée un fossé avec le quatrième jour"
 
 msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
 msgstr "Le pigeon voyageur est un schéma de retournement de chandelier haussier comprenant deux chandeliers rouges. La première bougie est une haute bougie noire qui apparaît dans une tendance de prix baissière. Le second jour est aussi une bougie noire, mais elle est plus petite et tient à l'intérieur du corps de la première bougie noire"
