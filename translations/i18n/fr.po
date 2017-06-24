@@ -1352,7 +1352,7 @@ msgid "February"
 msgstr "février"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public"
-msgstr "15 ans après, nous innovons toujours, grandissant et travaillant sur de nouvelles façons de mieux servir nos clients. Pour la première fois, nous offrons des trades touche/sans touche de court terme et introduisons une nouvelle application de graphique. Nous croyons que nous avons la plateforme d'options digitales la plus compétitive et la plus complète disponible pour le grand public"
+msgstr "15 ans après, nous innovons toujours, grandissant et travaillant sur de nouvelles façons de mieux servir nos clients. Pour la première fois, nous offrons des trades touche/sans touche de court terme et introduisons une nouvelle application graphique. Nous croyons que nous avons la plateforme d'options digitales la plus compétitive et la plus complète disponible pour le grand public"
 
 msgid "Final Price"
 msgstr "Prix final"
@@ -1391,7 +1391,7 @@ msgid "Flexibility"
 msgstr "Flexibilité"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
-msgstr "Pour la troisième année consécutive, BetOnMarkets.com est désigné 'Meilleur Fournisseur Financier à Cotes Fixes' par Shares Magazine UK. C'est la dernière fois que nous gagnons car Share Magazine arrête la récompense de cette catégorie"
+msgstr "Pour la troisième année consécutive, BetOnMarkets.com est désigné 'Meilleur Fournisseur Financier de Trading à Cotes Fixes' par Shares Magazine UK. C'est la dernière fois que nous gagnons car Share Magazine arrête la récompense de cette catégorie"
 
 msgid "Forex"
 msgstr "Forex"
@@ -1409,7 +1409,7 @@ msgid "Fractal (FRACTAL)"
 msgstr "Fractale (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr "Les fractales sont des indicateurs sur des graphiques en chandeliers qui identifient les points de retournement du marché. Les traders souvent utilisent les fractales pour avoir une idée à propos de la direction dans laquelle le prix va se diriger. Un fractal sera formera lorsque un schéma de prix particulier se produit sur le graphique"
+msgstr "Les fractales sont des indicateurs sur des graphiques en chandeliers qui identifient les points de retournement du marché. Les traders souvent utilisent les fractales pour avoir une idée à propos de la direction dans laquelle le prix va se diriger. Un fractal se formera lorsqu'un schéma de prix particulier se produit sur le graphique"
 
 msgid "Fran ais"
 msgstr "Français"
@@ -1865,7 +1865,7 @@ msgid "Low minimum stakes"
 msgstr "Les mises minimum basses"
 
 msgid "Lower"
-msgstr "Inférieur"
+msgstr "Plus bas"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
 msgstr "MACD est un indicateur de trading utilisé dans l'analyse technique de prix des actions. Il est censé révéler des changements dans la force, la direction, le momentum, et la durée de tendance des prix de l'action"
