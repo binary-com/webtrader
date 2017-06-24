@@ -467,10 +467,10 @@ msgid "Add indicator"
 msgstr "Ajouter un indicateur"
 
 msgid "Add/Remove comparisons"
-msgstr "Ajouter/supprimer des comparaisons"
+msgstr "Ajouter/Supprimer des comparaisons"
 
 msgid "Add/Remove indicators"
-msgstr "Ajouter/supprimer des indicateurs"
+msgstr "Ajouter/Supprimer des indicateurs"
 
 msgid "Add/remove indicators"
 msgstr "Ajouter/supprimer des indicateurs"
@@ -479,10 +479,10 @@ msgid "Admin"
 msgstr "Administration"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr "Bloque avancé (CDLADVANCEBLOCK)"
+msgstr "Bloc avancé (CDLADVANCEBLOCK)"
 
 msgid "All durations"
-msgstr "toutes durées"
+msgstr "Toutes durées"
 
 msgid "All market conditions"
 msgstr "Toutes conditions de marché"
