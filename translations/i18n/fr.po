@@ -2402,10 +2402,10 @@ msgid "Rate Of Change Percentage (ROCP)"
 msgstr "Pourcentage De Taux de Change (PDTC)"
 
 msgid "Rate Of Change Ratio (ROCR)"
-msgstr "Ratio de Taux de Change (ROCR)"
+msgstr "Ratio de Taux de Change (RDTC)"
 
 msgid "Read"
-msgstr "Lu"
+msgstr "Lire"
 
 msgid "Read about"
 msgstr "Lire l’à-propos"
