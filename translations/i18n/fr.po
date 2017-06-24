@@ -3008,19 +3008,19 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "Le versement est un montant payé à un trader d'options si leur prédiction est correcte"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr "Le schéma de perçage est faite de deux chandeliers, le premier noir et le second blanc. Les deux chandeliers devront avoir de larges corps et les ombres sont usuellement, mais pas nécessairement, petits ou non existants. Le chandelier blanc doit être ouvert en dessous de la précédente clôture et ferme au dessus du milieu du corps du chandelier noir. Une fermeture en dessous du milieu peut qualifier comme un retournement, mais ne serait pas considéré comme haussier"
+msgstr "Le schéma de perçage est faite de deux chandeliers, le premier noir et le second blanc. Les deux chandeliers devront avoir de larges corps et les ombres sont usuellement, mais pas nécessairement, petits ou non existants. Le chandelier blanc doit ouvrir en dessous de la précédente clôture et fermer au dessus du milieu du corps du chandelier noir. Une fermeture en dessous du milieu peut qualifier comme un retournement, mais ne serait pas considéré comme haussier"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
-msgstr "La première plateforme pour trader des options binaires dans les marchés financiers"
+msgstr "La première plateforme pour trader des options binaires dans les marchés financiers internautionaux"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
 msgstr "Le profit est la différence entre le prix d'achat (la mise) et le versement sur un trade gagnant"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr "Le changement de nom est une évolution naturelle de la plateforme comme elle continue à croître en terme de parts de marché dans secteur très compétitif du trading d'options binaires. La nouvelle marque reflète la nature des affaires, et notre nouveau slogan - prix aiguisé, trading intelligent - communique notre ethos et notre engagement envers les clients"
+msgstr "Le changement de nom est une évolution naturelle de la plateforme comme elle continue à croître en terme de parts de marché dans le secteur très compétitif du trading d'options binaires. La nouvelle marque reflète la nature des affaires, et notre nouveau slogan - prix aiguisé, trading intelligent - communique notre ethos et notre engagement envers les clients"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
-msgstr "Le prix de revente indique le prix de contrat sur le marché actuel. Les prix de revente sont sur une base des meilleurs efforts et peut être non disponible à tout moment après l'achat. Voir 'Vendre option' pour plus de détails sur la vente de contrats avant l'expiration"
+msgstr "Le prix de revente indique le prix du contrat sur le marché actuel. Les prix de revente sont sur une base des meilleurs efforts et peut être non disponible à tout moment après l'achat. Voir 'Vendre option' pour plus de détails sur la vente de contrats avant l'expiration"
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
 msgstr "Le retour est l'argent fait lors de l'expiration du contrat (voir 'Versement')"
