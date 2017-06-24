@@ -521,7 +521,7 @@ msgid "Apply"
 msgstr "Appliquer"
 
 msgid "Apply to become a Binary.com"
-msgstr "Postuler pour devenir un contributeur Binary.com"
+msgstr "Postuler pour devenir un agent de paiement Binary.com"
 
 msgid "Appropriateness Test: WARNING"
 msgstr "Test de pertinence : AVERTISSEMENT"
@@ -665,10 +665,10 @@ msgid "Binary options or other financial derivatives"
 msgstr "Options binaires ou autres produits financiers dérivés"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr "Options binaires ou autre expérience de trading des dérivés financiers"
+msgstr "Expérience de trading des options binaires ou autre dérivés financiers"
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr "Options binaires ou autre fréquence de trading des dérivés financiers"
+msgstr "Fréquence de trading des options binaires ou autre dérivés financiers"
 
 msgid "Binary trading is flexible"
 msgstr "Le trading d'options binaires est flexible"
@@ -722,10 +722,10 @@ msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com est entièrement en ligne et ne requiert pas l'installation de logiciel"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
-msgstr "Binary.com est honoré comme le \"Meilleur Courtier en Options Binaires\" au monde à la 16ème conférence exposition financière MENA, située à Dubai"
+msgstr "Binary.com est honoré comme le \"Meilleur Courtier en Options Binaires\" au monde à la 16ème conférence et exposition financière MENA, située à Dubai"
 
 msgid "Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr "Binary.com est l'un des noms les plus vieux et les plus respectés dans le trading d'options binaires en ligne"
+msgstr "Binary.com est l'un des noms les plus anciens et les plus respectés dans le trading d'options binaires en ligne"
 
 msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. For more information, visit our history page"
 msgstr "Binary.com appartient et est opéré par le groupe d'entreprises Binary Ltd. Pour plus d'information, visitez notre page historique"
