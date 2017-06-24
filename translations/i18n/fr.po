@@ -3383,13 +3383,13 @@ msgid "Volatility indices"
 msgstr "Indices de volatilité"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
-msgstr "MMP signifie Moyenne Mobile Pondérée. Cela aide à lisser la courbe de prix pour améliorer l'identification de tendance. Cela place une plus grande importance sur les récentes données par rapport à ce que fait l'MME"
+msgstr "MMP signifie Moyenne Mobile Pondérée. Cela aide à lisser la courbe de prix pour améliorer l'identification de tendance. Cela place une plus grande importance sur les récentes données par rapport à ce que fait la MME"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "Nous sommes requis par notre licence de vous informer à propos de ce qui arrive aux fonds que nous gardons à votre place, et le niveau de sécurité de vos fonds en cas d'insolvabilité"
 
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
-msgstr "Nous le réalisons encore une fois. BetOnMarkets.com après notre récompense de 2007 est voté 'Meilleur Fournisseur de Trading de Paris à Cote Fixes'"
+msgstr "Nous le réalisons encore une fois. BetOnMarkets.com après notre récompense de 2007 est voté 'Meilleur Fournisseur de Trading de Paris à Cote Fixes' pour 2008"
 
 msgid "We don't usually require any documents as we can verify your identity online"
 msgstr "Nous ne requerrons normalement aucun document puisque nous pouvons vérifier votre identité en ligne"
@@ -3569,7 +3569,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "permettre aux clients de développer leurs propres robots de trading automatisés avec la simplicité d'un glisser-déposer"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "et pour les clients Irlandais par (3) les Commissionnaires de Revenu en Irlande, la licence actuelle de bookmaker à distance a été émise le 29 septembre 2015 (licence no 1010285). Les services du site internet ne sont pas disponibles dans certains pays comme les États-Unis, Costa Rica, Hong Kong, ou pour les personnes en dessous de 18 ans"
+msgstr "et pour les clients Irlandais par (3) les Commissionnaires de Revenu en Irlande, la licence actuelle de bookmaker à distance a été émise le 29 septembre 2015 (licence no 1010285). Les services du site internet ne sont pas disponibles dans certains pays comme les États-Unis, le Costa Rica, Hong Kong, ou pour les personnes en dessous de 18 ans"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrophes (') sont autorisés"
