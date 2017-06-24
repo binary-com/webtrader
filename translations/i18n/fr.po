@@ -2303,7 +2303,7 @@ msgid "Please provide your tax information"
 msgstr "S'il vous plaît communiquez votre information fiscale"
 
 msgid "Please select"
-msgstr "Sélection"
+msgstr "Veuillez sélectionner"
 
 msgid "Please submit a valid verification token"
 msgstr "S'il vous plaît, soumettez un coupon de vérification valide"
@@ -2462,7 +2462,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "Indice de Force Relative (IFR)"
 
 msgid "Remove"
-msgstr "Retirer"
+msgstr "Supprimer"
 
 msgid "Remove Selected"
 msgstr "Supprimer la sélection"
