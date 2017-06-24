@@ -503,13 +503,13 @@ msgid "Amount"
 msgstr "Montant"
 
 msgid "Amount Per Point"
-msgstr "Montant par point de base"
+msgstr "Montant Par Point"
 
 msgid "Amount per point"
-msgstr "Montant par point de base"
+msgstr "Montant par point"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr "Un trade Finit Entre est gagnant si le prix de sortie du marché est strictement supérieur à la cible haute de prix ET strictement inférieur à la cible haute de prix. Un binaire Finit Hors De est gagant si le prix de sortie du marché est SOIT strictement supérieur à la cible haute de prix SOIT strictement inférieur à la cible basse de prix"
+msgstr "Un trade Finit Entre est gagnant si le prix de sortie du marché est strictement supérieur à la cible basse de prix ET strictement inférieur à la cible haute de prix. Un binaire Finit Hors De est gagnant si le prix de sortie du marché est SOIT strictement supérieur à la cible haute de prix SOIT strictement inférieur à la cible basse de prix"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
 msgstr "Une autre récompense majeure. Cette fois nous sommes nominés par les lecteurs en ligne du Global Banking and Finance Review et jugés par un panel d'experts industriels et d'analystes qui reconnaissent les 13 ans de fiabilité de notre plateforme, notre gamme de trades, notre fixation des prix, notre service client et notre vaste connaissance"
@@ -1007,7 +1007,7 @@ msgid "Create token"
 msgstr "Créer un jeton"
 
 msgid "Credit/Debit"
-msgstr "Crédit/débit"
+msgstr "Crédit/Débit"
 
 msgid "Crosshair"
 msgstr "Curseur en croix"
@@ -1061,7 +1061,7 @@ msgid "Dark Green"
 msgstr "Vert foncé"
 
 msgid "Dark Unica"
-msgstr "Dark Unica"
+msgstr "Unica Foncé"
 
 msgid "Date"
 msgstr "Date"
