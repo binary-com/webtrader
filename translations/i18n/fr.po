@@ -2846,10 +2846,10 @@ msgid "The Bullish Three Star appears after a downtrend and it consists of three
 msgstr "Les Trois Étoiles Haussières apparaissent après un mouvement baissier et consiste en trois consécutives Doji, dans lequel le second Doji chute en dessous des deux autres Doji. Les Trois Étoiles Baissières apparaissent après une tendance haussière et cela consiste en trois consécutives Doji, dans lequel le second Doji grimpe au dessus des deux autres Doji"
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
-msgstr "L'indicateur CMO est créé en calculant la différence entre la somme des récentes plus hautes clôtures et la somme des récentes plus basses clôtures et ensuite diviser le résultat par la somme de tout les mouvements de prix sur une période de temps donnée. Le résultat est multiplié par 100 pour donner une gamme entre -100 et +100"
+msgstr "L'indicateur CMO est créé en calculant la différence entre la somme des récentes plus hautes clôtures et la somme des récentes plus basses clôtures et ensuite diviser le résultat par la somme de tous les mouvements de prix sur une période de temps donnée. Le résultat est multiplié par 100 pour donner une gamme entre -100 et +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
-msgstr "L'indice de volatilité (CHOP) est un indicateur désigné pour déterminer si le marché est volatile (trading latéral) ou non volatile (trading à l'intérieur d'une tendance quelque soit la direction). CHOP n'est pas destiné à prédire la future direction du marché, il s'agit d'un indicateur à utiliser pour définir seulement la tendance du marché"
+msgstr "L'indice de volatilité (CHOP) est un indicateur désigné pour déterminer si le marché est volatile (trading sans direction) ou non volatile (trading à l'intérieur d'une tendance quelque soit la direction). CHOP n'est pas destiné à prédire la future direction du marché, il s'agit d'un indicateur à utiliser pour définir seulement la tendance du marché"
 
 msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions"
 msgstr "L'indice de la Filière des Matières Premières (IFMP) est un indicateur versatile qui peut être utilisé pour identifier une nouvelle tendance ou alerter sur des conditions extrêmes"
@@ -2858,7 +2858,7 @@ msgid "The Donchian Channel is an indicator used in market trading developed by 
 msgstr "Le canal de Donchian est un indicateur utilisé dans le marché du trading développé par Richard Donchian. Il se forme en prenant le plus haut et le plus bas des dernières périodes n. La zone entre le plus haut et le plus bas est le canal pour la période choisie"
 
 msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr "La Moyenne Mobile Exponentielle Double (MMED) par Patrick Mulloy s'attache à supprimer le retard inhérent associé aux Moyenne Mobiles en plaçant plus de poids aux valeurs récentes"
+msgstr "La Moyenne Mobile Exponentielle Double (MMED) par Patrick Mulloy s'attache à supprimer le retard inhérent associé aux Moyennes Mobiles en plaçant plus de poids aux valeurs récentes"
 
 msgid "The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
 msgstr "La Moyenne Mobile Exponentielle Double (MMED) de Patrick Mulloy s'attache à supprimer le retard inhérent associé aux Moyennes Mobiles en plaçant plus de poids sur les valeurs récentes"
@@ -2867,7 +2867,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "Le Doji Libellule est créée lorsque l'ouverture, le plus haut et la clôture sont les mêmes ou presque les mêmes prix (où l'ouverture, le plus haut et la fermeture ont exactement le même prix ce qui est rare). La partie la plus importante du Doji Libellule est la longue ombre inférieure"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
-msgstr "La Moyenne Mobile Exponentielle (MME) représente une moyenne de prix, mais place plus de poids sur les prix récents. La pondération appliquée aux plus récents prix dépend de la période sélectionnée des moyennes mobiles. Plus courte est la période pour la MME, plus la pondération va être forte pour le plus récent prix"
+msgstr "La Moyenne Mobile Exponentielle (MME) représente une moyenne de prix, mais place plus de poids sur les prix récents. La pondération appliquée aux plus récents prix dépend de la période sélectionnée de la moyenne mobile. Plus courte est la période pour la MME, plus la pondération va être forte pour le plus récent prix"
 
 msgid "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K"
 msgstr "L’Oscillateur de Stochastique Rapide est basé sur la formule originale de George Lane's pour %K et %D. %K est la version rapide qui apparaît plutôt volatile. %D est la MMS de 3 jours de %K"
