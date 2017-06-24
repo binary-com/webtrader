@@ -3632,7 +3632,7 @@ msgid "hours"
 msgstr "heures"
 
 msgid "https://developers.binary.com/"
-msgstr "https://Developers.Binary.com/"
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
@@ -3641,7 +3641,7 @@ msgid "if this is not your country of residence"
 msgstr "s'il ne s'agit pas de votre pays de résidence"
 
 msgid "in the future, the"
-msgstr "ultérieure, l'"
+msgstr "ultérieure, le"
 
 msgid "information about your trading exprience and personal finance"
 msgstr "informations sur votre expérience du trading et votre situation financière personnelle"
