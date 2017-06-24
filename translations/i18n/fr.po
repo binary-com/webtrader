@@ -395,7 +395,7 @@ msgid "A bullish candlestick pattern that consists of three candles, the first b
 msgstr "Un chandelier avec schéma haussier qui consiste en trois bougies, la première barre est un grand chandelier rouge localisé à l'intérieur d'un mouvement baissier, la seconde barre est une bougie avec un petit corps (soit rouge soit blanc) qui ferme en dessous de la première barre rouge, la dernière barre est une large bougie blanche qui ouvre au dessus de la bougie moyenne et ferme près du centre du corps de la première barre"
 
 msgid "A bullish or bearish candle followed by a doji with with a downward or uptrend gap"
-msgstr "Une chandelle haussière ou baissière suivie par un doji avec un fossé baissier ou haussier"
+msgstr "Une bougie haussière ou baissière suivie par un doji avec un fossé baissier ou haussier"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
 msgstr "Un graphique en chandelier dans lequel un grand chandelier est suivi par un chandelier plus petit dont le corps est localisé à l'intérieur de la fourchette verticale du corps plus large. Par rapport aux couleurs de chandelier, le harami haussier est un mouvement baissier de chandeliers non coloriés (noir) qui s'engouffrent dans un petit chandelier positif (blanche), signalant un retournement du mouvement baissier"
@@ -404,7 +404,7 @@ msgid "A candlestick with a long black body (long line) represents a bearish for
 msgstr "Un chandelier avec un grand corps noir (longue ligne) représente une force baissière dans le marché. Le prix de l'action était à la hausse et à la baisse dans des proportions importantes, ouvrant près des plus hauts et clôturant près des plus bas de la journée. Une avec une longue ligne blanche représente une force haussière dans le marché. Le prix de l'action était à la hausse et à la baisse dans des proportions importantes, ouvrant proche des plus bas de la journée et clôturant près des plus hauts"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr "Un chandelier avec une très longue ombre supérieure et inférieure et un petit corps réel sur un graphique en chandelier Japonais. Il montre que le marché perd son biais directionnel qu'il avait avant que la chandelle apparaisse"
+msgstr "Un chandelier avec une très longue ombre supérieure et inférieure et un petit corps réel sur un graphique en chandelier Japonais. Il montre que le marché perd son biais directionnel qu'il avait avant que la bougie apparaisse"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
 msgstr "La tendance graphique qui consiste en un petit chandelier blanc avec une courte ombre ou queue suivi par un grand chandelier noire qui éclipse ou 'absorbe' le petit blanc"
@@ -413,13 +413,13 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Un dérivé est un instrument financier dont la valeur est déterminée par référence à un marché sous-jacent. Les dérivés sont communément échangés sur le marché interbancaire, et les binaires sont l'une des plus simples formes de dérivés"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
-msgstr "Une chandelle moyenne ou longue haussière ou baissière avec le trait définissant clé étant l'absence d'ombre de tête ou queue"
+msgstr "Un chandelier moyen ou long haussier ou baissier avec le trait définissant clé étant l'absence d'ombre de tête ou queue"
 
 msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Betting Operator of the Year' over two other finalists. It's a major victory for our brand and further recognition of our world-beating service. Ten years on, and going from strength to strength"
 msgstr "Un panel représentant les leaders du secteur ont récompensé BetOnMarkets.com 'Opérateur de Paris Financier de l'Année' devant deux autres finalistes. C'est une victoire majeure pour notre marque et une reconnaissance supplémentaire de notre service au meilleur niveau mondial. 10 ans après, et prenant de plus en plus d'ampleur"
 
 msgid "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period"
-msgstr "Un indicateur technique inventé par Larry Williams qui utilise la moyenne pondérée de trois période de temps différente pour réduire la volatilité et les faux signaux de transactions qui sont associés à d'autres indicateurs qui principalement s'appuient sur une seule période de temps"
+msgstr "Un indicateur technique inventé par Larry Williams qui utilise la moyenne pondérée de trois périodes de temps différentes pour réduire la volatilité et les faux signaux de transactions qui sont associés à d'autres indicateurs qui principalement s'appuient sur une seule période de temps"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
 msgstr "Un indicateur d'impulsion technique qui compare le prix de clôture d'un titre à sa gamme de prix sur une période de temps donnée. La sensitivité de l'oscillation aux mouvements du marché peut être réduite en ajustant la période de temps ou en prenant une moyenne mobile du résultat"
