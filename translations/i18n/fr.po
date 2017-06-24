@@ -368,10 +368,10 @@ msgid "A Stays Between trade pays out if the market stays between (does not touc
 msgstr "Un trade Reste Entre sera gagnant si le marché reste entre (mais ne touche pas) A LA FOIS la barrière haute ou la barrière basse à tout moment durant la période choisie par le trader. Un trade Sort De est gagnant si le marché touche SOIT la barrière haute ou la barrière basse à tout moment durant la période choisie par le trader"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr "Un schéma de chandelier baissier consiste en trois chandelles qui doivent démontrer les caractéristiques suivantes, la première barre est un grand chandelier blanc localisé à l'intérieur d'un mouvement haussier, une barre moyenne est une chandelle avec un petit corps (rouge ou blanc) qui se ferme au dessus de la première barre blanche, la dernière barre est une grande chandelle rouge qui s'ouvre en dessous de la chandelle moyenne et se ferme près du centre du corps de la première barre"
+msgstr "Un schéma de chandelier baissier consiste en trois bougies qui doivent démontrer les caractéristiques suivantes, la première barre est un grand chandelier blanc localisé à l'intérieur d'un mouvement haussier, la barre moyenne est une bougie avec un petit corps (rouge ou blanc) qui se ferme au dessus de la première barre blanche, la dernière barre est une grande bougie rouge qui s'ouvre en dessous de la bougie moyenne et se ferme près du centre du corps de la première barre"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr "Un chandelier avec schéma baissier est utilisée pour prédire un retournement du mouvement haussier actuel. Le schéma consiste en trois chandeliers consécutifs à corps long qui ont clôturé plus bas que le jour précédent avec chaque ouverture de session ayant lieu à l'intérieur du corps de la précédente chandelle"
+msgstr "Un chandelier avec schéma baissier est utilisé pour prédire un retournement du mouvement haussier actuel. Le schéma consiste en trois chandeliers consécutifs à corps long qui ont clôturé plus bas que le jour précédent avec chaque ouverture de session ayant lieu à l'intérieur du corps de la précédente bougie"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
 msgstr "Une contre attaque baissière est une longue chandelle blanche dans un mouvement haussier, suivie par une longue chandelle noire. Les prix de clôture des deux chandelles sont au même niveau de prix. Une contre attaque haussière est une longue chandelle noire dans un mouvement baissier, suivie par une longue chandelle blanche. Les prix de clôture des deux chandelles sont au même niveau de prix"
@@ -1847,7 +1847,7 @@ msgid "Look for a tall black candle with a long lower shadow to appear in a down
 msgstr "Cherchez une haute bougie noire avec une longue ombre inférieure pour apparaître dans une tendance de prix baissier. Le second jour devrait être similaire au premier jour, mais plus petit avec un plus bas plus haut. Le dernier jour est un marubozu noir qui s'insérera à l'intérieur de la gamme haute basse du jour précédent"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
-msgstr "Recherchez une grande bougie blanche dans une tendance de prix à la hausse. Suite à cela, une bougie noire a un corps qui crée un fossé au-dessus du corps de la précédente bougie. Le dernier jour est une autre bougie noire, mais celle-ci engloutit la bougie baissière précédente mais se ferme au-dessus de l'ouverture du la première barre"
+msgstr "Recherchez une grande bougie blanche dans une tendance de prix à la hausse. Suite à cela, une bougie noire a un corps qui crée un fossé au-dessus du corps de la précédente bougie. Le dernier jour est une autre bougie noire, mais celle-ci engloutit la bougie baissière précédente mais se ferme au-dessus de l'ouverture de la première barre"
 
 msgid "Low"
 msgstr "Bas"
@@ -1859,7 +1859,7 @@ msgid "Low barrier"
 msgstr "Barrière inférieure"
 
 msgid "Low barrier offset"
-msgstr "Marge de barrière inférieure"
+msgstr "Compensation de barrière inférieure"
 
 msgid "Low minimum stakes"
 msgstr "Les mises minimum basses"
