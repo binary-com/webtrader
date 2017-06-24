@@ -2834,10 +2834,10 @@ msgid "The Average True Range (TRANGE) study measures the size of the period s r
 msgstr "L'étude de la Gamme Réelle Moyenne (TRANGE) mesure la taille de la période, et prend en compte tout fossé à partir de la clôture de la précédente période"
 
 msgid "The Awesome Oscillator is an indicator used to measure market momentum. AO calculates the difference of a 34 Period and 5 Period Simple Moving Averages. The Simple Moving Averages that are used are not calculated using closing price but rather each bar's midpoints. AO is generally used to affirm trends or to anticipate possible reversals"
-msgstr "L'Oscillateur Awesome est un indicateur utilisé pour mesurer le momentum du marché. OA calcule la différence entre les Moyennes Mobiles Simples de la Période 34 et de la Période 5. Les Moyennes Mobiles Simples qui ne sont pas calculés en utilisant le prix de clôture mais plutôt chaque barre du milieu. OA est généralement utilisé pour affirmer les tendances ou pour anticiper de possible retournements"
+msgstr "L'Oscillateur Awesome est un indicateur utilisé pour mesurer le momentum du marché. OA calcule la différence entre les Moyennes Mobiles Simples de 34 et de 5 périodes. Les Moyennes Mobiles Simples qui ne sont pas calculés en utilisant le prix de clôture mais plutôt chaque barre du milieu. OA est généralement utilisé pour affirmer les tendances ou pour anticiper de possible retournements"
 
 msgid "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
-msgstr "Le Schéma Baissier Dans le Cou apparaisse après une tendance baissière quand le premier jour est une longue bougie rouge et le second jour est un jour bleu, ouvrant en dessous du plus bas du premier jour et en clôturant à peine dans le corps du premier jour"
+msgstr "Le Schéma Baissier Dans le Cou apparait après une tendance baissière quand le premier jour est une longue bougie rouge et le second jour est un jour bleu, ouvrant en dessous du plus bas du premier jour et en clôturant à peine dans le corps du premier jour"
 
 msgid "The Bearish On-Neck Pattern occurs after a downtrend when a long black day is followed by a long white day that gaps down at the open and closes below the close of the black day"
 msgstr "Le Schéma Baissier Sur le Cou apparaît après un mouvement baissier quand un long jour noir est suivi par un long jour blanc qui chute à l'ouverture et ferme en dessous de la clôture du jour noir"
