@@ -1424,7 +1424,7 @@ msgid "From"
 msgstr "Từ"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Giao diện giao dịch toàn màn hình"
 
 msgid "Further instructions"
 msgstr "Hướng dẫn thêm"
@@ -1649,13 +1649,13 @@ msgid "Instruments"
 msgstr "Công cụ"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "Tệp JSON không hợp lệ"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "Thông số không hợp lệ"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "Kiểu mẫu không hợp lệ"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "Mô hình Inverted Hammer (CDLINVERTEDHAMMER)"
@@ -2087,7 +2087,7 @@ msgid "OHLC"
 msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 msgid "Occupation"
 msgstr "Nghề nghiệp"
@@ -2513,7 +2513,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "phương pháp tăng/giảm 3 (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Nền tảng vững chắc và an toàn"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2756,16 +2756,16 @@ msgid "Stop-type"
 msgstr "Kiểu ngưng"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Màu Stroke"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Chiều rộng Stroke"
 
 msgid "Submit"
 msgstr "Gửi"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Áp dụng các bản mẫu và lưu nó như là đã thành công"
 
 msgid "Summation (SUM)"
 msgstr "Phép lấy tổng (SUM)"
@@ -2804,13 +2804,13 @@ msgid "Tel"
 msgstr "Điện thoại"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Thay đổi mẫu đã được lưu lại"
 
 msgid "Template name"
 msgstr "Tên mẫu"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Tên bản mẫu đã tồn tại"
 
 msgid "Terms"
 msgstr "Điều khoản"
@@ -2984,7 +2984,7 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Những dịch vụ giao dịch tài chính ở trên trang web này chỉ thích hợp cho những khách hàng là những người có thể chịu sự tổn thất của tất cả số tiền họ đầu tư vào và là những người có kiến thức và có kinh nghiệm với rủi ro liên quan đến hợp đồng tài chính. Giao dịch trong các hợp đồng tài chính chứa đựng một mức độ rủi ro cao. Nếu hợp đồng được mua bị hết thời hạn và trở nên vô giá trị, bạn sẽ bị mất toàn bộ khoản đầu tư cùng với lợi nhuận của hợp đồng"
 
 msgid "The first step is to open an account. You can apply online in just a few minutes"
-msgstr ""
+msgstr "Bước đầu tiên là mở một tài khoản. Bạn có thể đăng kí trực tuyến trong vài phút"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr ""
@@ -3458,10 +3458,10 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr ""
 
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 msgid "With Binary.com you can trade"
-msgstr ""
+msgstr "Với Binary.com bạn có thể giao dịch"
 
 msgid "With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees"
 msgstr ""
@@ -3743,7 +3743,7 @@ msgid "websocket"
 msgstr ""
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "Có"
