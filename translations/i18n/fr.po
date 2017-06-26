@@ -2789,7 +2789,7 @@ msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "Fossé Tasuki (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
-msgstr "Numéro identification fiscale"
+msgstr "Numéro d'identification fiscale"
 
 msgid "Tax information"
 msgstr "Information fiscale"
@@ -3437,7 +3437,7 @@ msgid "When you trade with Binary.com, you can be assured that your deposits are
 msgstr "Quand vous tradez avec Binary.com, vous pouvez être assuré que vos dépôts sont conservés dans un compte trust séparé et ne sont pas utilisé pour d'autre but"
 
 msgid "While on the go, you can"
-msgstr "Pendant vous déplacements, vous pouvez"
+msgstr "Pendant vos déplacements, vous pouvez"
 
 msgid "Why Choose Binary Trading?"
 msgstr "Pourquoi choisir Binary Trading ?"
