@@ -3464,10 +3464,10 @@ msgid "With Binary.com you can trade"
 msgstr "Với Binary.com bạn có thể giao dịch"
 
 msgid "With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees"
-msgstr ""
+msgstr "Với nền tảng độc nhất của Binary.com, không có nguy cơ 'trượt giá' hoặc đuổi theo thị trường. Và không có lệ phí ẩn"
 
 msgid "With Binary.com, the most you can lose is the amount you stake at the start of your trade"
-msgstr ""
+msgstr "Với Binary.com, bạn có thể mất tối đa là số tiền bạn đánh cược ở thời điểm bắt đầu giao dịch của bạn"
 
 msgid "Withdraw funds"
 msgstr "Rút tiền tài khoản"
@@ -3485,7 +3485,7 @@ msgid "X-axis tick"
 msgstr "Đánh dấu X-axis"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Đường kẻ ô Y-axis"
@@ -3497,22 +3497,22 @@ msgid "Yes"
 msgstr "Có"
 
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
-msgstr ""
+msgstr "Bạn có thể chọn thanh toán từ $1 đến $50,000. Phạm vi thanh toán rộng này là lý tưởng cho các nhà giao dịch lớn và nhỏ"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "Bạn có thể mở một tài khoản, gửi tiền và bắt đầu giao dịch trong vòng vài phút"
 
 msgid "You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr ""
+msgstr "Bạn có thể bán lại giao dịch dài hạn tại bất kỳ thời điểm nào để hưởng lợi nhuận từ việc thay đổi điều kiện thị trường"
 
 msgid "You can set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "Bạn có thể thiết lập thời lượng giao dịch của bạn, từ 10 giây đến 365 ngày"
 
 msgid "You can trade a range of markets, timescales and indices - 24/7"
-msgstr ""
+msgstr "Bạn có thể giao dịch hàng loạt thị trường, thời lượng và chỉ số - 24/7"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
-msgstr ""
+msgstr "Bạn không cần gửi tiền để mở tài khoản, nhưng bạn cần gửi tiền trước khi bạn bắt đầu giao dịch"
 
 msgid "You get fair and transparent pricing, whatever your position"
 msgstr "Bạn có được công bằng và minh bạch giá cả, không quan trọng về vị trí của bạn"
@@ -3740,7 +3740,7 @@ msgid "view license"
 msgstr "xem giấy phép"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
