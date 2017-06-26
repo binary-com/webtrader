@@ -2,9 +2,9 @@
 
 module.exports = function (grunt) {
 
-    var pkg = grunt.file.readJSON('package.json');
+    var pkg = grunt.file.readJSON("package.json");
     for (var key in pkg.devDependencies) {
-        if (key.indexOf('grunt') !== -1) {
+        if (key.indexOf("grunt") !== -1) {
             grunt.loadNpmTasks(key);
         }
     }
@@ -21,24 +21,24 @@ module.exports = function (grunt) {
                 node: true
             },
             all: [
-                'Gruntfile.js'//, 'src/**/*.js', 'src/*.js' TODO
+                "Gruntfile.js"//, "src/**/*.js", "src/*.js" TODO
             ]
         },
         clean: {
-            compressed: ['dist/compressed'],
-            uncompressed: ['dist/uncompressed'],
-            branches:[ 'dist/branches'],
-            current_branch: [ 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'],
-            dist: ['dist'],
+            compressed: ["dist/compressed"],
+            uncompressed: ["dist/uncompressed"],
+            branches:[ "dist/branches"],
+            current_branch: [ "dist/branches/compressed/<%= gitinfo.local.branch.current.name %>"],
+            dist: ["dist"],
         },
         copy: {
             main: {
                 files: [
                     {
                         expand: true,
-                        cwd: 'src/',
-                        src: ['**', '!**/*.scss','!**/*.es6'],
-                        dest: 'dist/uncompressed/v<%=pkg.version%>'
+                        cwd: "src/",
+                        src: ["**", "!**/*.scss","!**/*.es6"],
+                        dest: "dist/uncompressed/v<%=pkg.version%>"
                     }
                 ]
             },
@@ -46,45 +46,45 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'node_modules/',
+                        cwd: "node_modules/",
                         src: [
-                            'jquery-ui-iconfont/jquery-ui.icon-font.css',
-                            'jquery-ui-iconfont/font/*',
-                            '!binary-com-jquery-dialogextended/**', 'binary-com-jquery-dialogextended/jquery.dialogextend.min.js',
-                            'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js', 'binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css',
-                            'binary-com-longcode/dist/main.js',
-                            '!highstock-release/**', 'highstock-release/highstock.js', 'highstock-release/themes/**', 'highstock-release/modules/exporting.js', 'highstock-release/modules/offline-exporting.js', 'highstock-release/highcharts-more.js',
-                            'moment/min/moment.min.js', 'moment/locale/**',
-                            'text/text.js',
-                            'webtrader-charts/dist/webtrader-charts.js',
-                            'regenerator-runtime/*',
-                            '!jquery-ui-dist/**', 'jquery-ui-dist/jquery-ui.min.css', 'jquery-ui-dist/jquery-ui.min.js',
-                            'chosen-js/*'
+                            "jquery-ui-iconfont/jquery-ui.icon-font.css",
+                            "jquery-ui-iconfont/font/*",
+                            "!binary-com-jquery-dialogextended/**", "binary-com-jquery-dialogextended/jquery.dialogextend.min.js",
+                            "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js", "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css",
+                            "binary-com-longcode/dist/main.js",
+                            "!highstock-release/**", "highstock-release/highstock.js", "highstock-release/themes/**", "highstock-release/modules/exporting.js", "highstock-release/modules/offline-exporting.js", "highstock-release/highcharts-more.js",
+                            "moment/min/moment.min.js", "moment/locale/**",
+                            "text/text.js",
+                            "webtrader-charts/dist/webtrader-charts.js",
+                            "regenerator-runtime/*",
+                            "!jquery-ui-dist/**", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
+                            "chosen-js/*"
                         ],
-                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                        dest: "dist/uncompressed/v<%=pkg.version%>/lib/",
                     },
                     {
                         expand: true,
-                        cwd: 'bower_components/',
+                        cwd: "bower_components/",
                         src: [
-                            '!colorpicker/**', 'colorpicker/jquery.colorpicker.js', 'colorpicker/images/**', 'colorpicker/jquery.colorpicker.css',
-                            '!datatables/**', 'datatables/media/images/**', 'datatables/media/js/jquery.dataTables.min.js', 'datatables/media/js/dataTables.jqueryui.min.js', 'datatables/media/css/jquery.dataTables.min.css', 'datatables/media/css/dataTables.jqueryui.min.css',
-                            '!growl/**', 'growl/javascripts/jquery.growl.js', 'growl/stylesheets/jquery.growl.css',
-                            'jquery/dist/jquery.min.js',
-                            'jquery-validation/dist/jquery.validate.min.js',
-                            'modernizr/modernizr.js',
-                            'clipboard/dist/clipboard.min.js',
-                            'es6-promise/promise.min.js',
-                            'alameda/alameda.js',
-                            'require-css/css.min.js',
-                            'lodash/dist/lodash.min.js',
-                            'rivets/dist/rivets.min.js',
-                            'sightglass/index.js',
-                            'jquery-sparkline/dist/jquery.sparkline.min.js',
-                            '!**/**/favicon.ico',
-                            'intl/dist/Intl.complete.js',
+                            "!colorpicker/**", "colorpicker/jquery.colorpicker.js", "colorpicker/images/**", "colorpicker/jquery.colorpicker.css",
+                            "!datatables/**", "datatables/media/images/**", "datatables/media/js/jquery.dataTables.min.js", "datatables/media/js/dataTables.jqueryui.min.js", "datatables/media/css/jquery.dataTables.min.css", "datatables/media/css/dataTables.jqueryui.min.css",
+                            "!growl/**", "growl/javascripts/jquery.growl.js", "growl/stylesheets/jquery.growl.css",
+                            "jquery/dist/jquery.min.js",
+                            "jquery-validation/dist/jquery.validate.min.js",
+                            "modernizr/modernizr.js",
+                            "clipboard/dist/clipboard.min.js",
+                            "es6-promise/promise.min.js",
+                            "alameda/alameda.js",
+                            "require-css/css.min.js",
+                            "lodash/dist/lodash.min.js",
+                            "rivets/dist/rivets.min.js",
+                            "sightglass/index.js",
+                            "jquery-sparkline/dist/jquery.sparkline.min.js",
+                            "!**/**/favicon.ico",
+                            "intl/dist/Intl.complete.js",
                         ],
-                        dest: 'dist/uncompressed/v<%=pkg.version%>/lib/',
+                        dest: "dist/uncompressed/v<%=pkg.version%>/lib/",
                     }
                 ]
             },
@@ -92,13 +92,13 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'dist/uncompressed',
+                        cwd: "dist/uncompressed",
                         src: [
-                            '**',
-                            '!**/*.js', '**/lib/**/*.min.js', '**/lib/**/highstock.js', '**/lib/**/webtrader-charts.js',
-                            '!**/*.css', '!**/*.html','!**/*.{png,jpg,gif,svg}'
+                            "**",
+                            "!**/*.js", "**/lib/**/*.min.js", "**/lib/**/highstock.js", "**/lib/**/webtrader-charts.js",
+                            "!**/*.css", "!**/*.html","!**/*.{png,jpg,gif,svg}"
                         ],
-                        dest: 'dist/compressed'
+                        dest: "dist/compressed"
                     }
                 ]
             },
@@ -107,9 +107,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'dist/compressed',
-                        src: [ '**'],
-                        dest: 'dist/branches/compressed/<%= gitinfo.local.branch.current.name %>'
+                        cwd: "dist/compressed",
+                        src: [ "**"],
+                        dest: "dist/branches/compressed/<%= gitinfo.local.branch.current.name %>"
                     }
                 ]
             },
@@ -117,9 +117,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        src: [ '**'],
-                        cwd: 'translations/i18n/json',
-                        dest: 'dist/uncompressed/v<%=pkg.version%>/i18n/'
+                        src: [ "**"],
+                        cwd: "translations/i18n/json",
+                        dest: "dist/uncompressed/v<%=pkg.version%>/i18n/"
                     }
                 ]
             },
@@ -128,49 +128,49 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        cwd: '.',
+                        cwd: ".",
                         src: ["chrome_extension/*"],
-                        dest: 'dist/uncompressed/'
+                        dest: "dist/uncompressed/"
                     }
                 ]
             }
         },
         rename: {
             moveThis: {
-                src: 'dist/uncompressed/v<%=pkg.version%>/index.html',
-                dest: 'dist/uncompressed/index.html'
+                src: "dist/uncompressed/v<%=pkg.version%>/index.html",
+                dest: "dist/uncompressed/index.html"
             }
         },
         replace: {
             version: {
-                src: ['dist/uncompressed/index.html', 'dist/uncompressed/manifest.webapp', 'dist/uncompressed/manifest.json', 'dist/uncompressed/auto-update.xml'],
+                src: ["dist/uncompressed/index.html", "dist/uncompressed/manifest.webapp", "dist/uncompressed/manifest.json", "dist/uncompressed/auto-update.xml"],
                 overwrite: true,
                 replacements: [{
-                    from: '<version>',
-                    to: '<%=pkg.version%>'
+                    from: "<version>",
+                    to: "<%=pkg.version%>"
                 }, {
-                    from: '<package-name>',
-                    to: "<%=pkg.name.replace(/_/g, ' ')%>"
+                    from: "<package-name>",
+                    to: "<%=pkg.name.replace(/_/g, \" \")%>"
                 }, {
-                    from: '<description>',
+                    from: "<description>",
                     to: "<%=pkg.description%>"
                 }]
             },
             style : {
-                src: ['dist/uncompressed/index.html', 'dist/uncompressed/v<%=pkg.version%>/main.html','dist/uncompressed/v<%=pkg.version%>/main.js', 'dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html', 'dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html'],
+                src: ["dist/uncompressed/index.html", "dist/uncompressed/v<%=pkg.version%>/main.html","dist/uncompressed/v<%=pkg.version%>/main.js", "dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html", "dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html"],
                 overwrite: true,
                 replacements: [{
-                    from: '<style-url>',
-                    to: 'https://style.binary.com'
+                    from: "<style-url>",
+                    to: "https://style.binary.com"
                 }]
             }
         },
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'dist/uncompressed',
-                src: ['**/*.css'],
-                dest: 'dist/compressed'
+                cwd: "dist/uncompressed",
+                src: ["**/*.css"],
+                dest: "dist/compressed"
             }
         },
         htmlmin: {
@@ -180,18 +180,18 @@ module.exports = function (grunt) {
             },
             minify: {
                 expand: true,
-                cwd: 'dist/uncompressed',
-                src: ['**/*.html'],
-                dest: 'dist/compressed'
+                cwd: "dist/uncompressed",
+                src: ["**/*.html"],
+                dest: "dist/compressed"
             }
         },
         imagemin: {
           dynamic: {
             files: [{
               expand: true,
-              cwd: 'dist/uncompressed/',
-              src: ['**/*.{png,jpg,gif,svg}'],
-              dest: 'dist/compressed/'
+              cwd: "dist/uncompressed/",
+              src: ["**/*.{png,jpg,gif,svg}"],
+              dest: "dist/compressed/"
             }]
           }
         },
@@ -199,9 +199,9 @@ module.exports = function (grunt) {
             minify: {
                 files: [{
                     expand: true,
-                    cwd: 'dist/uncompressed',
-                    src: ['**/*.js', '!**/lib/**/*.min.js', '!**/lib/**/highstock.js', '!**/lib/**/webtrader-charts.js'],
-                    dest: 'dist/compressed'
+                    cwd: "dist/uncompressed",
+                    src: ["**/*.js", "!**/lib/**/*.min.js", "!**/lib/**/highstock.js", "!**/lib/**/webtrader-charts.js"],
+                    dest: "dist/compressed"
                 }],
                 options: {
                     mangle: true,
@@ -218,38 +218,38 @@ module.exports = function (grunt) {
                 }
             }
         },
-        'gh-pages': {
-            'travis-deploy':{
+        "gh-pages": {
+            "travis-deploy":{
                 options: {
-                    base: 'dist/compressed',
+                    base: "dist/compressed",
                     add: true,
-                    repo: 'https://' + process.env.GIT_KEY + '@github.com/binary-com/webtrader.git',
-                    message: 'Commit v<%=pkg.version%> from TravisCI for [' + process.env.TRAVIS_BRANCH + ']'
+                    repo: "https://" + process.env.GIT_KEY + "@github.com/binary-com/webtrader.git",
+                    message: "Commit v<%=pkg.version%> from TravisCI for [" + process.env.TRAVIS_BRANCH + "]"
                 },
-                src: ['**/*']
+                src: ["**/*"]
             },
-            'deploy-branch': {
+            "deploy-branch": {
                 options: {
-                    base: 'dist/branches/compressed',
+                    base: "dist/branches/compressed",
                     add: true,
-                    message: 'Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= gitinfo.local.branch.current.name %>'
+                    message: "Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= gitinfo.local.branch.current.name %>"
                 },
-                src: ['**/*']
+                src: ["**/*"]
             },
-            'clean': {
+            "clean": {
                 options: {
                     add: false /* remove existing files in gh-pages branch */,
-                    message: 'Cleaning all files in gh-pages'
+                    message: "Cleaning all files in gh-pages"
                 },
-                src: [ 'README.md']
+                src: [ "README.md"]
             }
         },
         connect: {
             server_uncompressed: {
                 options: {
                     port: 9001,
-                    base: 'dist/uncompressed',
-                    hostname: '0.0.0.0',
+                    base: "dist/uncompressed",
+                    hostname: "0.0.0.0",
                     keepalive: true,
                     livereload: true
                 }
@@ -257,8 +257,8 @@ module.exports = function (grunt) {
             server_compressed: {
                 options: {
                     port: 9001,
-                    base: 'dist/compressed',
-                    hostname: '0.0.0.0',
+                    base: "dist/compressed",
+                    hostname: "0.0.0.0",
                     keepalive: true,
                     livereload: true
                 }
@@ -266,9 +266,9 @@ module.exports = function (grunt) {
             https: {
                 options: {
                     port: 443,
-                    protocol: 'https',
-                    base: 'dist/uncompressed',
-                    hostname: '0.0.0.0',
+                    protocol: "https",
+                    base: "dist/uncompressed",
+                    hostname: "0.0.0.0",
                     keepalive: true,
                     livereload: true
                 }
@@ -280,23 +280,23 @@ module.exports = function (grunt) {
                     //Check the negate option. Its not working
                     //Currently open ticket https://github.com/rhiokim/grunt-sloc/issues/14
                     //TODO
-                    src: ['**/*.js', '**/*.es6', '**/*.css', '**/*.html', '!**/libs/**']
+                    src: ["**/*.js", "**/*.es6", "**/*.css", "**/*.html", "!**/libs/**"]
                 }
             }
         },
         bump: {
             options: {
-                files: ['package.json', 'bower.json'],
+                files: ["package.json", "bower.json"],
                 updateConfigs: [],
                 commit: false,
-                /*commitMessage: 'Release v%VERSION%',
-                commitFiles: ['package.json'],*/
+                /*commitMessage: "Release v%VERSION%",
+                commitFiles: ["package.json"],*/
                 createTag: false,
-                /*tagName: 'v%VERSION%',
-                tagMessage: 'Version %VERSION%',*/
+                /*tagName: "v%VERSION%",
+                tagMessage: "Version %VERSION%",*/
                 push: false,
-                /*pushTo: 'upstream',
-                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+                /*pushTo: "upstream",
+                gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
                 globalReplace: false,
                 prereleaseName: false,*/
                 regExp: false
@@ -315,38 +315,38 @@ module.exports = function (grunt) {
             spawn: true,
             interrupt : false,
             livereload: {
-              key: grunt.file.read('grunt/livereload.key'),
-              cert: grunt.file.read('grunt/livereload.crt')
+              key: grunt.file.read("grunt/livereload.key"),
+              cert: grunt.file.read("grunt/livereload.crt")
             }
           },
           scss: {
             options: { livereload: false },
-            files: ['src/**/*.scss'],
-            tasks: ['newer:sass'],
+            files: ["src/**/*.scss"],
+            tasks: ["newer:sass"],
           },
           es6: {
             options: { livereload: false },
-            files: ['src/**/*.es6'],
-            tasks: ['newer:babel'],
+            files: ["src/**/*.es6"],
+            tasks: ["newer:babel"],
           },
           index: {
               options: { livereload: false },
-              files: ['src/index.html'],
-              tasks: ['newer:copy:main', 'rename', 'replace']
+              files: ["src/index.html"],
+              tasks: ["newer:copy:main", "rename", "replace"]
           },
           dist: {
-            files: ['dist/uncompressed/v<%=pkg.version%>/**/*.*','!dist/uncompressed/v<%=pkg.version%>/index.html', 'dist/uncompressed/index.html'],
+            files: ["dist/uncompressed/v<%=pkg.version%>/**/*.*","!dist/uncompressed/v<%=pkg.version%>/index.html", "dist/uncompressed/index.html"],
             tasks: []
           },
           scripts: {
             options: { livereload: false },
-            files: ['src/**','!src/index.html', '!src/**/*.scss', '!src/**/*.es6'],
-            tasks: [ 'newer:copy:main', 'newer:copy:copy_i18n', 'newer:copy:copyChromeManifest', 'replace:style'],
+            files: ["src/**","!src/index.html", "!src/**/*.scss", "!src/**/*.es6"],
+            tasks: [ "newer:copy:main", "newer:copy:copy_i18n", "newer:copy:copyChromeManifest", "replace:style"],
           },
         },
         shell: {
             moveEverythingToBETA_folder: {
-                command: 'mkdir beta; mv dist/compressed/* beta; mv beta dist/compressed'
+                command: "mkdir beta; mv dist/compressed/* beta; mv beta dist/compressed"
             }
         },
         if: {
@@ -355,47 +355,47 @@ module.exports = function (grunt) {
                 options: {
                     // execute test function(s)
                     test: function() {
-                        return process.env.TRAVIS_BRANCH === 'master';
+                        return process.env.TRAVIS_BRANCH === "master";
                     }
                 },
                 //array of tasks to execute if all tests pass
-                ifTrue: [ 'gh-pages:travis-deploy' ]
+                ifTrue: [ "gh-pages:travis-deploy" ]
             },
             beta: {
                 // Target-specific file lists and/or options go here.
                 options: {
                     // execute test function(s)
                     test: function() {
-                        return process.env.TRAVIS_BRANCH === 'development';
+                        return process.env.TRAVIS_BRANCH === "development";
                     }
                 },
                 //array of tasks to execute if all tests pass
-                ifTrue: [ 'shell:moveEverythingToBETA_folder', 'gh-pages:travis-deploy' ]
+                ifTrue: [ "shell:moveEverythingToBETA_folder", "gh-pages:travis-deploy" ]
             }
         },
         compress: {
             main: {
                 options: {
-                    archive: 'dist/uncompressed/chrome_extension.zip'
+                    archive: "dist/uncompressed/chrome_extension.zip"
                 },
                 files:
                     [
                         {
                             expand: true,
-                            cwd: 'dist/uncompressed/',
-                            src: ['auto-update.xml', 'manifest.json', 'chrome_background.js',
-                                'v<%=pkg.version%>/images/favicons/**']
+                            cwd: "dist/uncompressed/",
+                            src: ["auto-update.xml", "manifest.json", "chrome_background.js",
+                                "v<%=pkg.version%>/images/favicons/**"]
                         }
                     ]
             }
         },
         po2json: {
           options: {
-            format: 'raw'
+            format: "raw"
           },
           all: {
-            src: ['translations/i18n/*.po'],
-            dest: 'translations/i18n/json/'
+            src: ["translations/i18n/*.po"],
+            dest: "translations/i18n/json/"
           }
         },
         sass: {
@@ -404,10 +404,10 @@ module.exports = function (grunt) {
             files: [
               {
                 expand: true,
-                cwd: 'src/',
-                src: ['**/*.scss'],
-                dest: 'dist/uncompressed/v<%=pkg.version%>',
-                ext: '.css'
+                cwd: "src/",
+                src: ["**/*.scss"],
+                dest: "dist/uncompressed/v<%=pkg.version%>",
+                ext: ".css"
               }
             ]
           }
@@ -415,7 +415,7 @@ module.exports = function (grunt) {
         babel: {
           options: {
             sourceMap: true,
-            presets: ['es2015', 'stage-0'],
+            presets: ["es2015", "stage-0"],
             "plugins": [
               "transform-es2015-modules-amd",
               ["transform-runtime", {
@@ -430,10 +430,10 @@ module.exports = function (grunt) {
             files: [
               {
                 expand: true,
-                cwd: 'src/',
-                src: ['**/*.es6'],
-                dest: 'dist/uncompressed/v<%=pkg.version%>',
-                ext: '.js'
+                cwd: "src/",
+                src: ["**/*.es6"],
+                dest: "dist/uncompressed/v<%=pkg.version%>",
+                ext: ".js"
               }
             ]
           }
@@ -443,10 +443,10 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'src/help/docs/',
-                        src: ['**/*.md'],
+                        cwd: "src/help/docs/",
+                        src: ["**/*.md"],
                         bundle: true, //Bundle the markdown text in one file?
-                        bundle_dest: 'dist/uncompressed/v<%=pkg.version%>/help/content.html'
+                        bundle_dest: "dist/uncompressed/v<%=pkg.version%>/help/content.html"
                     }
                 ]
             }
@@ -454,13 +454,13 @@ module.exports = function (grunt) {
     });
 
     // This is markdown to html converter.
-    var showdown = require('showdown'),
+    var showdown = require("showdown"),
         converter = new showdown.Converter();
     /*
      * pass a bundle: true to bundle files
      * with bundle_dest: "path" to save it to a specific file at path
      */
-    grunt.registerMultiTask('markdown','Converts md files to html and bundles them into one file', function(){
+    grunt.registerMultiTask("markdown","Converts md files to html and bundles them into one file", function(){
         var content = "";
         this.files.forEach(function(f){
             var src= f.src[0].split("/");
@@ -471,7 +471,7 @@ module.exports = function (grunt) {
             } else {
                 var write_successfull = grunt.file.write(f.dest,html);
                 if(!write_successfull){
-                    grunt.log.error("Couldn't convert " + f.src[0] + " to html");
+                    grunt.log.error("Couldn\"t convert " + f.src[0] + " to html");
                 }
             }
         });
@@ -484,14 +484,14 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('mainTask', ['clean:compressed','clean:uncompressed', 'copy:main', 'sass', 'babel', 'markdown:helpDocs', 'copy:copy_i18n', 'copy:copyLibraries', 'copy:copyChromeManifest', 'rename', 'replace:version', 'replace:style']);
-    grunt.registerTask('compressionAndUglify', ['cssmin', 'htmlmin', 'imagemin', 'uglify', 'compress', 'copy:copy_AfterCompression']);
-  	grunt.registerTask('default', ['jshint', 'po2json', 'mainTask', 'compressionAndUglify', 'removelogging']);
+    grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "markdown:helpDocs", "copy:copy_i18n", "copy:copyLibraries", "copy:copyChromeManifest", "rename", "replace:version", "replace:style"]);
+    grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "compress", "copy:copy_AfterCompression"]);
+  	grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Deploy to a sub-folder of gh-pages with the name of current branch,
        This is only for developers working on different branches in their forks. */
-    grunt.registerTask('deploy-branch', ['default','gitinfo', 'clean:current_branch', 'copy:copy_current_branch', 'gh-pages:deploy-branch']);
+    grunt.registerTask("deploy-branch", ["default","gitinfo", "clean:current_branch", "copy:copy_current_branch", "gh-pages:deploy-branch"]);
     /* clean all the files in gh-pages branch */
-    grunt.registerTask('gh-pages-clean', ['gh-pages:clean']);
+    grunt.registerTask("gh-pages-clean", ["gh-pages:clean"]);
 };

@@ -469,10 +469,9 @@ export const init = function($parentObj) {
       Promise.all(
          oauth.slice(1)
             .map(acc => ({ authorize: acc.token}))
-            .map(req => {console.log(req);return liveapi.send(req);})
+            .map(req => liveapi.send(req))
       )
-         .then((results) =>{
-               console.log('Received results');
+         .then((results) =>
             liveapi.cached.authorize()
                .then((data) => {
                   results.unshift(data);
@@ -486,7 +485,7 @@ export const init = function($parentObj) {
                   }
                   local_storage.set('oauth', oauth);
                   return is_jpy_account;
-               })}
+               })
          )
          .then((is_jpy_account) => {
             /* Japan accounts should not be allowed to login to webtrader */
