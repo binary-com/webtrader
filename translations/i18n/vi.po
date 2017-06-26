@@ -2951,10 +2951,10 @@ msgid "The balance of power (BOP) indicator measures the strength of the bulls v
 msgstr ""
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
-msgstr ""
+msgstr "Rào cản của một giao dịch quyền chọn nhị phân là các mức giá mục tiêu bạn đặt ra cho các cơ sở. Bạn có thể lựa chọn giao dịch ở dưới hoặc vượt trên giá mục tiêu, hoặc ở giữa hai mục tiêu"
 
 msgid "The barrier(s) you choose defines your position and triggers your payout"
-msgstr ""
+msgstr "Barrier(s) bạn chọn xác định vị trí của bạn và kích hoạt thanh toán của bạn"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
 msgstr ""
@@ -2963,22 +2963,22 @@ msgid "The closing black marubozu candlestick is a tall black candle with an upp
 msgstr ""
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr ""
+msgstr "Công ty giữ tiền khách hàng trong tài khoản ngân hàng tách biệt với tài khoản ngân hàng vận hành, trong trường hợp phá sản, nó sẽ không thuộc tài sản của Công ty. Điều này đáp ứng các yêu cầu của Ủy ban Cờ bạc để cách ly các tiền của khách hàng ở cấp độ"
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
-msgstr ""
+msgstr "Kì của hợp đồng là khung thời gian của một giao dịch. Nó cũng được gọi là thời lượng"
 
 msgid "The duration is the length of a purchased trade (see"
-msgstr ""
+msgstr "Thời lượng là độ dài của giao dịch được mua"
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
-msgstr ""
+msgstr "Giá giao ngay nhập vào là giá bắt đầu của giao dịch được mua bởi người giao dịch"
 
 msgid "The expiry price is the price of the underlying when the contract expires"
-msgstr ""
+msgstr "Giá đáo hạn là giá của cơ sở khi hợp đồng hết hạn"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr ""
+msgstr "Các dịch vụ kinh doanh tài chính có trên trang web này chỉ thích hợp cho những khách hàng có khả năng chịu mất tất cả số tiền họ đầu tư và những người hiểu và có kinh nghiệm về các rủi ro liên quan trong việc mua lại các hợp đồng tài chính. Các giao dịch hợp đồng tài chính mang một mức độ rủi ro cao. Nếu hợp đồng được mua hết hạn trở nên vô giá trị, bạn sẽ bị mất tổng đầu tư của bạn, bao gồm phí bảo hiểm hợp đồng"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "Những dịch vụ giao dịch tài chính ở trên trang web này chỉ thích hợp cho những khách hàng là những người có thể chịu sự tổn thất của tất cả số tiền họ đầu tư vào và là những người có kiến thức và có kinh nghiệm với rủi ro liên quan đến hợp đồng tài chính. Giao dịch trong các hợp đồng tài chính chứa đựng một mức độ rủi ro cao. Nếu hợp đồng được mua bị hết thời hạn và trở nên vô giá trị, bạn sẽ bị mất toàn bộ khoản đầu tư cùng với lợi nhuận của hợp đồng"
@@ -2996,31 +2996,31 @@ msgid "The indicator is designed for use on a monthly time scale. It is the sum 
 msgstr ""
 
 msgid "The market exit price is the price in effect at the end of the contract period"
-msgstr ""
+msgstr "Giá thoát khỏi thị trường là giá có hiệu lực vào cuối thời gian hợp đồng"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
 msgstr ""
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
-msgstr ""
+msgstr "Bằng sáng chế có nghĩa là Regent Markets là nhà tiên phong được công nhận trong cá cược nhị phân. Bằng sáng chế giúp bảo vệ những đổi mới của chúng tôi"
 
 msgid "The payout is the amount paid to an options trader if their prediction is correct"
-msgstr ""
+msgstr "Tiền lãi là số tiền được trả cho một nhà giao dịch quyền chọn nếu dự đoán của mình là đúng"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
 msgstr ""
 
 msgid "The premier platform for trading binary options in the world's financial markets"
-msgstr ""
+msgstr "Sàn giao dịch cao cấp cho giao dịch quyền chọn nhị phân trên thị trường tài chính thế giới"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
-msgstr ""
+msgstr "Lợi nhuận là phần chênh lệch giữa giá mua (cổ phần) và tiền thanh toán trên giao dịch thắng"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr ""
+msgstr "Việc tái định vị thương hiệu này là một sự tiến hóa tự nhiên cho nền tảng mà nó tiếp tục phát triển triển thị phần trong lĩnh vực giao dịch nhị phân cạnh tranh cao độ. Thương hiệu mới phản ánh bản chất của ngành kinh doanh, và khẩu hiệu mới của chúng tôi - Giá Cả Cạnh Tranh, Giao Dịch Thông Minh - sẽ truyền đạt văn hóa và sự cam kết của chúng tôi đến với quý khách hàng"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
-msgstr ""
+msgstr "Giá bán lại chỉ giá thị trường hiện tại của hợp đồng. Giá bán lại dựa trên cơ sở nỗ lực nhất và có thể không có sẵn mọi lúc sau khi mua. Xem 'quyền chọn Bán' để biết thêm chi tiết về bán hợp đồng trước khi hết hạn"
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
 msgstr "Sự hoàn vốn là tiền nhận được khi hợp đồng hết hạn (xem 'Thanh toán')"
@@ -3227,7 +3227,7 @@ msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
 msgstr "Giao dịch nhị phân dễ dàng một cách đáng kể, và yêu cầu chỉ 3 bước đơn giản"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr ""
+msgstr "Giao dịch quyền chọn nhị phân có thể không thích hợp cho tất cả mọi người, vì vậy vui lòng bảo đảo rằng bạn đã hiểu hoàn toàn về rủi ro có liên quan. Thất thoát của bạn có thể vượt quá số tiền gửi ban đầu và bạn sẽ không được sở hữu hay có bất kì tiền lãi nào trong tài sản cơ sở. Liên quan tới quyền chọn nhị phân, là sản phẩm cá cược, hãy nhớ rằng chơi cá cược có thể bị nghiện - vui lòng chơi một cách có trách nhiệm"
 
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Việc giao dịch trên thị trường tài chính có thể trở thành nghiện. Hãy điền vào mẫu dưới đây để hạn chế sự tham gia của bạn trên các trang web hoặc gửi một bức thư đã ký hoặc fax cho nhóm hỗ trợ khách hàng của chúng tôi. Sau khi cài đặt, bạn chỉ có thể thắt chặt giới hạn của bạn. Giới hạn chỉ sẽ được gỡ bỏ hoặc nới lỏng sau 7 ngày cùng với ngoại lệ cho ngày Tự Loại Trừ, là thời gian mà không thể gỡ bỏ hoặc thay đổi một khi bạn đã xác nhận nó. Để loại bỏ hoặc tăng giới hạn của bạn, vui lòng liên hệ"
@@ -3242,10 +3242,10 @@ msgid "Transfer to another Binary account"
 msgstr "Chuyển khoản sang tài khoản nhị phân khác"
 
 msgid "Triangular Moving Average (TRIMA)"
-msgstr ""
+msgstr "Tam giác di chuyển trung bình (TRIMA)"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "Trung bình di chuyển gấp ba (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
 msgstr ""
@@ -3269,10 +3269,10 @@ msgid "Turnover"
 msgstr "Doanh số"
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Hai quạ (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "Giá đặc trưng (TYPPRICE)"
 
 msgid "USD"
 msgstr "USD"
@@ -3281,7 +3281,7 @@ msgid "USDJPY"
 msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
 msgstr "Dưới"
