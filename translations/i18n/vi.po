@@ -3023,13 +3023,13 @@ msgid "The resale price indicates a contract's current market price. Resale pric
 msgstr ""
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
-msgstr ""
+msgstr "Sự hoàn vốn là tiền nhận được khi hợp đồng hết hạn (xem 'Thanh toán')"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
-msgstr ""
+msgstr "Đơn vị vốn (stake) là số tiền nhà giao dịch cần phải trả để được vào một giao dịch"
 
 msgid "The sum of price over selected period"
-msgstr ""
+msgstr "Tổng của giá cả trong khoảng thời gian đã chọn"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
 msgstr ""
