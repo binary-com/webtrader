@@ -3515,7 +3515,7 @@ msgid "You don't need to deposit any money to open an account, but you need to d
 msgstr "Vous n'avez pas besoin de déposer de l'argent pour ouvrir un compte, mais vous avez besoin de déposer des fonds avant de pouvoir commencer à trader"
 
 msgid "You get fair and transparent pricing, whatever your position"
-msgstr "Vous obtenez un système de fixation des prix juste et transparente, quelque soit votre position"
+msgstr "Vous obtenez un système de fixation des prix juste et transparent, quelque soit votre position"
 
 msgid "You have sold the following contract"
 msgstr "Vous avez vendu le contrat suivant"
@@ -3533,7 +3533,7 @@ msgid "You set the barrier(s) to define your position"
 msgstr "Vous fixez la(les) barrière(s) pour définir votre position"
 
 msgid "You will be automatically logged out after such time"
-msgstr "Vous compte sera automatiquement déconnecté après cette période"
+msgstr "Votre compte sera automatiquement déconnecté après cette période"
 
 msgid "You'll be surprised by the returns you can make"
 msgstr "Vous serez surpris par les retours que vous pouvez faire"
@@ -3551,7 +3551,7 @@ msgid "Your money is always safe with Binary.com. At all times, it is held in se
 msgstr "Votre argent est toujours en sécurité avec Binary.com. A tout moment, il est détenu en compte cantonné dans une banque notée AAA, qui est une condition de notre licence de trading"
 
 msgid "Your new account balance is"
-msgstr "Le nouveau solde de votre compte compte est de"
+msgstr "Le nouveau solde de votre compte est de"
 
 msgid "Your risks are known"
 msgstr "Vos risques sont connus"
