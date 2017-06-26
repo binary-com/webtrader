@@ -4,7 +4,7 @@
 }
 .trading-times-sub-header .ui-selectmenu-button {
     margin-right: .2em;
-    width: 148px !important;
+    width: 148px;
 }
 .trading-times-sub-header .subheader-message {
     float:right;

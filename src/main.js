@@ -96,7 +96,7 @@ requirejs.onError = function(err) {
 
 require(['modernizr'], function() {
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
-        window.location.href = 'unsupported_browsers/unsupported_browsers.html';
+        window.location.assign('unsupported_browsers/unsupported_browsers.html');
         return;
     }
 })

@@ -38,7 +38,7 @@
 }
 
 /* use a maximum height for jq-ui dropdowns */
-ul.date-day.ui-menu { max-height: 320px !important; }
+ul.date-day.ui-menu { max-height: 320px; }
 
 /* hide the search section from jq-datatables if hide-search-input is set */
 .hide-search-input .dataTables_filter {
@@ -76,13 +76,13 @@ img.reload {
 }
 
 .webtrader-dialog-widget .ui-dialog-titlebar-close {
-   top: 1px !important;
-   background: transparent !important;
+   top: 1px;
+   background: transparent;
 }
 
-.ui-dialog-titlebar-close:hover,
-.ui-dialog-titlebar-close {
-   border: none !important;
+.webtrader-dialog-widget .ui-dialog-titlebar-close:hover,
+.webtrader-dialog-widget .ui-dialog-titlebar-close {
+   border: none;
 }
 
 .ui-icon-newwin {

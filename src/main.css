@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-size: 16px !important;
+    font-size: 16px;
 }
 
 body.rtl-direction { /* for arabic language */
@@ -57,12 +57,12 @@ body > .footer .addiction-warning a:hover {
 
 
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
-  width: 14px !important;
-  height: 14px !important;
+  width: 14px;
+  height: 14px;
 }
 
 .ui-dialog {
-    padding: 0!important;
+    padding: 0;
 }
 
 .ui-dialog.ui-corner-all .ui-corner-all {
@@ -73,7 +73,7 @@ body > .footer .addiction-warning a:hover {
 }
 
 .ui-priority-secondary {
-    opacity: 1!important;
+    opacity: 1;
 }
 
 .ui-state-default,
@@ -102,9 +102,7 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
     padding-bottom: 0;
 }
 .ui-dialog-titlebar-buttonpane {
-  height: 14px !important;
-  margin-top: -7px !important;
-  margin-right: 10px!important;
+  margin-right: 10px;
 }
 
 button.ui-button-text-only {
@@ -144,7 +142,7 @@ button.ui-button {
 /*.sorting_asc,*/
 .dataTable,
 .dataTables_filter {
-    width: 100% !important;
+    width: 100%;
 }
 
 .dataTables_filter label {
@@ -298,21 +296,21 @@ input:focus {
 }
 
 .growl.growl-notice {
-    background: #fef1cf !important;
-    color: black !important;
+    background: #fef1cf;
+    color: black;
 }
 .growl > .growl-close {
   padding-left: 5px;
 }
-#growls { top: 110px !important; }
+#growls.default { top: 110px; }
 
 .growl-error a {
-  color: white !important;
+  color: white;
   text-decoration: underline;
 }
 
 button {
-    outline: 0 !important;
+    outline: 0;
 }
 button.button-disabled,
 button[disabled] {
@@ -364,7 +362,7 @@ button[disabled] {
   border: none;
 }
 .ui-datepicker-prev, .ui-datepicker-next {
-  color: white!important;
+  color: white;
 }
 .ui-datepicker-prev:hover, .ui-datepicker-next:hover{
   opacity: 0.75;
@@ -374,11 +372,11 @@ button[disabled] {
 
 /* override table styles*/
 table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
-  border-bottom: none!important;
+  border-bottom: none;
 }
 
 /* make dropdowns consistent with binary-style */
-select + .ui-selectmenu-button { border-radius: 3px !important;}
+select + .ui-selectmenu-button { border-radius: 3px;}
 
 #doorbell-button  {
     right: -37px;
