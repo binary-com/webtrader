@@ -3110,7 +3110,7 @@ msgid "Thursday"
 msgstr "Thứ năm"
 
 msgid "Tick"
-msgstr ""
+msgstr "Giây"
 
 msgid "Tick Trade app"
 msgstr "Đánh dấu app giao dịch"
@@ -3434,28 +3434,28 @@ msgid "When you are satisfied with the trade price, instantly execute your trade
 msgstr "Khi bạn đang hài lòng với giá giao dịch, ngay lập tức thực hiện giao dịch của bạn"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
-msgstr ""
+msgstr "Khi bạn giao dịch với Binary.com, bạn được bảo đảm rằng tiền gửi của bạn được cất giữ trong một tài khoản tin cậy riêng biệt và không được sử dụng cho bất kì mục đích nào"
 
 msgid "While on the go, you can"
 msgstr "Khi đang tiến hành, bạn có thể"
 
 msgid "Why Choose Binary Trading?"
-msgstr ""
+msgstr "Tài sao lại chọn Giao dịch Nhị phân?"
 
 msgid "Will I need to install any software?"
-msgstr ""
+msgstr "Tôi có cần thiết lập phần mền nào nữa không?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
-msgstr ""
+msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng lượng hoàn lại khi thắng của bạn bằng cách chọn 'Ở lại trong' với một mục tiêu giá hẹp"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a 'Touch' trade, with a price target farther away from the current price"
-msgstr ""
+msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng lượng hoàn lại khi thắng của bạn bằng cách chọn 'Chạm' với một mức giá mục tiêu xa hơn khỏi giá hiện tại"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
-msgstr ""
+msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng lượng hoàn lại khi thắng của bạn bằng cách chọn một mức giá mục tiêu xa hơn khỏi giá hiện tại"
 
 msgid "Windows"
 msgstr "Windows"
