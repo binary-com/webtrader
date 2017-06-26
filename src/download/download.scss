@@ -1,6 +1,6 @@
-.download_window {
-    background-color: white !important;
-    overflow: inherit !important;
+.ui-dialog .ui-dialog-content.download_window {
+    background-color: white;
+    overflow: inherit;
 }
 
 .download {
@@ -13,10 +13,10 @@
     }
 }
 
-.download_fromDate, .download_fromTime {
+.download_table .download_fromDate, .download_table .download_fromTime {
     display: inline-block;
     position: relative;
-    line-height: 5px !important;
+    line-height: 5px;
 }
 .download_inst_time_cont div {
     display: inline-block;

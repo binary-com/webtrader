@@ -3,15 +3,15 @@
  */
 
 function isTick(ohlc) {
-    return ohlc.indexOf('t') != -1;
+    return ohlc.indexOf("t") != -1;
 }
 
 function isDotType(type) {
-    return type === 'dot';
+    return type === "dot";
 }
 
 function isLineDotType(type) {
-    return type === 'linedot';
+    return type === "linedot";
 }
 
 function convertToTimeperiodObject(timePeriodInStringFormat) {
@@ -26,10 +26,10 @@ function convertToTimeperiodObject(timePeriodInStringFormat) {
             var val = 0;
             switch (this.suffix())
             {
-                case 't' : val = 0; break;//There is no time in millis for ticks
-                case 'm' : val = this.intValue() * 60 * 1000; break;
-                case 'h' : val = this.intValue() * 60 * 60 * 1000; break;
-                case 'd' : val = this.intValue() * 24 * 60 * 60 * 1000; break;
+                case "t" : val = 0; break;//There is no time in millis for ticks
+                case "m" : val = this.intValue() * 60 * 1000; break;
+                case "h" : val = this.intValue() * 60 * 60 * 1000; break;
+                case "d" : val = this.intValue() * 24 * 60 * 60 * 1000; break;
             }
             return val;
         },
@@ -37,13 +37,13 @@ function convertToTimeperiodObject(timePeriodInStringFormat) {
             return this.timeInMillis() / 1000;
         },
         humanReadableString : function() {
-            var val = '';
+            var val = "";
             switch (this.suffix())
             {
-                case 't' : val = 'tick'; break;
-                case 'm' : val = 'minute(s)'; break;
-                case 'h' : val = 'hour(s)'; break;
-                case 'd' : val = 'day(s)'; break;
+                case "t" : val = "tick"; break;
+                case "m" : val = "minute(s)"; break;
+                case "h" : val = "hour(s)"; break;
+                case "d" : val = "day(s)"; break;
             }
             return this.intValue() + " " + val;
         }
@@ -51,7 +51,7 @@ function convertToTimeperiodObject(timePeriodInStringFormat) {
 }
 
 function isDataTypeClosePriceOnly( type ) {
-    return !(type === 'candlestick' || type === 'ohlc')
+    return !(type === "candlestick" || type === "ohlc")
 }
 
 function isSmallView() {
@@ -77,10 +77,10 @@ function epoch_to_string(epoch, options) {
             ("00" + d[prefix+ "Seconds"]()).slice(-2);
 }
 
-/* convert string in '2015-11-9' format to epoch
+/* convert string in "2015-11-9" format to epoch
    options: { utc: true/false } */
 function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
-    var ymd = yyyy_mm_dd.split('-'),
+    var ymd = yyyy_mm_dd.split("-"),
         y = ymd[0] * 1,
         m = ymd[1] * 1,
         d = ymd[2] * 1;
@@ -91,20 +91,20 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-    var minimumFractionDigits = currency && (currency.trim().toUpperCase() === 'BTC' || currency.trim().toUpperCase() === 'XBT') ? 8 : 2; //Because backend is confusing
-    var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+    var minimumFractionDigits = currency && (currency.trim().toUpperCase() === "BTC" || currency.trim().toUpperCase() === "XBT") ? 8 : 2; //Because backend is confusing
+    var i18n_name = (local_storage.get("i18n") || { value: "en" }).value;
 	var currency_symbols = {
-		'USD': '$', /* US Dollar */ 'EUR': '€', /* Euro */ 'CRC': '₡', /* Costa Rican Colón */
-		'GBP': '£', /* British Pound Sterling */ 'ILS': '₪', /* Israeli New Sheqel */
-		'INR': '₹', /* Indian Rupee */ 'JPY': '¥', /* Japanese Yen */
-		'KRW': '₩', /* South Korean Won */ 'NGN': '₦', /* Nigerian Naira */
-		'PHP': '₱', /* Philippine Peso */ 'PLN': 'zł', /* Polish Zloty */
-		'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
-		'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
-        'BTC': '฿', /*Bitcoin*/ 'XBT': '฿', /*Bitcoin*/
+		"USD": "$", /* US Dollar */ "EUR": "€", /* Euro */ "CRC": "₡", /* Costa Rican Colón */
+		"GBP": "£", /* British Pound Sterling */ "ILS": "₪", /* Israeli New Sheqel */
+		"INR": "₹", /* Indian Rupee */ "JPY": "¥", /* Japanese Yen */
+		"KRW": "₩", /* South Korean Won */ "NGN": "₦", /* Nigerian Naira */
+		"PHP": "₱", /* Philippine Peso */ "PLN": "zł", /* Polish Zloty */
+		"PYG": "₲", /* Paraguayan Guarani */ "THB": "฿", /* Thai Baht */
+		"UAH": "₴", /* Ukrainian Hryvnia */ "VND": "₫", /* Vietnamese Dong */
+        "BTC": "฿", /*Bitcoin*/ "XBT": "฿", /*Bitcoin*/
 	};
 	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
-						style: 'decimal',
+						style: "decimal",
 						minimumFractionDigits: minimumFractionDigits,
 					}).format(float);
 	if(currency){
@@ -114,7 +114,7 @@ function formatPrice(float,currency) {
 }
 
 function sortAlphaNum(property) {
-    'use strict';
+    "use strict";
     var reA = /[^a-zA-Z]/g;
     var reN = /[^0-9]/g;
 
@@ -145,8 +145,8 @@ function toFixed(value, precision) {
 }
 
 function uuid() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c == "x" ? r : (r&0x3|0x8);
         return v.toString(16);
     });
 }
@@ -191,7 +191,7 @@ String.prototype.replaceAll = function(target, replacement) {
 String.prototype.format = function() {
     var args = arguments;
     return this.replace(/{(\d+)}/g, function(match, number) {
-        return typeof args[number] != 'undefined'
+        return typeof args[number] != "undefined"
             ? args[number]
             : match
             ;
@@ -199,7 +199,7 @@ String.prototype.format = function() {
 };
 
 /* shim for missing functions in IE */
-if (typeof String.prototype.startsWith !== 'function') {
+if (typeof String.prototype.startsWith !== "function") {
     String.prototype.startsWith = function (str) {
       return this.lastIndexOf(str, 0) === 0;
     };
@@ -210,8 +210,8 @@ if (typeof String.prototype.startsWith !== 'function') {
 
 if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
-    'use strict';
-    if (typeof start !== 'number') {
+    "use strict";
+    if (typeof start !== "number") {
       start = 0;
     }
 
@@ -225,9 +225,9 @@ if (!String.prototype.includes) {
 
 if (!Array.prototype.includes) {
   Array.prototype.includes = function(searchElement /*, fromIndex*/) {
-    'use strict';
+    "use strict";
     if (this == null) {
-      throw new TypeError('Array.prototype.includes called on null or undefined');
+      throw new TypeError("Array.prototype.includes called on null or undefined");
     }
 
     var O = Object(this);
@@ -257,7 +257,7 @@ if (!Array.prototype.includes) {
 }
 /* are we in webtrader.binary.com or webtrader.binary.com/beta */
 var is_beta = (function() {
-  var _is_beta_ = window.location.href.indexOf('/beta') !== -1 || window.location.href.indexOf('localhost') !== -1;
+  var _is_beta_ = window.location.href.indexOf("/beta") !== -1 || window.location.href.indexOf("localhost") !== -1;
   return function() {
     return _is_beta_;
   };
@@ -266,50 +266,50 @@ var is_beta = (function() {
 /* simple localStorage cache to differentiate between live and beta */
 var local_storage = {
   get: function(name){
-    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    name = "_webtrader_" + name + (is_beta() ? "_beta" : "_live");
     var ret = localStorage.getItem(name);
     return ret && JSON.parse(ret);
   },
   set: function(name, obj){
-    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    name = "_webtrader_" + name + (is_beta() ? "_beta" : "_live");
     return localStorage.setItem(name, JSON.stringify(obj));
   },
   remove: function(name) {
-    name = '_webtrader_' + name + (is_beta() ? '_beta' : '_live');
+    name = "_webtrader_" + name + (is_beta() ? "_beta" : "_live");
     return localStorage.removeItem(name);
   }
 }
 
 function isLangSupported(lang) {
-    lang = (lang || '').trim().toLowerCase();
-    return lang === 'ar' || lang === 'de' || lang === 'en' || lang === 'es' || lang === 'fr' || lang === 'id' || lang === 'it' || lang === 'th'
-            || lang === 'ja' || lang === 'pl' || lang === 'pt' || lang === 'ru' || lang === 'vi' || lang === 'zn_cn' || lang === 'zh_cn' || lang === 'zh_tw';
+    lang = (lang || "").trim().toLowerCase();
+    return lang === "ar" || lang === "de" || lang === "en" || lang === "es" || lang === "fr" || lang === "id" || lang === "it" || lang === "th"
+            || lang === "ja" || lang === "pl" || lang === "pt" || lang === "ru" || lang === "vi" || lang === "zn_cn" || lang === "zh_cn" || lang === "zh_tw";
 }
 
 var Cookies = {
   get_by_name: function(name) {
     var cookie = document.cookie;
-    var res = cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-    return res ? res.pop() : '';
+    var res = cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
+    return res ? res.pop() : "";
   },
   loginids: function () {
-    var loginids = Cookies.get_by_name('loginid_list');
-    loginids = decodeURIComponent(loginids).split('+');
+    var loginids = Cookies.get_by_name("loginid_list");
+    loginids = decodeURIComponent(loginids).split("+");
     loginids = loginids.map(function(id){
-      var parts = id.split(':');
+      var parts = id.split(":");
       return {
         id: parts[0],
-        is_real: parts[1] === 'R',
-        is_disabled: parts[2] === 'D',
+        is_real: parts[1] === "R",
+        is_disabled: parts[2] === "D",
         is_mf: /MF/gi.test(parts[0]),
         is_mlt: /MLT/gi.test(parts[0]),
         is_mx: /MX/gi.test(parts[0]),
         is_cr: /CR/gi.test(parts[0])
       };
     });
-   /* when new accounts are created document.cookie doesn't change,
+   /* when new accounts are created document.cookie doesn"t change,
     * use local_storage to return the full list of loginids. */
-    var oauth_loginids = (local_storage.get('oauth') || []).map(function(id){
+    var oauth_loginids = (local_storage.get("oauth") || []).map(function(id){
       return {
         id: id.id,
         is_real: !id.is_virtual,
@@ -326,20 +326,20 @@ var Cookies = {
     return oauth_loginids && oauth_loginids.length > 0 ? oauth_loginids : loginids;
   },
   residence: function() {
-    return Cookies.get_by_name('residence');
+    return Cookies.get_by_name("residence");
   }
 }
 
 /* setup translating string literals */
 function setup_i18n_translation(dict) {
-      var keys = Object.keys(dict).filter(function(key) { return key !== '' && key !== ' '; });
+      var keys = Object.keys(dict).filter(function(key) { return key !== "" && key !== " "; });
       keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
       /* Escape keys for using them in regex. */
       var escaped = keys.map(function(key) { return key.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&"); });
-      escaped[0] = /[\?\.]$/.test(escaped[0]) ? escaped[0] + '|' : escaped[0] +'\\b|';
-      var regexp = new RegExp ('\\b(' + escaped.reduce(function(a, b){
-        return /[\?\.]$/.test(b) ? a + b + '|' : a + b + '\\b|';
-      }) + ')', 'g');
+      escaped[0] = /[\?\.]$/.test(escaped[0]) ? escaped[0] + "|" : escaped[0] +"\\b|";
+      var regexp = new RegExp ("\\b(" + escaped.reduce(function(a, b){
+        return /[\?\.]$/.test(b) ? a + b + "|" : a + b + "\\b|";
+      }) + ")", "g");
       var replacer = function (_, word, index, data) {
         return (dict[word] && dict[word][1]) || word;
       };
@@ -377,7 +377,7 @@ function getAppURL() {
   return window.location.href.split("/v")[0];
 }
 
-/* type = 'text/csv;charset=utf-8;' */
+/* type = "text/csv;charset=utf-8;" */
 function download_file_in_browser(filename, type, content){
             var blob = new Blob([content], { type: type });
             if (navigator.msSaveBlob) { // IE 10+
@@ -389,7 +389,7 @@ function download_file_in_browser(filename, type, content){
                     var url = URL.createObjectURL(blob);
                     link.setAttribute("href", url);
                     link.setAttribute("download", filename);
-                    link.style.visibility = 'hidden';
+                    link.style.visibility = "hidden";
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
@@ -400,8 +400,8 @@ function download_file_in_browser(filename, type, content){
 function guessDigits(prices) {
     var defaultDigits = 0;
     (prices || []).forEach(function(price) {
-        var priceStr = (price + '');
-        var priceSplitted = priceStr.split('.') || [];
+        var priceStr = (price + "");
+        var priceSplitted = priceStr.split(".") || [];
         if (priceSplitted.length > 1) {
             var len = priceSplitted[1].length;
             if ( len > defaultDigits) defaultDigits = len;
@@ -411,6 +411,6 @@ function guessDigits(prices) {
 }
 
 var isBTC = function () {
-    var currency = local_storage.get('currency');
-    return currency.toUpperCase() === 'BTC' || currency.toUpperCase() === 'XBT';
+    var currency = local_storage.get("currency");
+    return currency.toUpperCase() === "BTC" || currency.toUpperCase() === "XBT";
 }

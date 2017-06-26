@@ -4,10 +4,10 @@ $size_small: 14px;
 $size_tiny: 12px;
 
 
-.withdraw-dialog {
-  background: #fff !important;
-  padding: 0 !important;
-  overflow: hidden !important;
+.ui-dialog .ui-dialog-content.withdraw-dialog {
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
 
   .explanation {
       color: $gray;
@@ -107,7 +107,7 @@ $size_tiny: 12px;
     }
     select + .ui-selectmenu-button {
       font-size: $size_small;
-      width: 60% !important;
+      width: 60%;
     }
     .commission {
       color: $gray;
@@ -205,13 +205,12 @@ $size_tiny: 12px;
     > span {
       display: inline-block;
       position: relative;
-      top: 2px;
     }
   }
 }
 
 .withdraw-dialog-ul {
-  font-size: $size_small !important;
+  font-size: $size_small;
   max-height: 300px;
 }
 

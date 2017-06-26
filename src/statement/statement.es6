@@ -124,7 +124,11 @@ const initStatement = () => {
 
    table = table.dataTable({
       data: [],
+      autoWidth: false,
       "columnDefs": [ {
+         "targets": 3,
+         "width": "35%"
+      }, {
          "targets": 4,
          "createdCell": (td, cellData) => {
             const css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';

@@ -487,7 +487,11 @@ api.events.on('website_status', (data) => {
    if(is_website_up) {
          //Resend all the queued requests
          for(let i in queued_requests) {
-               socket.send(JSON.stringify(queued_requests[i].data));
+               //Don't send same requests multiple times.
+               if(!queued_requests[i].is_sent) {
+                  socket.send(JSON.stringify(queued_requests[i].data));
+                  queued_requests[i].is_sent = 1;
+               }
          }
    }
 });

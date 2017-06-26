@@ -1,7 +1,7 @@
-.deposit-dialog {
-  background: #fff !important;
-  padding: 0 !important;
-  overflow: hidden !important;
+.ui-dialog .ui-dialog-content.deposit-dialog {
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
 
   /* ------------------ TABS -------------------------- */
   .tabs {
