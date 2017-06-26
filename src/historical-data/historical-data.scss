@@ -3,7 +3,7 @@
       padding : 0 !important;
       position: relative;
    }
-   .titlebar {
+   .instrumnet-dropdown {
       position: absolute;
       background: linear-gradient(#2A3052,#15212D);
       height: 34px;
@@ -13,11 +13,15 @@
       color: white;
       z-index: +1;
       > ul {
-         display: none;
          border: none;
+         visibility: hidden;
+         opacity: 0;
+         transition: visibility 0.5s, opacity 0.1s linear 0.4s;
       }
       &:hover > ul {
-         display: block;
+         visibility: visible;
+         opacity: 1;
+         transition: visibility 0s;
       }
       li {
          min-width: 130px;
@@ -50,6 +54,24 @@
       .ui-dialog-title {
          font-size: 16px;
          width: 320px;
+      }
+   }
+   .date-time {
+      position: absolute;
+      background: linear-gradient(#2A3052,#15212D);
+      height: 34px;
+      width: 210px;
+      left: 340px;
+      top: 0;
+      color: white;
+      z-index: +1;
+      input {
+         color: white;
+         position: relative;
+         background: transparent;
+         border: none;
+         display: inline-block;
+         width: 100px;
       }
    }
 }
