@@ -3233,7 +3233,7 @@ msgid "Trading the financial markets can become addictive. Fill in the form belo
 msgstr "La spéculation financière peut s'avérer addictive. Veuillez remplir le formulaire ci-dessous pour limiter votre participation sur le site Web ou envoyer une lettre ou un fax signé à notre équipe du service clientèle. Une fois vos limites fixées, vous pourrez uniquement les restreindre. Elles ne pourront être supprimées ou élargies qu'au bout de 7 jours, sauf si une date d'auto-exclusion a été sélectionnée, laquelle ne peut être supprimée ou modifiée une fois confirmée. Pour supprimer ou augmenter vos limites, veuillez contacter"
 
 msgid "Tradingview for Binary.com"
-msgstr "Tradingview pour Binary.com"
+msgstr "Affichage Trading pour Binary.com"
 
 msgid "Transfer"
 msgstr "Transfert"
@@ -3698,7 +3698,7 @@ msgid "our helpful support desk"
 msgstr "notre bureau d'assistance serviable"
 
 msgid "payment agent"
-msgstr "agent de paiement Binary.com"
+msgstr "agent de paiement"
 
 msgid "points"
 msgstr "points"
@@ -3716,13 +3716,13 @@ msgid "start time"
 msgstr "heure de début"
 
 msgid "terms and conditions"
-msgstr "conditions générales Binary.com"
+msgstr "conditions générales"
 
 msgid "the"
 msgstr "le"
 
 msgid "thereafter"
-msgstr "suivant le traitement de l'opération"
+msgstr "ensuite"
 
 msgid "tick"
 msgstr "tick"
@@ -3755,4 +3755,4 @@ msgid "| Payout"
 msgstr "| Versement"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
-msgstr "permettant clients, affiliés, et développeurs à acheter et vendre des produits Binary.com"
+msgstr "permettant aux clients, affiliés, et développeurs d'acheter et vendre des produits Binary.com"
