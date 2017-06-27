@@ -928,9 +928,6 @@ msgstr ""
 msgid "Chrome"
 msgstr ""
 
-msgid "Click Jacking test"
-msgstr ""
-
 msgid "Click to log in with your Binary.com account"
 msgstr ""
 
@@ -1094,9 +1091,6 @@ msgid "Delete"
 msgstr ""
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
 msgstr ""
 
 msgid "Deposit funds"
@@ -3128,9 +3122,6 @@ msgid "Time interval"
 msgstr ""
 
 msgid "Time out until"
-msgstr ""
-
-msgid "Time period"
 msgstr ""
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
