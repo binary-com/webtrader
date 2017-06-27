@@ -932,9 +932,6 @@ msgstr "Indeks Choppiness (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Click Jacking test"
-msgstr "Klik Tes Jacking"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "Klik untuk masuk pada akun Binary.com Anda"
 
@@ -1099,9 +1096,6 @@ msgstr "Hapus"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Demo untuk afiliasi mengakses grafik Webtrader"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "Demo untuk affiliasi untuk mengakses grafik Webtrader dalam IFRAME"
 
 msgid "Deposit funds"
 msgstr "Deposit dana"
@@ -3133,9 +3127,6 @@ msgstr "Interval waktu"
 
 msgid "Time out until"
 msgstr "Time out hingga"
-
-msgid "Time period"
-msgstr "Periode Waktu"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "Waktu berubah. Kami meningkatkan hasil sehingga klien kami dapat memaksimalkan keuntungan trading mereka"

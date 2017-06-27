@@ -932,9 +932,6 @@ msgstr "Indeks CHOP (Choppiness Index)"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Click Jacking test"
-msgstr "Test Clickjacking"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "Kliknij, aby zalogować się przy użyciu konta na Binary.com"
 
@@ -1099,9 +1096,6 @@ msgstr "Usuń"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Wersja demo dla partnerów umożliwiająca dostęp do wykresów Webtrader"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "Wersja demo w IFRAME dla partnerów umożliwiająca dostęp do wykresów Webtrader"
 
 msgid "Deposit funds"
 msgstr "Wpłać środki"
@@ -3133,9 +3127,6 @@ msgstr "Odstęp czasu"
 
 msgid "Time out until"
 msgstr "Przekroczono limit czasu do"
-
-msgid "Time period"
-msgstr "Okres czasu"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "Czasy się zmieniają. Zwiększamy wypłaty, dzięki czemu nasi klienci mogą maksymalnie korzystać ze swoich wygranych zakładów"

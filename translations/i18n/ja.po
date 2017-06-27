@@ -945,9 +945,6 @@ msgstr "チョピネス・インデックス（CHOP）"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Click Jacking test"
-msgstr "ジャッキテストをクリック"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
@@ -1112,9 +1109,6 @@ msgstr "削除"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "アフィリエイト会員専用ウェブトレーダーチャートへのアクセス例"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "IFRAME内のWebtraderチャートにアクセスするアフィリエイトデモ"
 
 msgid "Deposit funds"
 msgstr "資金のご入金"
@@ -3150,9 +3144,6 @@ msgstr "期間"
 
 msgid "Time out until"
 msgstr "タイムアウト"
-
-msgid "Time period"
-msgstr "取引期間"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "時代のニーズを汲み、ペイアウト金額を増大させることで顧客の利益拡大を目指します。"

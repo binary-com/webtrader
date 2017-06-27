@@ -932,9 +932,6 @@ msgstr "crwdns19987:0crwdne19987:0"
 msgid "Chrome"
 msgstr "crwdns15542:0crwdne15542:0"
 
-msgid "Click Jacking test"
-msgstr "crwdns15543:0crwdne15543:0"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "crwdns15544:0crwdne15544:0"
 
@@ -1099,9 +1096,6 @@ msgstr "crwdns15594:0crwdne15594:0"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "crwdns20002:0crwdne20002:0"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "crwdns20003:0crwdne20003:0"
 
 msgid "Deposit funds"
 msgstr "crwdns15597:0crwdne15597:0"
@@ -3133,9 +3127,6 @@ msgstr "crwdns16037:0crwdne16037:0"
 
 msgid "Time out until"
 msgstr "crwdns20367:0crwdne20367:0"
-
-msgid "Time period"
-msgstr "crwdns16038:0crwdne16038:0"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "crwdns20368:0crwdne20368:0"
