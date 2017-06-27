@@ -12,7 +12,7 @@ var walk = function(dir) {
           results = results.concat(walk(file));
         else
           (file.endsWith(".md")) && results.push(file);
-    })
+    });
     return results;
 }
 

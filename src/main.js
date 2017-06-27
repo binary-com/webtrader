@@ -95,11 +95,12 @@ requirejs.onError = function(err) {
 };
 
 require(["modernizr"], function() {
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
+    var isSupported = !Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty;
+    if (isSupported) {
         window.location.assign("unsupported_browsers/unsupported_browsers.html");
         return;
     }
-})
+});
 
 /* Initialize the websocket as soon as possible */
 require(["websockets/binary_websockets", "text!./oauth/app_id.json"]);
