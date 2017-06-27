@@ -79,7 +79,7 @@ requirejs.config({
             deps: ["highstock-release/highstock"]
         },
         "color-picker": {
-            deps: ["jquery"] //This should fix the widget not found error
+            deps: ["jquery", "jquery-ui"] //This should fix the widget not found error
         }
     }
 });

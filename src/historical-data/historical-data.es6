@@ -7,6 +7,7 @@ import 'common/util';
 import wtcharts from 'webtrader-charts';
 import html from 'text!./historical-data.html';
 import _ from 'lodash';
+import 'jquery-ui';
 import 'css!./historical-data.css';
 import {getMarketData} from '../instruments/instruments';
 
@@ -89,6 +90,7 @@ export const createWindow = function(options) {
             $(this).dialog('destroy').remove(); //completely remove this dialog
             dialog = null;
         },
+        resize: () => chart && chart.actions.reflow(),
         width: 700,
         height: 400,
         open: function() {
