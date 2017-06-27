@@ -3,7 +3,7 @@
  */
 
 function isTick(ohlc) {
-    return ohlc.indexOf("t") != -1;
+    return ohlc.indexOf("t") !== -1;
 }
 
 function isDotType(type) {
@@ -17,47 +17,54 @@ function isLineDotType(type) {
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {
-            return parseInt(timePeriodInStringFormat.toLowerCase().replace("t", "").replace("h", "").replace("d", "").trim())
+            return parseInt(timePeriodInStringFormat.toLowerCase().replace("t", "").replace("h", "").replace("d", "").trim());
         },
         suffix : function() {
             return timePeriodInStringFormat.toLowerCase().replace("" + this.intValue(), "").trim().charAt(0);
         },
         timeInMillis : function() {
-            var val = 0;
-            switch (this.suffix())
-            {
-                case "t" : val = 0; break;//There is no time in millis for ticks
-                case "m" : val = this.intValue() * 60 * 1000; break;
-                case "h" : val = this.intValue() * 60 * 60 * 1000; break;
-                case "d" : val = this.intValue() * 24 * 60 * 60 * 1000; break;
-            }
-            return val;
+            var that = this;
+            var getTime = {
+                t: function() {
+                    return 0;
+                },
+                m: function() {
+                    return that.intValue() * 60 * 1000;
+                },
+                h: function() {
+                    return that.intValue() * 60 * 60 * 1000;
+                },
+                d: function() {
+                    return that.intValue() * 24 * 60 * 60 * 1000;
+                }
+            };
+
+            return getTime[this.suffix()]() || 0;
         },
         timeInSeconds : function() {
             return this.timeInMillis() / 1000;
         },
         humanReadableString : function() {
-            var val = "";
-            switch (this.suffix())
-            {
-                case "t" : val = "tick"; break;
-                case "m" : val = "minute(s)"; break;
-                case "h" : val = "hour(s)"; break;
-                case "d" : val = "day(s)"; break;
-            }
-            return this.intValue() + " " + val;
+            var str = {
+                "t": "tick",
+                "m": "minute(s)",
+                "h": "hour(s)",
+                "d": "day(s)"
+            };
+
+            return this.intValue() + " " + str[this.suffix()];
         }
-    }
+    };
 }
 
 function isDataTypeClosePriceOnly( type ) {
-    return !(type === "candlestick" || type === "ohlc")
+    return !(type === "candlestick" || type === "ohlc");
 }
 
 function isSmallView() {
   var ret = false;
-  if(Modernizr) {
-    if (Modernizr.mq("all and (max-width: 600px)") || Modernizr.mq("all and (max-device-width: 600px)")) {
+  if(window.Modernizr) {
+    if (window.Modernizr.mq("all and (max-width: 600px)") || window.Modernizr.mq("all and (max-device-width: 600px)")) {
       ret = true;
     }
   }
@@ -92,7 +99,7 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
     var minimumFractionDigits = currency && (currency.trim().toUpperCase() === "BTC" || currency.trim().toUpperCase() === "XBT") ? 8 : 2; //Because backend is confusing
-    var i18n_name = (local_storage.get("i18n") || { value: "en" }).value;
+    var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 	var currency_symbols = {
 		"USD": "$", /* US Dollar */ "EUR": "€", /* Euro */ "CRC": "₡", /* Costa Rican Colón */
 		"GBP": "£", /* British Pound Sterling */ "ILS": "₪", /* Israeli New Sheqel */
@@ -146,7 +153,7 @@ function toFixed(value, precision) {
 
 function uuid() {
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
-        var r = Math.random()*16|0, v = c == "x" ? r : (r&0x3|0x8);
+        var r = Math.random()*16|0, v = c === "x" ? r : (r&0x3|0x8);
         return v.toString(16);
     });
 }
@@ -160,19 +167,19 @@ function uuid() {
  * @param _callBackWithHandler
  */
 function setLongTimeout(callback, timeout_ms, _callBackWithHandler) {
-
+    var handle;
     //if we have to wait more than max time, need to recursively call this function again
     if(timeout_ms > 2147483647)
     {    //now wait until the max wait time passes then call this function again with
         //requested wait - max wait we just did, make sure and pass callback
-        var handle = setTimeout(function() {
+        handle = setTimeout(function() {
             setLongTimeout(callback, (timeout_ms - 2147483647), _callBackWithHandler);
         }, 2147483647);
         _callBackWithHandler(handle);
     }
     else  //if we are asking to wait less than max, finally just do regular seTimeout and call callback
     {
-        var handle = setTimeout(callback, timeout_ms);
+        handle = setTimeout(callback, timeout_ms);
         if (_callBackWithHandler) {
             _callBackWithHandler(handle);
         }

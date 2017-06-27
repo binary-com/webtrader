@@ -11,8 +11,8 @@ var walk = function(dir) {
         if (stat && stat.isDirectory())
           results = results.concat(walk(file));
         else
-          (file.endsWith(".md")) && results.push(file)
-    })
+          (file.endsWith(".md")) && results.push(file);
+    });
     return results;
 }
 

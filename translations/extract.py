@@ -138,7 +138,7 @@ files = [
 # brew install gettext
 # brew link gettext --force
 for f in files:
-    subprocess.call(['msgmerge', '--no-fuzzy-matching', '--output-file=' + f, f, './i18n/messages.pot'])
+    subprocess.call(['msgmerge', '-w 1000', '--no-fuzzy-matching', '--output-file=' + f, f, './i18n/messages.pot'])
 
 # to extract translated string from a to b
 # msgmerge -N -o i18n/zh_tw.po temp/zh_tw.po ref/zh_tw.po

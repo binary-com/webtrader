@@ -56,23 +56,25 @@ img.reload {
 
 .webtrader-dialog img.disabled { opacity: 0.5; }
 
-.custom-icon-maximize {
+.ui-icon.custom-icon-maximize {
     cursor: pointer;
-    background-image: url('../images/maximize.svg')!important;
+    background-image: url('../images/maximize.svg');
     position: relative;
     right: 3px;
 }
-.custom-icon-minimize {
+.ui-icon.custom-icon-minimize {
     cursor: pointer;
-    background-image: url('../images/minimize.svg')!important;
+    background-image: url('../images/minimize.svg');
     position: relative;
     right: 6px;
 }
-.custom-icon-close {
+.ui-button:hover .ui-icon.custom-icon-close,
+.ui-button:focus .ui-icon.custom-icon-close,
+.ui-icon.custom-icon-close {
     cursor: pointer;
-    background-image: url('../images/close.svg')!important;
-    position: relative;
+    background-image: url('../images/close.svg');
     right: 3px;
+    top: 9px;
 }
 
 .webtrader-dialog-widget .ui-dialog-titlebar-close {

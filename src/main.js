@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 2/11/15.
  */
-requirejs.config({
+window.requirejs.config({
     baseUrl: "./",
     paths: {
         "jquery": "lib/jquery/dist/jquery.min",
@@ -84,32 +84,55 @@ requirejs.config({
     }
 });
 
-requirejs.onError = function(err) {
+window.requirejs.onError = function(err) {
     //Avoiding script errors on timeout. Showing a warning so that developers can track wrong path errors on local servers.
     if (err.requireType === "scripterror") {
-        console.warn(err);
-        return;
+        throw err;
     }
-    console.error(err); // For more descriptive errors locally.
     throw err;
 };
 
 require(["modernizr"], function() {
-    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
+    var Modernizr = window.Modernizr;
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && window.isSmallView()) || 
+        !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
         window.location.assign("unsupported_browsers/unsupported_browsers.html");
         return;
     }
-})
+});
 
 /* Initialize the websocket as soon as possible */
 require(["websockets/binary_websockets", "text!./oauth/app_id.json"]);
 
-var i18n_name = (local_storage.get("i18n") || { value: "en" }).value;
+/* example: load_ondemand(li,"click","tradingtimes/tradingtimes",callback) */
+function load_ondemand(element, event_name, msg, module_name, callback) {
+    var func_name = null;
+    element.one(event_name, func_name = function() {
+
+        //Ignore click event, if it has disabled class
+        if (element.hasClass("disabled")) {
+            element.one(event_name, func_name);
+            return;
+        }
+
+        require([module_name], function(module) {
+            if (msg) {
+                require(["jquery", "jquery-growl"], function($) {
+                    $.growl.notice({ message: msg });
+                });
+            }
+            callback && callback(module);
+        });
+
+    });
+}
+
+var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
     /* setup translating string literals */
-    setup_i18n_translation(JSON.parse(lang_json));
-    if (i18n_name == "ar") {
+    window.setup_i18n_translation(JSON.parse(lang_json));
+    if (i18n_name === "ar") {
         $("body").addClass("rtl-direction");
     }
 
@@ -122,7 +145,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(["css!lib/jquery-ui-dist/jquery-ui.min.css",
-        "css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css",
         "css!lib/chosen-js/chosen.css",
         "css!lib/growl/stylesheets/jquery.growl.css",
         "css!lib/datatables/media/css/jquery.dataTables.min.css",
@@ -261,7 +283,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                 });
 
 
-        }
+        };
         
         require(["navigation/navigation", "jquery-ui", "css!main.css","css!binary-style"], function(navigation) {
             navigation.init(registerMenusCallback);
@@ -298,30 +320,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
 });
 
-
-/* example: load_ondemand(li,"click","tradingtimes/tradingtimes",callback) */
-function load_ondemand(element, event_name, msg, module_name, callback) {
-    var func_name = null;
-    element.one(event_name, func_name = function() {
-
-        //Ignore click event, if it has disabled class
-        if (element.hasClass("disabled")) {
-            element.one(event_name, func_name);
-            return;
-        }
-
-        require([module_name], function(module) {
-            if (msg) {
-                require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: msg });
-                });
-            }
-            callback && callback(module);
-        });
-
-    });
-}
-
 /*
  * patch for jquery growl functions.
  * do not to show multiple growls with the same content.
@@ -334,10 +332,10 @@ require(["jquery", "jquery-growl"], function($) {
             if (options.message.indexOf("rate limit") > -1) {
                 options.message += " Please try again after 1 minute.".i18n();
             }
-            if (!options.title) options.title = ""; /* remove title */
+            if (!options.title) { options.title = ""; /* remove title */ }
             /* remove current growl with the same message */
             $("#growls .growl:contains(\"" + options.message + "\")").remove();
             perv(options);
-        }
+        };
     });
 });

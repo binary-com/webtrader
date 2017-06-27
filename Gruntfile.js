@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     }
 
     grunt.initConfig({
-        pkg: pkg,
+        pkg,
         //Executing this task will populate grunt.config.gitinfo with repository data below
         gitinfo: {
             local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
                 node: true
             },
             all: [
-                "Gruntfile.js"//, "src/**/*.js", "src/*.js" TODO
+                // "src/**/*.js", "src/*.js" TODO
             ]
         },
         clean: {
@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                             "text/text.js",
                             "webtrader-charts/dist/webtrader-charts.js",
                             "regenerator-runtime/*",
-                            "!jquery-ui-dist/**", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
+                            "!jquery-ui-dist/**", "jquery-ui-dist/images/ui-icons_444444_256x240.png", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
                             "chosen-js/*"
                         ],
                         dest: "dist/uncompressed/v<%=pkg.version%>/lib/",
@@ -354,7 +354,7 @@ module.exports = function (grunt) {
                 // Target-specific file lists and/or options go here.
                 options: {
                     // execute test function(s)
-                    test: function() {
+                    test() {
                         return process.env.TRAVIS_BRANCH === "master";
                     }
                 },
@@ -486,7 +486,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "markdown:helpDocs", "copy:copy_i18n", "copy:copyLibraries", "copy:copyChromeManifest", "rename", "replace:version", "replace:style"]);
     grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "compress", "copy:copy_AfterCompression"]);
-  	grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
+    grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Deploy to a sub-folder of gh-pages with the name of current branch,
