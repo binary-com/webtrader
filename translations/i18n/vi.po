@@ -928,9 +928,6 @@ msgstr "Chỉ số độ dồi dào (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Click Jacking test"
-msgstr "Nhấp vào kiểm tra Jacking"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com của bạn"
 
@@ -1095,9 +1092,6 @@ msgstr "Xóa bỏ"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Giới thiệu cho các chi nhánh để truy cập vào bảng xếp hạng Webtrader"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "Thử nghiệm cho liên kết tới truy cập bảng Webtrader trong IFRAME"
 
 msgid "Deposit funds"
 msgstr "Khoản tiền đặt cọc"
@@ -3129,9 +3123,6 @@ msgstr "Khoảng thời gian"
 
 msgid "Time out until"
 msgstr "Thời gian ra đến khi"
-
-msgid "Time period"
-msgstr "Thời hạn"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "Thời gian đang thay đổi. Chúng tôi tăng tiền thưởng vì thế khách hàng có thể tận dụng nhiều nhất từ các giao dịch thắng của họ"
