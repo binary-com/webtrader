@@ -928,9 +928,6 @@ msgstr "波动指数 (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Click Jacking test"
-msgstr "点击劫持测试"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "点击登录Binary.com账户"
 
@@ -1095,9 +1092,6 @@ msgstr "删除"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "联盟成员访问Webtrader图表的演示"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "在IFRAME查看联盟会员访问Webtrader图表的演示"
 
 msgid "Deposit funds"
 msgstr "存入资金"
@@ -3129,9 +3123,6 @@ msgstr "时间间隔"
 
 msgid "Time out until"
 msgstr "时间已过。下次开启时间为"
-
-msgid "Time period"
-msgstr "期限"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "时代在变。我们增加了赔付金额，使客户可以从盈利交易中获取最大的收益"
