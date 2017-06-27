@@ -486,7 +486,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "markdown:helpDocs", "copy:copy_i18n", "copy:copyLibraries", "copy:copyChromeManifest", "rename", "replace:version", "replace:style"]);
     grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "compress", "copy:copy_AfterCompression"]);
-  	grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
+    grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Deploy to a sub-folder of gh-pages with the name of current branch,

@@ -104,12 +104,35 @@ require(["modernizr"], function() {
 /* Initialize the websocket as soon as possible */
 require(["websockets/binary_websockets", "text!./oauth/app_id.json"]);
 
+/* example: load_ondemand(li,"click","tradingtimes/tradingtimes",callback) */
+function load_ondemand(element, event_name, msg, module_name, callback) {
+    var func_name = null;
+    element.one(event_name, func_name = function() {
+
+        //Ignore click event, if it has disabled class
+        if (element.hasClass("disabled")) {
+            element.one(event_name, func_name);
+            return;
+        }
+
+        require([module_name], function(module) {
+            if (msg) {
+                require(["jquery", "jquery-growl"], function($) {
+                    $.growl.notice({ message: msg });
+                });
+            }
+            callback && callback(module);
+        });
+
+    });
+}
+
 var i18n_name = (local_storage.get("i18n") || { value: "en" }).value;
 require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
     /* setup translating string literals */
     setup_i18n_translation(JSON.parse(lang_json));
-    if (i18n_name == "ar") {
+    if (i18n_name === "ar") {
         $("body").addClass("rtl-direction");
     }
 
@@ -261,7 +284,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                 });
 
 
-        }
+        };
         
         require(["navigation/navigation", "jquery-ui", "css!main.css","css!binary-style"], function(navigation) {
             navigation.init(registerMenusCallback);
@@ -298,30 +321,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
 });
 
-
-/* example: load_ondemand(li,"click","tradingtimes/tradingtimes",callback) */
-function load_ondemand(element, event_name, msg, module_name, callback) {
-    var func_name = null;
-    element.one(event_name, func_name = function() {
-
-        //Ignore click event, if it has disabled class
-        if (element.hasClass("disabled")) {
-            element.one(event_name, func_name);
-            return;
-        }
-
-        require([module_name], function(module) {
-            if (msg) {
-                require(["jquery", "jquery-growl"], function($) {
-                    $.growl.notice({ message: msg });
-                });
-            }
-            callback && callback(module);
-        });
-
-    });
-}
-
 /*
  * patch for jquery growl functions.
  * do not to show multiple growls with the same content.
@@ -334,7 +333,7 @@ require(["jquery", "jquery-growl"], function($) {
             if (options.message.indexOf("rate limit") > -1) {
                 options.message += " Please try again after 1 minute.".i18n();
             }
-            if (!options.title) options.title = ""; /* remove title */
+            if (!options.title) { options.title = ""; /* remove title */ }
             /* remove current growl with the same message */
             $("#growls .growl:contains(\"" + options.message + "\")").remove();
             perv(options);
