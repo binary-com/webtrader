@@ -23,29 +23,36 @@ function convertToTimeperiodObject(timePeriodInStringFormat) {
             return timePeriodInStringFormat.toLowerCase().replace("" + this.intValue(), "").trim().charAt(0);
         },
         timeInMillis : function() {
-            var val = 0;
-            switch (this.suffix())
-            {
-                case "t" : val = 0; break;//There is no time in millis for ticks
-                case "m" : val = this.intValue() * 60 * 1000; break;
-                case "h" : val = this.intValue() * 60 * 60 * 1000; break;
-                case "d" : val = this.intValue() * 24 * 60 * 60 * 1000; break;
-            }
-            return val;
+            var that = this;
+            var getTime = {
+                t: function() {
+                    return 0;
+                },
+                m: function() {
+                    return that.intValue() * 60 * 1000;
+                },
+                h: function() {
+                    return that.intValue() * 60 * 60 * 1000;
+                },
+                d: function() {
+                    return that.intValue() * 24 * 60 * 60 * 1000;
+                }
+            };
+
+            return getTime[this.suffix()]() || 0;
         },
         timeInSeconds : function() {
             return this.timeInMillis() / 1000;
         },
         humanReadableString : function() {
-            var val = "";
-            switch (this.suffix())
-            {
-                case "t" : val = "tick"; break;
-                case "m" : val = "minute(s)"; break;
-                case "h" : val = "hour(s)"; break;
-                case "d" : val = "day(s)"; break;
-            }
-            return this.intValue() + " " + val;
+            var str = {
+                "t": "tick",
+                "m": "minute(s)",
+                "h": "hour(s)",
+                "d": "day(s)"
+            };
+
+            return this.intValue() + " " + str[this.suffix()];
         }
     };
 }
