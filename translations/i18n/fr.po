@@ -928,9 +928,6 @@ msgstr "Indice de volatilité (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Click Jacking test"
-msgstr "Test de Click Jacking"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "Cliquez pour vous connecter à votre compte Binary.com."
 
@@ -1095,9 +1092,6 @@ msgstr "Supprimer"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Démo permettant aux affiliés d'accéder aux graphiques Webtrader"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "Démonstration pour les affiliés souhaitant accéder aux graphiques Webtrader en IFRAME"
 
 msgid "Deposit funds"
 msgstr "Dépôt de fonds"
@@ -3129,9 +3123,6 @@ msgstr "Intervalle de temps"
 
 msgid "Time out until"
 msgstr "Expiré jusqu'à"
-
-msgid "Time period"
-msgstr "Période de temps"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "Les temps ont changé. Nous augmentons les versements pour que nos clients puissent profiter au maximum de leurs trades gagnantes"
