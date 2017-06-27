@@ -928,9 +928,6 @@ msgstr "Индекс переменчивости (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Click Jacking test"
-msgstr "Нажмите на Тест"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "Нажмите, чтобы войти через счёт на Binary.com"
 
@@ -1095,9 +1092,6 @@ msgstr "Удалить"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr "Демо-ролик для партнёров о том, как работать с графиками на Webtrader"
-
-msgid "Demo for affiliates to access Webtrader charts in IFRAME"
-msgstr "Демо-ролик для партнёров о том, как работать с графиками на Webtrader через IFRAME"
 
 msgid "Deposit funds"
 msgstr "Пополнить счет"
@@ -3129,9 +3123,6 @@ msgstr "Врем. интервал"
 
 msgid "Time out until"
 msgstr "Перерыв до"
-
-msgid "Time period"
-msgstr "Период"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
 msgstr "Времена меняются. Мы увеличиваем выплаты, позволяя своим клиентам получить наилучший выигрыш от своих контрактов"
