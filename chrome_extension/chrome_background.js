@@ -1,3 +1,4 @@
+var chrome = window.chrome;
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (tab.url.indexOf('webtrader.binary.com') != -1 && changeInfo.status === 'complete') {
         chrome.tabs.executeScript({

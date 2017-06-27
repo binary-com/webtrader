@@ -445,14 +445,20 @@ msgstr "Абсолютный ценовой осциллятор (APO)"
 msgid "Accept"
 msgstr "Принять"
 
+msgid "Accessible from any web browser in 13 languages"
+msgstr "Доступно на 13 языках с любого веб-браузера"
+
 msgid "Account balance"
 msgstr "Баланс счёта"
 
+msgid "Account opening reason"
+msgstr "Причина открытия счёта"
+
+msgid "Account turnover"
+msgstr "Объём покупок на счету"
+
 msgid "Action"
 msgstr "Действие"
-
-msgid "Add"
-msgstr "Добавить"
 
 msgid "Add comparisons"
 msgstr "Добавить сравнения"
@@ -460,8 +466,11 @@ msgstr "Добавить сравнения"
 msgid "Add indicator"
 msgstr "Добавить индикатор"
 
-msgid "Add level"
-msgstr "Добавить уровень"
+msgid "Add/Remove comparisons"
+msgstr "Добавить/удалить сравнение"
+
+msgid "Add/Remove indicators"
+msgstr "Добавить/удалить индикаторы"
 
 msgid "Add/remove indicators"
 msgstr "Добавить/удалить индикаторы"
@@ -523,8 +532,14 @@ msgstr "Апр"
 msgid "April"
 msgstr "Апрель"
 
+msgid "Are you sure you want to delete template?"
+msgstr "Вы уверены, что хотите удалить шаблон?"
+
 msgid "Are you sure you want to delete this token?"
 msgstr "Вы уверены, что хотите удалить этот ключ?"
+
+msgid "Are you sure you want to overwrite current template?"
+msgstr "Вы уверены, что хотите переделать текущий шаблон?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Скользящая средняя Арно Легу (ALMA)"
@@ -781,9 +796,6 @@ msgstr "Нажав"
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Нажав OK, Вы подтверждаете, что прочитали и согласились с обновлениями в документе"
 
-msgid "CLOSE"
-msgstr "ЗАКРЫТЬ"
-
 msgid "CSV"
 msgstr "CSV"
 
@@ -924,9 +936,6 @@ msgstr "Нажмите, чтобы войти через счёт на Binary.co
 
 msgid "Close"
 msgstr "Закрыть"
-
-msgid "Close Price"
-msgstr "Цена закрытия"
 
 msgid "Close all"
 msgstr "Закрыть всё"
@@ -1201,6 +1210,12 @@ msgstr "Загрузить векторное изображение в SVG"
 msgid "Download as"
 msgstr "Загрузить как"
 
+msgid "Downloading .csv"
+msgstr "Загрузка .csv"
+
+msgid "Downloading template as"
+msgstr "Загрузка шаблона в формате"
+
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr "Дожи-стрекоза (CDLDRAGONFLYDOJI)"
 
@@ -1216,9 +1231,6 @@ msgstr "Продолжит."
 msgid "EGR Operator Award"
 msgstr "Церемония EGR Operator Award"
 
-msgid "EMA"
-msgstr "ЭСС"
-
 msgid "EURUSD"
 msgstr "EURUSD"
 
@@ -1230,9 +1242,6 @@ msgstr "Каждый контракт на бинарных опционах и�
 
 msgid "Edge"
 msgstr "Граница"
-
-msgid "Edit"
-msgstr "Редактировать"
 
 msgid "Education"
 msgstr "Образование"
@@ -1261,6 +1270,9 @@ msgstr "English"
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Фигура поглощение (CDLENGULFING)"
 
+msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
+msgstr "Воспользуйтесь интуитивно-понятным торговым интерфейсом с улучшенными функциями, которые позволят Вам одновременно следить за всеми любимыми активами и рынками, а также просматривать нужные графики, индекс активов, время торговли и исторические данные. Самый важный аспект: Вы можете самостоятельно выбирать, что будет отображено на экране"
+
 msgid "Enter your current password"
 msgstr "Введите текущий пароль"
 
@@ -1272,6 +1284,9 @@ msgstr "Входная котировка"
 
 msgid "Entry spot price"
 msgstr "Спот-котировка на входе"
+
+msgid "Error getting data for %1"
+msgstr "Ошибка при получении данных для %1"
 
 msgid "Espa ol"
 msgstr "Espanol"
@@ -1326,6 +1341,9 @@ msgstr "Любимый артист"
 
 msgid "Favourite dish"
 msgstr "Любимое блюдо"
+
+msgid "Features"
+msgstr "Характеристики"
 
 msgid "Feb"
 msgstr "Фев"
@@ -1405,6 +1423,9 @@ msgstr "Пятница"
 msgid "From"
 msgstr "От"
 
+msgid "Full-screen trading interface"
+msgstr "Полноэкранный интерфейс"
+
 msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
 
@@ -1435,9 +1456,6 @@ msgstr "Светлая сетка"
 msgid "Group History"
 msgstr "История компании"
 
-msgid "HIGH"
-msgstr "ВЕРХНЕЕ ЗНАЧЕНИЕ"
-
 msgid "Hammer (CDLHAMMER)"
 msgstr "Молот (CDLHAMMER)"
 
@@ -1461,9 +1479,6 @@ msgstr "Выше"
 
 msgid "High Barrier"
 msgstr "Верхний барьер"
-
-msgid "High Price"
-msgstr "Верхняя цена"
 
 msgid "High barrier"
 msgstr "Верхний барьер"
@@ -1633,6 +1648,15 @@ msgstr "Инструмент"
 msgid "Instruments"
 msgstr "Инструменты"
 
+msgid "Invalid JSON file"
+msgstr "Неправильный файл JSON"
+
+msgid "Invalid parameter(s)"
+msgstr "Неправильный параметр(ы)"
+
+msgid "Invalid template type"
+msgstr "Неправильный тип шаблона"
+
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr "Перевернутый молот (CDLINVERTEDHAMMER)"
 
@@ -1653,9 +1677,6 @@ msgstr "Время расширяться. Для улучшения работ�
 
 msgid "Italiano"
 msgstr "Italiano"
-
-msgid "Its multi window interface allows pro traders to monitor the movements of multiple assets and markets at the same time. Thanks to multiple tools and indicators available, it allows tradingn and analyzing market with maximum flexibility"
-msgstr "Многооконный интерфейс позволяет профессиональным трейдерам одновременно следить за динамикой нескольких активов и рынков. Благодаря множеству доступных инструментов и индикаторов, платформа предоставляет максимальную гибкость для торговли и анализа рынка"
 
 msgid "Jan"
 msgstr "Янв"
@@ -1702,9 +1723,6 @@ msgstr "Заранее известный риск"
 msgid "Kuala Lumpur Office"
 msgstr "Офис в Куала-Лумпуре"
 
-msgid "LOW"
-msgstr "НИЖНЕЕ ЗНАЧЕНИЕ"
-
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ступенчатое дно (CDLLADDERBOTTOM)"
 
@@ -1725,9 +1743,6 @@ msgstr "Приступим"
 
 msgid "Level of Education"
 msgstr "Уровень образования"
-
-msgid "Levels"
-msgstr "Уровни"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
 msgstr "Компания лицензирована и регулируется на Мальте, в Великобритании, на Острове Мэн, в Ирландии и Японии"
@@ -1839,9 +1854,6 @@ msgstr "Ниже"
 
 msgid "Low Barrier"
 msgstr "Нижний барьер"
-
-msgid "Low Price"
-msgstr "Нижняя цена"
 
 msgid "Low barrier"
 msgstr "Нижний барьер"
@@ -2074,8 +2086,8 @@ msgstr "Сервер OAuth"
 msgid "OHLC"
 msgstr "OHLC"
 
-msgid "OPEN"
-msgstr "ОТКРЫТО"
+msgid "OK"
+msgstr "OK"
 
 msgid "Occupation"
 msgstr "Вид деятельности"
@@ -2136,9 +2148,6 @@ msgstr "Открыто"
 
 msgid "Open Account"
 msgstr "Открыть счёт"
-
-msgid "Open Price"
-msgstr "Цена открытия"
 
 msgid "Open a Financial Account"
 msgstr "Открыть финансовый счёт"
@@ -2503,8 +2512,8 @@ msgstr "Растущие рынки"
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Метод трёх поднимающихся/падающих (CDLRISEFALL3METHODS)"
 
-msgid "SMA"
-msgstr "ПСС"
+msgid "Robust and secure platform"
+msgstr "Надёжная и безопасная платформа"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2746,8 +2755,17 @@ msgstr "Стоп-профит"
 msgid "Stop-type"
 msgstr "Тип стопа"
 
+msgid "Stroke color"
+msgstr "Цвет штриха"
+
+msgid "Stroke width"
+msgstr "Ширина штриха"
+
 msgid "Submit"
 msgstr "Подтвердить"
+
+msgid "Successfully applied the template and saved it as"
+msgstr "Шаблон успешно применён и сохранён как"
 
 msgid "Summation (SUM)"
 msgstr "Суммирование (SUM)"
@@ -2757,12 +2775,6 @@ msgstr "Вск"
 
 msgid "Sunday"
 msgstr "Воскресенье"
-
-msgid "TEMA"
-msgstr "ТЭСС"
-
-msgid "TRIMA"
-msgstr "ТСС"
 
 msgid "Table"
 msgstr "Таблица"
@@ -2791,8 +2803,14 @@ msgstr "Без налогов"
 msgid "Tel"
 msgstr "Тел"
 
+msgid "Template changes saved"
+msgstr "Изменения сохранены"
+
 msgid "Template name"
 msgstr "Название шаблона"
+
+msgid "Template name already exists"
+msgstr "Данное имя уже существует"
 
 msgid "Terms"
 msgstr "Условия"
@@ -3328,6 +3346,9 @@ msgstr "На нашем сайте клиенты могут торговать 
 msgid "Variance (VAR)"
 msgstr "Вариация (VAR)"
 
+msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
+msgstr "Различные настраиваемые функции: загрузка и упорядочивание активов, графиков и других ресурсов"
+
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
 
@@ -3361,9 +3382,6 @@ msgstr "Индексы волатильности"
 msgid "Volatility indices"
 msgstr "Индексы волатильности"
 
-msgid "WMA"
-msgstr "ВСС"
-
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "Взвешенная скользящая средняя или WMA помогает сгладить ценовые неровности для более удобного определения тренда. Индикатор уделяет большее значение последним данным, чем экспоненциальная скользящая средняя (EMA)"
 
@@ -3391,8 +3409,8 @@ msgstr "Сервер Websocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is a Binary.com's advanced desktop trading platform"
-msgstr "Webtrader – это усовершенствованная платформа Binary.com для ПК"
+msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
+msgstr "Webtrader — передовая торговая платформа, которую можно полностью настраивать, согласно Вашим предпочтениям"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader применяет новые веб технологии для приятного и полноценного торгового опыта"
@@ -3409,8 +3427,8 @@ msgstr "Взвешенная цена закрытия (WCLPRICE)"
 msgid "Weighted Moving Average (WMA)"
 msgstr "Взвешенная скользящая средняя (WMA)"
 
-msgid "Welcome to Binary Webtrader"
-msgstr "Добро пожаловать на Webtrader от Binary"
+msgid "Welcome to Binary.com Webtrader"
+msgstr "Добро пожаловать на Webtrader от Binary.com"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Если Вы довольны ценой, незамедлительно исполняйте контракт"

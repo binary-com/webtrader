@@ -1,5 +1,5 @@
 .portfolio-dialog th {
-  width: auto !important;
+  width: auto;
 }
 
 .portfolio-dialog td:nth-child(n - 3),

@@ -26,7 +26,7 @@ export const init = () => {
       minimizable: false,
       maximizable: false,
       width: 548,
-      height: 180,
+      height: 'auto',
       close: () => {
          login_win.dialog('destroy');
          login_win.remove();

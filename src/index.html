@@ -31,8 +31,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<style-url>/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<style-url>/images/favicons/favicon-32x32.png">
 
-    <link rel="stylesheet" type="text/css" href="v<version>/index.css">
     <link rel="stylesheet" type="text/css" href="<style-url>/binary.css">
+    <link rel="stylesheet" type="text/css" href="v<version>/index.css">
 
 </head>
 
@@ -63,7 +63,7 @@
                     <li class="IT"><a href="/" data-lang="it">Italiano</a></li>
                     <li class="PL"><a href="/" data-lang="pl">Polski</a></li>
                     <li class="PT"><a href="/" data-lang="pt">Português</a></li>
-                    <li class="RU"><a href="/" data-lang=ru">Русский</a></li>
+                    <li class="RU"><a href="/" data-lang="ru">Русский</a></li>
                     <li class="VI"><a href="/" data-lang="vi">Tiếng Việt</a></li>
                     <li class="ZH_CN"><a href="/" data-lang="zh_cn">简体中文</a></li>
                     <li class="ZH_TW"><a href="/" data-lang="zh_tw">繁體中文</a></li>
@@ -186,12 +186,16 @@
         var href = window.location.href;
         if (/acct1=/.test(href) && /token1=/.test(href)) {
             //Remove the '#' check later once the backend changes are released TODO
-            var params = href.indexOf('#') != -1 ? href.split('#')[1].split('&') : href.split('?')[1].split('&');
+            var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
+            var accts = (params_str.match(/acct\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var tokens = (params_str.match(/token\d=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var currs = (params_str.match(/cur\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
             var oauth = [];
-            for (var i = 0; i < params.length - 1; i += 2) {
-                var id = params[i].split('=')[1];
-                var token = params[i + 1].split('=')[1];
-                oauth.push({ id: id, token: token });
+            for (var i = 0; i < accts.length; i++) {
+                var id = accts[i];
+                var token = tokens[i];
+                var curr = currs[i];
+                oauth.push({ id: id, token: token, currency: curr });
             }
             local_storage.set('oauth', oauth);
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
@@ -207,7 +211,7 @@
         if (local_storage.get("oauth") !== null) {
             window.location.href = 'v<version>/main.html';
         } else {
-            $(function() {
+            $(function () {
                 $('body').css('display', 'block');
                 setTime();
                 setInterval(setTime, 15 * 1000);
@@ -226,8 +230,8 @@
                     selected_lang.addClass('invisible');
                 }
 
-                $('.languages #select_language li').each(function(i, el) {
-                    $(el).click(function() {
+                $('.languages #select_language li').each(function (i, el) {
+                    $(el).click(function () {
                         var lang = $(el).find('a').data('lang');
                         if (lang) {
                             local_storage.set('i18n', { value: lang });
@@ -254,7 +258,6 @@
             var win = window.open(url, '_blank');
             win.focus();
         }
-
     </script>
 
     <!-- Google Tag Manager -->

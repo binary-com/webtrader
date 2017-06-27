@@ -218,6 +218,7 @@ rv.binders['is-valid-number'] = {
 
 /* bindar for jqueyr ui selectmenu options */
 rv.binders['selectmenu-*'] = function (el, value) {
+      console.log('Called')
    $(el).selectmenu('option', this.args[0], value);
 }
 /*binder for hidding overflow on selctmenu*/

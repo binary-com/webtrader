@@ -3,39 +3,38 @@
  */
 
 table.profit-table-dialog th span {
-    height: 2.5em !important;
+    height: 2.5em;
     display: block;
     font-size: 90%;
-    /*padding: 5px 5px !important;*/
 }
 
-table.profit-table-dialog th,
-table.profit-table-dialog td {
-    padding: 5px 5px !important;
+table.profit-table-dialog thead th,
+table.profit-table-dialog tr td {
+    padding: 5px 5px;
     text-align: center;
-    padding-right: 0 !important;
+    padding-right: 0;
 }
 
 table.profit-table-dialog th:nth-child(4),
 table.profit-table-dialog th:nth-child(7) {
-    width: 8% !important;
+    width: 8%;
 }
 table.profit-table-dialog tbody td:nth-child(8n){
-  padding-right: 4px !important;
+  padding-right: 4px;
 }
 
 table.profit-table-dialog th:nth-child(6) {
-    width: 8% !important;
+    width: 8%;
 }
 
 table.profit-table-dialog th:nth-child(1),
 table.profit-table-dialog th:nth-child(2),
 table.profit-table-dialog th:nth-child(5) {
-    width: 13% !important;
+    width: 13%;
 }
 
 table.profit-table-dialog th:nth-child(3) {
-    width: 36% !important;
+    width: 36%;
 }
 
 table.profit-table-dialog th > .search-input {
@@ -46,7 +45,7 @@ table.profit-table-dialog th > .search-input {
 }
 
 table.profit-table-dialog + div {
-    padding: 0.5em 0 !important;
+    padding: 0.5em 0;
 }
 
 table.profit-table-dialog img.arrow {
