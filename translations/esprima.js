@@ -276,8 +276,8 @@
         }
 
         return {
-            code: code,
-            octal: octal
+            code,
+            octal
         };
     }
 
@@ -394,8 +394,8 @@
         state.lastCommentStart = start;
 
         comment = {
-            type: type,
-            value: value
+            type,
+            value
         };
         if (extra.range) {
             comment.range = [start, end];
@@ -737,11 +737,11 @@
         }
 
         return {
-            type: type,
+            type,
             value: id,
-            lineNumber: lineNumber,
-            lineStart: lineStart,
-            start: start,
+            lineNumber,
+            lineStart,
+            start,
             end: index
         };
     }
@@ -944,10 +944,10 @@
         return {
             type: Token.NumericLiteral,
             value: parseInt(number, 8),
-            octal: octal,
-            lineNumber: lineNumber,
-            lineStart: lineStart,
-            start: start,
+            octal,
+            lineNumber,
+            lineStart,
+            start,
             end: index
         };
     }
@@ -1263,14 +1263,14 @@
         return {
             type: Token.Template,
             value: {
-                cooked: cooked,
+                cooked,
                 raw: source.slice(start + 1, index - rawOffset)
             },
-            head: head,
-            tail: tail,
-            lineNumber: lineNumber,
-            lineStart: lineStart,
-            start: start,
+            head,
+            tail,
+            lineNumber,
+            lineStart,
+            start,
             end: index
         };
     }

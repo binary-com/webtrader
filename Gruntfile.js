@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     }
 
     grunt.initConfig({
-        pkg: pkg,
+        pkg,
         //Executing this task will populate grunt.config.gitinfo with repository data below
         gitinfo: {
             local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
                 node: true
             },
             all: [
-                "Gruntfile.js"//, "src/**/*.js", "src/*.js" TODO
+                // "src/**/*.js", "src/*.js" TODO
             ]
         },
         clean: {
@@ -354,7 +354,7 @@ module.exports = function (grunt) {
                 // Target-specific file lists and/or options go here.
                 options: {
                     // execute test function(s)
-                    test: function() {
+                    test() {
                         return process.env.TRAVIS_BRANCH === "master";
                     }
                 },

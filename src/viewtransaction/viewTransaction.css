@@ -1,14 +1,14 @@
-.data-disruption-dialog {
+.ui-dialog .ui-dialog-content.data-disruption-dialog {
   text-align: center;
   line-height: 1.6em;
-  background: #fef1cf !important;
+  background: #fef1cf;
 }
-.view-transaction-dialog {
-  padding: 0 !important;
-  background: #fff !important;
-  display: flex !important;
+.ui-dialog .ui-dialog-content.view-transaction-dialog {
+  padding: 0;
+  background: #fff;
+  display: flex;
   flex-flow: column;
-  overflow: hidden !important;
+  overflow: hidden;
 }
 .view-transaction-dialog * { margin: 0; padding: 0; }
 .view-transaction-dialog .dotted-underline { border-bottom: 1px dotted black; }

@@ -1,7 +1,7 @@
 /**
  * Created by arnab on 2/11/15.
  */
-requirejs.config({
+window.requirejs.config({
     baseUrl: "./",
     paths: {
         "jquery": "lib/jquery/dist/jquery.min",
@@ -84,19 +84,18 @@ requirejs.config({
     }
 });
 
-requirejs.onError = function(err) {
+window.requirejs.onError = function(err) {
     //Avoiding script errors on timeout. Showing a warning so that developers can track wrong path errors on local servers.
     if (err.requireType === "scripterror") {
-        console.warn(err);
-        return;
+        throw err;
     }
-    console.error(err); // For more descriptive errors locally.
     throw err;
 };
 
 require(["modernizr"], function() {
-    var isSupported = !Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && isSmallView()) || !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty;
-    if (isSupported) {
+    var Modernizr = window.Modernizr;
+    if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && window.isSmallView()) || 
+        !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
         window.location.assign("unsupported_browsers/unsupported_browsers.html");
         return;
     }
@@ -128,11 +127,11 @@ function load_ondemand(element, event_name, msg, module_name, callback) {
     });
 }
 
-var i18n_name = (local_storage.get("i18n") || { value: "en" }).value;
+var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
     /* setup translating string literals */
-    setup_i18n_translation(JSON.parse(lang_json));
+    window.setup_i18n_translation(JSON.parse(lang_json));
     if (i18n_name === "ar") {
         $("body").addClass("rtl-direction");
     }
@@ -338,6 +337,6 @@ require(["jquery", "jquery-growl"], function($) {
             /* remove current growl with the same message */
             $("#growls .growl:contains(\"" + options.message + "\")").remove();
             perv(options);
-        }
+        };
     });
 });
