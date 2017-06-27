@@ -145,7 +145,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(["css!lib/jquery-ui-dist/jquery-ui.min.css",
-        "css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css",
         "css!lib/chosen-js/chosen.css",
         "css!lib/growl/stylesheets/jquery.growl.css",
         "css!lib/datatables/media/css/jquery.dataTables.min.css",
