@@ -79,7 +79,7 @@ requirejs.config({
             deps: ["highstock-release/highstock"]
         },
         "color-picker": {
-            deps: ["jquery"] //This should fix the widget not found error
+            deps: ["jquery", "jquery-ui"] //This should fix the widget not found error
         }
     }
 });
@@ -220,11 +220,11 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     elem.click();
                 });
 
-            //Register async loading of download dialog
-            load_ondemand($navMenu.find("a.download"), "click", "Loading Download/View Data ...".i18n(), "download/download",
-                function(download) {
-                    var elem = $navMenu.find("a.download");
-                    download.init(elem);
+            //Register async loading of historical-data dialog
+            load_ondemand($navMenu.find("a.historical-data"), 'click', 'Loading Download/View Data ...'.i18n(), 'historical-data/historical-data',
+                function(historicalData) {
+                    var elem = $navMenu.find("a.historical-data");
+                    historicalData.init(elem);
                     elem.click();
                 });
 

@@ -40,7 +40,7 @@ const reopen_dialogs = (symbols, saved_states) => {
       assetIndex: '#nav-menu .assetIndex',
       statement: '#nav-menu .statement',
       tradingTimes: '#nav-menu .tradingTimes',
-      download: '#nav-menu .download', // view historical data
+      historicalData: '#nav-menu .historical-data',
       portfolio: '#nav-menu .portfolio',
       profitTable: '#nav-menu .profitTable',
       token: '#nav-menu .token-management',
