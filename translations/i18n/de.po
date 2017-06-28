@@ -1739,7 +1739,7 @@ msgid "Level of Education"
 msgstr "Ausbildunggrad"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "In Malta, Großbritannien, auf der Isle of Man, Irland und Japan zugelassen und überwacht"
+msgstr "In Malta, Großbritannien, auf der Isle of Man, in Irland und Japan zugelassen und überwacht"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "Wie die EMA, misst die LWMA den jüngsten Kursen mehr und den Schlusskursen weniger Bedeutung vom Beginn des Zeitraums an, bei. Deshalb sind sie im Erkennen einer Trendumkehrung schneller, obwohl sie auch anfälliger für Störungen im Markt sind"
@@ -2057,7 +2057,7 @@ msgid "Normalized Average True Range (NATR)"
 msgstr "Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
-msgstr "Normalized Average True Range (NATR) versucht den Durchschnitt der True Range Werte über Instrumente zu normalisieren, in Verwendung der unterstehenden Formel"
+msgstr "Normalized Average True Range (NATR) versucht den Durchschnitt der True Range Werte in Verwendung der unterstehenden Formel, über Instrumente zu normalisieren"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Bitte beachten: Die Abhebung über einen Zahlungsagenten ist nur möglich, wenn Sie auch über diesen Zahlungsagenten eingezahlt haben"
@@ -2375,7 +2375,7 @@ msgid "Profit/Loss (points)"
 msgstr "Gewinn/Verlust (Punkte)"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "In Englisch, Indonesisch, Japanisch, Chinesisch, Polnisch, Deutsch, Französisch, Spanisch, Portugiesisch, Italienisch, Russisch, und Thailändisch herausgegeben"
+msgstr "Auf Englisch, Indonesisch, Japanisch, Chinesisch, Polnisch, Deutsch, Französisch, Spanisch, Portugiesisch, Italienisch, Russisch, und Thailändisch herausgegeben"
 
 msgid "Purchase"
 msgstr "Kauf"
