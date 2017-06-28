@@ -167,10 +167,10 @@ msgid "- up/down, touch/no-touch, stays in/goes out"
 msgstr "- auf/ab, Ziel/kein Ziel, bleibt innerhalb/geht außerhalb"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr "- wir fordern Sie dazu heraus, bessere Gewinne auf irgendeiner konkurrierenden Website zu finden"
+msgstr "- wir fordern Sie dazu heraus, bessere Gewinne auf einer konkurrierenden Website zu finden"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr "- gewinnen Sie den gleichen anteiligen Gewinn auf Einsätze aller Werte"
+msgstr "- gewinnen Sie die gleiche anteilige Rendite auf Einsätze aller Werte"
 
 msgid "- you know from the start what you will win or lose"
 msgstr "- Sie wissen von Anfang an, was Sie gewinnen oder verlieren werden"
@@ -512,7 +512,7 @@ msgid "An Ends Between trade pays out if the market exit price is strictly highe
 msgstr "Ein Endet-Zwischen Kontrakt zahlt aus, wenn der Ausstiegskurs ausdrücklich höher als das niedrige Preisziel UND ausdrücklich niedriger als das hohe Preisziel ist. Ein Endet-Außerhalb Kontrakt zahlt aus, wenn der Ausstiegskurs ENTWEDER ausdrücklich höher als das hohe Preisziel ODER ausdrücklich niedriger als das niedrige Preisziel ist"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr "Eine weitere wichtige Auszeichnung. Dieses Mal sind wir von den Online-Lesern von Global Banking and Finance Review nominiert und von einem Gremium an Industrieexperten und Analysten beurteilt, die unsere 13 Jahre an Plattformverlässlichkeit, Angebot an Geschäften, Preispolitik, Kundenbetreuung und umfangreichem Wissen anerkennen"
+msgstr "Eine weitere wichtige Auszeichnung. Dieses Mal sind wir von den Online-Lesern von Global Banking and Finance Review nominiert und von einem Gremium an Industrieexperten und Analysten beurteilt, die unsere 13 Jahre an Plattformverlässlichkeit, unser Angebot an Geschäften, unsere Preispolitik, Kundenbetreuung und unser umfangreiches Wissen anerkennen"
 
 msgid "Answer"
 msgstr "Antwort"
@@ -578,7 +578,7 @@ msgid "Average Directional Movement Index Rating (ADXR)"
 msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
-msgstr "Average Directional Movement Rating mißt Impulsänderungen im ADX. Er wird berechnet, indem zwei Werte des ADX (der aktuelle Wert und ein Wert der n Perioden zurück liegt) hinzugefügt, dann durch zwei dividiert werden"
+msgstr "Average Directional Movement Rating mißt Impulsänderungen im ADX. Er wird berechnet, indem zwei Werte des ADX (der aktuelle Wert und ein Wert der n Perioden zurückliegt) hinzugefügt, dann durch zwei dividiert werden"
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
@@ -626,7 +626,7 @@ msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets geht live"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr "BetOnMarkets.com hat über 400.000 Kunden in der Datenbank und hat den Meilenstein von US$ 1 Milliarde in nur 13 Jahren erreicht, was uns zu den führenden Anbietern im Handel von Fixed-Odds gemacht hat"
+msgstr "BetOnMarkets.com hat über 400.000 Kunden in der Datenbank und hat den Meilenstein von 1 Milliarde US$ in nur 13 Jahren erreicht, was uns zu den führenden Anbietern im Handel von Fixed-Odds gemacht hat"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
 msgstr "BetOnMarkets.com erhöht die Auszahlungen auf 100.000 USD, EUR, GBP und AUD"
