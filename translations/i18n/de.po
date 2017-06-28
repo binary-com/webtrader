@@ -171,10 +171,10 @@ msgid "- up/down, touch/no-touch, stays in/goes out"
 msgstr "- auf/ab, Ziel/kein Ziel, bleibt innerhalb/geht außerhalb"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr "- wir fordern Sie dazu heraus, bessere Gewinne auf irgendeiner konkurrierenden Website zu finden"
+msgstr "- wir fordern Sie dazu heraus, bessere Gewinne auf einer konkurrierenden Website zu finden"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr "- gewinnen Sie den gleichen anteiligen Gewinn auf Einsätze aller Werte"
+msgstr "- gewinnen Sie die gleiche anteilige Rendite auf Einsätze aller Werte"
 
 msgid "- you know from the start what you will win or lose"
 msgstr "- Sie wissen von Anfang an, was Sie gewinnen oder verlieren werden"
@@ -387,7 +387,7 @@ msgid "A binary option is a contract purchased by a trader, which pays a pre-det
 msgstr "Eine binäre Option ist ein vom Händler erworbener Kontrakt, der einen vorbestimmten Betrag auszahlt, wenn seine Voraussage korrekt ist"
 
 msgid "A binary option is an option with a fixed payout that is determined at the start of the trade. If your prediction is correct, you receive an agreed payout. If not, you lose your initial stake, and no more. The options are called 'binary' because there can be only two outcomes - win or lose"
-msgstr "Eine Binäre Option ist eine Option mit einer festen Auszahlung, die zu Beginn des Kontrakts festgelegt wird. Wenn Ihre Voraussage richtig ist, erhalten Sie eine im Voraus festgelegte Auszahlung. Anderenfalls verlieren Sie Ihren ursprünglichen Einsatz, nichts weiter. Die Optionen werden „Binär\" genannt, da es nur zwei Ergebnisse geben kann - gewinnen oder verlieren"
+msgstr "Eine Binäre Option ist eine Option mit einer festen Auszahlung, die zu Beginn des Kontrakts festgelegt wird. Wenn Ihre Voraussage richtig ist, erhalten Sie eine im Voraus festgelegte Auszahlung. Anderenfalls verlieren Sie Ihren ursprünglichen Einsatz, nichts weiter. Die Optionen werden „binär\" genannt, da es nur zwei Ergebnisse geben kann - gewinnen oder verlieren"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
 msgstr "Ein bullisches Candlestick-Pattern, das aus fünf Kerzen besteht, der erste ist ein langer weißer Tag, der zweite Tag spaltet sich und ist ein schwarzer Tag, die zweiten, dritten, und vierten Tage haben kleine echte Körper und folgen einem kurzen Downtrend-Pattern, aber bleiben innerhalb der Reichweite des ersten Tages und der fünfte ist ein langer weißer Tag, der über der Schlussnotierung des ersten Tages schließt"
@@ -516,7 +516,7 @@ msgid "An Ends Between trade pays out if the market exit price is strictly highe
 msgstr "Ein Endet-Zwischen Kontrakt zahlt aus, wenn der Ausstiegskurs ausdrücklich höher als das niedrige Preisziel UND ausdrücklich niedriger als das hohe Preisziel ist. Ein Endet-Außerhalb Kontrakt zahlt aus, wenn der Ausstiegskurs ENTWEDER ausdrücklich höher als das hohe Preisziel ODER ausdrücklich niedriger als das niedrige Preisziel ist"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr "Eine weitere wichtige Auszeichnung. Dieses Mal sind wir von den Online-Lesern von Global Banking and Finance Review nominiert und von einem Gremium an Industrieexperten und Analysten beurteilt, die unsere 13 Jahre an Plattformverlässlichkeit, Angebot an Geschäften, Preispolitik, Kundenbetreuung und umfangreichem Wissen anerkennen"
+msgstr "Eine weitere wichtige Auszeichnung. Dieses Mal sind wir von den Online-Lesern von Global Banking and Finance Review nominiert und von einem Gremium an Industrieexperten und Analysten beurteilt, die unsere 13 Jahre an Plattformverlässlichkeit, unser Angebot an Geschäften, unsere Preispolitik, Kundenbetreuung und unser umfangreiches Wissen anerkennen"
 
 msgid "Answer"
 msgstr "Antwort"
@@ -582,7 +582,7 @@ msgid "Average Directional Movement Index Rating (ADXR)"
 msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
-msgstr "Average Directional Movement Rating mißt Impulsänderungen im ADX. Er wird berechnet, indem zwei Werte des ADX (der aktuelle Wert und ein Wert der n Perioden zurück liegt) hinzugefügt, dann durch zwei dividiert werden"
+msgstr "Average Directional Movement Rating mißt Impulsänderungen im ADX. Er wird berechnet, indem zwei Werte des ADX (der aktuelle Wert und ein Wert der n Perioden zurückliegt) hinzugefügt, dann durch zwei dividiert werden"
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
@@ -630,7 +630,7 @@ msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets geht live"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr "BetOnMarkets.com hat über 400.000 Kunden in der Datenbank und hat den Meilenstein von US$ 1 Milliarde in nur 13 Jahren erreicht, was uns zu den führenden Anbietern im Handel von Fixed-Odds gemacht hat"
+msgstr "BetOnMarkets.com hat über 400.000 Kunden in der Datenbank und hat den Meilenstein von 1 Milliarde US$ in nur 13 Jahren erreicht, was uns zu den führenden Anbietern im Handel von Fixed-Odds gemacht hat"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
 msgstr "BetOnMarkets.com erhöht die Auszahlungen auf 100.000 USD, EUR, GBP und AUD"
@@ -798,7 +798,7 @@ msgid "By clicking"
 msgstr "Indem Sie klicken"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
-msgstr "Wenn Sie auf OK klicken, bestätigen Sie, dass Sie die aktualierten gelesen haben und diesen zustimmen"
+msgstr "Wenn Sie auf OK klicken, bestätigen Sie, dass Sie die aktualisierten gelesen haben und diesen zustimmen"
 
 msgid "CSV"
 msgstr "CSV"
@@ -894,7 +894,7 @@ msgid "Choose from over 1 million trades"
 msgstr "Wählen Sie von über 1 Million Geschäften"
 
 msgid "Choose from over a million possible trades at any time"
-msgstr "Wählen Sie von über einer Million möglichen Geschäften zu jeder Zeit"
+msgstr "Wählen Sie von über einer Million möglichen Geschäften, zu jeder Zeit"
 
 msgid "Choose password"
 msgstr "Passwort auswählen"
@@ -924,7 +924,7 @@ msgid "Choose your pereferred payment agent"
 msgstr "Wählen Sie Ihren bevorzugten Zahlungsagenten"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr "Wählen Sie Ihren bevorzugte Auszahlungsmethode"
+msgstr "Wählen Sie Ihre bevorzugte Auszahlungsmethode"
 
 msgid "Choppiness Index (CHOP)"
 msgstr "Choppiness Index (CHOP)"
@@ -1536,7 +1536,7 @@ msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Ich bestätige hiermit, dass ich keine politisch exponierte Person (PEP) bin"
 
 msgid "I have read and agree to Binary.com"
-msgstr "Ich habe die Binary.com gelesen und stimme ihnen zu"
+msgstr "Ich habe gelesen und akzeptiere die Binary.com"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Ich bin neu bei binären Optionen, wo beginne ich?"
@@ -1560,7 +1560,7 @@ msgid "If you select a specific"
 msgstr "Wenn Sie einen speziellen auswählen"
 
 msgid "If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access"
-msgstr "Wenn Sie ein individueller Händler sind, werden Sie die Einfachheit, Flexibilität, und das begrenzte Risiko vom binären Optionen Handel schätzen. Mit Binary.coms niedrigen minimum Einsätzen, werden Sie bald lernen, wie man mit Geschick und Selbstvertrauen handelt. Und falls Sie irgendwelche Fragen haben, steht es Ihnen frei auf zuzugreifen"
+msgstr "Wenn Sie ein individueller Händler sind, werden Sie die Einfachheit, Flexibilität, und das begrenzte Risiko vom binären Optionen Handel schätzen. Mit Binary.coms niedrigen minimum Einsätzen, werden Sie bald lernen, wie man mit Geschick und Selbstvertrauen handelt. Und falls Sie irgendwelche Fragen haben, steht es Ihnen frei zuzugreifen auf"
 
 msgid "In April"
 msgstr "Im April"
@@ -1572,7 +1572,7 @@ msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle re
 msgstr "Nach der absteigenden Bewegung im Bullish Hikkake Pattern, reicht die bullische Kerze über die Reichweite der drei vorhergehenden Kerzen und löst wahrscheinlich eine Anzahl von Stop Loss Order aus. Dieses zusätzliche Kaufen führt zu einer eindeutigen aufsteigenden Bewegung. Nach einer aufsteigenden Bewegung im Bearish Hikkake Pattern, reicht die bärische Kerze unter die Reichweite der drei vorhergehenden Kerzen, was wahrscheinlich zu einer Anzahl von Stop Loss Order führt. Dieses zusätzliche Kaufen führt zu einer eindeutigen absteigenden Bewegung"
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
-msgstr "Im Oktober 1999 erhält Regent Markets von Jim Mellon über seine Regent Pacific Gruppe, ein Fondsverwaltungsunternehmen mit Sitz in Hongkong, einen Anlagebetrag von 2 Millionen US $"
+msgstr "Im Oktober 1999 erhält Regent Markets von Jim Mellon über seine Regent Pacific Gruppe, ein Fondsverwaltungsunternehmen mit Sitz in Hongkong, einen Anlagebetrag von 2 Millionen US$"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
 msgstr "In einem Abwärtstrend hat eine Kerze mit kleinem kurzen Körper einen langen unteren Schatten, der zumindest dreimal so groß wie der echte Körper ist, und einen kleinen oder keinen oberen Schatten. Bestätigung von Kursen die höher am folgenden Tag schließen"
@@ -1584,7 +1584,7 @@ msgid "In an uptrend three successive days opens at or near the previous day's c
 msgstr "In einem Aufwärtstrend öffnen sich drei aufeinanderfolgende Tage zum, oder nahe dem Schlusskurs des vorherigen Tages und schließen an diesem Tag. Dieses Muster ist abgetrennter als das Three Black Crows Pattern und deshalb hat es eine höhere Zugverlässlichkeit als ein Umkehrungs-Muster"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
-msgstr "Der in Hongkong ansässige Hedgefond Manager und Unternehmer, Jean-Yves Sireau, beginnt mit Regent Marketing von seinem hongkonger Schlafzimmer aus. Er entwickelt das System, die Methoden und Algorithmen zur Einführung eines Finanzwettsystems mit festen Gewinnquoten. Jean-Yves Vision ist es, einen Markt mit den einfachsten derivativen Verträgen - der Wette mit festen Gewinnquoten - zu schaffen und normalen Anlegern die Chance zu bieten, mit kleinen Einsätzen dabei zu sein. Bis zu seiner Erfindung werden Binäroptionen nur in großen Mengen gehandelt"
+msgstr "Im klassischen Silicon Valley Stil beginnt der in Hongkong ansässige Hedgefond Manager und Unternehmer, Jean-Yves Sireau, mit Regent Markets von seinem hongkonger Schlafzimmer aus. Er entwickelt das System, die Methoden und Algorithmen zur Einführung eines Finanzwettsystems mit festen Gewinnquoten. Jean-Yves Vision ist es, einen Markt mit den einfachsten derivativen Verträgen - der Wette mit festen Gewinnquoten - zu schaffen und normalen Anlegern die Chance zu bieten, mit kleinen Einsätzen dabei zu sein. Bis zu seiner Erfindung werden binäre Optionen nur in großen Mengen gehandelt"
 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar"
 msgstr "Die Händler können auf ausländischen Devisenmärkten Kontrakte auf der Grundlage der Änderung des Wechselkurses einer Währung in eine andere abschließen. Wenn beispielsweise ein Händler den Anstieg des EUR/USD Wechselkurses auswählt, sagt er voraus, dass der Wert des Euro im Verhältnis zum Wert des US-Dollar steigen wird"
@@ -1743,7 +1743,7 @@ msgid "Level of Education"
 msgstr "Ausbildunggrad"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "In Malta, Großbritannien, auf der Isle of Man, Irland und Japan zugelassen und überwacht"
+msgstr "In Malta, Großbritannien, auf der Isle of Man, in Irland und Japan zugelassen und überwacht"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "Wie die EMA, misst die LWMA den jüngsten Kursen mehr und den Schlusskursen weniger Bedeutung vom Beginn des Zeitraums an, bei. Deshalb sind sie im Erkennen einer Trendumkehrung schneller, obwohl sie auch anfälliger für Störungen im Markt sind"
@@ -2004,7 +2004,7 @@ msgid "Mrs"
 msgstr "Fr"
 
 msgid "Ms"
-msgstr "Frl"
+msgstr "Frau"
 
 msgid "Name"
 msgstr "Name"
@@ -2061,7 +2061,7 @@ msgid "Normalized Average True Range (NATR)"
 msgstr "Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
-msgstr "Normalized Average True Range (NATR) versucht den Durchschnitt der True Range Werte über Instrumente zu normalisieren, in Verwendung der unterstehenden Formel"
+msgstr "Normalized Average True Range (NATR) versucht den Durchschnitt der True Range Werte in Verwendung der unterstehenden Formel, über Instrumente zu normalisieren"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Bitte beachten: Die Abhebung über einen Zahlungsagenten ist nur möglich, wenn Sie auch über diesen Zahlungsagenten eingezahlt haben"
@@ -2277,7 +2277,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Bitte geben Sie einen Wert größer als 0 ein"
 
 msgid "Please enter correct email"
-msgstr "Bitte geben Sie eine korrekte E-mail Adresse ein"
+msgstr "Bitte geben Sie eine korrekte E-Mail Adresse ein"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Bitte geben Sie ein Datum im Format JJJJ-MM-TT an"
@@ -2379,7 +2379,7 @@ msgid "Profit/Loss (points)"
 msgstr "Gewinn/Verlust (Punkte)"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "In Englisch, Indonesisch, Japanisch, Chinesisch, Polnisch, Deutsch, Französisch, Spanisch, Portugiesisch, Italienisch, Russisch, und Thailändisch herausgegeben"
+msgstr "Auf Englisch, Indonesisch, Japanisch, Chinesisch, Polnisch, Deutsch, Französisch, Spanisch, Portugiesisch, Italienisch, Russisch, und Thailändisch herausgegeben"
 
 msgid "Purchase"
 msgstr "Kauf"
@@ -2940,7 +2940,7 @@ msgid "The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a m
 msgstr "Der Triple Exponential Moving Average (TEMA) von Patrick Mulloy bietet einen gleitenden Durchschnitt mit geringerer Verzögerung als der traditionelle exponentielle gleitende Durchschnitt an"
 
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
-msgstr "Die Typische Kursfunktion misst den Durchschnitt des Hochs, Tiefs und der Schlusskurse des Tages, indem sie einen einfachen einzeiligen Plot verwendet. Der gewöhnliche Kurs gibt eine vereinfachte Ansicht der Handelskurse des Tages, ebenso wie andere Kursanpassungs-Funktionen an.  Sie können ihn dazu verwenden die Unbeständigkeit des Schlusskurses auszuglätten, da er Informationen für den ganzen Tag und nicht nur das Ergebnis des Tagesende umfasst. Der Typische Kursfunktion Indikator wird gemessen, indem das Hoch, Tief und die Schlusskurse addiert werden, und dann durch drei dividiert werden"
+msgstr "Die Typische Kursfunktion misst den Durchschnitt des Hochs, Tiefs und der Schlusskurse des Tages, indem sie einen einfachen einzeiligen Plot verwendet. Der gewöhnliche Kurs gibt eine vereinfachte Ansicht der Handelskurse des Tages, ebenso wie andere Kursanpassungs-Funktionen an. Sie können ihn dazu verwenden die Unbeständigkeit des Schlusskurses auszuglätten, da er Informationen für den ganzen Tag und nicht nur das Ergebnis des Tagesendes umfasst. Der Typische Kursfunktion Indikator wird gemessen, indem das Hoch, Tief und die Schlusskurse addiert werden, und dann durch drei dividiert werden"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Der Gewichtete Schluss-Indikator ist einfach ein Durchschnitt vom Kurs eines jeden Tages. Er kann dazu verwendet werden die Unbeständigkeit eines Charts für Schlusskurse auszuglätten, da er Informationen für den ganzen Handelstag umfasst"
@@ -3030,7 +3030,7 @@ msgid "The sum of price over selected period"
 msgstr "Die Summe der Kurse über den ausgewählten Zeitraum"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
-msgstr "Die Varianz und die ihr eng verwandte Standardabweichung sind Maßstäbe davon ,wie weit auseinander eine Verteilung liegt. In anderen Worten, sind sie Messungen von Variabilität. Die Varianz wird als durchschnittliche quadratische Abweichung vom Mittelwert einer jeden Zahl errechnet"
+msgstr "Die Varianz und die ihr eng verwandte Standardabweichung sind Maßstäbe davon, wie weit auseinander eine Verteilung liegt. In anderen Worten, sind sie Messungen von Variabilität. Die Varianz wird als durchschnittliche quadratische Abweichung vom Mittelwert einer jeden Zahl errechnet"
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
 msgstr "Die Volatilität Indizes simulieren verschiedene echte Marktsituationen und bieten eine ideale Plattform, um sich mit dem Handel vertraut zu machen, und um Strategien unter unterschiedlichen Marktbedingungen zu testen. Diese Indizes hängen von der Volatiliät und Tendenz ab und helfen den Benutzern dabei, Szenarien wie hohe Volatilität, geringe Volatilität, bullische oder bärische Trends auszuprobieren"
@@ -3072,7 +3072,7 @@ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., 
 msgstr "Diese Website wird in Großbritannien und auf der Isle of Man von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, Britische Inseln vermarktet und wird von (1) der Gambling Supervision Commission (Glücksspielbehörde) der Isle of Man, Britische Inseln zugelassen und überwacht, die aktuelle Glücksspiellizenz wurde am 31. August 2012 ausgestellt, und für Kunden aus Großbritannien von der (2) UK Gambling Commission -"
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr "Diese Website wird in den anderen Ländern der EU für von Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, angebotene Investmentprodukte vermarktet, zugelassen und überwacht als ein Kategorie 3 Investitionsdienstleistung Anbieter von der Malta Financial Services Authority (Lizenznummer IS/70156), und für Glücksspielprodukte von Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, die (1) von der Malta Gaming Authority auf Malta zugelassen sind und überwacht werden. Die lizenzdummer lautet MGA/CL2/118/2000, 26. Mai 2015 und für Kunden aus Großbritannien (2) die UK Gambling Commission -"
+msgstr "Diese Website wird in den anderen Ländern der EU für von Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, angebotene Investmentprodukte vermarktet, zugelassen und überwacht als ein Kategorie 3 Investitionsdienstleistung Anbieter von der Malta Financial Services Authority (Lizenznummer IS/70156), und für Glücksspielprodukte von Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, die (1) von der Malta Gaming Authority auf Malta zugelassen sind und überwacht werden. Die Lizenznummer lautet MGA/CL2/118/2000, 26. Mai 2015 und für Kunden aus Großbritannien (2) die UK Gambling Commission -"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
@@ -3147,7 +3147,7 @@ msgid "To process deposits and withdrawals for payment methods or local currenci
 msgstr "Um Ein- und Auszahlungen für Zahlungsmethoden oder Landeswährungen zu bearbeiten, die von Binary.com nicht unterstützt werden, setzen Sie sich bitte mit einem Zahlungsagenten in Verbindung"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
-msgstr "Um Gelder abzuheben, geben Sie bitte den speziellen Verifikationstoken, den wir gerade per E-mail an Sie verschickt haben, ein"
+msgstr "Um Gelder abzuheben, geben Sie bitte den speziellen Verifikationstoken, den wir gerade per E-Mail an Sie verschickt haben, ein"
 
 msgid "Token"
 msgstr "Token"
@@ -3345,7 +3345,7 @@ msgid "Various customisable features   load and arrange assets, charts, and othe
 msgstr "Verschiedene anpassbare Funktionen; laden Sie und arrangieren Sie Anlagen, Diagramme und andere Rohstoffe, wie Sie es Ihnen gefällt"
 
 msgid "Verification code has been sent to your email"
-msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-mail verschickt wurde, ein"
+msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-Mail verschickt wurde, ein"
 
 msgid "Verification token"
 msgstr "Token Überprüfung"
@@ -3540,7 +3540,7 @@ msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
 
 msgid "Your email"
-msgstr "Ihre E-mail"
+msgstr "Ihre E-Mail"
 
 msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
 msgstr "Ihre Gelder sind mit Binary.com immer sicher. Zu jeder Zeit, werden sie in mit AAA-bewerteten Banken gehalten, was eine Bedingung unserer Handelslizenzen ist"
@@ -3678,7 +3678,7 @@ msgid "minute"
 msgstr "Minute"
 
 msgid "minutes"
-msgstr "minuten"
+msgstr "Minuten"
 
 msgid "next tick"
 msgstr "Nächster Tick"
@@ -3696,7 +3696,7 @@ msgid "payment agent"
 msgstr "Zahlungsagent"
 
 msgid "points"
-msgstr "punkte"
+msgstr "Punkte"
 
 msgid "second"
 msgstr "Sekunde"
