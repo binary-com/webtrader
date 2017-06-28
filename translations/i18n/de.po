@@ -3026,7 +3026,7 @@ msgid "The sum of price over selected period"
 msgstr "Die Summe der Kurse über den ausgewählten Zeitraum"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
-msgstr "Die Varianz und die ihr eng verwandte Standardabweichung sind Maßstäbe davon ,wie weit auseinander eine Verteilung liegt. In anderen Worten, sind sie Messungen von Variabilität. Die Varianz wird als durchschnittliche quadratische Abweichung vom Mittelwert einer jeden Zahl errechnet"
+msgstr "Die Varianz und die ihr eng verwandte Standardabweichung sind Maßstäbe davon, wie weit auseinander eine Verteilung liegt. In anderen Worten, sind sie Messungen von Variabilität. Die Varianz wird als durchschnittliche quadratische Abweichung vom Mittelwert einer jeden Zahl errechnet"
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
 msgstr "Die Volatilität Indizes simulieren verschiedene echte Marktsituationen und bieten eine ideale Plattform, um sich mit dem Handel vertraut zu machen, und um Strategien unter unterschiedlichen Marktbedingungen zu testen. Diese Indizes hängen von der Volatiliät und Tendenz ab und helfen den Benutzern dabei, Szenarien wie hohe Volatilität, geringe Volatilität, bullische oder bärische Trends auszuprobieren"
@@ -3341,7 +3341,7 @@ msgid "Various customisable features   load and arrange assets, charts, and othe
 msgstr "Verschiedene anpassbare Funktionen; laden Sie und arrangieren Sie Anlagen, Diagramme und andere Rohstoffe, wie Sie es Ihnen gefällt"
 
 msgid "Verification code has been sent to your email"
-msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-mail verschickt wurde, ein"
+msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-Mail verschickt wurde, ein"
 
 msgid "Verification token"
 msgstr "Token Überprüfung"
@@ -3536,7 +3536,7 @@ msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
 
 msgid "Your email"
-msgstr "Ihre E-mail"
+msgstr "Ihre E-Mail"
 
 msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
 msgstr "Ihre Gelder sind mit Binary.com immer sicher. Zu jeder Zeit, werden sie in mit AAA-bewerteten Banken gehalten, was eine Bedingung unserer Handelslizenzen ist"
