@@ -1568,7 +1568,7 @@ msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle re
 msgstr "Nach der absteigenden Bewegung im Bullish Hikkake Pattern, reicht die bullische Kerze über die Reichweite der drei vorhergehenden Kerzen und löst wahrscheinlich eine Anzahl von Stop Loss Order aus. Dieses zusätzliche Kaufen führt zu einer eindeutigen aufsteigenden Bewegung. Nach einer aufsteigenden Bewegung im Bearish Hikkake Pattern, reicht die bärische Kerze unter die Reichweite der drei vorhergehenden Kerzen, was wahrscheinlich zu einer Anzahl von Stop Loss Order führt. Dieses zusätzliche Kaufen führt zu einer eindeutigen absteigenden Bewegung"
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
-msgstr "Im Oktober 1999 erhält Regent Markets von Jim Mellon über seine Regent Pacific Gruppe, ein Fondsverwaltungsunternehmen mit Sitz in Hongkong, einen Anlagebetrag von 2 Millionen US $"
+msgstr "Im Oktober 1999 erhält Regent Markets von Jim Mellon über seine Regent Pacific Gruppe, ein Fondsverwaltungsunternehmen mit Sitz in Hongkong, einen Anlagebetrag von 2 Millionen US$"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
 msgstr "In einem Abwärtstrend hat eine Kerze mit kleinem kurzen Körper einen langen unteren Schatten, der zumindest dreimal so groß wie der echte Körper ist, und einen kleinen oder keinen oberen Schatten. Bestätigung von Kursen die höher am folgenden Tag schließen"
@@ -1580,7 +1580,7 @@ msgid "In an uptrend three successive days opens at or near the previous day's c
 msgstr "In einem Aufwärtstrend öffnen sich drei aufeinanderfolgende Tage zum, oder nahe dem Schlusskurs des vorherigen Tages und schließen an diesem Tag. Dieses Muster ist abgetrennter als das Three Black Crows Pattern und deshalb hat es eine höhere Zugverlässlichkeit als ein Umkehrungs-Muster"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
-msgstr "Der in Hongkong ansässige Hedgefond Manager und Unternehmer, Jean-Yves Sireau, beginnt mit Regent Marketing von seinem hongkonger Schlafzimmer aus. Er entwickelt das System, die Methoden und Algorithmen zur Einführung eines Finanzwettsystems mit festen Gewinnquoten. Jean-Yves Vision ist es, einen Markt mit den einfachsten derivativen Verträgen - der Wette mit festen Gewinnquoten - zu schaffen und normalen Anlegern die Chance zu bieten, mit kleinen Einsätzen dabei zu sein. Bis zu seiner Erfindung werden Binäroptionen nur in großen Mengen gehandelt"
+msgstr "Im klassischen Silicon Valley Stil beginnt der in Hongkong ansässige Hedgefond Manager und Unternehmer, Jean-Yves Sireau, mit Regent Markets von seinem hongkonger Schlafzimmer aus. Er entwickelt das System, die Methoden und Algorithmen zur Einführung eines Finanzwettsystems mit festen Gewinnquoten. Jean-Yves Vision ist es, einen Markt mit den einfachsten derivativen Verträgen - der Wette mit festen Gewinnquoten - zu schaffen und normalen Anlegern die Chance zu bieten, mit kleinen Einsätzen dabei zu sein. Bis zu seiner Erfindung werden binäre Optionen nur in großen Mengen gehandelt"
 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar"
 msgstr "Die Händler können auf ausländischen Devisenmärkten Kontrakte auf der Grundlage der Änderung des Wechselkurses einer Währung in eine andere abschließen. Wenn beispielsweise ein Händler den Anstieg des EUR/USD Wechselkurses auswählt, sagt er voraus, dass der Wert des Euro im Verhältnis zum Wert des US-Dollar steigen wird"
@@ -2273,7 +2273,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Bitte geben Sie einen Wert größer als 0 ein"
 
 msgid "Please enter correct email"
-msgstr "Bitte geben Sie eine korrekte E-mail Adresse ein"
+msgstr "Bitte geben Sie eine korrekte E-Mail Adresse ein"
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Bitte geben Sie ein Datum im Format JJJJ-MM-TT an"
