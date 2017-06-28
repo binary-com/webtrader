@@ -890,7 +890,7 @@ msgid "Choose from over 1 million trades"
 msgstr "Wählen Sie von über 1 Million Geschäften"
 
 msgid "Choose from over a million possible trades at any time"
-msgstr "Wählen Sie von über einer Million möglichen Geschäften zu jeder Zeit"
+msgstr "Wählen Sie von über einer Million möglichen Geschäften, zu jeder Zeit"
 
 msgid "Choose password"
 msgstr "Passwort auswählen"
@@ -920,7 +920,7 @@ msgid "Choose your pereferred payment agent"
 msgstr "Wählen Sie Ihren bevorzugten Zahlungsagenten"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr "Wählen Sie Ihren bevorzugte Auszahlungsmethode"
+msgstr "Wählen Sie Ihre bevorzugte Auszahlungsmethode"
 
 msgid "Choppiness Index (CHOP)"
 msgstr "Choppiness Index (CHOP)"
@@ -1532,7 +1532,7 @@ msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Ich bestätige hiermit, dass ich keine politisch exponierte Person (PEP) bin"
 
 msgid "I have read and agree to Binary.com"
-msgstr "Ich habe die Binary.com gelesen und stimme ihnen zu"
+msgstr "Ich habe gelesen und akzeptiere die Binary.com"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Ich bin neu bei binären Optionen, wo beginne ich?"
