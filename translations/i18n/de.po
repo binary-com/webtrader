@@ -383,7 +383,7 @@ msgid "A binary option is a contract purchased by a trader, which pays a pre-det
 msgstr "Eine binäre Option ist ein vom Händler erworbener Kontrakt, der einen vorbestimmten Betrag auszahlt, wenn seine Voraussage korrekt ist"
 
 msgid "A binary option is an option with a fixed payout that is determined at the start of the trade. If your prediction is correct, you receive an agreed payout. If not, you lose your initial stake, and no more. The options are called 'binary' because there can be only two outcomes - win or lose"
-msgstr "Eine Binäre Option ist eine Option mit einer festen Auszahlung, die zu Beginn des Kontrakts festgelegt wird. Wenn Ihre Voraussage richtig ist, erhalten Sie eine im Voraus festgelegte Auszahlung. Anderenfalls verlieren Sie Ihren ursprünglichen Einsatz, nichts weiter. Die Optionen werden „Binär\" genannt, da es nur zwei Ergebnisse geben kann - gewinnen oder verlieren"
+msgstr "Eine Binäre Option ist eine Option mit einer festen Auszahlung, die zu Beginn des Kontrakts festgelegt wird. Wenn Ihre Voraussage richtig ist, erhalten Sie eine im Voraus festgelegte Auszahlung. Anderenfalls verlieren Sie Ihren ursprünglichen Einsatz, nichts weiter. Die Optionen werden „binär\" genannt, da es nur zwei Ergebnisse geben kann - gewinnen oder verlieren"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
 msgstr "Ein bullisches Candlestick-Pattern, das aus fünf Kerzen besteht, der erste ist ein langer weißer Tag, der zweite Tag spaltet sich und ist ein schwarzer Tag, die zweiten, dritten, und vierten Tage haben kleine echte Körper und folgen einem kurzen Downtrend-Pattern, aber bleiben innerhalb der Reichweite des ersten Tages und der fünfte ist ein langer weißer Tag, der über der Schlussnotierung des ersten Tages schließt"
@@ -1556,7 +1556,7 @@ msgid "If you select a specific"
 msgstr "Wenn Sie einen speziellen auswählen"
 
 msgid "If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access"
-msgstr "Wenn Sie ein individueller Händler sind, werden Sie die Einfachheit, Flexibilität, und das begrenzte Risiko vom binären Optionen Handel schätzen. Mit Binary.coms niedrigen minimum Einsätzen, werden Sie bald lernen, wie man mit Geschick und Selbstvertrauen handelt. Und falls Sie irgendwelche Fragen haben, steht es Ihnen frei auf zuzugreifen"
+msgstr "Wenn Sie ein individueller Händler sind, werden Sie die Einfachheit, Flexibilität, und das begrenzte Risiko vom binären Optionen Handel schätzen. Mit Binary.coms niedrigen minimum Einsätzen, werden Sie bald lernen, wie man mit Geschick und Selbstvertrauen handelt. Und falls Sie irgendwelche Fragen haben, steht es Ihnen frei zuzugreifen auf"
 
 msgid "In April"
 msgstr "Im April"
