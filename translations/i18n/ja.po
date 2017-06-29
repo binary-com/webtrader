@@ -591,7 +591,7 @@ msgid "Average Directional Movement Index Rating (ADXR)"
 msgstr "アベレージ・ダイレクショナル・ムーブメント・インデックス・レーティング（ADXR）"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
-msgstr ""
+msgstr "アベレージ・ディレクショナル・モメンタム・レーティングはADXの運動量の変化を定量化します。ADXの2つの値（現在値とn期間戻った値）を足して2で割って計算します。"
 
 msgid "Average True Range (ATR)"
 msgstr "アベレージ・トゥルー・レンジ（ATR）"
@@ -2208,7 +2208,7 @@ msgid "Over 90 staff and contractors worldwide"
 msgstr "世界中で90人を超えるスタッフと請負業者"
 
 msgid "Overlap Studies"
-msgstr ""
+msgstr "復習"
 
 msgid "PDF"
 msgstr "PDF"
