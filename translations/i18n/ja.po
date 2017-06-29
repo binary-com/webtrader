@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -415,7 +411,7 @@ msgid "A bullish or bearish candle followed by a doji with with a downward or up
 msgstr "ブリッシュまたはベアリッシュローソク足は下降または上昇トレンドの差がある十字線がきます"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr ""
+msgstr "長いローソク足チャートパターンは、より長いローソクの垂直範囲内にある小さいローソク足が続きます。ローソク足の色に関して陽線のはらみ線でいうと、ネガティブカラー（黒）のローソク足の下降トレンドがポジティブカラー（白）の小さいローソク足を包むことを言います。これがダウントレンドが逆転するサインになります。"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
 msgstr ""
@@ -2992,7 +2988,7 @@ msgid "The expiry price is the price of the underlying when the contract expires
 msgstr "判定レートとは、判定時刻時の市場価格を指します。"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr ""
+msgstr "当社における金融トレードは、投資された資金が全て失われる可能性があることをご理解出来る方、及び金融トレードにおけるあらゆるリスクを熟知されご経験されている方に対してのみ適切なサービスになります。金融トレードの売買は高いリスクを伴います。もし購入したトレードが負け判定となった場合は、購入価格も含め投資された資金が全て失われる可能性があります。"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "このサイトを含む金融取引サービスは、投資した全額の損失を負担することができ、金融トレードの売買に対するリスクに理解と経験があるお客様にのみ適しています。金融トレードの取引は高いリスクを伴います。購入したトレードに価値がなくなった場合、トレードのプレミアムを含む投資全額の損失を被ることになります。"
@@ -3239,7 +3235,7 @@ msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
 msgstr "バイナリーは3つのシンプルなステップでお取引いただける、非常に分かりやすい取引です"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr ""
+msgstr "【商号】Binary株式会社　金融商品取引業者　関東財務局長（金商）第2949号【加入協会】一般社団法人金融先物取引業協会 <br>Copyright (c) 2017 Binary K.K. All Rights Reserved."
 
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "お客さまの過度な取引を防止するため、お客さま自身で下記の該当する取引上限設定を行えます。\n"
