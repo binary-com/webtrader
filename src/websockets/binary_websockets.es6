@@ -8,6 +8,8 @@ import 'common/util';
 
 let is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
 let socket = null;
+let is_website_up = false;
+let queued_requests = {};
 
 const get_app_id = () => {
    const app_ids = JSON.parse(app_ids_json);
@@ -62,6 +64,7 @@ const onclose = () => {
         setTimeout(() => {
             timeoutIsSet = false;
             socket = connect();
+
             if(local_storage.get('oauth')) {
               api.cached.authorize().then(
                  () => {
@@ -83,6 +86,10 @@ const is_connected = () => (socket && socket.readyState === 1);
 
 
 const onopen = () => {
+   /**
+    * First thing to do -> subscribe to website_status
+    */
+   socket.send(JSON.stringify({website_status:1, subscribe:1}));
    /* send buffered sends */
    while (buffered_sends.length > 0) {
       const data = buffered_sends.shift();
@@ -122,9 +129,11 @@ const onmessage = (message) => {
    }
 
    const key = data.req_id;
-   const promise = unresolved_promises[key];
+   const promise = unresolved_promises[key] || queued_requests[key];
    if (promise) {
       delete unresolved_promises[key];
+      delete queued_requests[key];
+
       if (data.error) {
          data.error.echo_req = data.echo_req;
          data.error.req_id = data.req_id;
@@ -155,6 +164,11 @@ const send_request = (data) => {
    data.req_id = ++req_id_counter;
 
    return new Promise((resolve,reject) => {
+      if(!is_website_up) {
+            //Store any requests sent when website is down.
+            queued_requests[data.req_id] = { resolve: resolve, reject: reject, data: data };
+            return;
+      }
       unresolved_promises[data.req_id] = { resolve: resolve, reject: reject, data: data };
       if (is_connected()) {
          socket.send(JSON.stringify(data));
@@ -467,7 +481,20 @@ const api = {
    invalidate,
    app_id
 }
-
+/* subscribe to website_status */
+api.events.on('website_status', (data) => {
+   is_website_up = data.website_status.site_status.toLowerCase() === 'up';
+   if(is_website_up) {
+         //Resend all the queued requests
+         for(let i in queued_requests) {
+               //Don't send same requests multiple times.
+               if(!queued_requests[i].is_sent) {
+                  socket.send(JSON.stringify(queued_requests[i].data));
+                  queued_requests[i].is_sent = 1;
+               }
+         }
+   }
+});
 /* always register for transaction & balance streams */
 api.events.on('login',() => {
    api.send({transaction: 1, subscribe:1})

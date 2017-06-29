@@ -169,7 +169,8 @@ const addDateToHeader = function(options) {
       title: 'title',
       date: null,
       changed: () => { },
-      cleared: () => { }
+      cleared: () => { },
+      addDateDropDowns: true,
    },options);
 
    const header = this.parent().find('.ui-dialog-title').addClass('with-content');
@@ -216,10 +217,10 @@ const addDateToHeader = function(options) {
       }
 
       const dt = opts.date || new Date();
-      let year = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
-      let month = $('<select />').insertAfter(header).selectmenu({ width: 'auto' });
-      let day = $('<select />').insertAfter(header).selectmenu({ width: 'auto'});
-      day.selectmenu( "menuWidget" ).addClass('date-day');
+      let year = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
+      let month = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
+      let day = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto'});
+      day.selectmenu( "menuWidget" ).addClass('date-day'); 
       year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
       month = update(month, {
          min: 0, max: 11, initial: dt.getMonth(),
@@ -349,28 +350,37 @@ const addDateToHeader = function(options) {
    }
 
 
+   const date_string = $('<span style="line-height: 24px; position: relative; left: 10px"></span>');
    const dpicker = addDatePicker({
       date: options.date || new Date(),
       onchange: (yyyy_mm_dd) => {
-         dropdonws.update(yyyy_mm_dd);
+         date_string.text(yyyy_mm_dd);
+         dropdonws && dropdonws.update(yyyy_mm_dd);
          options.changed(yyyy_mm_dd);
       },
       onclear: () => {
-         dropdonws.clear();
+         dropdonws && dropdonws.clear();
          options.cleared();
       }
    });
-   const dropdonws = addDateDropDowns({
-      date: options.date, onchange: (yyyy_mm_dd) => {
-         dpicker.datepicker("setDate", yyyy_mm_dd);
-         options.changed(yyyy_mm_dd);
-      }
-   });
+   let dropdonws = null;
+   if(options.addDateDropDowns) {
+      dropdonws = addDateDropDowns({
+         date: options.date, onchange: (yyyy_mm_dd) => {
+            dpicker.datepicker("setDate", yyyy_mm_dd);
+            options.changed(yyyy_mm_dd);
+         }
+      });
+   }
+   else {
+      date_string.insertAfter(header);
+      date_string.text(options.date.toISOString().slice(0, 10));
+   }
 
    $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
 
    return {
-      clear:() => dropdonws.clear()
+      clear:() => dropdonws && dropdonws.clear()
    };
 }
 
@@ -596,6 +606,7 @@ export const createBlankWindow = function($html,options) {
 
 
    const dialog = blankWindow.dialog('widget');
+   dialog.addClass('webtrader-dialog-widget');
    /* allow dialogs to be moved though the bottom of the page */
    dialog.draggable( "option", "containment", false );
    dialog.draggable( "option", "scroll", true );
@@ -704,7 +715,12 @@ export const makeSelectmenu = function (select, options) {
    update_select(list);
    select.val(list[inx]);
 
-   select = select.selectmenu({ width: options.width });
+   select = select.selectmenu({ 
+         classes: {
+           "ui-selectmenu-button": "ui-selectmenu-button ui-state-default"
+         },
+         width: options.width 
+      });
    select.on('selectmenuchange', function () {
       var val = $(this).val();
       options.changed(val);

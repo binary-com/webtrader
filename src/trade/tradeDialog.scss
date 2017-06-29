@@ -1,9 +1,9 @@
-﻿.trade-dialog {
-    line-height: 1em !important;
-    padding: 0 !important;
+﻿.ui-dialog .ui-dialog-content.trade-dialog {
+    line-height: 1em;
+    padding: 0;
     position: relative;
-    overflow-x: hidden !important;
-    font-size: 14px !important;
+    overflow-x: hidden;
+    font-size: 14px;
     ul li {
       line-height: 1em;
       margin: 0;
@@ -44,8 +44,8 @@
 
 .trade-fields {
   .error { background: #fef1cf; }
-  ul li select.contract-category-display + .ui-selectmenu-button { width: 145px !important; }
-
+  ul.categories-row li select.contract-category-display + .ui-selectmenu-button { max-width: 145px; }
+  .ui-selectmenu-text { margin-top: -4px; }
   .duration-row li,
   .date-start-row li,
   .categories-row {
@@ -68,7 +68,7 @@
   .categories-row {
     margin-bottom: 5px;
     .ui-icon-help {
-      min-width: 28px!important;
+      min-width: 28px;
       height: 28px;
       color: #2a3052;
       position:absolute;
@@ -79,6 +79,7 @@
       }
     }
     .ui-selectmenu-button .ui-selectmenu-text {
+      width: 70px;
       padding-left: 2em;
       text-align: center;
     }
@@ -161,7 +162,7 @@
               color: black;
               height: 26px;
               margin-bottom: 5px;
-              width: 100% !important;
+              width: 100%;
               box-sizing: border-box;
             }
         }
@@ -210,8 +211,8 @@
 }
 
 /* style elments in the drop down*/
-.trade-dialog-date-start-ul li {
-    height:12px;
+.trade-dialog-date-start-ul li .ui-menu-item-wrapper{
+    padding: 0;
     font-size:13px;
     text-align:center;
 }
@@ -245,36 +246,43 @@
 }
 
 .trade-fields ul li:nth-child(1) > span {
-  min-width: 130px !important;
+  min-width: 130px;
   line-height: 28px;
   display: inline-block;
   white-space: nowrap;
 }
 .trade-fields ul.digits-row li:nth-child(1) > span {
-  min-width: 140px !important;
+  min-width: 140px;
   display: inline-block;
   padding-right: 5px;
 }
 .trade-fields ul li:nth-child(3) > span {
-  min-width: 100px !important; display: inline-block;
+  min-width: 100px; 
+  display: inline-block;
   box-sizing: border-box;
   line-height: 28px;
 }
-.trade-fields ul.date-start-row li:nth-child(3) > span { min-width: 85px !important }
+.trade-fields ul.date-start-row li:nth-child(3) > span { min-width: 85px }
 
 .trade-fields ul li:nth-child(1) select + .ui-selectmenu-button { 
-  min-width: 130px !important;
+  max-width: 130px ;
   height: 26px;
   border-radius:3px;
+  padding: 0;
 }
 .trade-fields ul li:nth-child(2) select + .ui-selectmenu-button { 
-  width: 100px !important; 
+  width: 100px; 
   height: 26px;
   border-radius:3px;
+  padding: 0;
+  .ui-selectmenu-text {
+    margin-top: 2px;
+  }
 }
 .trade-fields ul li:nth-child(3) select + .ui-selectmenu-button { 
-  width: 100px !important; 
+  width: 100px; 
   height: 28px;
+  padding: 0;
   border-radius:3px;
 }
 
@@ -286,15 +294,15 @@
   height: 28px;
   padding-left: 10px;
 }
-.trade-fields ul li:nth-child(2) input { width: 100px !important;}
-.trade-fields ul li:nth-child(3) input { width: 85px !important; }
+.trade-fields ul li:nth-child(2) input { width: 100px;}
+.trade-fields ul li:nth-child(3) input { width: 85px; }
 
 .trade-fields ul li:nth-child(2n) input:not([step]),
 .trade-fields ul li:nth-child(2n+3) input:not([step]) {
-  width: 100px !important;
+  width: 95px;
 }
 
-.trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px !important }
+.trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px; }
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
@@ -365,12 +373,12 @@
 
 .trade-fields .purchase-row { bottom: 5px;}
 .trade-fields .purchase-row li:nth-child(1) { position: relative; left: 20px; width: 200px; line-height: 34px;margin-right:5px;}
-.trade-fields .purchase-row li:nth-child(2) { right:5px; position: relative;}
+.trade-fields .purchase-row li:nth-child(2) { margin-left:10px; right:5px; position: relative;}
 .trade-fields .purchase-row li span { font-weight: bolder; font-size: 18px; text-overflow: ellipsis; overflow: hidden; width: 205px;}
 
-.trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px !important; }
+.trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
-.trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip !important;}
+.trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip;}
 
 /* ********************* Animated checkbox with CSS3 ****************/
 label.checkbox {

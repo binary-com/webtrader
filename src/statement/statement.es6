@@ -35,7 +35,6 @@ let is_specific_date_shown = false; /* is data for a specific date is shown */
 
 const refreshTable  = (yyy_mm_dd) => {
    const processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
-   loading = true;
 
    const request = {
       statement: 1,
@@ -51,8 +50,8 @@ const refreshTable  = (yyy_mm_dd) => {
       is_specific_date_shown = true;
    }
    else  { /* request the next 50 items for live scroll */
-      request.limit = 50;
-      if(is_specific_date_shown || yyy_mm_dd.clear) {
+      request.limit = 250;
+      if (is_specific_date_shown || (yyy_mm_dd && yyy_mm_dd.clear)) {
          table.api().rows().remove();
          is_specific_date_shown = false;
       }
@@ -72,7 +71,7 @@ const refreshTable  = (yyy_mm_dd) => {
             trans.transaction_id,
             _.capitalize(trans.action_type),
             trans.longcode,
-            (trans.amount * 1).toFixed(2),
+            trans.amount * 1,
             '<b>' + formatPrice(trans.balance_after,currency) + '</b>',
             view_button,
             trans, /* data for view transaction dailog - when clicking on arrows */
@@ -84,18 +83,23 @@ const refreshTable  = (yyy_mm_dd) => {
       processing_msg.hide();
    };
 
-   liveapi.send(request)
-      .then(refresh)
-      .catch((err) => {
-         refresh({});
-         $.growl.error({ message: err.message });
-         console.error(err);
-      });
+   if(!loading) {
+         loading = true;
+         liveapi.send(request)
+            .then(refresh)
+            .catch((err) => {
+                  refresh({});
+                  $.growl.error({ message: err.message });
+                  console.error(err);
+                  loading = false;
+            });
+   }
 }
 
 const initStatement = () => {
    statement = windows.createBlankWindow($('<div/>'), {
       title: 'Statement'.i18n(),
+      dialogClass: 'statement',
       width: 700 ,
       height: 400,
       close: () => {
@@ -120,7 +124,11 @@ const initStatement = () => {
 
    table = table.dataTable({
       data: [],
+      autoWidth: false,
       "columnDefs": [ {
+         "targets": 3,
+         "width": "35%"
+      }, {
          "targets": 4,
          "createdCell": (td, cellData) => {
             const css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';

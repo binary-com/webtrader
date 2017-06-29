@@ -1,5 +1,6 @@
+var chrome = window.chrome;
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    if (tab.url.indexOf('webtrader.binary.com') != -1 && changeInfo.status === 'complete') {
+    if (tab.url.indexOf("webtrader.binary.com") !== -1 && changeInfo.status === "complete") {
         chrome.tabs.executeScript({
             //Inject DOM node to indicate if the extension is installed
             code : "var isInstalledNode = document.createElement('div');isInstalledNode.id = 'webtrader-extension-is-installed';document.body.appendChild(isInstalledNode);"

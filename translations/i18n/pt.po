@@ -2730,6 +2730,9 @@ msgstr "Os índices do mercado da bolsa medem o valor de uma seleção de empres
 
 msgid "Stocks trading experience"
 msgstr "Experiência na negociação de ações"
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Stocks trading frequency"
 msgstr "Frequência das negociações de ações"

@@ -142,7 +142,7 @@ class Withdraw {
                 instructions: '',
                 checkAmount: (e, scope) => {
                     const amount = scope.agent.amount;
-                    if (amount == '') {
+                    if (amount === '') {
                         return;
                     }
                     if (amount > 2000) {
@@ -154,7 +154,7 @@ class Withdraw {
                 }
             },
             login_details: Cookies.loginids().reduce(function(a, b) {
-                if (a.id == local_storage.get("authorize").loginid) return a;
+                if (a.id === local_storage.get("authorize").loginid) return a;
                 else return b
             })
         };
@@ -225,7 +225,7 @@ class Withdraw {
                         }
                         error_handler(err);
                     });
-            } else if (menu.choice == 'agent') {
+            } else if (menu.choice === 'agent') {
                 verify.code = verify.token;
                 verify.token = '';
                 route.update('agent');
@@ -239,7 +239,7 @@ class Withdraw {
 
         agent.onchanged = () => {
             if (agent.loginid) {
-                let { withdrawal_commission, name } = agent.agents.find(a => a.paymentagent_loginid == agent.loginid);
+                let { withdrawal_commission, name } = agent.agents.find(a => a.paymentagent_loginid === agent.loginid);
                 agent.commission = withdrawal_commission;
                 agent.name = name;
             } else {

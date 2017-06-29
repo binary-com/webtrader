@@ -53,7 +53,7 @@ export const register = function(options) {
     if (typeof granularity === 'string') {
         if ($.trim(granularity) === '0') {
            ;// do nothing
-        } else if ($.trim(granularity).toLowerCase() == '1t') {
+        } else if ($.trim(granularity).toLowerCase() === '1t') {
             granularity = convertToTimeperiodObject(granularity).timeInSeconds();
         } else {
             is_tick = false;
@@ -94,7 +94,7 @@ export const register = function(options) {
     return liveapi.send(req, /*timeout:*/ 30 * 1000) // 30 second timeout
         .catch((up) => {
             /* if the market is closed try the same request without subscribing */
-            if (req.subscribe && up.code == 'MarketIsClosed') {
+            if (req.subscribe && up.code === 'MarketIsClosed') {
                 $.growl.notice({ message: options.symbol + ' market is presently closed.'.i18n() });
                 delete req.subscribe;
                 map[key].subscribers -= 1;
