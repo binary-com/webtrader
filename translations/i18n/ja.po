@@ -435,7 +435,7 @@ msgid "A technical indicator invented by Larry Williams that uses the weighted a
 msgstr "Larry Williamsによって開発されたインディケーターで、ボラティリティを減らすために異なる3つの期間の加重平均と単一の期間に依存するその他多数の指標に関連付けられたFalseトランザクションを使用します。"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
-msgstr ""
+msgstr "セキュリティの終値と指定された期間にわたる価格帯を比較するテクニカルモメンタムインディケーターです。市場の動きへのオシレーターの感度は期間を調節するか、結果の移動平均を用いることで減らすことができます。"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
 msgstr ""
