@@ -432,7 +432,7 @@ msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Bet
 msgstr "他の２社のファイナリストを勝ち抜き、BetOnMarkets.comは最も優秀なベッティングブローカーとして受賞。これは当社のブランドと世界一のサービスを提供していることに関する、素晴らしい評価です。創業１０周年を迎え、当社は年々強みを増しています。"
 
 msgid "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period"
-msgstr ""
+msgstr "Larry Williamsによって開発されたインディケーターで、ボラティリティを減らすために異なる3つの期間の加重平均と単一の期間に依存するその他多数の指標に関連付けられたFalseトランザクションを使用します。"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
 msgstr ""
