@@ -1134,7 +1134,7 @@ msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is 
 msgstr "ウィリアムズ％RはLarry Williamsによって開発されたストキャスティクスとは逆のモメンタム指標です。%R、Williams %R、ウィリアムズ%Rと表記され、ルックバック期間の最高値に対するクローズレベルを反映します。"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
-msgstr ""
+msgstr "1995年にTushar Chandeによって開発されたアルーンは、株式がトレンド傾向にあるかないかまたはそのトレンドがどれほど強いものなのかを定義するインディケーターです。アルーンアップとアルーンダウンの2つの指標に分かれます。25日アルーンアップは、25日中の最高値からの経過日数を測り、25日アルーンダウンは、25日中の最安値からの経過日数を計測します。"
 
 msgid "Differs"
 msgstr "DIFFERS"
