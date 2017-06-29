@@ -1,9 +1,5 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-msgstr ""
+msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
 msgstr ""
@@ -12,58 +8,58 @@ msgid "'Asian Rise' - You win when the last tick is higher than the average of t
 msgstr ""
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr ""
+msgstr "El premio \"Mejor Empresa de Comunicaciones\" de Investors Chronicle"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
-msgstr ""
+msgstr "El galardón de plata \"Mejor Corredor de Apuestas de Probabilidades Fijas\" de Trade2Win"
 
 msgid "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors Chronicle UK"
-msgstr ""
+msgstr "El premio \"Mejor Proveedor de Apuestas Financieras con Probabilidades Fijas\" de Financial Times e Investors Chronicle UK"
 
 msgid "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "El premio \"Mejor Proveedor de Operaciones Financieras con Probabilidades Fijas\" de Shares Magazine UK"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
-msgstr ""
+msgstr "El premio \"Mejor Empresa de Probabilidades Fijas 2012\" de Global Banking and Finance Review"
 
 msgid "'Differs' - You win when the last digit of the last tick does not match your prediction"
 msgstr ""
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr ""
+msgstr "El premio \"Operador de Apuestas Financieras del Año\" de eGaming Review"
 
 msgid "'Matches' - You win when the last digit of the last tick matches your prediction"
 msgstr ""
 
 msgid "'contract period'"
-msgstr ""
+msgstr "\"período del contrato\""
 
 msgid "(One) Touch trades"
 msgstr ""
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "(anteriormente conocido como"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(si menos de un día de duración), o al final de la jornada bursátil (si un día o más de duración)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
-msgstr ""
+msgstr ") es lanzado, estableciendo un servicio de apuestas financieras las 24 horas del día en una gran variedad de índices financieros. El negocio crece rápidamente y pronto nos convertimos en líderes del mercado de apuestas financieras con probabilidades fijas"
 
 msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives markets"
-msgstr ""
+msgstr "-Binary.com compara sus precios diariamente con los de los mercados de derivados interbancarios"
 
 msgid "- Binary.com ensures your personal data and transactions are always secure"
-msgstr ""
+msgstr "- Binary.com le garantiza que su información personal y transacciones estarán siempre seguras"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "-Binary.com no está afiliado con ninguno de los agentes de pago mencionados anteriormente. Cada agente de pago opera como un proveedor de servicios independiente y no es avalado, garantizado o de lo contrario aprobado por Binary.com. LOS CLIENTES TRATAN CON AGENTES DE PAGO A SU EXCLUSIVO RIESGO Y PELIGRO. Se recomienda a los clientes verificar las credenciales de los agentes de pago antes de enviarles dinero. Binary.com no será responsable en ninguna circunstancia por las transacciones realizadas entre los clientes y los agentes de pago"
 
 msgid "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr ""
+msgstr "- Binary.com es el pionero de la industria y cuenta con tecnología patentada de precios"
 
 msgid "- Binary.com offers many payment methods, such as credit/debit cards, bank wires, e-cash and e-wallets"
-msgstr ""
+msgstr "-Binary.com ofrece varios métodos de pago, incluyendo tarjetas de crédito, transferencias bancarias, dinero electrónico y e-wallets"
 
 msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
 msgstr ""
