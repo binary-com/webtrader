@@ -50,16 +50,16 @@ msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives m
 msgstr "-Binary.com compara sus precios diariamente con los de los mercados de derivados interbancarios"
 
 msgid "- Binary.com ensures your personal data and transactions are always secure"
-msgstr ""
+msgstr "- Binary.com le garantiza que su información personal y transacciones estarán siempre seguras"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "-Binary.com no está afiliado con ninguno de los agentes de pago mencionados anteriormente. Cada agente de pago opera como un proveedor de servicios independiente y no es avalado, garantizado o de lo contrario aprobado por Binary.com. LOS CLIENTES TRATAN CON AGENTES DE PAGO A SU EXCLUSIVO RIESGO Y PELIGRO. Se recomienda a los clientes verificar las credenciales de los agentes de pago antes de enviarles dinero. Binary.com no será responsable en ninguna circunstancia por las transacciones realizadas entre los clientes y los agentes de pago"
 
 msgid "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr ""
+msgstr "- Binary.com es el pionero de la industria y cuenta con tecnología patentada de precios"
 
 msgid "- Binary.com offers many payment methods, such as credit/debit cards, bank wires, e-cash and e-wallets"
-msgstr ""
+msgstr "-Binary.com ofrece varios métodos de pago, incluyendo tarjetas de crédito, transferencias bancarias, dinero electrónico y e-wallets"
 
 msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
 msgstr ""
