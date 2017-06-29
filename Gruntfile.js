@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                             "text/text.js",
                             "webtrader-charts/dist/webtrader-charts.js",
                             "regenerator-runtime/*",
-                            "!jquery-ui-dist/**", "jquery-ui-dist/images/ui-icons_444444_256x240.png", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
+                            "!jquery-ui-dist/**", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
                             "chosen-js/*"
                         ],
                         dest: "dist/uncompressed/v<%=pkg.version%>/lib/",
