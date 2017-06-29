@@ -1596,7 +1596,7 @@ msgid "In an uptrend three successive days opens at or near the previous day's c
 msgstr ""
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
-msgstr ""
+msgstr "香港のヘッジファンド会社でファンドマネージャーとして勤務していたジョン・イヴス氏が、デリバティブ商品を一般投資家に分かり易く、求め易い形で提供するため、小規模の投資額で固定オッズ形式の取引ができるシステム、メソッド及びアルゴリズムを開発。ジョン・イヴス氏は、全てのデリバティブ取引に対応できるシンプルなシステムを形成、固定オッズ取引、そしてあらゆるトレーダーに小額で行えるトレード機会を目指す。この革新により、大規模なバイナリーオプションの取引を実現。"
 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar"
 msgstr "外国為替市場では、任意の通貨が特定の通貨に対する価格の変化の予測に基づくトレードを実施できます。例えば、EUR/USD市場が上昇すると予測した場合は、米ドルに対してユーロの価値が上がると予測したことになります。"
@@ -2973,7 +2973,7 @@ msgid "The closing black marubozu candlestick is a tall black candle with an upp
 msgstr ""
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr ""
+msgstr "当社は運用口座とは別に銀行口座に顧客の資金を保持しています。破産の場合には、当社の資産の一部から支払われます。これは顧客資金分離への賭博委員会の要件を満たしています。"
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
 msgstr "トレード期間とはトレードのタイムフレームのことであり、取引期間と同じ意味です。"
