@@ -1128,7 +1128,7 @@ msgid "Deutsch"
 msgstr "ドイツ語"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
-msgstr ""
+msgstr "Donald Dorseyによって開発されたマスインデックスは、範囲拡張に基づくトレンドの反転を識別するためにその高低域を使用します。そのため、マスインデックスは方向バイアスがないボラティリティ指標です。その代わり、マスインデックスは現在のトレンドの反転の前兆となりうる膨らみ範囲を識別します。"
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
 msgstr "ウィリアムズ％RはLarry Williamsによって開発されたストキャスティクスとは逆のモメンタム指標です。%R、Williams %R、ウィリアムズ%Rと表記され、ルックバック期間の最高値に対するクローズレベルを反映します。"
