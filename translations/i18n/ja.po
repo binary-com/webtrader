@@ -438,7 +438,7 @@ msgid "A technical momentum indicator that compares a security's closing price t
 msgstr "セキュリティの終値と指定された期間にわたる価格帯を比較するテクニカルモメンタムインディケーターです。市場の動きへのオシレーターの感度は期間を調節するか、結果の移動平均を用いることで減らすことができます。"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr ""
+msgstr "トレーダーの画面ではBBQの串焼き（Stick sandwiche）のように見える3つのローソク足のテクニカル取引パターン。Stick sandwicheは真ん中のローソク足は他の2つとは異なる色をしており、両サイドのローソク足は真ん中よりも長い取引範囲になっています。（ボディが長い）Stick sandwicheは陰線と陽線双方で発生するパターンです。"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
 msgstr "Tickとは、市場価格の上下の振れ幅の最小値のことです。"
