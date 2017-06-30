@@ -1,6 +1,6 @@
 .config-dialog {
   padding: 10px;
-  background: white !important;
+  background: white;
 }
 .config-dialog + .ui-dialog-buttonpane {
   margin: 0;

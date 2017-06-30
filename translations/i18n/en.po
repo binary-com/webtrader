@@ -631,14 +631,20 @@ msgstr ""
 msgid "Accept"
 msgstr "Accept"
 
+msgid "Accessible from any web browser in 13 languages"
+msgstr ""
+
 msgid "Account balance"
 msgstr "Account balance"
 
+msgid "Account opening reason"
+msgstr ""
+
+msgid "Account turnover"
+msgstr ""
+
 msgid "Action"
 msgstr "Action"
-
-msgid "Add"
-msgstr ""
 
 msgid "Add comparisons"
 msgstr "Add comparisons"
@@ -646,8 +652,11 @@ msgstr "Add comparisons"
 msgid "Add indicator"
 msgstr "Add indicator"
 
-msgid "Add level"
-msgstr "Add level"
+msgid "Add/Remove comparisons"
+msgstr ""
+
+msgid "Add/Remove indicators"
+msgstr ""
 
 #, fuzzy
 msgid "Add/remove indicators"
@@ -718,8 +727,14 @@ msgstr "Apr"
 msgid "April"
 msgstr "April"
 
+msgid "Are you sure you want to delete template?"
+msgstr ""
+
 msgid "Are you sure you want to delete this token?"
 msgstr "Are you sure you want to delete this token?"
+
+msgid "Are you sure you want to overwrite current template?"
+msgstr ""
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr ""
@@ -1036,9 +1051,6 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
 "By clicking OK, you confirm that you have read and accepted the updated"
 
-msgid "CLOSE"
-msgstr "CLOSE"
-
 msgid "CSV"
 msgstr "CSV"
 
@@ -1204,9 +1216,6 @@ msgstr "Click to log in with your Binary.com account"
 
 msgid "Close"
 msgstr ""
-
-msgid "Close Price"
-msgstr "Close Price"
 
 msgid "Close all"
 msgstr "Close all"
@@ -1510,6 +1519,12 @@ msgstr "Download SVG vector image"
 msgid "Download as"
 msgstr "Download as"
 
+msgid "Downloading .csv"
+msgstr "Downloading .csv"
+
+msgid "Downloading template as"
+msgstr ""
+
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr ""
 
@@ -1528,9 +1543,6 @@ msgstr "Duration"
 msgid "EGR Operator Award"
 msgstr ""
 
-msgid "EMA"
-msgstr "EMA"
-
 msgid "EURUSD"
 msgstr ""
 
@@ -1546,9 +1558,6 @@ msgstr ""
 
 msgid "Edge"
 msgstr "Edge"
-
-msgid "Edit"
-msgstr "Edit"
 
 msgid "Education"
 msgstr "Education"
@@ -1577,6 +1586,13 @@ msgstr ""
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
 
+msgid ""
+"Enjoy an intuitive trading interface with advanced functionality that lets "
+"you monitor all of your favourite assets and markets at the same time, as "
+"well as essential charts, the asset index, trading times, and historical "
+"data. Most importantly, you get to choose what you want to see on your screen"
+msgstr ""
+
 msgid "Enter your current password"
 msgstr "Enter your current password"
 
@@ -1587,6 +1603,9 @@ msgid "Entry spot"
 msgstr "Entry spot"
 
 msgid "Entry spot price"
+msgstr ""
+
+msgid "Error getting data for %1"
 msgstr ""
 
 msgid "Espa ol"
@@ -1642,6 +1661,9 @@ msgstr "Favourite artist"
 
 msgid "Favourite dish"
 msgstr "Favourite dish"
+
+msgid "Features"
+msgstr ""
 
 msgid "Feb"
 msgstr "Feb"
@@ -1735,6 +1757,9 @@ msgstr "Friday"
 msgid "From"
 msgstr "From"
 
+msgid "Full-screen trading interface"
+msgstr ""
+
 msgid "Further instructions"
 msgstr "Further instructions"
 
@@ -1768,9 +1793,6 @@ msgstr "Grid Light"
 msgid "Group History"
 msgstr ""
 
-msgid "HIGH"
-msgstr "HIGH"
-
 msgid "Hammer (CDLHAMMER)"
 msgstr ""
 
@@ -1794,9 +1816,6 @@ msgstr ""
 
 msgid "High Barrier"
 msgstr "High Barrier"
-
-msgid "High Price"
-msgstr "High Price"
 
 msgid "High barrier"
 msgstr ""
@@ -2040,6 +2059,15 @@ msgstr "Instrument"
 msgid "Instruments"
 msgstr "Instruments"
 
+msgid "Invalid JSON file"
+msgstr ""
+
+msgid "Invalid parameter(s)"
+msgstr ""
+
+msgid "Invalid template type"
+msgstr ""
+
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
 
@@ -2069,13 +2097,6 @@ msgid ""
 msgstr ""
 
 msgid "Italiano"
-msgstr ""
-
-msgid ""
-"Its multi window interface allows pro traders to monitor the movements of "
-"multiple assets and markets at the same time. Thanks to multiple tools and "
-"indicators available, it allows tradingn and analyzing market with maximum "
-"flexibility"
 msgstr ""
 
 msgid "Jan"
@@ -2134,9 +2155,6 @@ msgstr ""
 msgid "Kuala Lumpur Office"
 msgstr ""
 
-msgid "LOW"
-msgstr "LOW"
-
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr ""
 
@@ -2157,9 +2175,6 @@ msgstr "Let's do it"
 
 msgid "Level of Education"
 msgstr "Level of Education"
-
-msgid "Levels"
-msgstr ""
 
 msgid ""
 "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, "
@@ -2293,9 +2308,6 @@ msgstr ""
 
 msgid "Low Barrier"
 msgstr "Low Barrier"
-
-msgid "Low Price"
-msgstr "Low Price"
 
 msgid "Low barrier"
 msgstr ""
@@ -2549,8 +2561,8 @@ msgstr "OAuth Server"
 msgid "OHLC"
 msgstr "OHLC"
 
-msgid "OPEN"
-msgstr "OPEN"
+msgid "OK"
+msgstr ""
 
 msgid "Occupation"
 msgstr ""
@@ -2621,9 +2633,6 @@ msgstr "Open"
 
 msgid "Open Account"
 msgstr "Open Account"
-
-msgid "Open Price"
-msgstr "Open Price"
 
 msgid "Open a Financial Account"
 msgstr "Open a Financial Account"
@@ -3025,8 +3034,8 @@ msgstr ""
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr ""
 
-msgid "SMA"
-msgstr "SMA"
+msgid "Robust and secure platform"
+msgstr ""
 
 msgid "SVG"
 msgstr "SVG"
@@ -3284,8 +3293,17 @@ msgstr "Stop-profit"
 msgid "Stop-type"
 msgstr "Stop-type"
 
+msgid "Stroke color"
+msgstr "Stroke color"
+
+msgid "Stroke width"
+msgstr "Stroke width"
+
 msgid "Submit"
 msgstr "Submit"
+
+msgid "Successfully applied the template and saved it as"
+msgstr ""
 
 msgid "Summation (SUM)"
 msgstr ""
@@ -3295,12 +3313,6 @@ msgstr "Sun"
 
 msgid "Sunday"
 msgstr "Sunday"
-
-msgid "TEMA"
-msgstr "TEMA"
-
-msgid "TRIMA"
-msgstr "TRIMA"
 
 msgid "Table"
 msgstr "Table"
@@ -3329,8 +3341,14 @@ msgstr ""
 msgid "Tel"
 msgstr "Tel"
 
+msgid "Template changes saved"
+msgstr ""
+
 msgid "Template name"
 msgstr "Template name"
+
+msgid "Template name already exists"
+msgstr ""
 
 msgid "Terms"
 msgstr "Terms"
@@ -4216,6 +4234,11 @@ msgstr ""
 msgid "Variance (VAR)"
 msgstr ""
 
+msgid ""
+"Various customisable features   load and arrange assets, charts, and other "
+"resources however you see fit"
+msgstr ""
+
 msgid "Verification code has been sent to your email"
 msgstr "Verification code has been sent to your email"
 
@@ -4248,9 +4271,6 @@ msgstr ""
 
 msgid "Volatility indices"
 msgstr ""
-
-msgid "WMA"
-msgstr "WMA"
 
 msgid ""
 "WMA stands for weighted moving average. It helps to smooth the price curve "
@@ -4297,7 +4317,9 @@ msgstr "Websocket Server"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is a Binary.com's advanced desktop trading platform"
+msgid ""
+"Webtrader is an advanced trading platform that s fully-customisable "
+"according to your personal preferences"
 msgstr ""
 
 msgid ""
@@ -4317,7 +4339,7 @@ msgstr ""
 msgid "Weighted Moving Average (WMA)"
 msgstr ""
 
-msgid "Welcome to Binary Webtrader"
+msgid "Welcome to Binary.com Webtrader"
 msgstr ""
 
 msgid ""
@@ -4701,6 +4723,51 @@ msgid ""
 "products"
 msgstr ""
 
+#~ msgid "Add level"
+#~ msgstr "Add level"
+
+#~ msgid "CLOSE"
+#~ msgstr "CLOSE"
+
+#~ msgid "Close Price"
+#~ msgstr "Close Price"
+
+#~ msgid "EMA"
+#~ msgstr "EMA"
+
+#~ msgid "Edit"
+#~ msgstr "Edit"
+
+#~ msgid "HIGH"
+#~ msgstr "HIGH"
+
+#~ msgid "High Price"
+#~ msgstr "High Price"
+
+#~ msgid "LOW"
+#~ msgstr "LOW"
+
+#~ msgid "Low Price"
+#~ msgstr "Low Price"
+
+#~ msgid "OPEN"
+#~ msgstr "OPEN"
+
+#~ msgid "Open Price"
+#~ msgstr "Open Price"
+
+#~ msgid "SMA"
+#~ msgstr "SMA"
+
+#~ msgid "TEMA"
+#~ msgstr "TEMA"
+
+#~ msgid "TRIMA"
+#~ msgstr "TRIMA"
+
+#~ msgid "WMA"
+#~ msgstr "WMA"
+
 #~ msgid ""
 #~ "In regards to binary options which are gambling products, remember that "
 #~ "gambling can be addictive"
@@ -4734,9 +4801,6 @@ msgstr ""
 #~ msgid "Stroke"
 #~ msgstr "Stroke"
 
-#~ msgid "Stroke width"
-#~ msgstr "Stroke width"
-
 #~ msgid "| Return"
 #~ msgstr "| Return"
 
@@ -4763,9 +4827,6 @@ msgstr ""
 
 #~ msgid "Customize chart appearance"
 #~ msgstr "Customize chart appearance"
-
-#~ msgid "Downloading .csv"
-#~ msgstr "Downloading .csv"
 
 #~ msgid "Email verification failed"
 #~ msgstr "Email verification failed"
@@ -4899,9 +4960,6 @@ msgstr ""
 
 #~ msgid "Street address"
 #~ msgstr "Street address"
-
-#~ msgid "Stroke color"
-#~ msgstr "Stroke color"
 
 #~ msgid "Terms and Conditions"
 #~ msgstr "Terms and Conditions"
