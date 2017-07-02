@@ -447,7 +447,7 @@ msgid "A trend indicated by a large candlestick followed by a doji that is locat
 msgstr "トレンドはローソク足の先端または底に位置する十字線がくる長いローソク足を示します。これは現行トレンドからの反転を意味します。"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr ""
+msgstr "下ヒゲのある十字線が続く上昇トレンドの白いローソク足は前日のローソクの高値以上を維持します。3日目は十字線の安値を下回る上ヒゲがある黒いローソクです。"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "捨て子（CDLABANDONEDBABY）"
