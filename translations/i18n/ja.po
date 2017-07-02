@@ -447,7 +447,7 @@ msgid "A trend indicated by a large candlestick followed by a doji that is locat
 msgstr "トレンドはローソク足の先端または底に位置する十字線がくる長いローソク足を示します。これは現行トレンドからの反転を意味します。"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr ""
+msgstr "下ヒゲのある十字線が続く上昇トレンドの白いローソク足は前日のローソクの高値以上を維持します。3日目は十字線の安値を下回る上ヒゲがある黒いローソクです。"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "捨て子（CDLABANDONEDBABY）"
@@ -621,7 +621,7 @@ msgid "Barrier(s)"
 msgstr "バリア"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "弱気相場：これは上昇トレンドにある3つのローソク足からなるエンド・オブ・トレンド・パターンです。2つ目のローソクは前日の終値付近で始まることが条件となります。最後のローソク足は短く、反転の分岐点となります。このパターンはもみ合い相場のリスクが上昇し、市場が反転する可能性があります。"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "ベルトホールド（CDLBELTHOLD）"
