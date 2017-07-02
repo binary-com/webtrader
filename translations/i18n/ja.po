@@ -621,7 +621,7 @@ msgid "Barrier(s)"
 msgstr "バリア"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "弱気相場：これは上昇トレンドにある3つのローソク足からなるエンド・オブ・トレンド・パターンです。2つ目のローソクは前日の終値付近で始まることが条件となります。最後のローソク足は短く、反転の分岐点となります。このパターンはもみ合い相場のリスクが上昇し、市場が反転する可能性があります。"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "ベルトホールド（CDLBELTHOLD）"
