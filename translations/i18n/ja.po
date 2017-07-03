@@ -2877,7 +2877,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "トンボ（Dragonfly Doji）は始値、終値、高値が同じまたはほぼ同価格であった状態のことをいいます。（3つの価格がまったく同じに成ることは極めて稀）トンボに関して最も重要なことは、下ヒゲが長い点です。"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
-msgstr ""
+msgstr "指数移動平均（EMA）は価格の平均を算出しますが、直近の価格に比重を置きます。移動平均の指定期間によって最新の価格に適用されます。EMAの期間が短いほど、直近価格により比重を置くことになります。"
 
 msgid "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K"
 msgstr ""
