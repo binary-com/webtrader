@@ -2925,7 +2925,7 @@ msgid "The Relative Strength Index (RSI) was published by J. Welles Wilder. The 
 msgstr ""
 
 msgid "The Rickshaw Man has unusually tall upper and lower shadows, a body in which the opening and closing prices are about the same, and the body is near the middle of the candlestick"
-msgstr ""
+msgstr "「無法松の一生」は非常に長い上ヒゲと下ヒゲがあるものをいいます。始値と終値がほぼ同じであり、ボディがローソクの中心にあります。"
 
 msgid "The Shooting formation is created when the open, low, and close are roughly the same price. There is a long upper shadow, generally defined as at least twice the length of the real body"
 msgstr ""
