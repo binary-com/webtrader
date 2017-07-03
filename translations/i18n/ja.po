@@ -2886,10 +2886,10 @@ msgid "The Gravestone Doji is created when the open, low, and close are the same
 msgstr "トウバ（Gravestone Doji）は始値、終値、安値がほぼおなじである状態をいいます。（3つの価格が全く同じであることは極めて稀）トウバで最も重要なことは、上ヒゲが長い点です。"
 
 msgid "The Hammer formation is created when the open, high, and close are roughly the same price.Also, there is a long lower shadow, twice the length as the real body"
-msgstr ""
+msgstr "ハンマーは始値、終値、高値がほぼ同価格である状態をいいます。また、ボディの2倍の長さの長い下ヒゲがあり、下ヒゲはかなり短いか全くついていません。"
 
 msgid "The Hanging Man formation, just like the Hammer, is created when the open, high, and close are roughly the same price. Also, there is a long lower shadow, which should be at least twice the length of the real body"
-msgstr ""
+msgstr "首吊り線（Hanging Man）は、ハンマーのように始値、終値、高値がほぼ同価格であり、少なくともボディの2倍以上はあるかなり長い下ヒゲがあります。"
 
 msgid "The Hull Moving Average solves the age old dilemma of making a moving average more responsive to current price activity whilst maintaining curve smoothness. In fact the HMA almost eliminates lag altogether and manages to improve smoothing at the same time"
 msgstr ""
