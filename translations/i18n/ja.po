@@ -417,7 +417,7 @@ msgid "A candlestick with a long black body (long line) represents a bearish for
 msgstr "長く黒いローソク足（長い線）は、市場が弱気状態にあることを表しています。株式の価格は高値で始まりその日の最安値で終了したため広範囲にわたって上下しました。長く白い線があるものは市場が強気状態にあることを表し、株式の価格はその日の最安値で始まり高値で終了しました。こちらも広範囲で上下しました。"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr ""
+msgstr "日本のローソク足チャートの上ヒゲと下ヒゲがかなり長く、ボディが小さいローソク足です。これは、市場がこのローソク足が表れる前の方向感を失っていることを意味します。"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
 msgstr "小さく白いローソクを覆うまたは包む長く黒いローソクが続いた状態の、短いヒゲのある白く短いローソクからなるチャートパターン"
