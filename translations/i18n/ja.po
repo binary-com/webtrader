@@ -2865,10 +2865,10 @@ msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be us
 msgstr "コモディティ・チャネル・インデックス（CCI）は新しい傾向を特定したり、極端な条件に陥った際に警告を通知するために使用される汎用性の高いインジケーターです。"
 
 msgid "The Donchian Channel is an indicator used in market trading developed by Richard Donchian. It is formed by taking the highest high and the lowest low of the last n periods. The area between the high and the low is the channel for the period chosen"
-msgstr ""
+msgstr "「ドンチャン・チャネル」はRichard Donchianによって開発された市場取引で使用されるインディケーターです。ある期間の高値と安値の推移を線で描画したものです。高値と安値の間の部分は選択した期間のチャネルです。"
 
 msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr ""
+msgstr "二重指数移動平均（CKS）は、Patrick Mulloy により開発され、直近の値を二重にとることで移動平均に関するラグ・ノイズを排除します。"
 
 msgid "The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
 msgstr ""
