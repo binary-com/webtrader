@@ -62,10 +62,10 @@ msgid "- Binary.com offers many payment methods, such as credit/debit cards, ban
 msgstr "-Binary.com ofrece varios métodos de pago, incluyendo tarjetas de crédito, transferencias bancarias, dinero electrónico y e-wallets"
 
 msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
-msgstr ""
+msgstr "- Binary.com cotiza una oferta y su contraoferta, por lo que Ud. siempre obtiene precios transparentes e imparciales"
 
 msgid "- binaries are licensed as a betting activity in the UK, so your winnings are tax-free"
-msgstr ""
+msgstr "- Las opciones binarias están registradas como un método de apuestas en el Reino Unido, por lo que sus ganancias están libres de impuesto"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
 msgstr ""
