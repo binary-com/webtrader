@@ -68,34 +68,34 @@ msgid "- binaries are licensed as a betting activity in the UK, so your winnings
 msgstr "- Las opciones binarias están registradas como un método de apuestas en el Reino Unido, por lo que sus ganancias están libres de impuesto"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
-msgstr ""
+msgstr "- Elija contratos intradía de 1 minuto a 24 horas"
 
 msgid "- choose the falls trade, lower trade, one-touch trade with a low barrier, or no-touch trade with a high barrier"
-msgstr ""
+msgstr "-Escoja contratos baja, inferior, toque con un límite bajo o sin toque con un límite alto"
 
 msgid "- choose the no-touch trade, the stays-between trade, or the ends-between trade"
-msgstr ""
+msgstr "- Escoja el contrato sin toque, queda dentro o finaliza dentro"
 
 msgid "- choose the one-touch trade, the goes-outside trade, or the ends outside trade"
-msgstr ""
+msgstr "- Escoja el contrato toque, sale fuera o finaliza fuera"
 
 msgid "- choose the rise trade, higher trade, one-touch trade with a high barrier, or no-touch trade with a low barrier"
-msgstr ""
+msgstr "-Escoja el contrato alza, superior, toque con un límite alto o sin toque con un límite bajo"
 
 msgid "- choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "-Escoja periodos de 10 segundos a 365 días"
 
 msgid "- choose trades with durations of up to 365 days"
-msgstr ""
+msgstr "-Escoja contratos con duraciones de hasta 365 días"
 
 msgid "- choose trades with high returns and a low probability to win, or with low returns and a high probability to win"
-msgstr ""
+msgstr "-Escoja contratos con rendimientos altos y bajas probabilidades de ganar, o con rendimientos bajos y altas probabilidades de ganar"
 
 msgid "- currencies, stock indices, and commodities"
-msgstr ""
+msgstr "-Divisas, índices bursátiles y materias primas"
 
 msgid "- customize your trades to meet your needs"
-msgstr ""
+msgstr "-Personalice sus operaciones para satisfacer sus necesidades"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
 msgstr ""
