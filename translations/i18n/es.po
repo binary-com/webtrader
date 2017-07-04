@@ -98,22 +98,22 @@ msgid "- customize your trades to meet your needs"
 msgstr "-Personalice sus operaciones para satisfacer sus necesidades"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
-msgstr ""
+msgstr "-Tantee terreno con $2 o délo todo por $50.000"
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "-de $1 a $50,000"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "-de 10 segundos a 365 días"
 
 msgid "- get pricing that is normally reserved for big institutional players"
-msgstr ""
+msgstr "-Obtenga precios normalmente reservados para jugadores institucionales importantes"
 
 msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions"
 msgstr ""
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "-Abra una cuenta en minutos"
 
 msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
 msgstr ""
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transacciones en los últimos 12 meses"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 Día"
@@ -206,7 +206,7 @@ msgid "1-2 years"
 msgstr "1-2 años"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 Minutos"
@@ -215,7 +215,7 @@ msgid "10m"
 msgstr ""
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 Minutos"
