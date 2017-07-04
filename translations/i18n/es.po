@@ -2,10 +2,10 @@ msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-f
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr ""
+msgstr "'Caída asiática' - Usted gana cuando el último valor es menor que el promedio de los valores durante el contrato"
 
 msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
-msgstr ""
+msgstr "'Subida asiática' - Usted gana cuando el último valor es mayor que el promedio de los valores durante el contrato"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr "El premio \"Mejor Empresa de Comunicaciones\" de Investors Chronicle"
@@ -23,19 +23,19 @@ msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr "El premio \"Mejor Empresa de Probabilidades Fijas 2012\" de Global Banking and Finance Review"
 
 msgid "'Differs' - You win when the last digit of the last tick does not match your prediction"
-msgstr ""
+msgstr "'Diferentes' - Usted gana cuando el último dígito del último valor no es igual a su predicción"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "El premio \"Operador de Apuestas Financieras del Año\" de eGaming Review"
 
 msgid "'Matches' - You win when the last digit of the last tick matches your prediction"
-msgstr ""
+msgstr "'Iguales' - Usted gana cuando el último dígito del último valor es igual a su predicción"
 
 msgid "'contract period'"
 msgstr "\"período del contrato\""
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "Contratos toque"
 
 msgid "(formerly known as"
 msgstr "(anteriormente conocido como"
