@@ -1,4 +1,4 @@
-import { addIndicator, removeIndicator } from './indicatorTest';
+import { closeDialog as closeIndicatorDialog ,addIndicator, removeIndicator } from './indicatorTest';
 import { openDialog, closeDialog, addOverlay } from './overlayTest';
 
 const ovrly1 = {
@@ -16,7 +16,7 @@ export default {
   indicatorAndOverlay: (browser) => {
     openDialog(browser, 'Indicators', 'indicator-dialog');
     addIndicator(browser);
-    closeDialog(browser, 'indicator-dialog');
+    closeIndicatorDialog(browser, 'indicator-dialog');
     openDialog(browser, 'Comparisons', 'overlay-dialog');
     addOverlay(browser, ovrly1);
     closeDialog(browser, 'overlay-dialog');

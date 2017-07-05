@@ -7,11 +7,11 @@ export default {
       .execute('$(\'div[role="dialog"] .webtrader-dialog span[data-balloon="Horizontal line"] img\').click()')
       .waitForElementPresent('.cssPopup')
       // Draw horizontal line
-      .execute("$('.cssPopup').parent().find('.ui-dialog-buttonset .ui-button')[0].click()")
+      .execute("$('.cssPopup + .lean_overlay_buttonpane > div:last-of-type').click()")
       .assert.elementNotPresent('.cssPopup')
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg', 90, 100)
       .mouseButtonClick('left')
-      .assert.elementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
+      .waitForElementPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg .highcharts-plot-lines-0 path')
       //Remove horizontal line from chart
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', 90, 100)
       .pause(1000)
@@ -27,7 +27,7 @@ export default {
       .execute('$(\'div[role="dialog"] .webtrader-dialog span[data-balloon="Vertical line"] img\').click()')
       .waitForElementPresent('.cssPopup')
       // Draw Vertical line
-      .execute("$('.cssPopup').parent().find('.ui-dialog-buttonset .ui-button')[0].click()")
+      .execute("$('.cssPopup + .lean_overlay_buttonpane > div:last-of-type').click()")
       .assert.elementNotPresent('.cssPopup')
       .moveToElement('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer svg', 190, 200)
       .mouseButtonClick('left')

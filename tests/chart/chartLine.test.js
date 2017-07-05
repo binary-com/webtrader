@@ -1,10 +1,5 @@
 import { before, after } from '../default';
-import { chartTemplateTest } from './chartTemplateTest';
-import { chartFunctionTest } from './chartFunctionTest';
 import chartLineTest from './chartLinesTest';
-import indicatorTest from './indicatorTest';
-import overlayTest from './overlayTest';
-import { indicatorAndOverlay as indicatorAndOverlayTest } from './indicatorAndOverlayTest';
 
 export default {
   before: (browser) => {
@@ -22,9 +17,6 @@ export default {
       .waitForElementNotVisible('div[role="dialog"]:last-of-type .webtrader-dialog .highcharts-loading')
   },
   after: after,
-  'Chart functions': chartFunctionTest,
-  //'Chart template': chartTemplateTest,
-  'Indicator test': indicatorTest.indicator,
-  'Overlay test': overlayTest.overlay,
-  'IndicatorAndOverlay': indicatorAndOverlayTest
+  'Horizontal line': chartLineTest.horizontalLine,
+  'Vertical line': chartLineTest.verticalLine
 }
