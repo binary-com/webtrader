@@ -2838,7 +2838,7 @@ msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. T
 msgstr ""
 
 msgid "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength"
-msgstr ""
+msgstr "アベレージ・ダイレクショナル・ムーブメント・インデックス（ADX）は1978年に J. Welles Wilderによって開発されました。金融商品ADXの価格シリーズのトレンドの強さを0から100の範囲で示します。一般的に、ADXは20以下の数値のトレンドの弱さと40を超えるトレンドの強さを読み取ります。"
 
 msgid "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
 msgstr ""
