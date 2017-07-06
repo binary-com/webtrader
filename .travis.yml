@@ -1,8 +1,6 @@
 git:
   depth: 1
 cache: yarn
-addons:
-  firefox: "latest"
 matrix:
   fast_finish: true
 language: node_js
