@@ -18,7 +18,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
 before_install: yarn
-install: yarn test-browserstack
+install: yarn test
 after_success:
   - git config --global user.email "arnab@binary.com"
   - git config --global user.name "Arnab Karmakar"
