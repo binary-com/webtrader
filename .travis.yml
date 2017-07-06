@@ -3,12 +3,12 @@ git:
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 language: node_js
 sudo: required
 dist: trusty
 node_js:
-  - '6'
+- '6'
 notifications:
   email:
   - apoorv@binary.com
@@ -16,24 +16,22 @@ branches:
   only:
   - master
   - development
-before_install: 
-  - export CHROME_BIN=/usr/bin/google-chrome
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sudo apt-get update
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome*.deb
-  - yarn
-  - yarn build-all
+before_install:
+- export CHROME_BIN=/usr/bin/google-chrome
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sudo apt-get update
+- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+- sudo dpkg -i google-chrome*.deb
+- yarn
+- yarn build-all
 before_script:
-  - jdk_switcher use oraclejdk8
+- jdk_switcher use oraclejdk8
 install: yarn test
 after_success:
-  - git config --global user.email "arnab@binary.com"
-  - git config --global user.name "Arnab Karmakar"
-  - yarn deploy-gh-pages
+- git config --global user.email "arnab@binary.com"
+- git config --global user.name "Arnab Karmakar"
+- yarn deploy-gh-pages
 env:
   global:
-  - secure: gf1yJ3WRKqBIvJTx/yiXEDtbeUVlEVR5nAd8F4q8bCqlEu6oDXbnNQ5M/9fj18nSPkmPQDTExpm1l2aPlu+AAZ5ydLQ98Z5jKUyTcJ40EUGOYEvVP5DxGGMFlelTEwrj7otuL4YDLuEepQkCCdgOmnv8Tau/Q0FcOkdaQ0DDEyJXZPgT38m1CHeSOsX0shZ+YxKLhjUc/Eo7O0F1HGrbLW/fP8ywUsxkpRxZxVkKZgKJuSoevZWVz2NL9xP76zYHLiAPdQtTr0VAYPFSM5Rko4UdZs606TqjLlgrBhlOqPJ4GDYG9C4WU8wLd7N2uguKKXk7t2/Rg9TInZ6v81DA0bvbx29TOx658mO1+Zpbeb+s2rTdJaASWkHrw7mfPIE8+/Hmc2KQwIUoUf4fAScVqIe6OW/nIod65JSBxOqzUwpf4l2Z9mqfFckR9pnLhom6WfzpFZn8rvWJ4XQPu9wJSM82pDpcSKF3IkdbUVMGj8tCts9TtCSM1+WiNtOoOtyKccjJpIqtO/6IOYAg0HT1tqeUn6LfzstIOQj3AG/Y6HZprH8OIwhjIB2kigMGtLCVYElCWyOE9ZAnyQLYu+wZCET1VJuQHkB9trPdGQ/rZJOOy7wtgyUXbIq4aEEiU3eDsKge+ncCtZoBxXD0BXYO9KWJMI8o8XkIrSRIKjlO+SQ=
-#notifications:
-    #slack: binary-group:xEVrYY0QGz7fbwJqi4LMWbBS
+  - secure: sKuM2wNyK5qWvM68U8ng29DZUbwnDEBg+lfUvxA6NV5sBdNzENr2MRt3xlm6f728XUi7lRRmMKodK8FK753Csy8R7fyf2KjVxKFlLCzaIMB5YOtu4ZEQ628Re3xebiepmlLNc6W8bs+4+SPr7C9PKocmLNdUM7up5EOOBpPagu5pmA4KNWvlceFwv4EggCsMAmRyS9BRSFufC78LcpwwmaJVv9/7wEXxCZOkkzKaH7+co2XTtIn7rcAOjGGJIznwJ6mMb06QtTylOCiTB2Kc19tD/vfU+TDBCU62cnCXpQ13Js8ioxwucRa4/O5BiuOo+ZOkeZCghVvLUhyBYuQBDSHv8ZoUXiTbzMjG+6TX2Z9A/7Eckn6hPxgb78uWq1MyVSKFdcUaZ3ezXmvVsEegLptcOqv6LtPWJhE1JQrJkLGxqe+zA/7rEo66Tw44D+sybY5dd4equHLARAcZWK3A5KIZuTMGbWcEwDrthxqiRMTVwwId7UqSOV8Ibb9jRBqTCu3ic4VWaAkrHCrRYgdcqymblgN0/LOYehOO/x32/mjBZu2JICV7dkNnGbzA8oHsgkKK5ZMemOzFMVMA8ifxglcwT+6Oda1qKczqr3aZlH3wc8iBNMd5IUiEWYAmyv1U1BvCNmkvEbDDTnqFhbxZPNQ4GXD822Hu6VO00su39f8=
