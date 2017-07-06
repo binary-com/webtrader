@@ -26,6 +26,7 @@ before_install:
   - yarn
 before_script:
   - jdk_switcher use oraclejdk8
+  - echo $AUTHENTICATION_URL
 install: yarn test
 after_success:
   - git config --global user.email "arnab@binary.com"
