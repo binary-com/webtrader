@@ -1,11 +1,11 @@
 require('babel-core/register');
-
+const fs = require('fs');
 const SCREENSHOT_PATH = "./screenshots/";
 const BINPATH = './node_modules/nightwatch/bin/';
 
 let config = undefined;
 
-if (~process.argv.indexOf('--local'))
+if (~process.argv.indexOf('--local') && fs.existsSync('./test-config'))
   config = require('./test-config');
 /**
  * For local testing create a file named test-config.js in root of project. It should have the following values:
@@ -18,9 +18,9 @@ if (~process.argv.indexOf('--local'))
 /**
  * Set URL based on travis branch
  */
-const url = process.env.TRAVIS_BRANCH === 'master' ? 'https://webtrader.binary.com' :
+const url = 'http://localhost:3000';/*process.env.TRAVIS_BRANCH === 'master' ? 'https://webtrader.binary.com' :
   process.env.TRAVIS_BRANCH === 'development' || ~process.argv.indexOf('browserstack') ?
-    'https://webtrader.binary.com/beta' : 'http://localhost:3000';
+    'https://webtrader.binary.com/beta' : 'http://localhost:3000';*/
 
 // we use a nightwatch.conf.js file so we can include comments and helper functions
 module.exports = {
