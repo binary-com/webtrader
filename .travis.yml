@@ -34,6 +34,3 @@ after_success:
 - git config --global user.email "arnab@binary.com"
 - git config --global user.name "Arnab Karmakar"
 - yarn deploy-gh-pages
-env:
-  global:
-    secure: ko360aFG1/PLnxbWazkQWsDyeEJvzoWCtTj3zf+9cLpiLBDfDnN7iXudk1tpGh73FOZsO1oCvv3ew/t50RswQ0Ldm8YRguUPC7PftNaWUPKhipv357jZ7Vt3vSUKBBJgjyyM55+L6WSr85N+f0N3kA9EbyR7I5f+ADEVNwPGp5TbukbtlTITiV6+UiKO/teFChVGA9eQnamwy5Q3C0BILjiPJTxZDXHFrQPcmF8kM9fSEXIf9QN+m/RfEzSJ6xV/UAYzsLTRKrVMj51GqMH2m6AzUgRGBR7feekCB8xxM6UTm0vpaPI+Se4/xqSgKvBtI+XLXgKgQ3HFwyGq8JNU6QFS0ScVOMmpazTVlajv63G0XWiOu1LZFRWV+Jcy4mEVBuQkRXxNbx1SMRUqz9SNew988Y9NUvpaibJvpiQIqPz3ShpJBDjCVyABAbrLgpG6ynZqh2+XQUoYO0ARAvOEcDznB7E/AJIOH8q19JvdIt2BpFzs+2ozMP85CRlFyuCcvu8lSebL0jqzaGUq+y+bploua1+cvDzr9D6xtUFMTlgSiwbW2mHEltea6hJO4YsHXInTfATp57pktar9MqAFl7OFLZL1EK7JBkFjB6JcRTS3PAVdTJuMNP5u1N4xYFL5X1HnA+g/aF3Oax5w+w7wGBdkNiNp3AUxsgfkzaCFbT8=
