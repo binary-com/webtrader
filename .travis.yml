@@ -24,9 +24,10 @@ before_install:
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   - sudo dpkg -i google-chrome*.deb
   - yarn
+  - echo $AUTHENTICATION_URL
+  - yarn build-all
 before_script:
   - jdk_switcher use oraclejdk8
-  - echo $AUTHENTICATION_URL
 install: yarn test
 after_success:
   - git config --global user.email "arnab@binary.com"
