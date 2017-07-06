@@ -2,10 +2,10 @@ msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-f
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr ""
+msgstr "'Caída asiática' - Usted gana cuando el último valor es menor que el promedio de los valores durante el contrato"
 
 msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
-msgstr ""
+msgstr "'Subida asiática' - Usted gana cuando el último valor es mayor que el promedio de los valores durante el contrato"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr "El premio \"Mejor Empresa de Comunicaciones\" de Investors Chronicle"
@@ -23,19 +23,19 @@ msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr "El premio \"Mejor Empresa de Probabilidades Fijas 2012\" de Global Banking and Finance Review"
 
 msgid "'Differs' - You win when the last digit of the last tick does not match your prediction"
-msgstr ""
+msgstr "'Diferentes' - Usted gana cuando el último dígito del último valor no es igual a su predicción"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "El premio \"Operador de Apuestas Financieras del Año\" de eGaming Review"
 
 msgid "'Matches' - You win when the last digit of the last tick matches your prediction"
-msgstr ""
+msgstr "'Iguales' - Usted gana cuando el último dígito del último valor es igual a su predicción"
 
 msgid "'contract period'"
 msgstr "\"período del contrato\""
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "Contratos toque"
 
 msgid "(formerly known as"
 msgstr "(anteriormente conocido como"
@@ -62,58 +62,58 @@ msgid "- Binary.com offers many payment methods, such as credit/debit cards, ban
 msgstr "-Binary.com ofrece varios métodos de pago, incluyendo tarjetas de crédito, transferencias bancarias, dinero electrónico y e-wallets"
 
 msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
-msgstr ""
+msgstr "- Binary.com cotiza una oferta y su contraoferta, por lo que Ud. siempre obtiene precios transparentes e imparciales"
 
 msgid "- binaries are licensed as a betting activity in the UK, so your winnings are tax-free"
-msgstr ""
+msgstr "- Las opciones binarias están registradas como un método de apuestas en el Reino Unido, por lo que sus ganancias están libres de impuesto"
 
 msgid "- choose intraday trades from 1 minute to 24 hours"
-msgstr ""
+msgstr "- Elija contratos intradía de 1 minuto a 24 horas"
 
 msgid "- choose the falls trade, lower trade, one-touch trade with a low barrier, or no-touch trade with a high barrier"
-msgstr ""
+msgstr "-Escoja contratos baja, inferior, toque con un límite bajo o sin toque con un límite alto"
 
 msgid "- choose the no-touch trade, the stays-between trade, or the ends-between trade"
-msgstr ""
+msgstr "- Escoja el contrato sin toque, queda dentro o finaliza dentro"
 
 msgid "- choose the one-touch trade, the goes-outside trade, or the ends outside trade"
-msgstr ""
+msgstr "- Escoja el contrato toque, sale fuera o finaliza fuera"
 
 msgid "- choose the rise trade, higher trade, one-touch trade with a high barrier, or no-touch trade with a low barrier"
-msgstr ""
+msgstr "-Escoja el contrato alza, superior, toque con un límite alto o sin toque con un límite bajo"
 
 msgid "- choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "-Escoja periodos de 10 segundos a 365 días"
 
 msgid "- choose trades with durations of up to 365 days"
-msgstr ""
+msgstr "-Escoja contratos con duraciones de hasta 365 días"
 
 msgid "- choose trades with high returns and a low probability to win, or with low returns and a high probability to win"
-msgstr ""
+msgstr "-Escoja contratos con rendimientos altos y bajas probabilidades de ganar, o con rendimientos bajos y altas probabilidades de ganar"
 
 msgid "- currencies, stock indices, and commodities"
-msgstr ""
+msgstr "-Divisas, índices bursátiles y materias primas"
 
 msgid "- customize your trades to meet your needs"
-msgstr ""
+msgstr "-Personalice sus operaciones para satisfacer sus necesidades"
 
 msgid "- dip a toe in the water with $2 or go all out for $50,000"
-msgstr ""
+msgstr "-Tantee terreno con $2 o délo todo por $50.000"
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "-de $1 a $50,000"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "-de 10 segundos a 365 días"
 
 msgid "- get pricing that is normally reserved for big institutional players"
-msgstr ""
+msgstr "-Obtenga precios normalmente reservados para jugadores institucionales importantes"
 
 msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions"
 msgstr ""
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "-Abra una cuenta en minutos"
 
 msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
 msgstr ""
@@ -185,7 +185,7 @@ msgid "0-5 transactions in the past 12 months"
 msgstr "0-5 transacciones en los últimos 12 meses"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
 msgstr "1 Día"
@@ -206,7 +206,7 @@ msgid "1-2 years"
 msgstr "1-2 años"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
 msgstr "10 Minutos"
@@ -215,7 +215,7 @@ msgid "10m"
 msgstr ""
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
 msgstr "15 Minutos"
