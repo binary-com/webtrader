@@ -13,7 +13,7 @@ export const addOverlay = (browser, overlayObject) => {
   browser
     //Apply overlay
     .click('.overlay-dialog > div:nth-of-type(3) > .categories:first-of-type .category > div:nth-of-type(' + overlayObject.count + ') span')
-    .assert.hidden('.overlay-dialog')
+    .waitForElementNotPresent('.overlay-dialog')
     //Check overlay count
     .waitForSeriesPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', overlayObject.symbol)
     .waitForElementPresent('div[role="dialog"] .webtrader-dialog .chartOptions > .table > .row > .cell .countBubl[rv-text="overlayCount"]')
@@ -34,8 +34,8 @@ const removeOverlay = (browser) => {
 
 export const closeDialog = (browser, dialogName) => {
   browser
-    .execute("$('." + dialogName + "').parent().find('.ui-dialog-titlebar-close').click()")
-    .assert.hidden('.' + dialogName);
+    .execute("$('." + dialogName + "').parent().find('.lean_overlay_titlebar .close').click()")
+    .waitForElementNotPresent('.' + dialogName);
 }
 export const openDialog = (browser, ele, dialogName) => {
   browser

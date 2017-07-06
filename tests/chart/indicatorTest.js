@@ -1,37 +1,42 @@
-const closeDialog = (browser, dialogName) => {
+export const closeDialog = (browser, dialogName) => {
   browser
-    .execute("$('." + dialogName + "').parent().find('.ui-dialog-titlebar-close').click()")
+    .click('div[role="dialog"] .webtrader-dialog .chartOptions_button span[data-balloon="Indicators"]')
     .assert.hidden('.' + dialogName);
 };
 
 const openDialog = (browser, ele, dialogName) => {
   browser
     .click('div[role="dialog"] .webtrader-dialog .chartOptions_button span[data-balloon="' + ele + '"]')
-    .waitForElementPresent('.' + dialogName);
+    .assert.visible('.' + dialogName);
 };
 
 
 export const addIndicator = (browser) => {
   browser
-    .click('.indicator-dialog div:nth-of-type(4) > div > div:first-of-type > span:first-of-type')
-    .assert.hidden('.indicator-dialog')
-    .waitForElementPresent('.indicator-builder-ui-dialog')
-    .assert.containsText('.indicator-builder-ui-dialog .ui-dialog-titlebar > span', 'Average True Range')
+    .click('.indicator-dialog .view > .types:first-of-type .display_name')
+    .assert.visible('.indicator.view')
+    .assert.containsText('.header-bar[rv-show="route.value | contains \'indicatorBuilder\'"]', 'Average True Range')
     // Apply indicator
-    .click('.indicator-builder-ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:first-of-type')
+    .click('.indicator.view .action_btn > a:first-of-type')
     .waitForElementPresent('div[role="dialog"] .webtrader-dialog .chartOptions > .table > .row > .cell .countBubl[rv-text="indicatorsCount"]')
     //Check indicator count is as expected
     .waitForSeriesPresent('div[role=\'dialog\'] .webtrader-dialog .chartSubContainer', 'ATR (14)')
     .assert.containsText('div[role="dialog"] .webtrader-dialog .chartOptions > .table > .row > .cell .countBubl[rv-text="indicatorsCount"]', '1')
     .click('div[role="dialog"] .webtrader-dialog .chartOptions_button span[data-balloon="Indicators"]')
-    .waitForElementPresent('.indicator-dialog')
-    .assert.containsText('.indicator-dialog .current > .table > .row > .cell > .table > .row:first-of-type > .cell > span', "Average True Range");
+    .assert.visible('.indicator-dialog')
+    .assert.cssClassNotPresent('.indicator-dialog [rv-on-click=\"route.update | bind \'active\'\"]', 'disabled')
+    .execute(() => {
+      $('.indicator-dialog div[rv-on-click="route.update | bind \'active\'"] span').click();
+    })
+    .assert.visible('.indicator-dialog .view[rv-show="route.value | eq \'active\'"]')
+    .assert.containsText('.indicator-dialog .view[rv-show="route.value | eq \'active\'"] .display_name', "Average True Range");
 };
 
 export const removeIndicator = (browser) => {
   browser
-    .click('.indicator-dialog .current > .table > .row > .cell > .remove')
-    .assert.elementNotPresent('.indicator-dialog .current > .table');
+    .execute(() => {
+      $('.indicator-dialog .view[rv-show="route.value | eq \'active\'"] span.option-2.remove').click();
+    });
   closeDialog(browser, 'indicator-dialog');
   browser
     .assert.hidden('div[role="dialog"] .webtrader-dialog .chartOptions > .table > .row > .cell .countBubl[rv-text="indicatorsCount"]');

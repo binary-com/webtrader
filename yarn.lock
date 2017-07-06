@@ -5849,7 +5849,7 @@ websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
 
-webtrader-charts@^0.2.2:
+webtrader-charts@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.2.3.tgz#6dcad5600b42e1eac5573e1c3850bc915137cbda"
   dependencies:
