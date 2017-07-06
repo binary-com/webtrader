@@ -19,6 +19,7 @@ branches:
   - master
   - development
 before_install:
+- echo $AUTHENTICATION_URL
 - export CHROME_BIN=/usr/bin/google-chrome
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
@@ -34,3 +35,6 @@ after_success:
 - git config --global user.email "arnab@binary.com"
 - git config --global user.name "Arnab Karmakar"
 - yarn deploy-gh-pages
+env:
+  global:
+    secure: goteFSsKqd543KHKyZ/nVrQakmzsK+b4/VuZ9I6nQDy/j9DdAbRelp+hxpg0qAf3LZn0yjp2naVX/eoI0naktJDfPDmtObnwHrU9nFaekTknsw33egylHjcCCWx54GVA6e9sjmaQchKq3/qsTeVYLVtPYMPvd49nr44JkfQcjY4FiCvv80qx+TDve6jPJdaRRpg5sVpojpBWJi4Dfg38LzwuKGAJ+uN/uIeHOO94i1DN+plUQYYt8jD8aq1/Vc04h5tWnFwxiIZh/4DTy0E1Czd3mxfhRLNFA7JsFWNbuFi8Bi/pFbVczRBDNuPk0c/zjXnGWWE8rprLRvJ7oASyH6PCtC5KIi07fXCjgvO4tMqfy2MpAVziIKzP4iVQv+ojC904Tjlva1I5Cb+cZCWUfnpeZhwzkJoHGKjBYaAV7VRom/OvkZhlwNniSYlc6o9f3lsAo8RoQDPPvciQk6jG4zvIsGYln2AgBIwPwbsLIqLEr4s/4S873/koG2GcOJUhf3h0P+PlmKEkv6GYAmsHbqL4ECsfcgo/XfXMPB/1GRmudPjLgwdDVO+aMZdEm300KNdQ1eubSsgtK7BBtd2z3hC1Ho4R9UcjqwJhy9YM7LleEU05wDMiEbNJ2c33mpOvv2UYqhp9bLnRitglscU9VKIpx1tOFQkCau+ktkV1Uxs=
