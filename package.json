@@ -8,6 +8,7 @@
     "npm": ">=3.0"
   },
   "devDependencies": {
+    "assert": "^1.4.1",
     "babel-core": "^6.10.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-modules-amd": "^6.18.0",
@@ -47,6 +48,7 @@
     "grunt-text-replace": "^0.4.0",
     "lodash": "^4.17.4",
     "nightwatch": "^0.9.15",
+    "nightwatch-html-reporter": "^2.0.2",
     "node-sass": "^3.10.0",
     "selenium-download": "^2.0.10",
     "serve-static": "^1.12.2",
@@ -64,7 +66,7 @@
     "minor-rel": "grunt bump:minor",
     "patch-rel": "grunt bump:patch",
     "postinstall": "bower install && node nightwatch.conf.BASIC.js",
-    "test": "nightwatch --local --config nightwatch.conf.BASIC.js",
+    "test": "nightwatch --local --config nightwatch.conf.BASIC.js && nightwatch-html-reporter -d ./reports -o index.html",
     "test-browserstack": "nightwatch --config nightwatch.conf.BASIC.js --env browserstack"
   },
   "repository": {

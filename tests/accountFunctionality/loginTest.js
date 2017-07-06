@@ -1,5 +1,17 @@
+import assert from 'assert';
+import head from 'lodash/head';
+
 export default {
   login: (browser) => {
+
+    let accountId = browser.globals.auth_url.split('&');
+    assert.notEqual(accountId, null, 'No account info found');
+    assert.notEqual(accountId, undefined, 'No account info found');
+    assert.notEqual(accountId.length, 0, 'Incorrect account info');
+    accountId = head(accountId).replace('/?acct1=', '');
+    assert.notEqual(accountId, null, 'No account info found');
+    assert.notEqual(accountId, undefined, 'No account info found');
+
     browser
       .click('.login button')
       .waitForElementVisible('.oauth-dialog')
@@ -18,9 +30,10 @@ export default {
       //Check account credentials
       .click('.top-nav-menu .windows .closeAll')
       .assert.containsText('.main-account .account-type', 'Virtual Account')
-      .assert.containsText('.account .main-account .account-id', 'VRTC1418840')
+      .assert.containsText('.account .main-account .account-id', accountId)
       //Check login dropdown
       .click('.main-account')
-      .assert.visible('#all-accounts-top')
+      .assert.visible('#all-accounts-top');
+
   }
 }
