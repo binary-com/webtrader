@@ -4,8 +4,6 @@ cache:
   yarn: true
   directories:
     - node_modules
-matrix:
-  fast_finish: true
 language: node_js
 sudo: required
 dist: trusty
