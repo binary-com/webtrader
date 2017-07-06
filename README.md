@@ -99,18 +99,10 @@ To run tests locally:
 ```
 yarn test
 ```
-To run tests on *BrowserStack*:
-- Run: `yarn test-browserstack`
 
-> **Note to developers:** Please add a file `test-config.js` in project root with the following contents.
-Make sure to replace `username`, `key`, `{acct-1}`, `{token-1-value}`.
-If you want all tests to pass, user's email address should be tied to two account(Needed to test the switch feature)
+> **Note to developers:** Add following with your values (user should have one virtual and real account for all tests to pass)
 ```
-module.exports = {
-   BROWSERSTACK_USERNAME: 'username', //Optional
-   BROWSERSTACK_KEY: 'key', //Optional
-   AUTHENTICATION_URL: '/?acct1={acct-1}&token1={token-1-value}' //Required
-  }
+        $ export AUTHENTICATION_URL="</?acct1=<acct1>&token1=<token1>&acct1=<acct1>&token2=<token2>"
 ```
 ### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
