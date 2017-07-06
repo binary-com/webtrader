@@ -18,6 +18,7 @@ if (~process.argv.indexOf('--local') && fs.existsSync('./test-config'))
 /**
  * Set URL based on travis branch
  */
+console.log("----------------"+process.env.AUTHENTICATION_URL);
 const url = 'http://localhost:3000';/*process.env.TRAVIS_BRANCH === 'master' ? 'https://webtrader.binary.com' :
   process.env.TRAVIS_BRANCH === 'development' || ~process.argv.indexOf('browserstack') ?
     'https://webtrader.binary.com/beta' : 'http://localhost:3000';*/
