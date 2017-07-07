@@ -1,7 +1,9 @@
 require('babel-core/register');
 
-const SCREENSHOT_PATH = "./screenshots/";
+const SCREENSHOT_PATH = "./reports/screenshots/";
 const BINPATH = './node_modules/nightwatch/bin/';
+
+console.log(111, process.env);
 
 /**
  * Set URL based on travis branch
@@ -9,7 +11,7 @@ const BINPATH = './node_modules/nightwatch/bin/';
 const url = process.env.TRAVIS_BRANCH === 'master' ? 
   'https://webtrader.binary.com' :
     process.env.TRAVIS_BRANCH === 'development' ?
-      'https://webtrader.binary.com/beta' : 'http://localhost:3000';
+      'https://webtrader.binary.com/beta' : 'http://127.0.0.1:3000';
 
 // we use a nightwatch.conf.js file so we can include comments and helper functions
 module.exports = {
