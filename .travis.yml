@@ -1,22 +1,30 @@
 git:
   depth: 1
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - bower_components
 matrix:
   fast_finish: true
 language: node_js
 node_js:
 - '6'
+dist: trusty
 notifications:
   slack: binary-group:xEVrYY0QGz7fbwJqi4LMWbBS
+  email:
+      - arnab@binary.com
+      - apoorv@binary.com
 branches:
   only:
   - master
   - development
-before_script:
+before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 - sleep 3
-before_install: yarn
+- yarn
 install: yarn test
 after_success:
 - git config --global user.email "arnab@binary.com"
