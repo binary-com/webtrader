@@ -11,7 +11,7 @@ export default {
     accountId = head(accountId).replace('acct1=', '');
     assert.notEqual(accountId, null, 'No account info found');
     assert.notEqual(accountId, undefined, 'No account info found');
-    console.log(`${browser.globals.url}/?${browser.globals.auth_url}`);
+
     browser
       .click('.login button')
       .waitForElementVisible('.oauth-dialog')
