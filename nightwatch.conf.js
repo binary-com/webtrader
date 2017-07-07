@@ -3,7 +3,7 @@ require('babel-core/register');
 const SCREENSHOT_PATH = "./reports/screenshots/";
 const BINPATH = './node_modules/nightwatch/bin/';
 
-console.log(111, process.env);
+console.log(111, ~process.argv);
 
 /**
  * Set URL based on travis branch
