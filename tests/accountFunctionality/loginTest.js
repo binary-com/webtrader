@@ -8,10 +8,10 @@ export default {
     assert.notEqual(accountId, null, 'No account info found');
     assert.notEqual(accountId, undefined, 'No account info found');
     assert.notEqual(accountId.length, 0, 'Incorrect account info');
-    accountId = head(accountId).replace('/?acct1=', '');
+    accountId = head(accountId).replace('acct1=', '');
     assert.notEqual(accountId, null, 'No account info found');
     assert.notEqual(accountId, undefined, 'No account info found');
-
+    console.log(`${browser.globals.url}/?${browser.globals.auth_url}`);
     browser
       .click('.login button')
       .waitForElementVisible('.oauth-dialog')
@@ -19,7 +19,7 @@ export default {
       //Navigate to oauth.binary.com
       .assert.urlContains('oauth.binary.com')
       //Login
-      .url(browser.globals.url + browser.globals.auth_url)
+      .url(`${browser.globals.url}/?${browser.globals.auth_url}`)
       .waitForElementVisible('body')
       .waitForElementNotVisible('.sk-spinner-container')
       //Check if logged in
