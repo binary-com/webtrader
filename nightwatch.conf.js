@@ -3,18 +3,6 @@ require('babel-core/register');
 const SCREENSHOT_PATH = "./reports/screenshots/";
 const BINPATH = './node_modules/nightwatch/bin/';
 
-let config = undefined;
-
-if (~process.argv.indexOf('--local') && fs.existsSync('./test-config'))
-  config = require('./test-config');
-/**
- * For local testing create a file named test-config.js in root of project. It should have the following values:
- module.exports = {
-   BROWSERSTACK_USERNAME: 'username', //Optional
-   BROWSERSTACK_KEY: 'key', //Optional
-   AUTHENTICATION_URL: '/?acct1={acct-1}&token1={token-1-value}' //Required
-  }
- */
 /**
  * Set URL based on travis branch
  */
@@ -43,12 +31,12 @@ module.exports = {
       "filter": "tests/\*/\*.test.js",
       "screenshots": {
         "enabled": true, // if you want to keep screenshots
-        "path": './screenshots', // save screenshots here
+        "path": './reports/screenshots', // save screenshots here
         "on_failure": true
       },
       "globals": {
         "url": url,
-        "auth_url": config ? config.AUTHENTICATION_URL : process.env.AUTHENTICATION_URL,
+        "auth_url": process.env.AUTHENTICATION_URL,
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 500
       },
@@ -58,6 +46,7 @@ module.exports = {
         "javascriptEnabled": true // turn off to test progressive enhancement
       }
     },
+    /*
     "browserstack": {
       selenium: {
         "start_process": false,
@@ -66,14 +55,14 @@ module.exports = {
       },
       "globals": {
         "url": url,
-        "auth_url": config ? config.AUTHENTICATION_URL : process.env.AUTHENTICATION_URL,
+        "auth_url": process.env.AUTHENTICATION_URL,
         "env": 'browserstack',
         "waitForConditionTimeout": 20000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 1000
       },
       desiredCapabilities: {
-        'browserstack.user': config ? config.BROWSERSTACK_USERNAME : process.env.BROWSERSTACK_USERNAME,
-        'browserstack.key': config ? config.BROWSERSTACK_KEY : process.env.BROWSERSTACK_KEY,
+        'browserstack.user': process.env.BROWSERSTACK_USERNAME,
+        'browserstack.key': process.env.BROWSERSTACK_KEY,
         'browser': 'chrome',
         'browser_version': '58.0',
         'os': 'Windows',
@@ -81,7 +70,7 @@ module.exports = {
       },
       'selenium_host': 'hub-cloud.browserstack.com',
       'selenium_port': 80
-    }
+    }*/
   }
 }
 /**
