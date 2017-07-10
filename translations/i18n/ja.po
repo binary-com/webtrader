@@ -873,7 +873,7 @@ msgid "Chart template"
 msgstr "チャートテンプレート"
 
 msgid "Chart type"
-msgstr "チャートタイプ"
+msgstr "チャートの種類"
 
 msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
 msgstr "市場価格が平均価格よりも上値で終了するか？下値で終了するか？を予測されたい場合は、Asianアップをご選択ください"
@@ -1485,7 +1485,7 @@ msgid "Help"
 msgstr "ヘルプ"
 
 msgid "High"
-msgstr "HIGH"
+msgstr "高値"
 
 msgid "High Barrier"
 msgstr "高限バリア"
@@ -2154,7 +2154,7 @@ msgid "Only numbers, letters, hyphens are allowed"
 msgstr "数字、文字、ハイフンのみご利用いただけます"
 
 msgid "Open"
-msgstr "Open"
+msgstr "始値"
 
 msgid "Open Account"
 msgstr "口座開設"
@@ -2787,7 +2787,7 @@ msgid "Sunday"
 msgstr "日曜日"
 
 msgid "Table"
-msgstr "高値/安値"
+msgstr "歩み値"
 
 msgid "Take early profits"
 msgstr "期限前にトレードを売却"
@@ -2823,7 +2823,7 @@ msgid "Template name already exists"
 msgstr "このテンプレート名は既に存在しています"
 
 msgid "Terms"
-msgstr "各種規約"
+msgstr "利用規約"
 
 msgid "Tertiary"
 msgstr "第三"
@@ -3332,7 +3332,7 @@ msgid "Upgrade to a Real Account"
 msgstr "リアル口座へアップグレード"
 
 msgid "Upload template"
-msgstr "テンプレートをアップデート"
+msgstr "テンプレートをアップロード"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr "Upside/Downside Gap Three Methods（CDLXSIDEGAP3METHODS）"
