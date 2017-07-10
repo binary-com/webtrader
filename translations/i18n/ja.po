@@ -209,7 +209,7 @@ msgid "10"
 msgstr "10"
 
 msgid "10 Minutes"
-msgstr "10分足"
+msgstr "10分"
 
 msgid "10m"
 msgstr "10分"
