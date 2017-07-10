@@ -188,7 +188,7 @@ msgid "1"
 msgstr "1"
 
 msgid "1 Day"
-msgstr "1日"
+msgstr "日足"
 
 msgid "1 Hour"
 msgstr "1時間"
@@ -197,7 +197,7 @@ msgid "1 Minute"
 msgstr "1分"
 
 msgid "1 Tick"
-msgstr "1 Tick"
+msgstr "1 ティック"
 
 msgid "1 million transactions/day"
 msgstr "1日に100万を超える取引が行われています"
@@ -239,7 +239,7 @@ msgid "1t"
 msgstr "1テック"
 
 msgid "2"
-msgstr "2時間"
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2時間"
