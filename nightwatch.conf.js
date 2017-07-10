@@ -46,31 +46,6 @@ module.exports = {
         "javascriptEnabled": true // turn off to test progressive enhancement
       }
     },
-    /*
-    "browserstack": {
-      selenium: {
-        "start_process": false,
-        "host": "hub-cloud.browserstack.com",
-        "port": 80
-      },
-      "globals": {
-        "url": url,
-        "auth_url": process.env.AUTHENTICATION_URL,
-        "env": 'browserstack',
-        "waitForConditionTimeout": 20000, // sometimes internet is slow so wait.
-        "waitForConditionPollInterval": 1000
-      },
-      desiredCapabilities: {
-        'browserstack.user': process.env.BROWSERSTACK_USERNAME,
-        'browserstack.key': process.env.BROWSERSTACK_KEY,
-        'browser': 'chrome',
-        'browser_version': '58.0',
-        'os': 'Windows',
-        'os_version': '10'
-      },
-      'selenium_host': 'hub-cloud.browserstack.com',
-      'selenium_port': 80
-    }*/
   }
 }
 /**
