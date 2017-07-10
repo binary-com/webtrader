@@ -27,7 +27,6 @@ before_install:
 - yarn
 install:
 - yarn build-all
-#- yarn test #disable test for now(lot of issues with selenium server)
 after_success:
 - git config --global user.email "arnab@binary.com"
 - git config --global user.name "Arnab Karmakar"
