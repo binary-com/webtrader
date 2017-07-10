@@ -209,7 +209,7 @@ msgid "10"
 msgstr "10"
 
 msgid "10 Minutes"
-msgstr "10分"
+msgstr "10分足"
 
 msgid "10m"
 msgstr "10分"
@@ -218,7 +218,7 @@ msgid "15"
 msgstr "15"
 
 msgid "15 Minutes"
-msgstr "15分"
+msgstr "15分足"
 
 msgid "15m"
 msgstr "15分"
@@ -242,10 +242,10 @@ msgid "2"
 msgstr "2"
 
 msgid "2 Hours"
-msgstr "2時間"
+msgstr "2時間足"
 
 msgid "2 Minutes"
-msgstr "2分"
+msgstr "2分足"
 
 msgid "2-way pricing"
 msgstr "2ウェイ・プライス"
@@ -293,13 +293,13 @@ msgid "3"
 msgstr "3"
 
 msgid "3 Minutes"
-msgstr "3分"
+msgstr "3分足"
 
 msgid "30"
 msgstr "30"
 
 msgid "30 Minutes"
-msgstr "30分"
+msgstr "30分足"
 
 msgid "30-day limit on losses"
 msgstr "30日間の損失制限"
@@ -317,7 +317,7 @@ msgid "4"
 msgstr "4時間"
 
 msgid "4 Hours"
-msgstr "4時間"
+msgstr "4時間足"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "過去12ヶ月で40以上のお取引"
@@ -329,7 +329,7 @@ msgid "5"
 msgstr "5"
 
 msgid "5 Minutes"
-msgstr "5分"
+msgstr "5分足"
 
 msgid "5m"
 msgstr "5分"
@@ -347,7 +347,7 @@ msgid "8"
 msgstr "8"
 
 msgid "8 Hours"
-msgstr "8時間"
+msgstr "8時間足"
 
 msgid "8h"
 msgstr "8時間"
@@ -1524,7 +1524,7 @@ msgid "Horizontal line"
 msgstr "水平線"
 
 msgid "Hours"
-msgstr "時間"
+msgstr "時間足"
 
 msgid "How do I fund my account?"
 msgstr "どうやって口座に入金できますか？"
@@ -1980,7 +1980,7 @@ msgid "Minus the agent's commission"
 msgstr "決済サービスの手数料を引く"
 
 msgid "Minutes"
-msgstr "分"
+msgstr "分足"
 
 msgid "Miss"
 msgstr "Miss"
