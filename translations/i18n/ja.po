@@ -2682,13 +2682,13 @@ msgid "Standard withdrawal"
 msgstr "スタンダード出金"
 
 msgid "Start Time"
-msgstr "取引時刻"
+msgstr "開始開始時刻"
 
 msgid "Start Trading"
 msgstr "取引を始める"
 
 msgid "Start time"
-msgstr "取引時刻"
+msgstr "開始時刻"
 
 msgid "State/province/region"
 msgstr "都道府県名"
@@ -3121,16 +3121,16 @@ msgid "Thursday"
 msgstr "木曜日"
 
 msgid "Tick"
-msgstr "Tick"
+msgstr "ティック"
 
 msgid "Tick Trade app"
 msgstr "Tickトレードアプリ"
 
 msgid "Tick {row.number}"
-msgstr "Tick {row.number}"
+msgstr "ティック {row.number}"
 
 msgid "Ticks"
-msgstr "Tick"
+msgstr "ティック"
 
 msgid "Tile"
 msgstr "タイル表示"
