@@ -1215,7 +1215,7 @@ msgid "Download SVG"
 msgstr "SVGでダウンロード"
 
 msgid "Download SVG vector image"
-msgstr "SVGでダウンロード"
+msgstr "SVGベクターでダウンロード"
 
 msgid "Download as"
 msgstr "ダウンロード"
