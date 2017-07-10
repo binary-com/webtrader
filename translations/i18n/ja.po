@@ -474,13 +474,13 @@ msgid "Action"
 msgstr "売買"
 
 msgid "Add comparisons"
-msgstr "比較チャート追加"
+msgstr "比較チャートを追加"
 
 msgid "Add indicator"
 msgstr "指標を追加（英語表示のみ）"
 
 msgid "Add/Remove comparisons"
-msgstr "比較の追加/削除"
+msgstr "比較チャートの追加/削除"
 
 msgid "Add/Remove indicators"
 msgstr "指標の追加/削除"
@@ -945,7 +945,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
 msgid "Close"
-msgstr "閉じる"
+msgstr "終値"
 
 msgid "Close all"
 msgstr "全て閉じる"
@@ -1860,7 +1860,7 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr ""
 
 msgid "Low"
-msgstr "LOW"
+msgstr "安値"
 
 msgid "Low Barrier"
 msgstr "下限バリア"
@@ -3695,7 +3695,7 @@ msgid "minutes"
 msgstr "分"
 
 msgid "next tick"
-msgstr "次のTick"
+msgstr "次のティック"
 
 msgid "oauth"
 msgstr "oauth"
