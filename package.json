@@ -65,8 +65,7 @@
     "major-rel": "grunt bump:major",
     "minor-rel": "grunt bump:minor",
     "patch-rel": "grunt bump:patch",
-    "postinstall": "bower install && node nightwatch.conf.js",
-    "test": "nightwatch --config nightwatch.conf.js && nightwatch-html-reporter -d ./reports -o index.html"
+    "postinstall": "bower install && node nightwatch.conf.js"
   },
   "repository": {
     "type": "git",
