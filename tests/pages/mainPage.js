@@ -13,7 +13,7 @@ const openMainPage = {
       .click('@closeAll');
   },
   login: function () {
-    this.api.url(`${browser.globals.url}/?${browser.globals.auth_url}`);
+    this.api.url(`${this.api.globals.url}/?${this.api.globals.auth_url}`);
     return this
       .waitForElementVisible('body')
       .waitForElementNotVisible('@spinner')

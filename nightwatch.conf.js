@@ -17,18 +17,17 @@ module.exports = {
   "page_objects_path": './tests/pages',
   "custom_commands_path": './tests/custom_commands',
 
-  "selenium": { // downloaded by selenium-download module (see readme)
-      "start_process": true, // tells nightwatch to start/stop the selenium process
-      "server_path": "./node_modules/nightwatch/bin/selenium.jar",
-      "host": "127.0.0.1",
-      "port": 4444, // standard selenium port
-      "cli_args": { // chrome driver is downloaded by selenium-download (see readme)
-        "webdriver.chrome.driver": "node_modules/nightwatch/bin/chromedriver"
-      }
-  },
-
   "test_settings": {
     "default": {
+      "selenium": { // downloaded by selenium-download module (see readme)
+        "start_process": true, // tells nightwatch to start/stop the selenium process
+        "server_path": "./node_modules/nightwatch/bin/selenium.jar",
+        "host": "127.0.0.1",
+        "port": 4444, // standard selenium port
+        "cli_args": { // chromedriver is downloaded by selenium-download (see readme)
+          "webdriver.chrome.driver": "./node_modules/nightwatch/bin/chromedriver"
+        }
+      },
       "filter": "tests/\*/\*.test.js",
       "screenshots": {
         "enabled": true, // if you want to keep screenshots
@@ -41,17 +40,42 @@ module.exports = {
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 500
       },
-      "desiredCapabilities": { // use chrome as the default browser for tests
+      "desiredCapabilities": { // use Chrome as the default browser for tests
         "browserName": "chrome",
         "acceptSslCerts": true,
         "javascriptEnabled": true // turn off to test progressive enhancement
       }
     },
+    /*
+    "browserstack": {
+      selenium: {
+        "start_process": false,
+        "host": "hub-cloud.browserstack.com",
+        "port": 80
+      },
+      "globals": {
+        "url": url,
+        "auth_url": process.env.AUTHENTICATION_URL,
+        "env": 'browserstack',
+        "waitForConditionTimeout": 20000, // sometimes internet is slow so wait.
+        "waitForConditionPollInterval": 1000
+      },
+      desiredCapabilities: {
+        'browserstack.user': process.env.BROWSERSTACK_USERNAME,
+        'browserstack.key': process.env.BROWSERSTACK_KEY,
+        'browser': 'chrome',
+        'browser_version': '58.0',
+        'os': 'Windows',
+        'os_version': '10'
+      },
+      'selenium_host': 'hub-cloud.browserstack.com',
+      'selenium_port': 80
+    }*/
   }
 }
 /**
  * selenium-download does exactly what it's name suggests;
- * downloads (or updates) the version of Selenium (& chrome driver)
+ * downloads (or updates) the version of Selenium (& chromedriver)
  * on your localhost where it will be used by Nightwatch.
  /the following code checks for the existence of `selenium.jar` before trying to run our tests.
  */
@@ -60,7 +84,7 @@ require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
   if (err || !stat || stat.size < 1) {
     require('selenium-download').ensure(BINPATH, function (error) {
       if (error) throw new Error(error); // no point continuing so exit!
-      console.log('✔ Selenium & chrome driver downloaded to:', BINPATH);
+      console.log('✔ Selenium & Chromedriver downloaded to:', BINPATH);
     });
   }
 });
