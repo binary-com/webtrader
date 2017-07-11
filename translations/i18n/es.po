@@ -212,7 +212,7 @@ msgid "10 Minutes"
 msgstr "10 Minutos"
 
 msgid "10m"
-msgstr "10m"
+msgstr "10min"
 
 msgid "15"
 msgstr "15"
@@ -221,7 +221,7 @@ msgid "15 Minutes"
 msgstr "15 Minutos"
 
 msgid "15m"
-msgstr "15m"
+msgstr "15min"
 
 msgid "1999"
 msgstr "1999"
@@ -233,7 +233,7 @@ msgid "1h"
 msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1min"
 
 msgid "1t"
 msgstr "1t"
