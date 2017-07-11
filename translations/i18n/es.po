@@ -149,13 +149,13 @@ msgid "- trade Binary.com's proprietary volatility indices"
 msgstr ""
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "-Opere todos los pares importantes de FX"
 
 msgid "- trade all major FX pairs, around the clock"
-msgstr ""
+msgstr "-Opere todos los pares importantes de FX, a toda hora"
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "- Opere todo los índices bursátiles mundiales importantes"
 
 msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
 msgstr ""
