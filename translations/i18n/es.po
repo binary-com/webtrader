@@ -161,10 +161,10 @@ msgid "- trade currencies, indices and commodities in rising, falling, sideways,
 msgstr ""
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "-Opere materias primas importantes como oro y petróleo"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "-arriba/abajo, toque/sin toque, queda dentro/sale fuera"
 
 msgid "- we challenge you to find better returns on any competing website"
 msgstr ""
