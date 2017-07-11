@@ -167,16 +167,16 @@ msgid "- up/down, touch/no-touch, stays in/goes out"
 msgstr "-arriba/abajo, toque/sin toque, queda dentro/sale fuera"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr ""
+msgstr "-Le retamos a que encuentre mejor rentabilidad en cualquier sitio web de la competencia"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Obtenga las mismas ganancias proporcionales en apuestas de cualquier valor"
 
 msgid "- you know from the start what you will win or lose"
-msgstr ""
+msgstr "- Sabrá desde el principio lo que ganará o perderá"
 
 msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees or commissions"
-msgstr ""
+msgstr "-Nunca tendrá llamadas de margen, riesgo de disparidad, costos por deslizamiento, tarifas ni comisiones ocultas"
 
 msgid "0-1 year"
 msgstr "0-1 año"
@@ -197,10 +197,10 @@ msgid "1 Minute"
 msgstr "1 Minuto"
 
 msgid "1 Tick"
-msgstr ""
+msgstr "1 Tick(t)"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1 millón de transacciones por día(d)"
 
 msgid "1-2 years"
 msgstr "1-2 años"
@@ -212,7 +212,7 @@ msgid "10 Minutes"
 msgstr "10 Minutos"
 
 msgid "10m"
-msgstr ""
+msgstr "10m"
 
 msgid "15"
 msgstr "15"
@@ -221,25 +221,25 @@ msgid "15 Minutes"
 msgstr "15 Minutos"
 
 msgid "15m"
-msgstr ""
+msgstr "15m"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1d"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
 msgstr ""
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 Horas"
@@ -251,28 +251,28 @@ msgid "2-way pricing"
 msgstr ""
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
 msgstr ""
