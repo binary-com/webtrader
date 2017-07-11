@@ -116,7 +116,7 @@ msgid "- open an account in minutes"
 msgstr "-Abra una cuenta en minutos"
 
 msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr "-abra, agregue o retire fondos de su cuenta en minutos, las 24 horas del día"
+msgstr "-abra, deposite o retire fondos de su cuenta en minutos, las 24 horas del día"
 
 msgid "- predict if the market will end higher or lower than a price target"
 msgstr "-Prediga si el valor de mercado será mayor o menor a un precio objetivo al cierre"
@@ -131,16 +131,16 @@ msgid "- predict if the market will touch or not touch a price target"
 msgstr "-Prediga si el mercado tocará o no un precio objetivo"
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "-Venda sus operaciones a largo plazo a precios de mercado antes de que expiren"
 
 msgid "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr ""
+msgstr "- Opere siguiendo sus corazonadas o utilice análisis técnico o fundamental"
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "-Comience a operar a partir de solo $5"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "-Opere 24/7, incluso los fines de semana"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr ""
