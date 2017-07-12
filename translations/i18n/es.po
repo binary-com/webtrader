@@ -158,7 +158,7 @@ msgid "- trade all major worldwide stock indices"
 msgstr "- Opere todo los índices bursátiles mundiales importantes"
 
 msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
-msgstr ""
+msgstr "-Opere divisas, índices bursátiles y materias primas en mercados al alza, a la baja, laterales, tranquilos y volátiles"
 
 msgid "- trade major commodities such as gold and oil"
 msgstr "-Opere materias primas importantes como oro y petróleo"
