@@ -6073,9 +6073,9 @@ websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
 
-webtrader-charts@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.2.5.tgz#93100325eadfc7b99897e36bab2818fc6b65bf87"
+webtrader-charts@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.3.2.tgz#be8a3442362a2f7765d30a397460ca2102bb69bb"
   dependencies:
     datatables.net-dt "^1.10.15"
     imports-loader "^0.7.1"
