@@ -362,16 +362,16 @@ msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Aver
 msgstr "Una media móvil suavizada es algo así como una mezcla entre una media móvil simple y una media móvil exponencial, solo que con un periodo aplicado más largo"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr ""
+msgstr "Un Trompo (spinning top) es una vela alcista o bajista con un cuerpo pequeño. El largo de las sombras de su parte superior e inferior puede variar. Al igual que una vela doji, representa un punto de indecisión en que coinciden compradores y vendedores"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
-msgstr ""
+msgstr "Un binario \"Queda dentro\" se paga si el mercado permanece entre (sin tocar) el límite superior e inferior (AMBOS) durante todo el período establecido. Un binario \"Sale\" se paga si el mercado alcanza el límite superior o el inferior en cualquier momento durante el período establecido"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "Un patrón de velas bajista que consiste en tres velas que han demostrado tener las siguientes características: la primera barra es una vela blanca grande ubicada en una tendencia alcista; la del medio, una vela de cuerpo pequeño (roja o blanca) que cierra sobre la primera vela blanca; y la última, una vela roja grande que abre por debajo de la vela del medio y cierra cerca del centro del cuerpo de la primera vela"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr ""
+msgstr "Un patrón de velas bajista que se usa para predecir la reversión de la tendencia alcista actual. Este patrón consiste en tres velas de cuerpo largo consecutivas que han cerrado en un valor menor al del día anterior, en la que cada sesión se abre dentro del cuerpo de la vela anterior"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
 msgstr ""
