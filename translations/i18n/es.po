@@ -116,31 +116,31 @@ msgid "- open an account in minutes"
 msgstr "-Abra una cuenta en minutos"
 
 msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr ""
+msgstr "-abra, deposite o retire fondos de su cuenta en minutos, las 24 horas del día"
 
 msgid "- predict if the market will end higher or lower than a price target"
-msgstr ""
+msgstr "-Prediga si el valor de mercado será mayor o menor a un precio objetivo al cierre"
 
 msgid "- predict if the market will rise or fall from its current level"
 msgstr ""
 
 msgid "- predict if the market will stay inside two price targets, or end between or outside them"
-msgstr ""
+msgstr "-Prediga si el mercado se mantendrá dentro de dos valores objetivos o cerrará entre o fuera de ellos"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr ""
+msgstr "-Prediga si el mercado tocará o no un precio objetivo"
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "-Venda sus operaciones a largo plazo a precios de mercado antes de que expiren"
 
 msgid "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr ""
+msgstr "- Opere siguiendo sus corazonadas o utilice análisis técnico o fundamental"
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "-Comience a operar a partir de solo $5"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "-Opere 24/7, incluso los fines de semana"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr ""
@@ -149,34 +149,34 @@ msgid "- trade Binary.com's proprietary volatility indices"
 msgstr ""
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "-Opere todos los pares importantes de FX"
 
 msgid "- trade all major FX pairs, around the clock"
-msgstr ""
+msgstr "-Opere todos los pares importantes de FX, a toda hora"
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "- Opere todo los índices bursátiles mundiales importantes"
 
 msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
 msgstr ""
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "-Opere materias primas importantes como oro y petróleo"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "-arriba/abajo, toque/sin toque, queda dentro/sale fuera"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr ""
+msgstr "-Le retamos a que encuentre mejor rentabilidad en cualquier sitio web de la competencia"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Obtenga las mismas ganancias proporcionales en apuestas de cualquier valor"
 
 msgid "- you know from the start what you will win or lose"
-msgstr ""
+msgstr "- Sabrá desde el principio lo que ganará o perderá"
 
 msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees or commissions"
-msgstr ""
+msgstr "-Nunca tendrá llamadas de margen, riesgo de disparidad, costos por deslizamiento, tarifas ni comisiones ocultas"
 
 msgid "0-1 year"
 msgstr "0-1 año"
@@ -197,10 +197,10 @@ msgid "1 Minute"
 msgstr "1 Minuto"
 
 msgid "1 Tick"
-msgstr ""
+msgstr "1 Tick(t)"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1 millón de transacciones por día(d)"
 
 msgid "1-2 years"
 msgstr "1-2 años"
@@ -212,7 +212,7 @@ msgid "10 Minutes"
 msgstr "10 Minutos"
 
 msgid "10m"
-msgstr ""
+msgstr "10min"
 
 msgid "15"
 msgstr "15"
@@ -221,25 +221,25 @@ msgid "15 Minutes"
 msgstr "15 Minutos"
 
 msgid "15m"
-msgstr ""
+msgstr "15min"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1d"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1min"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 Horas"
@@ -251,28 +251,28 @@ msgid "2-way pricing"
 msgstr ""
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
 msgstr ""

@@ -188,7 +188,7 @@ msgid "1"
 msgstr "1"
 
 msgid "1 Day"
-msgstr "1日"
+msgstr "日足"
 
 msgid "1 Hour"
 msgstr "1時間"
@@ -197,7 +197,7 @@ msgid "1 Minute"
 msgstr "1分"
 
 msgid "1 Tick"
-msgstr "1 Tick"
+msgstr "1 ティック"
 
 msgid "1 million transactions/day"
 msgstr "1日に100万を超える取引が行われています"
@@ -239,7 +239,7 @@ msgid "1t"
 msgstr "1テック"
 
 msgid "2"
-msgstr "2時間"
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2時間"
@@ -474,13 +474,13 @@ msgid "Action"
 msgstr "売買"
 
 msgid "Add comparisons"
-msgstr "比較チャート追加"
+msgstr "比較チャートを追加"
 
 msgid "Add indicator"
 msgstr "指標を追加（英語表示のみ）"
 
 msgid "Add/Remove comparisons"
-msgstr "比較の追加/削除"
+msgstr "比較チャートの追加/削除"
 
 msgid "Add/Remove indicators"
 msgstr "指標の追加/削除"
@@ -873,7 +873,7 @@ msgid "Chart template"
 msgstr "チャートテンプレート"
 
 msgid "Chart type"
-msgstr "チャートタイプ"
+msgstr "チャートの種類"
 
 msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
 msgstr "市場価格が平均価格よりも上値で終了するか？下値で終了するか？を予測されたい場合は、Asianアップをご選択ください"
@@ -945,7 +945,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
 msgid "Close"
-msgstr "閉じる"
+msgstr "終値"
 
 msgid "Close all"
 msgstr "全て閉じる"
@@ -1215,7 +1215,7 @@ msgid "Download SVG"
 msgstr "SVGでダウンロード"
 
 msgid "Download SVG vector image"
-msgstr "SVGでダウンロード"
+msgstr "SVGベクターでダウンロード"
 
 msgid "Download as"
 msgstr "ダウンロード"
@@ -1485,7 +1485,7 @@ msgid "Help"
 msgstr "ヘルプ"
 
 msgid "High"
-msgstr "HIGH"
+msgstr "高値"
 
 msgid "High Barrier"
 msgstr "高限バリア"
@@ -1578,22 +1578,22 @@ msgid "In April"
 msgstr "4月に"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
-msgstr ""
+msgstr "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
-msgstr ""
+msgstr "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
 msgstr "1999年10月、Regent Marketsは香港のファンドマネジメント企業のRegent Pacific Groupより2億USDの投資を受けました。"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
-msgstr ""
+msgstr "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
-msgstr ""
+msgstr "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
-msgstr ""
+msgstr "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
 msgstr "香港のヘッジファンド会社でファンドマネージャーとして勤務していたジョン・イヴス氏が、デリバティブ商品を一般投資家に分かり易く、求め易い形で提供するため、小規模の投資額で固定オッズ形式の取引ができるシステム、メソッド及びアルゴリズムを開発。ジョン・イヴス氏は、全てのデリバティブ取引に対応できるシンプルなシステムを形成、固定オッズ取引、そしてあらゆるトレーダーに小額で行えるトレード機会を目指す。この革新により、大規模なバイナリーオプションの取引を実現。"
@@ -1677,7 +1677,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "他の支払い方法で同じ資金の入金はできますか？"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr ""
+msgstr "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "お客さまは保有しているポジションを公正な価格でいつでも転売することができます。"
@@ -1722,10 +1722,10 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "Kicking – bull/bear determined by the longer marubozu（CDLKICKINGBYLENGTH）"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr ""
+msgstr "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr ""
+msgstr "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
 
 msgid "Known risks"
 msgstr "既知のリスク"
@@ -1758,7 +1758,9 @@ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ire
 msgstr "マルタ、英国、マン島、アイルランド、日本では、監督機関による監査を受けながら発行ライセンスを保持。"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
-msgstr ""
+msgstr "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise\n"
+" \n"
+"Context | Edit Context"
 
 msgid "Line"
 msgstr "ライン"
@@ -1845,22 +1847,22 @@ msgid "Long Line Candle (CDLLONGLINE)"
 msgstr "長い線のロウソク足（CDLLONGLINE）"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
-msgstr ""
+msgstr "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 
 msgid "Long-term action"
 msgstr "長期間取引"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
-msgstr ""
+msgstr "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
 
 msgid "Look for a tall black candle with a long lower shadow to appear in a downward price trend. The second day should be similar to the first day, but smaller and with a higher low. The last day is a black marubozu that squeezes inside the high-low range of the prior day"
-msgstr ""
+msgstr "Look for a tall black candle with a long lower shadow to appear in a downward price trend. The second day should be similar to the first day, but smaller and with a higher low. The last day is a black marubozu that squeezes inside the high-low range of the prior day"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
-msgstr ""
+msgstr "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 
 msgid "Low"
-msgstr "LOW"
+msgstr "安値"
 
 msgid "Low Barrier"
 msgstr "下限バリア"
@@ -1878,7 +1880,7 @@ msgid "Lower"
 msgstr "LOW"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr ""
+msgstr "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
 
 msgid "MENA FFXPO Award"
 msgstr "MENA FFXPO 賞を受賞"
@@ -2154,7 +2156,7 @@ msgid "Only numbers, letters, hyphens are allowed"
 msgstr "数字、文字、ハイフンのみご利用いただけます"
 
 msgid "Open"
-msgstr "Open"
+msgstr "始値"
 
 msgid "Open Account"
 msgstr "口座開設"
@@ -2208,7 +2210,7 @@ msgid "Over 90 staff and contractors worldwide"
 msgstr "世界中で90人を超えるスタッフと請負業者"
 
 msgid "Overlap Studies"
-msgstr "復習"
+msgstr "オーバーレイ分析"
 
 msgid "PDF"
 msgstr "PDF"
@@ -2364,13 +2366,13 @@ msgid "Price Transformation"
 msgstr "価格変換"
 
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
-msgstr ""
+msgstr "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 
 msgid "Price the trade"
 msgstr "トレード価格"
 
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
-msgstr ""
+msgstr "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
 
 msgid "Primary"
 msgstr "主要"
@@ -2631,7 +2633,7 @@ msgid "Show"
 msgstr "表示"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
-msgstr ""
+msgstr "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 
 msgid "Simple Moving Average (SMA)"
 msgstr "単純移動平均（SMA）"
@@ -2673,7 +2675,7 @@ msgid "Standard Deviation (STDDEV)"
 msgstr "標準偏差（STDDEV）"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
-msgstr ""
+msgstr "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
 
 msgid "Standard methods"
 msgstr "標準方法"
@@ -2682,13 +2684,13 @@ msgid "Standard withdrawal"
 msgstr "スタンダード出金"
 
 msgid "Start Time"
-msgstr "取引時刻"
+msgstr "開始開始時刻"
 
 msgid "Start Trading"
 msgstr "取引を始める"
 
 msgid "Start time"
-msgstr "取引時刻"
+msgstr "開始時刻"
 
 msgid "State/province/region"
 msgstr "都道府県名"
@@ -2787,7 +2789,7 @@ msgid "Sunday"
 msgstr "日曜日"
 
 msgid "Table"
-msgstr "高値/安値"
+msgstr "歩み値"
 
 msgid "Take early profits"
 msgstr "期限前にトレードを売却"
@@ -2823,7 +2825,7 @@ msgid "Template name already exists"
 msgstr "このテンプレート名は既に存在しています"
 
 msgid "Terms"
-msgstr "各種規約"
+msgstr "利用規約"
 
 msgid "Tertiary"
 msgstr "第三"
@@ -2832,34 +2834,34 @@ msgid "The"
 msgstr "　"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
-msgstr ""
+msgstr "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 
 msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
-msgstr ""
+msgstr "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
 
 msgid "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength"
 msgstr "アベレージ・ダイレクショナル・ムーブメント・インデックス（ADX）は1978年に J. Welles Wilderによって開発されました。金融商品ADXの価格シリーズのトレンドの強さを0から100の範囲で示します。一般的に、ADXは20以下の数値のトレンドの弱さと40を超えるトレンドの強さを読み取ります。"
 
 msgid "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
-msgstr ""
+msgstr "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
 
 msgid "The Awesome Oscillator is an indicator used to measure market momentum. AO calculates the difference of a 34 Period and 5 Period Simple Moving Averages. The Simple Moving Averages that are used are not calculated using closing price but rather each bar's midpoints. AO is generally used to affirm trends or to anticipate possible reversals"
-msgstr ""
+msgstr "The Awesome Oscillator is an indicator used to measure market momentum. AO calculates the difference of a 34 Period and 5 Period Simple Moving Averages. The Simple Moving Averages that are used are not calculated using closing price but rather each bar's midpoints. AO is generally used to affirm trends or to anticipate possible reversals"
 
 msgid "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
-msgstr ""
+msgstr "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
 
 msgid "The Bearish On-Neck Pattern occurs after a downtrend when a long black day is followed by a long white day that gaps down at the open and closes below the close of the black day"
-msgstr ""
+msgstr "The Bearish On-Neck Pattern occurs after a downtrend when a long black day is followed by a long white day that gaps down at the open and closes below the close of the black day"
 
 msgid "The Bullish Three Star appears after a downtrend and it consists of three consecutive Doji, in which the second Doji gaps below the other two Doji. The Bearish Three Star appears after a uptrend and it consists of three consecutive Doji, in which the second Doji gaps above the other two Doji"
-msgstr ""
+msgstr "The Bullish Three Star appears after a downtrend and it consists of three consecutive Doji, in which the second Doji gaps below the other two Doji. The Bearish Three Star appears after a uptrend and it consists of three consecutive Doji, in which the second Doji gaps above the other two Doji"
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
-msgstr ""
+msgstr "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
-msgstr ""
+msgstr "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
 
 msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions"
 msgstr "コモディティ・チャネル・インデックス（CCI）は新しい傾向を特定したり、極端な条件に陥った際に警告を通知するために使用される汎用性の高いインジケーターです。"
@@ -2892,73 +2894,73 @@ msgid "The Hanging Man formation, just like the Hammer, is created when the open
 msgstr "首吊り線（Hanging Man）は、ハンマーのように始値、終値、高値がほぼ同価格であり、少なくともボディの2倍以上はあるかなり長い下ヒゲがあります。"
 
 msgid "The Hull Moving Average solves the age old dilemma of making a moving average more responsive to current price activity whilst maintaining curve smoothness. In fact the HMA almost eliminates lag altogether and manages to improve smoothing at the same time"
-msgstr ""
+msgstr "The Hull Moving Average solves the age old dilemma of making a moving average more responsive to current price activity whilst maintaining curve smoothness. In fact the HMA almost eliminates lag altogether and manages to improve smoothing at the same time"
 
 msgid "The Inverted Hammer occurs mainly at the bottom of downtrends when the open, low, and close are roughly the same price. Also, there is a long upper shadow, which should be at least twice the length of the real body"
-msgstr ""
+msgstr "The Inverted Hammer occurs mainly at the bottom of downtrends when the open, low, and close are roughly the same price. Also, there is a long upper shadow, which should be at least twice the length of the real body"
 
 msgid "The Kaufman's Adaptive Moving Average (KAMA) Developed by Perry Kaufman, is a moving average designed to account for market noise or volatility. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
-msgstr ""
+msgstr "The Kaufman's Adaptive Moving Average (KAMA) Developed by Perry Kaufman, is a moving average designed to account for market noise or volatility. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
 
 msgid "The Least Squares Moving Average first calculates a least squares regression line over the preceding time periods, then projects it forward to the current period. In essence, it calculates what the value would be if the regression line continued"
-msgstr ""
+msgstr "The Least Squares Moving Average first calculates a least squares regression line over the preceding time periods, then projects it forward to the current period. In essence, it calculates what the value would be if the regression line continued"
 
 msgid "The MESA Adaptive Moving Average is developed by John Ehlers of Mesa Software. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
-msgstr ""
+msgstr "The MESA Adaptive Moving Average is developed by John Ehlers of Mesa Software. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
 
 msgid "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
-msgstr ""
+msgstr "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
 
 msgid "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average"
-msgstr ""
+msgstr "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average"
 
 msgid "The Price Rate-of-Change (ROC) indicator displays the difference between the current price and the price x-time periods ago. The difference can be displayed in either points or as a percentage"
-msgstr ""
+msgstr "The Price Rate-of-Change (ROC) indicator displays the difference between the current price and the price x-time periods ago. The difference can be displayed in either points or as a percentage"
 
 msgid "The Rate of Change Percentage (ROCP) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. ROCP does not express as a percentage. This indicator is also commonly known as a momentum indicator"
-msgstr ""
+msgstr "The Rate of Change Percentage (ROCP) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. ROCP does not express as a percentage. This indicator is also commonly known as a momentum indicator"
 
 msgid "The Rate of Change Rate (ROCR) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. This indicator is also commonly known as a momentum indicator"
-msgstr ""
+msgstr "The Rate of Change Rate (ROCR) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. This indicator is also commonly known as a momentum indicator"
 
 msgid "The Relative Strength Index (RSI) was published by J. Welles Wilder. The current price is normalized as a percentage between 0 and 100. The name of this oscillator is misleading because it does not compare the instrument relative to another instrument or set of instruments, but rather represents the current price relative to other recent pieces within the selected lookback window length"
-msgstr ""
+msgstr "The Relative Strength Index (RSI) was published by J. Welles Wilder. The current price is normalized as a percentage between 0 and 100. The name of this oscillator is misleading because it does not compare the instrument relative to another instrument or set of instruments, but rather represents the current price relative to other recent pieces within the selected lookback window length"
 
 msgid "The Rickshaw Man has unusually tall upper and lower shadows, a body in which the opening and closing prices are about the same, and the body is near the middle of the candlestick"
 msgstr "「無法松の一生」は非常に長い上ヒゲと下ヒゲがあるものをいいます。始値と終値がほぼ同じであり、ボディがローソクの中心にあります。"
 
 msgid "The Shooting formation is created when the open, low, and close are roughly the same price. There is a long upper shadow, generally defined as at least twice the length of the real body"
-msgstr ""
+msgstr "The Shooting formation is created when the open, low, and close are roughly the same price. There is a long upper shadow, generally defined as at least twice the length of the real body"
 
 msgid "The Simple Moving Average (SMA) is calculated by adding the price of an instrument over a number of time periods and then dividing the sum by the number of time periods. The SMA is basically the average price of the given time period, with equal weighting given to the price of each period"
-msgstr ""
+msgstr "The Simple Moving Average (SMA) is calculated by adding the price of an instrument over a number of time periods and then dividing the sum by the number of time periods. The SMA is basically the average price of the given time period, with equal weighting given to the price of each period"
 
 msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar Chande and Stanley Kroll, StochRSI is an oscillator that measures the level of RSI relative to its high-low range over a set time period. StochRSI applies the Stochastics formula to RSI values, instead of price values. This makes it an indicator of an indicator. The result is an oscillator that fluctuates between 0 and 1"
-msgstr ""
+msgstr "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar Chande and Stanley Kroll, StochRSI is an oscillator that measures the level of RSI relative to its high-low range over a set time period. StochRSI applies the Stochastics formula to RSI values, instead of price values. This makes it an indicator of an indicator. The result is an oscillator that fluctuates between 0 and 1"
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
-msgstr ""
+msgstr "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
-msgstr ""
+msgstr "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
-msgstr ""
+msgstr "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
 
 msgid "The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers a moving average with better smoothing then traditional exponential moving average"
-msgstr ""
+msgstr "The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers a moving average with better smoothing then traditional exponential moving average"
 
 msgid "The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a moving average with less lag then traditional exponential moving average"
-msgstr ""
+msgstr "The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a moving average with less lag then traditional exponential moving average"
 
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
-msgstr ""
+msgstr "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
-msgstr ""
+msgstr "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 
 msgid "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
-msgstr ""
+msgstr "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
 msgstr "バイナリー取引でのバリアとは、取引対象に設定する価格ターゲットのことです。その価格ターゲットに対して、価格が下回る、上回る、上下の価格ターゲットの間に留まるか否かを選択することができます。"
@@ -2967,10 +2969,10 @@ msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr "選択されたバリアによってポジションとペイアウト条件が決まります"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
-msgstr ""
+msgstr "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
-msgstr ""
+msgstr "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "当社は運用口座とは別に銀行口座に顧客の資金を保持しています。破産の場合には、当社の資産の一部から支払われます。これは顧客資金分離への賭博委員会の要件を満たしています。"
@@ -2997,19 +2999,19 @@ msgid "The first step is to open an account. You can apply online in just a few 
 msgstr "最初のステップは口座開設です。オンラインで申込ができます。"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
-msgstr ""
+msgstr "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 
 msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
-msgstr ""
+msgstr "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
 
 msgid "The indicator is designed for use on a monthly time scale. It is the sum of a 14-month rate of change and 11-month rate of change, smoothed by a 10-period weighted moving average"
-msgstr ""
+msgstr "The indicator is designed for use on a monthly time scale. It is the sum of a 14-month rate of change and 11-month rate of change, smoothed by a 10-period weighted moving average"
 
 msgid "The market exit price is the price in effect at the end of the contract period"
 msgstr "市場出口価格とは、トレードの終了期間に影響を及ぼす価格のことです。"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
-msgstr ""
+msgstr "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
 msgstr "この特許取得により、Regent Marketsはバイナリー取引におけるパイオニアと認識され、より一層の進化を遂げました。"
@@ -3018,7 +3020,7 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "ペイアウトとは、条件が満たされた際に支払われる金額のことです。"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr ""
+msgstr "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
 msgstr "世界の金融市場において\n"
@@ -3043,7 +3045,7 @@ msgid "The sum of price over selected period"
 msgstr "選択期間の合計"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
-msgstr ""
+msgstr "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
 msgstr "ボラリティ指数は、様々なリアル市場の状況をシミュレートし、取引や戦略に慣れるための理想的なプラットフォームです。これらインデックスはボラティリティとドリフトに依存しており、高ボラティリティ、低ボラティリティ、強気傾向、弱気傾向などのシナリオを試すのに役立ちます。"
@@ -3064,7 +3066,7 @@ msgid "These are trades where the trader selects a price target, and predicts th
 msgstr "ターゲット価格を設定し、取引対象の価格が取引終了時までにターゲット価格に触れることを予測するトレードタイプのことです。"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
-msgstr ""
+msgstr "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 
 msgid "This field is required"
 msgstr "この項目は必須です"
@@ -3079,13 +3081,13 @@ msgid "This is the current price at which an underlying can be bought or sold at
 msgstr "特定の時間にて、とある取引対象を売買できる現在の価格のことです。"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
-msgstr ""
+msgstr "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "三前進ホワイトソルジャー（CDL3WHITESOLDIERS）"
@@ -3103,10 +3105,10 @@ msgid "Three Stars In The South (CDL3STARSSOUTH)"
 msgstr "南三ツ星（CDL3STARSSOUTH）"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
-msgstr ""
+msgstr "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
 
 msgid "Three white days occur. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer"
-msgstr ""
+msgstr "Three white days occur. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer"
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
 msgstr "スリーライン・ストライク（CDL3LINESTRIKE）"
@@ -3121,16 +3123,16 @@ msgid "Thursday"
 msgstr "木曜日"
 
 msgid "Tick"
-msgstr "Tick"
+msgstr "ティック"
 
 msgid "Tick Trade app"
 msgstr "Tickトレードアプリ"
 
 msgid "Tick {row.number}"
-msgstr "Tick {row.number}"
+msgstr "ティック {row.number}"
 
 msgid "Ticks"
-msgstr "Tick"
+msgstr "ティック"
 
 msgid "Tile"
 msgstr "タイル表示"
@@ -3308,7 +3310,7 @@ msgid "Unique 3 River (CDLUNIQUE3RIVER)"
 msgstr "三川（CDLUNIQUE3RIVER）"
 
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
-msgstr ""
+msgstr "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 
 msgid "Up to 100% returns on rise/fall trades"
 msgstr "ラダートレードのリターン率は最高100%"
@@ -3332,7 +3334,7 @@ msgid "Upgrade to a Real Account"
 msgstr "リアル口座へアップグレード"
 
 msgid "Upload template"
-msgstr "テンプレートをアップデート"
+msgstr "テンプレートをアップロード"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr "Upside/Downside Gap Three Methods（CDLXSIDEGAP3METHODS）"
@@ -3392,7 +3394,7 @@ msgid "Volatility indices"
 msgstr "ボラティリティインデックス"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
-msgstr ""
+msgstr "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "当社はライセンスにより、当社が保持しているお客さまの口座の資金に何か起きた場合、及び支払不能になった場合にどの資金が保護されるかその範囲をお知らせする必要があります。"
@@ -3578,7 +3580,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "「ドラッグ&ドロップ」操作で簡単に自動売買ロボットを作成することができます"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 
 msgid "apostrophe (') are allowed"
 msgstr "アポストロフィ (') もご利用いただけます"
@@ -3695,7 +3697,7 @@ msgid "minutes"
 msgstr "分"
 
 msgid "next tick"
-msgstr "次のTick"
+msgstr "次のティック"
 
 msgid "oauth"
 msgstr "oauth"

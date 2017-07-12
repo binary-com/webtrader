@@ -1,31 +1,38 @@
 git:
   depth: 1
-cache: yarn
+cache:
+  yarn: true
+  directories:
+  - node_modules
+  - bower_components
 matrix:
   fast_finish: true
 language: node_js
 node_js:
-- '6'
+- '7'
+dist: trusty
 notifications:
+  slack: binary-group:xEVrYY0QGz7fbwJqi4LMWbBS
   email:
   - arnab@binary.com
+  - apoorv@binary.com
 branches:
   only:
   - master
   - development
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
-before_install: yarn
-install: yarn test
+before_install:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+- yarn
+install:
+- yarn build-all
+#- yarn test #disable test for now(lot of issues with selenium server)
 after_success:
-  - git config --global user.email "arnab@binary.com"
-  - git config --global user.name "Arnab Karmakar"
-  - yarn deploy-gh-pages
+- git config --global user.email "arnab@binary.com"
+- git config --global user.name "Arnab Karmakar"
+- yarn deploy-gh-pages
 env:
   global:
   - secure: ggLvaJoXEKPh7VJPnCmC5BMukaF3INrhVZwVyXJwHd0UgeUWLpwgEpL9X0GSVnEXPy3wpGkuTgjgh3U3ckCHCs9ZcMVq8nA9KYmEkOBzqnebYxqsL+RjdlrUngrLuXLas3FG84HUnx/8v3ux4/bXMfIGAzrdyMeNLvVioNsHDucfeFHzgjzCsUxU/L04lZVTNHEwdfthe6cA8BYR7KDT7zTaq06B0qFPMXMXOilw3/dbwLNsnHmiwtdjQwC6H7ohcPCSvfANDR+bLqH/o+7CFTVg9cv6401SDP2CYKjvu523Cbkr9UpCXYSRTSV3MQErLq3lKL87Zj//+TB3MnUJBccD56L6rEodQ5XJLGogT5lZDEnDOqd/kXqQIhyNLfALAW/0kBTRujr1BvNhogy7A/3jaJwZBYGDbh9wuOJNDxaldCLza8xEqBN09Bs3gEEhnUyI+45EHch9bNM+mxFOSAtqp3T+2ylCOuM5OJJlBgxrKTpNuu7w9JcSoJ+oSON7LgO5b1A0X6it3ca/bQ2gYR6nA3F020XsAzss0SO7yMNgVbB0PGY279RFyPn4UWkHterIUu/OAHg4OwDMaV00OkomP0Gb9+3FFYFjG8wUQLAPoeJVtDqb2DNFNa/ZEojN7f1EtiyqfLWKMcCu+E8Gb8Vl1R135+NGBINzeLirKM8=
-  - secure: cgB4Y5+JY8fgIQbfHXvAPVgiSQzLYa6BgqunJV8ssrHt1Lzi1A918QEXOLs1h+rsc44urFSvOCmScQJBwHoz6t4FsYZ8RWBtXdJTakNc72bFQ1j86rtbHg5g9ADSUI2Vo7HX4CVg0mv3Ypqwd42FRiOb7HhUf7gCre/0wAa3z/C0X6V4PzgM4vH16+7DUPyq1FdQNfO2/6xhA/IfGqbjnEop6rzj11UU3wmB1XLnApwH19CgbQSzXsJZ43/LNUo3XBJj3U2m22R8qSUpqIPi3/yMuc0Qz/iP8rCWNwQN60WEXaz7zioWaoeA2wk92pj5TKqSg8AS8mezAkDwkSez6sX4fPMBNp4zlvNRFSgXlbDu07neID+Vbifq9yKxVLOQAgp7IQQquvJYwA7S+9/xeUUYjJ1c4o0z4BfXlt4PrDvDBsTf4ZG073DZA+jMmVSk/HbQgEKJp7lspu6aOoS07KESTWq1O1pnkADoYfzks+VzCKPfLR/AQBUHffb//5ID+Em6Q6d69gUNH3BVXVI6x9/cTxEFXUzKw11w0ZH+qfuAdjV/zh9r2TBp/M91Ysm4vAJnDZO3qbRwJEzRUK7SS+yIu6AfV6VLLma1pcR+W1IrqJUDpQzuiRrQSQ8p9iMX0MutdH4fF466LHqHj3eG2ZoGHdKAPSKcvAvjI5W1SPg=
-notifications:
-    slack: binary-group:xEVrYY0QGz7fbwJqi4LMWbBS
+  - secure: NbMR6KXIq4EeKEG7xSGUYgQTHc4enq1AVtIM4iNbwLTofUEKvnWAkYzkontfzu2/XiPxg5rKr2rJh3ZcSybrPV+gyKu/DuCEU1bHIVywaO2p+eSvV0XDvrMLuFqOEDNJXiMVg/l80xLUIHhCwhTVUqJz85mgOqm610pZRE0rotWmLwr21S2F57tSx6F+TK0uEN/xSr8mbCM+zcLg5vZ8+CjF87ZLZRP8yPejPOT+7hBJ0LinAUdsEN8wpY4lOL2bmEVUYgFjIeZC/OZ8xxTbOSFi9QcaRgDMxSsZ6ejdafUXlrVheCb+kVEF1f2WAAMHFlJfP5zyh86U7spnvaerfT8Nv2gjEJvb6JKVN7fU4emJGiELxDK3MGTMlOmNRdmdkqqoEmzZ/R8pzjf2yOLJ7NDNxRlnubM8SwW2KtToF6nJZ6kHjr5hCQsYpdf33DIfqSgWpDSQ7RK80Shvzi9BDH2RzV9SHM88JEbUu0W1pzftFCvFq1zEhVs1HQKnNpJKBWpp0/cNe6vwB8e7s5nxhC1Oupkpz3kRc41JJA5bUqlnC99w68KvyB/4wrk0+2pnFjvNEhfWhXJsNgK3Hwys33M4kQV3OkulnYmgrUspdymrtClOFBCARLPncAp7S2sBfRPjgAJO0NQiuz27akTEYnewrMIhedkLjhDjANBfznU=
