@@ -12,7 +12,7 @@ const check_currency_async = () => new Promise((resolve, reject) => {
     var win = windows.createBlankWindow($html, {
         dialogClass: "dialog-confirm",
         width: 500,
-        height: 'auto',
+        height: 210,
         resizable: false,
         collapsable: false,
         minimizable: false,

@@ -1,7 +1,7 @@
-.real-dialog {
-    padding: 0 10px !important;
-    background: white !important;
-    overflow: hidden !important;
+.ui-dialog .ui-dialog-content.real-dialog {
+    padding: 0 10px;
+    background: white;
+    overflow: hidden;
 }
 
 .real-dialog span.validation {
@@ -21,7 +21,6 @@
 
 .real-dialog select + .ui-selectmenu-button {
     margin-bottom: 10px;
-    border-radius: 5px !important;
     font-size: 14px;
     z-index: 100;
 }
@@ -30,7 +29,7 @@
 /* for jq select menu */
 
 .real-dialog-ul {
-    font-size: 14px !important;
+    font-size: 14px;
     max-height: 100px;
 }
 
@@ -91,15 +90,14 @@
 .real-dialog .back-arrow > span {
     display: inline-block;
     position: relative;
-    top: 2px;
 }
 
 .real-dialog .user,
 .real-dialog .financial {
-    height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    overflow-y: auto;
 }
 
 .real-dialog .user label {

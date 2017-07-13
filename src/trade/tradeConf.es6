@@ -11,9 +11,6 @@ import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
 
-require(['websockets/stream_handler']);
-const barsTable = chartingRequestMap.barsTable;
-
 /* rv binder to show tick chart for this confirmation dialog */
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
@@ -206,13 +203,13 @@ export const init = (data, extra, show_callback, hide_callback) => {
          barrier: null,
          message: buy.longcode,
          balance_after: buy.balance_after,
-         buy_price: buy.buy_price,
+         buy_price: (+buy.buy_price).toFixed(isBTC() ? 8 : 2),
          purchase_time: buy.purchase_time,
          start_time: buy.start_time,
          transaction_id: buy.transaction_id,
-         payout: buy.payout,
+         payout: (+buy.payout).toFixed(isBTC() ? 8 : 2),
          currency: extra.currency,
-         potential_profit : buy.payout - buy.buy_price,
+         potential_profit : (buy.payout - buy.buy_price).toFixed(isBTC() ? 8 : 2),
          potential_profit_text : 'Profit'.i18n(),
          show_result: false,
       },
@@ -277,8 +274,8 @@ export const init = (data, extra, show_callback, hide_callback) => {
          lost: 'This contract lost'.i18n()
       }[status];
       if(status === 'lost') {
-         state.buy.potential_profit = -state.buy.buy_price;
-         state.buy.payout = 0;
+         state.buy.potential_profit = (-state.buy.buy_price).toFixed(isBTC() ? 8 : 2);
+         state.buy.payout = (0).toFixed(isBTC() ? 8 : 2);
          state.buy.potential_profit_text = 'Lost';
       }
       if(status === 'won') {

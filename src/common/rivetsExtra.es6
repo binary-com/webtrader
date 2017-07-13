@@ -8,9 +8,8 @@ import rv from 'rivets';
 import moment from 'moment';
 import 'jquery-ui';
 import 'jquery-sparkline';
-import 'ddslick';
 import 'chosen';
-import 'color-picker'
+import 'color-picker';
 
 /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
@@ -19,7 +18,7 @@ rivets._.View.prototype.observe = function (keypath, callback) {
    while ((inx = keypath.indexOf('.')) !== -1) {
       model = model[keypath.substring(0,inx)];
       keypath = keypath.substring(inx + 1);
-   };
+   }
    this.adapters['.'].observe(model, keypath,
       () => callback(model[keypath])
    );
@@ -171,48 +170,6 @@ rv.formatters.debounce = (value, callback, timeout = 250) => {
    return value;
 }
 
-/*************************************  binding *****************************************/
-rv.binders.ddslick = {
-   priority: 101,
-   publishes: true,
-   bind: function (el) {
-      const publish = this.publish,
-         model = this.model,
-         select = $(el);
-      const parent = select.parent();
-      const values = select.find('option').map((inx, opt) => $(opt).val()).get();
-
-      const update = (value) => {
-         const inx = values.indexOf(value);
-
-         parent.find('.dd-select input').val(value);
-         const selected_img = parent.find('img.dd-selected-image');
-         const img = parent.find('img')[inx+1];
-
-         selected_img.attr('src', $(img).attr('src'));
-      }
-
-      el._update = update;
-
-      let model_value = model.value;
-      select.ddslick({
-         imagePosition: "left",
-         data: [],
-         // width: 155,
-         background: "white",
-         onSelected: (data) => {
-            let value = data.selectedData.value
-            value = model_value || value;
-            model_value = null;
-            model.value = value;
-            update(value);
-         }
-      });
-   },
-   unbind: (el) => $(el).ddslick('destroy'),
-   routine: (el, value) => el._update(value)
-};
-
 /* turn current select item into a jquery-ui-selectmenu, update value on change */
 rv.binders.selectmenu = {
    priority: 100,
@@ -221,6 +178,9 @@ rv.binders.selectmenu = {
       const publish = this.publish,
          select = $(el);
       select.selectmenu({
+         classes: {
+           "ui-selectmenu-button": "ui-selectmenu-button ui-state-default"
+         },
          change: () => {
             publish(select.val());
             select.trigger('change');
@@ -258,6 +218,7 @@ rv.binders['is-valid-number'] = {
 
 /* bindar for jqueyr ui selectmenu options */
 rv.binders['selectmenu-*'] = function (el, value) {
+      console.log('Called')
    $(el).selectmenu('option', this.args[0], value);
 }
 /*binder for hidding overflow on selctmenu*/
@@ -594,7 +555,7 @@ const decimalPlaces = (num) => {
 rv.binders['decimal-round'] = {
    priority: 3001,
    routine: (input, places) => {
-      const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000}[places];
+      const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000, '8': 100000000}[places];
       input = $(input);
       input.on('input', () => {
          const prefered_sign = input.attr('prefered-sign') || '';
@@ -682,16 +643,10 @@ const component_twoway_bind = (self, data, keypathes) => {
    }, 0);
 }
 rivets.components['price-spinner'] = {
-   static: ['class', 'min', 'decimals'],
+   static: ['class', 'min'],
    template:
    () => `<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">
                <input rv-class="data.class" type="text" rv-value="data.value" rv-decimal-round="data.decimals | or 5" no-symbol="no-symbol" />
-                 <button rv-on-click="increment" step="1" class="ui-spinner-button ui-spinner-up ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 5px 0 0" tabindex="-1" role="button">
-                   <span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-n">▲</span> </span>
-                 </button>
-                 <button rv-on-click="decrement" step="-1" class="ui-spinner-button ui-spinner-down ui-button ui-widget ui-state-default ui-button-text-only" style="right: 0px;border-radius: 0 0 5px 0" tabindex="-1" role="button">
-                   <span class="ui-button-text"> <span class="ui-icon ui-icon-triangle-1-s">▼</span> </span>
-                 </button>
              </span>`,
    initialize: function(el, data) {
       const decimals = (data.decimals || 2)*1;
@@ -699,25 +654,7 @@ rivets.components['price-spinner'] = {
       component_twoway_bind(this, data, ['data.value']);
 
       return {
-         data: data,
-         increment: (e,scope) => {
-            let value = data.value*1;
-            value = value < 1 ? value + 0.1 : value + 1;
-            if((value | 0) !== value) {
-               value = value.toFixed(decimals);
-            }
-            data.value = value;
-         },
-         decrement: () => {
-            let value = data.value*1;
-            value = value > 1 ? value - 1 : value - 0.1;
-            if((value | 0) !== value) { /* is float */
-               value = value.toFixed(decimals);
-            }
-            if(value > min) {
-               data.value = value;
-            }
-         }
+         data: data
       };
    },
 };

@@ -132,10 +132,11 @@ const initPortfolioWin = () => {
            balance_span && balance_span && balance_span.update(data.balance.balance);
         }
     });
+    const lng = (local_storage.get('i18n') || {value:'en'}).value;
+    const active_symbols = local_storage.get('active_symbols'); 
     /* refresh portfolio when a new contract is added or closed */
     const on_transaction = liveapi.events.on('transaction',(data) => {
         const transaction = data.transaction;
-
         if(transaction.action === 'buy') {
             const view_button = '<button>View</button>'.i18n();
             const row = [
@@ -163,6 +164,7 @@ const initPortfolioWin = () => {
         .then((data) => {
             portfolioWin = windows.createBlankWindow($('<div/>'), {
                 title: 'Portfolio'.i18n(),
+                dialogClass: 'portfolio',
                 width: 700 ,
                 height: 400,
                 'data-authorized': 'true',
@@ -261,7 +263,7 @@ const forget_the_contracts = (contracts) => {
 }
 
 const init_table = async () => {
-    const processing_msg = $('#' + table.attr('id') + '_processing').show();
+    const processing_msg = $('#' + table.attr('id') + '_processing').show();   
     try {
         const data = await liveapi.send({ portfolio: 1 });
         const contracts = (data.portfolio && data.portfolio.contracts);

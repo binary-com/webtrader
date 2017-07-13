@@ -5,6 +5,16 @@
     <fieldset>
         <legend>Financial Information</legend>
         <div class="row">
+            <div class="column-1">Account opening reason</div>
+            <div class="column-2">
+                <select rv-value="financial.account_opening_reason">
+                    <option value="" selected="selected">Please select</option>
+                    <option rv-each-row="financial.account_opening_reason_array" rv-value="row">{row | i18n}</option>
+                </select>
+                <div class="error-msg" rv-show="empty_field | and financial.account_opening_reason | eq '' ">This field is required.</div>
+            </div>
+        </div>
+        <div class="row">
             <div class="column-1">Forex trading experience</div>
             <div class="column-2">
                 <select rv-value="financial.forex_trading_experience">
@@ -132,6 +142,16 @@
                     <option rv-each-row="financial.employment_industry_array" rv-value="row">{row | i18n}</option>
                 </select>
                 <div class="error-msg" rv-show="empty_field | and financial.employment_industry | eq ''">This field is required.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column-1">Account turnover</div>
+            <div class="column-2">
+                <select rv-value="financial.account_turnover">
+                    <option value="" selected="selected">Please select</option>
+                    <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
+                </select>
+                <div class="error-msg" rv-show="empty_field | and financial.account_turnover | eq ''">This field is required.</div>
             </div>
         </div>
         <div class="row">

@@ -21,7 +21,7 @@
         <li rv-each-ele='languages' class="ele.value" rv-class-invisible="lang.value | eq ele.value" rv-on-click='onclick | bind ele.value'>{ele.name}</li>
       </ul>
     </div>
-    <span class="contact-us"><a href="https://www.binary.com/en/contact.html" target="_blank">Contact Us</a></span>
+    <span class="contact-us"><a href="#" rv-on-click='openContactUs'>Contact Us</a></span>
     <span class="time"></span>
 </div>
 <div id="nav-menu" class="dark-blue header">
@@ -52,7 +52,7 @@
                     <li class="resourceIndex"><a href="#" class="assetIndex"><span class="ui-icon ui-icon-list"></span>Asset Index</a></li>
                     <li class="resourceIndex"><a href="#" class="tradingTimes"><span class="ui-icon ui-icon-clock-b"></span>Trading Times</a></li>
                     
-                    <li><a href="#download" class="download"><span class="ui-icon ui-icon-databases"></span>View Historical Data</a></li>
+                    <li><a href="#historical-data" class="historical-data"><span class="ui-icon ui-icon-databases"></span>Historical Data</a></li>
                     <li><a href="#selfexclusion" class="selfexclusion disabled"><span class="ui-icon ui-icon-gears"></span>Self-Exclusion</a></li>
                     <li><a href="#"><span class="ui-icon ui-icon-image"></span>Chart Themes<span class="nav-submenu-caret"></span></a>
                         <ul>

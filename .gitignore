@@ -7,6 +7,7 @@
 dist
 !/lib/*/*/dist
 translations/i18n/json/
+webtrader-charts/
 
 node_modules
 bower_components
@@ -20,3 +21,9 @@ npm-debug.log
 _references.js
 src/.vsdoc/
 jsconfig.json
+
+# Nightwatch files
+screenshots
+reports
+selenium-debug.log
+test-config.js

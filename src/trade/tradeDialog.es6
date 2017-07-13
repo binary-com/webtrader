@@ -327,6 +327,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
+      decimal: /^(BTC|XBT)$/.test(local_storage.get('currency')) ? 8 : 2
     },
     basis: {
       array: ['Payout', 'Stake'],
@@ -380,10 +381,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
       /* computed properties */
       netprofit_: function () {
-        return formatPrice(((this.payout - this.ask_price) || 0).toFixed(2), state.currency.value);
+        return formatPrice(((this.payout - this.ask_price) || 0), state.currency.value);
       },
       payout_: function () {
-        return formatPrice((+this.payout || 0).toFixed(2), state.currency.value);
+        return formatPrice((+this.payout || 0), state.currency.value);
       }
     },
     purchase: {
@@ -410,7 +411,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
              .then(function(data){
                state.currency.value = data.payout_currencies[0];
                state.currency.array = data.payout_currencies;
-             })
+            })
              .catch(function(err) { console.error(err); });
     }
   };
@@ -491,7 +492,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       array = [{ text: 'Now', value: 'now' }];
     }
     var later = (new Date().getTime() + 5*60*1000)/1000; // 5 minute from now
-    _.each(forward_starting_options, function (row) {
+    for(var i = 0; i < forward_starting_options.length; i++){
+      var row = forward_starting_options[i];
       var step = 5 * 60; // 5 minutes step
       var from = Math.ceil(Math.max(later, row.open) / step) * step;
       for (var epoch = from; epoch < row.close; epoch += step) {
@@ -501,7 +503,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][d.getUTCDay()];
         array.push({ text: text, value: epoch });
       }
-    });
+    }
     var options = { value: array[0].value, array: array, visible: true };
     if(_.some(array, {value: state.date_start.value*1})) {
       options.value = state.date_start.value;
@@ -1024,7 +1026,6 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
           symbol: symbol.symbol,
           subscribe: 1,
           granularity: 0,
-          count: 1000, /* this will be for the case that the user opens a the same tick chart later */
           style: 'ticks'
         }).catch(function (err) {
           /* if this contract offers tick trades, prevent user from trading */
@@ -1039,19 +1040,18 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
 
     var state = init_state(available,root,dialog, symbol, contracts_for.spot);
     if(!has_digits) { state.ticks.loading = false; }
-    var view = rv.bind(root[0],state)
+    var view = rv.bind(root[0],state);
     state.categories.update();            // trigger update to init categories_display submenu
 
     dialog.dialog('open');
 
     dialog.update_track = function(template) {
       update_track({symbol: symbol, template: template});
-    }
+    };
     dialog.get_template = get_current_template.bind(undefined, state);
     dialog.set_template = set_current_template.bind(undefined, state);
-    saved_template && (saved_template.name !== undefined)
-                  && dialog.set_template(saved_template);
-    dialog.hide_template_menu = function() { state.template.visible = false; }
+    saved_template && (saved_template.name !== undefined) && dialog.set_template(saved_template);
+    dialog.hide_template_menu = () => { state.template.visible = false; };
     require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
       tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
     });

@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-size: 16px !important;
+    font-size: 16px;
 }
 
 body.rtl-direction { /* for arabic language */
@@ -14,6 +14,7 @@ body.rtl-direction .ltr-direction { /* exception dialogs */
 
 .mainContainer {
     width: 100%;
+    height: 100%;
 }
 
 body.affiliates {
@@ -56,12 +57,12 @@ body > .footer .addiction-warning a:hover {
 
 
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
-  width: 14px !important;
-  height: 14px !important;
+  width: 14px;
+  height: 14px;
 }
 
 .ui-dialog {
-    padding: 0!important;
+    padding: 0;
 }
 
 .ui-dialog.ui-corner-all .ui-corner-all {
@@ -72,7 +73,7 @@ body > .footer .addiction-warning a:hover {
 }
 
 .ui-priority-secondary {
-    opacity: 1!important;
+    opacity: 1;
 }
 
 .ui-state-default,
@@ -84,7 +85,7 @@ body > .footer .addiction-warning a:hover {
     color: #FFFFFF;
 }
 .ui-selectmenu-button span.ui-selectmenu-text {
-  padding-top: 0.2em;
+  padding: 0.2em 0.5em 0 0.5em;
 }
 
 div.ui-tooltip { /* override default jquery ui max tooltip width */
@@ -101,9 +102,7 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
     padding-bottom: 0;
 }
 .ui-dialog-titlebar-buttonpane {
-  height: 14px !important;
-  margin-top: -7px !important;
-  margin-right: 10px!important;
+  margin-right: 10px;
 }
 
 button.ui-button-text-only {
@@ -117,6 +116,23 @@ button.ui-button-text-only .ui-menu {
     border-color: #3F476E;
 }
 
+button.ui-button {
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    text-transform: capitalize;
+    padding: 10px 25px;
+    display: inline-block;
+    font-weight: 400;
+    font-family: inherit;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    border: 0;
+    background: #2E8836;
+    color: #FFF;
+}
+
 .ui-menu {
     z-Index: 1003;
 }
@@ -126,7 +142,7 @@ button.ui-button-text-only .ui-menu {
 /*.sorting_asc,*/
 .dataTable,
 .dataTables_filter {
-    width: 100% !important;
+    width: 100%;
 }
 
 .dataTables_filter label {
@@ -280,21 +296,21 @@ input:focus {
 }
 
 .growl.growl-notice {
-    background: #fef1cf !important;
-    color: black !important;
+    background: #fef1cf;
+    color: black;
 }
 .growl > .growl-close {
   padding-left: 5px;
 }
-#growls { top: 110px !important; }
+#growls.default { top: 110px; }
 
 .growl-error a {
-  color: white !important;
+  color: white;
   text-decoration: underline;
 }
 
 button {
-    outline: 0 !important;
+    outline: 0;
 }
 button.button-disabled,
 button[disabled] {
@@ -346,7 +362,7 @@ button[disabled] {
   border: none;
 }
 .ui-datepicker-prev, .ui-datepicker-next {
-  color: white!important;
+  color: white;
 }
 .ui-datepicker-prev:hover, .ui-datepicker-next:hover{
   opacity: 0.75;
@@ -356,11 +372,11 @@ button[disabled] {
 
 /* override table styles*/
 table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
-  border-bottom: none!important;
+  border-bottom: none;
 }
 
 /* make dropdowns consistent with binary-style */
-select + .ui-selectmenu-button { border-radius: 3px !important;}
+select + .ui-selectmenu-button { border-radius: 3px;}
 
 #doorbell-button  {
     right: -37px;
@@ -377,8 +393,8 @@ select + .ui-selectmenu-button { border-radius: 3px !important;}
 
 #doorbell-error { color: red; }
 #doorbell-form textarea { outline: 0; }
-#doorbell-container legend { font-size: 1em !important; }
-#doorbell-close { opacity: 1 !important; }
+#doorbell-container #doorbell-form legend { font-size: 1em; }
+#doorbell-container #doorbell-close.close { opacity: 1; }
 
 /*hide input buttons*/
 .ui-spinner-button {
@@ -390,8 +406,9 @@ input[type="number"] {
 }
 
 /* jquery ui selectmenu on options hover*/
-.ui-menu-item.ui-state-focus {
+.ui-menu-item.ui-state-focus, .ui-menu-item-wrapper.ui-state-active {
   background: #1e90ff;
+  border: none;
   color: #fff;
 }
 

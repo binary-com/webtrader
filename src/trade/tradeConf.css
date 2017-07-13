@@ -40,7 +40,7 @@
   font-weight: bold;
 }
 .trade-conf .payout-row.spreads-result li {
-  width: auto !important; /* fix for IE broken flexbox implementation */
+  width: auto; /* fix for IE broken flexbox implementation */
 }
 .trade-conf .payout-row li:nth-child(2) {
   border-left: 1px solid #ccc;
@@ -63,11 +63,14 @@
   padding-bottom: 7px;
 }
 
-.trade-conf .view-row {
+.ui-dialog .ui-dialog-content.trade-dialog .trade-conf .view-row {
   margin-top: 40px;
+  height: 40px;
 }
-.trade-conf .view-row .view {
+.ui-dialog .ui-dialog-content.trade-dialog .trade-conf .view-row .view {
     padding-bottom: 3px;
+    margin-top: 2px;
+    height: 100%;
 }
 .trade-conf .view-row .arrow {
   cursor: pointer;

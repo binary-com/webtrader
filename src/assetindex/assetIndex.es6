@@ -17,6 +17,7 @@ export const init = (li) => {
         if (!assetWin) {
             assetWin = windows.createBlankWindow($('<div/>'), {
                 title: 'Asset Index'.i18n(),
+                dialogClass: 'assetIndex',
                 width: 700,
                 height: 400
             });
