@@ -48,6 +48,7 @@
           <span rv-text="table.date_expiry | moment | or '-'"></span>
           <br />
           <span rv-if="table.current_spot_time"
+                rv-show="table.is_sold | not-eq 1"
                 rv-text="table.current_spot_time | moment-humanize table.date_expiry"
                 rv-data-balloon='"remaining"'
                 class="dotted-underline smaller"></span>
