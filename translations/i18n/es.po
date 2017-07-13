@@ -383,7 +383,7 @@ msgid "A binary option is a contract purchased by a trader, which pays a pre-det
 msgstr "Una opción binaria es un contrato comprado por un comerciante, que pagará al inversor un monto predeterminado si su predicción es correcta"
 
 msgid "A binary option is an option with a fixed payout that is determined at the start of the trade. If your prediction is correct, you receive an agreed payout. If not, you lose your initial stake, and no more. The options are called 'binary' because there can be only two outcomes - win or lose"
-msgstr ""
+msgstr "Una opción binaria es una opción con una ganancia fija que se determina al comienzo de la transacción. Si la predicción del inversor es correcta, recibe el pago predeterminado. Si la predicción no es correcta, pierde sólamente la apuesta - su inversión inicial, y no más. Las opciones se llaman ‘binarias’ porque solo pueden haber dos resultados - ganar o perder"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
 msgstr ""
