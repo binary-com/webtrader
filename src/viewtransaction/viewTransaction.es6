@@ -251,6 +251,8 @@ const update_indicative = (data, state) => {
       state.table.is_sold = contract.is_sold;
       state.table.exit_tick = contract.exit_tick;
       state.table.exit_tick_time = contract.exit_tick_time;
+      state.table.date_expiry = contract.date_expiry;
+      state.table.current_spot_time = contract.exit_tick_time;
       state.table.sell_price = contract.sell_price;
       state.table.final_price = contract.sell_price;
       !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
