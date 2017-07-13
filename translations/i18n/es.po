@@ -419,7 +419,7 @@ msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Bet
 msgstr "Un jurado compuesto por líderes de la industria ha premiado BetOnMarkets.com como \"Operador de apuestas financiera del año\" frente a otros dos finalistas. Es una gran victoria para nuestra marca y un reconocimiento de nuestro servicio de clase superior. Diez años después, nos seguimos esforzando para ofrecer lo mejor a nuestros clientes."
 
 msgid "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period"
-msgstr ""
+msgstr "Indicador técnico inventado por Larry Williams, el cual usa el promedio ponderado de tres periodos diferentes para reducir la volatilidad y las señales de transacciones falsas asociadas a otros indicadores que, en general, están basados solo en un periodo de tiempo"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
 msgstr ""
