@@ -100,8 +100,9 @@ const init_state = (root, win) => {
    state.login.login = () => {
       state.login.disabled = true;
       const config = local_storage.get('config');
+      const lang = (local_storage.get('i18n') || {value:"en"}).value;
       const oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
-      window.location =  oauth_url + '?app_id=' + app_id;
+      window.location =  oauth_url + '?app_id=' + app_id + '&l=' +lang;
    }
 
    state.confirm.confirm = () => {
