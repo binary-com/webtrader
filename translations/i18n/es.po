@@ -398,7 +398,7 @@ msgid "A bullish or bearish candle followed by a doji with with a downward or up
 msgstr "Una vela alcista o bajista seguida de una doji con un gap de tendencia alcista o bajista"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr ""
+msgstr "Patrón de velas en el cual una vela grande es seguida por una vela más pequeña cuyo cuerpo se encuentra dentro del rango vertical del cuerpo más grande. En relación con el color de las velas, el patrón harami alcista presenta una tendencia a la baja de velas de color negativo (negras) que envuelven una vela positiva pequeña (blanca), lo que indica una reversión de la tendencia descendente"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
 msgstr ""
