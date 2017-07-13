@@ -389,7 +389,7 @@ msgid "A bullish candlestick pattern that consists of five candles, the first da
 msgstr ""
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "Patrón de velas alcista que consiste en tres velas: la primera barra es una vela roja grande ubicada en una tendencia bajista; la segunda, una vela de cuerpo pequeño (roja o blanca) que cierra debajo de la primera vela roja; y la última, una vela blanca grande que abre por encima de la vela del medio y cierra cerca del centro del cuerpo de la primera vela"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
 msgstr ""
