@@ -386,16 +386,16 @@ msgid "A binary option is an option with a fixed payout that is determined at th
 msgstr "Una opción binaria es una opción con una ganancia fija que se determina al comienzo de la transacción. Si la predicción del inversor es correcta, recibe el pago predeterminado. Si la predicción no es correcta, pierde sólamente la apuesta - su inversión inicial, y no más. Las opciones se llaman ‘binarias’ porque solo pueden haber dos resultados - ganar o perder"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
-msgstr ""
+msgstr "Patrón de velas alcista que consiste en cinco velas: el primer día la vela es larga y blanca; el segundo día, experimenta un gap alcista y es negra. El segundo, tercero y cuarto día las velas tienen cuerpos reales pequeños y siguen un corto patrón a la baja, pero se mantienen dentro de los valores del primer día, mientras que el quinto día consiste en una vela blanca larga que cierra sobre el cierre del primer día"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
 msgstr "Patrón de velas alcista que consiste en tres velas: la primera barra es una vela roja grande ubicada en una tendencia bajista; la segunda, una vela de cuerpo pequeño (roja o blanca) que cierra debajo de la primera vela roja; y la última, una vela blanca grande que abre por encima de la vela del medio y cierra cerca del centro del cuerpo de la primera vela"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "Patrón de velas alcista que consiste en tres velas: la primera barra es una vela roja grande ubicada en una tendencia bajista; la segunda, una vela de cuerpo pequeño (roja o blanca) que cierra debajo de la primera vela roja; y la última, una vela blanca grande que abre por encima de la vela del medio y cierra cerca del centro del cuerpo de la primera vela"
 
 msgid "A bullish or bearish candle followed by a doji with with a downward or uptrend gap"
-msgstr ""
+msgstr "Una vela alcista o bajista seguida de una doji con un gap de tendencia alcista o bajista"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
 msgstr ""
