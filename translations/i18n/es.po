@@ -671,22 +671,22 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Frecuencia de comercio con opciones binarias o de otros derivados financieros"
 
 msgid "Binary trading is flexible"
-msgstr "Operar con opciones binarias es flexible"
+msgstr "El comercio con opciones binarias es flexible"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
-msgstr ""
+msgstr "El comercio con opciones binarias es ideal tanto para inversionistas minoristas como para profesionales del mercado"
 
 msgid "Binary trading is very simple"
-msgstr ""
+msgstr "El comercio con opciones binarias es muy sencillo"
 
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
-msgstr ""
+msgstr "La filial japonesa de Binary, Binary KK tiene una licencia de la KLFB que la habilita como negocio de instrumentos financieros de tipo 1 en Japón"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
-msgstr ""
+msgstr "La filial japonesa de Binary, Binary KK, abre una oficina en Tokio e inicia el proceso de solicitud de las licencias pertinentes"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
-msgstr ""
+msgstr "La filial maltesa de Binary, Binary Investments (Europe) Ltd. recibe una licencia de Servicios de Inversión de categoría 3 de parte de la Autoridad de Servicios Financieros de Malta (Mfsa)"
 
 msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr ""
