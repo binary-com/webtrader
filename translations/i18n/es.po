@@ -467,7 +467,7 @@ msgid "Add indicator"
 msgstr "Añadir indicador"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "Agregar/Quitar comparaciones"
 
 msgid "Add/Remove indicators"
 msgstr ""
@@ -476,25 +476,25 @@ msgid "Add/remove indicators"
 msgstr ""
 
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr ""
 
 msgid "All durations"
-msgstr ""
+msgstr "Todas las duraciones"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "Todas las condiciones de mercado"
 
 msgid "All markets"
-msgstr ""
+msgstr "Todos los mercados"
 
 msgid "All markets, all conditions"
-msgstr ""
+msgstr "Todos los mercados, todas las condiciones"
 
 msgid "All payouts"
-msgstr ""
+msgstr "Todos los pagos"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todas las horas están en GMT (Greenwich Mean Time)"
