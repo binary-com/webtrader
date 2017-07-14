@@ -401,7 +401,7 @@ msgid "A candlestick chart pattern in which a large candlestick is followed by a
 msgstr "Patrón de velas en el cual una vela grande es seguida por una vela más pequeña cuyo cuerpo se encuentra dentro del rango vertical del cuerpo más grande. En relación con el color de las velas, el patrón harami alcista presenta una tendencia a la baja de velas de color negativo (negras) que envuelven una vela positiva pequeña (blanca), lo que indica una reversión de la tendencia descendente"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
-msgstr ""
+msgstr "Una vela con un cuerpo negro largo (línea larga) representa una fuerza bajista en el mercado. El precio de las acciones varió en un rango amplio, abriendo cerca del valor más alto y cerrando cerca del valor más bajo del día. Una vela con un cuerpo blanco largo representa una fuerza alcista en el mercado. El precio de las acciones varió en un rango amplio, abriendo cerca del valor más bajo y cerrando cerca del valor más alto del día"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
 msgstr "Vela con sombra superior e inferior muy larga y un cuerpo real pequeño presente en un gráfico de velas japonesas. Indica que el mercado está perdiendo la tendencia que tenía antes de que apareciera esta vela"
@@ -425,16 +425,16 @@ msgid "A technical momentum indicator that compares a security's closing price t
 msgstr "Indicador técnico de momentum (momento) que compara el precio de cierre de un valor con su rango de precios en un periodo determinado. La sensibilidad de un oscilador a los movimientos del mercado se puede reducir mediante el ajuste del periodo de tiempo o mediante el uso de una media móvil del resultado"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr ""
+msgstr "Patrón técnico de operación en el cual tres velas forman lo que parece ser un sándwich en la pantalla. En este patrón, la vela del medio es de un color opuesto a las velas de ambos lados, las que poseen una banda de precios mayor a la de la vela del medio. Los patrones \"stick sandwich\" pueden ocurrir en tendencias bajistas y alcistas"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
-msgstr ""
+msgstr "Un tick (intervalo) es una fluctuación mínima hacia arriba o abajo en el precio de un mercado"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
 msgstr ""
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr ""
+msgstr "Vela blanca situada en una tendencia de precios al alza, seguida por una doji cuya sombra inferior se mantiene sobre el máximo de la vela anterior. El tercer día consiste en una vela negra con una sombra superior por debajo del mínimo de la doji"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr ""
