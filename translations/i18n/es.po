@@ -143,7 +143,7 @@ msgid "- trade 24/7, even on weekends"
 msgstr "-Opere 24/7, incluso los fines de semana"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr ""
+msgstr "-Opere los índices de volatilidad de Binary.com 24/7"
 
 msgid "- trade Binary.com's proprietary volatility indices"
 msgstr ""
@@ -689,10 +689,10 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "La filial maltesa de Binary, Binary Investments (Europe) Ltd. recibe una licencia de Servicios de Inversión de categoría 3 de parte de la Autoridad de Servicios Financieros de Malta (Mfsa)"
 
 msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
-msgstr ""
+msgstr "La plataforma de Binary realiza en promedio 15 transacciones por segundo, 24/7"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
@@ -701,10 +701,10 @@ msgid "Binary.com Shop introduced"
 msgstr ""
 
 msgid "Binary.com continues to innovate and grow"
-msgstr ""
+msgstr "Binary.com continúa innovando y creciendo"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
-msgstr ""
+msgstr "Binary.com ha ganado una reputación envidiable debido a nuestro compromiso con altos estándares éticos y la calidad de la experiencia comercial que ofrecemos"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
 msgstr ""
