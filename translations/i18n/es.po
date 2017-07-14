@@ -614,7 +614,7 @@ msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Patrón Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
-msgstr ""
+msgstr "Precios cotejados"
 
 msgid "Benefits of binary trading"
 msgstr "Beneficios del comercio binario"
@@ -626,52 +626,52 @@ msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets empieza a funcionar"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr ""
+msgstr "BetOnMarkets.com tiene más de 400.000 clientes en su base de datos y ha alcanzado los $1000 millones de dólares en apenas su decimotercer año de funcionamiento, lo que nos convierte en uno de los líderes en comercio con apuestas de probabilidades fijas"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
-msgstr ""
+msgstr "BetOnMarkets.com aumenta los pagos a 100.000 USD, EUR, GBP y AUD"
 
 msgid "BetOnMarkets.com is successfully rebranded Binary.com"
-msgstr ""
+msgstr "BetOnMarkets.com cambia de nombre a Binary.com de manera exitosa"
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
-msgstr ""
+msgstr "BetOnMarkets.com alcanza un volumen de negocios de mil millones de dólares desde sus inicios en 1999"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
 
 msgid "Binary Bot released"
-msgstr ""
+msgstr "Binary Bot lanzado"
 
 msgid "Binary KK granted Japan license"
-msgstr ""
+msgstr "Binary KK recibe licencia en Japón"
 
 msgid "Binary Trading is simple to learn and to execute"
-msgstr ""
+msgstr "El comercio con opciones binarias es fácil de aprender y ejecutar"
 
 msgid "Binary granted Investment Services license"
-msgstr ""
+msgstr "Binary recibe la licencia de servicios de inversión"
 
 msgid "Binary opens Japan office"
-msgstr ""
+msgstr "Binary abre una oficina en Japón"
 
 msgid "Binary option"
-msgstr ""
+msgstr "Opciones binarias"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opciones binarias u otros derivados financieros"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "Experiencia comercial con opciones binarias o derivados de otros instrumentos financieros"
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "Frecuencia de comercio con opciones binarias o de otros derivados financieros"
 
 msgid "Binary trading is flexible"
-msgstr ""
+msgstr "Operar con opciones binarias es flexible"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
 msgstr ""
