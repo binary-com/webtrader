@@ -584,7 +584,7 @@ msgid "Average True Range (ATR)"
 msgstr "Rango verdadero medio (ATR)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Oscilador Awesome (AO)"
 
 msgid "Back"
 msgstr "Atrás"
@@ -593,10 +593,10 @@ msgid "Back to list"
 msgstr "Volver a la lista"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Equilibrio de poder (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
-msgstr ""
+msgstr "Bancos, fondos de cobertura e inversores profesionales habitualmente comercian con opciones binarias en los mercados de derivados Otc. Muchos profesionales del mercado confían en la plataforma Binary.com para realizar operaciones flexibles de alto volumen"
 
 msgid "Barrier"
 msgstr "Barrera"
