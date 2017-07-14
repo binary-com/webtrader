@@ -818,10 +818,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         state.proposal.error = err.message;
         state.proposal.message = '';
         state.proposal.loading = false;
-        if (err.echo_req && err.echo_req.proposal && err.details) {
-          state.proposal.ask_price = err.details.display_value;
-          state.proposal.message = err.details.longcode;
-        }
         return err;
       });
     /* update last_promise to invalidate previous requests */
