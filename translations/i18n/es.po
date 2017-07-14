@@ -431,13 +431,13 @@ msgid "A tick is the minimum upward or downward movement in the price of a marke
 msgstr "Un tick (intervalo) es una fluctuación mínima hacia arriba o abajo en el precio de un mercado"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
-msgstr ""
+msgstr "Tendencia que consiste en una vela grande seguida por una doji que se ubica dentro de la parte superior e inferior del cuerpo de la vela. Esto indica que la tendencia anterior está por revertirse"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
 msgstr "Vela blanca situada en una tendencia de precios al alza, seguida por una doji cuya sombra inferior se mantiene sobre el máximo de la vela anterior. El tercer día consiste en una vela negra con una sombra superior por debajo del mínimo de la doji"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Abandoned Baby (CDLABANDONEDBABY) (bebé abandonado)"
 
 msgid "Absolute Price Oscillator (APO)"
 msgstr ""
@@ -446,13 +446,13 @@ msgid "Accept"
 msgstr "Aceptar"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accesible desde cualquier navegador en 13 idiomas"
 
 msgid "Account balance"
 msgstr "Saldo de la cuenta"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "Motivo para abrir la cuenta"
 
 msgid "Account turnover"
 msgstr ""
