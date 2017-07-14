@@ -422,7 +422,7 @@ msgid "A technical indicator invented by Larry Williams that uses the weighted a
 msgstr "Indicador técnico inventado por Larry Williams, el cual usa el promedio ponderado de tres periodos diferentes para reducir la volatilidad y las señales de transacciones falsas asociadas a otros indicadores que, en general, están basados solo en un periodo de tiempo"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
-msgstr ""
+msgstr "Indicador técnico de momentum (momento) que compara el precio de cierre de un valor con su rango de precios en un periodo determinado. La sensibilidad de un oscilador a los movimientos del mercado se puede reducir mediante el ajuste del periodo de tiempo o mediante el uso de una media móvil del resultado"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
 msgstr ""
