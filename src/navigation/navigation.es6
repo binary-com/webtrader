@@ -215,7 +215,7 @@ const initLangButton = (root) => {
    state.onclick = (value) => {
       state.confirm.visible = false;
       const lang = _.find(state.languages, {value: value});
-      if(lang.value == state.lang.value)
+      if(lang && state.lang && lang.value == state.lang.value)
          return;
 
       local_storage.set('i18n', {value: lang.value});

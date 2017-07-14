@@ -110,37 +110,37 @@ msgid "- get pricing that is normally reserved for big institutional players"
 msgstr "-Obtenga precios normalmente reservados para jugadores institucionales importantes"
 
 msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions"
-msgstr ""
+msgstr "-Sin \"deslizamiento\", sin \"llamadas de margen\", sin \"stop out\" y sin tarifas ni comisiones ocultas"
 
 msgid "- open an account in minutes"
 msgstr "-Abra una cuenta en minutos"
 
 msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr ""
+msgstr "-abra, deposite o retire fondos de su cuenta en minutos, las 24 horas del día"
 
 msgid "- predict if the market will end higher or lower than a price target"
-msgstr ""
+msgstr "-Prediga si el valor de mercado será mayor o menor a un precio objetivo al cierre"
 
 msgid "- predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "-Prediga si habrá alzas o bajas del nivel actual del mercado"
 
 msgid "- predict if the market will stay inside two price targets, or end between or outside them"
-msgstr ""
+msgstr "-Prediga si el mercado se mantendrá dentro de dos valores objetivos o cerrará entre o fuera de ellos"
 
 msgid "- predict if the market will touch or not touch a price target"
-msgstr ""
+msgstr "-Prediga si el mercado tocará o no un precio objetivo"
 
 msgid "- sell your long-term trades at market prices before they expire"
-msgstr ""
+msgstr "-Venda sus operaciones a largo plazo a precios de mercado antes de que expiren"
 
 msgid "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr ""
+msgstr "- Opere siguiendo sus corazonadas o utilice análisis técnico o fundamental"
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "-Comience a operar a partir de solo $5"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "-Opere 24/7, incluso los fines de semana"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr ""
@@ -149,34 +149,34 @@ msgid "- trade Binary.com's proprietary volatility indices"
 msgstr ""
 
 msgid "- trade all major FX pairs"
-msgstr ""
+msgstr "-Opere todos los pares importantes de FX"
 
 msgid "- trade all major FX pairs, around the clock"
-msgstr ""
+msgstr "-Opere todos los pares importantes de FX, a toda hora"
 
 msgid "- trade all major worldwide stock indices"
-msgstr ""
+msgstr "- Opere todo los índices bursátiles mundiales importantes"
 
 msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
-msgstr ""
+msgstr "-Opere divisas, índices bursátiles y materias primas en mercados al alza, a la baja, laterales, tranquilos y volátiles"
 
 msgid "- trade major commodities such as gold and oil"
-msgstr ""
+msgstr "-Opere materias primas importantes como oro y petróleo"
 
 msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr ""
+msgstr "-arriba/abajo, toque/sin toque, queda dentro/sale fuera"
 
 msgid "- we challenge you to find better returns on any competing website"
-msgstr ""
+msgstr "-Le retamos a que encuentre mejor rentabilidad en cualquier sitio web de la competencia"
 
 msgid "- win the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Obtenga las mismas ganancias proporcionales en apuestas de cualquier valor"
 
 msgid "- you know from the start what you will win or lose"
-msgstr ""
+msgstr "- Sabrá desde el principio lo que ganará o perderá"
 
 msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees or commissions"
-msgstr ""
+msgstr "-Nunca tendrá llamadas de margen, riesgo de disparidad, costos por deslizamiento, tarifas ni comisiones ocultas"
 
 msgid "0-1 year"
 msgstr "0-1 año"
@@ -197,10 +197,10 @@ msgid "1 Minute"
 msgstr "1 Minuto"
 
 msgid "1 Tick"
-msgstr ""
+msgstr "1 Tick(t)"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1 millón de transacciones por día(d)"
 
 msgid "1-2 years"
 msgstr "1-2 años"
@@ -212,7 +212,7 @@ msgid "10 Minutes"
 msgstr "10 Minutos"
 
 msgid "10m"
-msgstr ""
+msgstr "10min"
 
 msgid "15"
 msgstr "15"
@@ -221,25 +221,25 @@ msgid "15 Minutes"
 msgstr "15 Minutos"
 
 msgid "15m"
-msgstr ""
+msgstr "15min"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1d"
 
 msgid "1h"
-msgstr ""
+msgstr "1h"
 
 msgid "1m"
-msgstr ""
+msgstr "1min"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
 msgstr "2 Horas"
@@ -248,55 +248,55 @@ msgid "2 Minutes"
 msgstr "2 Minutos"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "Valorización de contrato en 2 direcciones"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
-msgstr ""
+msgstr "2004"
 
 msgid "2007"
-msgstr ""
+msgstr "2007"
 
 msgid "2008"
-msgstr ""
+msgstr "2008"
 
 msgid "2009"
-msgstr ""
+msgstr "2009"
 
 msgid "2011"
-msgstr ""
+msgstr "2011"
 
 msgid "2012"
-msgstr ""
+msgstr "2012"
 
 msgid "2013"
-msgstr ""
+msgstr "2013"
 
 msgid "2014"
-msgstr ""
+msgstr "2014"
 
 msgid "2015"
-msgstr ""
+msgstr "2015"
 
 msgid "2016"
-msgstr ""
+msgstr "2016"
 
 msgid "2h"
-msgstr ""
+msgstr "2h"
 
 msgid "2m"
-msgstr ""
+msgstr "2min"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 Minutos"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr "30 Minutos"
@@ -308,13 +308,13 @@ msgid "30-day turnover limit"
 msgstr "límite de facturación de 30 días"
 
 msgid "30m"
-msgstr ""
+msgstr "30min"
 
 msgid "3m"
-msgstr ""
+msgstr "3min"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
 msgstr "4 Horas"
@@ -323,16 +323,16 @@ msgid "40 transactions or more in the past 12 months"
 msgstr "40 transacciones o más en los últimos 12 meses"
 
 msgid "4h"
-msgstr ""
+msgstr "4h"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 Minutos"
 
 msgid "5m"
-msgstr ""
+msgstr "5min"
 
 msgid "6-10 transactions in the past 12 months"
 msgstr "6-10 transacciones en los úlitmos 12 meses"
@@ -344,82 +344,82 @@ msgid "7-day turnover limit"
 msgstr "límite de volumen de negocios de 7 días"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
 msgstr "8 Horas"
 
 msgid "8h"
-msgstr ""
+msgstr "8h"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr ""
+msgstr "Un patrón Evening Doji Star consiste en una vela alcista larga, seguida de una vela doji que ha formado un gap sobre esta y por una tercera vela bajista que cierra bien dentro del cuerpo de la primera vela y al hacerlo confirma la reversión. Se le considera un patrón de velas de reversión de precios bajistas marcado"
 
 msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr ""
+msgstr "Una persona expuesta políticamente o PEP es un individuo al que le ha sido encomendada una función pública prominente. Este estatus se extiende a los parientes y socios de esta persona"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
-msgstr ""
+msgstr "Una media móvil suavizada es algo así como una mezcla entre una media móvil simple y una media móvil exponencial, solo que con un periodo aplicado más largo"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr ""
+msgstr "Un Trompo (spinning top) es una vela alcista o bajista con un cuerpo pequeño. El largo de las sombras de su parte superior e inferior puede variar. Al igual que una vela doji, representa un punto de indecisión en que coinciden compradores y vendedores"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
-msgstr ""
+msgstr "Un binario \"Queda dentro\" se paga si el mercado permanece entre (sin tocar) el límite superior e inferior (AMBOS) durante todo el período establecido. Un binario \"Sale\" se paga si el mercado alcanza el límite superior o el inferior en cualquier momento durante el período establecido"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "Un patrón de velas bajista que consiste en tres velas que han demostrado tener las siguientes características: la primera barra es una vela blanca grande ubicada en una tendencia alcista; la del medio, una vela de cuerpo pequeño (roja o blanca) que cierra sobre la primera vela blanca; y la última, una vela roja grande que abre por debajo de la vela del medio y cierra cerca del centro del cuerpo de la primera vela"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr ""
+msgstr "Un patrón de velas bajista que se usa para predecir la reversión de la tendencia alcista actual. Este patrón consiste en tres velas de cuerpo largo consecutivas que han cerrado en un valor menor al del día anterior, en la que cada sesión se abre dentro del cuerpo de la vela anterior"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
-msgstr ""
+msgstr "Un contraataque bajista es una vela blanca larga en una tendencia alcista, seguida de una vela negra larga. Los precios de cierre de ambas velas están en el mismo nivel. Un contraataque alcista es una vela negra larga en una tendencia bajista, seguida por una vela blanca larga. Los precios de cierre de ambas velas están en el mismo nivel"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
 msgstr ""
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
-msgstr ""
+msgstr "Una opción binaria es un contrato comprado por un comerciante, que pagará al inversor un monto predeterminado si su predicción es correcta"
 
 msgid "A binary option is an option with a fixed payout that is determined at the start of the trade. If your prediction is correct, you receive an agreed payout. If not, you lose your initial stake, and no more. The options are called 'binary' because there can be only two outcomes - win or lose"
-msgstr ""
+msgstr "Una opción binaria es una opción con una ganancia fija que se determina al comienzo de la transacción. Si la predicción del inversor es correcta, recibe el pago predeterminado. Si la predicción no es correcta, pierde sólamente la apuesta - su inversión inicial, y no más. Las opciones se llaman ‘binarias’ porque solo pueden haber dos resultados - ganar o perder"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
-msgstr ""
+msgstr "Patrón de velas alcista que consiste en cinco velas: el primer día la vela es larga y blanca; el segundo día, experimenta un gap alcista y es negra. El segundo, tercero y cuarto día las velas tienen cuerpos reales pequeños y siguen un corto patrón a la baja, pero se mantienen dentro de los valores del primer día, mientras que el quinto día consiste en una vela blanca larga que cierra sobre el cierre del primer día"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "Patrón de velas alcista que consiste en tres velas: la primera barra es una vela roja grande ubicada en una tendencia bajista; la segunda, una vela de cuerpo pequeño (roja o blanca) que cierra debajo de la primera vela roja; y la última, una vela blanca grande que abre por encima de la vela del medio y cierra cerca del centro del cuerpo de la primera vela"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "Patrón de velas alcista que consiste en tres velas: la primera barra es una vela roja grande ubicada en una tendencia bajista; la segunda, una vela de cuerpo pequeño (roja o blanca) que cierra debajo de la primera vela roja; y la última, una vela blanca grande que abre por encima de la vela del medio y cierra cerca del centro del cuerpo de la primera vela"
 
 msgid "A bullish or bearish candle followed by a doji with with a downward or uptrend gap"
-msgstr ""
+msgstr "Una vela alcista o bajista seguida de una doji con un gap de tendencia alcista o bajista"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr ""
+msgstr "Patrón de velas en el cual una vela grande es seguida por una vela más pequeña cuyo cuerpo se encuentra dentro del rango vertical del cuerpo más grande. En relación con el color de las velas, el patrón harami alcista presenta una tendencia a la baja de velas de color negativo (negras) que envuelven una vela positiva pequeña (blanca), lo que indica una reversión de la tendencia descendente"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
 msgstr ""
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr ""
+msgstr "Vela con sombra superior e inferior muy larga y un cuerpo real pequeño presente en un gráfico de velas japonesas. Indica que el mercado está perdiendo la tendencia que tenía antes de que apareciera esta vela"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
-msgstr ""
+msgstr "Patrón gráfico que consiste en una vela blanca pequeña con sombras o mechas cortas seguida por una vela grande negra que la eclipsa o \"envuelve\""
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
-msgstr ""
+msgstr "Un derivado es un instrumento financiero, cuyo valor se determina en referencia al mercado subyacente. Los derivativos por lo general se negocian en el mercado interbancario, y los binarios son unas de las formas de derivativos más simples"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
-msgstr ""
+msgstr "Vela mediana o larga de tendencia alcista o bajista cuya característica distintiva es que no tiene sombra superior ni inferior"
 
 msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Betting Operator of the Year' over two other finalists. It's a major victory for our brand and further recognition of our world-beating service. Ten years on, and going from strength to strength"
-msgstr ""
+msgstr "Un jurado compuesto por líderes de la industria ha premiado BetOnMarkets.com como \"Operador de apuestas financiera del año\" frente a otros dos finalistas. Es una gran victoria para nuestra marca y un reconocimiento de nuestro servicio de clase superior. Diez años después, nos seguimos esforzando para ofrecer lo mejor a nuestros clientes."
 
 msgid "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period"
-msgstr ""
+msgstr "Indicador técnico inventado por Larry Williams, el cual usa el promedio ponderado de tres periodos diferentes para reducir la volatilidad y las señales de transacciones falsas asociadas a otros indicadores que, en general, están basados solo en un periodo de tiempo"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
 msgstr ""
