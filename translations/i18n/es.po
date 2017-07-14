@@ -611,19 +611,19 @@ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks i
 msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Patrón Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr ""
 
 msgid "Benefits of binary trading"
-msgstr ""
+msgstr "Beneficios del comercio binario"
 
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "El premio al \"Mejor proveedor de operaciones financieras con probabilidades fijas\" de Shares Magazine UK"
 
 msgid "BetOnMarkets goes live"
-msgstr ""
+msgstr "BetOnMarkets empieza a funcionar"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
 msgstr ""
