@@ -533,13 +533,13 @@ msgid "April"
 msgstr "Abril"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "¿Está seguro de que desea eliminar esta plantilla?"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "¿Está seguro de que desea eliminar este token?"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "¿Está seguro de que desea sobrescribir esta plantilla?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr ""
