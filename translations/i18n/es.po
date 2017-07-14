@@ -440,7 +440,7 @@ msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "Abandoned Baby (CDLABANDONEDBABY) (bebé abandonado)"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "Oscilador de precio absoluto (APO)"
 
 msgid "Accept"
 msgstr "Aceptar"
@@ -509,10 +509,10 @@ msgid "Amount per point"
 msgstr "Cantidad por punto"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr ""
+msgstr "Un contrato \"finaliza dentro\" se paga si el precio de salida del mercado es estrictamente superior al precio objetivo mínimo y estrictamente inferior al precio objetivo máximo. Un contrato \"finaliza fuera\" se paga si el precio de salida del mercado es estrictamente superior al precio objetivo máximo o estrictamente inferior que el precio objetivo mínimo"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr ""
+msgstr "Otro premio importante. Esta vez estamos, por un lado, nominados por los lectores en línea de Global Banking and Finance Review y, por otro lado, evaluados por un jurado de expertos y analistas de la industria que reconocen los 13 años de fiabilidad de nuestra plataforma, nuestra amplia gama de productos, nuestros precios, servicio al cliente y el profundo conocimiento de lo que hacemos"
 
 msgid "Answer"
 msgstr "Respuesta"
@@ -542,13 +542,13 @@ msgid "Are you sure you want to overwrite current template?"
 msgstr "¿Está seguro de que desea sobrescribir esta plantilla?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
-msgstr ""
+msgstr "Media móvil Arnaud Legoux (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Oscilador Aroon (AROONOSC)"
 
 msgid "Asian down"
 msgstr ""
