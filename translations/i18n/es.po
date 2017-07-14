@@ -470,10 +470,10 @@ msgid "Add/Remove comparisons"
 msgstr "Agregar/Quitar comparaciones"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "Agregar o quitar indicadores"
 
 msgid "Add/remove indicators"
-msgstr ""
+msgstr "Agregar o quitar indicadores"
 
 msgid "Admin"
 msgstr "Administrador"
