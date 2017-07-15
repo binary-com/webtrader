@@ -881,7 +881,7 @@ msgid "Choose Touch / No Touch when you want to profit from the market touching 
 msgstr ""
 
 msgid "Choose a trade type"
-msgstr ""
+msgstr "Escoja un tipo de contrato"
 
 msgid "Choose digit if you want to profit from predicting the last decimal digit of the spot"
 msgstr ""
