@@ -740,31 +740,31 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com ofrece una variedad de métodos tradicionales de depósito y retiro de dinero, desde tarjetas de crédito y débito, hasta transacciones bancarias, dinero y monederos electrónicos"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
-msgstr ""
+msgstr "Binary.com ofrece una cuenta de dinero virtual para que pueda dominar el comercio con opciones binarias. ¿Por qué no abrir una cuenta de dinero virtual con $10.000, completamente funcional y gratuita, y empezar a aprender cómo operar"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com le ofrece nuevas formas de trabajar con los mercados"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
-msgstr ""
+msgstr "Binary.com abre una oficina en el edificio QSentral del centro de Kuala Lumpur para expandir aún más su equipo de desarrollo de TI"
 
 msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
-msgstr ""
+msgstr "Los precios de Binary.com son comparados con los del mercado de opciones interbancarias para que Ud. siempre obtenga los mejores precios para sus operaciones"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr ""
+msgstr "Binary.com alcanza un volumen de negocios de dos mil millones de dólares desde sus inicios en 1999"
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr ""
+msgstr "Binary.com alcanza un millón de usuarios registrados"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr ""
+msgstr "Binary.com se lleva a casa el primer premio en la categoría de Operador de Apuestas Financieras en la prestigiosa ceremonia EGR Premios de Operador de 2015, organizada en Londres"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
-msgstr ""
+msgstr "Los sistemas de Binary.com ahora procesan más de 1 millón de transacciones por día (incluyendo cuentas virtuales)"
 
 msgid "Bollinger Bands (BBANDS)"
-msgstr ""
+msgstr "Bandas de Bollinger (BBANDS)"
 
 msgid "Bollinger Bands can be used to measure the highness or lowness of the price relative to previous trades"
 msgstr ""
@@ -797,7 +797,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Haciendo clic en OK, usted confirma que ha leído y aceptado la actualización del"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr ""
