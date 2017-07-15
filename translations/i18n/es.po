@@ -716,34 +716,34 @@ msgid "Binary.com hits 1 million users, reaching a historic milestone. The compa
 msgstr "Binary.com llega a un millón de usuarios en un hito histórico. La compañía continúa su crecimiento exponencial y reafirma su posición como líder en la industria"
 
 msgid "Binary.com introduces an"
-msgstr ""
+msgstr "Binary.com introduce un"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
-msgstr ""
+msgstr "Binary.com está totalmente basado en la Web y no requiere la instalación de ningún software"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
-msgstr ""
+msgstr "Binary.com es galardonado como \"El Mejor Corredor de Opciones Binarias\" del mundo en la 16 Conferencia y Exposición Financiera MENA, realizada en Dubai"
 
 msgid "Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Binary.com es uno de los nombres más antiguos y respetados de comercio con opciones binarias en línea"
 
 msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com es de propiedad y está operado por el grupo de grupo de compañías Binary Ltd. Para más información, visite la página con nuestra historia"
 
 msgid "Binary.com is tailored to traders of all levels"
-msgstr ""
+msgstr "Binary.com se adapta a comerciantes de todos los niveles"
 
 msgid "Binary.com launches an"
-msgstr ""
+msgstr "Binary.com lanza un"
 
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
-msgstr ""
+msgstr "Binary.com ofrece una variedad de métodos tradicionales de depósito y retiro de dinero, desde tarjetas de crédito y débito, hasta transacciones bancarias, dinero y monederos electrónicos"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
 msgstr ""
 
 msgid "Binary.com offers new ways to trade"
-msgstr ""
+msgstr "Binary.com le ofrece nuevas formas de trabajar con los mercados"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr ""
