@@ -833,10 +833,10 @@ msgid "Cash Balance"
 msgstr "Saldo de efectivo"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Stop Chande Kroll (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Oscilador de momentum de Chande (CMO)"
 
 msgid "Change Backend Server"
 msgstr "Cambiar el Servidor de back-end"
@@ -863,16 +863,16 @@ msgid "Chart type"
 msgstr "Tipo de gráfico"
 
 msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
-msgstr ""
+msgstr "Escoja Subida o Caída Asiática cuando desee obtener ganancias si el mercado cierra en valores mayores o menores al precio promedio"
 
 msgid "Choose Ends In/Out to profit from the market stopping inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "Escoja Finaliza Dentro o Fuera para obtener ganancias si el mercado se detiene dentro o fuera de dos precios objetivo al final de un periodo de tiempo"
 
 msgid "Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target"
-msgstr ""
+msgstr "Escoja Superior o Inferior cuando desee obtener ganancias del mercado si este cierra en un valor más alto o más bajo que un precio objetivo"
 
 msgid "Choose Rise/Fall when you want to profit from the market rising or falling from its current level"
-msgstr ""
+msgstr "Escoja Alza o Baja cuando desee obtener ganancias de mercados al alza o a la baja de su nivel actual"
 
 msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period"
 msgstr ""
@@ -896,13 +896,13 @@ msgid "Choose password"
 msgstr "Elegir contraseña"
 
 msgid "Choose the barrier(s)"
-msgstr ""
+msgstr "Escoja el o los límite(s)"
 
 msgid "Choose the duration"
-msgstr ""
+msgstr "Escoja la duración"
 
 msgid "Choose the market, the price target, the time period, and how much you wish to win"
-msgstr ""
+msgstr "Escoja el mercado, el precio objetivo, el periodo de tiempo y cuánto desea ganar"
 
 msgid "Choose the market, the price targets, the time period, and how much you wish to win"
 msgstr ""
