@@ -575,10 +575,10 @@ msgid "Average Directional Movement Index (ADX)"
 msgstr "Índice de Movimiento Direccional Medio (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Valoración media de movimiento direccional (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
-msgstr ""
+msgstr "La valoración media de movimiento direccional (ADRX) cuantifica cambios de momentum en el ADX. Se calcula sumando dos valores de ADX (el valor actual y un valor de n periodos atrás) y luego dividiendo por dos"
 
 msgid "Average True Range (ATR)"
 msgstr "Rango verdadero medio (ATR)"
