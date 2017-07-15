@@ -707,13 +707,13 @@ msgid "Binary.com has earned an enviable reputation for our commitment to high e
 msgstr "Binary.com ha ganado una reputación envidiable debido a nuestro compromiso con altos estándares éticos y la calidad de la experiencia comercial que ofrecemos"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
-msgstr ""
+msgstr "Binary.com tiene más de 800.000 clientes en su base de datos y alcanzó los $ 2000 millones de dólares en su quinceavo año de vida, lo que nos convierte en líderes en el comercio con opciones binarias"
 
 msgid "Binary.com has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades"
-msgstr ""
+msgstr "Binary.com cuenta en todo momento con miles de clientes que ocupan posiciones variadas en los mercados financieros y gana un pequeño margen de estas transacciones"
 
 msgid "Binary.com hits 1 million users, reaching a historic milestone. The company continues to see exponential growth and this reconfirms its position as an industry leader"
-msgstr ""
+msgstr "Binary.com llega a un millón de usuarios en un hito histórico. La compañía continúa su crecimiento exponencial y reafirma su posición como líder en la industria"
 
 msgid "Binary.com introduces an"
 msgstr ""
