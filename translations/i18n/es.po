@@ -767,7 +767,7 @@ msgid "Bollinger Bands (BBANDS)"
 msgstr "Bandas de Bollinger (BBANDS)"
 
 msgid "Bollinger Bands can be used to measure the highness or lowness of the price relative to previous trades"
-msgstr ""
+msgstr "Las bandas de Bollinger se pueden utilizar para comparar un precio en relación con operaciones anteriores"
 
 msgid "Bought"
 msgstr "Comprado"
@@ -782,7 +782,7 @@ msgid "Browser upgrade required"
 msgstr "Actualización del navegador requerida"
 
 msgid "But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr ""
+msgstr "Pero no es necesario esperar a que expire. Puede vender operaciones a largo plazo en cualquier momento para obtener ganancias a partir de las condiciones cambiantes del mercado"
 
 msgid "Buy Price"
 msgstr "Precio de Compra"
@@ -800,13 +800,13 @@ msgid "CSV"
 msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
-msgstr ""
+msgstr "Se puede utilizar para comprar y vender contratos, renovar compras caducadas y recargar las cuentas de dinero virtual."
 
 msgid "Can be used to open accounts, set settings, manage token usage, and more."
-msgstr ""
+msgstr "Se puede utilizar para abrir cuentas, configurar ajustes, administrar el uso de token y mucho más."
 
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
-msgstr ""
+msgstr "Se puede utilizar para ver la actividad de la cuenta, incluyendo la configuración, límites, balances, historial de compras del contratos y mucho más."
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
 msgstr ""
