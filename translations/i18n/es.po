@@ -884,13 +884,13 @@ msgid "Choose a trade type"
 msgstr "Escoja un tipo de contrato"
 
 msgid "Choose digit if you want to profit from predicting the last decimal digit of the spot"
-msgstr ""
+msgstr "Escoja Dígito si desea obtener ganancias a partir de la predicción del último dígito decimal del precio actual del mercado"
 
 msgid "Choose from over 1 million trades"
-msgstr ""
+msgstr "Escoja entre más de un millón de contratos"
 
 msgid "Choose from over a million possible trades at any time"
-msgstr ""
+msgstr "Escoja entre más de un millón de posibles contratos en cualquier momento"
 
 msgid "Choose password"
 msgstr "Elegir contraseña"
@@ -905,13 +905,13 @@ msgid "Choose the market, the price target, the time period, and how much you wi
 msgstr "Escoja el mercado, el precio objetivo, el periodo de tiempo y cuánto desea ganar"
 
 msgid "Choose the market, the price targets, the time period, and how much you wish to win"
-msgstr ""
+msgstr "Escoja el mercado, los precios objetivo, el periodo de tiempo y cuánto desea ganar"
 
 msgid "Choose the market, the time period, and how much you wish to win"
-msgstr ""
+msgstr "Escoja el mercado, el periodo de tiempo y cuánto desea ganar"
 
 msgid "Choose the payout"
-msgstr ""
+msgstr "Escoja un tipo de pago"
 
 msgid "Choose the underlying market"
 msgstr ""
@@ -926,13 +926,13 @@ msgid "Choppiness Index (CHOP)"
 msgstr ""
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Haga clic para iniciar sesión con su cuenta de Binary.com"
 
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 msgid "Close all"
 msgstr "Cerrar todo"
@@ -944,10 +944,10 @@ msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 msgstr ""
 
 msgid "Commodities"
-msgstr ""
+msgstr "Materias primas"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
-msgstr ""
+msgstr "Las materias primas son un recurso valioso que crece o se extrae del suelo, como la plata, el oro y el petróleo. En Binary.com están valoradas en dólares estadounidenses"
 
 msgid "Commodities trading experience"
 msgstr "Experiencia de comerciar con materias primas"
@@ -971,7 +971,7 @@ msgid "Construction"
 msgstr "Construcción"
 
 msgid "Contact Us"
-msgstr ""
+msgstr "Contáctenos"
 
 msgid "Continue"
 msgstr "Continuar"
@@ -983,7 +983,7 @@ msgid "Contract"
 msgstr "Contrato"
 
 msgid "Contract period"
-msgstr ""
+msgstr "Período del contrato"
 
 msgid "Contracts"
 msgstr "Contratos"
