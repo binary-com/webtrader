@@ -1133,25 +1133,25 @@ msgid "Directional Movement (DMI) is actually a collection of three separate ind
 msgstr ""
 
 msgid "Directional Movement Index (DX)"
-msgstr ""
+msgstr "Índice de movimiento direccional (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr ""
+msgstr "¿Debo realizar un depósito para abrir una cuenta?"
 
 msgid "Do I need to send any documents?"
-msgstr ""
+msgstr "¿Debo enviar algún tipo de documentación?"
 
 msgid "Do you offer virtual-money accounts?"
-msgstr ""
+msgstr "¿Ofrecen cuentas de dinero virtual?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "¿Quiere instalar la extensión Webtrader de chrome?"
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Estrella doji (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
 msgstr ""
@@ -1160,7 +1160,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "¿Todavía no tiene una cuenta? Regístrese y obtenga una cuenta virtual de $10.000"
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "Canal de Donchian (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Hecho. Los fondos están siendo transferidos al agente de pago"
@@ -1178,7 +1178,7 @@ msgid "Double click the object to remove"
 msgstr "Haga doble clic en el objeto para quitar"
 
 msgid "Download"
-msgstr ""
+msgstr "Descargar"
 
 msgid "Download CSV"
 msgstr "Descargar CSV"
@@ -1205,13 +1205,13 @@ msgid "Download as"
 msgstr "Descargar como"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Descargando .csv"
 
 msgid "Downloading template as"
-msgstr ""
+msgstr "Descargando plantilla como"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "Doji libélula (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "Herramientas para dibujar"
@@ -1226,7 +1226,7 @@ msgid "EGR Operator Award"
 msgstr ""
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr ""
