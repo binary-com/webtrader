@@ -1154,7 +1154,7 @@ msgid "Doji Star (CDLDOJISTAR)"
 msgstr "Estrella doji (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
-msgstr ""
+msgstr "Una doji se forma cuando los precios de apertura y cierre de un valor son virtualmente iguales. El largo de las sombras superior e inferior puede variar y hacer que la vela resultante luzca como una cruz, una cruz invertida o un signo más"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "¿Todavía no tiene una cuenta? Regístrese y obtenga una cuenta virtual de $10.000"
@@ -1172,7 +1172,7 @@ msgid "Dot"
 msgstr "Punto"
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "Media móvil exponencial doble (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr "Haga doble clic en el objeto para quitar"
@@ -1217,7 +1217,7 @@ msgid "Drawing tools"
 msgstr "Herramientas para dibujar"
 
 msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr ""
+msgstr "Debido a recientes cambios en las regulaciones, nos vemos obligados a pedir a nuestros clientes que completen el siguiente Asesoramiento Financiero. Tenga en cuenta que no podrá seguir operando hasta que no lo complete"
 
 msgid "Duration"
 msgstr "Duración"
