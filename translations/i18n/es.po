@@ -1124,7 +1124,7 @@ msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that det
 msgstr ""
 
 msgid "Differs"
-msgstr ""
+msgstr "Dígito Difiere"
 
 msgid "Digits"
 msgstr "Dígitos"
