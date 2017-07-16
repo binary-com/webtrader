@@ -1223,16 +1223,16 @@ msgid "Duration"
 msgstr "Duración"
 
 msgid "EGR Operator Award"
-msgstr ""
+msgstr "Premio EGR Operator"
 
 msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
-msgstr ""
+msgstr "Cada opción binaria es una predicción del movimiento futuro de un mercado subyacente"
 
 msgid "Each binary trade is for a pre-determined payout amount. You win the payout if your prediction is correct"
-msgstr ""
+msgstr "Cada contrato binario es por una ganancia fija que se obtiene si su predicción es correcta"
 
 msgid "Edge"
 msgstr "Borde"
@@ -1247,25 +1247,25 @@ msgid "End Time"
 msgstr "Hora de finalización"
 
 msgid "Ends Between/Ends Outside trades"
-msgstr ""
+msgstr "Contratos Finaliza dentro/Finaliza fuera"
 
 msgid "Ends In/Out"
 msgstr "Termina Dentro/Fuera"
 
 msgid "Ends in"
-msgstr ""
+msgstr "Finaliza dentro"
 
 msgid "Ends out"
-msgstr ""
+msgstr "Finaliza fuera"
 
 msgid "English"
-msgstr ""
+msgstr "Inglés"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
-msgstr ""
+msgstr "Patrón envolvente (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "Disfrute de una interfaz intuitiva de comercio con funcionalidad avanzada que le permite controlar todos sus activos y mercados favoritos al mismo tiempo, así como los gráficos esenciales, el índice de activos, horarios comerciales y datos del historial. Lo más importante es que puede elegir lo que quiere ver en su pantalla"
 
 msgid "Enter your current password"
 msgstr "Introduzca su contraseña actual"
@@ -1280,10 +1280,10 @@ msgid "Entry spot price"
 msgstr ""
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Error al obtener datos para %1"
 
 msgid "Espa ol"
-msgstr ""
+msgstr "Español"
 
 msgid "Estimated Net Worth"
 msgstr "Valor Neto Estimado"
