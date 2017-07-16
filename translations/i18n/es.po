@@ -146,7 +146,7 @@ msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr "-Opere los índices de volatilidad de Binary.com 24/7"
 
 msgid "- trade Binary.com's proprietary volatility indices"
-msgstr ""
+msgstr "-Opere los índices de volatilidad creados por Binary.com"
 
 msgid "- trade all major FX pairs"
 msgstr "-Opere todos los pares importantes de FX"
@@ -377,7 +377,7 @@ msgid "A bearish counterattack is a long white candle in an uptrend, followed by
 msgstr "Un contraataque bajista es una vela blanca larga en una tendencia alcista, seguida de una vela negra larga. Los precios de cierre de ambas velas están en el mismo nivel. Un contraataque alcista es una vela negra larga en una tendencia bajista, seguida por una vela blanca larga. Los precios de cierre de ambas velas están en el mismo nivel"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
-msgstr ""
+msgstr "Una línea de separación bajista es un patrón de tendencia bajista. Es opuesto a la línea de separación alcista. Posee dos componentes principales: el primer día consiste en una vela verde y el segundo día corresponde a una vela que desciende, abre en el comienzo de la primera vela y cierra semanalmente"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
 msgstr "Una opción binaria es un contrato comprado por un comerciante, que pagará al inversor un monto predeterminado si su predicción es correcta"
@@ -875,10 +875,10 @@ msgid "Choose Rise/Fall when you want to profit from the market rising or fallin
 msgstr "Escoja Alza o Baja cuando desee obtener ganancias de mercados al alza o a la baja de su nivel actual"
 
 msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period"
-msgstr ""
+msgstr "Escoja Queda Dentro o Sale Fuera para obtener ganancias si el mercado se queda dentro de o se aleja de dos precios durante cualquier momento del plazo del contrato"
 
 msgid "Choose Touch / No Touch when you want to profit from the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "Escoja Toque o Sin Toque cuando desee obtener ganancias si el mercado toca o no toca un precio objetivo durante cualquier momento del plazo del contrato"
 
 msgid "Choose a trade type"
 msgstr "Escoja un tipo de contrato"
