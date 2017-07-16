@@ -551,10 +551,10 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscilador Aroon (AROONOSC)"
 
 msgid "Asian down"
-msgstr ""
+msgstr "Asiáticas Abajo"
 
 msgid "Asian up"
-msgstr ""
+msgstr "Asiáticas Arriba"
 
 msgid "Asians"
 msgstr "Asiáticas"
@@ -1277,7 +1277,7 @@ msgid "Entry spot"
 msgstr "Punto de entrada"
 
 msgid "Entry spot price"
-msgstr ""
+msgstr "Precio de entrada al contado"
 
 msgid "Error getting data for %1"
 msgstr "Error al obtener datos para %1"
@@ -1289,13 +1289,13 @@ msgid "Estimated Net Worth"
 msgstr "Valor Neto Estimado"
 
 msgid "Even"
-msgstr ""
+msgstr "Par"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "Estrella doji vespertina (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Estrella vespertina (CDLEVENINGSTAR)"
 
 msgid "Exclude me from the website until"
 msgstr "Excluirme del sitio web hasta que"
@@ -1310,19 +1310,19 @@ msgid "Exit spot"
 msgstr "Punto de salida"
 
 msgid "Expiry price"
-msgstr ""
+msgstr "Precio de expiración"
 
 msgid "Explanation"
 msgstr "Explicación"
 
 msgid "Exponential Moving Average (EMA)"
-msgstr ""
+msgstr "Media móvil exponencial (EMA)"
 
 msgid "Fall"
 msgstr "Baja"
 
 msgid "Falling markets"
-msgstr ""
+msgstr "Mercados a la baja"
 
 msgid "Family name"
 msgstr "Apellido"
@@ -1337,7 +1337,7 @@ msgid "Favourite dish"
 msgstr "Plato favorito"
 
 msgid "Features"
-msgstr ""
+msgstr "Características"
 
 msgid "Feb"
 msgstr ""
@@ -1346,7 +1346,7 @@ msgid "February"
 msgstr "Febrero"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public"
-msgstr ""
+msgstr "Quince años después seguimos innovando, creciendo y trabajando, buscando nuevas maneras de servir mejor a nuestros clientes. Por primera vez, ofrecemos contratos toque/sin toque a corto plazo e introducimos una nueva aplicación de gráficos. Creemos que tenemos la plataforma de opciones digitales más competitiva y completa a disposición del público minorista"
 
 msgid "Final Price"
 msgstr "Precio Final"
@@ -1358,7 +1358,7 @@ msgid "Finance"
 msgstr "Finanzas"
 
 msgid "Financial Information"
-msgstr ""
+msgstr "Información financiera"
 
 msgid "Financial Security"
 msgstr ""
@@ -1370,10 +1370,10 @@ msgid "Financial rewards"
 msgstr ""
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "Primera línea de domicilio"
 
 msgid "First name"
 msgstr "Nombre"
