@@ -914,7 +914,7 @@ msgid "Choose the payout"
 msgstr "Escoja un tipo de pago"
 
 msgid "Choose the underlying market"
-msgstr ""
+msgstr "Escoja el mercado subyacente"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Seleccione su agente de pago preferido"
@@ -923,7 +923,7 @@ msgid "Choose your pereferred withdrawal method"
 msgstr "Seleccione el método de retirada preferido"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "Indice de Choppiness (CHOP)"
 
 msgid "Chrome"
 msgstr "Chrome"
@@ -941,7 +941,7 @@ msgid "Closes"
 msgstr "Cierra"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "Marubozu cerrada (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
 msgstr "Materias primas"
@@ -956,7 +956,7 @@ msgid "Commodities trading frequency"
 msgstr "Frecuencia de comerciar con materias primas"
 
 msgid "Commodity Channel Index (CCI)"
-msgstr ""
+msgstr "Índice de Canal de Materias Primas (CCI)"
 
 msgid "Comparisons"
 msgstr "Comparaciones"
@@ -989,10 +989,10 @@ msgid "Contracts"
 msgstr "Contratos"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Curva de Coppock (CC)"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "Contraataque (CDLCOUNTERATTACK)"
 
 msgid "Country of residence"
 msgstr "País de residencia"
@@ -1010,7 +1010,7 @@ msgid "Crosshair"
 msgstr "Punto de mira"
 
 msgid "Currencies"
-msgstr ""
+msgstr "Divisas"
 
 msgid "Current Level"
 msgstr "Nivel Actual"
@@ -1070,7 +1070,7 @@ msgid "Days"
 msgstr "Días"
 
 msgid "Debt-free"
-msgstr ""
+msgstr "Libre de deuda"
 
 msgid "Dec"
 msgstr "Dic"
@@ -1085,13 +1085,13 @@ msgid "Default"
 msgstr "Predeterminado"
 
 msgid "Define your position"
-msgstr ""
+msgstr "Defina su posición"
 
 msgid "Delete"
 msgstr "Eliminar"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "Demo para que los afiliados accedan a los gráficos Webtrader"
 
 msgid "Deposit funds"
 msgstr "Depositar fondos"
@@ -1100,10 +1100,10 @@ msgid "Deposit of USD"
 msgstr "Depósito de USD"
 
 msgid "Depositing and withdrawing funds"
-msgstr ""
+msgstr "Depositar y retirar fondos"
 
 msgid "Derivative"
-msgstr ""
+msgstr "Derivativo"
 
 msgid "Describe what this token is for to find it later"
 msgstr "Describir para qué es este token para encontrarlo más tarde"
