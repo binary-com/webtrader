@@ -1112,7 +1112,7 @@ msgid "Description"
 msgstr "Descripción"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "Deutsch"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "El índice de masa desarrollado por Donald Dorsey utiliza el rango alto-bajo para identificar reversiones de tendencias a partir de expansiones en los rangos. En este sentido, el índice de masa es un indicador de volatilidad que no tiene un sesgo direccional. En cambio, este índice identifica abultamientos en el rango que pueden predecir una reversión en la tendencia actual"
@@ -1406,7 +1406,7 @@ msgid "Fractals are indicators on candlestick charts that identify reversal poin
 msgstr "Los fractales son indicadores presentes en los gráficos de velas que identifican puntos de reversión en el mercado. Los comerciales usualmente utilizan fractales para tener una idea de en qué dirección se desarrollará un precio- Un fractal se forma cuando un patrón particular de precios ocurre en un gráfico"
 
 msgid "Fran ais"
-msgstr ""
+msgstr "Français"
 
 msgid "Fri"
 msgstr "Vie"
@@ -1427,16 +1427,16 @@ msgid "GMT"
 msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
-msgstr ""
+msgstr "GMT es la sigla en inglés de Greenwich Mean Time (hora del meridiano de Greenwich), que es el huso horario oficial que utiliza el Reino Unido durante el invierno. En verano, el Reino Unido utiliza el horario de verano de Gran Bretaña, el cual es GMT + 1 hora. El sitio de Binary.com usa GMT durante todo el año"
 
 msgid "Get your price"
-msgstr ""
+msgstr "Obtenga su precio"
 
 msgid "Goes out"
-msgstr ""
+msgstr "Sale"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "Doji lápida (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
 msgstr "Gris"
@@ -1448,25 +1448,25 @@ msgid "Grid Light"
 msgstr "Luz de la Rejilla"
 
 msgid "Group History"
-msgstr ""
+msgstr "Historia corporativa"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Martillo (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "Hombre colgado (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr ""
+msgstr "Patrón cruz de harami (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
-msgstr ""
+msgstr "Patrón Harami (CDLHARAMI)"
 
 msgid "Health"
 msgstr "Salud"
 
 msgid "Help"
-msgstr ""
+msgstr "Ayuda"
 
 msgid "High"
 msgstr ""
@@ -1475,7 +1475,7 @@ msgid "High Barrier"
 msgstr "Barrera Alta"
 
 msgid "High barrier"
-msgstr ""
+msgstr "Límite alto"
 
 msgid "High barrier offset"
 msgstr "Offset del límite alto"
