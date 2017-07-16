@@ -1469,7 +1469,7 @@ msgid "Help"
 msgstr "Ayuda"
 
 msgid "High"
-msgstr ""
+msgstr "Máximo"
 
 msgid "High Barrier"
 msgstr "Barrera Alta"
@@ -1481,28 +1481,28 @@ msgid "High barrier offset"
 msgstr "Offset del límite alto"
 
 msgid "High returns"
-msgstr ""
+msgstr "Rentabilidad alta"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "Vela de onda alta (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr "Más alto"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "Superior/Inferior"
 
 msgid "Higher/Lower trades"
-msgstr ""
+msgstr "Contratos Superior/Inferior"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
-msgstr ""
+msgstr "Patrón Hikkake (CDLHIKKAKE)"
 
 msgid "Home Address"
 msgstr "Domicilio"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
+msgstr "Paloma mensajera (CDLHOMINGPIGEON)"
 
 msgid "Horizontal line"
 msgstr "Línea horizontal"
@@ -1511,19 +1511,19 @@ msgid "Hours"
 msgstr "Horas"
 
 msgid "How do I fund my account?"
-msgstr ""
+msgstr "¿Cómo deposito en mi cuenta?"
 
 msgid "How does Binary.com make money?"
-msgstr ""
+msgstr "¿Cómo hace dinero Binary.com?"
 
 msgid "How safe is my money with Binary.com?"
-msgstr ""
+msgstr "¿Qué tan seguro está mi dinero con Binary.com?"
 
 msgid "How soon can I start trading?"
-msgstr ""
+msgstr "¿Cuándo puedo comenzar a operar?"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "¿Cómo comercio con opciones binarias?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr ""
@@ -1559,7 +1559,7 @@ msgid "If you're an individual trader, you'll appreciate the simplicity, flexibi
 msgstr ""
 
 msgid "In April"
-msgstr ""
+msgstr "En abril"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
 msgstr ""
