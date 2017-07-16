@@ -143,7 +143,7 @@ msgid "- trade 24/7, even on weekends"
 msgstr "-Opere 24/7, incluso los fines de semana"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr ""
+msgstr "-Opere los índices de volatilidad de Binary.com 24/7"
 
 msgid "- trade Binary.com's proprietary volatility indices"
 msgstr ""
@@ -401,7 +401,7 @@ msgid "A candlestick chart pattern in which a large candlestick is followed by a
 msgstr "Patrón de velas en el cual una vela grande es seguida por una vela más pequeña cuyo cuerpo se encuentra dentro del rango vertical del cuerpo más grande. En relación con el color de las velas, el patrón harami alcista presenta una tendencia a la baja de velas de color negativo (negras) que envuelven una vela positiva pequeña (blanca), lo que indica una reversión de la tendencia descendente"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
-msgstr ""
+msgstr "Una vela con un cuerpo negro largo (línea larga) representa una fuerza bajista en el mercado. El precio de las acciones varió en un rango amplio, abriendo cerca del valor más alto y cerrando cerca del valor más bajo del día. Una vela con un cuerpo blanco largo representa una fuerza alcista en el mercado. El precio de las acciones varió en un rango amplio, abriendo cerca del valor más bajo y cerrando cerca del valor más alto del día"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
 msgstr "Vela con sombra superior e inferior muy larga y un cuerpo real pequeño presente en un gráfico de velas japonesas. Indica que el mercado está perdiendo la tendencia que tenía antes de que apareciera esta vela"
@@ -422,37 +422,37 @@ msgid "A technical indicator invented by Larry Williams that uses the weighted a
 msgstr "Indicador técnico inventado por Larry Williams, el cual usa el promedio ponderado de tres periodos diferentes para reducir la volatilidad y las señales de transacciones falsas asociadas a otros indicadores que, en general, están basados solo en un periodo de tiempo"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
-msgstr ""
+msgstr "Indicador técnico de momentum (momento) que compara el precio de cierre de un valor con su rango de precios en un periodo determinado. La sensibilidad de un oscilador a los movimientos del mercado se puede reducir mediante el ajuste del periodo de tiempo o mediante el uso de una media móvil del resultado"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr ""
+msgstr "Patrón técnico de operación en el cual tres velas forman lo que parece ser un sándwich en la pantalla. En este patrón, la vela del medio es de un color opuesto a las velas de ambos lados, las que poseen una banda de precios mayor a la de la vela del medio. Los patrones \"stick sandwich\" pueden ocurrir en tendencias bajistas y alcistas"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
-msgstr ""
+msgstr "Un tick (intervalo) es una fluctuación mínima hacia arriba o abajo en el precio de un mercado"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
-msgstr ""
+msgstr "Tendencia que consiste en una vela grande seguida por una doji que se ubica dentro de la parte superior e inferior del cuerpo de la vela. Esto indica que la tendencia anterior está por revertirse"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr ""
+msgstr "Vela blanca situada en una tendencia de precios al alza, seguida por una doji cuya sombra inferior se mantiene sobre el máximo de la vela anterior. El tercer día consiste en una vela negra con una sombra superior por debajo del mínimo de la doji"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Abandoned Baby (CDLABANDONEDBABY) (bebé abandonado)"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "Oscilador de precio absoluto (APO)"
 
 msgid "Accept"
 msgstr "Aceptar"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accesible desde cualquier navegador en 13 idiomas"
 
 msgid "Account balance"
 msgstr "Saldo de la cuenta"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "Motivo para abrir la cuenta"
 
 msgid "Account turnover"
 msgstr ""
@@ -467,34 +467,34 @@ msgid "Add indicator"
 msgstr "Añadir indicador"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "Agregar/Quitar comparaciones"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "Agregar o quitar indicadores"
 
 msgid "Add/remove indicators"
-msgstr ""
+msgstr "Agregar o quitar indicadores"
 
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr ""
 
 msgid "All durations"
-msgstr ""
+msgstr "Todas las duraciones"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "Todas las condiciones de mercado"
 
 msgid "All markets"
-msgstr ""
+msgstr "Todos los mercados"
 
 msgid "All markets, all conditions"
-msgstr ""
+msgstr "Todos los mercados, todas las condiciones"
 
 msgid "All payouts"
-msgstr ""
+msgstr "Todos los pagos"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todas las horas están en GMT (Greenwich Mean Time)"
@@ -509,10 +509,10 @@ msgid "Amount per point"
 msgstr "Cantidad por punto"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr ""
+msgstr "Un contrato \"finaliza dentro\" se paga si el precio de salida del mercado es estrictamente superior al precio objetivo mínimo y estrictamente inferior al precio objetivo máximo. Un contrato \"finaliza fuera\" se paga si el precio de salida del mercado es estrictamente superior al precio objetivo máximo o estrictamente inferior que el precio objetivo mínimo"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr ""
+msgstr "Otro premio importante. Esta vez estamos, por un lado, nominados por los lectores en línea de Global Banking and Finance Review y, por otro lado, evaluados por un jurado de expertos y analistas de la industria que reconocen los 13 años de fiabilidad de nuestra plataforma, nuestra amplia gama de productos, nuestros precios, servicio al cliente y el profundo conocimiento de lo que hacemos"
 
 msgid "Answer"
 msgstr "Respuesta"
@@ -533,22 +533,22 @@ msgid "April"
 msgstr "Abril"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "¿Está seguro de que desea eliminar esta plantilla?"
 
 msgid "Are you sure you want to delete this token?"
 msgstr "¿Está seguro de que desea eliminar este token?"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "¿Está seguro de que desea sobrescribir esta plantilla?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
-msgstr ""
+msgstr "Media móvil Arnaud Legoux (ALMA)"
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Oscilador Aroon (AROONOSC)"
 
 msgid "Asian down"
 msgstr ""
@@ -572,19 +572,19 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "Índice de Movimiento Direccional Medio (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Valoración media de movimiento direccional (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
-msgstr ""
+msgstr "La valoración media de movimiento direccional (ADRX) cuantifica cambios de momentum en el ADX. Se calcula sumando dos valores de ADX (el valor actual y un valor de n periodos atrás) y luego dividiendo por dos"
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "Rango verdadero medio (ATR)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Oscilador Awesome (AO)"
 
 msgid "Back"
 msgstr "Atrás"
@@ -593,10 +593,10 @@ msgid "Back to list"
 msgstr "Volver a la lista"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Equilibrio de poder (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
-msgstr ""
+msgstr "Bancos, fondos de cobertura e inversores profesionales habitualmente comercian con opciones binarias en los mercados de derivados Otc. Muchos profesionales del mercado confían en la plataforma Binary.com para realizar operaciones flexibles de alto volumen"
 
 msgid "Barrier"
 msgstr "Barrera"
@@ -605,94 +605,94 @@ msgid "Barrier offset"
 msgstr "Desplazamiento de la barrera"
 
 msgid "Barrier(s)"
-msgstr ""
+msgstr "Límite(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
 msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Patrón Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
-msgstr ""
+msgstr "Precios cotejados"
 
 msgid "Benefits of binary trading"
-msgstr ""
+msgstr "Beneficios del comercio binario"
 
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "El premio al \"Mejor proveedor de operaciones financieras con probabilidades fijas\" de Shares Magazine UK"
 
 msgid "BetOnMarkets goes live"
-msgstr ""
+msgstr "BetOnMarkets empieza a funcionar"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr ""
+msgstr "BetOnMarkets.com tiene más de 400.000 clientes en su base de datos y ha alcanzado los $1000 millones de dólares en apenas su decimotercer año de funcionamiento, lo que nos convierte en uno de los líderes en comercio con apuestas de probabilidades fijas"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
-msgstr ""
+msgstr "BetOnMarkets.com aumenta los pagos a 100.000 USD, EUR, GBP y AUD"
 
 msgid "BetOnMarkets.com is successfully rebranded Binary.com"
-msgstr ""
+msgstr "BetOnMarkets.com cambia de nombre a Binary.com de manera exitosa"
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
-msgstr ""
+msgstr "BetOnMarkets.com alcanza un volumen de negocios de mil millones de dólares desde sus inicios en 1999"
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
-msgstr ""
+msgstr "Binary Bot lanzado"
 
 msgid "Binary KK granted Japan license"
-msgstr ""
+msgstr "Binary KK recibe licencia en Japón"
 
 msgid "Binary Trading is simple to learn and to execute"
-msgstr ""
+msgstr "El comercio con opciones binarias es fácil de aprender y ejecutar"
 
 msgid "Binary granted Investment Services license"
-msgstr ""
+msgstr "Binary recibe la licencia de servicios de inversión"
 
 msgid "Binary opens Japan office"
-msgstr ""
+msgstr "Binary abre una oficina en Japón"
 
 msgid "Binary option"
-msgstr ""
+msgstr "Opciones binarias"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opciones binarias u otros derivados financieros"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "Experiencia comercial con opciones binarias o derivados de otros instrumentos financieros"
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "Frecuencia de comercio con opciones binarias o de otros derivados financieros"
 
 msgid "Binary trading is flexible"
-msgstr ""
+msgstr "El comercio con opciones binarias es flexible"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
-msgstr ""
+msgstr "El comercio con opciones binarias es ideal tanto para inversionistas minoristas como para profesionales del mercado"
 
 msgid "Binary trading is very simple"
-msgstr ""
+msgstr "El comercio con opciones binarias es muy sencillo"
 
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
-msgstr ""
+msgstr "La filial japonesa de Binary, Binary KK tiene una licencia de la KLFB que la habilita como negocio de instrumentos financieros de tipo 1 en Japón"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
-msgstr ""
+msgstr "La filial japonesa de Binary, Binary KK, abre una oficina en Tokio e inicia el proceso de solicitud de las licencias pertinentes"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
-msgstr ""
+msgstr "La filial maltesa de Binary, Binary Investments (Europe) Ltd. recibe una licencia de Servicios de Inversión de categoría 3 de parte de la Autoridad de Servicios Financieros de Malta (Mfsa)"
 
 msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
-msgstr ""
+msgstr "La plataforma de Binary realiza en promedio 15 transacciones por segundo, 24/7"
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
@@ -701,73 +701,73 @@ msgid "Binary.com Shop introduced"
 msgstr ""
 
 msgid "Binary.com continues to innovate and grow"
-msgstr ""
+msgstr "Binary.com continúa innovando y creciendo"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
-msgstr ""
+msgstr "Binary.com ha ganado una reputación envidiable debido a nuestro compromiso con altos estándares éticos y la calidad de la experiencia comercial que ofrecemos"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
-msgstr ""
+msgstr "Binary.com tiene más de 800.000 clientes en su base de datos y alcanzó los $ 2000 millones de dólares en su quinceavo año de vida, lo que nos convierte en líderes en el comercio con opciones binarias"
 
 msgid "Binary.com has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades"
-msgstr ""
+msgstr "Binary.com cuenta en todo momento con miles de clientes que ocupan posiciones variadas en los mercados financieros y gana un pequeño margen de estas transacciones"
 
 msgid "Binary.com hits 1 million users, reaching a historic milestone. The company continues to see exponential growth and this reconfirms its position as an industry leader"
-msgstr ""
+msgstr "Binary.com llega a un millón de usuarios en un hito histórico. La compañía continúa su crecimiento exponencial y reafirma su posición como líder en la industria"
 
 msgid "Binary.com introduces an"
-msgstr ""
+msgstr "Binary.com introduce un"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
-msgstr ""
+msgstr "Binary.com está totalmente basado en la Web y no requiere la instalación de ningún software"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
-msgstr ""
+msgstr "Binary.com es galardonado como \"El Mejor Corredor de Opciones Binarias\" del mundo en la 16 Conferencia y Exposición Financiera MENA, realizada en Dubai"
 
 msgid "Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Binary.com es uno de los nombres más antiguos y respetados de comercio con opciones binarias en línea"
 
 msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com es de propiedad y está operado por el grupo de grupo de compañías Binary Ltd. Para más información, visite la página con nuestra historia"
 
 msgid "Binary.com is tailored to traders of all levels"
-msgstr ""
+msgstr "Binary.com se adapta a comerciantes de todos los niveles"
 
 msgid "Binary.com launches an"
-msgstr ""
+msgstr "Binary.com lanza un"
 
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
-msgstr ""
+msgstr "Binary.com ofrece una variedad de métodos tradicionales de depósito y retiro de dinero, desde tarjetas de crédito y débito, hasta transacciones bancarias, dinero y monederos electrónicos"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
-msgstr ""
+msgstr "Binary.com ofrece una cuenta de dinero virtual para que pueda dominar el comercio con opciones binarias. ¿Por qué no abrir una cuenta de dinero virtual con $10.000, completamente funcional y gratuita, y empezar a aprender cómo operar"
 
 msgid "Binary.com offers new ways to trade"
-msgstr ""
+msgstr "Binary.com le ofrece nuevas formas de trabajar con los mercados"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
-msgstr ""
+msgstr "Binary.com abre una oficina en el edificio QSentral del centro de Kuala Lumpur para expandir aún más su equipo de desarrollo de TI"
 
 msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
-msgstr ""
+msgstr "Los precios de Binary.com son comparados con los del mercado de opciones interbancarias para que Ud. siempre obtenga los mejores precios para sus operaciones"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr ""
+msgstr "Binary.com alcanza un volumen de negocios de dos mil millones de dólares desde sus inicios en 1999"
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr ""
+msgstr "Binary.com alcanza un millón de usuarios registrados"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr ""
+msgstr "Binary.com se lleva a casa el primer premio en la categoría de Operador de Apuestas Financieras en la prestigiosa ceremonia EGR Premios de Operador de 2015, organizada en Londres"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
-msgstr ""
+msgstr "Los sistemas de Binary.com ahora procesan más de 1 millón de transacciones por día (incluyendo cuentas virtuales)"
 
 msgid "Bollinger Bands (BBANDS)"
-msgstr ""
+msgstr "Bandas de Bollinger (BBANDS)"
 
 msgid "Bollinger Bands can be used to measure the highness or lowness of the price relative to previous trades"
-msgstr ""
+msgstr "Las bandas de Bollinger se pueden utilizar para comparar un precio en relación con operaciones anteriores"
 
 msgid "Bought"
 msgstr "Comprado"
@@ -782,7 +782,7 @@ msgid "Browser upgrade required"
 msgstr "Actualización del navegador requerida"
 
 msgid "But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr ""
+msgstr "Pero no es necesario esperar a que expire. Puede vender operaciones a largo plazo en cualquier momento para obtener ganancias a partir de las condiciones cambiantes del mercado"
 
 msgid "Buy Price"
 msgstr "Precio de Compra"
@@ -797,16 +797,16 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Haciendo clic en OK, usted confirma que ha leído y aceptado la actualización del"
 
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
-msgstr ""
+msgstr "Se puede utilizar para comprar y vender contratos, renovar compras caducadas y recargar las cuentas de dinero virtual."
 
 msgid "Can be used to open accounts, set settings, manage token usage, and more."
-msgstr ""
+msgstr "Se puede utilizar para abrir cuentas, configurar ajustes, administrar el uso de token y mucho más."
 
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
-msgstr ""
+msgstr "Se puede utilizar para ver la actividad de la cuenta, incluyendo la configuración, límites, balances, historial de compras del contratos y mucho más."
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
 msgstr ""
@@ -833,10 +833,10 @@ msgid "Cash Balance"
 msgstr "Saldo de efectivo"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Stop Chande Kroll (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Oscilador de momentum de Chande (CMO)"
 
 msgid "Change Backend Server"
 msgstr "Cambiar el Servidor de back-end"
@@ -863,16 +863,16 @@ msgid "Chart type"
 msgstr "Tipo de gráfico"
 
 msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
-msgstr ""
+msgstr "Escoja Subida o Caída Asiática cuando desee obtener ganancias si el mercado cierra en valores mayores o menores al precio promedio"
 
 msgid "Choose Ends In/Out to profit from the market stopping inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "Escoja Finaliza Dentro o Fuera para obtener ganancias si el mercado se detiene dentro o fuera de dos precios objetivo al final de un periodo de tiempo"
 
 msgid "Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target"
-msgstr ""
+msgstr "Escoja Superior o Inferior cuando desee obtener ganancias del mercado si este cierra en un valor más alto o más bajo que un precio objetivo"
 
 msgid "Choose Rise/Fall when you want to profit from the market rising or falling from its current level"
-msgstr ""
+msgstr "Escoja Alza o Baja cuando desee obtener ganancias de mercados al alza o a la baja de su nivel actual"
 
 msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period"
 msgstr ""
@@ -881,7 +881,7 @@ msgid "Choose Touch / No Touch when you want to profit from the market touching 
 msgstr ""
 
 msgid "Choose a trade type"
-msgstr ""
+msgstr "Escoja un tipo de contrato"
 
 msgid "Choose digit if you want to profit from predicting the last decimal digit of the spot"
 msgstr ""
@@ -896,13 +896,13 @@ msgid "Choose password"
 msgstr "Elegir contraseña"
 
 msgid "Choose the barrier(s)"
-msgstr ""
+msgstr "Escoja el o los límite(s)"
 
 msgid "Choose the duration"
-msgstr ""
+msgstr "Escoja la duración"
 
 msgid "Choose the market, the price target, the time period, and how much you wish to win"
-msgstr ""
+msgstr "Escoja el mercado, el precio objetivo, el periodo de tiempo y cuánto desea ganar"
 
 msgid "Choose the market, the price targets, the time period, and how much you wish to win"
 msgstr ""
