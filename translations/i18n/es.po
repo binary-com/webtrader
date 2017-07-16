@@ -1340,7 +1340,7 @@ msgid "Features"
 msgstr "Características"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 msgid "February"
 msgstr "Febrero"
@@ -1361,13 +1361,13 @@ msgid "Financial Information"
 msgstr "Información financiera"
 
 msgid "Financial Security"
-msgstr ""
+msgstr "Seguridad financiera"
 
 msgid "Financial information"
 msgstr "Información financiera"
 
 msgid "Financial rewards"
-msgstr ""
+msgstr "Recompensas financieras"
 
 msgid "Firefox"
 msgstr "Firefox"
@@ -1379,16 +1379,16 @@ msgid "First name"
 msgstr "Nombre"
 
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
-msgstr ""
+msgstr "Primero, necesita establecer los parámetros de su contrato. Esto es lo que tiene que tener en cuenta:"
 
 msgid "Flexibility"
-msgstr ""
+msgstr "Flexibilidad"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
-msgstr ""
+msgstr "Por tercer año consecutivo, BetOnMarkets.com es votado como \"Mejor Proveedor de Opciones Financieras con Probabilidades Fijas\" por la revista Shares Magazine UK. Es la última vez que ganamos porque Shares Magazine ya no ofrece premios en esta categoría"
 
 msgid "Forex"
-msgstr ""
+msgstr "Forex"
 
 msgid "Forex trading experience"
 msgstr "Experiencia de comercio con Forex"
@@ -1400,10 +1400,10 @@ msgid "Founded October 1999"
 msgstr ""
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr ""
+msgstr "Los fractales son indicadores presentes en los gráficos de velas que identifican puntos de reversión en el mercado. Los comerciales usualmente utilizan fractales para tener una idea de en qué dirección se desarrollará un precio- Un fractal se forma cuando un patrón particular de precios ocurre en un gráfico"
 
 msgid "Fran ais"
 msgstr ""
@@ -1418,13 +1418,13 @@ msgid "From"
 msgstr "De"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Interfaz comercial de pantalla completa"
 
 msgid "Further instructions"
 msgstr "Otras instrucciones"
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr ""
