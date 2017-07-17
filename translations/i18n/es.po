@@ -1529,13 +1529,13 @@ msgid "Hull Moving Average (HMA)"
 msgstr "Media móvil de Hull (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
+msgstr "Declaro que soy una persona políticamente expuesta (PEP)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "He leído y estoy de acuerdo con"
 
 msgid "I'm new to binaries, where do I start?"
-msgstr ""
+msgstr "Soy nuevo en las opciones binarias, ¿por dónde comienzo?"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "AVISO IMPORTANTE"
@@ -1544,10 +1544,10 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "AVISO IMPORTANTE - Binary.com no está afiliado con ninguno de los agentes de pago mencionados anteriormente. Cada agente de pago opera como un proveedor de servicios independiente y no es avalado, garantizado o de lo contrario aprobado por Binary.com. LOS CLIENTES TRATAN CON AGENTES DE PAGO A SU EXCLUSIVO RIESGO Y PELIGRO. Se recomienda a los clientes verificar las credenciales de los agentes de pago antes de enviarles dinero. Binary.com no será responsable en ninguna circunstancia por las transacciones realizadas entre los clientes y los agentes de pago"
 
 msgid "Ideal for both pros and novices"
-msgstr ""
+msgstr "Ideal para profesionales y principiantes"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
+msgstr "Tres cuervos idénticos (CDLIDENTICAL3CROWS)"
 
 msgid "If you select a"
 msgstr "Si selecciona un"
