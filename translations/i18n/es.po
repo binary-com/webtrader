@@ -1526,7 +1526,7 @@ msgid "How to trade binaries?"
 msgstr "¿Cómo comercio con opciones binarias?"
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "Media móvil de Hull (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr ""
