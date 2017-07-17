@@ -1556,7 +1556,7 @@ msgid "If you select a specific"
 msgstr "Si  selecciona un"
 
 msgid "If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access"
-msgstr ""
+msgstr "Si Ud. es un comerciante individual, apreciará la simplicidad, flexibilidad y riesgo limitado del comercio con opciones binarias. Con las apuestas mínimas bajas de Binary.com, aprenderá cómo operar con habilidad y confianza. Y si tiene preguntas, tiene la libertad de acceder a"
 
 msgid "In April"
 msgstr "En abril"
