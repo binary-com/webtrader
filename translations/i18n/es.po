@@ -1562,7 +1562,7 @@ msgid "In April"
 msgstr "En abril"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
-msgstr ""
+msgstr "En un patrón apoyo ceñido (belt-hold) alcista, luego de un tramo de velas bajistas, se forma una vela blanca o alcista. El precio de apertura, el cual se vuelve el mínimo del día, es significativamente menor que el precio de cierre. Esto da como resultado una vela blanca larga con una sombra superior corta y sin sombra inferior. En un patrón apoyo ceñido bajista, se produce una vela negra o bajista. El precio de apertura, el cual se vuelve el máximo del día, es mayor que el precio de cierre del día anterior, lo que se traduce en una vela negra larga con una sombra inferior corta y sin sombra superior"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
 msgstr ""
