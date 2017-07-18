@@ -1565,16 +1565,16 @@ msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish o
 msgstr "En un patrón apoyo ceñido (belt-hold) alcista, luego de un tramo de velas bajistas, se forma una vela blanca o alcista. El precio de apertura, el cual se vuelve el mínimo del día, es significativamente menor que el precio de cierre. Esto da como resultado una vela blanca larga con una sombra superior corta y sin sombra inferior. En un patrón apoyo ceñido bajista, se produce una vela negra o bajista. El precio de apertura, el cual se vuelve el máximo del día, es mayor que el precio de cierre del día anterior, lo que se traduce en una vela negra larga con una sombra inferior corta y sin sombra superior"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
-msgstr ""
+msgstr "En un patrón Hikkake alcista, luego del movimiento a la baja, la vela alcista se alza por sobre el rango de las tres velas anteriores y muy probablemente genera órdenes stop loss. Esta compra adicional lleva a un movimiento alcista más evidente. En un patrón Hikkake alcista, luego de un movimiento al alza, la vela bajista alcanza un rango por debajo de las tres velas anteriores, lo que muy probablemente genere varias órdenes stop loss. Esta venta adicional lleva a un movimiento bajista más evidente"
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
-msgstr ""
+msgstr "En octubre de 1999, Regent Markets recibe un fondo de inversión de $2 millones de dólares de parte de Jim Mellon a través del Regent Pacific Group, una compañía de gestión de fondos con sede en Hong Kong"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
-msgstr ""
+msgstr "En una tendencia bajista, una vela pequeña de cuerpo corto tiene una sombra inferior con un largo de por lo menos tres veces su cuerpo real y poca o ninguna sombra superior. Es una confirmación de que los precios de cierre serán más altos al día siguiente"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
-msgstr ""
+msgstr "En una tendencia bajista, una vela negra aparece seguida por una vela blanca que abre por debajo del cuerpo anterior, pero esto puede ser difícil de ver en el gráfico. La vela blanca cierra por sobre el cuerpo, también. El último día de la línea de tres velas es otra vela blanca. En este ejemplo, muestra un cierre más alto"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
 msgstr ""
@@ -1613,7 +1613,7 @@ msgid "Indicators"
 msgstr "Indicadores"
 
 msgid "Indices"
-msgstr ""
+msgstr "Índices"
 
 msgid "Indices trading experience"
 msgstr "Experiencia de comercio con índices"
@@ -1622,10 +1622,10 @@ msgid "Indices trading frequency"
 msgstr "Frecuencia de comercio índices"
 
 msgid "Individual Traders"
-msgstr ""
+msgstr "Comerciantes individuales"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonesia"
 
 msgid "Industry of Employment"
 msgstr "Sector del Empleo"
