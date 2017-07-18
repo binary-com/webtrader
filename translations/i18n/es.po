@@ -1826,19 +1826,19 @@ msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
 msgstr "Doji de piernas largas (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Vela de pauta larga (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
-msgstr ""
+msgstr "La doji de piernas largas tiene sombras superiores e inferiores largas que son casi del mismo largo. Esta doji refleja gran indecisión en el mercado. Este patrón indica que los precios se comerciaron en valores muy superiores e inferiores a los del inicio de la sesión, pero que cerraron casi al mismo precio de apertura. Luego de una gran batahola, el resultado fue solo levemente diferente al valor de la apertura"
 
 msgid "Long-term action"
 msgstr "Acción a largo plazo"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
-msgstr ""
+msgstr "Busque una vela negra en una tendencia de precios bajista, seguida por una vela blanca que abre debajo del mínimo anterior pero cierra cerca, si bien más abajo, del punto medio del cuerpo de la vela negra"
 
 msgid "Look for a tall black candle with a long lower shadow to appear in a downward price trend. The second day should be similar to the first day, but smaller and with a higher low. The last day is a black marubozu that squeezes inside the high-low range of the prior day"
-msgstr ""
+msgstr "Busque una vela negra alta con una sombra inferior larga y que aparezca en una tendencia de precios bajista. La vela del segundo día debería ser similar a la del primero, pero más pequeña y con un mínimo más alto. El último día consiste en una marubozu negra que se esfuerza para entrar dentro del rango de precios del día anterior"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr ""
