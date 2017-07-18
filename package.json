@@ -55,17 +55,18 @@
     "showdown": "^1.6.3"
   },
   "scripts": {
-    "deploy-gh-pages": "grunt default if:live if:beta",
+    "deploy-gh-pages": "yarn build && grunt if:live if:beta",
     "start": "grunt && concurrently -k \"grunt watch\" \"grunt connect\"",
     "watch": "grunt watch",
     "server": "grunt connect",
     "mainTask": "grunt mainTask",
-    "build-all": "grunt",
+    "build": "grunt",
     "sloc": "grunt sloc",
     "major-rel": "grunt bump:major",
     "minor-rel": "grunt bump:minor",
     "patch-rel": "grunt bump:patch",
-    "postinstall": "bower install && node nightwatch.conf.js"
+    "postinstall": "bower install && node nightwatch.conf.js",
+    "test": "yarn build && nightwatch --config nightwatch.conf.js && nightwatch-html-reporter -d ./reports -o index.html"
   },
   "repository": {
     "type": "git",
