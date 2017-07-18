@@ -2252,16 +2252,16 @@ msgid "Pip"
 msgstr "Porcentaje en punto (pip)"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
-msgstr ""
+msgstr "Un \"Pip\" representa un punto porcentual que por lo general se refiere al cuarto decimal (es decir, 0,0001)"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "Lugar de nacimiento"
 
 msgid "Please"
 msgstr "Por favor"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "Seleccione la divisa con la que desea realizar la transacción"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Por favor, confirme los siguientes datos para completar la transferencia"
@@ -2270,7 +2270,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Por favor introduzca una fecha válida en formato aaaa-mm-dd"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "Ingrese un valor mayor a 0"
 
 msgid "Please enter correct email"
 msgstr "Por favor introduzca una dirección de correo electrónico correcta"
@@ -2279,7 +2279,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Por favor introduzca la fecha en formato AAAA-MM-DD"
 
 msgid "Please enter time in the format HH:MM"
-msgstr ""
+msgstr "Introduzca la hora en formato HH:MM"
 
 msgid "Please enter your current password"
 msgstr "Por favor, introduzca su contraseña actual"
@@ -2288,19 +2288,19 @@ msgid "Please enter your email"
 msgstr "Por favor introduzca su correo electrónico"
 
 msgid "Please input correct token"
-msgstr ""
+msgstr "Digite el token correcto"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Por favor, instale la última versión de uno de estos navegadores"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "Por favor, proporcione su información tributaria"
 
 msgid "Please select"
 msgstr "Por favor, seleccione"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "Por favor, envíe un token de verificación válido"
 
 msgid "Please try again after 1 minute"
 msgstr "Por favor, inténtelo de nuevo  después de 1 minuto"
@@ -2315,13 +2315,13 @@ msgid "Points"
 msgstr "Puntos"
 
 msgid "Polski"
-msgstr ""
+msgstr "Polski"
 
 msgid "Portfolio"
 msgstr "Cartera"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "Português"
 
 msgid "Postal code/ZIP"
 msgstr "Código postal"
@@ -2342,7 +2342,7 @@ msgid "Preferred reality-check interval"
 msgstr "Intervalo recomendado de prueba de la realidad"
 
 msgid "Press Create token button on the right to create your first token"
-msgstr ""
+msgstr "Presione 'Create token' a la derecha para crear su primer token"
 
 msgid "Price Transformation"
 msgstr ""
