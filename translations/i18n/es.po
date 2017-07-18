@@ -1727,7 +1727,7 @@ msgid "Learning to trade"
 msgstr "Aprender a operar"
 
 msgid "Least Squares Moving Average (LSMA)"
-msgstr ""
+msgstr "Media móvil de mínimos cuadrados (LSMA)"
 
 msgid "Less than"
 msgstr "Menos de"
@@ -1739,10 +1739,10 @@ msgid "Level of Education"
 msgstr "Nivel de Educación"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr ""
+msgstr "Con licencia y regulada en Malta, Reino Unido, isla de Man, Irlanda y Japón"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
-msgstr ""
+msgstr "Como el EMA, el LWMA asigna más significado a los precios recientes y menos al precio de cierre desde el comienzo del periodo. De este modo, son más rápidos para detectar una reversión de tendencia, aunque pueden ser más propensos al ruido de mercado"
 
 msgid "Line"
 msgstr "Línea"
@@ -1751,7 +1751,7 @@ msgid "Line Dot"
 msgstr "Punto de la línea"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
-msgstr ""
+msgstr "Media móvil ponderada lineal (LWMA)"
 
 msgid "Link"
 msgstr "Enlace"
@@ -1760,7 +1760,7 @@ msgid "Load chart template"
 msgstr "Cargar plantilla del gráfico"
 
 msgid "Load trade template"
-msgstr ""
+msgstr "Cargar plantilla del contrato"
 
 msgid "Loading"
 msgstr "Cargando"
@@ -1802,7 +1802,7 @@ msgid "Loading custom theme configuration"
 msgstr "Cargando configuración de tema personalizado"
 
 msgid "Loading help docs"
-msgstr ""
+msgstr "Cargar documentos de ayuda"
 
 msgid "Loading portfolio"
 msgstr "Cargando cartera"
@@ -1823,7 +1823,7 @@ msgid "Logout"
 msgstr "Cerrar sesión"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Doji de piernas largas (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
 msgstr ""
@@ -1832,7 +1832,7 @@ msgid "Long-legged doji have long upper and lower shadows that are almost equal 
 msgstr ""
 
 msgid "Long-term action"
-msgstr ""
+msgstr "Acción a largo plazo"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
 msgstr ""
@@ -1865,28 +1865,28 @@ msgid "MACD is a trading indicator used in technical analysis of stock prices.It
 msgstr ""
 
 msgid "MENA FFXPO Award"
-msgstr ""
+msgstr "Premio FFXPO de MENA"
 
 msgid "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
 msgstr "Asegúrese de que está de acuerdo con las condiciones de pago del agente antes de enviar su solicitud. Una vez que haga clic en el botón 'Confirmar transferencia' los fondos serán retirados de su cuenta y se enviarán al agente de pago que haya elegido. El agente le enviará la cantidad retirada (menos la comisión) a través de su método de pago preferido"
 
 msgid "Make your trade"
-msgstr ""
+msgstr "Realice su transacción"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "March"
 msgstr "Marzo"
 
 msgid "Market Professionals"
-msgstr ""
+msgstr "Profesionales del mercado"
 
 msgid "Market exit price"
 msgstr ""
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
 msgstr ""
