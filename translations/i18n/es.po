@@ -1661,7 +1661,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "¿Es posible depositar los mismos fondos a través de diferentes métodos de pago?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr ""
+msgstr "Posee una vela blanca larga que es seguida por otra vela que abre por sobre la primera (en un gap ascendente), la que a su vez es seguida por una vela negra de tendencia bajista que abre por debajo del valor de cierre del segundo día (gap descendente) y tiene un mínimo menor al precio de cierre de la vela del primer día. Se espera que la tendencia alcista continúe"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "En ocasiones es posible vender un contrato antes de que expire, pero solo si se puede determinar un precio justo. Si está opción está disponible, verá el botón azul \"Vender\" junto a su transacción en la cartera"
@@ -1685,7 +1685,7 @@ msgid "July"
 msgstr "Julio"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 msgid "June"
 msgstr "Junio"
@@ -1694,10 +1694,10 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Simplemente haga clic en el botón Grant en la página a la que será llevado ahora"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "Media móvil adaptativa de Kaufman (KAMA)"
 
 msgid "Key facts"
-msgstr ""
+msgstr "Hechos clave"
 
 msgid "Kicking (CDLKICKING)"
 msgstr ""
