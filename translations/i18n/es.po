@@ -1595,7 +1595,7 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr "En el Reino Unido y en la Isla de Man, nuestros clientes comercian a través de Binary (IOM) Ltd. En Japón, utilizan Binary KK. En la Unión Europea (con excepción del Reino Unido), operan con Binary (Europe) Ltd and Binary Investments (Europe) Ltd, mientras que en el resto del mundo lo hacen a través de Binary (C.R.) S.A"
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "Patrón dentro de la línea del cuello (CDLINNECK)"
 
 msgid "In/Out"
 msgstr "Dentro/Fuera"
@@ -1652,25 +1652,25 @@ msgid "Invalid template type"
 msgstr "Tipo de plantilla no válido"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
-msgstr ""
+msgstr "Patrón martillo invertido (CDLINVERTEDHAMMER)"
 
 msgid "Investments & Dividends"
 msgstr "Inversiones y Dividendos"
 
 msgid "Is it possible to deposit the same funds through different payment methods?"
-msgstr ""
+msgstr "¿Es posible depositar los mismos fondos a través de diferentes métodos de pago?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
 msgstr ""
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
-msgstr ""
+msgstr "En ocasiones es posible vender un contrato antes de que expire, pero solo si se puede determinar un precio justo. Si está opción está disponible, verá el botón azul \"Vender\" junto a su transacción en la cartera"
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
-msgstr ""
+msgstr "Es hora de crecer. Hemos creado un centro de programación en Cyberjaya - el Silicon Valley de Kuala Lumpur - para mantener y mejorar BetOnMarkets.com"
 
 msgid "Italiano"
-msgstr ""
+msgstr "Italiano"
 
 msgid "Jan"
 msgstr "Ene"
@@ -1679,7 +1679,7 @@ msgid "January"
 msgstr "Enero"
 
 msgid "Jul"
-msgstr ""
+msgstr "Jul"
 
 msgid "July"
 msgstr "Julio"
