@@ -2354,7 +2354,7 @@ msgid "Price the trade"
 msgstr "De un precio al contrato"
 
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
-msgstr ""
+msgstr "Los precios presentan tendencias a la baja al comienzo de este patrón, el cual es una vela negra alta. Esta es seguida por una vela blanca que cabe dentro del cuerpo de la vela anterior. De esta manera, se completa la vela harami alcista. El día final del patrón es una vela blanca que confirma la tendencia al cerrar por sobre el valor anterior de cierre. La combinación sugiere una reversión de la tendencia de precios"
 
 msgid "Primary"
 msgstr "Primario"
@@ -2390,7 +2390,7 @@ msgid "Quiet markets"
 msgstr "Mercados tranquilos"
 
 msgid "Rate Of Change (ROC)"
-msgstr ""
+msgstr "Tasa de variación (ROC)"
 
 msgid "Rate Of Change Percentage (ROCP)"
 msgstr ""
@@ -2405,16 +2405,16 @@ msgid "Read about"
 msgstr ""
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
-msgstr ""
+msgstr "Coseche los beneficios del comercio con opciones binarias, sabiendo que sus fondos están siempre seguros"
 
 msgid "Ref"
-msgstr ""
+msgstr "Ref."
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
-msgstr ""
+msgstr "Regent Markets Group Ltd. cambia su nombre a Binary ltd"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and website branding throughout the organisation"
-msgstr ""
+msgstr "Regent Markets Group Ltd. cambia su nombre a Binary Ltd., unificando así la marca de la empresa y del sitio web en toda la organización"
 
 msgid "Regent Markets acquires BetsForTraders client base"
 msgstr ""
