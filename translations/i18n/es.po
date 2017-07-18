@@ -2489,13 +2489,13 @@ msgid "Return"
 msgstr "Volver"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Patrón Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr "Aumento"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Alza/Baja"
 
 msgid "Rise/Fall trades"
 msgstr ""
@@ -2753,16 +2753,16 @@ msgid "Stroke color"
 msgstr ""
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Ancho de trazo"
 
 msgid "Submit"
 msgstr "Enviar"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Plantilla aplicada y guardada como"
 
 msgid "Summation (SUM)"
-msgstr ""
+msgstr "Sumatoria (SUM)"
 
 msgid "Sun"
 msgstr "Dom"
@@ -2777,34 +2777,34 @@ msgid "Take early profits"
 msgstr ""
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
-msgstr ""
+msgstr "Takuri (doji libélula con una sombra inferior muy larga) (CDLTAKURI)"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr ""
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "Número de identificación fiscal"
 
 msgid "Tax information"
-msgstr ""
+msgstr "Información tributaria"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "Residencia fiscal"
 
 msgid "Tax-free"
-msgstr ""
+msgstr "Exento de impuestos"
 
 msgid "Tel"
-msgstr ""
+msgstr "Tel"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Cambios de plantilla guardados"
 
 msgid "Template name"
 msgstr "Nombre de la plantilla"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "El nombre de la plantilla ya existe"
 
 msgid "Terms"
 msgstr "Términos"
