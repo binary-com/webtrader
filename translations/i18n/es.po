@@ -2417,46 +2417,46 @@ msgid "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and
 msgstr "Regent Markets Group Ltd. cambia su nombre a Binary Ltd., unificando así la marca de la empresa y del sitio web en toda la organización"
 
 msgid "Regent Markets acquires BetsForTraders client base"
-msgstr ""
+msgstr "Regent Markets adquiere la base de datos de clientes de BetsForTraders"
 
 msgid "Regent Markets files for a patent in March 2000 on the basis of our unique position as the sole serious competitor in the business of fixed-odds financial betting. In May, we register the trading name BetOnMarkets and move to Malta to receive an internet betting licence"
-msgstr ""
+msgstr "Regent Markets solicita una patente en marzo de 2000 basada en nuestra posición exclusiva como el único competidor serio en el negocio de apuestas financieras de probabilidades fijas. En mayo, se registra el nombre comercial BetOnMarkets y nos movemos a Malta para adquirir una licencia de apuestas por Internet"
 
 msgid "Regent Markets files for patent, and registers BetOnMarkets trading name"
-msgstr ""
+msgstr "Regent Markets solicita una patente y registra el nombre comercial BetOnMarkets"
 
 msgid "Regent Markets granted US patent for 'Betting system and method'"
-msgstr ""
+msgstr "Regent Markets recibe la patente en los EE. UU. para \"el sistema y método de apuestas\""
 
 msgid "Regent Markets granted two new US patents"
-msgstr ""
+msgstr "A Regent Markets le son concedidas dos nuevas patentes en los EE. UU"
 
 msgid "Regent Markets is founded by Jean-Yves Sireau"
-msgstr ""
+msgstr "Regent Markets es fundada por Jean-Yves Sireau"
 
 msgid "Regent Markets obtains a licence in the Isle of Man"
-msgstr ""
+msgstr "Regent Markets obtiene una licencia en la Isla de Man"
 
 msgid "Regent Markets receives funding to provide on-line financial betting services"
-msgstr ""
+msgstr "Regent Markets recibe fondos para ofrecer servicios de apuestas financieras en línea"
 
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
-msgstr ""
+msgstr "Regent Markets establece un centro de programación en Cyberjaya, Malasia"
 
 msgid "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of Binary.com"
-msgstr ""
+msgstr "Regent Pacific Group Ltd., accionista fundador de Binary.com, cotizado en la bolsa de Hong Kong"
 
 msgid "Regent Pacific transaction"
-msgstr ""
+msgstr "Transacción de Regent Pacific"
 
 msgid "Register free account"
 msgstr "Registrar una cuenta gratis"
 
 msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgstr "Índice de fuerza relativa (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "Quitar"
 
 msgid "Remove Selected"
 msgstr "Quitar Seleccionado"
@@ -2468,7 +2468,7 @@ msgid "Repeat password"
 msgstr "Repetir contraseña"
 
 msgid "Resale price"
-msgstr ""
+msgstr "Precio de reventa"
 
 msgid "Reset zoom"
 msgstr "Reiniciar zoom"
