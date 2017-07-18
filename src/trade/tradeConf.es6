@@ -158,6 +158,12 @@ const register_ticks = (state, extra) => {
    }
 
    fn = liveapi.events.on('proposal_open_contract', (data) => {
+      if(data.error) {
+            $.growl.error({message: data.error.message});
+            liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+            liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+            return;
+      }
       const contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
