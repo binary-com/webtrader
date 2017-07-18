@@ -2246,10 +2246,10 @@ msgid "Phone"
 msgstr "Teléfono"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Patrón penetrante (CDLPIERCING)"
 
 msgid "Pip"
-msgstr ""
+msgstr "Porcentaje en punto (pip)"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr ""
