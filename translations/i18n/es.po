@@ -1841,7 +1841,7 @@ msgid "Look for a tall black candle with a long lower shadow to appear in a down
 msgstr "Busque una vela negra alta con una sombra inferior larga y que aparezca en una tendencia de precios bajista. La vela del segundo día debería ser similar a la del primero, pero más pequeña y con un mínimo más alto. El último día consiste en una marubozu negra que se esfuerza para entrar dentro del rango de precios del día anterior"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
-msgstr ""
+msgstr "Busque una vela blanca alta en una tendencia de precios al alza. A continuación, aparece una vela negra con un cuerpo que se extiende por sobre el cuerpo de la vela anterior. El último día consiste en otra vela negra, la que envuelve a la vela bajista anterior pero cierra sobre la apertura de la primera vela"
 
 msgid "Low"
 msgstr "Mínimo"
@@ -1883,7 +1883,7 @@ msgid "Market Professionals"
 msgstr "Profesionales del mercado"
 
 msgid "Market exit price"
-msgstr ""
+msgstr "Precio de salida del mercado"
 
 msgid "Marubozu (CDLMARUBOZU)"
 msgstr "Marubozu (CDLMARUBOZU)"
@@ -1901,7 +1901,7 @@ msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr ""
 
 msgid "Maximum (MAX)"
-msgstr ""
+msgstr "Máximo (MAX)"
 
 msgid "Maximum account cash balance"
 msgstr "Saldo máximo de la cuenta"
