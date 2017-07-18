@@ -1577,13 +1577,13 @@ msgid "In a downward price trend, a black candle appears followed by a white can
 msgstr "En una tendencia bajista, una vela negra aparece seguida por una vela blanca que abre por debajo del cuerpo anterior, pero esto puede ser difícil de ver en el gráfico. La vela blanca cierra por sobre el cuerpo, también. El último día de la línea de tres velas es otra vela blanca. En este ejemplo, muestra un cierre más alto"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
-msgstr ""
+msgstr "En una tendencia alcista, tres días seguidos abren en o cerca del valor de cierre del día anterior y cierran más bajo en el mismo día. Este patrón es más agudo que el de los tres cuervos negros y, por ende, posee una confiabilidad mayor como un patrón de reversión"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
-msgstr ""
+msgstr "En el clásico estilo de Silicon Valley, el empresario y gestor de fondos de cobertura con sede en Hong Kong, Jean-Yves Sireau, establece Regent Markets en su apartamento en Hong Kong. Desde allí desarrolla los sistemas, métodos y algoritmos para la implementación de un sistema de apuestas financieras de probabilidades fijas. La visión de Jean-Yves es crear un mercado en la forma más simple de todos los contratos de derivados - las apuestas de probabilidades fijas - y ofrecer a los inversores pequeños la oportunidad de hacer apuestas de pocas cantidades. Hasta esta innovación, las opciones binarias normalmente se operaban sólo en grandes cantidades"
 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar"
-msgstr ""
+msgstr "En el mercado de divisas los comerciantes pueden comprar contratos basados en el cambio del precio de una divisa en relación a otra. Por ejemplo, si un comerciante selecciona Alza en el mercado EUR/USD, predice que el valor del Euro subirá en relación al valor del dólar estadounidense"
 
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Para aplicar correctamente el tema, se requiere una actualización completa de la página. ¿Está seguro que desea proceder?"
@@ -1592,7 +1592,7 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Al ofrecerle nuestros servicios, estamos obligados a obtener información de usted con el fin de evaluar si un determinado producto o servicio es adecuado para usted (es decir, si posee la experiencia y el conocimiento necesario para entender los riesgos)"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr ""
+msgstr "En el Reino Unido y en la Isla de Man, nuestros clientes comercian a través de Binary (IOM) Ltd. En Japón, utilizan Binary KK. En la Unión Europea (con excepción del Reino Unido), operan con Binary (Europe) Ltd and Binary Investments (Europe) Ltd, mientras que en el resto del mundo lo hacen a través de Binary (C.R.) S.A"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr ""
@@ -1601,7 +1601,7 @@ msgid "In/Out"
 msgstr "Dentro/Fuera"
 
 msgid "In/Out trades"
-msgstr ""
+msgstr "Contratos Dentro/Fuera"
 
 msgid "Income Source"
 msgstr "Fuente de Ingresos"
@@ -1631,10 +1631,10 @@ msgid "Industry of Employment"
 msgstr "Sector del Empleo"
 
 msgid "Instant access"
-msgstr ""
+msgstr "Acceso instantáneo"
 
 msgid "Instant funding"
-msgstr ""
+msgstr "Financiamiento instantáneo"
 
 msgid "Instrument"
 msgstr "Instrumento"
@@ -1643,13 +1643,13 @@ msgid "Instruments"
 msgstr "Instrumentos"
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "Archivo JSON no válido"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "Parámetro(s) no válido(s)"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "Tipo de plantilla no válido"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
 msgstr ""
