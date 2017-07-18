@@ -1700,31 +1700,31 @@ msgid "Key facts"
 msgstr "Hechos clave"
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Patada (CDLKICKING)"
 
 msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
-msgstr ""
+msgstr "Patada - alza o baja determinada por la vela marubozu más larga (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr ""
+msgstr "Los patrones de patada (kicking) en un gráfico de velas japonesas se forman cuando hay dos marubozus largas - una blanca y una negra - con un gap entre ellas. Los patrones de patada alcista presentarían una vela negra o con cuerpo lleno sin mechas (sombras), seguidas por un gap más alto con una vela blanca o de cuerpo vacío que tampoco tiene mechas"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr ""
+msgstr "Los patrones de patada (kicking) en un gráfico de velas japonesas se forman cuando hay dos marubozus - una blanca y una negra - con un gap entre ellas. Los patrones de patada alcista presentarían una vela negra o con cuerpo lleno sin mechas (sombras), seguidas por un gap más alto con una vela blanca o de cuerpo vacío que tampoco tiene mechas"
 
 msgid "Known risks"
-msgstr ""
+msgstr "Riesgos conocidos"
 
 msgid "Kuala Lumpur Office"
-msgstr ""
+msgstr "Oficina de Kuala Lumpur"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "Suelo de escalera (CDLLADDERBOTTOM)"
 
 msgid "Last used"
 msgstr "Utilizado por última vez"
 
 msgid "Learning to trade"
-msgstr ""
+msgstr "Aprender a operar"
 
 msgid "Least Squares Moving Average (LSMA)"
 msgstr ""
@@ -1844,19 +1844,19 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr ""
 
 msgid "Low"
-msgstr ""
+msgstr "Mínimo"
 
 msgid "Low Barrier"
 msgstr "Límite Inferior"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Límite bajo"
 
 msgid "Low barrier offset"
 msgstr "Offset límite bajo"
 
 msgid "Low minimum stakes"
-msgstr ""
+msgstr "Apuestas mínimas bajas"
 
 msgid "Lower"
 msgstr "Inferior"
