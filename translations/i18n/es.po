@@ -1130,7 +1130,7 @@ msgid "Digits"
 msgstr "Dígitos"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
-msgstr ""
+msgstr "El movimiento direccional (DMI) es realmente un conjunto de tres indicadores independientes combinados en uno. Consiste en el índice direccional medio (ADX), en el indicador direccional positivo (+DI) y en el indicador direccional negativo (-DI)"
 
 msgid "Directional Movement Index (DX)"
 msgstr "Índice de movimiento direccional (DX)"
@@ -1304,7 +1304,7 @@ msgid "Exit Spot"
 msgstr "Punto de Salida"
 
 msgid "Exit Spot Time"
-msgstr ""
+msgstr "Tiempo de punto de salida"
 
 msgid "Exit spot"
 msgstr "Punto de salida"
@@ -1862,7 +1862,7 @@ msgid "Lower"
 msgstr "Inferior"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr ""
+msgstr "El MACD es un indicador bursátil usado en el análisis técnico de los precios de las acciones. Su objetivo es revelar cambios en la fuerza, dirección, momento y duración de una tendencia en el precio de una acción"
 
 msgid "MENA FFXPO Award"
 msgstr "Premio FFXPO de MENA"
@@ -1889,16 +1889,16 @@ msgid "Marubozu (CDLMARUBOZU)"
 msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Índice de masa (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Enmarañado suspendido (CDLMATHOLD)"
 
 msgid "Matches"
-msgstr ""
+msgstr "Coincidencias"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
-msgstr ""
+msgstr "Mínimos coincidentes (CDLMATCHINGLOW)"
 
 msgid "Maximum (MAX)"
 msgstr "Máximo (MAX)"
@@ -1925,7 +1925,7 @@ msgid "Maximum number of open positions"
 msgstr "Número máximo de posiciones abiertas"
 
 msgid "Maximum price over selected period"
-msgstr ""
+msgstr "Precio máximo durante periodo seleccionado"
 
 msgid "May"
 msgstr "Mayo"
@@ -2198,22 +2198,22 @@ msgid "PDF"
 msgstr ""
 
 msgid "PEP Declaration"
-msgstr ""
+msgstr "Declaración de PEP"
 
 msgid "PNG"
 msgstr ""
 
 msgid "Parabolic SAR (SAR)"
-msgstr ""
+msgstr "SAR parabólico (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Las contraseñas no coinciden. Por favor, escríbalas otra vez"
 
 msgid "Patented technology"
-msgstr ""
+msgstr "Tecnología patentada"
 
 msgid "Pattern Recognition"
-msgstr ""
+msgstr "Reconocimiento de patrones"
 
 msgid "Payment agent"
 msgstr "Agente de pago"
@@ -2222,7 +2222,7 @@ msgid "Payment agents"
 msgstr "Agentes de pago"
 
 msgid "Payment options"
-msgstr ""
+msgstr "Métodos de pago"
 
 msgid "Payments"
 msgstr "Pagos"
