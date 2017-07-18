@@ -2816,10 +2816,10 @@ msgid "The"
 msgstr "El"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
-msgstr ""
+msgstr "El oscilador de precio absoluto (APO) se basa en las diferencias absolutas entre dos medias móviles de diferentes largos: una media móvil rápida y una lenta"
 
 msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
-msgstr ""
+msgstr "El oscilador Aroon es la diferencia entre Aroon-Up y Aroon-Down. Estos dos indicadores habitualmente se grafican juntos para facilitar su comparación, pero los analistas pueden también observar las diferencias entre estos dos indicadores mediante el oscilador Aroon. Este indicador fluctúa entre -100 y +100, con cero como línea media"
 
 msgid "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength"
 msgstr ""
