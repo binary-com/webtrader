@@ -1937,28 +1937,28 @@ msgid "Memorable town/city"
 msgstr "Ciudad memorable"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
-msgstr ""
+msgstr "Media móvil adaptativa de Mesa (MAMA)"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Mín: 10 máx: 2000"
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "Mínimo (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "Mínimo de 6 caracteres y debe contener al menos 1 dígito"
 
 msgid "Minimum of 2 characters required"
-msgstr ""
+msgstr "Mínimo de 2 caracteres requeridos"
 
 msgid "Minimum of 4 characters required"
-msgstr ""
+msgstr "Mínimo de 4 caracteres requeridos"
 
 msgid "Minimum of 6 characters required"
-msgstr ""
+msgstr "Mínimo de 6 caracteres requeridos"
 
 msgid "Minimum price over selected period"
-msgstr ""
+msgstr "Precio mínimo durante periodo seleccionado"
 
 msgid "Minus the agent's commission"
 msgstr "Menos la comisión del agente"
@@ -1970,10 +1970,10 @@ msgid "Miss"
 msgstr "Fallido"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
-msgstr ""
+msgstr "Indicadores de momentum"
 
 msgid "Mon"
 msgstr "Lun"
@@ -1982,16 +1982,16 @@ msgid "Monday"
 msgstr "Lunes"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
-msgstr ""
+msgstr "Estrella doji matutina (CDLMORNINGDOJISTAR)"
 
 msgid "Morning Star (CDLMORNINGSTAR)"
-msgstr ""
+msgstr "Estrella matutina (CDLMORNINGSTAR)"
 
 msgid "Mother's maiden name"
 msgstr "Apellido de soltera de su madre"
 
 msgid "Moving Average Convergence/Divergence (MACD)"
-msgstr ""
+msgstr "Convergencia o divergencia de media móvil (MACD)"
 
 msgid "Mr"
 msgstr "Sr."
@@ -2042,19 +2042,19 @@ msgid "No"
 msgstr "Núm"
 
 msgid "No Touch trades"
-msgstr ""
+msgstr "Contratos Sin toque"
 
 msgid "No matter the market - rising or falling, quiet or volatile - you'll find a trade to suit your outlook"
-msgstr ""
+msgstr "Sin importar el mercado -al alza o a la baja, tranquilo o volátil -, encontrará un contrato acorde a sus perspectivas"
 
 msgid "No surprises"
-msgstr ""
+msgstr "Sin sorpresas"
 
 msgid "No touch"
-msgstr ""
+msgstr "Sin Toque"
 
 msgid "Normalized Average True Range (NATR)"
-msgstr ""
+msgstr "Rango verdadero medio normalizado (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr ""
