@@ -2882,13 +2882,13 @@ msgid "The Inverted Hammer occurs mainly at the bottom of downtrends when the op
 msgstr "El patrón de martillo invertido ocurre principalmente al final de una tendencia bajista cuando los precios de apertura, máximo y de cierre son casi los mismos. Además, se aprecia una sombra superior larga, la que debería ser por lo menos dos veces el largo del cuerpo real de la vela"
 
 msgid "The Kaufman's Adaptive Moving Average (KAMA) Developed by Perry Kaufman, is a moving average designed to account for market noise or volatility. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
-msgstr ""
+msgstr "Media móvil adaptativa de Kaufman (KAMA), desarrollada por Perry Kaufman, es una media móvil diseñada para contabilizar el ruido o volatilidad del mercado. Este indicador que sigue tendencias se puede utilizar para identificar la tendencia general, registrar puntos de inflexión y filtrar movimientos de precio"
 
 msgid "The Least Squares Moving Average first calculates a least squares regression line over the preceding time periods, then projects it forward to the current period. In essence, it calculates what the value would be if the regression line continued"
-msgstr ""
+msgstr "La media móvil de mínimos cuadrados primero calcula la línea de regresión de los mínimos cuadrados en los periodos anteriores y, luego, la proyecta al periodo actual. Esencialmente, calcula cuál sería el valor si la línea de regresión continuase"
 
 msgid "The MESA Adaptive Moving Average is developed by John Ehlers of Mesa Software. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
-msgstr ""
+msgstr "La media móvil adaptativa de Mesa fue desarrollada por John Ehlers, de la compañía Mesa Software. Este indicador que sigue tendencias se puede utilizar para identificar la tendencia general, registrar puntos de inflexión y filtrar movimientos de precio"
 
 msgid "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
 msgstr ""
