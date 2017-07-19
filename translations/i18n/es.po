@@ -2201,7 +2201,7 @@ msgid "PEP Declaration"
 msgstr "Declaración de PEP"
 
 msgid "PNG"
-msgstr ""
+msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "SAR parabólico (SAR)"
@@ -2498,22 +2498,22 @@ msgid "Rise/Fall"
 msgstr "Alza/Baja"
 
 msgid "Rise/Fall trades"
-msgstr ""
+msgstr "Contratos Alza/Baja"
 
 msgid "Rising markets"
-msgstr ""
+msgstr "Mercados al alza"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr ""
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Plataforma robusta y segura"
 
 msgid "SVG"
-msgstr ""
+msgstr "SVG"
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
 msgstr "Empleado Asalariado"
@@ -2525,7 +2525,7 @@ msgid "Sale Price"
 msgstr "Precio de Venta"
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
 msgstr "Sáb"
@@ -2546,7 +2546,7 @@ msgid "Scalable trading"
 msgstr ""
 
 msgid "Second line of home address"
-msgstr ""
+msgstr "Segunda línea de dirección"
 
 msgid "Secondary"
 msgstr "Secundario"
@@ -2570,16 +2570,16 @@ msgid "Sell At Market"
 msgstr "Vender en el Mercado"
 
 msgid "Sell option"
-msgstr ""
+msgstr "Opción de venta"
 
 msgid "Sent to account"
 msgstr "Enviado a la cuenta"
 
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
-msgstr ""
+msgstr "Pautas separadas (CDLSEPARATINGLINES)"
 
 msgid "September"
 msgstr "Septiembre"
@@ -2591,7 +2591,7 @@ msgid "Session duration limit, in minutes"
 msgstr "Límite de duración de la sesión, en minutos"
 
 msgid "Set your probability of winning"
-msgstr ""
+msgstr "Establezca su probabilidad de ganar"
 
 msgid "Settles"
 msgstr "Se queda en"
@@ -2603,13 +2603,13 @@ msgid "Share chart"
 msgstr "Compartir gráfico"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
-msgstr ""
+msgstr "Estrella fugaz (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
-msgstr ""
+msgstr "Corto a largo plazo"
 
 msgid "Short-term action"
-msgstr ""
+msgstr "Acción a corto plazo"
 
 msgid "Show"
 msgstr "Mostrar"
@@ -2618,13 +2618,13 @@ msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish
 msgstr ""
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "Media móvil simple (SMA)"
 
 msgid "Simplicity"
-msgstr ""
+msgstr "Simplicidad"
 
 msgid "Smoothed Moving Average (SMMA)"
-msgstr ""
+msgstr "Media móvil suavizada(SMMA)"
 
 msgid "Sold"
 msgstr "Vendido"
@@ -2693,16 +2693,16 @@ msgid "Stays In/Goes Out"
 msgstr "Queda dentro/Sale fuera"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Queda dentro"
 
 msgid "Step 1: Define your position"
-msgstr ""
+msgstr "Paso 1: Defina su posición"
 
 msgid "Step 2: Get your trade price"
-msgstr ""
+msgstr "Paso 2: Obtenga el precio de su transacción"
 
 msgid "Step 3: Make your trade"
-msgstr ""
+msgstr "Paso 3: Realice su transacción"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
 msgstr ""
@@ -2891,7 +2891,7 @@ msgid "The MESA Adaptive Moving Average is developed by John Ehlers of Mesa Soft
 msgstr "La media móvil adaptativa de Mesa fue desarrollada por John Ehlers, de la compañía Mesa Software. Este indicador que sigue tendencias se puede utilizar para identificar la tendencia general, registrar puntos de inflexión y filtrar movimientos de precio"
 
 msgid "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
-msgstr ""
+msgstr "El indicador de momentum compara en qué lugar está el precio actual en relación con el pasado. En qué momento del pasado se realiza la comparación depende del operador técnico. Calcular el momentum es bastante sencillo (n es el número de periodos que selecciona el operador técnico): equivale al precio actual menos el mismo precio n periodos atrás"
 
 msgid "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average"
 msgstr ""
