@@ -2633,7 +2633,7 @@ msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr ""
 
 msgid "Spline"
-msgstr ""
+msgstr "Spline"
 
 msgid "Spot price"
 msgstr ""
@@ -2654,7 +2654,7 @@ msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
 msgstr ""
 
 msgid "Standard Deviation (STDDEV)"
-msgstr ""
+msgstr "Desviación estándar (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
 msgstr ""
@@ -2669,7 +2669,7 @@ msgid "Start Time"
 msgstr "Hora de Inicio"
 
 msgid "Start Trading"
-msgstr ""
+msgstr "Comience a operar"
 
 msgid "Start time"
 msgstr "Hora de inicio"
@@ -2681,13 +2681,13 @@ msgid "Statement"
 msgstr "Declaración"
 
 msgid "Statistical Functions"
-msgstr ""
+msgstr "Funciones estadísticas"
 
 msgid "Status"
 msgstr "Estado"
 
 msgid "Stays Between/Goes Outside trades"
-msgstr ""
+msgstr "Contratos Queda Dentro/Sale"
 
 msgid "Stays In/Goes Out"
 msgstr "Queda dentro/Sale fuera"
