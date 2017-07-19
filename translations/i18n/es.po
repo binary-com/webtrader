@@ -2843,10 +2843,10 @@ msgid "The CMO indicator is created by calculating the difference between the su
 msgstr "El indicador CMO se obtiene al calcular la diferencia entre la suma de todos los cierres más altos recientes y la suma de todos los cierres más bajos recientes, y dividirla por la suma de todos los movimientos de precios durante un periodo específico. El resultado se multiplica por 100 para obtener un rango de -100 a +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
-msgstr ""
+msgstr "El índice de Choppiness (CHOP) es un indicador designado para determinar si el mercado es muy variable (con movimientos laterales) o no (siguiendo una tendencia en una u otra dirección). El índice CHOP no tiene por finalidad predecir la dirección futura del mercado, sino que se utiliza para definir la condición de este"
 
 msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions"
-msgstr ""
+msgstr "Índice de canal de materias primas (CCI) es un indicador versátil que puede emplearse para identificar una nueva tendencia o advertir acerca de condiciones extremas en el mercado"
 
 msgid "The Donchian Channel is an indicator used in market trading developed by Richard Donchian. It is formed by taking the highest high and the lowest low of the last n periods. The area between the high and the low is the channel for the period chosen"
 msgstr ""
