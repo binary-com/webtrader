@@ -2840,7 +2840,7 @@ msgid "The Bullish Three Star appears after a downtrend and it consists of three
 msgstr "El patrón de tres velas alcistas aparece después de una tendencia a la baja y consiste en tres dojis consecutivas, en el cual la segunda doji forma un gap a la baja de las otras dos doji. El patrón de tres velas bajistas aparece luego de una tendencia a la baja y consiste en tres dojis consecutivas, en el cual la segunda doji forma un gap al alza de las otras dos doji"
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
-msgstr ""
+msgstr "El indicador CMO se obtiene al calcular la diferencia entre la suma de todos los cierres más altos recientes y la suma de todos los cierres más bajos recientes, y dividirla por la suma de todos los movimientos de precios durante un periodo específico. El resultado se multiplica por 100 para obtener un rango de -100 a +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
 msgstr ""
