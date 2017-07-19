@@ -2057,13 +2057,13 @@ msgid "Normalized Average True Range (NATR)"
 msgstr "Rango verdadero medio normalizado (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
-msgstr ""
+msgstr "El rango verdadero medio normalizado (NATR) intenta normalizar los valores del rango verdadero entre instrumentos por medio de la siguiente fórmula:"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: la retirada vía agente de pago está disponible sólo si  deposita exclusivamente vía agente de pago"
 
 msgid "Nov"
-msgstr ""
+msgstr "Nov"
 
 msgid "November"
 msgstr "Noviembre"
@@ -2078,34 +2078,34 @@ msgid "OAuth Server"
 msgstr "Servidor de OAuth"
 
 msgid "OHLC"
-msgstr ""
+msgstr "Gráfico OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "Aceptar"
 
 msgid "Occupation"
-msgstr ""
+msgstr "Ocupación"
 
 msgid "Oct"
-msgstr ""
+msgstr "Oct"
 
 msgid "October"
 msgstr "Octubre"
 
 msgid "Odd"
-msgstr ""
+msgstr "Impar"
 
 msgid "Offices in Malta, Malaysia and Japan"
-msgstr ""
+msgstr "Oficinas en Malta, Malasia y Japón"
 
 msgid "Ok"
-msgstr ""
+msgstr "Aceptar"
 
 msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
 msgstr "Sobre la base de la información proporcionada en relación con sus conocimientos y experiencia, consideramos que las inversiones disponibles a través de este sitio web no son adecuadas para usted"
 
 msgid "On-Neck Pattern (CDLONNECK)"
-msgstr ""
+msgstr "Patrón sobre la línea del cuello (CDLONNECK)"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una vez que se alcanza este límite, ya no puede depositar"
@@ -2114,28 +2114,28 @@ msgid "One last step left"
 msgstr "Queda un último paso"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
-msgstr ""
+msgstr "Sólo cinco años después de la creación de la web, obtenemos este importante premio por nuestros servicios de apuestas en línea. El premio reconoce la forma fiable, rápida y segura de operar en línea ofrecida por BetOnMarkets.com tanto para principiantes como para expertos. Hasta este momento, nuestro sitio web ha recibido más de 15 millones de transacciones"
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "Se permiten sólo letras, números y guiones"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "Se permite sólo el uso de letras, números, espacios, guiones, puntos y apóstrofes"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+msgstr "Se permite sólo el uso de letras, números, espacios, puntos, comas, -, / y @"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr ""
+msgstr "Se permite sólo el uso de letras, números, espacios, puntos, comas y rayas(-)"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "Se permite sólo el uso de letras, espacios, guiones, puntos y apóstrofes"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "Se permiten sólo números y espacios"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "Se permiten sólo letras, números y guiones"
 
 msgid "Open"
 msgstr "Abierto"
@@ -2150,13 +2150,13 @@ msgid "Open account"
 msgstr "Abrir una cuenta"
 
 msgid "Opening an account"
-msgstr ""
+msgstr "Abrir cuenta"
 
 msgid "Opens"
 msgstr "Se abre"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
 msgstr "El comercio con opciones binarias puede ser una verdadera adicción, como cualquier otra actividad llevada al extremo. Para evitar el peligro de tal adicción, le ofrecemos una comprobación de la realidad que le da un resumen de sus transacciones y cuentas de forma regular"
@@ -2171,31 +2171,31 @@ msgid "Other financial instruments trading frequency"
 msgstr "Frecuencia de comerciar con otros instumentos financieros"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr ""
+msgstr "Nuestra empresa sigue creciendo y obtiene una licencia en la Isla de Man para servir mejor a nuestros clientes en el Reino Unido"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
-msgstr ""
+msgstr "Nuestros clientes claramente confían en nosotros. A mediados de 2014, Binary.com tiene más de 100 millones de transacciones históricas y más de 130.000 nuevas transacciones diarias"
 
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
-msgstr ""
+msgstr "Nuestro crecimiento rápido se complementa con la adquisición de la cartera de clientes de BetsForTraders, uno de nuestros principales competidores"
 
 msgid "Over"
 msgstr "Encima"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "Más de 1 millón de cuentas registradas en todo el mundo"
 
 msgid "Over 3 years"
 msgstr "Más de 3 años"
 
 msgid "Over 90 staff and contractors worldwide"
-msgstr ""
+msgstr "Más de 90 empleados y contratistas en todo el mundo"
 
 msgid "Overlap Studies"
 msgstr ""
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PEP Declaration"
 msgstr "Declaración de PEP"
@@ -2708,7 +2708,7 @@ msgid "Stick Sandwich (CDLSTICKSANDWICH)"
 msgstr ""
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "Estocástico (STOCH)"
 
 msgid "Stochastic Fast (STOCHF)"
 msgstr ""
