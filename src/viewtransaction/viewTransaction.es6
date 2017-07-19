@@ -183,6 +183,12 @@ export const init = (contract_id, transaction_id) => {
 }
 
 const update_indicative = (data, state) => {
+   if(data.error) {
+      $.growl.error({message: data.error.message});
+      liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+      liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+      return;
+   }
    const contract = data.proposal_open_contract;
    const id = contract.contract_id || data.echo_req.contract_id,
       bid_price = contract.bid_price;
@@ -251,6 +257,8 @@ const update_indicative = (data, state) => {
       state.table.is_sold = contract.is_sold;
       state.table.exit_tick = contract.exit_tick;
       state.table.exit_tick_time = contract.exit_tick_time;
+      state.table.date_expiry = contract.date_expiry;
+      state.table.current_spot_time = contract.exit_tick_time;
       state.table.sell_price = contract.sell_price;
       state.table.final_price = contract.sell_price;
       !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
