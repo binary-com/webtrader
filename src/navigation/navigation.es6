@@ -122,7 +122,13 @@ const initLoginButton = (root) => {
    liveapi.events.on('balance', update_balance);
 
    liveapi.events.on('logout', () => {
-      $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+      $('.webtrader-dialog[data-authorized=true]').each((inx, elm) => {
+         const dlg = $(elm);
+         dlg.dialog('close');
+         dlg.one('dialogclose', () => {
+            _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
+         });
+      });
       /* destroy all authorized dialogs */
       state.logout_disabled = false;
       state.account.show = false;
@@ -136,7 +142,13 @@ const initLoginButton = (root) => {
    });
 
    liveapi.events.on('login', (data) => {
-      $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+      $('.webtrader-dialog[data-authorized=true]').each((inx, elm) => {
+         const dlg = $(elm);
+         dlg.dialog('close');
+         dlg.one('dialogclose', () => {
+            _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
+         });
+      });
       /* destroy all authorized dialogs */
       state.show_login = false;
       state.account.show = true;
