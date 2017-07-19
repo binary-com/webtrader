@@ -2711,22 +2711,22 @@ msgid "Stochastic (STOCH )"
 msgstr "Estocástico (STOCH)"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "Estocástico rápido (STOCHF)"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
-msgstr ""
+msgstr "Índice de fuerza relativa estocástico (STOCHRSI)"
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr ""
+msgstr "Estocástico lento (STOCHS)"
 
 msgid "Stock Indices"
-msgstr ""
+msgstr "Indices bursátiles"
 
 msgid "Stock indices"
-msgstr ""
+msgstr "Indices bursátiles"
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
-msgstr ""
+msgstr "Los índices bursátiles miden el valor de una selección de las compañías en el mercado bursátil"
 
 msgid "Stocks trading experience"
 msgstr "Experiencia de comerciar con acciones"
@@ -2750,7 +2750,7 @@ msgid "Stop-type"
 msgstr "Tipo de stop"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Color de trazo"
 
 msgid "Stroke width"
 msgstr "Ancho de trazo"
@@ -2780,7 +2780,7 @@ msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr "Takuri (doji libélula con una sombra inferior muy larga) (CDLTAKURI)"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
-msgstr ""
+msgstr "Tasuki Gap (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
 msgstr "Número de identificación fiscal"
@@ -2822,7 +2822,7 @@ msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. T
 msgstr "El oscilador Aroon es la diferencia entre Aroon-Up y Aroon-Down. Estos dos indicadores habitualmente se grafican juntos para facilitar su comparación, pero los analistas pueden también observar las diferencias entre estos dos indicadores mediante el oscilador Aroon. Este indicador fluctúa entre -100 y +100, con cero como línea media"
 
 msgid "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength"
-msgstr ""
+msgstr "El índice de movimiento direccional medio (ADX) fue desarrollado en 1978 por J. Welles Wilder como un indicador de la fuerza de tendencia de una serie de precios de un instrumento financiero. El ADX tiene un rango que va desde 0 a 100. En general, lecturas bajo 20 indican debilidad en la tendencia, mientras que lecturas sobre 40 indican fuerza en la tendencia"
 
 msgid "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
 msgstr ""
