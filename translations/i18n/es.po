@@ -2831,13 +2831,13 @@ msgid "The Awesome Oscillator is an indicator used to measure market momentum. A
 msgstr "El oscilador Awesome es un indicador utilizado para medir el momentum de mercado. El AO se calcula mediante la diferencia entre la media móvil simple de 34 y la de 5 periodos. Las medias móviles simples que se utilizan no se calculan usando el precio de cierre, sino que los puntos medios de cada barra. El AO se utiliza generalmente para reafirmar las tendencias o anticiparse a posibles reversiones"
 
 msgid "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
-msgstr ""
+msgstr "El patrón dentro de la línea del cuello ocurre después de una tendencia a la baja, cuando el primer día es una vela roja larga y el segundo día, una azul que abre debajo del mínimo del primer día y cierra casi dentro del cuerpo del primer día"
 
 msgid "The Bearish On-Neck Pattern occurs after a downtrend when a long black day is followed by a long white day that gaps down at the open and closes below the close of the black day"
-msgstr ""
+msgstr "El patrón sobre la línea del cuello ocurre después de una tendencia a la baja, cuando un día negro largo es seguido por un día blanco largo que realiza un gap descendente al inicio y cierra debajo del precio de cierre del día negro"
 
 msgid "The Bullish Three Star appears after a downtrend and it consists of three consecutive Doji, in which the second Doji gaps below the other two Doji. The Bearish Three Star appears after a uptrend and it consists of three consecutive Doji, in which the second Doji gaps above the other two Doji"
-msgstr ""
+msgstr "El patrón de tres velas alcistas aparece después de una tendencia a la baja y consiste en tres dojis consecutivas, en el cual la segunda doji forma un gap a la baja de las otras dos doji. El patrón de tres velas bajistas aparece luego de una tendencia a la baja y consiste en tres dojis consecutivas, en el cual la segunda doji forma un gap al alza de las otras dos doji"
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
 msgstr ""
