@@ -2825,10 +2825,10 @@ msgid "The Average Directional Movement Index index (ADX) was developed in 1978 
 msgstr "El índice de movimiento direccional medio (ADX) fue desarrollado en 1978 por J. Welles Wilder como un indicador de la fuerza de tendencia de una serie de precios de un instrumento financiero. El ADX tiene un rango que va desde 0 a 100. En general, lecturas bajo 20 indican debilidad en la tendencia, mientras que lecturas sobre 40 indican fuerza en la tendencia"
 
 msgid "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
-msgstr ""
+msgstr "El estudio del rango verdadero promedio (TRANGE) mide el tamaño del rango del período y considera cualquier gap desde el cierre del período anterior"
 
 msgid "The Awesome Oscillator is an indicator used to measure market momentum. AO calculates the difference of a 34 Period and 5 Period Simple Moving Averages. The Simple Moving Averages that are used are not calculated using closing price but rather each bar's midpoints. AO is generally used to affirm trends or to anticipate possible reversals"
-msgstr ""
+msgstr "El oscilador Awesome es un indicador utilizado para medir el momentum de mercado. El AO se calcula mediante la diferencia entre la media móvil simple de 34 y la de 5 periodos. Las medias móviles simples que se utilizan no se calculan usando el precio de cierre, sino que los puntos medios de cada barra. El AO se utiliza generalmente para reafirmar las tendencias o anticiparse a posibles reversiones"
 
 msgid "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
 msgstr ""
