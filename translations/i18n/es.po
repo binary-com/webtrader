@@ -2852,13 +2852,13 @@ msgid "The Donchian Channel is an indicator used in market trading developed by 
 msgstr ""
 
 msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr ""
+msgstr "La media móvil exponencial doble (DEMA) creada por Patrick Mulloy tiene por objetivo quitar el desfase inherente a las medias móviles al dar más peso a los valores recientes"
 
 msgid "The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr ""
+msgstr "La media móvil exponencial doble (DEMA) creada por Patrick Mulloy tiene por objetivo quitar el desfase inherente a las medias móviles al dar más peso a los valores recientes"
 
 msgid "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow"
-msgstr ""
+msgstr "La doji libélula se crea cuando los precios de apertura, máximo y de cierre son iguales o casi iguales (es poco frecuente que sean iguales). La parte más importante de esta doji es su larga sombra inferior"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr ""
