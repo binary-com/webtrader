@@ -103,6 +103,8 @@ const init_state = (root, what_todo) => {
          pep: false,
          salutation: 'Mr',
          salutation_array: ['Mr', 'Mrs', 'Ms', 'Miss'],
+         account_opening_reason_array: ['Speculative', 'Income Earning', 'Assets Saving', 'Hedging'],
+         account_opening_reason: '',
          first_name: '',
          last_name: '',
          date_of_birth: '',
@@ -133,9 +135,7 @@ const init_state = (root, what_todo) => {
       financial: {
          experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
          frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
-         account_opening_reason_array: ['Speculative', 'Income Earning', 'Assets Saving', 'Hedging'],
-
-         account_opening_reason: '',
+         
          forex_trading_experience: '',
          forex_trading_frequency: '',
          indices_trading_experience: '',
@@ -185,7 +185,7 @@ const init_state = (root, what_todo) => {
 
    state.user.is_valid = () => {
       const user = state.user;
-      return user.first_name !== '' &&
+      return state.user.account_opening_reason !== '' && user.first_name !== '' &&
          !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.first_name) &&
          user.last_name !== '' &&
          !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.last_name) &&
@@ -224,6 +224,7 @@ const init_state = (root, what_todo) => {
          salutation: user.salutation,
          first_name: user.first_name,
          last_name: user.last_name,
+         account_opening_reason: user.account_opening_reason,
          date_of_birth: user.date_of_birth,
          residence: user.residence,
          address_line_1: user.address_line_1,
@@ -260,7 +261,7 @@ const init_state = (root, what_todo) => {
    };
 
    state.financial.empty_fields = () => {
-      return state.financial.account_opening_reason === '' || state.financial.forex_trading_experience === '' ||
+      return state.financial.forex_trading_experience === '' ||
           state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
           state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
           state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
@@ -292,6 +293,7 @@ const init_state = (root, what_todo) => {
          new_account_maltainvest: 1,
          salutation: user.salutation,
          first_name: user.first_name,
+         account_opening_reason: user.account_opening_reason,
          last_name: user.last_name,
          date_of_birth: user.date_of_birth,
          residence: user.residence,
@@ -381,6 +383,7 @@ const init_state = (root, what_todo) => {
          state.user.salutation = data.salutation || state.user.salutation;
          state.user.first_name = data.first_name || '';
          state.user.last_name = data.last_name || '';
+         state.user.account_opening_reason = data.account_opening_reason || '';
          state.user.date_of_birth = data.date_of_birth ? moment.unix(data.date_of_birth).format("YYYY-MM-DD") : moment().subtract(18, "years").format("YYYY-MM-DD");
          state.user.address_line_1 = data.address_line_1 || '';
          state.user.address_line_2 = data.address_line_2 || '';
