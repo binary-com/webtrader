@@ -2636,7 +2636,7 @@ msgid "Spline"
 msgstr "Spline"
 
 msgid "Spot price"
-msgstr "Precio spot"
+msgstr "Precio al contado"
 
 msgid "Spreads"
 msgstr ""
@@ -2894,7 +2894,7 @@ msgid "The Momentum indicator compares where the current price is in relation to
 msgstr "El indicador de momentum compara en qué lugar está el precio actual en relación con el pasado. En qué momento del pasado se realiza la comparación depende del operador técnico. Calcular el momentum es bastante sencillo (n es el número de periodos que selecciona el operador técnico): equivale al precio actual menos el mismo precio n periodos atrás"
 
 msgid "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average"
-msgstr ""
+msgstr "El oscilador porcentaje precio (PPO) es un oscilador de momentum que mide la diferencia entre dos medias móviles como un porcentaje de la media móvil más grande"
 
 msgid "The Price Rate-of-Change (ROC) indicator displays the difference between the current price and the price x-time periods ago. The difference can be displayed in either points or as a percentage"
 msgstr "El indicador tasa de cambio (ROC) muestra la diferencia entre el precio actual y el precio x periodos atrás. La diferencia se puede mostrar en puntos o como porcentaje"
