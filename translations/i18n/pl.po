@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -147,7 +143,7 @@ msgid "- trade 24/7, even on weekends"
 msgstr "– handluj 24 godz. na dobę, nawet w weekendy"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr "– handluj wskaźnikami zmienności stworzonymi przez Binary.com, 24 godz. na dobę"
+msgstr "– handluj wskaźnikami zmienności stworzonymi przez Binary.com, 24 godz. na dobę 7 dni w tygodniu"
 
 msgid "- trade Binary.com's proprietary volatility indices"
 msgstr "– handluj wskaźnikami zmienności stworzonymi przez Binary.com"
