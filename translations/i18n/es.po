@@ -2921,10 +2921,10 @@ msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar
 msgstr "El índice de fuerza relativa estocástico (STOCHRSI) fue desarrollado por Tushar Chande y Stanley Kroll. Este oscilador mide el nivel de RSI con respecto a su rango en un periodo de tiempo definido. El StochRSI aplica la fórmula estocástica a valores RSI en vez de a precios. Esto lo transforma en un indicador de un indicador. El resultado es un oscilador que fluctúa entre 0 y 1"
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
-msgstr ""
+msgstr "El patrón Tasuki Gap está formado por tres velas. La primera es una vela roja dentro de una tendencia bajista definida; la segunda, otra vela roja en un gap descendente con respecto de la vela anterior, y la última, una vela blanca que cierra dentro del gap de las dos primeras barras"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
-msgstr ""
+msgstr "El patrón de continuación es una tendencia de continuación que puede aparecer al alza o a la baja. En una tendencia alcista se le llama patrón de continuación alcista y, en una baja, patrón de continuación bajista. Este patrón contiene por lo menos cinco velas"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
 msgstr ""
@@ -2945,7 +2945,7 @@ msgid "The balance of power (BOP) indicator measures the strength of the bulls v
 msgstr ""
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
-msgstr ""
+msgstr "El límite de un contrato de opciones binarias es el precio objetivo que usted establece para el mercado subyacente. Usted puede elegir contratos en que el mercado se queda por debajo o supera un precio objetivo, o en que se mantiene entre dos precios"
 
 msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr ""
