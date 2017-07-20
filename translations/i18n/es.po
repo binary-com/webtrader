@@ -2705,7 +2705,7 @@ msgid "Step 3: Make your trade"
 msgstr "Paso 3: Realice su transacción"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "Patrón stick sandwich (CDLSTICKSANDWICH)"
 
 msgid "Stochastic (STOCH )"
 msgstr "Estocástico (STOCH)"
@@ -2915,10 +2915,10 @@ msgid "The Shooting formation is created when the open, low, and close are rough
 msgstr "La formación estrella fugaz se crea cuando los precios de apertura, máximo y de cierre son casi los mismos. Además, se aprecia una sombra superior larga, la que debería ser, en general, por lo menos dos veces el largo del cuerpo real de la vela"
 
 msgid "The Simple Moving Average (SMA) is calculated by adding the price of an instrument over a number of time periods and then dividing the sum by the number of time periods. The SMA is basically the average price of the given time period, with equal weighting given to the price of each period"
-msgstr ""
+msgstr "La media móvil simple (SMA) se calcula sumando el precio de instrumento a un número de periodos de tiempo y, luego, dividiendo el resultado por el número de periodos. El SMA es básicamente el precio promedio de un periodo de tiempo específico, el cual da igual ponderación al precio de cada periodo"
 
 msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar Chande and Stanley Kroll, StochRSI is an oscillator that measures the level of RSI relative to its high-low range over a set time period. StochRSI applies the Stochastics formula to RSI values, instead of price values. This makes it an indicator of an indicator. The result is an oscillator that fluctuates between 0 and 1"
-msgstr ""
+msgstr "El índice de fuerza relativa estocástico (STOCHRSI) fue desarrollado por Tushar Chande y Stanley Kroll. Este oscilador mide el nivel de RSI con respecto a su rango en un periodo de tiempo definido. El StochRSI aplica la fórmula estocástica a valores RSI en vez de a precios. Esto lo transforma en un indicador de un indicador. El resultado es un oscilador que fluctúa entre 0 y 1"
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
 msgstr ""
