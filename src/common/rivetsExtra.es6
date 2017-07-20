@@ -172,7 +172,7 @@ rv.formatters.debounce = (value, callback, timeout = 250) => {
 
 /* turn current select item into a jquery-ui-selectmenu, update value on change */
 rv.binders.selectmenu = {
-   priority: 100,
+   priority: 101,
    publishes: true,
    bind: function (el) {
       const publish = this.publish,

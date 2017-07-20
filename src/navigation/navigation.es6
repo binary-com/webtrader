@@ -122,7 +122,13 @@ const initLoginButton = (root) => {
    liveapi.events.on('balance', update_balance);
 
    liveapi.events.on('logout', () => {
-      $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+      $('.webtrader-dialog[data-authorized=true]').each((inx, elm) => {
+         const dlg = $(elm);
+         dlg.dialog('close');
+         dlg.one('dialogclose', () => {
+            _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
+         });
+      });
       /* destroy all authorized dialogs */
       state.logout_disabled = false;
       state.account.show = false;
@@ -136,7 +142,13 @@ const initLoginButton = (root) => {
    });
 
    liveapi.events.on('login', (data) => {
-      $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+      $('.webtrader-dialog[data-authorized=true]').each((inx, elm) => {
+         const dlg = $(elm);
+         dlg.dialog('close');
+         dlg.one('dialogclose', () => {
+            _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
+         });
+      });
       /* destroy all authorized dialogs */
       state.show_login = false;
       state.account.show = true;
@@ -215,7 +227,7 @@ const initLangButton = (root) => {
    state.onclick = (value) => {
       state.confirm.visible = false;
       const lang = _.find(state.languages, {value: value});
-      if(lang.value == state.lang.value)
+      if(lang && state.lang && lang.value == state.lang.value)
          return;
 
       local_storage.set('i18n', {value: lang.value});
