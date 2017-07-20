@@ -2950,7 +2950,7 @@ hawk@~3.1.3:
     sntp "1.x.x"
 
 highstock-release@^5.0.10:
-  version v5.0.10
+  version "5.0.10"
   resolved "https://registry.yarnpkg.com/highstock-release/-/highstock-release-5.0.10.tgz#41da1f8fd4694f7c858a0e54e61b233fc6e22cb1"
 
 hoek@2.x.x:
@@ -4394,7 +4394,7 @@ optimist@0.6.1, optimist@^0.6.1:
     wordwrap "~0.0.2"
 
 optional@^0.1.0:
-  version v0.1.3
+  version "0.1.3"
   resolved "https://registry.yarnpkg.com/optional/-/optional-0.1.3.tgz#f87537517b59a5e732cfd8f18e4f7eea7ab4761e"
 
 optionator@^0.8.1:
@@ -6073,9 +6073,9 @@ websocket-extensions@>=0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
 
-webtrader-charts@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.2.5.tgz#93100325eadfc7b99897e36bab2818fc6b65bf87"
+webtrader-charts@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.3.6.tgz#ceaf3b8170dae99723faf31dbb224e7635f9b320"
   dependencies:
     datatables.net-dt "^1.10.15"
     imports-loader "^0.7.1"
