@@ -479,7 +479,7 @@ msgid "Admin"
 msgstr "Administrador"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "Avance en bloque (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "Todas las duraciones"
@@ -776,7 +776,7 @@ msgid "Brand of first car"
 msgstr "Marca del primer coche"
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Escape (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr "Actualización del navegador requerida"
@@ -2234,7 +2234,7 @@ msgid "Pension"
 msgstr "Pensión"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "Oscilador porcentaje-precio (PPO)"
 
 msgid "Permissions"
 msgstr "Permisos"
@@ -2651,7 +2651,7 @@ msgid "Stake"
 msgstr "Apuesta"
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
-msgstr ""
+msgstr "Patrón parado (CDLSTALLEDPATTERN)"
 
 msgid "Standard Deviation (STDDEV)"
 msgstr "Desviación estándar (STDDEV)"
