@@ -2504,7 +2504,7 @@ msgid "Rising markets"
 msgstr "Mercados al alza"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "Patrón de continuación alcista o bajista (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
 msgstr "Plataforma robusta y segura"
@@ -2636,7 +2636,7 @@ msgid "Spline"
 msgstr "Spline"
 
 msgid "Spot price"
-msgstr ""
+msgstr "Precio spot"
 
 msgid "Spreads"
 msgstr ""
