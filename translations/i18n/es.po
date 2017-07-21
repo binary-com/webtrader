@@ -455,7 +455,7 @@ msgid "Account opening reason"
 msgstr "Motivo para abrir la cuenta"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Facturación de la cuenta"
 
 msgid "Action"
 msgstr "Acción"
