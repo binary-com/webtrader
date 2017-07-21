@@ -5,6 +5,7 @@ import { statement as statementTest } from './statementTest';
 import { tokenManagement as tokenManagementTest } from './tokenManagementTest';
 import { logout as logoutTest } from './logoutTest';
 import { profitTable as profitTableTest } from './profitTableTest';
+import { accountSwitch as accountSwitchTest } from './accountSwitchTest';
 
 export default {
   before: before,
@@ -14,5 +15,6 @@ export default {
   'Statement': statementTest,
   'Profit Table': profitTableTest,
   'Token Mangement': tokenManagementTest,
+  'Switch account': accountSwitchTest,
   'Logout': logoutTest
 }

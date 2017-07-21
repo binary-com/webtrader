@@ -2,9 +2,9 @@ export default {
   horizontalLine: (browser) => {
     browser
       //Open draw pop-up
-      .click('div[role=\'dialog\'] .webtrader-dialog .chartOptions_button span.drawButton')
+      .click("div[role='dialog'] .webtrader-dialog .chartOptions_button span.drawButton")
       .assert.visible('div[role=\'dialog\'] .webtrader-dialog .drawingToolOverlay')
-      .execute('$(\'div[role="dialog"] .webtrader-dialog span[data-balloon="Horizontal line"] img\').click()')
+      .click('div[role="dialog"] .webtrader-dialog span[data-balloon="Horizontal line"] img')
       .waitForElementPresent('.cssPopup')
       // Draw horizontal line
       .execute("$('.cssPopup + .lean_overlay_buttonpane > div:last-of-type').click()")

@@ -28,7 +28,7 @@ module.exports = {
           "webdriver.chrome.driver": "./node_modules/nightwatch/bin/chromedriver"
         }
       },
-      "filter": "tests/\*/\*.test.js",
+      "filter": "*.test.js",
       "screenshots": {
         "enabled": true, // if you want to keep screenshots
         "path": './reports/screenshots', // save screenshots here
@@ -43,7 +43,11 @@ module.exports = {
       "desiredCapabilities": { // use Chrome as the default browser for tests
         "browserName": "chrome",
         "acceptSslCerts": true,
-        "javascriptEnabled": true // turn off to test progressive enhancement
+        "javascriptEnabled": true, // turn off to test progressive enhancement
+        "chromeOptions": {
+          "args": ["start-fullscreen"]
+        }
+
       }
     },
   }

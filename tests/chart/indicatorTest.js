@@ -6,6 +6,7 @@ export const closeDialog = (browser, dialogName) => {
 
 const openDialog = (browser, ele, dialogName) => {
   browser
+    .pause(5000)
     .click('div[role="dialog"] .webtrader-dialog .chartOptions_button span[data-balloon="' + ele + '"]')
     .assert.visible('.' + dialogName);
 };
