@@ -455,7 +455,7 @@ msgid "Account opening reason"
 msgstr "Motivo para abrir la cuenta"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Facturación de la cuenta"
 
 msgid "Action"
 msgstr "Acción"
@@ -698,7 +698,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com Shop introduced"
-msgstr ""
+msgstr "Presentamos la tienda de Binary.com"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com continúa innovando y creciendo"
@@ -1397,7 +1397,7 @@ msgid "Forex trading frequency"
 msgstr "Frecuencia de comercio con Forex"
 
 msgid "Founded October 1999"
-msgstr ""
+msgstr "Fundada en octubre de 1999"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
@@ -2393,7 +2393,7 @@ msgid "Rate Of Change (ROC)"
 msgstr "Tasa de variación (ROC)"
 
 msgid "Rate Of Change Percentage (ROCP)"
-msgstr ""
+msgstr "Porcentaje de tasa de cambio (ROCP)"
 
 msgid "Rate Of Change Ratio (ROCR)"
 msgstr ""
@@ -2543,7 +2543,7 @@ msgid "Save changes"
 msgstr "Guardar cambios"
 
 msgid "Scalable trading"
-msgstr ""
+msgstr "Operación escalable"
 
 msgid "Second line of home address"
 msgstr "Segunda línea de dirección"
@@ -2657,7 +2657,7 @@ msgid "Standard Deviation (STDDEV)"
 msgstr "Desviación estándar (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
-msgstr ""
+msgstr "La desviación estándar en un cálculo estadístico que se utiliza para medir la variabilidad. En negociación en mercados capitales, este valor es conocido como volatilidad. Una desviación estándar baja indica que los puntos de datos tienden a estar muy cerca de la media, mientras que una desviación estándar alta indica que los puntos están repartidos en un rango amplio de valores"
 
 msgid "Standard methods"
 msgstr "Métodos estándar"
@@ -2900,10 +2900,10 @@ msgid "The Price Rate-of-Change (ROC) indicator displays the difference between 
 msgstr "El indicador tasa de cambio (ROC) muestra la diferencia entre el precio actual y el precio x periodos atrás. La diferencia se puede mostrar en puntos o como porcentaje"
 
 msgid "The Rate of Change Percentage (ROCP) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. ROCP does not express as a percentage. This indicator is also commonly known as a momentum indicator"
-msgstr ""
+msgstr "El indicador porcentaje de tasa de cambio (ROCP) compara el precio actual con un precio anterior extraído de un número seleccionado de períodos anteriores. El precio actual se divide por el precio anterior. ROCP no expresa un porcentaje. Este indicador es también conocido como un indicador de momentum"
 
 msgid "The Rate of Change Rate (ROCR) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. This indicator is also commonly known as a momentum indicator"
-msgstr ""
+msgstr "El indicador coeficiente de tasa de cambio (ROCP) compara el precio actual con un precio anterior extraído de un número seleccionado de períodos anteriores. El precio actual se divide por el precio anterior. Este indicador es también conocido como un indicador de momentum"
 
 msgid "The Relative Strength Index (RSI) was published by J. Welles Wilder. The current price is normalized as a percentage between 0 and 100. The name of this oscillator is misleading because it does not compare the instrument relative to another instrument or set of instruments, but rather represents the current price relative to other recent pieces within the selected lookback window length"
 msgstr "El índice de fuerza relativa (RSI) fue publicado por J. Welles Wilder. El precio actual se normaliza como un porcentaje entre 0 y 100. El nombre de este oscilador es engañoso, puesto que no compara el instrumento con relación a otro instrumento o set de instrumentos, sino que representa el precio actual en relación con otros recientes dentro del periodo seleccionado"
@@ -2927,22 +2927,22 @@ msgid "The Three Methods pattern is a trend continuation pattern that can appear
 msgstr "El patrón de continuación es una tendencia de continuación que puede aparecer al alza o a la baja. En una tendencia alcista se le llama patrón de continuación alcista y, en una baja, patrón de continuación bajista. Este patrón contiene por lo menos cinco velas"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
-msgstr ""
+msgstr "La media móvil triangular (TRIMA) representa un promedio de precios, pero pondera más los precios medios del periodo de tiempo. Los cálculos suavizan los datos el doble mediante un ancho de ventana de la mitad del largo de la serie"
 
 msgid "The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers a moving average with better smoothing then traditional exponential moving average"
-msgstr ""
+msgstr "La media móvil exponencial triple (T3) desarrollada por Tim Tillson tiene por objetivo entregar una media móvil con mejor suavidad que la media móvil exponencial tradicional"
 
 msgid "The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a moving average with less lag then traditional exponential moving average"
-msgstr ""
+msgstr "La media móvil exponencial triple (TEMA) desarrollada por Patrick Mulloy entrega una media móvil con menos desfase que la media móvil exponencial tradicional"
 
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
-msgstr ""
+msgstr "La función de precio típico mide el promedio de los precios máximo, mínimo y de cierre del día mediante un sencillo diagrama de línea única. El precio típico entrega un panorama simplificado de los precios cotizados en el día, tal y como lo realizan otras funciones de ajuste de precios. Puede usarlo para suavizar algunas de las inconstancias del precio de cierre, porque comprende información de todo el día de operaciones y no solo el resultado del final de este. El indicador de precio típico se calcula sumando los precios máximo, mínimo y de cierre y dividiendo la suma por tres"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
-msgstr ""
+msgstr "El indicador de cierre ponderado es sencillamente un promedio de los precios de cada día. Se puede utilizar para suavizar algunas de las inconstancias de un gráfico de precios de cierre, dado que contiene información de todo el día de operaciones"
 
 msgid "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
-msgstr ""
+msgstr "El indicador de equilibrio de poder (BOP) mide la fuerza del mercado alcista con respecto al mercado bajista por medio de la evaluación de la habilidad de cada uno de empujar los precios a un nivel extremo"
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
 msgstr "El límite de un contrato de opciones binarias es el precio objetivo que usted establece para el mercado subyacente. Usted puede elegir contratos en que el mercado se queda por debajo o supera un precio objetivo, o en que se mantiene entre dos precios"
@@ -2951,118 +2951,118 @@ msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr ""
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
-msgstr ""
+msgstr "El patrón de escape comienza con una vela larga que representa la tendencia actual. La vela que le sigue es del mismo color y se aleja de la primera vela. El tercer día, a pesar de que la vela puede ser de cualquier color, esto no representa un cambio en la tendencia actual. El cuarto día la tendencia se mantiene y, por ende, sigue generando velas del mismo color. Sin embargo, el quinto día, la tendencia se revierte. Por favor, tener en cuenta que solo abre levemente en la dirección contraria a la tendencia actual y continúa en la misma dirección hasta cerrar en el área del gap"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
-msgstr ""
+msgstr "La vela marubozu negra cerrada es una vela alta y negra con sombra superior, pero sin sombra inferior. La vela marubozu blanca cerrada es una vela alta y blanca con sombra inferior, pero sin sombra superior"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr ""
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
-msgstr ""
+msgstr "El período del contrato es el plazo de una transacción. También se conoce como la duración"
 
 msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
-msgstr ""
+msgstr "El precio al contado de entrada es el precio de inicio del contrato adquirido por el comerciante"
 
 msgid "The expiry price is the price of the underlying when the contract expires"
-msgstr ""
+msgstr "El precio de caducidad es el precio del contrato subyacente cuando el contrato expira"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr ""
+msgstr "Los servicios contractuales financieros de este sitio solo son adecuados para los clientes que pueden hacer frente a la pérdida del dinero que invierten y que comprenden y tienen experiencia con los riesgos implícitos en la adquisición de contratos financieros. Las transacciones en los contractos financieros implican un alto grado de riesgo. Si los contratos comprados caducan sin valor, sufrirá la pérdida total de su inversión, la que consistirá en la prima contractual"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "Los servicios comerciales financieros contenidos en este sitio son adecuados solamente para los clientes que son capaces de soportar la pérdida de todo el dinero de su inversión y que entienden y tienen experiencia con el riesgo a la hora de adquirir contratos financieros. Las transacciones en contratos financieros conllevan un alto grado de riesgo. Si los contratos comprados caducan sin valor, usted sufrirá una pérdida total de su inversión, que consiste en el contrato permium"
 
 msgid "The first step is to open an account. You can apply online in just a few minutes"
-msgstr ""
+msgstr "El primer paso es abrir una cuenta. Puede solicitarlo en línea en cuestión de minutos"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
-msgstr ""
+msgstr "Los primeros tres días del patrón suelo de escalera alcista son velas negras fuertes con aperturas y cierres que van disminuyendo consecutivamente. El cuarto día es una vela negra corta que abre y se comercia a valores más altos, dejando una sombra superior larga, para luego cerrar en un nuevo mínimo. El quinto día es una vela blanca fuerte cuyo cuerpo genera un gap con el cuarto día"
 
 msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
-msgstr ""
+msgstr "El patrón paloma mensajera es un patrón de reversión alcista que está compuesto por dos velas rojas. La primera es una negra alta que aparece en una tendencia a la baja. La segunda también es una vela negra, pero más pequeña y que cabe dentro del cuerpo de la primera vela negra"
 
 msgid "The indicator is designed for use on a monthly time scale. It is the sum of a 14-month rate of change and 11-month rate of change, smoothed by a 10-period weighted moving average"
-msgstr ""
+msgstr "El indicador está diseñado para su uso en una escala de tiempo mensual. Es la suma de una tasa de cambio de 14 meses y una de 11 meses, suavizada por una media móvil ponderada de 10 periodos"
 
 msgid "The market exit price is the price in effect at the end of the contract period"
-msgstr ""
+msgstr "El precio de salida del mercado es el precio en vigor al momento de la finalización del contrato"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
-msgstr ""
+msgstr "El SAR parabólico se calcula casi de manera independiente para cada tendencia en el precio. Cuando el precio está al alza, el SAR aparece debajo del precio y converge con él de manera ascendente. De manera similar, en una tendencia a la baja, el SAR aparece sobre el precio y converge con él de manera descendente. En caso paso dentro de una tendencia, el SAR se calcula con un periodo de antecedencia"
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
-msgstr ""
+msgstr "La patente implica que Regent Markets es reconocida como pionera en apuestas binarias. La patente ayuda a proteger nuestras innovaciones"
 
 msgid "The payout is the amount paid to an options trader if their prediction is correct"
-msgstr ""
+msgstr "El pago es el monto pagado al inversor si su predicción es correcta"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr ""
+msgstr "El patrón penetrante está formado por dos velas: la primer negra y la segunda blanca. Ambas deben tener cuerpos bastante grandes y sus sombras son habitualmente, pero no necesariamente, pequeñas o inexistentes. La vela blanca debe abrir debajo del cierre anterior y cerrar sobre el punto medio del cuerpo de la vela negra. Un cierre debajo del punto medio podría calificarse como una reversión, pero sin llegar a considerarla alcista"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
-msgstr ""
+msgstr "La plataforma de primera calidad para el comercio con opciones binarias en los mercados financieros mundiales"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
-msgstr ""
+msgstr "La ganancia es la diferencia entre el pago y el precio de compra (la apuesta) de un contrato ganador"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr ""
+msgstr "El cambio de marca es una evolución natural para la plataforma ya que sigue creciendo su cuota de mercado en el campo altamente competitivo de las opciones binarias. La nueva marca refleja la naturaleza del negocio, mientras que el nuevo lema - Sharp Prices, Smart Trading (Mejores precios, inversiones inteligentes) - comunica nuestra filosofía y el compromiso con nuestros clientes"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
-msgstr ""
+msgstr "El precio de reventa indica el precio actual de mercado de un contrato. Los precios de reventa se basan en los mejores esfuerzos y pueden no estar disponibles en todo momento después de la compra. Diríjase a la sección \"Opción de venta\" para más información sobre la posibilidad de venta de los contratos antes de su vencimiento"
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
-msgstr ""
+msgstr "El retorno es el dinero que se entrega cuando el contrato finaliza (vea \"Pago\")"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
-msgstr ""
+msgstr "La apuesta es el monto que el comerciante debe pagar para comprar un contrato"
 
 msgid "The sum of price over selected period"
-msgstr ""
+msgstr "La suma del precio en un periodo seleccionado"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
-msgstr ""
+msgstr "La varianza y la estrechamente relacionada desviación estándar son medidas de qué tan dispersa es la distribución. En otras palabras, son medidas de variabilidad. La varianza se calcula como el promedio de la desviación al cuadrado de cada número con respecto a su media"
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
-msgstr ""
+msgstr "Los índices de volatilidad simulan varias situaciones reales del mercado y proporcionan una plataforma ideal para acostumbrarse al comercio y probar estrategias en varias condiciones del mercado. Estos índices dependen de la volatilidad y la deriva, y ayudan a los usuarios a probar escenarios de alta volatilidad, baja volatilidad, tendencias alcistas y bajistas"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
-msgstr ""
+msgstr "Estos son contratos en los que el comerciante predice si el mercado terminará por encima o debajo de un determinado objetivo de precio"
 
 msgid "These are trades where the trader predicts if a market will rise or fall at the end of a selected time period"
-msgstr ""
+msgstr "Estos son contratos en los que el comerciante predice si un mercado subirá o bajará al final del período de tiempo seleccionado"
 
 msgid "These are trades where the trader selects a low and high barrier, and predicts if the market will stay within these barriers or go outside them (see also 'Stays Between/Goes Outside trades')"
-msgstr ""
+msgstr "Estos son contratos en los que el comerciante selecciona un límite superior y uno inferior y predice si el mercado permanecerá entre esos límites o si saldrá fuera de ellos (vea también 'Contratos Queda Dentro/Sale')"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will never touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Estos son los contratos en los que el comerciante selecciona un precio objetivo y predice que el mercado nunca tocará el objetivo antes del vencimiento del contrato"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Estos son los contratos en los que que el comerciante selecciona un precio objetivo y predice que el mercado tocará el objetivo antes del vencimiento del contrato"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
-msgstr ""
+msgstr "Esta media móvil utiliza la curva de distribución normal (Gaussiana), la que se puede posicionar mediante el parámetro Offset de 0 a 1. Este parámetro permite regular la suavidad y alta sensibilidad de la media móvil. Sigma es otro parámetro que es responsable de la forma de los coeficientes de la curva"
 
 msgid "This field is required"
 msgstr "Este campo es requerido"
 
 msgid "This is another award we really savour. Trade2win is a portal for active traders seeking to profit from stocks, futures, options and forex, and these traders award us silver (we are just pipped for gold by Betfair). It means active traders worldwide rate our trading platform extremely highly"
-msgstr ""
+msgstr "Este es otro premio que realmente saboreamos. Trade2win es un portal para inversores activos que buscan beneficios de acciones, futuros, opciones y divisas, y estos comerciantes nos premian con el premio de plata (y el oro se otorga a Betfair por muy poca diferencia). Esto significa que los inversores activos en todo el mundo le otorgan una alta valoración a nuestra plataforma"
 
 msgid "This is big. We pick up a double award from the Financial Times and Investors Chronicle, reflecting our success in improving the quality and usability of our website and products"
-msgstr ""
+msgstr "Esto sí que es grande. Ganamos un doble premio de parte de Financial Times y de Investors Chronicle, lo que refleja nuestro éxito en la mejora de la calidad y la facilidad de uso de nuestro sitio web y sus productos"
 
 msgid "This is the current price at which an underlying can be bought or sold at a particular time"
-msgstr ""
+msgstr "Este es el precio actual al que se puede comprar o vender el contrato subyacente en un momento determinado"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
-msgstr ""
+msgstr "Este patrón ocurre cuando dos días negros tienen cierres equivalentes en una tendencia bajista. Los mínimos coincidentes indican que se ha alcanzado un suelo, a pesar de que el nuevo mínimo se probó y no hubo seguimiento, lo que es señal de un buen precio de apoyo"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 msgstr ""
@@ -3071,13 +3071,13 @@ msgid "This website is marketed in the rest of the EU, for investment products b
 msgstr ""
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
-msgstr ""
+msgstr "Tres soldados blancos (CDL3WHITESOLDIERS)"
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "Tres cuervos negros (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
-msgstr ""
+msgstr "Tres pautas interiores alcistas/bajistas (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
 msgstr ""
