@@ -28,6 +28,9 @@ before_install:
 install:
 - yarn build
 #- yarn test - Disable for now
+# Add following lines to package.json when tests are working in travis-ci TODO
+#    "test": "nightwatch --config nightwatch.conf.js",
+#    "test-report": "nightwatch-html-reporter -d ./reports -o index.html"
 after_success:
 - git config --global user.email "arnab@binary.com"
 - git config --global user.name "Arnab Karmakar"
