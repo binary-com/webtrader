@@ -2936,10 +2936,10 @@ msgid "The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a m
 msgstr "La media móvil exponencial triple (TEMA) desarrollada por Patrick Mulloy entrega una media móvil con menos desfase que la media móvil exponencial tradicional"
 
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
-msgstr ""
+msgstr "La función de precio típico mide el promedio de los precios máximo, mínimo y de cierre del día mediante un sencillo diagrama de línea única. El precio típico entrega un panorama simplificado de los precios cotizados en el día, tal y como lo realizan otras funciones de ajuste de precios. Puede usarlo para suavizar algunas de las inconstancias del precio de cierre, porque comprende información de todo el día de operaciones y no solo el resultado del final de este. El indicador de precio típico se calcula sumando los precios máximo, mínimo y de cierre y dividiendo la suma por tres"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
-msgstr ""
+msgstr "El indicador de cierre ponderado es sencillamente un promedio de los precios de cada día. Se puede utilizar para suavizar algunas de las inconstancias de un gráfico de precios de cierre, dado que contiene información de todo el día de operaciones"
 
 msgid "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
 msgstr ""
