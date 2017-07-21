@@ -698,7 +698,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com Shop introduced"
-msgstr ""
+msgstr "Presentamos la tienda de Binary.com"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com continúa innovando y creciendo"
@@ -1397,7 +1397,7 @@ msgid "Forex trading frequency"
 msgstr "Frecuencia de comercio con Forex"
 
 msgid "Founded October 1999"
-msgstr ""
+msgstr "Fundada en octubre de 1999"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
@@ -2393,7 +2393,7 @@ msgid "Rate Of Change (ROC)"
 msgstr "Tasa de variación (ROC)"
 
 msgid "Rate Of Change Percentage (ROCP)"
-msgstr ""
+msgstr "Porcentaje de tasa de cambio (ROCP)"
 
 msgid "Rate Of Change Ratio (ROCR)"
 msgstr ""
