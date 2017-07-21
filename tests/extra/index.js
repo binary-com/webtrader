@@ -20,7 +20,7 @@ export default {
 
     'Navigate to Main page': navigateToMainTest,
 
-    //'Check Chrome Ext': checkChromeExtTest, TODO
+    'Check Chrome Ext': checkChromeExtTest,
 
     'Help': helpTest,
 
