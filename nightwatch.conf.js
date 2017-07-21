@@ -45,7 +45,7 @@ module.exports = {
         "acceptSslCerts": true,
         "javascriptEnabled": true, // turn off to test progressive enhancement
         "chromeOptions": {
-          "args": ["start-fullscreen"]
+          "args": ["start-fullscreen", "headless", "disable-gpu"]
         }
 
       }
