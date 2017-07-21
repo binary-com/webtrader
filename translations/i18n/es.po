@@ -3056,10 +3056,10 @@ msgid "This is another award we really savour. Trade2win is a portal for active 
 msgstr "Este es otro premio que realmente saboreamos. Trade2win es un portal para inversores activos que buscan beneficios de acciones, futuros, opciones y divisas, y estos comerciantes nos premian con el premio de plata (y el oro se otorga a Betfair por muy poca diferencia). Esto significa que los inversores activos en todo el mundo le otorgan una alta valoración a nuestra plataforma"
 
 msgid "This is big. We pick up a double award from the Financial Times and Investors Chronicle, reflecting our success in improving the quality and usability of our website and products"
-msgstr ""
+msgstr "Esto sí que es grande. Ganamos un doble premio de parte de Financial Times y de Investors Chronicle, lo que refleja nuestro éxito en la mejora de la calidad y la facilidad de uso de nuestro sitio web y sus productos"
 
 msgid "This is the current price at which an underlying can be bought or sold at a particular time"
-msgstr ""
+msgstr "Este es el precio actual al que se puede comprar o vender el contrato subyacente en un momento determinado"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr ""
