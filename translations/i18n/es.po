@@ -2969,7 +2969,7 @@ msgid "The entry spot price is the starting price of the trade purchased by a tr
 msgstr "El precio al contado de entrada es el precio de inicio del contrato adquirido por el comerciante"
 
 msgid "The expiry price is the price of the underlying when the contract expires"
-msgstr "El precio de caducidad es el precio del mercado subyacente cuando el contrato expira"
+msgstr "El precio de caducidad es el precio del contrato subyacente cuando el contrato expira"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
 msgstr "Los servicios contractuales financieros de este sitio solo son adecuados para los clientes que pueden hacer frente a la pérdida del dinero que invierten y que comprenden y tienen experiencia con los riesgos implícitos en la adquisición de contratos financieros. Las transacciones en los contractos financieros implican un alto grado de riesgo. Si los contratos comprados caducan sin valor, sufrirá la pérdida total de su inversión, la que consistirá en la prima contractual"
@@ -3062,7 +3062,7 @@ msgid "This is the current price at which an underlying can be bought or sold at
 msgstr "Este es el precio actual al que se puede comprar o vender el contrato subyacente en un momento determinado"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
-msgstr ""
+msgstr "Este patrón ocurre cuando dos días negros tienen cierres equivalentes en una tendencia bajista. Los mínimos coincidentes indican que se ha alcanzado un suelo, a pesar de que el nuevo mínimo se probó y no hubo seguimiento, lo que es señal de un buen precio de apoyo"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 msgstr ""
@@ -3071,10 +3071,10 @@ msgid "This website is marketed in the rest of the EU, for investment products b
 msgstr ""
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
-msgstr ""
+msgstr "Tres soldados blancos (CDL3WHITESOLDIERS)"
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "Tres cuervos negros (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
 msgstr ""
