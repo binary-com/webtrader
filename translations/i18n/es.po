@@ -2543,7 +2543,7 @@ msgid "Save changes"
 msgstr "Guardar cambios"
 
 msgid "Scalable trading"
-msgstr ""
+msgstr "Operación escalable"
 
 msgid "Second line of home address"
 msgstr "Segunda línea de dirección"
@@ -2657,7 +2657,7 @@ msgid "Standard Deviation (STDDEV)"
 msgstr "Desviación estándar (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
-msgstr ""
+msgstr "La desviación estándar en un cálculo estadístico que se utiliza para medir la variabilidad. En negociación en mercados capitales, este valor es conocido como volatilidad. Una desviación estándar baja indica que los puntos de datos tienden a estar muy cerca de la media, mientras que una desviación estándar alta indica que los puntos están repartidos en un rango amplio de valores"
 
 msgid "Standard methods"
 msgstr "Métodos estándar"
@@ -2900,10 +2900,10 @@ msgid "The Price Rate-of-Change (ROC) indicator displays the difference between 
 msgstr "El indicador tasa de cambio (ROC) muestra la diferencia entre el precio actual y el precio x periodos atrás. La diferencia se puede mostrar en puntos o como porcentaje"
 
 msgid "The Rate of Change Percentage (ROCP) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. ROCP does not express as a percentage. This indicator is also commonly known as a momentum indicator"
-msgstr ""
+msgstr "El indicador porcentaje de tasa de cambio (ROCP) compara el precio actual con un precio anterior extraído de un número seleccionado de períodos anteriores. El precio actual se divide por el precio anterior. ROCP no expresa un porcentaje. Este indicador es también conocido como un indicador de momentum"
 
 msgid "The Rate of Change Rate (ROCR) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. This indicator is also commonly known as a momentum indicator"
-msgstr ""
+msgstr "El indicador coeficiente de tasa de cambio (ROCP) compara el precio actual con un precio anterior extraído de un número seleccionado de períodos anteriores. El precio actual se divide por el precio anterior. ROCP no expresa un porcentaje. Este indicador es también conocido como un indicador de momentum"
 
 msgid "The Relative Strength Index (RSI) was published by J. Welles Wilder. The current price is normalized as a percentage between 0 and 100. The name of this oscillator is misleading because it does not compare the instrument relative to another instrument or set of instruments, but rather represents the current price relative to other recent pieces within the selected lookback window length"
 msgstr "El índice de fuerza relativa (RSI) fue publicado por J. Welles Wilder. El precio actual se normaliza como un porcentaje entre 0 y 100. El nombre de este oscilador es engañoso, puesto que no compara el instrumento con relación a otro instrumento o set de instrumentos, sino que representa el precio actual en relación con otros recientes dentro del periodo seleccionado"
