@@ -2993,7 +2993,7 @@ msgid "The market exit price is the price in effect at the end of the contract p
 msgstr "El precio de salida del mercado es el precio en vigor al momento de la finalización del contrato"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
-msgstr ""
+msgstr "El SAR parabólico se calcula casi de manera independiente para cada tendencia en el precio. Cuando el precio está al alza, el SAR aparece debajo del precio y converge con él de manera ascendente. De manera similar, en una tendencia a la baja, el SAR aparece sobre el precio y converge con él de manera descendente. En caso paso dentro de una tendencia, el SAR se calcula con un periodo de antecedencia"
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
 msgstr "La patente implica que Regent Markets es reconocida como pionera en apuestas binarias. La patente ayuda a proteger nuestras innovaciones"
@@ -3002,58 +3002,58 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "El pago es el monto pagado al inversor si su predicción es correcta"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr ""
+msgstr "El patrón penetrante está formado por dos velas: la primer negra y la segunda blanca. Ambas deben tener cuerpos bastante grandes y sus sombras son habitualmente, pero no necesariamente, pequeñas o inexistentes. La vela blanca debe abrir debajo del cierre anterior y cerrar sobre el punto medio del cuerpo de la vela negra. Un cierre debajo del punto medio podría calificarse como una reversión, pero sin llegar a considerarla alcista"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
-msgstr ""
+msgstr "La plataforma de primera calidad para el comercio con opciones binarias en los mercados financieros mundiales"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
-msgstr ""
+msgstr "La ganancia es la diferencia entre el pago y el precio de compra (la apuesta) de un contrato ganador"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr ""
+msgstr "El cambio de marca es una evolución natural para la plataforma ya que sigue creciendo su cuota de mercado en el campo altamente competitivo de las opciones binarias. La nueva marca refleja la naturaleza del negocio, mientras que el nuevo lema - Sharp Prices, Smart Trading (Mejores precios, inversiones inteligentes) - comunica nuestra filosofía y el compromiso con nuestros clientes"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
-msgstr ""
+msgstr "El precio de reventa indica el precio actual de mercado de un contrato. Los precios de reventa se basan en los mejores esfuerzos y pueden no estar disponibles en todo momento después de la compra. Diríjase a la sección \"Opción de venta\" para más información sobre la posibilidad de venta de los contratos antes de su vencimiento"
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
-msgstr ""
+msgstr "El retorno es el dinero que se entrega cuando el contrato finaliza (vea \"Pago\")"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
-msgstr ""
+msgstr "La apuesta es el monto que el comerciante debe pagar para comprar un contrato"
 
 msgid "The sum of price over selected period"
-msgstr ""
+msgstr "La suma del precio en un periodo seleccionado"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
 msgstr ""
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
-msgstr ""
+msgstr "Los índices de volatilidad simulan varias situaciones reales del mercado y proporcionan una plataforma ideal para acostumbrarse al comercio y probar estrategias en varias condiciones del mercado. Estos índices dependen de la volatilidad y la deriva, y ayudan a los usuarios a probar escenarios de alta volatilidad, baja volatilidad, tendencias alcistas y bajistas"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
-msgstr ""
+msgstr "Estos son contratos en los que el comerciante predice si el mercado terminará por encima o debajo de un determinado objetivo de precio"
 
 msgid "These are trades where the trader predicts if a market will rise or fall at the end of a selected time period"
-msgstr ""
+msgstr "Estos son contratos en los que el comerciante predice si un mercado subirá o bajará al final del período de tiempo seleccionado"
 
 msgid "These are trades where the trader selects a low and high barrier, and predicts if the market will stay within these barriers or go outside them (see also 'Stays Between/Goes Outside trades')"
-msgstr ""
+msgstr "Estos son contratos en los que el comerciante selecciona un límite superior y uno inferior y predice si el mercado permanecerá entre esos límites o si saldrá fuera de ellos (vea también 'Contratos Queda Dentro/Sale')"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will never touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Estos son los contratos en los que el comerciante selecciona un precio objetivo y predice que el mercado nunca tocará el objetivo antes del vencimiento del contrato"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Estos son los contratos en los que que el comerciante selecciona un precio objetivo y predice que el mercado tocará el objetivo antes del vencimiento del contrato"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
-msgstr ""
+msgstr "Esta media móvil utiliza la curva de distribución normal (Gaussiana), la que se puede posicionar mediante el parámetro Offset de 0 a 1. Este parámetro permite regular la suavidad y alta sensibilidad de la media móvil. Sigma es otro parámetro que es responsable de la forma de los coeficientes de la curva"
 
 msgid "This field is required"
 msgstr "Este campo es requerido"
 
 msgid "This is another award we really savour. Trade2win is a portal for active traders seeking to profit from stocks, futures, options and forex, and these traders award us silver (we are just pipped for gold by Betfair). It means active traders worldwide rate our trading platform extremely highly"
-msgstr ""
+msgstr "Este es otro premio que realmente saboreamos. Trade2win es un portal para inversores activos que buscan beneficios de acciones, futuros, opciones y divisas, y estos comerciantes nos premian con el premio de plata (y el oro se otorga a Betfair por muy poca diferencia). Esto significa que los inversores activos en todo el mundo le otorgan una alta valoración a nuestra plataforma"
 
 msgid "This is big. We pick up a double award from the Financial Times and Investors Chronicle, reflecting our success in improving the quality and usability of our website and products"
 msgstr ""
