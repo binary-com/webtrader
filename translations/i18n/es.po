@@ -2954,7 +2954,7 @@ msgid "The breakaway pattern begins with a long candle representing the current 
 msgstr "El patrón de escape comienza con una vela larga que representa la tendencia actual. La vela que le sigue es del mismo color y se aleja de la primera vela. El tercer día, a pesar de que la vela puede ser de cualquier color, esto no representa un cambio en la tendencia actual. El cuarto día la tendencia se mantiene y, por ende, sigue generando velas del mismo color. Sin embargo, el quinto día, la tendencia se revierte. Por favor, tener en cuenta que solo abre levemente en la dirección contraria a la tendencia actual y continúa en la misma dirección hasta cerrar en el área del gap"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
-msgstr ""
+msgstr "La vela marubozu negra cerrada es una vela alta y negra con sombra superior, pero sin sombra inferior. La vela marubozu blanca cerrada es una vela alta y blanca con sombra inferior, pero sin sombra superior"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr ""
