@@ -2960,7 +2960,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr ""
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
-msgstr ""
+msgstr "El período del contrato es el plazo de una transacción. También se conoce como la duración"
 
 msgid "The duration is the length of a purchased trade (see"
 msgstr ""
