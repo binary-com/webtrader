@@ -2942,7 +2942,7 @@ msgid "The Weighted Close indicator is simply an average of each day's price. It
 msgstr "El indicador de cierre ponderado es sencillamente un promedio de los precios de cada día. Se puede utilizar para suavizar algunas de las inconstancias de un gráfico de precios de cierre, dado que contiene información de todo el día de operaciones"
 
 msgid "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
-msgstr ""
+msgstr "El indicador de equilibrio de poder (BOP) mide la fuerza del mercado alcista con respecto al mercado bajista por medio de la evaluación de la habilidad de cada uno de empujar los precios a un nivel extremo"
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
 msgstr "El límite de un contrato de opciones binarias es el precio objetivo que usted establece para el mercado subyacente. Usted puede elegir contratos en que el mercado se queda por debajo o supera un precio objetivo, o en que se mantiene entre dos precios"
@@ -2951,7 +2951,7 @@ msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr ""
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
-msgstr ""
+msgstr "El patrón de escape comienza con una vela larga que representa la tendencia actual. La vela que le sigue es del mismo color y se aleja de la primera vela. El tercer día, a pesar de que la vela puede ser de cualquier color, esto no representa un cambio en la tendencia actual. El cuarto día la tendencia se mantiene y, por ende, sigue generando velas del mismo color. Sin embargo, el quinto día, la tendencia se revierte. Por favor, tener en cuenta que solo abre levemente en la dirección contraria a la tendencia actual y continúa en la misma dirección hasta cerrar en el área del gap"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
 msgstr ""
