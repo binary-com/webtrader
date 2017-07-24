@@ -1,5 +1,4 @@
-export default {
-  help: (browser) => {
+export default (browser) => {
     browser
       .click('.help')
       .waitForElementPresent('.help-dialog')
@@ -7,5 +6,4 @@ export default {
       .assert.containsText('.help-dialog .content .items .search-text .highlight', 'AROONOSC')
       .execute('$(".help-dialog .content .items .search-text > a").click()')
       .assert.containsText('.help-dialog .content .items #aroonoscillatoraroonosc', 'Aroon Oscillator (AROONOSC)');
-  }
-}
+};
