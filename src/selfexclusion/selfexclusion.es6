@@ -279,7 +279,7 @@ const logout = function() {
     settingsData.max_open_bets = null;
     settingsData.session_duration_limit = null;
     settingsData.exclude_until = null;
-    $("#nav-container a.selfexclusion").addClass('disabled');
+    $(".resources a.selfexclusion").addClass('disabled');
 };
 
 liveapi.events.on('login', function(data) {
