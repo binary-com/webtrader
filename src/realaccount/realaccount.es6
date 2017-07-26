@@ -50,7 +50,7 @@ const init_real_win = (root, what_todo) => {
       minimizable: true,
       maximizable: false,
       width: 360,
-      height: 'auto',
+      height: 400,
       'data-authorized': true,
       close: () => {
          real_win.dialog('destroy');
@@ -404,7 +404,7 @@ const init_state = (root, what_todo) => {
          state.user.country_array = data.residence_list;
          state.user.place_of_birth = data.residence_list[0].value;
          const residence = _.find(data.residence_list, { value: state.user.residence });
-         state.user.phone = state.user.phone ? state.user.phone : '+' + residence.phone_idd;
+         state.user.phone = state.user.phone ? state.user.phone : residence.phone_idd ? '+' + residence.phone_idd : '';
       })
       .catch(error_handler);
 
@@ -413,7 +413,6 @@ const init_state = (root, what_todo) => {
          () => liveapi.cached.send({ states_list: state.user.residence })
       )
       .then((data) => {
-         console.log(data.states_list);
          state.user.state_address_array = [{text:'Please select', value:''}, ...data.states_list];
          state.user.state_address = state.user.state_address_array[0].value;
       })
