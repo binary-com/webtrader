@@ -3,9 +3,9 @@
         if (/acct1=/.test(href) && /token1=/.test(href)) {
             //Remove the '#' check later once the backend changes are released TODO
             var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
-            var accts = (params_str.match(/acct\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
-            var tokens = (params_str.match(/token\d=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
-            var currs = (params_str.match(/cur\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var accts = (params_str.match(/acct\d+=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var tokens = (params_str.match(/token\d+=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var currs = (params_str.match(/cur\d+=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
             var oauth = [];
             for (var i = 0; i < accts.length; i++) {
                 var id = accts[i];
