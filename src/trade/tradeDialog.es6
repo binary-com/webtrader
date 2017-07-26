@@ -332,7 +332,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     basis: {
       array: ['Payout', 'Stake'],
       value: 'payout',
-      amount: 10,
+      amount: isBTC() ? 0.002 : 10,
       limit: null,
     },
     spreads: {
