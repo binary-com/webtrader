@@ -2945,7 +2945,7 @@ msgid "The balance of power (BOP) indicator measures the strength of the bulls v
 msgstr "El indicador de equilibrio de poder (BOP) mide la fuerza del mercado alcista con respecto al mercado bajista por medio de la evaluación de la habilidad de cada uno de empujar los precios a un nivel extremo"
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
-msgstr "El límite de un contrato de opciones binarias es el precio objetivo que usted establece para el mercado subyacente. Usted puede elegir contratos en que el mercado se queda por debajo o supera un precio objetivo, o en que se mantiene entre dos precios"
+msgstr "El límite de un contrato de opciones binarias es el precio objetivo que usted establece para el contrato subyacente. Usted puede elegir contratos en que el mercado se queda por debajo o supera un precio objetivo, o en que se mantiene entre dos precios"
 
 msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr ""

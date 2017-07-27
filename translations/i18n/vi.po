@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
 
@@ -2619,7 +2615,7 @@ msgid "Show"
 msgstr "Hiển thị"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
-msgstr ""
+msgstr "Bên cạnh mô hình nến trắng dòng là một mô hình ba. Mẫu Bullish: một xu hướng trở lên, nến đầu tiên tiếp theo là khác lên trên đó sẽ mở ra trên đóng đầu tiên (khoảng cách lên), đó là theo một nến lên thứ ba mở dưới đóng thứ hai (khoảng cách xuống). Hướng giảm Hoa văn: trong một xu hướng, nến đầu tiên là xuống, theo sau là một nến lên mở ra dưới đây đóng một trong những đầu tiên (gap xuống), theo sau là một nến trở lên mở ra bên dưới kết thúc thứ hai. Mô hình này cho thấy việc tiếp tục một xu hướng"
 
 msgid "Simple Moving Average (SMA)"
 msgstr "Đường biến thiên trung bình đơn giản (SMA)"
@@ -2928,25 +2924,25 @@ msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is
 msgstr "Mô hình Tasuki Gap bao gồm ba chân nến, thanh đầu tiên là một nến đỏ trong một xu hướng được xác định, thanh thứ hai là một nến đỏ đã cách dưới đóng thanh trước và bar cuối là một nến trắng mà đóng trong vòng khoảng cách của hai thanh"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
-msgstr ""
+msgstr "Các mô hình ba phương pháp là một mô hình tiếp tục xu hướng có thể xuất hiện trong một xu hướng tăng hoặc một xu hướng xuống. Trong một xu hướng tăng, nó được gọi là các mô hình ba phương pháp tăng và trong một xu hướng, nó được gọi là các mô hình ba phương pháp rơi xuống. Các mô hình ba phương pháp này bao gồm ít nhất 5 chân nến"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
-msgstr ""
+msgstr "Các tam giác chuyển động trung bình (TRIMA) đại diện cho mức trung bình của giá cả, nhưng đặt trọng lượng trên giá trung bình trong khoảng thời gian. Tính toán đôi-mịn dữ liệu bằng cách sử dụng một chiều rộng cửa sổ là một nửa chiều dài của series"
 
 msgid "The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers a moving average with better smoothing then traditional exponential moving average"
-msgstr ""
+msgstr "Các Triple mũ di chuyển trung bình (T3) bởi Tim Tillson nỗ lực để cung cấp một di chuyển trung bình với tốt hơn làm mịn sau đó truyền thống mũ di chuyển trung bình"
 
 msgid "The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a moving average with less lag then traditional exponential moving average"
-msgstr ""
+msgstr "Các Triple mũ di chuyển trung bình (TEMA) bởi Patrick Mulloy cung cấp một di chuyển trung bình với độ trễ ít hơn sau đó truyền thống mũ di chuyển trung bình"
 
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
-msgstr ""
+msgstr "Các chức năng điển hình giá các biện pháp trung bình cao, thấp và giá đóng cửa trong ngày bằng cách sử dụng một cốt truyện đơn giản, dòng đơn. Giá bình thường cho một cái nhìn đơn giản của ngày giao dịch giá nhất và cũng là nó sẽ xảy ra với các chức năng điều chỉnh giá. Bạn có thể sử dụng nó làm mịn ra một số inconstancy mức giá đóng cửa vì nó bao gồm các thông tin cho toàn bộ giao dịch ngày và không chỉ là kết quả của những ngày cuối cùng. Điển hình giá chỉ được đo bằng cách thêm cao, thấp, và giá đóng cửa với nhau, và sau đó chia ba"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
-msgstr ""
+msgstr "Các chỉ số trọng đóng là chỉ đơn giản là trung bình mỗi ngày giá. Nó có thể được sử dụng để mịn ra một số inconstancy biểu đồ của giá đóng cửa, vì nó bao gồm các thông tin cho toàn bộ kinh doanh ngày"
 
 msgid "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
-msgstr ""
+msgstr "Chỉ số cân bằng sức mạnh cho (BOP) đo sức mạnh của bò vs gấu bằng cách đánh giá khả năng của mỗi người để đẩy giá đến một mức độ cực đoan"
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
 msgstr "Rào cản của một giao dịch quyền chọn nhị phân là các mức giá mục tiêu bạn đặt ra cho các cơ sở. Bạn có thể lựa chọn giao dịch ở dưới hoặc vượt trên giá mục tiêu, hoặc ở giữa hai mục tiêu"
@@ -2955,10 +2951,10 @@ msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr "Barrier(s) bạn chọn xác định vị trí của bạn và kích hoạt thanh toán của bạn"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
-msgstr ""
+msgstr "Các mô hình ly khai bắt đầu với một ngọn nến lâu đại diện cho xu hướng hiện nay. Ngọn nến sau là cùng một màu sắc và nó khoảng trống từ đó ngọn nến lâu dài đầu tiên. Trong khi nến s ngày thứ ba có thể là một trong hai màu, nó sẽ không hiển thị một sự thay đổi trong xu hướng hiện nay. Ngày thứ tư tiếp tục xu hướng và do đó tiếp tục sản xuất những cây nến cùng một màu sắc. Ngày thứ năm Tuy nhiên, đảo ngược xu hướng. Xin lưu ý rằng nó chỉ mở ra một chút đối lập với xu hướng hiện tại và nó vẫn tiếp tục trong cùng một hướng đến nơi nó sau đó đóng cửa trong khu vực khoảng cách"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
-msgstr ""
+msgstr "Đóng cửa đen marubozu nến là một ngọn nến cao màu đen với một bóng trên nhưng không thấp hơn. Nến trắng marubozu đóng cửa là một ngọn nến trắng cao với một bóng thấp nhưng không có bóng tối thượng"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "Công ty giữ tiền khách hàng trong tài khoản ngân hàng tách biệt với tài khoản ngân hàng vận hành, trong trường hợp phá sản, nó sẽ không thuộc tài sản của Công ty. Điều này đáp ứng các yêu cầu của Ủy ban Cờ bạc để cách ly các tiền của khách hàng ở cấp độ"
@@ -2985,19 +2981,19 @@ msgid "The first step is to open an account. You can apply online in just a few 
 msgstr "Bước đầu tiên là mở một tài khoản. Bạn có thể đăng kí trực tuyến trong vài phút"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
-msgstr ""
+msgstr "Ba ngày đầu tiên của bậc thang dưới Bullish là chân đế nến bằng màu đen mạnh mẽ với liên tục thấp hơn mở và đóng cửa thấp hơn. Ngày thứ tư là một nến đen ngắn, nhưng nó sẽ mở ra cao hơn và giao dịch cao, để lại một bóng lâu thượng, sau đó đóng cửa làm thấp mới. Ngày thứ năm là một nến trắng mạnh mẽ mà làm cho một cơ thể khoảng cách với các ngày thứ tư"
 
 msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
-msgstr ""
+msgstr "Bồ câu dẫn đường là một mô hình nến bullish đảo ngược bao gồm hai cột nến đỏ. Ngọn nến đầu tiên là một trong những màu đen cao xuất hiện trong một xu hướng xuống giá. Ngày thứ hai cũng là một ngọn nến màu đen, nhưng nó nhỏ hơn và phù hợp với bên trong cơ thể của ngọn nến đen đầu tiên"
 
 msgid "The indicator is designed for use on a monthly time scale. It is the sum of a 14-month rate of change and 11-month rate of change, smoothed by a 10-period weighted moving average"
-msgstr ""
+msgstr "Các chỉ số được thiết kế để sử dụng trên quy mô thời gian hàng tháng. Đó là tổng của 14 tháng mức độ thay đổi và 11 tháng mức độ thay đổi, smoothed bởi một khoảng thời gian 10 trọng di chuyển trung bình"
 
 msgid "The market exit price is the price in effect at the end of the contract period"
 msgstr "Giá thoát khỏi thị trường là giá có hiệu lực vào cuối thời gian hợp đồng"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
-msgstr ""
+msgstr "Parabolic SAR được tính gần như độc lập cho mỗi xu hướng trong giá cả. Khi giá là trong một xu hướng tăng, SAR nổi lên dưới giá và hội tụ trở lên đối với nó. Tương tự, một xu hướng, SAR nổi lên trên giá và hội tụ trở xuống. Tại mỗi bước trong một xu hướng, SAR được tính toán một khoảng thời gian trước"
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
 msgstr "Bằng sáng chế có nghĩa là Regent Markets là nhà tiên phong được công nhận trong cá cược nhị phân. Bằng sáng chế giúp bảo vệ những đổi mới của chúng tôi"
@@ -3006,7 +3002,7 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "Tiền lãi là số tiền được trả cho một nhà giao dịch quyền chọn nếu dự đoán của mình là đúng"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr ""
+msgstr "Các mẫu piercing được tạo thành hai cột nến, da đen đầu tiên và thứ hai màu trắng. Chân đế nến bằng cả hai cần phải có cơ quan khá lớn và bóng tối thường, nhưng không nhất thiết, nhỏ hoặc không tồn tại. Nến trắng phải mở dưới đây trước đó đóng và đóng trên các trung điểm của nến đen của cơ thể. Đóng một bên dưới các trung điểm có thể hội đủ điều kiện như là một sự đảo ngược, nhưng sẽ không được xem là là bullish"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
 msgstr "Sàn giao dịch cao cấp cho giao dịch quyền chọn nhị phân trên thị trường tài chính thế giới"
@@ -3051,7 +3047,7 @@ msgid "These are trades where the trader selects a price target, and predicts th
 msgstr "Những giao dịch này là chỗ nhà giao dịch đã chọn một giá mục tiêu, và dự đoán rằng thị trường sẽ chạm vào mục tiêu trước khi giao dịch hết hạn"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
-msgstr ""
+msgstr "Này di chuyển trung bình là sử dụng các đường cong của phân phối chuẩn (Gauss) có thể được đặt bằng tham số bù đắp từ 0 đến 1. Tham số này cho phép điều chỉnh êm ái và độ nhạy cảm cao của các di chuyển trung bình. Sigma là một tham số đó là chịu trách nhiệm về hình dạng của hệ số đường cong"
 
 msgid "This field is required"
 msgstr "Trường này là bắt buộc"
@@ -3066,13 +3062,13 @@ msgid "This is the current price at which an underlying can be bought or sold at
 msgstr "Đây là giá hiện tại tại đó mà tài sản cơ sở có thể được mua hoặc bán tại một thời điểm cụ thể"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
-msgstr ""
+msgstr "Mô hình này xảy ra khi hai ngày đen xuất hiện với đóng bình đẳng trong một xu hướng. Kết hợp thấp chỉ ra một đáy đã được thực hiện, mặc dù thấp mới đã được thử nghiệm và đã có không làm theo thông qua, đó là chỉ của một mức giá tốt hỗ trợ"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "Trang web này được bán trên thị trường tại Vương Quốc Anh và đảo Man bởi nhị phân (IOM) Ltd., tầng trệt, Thiên niên kỷ House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, chế và quy định của Ủy ban giám sát cờ bạc (1) ở Isle of Man, British Isles, hiện tại giấy phép cờ bạc trực tuyến phát hành vào ngày 31 tháng 8 năm 2012, và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "Trang web này trên thị trường trong phần còn lại của châu Âu, cho sản phẩm đầu tư bởi nhị phân đầu tư (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định như là một nhà cung cấp dịch vụ đầu tư thể loại 3 bởi cơ quan dịch vụ tài chính Malta (giấy phép. LÀ / 70156), và cho các sản phẩm chơi game bởi nhị phân (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định của (1) các cơ quan Nhan Malta ở Malta, giấy phép không có thanh/CL2/118/2000, ngày 26 tháng 5 năm 2015 và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "Ba binh sĩ trắng thăng trận(CDL3WHITESOLDIERS)"
@@ -3084,22 +3080,22 @@ msgid "Three Inside Up/Down (CDL3INSIDE)"
 msgstr "Ba bên trong lên/xuống (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "Ba bên ngoài lên/xuống (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr ""
+msgstr "Ba ngôi sao ở phía nam (CDL3STARSSOUTH)"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
-msgstr ""
+msgstr "Ba cao trắng nến, mỗi với đóng cửa cao hơn, và các cơ quan đó chồng chéo lên nhau (một giá mở cửa trong ngọn nến trước cơ thể)"
 
 msgid "Three white days occur. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer"
-msgstr ""
+msgstr "Ba màu trắng ngày xảy ra. Mỗi ngày kế tiếp sẽ mở ra trong cơ thể của ngày hôm trước và đóng cửa ở trên trước ngày. Các cơ quan của nến nhận được nhỏ hơn dần dần với bóng tối thượng của ngày 2 và 3 nhận được lâu hơn dần dần"
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
-msgstr ""
+msgstr "Cuộc tấn công ba dòng (CDL3LINESTRIKE)"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Mô hình hội đồng quản trị thrusting (CDLTHRUSTING)"
 
 msgid "Thu"
 msgstr "Thứ năm"
@@ -3243,13 +3239,13 @@ msgid "Triple Exponential Moving Average (T3)"
 msgstr "Trung bình di chuyển gấp ba (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "Triple mũ di chuyển trung bình (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "Tristar mẫu (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "True Range (TRANGE)"
 
 msgid "Try"
 msgstr "Thử"
@@ -3294,7 +3290,7 @@ msgid "Unique 3 River (CDLUNIQUE3RIVER)"
 msgstr "Độc đáo 3 River (CDLUNIQUE3RIVER)"
 
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
-msgstr ""
+msgstr "Duy nhất ba sông đáy là một mô hình nến bullish gôm 3 nến: nến 1 có một cơ thể dài và hướng giảm, ngọn nến thứ 2 là một cái búa, và cơ thể của nó là bên trong cơ thể của quầy bar 1, ngọn nến thứ 3 là nhỏ và tăng, giá gần gũi của nó là thấp hơn 2 thanh"
 
 msgid "Up to 100% returns on rise/fall trades"
 msgstr "Lên đến 100% hoàn vốn về các giao dịch tăng/giảm"
@@ -3303,7 +3299,7 @@ msgid "Up/Down"
 msgstr "Lên/xuống"
 
 msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
-msgstr ""
+msgstr "Lên/xuống-Gap-By-Side trắng dòng (CDLGAPSIDESIDEWHITE)"
 
 msgid "Upcoming Events"
 msgstr "Sự kiện sắp tới"
@@ -3321,10 +3317,10 @@ msgid "Upload template"
 msgstr "Tải mẫu biểu đồ"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
-msgstr ""
+msgstr "Ngược / nhược điểm Gap ba phương pháp (CDLXSIDEGAP3METHODS)"
 
 msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
-msgstr ""
+msgstr "Ngược / nhược điểm Gap hai quạ (CDLUPSIDEGAP2CROWS)"
 
 msgid "Use"
 msgstr "Sử dụng"
