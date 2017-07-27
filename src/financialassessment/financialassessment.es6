@@ -25,7 +25,6 @@ export const init = () => {
       closeOnEscape: false,
       modal: true,
       ignoreTileAction: true,
-      'data-authorized': 'true',
       close: () => {
         win_view.unbind();
         win_view = null;
@@ -37,9 +36,7 @@ export const init = () => {
       financial: {
         experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
         frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
-        account_opening_reason_array: ['Speculative', 'Income Earning', 'Assets Saving', 'Hedging'],
-
-        account_opening_reason: '',
+        
         forex_trading_experience: '',
         forex_trading_frequency: '',
         indices_trading_experience: '',
@@ -77,11 +74,17 @@ export const init = () => {
           "Others"
         ],
         occupation: '',
+
+        employment_status: '',
+        employment_status_array: ["Employed", "Pensioner", "Self-Employed", "Student", "Unemployed"],
+
+        source_of_wealth: '',
+        source_of_wealth_array: ["Accumulation of Income/Savings", "Cash Business", "Company Ownership", "Divorce Settlement", "Inheritance", "Investment Income", "Sale of Property", "Other"],
         disabled: false
       },
       empty_field: false,
       validate: () => {
-        return state.financial.account_opening_reason === '' || state.financial.forex_trading_experience === '' ||
+        return state.financial.forex_trading_experience === '' ||
           state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
           state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
           state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
@@ -90,7 +93,8 @@ export const init = () => {
           state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
           state.financial.occupation === '' || state.financial.education_level === '' ||
           state.financial.income_source === '' || state.financial.net_income === '' ||
-          state.financial.account_turnover === '' || state.financial.estimated_worth === '';
+          state.financial.account_turnover === '' || state.financial.estimated_worth === '' ||
+          state.financial.employment_status === '' || state.financial.source_of_wealth === '';
       },
     };
     state.submit = () => {
@@ -101,7 +105,6 @@ export const init = () => {
       state.financial.disabled = true;
       const request = {
         set_financial_assessment: 1,
-        account_opening_reason: state.financial.account_opening_reason,
         forex_trading_experience: state.financial.forex_trading_experience,
         forex_trading_frequency: state.financial.forex_trading_frequency,
         indices_trading_experience: state.financial.indices_trading_experience,
@@ -120,7 +123,9 @@ export const init = () => {
         net_income: state.financial.net_income,
         estimated_worth: state.financial.estimated_worth,
         account_turnover: state.financial.account_turnover,
-        occupation: state.financial.occupation
+        occupation: state.financial.occupation,
+        employment_status: state.financial.employment_status,
+        source_of_wealth: state.financial.source_of_wealth
       }
       liveapi.send(request).then((data) => {
         win_view.unbind();
@@ -130,6 +135,7 @@ export const init = () => {
         window.location.reload();
       }).catch((err) => {
         console.error(err);
+        state.financial.disabled = false;
       })
     }
     win_view = rv.bind(win, state);
