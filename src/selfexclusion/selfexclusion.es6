@@ -88,8 +88,10 @@ const settingsData = {
     timeout_until_time: null,
     trimString: (event, scope) => {
         const $el = $(event.target),
+            decimals = isBTC() ? 8 : 2,
             length = $el.attr('maxlength'),
-            val = $el.val().toString().replace(/[^\d]/g,''),
+            r = new RegExp(`[\\d]{0,20}(\\.[\\d]{1,${decimals}})?`, "g"),
+            val = ($el.val().toString().match(r) || [])[0],
             field = $el.attr('rv-value');
         scope[field] = val;
     },

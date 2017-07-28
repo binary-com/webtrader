@@ -651,7 +651,10 @@ rivets.components['price-spinner'] = {
       const decimals = (data.decimals || 2)*1;
       const min = (data.min || 0)*1;
       component_twoway_bind(this, data, ['data.value']);
-
+      $(el).on("change", () => {
+            data.value = (+data.value).toFixed(decimals);
+      });
+      $(el).trigger("change");
       return {
          data: data
       };
