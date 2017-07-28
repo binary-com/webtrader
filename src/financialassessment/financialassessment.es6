@@ -137,7 +137,13 @@ export const init = () => {
         console.error(err);
         state.financial.disabled = false;
       })
-    }
+    };
+    liveapi.cached.send({ get_financial_assessment: 1 }).then((data) => {
+      const financialassessment = data.get_financial_assessment;
+      Object.keys(financialassessment).forEach((key) => {
+        state.financial[key] = financialassessment[key];
+      });
+    });
     win_view = rv.bind(win, state);
     win.dialog("open");
   } else {
