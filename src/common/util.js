@@ -418,6 +418,6 @@ function guessDigits(prices) {
 }
 
 var isBTC = function () {
-    var currency = local_storage.get("currency");
+    var currency = local_storage.get("currency") || '';
     return currency.toUpperCase() === "BTC" || currency.toUpperCase() === "XBT";
 }
