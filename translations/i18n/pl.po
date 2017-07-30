@@ -1799,7 +1799,7 @@ msgid "Loading chart and trade menus"
 msgstr "Ładowanie menu wykresu i handlowania"
 
 msgid "Loading custom theme configuration"
-msgstr "ładowanie konfiguracji niestandardowych motywów"
+msgstr "Ładowanie konfiguracji niestandardowych motywów"
 
 msgid "Loading help docs"
 msgstr "Ładowanie dokumentów pomocowych"
@@ -1874,7 +1874,7 @@ msgid "Make your trade"
 msgstr "Dokonaj transakcji"
 
 msgid "Mar"
-msgstr "Marzec"
+msgstr "Mar"
 
 msgid "March"
 msgstr "Marzec"
@@ -2087,7 +2087,7 @@ msgid "Occupation"
 msgstr "Zawód"
 
 msgid "Oct"
-msgstr "Październik"
+msgstr "Paź"
 
 msgid "October"
 msgstr "Październik"
