@@ -1073,7 +1073,7 @@ msgid "Debt-free"
 msgstr "Bez zadłużenia"
 
 msgid "Dec"
-msgstr "Grudzień"
+msgstr "Gru"
 
 msgid "December"
 msgstr "Grudzień"
@@ -1340,7 +1340,7 @@ msgid "Features"
 msgstr "Funkcje"
 
 msgid "Feb"
-msgstr "Luty"
+msgstr "Lut"
 
 msgid "February"
 msgstr "Luty"
@@ -1613,7 +1613,7 @@ msgid "Indicators"
 msgstr "Wskaźniki"
 
 msgid "Indices"
-msgstr "Wskaźniki"
+msgstr "Indeksy"
 
 msgid "Indices trading experience"
 msgstr "Doświadczenie w handlowaniu wskaźnikami"
@@ -1637,7 +1637,7 @@ msgid "Instant funding"
 msgstr "Błyskawiczne zasilanie konta"
 
 msgid "Instrument"
-msgstr "Instrumenty"
+msgstr "Instrument"
 
 msgid "Instruments"
 msgstr "Instrumenty"
@@ -1673,19 +1673,19 @@ msgid "Italiano"
 msgstr "Italiano"
 
 msgid "Jan"
-msgstr "Styczeń"
+msgstr "Sty"
 
 msgid "January"
 msgstr "Styczeń"
 
 msgid "Jul"
-msgstr "Lipiec"
+msgstr "Lip"
 
 msgid "July"
 msgstr "Lipiec"
 
 msgid "Jun"
-msgstr "Czerwiec"
+msgstr "Cze"
 
 msgid "June"
 msgstr "Czerwiec"
