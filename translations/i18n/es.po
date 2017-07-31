@@ -608,7 +608,7 @@ msgid "Barrier(s)"
 msgstr "Límite(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Bajista: patrón de final de tendencia compuesto por tres velas en una tendencia alcista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta y puede formar un gap alcista. Puede haber, también, una sombra de ventas. El patrón representa una debilidad en un alza, con un riesgo de consolidación y una posible reversión. Alcista: patrón de final de tendencia compuesto por tres velas en una tendencia bajista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta. El patrón representa una debilidad, así como una consolidación y posible reversión de la tendencia"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Patrón Belt-hold (CDLBELTHOLD)"
@@ -2192,7 +2192,7 @@ msgid "Over 90 staff and contractors worldwide"
 msgstr "Más de 90 empleados y contratistas en todo el mundo"
 
 msgid "Overlap Studies"
-msgstr ""
+msgstr "Estudios sobrepuestos"
 
 msgid "PDF"
 msgstr "PDF"
@@ -2402,7 +2402,7 @@ msgid "Read"
 msgstr "Leer"
 
 msgid "Read about"
-msgstr ""
+msgstr "Lea sobre"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr "Coseche los beneficios del comercio con opciones binarias, sabiendo que sus fondos están siempre seguros"
@@ -2639,13 +2639,13 @@ msgid "Spot price"
 msgstr "Precio al contado"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Spreads"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "Spreads a la baja"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "Spreads al alza"
 
 msgid "Stake"
 msgstr "Apuesta"
@@ -2774,7 +2774,7 @@ msgid "Table"
 msgstr "Tabla"
 
 msgid "Take early profits"
-msgstr ""
+msgstr "Retirar primeras ganancias"
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr "Takuri (doji libélula con una sombra inferior muy larga) (CDLTAKURI)"
@@ -2948,7 +2948,7 @@ msgid "The barrier of a binary option trade is the price target you set for the 
 msgstr "El límite de un contrato de opciones binarias es el precio objetivo que usted establece para el contrato subyacente. Usted puede elegir contratos en que el mercado se queda por debajo o supera un precio objetivo, o en que se mantiene entre dos precios"
 
 msgid "The barrier(s) you choose defines your position and triggers your payout"
-msgstr ""
+msgstr "El (los) límite(s) que escoge definen su posición e inician su pago"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
 msgstr "El patrón de escape comienza con una vela larga que representa la tendencia actual. La vela que le sigue es del mismo color y se aleja de la primera vela. El tercer día, a pesar de que la vela puede ser de cualquier color, esto no representa un cambio en la tendencia actual. El cuarto día la tendencia se mantiene y, por ende, sigue generando velas del mismo color. Sin embargo, el quinto día, la tendencia se revierte. Por favor, tener en cuenta que solo abre levemente en la dirección contraria a la tendencia actual y continúa en la misma dirección hasta cerrar en el área del gap"
@@ -2957,13 +2957,13 @@ msgid "The closing black marubozu candlestick is a tall black candle with an upp
 msgstr "La vela marubozu negra cerrada es una vela alta y negra con sombra superior, pero sin sombra inferior. La vela marubozu blanca cerrada es una vela alta y blanca con sombra inferior, pero sin sombra superior"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr ""
+msgstr "La Compañía mantiene los fondos de los clientes en cuentas bancarias separadas de las cuentas operativas, las cuales, en caso de insolvencia, no formarán parte de los activos de la compañía. Esto cumple con los requisitos de la Comisión de Juego para la segregación de los recursos de clientes a un nivel de: protección media"
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
 msgstr "El período del contrato es el plazo de una transacción. También se conoce como la duración"
 
 msgid "The duration is the length of a purchased trade (see"
-msgstr ""
+msgstr "La duración es el plazo de un contrato que usted compra (vea \"período de contrato\")"
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
 msgstr "El precio al contado de entrada es el precio de inicio del contrato adquirido por el comerciante"
@@ -3104,16 +3104,16 @@ msgid "Thursday"
 msgstr "Jueves"
 
 msgid "Tick"
-msgstr ""
+msgstr "Intervalo"
 
 msgid "Tick Trade app"
 msgstr "App Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Intervalo {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Intervalos"
 
 msgid "Tile"
 msgstr "Mosaico"
@@ -3131,7 +3131,7 @@ msgid "Title"
 msgstr "Título"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Tiếng Việt"
 
 msgid "To"
 msgstr "A"
@@ -3146,7 +3146,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Para retirar fondos, introduzca el token de verificación especial que le hemos enviado por correo electrónico"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
 msgstr "Gestión de token"
@@ -3173,7 +3173,7 @@ msgid "Total Profit/Loss"
 msgstr "Ganancia/Pérdida Total"
 
 msgid "Touch"
-msgstr ""
+msgstr "Toca"
 
 msgid "Touch/No Touch"
 msgstr "Toque/No Toque"
@@ -3191,25 +3191,25 @@ msgid "Trade Confirmation"
 msgstr "Confirmación del Comercio"
 
 msgid "Trade all market conditions"
-msgstr ""
+msgstr "Opere en todas las condiciones de mercado"
 
 msgid "Trade to your budget"
-msgstr ""
+msgstr "Opere de acuerdo con su presupuesto"
 
 msgid "Trade to your strategy"
-msgstr ""
+msgstr "Opere de acuerdo con su estrategia"
 
 msgid "Trade using"
 msgstr "Comercie usando"
 
 msgid "Trade when you want to trade"
-msgstr ""
+msgstr "Opere cuando desee operar"
 
 msgid "Trade with confidence"
-msgstr ""
+msgstr "Opere con confianza"
 
 msgid "Trade your way"
-msgstr ""
+msgstr "Opere a su manera"
 
 msgid "Trading Times"
 msgstr "Horario de Comercio"
