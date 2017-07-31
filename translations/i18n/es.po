@@ -3065,7 +3065,7 @@ msgid "This pattern occurs when two black days appear with equal closes in a dow
 msgstr "Este patrón ocurre cuando dos días negros tienen cierres equivalentes en una tendencia bajista. Los mínimos coincidentes indican que se ha alcanzado un suelo, a pesar de que el nuevo mínimo se probó y no hubo seguimiento, lo que es señal de un buen precio de apoyo"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "Este sitio es comercializado en el Reino Unido y la Isla de Man por Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Además, posee una licencia otorgada y regulada por (1) la Comisión Supervisora de Apuestas de la Isla de Man, Islas Británicas, la cual se emitió el 31 de agosto de 2012, y por (2) la Comisión de Apuestas del Reino Unido"
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 msgstr ""
@@ -3080,16 +3080,16 @@ msgid "Three Inside Up/Down (CDL3INSIDE)"
 msgstr "Tres pautas interiores alcistas/bajistas (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "Tres pautas exteriores alcistas/bajistas (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr ""
+msgstr "Tres estrellas en el sur (CDL3STARSSOUTH)"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
-msgstr ""
+msgstr "Tres velas blancas altas, cada una con cierres más altos y cuerpos que se superponen (precio de apertura dentro del cuerpo de la vela anterior)"
 
 msgid "Three white days occur. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer"
-msgstr ""
+msgstr "Ocurren tres días blancos. Cada día sucesivo abre dentro del cuerpo del día anterior y cierra por sobre el día anterior. Los cuerpos de las velas se vuelven cada vez más pequeños y las sombras de los días 2 y 3 se alargan gradualmente"
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
 msgstr ""
