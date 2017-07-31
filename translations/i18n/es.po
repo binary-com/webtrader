@@ -3557,19 +3557,19 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
-msgstr ""
+msgstr "permitiendo que los clientes desarrollen sus propios robots de negociación automatizados con el simple método de arrastrar y soltar"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
 
 msgid "apostrophe (') are allowed"
-msgstr ""
+msgstr "se permiten apóstrofes (')"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
 
 msgid "auto-trader programming tool"
-msgstr ""
+msgstr "herramienta de programación de negociador automático"
 
 msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
 msgstr "debajo y procediendo con la apertura de la cuenta debe tener en cuenta que puede exponerse a riesgos (que pueden ser significativos, incluyendo el riesgo de pérdida de la suma total invertida) que puede que no conozca y no tenga experiencia para evaluar correctamente o mitigar"
@@ -3593,7 +3593,7 @@ msgid "disposes of its stake"
 msgstr ""
 
 msgid "e-commerce site for branded merchandise"
-msgstr ""
+msgstr "sitio de comercio electrónico para productos de marca"
 
 msgid "e.g"
 msgstr "ej."
@@ -3623,10 +3623,10 @@ msgid "hours"
 msgstr "horas"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "si este no es su país de residencia"
@@ -3668,7 +3668,7 @@ msgid "main site"
 msgstr "sitio web principal"
 
 msgid "medium protection"
-msgstr ""
+msgstr "protección media"
 
 msgid "minute"
 msgstr "minuto"
@@ -3680,13 +3680,13 @@ msgid "next tick"
 msgstr "próximo tick"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "de \"Ahora\", el"
 
 msgid "our helpful support desk"
-msgstr ""
+msgstr "nuestro útil servicio de asistencia"
 
 msgid "payment agent"
 msgstr "agente de pago"
@@ -3728,22 +3728,22 @@ msgid "trading frequency"
 msgstr "frecuencia de comercio"
 
 msgid "view license"
-msgstr ""
+msgstr "ver licencia"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "sí"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
-msgstr ""
+msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"
