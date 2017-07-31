@@ -129,12 +129,10 @@
             <span class="title-big">PEP Declaration</span>
         </div>
         <div class='row'>
-            <span class='title'>A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates.</span>
-        </div>
-        <div class='row'>
             <br>
             <label>
-                <input type='checkbox' rv-checked='user.pep' /> I acknowledge that I am not a politically exposed person (PEP).
+                <input type='checkbox' rv-checked='user.pep' />I acknowledge that I am not a politically exposed person (PEP). 
+                <span class="pep" rv-on-click="user.pep_window">What is pep?</span>
             </label>
         </div>
         <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
@@ -279,19 +277,27 @@
             </select>
         </div>
         <div class='row'>
+            <span class='title'>Income Source</span>
+            <span class="please-select" rv-show="financial.income_source | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.income_source" rv-selectrefresh="financial.income_source_array">
+                <option value="" selected="selected" disabled="disabled">Please select</option>
+                <option rv-each-row="financial.income_source_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
+        <div class='row'>
+            <span class='title'>Employent status</span>
+            <span class="please-select" rv-show="financial.employment_status | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.employment_status" rv-selectrefresh="financial.income_source_array">
+                <option value="" selected="selected" disabled="disabled">Please select</option>
+                <option rv-each-row="financial.employment_status_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
+        <div class='row'>
             <span class='title'>Industry of Employment</span>
             <span class="please-select" rv-show="financial.employment_industry | eq '' | and empty_fields.validate">*</span>
             <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.employment_industry" rv-selectrefresh="financial.employment_industry_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.employment_industry_array" rv-value="row">{row | i18n}</option>
-            </select>
-        </div>
-        <div class='row'>
-            <span class='title'>Account turnover</span>
-            <span class="please-select" rv-show="financial.account_turnover | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.account_turnover" rv-selectrefresh="financial.account_turnover_array">
-                    <option value="" selected="selected" disabled="disabled">Please select</option>
-                    <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class="row">
@@ -302,20 +308,20 @@
                 <option rv-each-row="financial.occupation_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
+        <div class="row">
+            <span class="title">Source of wealth</span>
+            <span class="please-select" rv-show="financial.source_of_wealth | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.source_of_wealth" rv-selectrefresh="financial.occupation_array">
+                <option value="" selected="selected" disabled="disabled">Please select</option>
+                <option rv-each-row="financial.source_of_wealth_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
         <div class='row'>
             <span class='title'>Level of Education</span>
             <span class="please-select" rv-show="financial.education_level | eq '' | and empty_fields.validate">*</span>
             <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.education_level" rv-selectrefresh="financial.education_level_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.education_level_array" rv-value="row">{row | i18n}</option>
-            </select>
-        </div>
-        <div class='row'>
-            <span class='title'>Income Source</span>
-            <span class="please-select" rv-show="financial.income_source | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.income_source" rv-selectrefresh="financial.income_source_array">
-                <option value="" selected="selected" disabled="disabled">Please select</option>
-                <option rv-each-row="financial.income_source_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>
@@ -332,6 +338,15 @@
             <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.estimated_worth" rv-selectrefresh="financial.estimated_worth_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.estimated_worth_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
+
+        <div class='row'>
+            <span class='title'>Anticipated account turnover</span>
+            <span class="please-select" rv-show="financial.account_turnover | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.account_turnover" rv-selectrefresh="financial.account_turnover_array">
+                    <option value="" selected="selected" disabled="disabled">Please select</option>
+                    <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>

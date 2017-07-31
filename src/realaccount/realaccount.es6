@@ -27,7 +27,7 @@ export const init = (li) => {
       if (!real_win) {
          navigation.getLandingCompany()
             .then(
-               (what_todo) => init_real_win(html, what_todo)
+            (what_todo) => init_real_win(html, what_todo)
             )
             .catch(error_handler);
       } else {
@@ -49,16 +49,15 @@ const init_real_win = (root, what_todo) => {
       collapsable: false,
       minimizable: true,
       maximizable: false,
-      width: 360,
-      height: 'auto',
-      'data-authorized': true,
+      width: 380,
+      height: 400,
       close: () => {
          real_win.dialog('destroy');
          real_win.trigger('dialogclose'); // TODO: figure out why event is not fired.
          real_win.remove();
          real_win = null;
       },
-      open: () => {},
+      open: () => { },
       destroy: () => {
          real_win_view && real_win_view.unbind();
          real_win_view = null;
@@ -135,7 +134,7 @@ const init_state = (root, what_todo) => {
       financial: {
          experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
          frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
-         
+
          forex_trading_experience: '',
          forex_trading_frequency: '',
          indices_trading_experience: '',
@@ -174,14 +173,20 @@ const init_state = (root, what_todo) => {
          ],
          occupation: '',
 
+         employment_status: '',
+         employment_status_array: ["Employed", "Pensioner", "Self-Employed", "Student", "Unemployed"],
+
+         source_of_wealth: '',
+         source_of_wealth_array: ["Accumulation of Income/Savings", "Cash Business", "Company Ownership", "Divorce Settlement", "Inheritance", "Investment Income", "Sale of Property", "Other"],
+
          accepted: false,
          disabled: false
       }
    };
 
-   state.input_disabled = local_storage.get("oauth").reduce((a,b)=>{
-         return a || /MLT/.test(b.id)
-      },false) && what_todo === "upgrade-mf";
+   state.input_disabled = local_storage.get("oauth").reduce((a, b) => {
+      return a || /MLT/.test(b.id)
+   }, false) && what_todo === "upgrade-mf";
 
    state.user.is_valid = () => {
       const user = state.user;
@@ -262,16 +267,36 @@ const init_state = (root, what_todo) => {
 
    state.financial.empty_fields = () => {
       return state.financial.forex_trading_experience === '' ||
-          state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
-          state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
-          state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
-          state.financial.stocks_trading_frequency === '' || state.financial.other_derivatives_trading_experience === '' ||
-          state.financial.other_derivatives_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
-          state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
-          state.financial.occupation === '' || state.financial.education_level === '' ||
-          state.financial.income_source === '' || state.financial.net_income === '' ||
-          state.financial.account_turnover === '' || state.financial.estimated_worth === '';
+         state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
+         state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
+         state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
+         state.financial.stocks_trading_frequency === '' || state.financial.other_derivatives_trading_experience === '' ||
+         state.financial.other_derivatives_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
+         state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
+         state.financial.occupation === '' || state.financial.education_level === '' ||
+         state.financial.income_source === '' || state.financial.net_income === '' ||
+         state.financial.account_turnover === '' || state.financial.estimated_worth === '' ||
+         state.financial.employment_status === '' || state.financial.source_of_wealth === '';;
    };
+
+   state.user.pep_window = (e) => {
+      e.preventDefault();
+      const text = `A Politically Exposed Person (PEP) is an individual who is or has been entrusted with a prominent public function including his/her immediate family members or persons known to be close associates of such persons, but does not include middle ranking or more junior officials.<br><br>
+         Such individuals include Heads of State, Ministers, Parliamentary Secretaries, Members of Parliament, Judges, Ambassadors, Senior Government Officials, High Ranking Officers in the Armed Forces, Audit Committees of the boards of central banks, and Directors of state-owned corporations.<br><br>
+         The “immediate family members” of the above examples will also be considered as PEP, and these include their spouses/partners, parents, and children. Additionally, “persons known to be close associates” of PEPs include their business partners, will also be considered as such.<br><br>
+         As a general rule, a person considered to be a PEP and who has ceased to be entrusted with a prominent public function for a period of at least twelve months no longer qualifies as a PEP.`;
+      windows.createBlankWindow(`<div style="padding:15px;">${text}</div>`, {
+         title: "PEP",
+         modal: true,
+         resizable: false,
+         collapsable: false,
+         minimizable: false,
+         maximizable: false,
+         closeOnEscape: true,
+         width: 500,
+         height: 'auto'
+      }).dialog("open");
+   }
 
    state.financial.click = () => {
       if (state.financial.empty_fields()) {
@@ -326,6 +351,9 @@ const init_state = (root, what_todo) => {
          income_source: financial.income_source,
          net_income: financial.net_income,
          estimated_worth: financial.estimated_worth,
+         employment_status: financial.employment_status,
+         source_of_wealth: financial.source_of_wealth,
+         account_turnover: financial.account_turnover,
          accept_risk: 1,
       };
       return request;
@@ -338,7 +366,7 @@ const init_state = (root, what_todo) => {
 
    state.risk.accept = () => {
       const request = state.financial.create_request();
-      if(!state.input_disabled) {
+      if (!state.input_disabled) {
          request.secret_question = state.user.secret_question_array[state.user.secret_question_inx];
          request.secret_answer = state.user.secret_answer;
       }
@@ -398,7 +426,7 @@ const init_state = (root, what_todo) => {
 
    residence_promise
       .then(
-         () => liveapi.cached.send({ residence_list: 1 })
+      () => liveapi.cached.send({ residence_list: 1 })
       )
       .then((data) => {
          state.user.country_array = data.residence_list;
@@ -410,11 +438,10 @@ const init_state = (root, what_todo) => {
 
    residence_promise
       .then(
-         () => liveapi.cached.send({ states_list: state.user.residence })
+      () => liveapi.cached.send({ states_list: state.user.residence })
       )
       .then((data) => {
-         console.log(data.states_list);
-         state.user.state_address_array = [{text:'Please select', value:''}, ...data.states_list];
+         state.user.state_address_array = [{ text: 'Please select', value: '' }, ...data.states_list];
          state.user.state_address = state.user.state_address_array[0].value;
       })
       .catch(error_handler);
