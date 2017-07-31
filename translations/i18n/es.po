@@ -809,7 +809,7 @@ msgid "Can be used to view account activity, including settings, limits, balance
 msgstr "Se puede utilizar para ver la actividad de la cuenta, incluyendo la configuración, límites, balances, historial de compras del contratos y mucho más."
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
-msgstr ""
+msgstr "Se puede utilizar para retirar fondos y transferirlos a agentes de pago, transferir fondos entre cuentas y establecer o cancelar contraseñas del cajero."
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -3092,10 +3092,10 @@ msgid "Three white days occur. Each successive day opens within the body of the 
 msgstr "Ocurren tres días blancos. Cada día sucesivo abre dentro del cuerpo del día anterior y cierra por sobre el día anterior. Los cuerpos de las velas se vuelven cada vez más pequeños y las sombras de los días 2 y 3 se alargan gradualmente"
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
-msgstr ""
+msgstr "Golpe de tres líneas (CDL3LINESTRIKE)"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Patrón de empuje (thrusting) (CDLTHRUSTING)"
 
 msgid "Thu"
 msgstr "Jue"
