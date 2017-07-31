@@ -3239,13 +3239,13 @@ msgid "Triple Exponential Moving Average (T3)"
 msgstr "Media móvil exponencial triple (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "La media móvil exponencial triple (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "Patrón Tristar (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "Rango verdadero (TRANGE)"
 
 msgid "Try"
 msgstr "Pruebe"
@@ -3260,28 +3260,28 @@ msgid "Turnover"
 msgstr "Volumen de ventas"
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Dos cuervos (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "Precio típico (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "Oscilador final (ULTOSC)"
 
 msgid "Under"
-msgstr ""
+msgstr "Inferior"
 
 msgid "Underlying"
-msgstr ""
+msgstr "Subyacente"
 
 msgid "Unfortunately, no - funds initially deposited through one payment method must be withdrawn through the same system; funds cannot be transferred to an alternate system for withdrawal. We do offer a wide variety of payment methods, to suit your specific needs and preferences"
-msgstr ""
+msgstr "Desafortunadamente, los fondos depositados inicialmente a través de un método de pago deben retirarse a través del mismo sistema. Los fondos no pueden ser transferidos a un sistema alternativo para su retiro. Le ofrecemos una amplia variedad de métodos de pago, de acuerdo con sus necesidades y preferencias específicas"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Desafortunadamente, su navegador no es compatible"
@@ -3521,13 +3521,13 @@ msgid "You pay"
 msgstr "Usted paga"
 
 msgid "You set the barrier(s) to define your position"
-msgstr ""
+msgstr "Usted define el(los) límite(s) que definen su posición"
 
 msgid "You will be automatically logged out after such time"
 msgstr "Usted será deconectado automáticamente después de esa hora"
 
 msgid "You'll be surprised by the returns you can make"
-msgstr ""
+msgstr "Le sorprenderán los retornos que puede obtener"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Su cuenta Binary.com ha sido creada, pero para comenzar a operar debe permitir que Webtrader acceda a ella"
@@ -3539,13 +3539,13 @@ msgid "Your email"
 msgstr "Su correo electrónico"
 
 msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr ""
+msgstr "Su dinero siempre está seguro con Binary.com. En todo momento, se mantiene en bancos de clasificación AAA, lo cual es una condición de nuestras licencias comerciales"
 
 msgid "Your new account balance is"
 msgstr "El nuevo saldo de su cuenta es"
 
 msgid "Your risks are known"
-msgstr ""
+msgstr "Conoce sus riesgos"
 
 msgid "Your transaction reference is"
 msgstr "Su referencia de transacción es"
@@ -3554,7 +3554,7 @@ msgid "Your transaction reference number is"
 msgstr "Su número de referencia de la transacción es"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr ""
