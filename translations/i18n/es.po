@@ -608,7 +608,7 @@ msgid "Barrier(s)"
 msgstr "Límite(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Bajista: patrón de final de tendencia compuesto por tres velas en una tendencia alcista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta y puede formar un gap alcista. Puede haber, también, una sombra de ventas. El patrón representa una debilidad en un alza, con un riesgo de consolidación y una posible reversión. Alcista: patrón de final de tendencia compuesto por tres velas en una tendencia bajista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta. El patrón representa una debilidad, así como una consolidación y posible reversión de la tendencia"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Patrón Belt-hold (CDLBELTHOLD)"
@@ -809,7 +809,7 @@ msgid "Can be used to view account activity, including settings, limits, balance
 msgstr "Se puede utilizar para ver la actividad de la cuenta, incluyendo la configuración, límites, balances, historial de compras del contratos y mucho más."
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
-msgstr ""
+msgstr "Se puede utilizar para retirar fondos y transferirlos a agentes de pago, transferir fondos entre cuentas y establecer o cancelar contraseñas del cajero."
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -2192,7 +2192,7 @@ msgid "Over 90 staff and contractors worldwide"
 msgstr "Más de 90 empleados y contratistas en todo el mundo"
 
 msgid "Overlap Studies"
-msgstr ""
+msgstr "Estudios sobrepuestos"
 
 msgid "PDF"
 msgstr "PDF"
@@ -2402,7 +2402,7 @@ msgid "Read"
 msgstr "Leer"
 
 msgid "Read about"
-msgstr ""
+msgstr "Lea sobre"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr "Coseche los beneficios del comercio con opciones binarias, sabiendo que sus fondos están siempre seguros"
@@ -2639,13 +2639,13 @@ msgid "Spot price"
 msgstr "Precio al contado"
 
 msgid "Spreads"
-msgstr ""
+msgstr "Spreads"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "Spreads a la baja"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "Spreads al alza"
 
 msgid "Stake"
 msgstr "Apuesta"
@@ -2774,7 +2774,7 @@ msgid "Table"
 msgstr "Tabla"
 
 msgid "Take early profits"
-msgstr ""
+msgstr "Retirar primeras ganancias"
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr "Takuri (doji libélula con una sombra inferior muy larga) (CDLTAKURI)"
@@ -2948,7 +2948,7 @@ msgid "The barrier of a binary option trade is the price target you set for the 
 msgstr "El límite de un contrato de opciones binarias es el precio objetivo que usted establece para el contrato subyacente. Usted puede elegir contratos en que el mercado se queda por debajo o supera un precio objetivo, o en que se mantiene entre dos precios"
 
 msgid "The barrier(s) you choose defines your position and triggers your payout"
-msgstr ""
+msgstr "El (los) límite(s) que escoge definen su posición e inician su pago"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
 msgstr "El patrón de escape comienza con una vela larga que representa la tendencia actual. La vela que le sigue es del mismo color y se aleja de la primera vela. El tercer día, a pesar de que la vela puede ser de cualquier color, esto no representa un cambio en la tendencia actual. El cuarto día la tendencia se mantiene y, por ende, sigue generando velas del mismo color. Sin embargo, el quinto día, la tendencia se revierte. Por favor, tener en cuenta que solo abre levemente en la dirección contraria a la tendencia actual y continúa en la misma dirección hasta cerrar en el área del gap"
@@ -2957,13 +2957,13 @@ msgid "The closing black marubozu candlestick is a tall black candle with an upp
 msgstr "La vela marubozu negra cerrada es una vela alta y negra con sombra superior, pero sin sombra inferior. La vela marubozu blanca cerrada es una vela alta y blanca con sombra inferior, pero sin sombra superior"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr ""
+msgstr "La Compañía mantiene los fondos de los clientes en cuentas bancarias separadas de las cuentas operativas, las cuales, en caso de insolvencia, no formarán parte de los activos de la compañía. Esto cumple con los requisitos de la Comisión de Juego para la segregación de los recursos de clientes a un nivel de: protección media"
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
 msgstr "El período del contrato es el plazo de una transacción. También se conoce como la duración"
 
 msgid "The duration is the length of a purchased trade (see"
-msgstr ""
+msgstr "La duración es el plazo de un contrato que usted compra (vea \"período de contrato\")"
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
 msgstr "El precio al contado de entrada es el precio de inicio del contrato adquirido por el comerciante"
@@ -3065,10 +3065,10 @@ msgid "This pattern occurs when two black days appear with equal closes in a dow
 msgstr "Este patrón ocurre cuando dos días negros tienen cierres equivalentes en una tendencia bajista. Los mínimos coincidentes indican que se ha alcanzado un suelo, a pesar de que el nuevo mínimo se probó y no hubo seguimiento, lo que es señal de un buen precio de apoyo"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "Este sitio es comercializado en el Reino Unido y la Isla de Man por Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Además, posee una licencia otorgada y regulada por (1) la Comisión Supervisora de Apuestas de la Isla de Man, Islas Británicas, la cual se emitió el 31 de agosto de 2012, y por (2) la Comisión de Apuestas del Reino Unido"
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "Este sitio web es comercializado en el resto de la UE, para productos de inversión, por Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, la cual posee una licencia de proveedor de Servicios de Inversión de categoría 3 regulada por la Autoridad de Servicios Financieros de Malta (licencia n° IS/70156). Además, posee una licencia para productos de juego otorgada a Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, por (1) la Autoridad de Apuestas de Malta (licencia n° MGA/CL2/118/2000) el 26 de mayo de 2015; y otra licencia para clientes del Reino Unido otorgada por (2) la Comisión de Apuestas del Reino Unido"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "Tres soldados blancos (CDL3WHITESOLDIERS)"
@@ -3080,22 +3080,22 @@ msgid "Three Inside Up/Down (CDL3INSIDE)"
 msgstr "Tres pautas interiores alcistas/bajistas (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "Tres pautas exteriores alcistas/bajistas (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr ""
+msgstr "Tres estrellas en el sur (CDL3STARSSOUTH)"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
-msgstr ""
+msgstr "Tres velas blancas altas, cada una con cierres más altos y cuerpos que se superponen (precio de apertura dentro del cuerpo de la vela anterior)"
 
 msgid "Three white days occur. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer"
-msgstr ""
+msgstr "Ocurren tres días blancos. Cada día sucesivo abre dentro del cuerpo del día anterior y cierra por sobre el día anterior. Los cuerpos de las velas se vuelven cada vez más pequeños y las sombras de los días 2 y 3 se alargan gradualmente"
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
-msgstr ""
+msgstr "Golpe de tres líneas (CDL3LINESTRIKE)"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Patrón de empuje (thrusting) (CDLTHRUSTING)"
 
 msgid "Thu"
 msgstr "Jue"
@@ -3104,16 +3104,16 @@ msgid "Thursday"
 msgstr "Jueves"
 
 msgid "Tick"
-msgstr ""
+msgstr "Intervalo"
 
 msgid "Tick Trade app"
 msgstr "App Tick Trade"
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "Intervalo {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "Intervalos"
 
 msgid "Tile"
 msgstr "Mosaico"
@@ -3122,16 +3122,16 @@ msgid "Time interval"
 msgstr "Intervalo de tiempo"
 
 msgid "Time out until"
-msgstr ""
+msgstr "Pausa hasta"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
-msgstr ""
+msgstr "Los tiempos están cambiando. Aumentamos los pagos para que nuestros clientes puedan sacar el máximo provecho de sus transacciones ganadoras"
 
 msgid "Title"
 msgstr "Título"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Tiếng Việt"
 
 msgid "To"
 msgstr "A"
@@ -3146,7 +3146,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Para retirar fondos, introduzca el token de verificación especial que le hemos enviado por correo electrónico"
 
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 msgid "Token management"
 msgstr "Gestión de token"
@@ -3173,7 +3173,7 @@ msgid "Total Profit/Loss"
 msgstr "Ganancia/Pérdida Total"
 
 msgid "Touch"
-msgstr ""
+msgstr "Toca"
 
 msgid "Touch/No Touch"
 msgstr "Toque/No Toque"
@@ -3191,34 +3191,34 @@ msgid "Trade Confirmation"
 msgstr "Confirmación del Comercio"
 
 msgid "Trade all market conditions"
-msgstr ""
+msgstr "Opere en todas las condiciones de mercado"
 
 msgid "Trade to your budget"
-msgstr ""
+msgstr "Opere de acuerdo con su presupuesto"
 
 msgid "Trade to your strategy"
-msgstr ""
+msgstr "Opere de acuerdo con su estrategia"
 
 msgid "Trade using"
 msgstr "Comercie usando"
 
 msgid "Trade when you want to trade"
-msgstr ""
+msgstr "Opere cuando desee operar"
 
 msgid "Trade with confidence"
-msgstr ""
+msgstr "Opere con confianza"
 
 msgid "Trade your way"
-msgstr ""
+msgstr "Opere a su manera"
 
 msgid "Trading Times"
 msgstr "Horario de Comercio"
 
 msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
-msgstr ""
+msgstr "El comercio con opciones binarias es sorprendentemente fácil y solo require de 3 simples pasos"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr ""
+msgstr "El comercio con opciones binarias puede no ser adecuado para todos, por lo que debe asegurarse de que entiende por completo los riesgos que este implica. Sus pérdidas pueden exceder su depósito inicial y Ud. no será titular ni tendrá ningún interés sobre el activo subyacente. Con respecto a las opciones binarias que consisten en productos, recuerde que apostar puede ser adictivo, por lo que le rogamos que juegue con responsabilidad"
 
 msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Comerciar en los mercados financieros puede ser adictivo. Rellene el siguiente formulario para limitar su participación en el sitio web o envíe una carta firmada o fax a nuestro equipo de soporte al cliente. Una vez establezca los límites, sólo podrá aumentarlos. Los límites sólo serán eliminados o disminuidos después de 7 días con la excepción de la fecha de autoexclusión, que no puede eliminarse o modificarse una vez que la haya confirmado. Para quitar o aumentar sus límites, por favor póngase en contacto con"
@@ -3227,25 +3227,25 @@ msgid "Tradingview for Binary.com"
 msgstr "Tradingview para Binary.com"
 
 msgid "Transfer"
-msgstr ""
+msgstr "Transferir"
 
 msgid "Transfer to another Binary account"
 msgstr "Transferir a otra cuenta Binary"
 
 msgid "Triangular Moving Average (TRIMA)"
-msgstr ""
+msgstr "Media móvil triangular (TRIMA)"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "Media móvil exponencial triple (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "La media móvil exponencial triple (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "Patrón Tristar (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "Rango verdadero (TRANGE)"
 
 msgid "Try"
 msgstr "Pruebe"
@@ -3260,28 +3260,28 @@ msgid "Turnover"
 msgstr "Volumen de ventas"
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Dos cuervos (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "Precio típico (TYPPRICE)"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "Oscilador final (ULTOSC)"
 
 msgid "Under"
-msgstr ""
+msgstr "Inferior"
 
 msgid "Underlying"
-msgstr ""
+msgstr "Subyacente"
 
 msgid "Unfortunately, no - funds initially deposited through one payment method must be withdrawn through the same system; funds cannot be transferred to an alternate system for withdrawal. We do offer a wide variety of payment methods, to suit your specific needs and preferences"
-msgstr ""
+msgstr "Desafortunadamente, los fondos depositados inicialmente a través de un método de pago deben retirarse a través del mismo sistema. Los fondos no pueden ser transferidos a un sistema alternativo para su retiro. Le ofrecemos una amplia variedad de métodos de pago, de acuerdo con sus necesidades y preferencias específicas"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Desafortunadamente, su navegador no es compatible"
@@ -3521,13 +3521,13 @@ msgid "You pay"
 msgstr "Usted paga"
 
 msgid "You set the barrier(s) to define your position"
-msgstr ""
+msgstr "Usted define el(los) límite(s) que definen su posición"
 
 msgid "You will be automatically logged out after such time"
 msgstr "Usted será deconectado automáticamente después de esa hora"
 
 msgid "You'll be surprised by the returns you can make"
-msgstr ""
+msgstr "Le sorprenderán los retornos que puede obtener"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Su cuenta Binary.com ha sido creada, pero para comenzar a operar debe permitir que Webtrader acceda a ella"
@@ -3539,13 +3539,13 @@ msgid "Your email"
 msgstr "Su correo electrónico"
 
 msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr ""
+msgstr "Su dinero siempre está seguro con Binary.com. En todo momento, se mantiene en bancos de clasificación AAA, lo cual es una condición de nuestras licencias comerciales"
 
 msgid "Your new account balance is"
 msgstr "El nuevo saldo de su cuenta es"
 
 msgid "Your risks are known"
-msgstr ""
+msgstr "Conoce sus riesgos"
 
 msgid "Your transaction reference is"
 msgstr "Su referencia de transacción es"
@@ -3554,22 +3554,22 @@ msgid "Your transaction reference number is"
 msgstr "Su número de referencia de la transacción es"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
-msgstr ""
+msgstr "permitiendo que los clientes desarrollen sus propios robots de negociación automatizados con el simple método de arrastrar y soltar"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
 
 msgid "apostrophe (') are allowed"
-msgstr ""
+msgstr "se permiten apóstrofes (')"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
 
 msgid "auto-trader programming tool"
-msgstr ""
+msgstr "herramienta de programación de negociador automático"
 
 msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
 msgstr "debajo y procediendo con la apertura de la cuenta debe tener en cuenta que puede exponerse a riesgos (que pueden ser significativos, incluyendo el riesgo de pérdida de la suma total invertida) que puede que no conozca y no tenga experiencia para evaluar correctamente o mitigar"
@@ -3593,7 +3593,7 @@ msgid "disposes of its stake"
 msgstr ""
 
 msgid "e-commerce site for branded merchandise"
-msgstr ""
+msgstr "sitio de comercio electrónico para productos de marca"
 
 msgid "e.g"
 msgstr "ej."
@@ -3623,10 +3623,10 @@ msgid "hours"
 msgstr "horas"
 
 msgid "https://developers.binary.com/"
-msgstr ""
+msgstr "https://developers.binary.com/"
 
 msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr ""
+msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "si este no es su país de residencia"
@@ -3668,7 +3668,7 @@ msgid "main site"
 msgstr "sitio web principal"
 
 msgid "medium protection"
-msgstr ""
+msgstr "protección media"
 
 msgid "minute"
 msgstr "minuto"
@@ -3680,13 +3680,13 @@ msgid "next tick"
 msgstr "próximo tick"
 
 msgid "oauth"
-msgstr ""
+msgstr "oauth"
 
 msgid "of \"Now\", the"
 msgstr "de \"Ahora\", el"
 
 msgid "our helpful support desk"
-msgstr ""
+msgstr "nuestro útil servicio de asistencia"
 
 msgid "payment agent"
 msgstr "agente de pago"
@@ -3728,22 +3728,22 @@ msgid "trading frequency"
 msgstr "frecuencia de comercio"
 
 msgid "view license"
-msgstr ""
+msgstr "ver licencia"
 
 msgid "websocket"
-msgstr ""
+msgstr "websocket"
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr "sí"
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
 msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
-msgstr ""
+msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"

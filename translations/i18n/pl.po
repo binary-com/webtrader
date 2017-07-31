@@ -446,7 +446,7 @@ msgid "Accept"
 msgstr "Akceptuj"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr "Dostępność z dowolnej przeglądarki w 13 językach"
+msgstr "Dostępność w 13 językach z dowolnej przeglądarki"
 
 msgid "Account balance"
 msgstr "Saldo konta"
@@ -521,13 +521,13 @@ msgid "Apply"
 msgstr "Zastosuj"
 
 msgid "Apply to become a Binary.com"
-msgstr "Aplikuj, by zostać klientem Binary.com"
+msgstr "Aplikuj, by zostać pośrednikiem płatności Binary.com"
 
 msgid "Appropriateness Test: WARNING"
-msgstr "Ocena zdolności: UWAGA"
+msgstr "Ocena zdolności: OSTRZEŻENIE"
 
 msgid "Apr"
-msgstr "Kwiecień"
+msgstr "Kwi"
 
 msgid "April"
 msgstr "Kwiecień"
@@ -566,7 +566,7 @@ msgid "Asset Index"
 msgstr "Indeks kapitałowy"
 
 msgid "Aug"
-msgstr "Sierpień"
+msgstr "Sie"
 
 msgid "August"
 msgstr "Sierpień"
@@ -659,7 +659,7 @@ msgid "Binary opens Japan office"
 msgstr "Binary otwiera biuro w Japonii"
 
 msgid "Binary option"
-msgstr "Opcje binarne"
+msgstr "Opcja binarna"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opcje binarne lub inne instrumenty pochodne"
@@ -947,7 +947,7 @@ msgid "Commodities"
 msgstr "Towary"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
-msgstr "Towary to zasoby będące rezultatem upraw lub wydobyte z ziemi, takie jak srebro, złoto, ropa naftowa. Na portalu Binary.com ich ceny podawane są w dolarach amerykańskich"
+msgstr "Towary to zasoby będące rezultatem upraw lub zasoby wydobyte z ziemi, takie jak srebro, złoto, ropa naftowa. Na portalu Binary.com ich ceny podawane są w dolarach amerykańskich"
 
 msgid "Commodities trading experience"
 msgstr "Doświadczenie w handlu towarami"
@@ -1073,7 +1073,7 @@ msgid "Debt-free"
 msgstr "Bez zadłużenia"
 
 msgid "Dec"
-msgstr "Grudzień"
+msgstr "Gru"
 
 msgid "December"
 msgstr "Grudzień"
@@ -1340,7 +1340,7 @@ msgid "Features"
 msgstr "Funkcje"
 
 msgid "Feb"
-msgstr "Luty"
+msgstr "Lut"
 
 msgid "February"
 msgstr "Luty"
@@ -1613,7 +1613,7 @@ msgid "Indicators"
 msgstr "Wskaźniki"
 
 msgid "Indices"
-msgstr "Wskaźniki"
+msgstr "Indeksy"
 
 msgid "Indices trading experience"
 msgstr "Doświadczenie w handlowaniu wskaźnikami"
@@ -1637,7 +1637,7 @@ msgid "Instant funding"
 msgstr "Błyskawiczne zasilanie konta"
 
 msgid "Instrument"
-msgstr "Instrumenty"
+msgstr "Instrument"
 
 msgid "Instruments"
 msgstr "Instrumenty"
@@ -1673,19 +1673,19 @@ msgid "Italiano"
 msgstr "Italiano"
 
 msgid "Jan"
-msgstr "Styczeń"
+msgstr "Sty"
 
 msgid "January"
 msgstr "Styczeń"
 
 msgid "Jul"
-msgstr "Lipiec"
+msgstr "Lip"
 
 msgid "July"
 msgstr "Lipiec"
 
 msgid "Jun"
-msgstr "Czerwiec"
+msgstr "Cze"
 
 msgid "June"
 msgstr "Czerwiec"
@@ -1799,7 +1799,7 @@ msgid "Loading chart and trade menus"
 msgstr "Ładowanie menu wykresu i handlowania"
 
 msgid "Loading custom theme configuration"
-msgstr "ładowanie konfiguracji niestandardowych motywów"
+msgstr "Ładowanie konfiguracji niestandardowych motywów"
 
 msgid "Loading help docs"
 msgstr "Ładowanie dokumentów pomocowych"
@@ -1874,7 +1874,7 @@ msgid "Make your trade"
 msgstr "Dokonaj transakcji"
 
 msgid "Mar"
-msgstr "Marzec"
+msgstr "Mar"
 
 msgid "March"
 msgstr "Marzec"
@@ -2087,7 +2087,7 @@ msgid "Occupation"
 msgstr "Zawód"
 
 msgid "Oct"
-msgstr "Październik"
+msgstr "Paź"
 
 msgid "October"
 msgstr "Październik"
