@@ -6,35 +6,6 @@ import _ from 'lodash';
 import navigation from './navigation';
 import '../common/util';
 
-/* recursively creates menu into root element, set on_click to register menu item clicks */
-const refreshMenuRecursive = ( root, data , on_click) => {
-   data.forEach((value) => {
-      const isDropdownMenu = value.submarkets || value.instruments;
-      const caretHtml = "<span class='nav-submenu-caret'></span>";
-      const menuLinkHtml = isDropdownMenu ? value.display_name + caretHtml : value.display_name;
-      const $menuLink = $("<a href='#'>" + menuLinkHtml + "</a>");
-      if(value.is_disabled)  $menuLink.addClass('disabled');
-
-      const newLI = $("<li>").append($menuLink);
-      if(!isDropdownMenu) {
-         newLI.data(value); /* example use => newLI.data('symbol'), newLI.data('delay_amount'), newLI.data('display_name') */
-      }
-      newLI.appendTo( root);
-
-      if (isDropdownMenu) {
-         const newUL = $("<ul>");
-         newUL.appendTo(newLI);
-         refreshMenuRecursive( newUL, value.submarkets || value.instruments, on_click );
-      }
-      else if(on_click && !value.is_disabled)
-         $menuLink.click(function () {
-            /* pass the <li> not the <a> tag */
-            const li = $(this).parent();
-            on_click(li);
-         });
-   });
-}
-
 /* you can filter the symbols with the options parameter, for example:
    options: {
        filter: (sym) => (sym.feed_license !== 'realtime')
@@ -106,9 +77,24 @@ export const sortMenu = (markets) => {
    return markets;
 };
 
-export const refreshMenu = (root,data,on_click) => {
-   refreshMenuRecursive(root, data, on_click);
-   navigation.updateDropdownToggles();
+export const refreshMenu = (root, markets, callback) => {
+   const menu = `<ul>${
+      markets.map(m => `<li><div>${m.display_name}</div><ul>${
+         m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${
+            s.instruments.map(i => `<li symbol='${i.symbol}'><div>${i.display_name}</div></li>`).join('')
+         }</ul></li>`).join('')
+      }</ul></li>`).join('')
+   }</ul>`;
+   const $menu = $(menu);
+   root.find('> ul').menu('destroy').remove();
+   root.append($menu);
+   $menu.find('li[symbol]').on('click', (e,a) => {
+      const display_name = $(e.target).text();
+      const symbol = $(e.target).closest('li').attr('symbol');
+      $menu.fadeOut(); setTimeout(() => $menu.show(), 500);
+      callback(symbol, display_name);
+   });
+   $menu.menu();
 }
 
 export default {
