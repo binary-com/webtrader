@@ -2204,7 +2204,7 @@ msgid "PNG"
 msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
-msgstr ""
+msgstr "Parabolic SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Le password non corrispondono. Digitale di nuovo"
@@ -2213,7 +2213,7 @@ msgid "Patented technology"
 msgstr "Tecnologia brevettata"
 
 msgid "Pattern Recognition"
-msgstr ""
+msgstr "Riconoscimento dei pattern"
 
 msgid "Payment agent"
 msgstr "Agente di pagamento"
@@ -2234,7 +2234,7 @@ msgid "Pension"
 msgstr "Pensione"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "Percentage Price Oscillator (PPO)"
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -2246,13 +2246,13 @@ msgid "Phone"
 msgstr "Telefono"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Piercing Pattern (CDLPIERCING)"
 
 msgid "Pip"
 msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
-msgstr ""
+msgstr "Pip è l'acronimo di 'percentuale in punti', generalmente indicato dalla quarta cifra decimale (ad esempio 0,0001)"
 
 msgid "Place of birth"
 msgstr "Luogo di nascita"
@@ -2270,7 +2270,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Inserisci una data valida nel formato aaaa-mm-gg"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "Inserire un valore superiore a 0"
 
 msgid "Please enter correct email"
 msgstr "Inserisci l'indirizzo email corretto"
@@ -2288,7 +2288,7 @@ msgid "Please enter your email"
 msgstr "Inserisci il tuo indirizzo email"
 
 msgid "Please input correct token"
-msgstr ""
+msgstr "Inserire il token corretto"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
@@ -2300,7 +2300,7 @@ msgid "Please select"
 msgstr "Seleziona"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "Invia un token di verifica valido"
 
 msgid "Please try again after 1 minute"
 msgstr "Riprova fra 1 minuto"
@@ -2321,7 +2321,7 @@ msgid "Portfolio"
 msgstr "Portafoglio"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "Portoghese"
 
 msgid "Postal code/ZIP"
 msgstr "Codice postale/CAP"
@@ -2345,7 +2345,7 @@ msgid "Press Create token button on the right to create your first token"
 msgstr "Premi il pulsante Crea token sulla destra per creare il tuo primo token"
 
 msgid "Price Transformation"
-msgstr ""
+msgstr "Trasformazione del prezzo"
 
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr ""
@@ -2375,7 +2375,7 @@ msgid "Profit/Loss (points)"
 msgstr "Profitto/Perdita (punti)"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr ""
+msgstr "Pubblicato in inglese, indonesiano, giapponese, cinese, polacco, tedesco, francese, spagnolo, portoghese, italiano, russo e tailandese"
 
 msgid "Purchase"
 msgstr "Acquisto"
@@ -2387,7 +2387,7 @@ msgid "Purchase Price"
 msgstr "Prezzo d'acquisto"
 
 msgid "Quiet markets"
-msgstr ""
+msgstr "Mercati calmi"
 
 msgid "Rate Of Change (ROC)"
 msgstr ""
@@ -2402,7 +2402,7 @@ msgid "Read"
 msgstr "Leggi"
 
 msgid "Read about"
-msgstr ""
+msgstr "Per saperne di più"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
@@ -2456,7 +2456,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "Indice di forza relativa (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 msgid "Remove Selected"
 msgstr "Rimuovi selezione"
@@ -2507,7 +2507,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Piattaforma robusta e sicura"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2543,7 +2543,7 @@ msgid "Save changes"
 msgstr "Salva le variazioni"
 
 msgid "Scalable trading"
-msgstr ""
+msgstr "Trading scalabile"
 
 msgid "Second line of home address"
 msgstr "Seconda riga dell'indirizzo di residenza"
@@ -2606,7 +2606,7 @@ msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
-msgstr ""
+msgstr "Da breve a lungo termine"
 
 msgid "Short-term action"
 msgstr "Azione a breve termine"
@@ -2618,7 +2618,7 @@ msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish
 msgstr ""
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "Media mobile semplice (SMA)"
 
 msgid "Simplicity"
 msgstr "Semplicità"
