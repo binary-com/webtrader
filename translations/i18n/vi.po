@@ -1319,7 +1319,7 @@ msgid "Exponential Moving Average (EMA)"
 msgstr "Trung bình vận chuyển mũ (EMA)"
 
 msgid "Fall"
-msgstr "Xuống"
+msgstr "Giảm"
 
 msgid "Falling markets"
 msgstr "Thị trường giảm"
