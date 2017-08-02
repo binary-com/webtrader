@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -450,7 +446,7 @@ msgid "Accept"
 msgstr "Accetta"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accessibile da qualsiasi browser web in 13 lingue"
 
 msgid "Account balance"
 msgstr "Saldo dell'account"
@@ -459,7 +455,7 @@ msgid "Account opening reason"
 msgstr "Motivo dell'apertura dell'account"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Turnover dell'account"
 
 msgid "Action"
 msgstr "Azione"
@@ -753,7 +749,7 @@ msgid "Binary.com opens an office in the QSentral office building in central Kua
 msgstr "Binary.com apre una sede nella struttura di QSentral, nella centrale Kuala Lumpur, per espandere ulteriormente il suo team addetto all'IT"
 
 msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
-msgstr ""
+msgstr "I prezzi di Binary.com sono rapportati al mercato delle opzioni interbancarie in modo da ottenere sempre i prezzi migliori per i tuoi trade"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
 msgstr "Binary.com ha raggiunto i 2 miliardi di turnover dal 1999"
@@ -1122,10 +1118,10 @@ msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to ide
 msgstr ""
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr ""
+msgstr "Sviluppato da Larry Williams, Williams %R è un indicatore di momentum che è l'inverso dell'Oscillatore stocastico veloce. Noto anche come %R, William %R riflette il livello di chiusura relativo all'high più alto per il periodo osservato"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
-msgstr ""
+msgstr "Sviluppato da Tushar Chande nel 1995, Aroon è un sistema di indicatori che definisce se un'azione è in trend oppure no e quanto è forte il trend. Esistono due indicatori separati: Aroon-Up e Aroon-Down. Un Aroon-up di 25 giorni misura il numero di giorni da un high di 25 giorni. Un Aroon-Down di 25 giorni misura il numero di giorni da un low di 25 giorni"
 
 msgid "Differs"
 msgstr "Differisce"
@@ -1209,7 +1205,7 @@ msgid "Download as"
 msgstr "Scarica come"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Download in corso di .csv"
 
 msgid "Downloading template as"
 msgstr "Download del modello come"
@@ -1284,7 +1280,7 @@ msgid "Entry spot price"
 msgstr "Prezzo d'ingresso"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Errore durante il recupero dei dati per %1"
 
 msgid "Espa ol"
 msgstr "Spagnolo"
@@ -1422,7 +1418,7 @@ msgid "From"
 msgstr "Da"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Interfaccia di trading a schermo intero"
 
 msgid "Further instructions"
 msgstr "Ulteriori istruzioni"
@@ -1470,7 +1466,7 @@ msgid "Health"
 msgstr "Salute"
 
 msgid "Help"
-msgstr ""
+msgstr "Aiuto"
 
 msgid "High"
 msgstr "High"
@@ -1485,7 +1481,7 @@ msgid "High barrier offset"
 msgstr "Offset barriera superiore"
 
 msgid "High returns"
-msgstr ""
+msgstr "Rendimenti elevati"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr "High-Wave Candle (CDLHIGHWAVE)"
@@ -1494,7 +1490,7 @@ msgid "Higher"
 msgstr "Superiore"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "High/Low"
 
 msgid "Higher/Lower trades"
 msgstr "Trade High/Low"
@@ -1527,7 +1523,7 @@ msgid "How soon can I start trading?"
 msgstr "Quando posso iniziare a fare trading?"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "Come si negoziano le opzioni binarie?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Hull Moving Average (HMA)"
@@ -1866,7 +1862,7 @@ msgid "Lower"
 msgstr "Inferiore"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr ""
+msgstr "Il MACD è un indicatore di trading utilizzato nell'analisi tecnica dei prezzi delle azioni. Il suo obiettivo è di rilevare la forza, la direzione, il momentum e la durata di un trend per un prezzo dell'azione"
 
 msgid "MENA FFXPO Award"
 msgstr "Riconoscimeno MENA FFXPO"
@@ -1893,7 +1889,7 @@ msgid "Marubozu (CDLMARUBOZU)"
 msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Indice di massa (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr "Mat Hold (CDLMATHOLD)"
@@ -2136,10 +2132,10 @@ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
 msgstr "Sono consentite solo lettere, spazi, trattini, punti e apostrofi"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "Sono consentiti solo numeri e spazi"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "Sono consentiti solo numeri, lettere e trattini"
 
 msgid "Open"
 msgstr "Apri"
@@ -2154,7 +2150,7 @@ msgid "Open account"
 msgstr "Apri un account"
 
 msgid "Opening an account"
-msgstr ""
+msgstr "Apertura di un account"
 
 msgid "Opens"
 msgstr "Apre"
@@ -2175,25 +2171,25 @@ msgid "Other financial instruments trading frequency"
 msgstr "Frequenza di trading con altri strumenti finanziari"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr ""
+msgstr "La nostra società continua a crescere e ottiene un'autorizzazione nel'Isola di Man per soddisfare meglio i nostri clienti britannici"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
-msgstr ""
+msgstr "È evidente che i nostri clienti ci apprezzino. A metà del 2014, Binary.com contava uno storico di oltre 100 milioni di transazioni e oltre 130.000 nuove operazioni ogni giorno"
 
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
-msgstr ""
+msgstr "La nostra rapida crescita organica è integrata dall'acquisizione della clientela di BetsForTraders, uno dei nostri principali concorrenti"
 
 msgid "Over"
 msgstr "Su"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "Oltre 1 milione di account registrati nel mondo"
 
 msgid "Over 3 years"
 msgstr "In 3 anni"
 
 msgid "Over 90 staff and contractors worldwide"
-msgstr ""
+msgstr "Oltre 90 dipendenti e collaboratori in tutto il mondo"
 
 msgid "Overlap Studies"
 msgstr ""
@@ -2208,7 +2204,7 @@ msgid "PNG"
 msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
-msgstr ""
+msgstr "Parabolic SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Le password non corrispondono. Digitale di nuovo"
@@ -2217,7 +2213,7 @@ msgid "Patented technology"
 msgstr "Tecnologia brevettata"
 
 msgid "Pattern Recognition"
-msgstr ""
+msgstr "Riconoscimento dei pattern"
 
 msgid "Payment agent"
 msgstr "Agente di pagamento"
@@ -2238,7 +2234,7 @@ msgid "Pension"
 msgstr "Pensione"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "Percentage Price Oscillator (PPO)"
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -2250,13 +2246,13 @@ msgid "Phone"
 msgstr "Telefono"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Piercing Pattern (CDLPIERCING)"
 
 msgid "Pip"
 msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
-msgstr ""
+msgstr "Pip è l'acronimo di 'percentuale in punti', generalmente indicato dalla quarta cifra decimale (ad esempio 0,0001)"
 
 msgid "Place of birth"
 msgstr "Luogo di nascita"
@@ -2274,7 +2270,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Inserisci una data valida nel formato aaaa-mm-gg"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "Inserire un valore superiore a 0"
 
 msgid "Please enter correct email"
 msgstr "Inserisci l'indirizzo email corretto"
@@ -2292,7 +2288,7 @@ msgid "Please enter your email"
 msgstr "Inserisci il tuo indirizzo email"
 
 msgid "Please input correct token"
-msgstr ""
+msgstr "Inserire il token corretto"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
@@ -2304,7 +2300,7 @@ msgid "Please select"
 msgstr "Seleziona"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "Invia un token di verifica valido"
 
 msgid "Please try again after 1 minute"
 msgstr "Riprova fra 1 minuto"
@@ -2325,7 +2321,7 @@ msgid "Portfolio"
 msgstr "Portafoglio"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "Portoghese"
 
 msgid "Postal code/ZIP"
 msgstr "Codice postale/CAP"
@@ -2349,7 +2345,7 @@ msgid "Press Create token button on the right to create your first token"
 msgstr "Premi il pulsante Crea token sulla destra per creare il tuo primo token"
 
 msgid "Price Transformation"
-msgstr ""
+msgstr "Trasformazione del prezzo"
 
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr ""
@@ -2379,7 +2375,7 @@ msgid "Profit/Loss (points)"
 msgstr "Profitto/Perdita (punti)"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr ""
+msgstr "Pubblicato in inglese, indonesiano, giapponese, cinese, polacco, tedesco, francese, spagnolo, portoghese, italiano, russo e tailandese"
 
 msgid "Purchase"
 msgstr "Acquisto"
@@ -2391,7 +2387,7 @@ msgid "Purchase Price"
 msgstr "Prezzo d'acquisto"
 
 msgid "Quiet markets"
-msgstr ""
+msgstr "Mercati calmi"
 
 msgid "Rate Of Change (ROC)"
 msgstr ""
@@ -2406,7 +2402,7 @@ msgid "Read"
 msgstr "Leggi"
 
 msgid "Read about"
-msgstr ""
+msgstr "Per saperne di più"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
@@ -2460,7 +2456,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "Indice di forza relativa (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 msgid "Remove Selected"
 msgstr "Rimuovi selezione"
@@ -2511,7 +2507,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Piattaforma robusta e sicura"
 
 msgid "SVG"
 msgstr "SVG"
@@ -2547,7 +2543,7 @@ msgid "Save changes"
 msgstr "Salva le variazioni"
 
 msgid "Scalable trading"
-msgstr ""
+msgstr "Trading scalabile"
 
 msgid "Second line of home address"
 msgstr "Seconda riga dell'indirizzo di residenza"
@@ -2610,7 +2606,7 @@ msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
-msgstr ""
+msgstr "Da breve a lungo termine"
 
 msgid "Short-term action"
 msgstr "Azione a breve termine"
@@ -2622,7 +2618,7 @@ msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish
 msgstr ""
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "Media mobile semplice (SMA)"
 
 msgid "Simplicity"
 msgstr "Semplicità"
