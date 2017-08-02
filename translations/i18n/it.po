@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -450,7 +446,7 @@ msgid "Accept"
 msgstr "Accetta"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accessibile da qualsiasi browser web in 13 lingue"
 
 msgid "Account balance"
 msgstr "Saldo dell'account"
@@ -459,7 +455,7 @@ msgid "Account opening reason"
 msgstr "Motivo dell'apertura dell'account"
 
 msgid "Account turnover"
-msgstr ""
+msgstr "Turnover dell'account"
 
 msgid "Action"
 msgstr "Azione"
@@ -753,7 +749,7 @@ msgid "Binary.com opens an office in the QSentral office building in central Kua
 msgstr "Binary.com apre una sede nella struttura di QSentral, nella centrale Kuala Lumpur, per espandere ulteriormente il suo team addetto all'IT"
 
 msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
-msgstr ""
+msgstr "I prezzi di Binary.com sono rapportati al mercato delle opzioni interbancarie in modo da ottenere sempre i prezzi migliori per i tuoi trade"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
 msgstr "Binary.com ha raggiunto i 2 miliardi di turnover dal 1999"
