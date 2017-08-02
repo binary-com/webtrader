@@ -102,7 +102,7 @@ const init_state = (root, what_todo) => {
          pep: false,
          salutation: 'Mr',
          salutation_array: ['Mr', 'Mrs', 'Ms', 'Miss'],
-         account_opening_reason_array: ['Speculative', 'Income Earning', 'Assets Saving', 'Hedging'],
+         account_opening_reason_array: ['Speculative', 'Income Earning', 'Hedging'],
          account_opening_reason: '',
          first_name: '',
          last_name: '',
