@@ -1118,10 +1118,10 @@ msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to ide
 msgstr ""
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr ""
+msgstr "Sviluppato da Larry Williams, Williams %R è un indicatore di momentum che è l'inverso dell'Oscillatore stocastico veloce. Noto anche come %R, William %R riflette il livello di chiusura relativo all'high più alto per il periodo osservato"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
-msgstr ""
+msgstr "Sviluppato da Tushar Chande nel 1995, Aroon è un sistema di indicatori che definisce se un'azione è in trend oppure no e quanto è forte il trend. Esistono due indicatori separati: Aroon-Up e Aroon-Down. Un Aroon-up di 25 giorni misura il numero di giorni da un high di 25 giorni. Un Aroon-Down di 25 giorni misura il numero di giorni da un low di 25 giorni"
 
 msgid "Differs"
 msgstr "Differisce"
@@ -1205,7 +1205,7 @@ msgid "Download as"
 msgstr "Scarica come"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Download in corso di .csv"
 
 msgid "Downloading template as"
 msgstr "Download del modello come"
@@ -1280,7 +1280,7 @@ msgid "Entry spot price"
 msgstr "Prezzo d'ingresso"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Errore durante il recupero dei dati per %1"
 
 msgid "Espa ol"
 msgstr "Spagnolo"
@@ -1418,7 +1418,7 @@ msgid "From"
 msgstr "Da"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Interfaccia di trading a schermo intero"
 
 msgid "Further instructions"
 msgstr "Ulteriori istruzioni"
