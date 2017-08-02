@@ -1466,7 +1466,7 @@ msgid "Health"
 msgstr "Salute"
 
 msgid "Help"
-msgstr ""
+msgstr "Aiuto"
 
 msgid "High"
 msgstr "High"
@@ -1481,7 +1481,7 @@ msgid "High barrier offset"
 msgstr "Offset barriera superiore"
 
 msgid "High returns"
-msgstr ""
+msgstr "Rendimenti elevati"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr "High-Wave Candle (CDLHIGHWAVE)"
@@ -1490,7 +1490,7 @@ msgid "Higher"
 msgstr "Superiore"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "High/Low"
 
 msgid "Higher/Lower trades"
 msgstr "Trade High/Low"
@@ -1523,7 +1523,7 @@ msgid "How soon can I start trading?"
 msgstr "Quando posso iniziare a fare trading?"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "Come si negoziano le opzioni binarie?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Hull Moving Average (HMA)"
@@ -1862,7 +1862,7 @@ msgid "Lower"
 msgstr "Inferiore"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr ""
+msgstr "Il MACD è un indicatore di trading utilizzato nell'analisi tecnica dei prezzi delle azioni. Il suo obiettivo è di rilevare la forza, la direzione, il momentum e la durata di un trend per un prezzo dell'azione"
 
 msgid "MENA FFXPO Award"
 msgstr "Riconoscimeno MENA FFXPO"
@@ -1889,7 +1889,7 @@ msgid "Marubozu (CDLMARUBOZU)"
 msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Indice di massa (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr "Mat Hold (CDLMATHOLD)"
@@ -2132,10 +2132,10 @@ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
 msgstr "Sono consentite solo lettere, spazi, trattini, punti e apostrofi"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "Sono consentiti solo numeri e spazi"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "Sono consentiti solo numeri, lettere e trattini"
 
 msgid "Open"
 msgstr "Apri"
@@ -2150,7 +2150,7 @@ msgid "Open account"
 msgstr "Apri un account"
 
 msgid "Opening an account"
-msgstr ""
+msgstr "Apertura di un account"
 
 msgid "Opens"
 msgstr "Apre"
@@ -2171,25 +2171,25 @@ msgid "Other financial instruments trading frequency"
 msgstr "Frequenza di trading con altri strumenti finanziari"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr ""
+msgstr "La nostra società continua a crescere e ottiene un'autorizzazione nel'Isola di Man per soddisfare meglio i nostri clienti britannici"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
-msgstr ""
+msgstr "È evidente che i nostri clienti ci apprezzino. A metà del 2014, Binary.com contava uno storico di oltre 100 milioni di transazioni e oltre 130.000 nuove operazioni ogni giorno"
 
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
-msgstr ""
+msgstr "La nostra rapida crescita organica è integrata dall'acquisizione della clientela di BetsForTraders, uno dei nostri principali concorrenti"
 
 msgid "Over"
 msgstr "Su"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "Oltre 1 milione di account registrati nel mondo"
 
 msgid "Over 3 years"
 msgstr "In 3 anni"
 
 msgid "Over 90 staff and contractors worldwide"
-msgstr ""
+msgstr "Oltre 90 dipendenti e collaboratori in tutto il mondo"
 
 msgid "Overlap Studies"
 msgstr ""
