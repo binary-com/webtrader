@@ -1,0 +1,129 @@
+/* Created by Armin on 10/17/2015 */
+
+body {
+  min-width: 1000px;
+}
+
+#topbar {
+   width: 100%;
+   line-height: 1;
+   font-size: 100%;
+   text-align: right;
+   padding: 3px 0;
+   height: 23px;
+   min-width: 1000px;
+   span.time {
+      color: white;
+      float: right;
+      padding-right: 35px;
+      padding-top: 5px;
+      font-size: 12px;
+   }
+   span.contact-us {
+      color: white;
+      float: right;
+      padding-right: 25px;
+      padding-top: 5px;
+      font-weight: 900;
+      font-size: 12px;
+   }
+
+   #select_language {
+      top:-3px;
+      z-index: 999999;/*should be at the top of other dialogs*/
+   }
+}
+
+
+#nav-menu {
+  min-width: 1000px;
+  .trade, .instruments, .resources, .windows {
+      > ul {
+         border: none;
+         visibility: hidden;
+         z-index: 999999;
+         opacity: 0;
+         transition: visibility 0.5s, opacity 0.1s linear 0.4s;
+      }
+      .ui-menu .ui-menu-item {
+         list-style-image: none !important;
+         .ui-menu-item-wrapper {
+            padding: 5px 1em 5px .4em;
+         }
+      }
+      .ui-widget.ui-widget-content {
+         border: none !important;
+      }
+      &:hover > ul {
+         visibility: visible;
+         opacity: 1;
+         transition: visibility 0s 0.2s;
+      }
+      li {
+         min-width: 130px;
+         font-size: 14px;
+         background: #2A3052;
+         color: white;
+         a {
+            color: white;
+            font-size: 14px;
+            padding-left: 30px !important;
+         }
+      }
+      .ui-icon-caret-1-e {
+         background-image: url('../images/double-angle-pointing-to-right.svg') !important;
+         background-size: 12px 12px !important;
+         background-position: 2px 5px !important;
+         margin: 0;
+         top: calc(50% - 12px);
+         right: 2px;
+      }
+      .title {
+         background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
+         padding-left: 20px;
+         line-height: 34px;
+         background-size: 12px 12px !important;
+         background-position: 2px 50% !important;
+         background-repeat: no-repeat;
+         margin: 0;
+      }
+      .ui-state-active {
+         margin: 0 !important;
+      }
+  }
+}
+
+#nav-menu .container {
+  text-align: center;
+  display: flex;
+}
+.top-nav-menu {
+  margin: 0 auto 0 auto;
+}
+
+#topbar #select_language.visible, #all-accounts-top.visible{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.top-nav-menu > li > a { font-size: 18px; color: white; }
+
+.login button {
+  margin: 15px 0;
+}
+
+#main-account {
+  top: -2px;
+} 
+
+.main-nav .nav-caret {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+}
+
+.logo-wrapper {
+  float: left;
+  margin-left: 5px;
+}

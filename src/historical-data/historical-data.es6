@@ -15,6 +15,10 @@ let dialog = null;
 
 const buildMenu = ($root, instrumentName, callback) => {
    const markets = getMarketData();
+   if(!markets || !markets.length){
+      _.delay(() => buildMenu($root, instrumentName, callback), 1000);
+      return;
+   }
    const menu = `<ul>${
       markets.map(m => `<li><div>${m.display_name}</div><ul>${
          m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${

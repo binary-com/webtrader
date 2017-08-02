@@ -9,37 +9,6 @@ import $navHtml from 'text!./navigation.html';
 import '../common/util';
 import 'css!navigation/navigation.css';
 
-export const updateDropdownToggles = () => {
-   $("#nav-menu .nav-dropdown-toggle").each(function(){
-      $(this).unbind("click").on("click",function(){
-         const $ul = $(this).next();
-         if($ul){
-            if($($ul[0]).css("visibility")==="hidden") 
-               $($ul[0]).css({visibility:"visible",opacity:1,display:"block"});
-            else 
-               $($ul[0]).css({visibility:"",opacity:"",display:""});
-         }
-      });
-   });
-   $("#nav-menu li").each(function(){
-      const class_name = $(this).attr("class") && $(this).attr("class").split(" ")[0];
-      if(class_name=== "account" || class_name === "login")
-         return;
-      $(this).unbind("click").on("click", function(){
-         if($(this)[0].lastChild.nodeName === "A"){
-            $(this).trigger("mouseleave");
-         }
-      });
-      $(this).unbind("mouseleave").on("mouseleave",function(){
-         const $ul = $(this).find("ul");
-         if($ul){
-            $($ul[0]).css({visibility:"",opacity:"",display:""});
-         }
-      });
-   });
-
-}
-
 const getType = (id) => {
    if(!id) return;
    const type = {MLT:"Gaming", MF:"Investment",VRTC:"Virtual",REAL:"Real"};
@@ -327,7 +296,8 @@ export const init = (callback) => {
    //Load theme settings ...
    require(['themes/themes']);
 
-   updateDropdownToggles();
+   $('#nav-menu .resources > ul').menu();
+   $('#nav-menu .windows > ul').menu();
 
    if (callback) {
       callback($("#nav-menu"));
@@ -342,6 +312,5 @@ export const init = (callback) => {
 export default {
    init,
    getLandingCompany,
-   updateDropdownToggles
 };
 
