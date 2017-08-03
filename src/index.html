@@ -184,12 +184,12 @@
     <script>
         /* oauth login ? */
         var href = window.location.href;
+        //Remove the '#' check later once the backend changes are released TODO
+        var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
         if (/acct1=/.test(href) && /token1=/.test(href)) {
-            //Remove the '#' check later once the backend changes are released TODO
-            var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
-            var accts = (params_str.match(/acct\d+=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
-            var tokens = (params_str.match(/token\d+=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
-            var currs = (params_str.match(/cur\d+=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var accts = (params_str.match(/acct\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var tokens = (params_str.match(/token\d=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
+            var currs = (params_str.match(/cur\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
             var oauth = [];
             for (var i = 0; i < accts.length; i++) {
                 var id = accts[i];
@@ -201,7 +201,8 @@
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
         }
 
-        var lang = (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
+        var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
+            (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
         if (isLangSupported(lang)) {
             local_storage.set('i18n', { value: lang });
         } else { // In case of invalid language fallback to EN
@@ -257,6 +258,15 @@
             var url = 'https://www.binary.com/' + (local_storage.get('i18n') || { value: 'en' }).value + '/contact.html'
             var win = window.open(url, '_blank');
             win.focus();
+        }
+
+        //For crowdin in-context translation.
+        if ((local_storage.get("i18n") || {}).value === 'ach') {
+            var _jipt = [];
+            _jipt.push(['project', 'webtrader']);
+            var crowdin = document.createElement("script");
+            crowdin.setAttribute('src', '//cdn.crowdin.com/jipt/jipt.js');
+            document.head.appendChild(crowdin);
         }
     </script>
 
