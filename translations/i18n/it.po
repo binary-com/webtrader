@@ -2684,40 +2684,40 @@ msgid "Statistical Functions"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Trade Stays Between (Staziona fra) / Goes Outside (Esce fuori)"
 
 msgid "Stays In/Goes Out"
-msgstr ""
+msgstr "Stays In (Rimane in) / Goes Out (Esce fuori)"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Stays in"
 
 msgid "Step 1: Define your position"
-msgstr ""
+msgstr "Step 1: Definisci la tua posizione"
 
 msgid "Step 2: Get your trade price"
-msgstr ""
+msgstr "Step 2: Ottieni il prezzo del tuo trade"
 
 msgid "Step 3: Make your trade"
-msgstr ""
+msgstr "Step 3: Effettua il tuo trade"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "Stick Sandwich (CDLSTICKSANDWICH)"
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "Stocastico (STOCH )"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "Stocastico veloce (STOCHF)"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
-msgstr ""
+msgstr "Indice di forza relativa stocastica (STOCHRSI)"
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr ""
+msgstr "Stocastico lento (STOCHS)"
 
 msgid "Stock Indices"
 msgstr "Indici azionari"
