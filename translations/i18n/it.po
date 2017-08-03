@@ -2726,7 +2726,7 @@ msgid "Stock indices"
 msgstr "Indici azionari"
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
-msgstr ""
+msgstr "Gli indici azionari misurano il valore di una selezione di società presenti nel mercato azionario"
 
 msgid "Stocks trading experience"
 msgstr "Esperienza di trading in azioni"
@@ -2759,10 +2759,10 @@ msgid "Submit"
 msgstr "Invia"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Il modello è stato correttamente applicato e salvato come"
 
 msgid "Summation (SUM)"
-msgstr ""
+msgstr "Sommatoria (SUM)"
 
 msgid "Sun"
 msgstr "Dom"
@@ -2777,34 +2777,34 @@ msgid "Take early profits"
 msgstr ""
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
-msgstr ""
+msgstr "Takuri (Dragonfly Doji con un'ombra inferiore molto lunga) (CDLTAKURI)"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
-msgstr ""
+msgstr "Tasuki Gap (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "Numero di identificazione fiscale"
 
 msgid "Tax information"
-msgstr ""
+msgstr "Informazioni fiscali"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "Residenza fiscale"
 
 msgid "Tax-free"
-msgstr ""
+msgstr "Esentasse"
 
 msgid "Tel"
 msgstr "Tel"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Modifiche apportate al modello salvato"
 
 msgid "Template name"
 msgstr "Nome del modello"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Il nome del modello esiste già"
 
 msgid "Terms"
 msgstr "Termini"
@@ -2816,7 +2816,7 @@ msgid "The"
 msgstr "Il/Lo/La/Gli/Le/I"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
-msgstr ""
+msgstr "L'Oscillatore di prezzo assoluto (APO) si basa sulle differenze assolute tra due medie mobili di diverse lunghezze, una media mobile Veloce e una Lenta"
 
 msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
 msgstr ""
@@ -3011,40 +3011,40 @@ msgid "The profit is the difference between the purchase price (the stake) and t
 msgstr "Il profitto è la differenza tra il prezzo d'acquisto (la puntata) e il payout di un trade vincente"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr ""
+msgstr "Il cambio di marchio è un'evoluzione naturale per la piattaforma poiché continua a crescere la sua quota di mercato nel campo altamente competitivo del trading binario. Il nuovo marchio riflette la natura dell'attività e la nostra nuova tagline - Sharp Prices, Smart Trading (Prezzi migliori, trading intelligente) – trasmette la nostra filosofia e il nostro impegno nei confronti dei nostri clienti"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
-msgstr ""
+msgstr "Il prezzo di rivendita indica il prezzo di mercato attuale  di un contratto. I prezzi di rivendita sono sulla base dei migliori sforzi e possono non essere sempre disponibili dopo l'acquisto. Per maggiori dettagli sulla vendita dei contratti prima della scadenza, vedi \"Vendi opzione\""
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
-msgstr ""
+msgstr "Il rendimento è il denaro realizzato alla scadenza del contratto (vedi \"Payout\")"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
-msgstr ""
+msgstr "La puntata è l'importo che un trader deve pagare per iniziare un trade"
 
 msgid "The sum of price over selected period"
-msgstr ""
+msgstr "La somma del prezzo per il periodo selezionato"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
 msgstr ""
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
-msgstr ""
+msgstr "Gli indici di volatilità simulano varie situazioni dei mercati reali e forniscono una piattaforma ideale per abituarsi al trading e testare le strategie in varie condizioni di mercato. Questi indici dipendono dalla volatilità e dalle tendenza e aiutano gli utenti a provare scenari come: alta volatilità, bassa volatilità, trend in rialzo e in ribasso"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
-msgstr ""
+msgstr "Questi sono trade in cui i trader prevedono se un mercato chiuderà a un prezzo più alto o più basso rispetto al prezzo obiettivo"
 
 msgid "These are trades where the trader predicts if a market will rise or fall at the end of a selected time period"
-msgstr ""
+msgstr "Questi sono trade in cui i trader prevedono se, al termine di un dato periodo di tempo, il mercato sarà in rialzo o in ribasso"
 
 msgid "These are trades where the trader selects a low and high barrier, and predicts if the market will stay within these barriers or go outside them (see also 'Stays Between/Goes Outside trades')"
-msgstr ""
+msgstr "Questi sono trade nei quali il trader seleziona una barriera inferiore e superiore e prevede che il mercato rimanga all'interno di queste barriere oppure che ne esca fuori (vedi anche \"Trade Stays Between/Goes Outside\")"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will never touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Questi sono trade nei quali il trader seleziona un prezzo obiettivo e prevede che il mercato non toccherà mai l'obiettivo prima della scadenza del trade"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Questi sono trade nei quali il trader seleziona un prezzo obiettivo e prevede che il mercato toccherà l'obiettivo prima della scadenza del trade"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
@@ -3236,10 +3236,10 @@ msgid "Triangular Moving Average (TRIMA)"
 msgstr "Media mobile triangolare (TRIMA)"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "Tripla media mobile esponenziale (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "Tripla media mobile esponenziale (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
 msgstr "Tristar Pattern (CDLTRISTAR)"
@@ -3275,7 +3275,7 @@ msgid "Ultimate Oscillator (ULTOSC)"
 msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
-msgstr ""
+msgstr "Sotto"
 
 msgid "Underlying"
 msgstr "Sottostante"
