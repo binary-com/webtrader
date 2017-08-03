@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="transparent" fill-rule="evenodd">
+        <g id="icons/active">
+            <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+            <polygon id="Path-6" fill="#FFFFFF" points="3 9 12 0 8 9"></polygon>
+            <polygon id="Path-6-Copy" fill="#FFFFFF" transform="translate(8.500000, 11.500000) scale(-1, -1) translate(-8.500000, -11.500000) " points="4 16 13 7 9 16"></polygon>
+        </g>
+    </g>
+</svg>

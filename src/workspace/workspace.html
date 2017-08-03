@@ -1,0 +1,89 @@
+<ul class='workspace-manager'>
+   <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "active"'>
+      <a href="#">
+         <span class='ui-icon ui-icon-active-workspace'></span>
+         Active Workspace
+      </a>
+   </li>
+   <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "saved"'>
+      <a href="#">
+         <span class='ui-icon ui-icon-saved-workspaces'></span>
+         Saved Workspaces
+      </a>
+   </li>
+   <li rv-show='route | eq "all"'>
+      <a href="#">
+         <span class='ui-icon ui-icon-arrange'></span>
+         <span>Arrange Workspace</span>
+      </a>
+   </li>
+   <li rv-show='route | eq "all"'>
+      <a href="#">
+         <span class='ui-icon ui-icon-load'></span>
+         <span>Load Workspace</span>
+      </a>
+   </li>
+
+
+   <li class='active-workspace-li' rv-show='route | one-of "active" "rename"'>
+      <a href="#" rv-show='route | eq "active"'>
+         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
+         <span>my-workspace-1</span>
+         <span class='ui-icon ui-icon-sub-menu'></span>
+      </a>
+      <a class='active-workspace-rename' rv-if='route | eq "rename"' href="#">
+         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "active"'></span>
+         <input value="my-workspace-1" autofocus />
+         <span class='ui-icon ui-icon-confirm'></span>
+      </a>
+      <ul rv-show='route | eq "active"'>
+         <li>
+            <a href='#' rv-on-click='update_route | bind "rename"'>
+               Rename
+               <span class='ui-icon ui-icon-edit'></span>
+            </a>
+         </li>
+         <li>
+            <a href='#'>
+               <span class='ui-icon ui-icon-save'></span>
+               Save
+            </a>
+         </li>
+         <li>
+            <a href='#'>
+               <span class='ui-icon ui-icon-load'></span>
+               Download
+            </a>
+         </li>
+         <li>
+            <a href='#'>
+               <span class='ui-icon ui-icon-delete'></span>
+               Close All
+            </a>
+         </li>
+      </ul>
+   </li>
+   <li rv-show='route | eq "saved"'>
+      <a href="#">
+         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
+         <span>Saved Workspaces</span>
+      </a>
+   </li>
+
+   <div  rv-show='route | eq "saved"'>
+      <li rv-each-row="workspaces">
+         <a href="#" class='invert-colors'>
+            <span rv-text='row.name'></span>
+            <span class='ui-icon ui-icon-delete-w'></span>
+         </a>
+      </li>
+   </div>
+   <div  rv-show='route | one-of "active" "rename"'>
+      <li rv-each-row="dialogs">
+         <a href="#" class='invert-colors'>
+            <span rv-text='row.name'></span>
+            <span class='ui-icon ui-icon-delete-w'></span>
+         </a>
+      </li>
+   </div>
+</ul>

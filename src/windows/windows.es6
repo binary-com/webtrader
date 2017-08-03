@@ -420,20 +420,18 @@ export const init = function($parentObj) {
 
    $menuUL = $parentObj.find("ul");
 
+   //Attach click listener for tile action
    const tileObject = $menuUL.find(".tile");
+   tileObject.click(tileDialogs);
 
+   //Attach click listener for close-all
    closeAllObject = $menuUL.find(".closeAll");
    closeAllObject.click(() => {
-      /* The close click is behaving weird.
-         Behavior - When there are charts opened, this event is able to close all charts and then
-         unable to hide the menu. When There are no charts, then it behaves normally */
       if ($('.webtrader-dialog').length > 0) {
          $('.webtrader-dialog').dialog('close');
       }
    });
 
-   //Attach click listener for tile menu
-   tileObject.click(tileDialogs);
 
    require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], (chartWindowObj,liveapi, menu) => {
       if(!tracker.is_empty()) {
@@ -630,6 +628,7 @@ export const createBlankWindow = function($html,options) {
    // add an item to window menu
    let li = null;
    const add_to_windows_menu = () => {
+      return;
       const link = $("<a href='#'>" + options.title + "</a>");
       // bring window to top on click
       link.click(blankWindow.moveToTop);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="2nd-Submenu" stroke="none" stroke-width="1" fill="transparent" fill-rule="evenodd">
+        <g id="7-rename" transform="translate(-925.000000, -116.000000)">
+            <g id="Buttons/cancel" transform="translate(925.000000, 116.000000)">
+                <rect id="Rectangle-5" fill="#F2F2F2" fill-rule="evenodd" x="0" y="0" width="20" height="20" rx="3"></rect>
+                <polyline id="Path-8" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="7 11.0048962 9 13 14 8"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

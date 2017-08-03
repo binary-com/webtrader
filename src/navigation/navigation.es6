@@ -6,6 +6,7 @@ import _ from 'lodash';
 import liveapi from '../websockets/binary_websockets';
 import rv from '../common/rivetsExtra';
 import $navHtml from 'text!./navigation.html';
+import workspace from '../workspace/workspace.js';
 import '../common/util';
 import 'css!navigation/navigation.css';
 
@@ -15,6 +16,7 @@ const getType = (id) => {
    id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
    return type[id]+" Account";
 };
+
 
 const initLoginButton = (root) => {
    const account_menu = root.find('.account-menu');
@@ -297,7 +299,7 @@ export const init = (callback) => {
    require(['themes/themes']);
 
    $('#nav-menu .resources > ul').menu();
-   $('#nav-menu .windows > ul').menu();
+   workspace.init($('#nav-menu .workspace'));
 
    if (callback) {
       callback($("#nav-menu"));
