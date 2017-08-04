@@ -454,12 +454,9 @@ msgstr "Saldo dell'account"
 msgid "Account opening reason"
 msgstr "Motivo dell'apertura dell'account"
 
-<<<<<<< HEAD
-=======
 msgid "Account turnover"
 msgstr "Turnover dell'account"
 
->>>>>>> fe7c9c708a3f41257c9a172d866cab59ceb2c855
 msgid "Action"
 msgstr "Azione"
 

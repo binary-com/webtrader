@@ -515,7 +515,7 @@ msgid "Answer"
 msgstr "答案"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "预期的账户交易额"
 
 msgid "Apply"
 msgstr "申请"
@@ -608,7 +608,7 @@ msgid "Barrier(s)"
 msgstr "障碍"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "看跌：显示趋势到了尽头的形式，由三个上升趋势K 线图组成。第二K 线图必须以与前一天收盘价相近的价格开盘。最后的K 线图的长度须短，并可形成向上缺口。另外还可能会有抛售暗影。走势形式显示上涨乏力，存在合并风险与反转的可能性。看涨：显示趋势到了尽头的形式，由三个下跌趋势K 线图组成。第二K 线图必须以与前一天收盘价相近的价格开盘。最后的K 线图的长度须长。形式显示乏力及合并趋势，并存在反转的可能性"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "执带 (CDLBELTHOLD)"
@@ -1241,10 +1241,7 @@ msgid "Embed code"
 msgstr "嵌入代码"
 
 msgid "Employent status"
-msgstr ""
-
-msgid "Employment status"
-msgstr ""
+msgstr "就业状况"
 
 msgid "End Time"
 msgstr "结束时间"
@@ -1502,7 +1499,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "圈套形态 (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "历史数据"
 
 msgid "Home Address"
 msgstr "家庭地址"
@@ -2618,7 +2615,7 @@ msgid "Sold"
 msgstr "已卖出"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "财富来源"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "陀螺线 (CDLSPINNINGTOP)"
@@ -3410,7 +3407,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "欢迎来到 Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Pep 是什么？"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "一旦您对交易价格感到满意，即可立刻执行交易"
