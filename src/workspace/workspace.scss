@@ -8,7 +8,6 @@ ul.workspace-manager.workspace-manager {
          line-height: 34px;
          padding-left: 30px;
          padding-right: 10px;
-         font-size: 14px;
          &.invert-colors {
             background: white;
             color: #2A3052;
@@ -71,4 +70,41 @@ ul.workspace-manager.workspace-manager {
    .ui-icon-sub-menu { background-image: url('../images/gear.svg') !important; }
    .ui-icon-delete-w { background-image: url('../images/delete-black.svg') !important; }
    .ui-icon-confirm { background-image: url('../images/btn-confirm.svg') !important; width: 20px; height: 20px; }
+
+   .dialog-list, .workspace-list {
+      li > a {
+         padding: 0;
+         display: flex;
+         align-items: center;
+         span:first-child { // the title
+            display: inline-block;
+            width: 100%;
+            padding-left: 20px;
+
+         }
+         span:last-child { // the X button
+            display: inline-block;
+            position: static;
+            height: 34px;
+            background-position: 3px 9px;
+            width: 30px;
+            transition: background-color 0.3s;
+            &:hover {
+               background-color: #f2f2f2;
+            }
+         }
+      }
+   }
+   .invert-on-hover:hover {
+      background: white;
+      a { color: #2A3052; }
+
+      .ui-icon-active-workspace { background-image: url('../images/active-black.svg') !important; }
+      .ui-icon-saved-workspaces { background-image: url('../images/saved-black.svg') !important; }
+      .ui-icon-arrange { background-image: url('../images/arrange-black.svg') !important; }
+      .ui-icon-load { background-image: url('../images/load-black.svg') !important; }
+      .ui-icon-edit { background-image: url('../images/edit-black.svg') !important; }
+      .ui-icon-save { background-image: url('../images/save-black.svg') !important; }
+      .ui-icon-delete { background-image: url('../images/delete-black.svg') !important; }
+   }
 }

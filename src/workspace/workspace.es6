@@ -13,17 +13,18 @@ const state = {
    dialogs: [
    ],
    update_route: route => state.route = route,
+   tileDialogs: () => tileDialogs(),
 };
 export const init = (parent) => {
    const root = $(html);
    parent.append(root);
    rv.bind(root[0], state);
 }
-export const addDialog = (name, click, remove) => {
+export const addDialog = (name, clickCb, removeCb) => {
    const row = {
       name: name,
-      click: () => click(),
-      remove: () => { cleaner(); remove(); } 
+      click: () => clickCb(),
+      remove: () => { cleaner(); removeCb(); } 
    };
    const cleaner = () => {
       const inx = state.dialogs.indexOf(row);

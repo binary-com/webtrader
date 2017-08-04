@@ -62,13 +62,11 @@ body {
       }
       li {
          min-width: 130px;
-         font-size: 14px;
          background: #2A3052;
          color: white;
          a {
             &:hover { opacity: 1; }
             color: white;
-            font-size: 14px;
             padding-left: 30px !important;
          }
       }
