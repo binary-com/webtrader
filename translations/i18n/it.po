@@ -446,7 +446,7 @@ msgid "Accept"
 msgstr "Accetta"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accessibile da qualsiasi browser web in 13 lingue"
 
 msgid "Account balance"
 msgstr "Saldo dell'account"
@@ -454,6 +454,12 @@ msgstr "Saldo dell'account"
 msgid "Account opening reason"
 msgstr "Motivo dell'apertura dell'account"
 
+<<<<<<< HEAD
+=======
+msgid "Account turnover"
+msgstr "Turnover dell'account"
+
+>>>>>>> fe7c9c708a3f41257c9a172d866cab59ceb2c855
 msgid "Action"
 msgstr "Azione"
 
@@ -749,7 +755,7 @@ msgid "Binary.com opens an office in the QSentral office building in central Kua
 msgstr "Binary.com apre una sede nella struttura di QSentral, nella centrale Kuala Lumpur, per espandere ulteriormente il suo team addetto all'IT"
 
 msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
-msgstr ""
+msgstr "I prezzi di Binary.com sono rapportati al mercato delle opzioni interbancarie in modo da ottenere sempre i prezzi migliori per i tuoi trade"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
 msgstr "Binary.com ha raggiunto i 2 miliardi di turnover dal 1999"
@@ -1115,10 +1121,10 @@ msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to ide
 msgstr ""
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr ""
+msgstr "Sviluppato da Larry Williams, Williams %R è un indicatore di momentum che è l'inverso dell'Oscillatore stocastico veloce. Noto anche come %R, William %R riflette il livello di chiusura relativo all'high più alto per il periodo osservato"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
-msgstr ""
+msgstr "Sviluppato da Tushar Chande nel 1995, Aroon è un sistema di indicatori che definisce se un'azione è in trend oppure no e quanto è forte il trend. Esistono due indicatori separati: Aroon-Up e Aroon-Down. Un Aroon-up di 25 giorni misura il numero di giorni da un high di 25 giorni. Un Aroon-Down di 25 giorni misura il numero di giorni da un low di 25 giorni"
 
 msgid "Differs"
 msgstr "Differisce"
@@ -1202,7 +1208,7 @@ msgid "Download as"
 msgstr "Scarica come"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "Download in corso di .csv"
 
 msgid "Downloading template as"
 msgstr "Download del modello come"
@@ -1283,7 +1289,7 @@ msgid "Entry spot price"
 msgstr "Prezzo d'ingresso"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "Errore durante il recupero dei dati per %1"
 
 msgid "Espa ol"
 msgstr "Spagnolo"
@@ -1421,7 +1427,7 @@ msgid "From"
 msgstr "Da"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "Interfaccia di trading a schermo intero"
 
 msgid "Further instructions"
 msgstr "Ulteriori istruzioni"
@@ -1469,7 +1475,7 @@ msgid "Health"
 msgstr "Salute"
 
 msgid "Help"
-msgstr ""
+msgstr "Aiuto"
 
 msgid "High"
 msgstr "High"
@@ -1484,7 +1490,7 @@ msgid "High barrier offset"
 msgstr "Offset barriera superiore"
 
 msgid "High returns"
-msgstr ""
+msgstr "Rendimenti elevati"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr "High-Wave Candle (CDLHIGHWAVE)"
@@ -1493,7 +1499,7 @@ msgid "Higher"
 msgstr "Superiore"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "High/Low"
 
 msgid "Higher/Lower trades"
 msgstr "Trade High/Low"
@@ -1529,7 +1535,7 @@ msgid "How soon can I start trading?"
 msgstr "Quando posso iniziare a fare trading?"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "Come si negoziano le opzioni binarie?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Hull Moving Average (HMA)"
@@ -1865,7 +1871,7 @@ msgid "Lower"
 msgstr "Inferiore"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr ""
+msgstr "Il MACD è un indicatore di trading utilizzato nell'analisi tecnica dei prezzi delle azioni. Il suo obiettivo è di rilevare la forza, la direzione, il momentum e la durata di un trend per un prezzo dell'azione"
 
 msgid "MENA FFXPO Award"
 msgstr "Riconoscimeno MENA FFXPO"
@@ -1892,7 +1898,7 @@ msgid "Marubozu (CDLMARUBOZU)"
 msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Indice di massa (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
 msgstr "Mat Hold (CDLMATHOLD)"
@@ -2135,10 +2141,10 @@ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
 msgstr "Sono consentite solo lettere, spazi, trattini, punti e apostrofi"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "Sono consentiti solo numeri e spazi"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "Sono consentiti solo numeri, lettere e trattini"
 
 msgid "Open"
 msgstr "Apri"
@@ -2153,7 +2159,7 @@ msgid "Open account"
 msgstr "Apri un account"
 
 msgid "Opening an account"
-msgstr ""
+msgstr "Apertura di un account"
 
 msgid "Opens"
 msgstr "Apre"
@@ -2174,25 +2180,25 @@ msgid "Other financial instruments trading frequency"
 msgstr "Frequenza di trading con altri strumenti finanziari"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr ""
+msgstr "La nostra società continua a crescere e ottiene un'autorizzazione nel'Isola di Man per soddisfare meglio i nostri clienti britannici"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
-msgstr ""
+msgstr "È evidente che i nostri clienti ci apprezzino. A metà del 2014, Binary.com contava uno storico di oltre 100 milioni di transazioni e oltre 130.000 nuove operazioni ogni giorno"
 
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
-msgstr ""
+msgstr "La nostra rapida crescita organica è integrata dall'acquisizione della clientela di BetsForTraders, uno dei nostri principali concorrenti"
 
 msgid "Over"
 msgstr "Su"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "Oltre 1 milione di account registrati nel mondo"
 
 msgid "Over 3 years"
 msgstr "In 3 anni"
 
 msgid "Over 90 staff and contractors worldwide"
-msgstr ""
+msgstr "Oltre 90 dipendenti e collaboratori in tutto il mondo"
 
 msgid "Overlap Studies"
 msgstr ""
@@ -2201,7 +2207,7 @@ msgid "PEP Declaration"
 msgstr "Dichiarazione PEP"
 
 msgid "Parabolic SAR (SAR)"
-msgstr ""
+msgstr "Parabolic SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Le password non corrispondono. Digitale di nuovo"
@@ -2210,7 +2216,7 @@ msgid "Patented technology"
 msgstr "Tecnologia brevettata"
 
 msgid "Pattern Recognition"
-msgstr ""
+msgstr "Riconoscimento dei pattern"
 
 msgid "Payment agent"
 msgstr "Agente di pagamento"
@@ -2231,7 +2237,7 @@ msgid "Pension"
 msgstr "Pensione"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "Percentage Price Oscillator (PPO)"
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -2243,13 +2249,13 @@ msgid "Phone"
 msgstr "Telefono"
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Piercing Pattern (CDLPIERCING)"
 
 msgid "Pip"
 msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
-msgstr ""
+msgstr "Pip è l'acronimo di 'percentuale in punti', generalmente indicato dalla quarta cifra decimale (ad esempio 0,0001)"
 
 msgid "Place of birth"
 msgstr "Luogo di nascita"
@@ -2267,7 +2273,7 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Inserisci una data valida nel formato aaaa-mm-gg"
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "Inserire un valore superiore a 0"
 
 msgid "Please enter correct email"
 msgstr "Inserisci l'indirizzo email corretto"
@@ -2285,7 +2291,7 @@ msgid "Please enter your email"
 msgstr "Inserisci il tuo indirizzo email"
 
 msgid "Please input correct token"
-msgstr ""
+msgstr "Inserire il token corretto"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
@@ -2297,7 +2303,7 @@ msgid "Please select"
 msgstr "Seleziona"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "Invia un token di verifica valido"
 
 msgid "Please try again after 1 minute"
 msgstr "Riprova fra 1 minuto"
@@ -2318,7 +2324,7 @@ msgid "Portfolio"
 msgstr "Portafoglio"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "Portoghese"
 
 msgid "Postal code/ZIP"
 msgstr "Codice postale/CAP"
@@ -2342,7 +2348,7 @@ msgid "Press Create token button on the right to create your first token"
 msgstr "Premi il pulsante Crea token sulla destra per creare il tuo primo token"
 
 msgid "Price Transformation"
-msgstr ""
+msgstr "Trasformazione del prezzo"
 
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr ""
@@ -2372,7 +2378,7 @@ msgid "Profit/Loss (points)"
 msgstr "Profitto/Perdita (punti)"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr ""
+msgstr "Pubblicato in inglese, indonesiano, giapponese, cinese, polacco, tedesco, francese, spagnolo, portoghese, italiano, russo e tailandese"
 
 msgid "Purchase"
 msgstr "Acquisto"
@@ -2384,7 +2390,7 @@ msgid "Purchase Price"
 msgstr "Prezzo d'acquisto"
 
 msgid "Quiet markets"
-msgstr ""
+msgstr "Mercati calmi"
 
 msgid "Rate Of Change (ROC)"
 msgstr ""
@@ -2399,7 +2405,7 @@ msgid "Read"
 msgstr "Leggi"
 
 msgid "Read about"
-msgstr ""
+msgstr "Per saperne di più"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr ""
@@ -2453,7 +2459,7 @@ msgid "Relative Strength Index (RSI)"
 msgstr "Indice di forza relativa (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 msgid "Remove Selected"
 msgstr "Rimuovi selezione"
@@ -2504,7 +2510,7 @@ msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "Piattaforma robusta e sicura"
 
 msgid "Safari"
 msgstr "Safari"
@@ -2537,7 +2543,7 @@ msgid "Save changes"
 msgstr "Salva le variazioni"
 
 msgid "Scalable trading"
-msgstr ""
+msgstr "Trading scalabile"
 
 msgid "Second line of home address"
 msgstr "Seconda riga dell'indirizzo di residenza"
@@ -2597,7 +2603,7 @@ msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
-msgstr ""
+msgstr "Da breve a lungo termine"
 
 msgid "Short-term action"
 msgstr "Azione a breve termine"
@@ -2606,7 +2612,7 @@ msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish
 msgstr ""
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "Media mobile semplice (SMA)"
 
 msgid "Simplicity"
 msgstr "Semplicità"
@@ -2675,40 +2681,40 @@ msgid "Statistical Functions"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Trade Stays Between (Staziona fra) / Goes Outside (Esce fuori)"
 
 msgid "Stays In/Goes Out"
-msgstr ""
+msgstr "Stays In (Rimane in) / Goes Out (Esce fuori)"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Stays in"
 
 msgid "Step 1: Define your position"
-msgstr ""
+msgstr "Step 1: Definisci la tua posizione"
 
 msgid "Step 2: Get your trade price"
-msgstr ""
+msgstr "Step 2: Ottieni il prezzo del tuo trade"
 
 msgid "Step 3: Make your trade"
-msgstr ""
+msgstr "Step 3: Effettua il tuo trade"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "Stick Sandwich (CDLSTICKSANDWICH)"
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "Stocastico (STOCH )"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "Stocastico veloce (STOCHF)"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
-msgstr ""
+msgstr "Indice di forza relativa stocastica (STOCHRSI)"
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr ""
+msgstr "Stocastico lento (STOCHS)"
 
 msgid "Stock Indices"
 msgstr "Indici azionari"
@@ -2717,7 +2723,7 @@ msgid "Stock indices"
 msgstr "Indici azionari"
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
-msgstr ""
+msgstr "Gli indici azionari misurano il valore di una selezione di società presenti nel mercato azionario"
 
 msgid "Stocks trading experience"
 msgstr "Esperienza di trading in azioni"
@@ -2750,10 +2756,10 @@ msgid "Submit"
 msgstr "Invia"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "Il modello è stato correttamente applicato e salvato come"
 
 msgid "Summation (SUM)"
-msgstr ""
+msgstr "Sommatoria (SUM)"
 
 msgid "Sun"
 msgstr "Dom"
@@ -2768,34 +2774,34 @@ msgid "Take early profits"
 msgstr ""
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
-msgstr ""
+msgstr "Takuri (Dragonfly Doji con un'ombra inferiore molto lunga) (CDLTAKURI)"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
-msgstr ""
+msgstr "Tasuki Gap (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "Numero di identificazione fiscale"
 
 msgid "Tax information"
-msgstr ""
+msgstr "Informazioni fiscali"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "Residenza fiscale"
 
 msgid "Tax-free"
-msgstr ""
+msgstr "Esentasse"
 
 msgid "Tel"
 msgstr "Tel"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "Modifiche apportate al modello salvato"
 
 msgid "Template name"
 msgstr "Nome del modello"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "Il nome del modello esiste già"
 
 msgid "Terms"
 msgstr "Termini"
@@ -2807,7 +2813,7 @@ msgid "The"
 msgstr "Il/Lo/La/Gli/Le/I"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
-msgstr ""
+msgstr "L'Oscillatore di prezzo assoluto (APO) si basa sulle differenze assolute tra due medie mobili di diverse lunghezze, una media mobile Veloce e una Lenta"
 
 msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
 msgstr ""
@@ -3002,40 +3008,40 @@ msgid "The profit is the difference between the purchase price (the stake) and t
 msgstr "Il profitto è la differenza tra il prezzo d'acquisto (la puntata) e il payout di un trade vincente"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr ""
+msgstr "Il cambio di marchio è un'evoluzione naturale per la piattaforma poiché continua a crescere la sua quota di mercato nel campo altamente competitivo del trading binario. Il nuovo marchio riflette la natura dell'attività e la nostra nuova tagline - Sharp Prices, Smart Trading (Prezzi migliori, trading intelligente) – trasmette la nostra filosofia e il nostro impegno nei confronti dei nostri clienti"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
-msgstr ""
+msgstr "Il prezzo di rivendita indica il prezzo di mercato attuale  di un contratto. I prezzi di rivendita sono sulla base dei migliori sforzi e possono non essere sempre disponibili dopo l'acquisto. Per maggiori dettagli sulla vendita dei contratti prima della scadenza, vedi \"Vendi opzione\""
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
-msgstr ""
+msgstr "Il rendimento è il denaro realizzato alla scadenza del contratto (vedi \"Payout\")"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
-msgstr ""
+msgstr "La puntata è l'importo che un trader deve pagare per iniziare un trade"
 
 msgid "The sum of price over selected period"
-msgstr ""
+msgstr "La somma del prezzo per il periodo selezionato"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
 msgstr ""
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
-msgstr ""
+msgstr "Gli indici di volatilità simulano varie situazioni dei mercati reali e forniscono una piattaforma ideale per abituarsi al trading e testare le strategie in varie condizioni di mercato. Questi indici dipendono dalla volatilità e dalle tendenza e aiutano gli utenti a provare scenari come: alta volatilità, bassa volatilità, trend in rialzo e in ribasso"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
-msgstr ""
+msgstr "Questi sono trade in cui i trader prevedono se un mercato chiuderà a un prezzo più alto o più basso rispetto al prezzo obiettivo"
 
 msgid "These are trades where the trader predicts if a market will rise or fall at the end of a selected time period"
-msgstr ""
+msgstr "Questi sono trade in cui i trader prevedono se, al termine di un dato periodo di tempo, il mercato sarà in rialzo o in ribasso"
 
 msgid "These are trades where the trader selects a low and high barrier, and predicts if the market will stay within these barriers or go outside them (see also 'Stays Between/Goes Outside trades')"
-msgstr ""
+msgstr "Questi sono trade nei quali il trader seleziona una barriera inferiore e superiore e prevede che il mercato rimanga all'interno di queste barriere oppure che ne esca fuori (vedi anche \"Trade Stays Between/Goes Outside\")"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will never touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Questi sono trade nei quali il trader seleziona un prezzo obiettivo e prevede che il mercato non toccherà mai l'obiettivo prima della scadenza del trade"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will touch the target before the expiry of the trade"
-msgstr ""
+msgstr "Questi sono trade nei quali il trader seleziona un prezzo obiettivo e prevede che il mercato toccherà l'obiettivo prima della scadenza del trade"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
@@ -3227,10 +3233,10 @@ msgid "Triangular Moving Average (TRIMA)"
 msgstr "Media mobile triangolare (TRIMA)"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "Tripla media mobile esponenziale (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "Tripla media mobile esponenziale (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
 msgstr "Tristar Pattern (CDLTRISTAR)"
@@ -3266,7 +3272,7 @@ msgid "Ultimate Oscillator (ULTOSC)"
 msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
-msgstr ""
+msgstr "Sotto"
 
 msgid "Underlying"
 msgstr "Sottostante"
