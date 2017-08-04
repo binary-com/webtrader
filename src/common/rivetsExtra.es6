@@ -172,7 +172,7 @@ rv.formatters.debounce = (value, callback, timeout = 250) => {
 
 /* turn current select item into a jquery-ui-selectmenu, update value on change */
 rv.binders.selectmenu = {
-   priority: 100,
+   priority: 101,
    publishes: true,
    bind: function (el) {
       const publish = this.publish,
@@ -218,7 +218,6 @@ rv.binders['is-valid-number'] = {
 
 /* bindar for jqueyr ui selectmenu options */
 rv.binders['selectmenu-*'] = function (el, value) {
-      console.log('Called')
    $(el).selectmenu('option', this.args[0], value);
 }
 /*binder for hidding overflow on selctmenu*/
@@ -652,7 +651,10 @@ rivets.components['price-spinner'] = {
       const decimals = (data.decimals || 2)*1;
       const min = (data.min || 0)*1;
       component_twoway_bind(this, data, ['data.value']);
-
+      $(el).on("change", () => {
+            data.value = (+data.value).toFixed(decimals);
+      });
+      $(el).trigger("change");
       return {
          data: data
       };

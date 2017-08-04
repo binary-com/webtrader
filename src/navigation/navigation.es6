@@ -9,37 +9,6 @@ import $navHtml from 'text!./navigation.html';
 import '../common/util';
 import 'css!navigation/navigation.css';
 
-export const updateDropdownToggles = () => {
-   $("#nav-menu .nav-dropdown-toggle").each(function(){
-      $(this).unbind("click").on("click",function(){
-         const $ul = $(this).next();
-         if($ul){
-            if($($ul[0]).css("visibility")==="hidden") 
-               $($ul[0]).css({visibility:"visible",opacity:1,display:"block"});
-            else 
-               $($ul[0]).css({visibility:"",opacity:"",display:""});
-         }
-      });
-   });
-   $("#nav-menu li").each(function(){
-      const class_name = $(this).attr("class") && $(this).attr("class").split(" ")[0];
-      if(class_name=== "account" || class_name === "login")
-         return;
-      $(this).unbind("click").on("click", function(){
-         if($(this)[0].lastChild.nodeName === "A"){
-            $(this).trigger("mouseleave");
-         }
-      });
-      $(this).unbind("mouseleave").on("mouseleave",function(){
-         const $ul = $(this).find("ul");
-         if($ul){
-            $($ul[0]).css({visibility:"",opacity:"",display:""});
-         }
-      });
-   });
-
-}
-
 const getType = (id) => {
    if(!id) return;
    const type = {MLT:"Gaming", MF:"Investment",VRTC:"Virtual",REAL:"Real"};
@@ -122,7 +91,13 @@ const initLoginButton = (root) => {
    liveapi.events.on('balance', update_balance);
 
    liveapi.events.on('logout', () => {
-      $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+      $('.webtrader-dialog[data-authorized=true]').each((inx, elm) => {
+         const dlg = $(elm);
+         dlg.dialog('close');
+         dlg.one('dialogclose', () => {
+            _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
+         });
+      });
       /* destroy all authorized dialogs */
       state.logout_disabled = false;
       state.account.show = false;
@@ -136,7 +111,13 @@ const initLoginButton = (root) => {
    });
 
    liveapi.events.on('login', (data) => {
-      $('.webtrader-dialog[data-authorized=true]').dialog('close').dialog('destroy').remove();
+      $('.webtrader-dialog[data-authorized=true]').each((inx, elm) => {
+         const dlg = $(elm);
+         dlg.dialog('close');
+         dlg.one('dialogclose', () => {
+            _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
+         });
+      });
       /* destroy all authorized dialogs */
       state.show_login = false;
       state.account.show = true;
@@ -215,7 +196,7 @@ const initLangButton = (root) => {
    state.onclick = (value) => {
       state.confirm.visible = false;
       const lang = _.find(state.languages, {value: value});
-      if(lang.value == state.lang.value)
+      if(lang && state.lang && lang.value == state.lang.value)
          return;
 
       local_storage.set('i18n', {value: lang.value});
@@ -315,7 +296,8 @@ export const init = (callback) => {
    //Load theme settings ...
    require(['themes/themes']);
 
-   updateDropdownToggles();
+   $('#nav-menu .resources > ul').menu();
+   $('#nav-menu .windows > ul').menu();
 
    if (callback) {
       callback($("#nav-menu"));
@@ -330,6 +312,5 @@ export const init = (callback) => {
 export default {
    init,
    getLandingCompany,
-   updateDropdownToggles
 };
 

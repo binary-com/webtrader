@@ -25,7 +25,7 @@ class AccountStatus {
       const [account_status, website_status, get_settings,
         financial_assessment, mt5_account] = await _this.getStatus(response.authorize);
       _this.tc_accepted = false;
-      _this.financial_assessment_submitted = true;
+      _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") ==-1;
       _this.is_mlt = /^malta$/gi.test(response.authorize.landing_company_name);
       _this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
       _this.is_cr = /^costarica$/gi.test(response.authorize.landing_company_name);
@@ -38,9 +38,9 @@ class AccountStatus {
 
       // Check whether the high risk clients have submitted the financial_assessment form.
       if (account_status.get_account_status.risk_classification === "high" && financial_assessment) {
-        _this.financial_assessment_submitted = Object.keys(financial_assessment.get_financial_assessment).length !== 0;
+        _this.financial_assessment_submitted = _this.financial_assessment_submitted && Object.keys(financial_assessment.get_financial_assessment).length !== 0;
       }
-
+      
       _this.checkStatus(response.authorize, account_status.get_account_status.status);
     });
 
@@ -54,7 +54,7 @@ class AccountStatus {
       liveapi.send({ get_account_status: 1 }),
       liveapi.send({ "website_status": 1 }),
       liveapi.send({ "get_settings": 1 }),
-      liveapi.send({ get_financial_assessment: 1 }),
+      liveapi.cached.send({ get_financial_assessment: 1 }),
       liveapi.send({ mt5_login_list: 1 })
     ]);
   }

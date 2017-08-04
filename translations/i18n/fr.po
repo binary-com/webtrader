@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -3735,3 +3738,36 @@ msgstr "| Versement"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permettant aux clients, affiliés, et développeurs d'acheter et vendre des produits Binary.com"
+
+#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
+#~ msgstr "Un PEP est un individu qui est ou a été en charge d'une fonction publique importante. Ce statut s'étend à la famille et proches associés du PEP"
+
+#~ msgid "Account turnover"
+#~ msgstr "Chiffre d’affaires du compte"
+
+#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
+#~ msgstr "Baissière : Il s’agit d’un modèle de fin de tendance composé de trois chandeliers dans une tendance haussière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier devrait être court et peut former un fossé haussier. Il pourrait aussi y avoir une ombre de vente. Le modèle représente une faiblesse dans une montée avec un risque de consolidation et une possible inversion. Haussière : Il s’agit d’un modèle de fin-de-tendance composé de trois chandeliers dans une tendance baissière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier doit être étayé. Le modèle représente une faiblesse, une consolidation et un possible renversement de tendance"
+
+#~ msgid "CSV"
+#~ msgstr "CSV"
+
+#~ msgid "Instrument"
+#~ msgstr "Instrument"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "PNG"
+#~ msgstr "PNG"
+
+#~ msgid "SVG"
+#~ msgstr "SVG"
+
+#~ msgid "Select Instrument"
+#~ msgstr "Sélection de l'instrument"
+
+#~ msgid "Show"
+#~ msgstr "Afficher"
+
+#~ msgid "View Historical Data"
+#~ msgstr "Voir les données historiques"

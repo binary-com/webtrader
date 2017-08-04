@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -1238,9 +1241,6 @@ msgid "Embed code"
 msgstr "內嵌代碼"
 
 msgid "Employent status"
-msgstr "就業狀況"
-
-msgid "Employment status"
 msgstr "就業狀況"
 
 msgid "End Time"
@@ -3735,3 +3735,36 @@ msgstr "| 賠付"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
+
+#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
+#~ msgstr "PEP是被委託進行特出公眾人物的個人。此身份包括了PEP的親屬和親近的人"
+
+#~ msgid "Account turnover"
+#~ msgstr "帳戶交易額"
+
+#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
+#~ msgstr "看跌：顯示趨勢到了盡頭的形式，由三個上升趨勢K 線圖組成。第二K 線圖必須以與前一天收盤價相近的價格開盤。最後的K 線圖的長度須短，並可形成向上缺口。另外還可能會有拋售暗影。走勢顯示上漲乏力，存在合併風險與反轉的可能性。看漲：顯示趨勢到了盡頭的形式，由三個下跌趨勢K 線圖組成。第二K 線圖必須以與前一天收盤價相近的價格開盤。最後的K 線圖的長度須長。形式顯示乏力及合併趨勢，並存在反轉的可能性"
+
+#~ msgid "CSV"
+#~ msgstr "CSV"
+
+#~ msgid "Instrument"
+#~ msgstr "工具"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "PNG"
+#~ msgstr "PNG"
+
+#~ msgid "SVG"
+#~ msgstr "聖文森特和格林納丁斯"
+
+#~ msgid "Select Instrument"
+#~ msgstr "選擇工具"
+
+#~ msgid "Show"
+#~ msgstr "顯示"
+
+#~ msgid "View Historical Data"
+#~ msgstr "檢視歷史資料"

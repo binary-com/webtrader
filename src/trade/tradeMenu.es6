@@ -38,15 +38,12 @@ const refresh_active_symbols = () => {
          markets = menu.sortMenu(markets);
 
          const trade = $("#nav-menu").find(".trade");
-         trade.find('> ul').remove();
-         const root = $("<ul>").appendTo(trade); /* add to trade menu */
-         menu.refreshMenu(root, markets, (li) => {
-            const data = li.data();
+         menu.refreshMenu(trade, markets, (symbol, display_name) => {
             liveapi
-               .send({ contracts_for: data.symbol })
+               .send({ contracts_for: symbol })
                .then((res) => {
                   require(['trade/tradeDialog'],
-                     (tradeDialog) => tradeDialog.init(data, res.contracts_for)
+                     (tradeDialog) => tradeDialog.init({symbol, display_name}, res.contracts_for)
                   );
                }).catch(show_error);
          });

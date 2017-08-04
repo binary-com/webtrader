@@ -292,7 +292,7 @@
 .trade-fields ul li input {
   margin: 0;
   height: 28px;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 .trade-fields ul li:nth-child(2) input { width: 100px;}
 .trade-fields ul li:nth-child(3) input { width: 85px; }
@@ -373,7 +373,7 @@
 
 .trade-fields .purchase-row { bottom: 5px;}
 .trade-fields .purchase-row li:nth-child(1) { position: relative; left: 20px; width: 200px; line-height: 34px;margin-right:5px;}
-.trade-fields .purchase-row li:nth-child(2) { margin-left:10px; right:5px; position: relative;}
+.ui-dialog .ui-dialog-content.trade-dialog .trade-fields .purchase-row li:nth-child(2) { margin-left:10px; right:5px; position: relative;}
 .trade-fields .purchase-row li span { font-weight: bolder; font-size: 18px; text-overflow: ellipsis; overflow: hidden; width: 205px;}
 
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px; }

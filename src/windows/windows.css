@@ -58,13 +58,13 @@ img.reload {
 
 .ui-icon.custom-icon-maximize {
     cursor: pointer;
-    background-image: url('../images/maximize.svg');
+    background-image: url('../images/maximize.svg')!important;
     position: relative;
     right: 3px;
 }
 .ui-icon.custom-icon-minimize {
     cursor: pointer;
-    background-image: url('../images/minimize.svg');
+    background-image: url('../images/minimize.svg')!important;
     position: relative;
     right: 6px;
 }
@@ -72,7 +72,7 @@ img.reload {
 .ui-button:focus .ui-icon.custom-icon-close,
 .ui-icon.custom-icon-close {
     cursor: pointer;
-    background-image: url('../images/close.svg');
+    background-image: url('../images/close.svg')!important;
     right: 3px;
     top: 9px;
 }
@@ -92,7 +92,8 @@ img.reload {
     right: 3px;
 }
 .ui-datepicker-trigger.ui-button {
-    margin-top: -12px;
+    margin-top: -20px;
+    position: relative;
     border: none;
     background: none;
     box-shadow: none;

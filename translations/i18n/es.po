@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -3735,3 +3738,36 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"
+
+#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
+#~ msgstr "Una persona expuesta políticamente o PEP es un individuo al que le ha sido encomendada una función pública prominente. Este estatus se extiende a los parientes y socios de esta persona"
+
+#~ msgid "Account turnover"
+#~ msgstr "Facturación de la cuenta"
+
+#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
+#~ msgstr "Bajista: patrón de final de tendencia compuesto por tres velas en una tendencia alcista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta y puede formar un gap alcista. Puede haber, también, una sombra de ventas. El patrón representa una debilidad en un alza, con un riesgo de consolidación y una posible reversión. Alcista: patrón de final de tendencia compuesto por tres velas en una tendencia bajista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta. El patrón representa una debilidad, así como una consolidación y posible reversión de la tendencia"
+
+#~ msgid "CSV"
+#~ msgstr "CSV"
+
+#~ msgid "Instrument"
+#~ msgstr "Instrumento"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "PNG"
+#~ msgstr "PNG"
+
+#~ msgid "SVG"
+#~ msgstr "SVG"
+
+#~ msgid "Select Instrument"
+#~ msgstr "Seleccionar instrumento"
+
+#~ msgid "Show"
+#~ msgstr "Mostrar"
+
+#~ msgid "View Historical Data"
+#~ msgstr "Ver Datos Históricos"

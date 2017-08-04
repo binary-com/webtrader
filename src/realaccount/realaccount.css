@@ -1,7 +1,8 @@
 .ui-dialog .ui-dialog-content.real-dialog {
     padding: 0 10px;
     background: white;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .real-dialog span.validation {
@@ -156,11 +157,11 @@
     width: 300px;
     padding: 5px;
     font-size: 15px;
-    position: absolute;
+    position: relative;
     background: white;
     z-index: 1000000000;
-    bottom: 65px;
-    right: 20px;
+    bottom: 425px;
+    left: 20px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.7) 0 6px 50px;
 }
@@ -197,4 +198,9 @@
 
 .chosen-container-active .chosen-drop .chosen-results li.highlighted {
     background: #1e90ff;
+}
+
+.real-dialog .pep {
+    border-bottom: 1px dotted #000;
+    cursor: pointer;
 }

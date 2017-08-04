@@ -5,16 +5,6 @@
     <fieldset>
         <legend>Financial Information</legend>
         <div class="row">
-            <div class="column-1">Account opening reason</div>
-            <div class="column-2">
-                <select rv-value="financial.account_opening_reason">
-                    <option value="" selected="selected">Please select</option>
-                    <option rv-each-row="financial.account_opening_reason_array" rv-value="row">{row | i18n}</option>
-                </select>
-                <div class="error-msg" rv-show="empty_field | and financial.account_opening_reason | eq '' ">This field is required.</div>
-            </div>
-        </div>
-        <div class="row">
             <div class="column-1">Forex trading experience</div>
             <div class="column-2">
                 <select rv-value="financial.forex_trading_experience">
@@ -135,6 +125,26 @@
             </div>
         </div>
         <div class="row">
+            <div class="column-1">Income Source</div>
+            <div class="column-2">
+                <select rv-value="financial.income_source">
+                    <option value="" selected="selected">Please select</option>
+                    <option rv-each-row="financial.income_source_array" rv-value="row">{row | i18n}</option>
+                </select>
+                <div class="error-msg" rv-show="empty_field | and financial.income_source | eq ''">This field is required.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column-1">Employment status</div>
+            <div class="column-2">
+                <select rv-value="financial.employment_status">
+                    <option value="" selected="selected">Please select</option>
+                    <option rv-each-row="financial.employment_status_array" rv-value="row">{row | i18n}</option>
+                </select>
+                <div class="error-msg" rv-show="empty_field | and financial.employment_status | eq ''">This field is required.</div>
+            </div>
+        </div>
+        <div class="row">
             <div class="column-1">Industry of Employment</div>
             <div class="column-2">
                 <select rv-value="financial.employment_industry">
@@ -142,16 +152,6 @@
                     <option rv-each-row="financial.employment_industry_array" rv-value="row">{row | i18n}</option>
                 </select>
                 <div class="error-msg" rv-show="empty_field | and financial.employment_industry | eq ''">This field is required.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column-1">Account turnover</div>
-            <div class="column-2">
-                <select rv-value="financial.account_turnover">
-                    <option value="" selected="selected">Please select</option>
-                    <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
-                </select>
-                <div class="error-msg" rv-show="empty_field | and financial.account_turnover | eq ''">This field is required.</div>
             </div>
         </div>
         <div class="row">
@@ -165,6 +165,16 @@
             </div>
         </div>
         <div class="row">
+            <div class="column-1">Source of wealth</div>
+            <div class="column-2">
+                <select rv-value="financial.source_of_wealth">
+                    <option value="" selected="selected">Please select</option>
+                    <option rv-each-row="financial.source_of_wealth_array" rv-value="row">{row | i18n}</option>
+                </select>
+                <div class="error-msg" rv-show="empty_field | and financial.source_of_wealth | eq ''">This field is required.</div>
+            </div>
+        </div>
+        <div class="row">
             <div class="column-1">Level of Education</div>
             <div class="column-2">
                 <select rv-value="financial.education_level">
@@ -172,16 +182,6 @@
                     <option rv-each-row="financial.education_level_array" rv-value="row">{row | i18n}</option>
                 </select>
                 <div class="error-msg" rv-show="empty_field | and financial.education_level | eq ''">This field is required.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column-1">Income Source</div>
-            <div class="column-2">
-                <select rv-value="financial.income_source">
-                    <option value="" selected="selected">Please select</option>
-                    <option rv-each-row="financial.income_source_array" rv-value="row">{row | i18n}</option>
-                </select>
-                <div class="error-msg" rv-show="empty_field | and financial.income_source | eq ''">This field is required.</div>
             </div>
         </div>
         <div class="row">
@@ -202,6 +202,16 @@
                     <option rv-each-row="financial.estimated_worth_array" rv-value="row">{row | i18n}</option>
                 </select>
                 <div class="error-msg" rv-show="empty_field | and financial.estimated_worth | eq ''">This field is required.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column-1">Anticipated account turnover</div>
+            <div class="column-2">
+                <select rv-value="financial.account_turnover">
+                    <option value="" selected="selected">Please select</option>
+                    <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
+                </select>
+                <div class="error-msg" rv-show="empty_field | and financial.account_turnover | eq ''">This field is required.</div>
             </div>
         </div>
     </fieldset>

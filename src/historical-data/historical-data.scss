@@ -18,6 +18,15 @@
          opacity: 0;
          transition: visibility 0.5s, opacity 0.1s linear 0.4s;
       }
+      .ui-menu .ui-menu-item {
+         list-style-image: none !important;
+         .ui-menu-item-wrapper {
+            padding: 5px 1em 5px .4em;
+         }
+      }
+      .ui-widget.ui-widget-content {
+         border: none !important;
+      }
       &:hover > ul {
          visibility: visible;
          opacity: 1;
