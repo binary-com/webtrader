@@ -355,9 +355,6 @@ msgstr "8 giờ"
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Một ngôi sao Doji tối bao gồm một ngọn nên tăng dài, theo sau bởi một Doji đã có lỗ hỏng trên nó, tiếp đến một ngọn nến giảm giá thứ 3 mà gần sát với thân của ngọn nến thứ nhất và trong lúc đang xác nhận đảo hướng. Nó được coi là một mô hình nến giảm giá đảo hướng mạnh"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "Một PEP là một cá nhân hoặc đã được ủy thác với một chức năng công cộng nổi tiếng. Tình trạng này kéo dài tới một thân nhân của một PEP và các mối quan hệ thân cận"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Một bước di chuyển mượt trung bình là sự sắp xếp của sự pha trộn giữa một bước di chuyển đơn giản trung bình và một di chuyển số mũ trung bình, chỉ áp dụng với các hiệu lực kéo dài"
 
@@ -454,9 +451,6 @@ msgstr "Số dư tài khoản"
 msgid "Account opening reason"
 msgstr "Lý do mở tài khoản"
 
-msgid "Account turnover"
-msgstr "Doanh thu tài khoản"
-
 msgid "Action"
 msgstr "Hành động"
 
@@ -516,6 +510,9 @@ msgstr "Giải thưởng lớn khác. Thời gian này chúng tôi được đ�
 
 msgid "Answer"
 msgstr "Câu trả lời"
+
+msgid "Anticipated account turnover"
+msgstr ""
 
 msgid "Apply"
 msgstr "Áp dụng"
@@ -607,8 +604,8 @@ msgstr "Offset barie"
 msgid "Barrier(s)"
 msgstr "Các rào cản"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Hướng giảm: Đây là một mô hình kết thúc xu hướng bao gồm ba chân nến trong một xu hướng tăng. Nến thứ hai phải mở gần kết thúc ngày hôm trước. Nến cuối nên ngắn và có thể tạo ra một lỗ ngược. Cũng có thể một bóng bán. Các mẫu đại diện cho một điểm yếu trong sự gia tăng với một nguy cơ của củng cố và có thể đảo ngược. Hướng tích cực: Đây là một mô hình kết thúc xu hướng bao gồm ba chân nến trong một xu hướng. Nến thứ hai phải mở gần kết thúc ngày hôm trước. nến cuối cùng phải vững. Các mẫu đại diện cho một điểm yếu và củng cố và một có thể đảo ngược xu hướng"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Vành đai giữ (CDLBELTHOLD)"
@@ -795,9 +792,6 @@ msgstr "Bằng cách nhấp vào"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Bằng cách nhấn OK, bạn xác nhận rằng bạn đã đọc và chấp nhận phần đã cập nhật"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Có thể được sử dụng để mua và bán hợp đồng, làm mới mua đã hết hạn, và các tài khoản tiền ảo top-up."
@@ -1243,6 +1237,12 @@ msgstr "Giáo dục"
 msgid "Embed code"
 msgstr "Mã nhúng"
 
+msgid "Employent status"
+msgstr ""
+
+msgid "Employment status"
+msgstr ""
+
 msgid "End Time"
 msgstr "Thời gian kết thúc"
 
@@ -1498,6 +1498,9 @@ msgstr "Các giao dịch cao hơn/thấp hơn"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Mẫu Hikkake (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr ""
+
 msgid "Home Address"
 msgstr "Địa chỉ nhà"
 
@@ -1635,9 +1638,6 @@ msgstr "Truy cập tức thì"
 
 msgid "Instant funding"
 msgstr "Tài trợ tức thì"
-
-msgid "Instrument"
-msgstr "Công cụ"
 
 msgid "Instruments"
 msgstr "Công cụ"
@@ -2194,14 +2194,8 @@ msgstr "Hơn 90 nhân viên và các nhà thầu trên toàn cầu"
 msgid "Overlap Studies"
 msgstr "nghiên cứu chồng chéo"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "tuyên bố PEP"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Hệ thống Parabolic SAR (SAR)"
@@ -2509,9 +2503,6 @@ msgstr "phương pháp tăng/giảm 3 (CDLRISEFALL3METHODS)"
 msgid "Robust and secure platform"
 msgstr "Nền tảng vững chắc và an toàn"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2556,9 +2547,6 @@ msgstr "Bảo mật"
 
 msgid "Security question"
 msgstr "Câu hỏi bảo mật"
-
-msgid "Select Instrument"
-msgstr "Chọn công cụ"
 
 msgid "Self-Employed"
 msgstr "Tự làm"
@@ -2611,9 +2599,6 @@ msgstr "Ngắn đến dài hạn"
 msgid "Short-term action"
 msgstr "Giải pháp ngắn hạn"
 
-msgid "Show"
-msgstr "Hiển thị"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Bên cạnh mô hình nến trắng dòng là một mô hình ba. Mẫu Bullish: một xu hướng trở lên, nến đầu tiên tiếp theo là khác lên trên đó sẽ mở ra trên đóng đầu tiên (khoảng cách lên), đó là theo một nến lên thứ ba mở dưới đóng thứ hai (khoảng cách xuống). Hướng giảm Hoa văn: trong một xu hướng, nến đầu tiên là xuống, theo sau là một nến lên mở ra dưới đây đóng một trong những đầu tiên (gap xuống), theo sau là một nến trở lên mở ra bên dưới kết thúc thứ hai. Mô hình này cho thấy việc tiếp tục một xu hướng"
 
@@ -2628,6 +2613,9 @@ msgstr "Đường biến thiên trung bình mượt (SMMA)"
 
 msgid "Sold"
 msgstr "Đã bán"
+
+msgid "Source of wealth"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Mô hình ngọn quay (CDLSPINNINGTOP)"
@@ -3355,9 +3343,6 @@ msgstr "Đường dọc"
 msgid "View"
 msgstr "Xem"
 
-msgid "View Historical Data"
-msgstr "Xem dữ liệu lịch sử"
-
 msgid "View Statement"
 msgstr "Xem tuyên bố"
 
@@ -3420,6 +3405,9 @@ msgstr "Đường biến thiên trung bình có trọng lượng (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Chào mừng đến với Binary.com Webtrader"
+
+msgid "What is pep?"
+msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Khi bạn đang hài lòng với giá giao dịch, ngay lập tức thực hiện giao dịch của bạn"
