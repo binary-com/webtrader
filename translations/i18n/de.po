@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -359,9 +355,6 @@ msgstr "8 Std."
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Ein Evening Doji Star besteht aus einer langen bullischen Kerze, gefolgt von einem Doji, das sich darüber gespalten hat, dann einer dritten fallenden Kerze, die sich gut innerhalb des Körpers der ersten Kerze schließt, und indem sie dies tut, bestätigt sie die Umkehrung. Es wird als starkes, bärisches Preisumkehr Candlestick-Pattern bezeichnet"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "Eine PEP ist eine Einzelperson, die mit einem wichtigen, öffentlichen Amt betraut ist oder betraut war. Dieser Status weitet sich auf Verwandte und nahe Kollegen des PEPs aus"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Ein geglätteter gleitender Durchschnitt (Smoothed Moving Average) ist sozusagen eine Mischung aus einem Einfachen Gleitenden Durchschnitt (Simple Moving Average) und einem Exponentiell Gleitenden Durchschnitt (Exponential Moving Average), nur mit einem länger angewandten Zeitraum"
 
@@ -458,9 +451,6 @@ msgstr "Kontostand"
 msgid "Account opening reason"
 msgstr "Kontoeröffnungs-Grund"
 
-msgid "Account turnover"
-msgstr "Kontoumsatz"
-
 msgid "Action"
 msgstr "Aktion"
 
@@ -520,6 +510,9 @@ msgstr "Eine weitere wichtige Auszeichnung. Dieses Mal sind wir von den Online-L
 
 msgid "Answer"
 msgstr "Antwort"
+
+msgid "Anticipated account turnover"
+msgstr ""
 
 msgid "Apply"
 msgstr "Anwenden"
@@ -611,8 +604,8 @@ msgstr "Schwellenverschiebung"
 msgid "Barrier(s)"
 msgstr "Schwelle(n)"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Bärisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Aufwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze sollte kurz sein und kann ein Upside Gap formen. Es könnte auch einen Verkaufs-Schatten geben. Das Muster repräsentiert eine Schwachstelle in einem Aufstieg mit einem Risiko von Konsolidierung und möglicher Umkehr. Bullisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Abwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze muss kurz sein. Das Muster repräsentiert eine Schwachstelle und Konsolidierung und eine mögliche Umkehrung des Trends"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -799,9 +792,6 @@ msgstr "Indem Sie klicken"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Wenn Sie auf OK klicken, bestätigen Sie, dass Sie die aktualisierten gelesen haben und diesen zustimmen"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Kann verwendet werden, um Kontrakte zu kaufen und zu verkaufen, abgelaufene Kontrakte zu erneuern, und um virtuelle Konten aufzustocken."
@@ -1247,6 +1237,12 @@ msgstr "Ausbildung"
 msgid "Embed code"
 msgstr "Code einbinden"
 
+msgid "Employent status"
+msgstr ""
+
+msgid "Employment status"
+msgstr ""
+
 msgid "End Time"
 msgstr "Endzeit"
 
@@ -1502,6 +1498,9 @@ msgstr "Höher/Tiefer Kontrakte"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr ""
+
 msgid "Home Address"
 msgstr "Wohnadresse"
 
@@ -1639,9 +1638,6 @@ msgstr "Sofortiger Zugriff"
 
 msgid "Instant funding"
 msgstr "Sofortige Förderung"
-
-msgid "Instrument"
-msgstr "Instrument"
 
 msgid "Instruments"
 msgstr "Instrument"
@@ -2198,14 +2194,8 @@ msgstr "Weltweit über 90 Angestellte und Auftragnehmer"
 msgid "Overlap Studies"
 msgstr "Überschneidende Studien"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "PEP Erklärung"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Parabolisches SAR (SAR)"
@@ -2513,9 +2503,6 @@ msgstr "Steigende/Fallende Three Methods (CDLRISEFALL3METHODS)"
 msgid "Robust and secure platform"
 msgstr "Robuste und sichere Plattform"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2560,9 +2547,6 @@ msgstr "Sicherheit"
 
 msgid "Security question"
 msgstr "Sicherheitsfrage"
-
-msgid "Select Instrument"
-msgstr "Instrument auswählen"
 
 msgid "Self-Employed"
 msgstr "Selbstständig"
@@ -2615,9 +2599,6 @@ msgstr "Kurz- bis Langfristig"
 msgid "Short-term action"
 msgstr "Kurzfristige Aktion"
 
-msgid "Show"
-msgstr "Anzeigen"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Ein Side by side white lines Candlestick-Pattern ist ein Dreifach-Muster. Bullisches Muster: In einem Aufwärtstrend ist die erste Kerze gefolgt von einer weiteren Kerze, die aufwärts geht und die sich über dem Schlusskurs des ersten Tages (gap up) öffnet; danach folgt eine dritte Kerze, die aufwärts geht, und sich unter dem Schlusskurs des zweiten Tages (gap down) schließt. Bärisches Muster: Während eines Abwärtstrends, geht die erste Kerze nach unten, gefolgt von einer Kerze die nach oben geht, und sich unter dem Schlusskurs des ersten Tages (gap down) öffnet; gefolgt von einer aufwärtsgehenden Kerze, die sich unter dem Schlusskurs des zweiten Tages schließt. Dieses Muster zeigt die Fortsetzung eines Abwärtstrends an"
 
@@ -2632,6 +2613,9 @@ msgstr "Geglätteter Gleitender Durchschnitt (Smoothed Moving Average - SMMA)"
 
 msgid "Sold"
 msgstr "Verkauft"
+
+msgid "Source of wealth"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -3359,9 +3343,6 @@ msgstr "Vertikale Linie"
 msgid "View"
 msgstr "Ansicht"
 
-msgid "View Historical Data"
-msgstr "Historische Daten Ansicht"
-
 msgid "View Statement"
 msgstr "Statement ansehen"
 
@@ -3424,6 +3405,9 @@ msgstr "Gewichteter Gleitender Durchschnitt (Weighted Moving Average - WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Willkommen bei Binary.com Webtrader"
+
+msgid "What is pep?"
+msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Wenn Sie mit dem Verkaufskurs zufrieden sind, führen Sie das Geschäft umgehend aus"
