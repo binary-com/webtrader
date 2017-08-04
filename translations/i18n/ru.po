@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -359,9 +355,6 @@ msgstr "8ч"
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Вечерняя звезда Дожи состоит из длинной бычьей свечи, за которой следует Дожи с гэпом над ней, а затем третья, медвежья свеча, закрывающаяся на уровне тела первой свечи и таким образом подтверждающая наличие разворота. Данная фигура считается сильным индикатором медвежьего разворота на свечном графике"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "Политически значимое лицо (ПЗЛ) – это человек, который в данное время выполняет или ранее выполнял важные государственные функции. Данный статус распространяется на родственников и близких друзей ПЗЛ"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Сглаженная скользящая средняя – это своего рода смесь простой скользящей средней и экспоненциальной скользящей средней, но с более продолжительным периодом"
 
@@ -458,9 +451,6 @@ msgstr "Баланс счёта"
 msgid "Account opening reason"
 msgstr "Причина открытия счёта"
 
-msgid "Account turnover"
-msgstr "Объём покупок на счету"
-
 msgid "Action"
 msgstr "Действие"
 
@@ -520,6 +510,9 @@ msgstr "Еще одна крупная награда: на этот раз мы
 
 msgid "Answer"
 msgstr "Ответ"
+
+msgid "Anticipated account turnover"
+msgstr ""
 
 msgid "Apply"
 msgstr "Применить"
@@ -611,8 +604,8 @@ msgstr "Изменение барьера"
 msgid "Barrier(s)"
 msgstr "Барьер(ы)"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Медвежья фигура: это фигура окончания тренда, состоящая из трёх свечей в рамках восходящего тренда. Вторая свеча должна открываться в вблизи уровня закрытия предыдущего дня. Последняя свеча должна быть короткой и может образовать гэп при попытке роста. Также может присутствовать тень продажи. Фигура демонстрирует слабость восходящей динамики с риском консолидации и возможным разворотом. Бычья фигура: Это фигура окончания тренда, состоящая из трёх свечей, относящихся к нисходящему тренду. Вторая свеча должна открываться вбдизи уровня закрытия предыдущего дня. Последняя свеча должна быть короткой. Фигура демонстрирует слабость и консолидацию, а также возможный разворот тренда"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Захват за пояс (CDLBELTHOLD)"
@@ -799,9 +792,6 @@ msgstr "Нажав"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Нажав OK, Вы подтверждаете, что прочитали и согласились с обновлениями в документе"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Может использоваться для покупки и продажи контрактов, возобновления закончившихся сделок, а также для пополнения демо-счетов."
@@ -1247,6 +1237,12 @@ msgstr "Образование"
 msgid "Embed code"
 msgstr "Код для вставки"
 
+msgid "Employent status"
+msgstr ""
+
+msgid "Employment status"
+msgstr ""
+
 msgid "End Time"
 msgstr "Окончание"
 
@@ -1502,6 +1498,9 @@ msgstr "Контракты Выше/Ниже"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Фигура Хиккаке (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr ""
+
 msgid "Home Address"
 msgstr "Адрес"
 
@@ -1639,9 +1638,6 @@ msgstr "Мгновенный доступ"
 
 msgid "Instant funding"
 msgstr "Мгновенное пополнение"
-
-msgid "Instrument"
-msgstr "Инструмент"
 
 msgid "Instruments"
 msgstr "Инструменты"
@@ -2198,14 +2194,8 @@ msgstr "Более 90 сотрудников и наёмных работник�
 msgid "Overlap Studies"
 msgstr "Перекрытие графиков"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "Декларация ПЗЛ"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Параболическая система SAR (SAR)"
@@ -2513,9 +2503,6 @@ msgstr "Метод трёх поднимающихся/падающих (CDLRISE
 msgid "Robust and secure platform"
 msgstr "Надёжная и безопасная платформа"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2560,9 +2547,6 @@ msgstr "Безопасность"
 
 msgid "Security question"
 msgstr "Секретный вопрос"
-
-msgid "Select Instrument"
-msgstr "Выбрать инструмент"
 
 msgid "Self-Employed"
 msgstr "Частный предприниматель"
@@ -2615,9 +2599,6 @@ msgstr "От краткосрочных до долгосрочных сдело
 msgid "Short-term action"
 msgstr "Краткосрочное действие"
 
-msgid "Show"
-msgstr "Показать"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Фигура из трёх белых свечей. Бычья фигура: в рамках восходящего тренда после первой белой свечи формируется вторая свеча, которая начинается выше уровня закрытия предыдущей свечи (восходящий гэп). Затем на графике формируется третья восходящая свеча, начало которой находится ниже уровня закрытия второй свечи (нисходящий гэп). Медвежья фигура: в рамках нисходящего тренда, за первой нисходящей свечой  формируется восходящая свеча, начало которой находится ниже уровня закрытия первой свечи (нисходящий гэп). Затем на графике формируется ещё одна растущая свеча, которая открывается ниже уровня закрытия второй свечи. Данная фигура обозначает продолжение нисходящего тренда"
 
@@ -2632,6 +2613,9 @@ msgstr "Сглаженная скользящая средняя (SMMA)"
 
 msgid "Sold"
 msgstr "Продано"
+
+msgid "Source of wealth"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Волчок (CDLSPINNINGTOP)"
@@ -3359,9 +3343,6 @@ msgstr "Вертикальная линия"
 msgid "View"
 msgstr "Обзор"
 
-msgid "View Historical Data"
-msgstr "Обзор истории"
-
 msgid "View Statement"
 msgstr "Смотреть историю счета"
 
@@ -3424,6 +3405,9 @@ msgstr "Взвешенная скользящая средняя (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Добро пожаловать на Webtrader от Binary.com"
+
+msgid "What is pep?"
+msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Если Вы довольны ценой, незамедлительно исполняйте контракт"
