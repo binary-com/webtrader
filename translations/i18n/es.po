@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -355,9 +358,6 @@ msgstr "8h"
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Un patrón Evening Doji Star consiste en una vela alcista larga, seguida de una vela doji que ha formado un gap sobre esta y por una tercera vela bajista que cierra bien dentro del cuerpo de la primera vela y al hacerlo confirma la reversión. Se le considera un patrón de velas de reversión de precios bajistas marcado"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "Una persona expuesta políticamente o PEP es un individuo al que le ha sido encomendada una función pública prominente. Este estatus se extiende a los parientes y socios de esta persona"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Una media móvil suavizada es algo así como una mezcla entre una media móvil simple y una media móvil exponencial, solo que con un periodo aplicado más largo"
 
@@ -454,9 +454,6 @@ msgstr "Saldo de la cuenta"
 msgid "Account opening reason"
 msgstr "Motivo para abrir la cuenta"
 
-msgid "Account turnover"
-msgstr "Facturación de la cuenta"
-
 msgid "Action"
 msgstr "Acción"
 
@@ -516,6 +513,9 @@ msgstr "Otro premio importante. Esta vez estamos, por un lado, nominados por los
 
 msgid "Answer"
 msgstr "Respuesta"
+
+msgid "Anticipated account turnover"
+msgstr ""
 
 msgid "Apply"
 msgstr "Aplicar"
@@ -607,8 +607,8 @@ msgstr "Desplazamiento de la barrera"
 msgid "Barrier(s)"
 msgstr "Límite(s)"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Bajista: patrón de final de tendencia compuesto por tres velas en una tendencia alcista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta y puede formar un gap alcista. Puede haber, también, una sombra de ventas. El patrón representa una debilidad en un alza, con un riesgo de consolidación y una posible reversión. Alcista: patrón de final de tendencia compuesto por tres velas en una tendencia bajista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta. El patrón representa una debilidad, así como una consolidación y posible reversión de la tendencia"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Patrón Belt-hold (CDLBELTHOLD)"
@@ -795,9 +795,6 @@ msgstr "Haciendo clic"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Haciendo clic en OK, usted confirma que ha leído y aceptado la actualización del"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Se puede utilizar para comprar y vender contratos, renovar compras caducadas y recargar las cuentas de dinero virtual."
@@ -1243,6 +1240,12 @@ msgstr "Educación"
 msgid "Embed code"
 msgstr "Incrustar código"
 
+msgid "Employent status"
+msgstr ""
+
+msgid "Employment status"
+msgstr ""
+
 msgid "End Time"
 msgstr "Hora de finalización"
 
@@ -1498,6 +1501,9 @@ msgstr "Contratos Superior/Inferior"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Patrón Hikkake (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr ""
+
 msgid "Home Address"
 msgstr "Domicilio"
 
@@ -1635,9 +1641,6 @@ msgstr "Acceso instantáneo"
 
 msgid "Instant funding"
 msgstr "Financiamiento instantáneo"
-
-msgid "Instrument"
-msgstr "Instrumento"
 
 msgid "Instruments"
 msgstr "Instrumentos"
@@ -2194,14 +2197,8 @@ msgstr "Más de 90 empleados y contratistas en todo el mundo"
 msgid "Overlap Studies"
 msgstr "Estudios sobrepuestos"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "Declaración de PEP"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "SAR parabólico (SAR)"
@@ -2509,9 +2506,6 @@ msgstr "Patrón de continuación alcista o bajista (CDLRISEFALL3METHODS)"
 msgid "Robust and secure platform"
 msgstr "Plataforma robusta y segura"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2556,9 +2550,6 @@ msgstr "Seguridad"
 
 msgid "Security question"
 msgstr "Pregunta de seguridad"
-
-msgid "Select Instrument"
-msgstr "Seleccionar instrumento"
 
 msgid "Self-Employed"
 msgstr "Autónomo"
@@ -2611,9 +2602,6 @@ msgstr "Corto a largo plazo"
 msgid "Short-term action"
 msgstr "Acción a corto plazo"
 
-msgid "Show"
-msgstr "Mostrar"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "El patrón pautas blancas paralelas es un patrón triple. Patrón alcista: en una tendencia al alza, la primera vela es seguida por otra de tendencia alcista que abre por sobre el precio de cierre de la primera (gap ascendente), la cual es seguida, a su vez, por una tercera vela alcista que abre por debajo del precio de cierre de esta (gap descendente). Patrón bajista: en una tendencia a la baja, la primera vela es descendente y es seguida por otra de tendencia alcista que abre por debajo del precio de cierre de la primera (gap descendente), la cual es seguida, a su vez, por una tercera vela alcista que abre por debajo del precio de cierre de esta. Este patrón indica la continuación de una tendencia bajista"
 
@@ -2628,6 +2616,9 @@ msgstr "Media móvil suavizada(SMMA)"
 
 msgid "Sold"
 msgstr "Vendido"
+
+msgid "Source of wealth"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Trompo (CDLSPINNINGTOP)"
@@ -3355,9 +3346,6 @@ msgstr "Línea vertical"
 msgid "View"
 msgstr "Ver"
 
-msgid "View Historical Data"
-msgstr "Ver Datos Históricos"
-
 msgid "View Statement"
 msgstr ""
 
@@ -3419,6 +3407,9 @@ msgid "Weighted Moving Average (WMA)"
 msgstr ""
 
 msgid "Welcome to Binary.com Webtrader"
+msgstr ""
+
+msgid "What is pep?"
 msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
@@ -3747,3 +3738,36 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"
+
+#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
+#~ msgstr "Una persona expuesta políticamente o PEP es un individuo al que le ha sido encomendada una función pública prominente. Este estatus se extiende a los parientes y socios de esta persona"
+
+#~ msgid "Account turnover"
+#~ msgstr "Facturación de la cuenta"
+
+#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
+#~ msgstr "Bajista: patrón de final de tendencia compuesto por tres velas en una tendencia alcista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta y puede formar un gap alcista. Puede haber, también, una sombra de ventas. El patrón representa una debilidad en un alza, con un riesgo de consolidación y una posible reversión. Alcista: patrón de final de tendencia compuesto por tres velas en una tendencia bajista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta. El patrón representa una debilidad, así como una consolidación y posible reversión de la tendencia"
+
+#~ msgid "CSV"
+#~ msgstr "CSV"
+
+#~ msgid "Instrument"
+#~ msgstr "Instrumento"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "PNG"
+#~ msgstr "PNG"
+
+#~ msgid "SVG"
+#~ msgstr "SVG"
+
+#~ msgid "Select Instrument"
+#~ msgstr "Seleccionar instrumento"
+
+#~ msgid "Show"
+#~ msgstr "Mostrar"
+
+#~ msgid "View Historical Data"
+#~ msgstr "Ver Datos Históricos"

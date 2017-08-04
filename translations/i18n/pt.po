@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -355,9 +358,6 @@ msgstr "8h"
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Uma estrela Doji da noite consiste em uma vela longa de tendência alta, seguida por uma Doji que registra uma lacuna acima dela, depois, uma terceira vela baixista que se fecha bem dentro do corpo da primeira vela e, desse modo, confirmando o reverso. É considerado um padrão de vela baixista forte de reversão de preço."
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "Uma PPE é uma pessoa que desempenham ou que tenham desempenhado funções públicas proeminentes. Este status se estende aos familiares e outras pessoas de seu relacionamento próximo"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Uma Média Móvel Suavizada é uma espécie de mistura entre uma Média Móvel Simples e uma Média Móvel Exponencial, apenas com a aplicação de um período maior. "
 
@@ -454,9 +454,6 @@ msgstr "Saldo da conta"
 msgid "Account opening reason"
 msgstr "Motivo de abertura de conta"
 
-msgid "Account turnover"
-msgstr "Volume de negócios da conta"
-
 msgid "Action"
 msgstr "Ação"
 
@@ -516,6 +513,9 @@ msgstr "Outro prêmio importante. Desta vez fomos nomeados pelos leitores online
 
 msgid "Answer"
 msgstr "Resposta"
+
+msgid "Anticipated account turnover"
+msgstr ""
 
 msgid "Apply"
 msgstr "Aplicar"
@@ -607,8 +607,8 @@ msgstr "Deslocamento da barreira"
 msgid "Barrier(s)"
 msgstr "Barreira(s)"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Tendência baixista: é um padrão de fim de tendência composto por três vela numa tendência de alta. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta e pode formar uma lacuna para cima. Também pode haver uma sombra de venda. O padrão representa uma fraqueza numa subida com um risco de consolidação e uma possível inversão. Altista: é um padrão de fim de tendência composto por três velas numa tendência de baixa. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta. O padrão representa uma fraqueza, uma consolidação e uma possível inversão de tendência"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -795,9 +795,6 @@ msgstr "Ao clicar"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Ao clicar OK, você confirma que você leu e aceitou"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Pode ser usado para comprar e vender contratos, renovar aquisições expiradas e financiar contas de dinheiro virtual"
@@ -1243,6 +1240,12 @@ msgstr "Educação"
 msgid "Embed code"
 msgstr "Código de inserção"
 
+msgid "Employent status"
+msgstr ""
+
+msgid "Employment status"
+msgstr ""
+
 msgid "End Time"
 msgstr "Hora de término"
 
@@ -1498,6 +1501,9 @@ msgstr "Negociações Superior/Inferior"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Padrão Hikkake (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr ""
+
 msgid "Home Address"
 msgstr "Endereço residencial"
 
@@ -1635,9 +1641,6 @@ msgstr "Acesso instantâneo"
 
 msgid "Instant funding"
 msgstr "Financiamento instantâneo"
-
-msgid "Instrument"
-msgstr "Instrumento"
 
 msgid "Instruments"
 msgstr "Instrumento"
@@ -2194,14 +2197,8 @@ msgstr "Mais de 90 funcionários e colaboradores em todo o mundo"
 msgid "Overlap Studies"
 msgstr "Estudos sobrepostos"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "Declaração PPE"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "SAR Parabólico (SAR)"
@@ -2509,9 +2506,6 @@ msgstr "Três métodos de alta/baixa (CDLRISEFALL3METHODS)"
 msgid "Robust and secure platform"
 msgstr "Plataforma robusta e segura"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2556,9 +2550,6 @@ msgstr "Segurança"
 
 msgid "Security question"
 msgstr "Pergunta de segurança"
-
-msgid "Select Instrument"
-msgstr "Selecionar instrumento"
 
 msgid "Self-Employed"
 msgstr "Trabalhador autônomo"
@@ -2611,9 +2602,6 @@ msgstr "Curto a longo prazo"
 msgid "Short-term action"
 msgstr "Ação de curto prazo"
 
-msgid "Show"
-msgstr "Mostrar"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Um padrão de velas de linhas brancas lado a lado é um padrão triplo. Padrão altista: Numa tendência de alta, a primeira vela é seguida por uma vela para cima que se abre acima do fechamento da primeira (lacuna para cima), que é seguida por uma terceira vela para cima que se abre abaixo da segunda (lacuna para baixo). Padrão baixista: Durante uma tendência de baixa, a primeira vela aponta para baixo, seguida por uma vela que aponta para cima que se abre abaixo do fechamento da primeira (lacuna para baixo), seguida por uma vela para cima que se abre abaixo do fechamento da segunda. Este padrão indica a continuação de uma tendência de baixa"
 
@@ -2628,6 +2616,9 @@ msgstr "Média Móvel Suavizada (SMMA)"
 
 msgid "Sold"
 msgstr "Vendido"
+
+msgid "Source of wealth"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Pião (CDLSPINNINGTOP)"
@@ -2730,9 +2721,6 @@ msgstr "Os índices do mercado da bolsa medem o valor de uma seleção de empres
 
 msgid "Stocks trading experience"
 msgstr "Experiência na negociação de ações"
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Stocks trading frequency"
 msgstr "Frequência das negociações de ações"
@@ -3358,9 +3346,6 @@ msgstr "Linha vertical"
 msgid "View"
 msgstr "Ver"
 
-msgid "View Historical Data"
-msgstr "Ver dados históricos"
-
 msgid "View Statement"
 msgstr "Ver extrato"
 
@@ -3423,6 +3408,9 @@ msgstr "Média Móvel Ponderada (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Bem-vindo(a) ao WebTrader da Binary.com"
+
+msgid "What is pep?"
+msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Quando você estiver satisfeito com o preço de negociação, execute imediatamente a sua negociação"
@@ -3750,3 +3738,36 @@ msgstr "| Prêmio"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitindo que clientes, afiliados e desenvolvedores possam comprar e vender produtos da Binary.com"
+
+#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
+#~ msgstr "Uma PPE é uma pessoa que desempenham ou que tenham desempenhado funções públicas proeminentes. Este status se estende aos familiares e outras pessoas de seu relacionamento próximo"
+
+#~ msgid "Account turnover"
+#~ msgstr "Volume de negócios da conta"
+
+#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
+#~ msgstr "Tendência baixista: é um padrão de fim de tendência composto por três vela numa tendência de alta. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta e pode formar uma lacuna para cima. Também pode haver uma sombra de venda. O padrão representa uma fraqueza numa subida com um risco de consolidação e uma possível inversão. Altista: é um padrão de fim de tendência composto por três velas numa tendência de baixa. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta. O padrão representa uma fraqueza, uma consolidação e uma possível inversão de tendência"
+
+#~ msgid "CSV"
+#~ msgstr "CSV"
+
+#~ msgid "Instrument"
+#~ msgstr "Instrumento"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "PNG"
+#~ msgstr "PNG"
+
+#~ msgid "SVG"
+#~ msgstr "SVG"
+
+#~ msgid "Select Instrument"
+#~ msgstr "Selecionar instrumento"
+
+#~ msgid "Show"
+#~ msgstr "Mostrar"
+
+#~ msgid "View Historical Data"
+#~ msgstr "Ver dados históricos"
