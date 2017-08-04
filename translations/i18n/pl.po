@@ -355,9 +355,6 @@ msgstr "8 godz."
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Gwiazda wieczorna doji składa się z długiej świecy o trendzie wzrostowym, świecy doji powyżej niej oraz trzeciej świecy o trendzie spadkowym, która zamyka się na wysokości świecy pierwszej i tym samym potwierdza zmianę tendencji. Jest to silna formacja świecowa sygnalizująca zmianę tendencji na rynku na spadkową"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "PEP to osoba, która wykonuje lub wykonywała znaczącą funkcję publiczną. Status odnosi się również do członków rodziny takiej osoby i jej bliskich współpracowników"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Wygładzona średnia krocząca jest kombinacją prostej średniej kroczącej i wykładniczej średniej kroczącej, ale o dłuższym okresie"
 
@@ -454,9 +451,6 @@ msgstr "Saldo konta"
 msgid "Account opening reason"
 msgstr "Powód otwarcia konta"
 
-msgid "Account turnover"
-msgstr "Obrót na koncie"
-
 msgid "Action"
 msgstr "Czynność"
 
@@ -516,6 +510,9 @@ msgstr "Kolejna ważna nagroda. Tym razem jesteśmy nominowani przez czytelnikó
 
 msgid "Answer"
 msgstr "Odpowiedź"
+
+msgid "Anticipated account turnover"
+msgstr ""
 
 msgid "Apply"
 msgstr "Zastosuj"
@@ -607,8 +604,8 @@ msgstr "Wyrównanie limitu"
 msgid "Barrier(s)"
 msgstr "Limit(y)"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Bessa: Formacja na koniec trendu składająca się z trzech świec w trendzie wzrostowym. Druga świeca musi otwierać się blisko zamknięcia poprzedniego dnia. Ostatnia świeca powinna mieć krótki korpus i może tworzyć górną lukę. Możliwy jest również cień sprzedaży. Formacja przedstawia słaby wzrost z ryzykiem konsolidacji i możliwą zmianą trendu. Hossa: Formacja na koniec trendu składająca się z trzech świec w trendzie spadkowym. Druga świeca musi otwierać się blisko zamknięcia poprzedniego dnia. Formacja przedstawia słabość i konsolidację i możliwą zmianą trendu"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold – zatrzymanie (CDLBELTHOLD)"
@@ -795,9 +792,6 @@ msgstr "Przez kliknięcie"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Kliknięcie przycisku OK oznacza przeczytanie i akceptację zaktualizowanych"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Może być stosowany do zakupu i sprzedaży kontraktów, odnawiania wygasłych zakupów oraz doładowywania kont z wirtualnymi pieniędzmi."
@@ -1243,6 +1237,12 @@ msgstr "Edukacja"
 msgid "Embed code"
 msgstr "Kod osadzania"
 
+msgid "Employent status"
+msgstr ""
+
+msgid "Employment status"
+msgstr ""
+
 msgid "End Time"
 msgstr "Czas zakończenia"
 
@@ -1498,6 +1498,9 @@ msgstr "Zakłady typu „wyższy/niższy”"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern – formacja Hikkake (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr ""
+
 msgid "Home Address"
 msgstr "Adres domowy"
 
@@ -1635,9 +1638,6 @@ msgstr "Błyskawiczny dostęp"
 
 msgid "Instant funding"
 msgstr "Błyskawiczne zasilanie konta"
-
-msgid "Instrument"
-msgstr "Instrument"
 
 msgid "Instruments"
 msgstr "Instrumenty"
@@ -2194,14 +2194,8 @@ msgstr "Ponad 90 pracowników i podwykonawców na całym świecie"
 msgid "Overlap Studies"
 msgstr "Analiza techniczna „Overlap Studies”"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "Oświadczenie ws. PEP"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Wskaźnik SAR (Parabolic SAR)"
@@ -2509,9 +2503,6 @@ msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgid "Robust and secure platform"
 msgstr "Solidna i bezpieczna platforma"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2556,9 +2547,6 @@ msgstr "Bezpieczeństwo"
 
 msgid "Security question"
 msgstr "Pytanie zabezpieczające"
-
-msgid "Select Instrument"
-msgstr "Wybierz instrument"
 
 msgid "Self-Employed"
 msgstr "Osoba samozatrudniona"
@@ -2611,9 +2599,6 @@ msgstr "Zakłady krótko i długoterminowe"
 msgid "Short-term action"
 msgstr "Działanie krótkoterminowe"
 
-msgid "Show"
-msgstr "Pokaż"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Formacja świecowa przybierająca postać białych linii ułożonych blisko siebie to formacja potrójna. Formacja bessy: w trendzie wzrostowym po pierwszej świecy występuje kolejna świeca o tendencji wzrostowej, która otwiera się powyżej zamknięcia pierwszej świecy (luka górna), a następnie kolejna świeca wzrostowa, która otwiera się poniżej zamknięcia drugiej (luka dolna). Formacja hossy: W trendzie spadkowym po pierwszej świecy o tendencji spadkowej występuje świeca wzrostowa otwierająca się poniżej zamknięcia świecy pierwszej (luka dolna), po czym widzimy świecę wzrostową, która otwiera się poniżej zamknięcia drugiej świecy. Ta formacja wskazuje na kontynuację trendu spadkowego"
 
@@ -2628,6 +2613,9 @@ msgstr "Wygładzona średnia krocząca (SMMA – Smoothed Moving Average)"
 
 msgid "Sold"
 msgstr "Sprzedane"
+
+msgid "Source of wealth"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -3355,9 +3343,6 @@ msgstr "Linia pionowa"
 msgid "View"
 msgstr "Widok"
 
-msgid "View Historical Data"
-msgstr "Wyświetl dane historyczne"
-
 msgid "View Statement"
 msgstr "Zobacz oświadczenie"
 
@@ -3420,6 +3405,9 @@ msgstr "Ważona średnia krocząca (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Witamy na platformie Webtrader firmy Binary.com"
+
+msgid "What is pep?"
+msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Jeśli satysfakcjonuje Cię cena zakładu, możesz zawrzeć zakład natychmiast"
