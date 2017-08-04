@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -359,9 +355,6 @@ msgstr "8小时"
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "十字夜星包括长线看涨烛图， 接下来是其上有缺口的十字图，然后是在首个烛图主体内完整收盘并同时确认翻转的第三看跌烛图。被视为强大的看跌价逆转K 线图形态"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "PEP是被委托进行特出公众任务的个人。此身份包括了PEP的亲属和亲近的人"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "平滑移动平均线类似简单移动平均线与指数移动平均线的混合，但应用期限较长"
 
@@ -458,9 +451,6 @@ msgstr "账户余额"
 msgid "Account opening reason"
 msgstr "开立账户的原因"
 
-msgid "Account turnover"
-msgstr "账户交易额"
-
 msgid "Action"
 msgstr "操作"
 
@@ -520,6 +510,9 @@ msgstr "这是我们赢得的另一大奖项。该奖项由《Global Banking and
 
 msgid "Answer"
 msgstr "答案"
+
+msgid "Anticipated account turnover"
+msgstr "预期的账户交易额"
 
 msgid "Apply"
 msgstr "申请"
@@ -611,7 +604,7 @@ msgstr "障碍位移"
 msgid "Barrier(s)"
 msgstr "障碍"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
 msgstr "看跌：显示趋势到了尽头的形式，由三个上升趋势K 线图组成。第二K 线图必须以与前一天收盘价相近的价格开盘。最后的K 线图的长度须短，并可形成向上缺口。另外还可能会有抛售暗影。走势形式显示上涨乏力，存在合并风险与反转的可能性。看涨：显示趋势到了尽头的形式，由三个下跌趋势K 线图组成。第二K 线图必须以与前一天收盘价相近的价格开盘。最后的K 线图的长度须长。形式显示乏力及合并趋势，并存在反转的可能性"
 
 msgid "Belt-hold (CDLBELTHOLD)"
@@ -799,9 +792,6 @@ msgstr "通过点击"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "通过点击OK键，您确认已经阅读并接受更新的"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用于合同购入与售出，给到期的购入合同延期，以及给虚拟金钱账户存入资金。"
@@ -1247,6 +1237,12 @@ msgstr "教育"
 msgid "Embed code"
 msgstr "嵌入代码"
 
+msgid "Employent status"
+msgstr "就业状况"
+
+msgid "Employment status"
+msgstr "就业状况"
+
 msgid "End Time"
 msgstr "结束时间"
 
@@ -1502,6 +1498,9 @@ msgstr "“高于/低于”交易"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "圈套形态 (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr "历史数据"
+
 msgid "Home Address"
 msgstr "家庭地址"
 
@@ -1639,9 +1638,6 @@ msgstr "即时访问"
 
 msgid "Instant funding"
 msgstr "即时存款"
-
-msgid "Instrument"
-msgstr "工具"
 
 msgid "Instruments"
 msgstr "工具"
@@ -2198,14 +2194,8 @@ msgstr "世界各地拥有超过90名职员和合同工"
 msgid "Overlap Studies"
 msgstr "重叠研究"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "PEP 声明"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "抛物线转向指标 (SAR)"
@@ -2513,9 +2503,6 @@ msgstr "上涨/下跌三法 (CDLRISEFALL3METHODS)"
 msgid "Robust and secure platform"
 msgstr "稳健和安全的平台"
 
-msgid "SVG"
-msgstr "圣文森特和格林纳丁斯"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2560,9 +2547,6 @@ msgstr "安全"
 
 msgid "Security question"
 msgstr "安全提示问题"
-
-msgid "Select Instrument"
-msgstr "选择工具"
 
 msgid "Self-Employed"
 msgstr "个体经营"
@@ -2615,9 +2599,6 @@ msgstr "各种交易期限"
 msgid "Short-term action"
 msgstr "短期交易操作"
 
-msgid "Show"
-msgstr "显示"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "并排的白色K 线图形态是三重形态。看涨形态：上升走势中，首支K 线图后面的是另一支以高于首支收盘价开盘的上升K 线图（高开缺口），再后面的是第三支以低于第二支收盘价开盘的上升K 线图（低开缺口）。看跌形态：下降走势中，首支K 线图下跌，后面的是一支以低于首支收盘价开盘的上升K 线图（低开缺口），再后面的是以低于第二支收盘价开盘的上升K 线图。此形态显示持续下跌走势"
 
@@ -2632,6 +2613,9 @@ msgstr "平滑移动平均线 (SMMA)"
 
 msgid "Sold"
 msgstr "已卖出"
+
+msgid "Source of wealth"
+msgstr "财富来源"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "陀螺线 (CDLSPINNINGTOP)"
@@ -3359,9 +3343,6 @@ msgstr "垂直线"
 msgid "View"
 msgstr "查看"
 
-msgid "View Historical Data"
-msgstr "查看历史数据"
-
 msgid "View Statement"
 msgstr "查看报表"
 
@@ -3424,6 +3405,9 @@ msgstr "加权移动平均指标 (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr "欢迎来到 Binary.com Webtrader"
+
+msgid "What is pep?"
+msgstr "Pep 是什么？"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "一旦您对交易价格感到满意，即可立刻执行交易"
