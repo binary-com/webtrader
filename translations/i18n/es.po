@@ -1499,7 +1499,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Patrón Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Datos Históricos"
 
 msgid "Home Address"
 msgstr "Domicilio"
