@@ -3386,7 +3386,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader es una plataforma avanzada totalmente personalizable según sus preferencias"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utiliza las nuevas tecnologías web para una experiencia comercial rica y placentera"
@@ -3398,31 +3398,31 @@ msgid "Wednesday"
 msgstr "Miércoles"
 
 msgid "Weighted Close Price (WCLPRICE)"
-msgstr ""
+msgstr "Precio de cierre ponderado (WCLPRICE)"
 
 msgid "Weighted Moving Average (WMA)"
-msgstr ""
+msgstr "Media móvil ponderada (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Bienvenido a Webtrader de Binary.com"
 
 msgid "What is pep?"
 msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
-msgstr ""
+msgstr "Cuando esté satisfecho con el precio de negociación, ejecute instantáneamente su operación"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
-msgstr ""
+msgstr "Cuando opera con Binary.com, puede estar seguro de que sus depósitos se mantienen en una cuenta fiduciaria separada y no se utilizan para ningún otro propósito"
 
 msgid "While on the go, you can"
 msgstr "Mientras viaja, puede"
 
 msgid "Why Choose Binary Trading?"
-msgstr ""
+msgstr "¿Por qué elegir las opciones binarias?"
 
 msgid "Will I need to install any software?"
-msgstr ""
+msgstr "¿Necesitaré instalar algún tipo de software?"
 
 msgid "Williams' %R (WILLR)"
 msgstr ""
@@ -3437,10 +3437,10 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr ""
 
 msgid "Windows"
-msgstr ""
+msgstr "Ventanas"
 
 msgid "With Binary.com you can trade"
-msgstr ""
+msgstr "Con Binary.com puede negociar"
 
 msgid "With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees"
 msgstr ""
@@ -3464,7 +3464,7 @@ msgid "X-axis tick"
 msgstr "Tick de eje-x"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Cuadrícula del eje-y"
