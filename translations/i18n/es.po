@@ -3293,7 +3293,7 @@ msgid "Upcoming Events"
 msgstr "Próximos Eventos"
 
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 msgid "Update Settings"
 msgstr "Actualizar Configuración"
@@ -3302,7 +3302,7 @@ msgid "Upgrade to a Real Account"
 msgstr "Actualizar a una cuenta real"
 
 msgid "Upload template"
-msgstr ""
+msgstr "Cargar plantilla"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr ""
@@ -3320,10 +3320,10 @@ msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr ""
 
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available"
-msgstr ""
+msgstr "A través de nuestro sitio web, los clientes pueden operar con divisas, índices, acciones y materias primas en cualquier momento. Tenemos los precios más flexibles y la gama más amplia de productos disponibles"
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Varianza (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
 msgstr ""
@@ -3347,16 +3347,16 @@ msgid "View Statement"
 msgstr ""
 
 msgid "Volatile markets"
-msgstr ""
+msgstr "Mercados volátiles"
 
 msgid "Volatility Indicators"
-msgstr ""
+msgstr "Indicadores de volatilidad"
 
 msgid "Volatility Indices"
-msgstr ""
+msgstr "Índices de Volatilidad"
 
 msgid "Volatility indices"
-msgstr ""
+msgstr "Índices de volatilidad"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr ""
