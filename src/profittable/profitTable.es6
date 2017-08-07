@@ -152,7 +152,7 @@ const initProfitWin = () => {
             if (css_class)
                $(td).addClass(css_class);
             $(td).attr("data-src", cellData);
-            td.textContent = formatPrice(cellData,currency);
+            td.innerHTML = formatPrice(cellData,currency);
          }
       }],
       info: false,
