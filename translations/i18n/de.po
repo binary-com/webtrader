@@ -1237,7 +1237,7 @@ msgstr "Ausbildung"
 msgid "Embed code"
 msgstr "Code einbinden"
 
-msgid "Employent status"
+msgid "Employment status"
 msgstr "Beschäftigungsstatus"
 
 msgid "End Time"
