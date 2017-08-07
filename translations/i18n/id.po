@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -3735,36 +3732,3 @@ msgstr "| Hasil"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
-
-#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-#~ msgstr "PEP adalah individu yang atau telah dipercayakan dengan fungsi publik terkemuka. Status ini diperluas hingga ke kerabat seorang PEP dan rekan dekat"
-
-#~ msgid "Account turnover"
-#~ msgstr "Turnover akun"
-
-#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-#~ msgstr "Bearish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam uptrend. Candlestick kedua harus dibuka mendekati penutupan hari sebelumnya. Candlestick terakhir harus lebih pendek dan bisa membentuk gap terbalik. Bisa juga ada bayangan penjualan. Pola ini merupakan kelemahan dalam suatu kenaikan dengan risiko konsolidasi dan kemungkinan pembalikan. Bullish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam tren turun. Candlestick kedua harus mendekati penutupan hari sebelumnya. Candlestick terakhir pasti ditepi. Pola ini merupakan kelemahan dan konsolidasi dan kemungkinan pembalikan tren"
-
-#~ msgid "CSV"
-#~ msgstr "CSV"
-
-#~ msgid "Instrument"
-#~ msgstr "Instrumen"
-
-#~ msgid "PDF"
-#~ msgstr "PDF"
-
-#~ msgid "PNG"
-#~ msgstr "PNG"
-
-#~ msgid "SVG"
-#~ msgstr "SVG"
-
-#~ msgid "Select Instrument"
-#~ msgstr "Pilih Instrumen"
-
-#~ msgid "Show"
-#~ msgstr "Tampilkan"
-
-#~ msgid "View Historical Data"
-#~ msgstr "Lihat Data Historikal"
