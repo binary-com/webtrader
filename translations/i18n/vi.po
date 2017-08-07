@@ -1240,9 +1240,6 @@ msgstr "Giáo dục"
 msgid "Embed code"
 msgstr "Mã nhúng"
 
-msgid "Employent status"
-msgstr ""
-
 msgid "Employment status"
 msgstr ""
 

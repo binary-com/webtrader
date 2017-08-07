@@ -454,9 +454,6 @@ msgstr "Saldo dell'account"
 msgid "Account opening reason"
 msgstr "Motivo dell'apertura dell'account"
 
-msgid "Account turnover"
-msgstr "Turnover dell'account"
-
 msgid "Action"
 msgstr "Azione"
 
@@ -1242,9 +1239,6 @@ msgstr "Istruzione"
 
 msgid "Embed code"
 msgstr "Codice inserito"
-
-msgid "Employent status"
-msgstr ""
 
 msgid "Employment status"
 msgstr ""
@@ -3741,6 +3735,9 @@ msgstr "| Payout"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
+
+#~ msgid "Account turnover"
+#~ msgstr "Turnover dell'account"
 
 #~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
 #~ msgstr "Ribassista: questo è un modello di fine trend composto da tre candele rialziste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela dovrebbe essere corta e può formare un gap al rialzo. Potrebbe anche esserci un'ombra di vendita. Il modello rappresenta una debolezza in un rialzo con un rischio di consolidamento e una possibile inversione del trend. Rialzista: questo è un modello di fine trend composto da tre candele ribassiste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela deve essere corta. Il modello rappresenta una debolezza, un consolidamento e una possibile inversione del trend"

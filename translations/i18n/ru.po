@@ -1240,9 +1240,6 @@ msgstr "Образование"
 msgid "Embed code"
 msgstr "Код для вставки"
 
-msgid "Employent status"
-msgstr ""
-
 msgid "Employment status"
 msgstr ""
 
