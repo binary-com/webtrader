@@ -61,7 +61,7 @@ ul.workspace-manager.workspace-manager {
 
    .ui-icon-active-workspace, .ui-icon-saved-workspaces,
    .ui-icon-back, .ui-icon-arrange, .ui-icon-load,
-   .ui-icon-edit, .ui-icon-save, .ui-icon-delete {
+   .ui-icon-edit, .ui-icon-save, .ui-icon-save-as, .ui-icon-delete {
       left: 5px;
       position: absolute;
       top: calc(50% - 8px);
@@ -74,6 +74,7 @@ ul.workspace-manager.workspace-manager {
    .ui-icon-load { background-image: url('../images/load.svg') !important; }
    .ui-icon-edit { background-image: url('../images/edit.svg') !important; }
    .ui-icon-save { background-image: url('../images/save.svg') !important; }
+   .ui-icon-save-as { background-image: url('../images/save-as.svg') !important; }
    .ui-icon-delete { background-image: url('../images/delete-white.svg') !important; }
 
    .ui-icon-sub-menu, .ui-icon-confirm, .ui-icon-delete-w{
@@ -119,6 +120,7 @@ ul.workspace-manager.workspace-manager {
       .ui-icon-load { background-image: url('../images/load-black.svg') !important; }
       .ui-icon-edit { background-image: url('../images/edit-black.svg') !important; }
       .ui-icon-save { background-image: url('../images/save-black.svg') !important; }
+      .ui-icon-save-as { background-image: url('../images/save-as-black.svg') !important; }
       .ui-icon-delete { background-image: url('../images/delete-black.svg') !important; }
    }
 }
