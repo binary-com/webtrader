@@ -1240,9 +1240,6 @@ msgstr "Edukasi"
 msgid "Embed code"
 msgstr "Menanamkan kode"
 
-msgid "Employent status"
-msgstr ""
-
 msgid "Employment status"
 msgstr ""
 

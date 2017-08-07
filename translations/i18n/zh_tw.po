@@ -1240,8 +1240,8 @@ msgstr "教育"
 msgid "Embed code"
 msgstr "內嵌代碼"
 
-msgid "Employent status"
-msgstr "就業狀況"
+msgid "Employment status"
+msgstr ""
 
 msgid "End Time"
 msgstr "結束時間"
@@ -3735,6 +3735,9 @@ msgstr "| 賠付"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
+
+#~ msgid "Employent status"
+#~ msgstr "就業狀況"
 
 #~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
 #~ msgstr "PEP是被委託進行特出公眾人物的個人。此身份包括了PEP的親屬和親近的人"

@@ -1240,9 +1240,6 @@ msgstr "Formation"
 msgid "Embed code"
 msgstr "Intégrer le code"
 
-msgid "Employent status"
-msgstr ""
-
 msgid "Employment status"
 msgstr ""
 
