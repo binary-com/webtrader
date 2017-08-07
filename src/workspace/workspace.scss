@@ -13,6 +13,11 @@ ul.workspace-manager.workspace-manager {
             color: #2A3052;
          }
       }
+      span.ellipsis {
+         text-overflow: ellipsis;
+         max-width: 180px;
+         overflow: hidden;
+      }
    }
    li.active-workspace-li {
       .ui-icon-gears {
@@ -23,6 +28,11 @@ ul.workspace-manager.workspace-manager {
          height: 100%;
          width: 34px;
          font-size: 18px;
+      }
+      span.ellipsis {
+         display: inline-block;
+         line-height: 18px;
+         max-width: 150px;
       }
       ul.hide {
          opacity: 0 !important;

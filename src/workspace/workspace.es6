@@ -1,6 +1,7 @@
 import html from 'text!./workspace.html';
 import rv from '../common/rivetsExtra';
 import $ from 'jquery';
+import 'jquery-growl';
 import 'css!./workspace.css';
 
 const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
@@ -21,7 +22,19 @@ const state = {
    closeAll: () => $('.webtrader-dialog').dialog('close'),
    current_workspace: {
       name: (local_storage.get('states') || {  }).name || 'my-workspace-1',
-      name_perv_value: ''
+      name_perv_value: '',
+      save: () => {
+         const {name} = state.current_workspace;
+         const inx = _.findIndex(state.workspaces, {name: name});
+         if(inx === -1) {
+            return state.saveas.show();
+         }
+         const workspace = local_storage.get('states');
+         workspace.name = name;
+         state.workspaces[inx] = workspace;
+         local_storage.set('workspaces', state.workspaces);
+         $.growl.notice({ message: 'Workspace changes saved'.i18n() });
+      }
    },
    rename: {
       show: () => {
@@ -29,32 +42,55 @@ const state = {
          state.route = 'rename';
       },
       apply: () => { 
-         const {name, name_perv_value} = state.current_workspace;
-         if(!name) { 
+         let {name, name_perv_value} = state.current_workspace;
+         if(!name || name === name_perv_value) { 
             return state.rename.cancel();
+         }
+         if(_.find(state.workspaces, {name: name})) {
+            const matches = name.match(/\d+$/);
+            const number = matches ? parseInt(matches[0]) : 0;
+            name = name.replace(/\d+$/, '') + (number + 1);
          }
          const workspace = _.find(state.workspaces, {name: name_perv_value});
          if(workspace) {
             workspace.name = name;
+            state.workspaces = state.workspaces;
             local_storage.set('workspaces', state.workspaces);
          }
-         const states = local_storage.get('states');
-         if(states.name === name_perv_value) {
-            states.name = name;
-            local_storage.set('states', states);
-         }
+         state.current_workspace.name = name;
          state.route = 'active';
       },
       cancel: () => {
          state.current_workspace.name = state.current_workspace.name_perv_value;
          state.route = 'active';
       }
+   },
+   saveas: {
+      show: () => {
+         state.current_workspace.name_perv_value = state.current_workspace.name;
+         state.route = 'saveas';
+      },
+      apply: () => { 
+         let {name, name_perv_value} = state.current_workspace;
+         if(!name) { 
+            return state.saveas.cancel();
+         }
+         if(_.find(state.workspaces, {name: name})) {
+            const matches = name.match(/\d+$/);
+            const number = matches ? parseInt(matches[0]) : 0;
+            name = name.replace(/\d+$/, '') + (number + 1);
+         }
+         const workspace = local_storage.get('states');
+         workspace.name = name;
+         state.workspaces.push(workspace);
+         local_storage.set('workspaces', state.workspaces);
+
+         state.current_workspace.name = name;
+         state.route = 'active';
+      },
+      cancel: () => state.rename.cancel()
    }
-
 };
-
-state.current_workspace = _.find(state.workspaces, { name: state.current_workspace.name }) || state.current_workspace;
-
 
 export const init = (parent) => {
    const root = $(html);
