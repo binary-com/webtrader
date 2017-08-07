@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -1240,8 +1237,8 @@ msgstr "Educación"
 msgid "Embed code"
 msgstr "Incrustar código"
 
-msgid "Employment status"
-msgstr ""
+msgid "Employent status"
+msgstr "Situación laboral"
 
 msgid "End Time"
 msgstr "Hora de finalización"
@@ -1499,7 +1496,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Patrón Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Datos Históricos"
 
 msgid "Home Address"
 msgstr "Domicilio"
@@ -3293,7 +3290,7 @@ msgid "Upcoming Events"
 msgstr "Próximos Eventos"
 
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 msgid "Update Settings"
 msgstr "Actualizar Configuración"
@@ -3302,7 +3299,7 @@ msgid "Upgrade to a Real Account"
 msgstr "Actualizar a una cuenta real"
 
 msgid "Upload template"
-msgstr ""
+msgstr "Cargar plantilla"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 msgstr ""
@@ -3320,10 +3317,10 @@ msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr ""
 
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available"
-msgstr ""
+msgstr "A través de nuestro sitio web, los clientes pueden operar con divisas, índices, acciones y materias primas en cualquier momento. Tenemos los precios más flexibles y la gama más amplia de productos disponibles"
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Varianza (VAR)"
 
 msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
 msgstr ""
@@ -3347,46 +3344,46 @@ msgid "View Statement"
 msgstr ""
 
 msgid "Volatile markets"
-msgstr ""
+msgstr "Mercados volátiles"
 
 msgid "Volatility Indicators"
-msgstr ""
+msgstr "Indicadores de volatilidad"
 
 msgid "Volatility Indices"
-msgstr ""
+msgstr "Índices de Volatilidad"
 
 msgid "Volatility indices"
-msgstr ""
+msgstr "Índices de volatilidad"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr ""
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
-msgstr ""
+msgstr "Estamos obligados por nuestra licencia a informarle acerca de lo que ocurre con los fondos que guardamos en la cuenta para usted y sobre el grado de protección de los mismos en caso de insolvencia"
 
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
-msgstr ""
+msgstr "Lo hemos conseguido otra vez. BetOnMarkets.com repite el galardón de 2007 al ser votado como \"Mejor Proveedor de Apuestas Financieras de Probabilidades Fijas\" también en 2008"
 
 msgid "We don't usually require any documents as we can verify your identity online"
-msgstr ""
+msgstr "Por lo general no solicitamos documentos ya que podemos verificar su identidad en línea"
 
 msgid "We rebrand BetOnMarkets.com as"
-msgstr ""
+msgstr "Cambiamos la marca BetOnMarkets.com por"
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr ""
 
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
-msgstr ""
+msgstr "Nos enorgullece este premio. Estamos firmemente comprometidos a ofrecer una experiencia de negociación ética y centrada en el cliente y este premio demuestra que BetOnMarkets es una marca de confianza que escucha y atiende a los clientes sin importar su experiencia. Ofrecemos servicios de atención al cliente en inglés, indonesio, ruso, chino y español"
 
 msgid "Websocket Server"
 msgstr "Servidor WebSocket"
 
 msgid "Webtrader"
-msgstr ""
+msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader es una plataforma avanzada totalmente personalizable según sus preferencias"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utiliza las nuevas tecnologías web para una experiencia comercial rica y placentera"
@@ -3398,31 +3395,31 @@ msgid "Wednesday"
 msgstr "Miércoles"
 
 msgid "Weighted Close Price (WCLPRICE)"
-msgstr ""
+msgstr "Precio de cierre ponderado (WCLPRICE)"
 
 msgid "Weighted Moving Average (WMA)"
-msgstr ""
+msgstr "Media móvil ponderada (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Bienvenido a Webtrader de Binary.com"
 
 msgid "What is pep?"
 msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
-msgstr ""
+msgstr "Cuando esté satisfecho con el precio de negociación, ejecute instantáneamente su operación"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
-msgstr ""
+msgstr "Cuando opera con Binary.com, puede estar seguro de que sus depósitos se mantienen en una cuenta fiduciaria separada y no se utilizan para ningún otro propósito"
 
 msgid "While on the go, you can"
 msgstr "Mientras viaja, puede"
 
 msgid "Why Choose Binary Trading?"
-msgstr ""
+msgstr "¿Por qué elegir las opciones binarias?"
 
 msgid "Will I need to install any software?"
-msgstr ""
+msgstr "¿Necesitaré instalar algún tipo de software?"
 
 msgid "Williams' %R (WILLR)"
 msgstr ""
@@ -3437,10 +3434,10 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr ""
 
 msgid "Windows"
-msgstr ""
+msgstr "Ventanas"
 
 msgid "With Binary.com you can trade"
-msgstr ""
+msgstr "Con Binary.com puede negociar"
 
 msgid "With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees"
 msgstr ""
@@ -3464,7 +3461,7 @@ msgid "X-axis tick"
 msgstr "Tick de eje-x"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
 msgstr "Cuadrícula del eje-y"
@@ -3735,36 +3732,3 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"
-
-#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-#~ msgstr "Una persona expuesta políticamente o PEP es un individuo al que le ha sido encomendada una función pública prominente. Este estatus se extiende a los parientes y socios de esta persona"
-
-#~ msgid "Account turnover"
-#~ msgstr "Facturación de la cuenta"
-
-#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-#~ msgstr "Bajista: patrón de final de tendencia compuesto por tres velas en una tendencia alcista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta y puede formar un gap alcista. Puede haber, también, una sombra de ventas. El patrón representa una debilidad en un alza, con un riesgo de consolidación y una posible reversión. Alcista: patrón de final de tendencia compuesto por tres velas en una tendencia bajista. La segunda vela debe abrir cerca del cierre del día anterior. La última vela debe ser corta. El patrón representa una debilidad, así como una consolidación y posible reversión de la tendencia"
-
-#~ msgid "CSV"
-#~ msgstr "CSV"
-
-#~ msgid "Instrument"
-#~ msgstr "Instrumento"
-
-#~ msgid "PDF"
-#~ msgstr "PDF"
-
-#~ msgid "PNG"
-#~ msgstr "PNG"
-
-#~ msgid "SVG"
-#~ msgstr "SVG"
-
-#~ msgid "Select Instrument"
-#~ msgstr "Seleccionar instrumento"
-
-#~ msgid "Show"
-#~ msgstr "Mostrar"
-
-#~ msgid "View Historical Data"
-#~ msgstr "Ver Datos Históricos"

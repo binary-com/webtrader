@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -515,7 +512,7 @@ msgid "Answer"
 msgstr "Antwort"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Erwarteter Kontoumsatz"
 
 msgid "Apply"
 msgstr "Anwenden"
@@ -608,7 +605,7 @@ msgid "Barrier(s)"
 msgstr "Schwelle(n)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Bärisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Aufwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze sollte kurz sein und kann ein Upside Gap formen. Es könnte auch einen Verkaufs-Schatten geben. Das Muster repräsentiert eine Schwachstelle in einem Aufstieg mit einem Risiko von Konsolidierung und möglicher Umkehr. Bullisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Abwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze muss kurz sein. Das Muster repräsentiert eine Schwachstelle und Konsolidierung und eine mögliche Umkehrung des Trends"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -1240,8 +1237,8 @@ msgstr "Ausbildung"
 msgid "Embed code"
 msgstr "Code einbinden"
 
-msgid "Employment status"
-msgstr ""
+msgid "Employent status"
+msgstr "Beschäftigungsstatus"
 
 msgid "End Time"
 msgstr "Endzeit"
@@ -1499,7 +1496,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Historische Daten"
 
 msgid "Home Address"
 msgstr "Wohnadresse"
@@ -2615,7 +2612,7 @@ msgid "Sold"
 msgstr "Verkauft"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Quelle des Reichtums"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -3407,7 +3404,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Willkommen bei Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Was ist Pep?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Wenn Sie mit dem Verkaufskurs zufrieden sind, führen Sie das Geschäft umgehend aus"
@@ -3735,36 +3732,3 @@ msgstr "| Auszahlung"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kaufen und zu verkaufen"
-
-#~ msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-#~ msgstr "Eine PEP ist eine Einzelperson, die mit einem wichtigen, öffentlichen Amt betraut ist oder betraut war. Dieser Status weitet sich auf Verwandte und nahe Kollegen des PEPs aus"
-
-#~ msgid "Account turnover"
-#~ msgstr "Kontoumsatz"
-
-#~ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-#~ msgstr "Bärisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Aufwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze sollte kurz sein und kann ein Upside Gap formen. Es könnte auch einen Verkaufs-Schatten geben. Das Muster repräsentiert eine Schwachstelle in einem Aufstieg mit einem Risiko von Konsolidierung und möglicher Umkehr. Bullisch: Dies ist ein End-of-Trend Pattern, das aus drei Kerzen in einem Abwärtstrend besteht. Die zweite Kerze muss sich nahe der Schlussnotierung des vorherigen Tages öffnen. Die letzte Kerze muss kurz sein. Das Muster repräsentiert eine Schwachstelle und Konsolidierung und eine mögliche Umkehrung des Trends"
-
-#~ msgid "CSV"
-#~ msgstr "CSV"
-
-#~ msgid "Instrument"
-#~ msgstr "Instrument"
-
-#~ msgid "PDF"
-#~ msgstr "PDF"
-
-#~ msgid "PNG"
-#~ msgstr "PNG"
-
-#~ msgid "SVG"
-#~ msgstr "SVG"
-
-#~ msgid "Select Instrument"
-#~ msgstr "Instrument auswählen"
-
-#~ msgid "Show"
-#~ msgstr "Anzeigen"
-
-#~ msgid "View Historical Data"
-#~ msgstr "Historische Daten Ansicht"
