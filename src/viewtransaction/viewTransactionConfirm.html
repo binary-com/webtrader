@@ -6,10 +6,10 @@
     </div>
     <div class="confirm-row">
       <div> <p>Buy Price</p>
-        <span rv-text="buy_price | formatPrice"></span>
+        <span rv-html="buy_price | formatPrice currency"></span>
       </div>
       <div class="sell-price"> <p><strong>Sale Price</strong></p>
-        <span rv-text="sell_price | formatPrice"
+        <span rv-html="sell_price | formatPrice currency"
               rv-class-red="buy_price | gt sell_price"
               rv-class-green="sell_price | gt buy_price"></span>
       </div>
@@ -24,6 +24,6 @@
     </div>
 
     <div class="balance-row secondary-bg-color">
-        Your new account balance is&nbsp;<span rv-text="balance | format-price currency"></span>
+        Your new account balance is&nbsp;<span rv-html="balance | format-price currency"></span>
     </div>
 </div>
