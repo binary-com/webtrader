@@ -83,8 +83,8 @@
    <div  rv-show='route | eq "saved"' class='workspace-list'>
       <li rv-each-row="workspaces">
          <a href="#" class='invert-colors'>
-            <span rv-text='row.name' rv-on-click='row.click' class='ellipsis'></span>
-            <span class='ui-icon ui-icon-delete-w' rv-on-click='row.remove'></span>
+            <span rv-text='row.name' rv-on-click='workspace.show | bind row' class='ellipsis'></span>
+            <span class='ui-icon ui-icon-delete-w' rv-on-click='workspace.remove | bind row'></span>
          </a>
       </li>
    </div>

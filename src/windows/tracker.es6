@@ -90,10 +90,11 @@ const reopen_dialogs = (symbols, saved_states) => {
                      if(data.position.offset) {
                         const x = data.position.offset.left;
                         const y = data.position.offset.top;
-                        dialog.dialog('widget').animate({
+                        dialog.dialog('widget').css({
                            left: x + 'px',
                            top: y + 'px'
-                        }, 1000, dialog.trigger.bind(dialog, 'animated'));
+                        });
+                        dialog.trigger('animated');
                         /* update dialog option.position */
                         dialog.dialog("option", "position", { my: x, at: y });
                      }

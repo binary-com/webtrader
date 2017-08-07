@@ -3,6 +3,7 @@ import rv from '../common/rivetsExtra';
 import $ from 'jquery';
 import 'jquery-growl';
 import 'css!./workspace.css';
+import tracker from '../windows/tracker';
 
 const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 (() => {
@@ -13,6 +14,8 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
    }
 })();
 
+const clone = obj => JSON.parse(JSON.stringify(obj));
+
 const state = {
    route: 'all', // one of ['all', 'active', 'saved', 'rename']
    workspaces: local_storage.get('workspaces') || [],
@@ -20,6 +23,19 @@ const state = {
    update_route: route => state.route = route,
    tileDialogs: () => tileDialogs(),
    closeAll: () => $('.webtrader-dialog').dialog('close'),
+   workspace: {
+      remove: w => {
+         const inx = state.workspaces.indexOf(w);
+         inx !== -1 && state.workspaces.splice(inx, 1);
+         local_storage.set('workspaces', state.workspaces);
+      },
+      show: w => {
+         state.closeAll();
+         state.current_workspace.name = w.name;
+         local_storage.set('states', w);
+         tracker.reopen(clone(w));
+      }
+   },
    current_workspace: {
       name: (local_storage.get('states') || {  }).name || 'my-workspace-1',
       name_perv_value: '',
