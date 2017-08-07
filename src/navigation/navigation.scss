@@ -43,12 +43,11 @@ body {
          visibility: hidden;
          z-index: 999999;
          opacity: 0;
-         transition: visibility 0.5s, opacity 0.1s linear 0.4s;
       }
       .ui-menu .ui-menu-item {
          list-style-image: none !important;
          .ui-menu-item-wrapper {
-            padding: 5px 1em 5px .4em;
+            padding: 5px 1em 5px 0.8em;
          }
       }
       .ui-widget.ui-widget-content {
@@ -57,17 +56,21 @@ body {
       &:hover > ul {
          visibility: visible;
          opacity: 1;
-         transition: visibility 0s 0.2s;
       }
       li {
-         min-width: 130px;
+         min-width: 150px;
+         line-height: 30px;
          font-size: 14px;
          background: #2A3052;
          color: white;
+         text-align: left;
          a {
             color: white;
             font-size: 14px;
-            padding-left: 30px !important;
+            padding-left: 35px !important;
+            span.ui-icon {
+              padding-left: 10px;
+            }
          }
       }
       .ui-icon-caret-1-e {
@@ -76,7 +79,7 @@ body {
          background-position: 2px 5px !important;
          margin: 0;
          top: calc(50% - 12px);
-         right: 2px;
+         right: 5px;
       }
       .title {
          background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
