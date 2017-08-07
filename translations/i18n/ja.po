@@ -1262,9 +1262,6 @@ msgstr "お役立ち情報"
 msgid "Embed code"
 msgstr "埋め込みコード"
 
-msgid "Employent status"
-msgstr ""
-
 msgid "Employment status"
 msgstr ""
 

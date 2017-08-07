@@ -1240,9 +1240,6 @@ msgstr "Edukacja"
 msgid "Embed code"
 msgstr "Kod osadzania"
 
-msgid "Employent status"
-msgstr ""
-
 msgid "Employment status"
 msgstr ""
 

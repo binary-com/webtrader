@@ -280,8 +280,8 @@
         rv-if="categories.value.contract_category | not-eq 'spreads' | and proposal.error | eq ''"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li>
-          Net Profit: <span rv-text="proposal.netprofit_ < ask_price payout"> </span>
-          | Payout: <span rv-text="proposal.payout_ < ask_price payout"> </span>
+          Net Profit: <span rv-html="proposal.netprofit_ < ask_price payout"> </span>
+          | Payout: <span rv-html="proposal.payout_ < ask_price payout"> </span>
         </li>
     </ul>
 
@@ -302,7 +302,7 @@
 
     <ul class="purchase-row stick-to-bottom ltr-direction"
         rv-css-opacity="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error | ternary 0.5 1">
-      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-text="proposal.ask_price | format-price currency.value"> </span> </span> </li>
+      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-html="proposal.ask_price | format-price currency.value"> </span> </span> </li>
       <li> <button
               rv-on-click="purchase.onclick"
               rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">Purchase</button>

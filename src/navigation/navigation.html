@@ -74,12 +74,8 @@
                     <li style="display:none;"><a href="#" class="config"><span class="ui-icon ui-icon-shuffle"></span>Change Backend Server</a></li>
                 </ul>
             </li>
-            <li class="windows ltr-direction">
-                <a href="#" class="nav-dropdown-toggle">Windows <span class="nav-caret"></span></a>
-                <ul>
-                    <li><a href="#" class="tile"><span class="ui-icon ui-icon-view-icons"></span>Tile</a></li>
-                    <li><a href="#" class="closeAll"><span class="ui-icon ui-icon-closethick"></span>Close all</a></li>
-                </ul>
+            <li class="workspace ltr-direction">
+                <a href="#" class="nav-dropdown-toggle">Workspace <span class="nav-caret"></span></a>
             </li>
             <li>
               <a href="#" class="help">Help</a>
@@ -92,7 +88,7 @@
                         <div class="main-account">
                             <div class="account-type">{account.type}</div>
                             <div class="account-id">{account.id}</div>
-                            <div rv-if="currency | not-eq ''" class="topMenuBalance">{account.balance}</div>
+                            <div rv-if="currency | not-eq ''" class="topMenuBalance" rv-html="account.balance"></div>
                         </div>
                     <div class="nav-caret"></div>
                     </a>
@@ -107,7 +103,7 @@
                   <div class="main-account">
                     <div class="account-type">{account.type}</div>
                     <div class="account-id">{account.id}</div>
-                    <div rv-if="currency | not-eq ''" class="topMenuBalance">{account.balance}</div>
+                    <div rv-if="currency | not-eq ''" class="topMenuBalance" rv-html="account.balance"></div>
                   </div>
                   <div class="nav-caret"></div>
                 </a>

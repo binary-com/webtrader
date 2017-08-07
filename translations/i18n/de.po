@@ -1240,9 +1240,6 @@ msgstr "Code einbinden"
 msgid "Employent status"
 msgstr "Beschäftigungsstatus"
 
-msgid "Employment status"
-msgstr "Beschäftigungsstatus"
-
 msgid "End Time"
 msgstr "Endzeit"
 

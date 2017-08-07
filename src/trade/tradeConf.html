@@ -82,7 +82,7 @@
   <ul class='balance-row' rv-css-bottom="ticks.category.contract_category | eq 'digits' | or ticks.chart_visible | ternary 0 '10%'">
     <li>
       <span> Account balance: </span>
-      <span class="bold" rv-text="buy.balance_after | format-price buy.currency"></span>
+      <span class="bold" rv-html="buy.balance_after | format-price buy.currency"></span>
     </li>
   </ul>
 </div>

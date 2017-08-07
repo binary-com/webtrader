@@ -483,7 +483,7 @@ const api = {
 }
 /* subscribe to website_status */
 api.events.on('website_status', (data) => {
-   is_website_up = data.website_status.site_status.toLowerCase() === 'up';
+   is_website_up = data.website_status && data.website_status.site_status.toLowerCase() === 'up';
    if(is_website_up) {
          //Resend all the queued requests
          for(let i in queued_requests) {

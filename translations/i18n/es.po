@@ -1240,9 +1240,6 @@ msgstr "Incrustar código"
 msgid "Employent status"
 msgstr "Situación laboral"
 
-msgid "Employment status"
-msgstr "Situación laboral"
-
 msgid "End Time"
 msgstr "Hora de finalización"
 

@@ -134,7 +134,7 @@ const initStatement = () => {
             const css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
             if (css_class)
                $(td).addClass(css_class);
-            td.textContent = formatPrice(cellData, currency);
+            td.innerHTML = formatPrice(cellData, currency);
          }
       }],
       paging: false,

@@ -98,24 +98,21 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
+    float = float && Math.abs(float);
+    currency = currency && currency.toLowerCase();
+    var sign = float < 0 ? '-': '';
     var minimumFractionDigits = currency && (currency.trim().toUpperCase() === "BTC" || currency.trim().toUpperCase() === "XBT") ? 8 : 2; //Because backend is confusing
     var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
-	var currency_symbols = {
-		"USD": "$", /* US Dollar */ "EUR": "€", /* Euro */ "CRC": "₡", /* Costa Rican Colón */
-		"GBP": "£", /* British Pound Sterling */ "ILS": "₪", /* Israeli New Sheqel */
-		"INR": "₹", /* Indian Rupee */ "JPY": "¥", /* Japanese Yen */
-		"KRW": "₩", /* South Korean Won */ "NGN": "₦", /* Nigerian Naira */
-		"PHP": "₱", /* Philippine Peso */ "PLN": "zł", /* Polish Zloty */
-		"PYG": "₲", /* Paraguayan Guarani */ "THB": "฿", /* Thai Baht */
-		"UAH": "₴", /* Ukrainian Hryvnia */ "VND": "₫", /* Vietnamese Dong */
-        "BTC": "฿", /*Bitcoin*/ "XBT": "฿", /*Bitcoin*/
-	};
+	
 	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
 						style: "decimal",
 						minimumFractionDigits: minimumFractionDigits,
 					}).format(float);
 	if(currency){
-		float = (currency_symbols[currency.trim().toUpperCase()] || currency) + float;
+		float = sign + $('<span>', {
+            class: 'symbols ' + currency,
+            text: float
+        })[0].outerHTML;
 	}
 	return float;
 }
