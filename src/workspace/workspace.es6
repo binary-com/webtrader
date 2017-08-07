@@ -8,7 +8,7 @@ import tracker from '../windows/tracker';
 const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 (() => {
    const states = local_storage.get('states');
-   if(!states.name) {
+   if(states && !states.name) {
       states.name = INITIAL_WORKSPACE_NAME;
       local_storage.set('states', states);
    }
