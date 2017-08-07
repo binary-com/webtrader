@@ -1,20 +1,61 @@
 import html from 'text!./workspace.html';
 import rv from '../common/rivetsExtra';
+import $ from 'jquery';
 import 'css!./workspace.css';
+
+const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
+(() => {
+   const states = local_storage.get('states');
+   if(!states.name) {
+      states.name = INITIAL_WORKSPACE_NAME;
+      local_storage.set('states', states);
+   }
+})();
 
 const state = {
    route: 'all', // one of ['all', 'active', 'saved', 'rename']
-   workspaces: [
-      {name: 'volatility workspace'},
-      {name: 'fx aswesome'},
-      {name: 'japon stuff'},
-      {name: 'weekend setup'},
-   ],
-   dialogs: [
-   ],
+   workspaces: local_storage.get('workspaces') || [],
+   dialogs: [ ],
    update_route: route => state.route = route,
    tileDialogs: () => tileDialogs(),
+   closeAll: () => $('.webtrader-dialog').dialog('close'),
+   current_workspace: {
+      name: (local_storage.get('states') || {  }).name || 'my-workspace-1',
+      name_perv_value: ''
+   },
+   rename: {
+      show: () => {
+         state.current_workspace.name_perv_value = state.current_workspace.name;
+         state.route = 'rename';
+      },
+      apply: () => { 
+         const {name, name_perv_value} = state.current_workspace;
+         if(!name) { 
+            return state.rename.cancel();
+         }
+         const workspace = _.find(state.workspaces, {name: name_perv_value});
+         if(workspace) {
+            workspace.name = name;
+            local_storage.set('workspaces', state.workspaces);
+         }
+         const states = local_storage.get('states');
+         if(states.name === name_perv_value) {
+            states.name = name;
+            local_storage.set('states', states);
+         }
+         state.route = 'active';
+      },
+      cancel: () => {
+         state.current_workspace.name = state.current_workspace.name_perv_value;
+         state.route = 'active';
+      }
+   }
+
 };
+
+state.current_workspace = _.find(state.workspaces, { name: state.current_workspace.name }) || state.current_workspace;
+
+
 export const init = (parent) => {
    const root = $(html);
    parent.append(root);

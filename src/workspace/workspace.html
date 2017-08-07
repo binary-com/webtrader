@@ -27,17 +27,17 @@
    <li class='active-workspace-li' rv-show='route | one-of "active" "rename"'>
       <a href="#" rv-show='route | eq "active"'>
          <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
-         <span>my-workspace-1</span>
+         <span rv-text='current_workspace.name'></span>
          <span class='ui-icon ui-icon-sub-menu'></span>
       </a>
       <a class='active-workspace-rename' rv-if='route | eq "rename"' href="#">
-         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "active"'></span>
-         <input value="my-workspace-1" autofocus />
-         <span class='ui-icon ui-icon-confirm'></span>
+         <span class='ui-icon ui-icon-back' rv-on-click='rename.cancel'></span>
+         <input rv-value="current_workspace.name" autofocus />
+         <span class='ui-icon ui-icon-confirm' rv-on-click='rename.apply'></span>
       </a>
-      <ul rv-show='route | eq "active"'>
+      <ul rv-class-hide='route | not-eq "active"'>
          <li class='invert-on-hover'>
-            <a href='#' rv-on-click='update_route | bind "rename"'>
+            <a href='#' rv-on-click='rename.show'>
                Rename
                <span class='ui-icon ui-icon-edit'></span>
             </a>
@@ -54,7 +54,7 @@
                Download
             </a>
          </li>
-         <li class='invert-on-hover'>
+         <li class='invert-on-hover' rv-on-click='closeAll'>
             <a href='#'>
                <span class='ui-icon ui-icon-delete'></span>
                Close All

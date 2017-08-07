@@ -24,6 +24,10 @@ ul.workspace-manager.workspace-manager {
          width: 34px;
          font-size: 18px;
       }
+      ul.hide {
+         opacity: 0 !important;
+         pointer-events: none;
+      }
    }
    a.active-workspace-rename {
       padding: 0 !important;

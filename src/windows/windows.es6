@@ -13,7 +13,7 @@ import 'common/util';
 import 'css!windows/windows.css';
 import workspace from  '../workspace/workspace.js';
 
-let closeAllObject = null, dialogCounter = 0, $menuUL = null;
+let dialogCounter = 0;
 
 /* options: { width: 350, height: 400 } */
 const calculateChartCount = (options) => {
@@ -309,21 +309,6 @@ export const init = function($parentObj) {
       return original.apply(this, arguments);
    }
 
-   $menuUL = $parentObj.find("ul");
-
-   //Attach click listener for tile action
-   const tileObject = $menuUL.find(".tile");
-   tileObject.click(workspace.tileDialogs);
-
-   //Attach click listener for close-all
-   closeAllObject = $menuUL.find(".closeAll");
-   closeAllObject.click(() => {
-      if ($('.webtrader-dialog').length > 0) {
-         $('.webtrader-dialog').dialog('close');
-      }
-   });
-
-
    require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], (chartWindowObj,liveapi, menu) => {
       if(!tracker.is_empty()) {
          tracker.reopen();
@@ -417,10 +402,6 @@ export const init = function($parentObj) {
    $(window).scroll(fixMinimizedDialogsPosition);
    return this;
 }
-
-//Trigger close even on all dialogs
-export const closeAll = () => closeAllObject && closeAllObject.click();
-
 
 /* important options: {
    title:'',
@@ -612,7 +593,6 @@ export const event_off = (name, cb) => {
 
 export default {
    init,
-   closeAll,
    createBlankWindow,
    makeSelectmenu
 };
