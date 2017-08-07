@@ -7,6 +7,15 @@ import financialassessment from "../financialassessment/financialassessment";
 import taxInformation from "../taxInformation/taxInformation";
 import "../common/util";
 
+const reposition_dialogs = (min) => {
+   $('.webtrader-dialog').parent().each(function() {
+      const top = $(this).css('top').replace('px', '') * 1;
+      if(top <= min)  {
+         $(this).animate({ top: `${min}px` }, 300);
+      }
+   });
+};
+
 class AccountStatus {
 
   constructor() {
@@ -16,9 +25,7 @@ class AccountStatus {
     liveapi.events.on("login", async (response) => {
       if (+response.authorize.is_virtual === 1) {
         $ele.is(":visible") && $ele.slideUp(500);
-        $('.webtrader-dialog').parent().animate({
-          top: '110px'
-        })
+        reposition_dialogs(115);
         return;
       }
 
@@ -114,17 +121,12 @@ class AccountStatus {
 
       if ($ele.is(":hidden")) {
         $ele.slideDown(500);
-        $('.webtrader-dialog').parent().animate({
-          top: '140px'
-        })
+        reposition_dialogs(140);
       }
     } else {
       $ele.is(":visible") && $ele.slideUp(500);
-      $('.webtrader-dialog').parent().animate({
-        top: '110px'
-      })
+      reposition_dialogs(115);
     }
-
   }
 }
 

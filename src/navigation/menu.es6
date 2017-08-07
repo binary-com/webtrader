@@ -81,7 +81,7 @@ export const refreshMenu = (root, markets, callback) => {
    const menu = `<ul>${
       markets.map(m => `<li><div>${m.display_name}</div><ul>${
          m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${
-            s.instruments.map(i => `<li symbol='${i.symbol}'><div>${i.display_name}</div></li>`).join('')
+            s.instruments.map(i => `<li symbol='${i.symbol}' pip='${i.pip}'><div>${i.display_name}</div></li>`).join('')
          }</ul></li>`).join('')
       }</ul></li>`).join('')
    }</ul>`;
@@ -90,9 +90,11 @@ export const refreshMenu = (root, markets, callback) => {
    root.append($menu);
    $menu.find('li[symbol]').on('click', (e,a) => {
       const display_name = $(e.target).text();
-      const symbol = $(e.target).closest('li').attr('symbol');
+      const $li = $(e.target).closest('li');
+      const symbol = $li.attr('symbol');
+      const pip = $li.attr('pip');
       $menu.fadeOut(); setTimeout(() => $menu.show(), 500);
-      callback(symbol, display_name);
+      callback(symbol, display_name, pip);
    });
    $menu.menu();
 }

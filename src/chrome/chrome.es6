@@ -3,6 +3,7 @@
  */
 import $ from 'jquery';
 import windows from '../windows/windows';
+import workspace from '../workspace/workspace';
 import moment from 'moment';
 import '../common/util';
 import html from 'text!./chrome.html';
@@ -63,13 +64,8 @@ setTimeout(() => {
    }
 }, 5000);
 
-/*
-This is needed in order to bring back the modality of the dialog when the page is loaded first time. Since this dialog might be loaded way before
-chart dialogs are loaded, what have been found that, when charts are loaded later(after this is shown), the modality of this dialog is lost. However,
-if we close and reopen this dialog after tile is called, the modality is restored. In an ideal scenario, users won't be able to do anything when this
-dialog is shown because this is a blocking dialog.
-*/
-windows.event_on("tile", () => {
+/* Move to top if it's behind other dialogs */
+workspace.events.on('tile', () => {
    if (win && win.dialog('isOpen')) {
       win.dialog('close');
       win.moveToTop();

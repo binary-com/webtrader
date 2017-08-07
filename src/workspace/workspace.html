@@ -1,0 +1,99 @@
+<ul class='workspace-manager'>
+   <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "active"' class='invert-on-hover'>
+      <a href="#">
+         <span class='ui-icon ui-icon-active-workspace'></span>
+         Active Workspace
+      </a>
+   </li>
+   <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "saved"' class='invert-on-hover'>
+      <a href="#">
+         <span class='ui-icon ui-icon-saved-workspaces'></span>
+         Saved Workspaces
+      </a>
+   </li>
+   <li rv-show='route | eq "all"' rv-on-click='tileDialogs' class='invert-on-hover'>
+      <a href="#">
+         <span class='ui-icon ui-icon-arrange'></span>
+         <span>Arrange Workspace</span>
+      </a>
+   </li>
+   <li rv-show='route | eq "all"' class='invert-on-hover'>
+      <a href="#">
+         <span class='ui-icon ui-icon-load'></span>
+         <span>Load Workspace</span>
+      </a>
+   </li>
+
+   <li class='active-workspace-li' rv-show='route | one-of "active" "rename" "saveas"'>
+      <a href="#" rv-show='route | eq "active"'>
+         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
+         <span rv-text='current_workspace.name' class='ellipsis'></span>
+         <span class='ui-icon ui-icon-sub-menu'></span>
+      </a>
+      <a class='active-workspace-rename' rv-if='route | eq "rename"' href="#">
+         <span class='ui-icon ui-icon-back' rv-on-click='rename.cancel'></span>
+         <input rv-value="current_workspace.name" autofocus maxlength="18" />
+         <span class='ui-icon ui-icon-confirm' rv-on-click='rename.apply'></span>
+      </a>
+      <a class='active-workspace-rename' rv-if='route | eq "saveas"' href="#">
+         <span class='ui-icon ui-icon-back' rv-on-click='saveas.cancel'></span>
+         <input rv-value="current_workspace.name" autofocus maxlength="18" />
+         <span class='ui-icon ui-icon-confirm' rv-on-click='saveas.apply'></span>
+      </a>
+      <ul rv-class-hide='route | not-eq "active"'>
+         <li class='invert-on-hover'>
+            <a href='#' rv-on-click='rename.show'>
+               Rename
+               <span class='ui-icon ui-icon-edit'></span>
+            </a>
+         </li>
+         <li class='invert-on-hover' rv-on-click='current_workspace.save'>
+            <a href='#'>
+               <span class='ui-icon ui-icon-save'></span>
+               Save
+            </a>
+         </li>
+         <li class='invert-on-hover' rv-if='workspaces | prop "length"' rv-on-click='saveas.show'>
+            <a href='#'>
+               <span class='ui-icon ui-icon-save-as'></span>
+               Save as ...
+            </a>
+         </li>
+         <li class='invert-on-hover'>
+            <a href='#'>
+               <span class='ui-icon ui-icon-load'></span>
+               Download
+            </a>
+         </li>
+         <li class='invert-on-hover' rv-on-click='closeAll'>
+            <a href='#'>
+               <span class='ui-icon ui-icon-delete'></span>
+               Close All
+            </a>
+         </li>
+      </ul>
+   </li>
+   <li rv-show='route | eq "saved"'>
+      <a href="#">
+         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
+         <span>Saved Workspaces</span>
+      </a>
+   </li>
+
+   <div  rv-show='route | eq "saved"' class='workspace-list'>
+      <li rv-each-row="workspaces">
+         <a href="#" class='invert-colors'>
+            <span rv-text='row.name' rv-on-click='workspace.show | bind row' class='ellipsis'></span>
+            <span class='ui-icon ui-icon-delete-w' rv-on-click='workspace.remove | bind row'></span>
+         </a>
+      </li>
+   </div>
+   <div  rv-show='route | one-of "active" "rename" "saveas"' class='dialog-list'>
+      <li rv-each-row="dialogs">
+         <a href="#" class='invert-colors'>
+            <span rv-text='row.name' rv-on-click='row.click' class='ellipsis'></span>
+            <span class='ui-icon ui-icon-delete-w' rv-on-click='row.remove'></span>
+         </a>
+      </li>
+   </div>
+</ul>

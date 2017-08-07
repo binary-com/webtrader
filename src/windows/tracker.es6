@@ -90,10 +90,11 @@ const reopen_dialogs = (symbols, saved_states) => {
                      if(data.position.offset) {
                         const x = data.position.offset.left;
                         const y = data.position.offset.top;
-                        dialog.dialog('widget').animate({
+                        dialog.dialog('widget').css({
                            left: x + 'px',
                            top: y + 'px'
-                        }, 1000, dialog.trigger.bind(dialog, 'animated'));
+                        });
+                        dialog.trigger('animated');
                         /* update dialog option.position */
                         dialog.dialog("option", "position", { my: x, at: y });
                      }
@@ -107,6 +108,7 @@ const reopen_dialogs = (symbols, saved_states) => {
       }
    };
    _.forEach(saved_states,(data, module_id) => {
+      if(module_id === 'name') return; // ignore name
       if(_.isArray(data))
          data.forEach((d) => reopen(d, module_id))
       else
@@ -115,7 +117,11 @@ const reopen_dialogs = (symbols, saved_states) => {
 }
 
 // /* avoid too many writes to local storage */
-const save_states = _.debounce(() => local_storage.set('states', states) , 50);
+const save_states = _.debounce(() => {
+   const perv_states = local_storage.get('states');
+   states.name = (perv_states && perv_states.name) || states.name;
+   local_storage.set('states', states)
+}, 50);
 
 const apply_saved_state = (dialog, blankWindow, state, saved_state) => {
    const pos = saved_state.position;
@@ -257,7 +263,10 @@ export const track = (options, blankWindow) => {
    };
 }
 
-export const reopen = () => {
+export const reopen = (workspace = null) => {
+   if(workspace) {
+      states = workspace;
+   }
    symbols_promise.then((symbols) => {
       saved_states = states;
       states = { };
@@ -289,7 +298,7 @@ export const reopen_unique_dialogs = (unique_dialogs) => {
 
 export const is_empty = () => {
    const ok = _.values(states).filter(
-      (s) => (_.isArray(s) || s.position.mode !== 'closed')
+      (s) => !_.isString(s) && (_.isArray(s) || s.position.mode !== 'closed')
    );
    return ok.length === 0;
 }
