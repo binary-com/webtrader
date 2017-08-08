@@ -512,7 +512,7 @@ msgid "Answer"
 msgstr "Jawaban"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Antisipasi turnover akun"
 
 msgid "Apply"
 msgstr "Daftar"
@@ -605,7 +605,7 @@ msgid "Barrier(s)"
 msgstr "Batasan"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Bearish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam uptrend. Candlestick kedua harus dibuka mendekati penutupan hari sebelumnya. Candlestick terakhir harus lebih pendek dan bisa membentuk gap terbalik. Bisa juga ada bayangan penjualan. Pola ini merupakan kelemahan dalam suatu kenaikan dengan risiko konsolidasi dan kemungkinan pembalikan. Bullish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam tren turun. Candlestick kedua harus mendekati penutupan hari sebelumnya. Candlestick terakhir harus pendek. Pola ini merupakan kelemahan dan konsolidasi dan kemungkinan pembalikan tren"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -1238,7 +1238,7 @@ msgid "Embed code"
 msgstr "Menanamkan kode"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Status pekerjaan"
 
 msgid "End Time"
 msgstr "Waktu Akhir"
@@ -1496,7 +1496,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Data Historikal"
 
 msgid "Home Address"
 msgstr "Alamat Rumah"
@@ -2612,7 +2612,7 @@ msgid "Sold"
 msgstr "Terjual"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Sumber kekayaan"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -3404,7 +3404,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Selamat datang di Webtrader Binary.com"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Apa itu pep?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Bila Anda puas dengan harga kontrak, langsung jalankan trading Anda"
