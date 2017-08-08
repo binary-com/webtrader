@@ -105,6 +105,63 @@ const state = {
          state.route = 'active';
       },
       cancel: () => state.rename.cancel()
+   },
+   file: {
+      hash_code: (s) => JSON.stringify(s).split("").reduce((a,b) => {a=((a<<5)-a)+b.charCodeAt(0);return a&a},0),
+      open_selector: (e) => {
+         const $root = $(e.target).closest('.workspace-manager');
+         $root.find("input[type=file]").click();
+      },
+      upload: (event) => {
+         // const _this = this;
+         const file = event.target.files[0];
+         event.target.value = null;
+         if(!file) { return; }
+
+         const reader = new FileReader();
+         reader.onload = (e) => {
+            const contents = e.target.result;
+            // const array = local_storage.get("trade-templates");
+            let data = null;
+            try{
+               data = JSON.parse(contents);
+               const hash = data.random;
+               delete data.random;
+               if(hash !== state.file.hash_code(data)){ throw "Invalid JSON file".i18n(); }
+               if(data.template_type !== 'workspace-template') { throw "Invalid template type.".i18n(); }
+            } catch(e) {
+               $.growl.error({message:e});
+               return;
+            }
+
+            let name = data.name;
+            if(_.find(state.workspaces, {name: name})) {
+               const matches = name.match(/\d+$/);
+               const number = matches ? parseInt(matches[0]) : 0;
+               name = name.replace(/\d+$/, '') + (number + 1);
+            }
+            data.name =  name;
+            delete data.template_type;
+            delete data.random;
+            state.workspaces.push(data);
+            local_storage.set('workspaces', state.workspaces);
+
+            $.growl.notice({message: "Successfully added workspace as ".i18n() + "<b>" + data.name + "</b>"});
+         }
+
+         reader.readAsText(file);
+      },
+      download: () => {
+         const {name} = state.current_workspace;
+         const inx = _.findIndex(state.workspaces, {name: name});
+         const workspace = inx !== -1 ? state.workspaces[inx] : local_storage.get('states');
+         workspace.name = name;
+         workspace.template_type = 'workspace-template';
+         workspace.random = state.file.hash_code(workspace)
+         var json = JSON.stringify(workspace);
+         download_file_in_browser(workspace.name + '.json', 'text/json;charset=utf-8;', json);
+         $.growl.notice({message: "Downloading workspace as %1".i18n().replace("%1", `<b>${workspace.name}.json</b>`)});
+      }
    }
 };
 
