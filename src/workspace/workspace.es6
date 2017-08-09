@@ -134,13 +134,11 @@ const state = {
                return;
             }
 
-            let name = data.name;
-            if(_.find(state.workspaces, {name: name})) {
+            if(_.find(state.workspaces, {name: data.name})) {
                const matches = name.match(/\d+$/);
-               const number = matches ? parseInt(matches[0]) : 0;
-               name = name.replace(/\d+$/, '') + (number + 1);
+               $.growl.error({message: "Template name already exists".i18n()});
+               return; // don't apply the same workspace
             }
-            data.name =  name;
             delete data.template_type;
             delete data.random;
             state.workspaces.push(data);
