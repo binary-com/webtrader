@@ -31,9 +31,11 @@ const state = {
       },
       show: w => {
          state.closeAll();
-         state.current_workspace.name = w.name;
-         local_storage.set('states', w);
-         tracker.reopen(clone(w));
+         _.delay(() => {
+            state.current_workspace.name = w.name;
+            local_storage.set('states', w);
+            tracker.reopen(clone(w));
+         }, 500);
       }
    },
    current_workspace: {
