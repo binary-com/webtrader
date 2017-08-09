@@ -605,7 +605,7 @@ msgid "Barrier(s)"
 msgstr "Барьер(ы)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Медвежья фигура: это фигура окончания тренда, состоящая из трёх свечей в рамках восходящего тренда. Вторая свеча должна открываться в вблизи уровня закрытия предыдущего дня. Последняя свеча должна быть короткой и может образовать гэп при попытке роста. Также может присутствовать тень продажи. Фигура демонстрирует слабость восходящей динамики с риском консолидации и возможным разворотом. Бычья фигура: Это фигура окончания тренда, состоящая из трёх свечей, относящихся к нисходящему тренду. Вторая свеча должна открываться вблизи уровня закрытия предыдущего дня. Последняя свеча должна быть короткой. Фигура демонстрирует слабость и консолидацию, а также возможный разворот тренда"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Захват за пояс (CDLBELTHOLD)"
