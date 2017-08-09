@@ -84,6 +84,8 @@
    <div  rv-show='route | eq "saved"' class='workspace-list'>
       <li rv-each-row="workspaces">
          <a href="#" class='invert-colors'>
+            <span rv-if='row.name | not-eq current_workspace.name' class='ui-icon ui-icon-tick-normal'></span>
+            <span rv-if='row.name | eq current_workspace.name' class='ui-icon ui-icon-tick-selected'></span>
             <span rv-text='row.name' rv-on-click='workspace.show | bind row' class='ellipsis'></span>
             <span class='ui-icon ui-icon-delete-w' rv-on-click='workspace.remove | bind row'></span>
          </a>
