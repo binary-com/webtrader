@@ -69,13 +69,18 @@ ul.workspace-manager.workspace-manager {
    }
    .ui-icon-active-workspace { background-image: url('../images/active.svg') !important; }
    .ui-icon-saved-workspaces { background-image: url('../images/saved.svg') !important; }
-   .ui-icon-back { background-image: url('../images/back.svg') !important; }
    .ui-icon-arrange { background-image: url('../images/arrange.svg') !important; }
    .ui-icon-load { background-image: url('../images/load.svg') !important; }
    .ui-icon-edit { background-image: url('../images/edit.svg') !important; }
    .ui-icon-save { background-image: url('../images/save.svg') !important; }
    .ui-icon-save-as { background-image: url('../images/save-as.svg') !important; }
    .ui-icon-delete { background-image: url('../images/delete-white.svg') !important; }
+   .ui-icon-back {
+      background-image: url('../images/back.svg') !important;
+      width: 30px; height: 34px;
+      left: 0; top: 0;
+      background-position: 5px 50%;
+   }
 
    .ui-icon-sub-menu, .ui-icon-confirm, .ui-icon-delete-w{
       position: absolute;
