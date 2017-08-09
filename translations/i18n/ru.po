@@ -3404,7 +3404,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Добро пожаловать на Webtrader от Binary.com"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Кто такие ПЗЛ?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Если Вы довольны ценой, незамедлительно исполняйте контракт"
