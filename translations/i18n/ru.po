@@ -512,7 +512,7 @@ msgid "Answer"
 msgstr "Ответ"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Ожидаемый объем покупок на счету"
 
 msgid "Apply"
 msgstr "Применить"
@@ -1238,7 +1238,7 @@ msgid "Embed code"
 msgstr "Код для вставки"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Статус занятости"
 
 msgid "End Time"
 msgstr "Окончание"
@@ -1496,7 +1496,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Фигура Хиккаке (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "История"
 
 msgid "Home Address"
 msgstr "Адрес"
@@ -2612,7 +2612,7 @@ msgid "Sold"
 msgstr "Продано"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Источник доходов"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Волчок (CDLSPINNINGTOP)"
