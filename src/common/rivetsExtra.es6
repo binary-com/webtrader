@@ -306,6 +306,19 @@ rv.binders.spinner = {
    routine: (el,value) => $(el).webtrader_spinner('value', value*1)
 };
 
+/* bind to pressing Enter key in input*/
+rv.binders['input-enter'] = {
+   priority: 93,
+   publishes: false,
+   routine: (el, callback) => {
+      $(el).keyup(function(event){
+         if(event.keyCode == 13){
+            callback();
+         }
+      });
+   },
+   function: true
+} 
 /* bind values to jquery ui spinner options like 'min', 'max', ... */
 rv.binders['spinner-*'] = function(el,value) {
    $(el).webtrader_spinner('option', this.args[0], value);

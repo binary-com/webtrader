@@ -31,14 +31,14 @@
          <span rv-text='current_workspace.name' class='ellipsis'></span>
          <span class='ui-icon ui-icon-sub-menu'></span>
       </a>
-      <a class='active-workspace-rename' rv-if='route | eq "rename"' href="#">
+      <a class='active-workspace-rename' rv-show='route | eq "rename"' href="#">
          <span class='ui-icon ui-icon-back' rv-on-click='rename.cancel'></span>
-         <input rv-value="current_workspace.name" autofocus maxlength="18" />
+         <input rv-value="current_workspace.name" autofocus maxlength="18" rv-input-enter='rename.apply' />
          <span class='ui-icon ui-icon-confirm' rv-on-click='rename.apply'></span>
       </a>
-      <a class='active-workspace-rename' rv-if='route | eq "saveas"' href="#">
+      <a class='active-workspace-rename' rv-show='route | eq "saveas"' href="#">
          <span class='ui-icon ui-icon-back' rv-on-click='saveas.cancel'></span>
-         <input rv-value="current_workspace.name" autofocus maxlength="18" />
+         <input rv-value="current_workspace.name" autofocus maxlength="18" rv-input-enter='saveas.apply' />
          <span class='ui-icon ui-icon-confirm' rv-on-click='saveas.apply'></span>
       </a>
       <ul rv-class-hide='route | not-eq "active"'>
