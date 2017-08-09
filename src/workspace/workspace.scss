@@ -36,7 +36,7 @@ ul.workspace-manager.workspace-manager {
       }
       ul.hide {
          opacity: 0 !important;
-         pointer-events: none;
+         // pointer-events: none;
       }
    }
    a.active-workspace-rename {
@@ -87,6 +87,9 @@ ul.workspace-manager.workspace-manager {
    .ui-icon-confirm { background-image: url('../images/btn-confirm.svg') !important; width: 20px; height: 20px; }
 
    .dialog-list, .workspace-list {
+      box-sizing: border-box;
+      border: 1px solid #d2d2d2;
+      border-top: none;
       li > a {
          padding: 0;
          display: flex;

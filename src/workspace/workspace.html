@@ -18,10 +18,11 @@
       </a>
    </li>
    <li rv-show='route | eq "all"' class='invert-on-hover'>
-      <a href="#">
+      <a href="#" rv-on-click='file.open_selector'>
          <span class='ui-icon ui-icon-load'></span>
          <span>Load Workspace</span>
       </a>
+      <input type="file" rv-on-change='file.upload' style="display: none">
    </li>
 
    <li class='active-workspace-li' rv-show='route | one-of "active" "rename" "saveas"'>
@@ -59,7 +60,7 @@
                Save as ...
             </a>
          </li>
-         <li class='invert-on-hover'>
+         <li class='invert-on-hover' rv-on-click='file.download'>
             <a href='#'>
                <span class='ui-icon ui-icon-load'></span>
                Download
