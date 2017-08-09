@@ -42,7 +42,7 @@
          <span class='ui-icon ui-icon-confirm' rv-on-click='saveas.apply'></span>
       </a>
       <ul rv-class-hide='route | not-eq "active"'>
-         <li class='invert-on-hover'>
+         <li class='invert-on-hover' rv-if='current_workspace.is_saved < name root.workspaces'>
             <a href='#' rv-on-click='rename.show'>
                Rename
                <span class='ui-icon ui-icon-edit'></span>

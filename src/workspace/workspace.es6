@@ -39,14 +39,15 @@ const state = {
    current_workspace: {
       name: (local_storage.get('states') || {  }).name || 'my-workspace-1',
       name_perv_value: '',
+      is_saved: () => _.findIndex(state.workspaces, {name: state.current_workspace.name}) !== -1,
       save: () => {
-         const {name} = state.current_workspace;
-         const inx = _.findIndex(state.workspaces, {name: name});
-         if(inx === -1) {
+         const {name, is_saved} = state.current_workspace;
+         if(!is_saved()) {
             return state.saveas.show();
          }
          const workspace = local_storage.get('states');
          workspace.name = name;
+         const inx = _.findIndex(state.workspaces, {name: workspace.name});
          state.workspaces[inx] = workspace;
          local_storage.set('workspaces', state.workspaces);
          $.growl.notice({ message: 'Workspace changes saved'.i18n() });
@@ -64,8 +65,11 @@ const state = {
          }
          if(_.find(state.workspaces, {name: name})) {
             const matches = name.match(/\d+$/);
-            const number = matches ? parseInt(matches[0]) : 0;
-            name = name.replace(/\d+$/, '') + (number + 1);
+            let number = matches ? parseInt(matches[0]) : 0;
+            name = name.replace(/\d+$/, '');
+            while(_.find(state.workspaces, {name: name + number}))
+               number += 1;
+            name = name + number;
          }
          const workspace = _.find(state.workspaces, {name: name_perv_value});
          if(workspace) {
@@ -93,8 +97,11 @@ const state = {
          }
          if(_.find(state.workspaces, {name: name})) {
             const matches = name.match(/\d+$/);
-            const number = matches ? parseInt(matches[0]) : 0;
-            name = name.replace(/\d+$/, '') + (number + 1);
+            let number = matches ? parseInt(matches[0]) : 0;
+            name = name.replace(/\d+$/, '');
+            while(_.find(state.workspaces, {name: name + number}))
+               number += 1;
+            name = name + number;
          }
          const workspace = local_storage.get('states');
          workspace.name = name;
@@ -162,6 +169,7 @@ const state = {
       }
    }
 };
+state.current_workspace.root = state;
 
 export const init = (parent) => {
    const root = $(html);
