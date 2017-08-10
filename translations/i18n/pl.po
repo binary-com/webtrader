@@ -506,7 +506,7 @@ msgid "An Ends Between trade pays out if the market exit price is strictly highe
 msgstr "Zakład typu „zakończy się pomiędzy” przynosi zysk, jeśli rynkowa cena wyjściowa jest znacząco wyższa niż niska cena docelowa ORAZ znacząco niższa niż wysoka cena docelowa. Opcja binarna typu „zakończy się poza” przynosi zysk, jeśli rynkowa cena wyjściowa jest ALBO znacząco wyższa niż wysoka cena docelowa ALBO znacząco niższa niż niska cena docelowa"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr "Kolejna ważna nagroda. Tym razem jesteśmy nominowani przez czytelników internetowego wydania magazynu Global Banking and Finance Review (Światowy Przegląd Bankowy i Finansowy) i oceniani przez panel ekspertów branżowych, którzy docenili nasze 13-letnie doświadczenie i wiarygodność platformy, szeroki wybór zakładów, wycenę, obsługę klienta i szeroką wiedzę"
+msgstr "Kolejna ważna nagroda. Tym razem zostaliśmy nominowani przez czytelników internetowego wydania magazynu Global Banking and Finance Review (Światowy Przegląd Bankowy i Finansowy) i ocenieni przez panel ekspertów branżowych, którzy docenili nasze 13-letnie doświadczenie i wiarygodność platformy, szeroki wybór zakładów, wycenę, obsługę klienta i szeroką wiedzę"
 
 msgid "Answer"
 msgstr "Odpowiedź"
@@ -548,10 +548,10 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscylator Aroon (AROONOSC)"
 
 msgid "Asian down"
-msgstr "Azjatycki – Spadek"
+msgstr "Azjatyckie – Spadek"
 
 msgid "Asian up"
-msgstr "Azjatycki – Wzrost"
+msgstr "Azjatyckie – Wzrost"
 
 msgid "Asians"
 msgstr "Azjatyckie"
