@@ -461,13 +461,13 @@ msgid "Add indicator"
 msgstr "Dodaj wskaźnik"
 
 msgid "Add/Remove comparisons"
-msgstr "Dodaj/Usuń porównania"
+msgstr "Dodaj/usuń porównania"
 
 msgid "Add/Remove indicators"
 msgstr "Dodaj/usuń wskaźniki"
 
 msgid "Add/remove indicators"
-msgstr "Dodaj/usuń wskaźnik"
+msgstr "Dodaj/usuń wskaźniki"
 
 msgid "Admin"
 msgstr "Admin"
@@ -1223,13 +1223,13 @@ msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
-msgstr "Każda opcja binarna to prognoza przyszłego zachowania się rynku podstawowego"
+msgstr "Każda opcja binarna to prognoza przyszłego zachowania się rynku bazowego"
 
 msgid "Each binary trade is for a pre-determined payout amount. You win the payout if your prediction is correct"
 msgstr "Każda opcja binarna jest zawierana na wcześniej określoną kotę wypłaty. Wygrywasz wypłatę, jeśli Twoja prognoza się sprawdzi"
 
 msgid "Edge"
-msgstr "Krawędź"
+msgstr "Edge"
 
 msgid "Education"
 msgstr "Edukacja"
@@ -1373,7 +1373,7 @@ msgid "First line of home address"
 msgstr "Pierwsza część adresu zamieszkania"
 
 msgid "First name"
-msgstr "Pierwsze imię"
+msgstr "Imię"
 
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
 msgstr "Najpierw musisz ustawić parametry transakcji. Oto, co warto wziąć pod uwagę"
