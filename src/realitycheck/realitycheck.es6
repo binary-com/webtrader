@@ -76,12 +76,13 @@ const setOrRefreshTimer = (timeOutInMins) => {
             let durationIn_ms = moment.utc().valueOf() - data.reality_check.start_time * 1000;
             const max_durationIn_ms = 48 * 60 * 60 * 1000;
             if (durationIn_ms > max_durationIn_ms) durationIn_ms = max_durationIn_ms;
+            const decimals = isBTC() ? 8 : 2;
             settingsData.durationInMins = moment.duration(durationIn_ms).humanize();
             settingsData.bought = data.reality_check.buy_count;
             settingsData.turnOver = data.reality_check.buy_amount;
             settingsData.loginTime = moment.utc(data.reality_check.start_time * 1000).format("MMM D, YYYY hh:mm") + " GMT";
             settingsData.sold = data.reality_check.sell_count;
-            settingsData.pnl = data.reality_check.sell_amount - data.reality_check.buy_amount;
+            settingsData.pnl = (data.reality_check.sell_amount - data.reality_check.buy_amount).toFixed(decimals);
             settingsData.currentTime = moment.utc().format("MMM D, YYYY hh:mm") + " GMT";
             settingsData.open = data.reality_check.open_contract_count;
             settingsData.potentialProfit = data.reality_check.potential_profit;

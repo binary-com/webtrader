@@ -13,8 +13,7 @@ import viewTransaction from '../viewtransaction/viewTransaction';
 
 let statement = null,
    table = null,
-   datepicker = null,
-   currency=local_storage.get("currency");
+   datepicker = null;
 
 export const init = ($menuLink) => {
    $menuLink.click(() => {
@@ -72,7 +71,7 @@ const refreshTable  = (yyy_mm_dd) => {
             _.capitalize(trans.action_type),
             trans.longcode,
             trans.amount * 1,
-            '<b>' + formatPrice(trans.balance_after,currency) + '</b>',
+            '<b>' + formatPrice(trans.balance_after,local_storage.get("currency")) + '</b>',
             view_button,
             trans, /* data for view transaction dailog - when clicking on arrows */
          ];
@@ -134,7 +133,7 @@ const initStatement = () => {
             const css_class = (cellData < 0) ? 'red' : (cellData > 0) ? 'green' : 'bold';
             if (css_class)
                $(td).addClass(css_class);
-            td.innerHTML = formatPrice(cellData, currency);
+            td.innerHTML = formatPrice(cellData, local_storage.get("currency"));
          }
       }],
       paging: false,

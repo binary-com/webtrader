@@ -32,20 +32,20 @@ class AccountStatus {
       const [account_status, website_status, get_settings,
         financial_assessment, mt5_account] = await _this.getStatus(response.authorize);
       _this.tc_accepted = false;
-      _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") ==-1;
+      _this.financial_assessment_submitted = true;
       _this.is_mlt = /^malta$/gi.test(response.authorize.landing_company_name);
       _this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
       _this.is_cr = /^costarica$/gi.test(response.authorize.landing_company_name);
       _this.has_mt5_account = mt5_account.mt5_login_list.length > 0;
-
+      _this.is_authenticated = !account_status.get_account_status.prompt_client_to_authenticate;
       // Check whether the user has accepted the T&C.
       if (website_status && website_status.website_status && get_settings && get_settings.get_settings) {
         _this.tc_accepted = website_status.website_status.terms_conditions_version === get_settings.get_settings.client_tnc_status;
       }
 
       // Check whether the high risk clients have submitted the financial_assessment form.
-      if (account_status.get_account_status.risk_classification === "high" && financial_assessment) {
-        _this.financial_assessment_submitted = _this.financial_assessment_submitted && Object.keys(financial_assessment.get_financial_assessment).length !== 0;
+      if (account_status.get_account_status.risk_classification === "high" || _this.is_mf) {
+        _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") ==-1;
       }
       
       _this.checkStatus(response.authorize, account_status.get_account_status.status);
@@ -94,9 +94,7 @@ class AccountStatus {
       authenticate: {
         message: "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available.".i18n()
           .replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
-        is_valid: _ => (/authenticated/.test(status) && (/age_verification/.test(status) || _this.is_cr))
-          //For cr accounts show authentication msg if the user balance is more than 200 or has mt5 account
-          || (!/authenticated/.test(status) && _this.is_cr && (+authorize.balance < 200 || !_this.has_mt5_account)),
+        is_valid: _ => _this.is_authenticated,
         callback: notice.init
       },
       unwelcome: {
