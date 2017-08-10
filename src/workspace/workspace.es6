@@ -17,7 +17,7 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
 const state = {
-   route: 'all', // one of ['all', 'active', 'saved', 'rename']
+   route: 'all', // one of ['all', 'active', 'saved', 'rename', 'submenu']
    workspaces: local_storage.get('workspaces') || [],
    dialogs: [ ],
    update_route: route => state.route = route,

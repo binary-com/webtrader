@@ -47,7 +47,7 @@ body {
       &:hover > ul {
          visibility: visible;
          opacity: 1;
-         transition: visibility 0s 0.2s;
+         transition: visibility 0s 0.1s;
       }
    }
   .trade, .instruments, .resources {
