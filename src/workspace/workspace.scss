@@ -6,7 +6,7 @@ ul.workspace-manager.workspace-manager {
          color: white;
          padding: 0;
          line-height: 34px;
-         padding-left: 30px;
+         padding-left: 36px;
          padding-right: 10px;
          &.invert-colors {
             background: white;
@@ -20,6 +20,7 @@ ul.workspace-manager.workspace-manager {
       }
    }
    li.active-workspace-li {
+      a { span.ellipsis { vertical-align: text-top; } }
       .ui-icon-gears {
          left: auto;
          right: 0;
@@ -61,21 +62,29 @@ ul.workspace-manager.workspace-manager {
 
    .ui-icon-active-workspace, .ui-icon-saved-workspaces,
    .ui-icon-back, .ui-icon-arrange, .ui-icon-load,
+   .ui-icon-tick-normal, .ui-icon-tick-selected,
    .ui-icon-edit, .ui-icon-save, .ui-icon-save-as, .ui-icon-delete {
-      left: 5px;
+      left: 10px;
       position: absolute;
       top: calc(50% - 8px);
       &:after { display: none; }
    }
    .ui-icon-active-workspace { background-image: url('../images/active.svg') !important; }
    .ui-icon-saved-workspaces { background-image: url('../images/saved.svg') !important; }
-   .ui-icon-back { background-image: url('../images/back.svg') !important; }
    .ui-icon-arrange { background-image: url('../images/arrange.svg') !important; }
    .ui-icon-load { background-image: url('../images/load.svg') !important; }
    .ui-icon-edit { background-image: url('../images/edit.svg') !important; }
    .ui-icon-save { background-image: url('../images/save.svg') !important; }
    .ui-icon-save-as { background-image: url('../images/save-as.svg') !important; }
+   .ui-icon-tick-normal { background-image: url('../images/ic-tick-normal.svg') !important; }
+   .ui-icon-tick-selected { background-image: url('../images/ic-tick-selected.svg') !important; }
    .ui-icon-delete { background-image: url('../images/delete-white.svg') !important; }
+   .ui-icon-back {
+      background-image: url('../images/back.svg') !important;
+      width: 36px; height: 34px;
+      left: 0; top: 0;
+      background-position: 10px 50%;
+   }
 
    .ui-icon-sub-menu, .ui-icon-confirm, .ui-icon-delete-w{
       position: absolute;
@@ -94,13 +103,13 @@ ul.workspace-manager.workspace-manager {
          padding: 0;
          display: flex;
          align-items: center;
-         span:first-child { // the title
+         span.ellipsis { // the title
             display: inline-block;
             width: 100%;
-            padding-left: 20px;
+            padding-left: 36px;
 
          }
-         span:last-child { // the X button
+         span.ui-icon-delete-w { // the X button
             display: inline-block;
             position: static;
             height: 34px;
@@ -114,16 +123,6 @@ ul.workspace-manager.workspace-manager {
       }
    }
    .invert-on-hover:hover {
-      background: white;
-      a { color: #2A3052; }
-
-      .ui-icon-active-workspace { background-image: url('../images/active-black.svg') !important; }
-      .ui-icon-saved-workspaces { background-image: url('../images/saved-black.svg') !important; }
-      .ui-icon-arrange { background-image: url('../images/arrange-black.svg') !important; }
-      .ui-icon-load { background-image: url('../images/load-black.svg') !important; }
-      .ui-icon-edit { background-image: url('../images/edit-black.svg') !important; }
-      .ui-icon-save { background-image: url('../images/save-black.svg') !important; }
-      .ui-icon-save-as { background-image: url('../images/save-as-black.svg') !important; }
-      .ui-icon-delete { background-image: url('../images/delete-black.svg') !important; }
+      background: #E98024;
    }
 }

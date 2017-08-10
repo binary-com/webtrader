@@ -17,7 +17,7 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
 const state = {
-   route: 'all', // one of ['all', 'active', 'saved', 'rename']
+   route: 'all', // one of ['all', 'active', 'saved', 'rename', 'submenu']
    workspaces: local_storage.get('workspaces') || [],
    dialogs: [ ],
    update_route: route => state.route = route,
@@ -31,22 +31,25 @@ const state = {
       },
       show: w => {
          state.closeAll();
-         state.current_workspace.name = w.name;
-         local_storage.set('states', w);
-         tracker.reopen(clone(w));
+         _.delay(() => {
+            state.current_workspace.name = w.name;
+            local_storage.set('states', w);
+            tracker.reopen(clone(w));
+         }, 500);
       }
    },
    current_workspace: {
       name: (local_storage.get('states') || {  }).name || 'my-workspace-1',
       name_perv_value: '',
+      is_saved: () => _.findIndex(state.workspaces, {name: state.current_workspace.name}) !== -1,
       save: () => {
-         const {name} = state.current_workspace;
-         const inx = _.findIndex(state.workspaces, {name: name});
-         if(inx === -1) {
+         const {name, is_saved} = state.current_workspace;
+         if(!is_saved()) {
             return state.saveas.show();
          }
          const workspace = local_storage.get('states');
          workspace.name = name;
+         const inx = _.findIndex(state.workspaces, {name: workspace.name});
          state.workspaces[inx] = workspace;
          local_storage.set('workspaces', state.workspaces);
          $.growl.notice({ message: 'Workspace changes saved'.i18n() });
@@ -64,8 +67,11 @@ const state = {
          }
          if(_.find(state.workspaces, {name: name})) {
             const matches = name.match(/\d+$/);
-            const number = matches ? parseInt(matches[0]) : 0;
-            name = name.replace(/\d+$/, '') + (number + 1);
+            let number = matches ? parseInt(matches[0]) : 0;
+            name = name.replace(/\d+$/, '');
+            while(_.find(state.workspaces, {name: name + number}))
+               number += 1;
+            name = name + number;
          }
          const workspace = _.find(state.workspaces, {name: name_perv_value});
          if(workspace) {
@@ -93,8 +99,11 @@ const state = {
          }
          if(_.find(state.workspaces, {name: name})) {
             const matches = name.match(/\d+$/);
-            const number = matches ? parseInt(matches[0]) : 0;
-            name = name.replace(/\d+$/, '') + (number + 1);
+            let number = matches ? parseInt(matches[0]) : 0;
+            name = name.replace(/\d+$/, '');
+            while(_.find(state.workspaces, {name: name + number}))
+               number += 1;
+            name = name + number;
          }
          const workspace = local_storage.get('states');
          workspace.name = name;
@@ -134,13 +143,11 @@ const state = {
                return;
             }
 
-            let name = data.name;
-            if(_.find(state.workspaces, {name: name})) {
+            if(_.find(state.workspaces, {name: data.name})) {
                const matches = name.match(/\d+$/);
-               const number = matches ? parseInt(matches[0]) : 0;
-               name = name.replace(/\d+$/, '') + (number + 1);
+               $.growl.error({message: "Template name already exists".i18n()});
+               return; // don't apply the same workspace
             }
-            data.name =  name;
             delete data.template_type;
             delete data.random;
             state.workspaces.push(data);
@@ -164,6 +171,7 @@ const state = {
       }
    }
 };
+state.current_workspace.root = state;
 
 export const init = (parent) => {
    const root = $(html);
