@@ -668,7 +668,7 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Częstotliwość handlowania opcjami binarnymi lub innymi instrumentami pochodnymi"
 
 msgid "Binary trading is flexible"
-msgstr "Opcje binarne są elastyczne"
+msgstr "Handel opcjami binarnymi charakteryzuje się elastycznością"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
 msgstr "Opcje binarne to idealny wybór zarówno dla nieprofesjonalnych, jak i zawodowych graczy"
@@ -680,7 +680,7 @@ msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 
 msgstr "Spółka zależna firmy Binary: Binary KK podlega licencji KLFB jako firma typu 1 prowadząca działalność w zakresie instrumentów finansowych w Japonii"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
-msgstr "Spółka zależna firmy Binary: Binary KK podlega licencji KLFB jako firma typu 1 prowadząca działalność w zakresie instrumentów finansowych w Japonii"
+msgstr "Spółka zależna firmy Binary, Binary KK, otwiera biuro w Tokio i rozpoczyna proces ubiegania się o odpowiednie licencje"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
 msgstr "Urząd ds. Usług Finansowych (Malta Financial Services Authority) na Malcie przyznał maltańskiej spółce zależnej firmy Binary, Binary Investments (Europe) Ltd., licencję dla podmiotów świadczących usługi inwestycyjne kategorii 3"
@@ -704,10 +704,10 @@ msgid "Binary.com has earned an enviable reputation for our commitment to high e
 msgstr "Dzięki dbaniu o najwyższe standardy etyczne i jakość oferowanych usług firma Binary.com zyskała reputację, której może jej pozazdrościć konkurencja"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
-msgstr "Binary.com ma w bazie ponad 800 000 klientów i już w 15. roku działalności osiągnął próg 2 mld $, co sprawia, że jesteśmy jednym z liderów w branży handlu opcjami binarnymi"
+msgstr "Firma Binary.com ma w bazie ponad 800 000 klientów i już w 15. roku działalności osiągnęła próg 2 mld $, co sprawia, że jest jednym z liderów w branży handlu opcjami binarnymi"
 
 msgid "Binary.com has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades"
-msgstr "Binary.com ma tysiące klientów, zawierających transakcje na rynkach finansowych o dowolnej porze. Zarobek %1 stanowi jedynie niewielka marża pobierana od zawieranych zakładów"
+msgstr "Binary.com ma tysiące klientów, zawierających transakcje na rynkach finansowych o dowolnej porze. Zarobek firmy to jedynie niewielka marża pobierana od zawieranych zakładów"
 
 msgid "Binary.com hits 1 million users, reaching a historic milestone. The company continues to see exponential growth and this reconfirms its position as an industry leader"
 msgstr "Binary.com ma już milion użytkowników, co jest rekordem w historii naszej działalności. Nieprzerwany szybki rozwój naszej firmy potwierdza naszą pozycję lidera na rynku"
@@ -716,7 +716,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com przedstawia"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
-msgstr "Binary.com to narzędzie internetowe i nie wymaga instalowania oprogramowania"
+msgstr "Binary.com to narzędzie internetowe i nie wymaga instalowania żadnego oprogramowania"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
 msgstr "Podczas 16. edycji corocznego wydarzenia MENA International Financial Conference and Exhibition w Dubaju firma Binary.com zostaje uznana za „Najlepszego brokera opcji binarnych”"
@@ -725,7 +725,7 @@ msgid "Binary.com is one of the oldest and most respected names in online binary
 msgstr "Binary.com to jedna z najstarszych i najbardziej szanowanych marek w branży internetowego handlu opcjami binarnymi"
 
 msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. For more information, visit our history page"
-msgstr "Właścicielem i firmą zarządzającą Binary.com jest grupa Binary Ltd. Jeśli chcesz uzyskać więcej informacji, odwiedź stronę na temat naszej historii"
+msgstr "Właścicielem i firmą zarządzającą Binary.com jest grupa Binary Ltd. Jeśli chcesz uzyskać więcej informacji, odwiedź stronę poświęconą naszej historii"
 
 msgid "Binary.com is tailored to traders of all levels"
 msgstr "Binary.com jest platformą dla graczy na każdym poziomie"
