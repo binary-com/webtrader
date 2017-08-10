@@ -80,7 +80,7 @@ msgid "- choose the one-touch trade, the goes-outside trade, or the ends outside
 msgstr "– wybierz zakłady z jednokrotnym osiągnięciem ceny, zakład typu przekroczy lub zakończy się poza"
 
 msgid "- choose the rise trade, higher trade, one-touch trade with a high barrier, or no-touch trade with a low barrier"
-msgstr "– wybierz zakłady typu wzrost lub typu wyższy, z jednokrotnym osiągnięciem ceny z dolnym limitem albo zakłady nie osiągnie z górnym limitem"
+msgstr "– wybierz zakłady typu wzrost lub typu wyższy, z jednokrotnym osiągnięciem ceny z górnym limitem albo zakłady nie osiągnie z dolnym limitem"
 
 msgid "- choose timeframes from 10 seconds to 365 days"
 msgstr "– Wybierz czas trwania od 10 sek. do 365 dni"
