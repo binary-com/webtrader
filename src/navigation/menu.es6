@@ -93,7 +93,7 @@ export const refreshMenu = (root, markets, callback) => {
       const $li = $(e.target).closest('li');
       const symbol = $li.attr('symbol');
       const pip = $li.attr('pip');
-      $menu.fadeOut(); setTimeout(() => $menu.show(), 500);
+      $menu.detach(); root.append($menu);
       callback(symbol, display_name, pip);
    });
    $menu.menu();
