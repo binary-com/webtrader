@@ -44,7 +44,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(jeśli okres trwania jest krótszy niż jeden dzień) lub na koniec dnia handlowego (jeśli okres trwania wynosi co najmniej jeden dzień)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
-msgstr ") rozpoczyna działalność jako całodobowa usługa zakładów dla różnorodnych wskaźników finansowych. Biznes rozwija się prężnie i w krótkim czasie stajemy się liderem rynku w branży zakładów o ustalonej stawce"
+msgstr ") rozpoczyna działalność jako całodobowa usługa zawierania zakładów dla różnorodnych wskaźników finansowych. Biznes rozwija się prężnie i w krótkim czasie stajemy się liderem rynku w branży zakładów o ustalonej stawce"
 
 msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives markets"
 msgstr "– Binary.com codziennie porównuje swoje ceny z cenami na rynkach międzybankowych instrumentów pochodnych"
@@ -56,7 +56,7 @@ msgid "- Binary.com is not affiliated with any of the Payment Agents listed abov
 msgstr "- Firma Binary.com nie jest związana z żadnym z pośredników płatności wymienionych powyżej. Każdy pośrednik płatności działa jako niezależny usługodawca i nie jest w żaden sposób zatwierdzony ani popierany przez Binary.com. KLIENCI KORZYSTAJĄ Z USŁUG POŚREDNIKÓW NA WŁASNE RYZYKO. Zaleca się sprawdzenie danych pośredników płatności przed wysłaniem do nich pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za transakcje zawarte między klientami a pośrednikami płatności"
 
 msgid "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr "– Binary.com jest pionierem w branży i posiada opatentowaną technologią wyceny"
+msgstr "– Binary.com jest pionierem w branży i posiada opatentowaną technologię wyceny"
 
 msgid "- Binary.com offers many payment methods, such as credit/debit cards, bank wires, e-cash and e-wallets"
 msgstr "– Binary.com oferuje wiele metod płatności, takich jak karty kredytowe/debetowe, przelewy bankowe, e-gotówka i e-portfel"
