@@ -2,10 +2,10 @@ msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-f
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr "„Azjatycki - spadnie” – Wygrywasz, gdy ostatni najmniejszy przyrost ceny jest jest wartością mniejszą niż średnia najmniejszych przyrostów ceny"
+msgstr "„Azjatycki – spadek” – Wygrywasz, gdy ostatni najmniejszy przyrost ceny jest wartością mniejszą niż średnia najmniejszych przyrostów ceny"
 
 msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
-msgstr "„Azjatycki - wzrośnie” – Wygrywasz, gdy ostatni najmniejszy przyrost ceny jest wartością większą niż średnia najmniejszych przyrostów ceny"
+msgstr "„Azjatycki – wzrost” – Wygrywasz, gdy ostatni najmniejszy przyrost ceny jest wartością większą niż średnia najmniejszych przyrostów ceny"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr "Nagroda „Firma najlepiej komunikująca się z klientami” przyznana przez Investors Chronicle"
@@ -512,7 +512,7 @@ msgid "Answer"
 msgstr "Odpowiedź"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Przewidywany obrót na koncie"
 
 msgid "Apply"
 msgstr "Zastosuj"
@@ -605,7 +605,7 @@ msgid "Barrier(s)"
 msgstr "Limit(y)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Bessa: Formacja na koniec trendu składająca się z trzech świec w trendzie wzrostowym. Druga świeca musi otwierać się blisko zamknięcia poprzedniego dnia. Ostatnia świeca powinna mieć krótki korpus i może tworzyć górną lukę. Możliwy jest również cień sprzedaży. Formacja przedstawia słaby wzrost z ryzykiem konsolidacji i możliwą zmianą trendu. Hossa: Formacja na koniec trendu składająca się z trzech świec w trendzie spadkowym. Druga świeca musi otwierać się blisko zamknięcia poprzedniego dnia; ostatnia świeca musi mieć długi korpus. Formacja przedstawia słabość i konsolidację i możliwą zmianą trendu"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold – zatrzymanie (CDLBELTHOLD)"
@@ -1238,7 +1238,7 @@ msgid "Embed code"
 msgstr "Kod osadzania"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Status zatrudnienia"
 
 msgid "End Time"
 msgstr "Czas zakończenia"
@@ -1496,7 +1496,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern – formacja Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Dane historyczne"
 
 msgid "Home Address"
 msgstr "Adres domowy"
@@ -2612,7 +2612,7 @@ msgid "Sold"
 msgstr "Sprzedane"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Źródło majątku"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -3404,7 +3404,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Witamy na platformie Webtrader firmy Binary.com"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Czym jest pep?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Jeśli satysfakcjonuje Cię cena zakładu, możesz zawrzeć zakład natychmiast"
