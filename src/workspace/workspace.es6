@@ -3,6 +3,7 @@ import rv from '../common/rivetsExtra';
 import $ from 'jquery';
 import 'jquery-growl';
 import 'css!./workspace.css';
+import liveapi from '../websockets/binary_websockets';
 import tracker from '../windows/tracker';
 
 const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
@@ -30,6 +31,13 @@ const state = {
          local_storage.set('workspaces', state.workspaces);
       },
       show: w => {
+         let needsAuthentication = w.tradeDialog && w.tradeDialog.length;
+         needsAuthentication = needsAuthentication || w.portfolio || w.statement || w.profitTable 
+                              || w.deposit || w.withdraw;
+         if(needsAuthentication && !liveapi.is_authenticated()) {
+            $.growl.notice({ message: 'Please log in to see your saved workspace.'.i18n() });
+            return;
+         }
          state.closeAll();
          _.delay(() => {
             state.current_workspace.name = w.name;
@@ -51,6 +59,7 @@ const state = {
          workspace.name = name;
          const inx = _.findIndex(state.workspaces, {name: workspace.name});
          state.workspaces[inx] = workspace;
+         state.workspaces = clone(state.workspaces);
          local_storage.set('workspaces', state.workspaces);
          $.growl.notice({ message: 'Workspace changes saved'.i18n() });
       }
@@ -76,7 +85,6 @@ const state = {
          const workspace = _.find(state.workspaces, {name: name_perv_value});
          if(workspace) {
             workspace.name = name;
-            state.workspaces = state.workspaces;
             local_storage.set('workspaces', state.workspaces);
          }
          state.current_workspace.name = name;
