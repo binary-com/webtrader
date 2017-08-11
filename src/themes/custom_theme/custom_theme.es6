@@ -123,8 +123,8 @@ export const init = ($menuLink) => {
                   (themes) => {
                      const $ele = $('a.theme_custom');
                      const elementText = $ele.text();
-                     const elementClass = $ele.attr('class');
-                     themes.confirmationDialog(Highcharts.getOptions(), elementClass, elementText);
+                     const themeName = $ele.attr('theme-name');
+                     themes.confirmationDialog(Highcharts.getOptions(), themeName, elementText);
                   }
                ),
                Cancel: function () {

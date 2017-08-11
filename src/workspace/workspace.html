@@ -33,12 +33,12 @@
       </a>
       <a class='active-workspace-rename' rv-show='route | eq "rename"' href="#">
          <span class='ui-icon ui-icon-back' rv-on-click='rename.cancel'></span>
-         <input rv-value="current_workspace.name" autofocus maxlength="18" rv-input-enter='rename.apply' />
+         <input rv-value="current_workspace.name" rv-dom-focus='route | eq "rename"' maxlength="18" rv-input-enter='rename.apply' />
          <span class='ui-icon ui-icon-confirm' rv-on-click='rename.apply'></span>
       </a>
       <a class='active-workspace-rename' rv-show='route | eq "saveas"' href="#">
          <span class='ui-icon ui-icon-back' rv-on-click='saveas.cancel'></span>
-         <input rv-value="current_workspace.name" autofocus maxlength="18" rv-input-enter='saveas.apply' />
+         <input rv-value="current_workspace.name" rv-dom-focus='route | eq "saveas"' maxlength="18" rv-input-enter='saveas.apply' />
          <span class='ui-icon ui-icon-confirm' rv-on-click='saveas.apply'></span>
       </a>
       <ul rv-class-hide='route | not-eq "submenu"'>
@@ -91,7 +91,7 @@
          </a>
       </li>
    </div>
-   <div  rv-show='route | one-of "active" "rename" "saveas" "submenu"' class='dialog-list' rv-on-mouseenter='update_route | bind "active"'>
+   <div  rv-show='route | one-of "active" "rename" "saveas" "submenu"' class='dialog-list' rv-on-mouseenter='hide_submenu'>
       <li rv-each-row="dialogs">
          <a href="#" class='invert-colors'>
             <span rv-text='row.name' rv-on-click='row.click' class='ellipsis'></span>
