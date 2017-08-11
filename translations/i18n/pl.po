@@ -1211,7 +1211,7 @@ msgid "Drawing tools"
 msgstr "Narzędzia do rysowania"
 
 msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr "Z powodu niedawnych zmian w przepisach jesteśmy zobowiązani poprosić klientów o wypełnienie następującego formularza oceny sytuacji finansowej. Kontynuowanie handlowania będzie niemożliwe dopóki formularz nie zostanie wypełniony"
+msgstr "Z powodu niedawnych zmian w przepisach prawnych jesteśmy zobowiązani poprosić klientów o wypełnienie następującego formularza oceny sytuacji finansowej. Kontynuowanie handlowania będzie niemożliwe dopóki formularz nie zostanie wypełniony"
 
 msgid "Duration"
 msgstr "Czas trwania"
