@@ -2291,7 +2291,7 @@ msgid "Please select"
 msgstr "Wybierz"
 
 msgid "Please submit a valid verification token"
-msgstr "Proszę podać poprawny  token weryfikujący"
+msgstr "Proszę podać poprawny token weryfikujący"
 
 msgid "Please try again after 1 minute"
 msgstr "Spróbuj ponownie za minutę"
@@ -2396,7 +2396,7 @@ msgid "Read about"
 msgstr "Przeczytaj o"
 
 msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
-msgstr "Ciesz się korzyściami handlu opcjami binarnymi, wiedząc, że Twoje środki są w pełni bezpieczne"
+msgstr "Ciesz się korzyściami z handlowania opcjami binarnymi, wiedząc, że Twoje środki są w pełni bezpieczne"
 
 msgid "Ref"
 msgstr "Ref"
@@ -2438,7 +2438,7 @@ msgid "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of B
 msgstr "Regent Pacific Group Ltd., firma notowana na giełdzie w Hongkongu będąca wspólnikiem-założycielem Binary.com"
 
 msgid "Regent Pacific transaction"
-msgstr "Transakcje Regent Pacific"
+msgstr "Transakcja Regent Pacific"
 
 msgid "Register free account"
 msgstr "Zarejestruj darmowe konto"
@@ -2678,7 +2678,7 @@ msgid "Stays In/Goes Out"
 msgstr "Pozostanie w/przekroczy"
 
 msgid "Stays in"
-msgstr "Pozostaje w"
+msgstr "Pozostanie w"
 
 msgid "Step 1: Define your position"
 msgstr "Krok 1: Określ swoją pozycję"
@@ -2717,7 +2717,7 @@ msgid "Stocks trading experience"
 msgstr "Doświadczenie w handlowaniu akcjami"
 
 msgid "Stocks trading frequency"
-msgstr "Częstość handlowania akcjami"
+msgstr "Częstotliwość handlowania akcjami"
 
 msgid "Stop Loss Level"
 msgstr "Poziom Stop stratom"
@@ -2741,7 +2741,7 @@ msgid "Stroke width"
 msgstr "Szerokość pędzla"
 
 msgid "Submit"
-msgstr "Wyślij"
+msgstr "Prześlij"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Szablon został zastosowany i zapisany jako"
