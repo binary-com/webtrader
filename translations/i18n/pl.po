@@ -1568,7 +1568,7 @@ msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle re
 msgstr "W przypadku formacji Hikkake o tendencji wzrostowej po spadku na rynku świeca hossy osiąga poziom wyższy niż zasięg trzech poprzednich świec i prawdopodobnie wywoła wiele zleceń „stop loss” (stop stratom). Wzmożony zakup powoduje wyraźniejszy wzrost na rynku. W przypadku formacji Hikkake o tendencji spadkowej po odnotowaniu wzrostu na rynku świeca bessy wykracza poza dolny poziom zasięgu trzech poprzednich świec, co prawdopodobnie wywoła wiele zleceń „stop loss” (stop stratom). Wzmożona sprzedaż powoduje wyraźniejszy spadek na rynku"
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
-msgstr "W październiku 1999 r. Regent Markets otrzymuje 2 mln $ dofinansowania od Jima Mellona z Regent Pacific Group, firmy zarządzającej funduszami z siedzibą w Hong Kongu"
+msgstr "W październiku 1999 r. Regent Markets otrzymuje 2 mln dolarów dofinansowania od Jima Mellona z Regent Pacific Group, firmy zarządzającej funduszami z siedzibą w Hong Kongu"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
 msgstr "W przypadku trendu zniżkowego jedna świeca o małym korpusie ma długi dolny cień – o długości równiej co najmniej trzykrotności długości jej korpusu – i krótki górny cień lub nie ma go wcale. Potwierdzenie cen wyższych na koniec następnego dnia"
@@ -1859,7 +1859,7 @@ msgid "Lower"
 msgstr "Niższy"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr "Wskaźnik MACD (Moving Average Convergence/Divergence) jest używany w analizie technicznej cen akcji. Ma on wskazywać siłe, kierunek, dynamikę oraz czas trwania trendu na rynku cen akcji"
+msgstr "Wskaźnik MACD (Moving Average Convergence/Divergence) jest używany w analizie technicznej cen akcji. Ma on wskazywać siłę, kierunek, dynamikę oraz czas trwania trendu na rynku cen akcji"
 
 msgid "MENA FFXPO Award"
 msgstr "Nagroda MENA FFXPO"
