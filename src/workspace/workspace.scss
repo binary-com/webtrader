@@ -121,6 +121,9 @@ ul.workspace-manager.workspace-manager {
             }
          }
       }
+      .ui-icon-tick-normal, .ui-icon-tick-selected {
+         pointer-events: none;
+      }
    }
    .invert-on-hover:hover {
       background: #E98024;

@@ -214,6 +214,13 @@ rv.binders['is-valid-number'] = {
    },
    unbind: (el) => { },
    routine: (el, value) => { }
+}
+
+/* bindar for jqueyr ui selectmenu options */
+rv.binders['dom-*'] = function (el, value) {
+   const method = this.args[0];
+   if(value)
+      setTimeout(() => el[method](), 0);
 };
 
 /* bindar for jqueyr ui selectmenu options */

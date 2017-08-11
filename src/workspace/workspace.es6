@@ -22,6 +22,10 @@ const state = {
    workspaces: local_storage.get('workspaces') || [],
    dialogs: [ ],
    update_route: route => state.route = route,
+   hide_submenu: () => {
+      if(state.route === 'submenu')
+         state.route = 'active';
+   },
    tileDialogs: () => tileDialogs(),
    closeAll: () => $('.webtrader-dialog').dialog('close'),
    workspace: {
