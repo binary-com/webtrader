@@ -737,7 +737,7 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com oferuje pełną gamę metod wpłaty i wypłaty środków, w tym wypłatę za pomocą kart kredytowych i kart debetowych, poprzez przelewy bankowe oraz przy użyciu e-gotówki lub e-portfela"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
-msgstr "Binary.com ma w ofercie konto z wirtualnymi pieniędzmi, dzięki któremu możesz przećwiczyć handel opcjami binarnymi. Warto otworzyć w pełni funkcjonalne wirtualne konto z kwotą 10 tys. $ i zacząć naukę handlowania"
+msgstr "Binary.com ma w ofercie konto z wirtualnymi pieniędzmi, dzięki któremu możesz przećwiczyć handel opcjami binarnymi. Warto otworzyć w pełni funkcjonalne darmowe wirtualne konto z kwotą 10 tys. dolarów i zacząć naukę handlowania"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com oferuje nowe sposoby handlowania"
@@ -749,16 +749,16 @@ msgid "Binary.com prices are benchmarked against the interbank options market, s
 msgstr "Ceny Binary.com są zestawiane z cenami na rynku opcji międzybankowych, więc zawsze uzyskujesz najlepsze ceny dla swoich zakładów"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr "Binary.com osiąga obrót w wysokości 2 mld $ od rozpoczęcia działalności w 1999 r."
+msgstr "Binary.com osiąga obrót w wysokości 2 mld dolarów od rozpoczęcia działalności w 1999 r."
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr "Binary.com ma już 1 milion zarejestrowanych użytkowników"
+msgstr "Binary.com ma już milion zarejestrowanych użytkowników"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr "Binary.com zdobywa pierwszą nagrodę w kategorii „Operator finansowy roku” na prestiżowej ceremonii wręczenia nagród EGR Operator Awards, która odbyła się w Londynie w 2015 r."
+msgstr "Binary.com zdobywa pierwszą nagrodę w kategorii „Operator finansowy roku” na prestiżowej ceremonii wręczenia nagród EGR Operator Awards w Londynie w 2015 r."
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
-msgstr "Systemy Binary.com przetwarzają obecnie ponad 1 milion transakcji dziennie (z uwzględnieniem kont wirtualnych)"
+msgstr "Systemy Binary.com przetwarzają obecnie ponad milion transakcji dziennie (z uwzględnieniem kont wirtualnych)"
 
 msgid "Bollinger Bands (BBANDS)"
 msgstr "Wstęgi Bollingera (BBANDS)"
@@ -779,7 +779,7 @@ msgid "Browser upgrade required"
 msgstr "Konieczna jest aktualizacja przeglądarki"
 
 msgid "But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr "Nie ma potrzeby czekać do zakończenia zakładu. Możesz odsprzedać zakłady długoterminowe w każdym momencie i zyskać, dzięki zmianie warunków rynkowych"
+msgstr "Nie musisz czekać do zakończenia zakładu. Możesz odsprzedać zakłady długoterminowe w każdym momencie i zyskać, dzięki zmianie warunków rynkowych"
 
 msgid "Buy Price"
 msgstr "Cena zakupu"
