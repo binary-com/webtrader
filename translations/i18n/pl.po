@@ -3089,7 +3089,7 @@ msgid "Thursday"
 msgstr "Czwartek"
 
 msgid "Tick"
-msgstr "Zmiana ceny"
+msgstr "Najmniejsza zmiana ceny"
 
 msgid "Tick Trade app"
 msgstr "Aplikacja Tick Trade"
@@ -3116,7 +3116,7 @@ msgid "Title"
 msgstr "Tytuł"
 
 msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
+msgstr "Tiếng Việt"
 
 msgid "To"
 msgstr "Do"
@@ -3191,7 +3191,7 @@ msgid "Trade when you want to trade"
 msgstr "Handluj wtedy, kiedy chcesz"
 
 msgid "Trade with confidence"
-msgstr "Handluj, ciesząc się pewnością siebie"
+msgstr "Handluj pewnie"
 
 msgid "Trade your way"
 msgstr "Handluj na swój własny sposób"
@@ -3200,7 +3200,7 @@ msgid "Trading Times"
 msgstr "Godziny handlowania"
 
 msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
-msgstr "Handlowanie opcjami binarnymi jest na prawdę łatwe i wymaga jedynie trzech prostych kroków"
+msgstr "Handlowanie opcjami binarnymi jest naprawdę łatwe i wymaga jedynie trzech prostych kroków"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "Handlowanie opcjami binarnymi może nie być odpowiednie dla każdego, więc prosimy o upewnienie się, że w pełni rozumiesz związane z nim ryzyko. Twoje straty mogą przewyższyć Twój wkład początkowy, dodatkowo nie posiadasz żadnego interesu w odniesieniu do aktywów bazowych. W przypadku opcji binarnych, które stanowią produkt hazardowy, należy pamiętać, że hazard może uzależniać – prosimy o rozsądną grę"
@@ -3314,7 +3314,7 @@ msgid "Use the \"Save as ...\" button to save the chart settings, type, time per
 msgstr "Użyj przycisku „Zapisz jako ...”, aby zapisać ustawienia wykresu, jego rodzaj, a także przedział czasu, wskaźniki i porównania"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr "Aby zapisać ustawienia handlowe, użyj przycisku „Zapisz jako…”"
+msgstr "Użyj przycisku „Zapisz jako…”, aby zapisać ustawienia handlowe"
 
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available"
 msgstr "Korzystając z naszej strony internetowej, nasi klienci mogą handlować walutami, wskaźnikami, akcjami i towarami 24 godziny na dobę. Oferujemy najbardziej zróżnicowane ceny i najbogatszą gamę produktów"
@@ -3458,7 +3458,7 @@ msgid "X-axis line"
 msgstr "Linia osi X"
 
 msgid "X-axis tick"
-msgstr "Najmniejsza zmiana na osi X"
+msgstr "Najmniejsza zmiana ceny na osi X"
 
 msgid "Xodds.com"
 msgstr "Xodds.com"
