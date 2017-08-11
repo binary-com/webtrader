@@ -3125,7 +3125,7 @@ msgid "To deposit money please contact the payment agent directly"
 msgstr "Aby wpłacić pieniądze, skontaktuj się bezpośrednio z pośrednikiem płatności"
 
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
-msgstr "Możesz skorzystać z usług autoryzowanego pośrednika płatności oferującego metody płatności i lokalne waluty nieobsługiwane przez Binary.com"
+msgstr "Możesz skorzystać z usług pośrednika płatności oferującego metody płatności i lokalne waluty nieobsługiwane przez Binary.com"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Aby wypłacić środki, wpisz specjalny kod weryfikacyjny wysłany na Twój adres e-mail"
