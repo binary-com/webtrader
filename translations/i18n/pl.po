@@ -2165,10 +2165,10 @@ msgid "Other financial instruments trading experience"
 msgstr "Doświadczenie w handlowaniu innymi instrumentami finansowymi"
 
 msgid "Other financial instruments trading frequency"
-msgstr "Częstość handlowania innymi instrumentami finansowymi"
+msgstr "Częstotliwość handlowania innymi instrumentami finansowymi"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr "Nasz firma rozwija się i zdobywa licencję na Wyspie Man, aby jeszcze lepiej służyć klientom z Wielkiej Brytanii"
+msgstr "Nasza firma rozwija się i zdobywa licencję na Wyspie Man, aby jeszcze lepiej służyć klientom z Wielkiej Brytanii"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
 msgstr "Nasi klienci ewidentnie nas lubią. W połowie 2014 r. Binary.com ma ponad 100 mln. transakcji historycznych i ponad 130 tys. nowych transakcji dziennie"
@@ -2429,7 +2429,7 @@ msgid "Regent Markets obtains a licence in the Isle of Man"
 msgstr "Regent Markets uzyskuje licencję na Wyspie Man"
 
 msgid "Regent Markets receives funding to provide on-line financial betting services"
-msgstr "Regent Markets otrzymuje wsparcie finansowe, aby oferować usługi handlu i zakładów online"
+msgstr "Regent Markets otrzymuje wsparcie finansowe, aby oferować usługi zawierania zakładów finansowych online"
 
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
 msgstr "Regent Markets zakłada centrum programistyczne w Cyberjaya w Malezji"
