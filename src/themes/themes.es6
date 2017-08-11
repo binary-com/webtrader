@@ -38,11 +38,11 @@ $('a.theme_dark_blue, a.theme_dark_green, a.theme_dark_unica, a.theme_gray, a.th
    .on('click', function () {
       const $ele = $(this);
       const elementText = $ele.text();
-      const elementClass = $ele.attr('class');
-      confirmationDialog(null, elementClass, elementText);
+      const themeName = $ele.attr('theme-name');
+      confirmationDialog(null, themeName, elementText);
    });
 
-export const confirmationDialog = (themeObj, elementClass, elementText) => {
+export const confirmationDialog = (themeObj, themeName, elementText) => {
    if(win) {
       win.moveToTop();
       return;
@@ -68,16 +68,15 @@ export const confirmationDialog = (themeObj, elementClass, elementText) => {
       });
       $html.find("#apply").on("click", () => {
          $.growl.notice({message: 'Loading ' + elementText});
-         const themeName_file = elementClass.replace('theme_', '').replace('_', '-');
          if(themeObj){
             local_storage.remove("theme");
             local_storage.set("custom_theme", themeObj);
          }
-         else if(themeName_file === 'default') {
+         else if(themeName === 'default') {
             local_storage.remove("theme");
             local_storage.remove("custom_theme");
          } else{
-            local_storage.set("theme", {name: themeName_file}); 
+            local_storage.set("theme", {name: themeName}); 
          }
          location.reload();
       });
