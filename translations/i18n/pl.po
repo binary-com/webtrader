@@ -2060,7 +2060,7 @@ msgid "Note: withdrawal via payment agent is available only if you deposit exclu
 msgstr "Uwaga: Wypłaty poprzez pośredników płatności są dostępne tylko w przypadku dokonania wpłaty poprzez pośrednika płatności"
 
 msgid "Nov"
-msgstr "Listopad"
+msgstr "Lis"
 
 msgid "November"
 msgstr "Listopad"
@@ -3710,7 +3710,7 @@ msgid "trading experience"
 msgstr "doświadczenie w handlowaniu"
 
 msgid "trading frequency"
-msgstr "częstość handlowania"
+msgstr "częstotliwość handlowania"
 
 msgid "view license"
 msgstr "zobacz licencję"
