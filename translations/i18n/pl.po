@@ -1865,7 +1865,7 @@ msgid "MENA FFXPO Award"
 msgstr "Nagroda MENA FFXPO"
 
 msgid "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
-msgstr "Upewnij się, że przez wysłaniem wniosku, zostały zaakceptowane warunki płatności stosowane przez pośrednika. Po kliknięciu przycisku „Potwierdź przelew” środki zostaną wypłacone z Twojego konta i wysłane do wybranego pośrednika płatności. Pośrednik prześle Ci określoną kwotę (po potrąceniu prowizji) wybraną przez Ciebie preferowaną metodą płatności"
+msgstr "Upewnij się, że przed wysłaniem wniosku, zostały zaakceptowane warunki płatności stosowane przez pośrednika. Po kliknięciu przycisku „Potwierdź przelew” środki zostaną wypłacone z Twojego konta i wysłane do wybranego pośrednika płatności. Pośrednik prześle Ci określoną kwotę (po potrąceniu prowizji) wybraną przez Ciebie preferowaną metodą płatności"
 
 msgid "Make your trade"
 msgstr "Dokonaj transakcji"
@@ -2561,7 +2561,7 @@ msgid "Sent to account"
 msgstr "Wyślij na konto"
 
 msgid "Sep"
-msgstr "wrz."
+msgstr "Wrz"
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
 msgstr "Separating Lines – rozstanie (CDLSEPARATINGLINES)"
@@ -2591,7 +2591,7 @@ msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star – spadająca gwiazda (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
-msgstr "Zakłady krótko i długoterminowe"
+msgstr "Zakłady krótko- i długoterminowe"
 
 msgid "Short-term action"
 msgstr "Działanie krótkoterminowe"
