@@ -1598,7 +1598,7 @@ msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern – formacja szyi (CDLINNECK)"
 
 msgid "In/Out"
-msgstr "W/Poza"
+msgstr "W/poza"
 
 msgid "In/Out trades"
 msgstr "Zakłady typu „w/poza”"
@@ -2117,7 +2117,7 @@ msgid "Only letters, numbers, hyphen are allowed"
 msgstr "Dozwolone są wyłącznie litery, liczby i myślnik"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr "Dozwolone są wyłącznie litery, cyfry, myślnik, kropka i apostrof"
+msgstr "Dozwolone są wyłącznie litery, cyfry, spacja, myślnik, kropka i apostrof"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
 msgstr "Dozwolone są tylko litery, cyfry, spacja, kropka, przecinek oraz znaki: - / @"
@@ -3434,7 +3434,7 @@ msgid "Win 10-1000% on your stake if you are correct. Increase your winning retu
 msgstr "Wygraj 10–1000%, jeśli Twoja prognoza się sprawdzi. Zwiększ swój zysk z wygranej, ustawiając cenę docelową jako wartość daleką od obecnej ceny"
 
 msgid "Windows"
-msgstr "Windows"
+msgstr "okna"
 
 msgid "With Binary.com you can trade"
 msgstr "Z Binary.com możesz handlować w następujących warunkach:"
@@ -3482,7 +3482,7 @@ msgid "You can sell back long-term trades at any time to profit from changing ma
 msgstr "Możesz w dowolnej chwili odsprzedać każdy długoterminowy zakład, aby zyskać w związku ze zmieniającą się sytuacją rynkową"
 
 msgid "You can set the length of your trade, from 10 seconds to 365 days"
-msgstr "Możesz wybrać długość okresu trwania Twojego zakładu: od 10 sek. do 365 dni"
+msgstr "Możesz wybrać długość okresu trwania Twojego zakładu: od 10 sekund do 365 dni"
 
 msgid "You can trade a range of markets, timescales and indices - 24/7"
 msgstr "Możesz handlować wieloma wskaźnikami na różnych rynkach i zawierać zakłady o różnym czasie trwania – 24 godz. na dobę"
@@ -3539,7 +3539,7 @@ msgid "Your transaction reference number is"
 msgstr "Numer referencyjny transakcji to"
 
 msgid "Zoom"
-msgstr "Powiększenie"
+msgstr "Powiększ"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "pozwalające klientom na tworzenie swoich własnych robotów do automatycznego handlowania, korzystając z prostych narzędzi i funkcji, takich jak „przeciągnij i upuść”"
