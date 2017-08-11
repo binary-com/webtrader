@@ -1919,7 +1919,7 @@ msgid "Maximum aggregate loss per day"
 msgstr "Maksymalna łączna strata dzienna"
 
 msgid "Maximum number of open positions"
-msgstr "Maksymalna dzienna liczba otwartych pozycji"
+msgstr "Maksymalna liczba otwartych pozycji"
 
 msgid "Maximum price over selected period"
 msgstr "Maksymalna cena w wybranym okresie"
@@ -1964,7 +1964,7 @@ msgid "Minutes"
 msgstr "Minuty"
 
 msgid "Miss"
-msgstr "Pani"
+msgstr "Panna"
 
 msgid "Momentum (MOM)"
 msgstr "Momentum (MOM)"
