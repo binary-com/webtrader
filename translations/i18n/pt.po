@@ -605,7 +605,7 @@ msgid "Barrier(s)"
 msgstr "Barreira(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Tendência baixista: é um padrão de fim de tendência composto por três vela numa tendência de alta. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta e pode formar uma lacuna para cima. Também pode haver uma sombra de venda. O padrão representa uma fraqueza numa subida com um risco de consolidação e uma possível inversão. Altista: é um padrão de fim de tendência composto por três velas numa tendência de baixa. A segunda vela deve abrir próximo do fechamento do dia anterior. A última vela deve ser curta. O padrão representa uma fraqueza, uma consolidação e uma possível inversão de tendência"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -1238,7 +1238,7 @@ msgid "Embed code"
 msgstr "Código de inserção"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Estado profissional"
 
 msgid "End Time"
 msgstr "Hora de término"
@@ -1496,7 +1496,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Padrão Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Dados históricos"
 
 msgid "Home Address"
 msgstr "Endereço residencial"
@@ -2612,7 +2612,7 @@ msgid "Sold"
 msgstr "Vendido"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Fonte de riqueza"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Pião (CDLSPINNINGTOP)"
