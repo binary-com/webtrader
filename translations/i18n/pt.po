@@ -512,7 +512,7 @@ msgid "Answer"
 msgstr "Resposta"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Volume de negócios antecipado da conta"
 
 msgid "Apply"
 msgstr "Aplicar"
