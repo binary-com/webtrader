@@ -2612,7 +2612,7 @@ msgid "Sold"
 msgstr "Verkauft"
 
 msgid "Source of wealth"
-msgstr "Quelle des Reichtums"
+msgstr "Quelle des Vermögens"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
