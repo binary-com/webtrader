@@ -445,15 +445,6 @@ export const createBlankWindow = function($html,options) {
          minimize: 'custom-icon-minimize',
          maximize: 'custom-icon-maximize'
       },
-      open: function() {
-         $(this).promise().done(function () {
-            const parent = $(this).parent();
-            parent.css({
-               top: `+=${(Math.random()*30 | 0) + 20}`,
-               left: `+=${(Math.random()*40 | 0) - 20}`,
-            });
-         });
-      }
    }, options || {});
    options.minWidth = options.minWidth || options.width;
    options.minHeight = options.minHeight || options.height;
@@ -482,6 +473,18 @@ export const createBlankWindow = function($html,options) {
       blankWindow.on('dialogdestroy', options.destroy);
    }
 
+   blankWindow.on('dialogopen', function() {
+      _.defer(() => {
+         const top = ['#msg-notification', '#topbar', '#nav-menu'].map(selector => $(selector).outerHeight()).reduce((a,b) => a+b, 0);
+         const parent = $(this).parent();
+         if(parent.css('top').replace('px', '') * 1 <= top) {
+            parent.animate({
+               top: top + (Math.random()*15 | 0),
+               left: `+=${(Math.random()*10 | 0) - 20}px`,
+            }, 300, dialog.trigger.bind(dialog, 'animated'));
+         }
+      });
+   });
    blankWindow.moveToTop = () => {
       blankWindow.dialog('open');
       blankWindow.dialogExtend('restore');

@@ -15,6 +15,7 @@ const reposition_dialogs = (min) => {
       }
    });
 };
+let is_shown = false;
 
 class AccountStatus {
 
@@ -25,6 +26,7 @@ class AccountStatus {
     liveapi.events.on("login", async (response) => {
       if (+response.authorize.is_virtual === 1) {
         $ele.is(":visible") && $ele.slideUp(500);
+        is_shown = false;
         reposition_dialogs(115);
         return;
       }
@@ -52,7 +54,10 @@ class AccountStatus {
     });
 
     // Hide msg bar on logout.
-    liveapi.events.on('logout', _ => $ele.is(":visible") && $ele.slideUp(500));
+     liveapi.events.on('logout', _ => {
+         $ele.is(":visible") && $ele.slideUp(500);
+         is_shown = false;
+     });
   }
 
   getStatus() {
@@ -117,13 +122,13 @@ class AccountStatus {
       // bind click event to open specific dialogs with instructions.
       $ele.find("a").on("click", invalid_obj.callback);
 
-      if ($ele.is(":hidden")) {
-        $ele.slideDown(500);
-        reposition_dialogs(140);
-      }
+      $ele.slideDown(500);
+      reposition_dialogs(140);
+      is_shown = true;
     } else {
       $ele.is(":visible") && $ele.slideUp(500);
       reposition_dialogs(115);
+      is_shown = false;
     }
   }
 }
@@ -131,5 +136,6 @@ class AccountStatus {
 export const init = new AccountStatus();
 
 export default {
-  init
+  init,
+  is_shown: () => is_shown
 }

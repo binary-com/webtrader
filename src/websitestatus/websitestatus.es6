@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import liveapi from '../websockets/binary_websockets';
+import accountstatus from '../accountstatus/accountstatus';
 
 const reposition_dialogs = (min) => {
    $('.webtrader-dialog').parent().each(function() {
@@ -12,12 +13,12 @@ const reposition_dialogs = (min) => {
 const website_status = (data) => {
     if (data.website_status.site_status.toLowerCase() === "up") {
         const $ele = $("#msg-notification");
-        $ele.is(":visible") && $ele.slideUp(500) && reposition_dialogs(110);
+        $ele.is(":visible") && !accountstatus.is_shown() && $ele.slideUp(500) && reposition_dialogs(110);
     }
     else {
         const $ele = $("#msg-notification");
         const message = $('<div class="error-msg"/>').append(data.website_status.message || 'Seems like our servers are down, we are working on fixing it.'.i18n());
-        $ele.is(':hidden') && $ele.html(message) && $ele.slideDown(500) &&  reposition_dialogs(140);
+        $ele.html(message) && $ele.slideDown(500) &&  reposition_dialogs(140);
     }
 };
 
