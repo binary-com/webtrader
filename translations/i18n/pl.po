@@ -425,13 +425,13 @@ msgid "A technical trading pattern in which three candlesticks form what appears
 msgstr "Formacja handlowa analizy technicznej, w której trzy świece tworzą kształt przypominający na ekranie kanapkę „stick sandwich pattern”. Taka kanapka będzie miała w środku świecę w innym kolorze niż świece po obu jej stronach i obie świece zewnętrzne będą miały szerszy zakres handlowy niż świeca środkowa. Formacja może wystąpić zarówno w przypadku wskaźników hossy, jak i bessy"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
-msgstr "Najmniejszy przyrost ceny to minimalny ruch ceny rynkowej w górę lub w dół"
+msgstr "Najmniejsza zmiana ceny to minimalny ruch ceny rynkowej w górę lub w dół"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
 msgstr "Trend symbolizowany przez świecę o długim korpusie, po której występuje świeca doji zlokalizowana w obrębie górnej lub dolnej części korpusu świecy. Świadczy to o mającej nastąpić zmianie trendu"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr "Biała świeca w trendzie wzrostu cen, po której występuje świeca doji z dolnym cieniem powyżej górnego cienia poprzedniej świecy. Trzeci dzień do świeca czarna z górnym cieniem poniżej dolnego cienia świecy doji"
+msgstr "Biała świeca w trendzie wzrostu cen, po której występuje świeca doji z dolnym cieniem powyżej górnego cienia poprzedniej świecy. Trzeci dzień to świeca czarna z górnym cieniem poniżej dolnego cienia świecy doji"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "Abandoned Baby – porzucone dziecko (CDLABANDONEDBABY)"
@@ -857,28 +857,28 @@ msgid "Chart type"
 msgstr "Rodzaj wykresu"
 
 msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
-msgstr "Wybierz zakład typu „Azjatyckie: wzrost/spadek”, aby zyskać, gdy cena końcowa będzie wyższa lub niższa od średniej ceny"
+msgstr "Wybierz zakład typu „azjatyckie: wzrost/spadek”, aby zyskać, gdy cena końcowa będzie wyższa lub niższa od średniej ceny"
 
 msgid "Choose Ends In/Out to profit from the market stopping inside or outside two price targets at the end of the time period"
-msgstr "Wybierz zakład typu „Zakończy się w/poza”, aby zyskać, gdy cena rynkowa zatrzyma się w przedziale dwóch cen docelowych na koniec danego okresu"
+msgstr "Wybierz zakład typu „zakończy się w/poza”, aby zyskać, gdy cena rynkowa zatrzyma się w przedziale dwóch cen docelowych na koniec danego okresu"
 
 msgid "Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target"
-msgstr "Wybierz zakład typu „Wyższe/niższe”, aby zyskać, gdy cena końcowa będzie wyższa lub niższa od ceny docelowej"
+msgstr "Wybierz zakład typu „wyższe/niższe”, aby zyskać, gdy cena końcowa będzie wyższa lub niższa od ceny docelowej"
 
 msgid "Choose Rise/Fall when you want to profit from the market rising or falling from its current level"
-msgstr "Wybierz zakład typu „Wzrost/spadek”, aby zyskać, gdy cena rynkowa spadnie lub wzrośnie w odniesieniu do jej bieżącego poziomu"
+msgstr "Wybierz zakład typu „wzrost/spadek”, aby zyskać, gdy cena rynkowa spadnie lub wzrośnie w odniesieniu do jej bieżącego poziomu"
 
 msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period"
-msgstr "Wybierz zakład typu „Pozostaje w/poza”, aby zyskać, jeśli cena rynkowa pozostanie w przedziale dwóch cen docelowych lub wyjdzie poza ten przedział w dowolnym czasie trwania kontraktu"
+msgstr "Wybierz zakład typu „pozostaje w/poza”, aby zyskać, jeśli cena rynkowa pozostanie w przedziale dwóch cen docelowych lub wyjdzie poza ten przedział w dowolnym czasie trwania kontraktu"
 
 msgid "Choose Touch / No Touch when you want to profit from the market touching or not touching a target any time during the contract period"
-msgstr "Wybierz zakład typu „Osiągnie/ nie osiągnie”, aby zyskać, gdy cena rynkowa osiągnie cenę docelową lub nie osiągnie jej w dowolnej chwili trwania kontraktu"
+msgstr "Wybierz zakład typu „osiągnie/ nie osiągnie”, aby zyskać, gdy cena rynkowa osiągnie cenę docelową lub nie osiągnie jej w dowolnej chwili trwania kontraktu"
 
 msgid "Choose a trade type"
 msgstr "Wybierz rodzaj zakładu"
 
 msgid "Choose digit if you want to profit from predicting the last decimal digit of the spot"
-msgstr "Wybierz zakład typu „Cyfry”, aby zyskać, prognozując ostatnią cyfrę ceny spot"
+msgstr "Wybierz zakład typu „cyfry”, aby zyskać, prognozując ostatnią cyfrę ceny spot"
 
 msgid "Choose from over 1 million trades"
 msgstr "Wybieraj spośród 1 miliona zakładów"
@@ -1112,7 +1112,7 @@ msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to ide
 msgstr "Indeks Masy (Mass Index) stworzony przez Donalda Dorseya bierze pod uwagę zakresy cenowe: cenę niską i wysoką. Stosowany jest do sygnalizowania zmian trendów na rynku w oparciu o zakresy cenowe. Można go postrzegać jako wskaźnik zmienności, który nie wskazuje kierunku zmian, ale wykrywając zmiany z zakresach cenowych, sygnalizuje zmianę bieżącego trendu"
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr "Wskaźnik dynamiki Williams %R, stworzony przez  Larry'ego Williamsa, jest wskaźnikiem odwrotnym do oscylatora stochastycznego szybkiego. Wskaźnik ten, zwany również wskaźnikiem %R, odzwierciedla poziom ceny zamknięcia w stosunku do maksymalnej ceny w ostatnim okresie"
+msgstr "Wskaźnik dynamiki Williams %R, stworzony przez Larry'ego Williamsa, jest wskaźnikiem odwrotnym do oscylatora stochastycznego szybkiego. Wskaźnik ten, zwany również wskaźnikiem %R, odzwierciedla poziom ceny zamknięcia w stosunku do maksymalnej ceny w ostatnim okresie"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
 msgstr "System wskaźników Aroon został opracowany przez Tushara Chande w 1995 r. Wskazuje, czy dany instrument finansowy znajduje się w trendzie oraz jaka jest siła wskazywanego trendu. Istnieją dwa oddzielne wskaźniki: Aroon-Up oraz Aroon-Down. 25-dniowy wskaźnik Aroon-Up mierzy liczbę dni od momentu, gdy wskaźnik osiągnął szczyt. Z kolei 25-dniowy wskaźnik Aroon-Down mierzy liczbę dni od momentu spadku"
@@ -3362,7 +3362,7 @@ msgid "We are required by our license to inform you about what happens to funds 
 msgstr "Nasza licencja zobowiązuje nas, aby poinformować Cię, co dzieje się z Twoimi środkami gromadzonymi na naszych kontach oraz o zakresie ochrony, jaką środki są objęte na wypadek naszej niewypłacalności"
 
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
-msgstr "Znowu nam się udało. W 2008 r. BetOnMarkets.com zdobywa tę samą nagrodę „Najlepszy dostawca zakładów o ustalonej stawce”, co w 2007 r."
+msgstr "Znowu nam się udało. W 2008 r. BetOnMarkets.com zdobywa tę samą nagrodę co w 2007 r.:„Najlepszy dostawca zakładów o ustalonej stawce”"
 
 msgid "We don't usually require any documents as we can verify your identity online"
 msgstr "Zwykle nie wymagamy żadnych dokumentów, ponieważ możemy zweryfikować Twoją tożsamość przez internet"
