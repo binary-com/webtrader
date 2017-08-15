@@ -401,7 +401,7 @@ msgid "A candlestick with a long black body (long line) represents a bearish for
 msgstr "Świeca o długim czarnym korpusie (długa linia) oznacza tendencję zniżkową na rynku. Cena akcji była wysoko i nisko w szerokim zakresie czasowym: cena otwarcia była u góry, a cena zamknięcia u dołu. Świeca o długiej białej linii oznacza tendencję wzrostową na rynku. Cena akcji była wysoko i nisko w szerokim zakresie czasowym: cena otwarcia u dołu, a cena zamknięcia u góry"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr "Świeca o bardzo długim dolnym i górnym cieniu i małym korpusie na japońskim wykresie świecowym. Oznacza to, że rynek traci  równowagę cenową, którą posiadał przed wystąpieniem tej świecy"
+msgstr "Świeca o bardzo długim dolnym i górnym cieniu i małym korpusie na japońskim wykresie świecowym. Oznacza to, że rynek traci równowagę cenową, którą posiadał przed wystąpieniem tej świecy"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
 msgstr "Formacja składająca się z małej białej świecy z krótkim dolnym lub górnym cieniem, po której występuje duża czarna świeca, która „obejmuje” małą białą świecę"
