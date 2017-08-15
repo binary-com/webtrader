@@ -1262,7 +1262,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Engulfing Pattern – formacja objęcia (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr "Ciesz się naszym intuicyjnym interfejsem do handlowania z zaawansowanymi funkcjami, które umożliwiają jednoczesne monitorowanie wszystkich Twoich ulubionych aktywów i rynków. Korzystaj również z niezbędnych wykresów, indeksów aktywów, czy danych historycznych. Ale co najważniejsze, decyduj, co chcesz zobaczyć na ekranie"
+msgstr "Możesz cieszyć się naszym intuicyjnym interfejsem do handlowania z zaawansowanymi funkcjami, które umożliwiają jednoczesne monitorowanie wszystkich Twoich ulubionych aktywów i rynków. Możesz również korzystać z niezbędnych wykresów, indeksów aktywów, czy danych historycznych. Ale co najważniejsze, decydować, co chcesz zobaczyć na ekranie"
 
 msgid "Enter your current password"
 msgstr "Wprowadź swoje obecne hasło"
@@ -3623,7 +3623,7 @@ msgid "information about your trading exprience and personal finance"
 msgstr "informacje dotyczące Twojego doświadczenia w handlowaniu i sytuacji finansowej"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
-msgstr "jest zaawansowaną platformą handlową na komputery stacjonarne firmy Binary. Jej wieloekranowy interfejs zapewnia maksymalną elastyczność i sprosta potrzebom aktywnych graczy pracujących na swoich komputerach PC"
+msgstr "jest zaawansowaną platformą handlową firmy Binary na komputery stacjonarne. Jej wieloekranowy interfejs zapewnia maksymalną elastyczność i sprosta potrzebom aktywnych graczy pracujących na swoich komputerach PC"
 
 msgid "is required. Current spread"
 msgstr "jest wymagana. Obecny spread"
