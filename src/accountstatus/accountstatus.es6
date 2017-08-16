@@ -34,7 +34,7 @@ class AccountStatus {
       const [account_status, website_status, get_settings,
         financial_assessment, mt5_account] = await _this.getStatus(response.authorize);
       _this.tc_accepted = false;
-      _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") ==-1;
+      _this.financial_assessment_submitted = true;
       _this.is_mlt = /^malta$/gi.test(response.authorize.landing_company_name);
       _this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
       _this.is_cr = /^costarica$/gi.test(response.authorize.landing_company_name);
