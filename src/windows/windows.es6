@@ -358,6 +358,15 @@ export const init = function($parentObj) {
          .then((results) =>
             liveapi.cached.authorize()
                .then((data) => {
+                  const oauth = local_storage.get("oauth");
+                  // Set currency for each account.
+                  results.forEach((auth) => {
+                        if(auth.authorize) {
+                              const _curr = oauth.find((e) => e.id == auth.authorize.loginid);
+                              _curr.currency = auth.authorize.currency;
+                        }
+                  });
+                  local_storage.set("oauth", oauth);
                   results.unshift(data);
                   let is_jpy_account = false;
                   for(let i = 0; i < results.length; ++i) {
