@@ -2,33 +2,33 @@
    <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "active"' class='invert-on-hover'>
       <a href="#">
          <span class='ui-icon ui-icon-active-workspace'></span>
-         Active Workspace
+         Active
       </a>
    </li>
    <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "saved"' class='invert-on-hover'>
       <a href="#">
          <span class='ui-icon ui-icon-saved-workspaces'></span>
-         Saved Workspaces
-      </a>
-   </li>
-   <li rv-show='route | eq "all"' rv-on-click='tileDialogs' class='invert-on-hover'>
-      <a href="#">
-         <span class='ui-icon ui-icon-arrange'></span>
-         <span>Arrange Workspace</span>
+         Saved
       </a>
    </li>
    <li rv-show='route | eq "all"' class='invert-on-hover'>
       <a href="#" rv-on-click='file.open_selector'>
          <span class='ui-icon ui-icon-load'></span>
-         <span>Load Workspace</span>
+         <span>Load</span>
       </a>
       <input type="file" rv-on-change='file.upload' style="display: none">
+   </li>
+   <li rv-show='route | eq "all"' rv-on-click='tileDialogs' class='invert-on-hover'>
+      <a href="#">
+         <span class='ui-icon ui-icon-arrange'></span>
+         <span>Arrange</span>
+      </a>
    </li>
 
    <li class='active-workspace-li' rv-show='route | one-of "active" "rename" "saveas" "submenu"'>
       <a href="#" rv-show='route | one-of "active" "submenu"'>
          <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
-         <span rv-text='current_workspace.name' class='ellipsis' rv-on-click='update_route | bind "acitve"'></span>
+         <span rv-text='current_workspace.name' class='ellipsis' rv-on-click='update_route | bind "submenu"'></span>
          <span class='ui-icon ui-icon-sub-menu' rv-on-click='update_route | bind "submenu"'></span>
       </a>
       <a class='active-workspace-rename' rv-show='route | eq "rename"' href="#">
