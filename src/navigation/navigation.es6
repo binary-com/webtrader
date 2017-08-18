@@ -10,9 +10,15 @@ import workspace from '../workspace/workspace.js';
 import '../common/util';
 import 'css!navigation/navigation.css';
 
-const getType = (id) => {
-   if(!id) return;
-   const type = {MLT:"Gaming", MF:"Investment",VRTC:"Virtual",REAL:"Real"};
+const getType = (acc) => {
+   let id = acc.loginid || acc.id;
+   if(!acc || !id) return;
+   const type = {
+         MLT:"Gaming", 
+         MF:"Investment",
+         VRTC:"Virtual",
+         REAL:(acc.currency || '').toUpperCase() || 'Real'
+   };
    id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
    return type[id]+" Account";
 };
@@ -39,7 +45,7 @@ const initLoginButton = (root) => {
 
    state.oauth = local_storage.get('oauth') || [];
    state.oauth = state.oauth.map((e) => {
-      e.type = getType(e.id);
+      e.type = getType(e);
       return e;
    });
    state.showLoginWin = () => {
@@ -127,10 +133,10 @@ const initLoginButton = (root) => {
       state.account.is_virtual = data.authorize.is_virtual;
       state.oauth = local_storage.get('oauth') || [];
       state.oauth = state.oauth.map((e) => {
-         e.type = getType(e.id);
+         e.type = getType(e);
          return e;
       });
-      state.account.type = getType(data.authorize.loginid);
+      state.account.type = getType(data.authorize);
 
       state.currency = data.authorize.currency;
       local_storage.set("currency", state.currency);
@@ -142,6 +148,8 @@ const initLoginButton = (root) => {
          state.show_realaccount_link = (what_todo === 'upgrade-mlt');
          const loginids = Cookies.loginids();
          state.has_real_account = _.some(loginids, {is_real: true});
+         state.has_mf_or_mlt = _.some(loginids, {is_mf: true}) || _.some(loginids, {is_mlt: true});
+         state.show_new_account_link = what_todo === 'new-account';
          state.has_disabled_account =  _.some(loginids, {is_disabled: true});
 
          if(_.some(loginids, {is_disabled: true})) {
@@ -250,17 +258,29 @@ const initLangButton = (root) => {
      b: has MF account => do nothing
   3: company & shortcode anything except above
      a: no MLT, MX, CR account ==> upgrade to MLT, MX or CR
-     b: has MLT, MX, CR account ==> do nothing
+     b: has MLT, MX ==> do nothing
   4: company shortcode == japan
      a: do nothing and show an error message
-
-  returns 'upgrade-mlt' | 'upgrade-mf' | 'do-nothing'
+  5: shortcode = costarica
+     a: No currency
+       I: Do nothing.
+     b: Fiat currency && Not all crypto currency account
+       I: Allow crypto account
+     c: Crypto currency account && No fiat currency account
+      I: Allow fiat account
+     d: Fiat && all crypto account
+      I: do nothing.
+  returns 'upgrade-mlt' | 'upgrade-mf' | 'do-nothing' | 'new_account'
 */
 export const getLandingCompany = () => {
    return liveapi.cached.authorize().then((data) => {
-      return liveapi
-         .cached.send({landing_company: data.authorize.country })
-         .then((data) => {
+      return Promise.all([
+            liveapi.cached.send({landing_company: data.authorize.country }),
+            liveapi.cached.send({landing_company_details: data.authorize.landing_company_name})
+         ])
+         .then((results) => {
+            const data = results[0];
+            const landing_company_details = results[1].landing_company_details || {};
             const financial = data.landing_company.financial_company;
             const gaming = data.landing_company.gaming_company;
 
@@ -280,10 +300,27 @@ export const getLandingCompany = () => {
                return 'upgrade-mf'; // 2-a
             }
             // 3:
-            if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}) || _.some(loginids, {is_cr: true}))
+            if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}))
                return 'do-nothing'; // 3-b
-            return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
             // 4: never happens, japan accounts are not able to log into webtrader.
+            // 5:
+            const cr_accts = _.filter(loginids, {is_cr: true});
+            if( cr_accts.length && landing_company_details.legal_allowed_currencies) {
+               const currencies_config = local_storage.get("currencies_config") || {};
+               const has_fiat = _.some(cr_accts, {type: 'fiat'});
+               const crypto_currencies = _.difference(
+                  landing_company_details.legal_allowed_currencies.filter((curr) => {
+                     return currencies_config[curr].type === 'crypto';
+                  }),
+                  _.filter(cr_accts, {type: 'crypto'}).map((acct) => acct.currency)
+               );
+               const has_all_crypto = crypto_currencies.length === 0;
+               if(has_fiat ^ has_all_crypto) {
+                  return 'new-account'; // 5-b and 5-c
+               }
+               return 'do-nothing'; // 5-d
+            }
+            return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
          });
    });
 }
@@ -313,6 +350,6 @@ export const init = (callback) => {
 
 export default {
    init,
-   getLandingCompany,
+   getLandingCompany
 };
 

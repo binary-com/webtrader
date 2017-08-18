@@ -204,3 +204,13 @@
     border-bottom: 1px dotted #000;
     cursor: pointer;
 }
+.real-dialog .new_account .notice-msg {
+    font-size: 14px;
+}
+.real-dialog .new_account table tbody tr{
+    text-align: center;
+}
+
+.real-dialog .new_account table tbody tr td:first-of-type {
+    line-height: 50px;
+}

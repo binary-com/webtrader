@@ -314,6 +314,7 @@ var Cookies = {
     });
    /* when new accounts are created document.cookie doesn"t change,
     * use local_storage to return the full list of loginids. */
+    var currencies_config = local_storage.get("currencies_config") || {};
     var oauth_loginids = (local_storage.get("oauth") || []).map(function(id){
       return {
         id: id.id,
@@ -322,7 +323,9 @@ var Cookies = {
         is_mf: /MF/gi.test(id.id),
         is_mlt: /MLT/gi.test(id.id),
         is_mx: /MX/gi.test(id.id),
-        is_cr: /CR/gi.test(id.id)
+        is_cr: /CR/gi.test(id.id),
+        currency: id.currency,
+        type: currencies_config[id.currency] ? currencies_config[id.currency].type : ''
       }
     }).filter(function(id) {
       return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;

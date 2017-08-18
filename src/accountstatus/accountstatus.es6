@@ -5,6 +5,7 @@ import notice from "shownotice/shownotice";
 import tc from "../tc/tc";
 import financialassessment from "../financialassessment/financialassessment";
 import taxInformation from "../taxInformation/taxInformation";
+import currency from "../cashier/currency";
 import "../common/util";
 
 const reposition_dialogs = (min) => {
@@ -84,17 +85,23 @@ class AccountStatus {
         is_valid: _ => _this.tc_accepted,
         callback: tc.init
       },
+      risk: {
+        message: "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
+          .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
+        is_valid: _ => _this.financial_assessment_submitted,
+        callback: financialassessment.init
+      },
       tax: {
         message: "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => !_this.is_mf || /crs_tin_information/.test(status),
         callback: taxInformation.init
       },
-      risk: {
-        message: "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
+      currency: {
+        message: "Please set the [_1]currency[_2] of your account"
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
-        is_valid: _ => _this.financial_assessment_submitted,
-        callback: financialassessment.init
+        is_valid: _ => local_storage.get("currency"),
+        callback: currency.check_currency
       },
       authenticate: {
         message: "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available.".i18n()
@@ -121,7 +128,6 @@ class AccountStatus {
       $ele.html(invalid_obj.message);
       // bind click event to open specific dialogs with instructions.
       $ele.find("a").on("click", invalid_obj.callback);
-
       $ele.slideDown(500);
       reposition_dialogs(140);
       is_shown = true;
