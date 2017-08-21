@@ -1,5 +1,5 @@
 ul.workspace-manager.workspace-manager {
-   min-width: 200px;
+   min-width: 140px;
    li {
       > a {
          &:hover { opacity: 1; }
@@ -20,7 +20,10 @@ ul.workspace-manager.workspace-manager {
       }
    }
    li.active-workspace-li {
-      a { span.ellipsis { vertical-align: text-top; } }
+      > a {
+         &:hover { background: #2A3052 !important; }
+         span.ellipsis { vertical-align: text-top; }
+      }
       .ui-icon-gears {
          left: auto;
          right: 0;
@@ -44,6 +47,7 @@ ul.workspace-manager.workspace-manager {
       padding: 0 !important;
       height: 34px;
       padding-right: 20px;
+      &:hover { background: #2A3052 !important; }
       input {
          display: inline-block;
          border-radius: 0;
@@ -86,9 +90,16 @@ ul.workspace-manager.workspace-manager {
       background-position: 10px 50%;
    }
 
-   .ui-icon-sub-menu, .ui-icon-confirm, .ui-icon-delete-w{
+   .ui-icon-sub-menu {
       position: absolute;
-      right: 6px;
+      top: 0; right: 0;
+      width: 36px; height: 34px;
+      background-position: 10px 50%;
+      &:hover { opacity: 0.8; }
+   }
+   .ui-icon-confirm, .ui-icon-delete-w{
+      position: absolute;
+      right: 4px;
       top: calc(50% - 9px);
    }
    .ui-icon-sub-menu { background-image: url('../images/gear.svg') !important; }
