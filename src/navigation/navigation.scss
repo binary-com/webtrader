@@ -42,7 +42,7 @@ body {
          visibility: hidden;
          z-index: 999999;
          opacity: 0;
-         transition: visibility 0.5s, opacity 0.1s linear 0.4s;
+         transition: visibility 0.5s, opacity 0.1s linear 0.1s;
       }
       &:hover > ul {
          visibility: visible;
@@ -53,6 +53,7 @@ body {
   .trade, .instruments, .resources {
       .ui-menu .ui-menu-item {
          list-style-image: none !important;
+         white-space: nowrap;
          .ui-menu-item-wrapper {
             padding: 7px 1em 7px .4em;
          }
@@ -90,6 +91,10 @@ body {
 #nav-menu .container {
   text-align: center;
   display: flex;
+
+  .account-menu {
+     height: 70px;
+  }
 }
 .top-nav-menu {
   margin: 0 auto 0 auto;
@@ -119,5 +124,6 @@ body {
 
 .logo-wrapper {
   float: left;
+  height: 70px;
   margin-left: 5px;
 }
