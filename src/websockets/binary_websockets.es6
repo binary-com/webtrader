@@ -230,6 +230,7 @@ export const invalidate = () => {
    for(const i in cached_promises)
       if(needs_authentication(cached_promises[i].data) || ('authorize' in cached_promises[i].data))
          delete cached_promises[i];
+   is_authenitcated_session = false;
 }
 
 /* first authenticate and then send the request */
