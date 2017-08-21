@@ -220,6 +220,7 @@ export const invalidate = () => {
    local_storage.remove('oauth');
    local_storage.remove('authorize');
    fire_event("reset_realitycheck");
+   fire_event("reset_accountstatus");
 
    api.send({logout: 1}) /* try to logout and if it fails close the socket */
       .catch((err) =>{
@@ -402,7 +403,7 @@ export const switch_account = (id) => {
       .catch((err) => console.error(err));
 
    return api.cached.authorize().then(
-      () => fire_event("switch_account")
+      (data) => fire_event("switch_account", data) 
    );
 }
 

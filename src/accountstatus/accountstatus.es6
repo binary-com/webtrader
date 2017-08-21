@@ -23,7 +23,7 @@ class AccountStatus {
   constructor() {
     const _this = this;
     // Initiating account check on login.
-    liveapi.events.on("login", async (response) => {
+    const onLogin = async (response) => {
       const $ele = $("#msg-notification");
       if (+response.authorize.is_virtual === 1) {
         $ele.is(":visible") && $ele.slideUp(500);
@@ -52,14 +52,16 @@ class AccountStatus {
       }
 
       _this.checkStatus(response.authorize, account_status.get_account_status.status);
-    });
+    };
+    liveapi.events.on("login", onLogin);
+    // liveapi.events.on("switch_account", onLogin);
 
     // Hide msg bar on logout.
-    liveapi.events.on('logout', _ => {
-      const $ele = $("#msg-notification");
-      $ele.is(":visible") && $ele.slideUp(500);
-      is_shown = false;
-    });
+     liveapi.events.on('reset_accountstatus', _ => {
+         const $ele = $("#msg-notification");
+         $ele.is(":visible") && $ele.slideUp(500);
+         is_shown = false;
+     });
   }
 
   getStatus() {
