@@ -46,6 +46,9 @@ window.requirejs.config({
         "timepicker": {
             deps: ["jquery-ui", "jquery"]
         },
+        "jquery.dialogextend": {
+           deps: ["jquery-ui"]
+        },
         "jquery-ui": {
             deps: ["jquery"]
         },
