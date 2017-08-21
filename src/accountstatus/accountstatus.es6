@@ -9,22 +9,22 @@ import currency from "../cashier/currency";
 import "../common/util";
 
 const reposition_dialogs = (min) => {
-   $('.webtrader-dialog').parent().each(function() {
-      const top = $(this).css('top').replace('px', '') * 1;
-      if(top <= min)  {
-         $(this).animate({ top: `${min}px` }, 300);
-      }
-   });
+  $('.webtrader-dialog').parent().each(function () {
+    const top = $(this).css('top').replace('px', '') * 1;
+    if (top <= min) {
+      $(this).animate({ top: `${min}px` }, 300);
+    }
+  });
 };
 let is_shown = false;
 
 class AccountStatus {
 
   constructor() {
-    const _this = this,
-      $ele = $("#msg-notification");
+    const _this = this;
     // Initiating account check on login.
     liveapi.events.on("login", async (response) => {
+      const $ele = $("#msg-notification");
       if (+response.authorize.is_virtual === 1) {
         $ele.is(":visible") && $ele.slideUp(500);
         is_shown = false;
@@ -48,17 +48,18 @@ class AccountStatus {
 
       // Check whether the high risk clients have submitted the financial_assessment form.
       if (account_status.get_account_status.risk_classification === "high" || _this.is_mf) {
-        _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") ==-1;
+        _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") == -1;
       }
-      
+
       _this.checkStatus(response.authorize, account_status.get_account_status.status);
     });
 
     // Hide msg bar on logout.
-     liveapi.events.on('logout', _ => {
-         $ele.is(":visible") && $ele.slideUp(500);
-         is_shown = false;
-     });
+    liveapi.events.on('logout', _ => {
+      const $ele = $("#msg-notification");
+      $ele.is(":visible") && $ele.slideUp(500);
+      is_shown = false;
+    });
   }
 
   getStatus() {
@@ -122,7 +123,7 @@ class AccountStatus {
     }
 
     // Getting the invalid account status.
-    const invalid_obj = _.find(model, obj => !obj.is_valid())
+    const invalid_obj = _.find(model, obj => !obj.is_valid());
     if (invalid_obj) {
       // Show message
       $ele.html(invalid_obj.message);

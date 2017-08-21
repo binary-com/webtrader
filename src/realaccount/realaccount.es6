@@ -444,9 +444,8 @@ const init_state = (root, what_todo) => {
             .then(() => {
                liveapi.send({set_account_currency: curr}).then(() => {
                   local_storage.set("currency", curr);
-                  //For updating balance in navigation
-                  liveapi.send({ balance: 1, subscribe: 1 })
-                    .catch(function (err) { console.error(err); });
+                  //Re-authorize.
+                  liveapi.cached.authorize(true)
                   real_win && real_win.dialog('close');
                   real_win_li.hide();
                });
@@ -463,7 +462,6 @@ const init_state = (root, what_todo) => {
    /* get the residence field and its states */
    const residence_promise = liveapi.send({ get_settings: 1 })
       .then((data) => {
-         console.log(data);
          data = data.get_settings;
          state.user.salutation = data.salutation || state.user.salutation;
          state.user.first_name = data.first_name || '';

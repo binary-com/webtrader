@@ -431,13 +431,14 @@ export const cached  = {
    },
    /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
-   authorize: () => {
+   authorize: (re_authorize) => {
       const oauth = local_storage.get('oauth');
       const token = oauth && oauth[0] && oauth[0].token,
          key = JSON.stringify({ authorize: token });
 
-      if (is_authenitcated_session && token && cached_promises[key])
-         return cached_promises[key].promise;
+      if (is_authenitcated_session && token && cached_promises[key] && !re_authorize){
+            return cached_promises[key].promise;
+      }
 
       return token ? authenticate(token) : /* we have a token => autheticate */
          Promise.reject('Please log in.'.i18n());
