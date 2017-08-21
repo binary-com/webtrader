@@ -1658,7 +1658,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "Czy można wpłacić te same środki, korzystając z innych metod płatności?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr "Cechą charakterystyczną jest biała świeca, po której występuje kolejna biała świeca z ceną otwarcia powyżej pierwszej świecy (luka górna), a następnie świeca czarna zniżkująca o cenie otwarcia poniżej ceny zamknięcia drugiego dnia (luka dolna), a jej dół  znajduje się blisko ceny zamknięcia dnia pierwszego. Można się spodziewać, że trend wzrostowy będzie trwał"
+msgstr "Cechą charakterystyczną jest biała świeca, po której występuje kolejna biała świeca z ceną otwarcia powyżej pierwszej świecy (luka górna), a następnie świeca czarna zniżkująca o cenie otwarcia poniżej ceny zamknięcia drugiego dnia (luka dolna), której dół znajduje się blisko ceny zamknięcia dnia pierwszego. Można się spodziewać, że trend wzrostowy będzie trwał"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "Czasami istnieje możliwość sprzedaży opcji przed upływem terminu ważności, ale jedynie wtedy, gdy można ustalić uczciwą cenę. Jeżeli taka opcja jest dostępna, przy Twoim zakładzie w portfolio będzie widoczny niebieski przycisk „Sprzedaj”"
@@ -1703,10 +1703,10 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "Kopnięcie – hossa/bessa określona przez dłuższą świecę marubozu (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "Formacje kopnięcia (Kicking) na wykresie świecowym tworzą się, gdy mamy dwie świece marubozu o długim korpusie – jedną białą i jedną czarną – z luką pomiędzy nimi. Formacje kopnięcia o tendencji zniżkowej przybiera formę czarnej lub wypełnionej świecy bez żadnych cieni, po których występuje luka górna z białą lub pustą świecą również pozbawioną cieni"
+msgstr "Formacje kopnięcia (Kicking) na wykresie świecowym tworzą się, gdy mamy dwie świece marubozu o długim korpusie – jedną białą i jedną czarną – z luką pomiędzy nimi. Formacje kopnięcia o tendencji zniżkowej przybierają formę czarnej lub wypełnionej świecy bez żadnych cieni, po których występuje luka górna z białą lub pustą świecą również pozbawioną cieni"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "Formacje kopnięcia (Kicking) na wykresie świecowym tworzą się, gdy mamy dwie świece marubozu o długim korpusie – jedną białą i jedną czarną – z luką pomiędzy nimi. Formacje kopnięcia o tendencji zniżkowej przybiera formę czarnej lub wypełnionej świecy bez żadnych cieni, po których występuje luka górna z białą lub pustą świecą również pozbawioną cieni"
+msgstr "Formacje kopnięcia (Kicking) na wykresie świecowym tworzą się, gdy mamy dwie świece marubozu – jedną białą i jedną czarną – z luką pomiędzy nimi. Formacje kopnięcia o tendencji zniżkowej przybierają formę czarnej lub wypełnionej świecy bez żadnych cieni, po których występuje luka górna z białą lub pustą świecą również pozbawioną cieni"
 
 msgid "Known risks"
 msgstr "Brak ukrytego ryzyka"
@@ -1739,7 +1739,7 @@ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ire
 msgstr "Licencje i regulacje na Malcie, Wyspie Man, w Zjednoczonym Królestwie, Irlandii i Japonii"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
-msgstr "Podobnie jak wykładnicza średnia krocząca (EMA) liniowa ważona średnia krocząca (LWMA) skupia się bardziej na cenach z ostatniego okresu, a mniej na cenach zamknięcia z początku badanego okresu. Z tego powodu szybciej wykrywają zmiany trendu, ale są bardziej podatne na zakłócenia na rynku"
+msgstr "Podobnie jak wykładnicza średnia krocząca (EMA) liniowa ważona średnia krocząca (LWMA) skupia się bardziej na cenach z ostatniego okresu, a mniej na cenach zamknięcia z początku badanego okresu. Z tego powodu szybciej wykrywa zmiany trendu, ale jest bardziej podatna na zakłócenia na rynku"
 
 msgid "Line"
 msgstr "Linia"
