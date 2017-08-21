@@ -5,15 +5,16 @@ import notice from "shownotice/shownotice";
 import tc from "../tc/tc";
 import financialassessment from "../financialassessment/financialassessment";
 import taxInformation from "../taxInformation/taxInformation";
+import currency from "../cashier/currency";
 import "../common/util";
 
 const reposition_dialogs = (min) => {
-   $('.webtrader-dialog').parent().each(function() {
-      const top = $(this).css('top').replace('px', '') * 1;
-      if(top <= min)  {
-         $(this).animate({ top: `${min}px` }, 300);
-      }
-   });
+  $('.webtrader-dialog').parent().each(function () {
+    const top = $(this).css('top').replace('px', '') * 1;
+    if (top <= min) {
+      $(this).animate({ top: `${min}px` }, 300);
+    }
+  });
 };
 let is_shown = false;
 
@@ -47,9 +48,9 @@ class AccountStatus {
 
       // Check whether the high risk clients have submitted the financial_assessment form.
       if (account_status.get_account_status.risk_classification === "high" || _this.is_mf) {
-        _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") ==-1;
+        _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") == -1;
       }
-      
+
       _this.checkStatus(response.authorize, account_status.get_account_status.status);
     };
     liveapi.events.on("login", onLogin);
@@ -87,17 +88,23 @@ class AccountStatus {
         is_valid: _ => _this.tc_accepted,
         callback: tc.init
       },
+      risk: {
+        message: "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
+          .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
+        is_valid: _ => _this.financial_assessment_submitted,
+        callback: financialassessment.init
+      },
       tax: {
         message: "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => !_this.is_mf || /crs_tin_information/.test(status),
         callback: taxInformation.init
       },
-      risk: {
-        message: "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
+      currency: {
+        message: "Please set the [_1]currency[_2] of your account"
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
-        is_valid: _ => _this.financial_assessment_submitted,
-        callback: financialassessment.init
+        is_valid: _ => local_storage.get("currency"),
+        callback: currency.check_currency
       },
       authenticate: {
         message: "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available.".i18n()
@@ -118,13 +125,12 @@ class AccountStatus {
     }
 
     // Getting the invalid account status.
-    const invalid_obj = _.find(model, obj => !obj.is_valid())
+    const invalid_obj = _.find(model, obj => !obj.is_valid());
     if (invalid_obj) {
       // Show message
       $ele.html(invalid_obj.message);
       // bind click event to open specific dialogs with instructions.
       $ele.find("a").on("click", invalid_obj.callback);
-
       $ele.slideDown(500);
       reposition_dialogs(140);
       is_shown = true;

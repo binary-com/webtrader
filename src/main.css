@@ -339,7 +339,7 @@ button[disabled] {
 }
 
 .dialog-confirm.ui-dialog .ui-widget-content {
-    background: #f2f2f2;
+    background: #ffffff;
     border: none;
     padding: 0.5em 1em 0em 1em;
     text-align: center
@@ -347,6 +347,7 @@ button[disabled] {
 .dialog-confirm.ui-dialog .ui-selectmenu-menu ul{
   background: #fff;
   padding: 0px;
+  border: 1px solid #cecece;
 }
 /* Hide Dialog title-bar*/
 .dialog-confirm.ui-dialog .ui-dialog-titlebar {

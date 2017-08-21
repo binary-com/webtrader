@@ -8,7 +8,7 @@ import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
 import _ from 'lodash';
 import moment from 'moment';
-import navigation from 'navigation/navigation';
+import { getLandingCompany } from 'navigation/navigation';
 import html from 'text!realaccount/realaccount.html';
 import 'css!realaccount/realaccount.css';
 
@@ -25,7 +25,7 @@ export const init = (li) => {
    real_win_li = li;
    li.click(() => {
       if (!real_win) {
-         navigation.getLandingCompany()
+         getLandingCompany()
             .then(
             (what_todo) => init_real_win(html, what_todo)
             )
@@ -40,7 +40,8 @@ const init_real_win = (root, what_todo) => {
    root = $(root).i18n();
    const _title = {
       'upgrade-mlt': 'Real Money Account Opening'.i18n(),
-      'upgrade-mf': 'Financial Account Opening form'.i18n()
+      'upgrade-mf': 'Financial Account Opening form'.i18n(),
+      'new-account': 'New Account'.i18n(),
    }[what_todo];
 
    real_win = windows.createBlankWindow(root, {
@@ -128,7 +129,8 @@ const init_state = (root, what_todo) => {
          place_of_birth: '-',
          country_array: [{ text: '-', value: '-' }],
          tax_residence: '',
-         tax_identification_number: ''
+         tax_identification_number: '',
+         available_currencies: []
 
       },
       financial: {
@@ -402,6 +404,59 @@ const init_state = (root, what_todo) => {
       real_win.dialog('widget').trigger('dialogresizestop');
    };
 
+   state.set_account_opening_reason = () => {
+      var req = { set_settings: 1 };
+      req.account_opening_reason = state.user.account_opening_reason;
+      state.user.disabled = true;
+      liveapi.send(req).then((data) => {
+         state.user.show_account_opening_reason = false;
+      }).catch((err) => {
+         error_handler(err);
+         state.user.disabled = false;
+      });
+   };
+
+   state.create_new_account = (curr) => {
+      const req = {
+         new_account_real: 1,
+         salutation: state.user.salutation || '',
+         first_name: state.user.first_name || '',
+         last_name: state.user.last_name || '',
+         date_of_birth: state.user.date_of_birth || '',
+         address_line_1: state.user.address_line_1 || '',
+         address_line_2: state.user.address_line_2 || '',
+         address_city: state.user.city_address || '',
+         address_state: state.user.state_address || '',
+         address_postcode: state.user.address_postcode || '',
+         phone: state.user.phone || '',
+         account_opening_reason: state.user.account_opening_reason,
+         residence: state.user.residence,
+      };
+      liveapi.send(req).then((data) => {
+         const info = data.new_account_real;
+         const oauth = local_storage.get('oauth');
+         oauth.push({ id: info.client_id, token: info.oauth_token, currency: curr, is_virtual: 0 });
+         local_storage.set('oauth', oauth);
+         $.growl.notice({ message: 'Account successfully created' });
+         $.growl.notice({ message: 'Switching to your new account ...' });
+         /* login with the new account */
+         return liveapi.switch_account(info.client_id)
+            .then(() => {
+               liveapi.send({set_account_currency: curr}).then(() => {
+                  local_storage.set("currency", curr);
+                  //Re-authorize.
+                  liveapi.cached.authorize(true)
+                  real_win && real_win.dialog('close');
+                  real_win_li.hide();
+               });
+            });
+      }).catch((err) => {
+         error_handler(err);
+         real_win && real_win.dialog('close');
+         real_win_li.hide();
+      })
+   };
+
    real_win_view = rv.bind(root[0], state);
 
    /* get the residence field and its states */
@@ -421,6 +476,7 @@ const init_state = (root, what_todo) => {
          state.user.phone = data.phone || '';
          state.user.residence = data.country_code || '';
          state.user.residence_name = data.country || '';
+         state.user.show_account_opening_reason = state.user.account_opening_reason === '';
       })
       .catch(error_handler);
 
@@ -445,6 +501,45 @@ const init_state = (root, what_todo) => {
          state.user.state_address = state.user.state_address_array[0].value;
       })
       .catch(error_handler);
+
+   // Gets available currency for the current user.
+   const update_currencies = () => {
+      const authorize = local_storage.get("authorize");
+      liveapi.cached.send({ landing_company_details: authorize.landing_company_name })
+         .then((data) => {
+            if (!data.landing_company_details || !data.landing_company_details.legal_allowed_currencies)
+               return;
+            const currencies = data.landing_company_details.legal_allowed_currencies;
+            const currencies_config = local_storage.get("currencies_config") || {};
+            const cr_accts = _.filter(Cookies.loginids(), { is_cr: true });
+            const has_fiat = _.some(cr_accts, { type: 'fiat' });
+            if (!has_fiat)
+               state.user.available_currencies = currencies.filter((c) => {
+                  return currencies_config[c] && currencies_config[c].type === 'fiat';
+               });
+            else
+               state.user.available_currencies = _.difference(
+                  currencies.filter((c) => {
+                     return currencies_config[c] && currencies_config[c].type === 'crypto';
+                  }),
+                  _.filter(cr_accts, { type: 'crypto' }).map((acc) => acc.currency || '')
+               );
+         });
+   };
+   what_todo === 'new-account' && update_currencies();
 }
 
 export default { init }
+// req.salutation = state.user.salutation;
+// req.first_name = state.user.first_name;
+// req.last_name = state.user.last_name;
+// req.account_opening_reason = state.user.account_opening_reason;
+// req.date_of_birth = state.user.date_of_birth;
+// req.address_line_1 = state.user.address_line_1;
+// req.address_line_2 = state.user.address_line_1;
+// req.city_address = state.user.city_address;
+// req.state_address = state.user.state_address;
+// req.address_postcode = state.user.address_postcode;
+// req.phone = state.user.phone;
+// req.residence = state.user.residence;
+// req.residence_name = state.user.residence_name;

@@ -169,7 +169,8 @@ rv.formatters.debounce = (value, callback, timeout = 250) => {
    callback._timer_notify = setTimeout(callback.bind(undefined,value), timeout);
    return value;
 }
-
+// Filter array based on property.
+rv.formatters.filter = (array, prop, value) => _.filter(array, (e) => e[prop] === value );
 /* turn current select item into a jquery-ui-selectmenu, update value on change */
 rv.binders.selectmenu = {
    priority: 101,
@@ -225,6 +226,7 @@ rv.binders['dom-*'] = function (el, value) {
 
 /* bindar for jqueyr ui selectmenu options */
 rv.binders['selectmenu-*'] = function (el, value) {
+   this.args[0] = {appendto: 'appendTo'}[this.args[0]] || this.args[0];
    $(el).selectmenu('option', this.args[0], value);
 }
 /*binder for hidding overflow on selctmenu*/

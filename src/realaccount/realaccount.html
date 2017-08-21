@@ -1,11 +1,11 @@
 <div class='real-dialog'>
-    <div class='user' rv-show='route.value |  eq "user"'>
+    <div class='user' rv-show='route.value |  eq "user"' rv-if="what_todo | not-eq 'new-account'">
         <div class='row'>
             <span class="title-big">Personal Details</span>
         </div>
         <div class='row'>
             <span class='title'>Title</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='100' rv-selectmenu="user.salutation" rv-selectrefresh="account.salutation_array" rv-selectmenu-disabled="input_disabled">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='100' rv-selectmenu="user.salutation" rv-selectrefresh="account.salutation_array" rv-selectmenu-disabled="input_disabled">
                 <option rv-each-row="user.salutation_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
@@ -33,7 +33,7 @@
         </div>
         <div class="row">
             <span class='title'>Account opening reason</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="user.account_opening_reason" rv-selectrefresh="user.account_opening_reason_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="user.account_opening_reason" rv-selectrefresh="user.account_opening_reason_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="user.account_opening_reason_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -85,7 +85,7 @@
         </div>
         <div class='row'>
             <span class='title'>State/province/region</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='200' rv-selectmenu="user.state_address" rv-selectrefresh="user.state_address_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='200' rv-selectmenu="user.state_address" rv-selectrefresh="user.state_address_array">
                 <option rv-each-row="user.state_address_array" rv-value="row.value">{row.text}</option>
             </select>
         </div>
@@ -110,7 +110,7 @@
         </div>
         <div class='row' rv-show="input_disabled | eq false">
             <span class='title'>Security question</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="user.secret_question_inx" rv-selectrefresh="user.secret_question_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="user.secret_question_inx" rv-selectrefresh="user.secret_question_array">
                 <option rv-each-row="user.secret_question_array" rv-value="index">{row | i18n}</option>
             </select>
         </div>
@@ -140,7 +140,7 @@
         </div>
         <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
             <span class="title">Place of birth</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="user.place_of_birth" rv-selectrefresh="user.country_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="user.place_of_birth" rv-selectrefresh="user.country_array">
                 <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
             </select>
         </div>
@@ -193,13 +193,13 @@
         <div class='row'>
             <span class='title'>Forex trading experience</span>
             <span class="please-select" rv-show="financial.forex_trading_experience | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.forex_trading_experience" rv-selectrefresh="financial.experience_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.forex_trading_experience" rv-selectrefresh="financial.experience_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
             </select>
             <span class='title'>Forex trading frequency</span>
             <span class="please-select" rv-show="financial.forex_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.forex_trading_frequency" rv-selectrefresh="financial.frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.forex_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -207,13 +207,13 @@
         <div class='row'>
             <span class='title'>Indices trading experience</span>
             <span class="please-select" rv-show="financial.indices_trading_experience | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.indices_trading_experience" rv-selectrefresh="financial.experience_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.indices_trading_experience" rv-selectrefresh="financial.experience_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
             </select>
             <span class='title'>Indices trading frequency</span>
             <span class="please-select" rv-show="financial.indices_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.indices_trading_frequency" rv-selectrefresh="financial.frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.indices_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -221,13 +221,13 @@
         <div class='row'>
             <span class='title'>Commodities trading experience</span>
             <span class="please-select" rv-show="financial.commodities_trading_experience | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.commodities_trading_experience" rv-selectrefresh="financial.experience_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.commodities_trading_experience" rv-selectrefresh="financial.experience_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
             </select>
             <span class='title'>Commodities trading frequency</span>
             <span class="please-select" rv-show="financial.commodities_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.commodities_trading_frequency" rv-selectrefresh="financial.frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.commodities_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -235,13 +235,13 @@
         <div class='row'>
             <span class='title'>Stocks trading experience</span>
             <span class="please-select" rv-show="financial.stocks_trading_experience | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.stocks_trading_experience" rv-selectrefresh="financial.experience_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.stocks_trading_experience" rv-selectrefresh="financial.experience_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
             </select>
             <span class='title'>Stocks trading frequency</span>
             <span class="please-select" rv-show="financial.stocks_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.stocks_trading_frequency" rv-selectrefresh="financial.frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.stocks_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -255,7 +255,7 @@
             </select>
             <span class='title'>Binary options or other financial derivatives<br/>trading frequency</span>
             <span class="please-select" rv-show="financial.other_derivatives_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.other_derivatives_trading_frequency" rv-selectrefresh="financial.frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.other_derivatives_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -263,7 +263,7 @@
         <div class='row'>
             <span class='title'>Other financial instruments trading experience</span>
             <span class="please-select" rv-show="financial.other_instruments_trading_experience | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.other_instruments_trading_experience" rv-selectrefresh="financial.experience_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.other_instruments_trading_experience" rv-selectrefresh="financial.experience_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -271,7 +271,7 @@
         <div class='row'>
             <span class='title'>Other financial instruments trading frequency</span>
             <span class="please-select" rv-show="financial.other_instruments_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.other_instruments_trading_frequency" rv-selectrefresh="financial.frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.other_instruments_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -279,7 +279,7 @@
         <div class='row'>
             <span class='title'>Income Source</span>
             <span class="please-select" rv-show="financial.income_source | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.income_source" rv-selectrefresh="financial.income_source_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.income_source" rv-selectrefresh="financial.income_source_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.income_source_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -287,7 +287,7 @@
         <div class='row'>
             <span class='title'>Employment status</span>
             <span class="please-select" rv-show="financial.employment_status | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.employment_status" rv-selectrefresh="financial.income_source_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.employment_status" rv-selectrefresh="financial.income_source_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.employment_status_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -295,7 +295,7 @@
         <div class='row'>
             <span class='title'>Industry of Employment</span>
             <span class="please-select" rv-show="financial.employment_industry | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.employment_industry" rv-selectrefresh="financial.employment_industry_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.employment_industry" rv-selectrefresh="financial.employment_industry_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.employment_industry_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -303,7 +303,7 @@
         <div class="row">
             <span class="title">Occupation</span>
             <span class="please-select" rv-show="financial.occupation | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.occupation" rv-selectrefresh="financial.occupation_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.occupation" rv-selectrefresh="financial.occupation_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.occupation_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -311,7 +311,7 @@
         <div class="row">
             <span class="title">Source of wealth</span>
             <span class="please-select" rv-show="financial.source_of_wealth | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.source_of_wealth" rv-selectrefresh="financial.occupation_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.source_of_wealth" rv-selectrefresh="financial.occupation_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.source_of_wealth_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -319,7 +319,7 @@
         <div class='row'>
             <span class='title'>Level of Education</span>
             <span class="please-select" rv-show="financial.education_level | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.education_level" rv-selectrefresh="financial.education_level_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.education_level" rv-selectrefresh="financial.education_level_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.education_level_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -327,7 +327,7 @@
         <div class='row'>
             <span class='title'>Net Annual Income</span>
             <span class="please-select" rv-show="financial.net_income | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.net_income" rv-selectrefresh="financial.net_income_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.net_income" rv-selectrefresh="financial.net_income_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.net_income_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -335,7 +335,7 @@
         <div class='row'>
             <span class='title'>Estimated Net Worth</span>
             <span class="please-select" rv-show="financial.estimated_worth | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.estimated_worth" rv-selectrefresh="financial.estimated_worth_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.estimated_worth" rv-selectrefresh="financial.estimated_worth_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.estimated_worth_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -344,7 +344,7 @@
         <div class='row'>
             <span class='title'>Anticipated account turnover</span>
             <span class="please-select" rv-show="financial.account_turnover | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-width='330' rv-selectmenu="financial.account_turnover" rv-selectrefresh="financial.account_turnover_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.account_turnover" rv-selectrefresh="financial.account_turnover_array">
                     <option value="" selected="selected" disabled="disabled">Please select</option>
                     <option rv-each-row="financial.account_turnover_array" rv-value="row">{row | i18n}</option>
             </select>
@@ -384,5 +384,32 @@
     </span>
         <button rv-on-click='risk.accept'>Accept</button>
         <button rv-on-click='risk.decline'>Decline</button>
+    </div>
+
+    <div class="new_account" rv-if="what_todo | eq 'new-account'">
+        <div rv-if="user.show_account_opening_reason">
+            <p> Please select an account opening reason before continuing</p>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="user.account_opening_reason" rv-selectrefresh="user.account_opening_reason_array">
+                <option rv-each-row="user.account_opening_reason_array" rv-value="row">{row | i18n}</option>
+            </select>
+            <button rv-on-click="set_account_opening_reason" rv-disabled="user.disabled">Ok</button>
+        </div>
+        <div rv-if="user.show_account_opening_reason | negate">
+            <p class="notice-msg">Note: You can only have one fiat currency account and one of each cryptocurrency account.</p>
+            <table>
+                <thead>
+                    <th>Available Currencies</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr rv-each-curr="user.available_currencies">
+                        <td>{curr}</td>
+                        <td>
+                            <button rv-on-click="create_new_account | bind curr">Create</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
