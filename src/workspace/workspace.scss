@@ -15,7 +15,7 @@ ul.workspace-manager.workspace-manager {
       }
       span.ellipsis {
          text-overflow: ellipsis;
-         max-width: 180px;
+         max-width: 160px;
          overflow: hidden;
       }
    }
@@ -36,7 +36,7 @@ ul.workspace-manager.workspace-manager {
       span.ellipsis {
          display: inline-block;
          line-height: 18px;
-         max-width: 150px;
+         max-width: 135px;
       }
       ul.hide {
          opacity: 0 !important;
@@ -94,7 +94,7 @@ ul.workspace-manager.workspace-manager {
       position: absolute;
       top: 0; right: 0;
       width: 36px; height: 34px;
-      background-position: 10px 50%;
+      background-position: 15px 50%;
       &:hover { opacity: 0.8; }
    }
    .ui-icon-confirm, .ui-icon-delete-w{
