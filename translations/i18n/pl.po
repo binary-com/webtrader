@@ -2345,7 +2345,7 @@ msgid "Price the trade"
 msgstr "Wyceń zakład"
 
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
-msgstr "Odnotowuje się spadkową tendencję cenową aż do momentu rozpoczęcia formacji, czyli czarnej świecy o długim korpusie. Następnie występuje biała świeca mieszcząca się w środku korpusu poprzedniej świecy, a potem świeca harami o tendencji wzrostowej. Ostatni dzień formacji to świeca potwierdzająca – biała zamykająca powyżej poprzedniej ceny zamknięcia. Takie połączenie sugeruje, że nastąpiła zmiana trendu cenowego"
+msgstr "Odnotowuje się spadkową tendencję cenową aż do momentu rozpoczęcia formacji, czyli czarnej świecy o długim korpusie. Następnie występuje biała świeca mieszcząca się w środku korpusu poprzedniej świecy, a potem świeca harami o tendencji wzrostowej. Ostatni dzień formacji to świeca potwierdzająca – biała zamykająca się powyżej poprzedniej ceny zamknięcia. Takie połączenie sugeruje, że nastąpiła zmiana trendu cenowego"
 
 msgid "Primary"
 msgstr "Podstawowe"
