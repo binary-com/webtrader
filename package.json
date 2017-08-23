@@ -15,7 +15,6 @@
     "babel-preset-env": "^1.5.1",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
-    "bower": "^1.8.0",
     "concurrently": "^3.3.0",
     "connect": "^3.6.1",
     "grunt": "^1.0.1",
@@ -59,8 +58,7 @@
     "sloc": "grunt sloc",
     "major-rel": "grunt bump:major",
     "minor-rel": "grunt bump:minor",
-    "patch-rel": "grunt bump:patch",
-    "postinstall": "bower install"
+    "patch-rel": "grunt bump:patch"
   },
   "repository": {
     "type": "git",
@@ -79,15 +77,29 @@
     "url": "https://github.com/binary-com/webtrader/issues"
   },
   "dependencies": {
+    "alameda": "^1.2.0",
     "binary-com-jquery-dialogextended": "binary-com/jquery-dialogextend#master",
     "binary-com-jquery-ui-timepicker": "^1.0.1",
     "chosen-js": "^1.6.2",
+    "clipboard": "^1.7.1",
+    "datatables.net": "^1.10.15",
+    "datatables.net-dt": "^1.10.15",
+    "datatables.net-jqui": "^1.10.15",
+    "es6-promise": "^4.1.1",
     "highstock-release": "^5.0.10",
+    "intl": "^1.2.5",
+    "jquery": "^3.2.1",
+    "jquery-sparkline": "^2.4.0",
     "jquery-ui-dist": "1.12.0",
     "jquery-ui-iconfont": "^2.1.0",
+    "jquery.growl": "^1.3.1",
     "moment": "^2.18.1",
+    "npm-modernizr": "^2.8.3",
     "regenerator-runtime": "^0.10.1",
+    "require-css": "^0.1.10",
+    "rivets": "0.8.1",
     "text": "requirejs/text",
+    "vanderlee-colorpicker": "^1.2.13",
     "webtrader-charts": "^0.3.6"
   },
   "contributors": [
