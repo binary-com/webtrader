@@ -2996,7 +2996,7 @@ msgid "The profit is the difference between the purchase price (the stake) and t
 msgstr "Zysk to różnica między ceną zakupu (stawką) a wypłatą z wygrywającego zakładu"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr "Zmiana nazwy to naturalna ewolucja platformy, która ma coraz większy udział w niezwykle konkurencyjnym rynku handlu opcjami binarnymi. Nowa marka odzwierciedla naturę biznesu, a nasze nowe hasło – Ostre ceny, inteligentny handel – wyraża nasze wartości i poświęcenie dla klientów"
+msgstr "Zmiana nazwy to naturalna ewolucja platformy, która ma coraz większy udział w niezwykle konkurencyjnym rynku handlu opcjami binarnymi. Nowa marka odzwierciedla naturę biznesu, a nasze nowe hasło – Atrakcyjne ceny, inteligentny handel – wyraża nasze wartości i poświęcenie dla klientów"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
 msgstr "Cena odsprzedaży wskazuje aktualną cenę rynkową danego kontraktu. Dokładamy wszelkich starań, aby ceny odsprzedaży były zawsze dostępne, jednak mogą one nie być dostępne w każdym czasie po zakupie. Zobacz sekcję „Sprzedaj opcję”, aby uzyskać więcej informacji na temat sprzedaży kontraktów przed ich terminem wygaśnięcia"
@@ -3011,7 +3011,7 @@ msgid "The sum of price over selected period"
 msgstr "Suma cen w wybranym okresie"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
-msgstr "Wariancja i powiązane z nią odchylenie standardowe to wskaźniki pokazujące jak szeroko rozrzucone są wartości jakiejś wielkości. Innymi słowy, są miarami zmienności. Wariancja to średnią arytmetyczną kwadratów odchyleń poszczególnych wartości cechy od wartości oczekiwanej"
+msgstr "Wariancja i powiązane z nią odchylenie standardowe to wskaźniki pokazujące jak szeroko rozrzucone są wartości danej wielkości. Innymi słowy, są miarami zmienności. Wariancja to średnia arytmetyczna kwadratów odchyleń poszczególnych wartości cechy od wartości oczekiwanej"
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
 msgstr "Wskaźniki zmienności symulują różne sytuacje rynkowe i zapewniają doskonałe warunki do przećwiczenia strategii handlowych w różnych warunkach rynkowych. Indeksy są zależne od zmienności rynki i pomagają użytkownikom wypróbować różne scenariusze – wysokiej i niskiej zmienności, trendów wzrostowych i spadkowych"
