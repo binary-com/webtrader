@@ -2837,22 +2837,22 @@ msgid "The Donchian Channel is an indicator used in market trading developed by 
 msgstr "Kanał Donchiana jest wskaźnikiem handlowym stworzonym przez Richarda Donchiana. Uwzględnia najwyższą i najniższą cenę w określonej liczbie ostatnich okresów. Obszar między ceną niską a wysoką jest kanałem dla wybranego okresu"
 
 msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr "Podwójna wykładnicza średnia krocząca (CKS) stworzona przez Patricka Mulloya ma na celu usunięcie opóźnienie czasowe średnich kroczących poprzez nałożenie większej wagi na wartości z niedawnych okresów"
+msgstr "Podwójna wykładnicza średnia krocząca (CKS) stworzona przez Patricka Mulloya ma na celu usunięcie opóźnienia czasowego średnich kroczących poprzez nałożenie większej wagi na wartości z niedawnych okresów"
 
 msgid "The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr "Podwójna wykładnicza średnia krocząca (DEMA) stworzona przez Patricka Mulloya ma na celu usunięcie opóźnienie czasowe średnich kroczących poprzez nałożenie większej wagi na wartości z niedawnych okresów"
+msgstr "Podwójna wykładnicza średnia krocząca (DEMA) stworzona przez Patricka Mulloya ma na celu usunięcie opóźnienia czasowego średnich kroczących poprzez nałożenie większej wagi na wartości z niedawnych okresów"
 
 msgid "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow"
-msgstr "Ważka doji (Dragonfly Doji) tworzy się, gdy cena otwarcia, wysoka i zamknięcia są zbliżone lub takie same (Sytuacja, gdy cena otwarcia, wysoka i zamknięcia są jednakowe jest dość żadka). Najważniejszą cechą charakterystyczną tej świecy jest długi dolny cień"
+msgstr "Ważka doji (Dragonfly Doji) tworzy się, gdy cena otwarcia, cena wysoka i cena zamknięcia są zbliżone lub takie same (sytuacja, gdy cena otwarcia, wysoka i zamknięcia są jednakowe jest dość rzadka). Najważniejszą cechą charakterystyczną tej świecy jest długi dolny cień"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "Wykładnicza średnia krocząca (EMA) przedstawia średnią cen, lecz przykłada większą wagę do cen niedawnych. To, jaką wagę przydziela się ostatnim cenom zależy od wybranego okresu średniej kroczącej. Im krótszy jest okres średniej EMA, tym większą wagę mają bardziej aktualne ceny"
 
 msgid "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K"
-msgstr "Oscylator stochastyczny szybki jest oparty na oryginalnych formułach Georga Lane'a dla %K i %D. Wersja szybka oscylatora jest dość zmienna. %D jest 3-dniową prostą średnią kroczącą %K"
+msgstr "Oscylator stochastyczny szybki jest oparty na oryginalnych formułach Georga Lane'a dla %K i %D. Wersja szybka oscylatora, czyli %K, jest dość zmienna. %D jest 3-dniową prostą średnią kroczącą %K"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
-msgstr "Nagrobek doji (Gravestone Doji) tworzy się, gdy cena otwarcia, niska i zamknięcia są zbliżone lub takie same (Sytuacja, gdy cena otwarcia, niska i zamknięcia są jednakowe jest dość żadka). Najważniejszą cechą charakterystyczną tej świecy jest długi górny cień"
+msgstr "Nagrobek doji (Gravestone Doji) tworzy się, gdy cena otwarcia, cena niska i cena zamknięcia są zbliżone lub takie same (sytuacja, gdy cena otwarcia, niska i zamknięcia są jednakowe jest dość rzadka). Najważniejszą cechą charakterystyczną tej świecy jest długi górny cień"
 
 msgid "The Hammer formation is created when the open, high, and close are roughly the same price.Also, there is a long lower shadow, twice the length as the real body"
 msgstr "Formacja młota tworzy się, gdy cena otwarcia, cena wysoka i cena zamknięcia są do siebie zbliżone. Dodatkowo w przypadku tej świecy występuje długi cień – dwa razy dłuższy niż korpus świecy"
