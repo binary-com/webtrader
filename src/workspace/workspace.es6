@@ -1,9 +1,12 @@
+import html_menu from 'text!./workspace-menu.html';
 import html from 'text!./workspace.html';
 import rv from '../common/rivetsExtra';
 import $ from 'jquery';
 import 'jquery-growl';
+import 'css!./workspace-menu.css';
 import 'css!./workspace.css';
 import liveapi from '../websockets/binary_websockets';
+import windows from '../windows/windows';
 import tracker from '../windows/tracker';
 
 const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
@@ -18,7 +21,7 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
 const state = {
-   route: 'all', // one of ['all', 'active', 'saved', 'rename', 'submenu']
+   route: 'active', // one of ['active', 'saved', 'rename']
    workspaces: local_storage.get('workspaces') || [],
    dialogs: [ ],
    update_route: route => state.route = route,
@@ -184,16 +187,56 @@ const state = {
    }
 };
 state.current_workspace.root = state;
+let manager_win = null;
+let manager_view = null;
+const openManager = () => {
+  const $html = $(html).i18n();
+  const close = () => {
+    manager_view && manager_view.unbind();
+    manager_view = null;
+    manager_win && manager_win.destroy();
+    manager_win = null;
+  };
+  manager_win = windows.createBlankWindow($html, {
+    title: 'Manage'.i18n(),
+    width: 400,
+    height: 250,
+    resizable: false,
+    collapsable: false,
+    minimizable: false,
+    maximizable: false,
+    draggable: false,
+    modal: true,
+    close: close,
+    ignoreTileAction:true,
+    'data-authorized': true,
+    create:() => $('body').css({ overflow: 'hidden' }),
+    beforeClose: () => $('body').css({ overflow: 'inherit' })
+  });
+  manager_view = rv.bind($html[0], state);
+  manager_win.dialog('open');
+}
 
 export const init = (parent) => {
-   const root = $(html);
+   const state = {
+     closeAll: () => $('.webtrader-dialog').dialog('close'),
+     tileDialogs: () => tileDialogs(),
+     showWorkspaceManager: () => {
+       openManager();
+       console.warn('to be implemented :-)');
+     }
+   };
+   const root = $(html_menu);
    parent.append(root);
    rv.bind(root[0], state);
 }
 export const addDialog = (name, clickCb, removeCb) => {
    const row = {
       name: name,
-      click: () => clickCb(),
+      click: () => {
+        manager_win && manager_win.dialog('destroy');
+        clickCb();
+      },
       remove: () => { cleaner(); removeCb(); } 
    };
    const cleaner = () => {
