@@ -353,6 +353,9 @@ button[disabled] {
 .dialog-confirm.ui-dialog .ui-dialog-titlebar {
     display: none;
 }
+.ui-widget-overlay {
+  opacity: 0.3 !important;
+}
 
 /* override datepicker syles */
 .ui-datepicker, .ui-timepicker .ui-widget-content {

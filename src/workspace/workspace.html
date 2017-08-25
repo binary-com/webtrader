@@ -1,102 +1,66 @@
-<ul class='workspace-manager'>
-   <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "active"' class='invert-on-hover'>
-      <a href="#">
-         <span class='ui-icon ui-icon-active-workspace'></span>
-         Active
-      </a>
-   </li>
-   <li rv-show="route | eq 'all'" rv-on-click='update_route | bind "saved"' class='invert-on-hover'>
-      <a href="#">
-         <span class='ui-icon ui-icon-saved-workspaces'></span>
-         Saved
-      </a>
-   </li>
-   <li rv-show='route | eq "all"' class='invert-on-hover'>
-      <a href="#" rv-on-click='file.open_selector'>
-         <span class='ui-icon ui-icon-load'></span>
-         <span>Load</span>
-      </a>
-      <input type="file" rv-on-change='file.upload' style="display: none">
-   </li>
-   <li rv-show='route | eq "all"' rv-on-click='tileDialogs' class='invert-on-hover'>
-      <a href="#">
-         <span class='ui-icon ui-icon-arrange'></span>
-         <span>Arrange</span>
-      </a>
-   </li>
+<div class='workspace-manager-dialog'>
+  <input type="hidden" autofocus="autofocus" />
+  <div class='tabs'>
+    <div rv-on-click='update_route | bind "active"' rv-class-selected='route | one-of "active" "saveas" "rename"'>Active</div>
+    <div rv-on-click='update_route | bind "saved"' rv-class-selected='route | eq "saved"'>Saved</div>
+  </div>
+  <div class='active-tab' rv-show='route | one-of "active" "saveas" "rename"'>
+    <div class='current-workspace'>
+      <div class='name' rv-show='route | one-of "active" "rename"'>
+        <input maxlength="24"
+               rv-value='current_workspace.name'
+               rv-on-focusin='rename.show'
+               rv-dom-select='route | eq "rename"'
+               rv-dom-blur='route | not-eq "rename"'
+               rv-input-enter='update_route | bind "active"'
+               rv-on-focusout='rename.apply' />
+      </div>
+      <div class='name' rv-show='route | eq "saveas"'>
+        <input maxlength="24"
+               rv-value='current_workspace.name'
+               rv-dom-select='route | eq "saveas"'
+               rv-dom-blur='route | not-eq "saveas"'
+               rv-input-enter='update_route | bind "active"'
+               rv-on-focusout='saveas.apply' />
+      </div>
+      <div class='icon-save' rv-on-click='current_workspace.save' rv-show='current_workspace.is_saved < name root.workspaces' />
+      <div class='icon-saveas' rv-on-click='saveas.show' />
+    </div>
 
-   <li class='active-workspace-li' rv-show='route | one-of "active" "rename" "saveas" "submenu"'>
-      <a href="#" rv-show='route | one-of "active" "submenu"'>
-         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
-         <span rv-text='current_workspace.name' class='ellipsis' rv-on-click='update_route | bind "submenu"'></span>
-         <span class='ui-icon ui-icon-sub-menu' rv-on-click='update_route | bind "submenu"'></span>
-      </a>
-      <a class='active-workspace-rename' rv-show='route | eq "rename"' href="#">
-         <span class='ui-icon ui-icon-back' rv-on-click='rename.cancel'></span>
-         <input rv-value="current_workspace.name" rv-dom-focus='route | eq "rename"' maxlength="18" rv-input-enter='rename.apply' />
-         <span class='ui-icon ui-icon-confirm' rv-on-click='rename.apply'></span>
-      </a>
-      <a class='active-workspace-rename' rv-show='route | eq "saveas"' href="#">
-         <span class='ui-icon ui-icon-back' rv-on-click='saveas.cancel'></span>
-         <input rv-value="current_workspace.name" rv-dom-focus='route | eq "saveas"' maxlength="18" rv-input-enter='saveas.apply' />
-         <span class='ui-icon ui-icon-confirm' rv-on-click='saveas.apply'></span>
-      </a>
-      <ul rv-class-hide='route | not-eq "submenu"'>
-         <li class='invert-on-hover' rv-if='current_workspace.is_saved < name root.workspaces'>
-            <a href='#' rv-on-click='rename.show'>
-               Rename
-               <span class='ui-icon ui-icon-edit'></span>
-            </a>
-         </li>
-         <li class='invert-on-hover' rv-on-click='current_workspace.save'>
-            <a href='#'>
-               <span class='ui-icon ui-icon-save'></span>
-               Save
-            </a>
-         </li>
-         <li class='invert-on-hover' rv-if='workspaces | prop "length"' rv-on-click='saveas.show'>
-            <a href='#'>
-               <span class='ui-icon ui-icon-save-as'></span>
-               Save as ...
-            </a>
-         </li>
-         <li class='invert-on-hover' rv-on-click='file.download'>
-            <a href='#'>
-               <span class='ui-icon ui-icon-load'></span>
-               Download
-            </a>
-         </li>
-         <li class='invert-on-hover' rv-on-click='closeAll'>
-            <a href='#'>
-               <span class='ui-icon ui-icon-delete'></span>
-               Close All
-            </a>
-         </li>
-      </ul>
-   </li>
-   <li rv-show='route | eq "saved"'>
-      <a href="#">
-         <span class='ui-icon ui-icon-back' rv-on-click='update_route | bind "all"'></span>
-         <span>Saved Workspaces</span>
-      </a>
-   </li>
+    <div class='dialogs'>
+      <div class='dialog' rv-each-dialog='dialogs'>
+        <div class='name' rv-on-click='dialog.click'>
+          <span rv-text='dialog.name'></span>
+        </div>
+        <div class='icon-remove' rv-on-click='dialog.remove' />
+      </div>
+    </div>
 
-   <div  rv-show='route | eq "saved"' class='workspace-list'>
-      <li rv-each-row="workspaces">
-         <a href="#" class='invert-colors'>
-            <span rv-if='row.name | not-eq current_workspace.name' class='ui-icon ui-icon-tick-normal'></span>
-            <span rv-if='row.name | eq current_workspace.name' class='ui-icon ui-icon-tick-selected'></span>
-            <span rv-text='row.name' rv-on-click='workspace.show | bind row' class='ellipsis'></span>
-            <span class='ui-icon ui-icon-delete-w' rv-on-click='workspace.remove | bind row'></span>
-         </a>
-      </li>
-   </div>
-   <div  rv-show='route | one-of "active" "rename" "saveas" "submenu"' class='dialog-list' rv-on-mouseenter='hide_submenu'>
-      <li rv-each-row="dialogs">
-         <a href="#" class='invert-colors'>
-            <span rv-text='row.name' rv-on-click='row.click' class='ellipsis'></span>
-            <span class='ui-icon ui-icon-delete-w' rv-on-click='row.remove'></span>
-         </a>
-      </li>
-   </div>
-</ul>
+  </div>
+
+  <div class='saved-tab' rv-show='route | eq "saved"'>
+    <input type="file" rv-on-change='file.upload' style="display: none" />
+    <div class='load-workspace' rv-on-click='file.open_selector'>
+      <div class='icon-upload' />
+      <div class='name'>Load Workspace</div>
+    </div>
+    <div class='workspaces'>
+      <div rv-each-row="workspaces">
+        <div class='icon-tick-normal'
+             rv-on-click='workspace.show | bind row'
+             rv-if='row.name | not-eq current_workspace.name' />
+        <div class='icon-tick-selected'
+             rv-if='row.name | eq current_workspace.name' />
+        <div class='name'>
+          <input maxlength="24"
+               rv-value='row.name'
+               rv-on-focusin='workspace.save_name | bind row'
+               rv-input-enter='workspace.blur'
+               rv-on-focusout='workspace.rename | bind row' />
+        </div>
+        <div class='icon-delete' rv-on-click='workspace.remove | bind row' />
+        <div class='icon-download' rv-on-click='file.download | bind row'/>
+      </div>
+    </div>
+  </div>
+</div>

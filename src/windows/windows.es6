@@ -442,6 +442,7 @@ export const createBlankWindow = function($html,options) {
       autoOpen: false,
       resizable: true,
       collapsable: false,
+      draggable: true,
       width: 350,
       height: 400,
       my: 'center',
@@ -469,8 +470,10 @@ export const createBlankWindow = function($html,options) {
    const dialog = blankWindow.dialog('widget');
    dialog.addClass('webtrader-dialog-widget');
    /* allow dialogs to be moved though the bottom of the page */
-   dialog.draggable( "option", "containment", false );
-   dialog.draggable( "option", "scroll", true );
+   if (options.draggable !== false) {
+     dialog.draggable( "option", "containment", false );
+     dialog.draggable( "option", "scroll", true );
+   }
    dialog.on('dragstop', () => {
       const top = dialog.offset().top;
       if(top < 0) {
