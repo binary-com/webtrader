@@ -2828,13 +2828,13 @@ msgid "The CMO indicator is created by calculating the difference between the su
 msgstr "Wskaźnik CMO to różnica między sumą wszystkich ostatnich wysokich cen zamknięcia a sumą wszystkich ostatnich niskich cen zamknięcia podzielona przez sumę wszystkich zmian cen w danym okresie. Wynik mnoży się przez 100. Wartość wskaźnika przyjmuje wartości między -100 a +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
-msgstr "Indeks CHOP (Choppiness Index) jest wskaźnikiem stworzonym w celu określania, czy rynek jest zmienny (odchylenia handlowe) czy nie (handlowanie w ramach jednego trendu: spadkowego lub wzrostowego). Indeksu CHOP nie stosuje się do przewidywania przyszłego kierunku cen, lecz jako wskaźnika określającego, czy rynek jest podatny na zmiany trendów"
+msgstr "Indeks CHOP (Choppiness Index) jest wskaźnikiem stworzonym w celu określania, czy rynek jest zmienny (odchylenia handlowe) czy nie (handlowanie w ramach jednego trendu: spadkowego lub wzrostowego). Indeksu CHOP nie stosuje się do przewidywania przyszłego kierunku cen, lecz jako wskaźnik określający, czy rynek jest podatny na zmiany trendów"
 
 msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions"
 msgstr "Indeks CCI (Commodity Channel Index) to uniwersalny wskaźnik, który może być stosowany do przewidywania nowych trendów i ostrzegania przed ekstremalnymi warunkami rynkowymi"
 
 msgid "The Donchian Channel is an indicator used in market trading developed by Richard Donchian. It is formed by taking the highest high and the lowest low of the last n periods. The area between the high and the low is the channel for the period chosen"
-msgstr "Kanał Donchiana jest wskaźnikiem handlowym stworzonym przez Richarda Donchiana. Uwzględnia najwyższą i najniższą cenę w określonej liczbie ostatnich okresów. Obszar między ceną niską i wysoką jest kanałem dla wybranego okresu"
+msgstr "Kanał Donchiana jest wskaźnikiem handlowym stworzonym przez Richarda Donchiana. Uwzględnia najwyższą i najniższą cenę w określonej liczbie ostatnich okresów. Obszar między ceną niską a wysoką jest kanałem dla wybranego okresu"
 
 msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
 msgstr "Podwójna wykładnicza średnia krocząca (CKS) stworzona przez Patricka Mulloya ma na celu usunięcie opóźnienie czasowe średnich kroczących poprzez nałożenie większej wagi na wartości z niedawnych okresów"
