@@ -1091,7 +1091,7 @@ msgid "Deposit funds"
 msgstr "Wpłać środki"
 
 msgid "Deposit of USD"
-msgstr "Wpłata USD"
+msgstr "Wymagana jest wpłata w wysokości USD"
 
 msgid "Depositing and withdrawing funds"
 msgstr "Wpłacanie i wypłacanie środków"
