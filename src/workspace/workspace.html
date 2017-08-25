@@ -1,17 +1,30 @@
 <div class='workspace-manager-dialog'>
   <input type="hidden" autofocus="autofocus" />
   <div class='tabs'>
-    <div rv-on-click='update_route | bind "active"' rv-class-selected='route | one-of "active" "rename"'>Active</div>
+    <div rv-on-click='update_route | bind "active"' rv-class-selected='route | one-of "active" "saveas" "rename"'>Active</div>
     <div rv-on-click='update_route | bind "saved"' rv-class-selected='route | eq "saved"'>Saved</div>
   </div>
-  <div class='active-tab' rv-show='route | one-of "active" "rename"'>
+  <div class='active-tab' rv-show='route | one-of "active" "saveas" "rename"'>
     <div class='current-workspace'>
-      <div class='name'>
-        <input rv-value='current_workspace.name' />
-        <div class='icon-confirm' />
+      <div class='name' rv-show='route | one-of "active" "rename"'>
+        <input maxlength="24"
+               rv-value='current_workspace.name'
+               rv-on-focusin='rename.show'
+               rv-dom-select='route | eq "rename"'
+               rv-dom-blur='route | not-eq "rename"'
+               rv-input-enter='update_route | bind "active"'
+               rv-on-focusout='rename.apply' />
       </div>
-      <div class='icon-save' />
-      <div class='icon-saveas' />
+      <div class='name' rv-show='route | eq "saveas"'>
+        <input maxlength="24"
+               rv-value='current_workspace.name'
+               rv-dom-select='route | eq "saveas"'
+               rv-dom-blur='route | not-eq "saveas"'
+               rv-input-enter='update_route | bind "active"'
+               rv-on-focusout='saveas.apply' />
+      </div>
+      <div class='icon-save' rv-on-click='current_workspace.save' rv-show='current_workspace.is_saved < name root.workspaces' />
+      <div class='icon-saveas' rv-on-click='saveas.show' />
     </div>
 
     <div class='dialogs'>
@@ -26,16 +39,27 @@
   </div>
 
   <div class='saved-tab' rv-show='route | eq "saved"'>
+    <input type="file" rv-on-change='file.upload' style="display: none" />
+    <div class='load-workspace' rv-on-click='file.open_selector'>
+      <div class='icon-upload' />
+      <div class='name'>Load Workspace</div>
+    </div>
     <div class='workspaces'>
       <div rv-each-row="workspaces">
-        <div rv-if='row.name | not-eq current_workspace.name' class='icon-tick-normal' />
-        <div rv-if='row.name | eq current_workspace.name' class='icon-tick-selected' />
+        <div class='icon-tick-normal'
+             rv-on-click='workspace.show | bind row'
+             rv-if='row.name | not-eq current_workspace.name' />
+        <div class='icon-tick-selected'
+             rv-if='row.name | eq current_workspace.name' />
         <div class='name'>
-          <input rv-value='row.name' />
-          <div class='icon-confirm' />
+          <input maxlength="24"
+               rv-value='row.name'
+               rv-on-focusin='workspace.save_name | bind row'
+               rv-input-enter='workspace.blur'
+               rv-on-focusout='workspace.rename | bind row' />
         </div>
-        <div class='icon-delete' />
-        <div class='icon-download' />
+        <div class='icon-delete' rv-on-click='workspace.remove | bind row' />
+        <div class='icon-download' rv-on-click='file.download | bind row'/>
       </div>
     </div>
   </div>

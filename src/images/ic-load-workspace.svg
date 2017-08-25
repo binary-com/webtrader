@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/black/load-workspace</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/black/load-workspace">
+            <path d="M5.5,10.5 L1.5,10.5 C0.94771525,10.5 0.5,10.0522847 0.5,9.5 L0.5,1.5 C0.5,0.94771525 0.94771525,0.5 1.5,0.5 L14.5,0.5 C15.0522847,0.5 15.5,0.94771525 15.5,1.5 L15.5,9.5 C15.5,10.0522847 15.0522847,10.5 14.5,10.5 L10.5,10.5" id="Rectangle-6" stroke="#293055" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1,0 L15,0 C15.5522847,-1.01453063e-16 16,0.44771525 16,1 L16,3 C16,3.55228475 15.5522847,4 15,4 L1,4 C0.44771525,4 6.76353751e-17,3.55228475 0,3 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z M14,3 C14.5522847,3 15,2.55228475 15,2 C15,1.44771525 14.5522847,1 14,1 C13.4477153,1 13,1.44771525 13,2 C13,2.55228475 13.4477153,3 14,3 Z M11,3 C11.5522847,3 12,2.55228475 12,2 C12,1.44771525 11.5522847,1 11,1 C10.4477153,1 10,1.44771525 10,2 C10,2.55228475 10.4477153,3 11,3 Z M8,3 C8.55228475,3 9,2.55228475 9,2 C9,1.44771525 8.55228475,1 8,1 C7.44771525,1 7,1.44771525 7,2 C7,2.55228475 7.44771525,3 8,3 Z" id="Combined-Shape" fill="#293055"></path>
+            <polyline id="Path-4-Copy" stroke="#293055" stroke-linecap="round" stroke-linejoin="round" transform="translate(9.250000, 11.000000) scale(-1, 1) translate(-9.250000, -11.000000) " points="10.5 6.5 10.5 15.5 8 13"></polyline>
+            <polyline id="Path-4-Copy-2" stroke="#293055" stroke-linecap="round" stroke-linejoin="round" points="8 6.5 8 15.5 5.5 13"></polyline>
+        </g>
+    </g>
+</svg>

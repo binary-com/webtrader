@@ -322,7 +322,7 @@ rv.binders['input-enter'] = {
    routine: (el, callback) => {
       $(el).keyup(function(event){
          if(event.keyCode == 13){
-            callback();
+            callback(el);
          }
       });
    },
