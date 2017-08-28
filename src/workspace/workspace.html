@@ -21,10 +21,10 @@
                rv-dom-select='route | eq "saveas"'
                rv-dom-blur='route | not-eq "saveas"'
                rv-input-enter='update_route | bind "active"'
-               rv-on-focusout='saveas.apply' />
+               rv-on-blur='saveas.apply' />
       </div>
-      <div class='icon-save' rv-on-click='current_workspace.save'></div>
-      <div class='icon-saveas' rv-on-click='saveas.show'></div>
+      <div class='icon-save' rv-on-click='current_workspace.save' rv-show='route | one-of "rename" "active"'></div>
+      <div class='icon-saveas' rv-on-mousedown='saveas.show' rv-show='route | one-of "active" "saveas"'></div>
     </div>
 
     <div class='dialogs'>
