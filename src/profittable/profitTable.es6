@@ -66,7 +66,7 @@ const refreshTable = (yyyy_mm_dd) => {
    const refresh = (data) => {
       const transactions = (data.profit_table && data.profit_table.transactions) || [];
       const rows = transactions.map((trans) => {
-         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(isBTC() ? 8 : 2); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
+         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(currencyFractionalDigits()); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
          const view_button = '<button>View</button>'.i18n();
          try{
             trans.longcode;            

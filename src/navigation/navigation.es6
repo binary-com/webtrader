@@ -40,6 +40,8 @@ const initLoginButton = (root) => {
          is_virtual:0
       },
       show_submenu: false,
+      show_new_account_link: false,
+
    };
 
 
@@ -315,8 +317,10 @@ export const getLandingCompany = () => {
                   }),
                   _.filter(cr_accts, {type: 'crypto'}).map((acct) => acct.currency)
                );
-               const has_all_crypto = crypto_currencies.length === 0;
-               if(has_fiat ^ has_all_crypto) {
+               const has_crypto = crypto_currencies.length && crypto_currencies.length !== (landing_company_details.legal_allowed_currencies.filter((curr) => {
+                  return currencies_config[curr].type === 'crypto';
+               }) || []).length;
+               if((!has_fiat && has_crypto) || (has_crypto && has_fiat)) {
                   return 'new-account'; // 5-b and 5-c
                }
                return 'do-nothing'; // 5-d

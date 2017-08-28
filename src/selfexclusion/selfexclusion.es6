@@ -88,7 +88,7 @@ const settingsData = {
     timeout_until_time: null,
     trimString: (event, scope) => {
         const $el = $(event.target),
-            decimals = isBTC() ? 8 : 2,
+            decimals = currencyFractionalDigits(),
             length = $el.attr('maxlength'),
             r = new RegExp(`[\\d]{0,20}(\\.[\\d]{1,${decimals}})?`, "g"),
             val = ($el.val().toString().match(r) || [])[0],
