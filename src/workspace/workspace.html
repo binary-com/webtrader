@@ -23,8 +23,8 @@
                rv-input-enter='update_route | bind "active"'
                rv-on-focusout='saveas.apply' />
       </div>
-      <div class='icon-save' rv-on-click='current_workspace.save' rv-show='current_workspace.is_saved < name root.workspaces' />
-      <div class='icon-saveas' rv-on-click='saveas.show' />
+      <div class='icon-save' rv-on-click='current_workspace.save' rv-show='current_workspace.is_saved &gt; name root.workspaces'></div>
+      <div class='icon-saveas' rv-on-click='saveas.show'></div>
     </div>
 
     <div class='dialogs'>
@@ -32,7 +32,7 @@
         <div class='name' rv-on-click='dialog.click'>
           <span rv-text='dialog.name'></span>
         </div>
-        <div class='icon-remove' rv-on-click='dialog.remove' />
+        <div class='icon-remove' rv-on-click='dialog.remove'></div>
       </div>
     </div>
 
@@ -41,16 +41,16 @@
   <div class='saved-tab' rv-show='route | eq "saved"'>
     <input type="file" rv-on-change='file.upload' style="display: none" />
     <div class='load-workspace' rv-on-click='file.open_selector'>
-      <div class='icon-upload' />
+      <div class='icon-upload'></div>
       <div class='name'>Load Workspace</div>
     </div>
     <div class='workspaces'>
       <div rv-each-row="workspaces">
         <div class='icon-tick-normal'
              rv-on-click='workspace.show | bind row'
-             rv-if='row.name | not-eq current_workspace.name' />
+             rv-if='row.name | not-eq current_workspace.name'></div>
         <div class='icon-tick-selected'
-             rv-if='row.name | eq current_workspace.name' />
+             rv-if='row.name | eq current_workspace.name'></div>
         <div class='name'>
           <input maxlength="24"
                rv-value='row.name'
@@ -58,8 +58,8 @@
                rv-input-enter='workspace.blur'
                rv-on-focusout='workspace.rename | bind row' />
         </div>
-        <div class='icon-delete' rv-on-click='workspace.remove | bind row' />
-        <div class='icon-download' rv-on-click='file.download | bind row'/>
+        <div class='icon-delete' rv-on-click='workspace.remove | bind row'></div>
+        <div class='icon-download' rv-on-click='file.download | bind row'></div>
       </div>
     </div>
   </div>
