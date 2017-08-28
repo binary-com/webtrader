@@ -14,6 +14,7 @@
                rv-dom-blur='route | not-eq "rename"'
                rv-input-enter='update_route | bind "active"'
                rv-on-focusout='rename.apply' />
+        <div class='icon-confirm'></div>
       </div>
       <div class='name' rv-show='route | eq "saveas"'>
         <input maxlength="24"
@@ -22,9 +23,18 @@
                rv-dom-blur='route | not-eq "saveas"'
                rv-input-enter='update_route | bind "active"'
                rv-on-blur='saveas.apply' />
+        <div class='icon-confirm icon-plus'></div>
       </div>
-      <div class='icon-save' rv-on-click='current_workspace.save' rv-show='route | one-of "rename" "active"'></div>
-      <div class='icon-saveas' rv-on-mousedown='saveas.show' rv-show='route | one-of "active" "saveas"'></div>
+      <div class='icon-save'
+           data-balloon-pos='down'
+           rv-attr-data-balloon='"Save" | i18n'
+           rv-on-click='current_workspace.save'
+           rv-show='route < current_workspace | eq "active" | and current_workspace.is_saved'></div>
+      <div class='icon-saveas'
+           data-balloon-pos='down'
+           rv-attr-data-balloon='"Save As New Workspace" | i18n'
+           rv-on-mousedown='saveas.show'
+           rv-show='route | eq "active"'></div>
     </div>
 
     <div class='dialogs'>
