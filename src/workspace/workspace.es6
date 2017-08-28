@@ -126,8 +126,13 @@ const state = {
    },
    saveas: {
       show: () => {
-         state.current_workspace.name_perv_value = state.current_workspace.name;
-         state.route = 'saveas';
+        if (state.route !== 'saveas') {
+          state.current_workspace.name_perv_value = state.current_workspace.name;
+          state.route = 'saveas';
+        }
+        else {
+          state.route = 'active';
+        }
       },
       apply: () => { 
          let {name, name_perv_value} = state.current_workspace;
@@ -149,6 +154,7 @@ const state = {
 
          state.current_workspace.name = name;
          state.route = 'active';
+         $.growl.notice({ message: "Added new workspace %".i18n().replace('%', `<b>${name}</b>`) });
       },
       cancel: () => state.rename.cancel()
    },
