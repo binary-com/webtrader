@@ -101,7 +101,7 @@ function formatPrice(float,currency) {
     float = float && Math.abs(float);
     currency = currency && currency.toLowerCase();
     var sign = float < 0 ? '-': '';
-    var minimumFractionDigits = currency && (currency.trim().toUpperCase() === "BTC" || currency.trim().toUpperCase() === "XBT") ? 8 : 2; //Because backend is confusing
+    var minimumFractionDigits = ((local_storage.get('currencies_config') || {})[(currency|| '').toUpperCase()] || {}).fractional_digits || 2;
     var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 	
 	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
@@ -418,7 +418,7 @@ function guessDigits(prices) {
     return defaultDigits || 4;
 }
 
-var isBTC = function () {
-    var currency = local_storage.get("currency") || '';
-    return currency.toUpperCase() === "BTC" || currency.toUpperCase() === "XBT";
+var currencyFractionalDigits = function () {
+    var currency = (local_storage.get("currency") || '').toUpperCase();
+    return ((local_storage.get('currencies_config') || {})[currency] || {}).fractional_digits || 2;
 }

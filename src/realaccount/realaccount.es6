@@ -517,13 +517,13 @@ const init_state = (root, what_todo) => {
                state.user.available_currencies = currencies.filter((c) => {
                   return currencies_config[c] && currencies_config[c].type === 'fiat';
                });
-            else
-               state.user.available_currencies = _.difference(
-                  currencies.filter((c) => {
-                     return currencies_config[c] && currencies_config[c].type === 'crypto';
-                  }),
-                  _.filter(cr_accts, { type: 'crypto' }).map((acc) => acc.currency || '')
-               );
+               
+            state.user.available_currencies =[ ...state.user.available_currencies, ..._.difference(
+              currencies.filter((c) => {
+                    return currencies_config[c] && currencies_config[c].type === 'crypto';
+              }),
+              _.filter(cr_accts, { type: 'crypto' }).map((acc) => acc.currency || '')
+            )];
          });
    };
    what_todo === 'new-account' && update_currencies();

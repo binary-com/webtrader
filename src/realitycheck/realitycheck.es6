@@ -76,7 +76,7 @@ const setOrRefreshTimer = (timeOutInMins) => {
             let durationIn_ms = moment.utc().valueOf() - data.reality_check.start_time * 1000;
             const max_durationIn_ms = 48 * 60 * 60 * 1000;
             if (durationIn_ms > max_durationIn_ms) durationIn_ms = max_durationIn_ms;
-            const decimals = isBTC() ? 8 : 2;
+            const decimals = currencyFractionalDigits();
             settingsData.durationInMins = moment.duration(durationIn_ms).humanize();
             settingsData.bought = data.reality_check.buy_count;
             settingsData.turnOver = data.reality_check.buy_amount;
