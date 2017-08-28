@@ -70,7 +70,10 @@ const state = {
    current_workspace: {
       name: (local_storage.get('states') || {  }).name || 'workspace-1',
       name_perv_value: '',
-      is_saved: () => _.findIndex(state.workspaces, {name: state.current_workspace.name}) !== -1,
+      is_saved: () => {
+         const result = _.findIndex(state.workspaces, {name: state.current_workspace.name}) !== -1;
+         return result;
+      },
       save: () => {
          const {name, is_saved} = state.current_workspace;
          if(!is_saved()) {
@@ -106,6 +109,7 @@ const state = {
          const workspace = _.find(state.workspaces, {name: name_perv_value});
          if(workspace) {
             workspace.name = name;
+            state.workspaces = state.workspaces;
             local_storage.set('workspaces', state.workspaces);
          }
          const states = local_storage.get('states');
@@ -185,6 +189,8 @@ const state = {
             delete data.random;
             state.workspaces.push(data);
             local_storage.set('workspaces', state.workspaces);
+
+            state.workspace.show(data);
 
             $.growl.notice({message: "Successfully added workspace as ".i18n() + "<b>" + data.name + "</b>"});
          }
