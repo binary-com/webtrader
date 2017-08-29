@@ -155,10 +155,11 @@ const initLoginButton = (root) => {
          state.has_disabled_account =  _.some(loginids, {is_disabled: true});
 
          if(_.some(loginids, {is_disabled: true})) {
+            const lockedIds = _.filter(loginids, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
                message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
-               + "Your account is locked, please contact customer support for more info.".i18n()
+               + "Your account(%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
                + "</a>"
             });
          }
