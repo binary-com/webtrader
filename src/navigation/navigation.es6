@@ -172,11 +172,11 @@ const initLoginButton = (root) => {
       state.show_login = true;
    });
 
-   /* update time every one minute */
-   time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
+   /* update time every second */
+   time.text(moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT');
    setInterval(() => {
-      time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
-   }, 15 * 1000);
+      time.text(moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT');
+   }, 1000);
 }
 
 const initLangButton = (root) => {

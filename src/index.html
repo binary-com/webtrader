@@ -215,7 +215,7 @@
             $(function () {
                 $('body').css('display', 'block');
                 setTime();
-                setInterval(setTime, 15 * 1000);
+                setInterval(setTime, 1000);
 
                 if (isLangSupported(lang)) {
                     $.getJSON('v<version>/i18n/' + lang + '.json', function (data) {
@@ -246,7 +246,7 @@
         }
 
         function setTime() {
-            var time = moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'
+            var time = moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT'
             $(".time").text(time);
         }
 
