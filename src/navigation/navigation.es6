@@ -320,7 +320,8 @@ export const getLandingCompany = () => {
                const has_crypto = crypto_currencies.length && crypto_currencies.length !== (landing_company_details.legal_allowed_currencies.filter((curr) => {
                   return currencies_config[curr].type === 'crypto';
                }) || []).length;
-               if((!has_fiat && has_crypto) || (has_crypto && has_fiat)) {
+               const has_all_crypto = !crypto_currencies.length;
+               if((!has_fiat && has_crypto) || (has_fiat && !has_all_crypto)) {
                   return 'new-account'; // 5-b and 5-c
                }
                return 'do-nothing'; // 5-d

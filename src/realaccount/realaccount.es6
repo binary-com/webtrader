@@ -444,8 +444,8 @@ const init_state = (root, what_todo) => {
             .then(() => {
                liveapi.send({set_account_currency: curr}).then(() => {
                   local_storage.set("currency", curr);
-                  //Re-authorize.
-                  liveapi.cached.authorize(true)
+                  // To show create account button.
+                  window.location.reload();
                   real_win && real_win.dialog('close');
                   real_win_li.hide();
                });

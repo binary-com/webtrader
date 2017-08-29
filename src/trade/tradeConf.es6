@@ -209,7 +209,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          barrier: null,
          message: buy.longcode,
          balance_after: buy.balance_after,
-         buy_price: (+buy.buy_price).toFixed(icurrencyFractionalDigits()),
+         buy_price: (+buy.buy_price).toFixed(currencyFractionalDigits()),
          purchase_time: buy.purchase_time,
          start_time: buy.start_time,
          transaction_id: buy.transaction_id,
