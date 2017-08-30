@@ -183,6 +183,12 @@ export const init = (contract_id, transaction_id) => {
 }
 
 const update_indicative = (data, state) => {
+   if(data.error) {
+      $.growl.error({message: data.error.message});
+      liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+      liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+      return;
+   }
    const contract = data.proposal_open_contract;
    const id = contract.contract_id || data.echo_req.contract_id,
       bid_price = contract.bid_price;

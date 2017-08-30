@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="transparent" fill-rule="evenodd">
+        <g id="icons/edit">
+            <rect id="Rectangle-4" fill="#D8D8D8" opacity="0" x="0" y="0" width="16" height="16"></rect>
+            <rect id="Rectangle-2" fill="#FFFFFF" x="2" y="12" width="2" height="2"></rect>
+            <path d="M10.1464466,3.85355339 L12.1464466,5.85355339 L4,14 L2,12 L10.1464466,3.85355339 Z M10.8535534,3.14644661 L11.5,2.5 L11.5,2.5 C12.0522847,1.94771525 12.9477153,1.94771525 13.5,2.5 L13.5,2.5 L13.5,2.5 C14.0522847,3.05228475 14.0522847,3.94771525 13.5,4.5 L12.8535534,5.14644661 L10.8535534,3.14644661 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

@@ -158,6 +158,12 @@ const register_ticks = (state, extra) => {
    }
 
    fn = liveapi.events.on('proposal_open_contract', (data) => {
+      if(data.error) {
+            $.growl.error({message: data.error.message});
+            liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+            liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+            return;
+      }
       const contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
@@ -203,13 +209,13 @@ export const init = (data, extra, show_callback, hide_callback) => {
          barrier: null,
          message: buy.longcode,
          balance_after: buy.balance_after,
-         buy_price: (+buy.buy_price).toFixed(isBTC() ? 8 : 2),
+         buy_price: (+buy.buy_price).toFixed(currencyFractionalDigits()),
          purchase_time: buy.purchase_time,
          start_time: buy.start_time,
          transaction_id: buy.transaction_id,
-         payout: (+buy.payout).toFixed(isBTC() ? 8 : 2),
+         payout: (+buy.payout).toFixed(currencyFractionalDigits()),
          currency: extra.currency,
-         potential_profit : (buy.payout - buy.buy_price).toFixed(isBTC() ? 8 : 2),
+         potential_profit : (buy.payout - buy.buy_price).toFixed(currencyFractionalDigits()),
          potential_profit_text : 'Profit'.i18n(),
          show_result: false,
       },
@@ -274,8 +280,8 @@ export const init = (data, extra, show_callback, hide_callback) => {
          lost: 'This contract lost'.i18n()
       }[status];
       if(status === 'lost') {
-         state.buy.potential_profit = (-state.buy.buy_price).toFixed(isBTC() ? 8 : 2);
-         state.buy.payout = (0).toFixed(isBTC() ? 8 : 2);
+         state.buy.potential_profit = (-state.buy.buy_price).toFixed(currencyFractionalDigits());
+         state.buy.payout = (0).toFixed(currencyFractionalDigits());
          state.buy.potential_profit_text = 'Lost';
       }
       if(status === 'won') {

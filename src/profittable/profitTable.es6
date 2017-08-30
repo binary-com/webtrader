@@ -14,7 +14,6 @@ import html from 'text!./profitTable.html';
 
 let profitWin = null,
    table = null,
-   currency = local_storage.get("currency"),
    datepicker = null;
 
 export const init = ($menuLink) => {
@@ -26,8 +25,7 @@ export const init = ($menuLink) => {
                console.error(err);
                $.growl.error({ message: err.message });
             });
-      else{
-         currency = local_storage.get("currency");        
+      else{       
          profitWin.moveToTop();
       }
    });
@@ -68,7 +66,7 @@ const refreshTable = (yyyy_mm_dd) => {
    const refresh = (data) => {
       const transactions = (data.profit_table && data.profit_table.transactions) || [];
       const rows = transactions.map((trans) => {
-         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(isBTC() ? 8 : 2); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
+         const profit = (parseFloat(trans.sell_price) - parseFloat(trans.buy_price)).toFixed(currencyFractionalDigits()); //= parseFloat(trans.sell_price) - parseFloat(trans.buy_price)
          const view_button = '<button>View</button>'.i18n();
          try{
             trans.longcode;            
@@ -79,9 +77,9 @@ const refreshTable = (yyyy_mm_dd) => {
             epoch_to_string(trans.purchase_time, { utc: true }),
             trans.transaction_id,
             trans.longcode,
-            formatPrice(trans.buy_price,currency),
+            formatPrice(trans.buy_price,local_storage.get("currency")),
             epoch_to_string(trans.sell_time, { utc: true }),
-            formatPrice(trans.sell_price,currency),
+            formatPrice(trans.sell_price,local_storage.get("currency")),
             profit,
             view_button,
             trans, /* we will use it when handling arrow clicks to show view transaction dialog */
@@ -152,7 +150,7 @@ const initProfitWin = () => {
             if (css_class)
                $(td).addClass(css_class);
             $(td).attr("data-src", cellData);
-            td.textContent = formatPrice(cellData,currency);
+            td.innerHTML = formatPrice(cellData,local_storage.get("currency"));
          }
       }],
       info: false,
@@ -165,7 +163,7 @@ const initProfitWin = () => {
          const css = 'total ' + (total >= 0 ? 'green' : 'red');
          footer.html(
             '<span class="title">Total Profit/Loss<span>' +
-            '<span class="' + css + '">'+ formatPrice(total,currency) +'</span>'
+            '<span class="' + css + '">'+ formatPrice(total,local_storage.get("currency")) +'</span>'
          );
       },
       paging: false,

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/black/save</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/black/save" stroke="#293055">
+            <path d="M2.75,2.5 C2.61192881,2.5 2.5,2.61192881 2.5,2.75 L2.5,13.25 C2.5,13.3880712 2.61192881,13.5 2.75,13.5 L13.25,13.5 C13.3880712,13.5 13.5,13.3880712 13.5,13.25 L13.5,6.06066017 C13.5,5.99435605 13.4736608,5.93076757 13.4267767,5.88388348 L10.1161165,2.5732233 C10.0692324,2.52633921 10.005644,2.5 9.93933983,2.5 L2.75,2.5 Z" id="Combined-Shape-Copy"></path>
+            <rect id="Rectangle" x="4.5" y="2.5" width="4" height="3" rx="1"></rect>
+            <circle id="Oval" cx="8" cy="9" r="1.5"></circle>
+        </g>
+    </g>
+</svg>

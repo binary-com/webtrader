@@ -7,19 +7,18 @@ window.requirejs.config({
         "jquery": "lib/jquery/dist/jquery.min",
         "jquery-ui": "lib/jquery-ui-dist/jquery-ui.min",
         "jquery.dialogextend": "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
-        "jquery-growl": "lib/growl/javascripts/jquery.growl",
-        "jquery-validation": "lib/jquery-validation/dist/jquery.validate.min",
-        "modernizr": "lib/modernizr/modernizr",
-        "color-picker": "lib/colorpicker/jquery.colorpicker",
-        "datatables": "lib/datatables/media/js/jquery.dataTables.min",
-        "datatables-jquery-ui": "lib/datatables/media/js/dataTables.jqueryui.min",
+        "jquery-growl": "lib/jquery.growl/javascripts/jquery.growl",
+        "modernizr": "lib/npm-modernizr/modernizr",
+        "color-picker": "lib/vanderlee-colorpicker/jquery.colorpicker",
+        "datatables": "lib/datatables.net/js/jquery.dataTables",
+        "datatables-jquery-ui": "lib/datatables.net-jqui/js/dataTables.jqueryui",
         "currentPriceIndicator": "charts/indicators/highcharts_custom/currentprice",
         "es6-promise": "lib/es6-promise/promise.min",
         "rivets": "lib/rivets/dist/rivets.min",
         "sightglass": "lib/sightglass/index",
         "timepicker": "lib/binary-com-jquery-ui-timepicker/jquery.ui.timepicker",
-        "lodash": "lib/lodash/dist/lodash.min",
-        "jquery-sparkline": "lib/jquery-sparkline/dist/jquery.sparkline.min",
+        "lodash": "lib/lodash/lodash.min",
+        "jquery-sparkline": "lib/jquery-sparkline/jquery.sparkline.min",
         "moment": "lib/moment/min/moment.min",
         "moment-locale":"lib/moment/locale",
         "clipboard": "lib/clipboard/dist/clipboard.min",
@@ -46,6 +45,9 @@ window.requirejs.config({
         "timepicker": {
             deps: ["jquery-ui", "jquery"]
         },
+        "jquery.dialogextend": {
+           deps: ["jquery-ui"]
+        },
         "jquery-ui": {
             deps: ["jquery"]
         },
@@ -64,6 +66,9 @@ window.requirejs.config({
         },
         "datatables": {
             deps: ["jquery-ui"]
+        },
+        "datatables-jquery-ui" : {
+            deps: ["datatables"]
         },
         "currentPriceIndicator": {
             deps: ["highstock-release/highstock"]
@@ -147,10 +152,10 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     require(["css!lib/jquery-ui-dist/jquery-ui.min.css",
         "css!lib/jquery-ui-iconfont/jquery-ui.icon-font.css",
         "css!lib/chosen-js/chosen.css",
-        "css!lib/growl/stylesheets/jquery.growl.css",
-        "css!lib/datatables/media/css/jquery.dataTables.min.css",
-        "css!lib/datatables/media/css/dataTables.jqueryui.min.css",
-        "css!lib/colorpicker/jquery.colorpicker.css",]);
+        "css!lib/jquery.growl/stylesheets/jquery.growl.css",
+        "css!lib/datatables.net-dt/css/jquery.dataTables.css",
+        "css!lib/datatables.net-jqui/css/dataTables.jqueryui.css",
+        "css!lib/vanderlee-colorpicker/jquery.colorpicker.css",]);
         // "css!charts/charts.css"]);
 
     function handle_normal_route() {
@@ -307,7 +312,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                 windows.init($windowsLI);
                 // hide the main loading spinner,
                 // after the `last module` has been loaded.
-                $(".sk-spinner-container").hide();
+                $(".sk-spinner-container").parent().hide();
                 $("body > .footer").show();
             });
         });

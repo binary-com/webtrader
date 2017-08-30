@@ -1,5 +1,6 @@
-.custom_theme {
+.custom_theme.webtrader-dialog {
 	display: inline-block;
+	overflow: hidden;
 }
 .custom_theme input {
     width: 100px;

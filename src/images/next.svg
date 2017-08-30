@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="2nd-Submenu" stroke="none" stroke-width="1" fill="transparent" fill-rule="evenodd">
+        <g id="next" transform="translate(-4.000000, -2.000000)" fill-rule="nonzero">
+            <rect id="Rectangle" fill="#D8D8D8" opacity="0" x="0" y="0" width="16" height="16"></rect>
+            <polygon id="Shape" fill="#FFFFFF" points="4.59997559 3.4 5.99997559 2 11.9999756 8 5.99997559 14 4.59997559 12.6 9.1999756 8"></polygon>
+        </g>
+    </g>
+</svg>

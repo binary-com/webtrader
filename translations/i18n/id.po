@@ -1,7 +1,3 @@
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -359,9 +355,6 @@ msgstr "8h"
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "Evening Doji Star terdiri dari candle bullish yang panjang, diikuti oleh Doji yang mengalami gapped, kemudian candle bearish ketiga yang tertutup dengan baik oleh candle pertama yaitu mengkonfirmasi pembalikan. Hal ini dianggap sebagai bearish reversal harga pola candlestick yang kuat"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "PEP adalah individu yang atau telah dipercayakan dengan fungsi publik terkemuka. Status ini diperluas hingga ke kerabat seorang PEP dan rekan dekat"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Smoothed Moving Average adalah campuran dari Simple Moving Average dan Exponential Moving Average, dengan penambahan period yang lebih panjang"
 
@@ -458,9 +451,6 @@ msgstr "Saldo akun"
 msgid "Account opening reason"
 msgstr "Alasan pedaftaran akun"
 
-msgid "Account turnover"
-msgstr "Turnover akun"
-
 msgid "Action"
 msgstr "Aksi"
 
@@ -520,6 +510,9 @@ msgstr "Anugerah terbaik lainnya. Kali ini kami dinominasikan oleh pembaca onlin
 
 msgid "Answer"
 msgstr "Jawaban"
+
+msgid "Anticipated account turnover"
+msgstr "Antisipasi turnover akun"
 
 msgid "Apply"
 msgstr "Daftar"
@@ -611,8 +604,8 @@ msgstr "Batas offset"
 msgid "Barrier(s)"
 msgstr "Batasan"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "Bearish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam uptrend. Candlestick kedua harus dibuka mendekati penutupan hari sebelumnya. Candlestick terakhir harus lebih pendek dan bisa membentuk gap terbalik. Bisa juga ada bayangan penjualan. Pola ini merupakan kelemahan dalam suatu kenaikan dengan risiko konsolidasi dan kemungkinan pembalikan. Bullish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam tren turun. Candlestick kedua harus mendekati penutupan hari sebelumnya. Candlestick terakhir pasti ditepi. Pola ini merupakan kelemahan dan konsolidasi dan kemungkinan pembalikan tren"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr "Bearish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam uptrend. Candlestick kedua harus dibuka mendekati penutupan hari sebelumnya. Candlestick terakhir harus lebih pendek dan bisa membentuk gap terbalik. Bisa juga ada bayangan penjualan. Pola ini merupakan kelemahan dalam suatu kenaikan dengan risiko konsolidasi dan kemungkinan pembalikan. Bullish: Merupakan pola akhir tren yang terdiri dari tiga candlestick dalam tren turun. Candlestick kedua harus mendekati penutupan hari sebelumnya. Candlestick terakhir harus pendek. Pola ini merupakan kelemahan dan konsolidasi dan kemungkinan pembalikan tren"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -799,9 +792,6 @@ msgstr "Dengan mengklik"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Dengan mengklik OK, maka Anda telah membaca dan menerima pembaruan"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Dapat digunakan untuk membeli dan menjual kontrak, memperbaharui kontrak yang telah berakhir, dan mengisi ulang akun virtual."
@@ -1247,6 +1237,9 @@ msgstr "Edukasi"
 msgid "Embed code"
 msgstr "Menanamkan kode"
 
+msgid "Employment status"
+msgstr "Status pekerjaan"
+
 msgid "End Time"
 msgstr "Waktu Akhir"
 
@@ -1502,6 +1495,9 @@ msgstr "Kontrak Higher/Lower"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
+msgid "Historical Data"
+msgstr "Data Historikal"
+
 msgid "Home Address"
 msgstr "Alamat Rumah"
 
@@ -1639,9 +1635,6 @@ msgstr "Akses cepat"
 
 msgid "Instant funding"
 msgstr "Pendanaan instan"
-
-msgid "Instrument"
-msgstr "Instrumen"
 
 msgid "Instruments"
 msgstr "Instrumen"
@@ -2198,14 +2191,8 @@ msgstr "Lebih dari 90 staf dan kontraktor di seluruh dunia"
 msgid "Overlap Studies"
 msgstr "Studi Tumpang Tindih"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "Deklarasi PEP"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "Parabolic SAR (SAR)"
@@ -2513,9 +2500,6 @@ msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgid "Robust and secure platform"
 msgstr "Platform yang kuat dan aman"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2560,9 +2544,6 @@ msgstr "Keamanan"
 
 msgid "Security question"
 msgstr "Pertanyaan keamanan"
-
-msgid "Select Instrument"
-msgstr "Pilih Instrumen"
 
 msgid "Self-Employed"
 msgstr "Wirausaha"
@@ -2615,9 +2596,6 @@ msgstr "Pendek hingga jangka panjang"
 msgid "Short-term action"
 msgstr "Aksi jangka pendek"
 
-msgid "Show"
-msgstr "Tampilkan"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Berdampingan garis-garis putih pola tiga candlestick. Pola bullish: Dalam sebuah tren, candlestick pertama diikuti oleh kenaikan candlestick lain yang terbuka di atas penutupan pertama (gap up), yang diikuti oleh ke atas candlestick ketiga yang terbuka di bawah penutupan kedua (gap down). Pola bearish: Selama downtrend, candlestick pertama ke bawah, diikuti oleh candlestick ke atas yang terbuka di bawah penutupan yang pertama (gap down), diikuti oleh candlestick ke atas yang terbuka di bawah penutupan yang kedua. Pola ini menunjukkan kelanjutan dari downtrend"
 
@@ -2632,6 +2610,9 @@ msgstr "Smoothed Moving Average (SMMA)"
 
 msgid "Sold"
 msgstr "Terjual"
+
+msgid "Source of wealth"
+msgstr "Sumber kekayaan"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -3359,9 +3340,6 @@ msgstr "Garis vertikal"
 msgid "View"
 msgstr "Lihat"
 
-msgid "View Historical Data"
-msgstr "Lihat Data Historikal"
-
 msgid "View Statement"
 msgstr "Lihat Pernyataan"
 
@@ -3424,6 +3402,9 @@ msgstr "Weighted Moving Average (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Selamat datang di Webtrader Binary.com"
+
+msgid "What is pep?"
+msgstr "Apa itu pep?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Bila Anda puas dengan harga kontrak, langsung jalankan trading Anda"

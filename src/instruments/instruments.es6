@@ -57,25 +57,17 @@ function refresh_active_symbols() {
 
             const instruments = $("#nav-menu").find(".instruments");
             instruments.find('> ul').remove();
-            const root = $("<ul>").appendTo(instruments); /* add to instruments menu */
-            menu.refreshMenu(root, markets, onMenuItemClick);
+            menu.refreshMenu(instruments , markets, onMenuItemClick);
         });
 }
 
-function onMenuItemClick(li) {
-
-    const delayAmount = li.data('delay_amount'), //this is in minutes
-        symbol = li.data('symbol'),
-        displaySymbol = li.data('display_name');
-
+function onMenuItemClick(symbol, displayName) {
     chartWindow.addNewWindow({
         instrumentCode: symbol,
-        instrumentName: displaySymbol,
+        instrumentName: displayName,
         timePeriod: '1d',
-        type: 'candlestick',
-        delayAmount: delayAmount
+        type: 'candlestick'
     });
-
 }
 
 let markets = [];

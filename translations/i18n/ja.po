@@ -355,9 +355,6 @@ msgstr "8時間"
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr "宵の明星は長い陰線のローソク足から成ります。長めの陽線のあとに、ギャップの明けた十字線が発生しその次に下放れて大陰線で１日目の陽線の下半分あたり確定した状態をいいます。上昇トレンドからの大きな転向サインとなるローソク足のパターンです。"
 
-msgid "A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP's relatives and close associates"
-msgstr "PEPとは公的地位に有するまたは委託されている個人をいいます。親族や親しい友人にPEPがいる場合も該当します。"
-
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "平滑移動平均は、単純移動平均と指数移動平均を合せたようなもので、長期間のみ適用されます。"
 
@@ -467,9 +464,6 @@ msgstr "口座残高"
 msgid "Account opening reason"
 msgstr "口座開設の理由"
 
-msgid "Account turnover"
-msgstr "口座取引数量"
-
 msgid "Action"
 msgstr "売買"
 
@@ -529,6 +523,9 @@ msgstr "他の主な賞として、”Global Banking”及び”Finance Review�
 
 msgid "Answer"
 msgstr "答え"
+
+msgid "Anticipated account turnover"
+msgstr ""
 
 msgid "Apply"
 msgstr "適用"
@@ -620,8 +617,8 @@ msgstr "追加バリア値"
 msgid "Barrier(s)"
 msgstr "バリア"
 
-msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be shore. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "弱気相場：これは上昇トレンドにある3つのローソク足からなるエンド・オブ・トレンド・パターンです。2つ目のローソクは前日の終値付近で始まることが条件となります。最後のローソク足は短く、反転の分岐点となります。このパターンはもみ合い相場のリスクが上昇し、市場が反転する可能性があります。"
+msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
+msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "ベルトホールド（CDLBELTHOLD）"
@@ -808,9 +805,6 @@ msgstr "クリックすると"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "当社でお取引なさっているお客さまにおいて、改定内容を必ずご確認いただく必要がございます。原則、改定後の書面の内容をご確認いただきOKボタンを押して頂くまで、お取引できなくなりますので、お取引の際ご注意ください。"
-
-msgid "CSV"
-msgstr "CSV"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "トレードの売買、期限切れトレードの更新、デモ口座の補充にご利用いただけます。"
@@ -1259,6 +1253,9 @@ msgstr "お役立ち情報"
 msgid "Embed code"
 msgstr "埋め込みコード"
 
+msgid "Employment status"
+msgstr ""
+
 msgid "End Time"
 msgstr "終了時刻"
 
@@ -1514,6 +1511,9 @@ msgstr "HIGH/LOW・トレード"
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "ひっかけパターン（CDLHIKKAKE）"
 
+msgid "Historical Data"
+msgstr ""
+
 msgid "Home Address"
 msgstr "現住所"
 
@@ -1651,9 +1651,6 @@ msgstr "インスタントアクセス"
 
 msgid "Instant funding"
 msgstr "素早い入金対応"
-
-msgid "Instrument"
-msgstr "商品"
 
 msgid "Instruments"
 msgstr "商品"
@@ -2212,14 +2209,8 @@ msgstr "世界中で90人を超えるスタッフと請負業者"
 msgid "Overlap Studies"
 msgstr "オーバーレイ分析"
 
-msgid "PDF"
-msgstr "PDF"
-
 msgid "PEP Declaration"
 msgstr "PDP宣言書"
-
-msgid "PNG"
-msgstr "PNG"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "パラボリックSAR（SAR）"
@@ -2527,9 +2518,6 @@ msgstr "上昇/下降スリーメソッド（CDLRISEFALL3METHODS）"
 msgid "Robust and secure platform"
 msgstr "ロバストで安心なプラットフォーム"
 
-msgid "SVG"
-msgstr "SVG"
-
 msgid "Safari"
 msgstr "Safari"
 
@@ -2574,9 +2562,6 @@ msgstr "セキュリティ"
 
 msgid "Security question"
 msgstr "セキュリティ保護用の質問"
-
-msgid "Select Instrument"
-msgstr "金融商品をご選択ください"
 
 msgid "Self-Employed"
 msgstr "自営業"
@@ -2629,9 +2614,6 @@ msgstr "短期から長期のお取引"
 msgid "Short-term action"
 msgstr "短期間取引"
 
-msgid "Show"
-msgstr "表示"
-
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 
@@ -2646,6 +2628,9 @@ msgstr "平滑移動平均（SMMA）"
 
 msgid "Sold"
 msgstr "売却"
+
+msgid "Source of wealth"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "コマ（CDLSPINNINGTOP）"
@@ -3375,9 +3360,6 @@ msgstr "垂直線"
 msgid "View"
 msgstr "表示"
 
-msgid "View Historical Data"
-msgstr "履歴データの表示"
-
 msgid "View Statement"
 msgstr "取引履歴を表示する"
 
@@ -3440,6 +3422,9 @@ msgstr "加重移動平均線 (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
 msgstr " Binary.com Webtrader へようこそ"
+
+msgid "What is pep?"
+msgstr ""
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "価格に満足したら、すぐにトレードを実行しましょう。"
