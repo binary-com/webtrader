@@ -98,16 +98,17 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-    float = float && Math.abs(float);
-    currency = currency && currency.toLowerCase();
     var sign = float < 0 ? '-': '';
-    var minimumFractionDigits = ((local_storage.get('currencies_config') || {})[(currency|| '').toUpperCase()] || {}).fractional_digits || 2;
+
+    float = float && Math.abs(float);
+    currency = (currency || '').toLowerCase().trim();
+    var currencies_config = (local_storage.get('currencies_config') || {});
+    var minimumFractionDigits = (currencies_config[(currency|| '').toUpperCase()] || {}).fractional_digits || 2;
     var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
-	
 	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
 						style: "decimal",
 						minimumFractionDigits: minimumFractionDigits,
-					}).format(float);
+                    }).format(float);
 	if(currency){
 		float = sign + $('<span>', {
             class: 'symbols ' + currency,
