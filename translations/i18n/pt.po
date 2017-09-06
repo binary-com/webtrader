@@ -455,7 +455,7 @@ msgid "Action"
 msgstr "Ação"
 
 msgid "Active"
-msgstr "Ativo"
+msgstr "Ativa"
 
 msgid "Add comparisons"
 msgstr "Adicionar comparações"
@@ -1766,7 +1766,7 @@ msgid "Link"
 msgstr "Link"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Carregar mesa de negociações"
 
 msgid "Load chart template"
 msgstr "Carregar modelo do gráfico"
@@ -1886,7 +1886,7 @@ msgid "Make your trade"
 msgstr "Realize a sua negociação"
 
 msgid "Manage"
-msgstr ""
+msgstr "Gerenciar"
 
 msgid "Mar"
 msgstr "Mar"
@@ -2075,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Intervalo Verdadeiro Médio Normalizado (IVMN) tenta normalizar os valores do intervalo verdadeiro médio em todos os instrumentos ao usar a fórmula abaixo"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Nota: Só é possível ter uma conta de moeda fiduciária e uma conta de cada criptomoeda"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: retiradas através de agentes de pagamentos somente estão disponíveis no caso de você depositar exclusivamente por via de agentes de pagamento"
@@ -2312,7 +2312,7 @@ msgid "Please select"
 msgstr "Selecione"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Selecione um motivo de abertura de conta antes de continuar"
 
 msgid "Please submit a valid verification token"
 msgstr "Envie um token de verificação válido"
@@ -2555,7 +2555,7 @@ msgid "Save changes"
 msgstr "Salvar alterações"
 
 msgid "Saved"
-msgstr ""
+msgstr "Salva"
 
 msgid "Scalable trading"
 msgstr "Negociações escaláveis"
@@ -3407,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "O WebTrader é uma plataforma de negociação avançada, totalmente personalizável de acordo com as suas preferências pessoais"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utiliza novas tecnologias web para uma experiência de negociação rica e divertida"
@@ -3473,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Retirada através de agentes de pagamentos"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Mesa de negociações"
 
 msgid "X-axis labels"
 msgstr "Etiquetas do eixo X"
@@ -3650,7 +3650,7 @@ msgid "is Binary's advanced desktop trading platform. Its multi-window interface
 msgstr "é a plataforma de negociação avançada para desktops da Binary. A sua interface de várias janelas proporciona flexibilidade máxima e se adequa às necessidade de negociadores ativos que trabalham nos seus computadores desktop"
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "é necessário. Spread atual"
 
 msgid "is that which is selected and the"
 msgstr ""
