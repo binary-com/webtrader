@@ -467,6 +467,9 @@ msgstr "口座開設の理由"
 msgid "Action"
 msgstr "売買"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "比較チャートを追加"
 
@@ -560,6 +563,9 @@ msgstr "アルーン（AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "アルーン オシレーター (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "ASIAN DOWN"
 
@@ -580,6 +586,9 @@ msgstr "8月"
 
 msgid "August"
 msgstr "8月"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "平均方向性指数（ADX)"
@@ -941,8 +950,8 @@ msgstr "「Binary.comアカウントでログインする」をクリックし�
 msgid "Close"
 msgstr "終値"
 
-msgid "Close all"
-msgstr "全て閉じる"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "取引終了時間"
@@ -1006,6 +1015,9 @@ msgstr "居住国"
 
 msgid "Create"
 msgstr "作成"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "トークンを作成"
@@ -1771,6 +1783,9 @@ msgstr "線形加重移動平均（LWMA）"
 msgid "Link"
 msgstr "リンク"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "チャートテンプレートを読み込む"
 
@@ -1887,6 +1902,9 @@ msgstr "リクエストを送信される前に、エージェントの支払規
 
 msgid "Make your trade"
 msgstr "取引を実行しましょう。"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "3月"
@@ -2073,6 +2091,9 @@ msgstr "正規化ATR（NATR）"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "正規化ATR（NATR）は次の計算式を利用して、計測器のアベレージ・トゥルー・レンジ値の正規化を行います"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "ご注意：決済サービスでのご出金は、ご入金の際に決済サービスをご利用いただいた場合にのみご利用いただけます。"
@@ -2307,6 +2328,9 @@ msgstr "税務情報をご入力ください"
 
 msgid "Please select"
 msgstr "選択してください"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "有効なワンタイムパスワードをご入力ください"
@@ -2547,6 +2571,9 @@ msgstr "名前をつけて保存"
 
 msgid "Save changes"
 msgstr "変更が保存されました"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "スケーラブルな取引"
@@ -3119,9 +3146,6 @@ msgstr "ティック {row.number}"
 msgid "Ticks"
 msgstr "ティック"
 
-msgid "Tile"
-msgstr "タイル表示"
-
 msgid "Time interval"
 msgstr "期間"
 
@@ -3402,8 +3426,8 @@ msgstr "Websocket サーバー"
 msgid "Webtrader"
 msgstr "ウェブトレーダー"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "Webtraderはお好みに合せてカスタマイズできる高度な取引プラットフォームです。"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "ウェブトレーダーは取引経験をより豊かに、より楽しめるものへとする全く新しいウェブテクノロジーを使用しています"
@@ -3453,9 +3477,6 @@ msgstr "条件が満たされた場合、購入金額の10%〜1000%を獲得い�
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "条件が満たされた場合、購入金額の10%〜1000%を獲得いただけます。現行価格から離れた価格を選択するほど、リターン率も大きくなります。"
 
-msgid "Windows"
-msgstr "Windows"
-
 msgid "With Binary.com you can trade"
 msgstr "当社では下記のお取引が可能です。"
 
@@ -3470,6 +3491,9 @@ msgstr "資金のご出金"
 
 msgid "Withdrawal via payment agents"
 msgstr "決済サービスでのご出金"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "X 軸ラベル"
@@ -3752,3 +3776,4 @@ msgstr "| ペイアウト"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
+
