@@ -454,6 +454,9 @@ msgstr "Motivo dell'apertura dell'account"
 msgid "Action"
 msgstr "Azione"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Aggiungi confronti"
 
@@ -547,6 +550,9 @@ msgstr "Aroon (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Aroon Oscillator (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Asian down"
 
@@ -567,6 +573,9 @@ msgstr "Ago"
 
 msgid "August"
 msgstr "Agosto"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Average Directional Movement Index (ADX)"
@@ -928,8 +937,8 @@ msgstr "Clicca per accedere con il tuo account Binary.com"
 msgid "Close"
 msgstr "Chiudi"
 
-msgid "Close all"
-msgstr "Chiudi tutto"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Chiude"
@@ -993,6 +1002,9 @@ msgstr "Paese di residenza"
 
 msgid "Create"
 msgstr "Crea"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Crea token"
@@ -1753,6 +1765,9 @@ msgstr "Media mobile ponderata lineare (LWMA)"
 msgid "Link"
 msgstr "Link"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Carica modello del grafico"
 
@@ -1869,6 +1884,9 @@ msgstr "Prima di inviare la richiesta, assicurati di aver prima preso accordi co
 
 msgid "Make your trade"
 msgstr "Esegui il tuo trade"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mar"
@@ -2054,6 +2072,9 @@ msgid "Normalized Average True Range (NATR)"
 msgstr "Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
+msgstr ""
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
@@ -2289,6 +2310,9 @@ msgstr ""
 
 msgid "Please select"
 msgstr "Seleziona"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "Invia un token di verifica valido"
@@ -2529,6 +2553,9 @@ msgstr "Salva come"
 
 msgid "Save changes"
 msgstr "Salva le variazioni"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "Trading scalabile"
@@ -3100,9 +3127,6 @@ msgstr "Tick {row.number}"
 msgid "Ticks"
 msgstr "Tick"
 
-msgid "Tile"
-msgstr "Tile"
-
 msgid "Time interval"
 msgstr "Intervallo di tempo"
 
@@ -3382,7 +3406,7 @@ msgstr "Server di Websocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
 msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
@@ -3433,9 +3457,6 @@ msgstr "Se hai ragione, vinci il 10-1000% della tua puntata. Aumenta il rendimen
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "Se hai ragione, vinci il 10-1000% della tua puntata. Aumenta il rendimento delle tue vincite scegliendo un prezzo target lontano dal prezzo attuale"
 
-msgid "Windows"
-msgstr "Windows"
-
 msgid "With Binary.com you can trade"
 msgstr "Con Binary.com puoi negoziare"
 
@@ -3450,6 +3471,9 @@ msgstr "Preleva fondi"
 
 msgid "Withdrawal via payment agents"
 msgstr "Prelievo tramite gli agenti di pagamento"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "Etichetta dell'asse delle X"
@@ -3732,3 +3756,4 @@ msgstr "| Payout"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
+
