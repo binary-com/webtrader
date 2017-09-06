@@ -455,7 +455,7 @@ msgid "Action"
 msgstr "Aktion"
 
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 msgid "Add comparisons"
 msgstr "Vergleiche hinzufügen"
@@ -551,7 +551,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Aroon Oszillator (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Vereinbaren"
 
 msgid "Asian down"
 msgstr "Asiaten Tief"
@@ -575,7 +575,7 @@ msgid "August"
 msgstr "August"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Verfügbare Währungen"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Average Directional Movement Index (ADX)"
@@ -938,7 +938,7 @@ msgid "Close"
 msgstr "Schluss"
 
 msgid "Close All"
-msgstr ""
+msgstr "Alle schließen"
 
 msgid "Closes"
 msgstr "Schließt"
@@ -1004,7 +1004,7 @@ msgid "Create"
 msgstr "Erstellen"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Konto einrichten"
 
 msgid "Create token"
 msgstr "Token erstellen"
