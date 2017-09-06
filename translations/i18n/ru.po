@@ -455,7 +455,7 @@ msgid "Action"
 msgstr "Действие"
 
 msgid "Active"
-msgstr ""
+msgstr "Активные"
 
 msgid "Add comparisons"
 msgstr "Добавить сравнения"
@@ -575,7 +575,7 @@ msgid "August"
 msgstr "Август"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Доступные валюты"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Индекс среднего направления (ADX)"
@@ -938,7 +938,7 @@ msgid "Close"
 msgstr "Закрыть"
 
 msgid "Close All"
-msgstr ""
+msgstr "Закрыть всё"
 
 msgid "Closes"
 msgstr "Закрытие"
@@ -1004,7 +1004,7 @@ msgid "Create"
 msgstr "Создать"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Открыть счёт"
 
 msgid "Create token"
 msgstr "Создать ключ"
@@ -1766,7 +1766,7 @@ msgid "Link"
 msgstr "Ссылка"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Загрузить Рабочую область"
 
 msgid "Load chart template"
 msgstr "Загрузить шаблон графика"
@@ -2075,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Нормализованный средний истинный диапазон (NATR) предпринимает попытку нормализовать значения среднего истинного диапазона инструментов, используя следующую формулу"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Примечание: Вы можете открыть лишь один счёт с обычными деньгами и по одному счёту на каждую криптовалюту"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Примечание: вывод средств через платёжного агента возможен лишь в том случае, когда Вы вносите средства исключительно через данного платёжного агента"
@@ -2312,7 +2312,7 @@ msgid "Please select"
 msgstr "Пожалуйста, выберите"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Чтобы продолжить, пожалуйста, укажите причину открытия счёта"
 
 msgid "Please submit a valid verification token"
 msgstr "Пожалуйста, укажите правильный проверочный ключ"
@@ -3407,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader — передовая торговая платформа, которую можно полностью настраивать, согласно Вашим предпочтениям"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader применяет новые веб технологии для приятного и полноценного торгового опыта"
@@ -3473,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Вывод через платёжных агентов"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Рабочая область"
 
 msgid "X-axis labels"
 msgstr "Метки оси X"
