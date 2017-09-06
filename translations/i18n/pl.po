@@ -454,6 +454,9 @@ msgstr "Powód otwarcia konta"
 msgid "Action"
 msgstr "Czynność"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Dodaj porównania"
 
@@ -547,6 +550,9 @@ msgstr "Aroon (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscylator Aroon (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Azjatyckie – Spadek"
 
@@ -567,6 +573,9 @@ msgstr "Sie"
 
 msgid "August"
 msgstr "Sierpień"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Wskaźnik ADX (Average Directional Movement Index)"
@@ -928,8 +937,8 @@ msgstr "Kliknij, aby zalogować się przy użyciu konta na Binary.com"
 msgid "Close"
 msgstr "Zamknij"
 
-msgid "Close all"
-msgstr "Zamknij wszystko"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Zamknięcie"
@@ -993,6 +1002,9 @@ msgstr "Kraj zamieszkania"
 
 msgid "Create"
 msgstr "Utwórz"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Utwórz token"
@@ -1753,6 +1765,9 @@ msgstr "Liniowa ważona średnia krocząca (LWMA)"
 msgid "Link"
 msgstr "Łącze"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Załaduj szablon wykresu"
 
@@ -1869,6 +1884,9 @@ msgstr "Upewnij się, że przed wysłaniem wniosku, zostały zaakceptowane warun
 
 msgid "Make your trade"
 msgstr "Dokonaj transakcji"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mar"
@@ -2055,6 +2073,9 @@ msgstr "Wskaźnik NATR (Normalized Average True Range)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "Wskaźnik NATR służy do znormalizowania wartości ATR poszczególnych instrumentów finansowych przy użyciu poniższego wzoru"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Uwaga: Wypłaty poprzez pośredników płatności są dostępne tylko w przypadku dokonania wpłaty poprzez pośrednika płatności"
@@ -2289,6 +2310,9 @@ msgstr "Proszę podać informacje podatkowe"
 
 msgid "Please select"
 msgstr "Wybierz"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "Proszę podać poprawny token weryfikujący"
@@ -2529,6 +2553,9 @@ msgstr "Zapisz jako"
 
 msgid "Save changes"
 msgstr "Zapisz zmiany"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "Skalowalne handlowanie"
@@ -3100,9 +3127,6 @@ msgstr "Najmniejsza zmiana ceny {row.number}"
 msgid "Ticks"
 msgstr "Najmniejsze zmiany ceny"
 
-msgid "Tile"
-msgstr "Zmień położenie"
-
 msgid "Time interval"
 msgstr "Odstęp czasu"
 
@@ -3382,8 +3406,8 @@ msgstr "Serwer Websocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "Webtrader to zaawansowana platforma handlowa, którą można całkowicie spersonalizować w zależności od osobistych potrzeb"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Aplikacja Webtrader wykorzystuje nowe technologie internetowe, aby zapewnić doskonałe handlowanie"
@@ -3433,9 +3457,6 @@ msgstr "Wygraj 10–1000%, jeśli Twoja prognoza się sprawdzi. Zwiększ swój z
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "Wygraj 10–1000%, jeśli Twoja prognoza się sprawdzi. Zwiększ swój zysk z wygranej, ustawiając cenę docelową jako wartość daleką od obecnej ceny"
 
-msgid "Windows"
-msgstr "okna"
-
 msgid "With Binary.com you can trade"
 msgstr "Z Binary.com możesz handlować w następujących warunkach:"
 
@@ -3450,6 +3471,9 @@ msgstr "Wypłać środki"
 
 msgid "Withdrawal via payment agents"
 msgstr "Wypłata przez pośrednika płatności"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "Etykiety osi X"
@@ -3732,3 +3756,4 @@ msgstr "| Wypłata"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "umożliwiając klientom, partnerom i programistom zakup i sprzedaż produktów firmy Binary.com"
+
