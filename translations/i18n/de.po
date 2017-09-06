@@ -1766,7 +1766,7 @@ msgid "Link"
 msgstr "Link"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Arbeitsbereich laden"
 
 msgid "Load chart template"
 msgstr "Chartvorlage wird geladen"
@@ -1886,7 +1886,7 @@ msgid "Make your trade"
 msgstr "Führen Sie Ihr Geschäft aus"
 
 msgid "Manage"
-msgstr ""
+msgstr "Verwalten"
 
 msgid "Mar"
 msgstr "Mär"
@@ -2075,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Normalized Average True Range (NATR) versucht den Durchschnitt der True Range Werte in Verwendung der unterstehenden Formel, über Instrumente zu normalisieren"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Hinweis: Sie können nur ein Fiat-Währungskonto und ein Konto je Kryptowährung haben"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Bitte beachten: Die Abhebung über einen Zahlungsagenten ist nur möglich, wenn Sie auch über diesen Zahlungsagenten eingezahlt haben"
@@ -2312,7 +2312,7 @@ msgid "Please select"
 msgstr "Bitte auswählen"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Bitte legen Sie einen Kontoeröffnung-Grund fest, bevor Sie fortfahren"
 
 msgid "Please submit a valid verification token"
 msgstr "Bitte übermitteln Sie einen gültigen Verifikationstoken"
@@ -2555,7 +2555,7 @@ msgid "Save changes"
 msgstr "Änderungen speichern"
 
 msgid "Saved"
-msgstr ""
+msgstr "Gespeichert"
 
 msgid "Scalable trading"
 msgstr "Skalierbarer Handel"
@@ -3407,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Web trader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader ist eine fortschrittliche Handelsplattform, die ganz individuell Ihren persönlichen Vorlieben angepasst werden kann"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader verwendet neue Webtechnologien für eine reiche und angenehme Handelserfahrung"
@@ -3473,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Abheben über Zahlungsagenten"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Arbeitsbereich"
 
 msgid "X-axis labels"
 msgstr "X-Achse Labels"
