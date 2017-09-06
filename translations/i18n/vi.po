@@ -454,6 +454,9 @@ msgstr "Lý do mở tài khoản"
 msgid "Action"
 msgstr "Hành động"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Thêm các so sánh"
 
@@ -547,6 +550,9 @@ msgstr "Aroon (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Dao động Aroon (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Châu Á xuống"
 
@@ -567,6 +573,9 @@ msgstr "Tháng tám"
 
 msgid "August"
 msgstr "Tháng tám"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Chỉ số di chuyển trung bình trực tiếp (ADX)"
@@ -928,8 +937,8 @@ msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com c�
 msgid "Close"
 msgstr "Đóng"
 
-msgid "Close all"
-msgstr "Đóng tất cả"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Kết thúc"
@@ -993,6 +1002,9 @@ msgstr "Quốc gia cư trú"
 
 msgid "Create"
 msgstr "Tạo"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Tạo token"
@@ -1753,6 +1765,9 @@ msgstr "Công thức biến thiên trung bình có trọng số tuyến ti
 msgid "Link"
 msgstr "Liên kết"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Tải mẫu biểu đồ"
 
@@ -1869,6 +1884,9 @@ msgstr "Đầu tiên hãy chắc chắn rằng bạn đã đồng ý với Đạ
 
 msgid "Make your trade"
 msgstr "thực hiện giao dịch của bạn"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "Tháng ba"
@@ -2055,6 +2073,9 @@ msgstr "Chỉ số Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "Chỉ số Normalized Average True Range (NATR) cố gắng để bình thường hóa các giá trị trung bình phạm vi chuẩn trên thiết bị bằng cách sử dụng công thức dưới đây"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Lưu ý: Rút tiền thông qua đại lý thanh toán sẽ chỉ khả dụng nếu bạn gửi tiền duy nhất thông qua đại lý thanh toán"
@@ -2289,6 +2310,9 @@ msgstr "Vui lòng cung cấp thông tin thuế của bạn"
 
 msgid "Please select"
 msgstr "Vui lòng chọn"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "Xin vui lòng nhập một mã thông báo xác nhận hợp lệ"
@@ -2529,6 +2553,9 @@ msgstr "Lưu lại thành"
 
 msgid "Save changes"
 msgstr "Lưu các thay đổi"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "giao dịch có thể mở rộng"
@@ -3100,9 +3127,6 @@ msgstr "Đánh dấu {dòng.số}"
 msgid "Ticks"
 msgstr "Đánh dấu"
 
-msgid "Tile"
-msgstr "Kiểu xếp ngói"
-
 msgid "Time interval"
 msgstr "Khoảng thời gian"
 
@@ -3382,8 +3406,8 @@ msgstr "Máy chủ Websocket"
 msgid "Webtrader"
 msgstr "WebTrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "WebTrader là một nền tảng giao dịch tiên tiến mà có thể tùy biến toàn bộ theo sở thích cá nhân của bạn"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "WebTrader sử dụng công nghệ web mới để cho ra một trải nghiệm giao dịch thú vị và phong phú"
@@ -3433,9 +3457,6 @@ msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng lượng hoàn lại khi thắng của bạn bằng cách chọn một mức giá mục tiêu xa hơn khỏi giá hiện tại"
 
-msgid "Windows"
-msgstr "Windows"
-
 msgid "With Binary.com you can trade"
 msgstr "Với Binary.com bạn có thể giao dịch"
 
@@ -3450,6 +3471,9 @@ msgstr "Rút tiền tài khoản"
 
 msgid "Withdrawal via payment agents"
 msgstr "Rút tiền thông qua đại lý thanh toán"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "Nhãn X-axis"
@@ -3732,3 +3756,4 @@ msgstr "| Thanh toán"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
+
