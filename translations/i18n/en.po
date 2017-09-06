@@ -469,6 +469,9 @@ msgstr ""
 msgid "Action"
 msgstr "Action"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Add comparisons"
 
@@ -563,6 +566,9 @@ msgstr ""
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr ""
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr ""
 
@@ -583,6 +589,9 @@ msgstr "Aug"
 
 msgid "August"
 msgstr "August"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr ""
@@ -944,8 +953,8 @@ msgstr "Click to log in with your Binary.com account"
 msgid "Close"
 msgstr ""
 
-msgid "Close all"
-msgstr "Close all"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Closes"
@@ -1009,6 +1018,9 @@ msgstr "Country of residence"
 
 msgid "Create"
 msgstr "Create"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Create token"
@@ -1770,6 +1782,9 @@ msgstr ""
 msgid "Link"
 msgstr "Link"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Load chart template"
 
@@ -1885,6 +1900,9 @@ msgid "Make sure that you have first agreed with the Agent on the terms of payme
 msgstr "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
 
 msgid "Make your trade"
+msgstr ""
+
+msgid "Manage"
 msgstr ""
 
 msgid "Mar"
@@ -2071,6 +2089,9 @@ msgid "Normalized Average True Range (NATR)"
 msgstr ""
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
+msgstr ""
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
@@ -2306,6 +2327,9 @@ msgstr ""
 
 msgid "Please select"
 msgstr "Please select"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr ""
@@ -2547,6 +2571,9 @@ msgstr "Save as"
 
 msgid "Save changes"
 msgstr "Save changes"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr ""
@@ -3118,9 +3145,6 @@ msgstr "Tick {row.number}"
 msgid "Ticks"
 msgstr "Ticks"
 
-msgid "Tile"
-msgstr "Tile"
-
 msgid "Time interval"
 msgstr "Time interval"
 
@@ -3401,7 +3425,7 @@ msgstr "Websocket Server"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
 msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
@@ -3452,9 +3476,6 @@ msgstr ""
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr ""
 
-msgid "Windows"
-msgstr "Windows"
-
 msgid "With Binary.com you can trade"
 msgstr ""
 
@@ -3469,6 +3490,9 @@ msgstr "Withdraw funds"
 
 msgid "Withdrawal via payment agents"
 msgstr "Withdrawal via payment agents"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "X-axis labels"
@@ -3751,6 +3775,15 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr ""
+
+#~ msgid "Close all"
+#~ msgstr "Close all"
+
+#~ msgid "Tile"
+#~ msgstr "Tile"
+
+#~ msgid "Windows"
+#~ msgstr "Windows"
 
 #~ msgid "CSV"
 #~ msgstr "CSV"
