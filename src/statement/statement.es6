@@ -99,7 +99,7 @@ const initStatement = () => {
    statement = windows.createBlankWindow($('<div/>'), {
       title: 'Statement'.i18n(),
       dialogClass: 'statement',
-      width: 700 ,
+      width: 800 ,
       height: 400,
       close: () => {
          table && table.DataTable().destroy(true);

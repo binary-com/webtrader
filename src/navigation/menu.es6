@@ -96,7 +96,7 @@ export const refreshMenu = (root, markets, callback) => {
       $menu.detach(); root.append($menu);
       callback(symbol, display_name, pip);
    });
-   $menu.menu();
+   $menu.menu({ position: { collision: 'fit' } });
 }
 
 export default {

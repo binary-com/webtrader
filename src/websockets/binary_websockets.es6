@@ -220,6 +220,7 @@ export const invalidate = () => {
    local_storage.remove('oauth');
    local_storage.remove('authorize');
    fire_event("reset_realitycheck");
+   fire_event("reset_accountstatus");
 
    api.send({logout: 1}) /* try to logout and if it fails close the socket */
       .catch((err) =>{
@@ -230,6 +231,7 @@ export const invalidate = () => {
    for(const i in cached_promises)
       if(needs_authentication(cached_promises[i].data) || ('authorize' in cached_promises[i].data))
          delete cached_promises[i];
+   is_authenitcated_session = false;
 }
 
 /* first authenticate and then send the request */
@@ -401,7 +403,7 @@ export const switch_account = (id) => {
       .catch((err) => console.error(err));
 
    return api.cached.authorize().then(
-      () => fire_event("switch_account")
+      (data) => fire_event("switch_account", data) 
    );
 }
 
@@ -430,13 +432,14 @@ export const cached  = {
    },
    /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
-   authorize: () => {
+   authorize: (re_authorize) => {
       const oauth = local_storage.get('oauth');
       const token = oauth && oauth[0] && oauth[0].token,
          key = JSON.stringify({ authorize: token });
 
-      if (is_authenitcated_session && token && cached_promises[key])
-         return cached_promises[key].promise;
+      if (is_authenitcated_session && token && cached_promises[key] && !re_authorize){
+            return cached_promises[key].promise;
+      }
 
       return token ? authenticate(token) : /* we have a token => autheticate */
          Promise.reject('Please log in.'.i18n());

@@ -4,7 +4,6 @@ cache:
   yarn: true
   directories:
   - node_modules
-  - bower_components
 matrix:
   fast_finish: true
 language: node_js
@@ -16,6 +15,7 @@ notifications:
   email:
   - arnab@binary.com
   - apoorv@binary.com
+  - amin@binary.com
 branches:
   only:
   - master

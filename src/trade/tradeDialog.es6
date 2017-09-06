@@ -327,12 +327,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
-      decimal: /^(BTC|XBT)$/.test(local_storage.get('currency')) ? 8 : 2
+      decimal: currencyFractionalDigits()
     },
     basis: {
       array: ['Payout', 'Stake'],
       value: 'payout',
-      amount: isBTC() ? 0.002 : 10,
+      amount: currencyFractionalDigits() === 8 ? 0.10000000 : 10,
       limit: null,
     },
     spreads: {
@@ -933,7 +933,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           state.tick.quote = data.tick.quote;
           state.ticks.loading = false;
           /* update ticks for sparkline chart */
-          if(state.ticks.array.length > 30) {
+          if(state.ticks.array.length > 25) {
             state.ticks.array.shift();
           }
           state.ticks.array.push(data.tick);

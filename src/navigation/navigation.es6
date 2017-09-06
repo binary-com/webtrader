@@ -40,6 +40,8 @@ const initLoginButton = (root) => {
          is_virtual:0
       },
       show_submenu: false,
+      show_new_account_link: false,
+
    };
 
 
@@ -84,7 +86,7 @@ const initLoginButton = (root) => {
          /* We're not going to set currency automatically, since the user might select a different currency  */
          if (local_storage.get("currency")){
             state.currency = local_storage.get("currency");
-         } else 
+          } else 
             return;
       }
 
@@ -153,10 +155,11 @@ const initLoginButton = (root) => {
          state.has_disabled_account =  _.some(loginids, {is_disabled: true});
 
          if(_.some(loginids, {is_disabled: true})) {
+            const lockedIds = _.filter(loginids, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
                message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
-               + "Your account is locked, please contact customer support for more info.".i18n()
+               + "Your account(%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
                + "</a>"
             });
          }
@@ -169,11 +172,11 @@ const initLoginButton = (root) => {
       state.show_login = true;
    });
 
-   /* update time every one minute */
-   time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
+   /* update time every second */
+   time.text(moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT');
    setInterval(() => {
-      time.text(moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT');
-   }, 15 * 1000);
+      time.text(moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT');
+   }, 1000);
 }
 
 const initLangButton = (root) => {
@@ -280,10 +283,11 @@ export const getLandingCompany = () => {
          ])
          .then((results) => {
             const data = results[0];
-            const landing_company_details = results[1].landing_company_details || {};
+            const landing_company_details = data.landing_company.virtual_company === 'virtual' ?
+              data.landing_company.financial_company || {} :
+              results[1].landing_company_details || {};
             const financial = data.landing_company.financial_company;
             const gaming = data.landing_company.gaming_company;
-
             const loginids = Cookies.loginids();
             const curr_login = local_storage.get("oauth")[0];
             curr_login.is_mlt = /MLT/.test(curr_login.id);
@@ -314,8 +318,11 @@ export const getLandingCompany = () => {
                   }),
                   _.filter(cr_accts, {type: 'crypto'}).map((acct) => acct.currency)
                );
-               const has_all_crypto = crypto_currencies.length === 0;
-               if(has_fiat ^ has_all_crypto) {
+               const has_crypto = crypto_currencies.length && crypto_currencies.length !== (landing_company_details.legal_allowed_currencies.filter((curr) => {
+                  return currencies_config[curr].type === 'crypto';
+               }) || []).length;
+               const has_all_crypto = !crypto_currencies.length;
+               if((!has_fiat && has_crypto) || (has_fiat && !has_all_crypto)) {
                   return 'new-account'; // 5-b and 5-c
                }
                return 'do-nothing'; // 5-d

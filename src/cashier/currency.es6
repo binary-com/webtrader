@@ -40,14 +40,13 @@ const check_currency_async = () => new Promise((resolve, reject) => {
       liveapi.send({ set_account_currency: state.value })
         .then(resolve, reject)
         .then(() => {
-          local_storage.set("currency", state.value);
+          // This doesn't work because on emitting the login event currency is reset.
+          // local_storage.set("currency", state.value);
           const oauth = local_storage.get('oauth');
           oauth[0].currency = state.value;
           local_storage.set("oauth", oauth);
-          liveapi.switch_account(oauth[0].id); // To emit login.
-          //For updating balance in navigation
-          liveapi.send({ balance: 1, subscribe: 1 })
-            .catch(function (err) { console.error(err); });
+          //Re-authorize
+          liveapi.cached.authorize(true)
           win.dialog('close');
         });
     },
@@ -73,7 +72,6 @@ const check_currency_async = () => new Promise((resolve, reject) => {
   }).catch(() => reject({ message: 'Please try again after few minutes.'.i18n() }));
 
   rv.formatters.format_category = (category) => {
-    console.log(category);
     return _.capitalize(category) + " Currencies"
   };
 
