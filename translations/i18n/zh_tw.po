@@ -454,6 +454,9 @@ msgstr "開立帳戶的原因"
 msgid "Action"
 msgstr "動作"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "新增比較"
 
@@ -547,6 +550,9 @@ msgstr "阿隆指標 (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "阿隆震盪指標 (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "亞洲下跌"
 
@@ -567,6 +573,9 @@ msgstr "八月"
 
 msgid "August"
 msgstr "八月"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "平均趨向指標(ADX)"
@@ -928,8 +937,8 @@ msgstr "點選登入Binary.com帳戶"
 msgid "Close"
 msgstr "關"
 
-msgid "Close all"
-msgstr "全部關閉"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "關"
@@ -993,6 +1002,9 @@ msgstr "居住國"
 
 msgid "Create"
 msgstr "建立"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "建立權杖"
@@ -1753,6 +1765,9 @@ msgstr "線性加權移動平均數 (LWMA)"
 msgid "Link"
 msgstr "連結"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "載入圖表範本"
 
@@ -1869,6 +1884,9 @@ msgstr "在送出要求前，請確保您已同意代理的支付條款。一旦
 
 msgid "Make your trade"
 msgstr "執行交易"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "三月"
@@ -2055,6 +2073,9 @@ msgstr "標準化真實波動幅度均值 (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "標準化真實波動幅度均值 (NATR)嘗試使用以下公式將各工具之間的真實波動幅度均值標準化"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "請注意:如果要使用付款代理提款，您必須僅通過付款代理存款"
@@ -2289,6 +2310,9 @@ msgstr "請提供稅務資訊"
 
 msgid "Please select"
 msgstr "請選擇"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "請提供有效的驗證權杖"
@@ -2529,6 +2553,9 @@ msgstr "另存為"
 
 msgid "Save changes"
 msgstr "儲存更改"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "靈活交易"
@@ -3100,9 +3127,6 @@ msgstr "跳動點 {列.號}"
 msgid "Ticks"
 msgstr "跳動點"
 
-msgid "Tile"
-msgstr "圖標"
-
 msgid "Time interval"
 msgstr "時間間隔"
 
@@ -3382,8 +3406,8 @@ msgstr "Websocket 伺服器"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "Webtrader是先進的交易平台，完全根據個人的愛好訂製"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader採用新型網絡技術，為您提供豐富而充滿樂趣的交易體驗"
@@ -3433,9 +3457,6 @@ msgstr "如果您預測正確的話，即可贏得相等於投注額10-1000%的�
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "如果您預測正確的話，即可贏得相等於投注額10-1000%的回報率。選擇距離目前價格更遠的預測價格可增加回報率"
 
-msgid "Windows"
-msgstr "視窗"
-
 msgid "With Binary.com you can trade"
 msgstr "通過Binary.com，您可以交易"
 
@@ -3450,6 +3471,9 @@ msgstr "取出資金"
 
 msgid "Withdrawal via payment agents"
 msgstr "通過支付代理提款"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "X-軸標籤"
@@ -3732,3 +3756,4 @@ msgstr "| 賠付"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
+
