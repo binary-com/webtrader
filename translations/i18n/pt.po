@@ -3641,7 +3641,7 @@ msgid "if this is not your country of residence"
 msgstr "se este não for o seu país de residência"
 
 msgid "in the future, the"
-msgstr ""
+msgstr "no futuro, a"
 
 msgid "information about your trading exprience and personal finance"
 msgstr "informações sobre a sua experiência com negociações e finanças pessoais"
@@ -3653,10 +3653,10 @@ msgid "is required. Current spread"
 msgstr "é necessário. Spread atual"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "é aquela que está selecionada e o"
 
 msgid "is the"
-msgstr ""
+msgstr "é o"
 
 msgid "is the price in effect at that time"
 msgstr "é o preço em vigor naquele momento"
@@ -3668,7 +3668,7 @@ msgid "is the selected time"
 msgstr "é a hora selecionada"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "é o preço na"
 
 msgid "is when the contract is processed by our servers and the"
 msgstr "é quando o contrato é processado pelos nossos servidores e "
