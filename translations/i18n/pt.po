@@ -455,7 +455,7 @@ msgid "Action"
 msgstr "Ação"
 
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 msgid "Add comparisons"
 msgstr "Adicionar comparações"
@@ -551,7 +551,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Aroon Oscillator (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Organizar"
 
 msgid "Asian down"
 msgstr "Asiático abaixo"
