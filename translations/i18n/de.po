@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -454,6 +457,9 @@ msgstr "Kontoeröffnungs-Grund"
 msgid "Action"
 msgstr "Aktion"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Vergleiche hinzufügen"
 
@@ -547,6 +553,9 @@ msgstr "Aroon (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Aroon Oszillator (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Asiaten Tief"
 
@@ -567,6 +576,9 @@ msgstr "Aug"
 
 msgid "August"
 msgstr "August"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Average Directional Movement Index (ADX)"
@@ -928,8 +940,8 @@ msgstr "Anklicken, um sich mit Ihrem Binary.com Konto anzumelden"
 msgid "Close"
 msgstr "Schluss"
 
-msgid "Close all"
-msgstr "Alle schließen"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Schließt"
@@ -993,6 +1005,9 @@ msgstr "Wohnsitzland"
 
 msgid "Create"
 msgstr "Erstellen"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Token erstellen"
@@ -1753,6 +1768,9 @@ msgstr "Linearly Weighted Moving Average (LWMA)"
 msgid "Link"
 msgstr "Link"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Chartvorlage wird geladen"
 
@@ -1869,6 +1887,9 @@ msgstr "Bevor Sie Ihren Antrag absenden können, müssen Sie zuerst den Zahlungs
 
 msgid "Make your trade"
 msgstr "Führen Sie Ihr Geschäft aus"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mär"
@@ -2055,6 +2076,9 @@ msgstr "Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "Normalized Average True Range (NATR) versucht den Durchschnitt der True Range Werte in Verwendung der unterstehenden Formel, über Instrumente zu normalisieren"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Bitte beachten: Die Abhebung über einen Zahlungsagenten ist nur möglich, wenn Sie auch über diesen Zahlungsagenten eingezahlt haben"
@@ -2289,6 +2313,9 @@ msgstr "Bitte geben Sie Ihre Steuerinformationen an"
 
 msgid "Please select"
 msgstr "Bitte auswählen"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "Bitte übermitteln Sie einen gültigen Verifikationstoken"
@@ -2529,6 +2556,9 @@ msgstr "Speichern als"
 
 msgid "Save changes"
 msgstr "Änderungen speichern"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "Skalierbarer Handel"
@@ -3100,9 +3130,6 @@ msgstr "Tick {Reihe.Nummer}"
 msgid "Ticks"
 msgstr "Ticks"
 
-msgid "Tile"
-msgstr "Tile"
-
 msgid "Time interval"
 msgstr "Zeitinterval"
 
@@ -3382,8 +3409,8 @@ msgstr "Websocket Server"
 msgid "Webtrader"
 msgstr "Web trader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "Webtrader ist eine fortschrittliche Handelsplattform, die ganz individuell Ihren persönlichen Vorlieben angepasst werden kann"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader verwendet neue Webtechnologien für eine reiche und angenehme Handelserfahrung"
@@ -3433,9 +3460,6 @@ msgstr "Gewinnen Sie 10-1000% auf Ihre Einsätze, wenn Sie richtig liegen. Erhö
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "Gewinnen Sie 10-1000% auf Ihre Einsätze, wenn Sie richtig liegen. Erhöhen Sie Ihre gewinnende Rendite, indem Sie ein Kursziel auswählen, das weiter vom aktuellen Kurs entfernt liegt"
 
-msgid "Windows"
-msgstr "Windows"
-
 msgid "With Binary.com you can trade"
 msgstr "Mit Binary.com können Sie handeln"
 
@@ -3450,6 +3474,9 @@ msgstr "Gelder abheben"
 
 msgid "Withdrawal via payment agents"
 msgstr "Abheben über Zahlungsagenten"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "X-Achse Labels"
@@ -3732,3 +3759,15 @@ msgstr "| Auszahlung"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kaufen und zu verkaufen"
+
+#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
+#~ msgstr "Webtrader ist eine fortschrittliche Handelsplattform, die ganz individuell Ihren persönlichen Vorlieben angepasst werden kann"
+
+#~ msgid "Close all"
+#~ msgstr "Alle schließen"
+
+#~ msgid "Tile"
+#~ msgstr "Tile"
+
+#~ msgid "Windows"
+#~ msgstr "Windows"
