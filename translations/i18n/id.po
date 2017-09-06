@@ -454,6 +454,9 @@ msgstr "Alasan pedaftaran akun"
 msgid "Action"
 msgstr "Aksi"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Tambah perbandingan"
 
@@ -547,6 +550,9 @@ msgstr "Aroon (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Aroon Oscillator (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Asian down"
 
@@ -567,6 +573,9 @@ msgstr "Agst"
 
 msgid "August"
 msgstr "Agustus"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Average Directional Movement Index (ADX)"
@@ -928,8 +937,8 @@ msgstr "Klik untuk masuk pada akun Binary.com Anda"
 msgid "Close"
 msgstr "Tutup"
 
-msgid "Close all"
-msgstr "Tutup semua"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Tutup"
@@ -993,6 +1002,9 @@ msgstr "Negara tempat tinggal"
 
 msgid "Create"
 msgstr "Membuat"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Membuat token"
@@ -1753,6 +1765,9 @@ msgstr "Linearly Weighted Moving Average (LWMA)"
 msgid "Link"
 msgstr "Link"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Memuat template grafik"
 
@@ -1869,6 +1884,9 @@ msgstr "Pastikan bahwa Anda telah bersetuju dengan Agen sesuai dengan ketentuan 
 
 msgid "Make your trade"
 msgstr "Lakukan trading Anda"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mar"
@@ -2055,6 +2073,9 @@ msgstr "Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "Normalized Average True Range (NATR) mencoba untuk menormalisasi rata-rata nilai rentang sebenarnya di instrumen dengan menggunakan rumus di bawah ini"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: Penarikan via agen pembayaran hanya tersedia jika Anda mendeposit via agen pembayaran"
@@ -2289,6 +2310,9 @@ msgstr "Mohon sediakan informasi pajak Anda"
 
 msgid "Please select"
 msgstr "Silahkan pilih"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "Kirimkan token verifikasi yang berlaku"
@@ -2529,6 +2553,9 @@ msgstr "Simpan sebagai"
 
 msgid "Save changes"
 msgstr "Simpan perubahan"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "Trading scalable"
@@ -3100,9 +3127,6 @@ msgstr "Tik {row.number}"
 msgid "Ticks"
 msgstr "Tik"
 
-msgid "Tile"
-msgstr "Tile"
-
 msgid "Time interval"
 msgstr "Interval waktu"
 
@@ -3382,8 +3406,8 @@ msgstr "Server Websocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "Webtrader adalah platform trading canggih yang sepenuhnya disesuaikan dengan pilihan pribadi Anda"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader menggunakan teknologi web baru untuk pengalaman trading yang menyenangkan"
@@ -3433,9 +3457,6 @@ msgstr "Untung 10-1000% dari modal jika Anda tepat. Tingkatkan laba keuntungan A
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "Untung 10-1000% dari modal jika Anda tepat. Tingkatkan laba keuntungan Anda dengan memilih target harga jauh dari harga terkini"
 
-msgid "Windows"
-msgstr "Windows"
-
 msgid "With Binary.com you can trade"
 msgstr "Di Binary.com Anda dapat bertrading"
 
@@ -3450,6 +3471,9 @@ msgstr "Menarik dana"
 
 msgid "Withdrawal via payment agents"
 msgstr "Penarikan melalui agen pembayaran"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "Label x-axis"
@@ -3732,3 +3756,4 @@ msgstr "| Hasil"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
+
