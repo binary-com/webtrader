@@ -454,6 +454,9 @@ msgstr "Motivo para abrir la cuenta"
 msgid "Action"
 msgstr "Acción"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Añadir comparaciones"
 
@@ -547,6 +550,9 @@ msgstr "Aroon (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscilador Aroon (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Asiáticas Abajo"
 
@@ -567,6 +573,9 @@ msgstr "Ago"
 
 msgid "August"
 msgstr "Agosto"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Índice de Movimiento Direccional Medio (ADX)"
@@ -928,8 +937,8 @@ msgstr "Haga clic para iniciar sesión con su cuenta de Binary.com"
 msgid "Close"
 msgstr "Cerrar"
 
-msgid "Close all"
-msgstr "Cerrar todo"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Cierra"
@@ -993,6 +1002,9 @@ msgstr "País de residencia"
 
 msgid "Create"
 msgstr "Crear"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Crear token"
@@ -1753,6 +1765,9 @@ msgstr "Media móvil ponderada lineal (LWMA)"
 msgid "Link"
 msgstr "Enlace"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Cargar plantilla del gráfico"
 
@@ -1869,6 +1884,9 @@ msgstr "Asegúrese de que está de acuerdo con las condiciones de pago del agent
 
 msgid "Make your trade"
 msgstr "Realice su transacción"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "Mar"
@@ -2055,6 +2073,9 @@ msgstr "Rango verdadero medio normalizado (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "El rango verdadero medio normalizado (NATR) intenta normalizar los valores del rango verdadero entre instrumentos por medio de la siguiente fórmula:"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: la retirada vía agente de pago está disponible sólo si  deposita exclusivamente vía agente de pago"
@@ -2289,6 +2310,9 @@ msgstr "Por favor, proporcione su información tributaria"
 
 msgid "Please select"
 msgstr "Por favor, seleccione"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "Por favor, envíe un token de verificación válido"
@@ -2529,6 +2553,9 @@ msgstr "Guardar como"
 
 msgid "Save changes"
 msgstr "Guardar cambios"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "Operación escalable"
@@ -3100,9 +3127,6 @@ msgstr "Intervalo {row.number}"
 msgid "Ticks"
 msgstr "Intervalos"
 
-msgid "Tile"
-msgstr "Mosaico"
-
 msgid "Time interval"
 msgstr "Intervalo de tiempo"
 
@@ -3382,8 +3406,8 @@ msgstr "Servidor WebSocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "Webtrader es una plataforma avanzada totalmente personalizable según sus preferencias"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utiliza las nuevas tecnologías web para una experiencia comercial rica y placentera"
@@ -3433,9 +3457,6 @@ msgstr ""
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr ""
 
-msgid "Windows"
-msgstr "Ventanas"
-
 msgid "With Binary.com you can trade"
 msgstr "Con Binary.com puede negociar"
 
@@ -3450,6 +3471,9 @@ msgstr "Retirar fondos"
 
 msgid "Withdrawal via payment agents"
 msgstr "Retirada a través de agentes de pago"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "Etiquetas de eje-x"
@@ -3732,3 +3756,4 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"
+
