@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -3757,3 +3760,11 @@ msgstr "| Payout"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
 
+#~ msgid "Close all"
+#~ msgstr "Chiudi tutto"
+
+#~ msgid "Tile"
+#~ msgstr "Tile"
+
+#~ msgid "Windows"
+#~ msgstr "Windows"

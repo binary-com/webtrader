@@ -1,0 +1,28 @@
+ul.workspace-ul {
+  li {
+    > a {
+      &:hover { opacity: 1; }
+      color: white;
+      padding: 0;
+      line-height: 34px;
+      padding: 0 10px 0 36px !important;
+      &.invert-colors {
+        background: white;
+        color: #2A3052;
+      }
+    }
+  }
+  .invert-colors {
+    background: white;
+    color: #2A3052;
+  }
+  .ui-icon-workspace, .ui-icon-arrange, .ui-icon-delete {
+    left: 10px;
+    position: absolute;
+    top: calc(50% - 8px);
+    &:after { display: none; }
+  }
+  .ui-icon-workspace { background-image: url('../images/workspace.svg') !important; }
+  .ui-icon-delete { background-image: url('../images/delete-white.svg') !important; }
+  .ui-icon-arrange { background-image: url('../images/arrange.svg') !important; }
+}

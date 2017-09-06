@@ -98,16 +98,17 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
-    float = float && Math.abs(float);
-    currency = currency && currency.toLowerCase();
     var sign = float < 0 ? '-': '';
-    var minimumFractionDigits = currency && (currency.trim().toUpperCase() === "BTC" || currency.trim().toUpperCase() === "XBT") ? 8 : 2; //Because backend is confusing
+
+    float = float && Math.abs(float);
+    currency = (currency || '').toLowerCase().trim();
+    var currencies_config = (local_storage.get('currencies_config') || {});
+    var minimumFractionDigits = (currencies_config[(currency|| '').toUpperCase()] || {}).fractional_digits || 2;
     var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
-	
 	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
 						style: "decimal",
 						minimumFractionDigits: minimumFractionDigits,
-					}).format(float);
+                    }).format(float);
 	if(currency){
 		float = sign + $('<span>', {
             class: 'symbols ' + currency,
@@ -314,6 +315,7 @@ var Cookies = {
     });
    /* when new accounts are created document.cookie doesn"t change,
     * use local_storage to return the full list of loginids. */
+    var currencies_config = local_storage.get("currencies_config") || {};
     var oauth_loginids = (local_storage.get("oauth") || []).map(function(id){
       return {
         id: id.id,
@@ -322,7 +324,9 @@ var Cookies = {
         is_mf: /MF/gi.test(id.id),
         is_mlt: /MLT/gi.test(id.id),
         is_mx: /MX/gi.test(id.id),
-        is_cr: /CR/gi.test(id.id)
+        is_cr: /CR/gi.test(id.id),
+        currency: id.currency,
+        type: currencies_config[id.currency] ? currencies_config[id.currency].type : ''
       }
     }).filter(function(id) {
       return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
@@ -415,7 +419,7 @@ function guessDigits(prices) {
     return defaultDigits || 4;
 }
 
-var isBTC = function () {
-    var currency = local_storage.get("currency") || '';
-    return currency.toUpperCase() === "BTC" || currency.toUpperCase() === "XBT";
+var currencyFractionalDigits = function () {
+    var currency = (local_storage.get("currency") || '').toUpperCase();
+    return ((local_storage.get('currencies_config') || {})[currency] || {}).fractional_digits || 2;
 }

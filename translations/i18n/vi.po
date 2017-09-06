@@ -1,3 +1,6 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
 
@@ -3757,3 +3760,14 @@ msgstr "| Thanh toán"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
+#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
+#~ msgstr "WebTrader là một nền tảng giao dịch tiên tiến mà có thể tùy biến toàn bộ theo sở thích cá nhân của bạn"
+
+#~ msgid "Close all"
+#~ msgstr "Đóng tất cả"
+
+#~ msgid "Tile"
+#~ msgstr "Kiểu xếp ngói"
+
+#~ msgid "Windows"
+#~ msgstr "Windows"

@@ -108,10 +108,9 @@ const reopen_dialogs = (symbols, saved_states) => {
       }
    };
    _.forEach(saved_states,(data, module_id) => {
-      if(module_id === 'name') return; // ignore name
       if(_.isArray(data))
          data.forEach((d) => reopen(d, module_id))
-      else
+      else if(_.isObject(data))
          reopen(data, module_id);
    });
 }

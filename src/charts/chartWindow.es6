@@ -8,10 +8,11 @@ import liveapi from '../websockets/binary_websockets';
 import 'common/util';
 import wtcharts from 'webtrader-charts';
 
+const app_config = local_storage.get("config");
 wtcharts.init({
    appId: liveapi.app_id,
    lang: 'en',
-   server: 'wss://ws.binaryws.com/websockets/v3'
+   server: app_config ? app_config.websocket_url : 'wss://ws.binaryws.com/websockets/v3'
 });
 
 export const addNewWindow = function(options) {

@@ -89,7 +89,7 @@
         <div class="container">
             <div class="text">
                 <h1>Welcome to Binary.com Webtrader</h1>
-                <p>Webtrader is an advanced trading platform that’s fully-customisable according to your personal preferences.</p>
+                <p>Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences.</p>
                 <p>
                     Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets
                     at the same time, as well as essential charts, the asset index, trading times, and historical data. Most
@@ -116,7 +116,7 @@
         </div>
     </div>
     <div id="footer">
-        <div id="footer-regulatory" class="primary-color-dark">
+        <div id="footer-regulatory" class="primary-bg-color-dark">
             <div id="footer-content">
                 <div id="regulatory-text" class="content-inverse-color">
                     This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas,
@@ -215,7 +215,7 @@
             $(function () {
                 $('body').css('display', 'block');
                 setTime();
-                setInterval(setTime, 15 * 1000);
+                setInterval(setTime, 1000);
 
                 if (isLangSupported(lang)) {
                     $.getJSON('v<version>/i18n/' + lang + '.json', function (data) {
@@ -246,7 +246,7 @@
         }
 
         function setTime() {
-            var time = moment.utc().format('YYYY-MM-DD HH:mm') + ' GMT'
+            var time = moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT'
             $(".time").text(time);
         }
 

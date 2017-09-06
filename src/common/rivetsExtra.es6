@@ -169,7 +169,8 @@ rv.formatters.debounce = (value, callback, timeout = 250) => {
    callback._timer_notify = setTimeout(callback.bind(undefined,value), timeout);
    return value;
 }
-
+// Filter array based on property.
+rv.formatters.filter = (array, prop, value) => _.filter(array, (e) => e[prop] === value );
 /* turn current select item into a jquery-ui-selectmenu, update value on change */
 rv.binders.selectmenu = {
    priority: 101,
@@ -214,10 +215,18 @@ rv.binders['is-valid-number'] = {
    },
    unbind: (el) => { },
    routine: (el, value) => { }
+}
+
+/* bindar for jqueyr ui selectmenu options */
+rv.binders['dom-*'] = function (el, value) {
+   const method = this.args[0];
+   if(value)
+      setTimeout(() => el[method](), 0);
 };
 
 /* bindar for jqueyr ui selectmenu options */
 rv.binders['selectmenu-*'] = function (el, value) {
+   this.args[0] = {appendto: 'appendTo'}[this.args[0]] || this.args[0];
    $(el).selectmenu('option', this.args[0], value);
 }
 /*binder for hidding overflow on selctmenu*/
@@ -306,6 +315,19 @@ rv.binders.spinner = {
    routine: (el,value) => $(el).webtrader_spinner('value', value*1)
 };
 
+/* bind to pressing Enter key in input*/
+rv.binders['input-enter'] = {
+   priority: 93,
+   publishes: false,
+   routine: (el, callback) => {
+      $(el).keyup(function(event){
+         if(event.keyCode == 13){
+            callback(el);
+         }
+      });
+   },
+   function: true
+} 
 /* bind values to jquery ui spinner options like 'min', 'max', ... */
 rv.binders['spinner-*'] = function(el,value) {
    $(el).webtrader_spinner('option', this.args[0], value);
