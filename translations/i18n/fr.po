@@ -454,6 +454,9 @@ msgstr "Motif d’ouverture de compte"
 msgid "Action"
 msgstr "Action"
 
+msgid "Active"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Ajouter des comparaisons"
 
@@ -547,6 +550,9 @@ msgstr "Aroon (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscillateur Aroon (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Asiatique/baisse"
 
@@ -567,6 +573,9 @@ msgstr "août"
 
 msgid "August"
 msgstr "août"
+
+msgid "Available Currencies"
+msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Index de Mouvement Directionnel Moyen (ADX)"
@@ -928,8 +937,8 @@ msgstr "Cliquez pour vous connecter à votre compte Binary.com."
 msgid "Close"
 msgstr "Clôture"
 
-msgid "Close all"
-msgstr "Fermer tout"
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "Fermetures"
@@ -993,6 +1002,9 @@ msgstr "Pays de résidence"
 
 msgid "Create"
 msgstr "Créer"
+
+msgid "Create Account"
+msgstr ""
 
 msgid "Create token"
 msgstr "Créer un jeton"
@@ -1753,6 +1765,9 @@ msgstr "Moyenne Mobile Pondérée Linéaire (MMPL)"
 msgid "Link"
 msgstr "Lien"
 
+msgid "Load Workspace"
+msgstr ""
+
 msgid "Load chart template"
 msgstr "Charger le modèle graphique"
 
@@ -1869,6 +1884,9 @@ msgstr "Avant d'envoyer votre demande, veillez à vous mettre d'accord avec l'Ag
 
 msgid "Make your trade"
 msgstr "Faites votre trade"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "mars"
@@ -2055,6 +2073,9 @@ msgstr "Gamme Réelle Moyenne Normalisée (GRMN)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "Gamme Réelle Moyenne Normalisée (GRMN) essaie de normaliser la gamme réelle moyenne à travers les instruments en utilisant la formule ci-dessous"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "N.B. Le retrait par agent de paiement n'est disponible que si vous effectuez vos dépôts uniquement par le biais d'un agent de paiement."
@@ -2289,6 +2310,9 @@ msgstr "S'il vous plaît communiquez votre information fiscale"
 
 msgid "Please select"
 msgstr "Veuillez sélectionner"
+
+msgid "Please select an account opening reason before continuing"
+msgstr ""
 
 msgid "Please submit a valid verification token"
 msgstr "S'il vous plaît, soumettez un coupon de vérification valide"
@@ -2529,6 +2553,9 @@ msgstr "Enregistrer sous"
 
 msgid "Save changes"
 msgstr "Sauvegarder les changements"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "Trading à taille variable"
@@ -3100,9 +3127,6 @@ msgstr "Tick {row.number}"
 msgid "Ticks"
 msgstr "Ticks"
 
-msgid "Tile"
-msgstr "Titre"
-
 msgid "Time interval"
 msgstr "Intervalle de temps"
 
@@ -3382,8 +3406,8 @@ msgstr "Serveur websocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "WebTrader est une plateforme de trading avancée qui est entièrement personnalisable selon vos préférences personnelles"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilise les nouvelles technologies Web pour une expérience de trading riche et agréable"
@@ -3433,9 +3457,6 @@ msgstr "Gagnez 10-1000% sur votre mise si vous êtes correct. Augmentez vos reto
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "Gagnez 10-1000% sur votre mise si vous êtes correct. Augmentez vos retours gagnants en choisissant un prix cible plus éloigné par rapport au prix actuel"
 
-msgid "Windows"
-msgstr "Fenêtres"
-
 msgid "With Binary.com you can trade"
 msgstr "Avec Binary.com vous pouvez trader"
 
@@ -3450,6 +3471,9 @@ msgstr "Retirer des fonds"
 
 msgid "Withdrawal via payment agents"
 msgstr "Retrait par agents de paiement"
+
+msgid "Workspace"
+msgstr ""
 
 msgid "X-axis labels"
 msgstr "Valeurs de l'axe des X"
@@ -3732,3 +3756,4 @@ msgstr "| Versement"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permettant aux clients, affiliés, et développeurs d'acheter et vendre des produits Binary.com"
+
