@@ -575,7 +575,7 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Moedas disponíveis"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Índice de Movimento Direcional Médio (ADX)"
@@ -938,7 +938,7 @@ msgid "Close"
 msgstr "Fechar"
 
 msgid "Close All"
-msgstr ""
+msgstr "Fechar tudo"
 
 msgid "Closes"
 msgstr "Fecha"
@@ -1004,7 +1004,7 @@ msgid "Create"
 msgstr "Criar"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Criar conta"
 
 msgid "Create token"
 msgstr "Criar token"
