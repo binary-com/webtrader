@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -458,7 +455,7 @@ msgid "Action"
 msgstr "Aksi"
 
 msgid "Active"
-msgstr ""
+msgstr "Aktif"
 
 msgid "Add comparisons"
 msgstr "Tambah perbandingan"
@@ -554,7 +551,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Aroon Oscillator (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Atur"
 
 msgid "Asian down"
 msgstr "Asian down"
@@ -578,7 +575,7 @@ msgid "August"
 msgstr "Agustus"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Mata Uang Yang Tersedia"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Average Directional Movement Index (ADX)"
@@ -941,7 +938,7 @@ msgid "Close"
 msgstr "Tutup"
 
 msgid "Close All"
-msgstr ""
+msgstr "Tutup Semua"
 
 msgid "Closes"
 msgstr "Tutup"
@@ -1007,7 +1004,7 @@ msgid "Create"
 msgstr "Membuat"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Daftar Akun"
 
 msgid "Create token"
 msgstr "Membuat token"
@@ -1769,7 +1766,7 @@ msgid "Link"
 msgstr "Link"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Tampilkan Ruang kerja"
 
 msgid "Load chart template"
 msgstr "Memuat template grafik"
@@ -1889,7 +1886,7 @@ msgid "Make your trade"
 msgstr "Lakukan trading Anda"
 
 msgid "Manage"
-msgstr ""
+msgstr "Kelola"
 
 msgid "Mar"
 msgstr "Mar"
@@ -2078,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Normalized Average True Range (NATR) mencoba untuk menormalisasi rata-rata nilai rentang sebenarnya di instrumen dengan menggunakan rumus di bawah ini"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Catatan: Anda hanya dapat memiliki satu akun mata uang fiat dan satu dari setiap akun mata uang crypto"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: Penarikan via agen pembayaran hanya tersedia jika Anda mendeposit via agen pembayaran"
@@ -2315,7 +2312,7 @@ msgid "Please select"
 msgstr "Silahkan pilih"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Silahkan pilih alasan pendaftaran akun sebelum melanjutkan"
 
 msgid "Please submit a valid verification token"
 msgstr "Kirimkan token verifikasi yang berlaku"
@@ -2558,7 +2555,7 @@ msgid "Save changes"
 msgstr "Simpan perubahan"
 
 msgid "Saved"
-msgstr ""
+msgstr "Tersimpan"
 
 msgid "Scalable trading"
 msgstr "Trading scalable"
@@ -3410,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader adalah platform trading canggih yang sepenuhnya disesuaikan dengan pilihan pribadi Anda"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader menggunakan teknologi web baru untuk pengalaman trading yang menyenangkan"
@@ -3476,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Penarikan melalui agen pembayaran"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Ruang kerja"
 
 msgid "X-axis labels"
 msgstr "Label x-axis"
@@ -3760,14 +3757,3 @@ msgstr "| Hasil"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "Webtrader adalah platform trading canggih yang sepenuhnya disesuaikan dengan pilihan pribadi Anda"
-
-#~ msgid "Close all"
-#~ msgstr "Tutup semua"
-
-#~ msgid "Tile"
-#~ msgstr "Tile"
-
-#~ msgid "Windows"
-#~ msgstr "Windows"
