@@ -2075,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Normalized Average True Range (NATR) mencoba untuk menormalisasi rata-rata nilai rentang sebenarnya di instrumen dengan menggunakan rumus di bawah ini"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Catatan: Anda hanya dapat memiliki satu akun mata uang fiat dan satu dari setiap akun mata uang crypto"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: Penarikan via agen pembayaran hanya tersedia jika Anda mendeposit via agen pembayaran"
@@ -2312,7 +2312,7 @@ msgid "Please select"
 msgstr "Silahkan pilih"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Silahkan pilih alasan pendaftaran akun sebelum melanjutkan"
 
 msgid "Please submit a valid verification token"
 msgstr "Kirimkan token verifikasi yang berlaku"
@@ -2555,7 +2555,7 @@ msgid "Save changes"
 msgstr "Simpan perubahan"
 
 msgid "Saved"
-msgstr ""
+msgstr "Tersimpan"
 
 msgid "Scalable trading"
 msgstr "Trading scalable"
@@ -3407,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader adalah platform trading canggih yang sepenuhnya disesuaikan dengan pilihan pribadi Anda"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader menggunakan teknologi web baru untuk pengalaman trading yang menyenangkan"
@@ -3473,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Penarikan melalui agen pembayaran"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Ruang kerja"
 
 msgid "X-axis labels"
 msgstr "Label x-axis"
