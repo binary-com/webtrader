@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -458,7 +455,7 @@ msgid "Action"
 msgstr "動作"
 
 msgid "Active"
-msgstr ""
+msgstr "活躍"
 
 msgid "Add comparisons"
 msgstr "新增比較"
@@ -554,7 +551,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "阿隆震盪指標 (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "安排"
 
 msgid "Asian down"
 msgstr "亞洲下跌"
@@ -578,7 +575,7 @@ msgid "August"
 msgstr "八月"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "可用的貨幣"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "平均趨向指標(ADX)"
@@ -941,7 +938,7 @@ msgid "Close"
 msgstr "關"
 
 msgid "Close All"
-msgstr ""
+msgstr "全部關閉"
 
 msgid "Closes"
 msgstr "關"
@@ -1007,7 +1004,7 @@ msgid "Create"
 msgstr "建立"
 
 msgid "Create Account"
-msgstr ""
+msgstr "開立帳戶"
 
 msgid "Create token"
 msgstr "建立權杖"
@@ -1769,7 +1766,7 @@ msgid "Link"
 msgstr "連結"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "載入工作區"
 
 msgid "Load chart template"
 msgstr "載入圖表範本"
@@ -1889,7 +1886,7 @@ msgid "Make your trade"
 msgstr "執行交易"
 
 msgid "Manage"
-msgstr ""
+msgstr "管理"
 
 msgid "Mar"
 msgstr "三月"
@@ -2078,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "標準化真實波動幅度均值 (NATR)嘗試使用以下公式將各工具之間的真實波動幅度均值標準化"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "注： 您只能擁有一個法定貨幣帳戶以及每種加密貨幣一個帳戶"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "請注意:如果要使用付款代理提款，您必須僅通過付款代理存款"
@@ -2315,7 +2312,7 @@ msgid "Please select"
 msgstr "請選擇"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "繼續操作前請選擇開立帳戶的原因"
 
 msgid "Please submit a valid verification token"
 msgstr "請提供有效的驗證權杖"
@@ -2558,7 +2555,7 @@ msgid "Save changes"
 msgstr "儲存更改"
 
 msgid "Saved"
-msgstr ""
+msgstr "已儲存"
 
 msgid "Scalable trading"
 msgstr "靈活交易"
@@ -3410,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader是先進的交易平台，完全根據個人的愛好訂製"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader採用新型網絡技術，為您提供豐富而充滿樂趣的交易體驗"
@@ -3476,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "通過支付代理提款"
 
 msgid "Workspace"
-msgstr ""
+msgstr "工作區"
 
 msgid "X-axis labels"
 msgstr "X-軸標籤"
@@ -3760,14 +3757,3 @@ msgstr "| 賠付"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "Webtrader是先進的交易平台，完全根據個人的愛好訂製"
-
-#~ msgid "Close all"
-#~ msgstr "全部關閉"
-
-#~ msgid "Tile"
-#~ msgstr "圖標"
-
-#~ msgid "Windows"
-#~ msgstr "視窗"
