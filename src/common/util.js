@@ -423,3 +423,8 @@ var currencyFractionalDigits = function () {
     var currency = (local_storage.get("currency") || '').toUpperCase();
     return ((local_storage.get('currencies_config') || {})[currency] || {}).fractional_digits || 2;
 }
+
+function isCryptoCurrency(curr) {
+    var currency = (curr || local_storage.get("currency") || '').toUpperCase();
+    return ((local_storage.get('currencies_config') || {})[currency] || {}).type === 'crypto';
+}
