@@ -97,6 +97,7 @@ function init_state(root) {
             residence: '',
             residence_name: ''
         },
+        is_cryptocurrency: isCryptoCurrency(),
         standard_methods: {
             iframe_visible: false,
         },
