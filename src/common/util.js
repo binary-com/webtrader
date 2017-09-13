@@ -429,7 +429,7 @@ var currencyFractionalDigits = function () {
     return getCurrencyDetail('fractional_digits');
 }
 
-var isCryptoCurrency = (curr) => {
+var isCryptoCurrency = function (curr) {
     var is_crypto = getCurrencyDetail('type', curr) === 'crypto';
     return is_crypto;
 }
