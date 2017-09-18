@@ -1,1 +1,0 @@
-function fixTouchEvent(){"use strict";var a=!1,b=!1;Highcharts.wrap(Highcharts.Pointer.prototype,"touch",function(c,d){var e=this.chart,f=e.isInsidePlot(d.chartX-e.plotLeft,d.chartY-e.plotTop);return f&&!b&&"touchstart"==d.type&&(b=!0),f||(b=!1),this.pinchDown.length>1&&(a=!0),!a&&"touchmove"!=d.type||0!=this.pinchDown.length?void(b&&c.call(this,d)):void(a=!1)})}
