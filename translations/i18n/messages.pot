@@ -455,6 +455,9 @@ msgstr ""
 msgid "Action"
 msgstr "" 
 
+msgid "Active"
+msgstr "" 
+
 msgid "Add comparisons"
 msgstr "" 
 
@@ -548,6 +551,9 @@ msgstr ""
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "" 
 
+msgid "Arrange"
+msgstr "" 
+
 msgid "Asian down"
 msgstr "" 
 
@@ -567,6 +573,9 @@ msgid "Aug"
 msgstr "" 
 
 msgid "August"
+msgstr "" 
+
+msgid "Available Currencies"
 msgstr "" 
 
 msgid "Average Directional Movement Index (ADX)"
@@ -929,7 +938,7 @@ msgstr ""
 msgid "Close"
 msgstr "" 
 
-msgid "Close all"
+msgid "Close All"
 msgstr "" 
 
 msgid "Closes"
@@ -993,6 +1002,9 @@ msgid "Country of residence"
 msgstr "" 
 
 msgid "Create"
+msgstr "" 
+
+msgid "Create Account"
 msgstr "" 
 
 msgid "Create token"
@@ -1754,6 +1766,9 @@ msgstr ""
 msgid "Link"
 msgstr "" 
 
+msgid "Load Workspace"
+msgstr "" 
+
 msgid "Load chart template"
 msgstr "" 
 
@@ -1869,6 +1884,9 @@ msgid "Make sure that you have first agreed with the Agent on the terms of payme
 msgstr "" 
 
 msgid "Make your trade"
+msgstr "" 
+
+msgid "Manage"
 msgstr "" 
 
 msgid "Mar"
@@ -2055,6 +2073,9 @@ msgid "Normalized Average True Range (NATR)"
 msgstr "" 
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
+msgstr "" 
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "" 
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
@@ -2289,6 +2310,9 @@ msgid "Please provide your tax information"
 msgstr "" 
 
 msgid "Please select"
+msgstr "" 
+
+msgid "Please select an account opening reason before continuing"
 msgstr "" 
 
 msgid "Please submit a valid verification token"
@@ -2529,6 +2553,9 @@ msgid "Save as"
 msgstr "" 
 
 msgid "Save changes"
+msgstr "" 
+
+msgid "Saved"
 msgstr "" 
 
 msgid "Scalable trading"
@@ -3101,9 +3128,6 @@ msgstr ""
 msgid "Ticks"
 msgstr "" 
 
-msgid "Tile"
-msgstr "" 
-
 msgid "Time interval"
 msgstr "" 
 
@@ -3383,7 +3407,7 @@ msgstr ""
 msgid "Webtrader"
 msgstr "" 
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
 msgstr "" 
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
@@ -3434,9 +3458,6 @@ msgstr ""
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "" 
 
-msgid "Windows"
-msgstr "" 
-
 msgid "With Binary.com you can trade"
 msgstr "" 
 
@@ -3450,6 +3471,9 @@ msgid "Withdraw funds"
 msgstr "" 
 
 msgid "Withdrawal via payment agents"
+msgstr "" 
+
+msgid "Workspace"
 msgstr "" 
 
 msgid "X-axis labels"

@@ -454,6 +454,9 @@ msgstr "Причина открытия счёта"
 msgid "Action"
 msgstr "Действие"
 
+msgid "Active"
+msgstr "Активные"
+
 msgid "Add comparisons"
 msgstr "Добавить сравнения"
 
@@ -547,6 +550,9 @@ msgstr "Арун (AROON)"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Осциллятор Арун (AROONOSC)"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "Азиатские вниз"
 
@@ -567,6 +573,9 @@ msgstr "Авг"
 
 msgid "August"
 msgstr "Август"
+
+msgid "Available Currencies"
+msgstr "Доступные валюты"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Индекс среднего направления (ADX)"
@@ -928,7 +937,7 @@ msgstr "Нажмите, чтобы войти через счёт на Binary.co
 msgid "Close"
 msgstr "Закрыть"
 
-msgid "Close all"
+msgid "Close All"
 msgstr "Закрыть всё"
 
 msgid "Closes"
@@ -993,6 +1002,9 @@ msgstr "Страна проживания"
 
 msgid "Create"
 msgstr "Создать"
+
+msgid "Create Account"
+msgstr "Открыть счёт"
 
 msgid "Create token"
 msgstr "Создать ключ"
@@ -1753,6 +1765,9 @@ msgstr "Линейно-взвешенная скользящая средняя 
 msgid "Link"
 msgstr "Ссылка"
 
+msgid "Load Workspace"
+msgstr "Загрузить Рабочую область"
+
 msgid "Load chart template"
 msgstr "Загрузить шаблон графика"
 
@@ -1869,6 +1884,9 @@ msgstr "Перед тем, как подтвердить запрос, убед�
 
 msgid "Make your trade"
 msgstr "Купите контракт"
+
+msgid "Manage"
+msgstr ""
 
 msgid "Mar"
 msgstr "Мар"
@@ -2055,6 +2073,9 @@ msgstr "Нормализованный средний истинный диап�
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "Нормализованный средний истинный диапазон (NATR) предпринимает попытку нормализовать значения среднего истинного диапазона инструментов, используя следующую формулу"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr "Примечание: Вы можете открыть лишь один счёт с обычными деньгами и по одному счёту на каждую криптовалюту"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Примечание: вывод средств через платёжного агента возможен лишь в том случае, когда Вы вносите средства исключительно через данного платёжного агента"
@@ -2289,6 +2310,9 @@ msgstr "Пожалуйста, предоставьте Вашу налогову
 
 msgid "Please select"
 msgstr "Пожалуйста, выберите"
+
+msgid "Please select an account opening reason before continuing"
+msgstr "Чтобы продолжить, пожалуйста, укажите причину открытия счёта"
 
 msgid "Please submit a valid verification token"
 msgstr "Пожалуйста, укажите правильный проверочный ключ"
@@ -2529,6 +2553,9 @@ msgstr "Сохранить как"
 
 msgid "Save changes"
 msgstr "Сохранить изменения"
+
+msgid "Saved"
+msgstr ""
 
 msgid "Scalable trading"
 msgstr "Масштабируемость торговли"
@@ -3100,9 +3127,6 @@ msgstr "Тик {row.number}"
 msgid "Ticks"
 msgstr "Тики"
 
-msgid "Tile"
-msgstr "Плитка"
-
 msgid "Time interval"
 msgstr "Врем. интервал"
 
@@ -3382,7 +3406,7 @@ msgstr "Сервер Websocket"
 msgid "Webtrader"
 msgstr "Webtrader"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
 msgstr "Webtrader — передовая торговая платформа, которую можно полностью настраивать, согласно Вашим предпочтениям"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
@@ -3433,9 +3457,6 @@ msgstr "Выиграйте 10-1000% от Вашей ставки, если пр�
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "Выиграйте 10-1000% от Вашей ставки, если прогноз окажется правильным. Увеличьте прибыль, выбрав целевую цену, которая находится далеко от текущей цены"
 
-msgid "Windows"
-msgstr "Окна"
-
 msgid "With Binary.com you can trade"
 msgstr "На Binary.com Вы можете торговать"
 
@@ -3450,6 +3471,9 @@ msgstr "Вывести средства"
 
 msgid "Withdrawal via payment agents"
 msgstr "Вывод через платёжных агентов"
+
+msgid "Workspace"
+msgstr "Рабочая область"
 
 msgid "X-axis labels"
 msgstr "Метки оси X"
@@ -3732,3 +3756,4 @@ msgstr "| Выплата"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "позволяющий клиентам, партнёрам и разработчикам покупать и продавать продукты Binary.com"
+

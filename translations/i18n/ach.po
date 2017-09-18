@@ -454,6 +454,9 @@ msgstr "crwdns24276:0crwdne24276:0"
 msgid "Action"
 msgstr "crwdns15478:0crwdne15478:0"
 
+msgid "Active"
+msgstr "crwdns33464:0crwdne33464:0"
+
 msgid "Add comparisons"
 msgstr "crwdns15479:0crwdne15479:0"
 
@@ -547,6 +550,9 @@ msgstr "crwdns19899:0crwdne19899:0"
 msgid "Aroon Oscillator (AROONOSC)"
 msgstr "crwdns19900:0crwdne19900:0"
 
+msgid "Arrange"
+msgstr "crwdns33465:0crwdne33465:0"
+
 msgid "Asian down"
 msgstr "crwdns19901:0crwdne19901:0"
 
@@ -567,6 +573,9 @@ msgstr "crwdns15503:0crwdne15503:0"
 
 msgid "August"
 msgstr "crwdns15504:0crwdne15504:0"
+
+msgid "Available Currencies"
+msgstr "crwdns33466:0crwdne33466:0"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "crwdns19903:0crwdne19903:0"
@@ -928,8 +937,8 @@ msgstr "crwdns15544:0crwdne15544:0"
 msgid "Close"
 msgstr "crwdns19988:0crwdne19988:0"
 
-msgid "Close all"
-msgstr "crwdns15546:0crwdne15546:0"
+msgid "Close All"
+msgstr "crwdns33467:0crwdne33467:0"
 
 msgid "Closes"
 msgstr "crwdns15547:0crwdne15547:0"
@@ -993,6 +1002,9 @@ msgstr "crwdns15564:0crwdne15564:0"
 
 msgid "Create"
 msgstr "crwdns15565:0crwdne15565:0"
+
+msgid "Create Account"
+msgstr "crwdns33468:0crwdne33468:0"
 
 msgid "Create token"
 msgstr "crwdns15566:0crwdne15566:0"
@@ -1753,6 +1765,9 @@ msgstr "crwdns20122:0crwdne20122:0"
 msgid "Link"
 msgstr "crwdns15729:0crwdne15729:0"
 
+msgid "Load Workspace"
+msgstr "crwdns33469:0crwdne33469:0"
+
 msgid "Load chart template"
 msgstr "crwdns15730:0crwdne15730:0"
 
@@ -1869,6 +1884,9 @@ msgstr "crwdns15764:0crwdne15764:0"
 
 msgid "Make your trade"
 msgstr "crwdns20137:0crwdne20137:0"
+
+msgid "Manage"
+msgstr "crwdns33470:0crwdne33470:0"
 
 msgid "Mar"
 msgstr "crwdns15765:0crwdne15765:0"
@@ -2055,6 +2073,9 @@ msgstr "crwdns20162:0crwdne20162:0"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
 msgstr "crwdns20163:0crwdne20163:0"
+
+msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+msgstr "crwdns33471:0crwdne33471:0"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "crwdns15810:0crwdne15810:0"
@@ -2289,6 +2310,9 @@ msgstr "crwdns20196:0crwdne20196:0"
 
 msgid "Please select"
 msgstr "crwdns15886:0crwdne15886:0"
+
+msgid "Please select an account opening reason before continuing"
+msgstr "crwdns33472:0crwdne33472:0"
 
 msgid "Please submit a valid verification token"
 msgstr "crwdns20197:0crwdne20197:0"
@@ -2529,6 +2553,9 @@ msgstr "crwdns15944:0crwdne15944:0"
 
 msgid "Save changes"
 msgstr "crwdns15945:0crwdne15945:0"
+
+msgid "Saved"
+msgstr "crwdns33473:0crwdne33473:0"
 
 msgid "Scalable trading"
 msgstr "crwdns20232:0crwdne20232:0"
@@ -3100,9 +3127,6 @@ msgstr "crwdns16033:0{row.number}crwdne16033:0"
 msgid "Ticks"
 msgstr "crwdns16034:0crwdne16034:0"
 
-msgid "Tile"
-msgstr "crwdns16035:0crwdne16035:0"
-
 msgid "Time interval"
 msgstr "crwdns16037:0crwdne16037:0"
 
@@ -3382,8 +3406,8 @@ msgstr "crwdns16091:0crwdne16091:0"
 msgid "Webtrader"
 msgstr "crwdns16092:0crwdne16092:0"
 
-msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-msgstr "crwdns24299:0crwdne24299:0"
+msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
+msgstr "crwdns33474:0crwdne33474:0"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "crwdns16093:0crwdne16093:0"
@@ -3433,9 +3457,6 @@ msgstr "crwdns20424:0crwdne20424:0"
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
 msgstr "crwdns20425:0crwdne20425:0"
 
-msgid "Windows"
-msgstr "crwdns16097:0crwdne16097:0"
-
 msgid "With Binary.com you can trade"
 msgstr "crwdns20426:0crwdne20426:0"
 
@@ -3450,6 +3471,9 @@ msgstr "crwdns16098:0crwdne16098:0"
 
 msgid "Withdrawal via payment agents"
 msgstr "crwdns16099:0crwdne16099:0"
+
+msgid "Workspace"
+msgstr "crwdns33475:0crwdne33475:0"
 
 msgid "X-axis labels"
 msgstr "crwdns16100:0crwdne16100:0"
@@ -3732,3 +3756,7 @@ msgstr "crwdns20452:0crwdne20452:0"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "crwdns20453:0crwdne20453:0"
+
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
