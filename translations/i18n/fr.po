@@ -1886,7 +1886,7 @@ msgid "Make your trade"
 msgstr "Faites votre trade"
 
 msgid "Manage"
-msgstr ""
+msgstr "Gérer"
 
 msgid "Mar"
 msgstr "mars"
@@ -2075,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Gamme Réelle Moyenne Normalisée (GRMN) essaie de normaliser la gamme réelle moyenne à travers les instruments en utilisant la formule ci-dessous"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Remarque : Vous ne pouvez avoir qu'un compte en monnaie fiduciaire et un pour chaque monnaie digitale"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "N.B. Le retrait par agent de paiement n'est disponible que si vous effectuez vos dépôts uniquement par le biais d'un agent de paiement."
@@ -2312,7 +2312,7 @@ msgid "Please select"
 msgstr "Veuillez sélectionner"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Veuillez sélectionner une raison pour l’ouverture du compte avant de continuer"
 
 msgid "Please submit a valid verification token"
 msgstr "S'il vous plaît, soumettez un coupon de vérification valide"
@@ -2555,7 +2555,7 @@ msgid "Save changes"
 msgstr "Sauvegarder les changements"
 
 msgid "Saved"
-msgstr ""
+msgstr "Enregistré"
 
 msgid "Scalable trading"
 msgstr "Trading à taille variable"
@@ -2639,7 +2639,7 @@ msgid "Sold"
 msgstr "Vendu"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Source de richesse"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Toupie (CDLSPINNINGTOP)"
@@ -3407,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader est une plateforme de trading avancée qui est entièrement personnalisable selon vos préférences personnelles"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilise les nouvelles technologies Web pour une expérience de trading riche et agréable"
@@ -3428,7 +3428,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Bienvenue sur Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Qu'est ce que pep ?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Quand vous êtes satisfait du prix du trade, exécutez votre trade immédiatement"
@@ -3473,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Retrait par agents de paiement"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Espace de travail"
 
 msgid "X-axis labels"
 msgstr "Valeurs de l'axe des X"
