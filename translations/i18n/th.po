@@ -35,10 +35,10 @@ msgid "'contract period'"
 msgstr ""
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "(One) Touch Trades"
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "(เดิมชื่อ"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr ""
@@ -137,7 +137,7 @@ msgid "- set your trades on 'gut feel', or use technical or fundamental analysis
 msgstr ""
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "- เริ่มซื้อขายด้วยเงินเพียง 5 เหรียญสหรัฐ"
 
 msgid "- trade 24/7, even on weekends"
 msgstr "- ทำการซื้อขายตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
@@ -479,16 +479,16 @@ msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr ""
 
 msgid "All durations"
-msgstr ""
+msgstr "ระยะเวลาทั้งหมด"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All markets"
-msgstr ""
+msgstr "ตลาดทั้งหมด"
 
 msgid "All markets, all conditions"
-msgstr ""
+msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All payouts"
 msgstr ""
@@ -497,13 +497,13 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr ""
 
 msgid "Amount"
-msgstr ""
+msgstr "มูลค่า"
 
 msgid "Amount Per Point"
-msgstr ""
+msgstr "จำนวนต่อจุด"
 
 msgid "Amount per point"
-msgstr ""
+msgstr "จำนวนต่อจุด"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
 msgstr ""
@@ -512,16 +512,16 @@ msgid "Another major award. This time we're nominated by the online readers of G
 msgstr ""
 
 msgid "Answer"
-msgstr ""
+msgstr "คำตอบ"
 
 msgid "Anticipated account turnover"
 msgstr ""
 
 msgid "Apply"
-msgstr ""
+msgstr "สมัคร"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "สมัครเพื่อเป็นตัวแทนรับชำระเงินกับ Binary.com"
 
 msgid "Appropriateness Test: WARNING"
 msgstr ""
@@ -776,13 +776,13 @@ msgid "Bollinger Bands can be used to measure the highness or lowness of the pri
 msgstr ""
 
 msgid "Bought"
-msgstr ""
+msgstr "ซื้อ"
 
 msgid "Brand of first car"
 msgstr ""
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr ""
@@ -815,10 +815,10 @@ msgid "Can be used to withdraw to payment agents, transfer funds between account
 msgstr ""
 
 msgid "Cancel"
-msgstr ""
+msgstr "ยกเลิก"
 
 msgid "Candles"
-msgstr ""
+msgstr "เทียน"
 
 msgid "Candlestick down-color"
 msgstr ""
@@ -848,13 +848,13 @@ msgid "Change password"
 msgstr ""
 
 msgid "Chart"
-msgstr ""
+msgstr "แผนภูมิ"
 
 msgid "Chart Themes"
-msgstr ""
+msgstr "รูปแบบแผนภูมิ"
 
 msgid "Chart background"
-msgstr ""
+msgstr "พื้นหลังแผนภูมิ"
 
 msgid "Chart context menu"
 msgstr ""
@@ -863,7 +863,7 @@ msgid "Chart template"
 msgstr ""
 
 msgid "Chart type"
-msgstr ""
+msgstr "ชนิดแผนภูมิ"
 
 msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
 msgstr ""
@@ -935,10 +935,10 @@ msgid "Click to log in with your Binary.com account"
 msgstr ""
 
 msgid "Close"
-msgstr ""
+msgstr "ปิด"
 
 msgid "Close All"
-msgstr ""
+msgstr "ปิดทั้งหมด"
 
 msgid "Closes"
 msgstr ""
@@ -965,31 +965,31 @@ msgid "Comparisons"
 msgstr ""
 
 msgid "Conditions"
-msgstr ""
+msgstr "เงื่อนไข"
 
 msgid "Confirm transfer"
-msgstr ""
+msgstr "ยืนยันการโอนเงิน"
 
 msgid "Construction"
-msgstr ""
+msgstr "การก่อสร้าง"
 
 msgid "Contact Us"
-msgstr ""
+msgstr "ติดต่อเรา"
 
 msgid "Continue"
-msgstr ""
+msgstr "ดำเนินการต่อ"
 
 msgid "Continue Trading"
-msgstr ""
+msgstr "ดำเนินการซื้อขาย"
 
 msgid "Contract"
-msgstr ""
+msgstr "สัญญา"
 
 msgid "Contract period"
-msgstr ""
+msgstr "ระยะเวลาของสัญญา"
 
 msgid "Contracts"
-msgstr ""
+msgstr "สัญญา"
 
 msgid "Coppock Curve (CC)"
 msgstr ""
@@ -1001,13 +1001,13 @@ msgid "Country of residence"
 msgstr ""
 
 msgid "Create"
-msgstr ""
+msgstr "สร้าง"
 
 msgid "Create Account"
-msgstr ""
+msgstr "สร้างบัญชี"
 
 msgid "Create token"
-msgstr ""
+msgstr "สร้างโทเค่น"
 
 msgid "Credit/Debit"
 msgstr ""
@@ -1067,34 +1067,34 @@ msgid "Dark Unica"
 msgstr ""
 
 msgid "Date"
-msgstr ""
+msgstr "วันที่"
 
 msgid "Date of birth"
-msgstr ""
+msgstr "วันเกิด"
 
 msgid "Days"
-msgstr ""
+msgstr "วัน"
 
 msgid "Debt-free"
-msgstr ""
+msgstr "ปราศจากหนี้"
 
 msgid "Dec"
-msgstr ""
+msgstr "ธ.ค."
 
 msgid "December"
-msgstr ""
+msgstr "ธันวาคม"
 
 msgid "Decline"
-msgstr ""
+msgstr "ปฏิเสธ"
 
 msgid "Default"
-msgstr ""
+msgstr "ค่าเริ่มต้น"
 
 msgid "Define your position"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "ลบ"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
