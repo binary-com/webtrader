@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr ""
 
@@ -188,73 +185,73 @@ msgid "0-5 transactions in the past 12 months"
 msgstr ""
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
-msgstr ""
+msgstr "1 วัน"
 
 msgid "1 Hour"
-msgstr ""
+msgstr "1 ชั่วโมง"
 
 msgid "1 Minute"
-msgstr ""
+msgstr "1 นาที"
 
 msgid "1 Tick"
-msgstr ""
+msgstr "1 ช่วงเวลา"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1 ล้านธุรกรรมต่อวัน"
 
 msgid "1-2 years"
-msgstr ""
+msgstr "1-2 ปี"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
-msgstr ""
+msgstr "10 นาที"
 
 msgid "10m"
-msgstr ""
+msgstr "10 นาที"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
-msgstr ""
+msgstr "15 นาที"
 
 msgid "15m"
-msgstr ""
+msgstr "15 นาที"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1 วัน"
 
 msgid "1h"
-msgstr ""
+msgstr "1 ชั่วโมง"
 
 msgid "1m"
-msgstr ""
+msgstr "1 นาที"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
-msgstr ""
+msgstr "2 ชั่วโมง"
 
 msgid "2 Minutes"
-msgstr ""
+msgstr "2 นาที"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "ราคา 2 ทาง (2-Way Pricing)"
 
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 msgid "2004"
 msgstr ""
@@ -3759,3 +3756,4 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr ""
+
