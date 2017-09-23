@@ -251,52 +251,52 @@ msgid "2-way pricing"
 msgstr "ราคา 2 ทาง (2-Way Pricing)"
 
 msgid "2000"
-msgstr "2000"
+msgstr "2000 (พ.ศ. 2543)"
 
 msgid "2004"
-msgstr ""
+msgstr "2004 (พ.ศ. 2547)"
 
 msgid "2007"
-msgstr ""
+msgstr "2007 (พ.ศ. 2550)"
 
 msgid "2008"
-msgstr ""
+msgstr "2008 (พ.ศ. 2551)"
 
 msgid "2009"
-msgstr ""
+msgstr "2009 (พ.ศ. 2552)"
 
 msgid "2011"
-msgstr ""
+msgstr "2011 (พ.ศ. 2554)"
 
 msgid "2012"
-msgstr ""
+msgstr "2012 (พ.ศ. 2555)"
 
 msgid "2013"
-msgstr ""
+msgstr "2013 (พ.ศ. 2556)"
 
 msgid "2014"
-msgstr ""
+msgstr "2014 (พ.ศ. 2557)"
 
 msgid "2015"
-msgstr ""
+msgstr "2015 (พ.ศ. 2558)"
 
 msgid "2016"
-msgstr ""
+msgstr "2016 (พ.ศ. 2559)"
 
 msgid "2h"
-msgstr ""
+msgstr "2 ชั่วโมง"
 
 msgid "2m"
-msgstr ""
+msgstr "2 นาที"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
-msgstr ""
+msgstr "3 นาที"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
 msgstr ""
@@ -440,40 +440,40 @@ msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
 msgid "Accept"
-msgstr ""
+msgstr "ยอมรับ"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "เข้าถึงได้จากเว็บเบราว์เซอร์ใดๆ 13 ภาษา"
 
 msgid "Account balance"
-msgstr ""
+msgstr "ยอดคงเหลือในบัญชี"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "เหตุผลในการเปิดบัญชี"
 
 msgid "Action"
-msgstr ""
+msgstr "การดำเนินการ"
 
 msgid "Active"
-msgstr ""
+msgstr "ใช้งานอยู่"
 
 msgid "Add comparisons"
-msgstr ""
+msgstr "เพิ่มการเปรียบเทียบ"
 
 msgid "Add indicator"
-msgstr ""
+msgstr "เพิ่มตัวบ่งชี้"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "เพิ่ม/ลบ การเปรียบเทียบ"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 
 msgid "Add/remove indicators"
-msgstr ""
+msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 
 msgid "Admin"
-msgstr ""
+msgstr "ผู้ดูแลระบบ"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr ""
