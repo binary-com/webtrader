@@ -113,7 +113,7 @@ msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidd
 msgstr ""
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "- เปิดบัญชีเพียงไม่กี่นาที"
 
 msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
 msgstr ""
@@ -179,10 +179,10 @@ msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees
 msgstr ""
 
 msgid "0-1 year"
-msgstr ""
+msgstr "0-1 ปี"
 
 msgid "0-5 transactions in the past 12 months"
-msgstr ""
+msgstr "มี 0-5 ธุรกรรมในระยะเวลา 12 เดือน ที่ผ่านมา"
 
 msgid "1"
 msgstr "1"
@@ -299,58 +299,58 @@ msgid "30"
 msgstr "30"
 
 msgid "30 Minutes"
-msgstr ""
+msgstr "30 นาที"
 
 msgid "30-day limit on losses"
-msgstr ""
+msgstr "วงเงินขาดทุนในช่วง 30 วัน"
 
 msgid "30-day turnover limit"
-msgstr ""
+msgstr "วงเงินซื้อขาย 30 วัน"
 
 msgid "30m"
-msgstr ""
+msgstr "30 นาที"
 
 msgid "3m"
-msgstr ""
+msgstr "3 นาที"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
-msgstr ""
+msgstr "4 ชั่วโมง"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr ""
+msgstr "มีมากกว่า 40 ธุรกรรม ภายใน 12 เดือนที่ผ่านมา"
 
 msgid "4h"
-msgstr ""
+msgstr "4 ชั่วโมง"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
-msgstr ""
+msgstr "5 นาที"
 
 msgid "5m"
-msgstr ""
+msgstr "5 นาที"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr ""
+msgstr "มี 6-10 ธุรกรรมในระยะเวลา 12 เดือน ที่ผ่านมา"
 
 msgid "7-day limit on losses"
-msgstr ""
+msgstr "วงเงินขาดทุนในช่วง 7 วัน"
 
 msgid "7-day turnover limit"
-msgstr ""
+msgstr "วงเงินซื้อขาย 7 วัน"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
-msgstr ""
+msgstr "8 ชั่วโมง"
 
 msgid "8h"
-msgstr ""
+msgstr "8 ชั่วโมง"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
@@ -527,10 +527,10 @@ msgid "Appropriateness Test: WARNING"
 msgstr ""
 
 msgid "Apr"
-msgstr ""
+msgstr "เม.ย."
 
 msgid "April"
-msgstr ""
+msgstr "เมษายน"
 
 msgid "Are you sure you want to delete template?"
 msgstr ""
@@ -545,70 +545,70 @@ msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr ""
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Aroon Oscillator (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "จัดเรียง"
 
 msgid "Asian down"
-msgstr ""
+msgstr "เอเชียลง"
 
 msgid "Asian up"
-msgstr ""
+msgstr "เอเชียขึ้น"
 
 msgid "Asians"
-msgstr ""
+msgstr "ภูมิภาคเอเชีย"
 
 msgid "Asset"
-msgstr ""
+msgstr "สินทรัพย์"
 
 msgid "Asset Index"
-msgstr ""
+msgstr "ดัชนีสินทรัพย์"
 
 msgid "Aug"
-msgstr ""
+msgstr "ส.ค."
 
 msgid "August"
-msgstr ""
+msgstr "สิงหาคม"
 
 msgid "Available Currencies"
 msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "Average Directional Movement Index (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
 msgstr ""
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "Average True Range (ATR)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Awesome Oscillator (AO)"
 
 msgid "Back"
-msgstr ""
+msgstr "กลับ"
 
 msgid "Back to list"
-msgstr ""
+msgstr "กลับไปที่รายการ"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
 msgstr ""
 
 msgid "Barrier"
-msgstr ""
+msgstr "Barrier"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "Barrier ออฟเซ็ท"
 
 msgid "Barrier(s)"
 msgstr ""
@@ -617,7 +617,7 @@ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks i
 msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr ""
@@ -644,10 +644,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr ""
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr ""
@@ -665,7 +665,7 @@ msgid "Binary opens Japan office"
 msgstr ""
 
 msgid "Binary option"
-msgstr ""
+msgstr "ไบนารีออปชั่น"
 
 msgid "Binary options or other financial derivatives"
 msgstr ""
