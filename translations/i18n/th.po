@@ -101,10 +101,10 @@ msgid "- dip a toe in the water with $2 or go all out for $50,000"
 msgstr ""
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "- ตั้งแต่ 1 ถึง 50,000 เหรียญสหรัฐ"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "- ตั้งแต่ 10 วินาที ถึง 365 วัน"
 
 msgid "- get pricing that is normally reserved for big institutional players"
 msgstr ""
@@ -140,7 +140,7 @@ msgid "- start trading with as little as $5"
 msgstr ""
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "- ทำการซื้อขายตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr ""
