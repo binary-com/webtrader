@@ -2669,7 +2669,7 @@ msgid "Standard Deviation (STDDEV)"
 msgstr "Deviazione standard (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
-msgstr ""
+msgstr "La Deviazione standard è un calcolo statistico utilizzato per misurare la variabilità. Nel trading, questo valore è noto come volatilità. Una deviazione standard bassa indica che i punti dei dati tendono a essere molto vicini alla media, mentre la deviazione standard alta indica che i punti dei dati sono sparsi su un ampio range di valori"
 
 msgid "Standard methods"
 msgstr "Modalità standard"
