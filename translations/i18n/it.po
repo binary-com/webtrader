@@ -938,7 +938,7 @@ msgid "Close"
 msgstr "Chiudi"
 
 msgid "Close All"
-msgstr ""
+msgstr "Chiudi tutto"
 
 msgid "Closes"
 msgstr "Chiude"
@@ -1004,7 +1004,7 @@ msgid "Create"
 msgstr "Crea"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Crea un account"
 
 msgid "Create token"
 msgstr "Crea token"
@@ -1412,7 +1412,7 @@ msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr ""
+msgstr "I frattali sono degli indicatori sui grafici a candele che individuano i punti di inversione nel mercato. I trader spesso utilizzano i frattali per avere un'idea della direzione in cui andrà il prezzo. Un frattale ti dirà quando un dato modello di prezzi si verificherà su un grafico"
 
 msgid "Fran ais"
 msgstr "Francese"
@@ -1868,7 +1868,7 @@ msgid "Low barrier offset"
 msgstr "Offset della barriera inferiore"
 
 msgid "Low minimum stakes"
-msgstr ""
+msgstr "Puntate minime inferiori"
 
 msgid "Lower"
 msgstr "Inferiore"
@@ -1886,7 +1886,7 @@ msgid "Make your trade"
 msgstr "Esegui il tuo trade"
 
 msgid "Manage"
-msgstr ""
+msgstr "Gestisci"
 
 msgid "Mar"
 msgstr "Mar"
@@ -2060,7 +2060,7 @@ msgid "No Touch trades"
 msgstr "Trade No Touch"
 
 msgid "No matter the market - rising or falling, quiet or volatile - you'll find a trade to suit your outlook"
-msgstr ""
+msgstr "A prescindere dal mercato, in rialzo o in ribasso, calmo o volatile, troverai un trade adatto alle tue previsioni"
 
 msgid "No surprises"
 msgstr "Nessuna sorpresa"
@@ -2075,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr ""
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Nota: puoi avere solo un account di moneta fiat e uno per ogni account di criptovaluta"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: il prelievo tramite agente di pagamento è disponibile solo se depositi esclusivamente tramite un agente di pagamento"
@@ -2210,7 +2210,7 @@ msgid "Over 90 staff and contractors worldwide"
 msgstr "Oltre 90 dipendenti e collaboratori in tutto il mondo"
 
 msgid "Overlap Studies"
-msgstr ""
+msgstr "Studi sovrapposti"
 
 msgid "PEP Declaration"
 msgstr "Dichiarazione PEP"
@@ -2306,13 +2306,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "Si prega di fornire i dati fiscali"
 
 msgid "Please select"
 msgstr "Seleziona"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Prima di continuare, seleziona un motivo per l'apertura dell'account"
 
 msgid "Please submit a valid verification token"
 msgstr "Invia un token di verifica valido"
@@ -2330,7 +2330,7 @@ msgid "Points"
 msgstr "Punti"
 
 msgid "Polski"
-msgstr ""
+msgstr "Polski"
 
 msgid "Portfolio"
 msgstr "Portafoglio"
@@ -2555,7 +2555,7 @@ msgid "Save changes"
 msgstr "Salva le variazioni"
 
 msgid "Saved"
-msgstr ""
+msgstr "Salvato"
 
 msgid "Scalable trading"
 msgstr "Trading scalabile"
@@ -2603,7 +2603,7 @@ msgid "Session duration limit, in minutes"
 msgstr "Limite di durata della sessione, in minuti"
 
 msgid "Set your probability of winning"
-msgstr ""
+msgstr "Imposta la tua probabilità di vincita"
 
 msgid "Settles"
 msgstr "Depositi"
@@ -2639,7 +2639,7 @@ msgid "Sold"
 msgstr "Venduto"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Fonte di ricchezza"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -2666,7 +2666,7 @@ msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
 msgstr "Stalled Pattern (CDLSTALLEDPATTERN)"
 
 msgid "Standard Deviation (STDDEV)"
-msgstr ""
+msgstr "Deviazione standard (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
 msgstr ""
