@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -1253,7 +1250,7 @@ msgid "Embed code"
 msgstr "Codice inserito"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Stato di occupazione"
 
 msgid "End Time"
 msgstr "Orario di fine"
@@ -1277,7 +1274,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Modello Engulfing (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr ""
+msgstr "Goditi un'interfaccia di trading intuitiva con funzionalità avanzate che ti consente di monitorare tutti i tuoi asset e mercati preferiti contemporaneamente, così come i grafici fondamentali, gli indici degli asset, gli orari di trading e i dati storici. La cosa più importante è che puoi scegliere che cosa desideri guardare sul tuo schermo"
 
 msgid "Enter your current password"
 msgstr "Inserisci la tua password attuale"
@@ -1511,7 +1508,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Modello Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Dati storici"
 
 msgid "Home Address"
 msgstr "Indirizzo di casa"
@@ -1529,10 +1526,10 @@ msgid "How do I fund my account?"
 msgstr "Come posso depositare sul mio account?"
 
 msgid "How does Binary.com make money?"
-msgstr ""
+msgstr "Come è possibile guadagnare su Binary.com?"
 
 msgid "How safe is my money with Binary.com?"
-msgstr ""
+msgstr "Quanto è sicuro il mio denaro su Binary.com?"
 
 msgid "How soon can I start trading?"
 msgstr "Quando posso iniziare a fare trading?"
@@ -3760,11 +3757,3 @@ msgstr "| Payout"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
 
-#~ msgid "Close all"
-#~ msgstr "Chiudi tutto"
-
-#~ msgid "Tile"
-#~ msgstr "Tile"
-
-#~ msgid "Windows"
-#~ msgstr "Windows"
