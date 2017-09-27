@@ -32,7 +32,7 @@ msgid "'Matches' - You win when the last digit of the last tick matches your pre
 msgstr ""
 
 msgid "'contract period'"
-msgstr ""
+msgstr "'ระยะเวลาสัญญา'"
 
 msgid "(One) Touch trades"
 msgstr "(One) Touch Trades"
