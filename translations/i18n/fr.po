@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -458,7 +455,7 @@ msgid "Action"
 msgstr "Action"
 
 msgid "Active"
-msgstr ""
+msgstr "Actif"
 
 msgid "Add comparisons"
 msgstr "Ajouter des comparaisons"
@@ -518,7 +515,7 @@ msgid "Answer"
 msgstr "Réponse"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Chiffre d'affaire anticipé du compte"
 
 msgid "Apply"
 msgstr "Appliquer"
@@ -554,7 +551,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscillateur Aroon (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Arranger"
 
 msgid "Asian down"
 msgstr "Asiatique/baisse"
@@ -578,7 +575,7 @@ msgid "August"
 msgstr "août"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Devises disponibles"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Index de Mouvement Directionnel Moyen (ADX)"
@@ -617,7 +614,7 @@ msgid "Barrier(s)"
 msgstr "Barrière(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Baissière : Il s’agit d’un modèle de fin de tendance composé de trois chandeliers dans une tendance haussière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier devrait être court et peut former un fossé haussier. Il pourrait aussi y avoir une ombre de vente. Le modèle représente une faiblesse dans une montée avec un risque de consolidation et une possible inversion. Haussière : Il s’agit d’un modèle de fin-de-tendance composé de trois chandeliers dans une tendance baissière. Le second chandelier doit ouvrir à proximité de la clôture de la veille. Le dernier chandelier doit être étayé. Le modèle représente une faiblesse, une consolidation et un possible renversement de tendance"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Ceinture-cale (CDLBELTHOLD)"
@@ -941,7 +938,7 @@ msgid "Close"
 msgstr "Clôture"
 
 msgid "Close All"
-msgstr ""
+msgstr "Fermer tout"
 
 msgid "Closes"
 msgstr "Fermetures"
@@ -1007,7 +1004,7 @@ msgid "Create"
 msgstr "Créer"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Créer un compte"
 
 msgid "Create token"
 msgstr "Créer un jeton"
@@ -1253,7 +1250,7 @@ msgid "Embed code"
 msgstr "Intégrer le code"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Statut d’emploi"
 
 msgid "End Time"
 msgstr "Heure de fin"
@@ -1511,7 +1508,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Schéma Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Données historiques"
 
 msgid "Home Address"
 msgstr "Adresse du domicile"
@@ -1769,7 +1766,7 @@ msgid "Link"
 msgstr "Lien"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Télécharger l’Espace de Travail"
 
 msgid "Load chart template"
 msgstr "Charger le modèle graphique"
@@ -1889,7 +1886,7 @@ msgid "Make your trade"
 msgstr "Faites votre trade"
 
 msgid "Manage"
-msgstr ""
+msgstr "Gérer"
 
 msgid "Mar"
 msgstr "mars"
@@ -2078,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Gamme Réelle Moyenne Normalisée (GRMN) essaie de normaliser la gamme réelle moyenne à travers les instruments en utilisant la formule ci-dessous"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Remarque : Vous ne pouvez avoir qu'un compte en monnaie fiduciaire et un pour chaque monnaie digitale"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "N.B. Le retrait par agent de paiement n'est disponible que si vous effectuez vos dépôts uniquement par le biais d'un agent de paiement."
@@ -2315,7 +2312,7 @@ msgid "Please select"
 msgstr "Veuillez sélectionner"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Veuillez sélectionner une raison pour l’ouverture du compte avant de continuer"
 
 msgid "Please submit a valid verification token"
 msgstr "S'il vous plaît, soumettez un coupon de vérification valide"
@@ -2558,7 +2555,7 @@ msgid "Save changes"
 msgstr "Sauvegarder les changements"
 
 msgid "Saved"
-msgstr ""
+msgstr "Enregistré"
 
 msgid "Scalable trading"
 msgstr "Trading à taille variable"
@@ -2642,7 +2639,7 @@ msgid "Sold"
 msgstr "Vendu"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Source de richesse"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Toupie (CDLSPINNINGTOP)"
@@ -3410,7 +3407,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader est une plateforme de trading avancée qui est entièrement personnalisable selon vos préférences personnelles"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilise les nouvelles technologies Web pour une expérience de trading riche et agréable"
@@ -3431,7 +3428,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Bienvenue sur Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Qu'est ce que pep ?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Quand vous êtes satisfait du prix du trade, exécutez votre trade immédiatement"
@@ -3476,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Retrait par agents de paiement"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Espace de travail"
 
 msgid "X-axis labels"
 msgstr "Valeurs de l'axe des X"
@@ -3760,14 +3757,3 @@ msgstr "| Versement"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permettant aux clients, affiliés, et développeurs d'acheter et vendre des produits Binary.com"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "WebTrader est une plateforme de trading avancée qui est entièrement personnalisable selon vos préférences personnelles"
-
-#~ msgid "Close all"
-#~ msgstr "Fermer tout"
-
-#~ msgid "Tile"
-#~ msgstr "Titre"
-
-#~ msgid "Windows"
-#~ msgstr "Fenêtres"

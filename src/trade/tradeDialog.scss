@@ -302,7 +302,54 @@
   width: 95px;
 }
 
-.trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px; }
+.trade-fields ul li select.date-start-select + .chosen-container {
+  width: 115px !important;
+  .chosen-search { display: none; }
+  ul.chosen-results {
+    flex-direction: column;
+    max-height: 250px;
+    li {
+      width: calc(100% - 10px);
+      text-align: center;
+      line-height: 18px;
+      display: block;
+    }
+  }
+
+  .chosen-drop {
+      box-shadow: none;
+      border-radius: 2px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border: 1px solid #F2F2F2;
+      border-top: none;
+  }
+
+  .chosen-single {
+    border: 1px solid #F2F2F2;
+    background-image: none;
+    border-radius: 2px;
+    font-weight: normal;
+    position: relative;
+    box-shadow: none;
+  }
+
+  &.chosen-container-active {
+    .chosen-single {
+      box-shadow: none;
+      border: 1px solid #F2F2F2;
+      text-align: center;
+      padding: 0;
+      > span {
+        width: calc(100% - 10px);
+      }
+      > div {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {

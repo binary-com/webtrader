@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr ""
 
@@ -35,13 +32,13 @@ msgid "'Matches' - You win when the last digit of the last tick matches your pre
 msgstr ""
 
 msgid "'contract period'"
-msgstr ""
+msgstr "'ระยะเวลาสัญญา'"
 
 msgid "(One) Touch trades"
-msgstr ""
+msgstr "(One) Touch Trades"
 
 msgid "(formerly known as"
-msgstr ""
+msgstr "(เดิมชื่อ"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr ""
@@ -104,10 +101,10 @@ msgid "- dip a toe in the water with $2 or go all out for $50,000"
 msgstr ""
 
 msgid "- from $1 to $50,000"
-msgstr ""
+msgstr "- ตั้งแต่ 1 ถึง 50,000 เหรียญสหรัฐ"
 
 msgid "- from 10 seconds to 365 days"
-msgstr ""
+msgstr "- ตั้งแต่ 10 วินาที ถึง 365 วัน"
 
 msgid "- get pricing that is normally reserved for big institutional players"
 msgstr ""
@@ -116,7 +113,7 @@ msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidd
 msgstr ""
 
 msgid "- open an account in minutes"
-msgstr ""
+msgstr "- เปิดบัญชีเพียงไม่กี่นาที"
 
 msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
 msgstr ""
@@ -140,10 +137,10 @@ msgid "- set your trades on 'gut feel', or use technical or fundamental analysis
 msgstr ""
 
 msgid "- start trading with as little as $5"
-msgstr ""
+msgstr "- เริ่มซื้อขายด้วยเงินเพียง 5 เหรียญสหรัฐ"
 
 msgid "- trade 24/7, even on weekends"
-msgstr ""
+msgstr "- ทำการซื้อขายตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
 
 msgid "- trade Binary.com's own volatility indices, 24/7"
 msgstr ""
@@ -182,178 +179,178 @@ msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees
 msgstr ""
 
 msgid "0-1 year"
-msgstr ""
+msgstr "0-1 ปี"
 
 msgid "0-5 transactions in the past 12 months"
-msgstr ""
+msgstr "มี 0-5 ธุรกรรมในระยะเวลา 12 เดือน ที่ผ่านมา"
 
 msgid "1"
-msgstr ""
+msgstr "1"
 
 msgid "1 Day"
-msgstr ""
+msgstr "1 วัน"
 
 msgid "1 Hour"
-msgstr ""
+msgstr "1 ชั่วโมง"
 
 msgid "1 Minute"
-msgstr ""
+msgstr "1 นาที"
 
 msgid "1 Tick"
-msgstr ""
+msgstr "1 ช่วงเวลา"
 
 msgid "1 million transactions/day"
-msgstr ""
+msgstr "1 ล้านธุรกรรมต่อวัน"
 
 msgid "1-2 years"
-msgstr ""
+msgstr "1-2 ปี"
 
 msgid "10"
-msgstr ""
+msgstr "10"
 
 msgid "10 Minutes"
-msgstr ""
+msgstr "10 นาที"
 
 msgid "10m"
-msgstr ""
+msgstr "10 นาที"
 
 msgid "15"
-msgstr ""
+msgstr "15"
 
 msgid "15 Minutes"
-msgstr ""
+msgstr "15 นาที"
 
 msgid "15m"
-msgstr ""
+msgstr "15 นาที"
 
 msgid "1999"
-msgstr ""
+msgstr "1999"
 
 msgid "1d"
-msgstr ""
+msgstr "1 วัน"
 
 msgid "1h"
-msgstr ""
+msgstr "1 ชั่วโมง"
 
 msgid "1m"
-msgstr ""
+msgstr "1 นาที"
 
 msgid "1t"
-msgstr ""
+msgstr "1t"
 
 msgid "2"
-msgstr ""
+msgstr "2"
 
 msgid "2 Hours"
-msgstr ""
+msgstr "2 ชั่วโมง"
 
 msgid "2 Minutes"
-msgstr ""
+msgstr "2 นาที"
 
 msgid "2-way pricing"
-msgstr ""
+msgstr "ราคา 2 ทาง (2-Way Pricing)"
 
 msgid "2000"
-msgstr ""
+msgstr "2000 (พ.ศ. 2543)"
 
 msgid "2004"
-msgstr ""
+msgstr "2004 (พ.ศ. 2547)"
 
 msgid "2007"
-msgstr ""
+msgstr "2007 (พ.ศ. 2550)"
 
 msgid "2008"
-msgstr ""
+msgstr "2008 (พ.ศ. 2551)"
 
 msgid "2009"
-msgstr ""
+msgstr "2009 (พ.ศ. 2552)"
 
 msgid "2011"
-msgstr ""
+msgstr "2011 (พ.ศ. 2554)"
 
 msgid "2012"
-msgstr ""
+msgstr "2012 (พ.ศ. 2555)"
 
 msgid "2013"
-msgstr ""
+msgstr "2013 (พ.ศ. 2556)"
 
 msgid "2014"
-msgstr ""
+msgstr "2014 (พ.ศ. 2557)"
 
 msgid "2015"
-msgstr ""
+msgstr "2015 (พ.ศ. 2558)"
 
 msgid "2016"
-msgstr ""
+msgstr "2016 (พ.ศ. 2559)"
 
 msgid "2h"
-msgstr ""
+msgstr "2 ชั่วโมง"
 
 msgid "2m"
-msgstr ""
+msgstr "2 นาที"
 
 msgid "3"
-msgstr ""
+msgstr "3"
 
 msgid "3 Minutes"
-msgstr ""
+msgstr "3 นาที"
 
 msgid "30"
-msgstr ""
+msgstr "30"
 
 msgid "30 Minutes"
-msgstr ""
+msgstr "30 นาที"
 
 msgid "30-day limit on losses"
-msgstr ""
+msgstr "วงเงินขาดทุนในช่วง 30 วัน"
 
 msgid "30-day turnover limit"
-msgstr ""
+msgstr "วงเงินซื้อขาย 30 วัน"
 
 msgid "30m"
-msgstr ""
+msgstr "30 นาที"
 
 msgid "3m"
-msgstr ""
+msgstr "3 นาที"
 
 msgid "4"
-msgstr ""
+msgstr "4"
 
 msgid "4 Hours"
-msgstr ""
+msgstr "4 ชั่วโมง"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr ""
+msgstr "มีมากกว่า 40 ธุรกรรม ภายใน 12 เดือนที่ผ่านมา"
 
 msgid "4h"
-msgstr ""
+msgstr "4 ชั่วโมง"
 
 msgid "5"
-msgstr ""
+msgstr "5"
 
 msgid "5 Minutes"
-msgstr ""
+msgstr "5 นาที"
 
 msgid "5m"
-msgstr ""
+msgstr "5 นาที"
 
 msgid "6-10 transactions in the past 12 months"
-msgstr ""
+msgstr "มี 6-10 ธุรกรรมในระยะเวลา 12 เดือน ที่ผ่านมา"
 
 msgid "7-day limit on losses"
-msgstr ""
+msgstr "วงเงินขาดทุนในช่วง 7 วัน"
 
 msgid "7-day turnover limit"
-msgstr ""
+msgstr "วงเงินซื้อขาย 7 วัน"
 
 msgid "8"
-msgstr ""
+msgstr "8"
 
 msgid "8 Hours"
-msgstr ""
+msgstr "8 ชั่วโมง"
 
 msgid "8h"
-msgstr ""
+msgstr "8 ชั่วโมง"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
 msgstr ""
@@ -443,55 +440,55 @@ msgid "Absolute Price Oscillator (APO)"
 msgstr ""
 
 msgid "Accept"
-msgstr ""
+msgstr "ยอมรับ"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "เข้าถึงได้จากเว็บเบราว์เซอร์ใดๆ 13 ภาษา"
 
 msgid "Account balance"
-msgstr ""
+msgstr "ยอดคงเหลือในบัญชี"
 
 msgid "Account opening reason"
-msgstr ""
+msgstr "เหตุผลในการเปิดบัญชี"
 
 msgid "Action"
-msgstr ""
+msgstr "การดำเนินการ"
 
 msgid "Active"
-msgstr ""
+msgstr "ใช้งานอยู่"
 
 msgid "Add comparisons"
-msgstr ""
+msgstr "เพิ่มการเปรียบเทียบ"
 
 msgid "Add indicator"
-msgstr ""
+msgstr "เพิ่มตัวบ่งชี้"
 
 msgid "Add/Remove comparisons"
-msgstr ""
+msgstr "เพิ่ม/ลบ การเปรียบเทียบ"
 
 msgid "Add/Remove indicators"
-msgstr ""
+msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 
 msgid "Add/remove indicators"
-msgstr ""
+msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 
 msgid "Admin"
-msgstr ""
+msgstr "ผู้ดูแลระบบ"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
 msgstr ""
 
 msgid "All durations"
-msgstr ""
+msgstr "ระยะเวลาทั้งหมด"
 
 msgid "All market conditions"
-msgstr ""
+msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All markets"
-msgstr ""
+msgstr "ตลาดทั้งหมด"
 
 msgid "All markets, all conditions"
-msgstr ""
+msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All payouts"
 msgstr ""
@@ -500,13 +497,13 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr ""
 
 msgid "Amount"
-msgstr ""
+msgstr "มูลค่า"
 
 msgid "Amount Per Point"
-msgstr ""
+msgstr "จำนวนต่อจุด"
 
 msgid "Amount per point"
-msgstr ""
+msgstr "จำนวนต่อจุด"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
 msgstr ""
@@ -515,25 +512,25 @@ msgid "Another major award. This time we're nominated by the online readers of G
 msgstr ""
 
 msgid "Answer"
-msgstr ""
+msgstr "คำตอบ"
 
 msgid "Anticipated account turnover"
 msgstr ""
 
 msgid "Apply"
-msgstr ""
+msgstr "สมัคร"
 
 msgid "Apply to become a Binary.com"
-msgstr ""
+msgstr "สมัครเพื่อเป็นตัวแทนรับชำระเงินกับ Binary.com"
 
 msgid "Appropriateness Test: WARNING"
 msgstr ""
 
 msgid "Apr"
-msgstr ""
+msgstr "เม.ย."
 
 msgid "April"
-msgstr ""
+msgstr "เมษายน"
 
 msgid "Are you sure you want to delete template?"
 msgstr ""
@@ -548,70 +545,70 @@ msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr ""
 
 msgid "Aroon (AROON)"
-msgstr ""
+msgstr "Aroon (AROON)"
 
 msgid "Aroon Oscillator (AROONOSC)"
-msgstr ""
+msgstr "Aroon Oscillator (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "จัดเรียง"
 
 msgid "Asian down"
-msgstr ""
+msgstr "เอเชียลง"
 
 msgid "Asian up"
-msgstr ""
+msgstr "เอเชียขึ้น"
 
 msgid "Asians"
-msgstr ""
+msgstr "ภูมิภาคเอเชีย"
 
 msgid "Asset"
-msgstr ""
+msgstr "สินทรัพย์"
 
 msgid "Asset Index"
-msgstr ""
+msgstr "ดัชนีสินทรัพย์"
 
 msgid "Aug"
-msgstr ""
+msgstr "ส.ค."
 
 msgid "August"
-msgstr ""
+msgstr "สิงหาคม"
 
 msgid "Available Currencies"
 msgstr ""
 
 msgid "Average Directional Movement Index (ADX)"
-msgstr ""
+msgstr "Average Directional Movement Index (ADX)"
 
 msgid "Average Directional Movement Index Rating (ADXR)"
-msgstr ""
+msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
 msgstr ""
 
 msgid "Average True Range (ATR)"
-msgstr ""
+msgstr "Average True Range (ATR)"
 
 msgid "Awesome Oscillator (AO)"
-msgstr ""
+msgstr "Awesome Oscillator (AO)"
 
 msgid "Back"
-msgstr ""
+msgstr "กลับ"
 
 msgid "Back to list"
-msgstr ""
+msgstr "กลับไปที่รายการ"
 
 msgid "Balance of Power (BOP)"
-msgstr ""
+msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
 msgstr ""
 
 msgid "Barrier"
-msgstr ""
+msgstr "Barrier"
 
 msgid "Barrier offset"
-msgstr ""
+msgstr "Barrier ออฟเซ็ท"
 
 msgid "Barrier(s)"
 msgstr ""
@@ -620,7 +617,7 @@ msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks i
 msgstr ""
 
 msgid "Belt-hold (CDLBELTHOLD)"
-msgstr ""
+msgstr "Belt-hold (CDLBELTHOLD)"
 
 msgid "Benchmarked prices"
 msgstr ""
@@ -647,10 +644,10 @@ msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr ""
 
 msgid "Betonmarkets.com"
-msgstr ""
+msgstr "Betonmarkets.com"
 
 msgid "Bill Williams"
-msgstr ""
+msgstr "Bill Williams"
 
 msgid "Binary Bot released"
 msgstr ""
@@ -668,7 +665,7 @@ msgid "Binary opens Japan office"
 msgstr ""
 
 msgid "Binary option"
-msgstr ""
+msgstr "ไบนารีออปชั่น"
 
 msgid "Binary options or other financial derivatives"
 msgstr ""
@@ -779,13 +776,13 @@ msgid "Bollinger Bands can be used to measure the highness or lowness of the pri
 msgstr ""
 
 msgid "Bought"
-msgstr ""
+msgstr "ซื้อ"
 
 msgid "Brand of first car"
 msgstr ""
 
 msgid "Breakaway (CDLBREAKAWAY)"
-msgstr ""
+msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
 msgstr ""
@@ -818,10 +815,10 @@ msgid "Can be used to withdraw to payment agents, transfer funds between account
 msgstr ""
 
 msgid "Cancel"
-msgstr ""
+msgstr "ยกเลิก"
 
 msgid "Candles"
-msgstr ""
+msgstr "เทียน"
 
 msgid "Candlestick down-color"
 msgstr ""
@@ -851,13 +848,13 @@ msgid "Change password"
 msgstr ""
 
 msgid "Chart"
-msgstr ""
+msgstr "แผนภูมิ"
 
 msgid "Chart Themes"
-msgstr ""
+msgstr "รูปแบบแผนภูมิ"
 
 msgid "Chart background"
-msgstr ""
+msgstr "พื้นหลังแผนภูมิ"
 
 msgid "Chart context menu"
 msgstr ""
@@ -866,7 +863,7 @@ msgid "Chart template"
 msgstr ""
 
 msgid "Chart type"
-msgstr ""
+msgstr "ชนิดแผนภูมิ"
 
 msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
 msgstr ""
@@ -938,10 +935,10 @@ msgid "Click to log in with your Binary.com account"
 msgstr ""
 
 msgid "Close"
-msgstr ""
+msgstr "ปิด"
 
 msgid "Close All"
-msgstr ""
+msgstr "ปิดทั้งหมด"
 
 msgid "Closes"
 msgstr ""
@@ -968,31 +965,31 @@ msgid "Comparisons"
 msgstr ""
 
 msgid "Conditions"
-msgstr ""
+msgstr "เงื่อนไข"
 
 msgid "Confirm transfer"
-msgstr ""
+msgstr "ยืนยันการโอนเงิน"
 
 msgid "Construction"
-msgstr ""
+msgstr "การก่อสร้าง"
 
 msgid "Contact Us"
-msgstr ""
+msgstr "ติดต่อเรา"
 
 msgid "Continue"
-msgstr ""
+msgstr "ดำเนินการต่อ"
 
 msgid "Continue Trading"
-msgstr ""
+msgstr "ดำเนินการซื้อขาย"
 
 msgid "Contract"
-msgstr ""
+msgstr "สัญญา"
 
 msgid "Contract period"
-msgstr ""
+msgstr "ระยะเวลาของสัญญา"
 
 msgid "Contracts"
-msgstr ""
+msgstr "สัญญา"
 
 msgid "Coppock Curve (CC)"
 msgstr ""
@@ -1004,13 +1001,13 @@ msgid "Country of residence"
 msgstr ""
 
 msgid "Create"
-msgstr ""
+msgstr "สร้าง"
 
 msgid "Create Account"
-msgstr ""
+msgstr "สร้างบัญชี"
 
 msgid "Create token"
-msgstr ""
+msgstr "สร้างโทเค่น"
 
 msgid "Credit/Debit"
 msgstr ""
@@ -1070,34 +1067,34 @@ msgid "Dark Unica"
 msgstr ""
 
 msgid "Date"
-msgstr ""
+msgstr "วันที่"
 
 msgid "Date of birth"
-msgstr ""
+msgstr "วันเกิด"
 
 msgid "Days"
-msgstr ""
+msgstr "วัน"
 
 msgid "Debt-free"
-msgstr ""
+msgstr "ปราศจากหนี้"
 
 msgid "Dec"
-msgstr ""
+msgstr "ธ.ค."
 
 msgid "December"
-msgstr ""
+msgstr "ธันวาคม"
 
 msgid "Decline"
-msgstr ""
+msgstr "ปฏิเสธ"
 
 msgid "Default"
-msgstr ""
+msgstr "ค่าเริ่มต้น"
 
 msgid "Define your position"
 msgstr ""
 
 msgid "Delete"
-msgstr ""
+msgstr "ลบ"
 
 msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
@@ -3759,3 +3756,4 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr ""
+
