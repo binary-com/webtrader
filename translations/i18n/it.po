@@ -2366,7 +2366,7 @@ msgid "Price forms three black candles, each with lower closes, in a downward pr
 msgstr ""
 
 msgid "Price the trade"
-msgstr ""
+msgstr "Fissa il prezzo del trade"
 
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
 msgstr ""
@@ -2681,7 +2681,7 @@ msgid "Start Time"
 msgstr "Orario d'inizio"
 
 msgid "Start Trading"
-msgstr ""
+msgstr "Inizia il trading"
 
 msgid "Start time"
 msgstr "Orario d'inizio"
@@ -2693,7 +2693,7 @@ msgid "Statement"
 msgstr "Estratto"
 
 msgid "Statistical Functions"
-msgstr ""
+msgstr "Funzioni statistiche"
 
 msgid "Status"
 msgstr "Status"
@@ -2762,10 +2762,10 @@ msgid "Stop-type"
 msgstr "Tipologia di stop"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "Colore del tratto"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "Larghezza del tratto"
 
 msgid "Submit"
 msgstr "Invia"
@@ -3425,7 +3425,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Media mobile ponderata (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "Benvenuto su Binary.com Webtrader"
 
 msgid "What is pep?"
 msgstr ""
@@ -3434,7 +3434,7 @@ msgid "When you are satisfied with the trade price, instantly execute your trade
 msgstr "Quando sei soddisfatto del prezzo del trade, esegui immediatamente l'operazione"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
-msgstr ""
+msgstr "Quando negozi con Binary.com, puoi stare tranquillo poiché i fondi sono tenuti in account di fiducia separati e non vengono utilizzati per nessun altro scopo"
 
 msgid "While on the go, you can"
 msgstr "Mentre sei in movimento, puoi"
@@ -3446,7 +3446,7 @@ msgid "Will I need to install any software?"
 msgstr "Devo installare qualche software?"
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr "Se hai ragione, vinci il 10-1000% della tua puntata. Aumenta il rendimento delle tue vincite scegliendo \"Stays in\" con prezzo target più vicino"
@@ -3473,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Prelievo tramite gli agenti di pagamento"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Area di lavoro"
 
 msgid "X-axis labels"
 msgstr "Etichetta dell'asse delle X"
