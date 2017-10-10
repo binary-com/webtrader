@@ -2075,7 +2075,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Chỉ số Normalized Average True Range (NATR) cố gắng để bình thường hóa các giá trị trung bình phạm vi chuẩn trên thiết bị bằng cách sử dụng công thức dưới đây"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Lưu ý: bạn chỉ có thể có một tài khoản tiền tệ định danh và một của mỗi tài khoản cryptocurrency"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Lưu ý: Rút tiền thông qua đại lý thanh toán sẽ chỉ khả dụng nếu bạn gửi tiền duy nhất thông qua đại lý thanh toán"
