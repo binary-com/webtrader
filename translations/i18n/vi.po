@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
 
@@ -458,7 +455,7 @@ msgid "Action"
 msgstr "Hành động"
 
 msgid "Active"
-msgstr ""
+msgstr "Còn hoạt động"
 
 msgid "Add comparisons"
 msgstr "Thêm các so sánh"
@@ -518,7 +515,7 @@ msgid "Answer"
 msgstr "Câu trả lời"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Dự đoán doanh thu tài khoản"
 
 msgid "Apply"
 msgstr "Áp dụng"
@@ -554,7 +551,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Dao động Aroon (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Sắp xếp"
 
 msgid "Asian down"
 msgstr "Châu Á xuống"
@@ -578,7 +575,7 @@ msgid "August"
 msgstr "Tháng tám"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Các loại tiền tệ có sẵn"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Chỉ số di chuyển trung bình trực tiếp (ADX)"
@@ -617,7 +614,7 @@ msgid "Barrier(s)"
 msgstr "Các rào cản"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Hướng giảm: Đây là một mô hình kết thúc xu hướng bao gồm ba chân nến trong một xu hướng tăng. Nến thứ hai phải mở gần kết thúc ngày hôm trước. Nến cuối nên ngắn và có thể tạo ra một lỗ ngược. Cũng có thể một bóng bán. Các mẫu đại diện cho một điểm yếu trong sự gia tăng với một nguy cơ của củng cố và có thể đảo ngược. Hướng tích cực: Đây là một mô hình kết thúc xu hướng bao gồm ba chân nến trong một xu hướng. Nến thứ hai phải mở gần kết thúc ngày hôm trước. nến cuối cùng phải vững. Các mẫu đại diện cho một điểm yếu và củng cố và một có thể đảo ngược xu hướng"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Vành đai giữ (CDLBELTHOLD)"
@@ -941,7 +938,7 @@ msgid "Close"
 msgstr "Đóng"
 
 msgid "Close All"
-msgstr ""
+msgstr "Đóng tất cả"
 
 msgid "Closes"
 msgstr "Kết thúc"
@@ -1007,7 +1004,7 @@ msgid "Create"
 msgstr "Tạo"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Tạo Tài khoản"
 
 msgid "Create token"
 msgstr "Tạo token"
@@ -1253,7 +1250,7 @@ msgid "Embed code"
 msgstr "Mã nhúng"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Tình trạng tuyển dụng"
 
 msgid "End Time"
 msgstr "Thời gian kết thúc"
@@ -1511,7 +1508,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Mẫu Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Dữ liệu lịch sử"
 
 msgid "Home Address"
 msgstr "Địa chỉ nhà"
@@ -1769,7 +1766,7 @@ msgid "Link"
 msgstr "Liên kết"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Tải Workspace"
 
 msgid "Load chart template"
 msgstr "Tải mẫu biểu đồ"
@@ -1889,7 +1886,7 @@ msgid "Make your trade"
 msgstr "thực hiện giao dịch của bạn"
 
 msgid "Manage"
-msgstr ""
+msgstr "Quản lý"
 
 msgid "Mar"
 msgstr "Tháng ba"
@@ -3760,14 +3757,3 @@ msgstr "| Thanh toán"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "WebTrader là một nền tảng giao dịch tiên tiến mà có thể tùy biến toàn bộ theo sở thích cá nhân của bạn"
-
-#~ msgid "Close all"
-#~ msgstr "Đóng tất cả"
-
-#~ msgid "Tile"
-#~ msgstr "Kiểu xếp ngói"
-
-#~ msgid "Windows"
-#~ msgstr "Windows"
