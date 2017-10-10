@@ -2312,7 +2312,7 @@ msgid "Please select"
 msgstr "Vui lòng chọn"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Vui lòng lựa chọn một lý do mở tài khoản trước khi tiếp tục"
 
 msgid "Please submit a valid verification token"
 msgstr "Xin vui lòng nhập một mã thông báo xác nhận hợp lệ"
@@ -2555,7 +2555,7 @@ msgid "Save changes"
 msgstr "Lưu các thay đổi"
 
 msgid "Saved"
-msgstr ""
+msgstr "Đã lưu lại"
 
 msgid "Scalable trading"
 msgstr "giao dịch có thể mở rộng"
@@ -2639,7 +2639,7 @@ msgid "Sold"
 msgstr "Đã bán"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Nguồn tài sản"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Mô hình ngọn quay (CDLSPINNINGTOP)"
@@ -3407,7 +3407,7 @@ msgid "Webtrader"
 msgstr "WebTrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "WebTrader là một nền tảng giao dịch tiên tiến mà có thể tùy biến toàn bộ theo sở thích cá nhân của bạn"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "WebTrader sử dụng công nghệ web mới để cho ra một trải nghiệm giao dịch thú vị và phong phú"
@@ -3428,7 +3428,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Chào mừng đến với Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Pep là gì?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Khi bạn đang hài lòng với giá giao dịch, ngay lập tức thực hiện giao dịch của bạn"
@@ -3473,7 +3473,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Rút tiền thông qua đại lý thanh toán"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Không gian làm việc"
 
 msgid "X-axis labels"
 msgstr "Nhãn X-axis"
