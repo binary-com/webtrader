@@ -797,7 +797,7 @@ msgid "Buy price"
 msgstr ""
 
 msgid "By clicking"
-msgstr ""
+msgstr "โดยการคลิก"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
@@ -845,7 +845,7 @@ msgid "Change Backend Server"
 msgstr ""
 
 msgid "Change password"
-msgstr ""
+msgstr "เปลี่ยนรหัสผ่าน"
 
 msgid "Chart"
 msgstr "แผนภูมิ"
@@ -857,10 +857,10 @@ msgid "Chart background"
 msgstr "พื้นหลังแผนภูมิ"
 
 msgid "Chart context menu"
-msgstr ""
+msgstr "เมนูแผนภูมิ"
 
 msgid "Chart template"
-msgstr ""
+msgstr "แม่แบบแผนภูมิ"
 
 msgid "Chart type"
 msgstr "ชนิดแผนภูมิ"
@@ -896,13 +896,13 @@ msgid "Choose from over a million possible trades at any time"
 msgstr ""
 
 msgid "Choose password"
-msgstr ""
+msgstr "กำหนดรหัสผ่าน"
 
 msgid "Choose the barrier(s)"
-msgstr ""
+msgstr "เลือก Barrier(s)"
 
 msgid "Choose the duration"
-msgstr ""
+msgstr "เลือกระยะเวลา"
 
 msgid "Choose the market, the price target, the time period, and how much you wish to win"
 msgstr ""
@@ -914,7 +914,7 @@ msgid "Choose the market, the time period, and how much you wish to win"
 msgstr ""
 
 msgid "Choose the payout"
-msgstr ""
+msgstr "เลือกการชำระเงิน"
 
 msgid "Choose the underlying market"
 msgstr ""
@@ -947,7 +947,7 @@ msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 msgstr ""
 
 msgid "Commodities"
-msgstr ""
+msgstr "สินค้าโภคภัณฑ์"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr ""
