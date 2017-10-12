@@ -797,7 +797,7 @@ msgid "Buy price"
 msgstr ""
 
 msgid "By clicking"
-msgstr ""
+msgstr "โดยการคลิก"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr ""
@@ -845,7 +845,7 @@ msgid "Change Backend Server"
 msgstr ""
 
 msgid "Change password"
-msgstr ""
+msgstr "เปลี่ยนรหัสผ่าน"
 
 msgid "Chart"
 msgstr "แผนภูมิ"
@@ -857,10 +857,10 @@ msgid "Chart background"
 msgstr "พื้นหลังแผนภูมิ"
 
 msgid "Chart context menu"
-msgstr ""
+msgstr "เมนูแผนภูมิ"
 
 msgid "Chart template"
-msgstr ""
+msgstr "แม่แบบแผนภูมิ"
 
 msgid "Chart type"
 msgstr "ชนิดแผนภูมิ"
@@ -896,13 +896,13 @@ msgid "Choose from over a million possible trades at any time"
 msgstr ""
 
 msgid "Choose password"
-msgstr ""
+msgstr "กำหนดรหัสผ่าน"
 
 msgid "Choose the barrier(s)"
-msgstr ""
+msgstr "เลือก Barrier(s)"
 
 msgid "Choose the duration"
-msgstr ""
+msgstr "เลือกระยะเวลา"
 
 msgid "Choose the market, the price target, the time period, and how much you wish to win"
 msgstr ""
@@ -914,7 +914,7 @@ msgid "Choose the market, the time period, and how much you wish to win"
 msgstr ""
 
 msgid "Choose the payout"
-msgstr ""
+msgstr "เลือกการชำระเงิน"
 
 msgid "Choose the underlying market"
 msgstr ""
@@ -947,7 +947,7 @@ msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 msgstr ""
 
 msgid "Commodities"
-msgstr ""
+msgstr "สินค้าโภคภัณฑ์"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr ""
@@ -1016,22 +1016,22 @@ msgid "Crosshair"
 msgstr ""
 
 msgid "Currencies"
-msgstr ""
+msgstr "สกุลเงิน"
 
 msgid "Current Level"
-msgstr ""
+msgstr "ระดับปัจจุบัน"
 
 msgid "Current Spot"
-msgstr ""
+msgstr "สปอตปัจจุบัน"
 
 msgid "Current Spot Time"
-msgstr ""
+msgstr "เวลาของสปอตปัจจุบัน"
 
 msgid "Current comparisons"
-msgstr ""
+msgstr "การเปรียบเทียบปัจจุบัน"
 
 msgid "Current indicators"
-msgstr ""
+msgstr "ตัวชี้วัดปัจจุบัน"
 
 msgid "Current password"
 msgstr ""
@@ -1052,7 +1052,7 @@ msgid "Daily turnover limit"
 msgstr ""
 
 msgid "Dark Blue"
-msgstr ""
+msgstr "สีน้ำเงินเข้ม"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 msgstr ""
@@ -1061,7 +1061,7 @@ msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs wh
 msgstr ""
 
 msgid "Dark Green"
-msgstr ""
+msgstr "สีเขียวเข้ม"
 
 msgid "Dark Unica"
 msgstr ""
@@ -1091,7 +1091,7 @@ msgid "Default"
 msgstr "ค่าเริ่มต้น"
 
 msgid "Define your position"
-msgstr ""
+msgstr "กำหนดโพซิชั่นของท่าน"
 
 msgid "Delete"
 msgstr "ลบ"
@@ -1100,22 +1100,22 @@ msgid "Demo for affiliates to access Webtrader charts"
 msgstr ""
 
 msgid "Deposit funds"
-msgstr ""
+msgstr "การฝากเงิน"
 
 msgid "Deposit of USD"
-msgstr ""
+msgstr "การฝากเงินดอลลาร์สหรัฐ"
 
 msgid "Depositing and withdrawing funds"
 msgstr ""
 
 msgid "Derivative"
-msgstr ""
+msgstr "อนุพันธ์"
 
 msgid "Describe what this token is for to find it later"
 msgstr ""
 
 msgid "Description"
-msgstr ""
+msgstr "รายละเอียด"
 
 msgid "Deutsch"
 msgstr ""
@@ -1133,7 +1133,7 @@ msgid "Differs"
 msgstr ""
 
 msgid "Digits"
-msgstr ""
+msgstr "ตัวเลข"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr ""
@@ -1184,49 +1184,49 @@ msgid "Double click the object to remove"
 msgstr ""
 
 msgid "Download"
-msgstr ""
+msgstr "ดาวน์โหลด"
 
 msgid "Download CSV"
-msgstr ""
+msgstr "ดาวน์โหลด CSV"
 
 msgid "Download JPEG image"
-msgstr ""
+msgstr "ดาวน์โหลดรูปภาพ JPEG"
 
 msgid "Download PDF document"
-msgstr ""
+msgstr "ดาวน์โหลดเอกสาร PDF"
 
 msgid "Download PNG"
-msgstr ""
+msgstr "ดาวน์โหลด PNG"
 
 msgid "Download PNG image"
-msgstr ""
+msgstr "ดาวน์โหลดรูปภาพ PNG"
 
 msgid "Download SVG"
-msgstr ""
+msgstr "ดาวน์โหลด SVG"
 
 msgid "Download SVG vector image"
-msgstr ""
+msgstr "ดาวน์โหลดภาพเวกเตอร์ SVG"
 
 msgid "Download as"
-msgstr ""
+msgstr "ดาวน์โหลดเป็น"
 
 msgid "Downloading .csv"
-msgstr ""
+msgstr "กำลังดาวน์โหลด .csv"
 
 msgid "Downloading template as"
-msgstr ""
+msgstr "ดาวน์โหลดแม่แบบเป็น"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 msgstr ""
 
 msgid "Drawing tools"
-msgstr ""
+msgstr "เครื่องมือวาดภาพ"
 
 msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
 msgstr ""
 
 msgid "Duration"
-msgstr ""
+msgstr "ระยะเวลา"
 
 msgid "EGR Operator Award"
 msgstr ""
@@ -1298,7 +1298,7 @@ msgid "Estimated Net Worth"
 msgstr ""
 
 msgid "Even"
-msgstr ""
+msgstr "คู่"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr ""
@@ -1310,19 +1310,19 @@ msgid "Exclude me from the website until"
 msgstr ""
 
 msgid "Exit Spot"
-msgstr ""
+msgstr "สปอตสิ้นสุด"
 
 msgid "Exit Spot Time"
-msgstr ""
+msgstr "เวลาที่สปอตสิ้นสุด"
 
 msgid "Exit spot"
-msgstr ""
+msgstr "สปอตสิ้นสุด"
 
 msgid "Expiry price"
-msgstr ""
+msgstr "ราคาที่หมดอายุ"
 
 msgid "Explanation"
-msgstr ""
+msgstr "คำอธิบาย"
 
 msgid "Exponential Moving Average (EMA)"
 msgstr ""
@@ -1334,64 +1334,64 @@ msgid "Falling markets"
 msgstr ""
 
 msgid "Family name"
-msgstr ""
+msgstr "นามสกุล"
 
 msgid "Favorites"
-msgstr ""
+msgstr "รายการโปรด"
 
 msgid "Favourite artist"
-msgstr ""
+msgstr "ศิลปินที่ท่านโปรดปราน"
 
 msgid "Favourite dish"
-msgstr ""
+msgstr "อาหารที่ท่านโปรดปราน"
 
 msgid "Features"
-msgstr ""
+msgstr "คุณลักษณะ"
 
 msgid "Feb"
-msgstr ""
+msgstr "ก.พ."
 
 msgid "February"
-msgstr ""
+msgstr "กุมภาพันธ์"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public"
 msgstr ""
 
 msgid "Final Price"
-msgstr ""
+msgstr "ราคาสุดท้าย"
 
 msgid "Final price"
-msgstr ""
+msgstr "ราคาสุดท้าย"
 
 msgid "Finance"
-msgstr ""
+msgstr "การเงิน"
 
 msgid "Financial Information"
-msgstr ""
+msgstr "ข้อมูลทางการเงิน"
 
 msgid "Financial Security"
-msgstr ""
+msgstr "ความปลอดภัยทางการเงิน"
 
 msgid "Financial information"
-msgstr ""
+msgstr "ข้อมูลทางการเงิน"
 
 msgid "Financial rewards"
-msgstr ""
+msgstr "เงินรางวัล"
 
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 msgid "First line of home address"
-msgstr ""
+msgstr "บรรทัดแรกของที่อยู่"
 
 msgid "First name"
-msgstr ""
+msgstr "ชื่อตัว"
 
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
 msgstr ""
 
 msgid "Flexibility"
-msgstr ""
+msgstr "มีความยืดหยุ่น"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr ""
@@ -1418,13 +1418,13 @@ msgid "Fran ais"
 msgstr ""
 
 msgid "Fri"
-msgstr ""
+msgstr "ศ"
 
 msgid "Friday"
-msgstr ""
+msgstr "วันศุกร์"
 
 msgid "From"
-msgstr ""
+msgstr "จาก"
 
 msgid "Full-screen trading interface"
 msgstr ""
@@ -1433,7 +1433,7 @@ msgid "Further instructions"
 msgstr ""
 
 msgid "GMT"
-msgstr ""
+msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr ""
@@ -1526,16 +1526,16 @@ msgid "How do I fund my account?"
 msgstr ""
 
 msgid "How does Binary.com make money?"
-msgstr ""
+msgstr "Binary.com ทำให้เงินงอกเงยได้อย่างไร?"
 
 msgid "How safe is my money with Binary.com?"
-msgstr ""
+msgstr "เงินของฉันจะปลอดภัยแค่ไหนเมื่อลงทุนกับ Binary.com?"
 
 msgid "How soon can I start trading?"
-msgstr ""
+msgstr "ฉันจะเริ่มซื้อขายได้เร็วที่สุดเมื่อใด?"
 
 msgid "How to trade binaries?"
-msgstr ""
+msgstr "ซื้อขายไบนารีอย่างไร?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr ""
@@ -1544,19 +1544,19 @@ msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr ""
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "ฉันได้อ่าน และยอมรับกับ Binary.com"
 
 msgid "I'm new to binaries, where do I start?"
-msgstr ""
+msgstr "ฉันเป็นมือใหม่สำหรับไบนารี ฉันจะเริ่มอย่างไร?"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr ""
+msgstr "ข้อสงวนสิทธิ์ที่สำคัญ"
 
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr ""
 
 msgid "Ideal for both pros and novices"
-msgstr ""
+msgstr "เหมาะสำหรับมืออาชีพและมือใหม่"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr ""
@@ -1571,7 +1571,7 @@ msgid "If you're an individual trader, you'll appreciate the simplicity, flexibi
 msgstr ""
 
 msgid "In April"
-msgstr ""
+msgstr "ในเดือนเมษายน"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
 msgstr ""
