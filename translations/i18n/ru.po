@@ -457,6 +457,9 @@ msgstr "Действие"
 msgid "Active"
 msgstr "Активные"
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Добавить сравнения"
 
@@ -495,6 +498,9 @@ msgstr "С выплатами по контрактам"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Всё время указано в GMT (по Гринвичу)"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "Сумма"
@@ -568,6 +574,9 @@ msgstr "Актив"
 msgid "Asset Index"
 msgstr "Индекс активов"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Авг"
 
@@ -588,6 +597,15 @@ msgstr "Мощность индекса среднего направления 
 
 msgid "Average True Range (ATR)"
 msgstr "Средний истинный диапазон (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Чудесный осциллятор (AO)"
@@ -1729,6 +1747,9 @@ msgstr "Офис в Куала-Лумпуре"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ступенчатое дно (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Недавние"
 
@@ -1782,6 +1803,9 @@ msgstr "Загрузка индекса активов"
 
 msgid "Loading Configurations"
 msgstr "Загрузка системных настроек"
+
+msgid "Loading Copy Trade"
+msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Идет Загрузка/Обзор данных"
@@ -1915,6 +1939,9 @@ msgstr "Совпадёт"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Совпадение по нижнему уровню (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "Максимум (MAX)"
 
@@ -1953,6 +1980,9 @@ msgstr "Любимый город"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "MESA адаптивная скользящая средняя (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Мин: 10; Макс: 2000"
@@ -1995,6 +2025,9 @@ msgstr "Пон"
 
 msgid "Monday"
 msgstr "Понедельник"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Утрeнняя звeзда доджи (CDLMORNINGDOJISTAR)"
@@ -2247,6 +2280,9 @@ msgstr "Пенсия"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Процентный ценовой осциллятор (ПЦО)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Разрешения"
@@ -3175,11 +3211,17 @@ msgstr "Фон подсказки"
 msgid "Tooltip text"
 msgstr "Текст подсказки"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Общая стоимость"
 
 msgid "Total Profit/Loss"
 msgstr "Общая прибыль/убыток"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Касание"
@@ -3198,6 +3240,9 @@ msgstr "Торговля"
 
 msgid "Trade Confirmation"
 msgstr "Подтверждение контракта"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "Торгуйте при любых рыночных условиях"
@@ -3219,6 +3264,15 @@ msgstr "Торгуйте с уверенностью"
 
 msgid "Trade your way"
 msgstr "Торгуйте по своей методике"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Торговые часы"
@@ -3493,6 +3547,9 @@ msgstr "Сетка оси Y"
 msgid "Y-axis labels"
 msgstr "Метки оси Y"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "Да"
 
@@ -3543,6 +3600,9 @@ msgstr "Вы успешно открыли счёт на Binary.com, но для
 
 msgid "Your browser is not supported"
 msgstr "Ваш браузер не поддерживается"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Ваш эл. адрес"
