@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -460,6 +457,9 @@ msgstr "Czynność"
 msgid "Active"
 msgstr ""
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Dodaj porównania"
 
@@ -498,6 +498,9 @@ msgstr "Wypłaty w każdej wysokości"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Wszystkie godziny są podane według czasu GMT (Greenwich Mean Time)"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "Kwota"
@@ -571,6 +574,9 @@ msgstr "Aktywa"
 msgid "Asset Index"
 msgstr "Indeks kapitałowy"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Sie"
 
@@ -591,6 +597,15 @@ msgstr "Wskaźnik ADXR określa zmianę wskaźnika ADX. Oblicza się go, sumują
 
 msgid "Average True Range (ATR)"
 msgstr "Wskaźnik ATR (Average True Range)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Oscylator Awesome (AO)"
@@ -1732,6 +1747,9 @@ msgstr "Biuro w Kuala Lumpur"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom – dno drabiny (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Ostatnio używane"
 
@@ -1785,6 +1803,9 @@ msgstr "Ładowanie indeksu aktywów"
 
 msgid "Loading Configurations"
 msgstr "Ładowanie konfiguracji"
+
+msgid "Loading Copy Trade"
+msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Ładowanie danych pobierania/przeglądania"
@@ -1918,6 +1939,9 @@ msgstr "Zgadza się"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Formacja Matching Low (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "Maksimum (MAX)"
 
@@ -1956,6 +1980,9 @@ msgstr "Łatwe do zapamiętania miasto"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Adaptacyjna średnia krocząca Mesa (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min.: 10 Maks.: 2000"
@@ -1998,6 +2025,9 @@ msgstr "Pon."
 
 msgid "Monday"
 msgstr "Poniedziałek"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star – poranna gwiazda doji (CDLMORNINGDOJISTAR)"
@@ -2250,6 +2280,9 @@ msgstr "Emerytura"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Procentowy oscylator ceny PPO (Percentage Price Oscillator)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Pozwolenia"
@@ -3178,11 +3211,17 @@ msgstr "Tło tooltipa"
 msgid "Tooltip text"
 msgstr "Tekst tooltipa"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Koszt całkowity"
 
 msgid "Total Profit/Loss"
 msgstr "Całkowity zysk / całkowita strata"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Osiągnie"
@@ -3201,6 +3240,9 @@ msgstr "Handluj"
 
 msgid "Trade Confirmation"
 msgstr "Potwierdzenie zawarcia zakładu"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "Zawieraj zakłady w każdych warunkach rynkowych"
@@ -3222,6 +3264,15 @@ msgstr "Handluj pewnie"
 
 msgid "Trade your way"
 msgstr "Handluj na swój własny sposób"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Godziny handlowania"
@@ -3496,6 +3547,9 @@ msgstr "Linia siatki osi Y"
 msgid "Y-axis labels"
 msgstr "Etykiety osi Y"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "Tak"
 
@@ -3546,6 +3600,9 @@ msgstr "Twoje konto Binary.com zostało utworzone, ale żeby rozpocząć handlow
 
 msgid "Your browser is not supported"
 msgstr "Twoja przeglądarka nie jest obsługiwana"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Twój adres e-mail"
@@ -3760,14 +3817,3 @@ msgstr "| Wypłata"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "umożliwiając klientom, partnerom i programistom zakup i sprzedaż produktów firmy Binary.com"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "Webtrader to zaawansowana platforma handlowa, którą można całkowicie spersonalizować w zależności od osobistych potrzeb"
-
-#~ msgid "Close all"
-#~ msgstr "Zamknij wszystko"
-
-#~ msgid "Tile"
-#~ msgstr "Zmień położenie"
-
-#~ msgid "Windows"
-#~ msgstr "okna"
