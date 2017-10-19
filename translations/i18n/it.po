@@ -457,6 +457,9 @@ msgstr "Azione"
 msgid "Active"
 msgstr "Attivo"
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Aggiungi confronti"
 
@@ -495,6 +498,9 @@ msgstr "Tutti i payout"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tutti gli orari sono in GMT (Greenwich Mean Time)"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "Importo"
@@ -568,6 +574,9 @@ msgstr "Asset"
 msgid "Asset Index"
 msgstr "Indice degli asset"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Ago"
 
@@ -588,6 +597,15 @@ msgstr "Average Directional Movement Rating quantifica la variazione del momentu
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oscillator (AO)"
@@ -1729,6 +1747,9 @@ msgstr "Sede di Kuala Lumpur"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Ultima volta"
 
@@ -1782,6 +1803,9 @@ msgstr "Caricamento dell'indice degli asset"
 
 msgid "Loading Configurations"
 msgstr "Caricamento delle configurazioni"
+
+msgid "Loading Copy Trade"
+msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Caricamento del download/Mostra dati"
@@ -1915,6 +1939,9 @@ msgstr "Corrisponde"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "Massimo (MAX)"
 
@@ -1953,6 +1980,9 @@ msgstr "Città indimenticabile"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Media mobile adattiva Mesa (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -1995,6 +2025,9 @@ msgstr "Lun"
 
 msgid "Monday"
 msgstr "Lunedì"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2247,6 +2280,9 @@ msgstr "Pensione"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Percentage Price Oscillator (PPO)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -3175,11 +3211,17 @@ msgstr "Sfondo della tooltip"
 msgid "Tooltip text"
 msgstr "Testo nella tooltip"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Costo totale"
 
 msgid "Total Profit/Loss"
 msgstr "Profitto/Perdita totale"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Touch"
@@ -3198,6 +3240,9 @@ msgstr "Trade"
 
 msgid "Trade Confirmation"
 msgstr "Conferma del trade"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr ""
@@ -3219,6 +3264,15 @@ msgstr ""
 
 msgid "Trade your way"
 msgstr "Negozia a modo tuo"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Orari di trading"
@@ -3493,6 +3547,9 @@ msgstr "Griglia dell'asse delle Y"
 msgid "Y-axis labels"
 msgstr "Etichetta dell'asse delle Y"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "Sì"
 
@@ -3543,6 +3600,9 @@ msgstr "Il tuo account Binary.com è stato creato ma per iniziare a fare trading
 
 msgid "Your browser is not supported"
 msgstr "Il tuo browser non è supportato"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Il tuo indirizzo email"
