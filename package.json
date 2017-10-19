@@ -45,7 +45,7 @@
     "grunt-string-replace": "^1.0.0",
     "grunt-text-replace": "^0.4.0",
     "lodash": "^4.17.4",
-    "node-sass": "^3.10.0",
+    "node-sass": "^4.5.3",
     "showdown": "^1.6.3"
   },
   "scripts": {
@@ -100,7 +100,7 @@
     "rivets": "0.8.1",
     "text": "requirejs/text",
     "vanderlee-colorpicker": "^1.2.13",
-    "webtrader-charts": "^0.3.11"
+    "webtrader-charts": "0.4.1"
   },
   "contributors": [
     {
