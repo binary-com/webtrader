@@ -478,6 +478,9 @@ msgstr "売買"
 msgid "Active"
 msgstr ""
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "比較チャートを追加"
 
@@ -516,6 +519,9 @@ msgstr "全てのペイアウト"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "当社サイトの時間表示は全て、GMT（グリニッジ標準時）に基づきます。"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "金額"
@@ -589,6 +595,9 @@ msgstr "資産"
 msgid "Asset Index"
 msgstr "取引期間データ"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "8月"
 
@@ -609,6 +618,15 @@ msgstr "アベレージ・ディレクショナル・モメンタム・レーテ
 
 msgid "Average True Range (ATR)"
 msgstr "アベレージ・トゥルー・レンジ（ATR）"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "オーサム・オシレーター（AO)"
@@ -1754,6 +1772,9 @@ msgstr "クアラルンプール（マレーシア）"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "梯子下（CDLLADDERBOTTOM）"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "最後に使用したもの"
 
@@ -1810,6 +1831,9 @@ msgstr "資産インデックスの読み込み"
 
 msgid "Loading Configurations"
 msgstr "設定の読込み中"
+
+msgid "Loading Copy Trade"
+msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "データのダウンロード/表示を読込み中"
@@ -1943,6 +1967,9 @@ msgstr "MATCHE"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low （CDLMATCHINGLOW）"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "特定期間の最高値（MAX）"
 
@@ -1981,6 +2008,9 @@ msgstr "思い出のある都市／街の名前"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "メサ適応移動平均（MAMA）"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -2023,6 +2053,9 @@ msgstr "月曜日"
 
 msgid "Monday"
 msgstr "月曜日"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "明けの明星（CDLMORNINGDOJISTAR）"
@@ -2275,6 +2308,9 @@ msgstr "年金"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "パーセント・プライス・オシレーター（PPO）"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "アクセス許可"
@@ -3205,11 +3241,17 @@ msgstr "ツールチップ背景"
 msgid "Tooltip text"
 msgstr "ツールチップ テキスト"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "合計投資額"
 
 msgid "Total Profit/Loss"
 msgstr "合計　損益"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "TOUCH"
@@ -3228,6 +3270,9 @@ msgstr "トレード"
 
 msgid "Trade Confirmation"
 msgstr "トレード確定"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "あらゆる市場状況でお取引いただけます"
@@ -3249,6 +3294,15 @@ msgstr "安心してお取引できます"
 
 msgid "Trade your way"
 msgstr "柔軟な取引"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "取引時間"
@@ -3525,6 +3579,9 @@ msgstr "Y 軸目盛線"
 msgid "Y-axis labels"
 msgstr "Y 軸のラベル"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "はい"
 
@@ -3575,6 +3632,9 @@ msgstr "お客様のBinry.com口座が作成されました。お取引を開始
 
 msgid "Your browser is not supported"
 msgstr "お使いのブラウザは対応しておりません"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "メールアドレス"

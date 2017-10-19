@@ -288,6 +288,12 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     elem.click();
                 });
 
+            load_ondemand($navMenu.find("a.copytrade"), "click", "Loading Copy Trade...".i18n(), "copytrade/index",
+              function(copytrade) {
+                  var elem = $navMenu.find("a.copytrade");
+                  copytrade.init(elem);
+                  elem.click();
+              });
 
         };
         

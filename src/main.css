@@ -427,3 +427,57 @@ input[type="number"] {
     display: none;
 }
 
+/* ********************* Animated checkbox with CSS3 ****************/
+label.checkbox {
+    min-width: 80px;
+    min-height: 2em;
+    cursor:pointer;
+    display: inline-block;
+    position: relative;
+    top:5px;
+}
+label.checkbox  input { display:none;}
+label.checkbox span  {
+    display:inline-block;
+    position:absolute;
+    height:18px;
+    width:18px;
+    transition-duration:0.3s;
+}
+label.checkbox span.text     {
+    padding-top: 3px;
+    padding-left: 40px;
+}
+label.checkbox span.box     {
+    border:3px solid #273051;
+    transition-delay:0.1s;
+}
+label.checkbox span.check  {
+    top: -8px;
+    left: 5px;
+    width: 12px;
+    height: 24px;
+    border: none;
+    border-style: none solid solid none;
+    border-width: medium 4px 3px medium;
+    border-color: #273051;
+    opacity:0;
+    transform:rotate(180deg);
+    transition-delay:0.2s;
+}
+/* handling click events */
+label.checkbox input:checked ~ span.box {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+}
+label.checkbox input:checked ~ span.check {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+}
+
+.chosen-disable {
+    width: 100%;
+    height: 29px;
+    position: absolute;
+    z-index: +1;
+}

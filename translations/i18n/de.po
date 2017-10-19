@@ -460,6 +460,9 @@ msgstr "Aktion"
 msgid "Active"
 msgstr "Aktiv"
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Vergleiche hinzufügen"
 
@@ -498,6 +501,9 @@ msgstr "Alle Auszahlungen"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Alle Zeiten sind in GTM (Greenwich Mean Time)"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "Betrag"
@@ -571,6 +577,9 @@ msgstr "Aktie"
 msgid "Asset Index"
 msgstr "Aktienindex"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Aug"
 
@@ -591,6 +600,15 @@ msgstr "Average Directional Movement Rating mißt Impulsänderungen im ADX. Er w
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oszillator (AO)"
@@ -1732,6 +1750,9 @@ msgstr "Kuala Lumpur Firmensitz"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Zuletzt verwendet"
 
@@ -1785,6 +1806,9 @@ msgstr "Aktienindex wird geladen"
 
 msgid "Loading Configurations"
 msgstr "Konfigurationen werden geladen"
+
+msgid "Loading Copy Trade"
+msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Download/Daten Einsehen wird geladen"
@@ -1918,6 +1942,9 @@ msgstr "Gleicht"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "Maximum (MAX)"
 
@@ -1956,6 +1983,9 @@ msgstr "Einprägsamer Ort/Stadt"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa Adaptive Moving Average (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -1998,6 +2028,9 @@ msgstr "Mo"
 
 msgid "Monday"
 msgstr "Montag"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2250,6 +2283,9 @@ msgstr "Rente/Pension"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Percentage Price Oscillator (PPO)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Genehmigungen"
@@ -3178,11 +3214,17 @@ msgstr "Tooltip Hintergrund"
 msgid "Tooltip text"
 msgstr "Tooltip Text"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Gesamtkosten"
 
 msgid "Total Profit/Loss"
 msgstr "Gesamt Gewinn/Verlust"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Ziel"
@@ -3201,6 +3243,9 @@ msgstr "Handel"
 
 msgid "Trade Confirmation"
 msgstr "Kontraktbestätigung"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "Handeln Sie alle Marktkonditionen"
@@ -3222,6 +3267,15 @@ msgstr "Handeln Sie mit Selbstvertrauen"
 
 msgid "Trade your way"
 msgstr "Handeln Sie auf Ihre Weise"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Handelszeiten"
@@ -3496,6 +3550,9 @@ msgstr "Y-Achse Gitternetzlinie"
 msgid "Y-axis labels"
 msgstr "Y-Achse Labels"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "Ja"
 
@@ -3546,6 +3603,9 @@ msgstr "Ihr Binary.com Konto ist erstellt, aber um mit dem Handeln zu beginnen, 
 
 msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Ihre E-Mail"

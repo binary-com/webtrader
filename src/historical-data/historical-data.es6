@@ -2,6 +2,7 @@ import $ from 'jquery';
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import moment from 'moment';
+import 'timepicker';
 import 'highstock-release/modules/offline-exporting';
 import 'common/util';
 import wtcharts from 'webtrader-charts';
