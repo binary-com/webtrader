@@ -457,6 +457,9 @@ msgstr "操作"
 msgid "Active"
 msgstr "活跃"
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "添加比较"
 
@@ -495,6 +498,9 @@ msgstr "所有赔付额"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "所有时间均采用格林威治标准时间（GMT）"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "金额"
@@ -568,6 +574,9 @@ msgstr "资产"
 msgid "Asset Index"
 msgstr "资产指数"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "八月"
 
@@ -588,6 +597,15 @@ msgstr "平均趋向评估计量ADX中的动量变化。计算方法是将ADX的
 
 msgid "Average True Range (ATR)"
 msgstr "平均真实波动范围 (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "动量震荡指标 (AO)"
@@ -1729,6 +1747,9 @@ msgstr "吉隆坡办公室"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "梯底 (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "上一次使用"
 
@@ -1782,6 +1803,9 @@ msgstr "加载资产指数"
 
 msgid "Loading Configurations"
 msgstr "加载配置"
+
+msgid "Loading Copy Trade"
+msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "加载下载/查看数据"
@@ -1915,6 +1939,9 @@ msgstr "相符"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "相同低价 (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "最高价 (MAX)"
 
@@ -1953,6 +1980,9 @@ msgstr "难忘的城镇/城市"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa自适应移动平均线 (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "最小: 10 最大: 2000"
@@ -1995,6 +2025,9 @@ msgstr "周一"
 
 msgid "Monday"
 msgstr "周一"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "晨星十字线 (CDLMORNINGDOJISTAR)"
@@ -2247,6 +2280,9 @@ msgstr "养老金"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "百分比价格震荡指标 (PPO)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "权限"
@@ -3175,11 +3211,17 @@ msgstr "工具提示背景"
 msgid "Tooltip text"
 msgstr "工具提示文本"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "成本总计"
 
 msgid "Total Profit/Loss"
 msgstr "利润/亏损合计"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "触及"
@@ -3198,6 +3240,9 @@ msgstr "交易"
 
 msgid "Trade Confirmation"
 msgstr "确认交易"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "在所有市场环境交易"
@@ -3219,6 +3264,15 @@ msgstr "充满自信地交易"
 
 msgid "Trade your way"
 msgstr "以您的方式交易"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "交易时间"
@@ -3493,6 +3547,9 @@ msgstr "Y-轴网格线"
 msgid "Y-axis labels"
 msgstr "Y-轴标签"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "是"
 
@@ -3543,6 +3600,9 @@ msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才
 
 msgid "Your browser is not supported"
 msgstr "您的浏览器不受支持"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "您的电子邮件"
