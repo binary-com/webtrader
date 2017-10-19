@@ -5,7 +5,7 @@ import moment from 'moment';
 import 'timepicker';
 import 'highstock-release/modules/offline-exporting';
 import 'common/util';
-import wtcharts from 'webtrader-charts';
+import 'webtrader-charts';
 import html from 'text!./historical-data.html';
 import _ from 'lodash';
 import 'jquery-ui';
@@ -109,7 +109,7 @@ export const createWindow = function(options) {
     let chart = null;
     const show_chart = () => {
        chart && chart.actions.destroy(); chart = null;
-       chart = wtcharts.chartWindow.addNewChart($root, options_copy);
+       chart = WebtraderCharts.chartWindow.addNewChart($root, options_copy);
        chart.actions.reflow();
        chart.events.anyChange = () => {
           options_copy = chart.data();

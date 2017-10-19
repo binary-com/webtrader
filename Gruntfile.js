@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                             "!highstock-release/**", "highstock-release/highstock.js", "highstock-release/themes/**", "highstock-release/modules/exporting.js", "highstock-release/modules/offline-exporting.js", "highstock-release/highcharts-more.js",
                             "moment/min/moment.min.js", "moment/locale/**",
                             "text/text.js",
-                            "webtrader-charts/dist/webtrader-charts.js",
+                            "webtrader-charts/dist/webtrader-charts.iife.js",
                             "regenerator-runtime/*",
                             "!jquery-ui-dist/**", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
                             "chosen-js/*",
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
                         cwd: "dist/uncompressed",
                         src: [
                             "**",
-                            "!**/*.js", "**/lib/**/*.min.js", "**/lib/**/highstock.js", "**/lib/**/webtrader-charts.js",
+                            "!**/*.js", "**/lib/**/*.min.js", "**/lib/**/highstock.js", "**/lib/**/webtrader-charts.iife.js",
                             "!**/*.css", "!**/*.html","!**/*.{png,jpg,gif,svg}"
                         ],
                         dest: "dist/compressed"
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: "dist/uncompressed",
-                    src: ["**/*.js", "!**/lib/**/*.min.js", "!**/lib/**/highstock.js", "!**/lib/**/webtrader-charts.js"],
+                    src: ["**/*.js", "!**/lib/**/*.min.js", "!**/lib/**/highstock.js", "!**/lib/**/webtrader-charts.iife.js"],
                     dest: "dist/compressed"
                 }],
                 options: {

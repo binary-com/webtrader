@@ -6,13 +6,13 @@ import windows from "../windows/windows";
 import 'highstock-release/modules/offline-exporting';
 import liveapi from '../websockets/binary_websockets';
 import 'common/util';
-import wtcharts from 'webtrader-charts';
+import 'webtrader-charts';
 
 const app_config = local_storage.get("config");
-wtcharts.init({
-   appId: liveapi.app_id,
-   lang: 'en',
-   server: app_config ? app_config.websocket_url : 'wss://ws.binaryws.com/websockets/v3'
+WebtraderCharts.init({
+  appId: liveapi.app_id,
+  lang: 'en',
+  server: app_config ? app_config.websocket_url : 'wss://ws.binaryws.com/websockets/v3'
 });
 
 export const addNewWindow = function(options) {
@@ -33,7 +33,7 @@ export const addNewWindow = function(options) {
         }
     }, options);
     const dialog = windows.createBlankWindow($parent, options);
-    const chart = wtcharts.chartWindow.addNewChart($parent, options_copy);
+    const chart = WebtraderCharts.chartWindow.addNewChart($parent, options_copy);
     chart.actions.reflow();
 
     const update_track = dialog.track({
