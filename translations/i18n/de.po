@@ -458,7 +458,7 @@ msgid "Active"
 msgstr "Aktiv"
 
 msgid "Active Since"
-msgstr ""
+msgstr "Aktiv seit"
 
 msgid "Add comparisons"
 msgstr "Vergleiche hinzufügen"
@@ -500,7 +500,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Alle Zeiten sind in GTM (Greenwich Mean Time)"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "Erlauben Sie anderen, Ihre Trades zu kopieren"
 
 msgid "Amount"
 msgstr "Betrag"
@@ -575,7 +575,7 @@ msgid "Asset Index"
 msgstr "Aktienindex"
 
 msgid "Assets"
-msgstr ""
+msgstr "Anlagen"
 
 msgid "Aug"
 msgstr "Aug"
@@ -599,13 +599,13 @@ msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
 
 msgid "Avg. Duration"
-msgstr ""
+msgstr "Durchschnittliche Dauer"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "Durchschnittlicher Verlust"
 
 msgid "Avg. Profit"
-msgstr ""
+msgstr "Durchschnittlicher Gewinn"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oszillator (AO)"
@@ -1748,7 +1748,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Profitable Trades der letzten 12 Monate"
 
 msgid "Last used"
 msgstr "Zuletzt verwendet"
@@ -1805,7 +1805,7 @@ msgid "Loading Configurations"
 msgstr "Konfigurationen werden geladen"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Lade Kopie-Trade"
 
 msgid "Loading Download/View Data"
 msgstr "Download/Daten Einsehen wird geladen"
@@ -1940,7 +1940,7 @@ msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Max. Handelseinsatz"
 
 msgid "Maximum (MAX)"
 msgstr "Maximum (MAX)"
@@ -1982,7 +1982,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa Adaptive Moving Average (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Min. Handelseinsatz"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -2027,7 +2027,7 @@ msgid "Monday"
 msgstr "Montag"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Monatliche Gewinn-Trades"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2282,7 +2282,7 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Percentage Price Oscillator (PPO)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Leistungs-Wahrscheinlichkeit"
 
 msgid "Permissions"
 msgstr "Genehmigungen"
@@ -3212,7 +3212,7 @@ msgid "Tooltip text"
 msgstr "Tooltip Text"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Gesamte Kopierer"
 
 msgid "Total Cost"
 msgstr "Gesamtkosten"
@@ -3221,7 +3221,7 @@ msgid "Total Profit/Loss"
 msgstr "Gesamt Gewinn/Verlust"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Gesamte Trades"
 
 msgid "Touch"
 msgstr "Ziel"
@@ -3242,7 +3242,7 @@ msgid "Trade Confirmation"
 msgstr "Kontraktbestätigung"
 
 msgid "Trade Types"
-msgstr ""
+msgstr "Handelsarten"
 
 msgid "Trade all market conditions"
 msgstr "Handeln Sie alle Marktkonditionen"
@@ -3266,13 +3266,13 @@ msgid "Trade your way"
 msgstr "Handeln Sie auf Ihre Weise"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Trader Statistiken"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Trade Profitabilität"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Trade Break-Down"
 
 msgid "Trading Times"
 msgstr "Handelszeiten"
@@ -3548,7 +3548,7 @@ msgid "Y-axis labels"
 msgstr "Y-Achse Labels"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Jährliche Gewinn-Trades"
 
 msgid "Yes"
 msgstr "Ja"
@@ -3602,7 +3602,7 @@ msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Ihre Kopie-Einstellungen"
 
 msgid "Your email"
 msgstr "Ihre E-Mail"
