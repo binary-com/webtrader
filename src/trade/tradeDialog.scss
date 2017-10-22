@@ -302,7 +302,54 @@
   width: 95px;
 }
 
-.trade-fields ul li select.date-start-select + .ui-selectmenu-button { width: 115px; }
+.trade-fields ul li select.date-start-select + .chosen-container {
+  width: 115px !important;
+  .chosen-search { display: none; }
+  ul.chosen-results {
+    flex-direction: column;
+    max-height: 250px;
+    li {
+      width: calc(100% - 10px);
+      text-align: center;
+      line-height: 18px;
+      display: block;
+    }
+  }
+
+  .chosen-drop {
+      box-shadow: none;
+      border-radius: 2px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border: 1px solid #F2F2F2;
+      border-top: none;
+  }
+
+  .chosen-single {
+    border: 1px solid #F2F2F2;
+    background-image: none;
+    border-radius: 2px;
+    font-weight: normal;
+    position: relative;
+    box-shadow: none;
+  }
+
+  &.chosen-container-active {
+    .chosen-single {
+      box-shadow: none;
+      border: 1px solid #F2F2F2;
+      text-align: center;
+      padding: 0;
+      > span {
+        width: calc(100% - 10px);
+      }
+      > div {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
@@ -379,51 +426,3 @@
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip;}
-
-/* ********************* Animated checkbox with CSS3 ****************/
-label.checkbox {
-  min-width: 80px;
-  min-height: 2em;
-  cursor:pointer;
-  display: inline-block;
-  position: relative;
-  top:5px;
-}
-label.checkbox  input { display:none;}
-label.checkbox span  {
-  display:inline-block;
-  position:absolute;
-  height:18px;
-  width:18px;
-  transition-duration:0.3s;
-}
-label.checkbox span.text     {
-  padding-top: 3px;
-  padding-left: 40px;
-}
-label.checkbox span.box     {
-  border:3px solid #273051;
-  transition-delay:0.1s;
-}
-label.checkbox span.check  {
-  top: -8px;
-  left: 5px;
-  width: 12px;
-  height: 24px;
-  border: none;
-  border-style: none solid solid none;
-  border-width: medium 4px 3px medium;
-  border-color: #273051;
-  opacity:0;
-  transform:rotate(180deg);
-  transition-delay:0.2s;
-}
-/* handling click events */
-label.checkbox input:checked ~ span.box {
-  opacity: 0;
-  transform: scale(0) rotate(-180deg);
-}
-label.checkbox input:checked ~ span.check {
-  opacity: 1;
-  transform: scale(1) rotate(45deg);
-}

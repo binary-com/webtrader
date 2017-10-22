@@ -419,7 +419,17 @@ function guessDigits(prices) {
     return defaultDigits || 4;
 }
 
+function getCurrencyDetail(prop, curr) {
+    var currency = (curr || local_storage.get("currency") || '').toUpperCase();
+    var config = (local_storage.get('currencies_config') || {})[currency] || {};
+    return config[prop];
+}
+
 var currencyFractionalDigits = function () {
-    var currency = (local_storage.get("currency") || '').toUpperCase();
-    return ((local_storage.get('currencies_config') || {})[currency] || {}).fractional_digits || 2;
+    return getCurrencyDetail('fractional_digits');
+}
+
+var isCryptoCurrency = function (curr) {
+    var is_crypto = getCurrencyDetail('type', curr) === 'crypto';
+    return is_crypto;
 }

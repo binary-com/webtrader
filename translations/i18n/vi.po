@@ -3817,3 +3817,62 @@ msgstr "| Thanh toán"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
+msgid "Active Since"
+msgstr ""
+
+msgid "Allow others to copy your trades"
+msgstr ""
+
+msgid "Assets"
+msgstr ""
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
+
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
+msgid "Loading Copy Trade"
+msgstr ""
+
+msgid "Max. Trade Stake"
+msgstr ""
+
+msgid "Min. Trade Stake"
+msgstr ""
+
+msgid "Monthly Profitable Trades"
+msgstr ""
+
+msgid "Performance Probability"
+msgstr ""
+
+msgid "Total Copiers"
+msgstr ""
+
+msgid "Total Trades"
+msgstr ""
+
+msgid "Trade Types"
+msgstr ""
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
+
+msgid "Yearly Profitable Trades"
+msgstr ""
+
+msgid "Your copying settings"
+msgstr ""

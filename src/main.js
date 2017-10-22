@@ -25,7 +25,7 @@ window.requirejs.config({
         "indicator_levels": "charts/indicators/level",
         "binary-style": "<style-url>/binary",
         "babel-runtime/regenerator": "lib/regenerator-runtime/runtime",
-        "webtrader-charts" : "lib/webtrader-charts/dist/webtrader-charts",
+        "webtrader-charts" : "lib/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",
         "highstock-release": "lib/highstock-release",
     },
@@ -39,6 +39,14 @@ window.requirejs.config({
     waitSeconds: 0,
     /* fix for requriejs timeout on slow internet connectins */
     "shim": {
+        "webtrader-charts": {
+            exports: "WebtraderCharts",
+            deps: [
+              'moment',
+              'jquery',
+              'highstock-release/highstock',
+            ]
+        },
         "babel-runtime/regenerator": {
             exports: "regeneratorRuntime"
         },
@@ -288,6 +296,12 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     elem.click();
                 });
 
+            load_ondemand($navMenu.find("a.copytrade"), "click", "Loading Copy Trade...".i18n(), "copytrade/index",
+              function(copytrade) {
+                  var elem = $navMenu.find("a.copytrade");
+                  copytrade.init(elem);
+                  elem.click();
+              });
 
         };
         

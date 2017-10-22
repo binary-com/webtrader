@@ -41,8 +41,10 @@
         <li rv-on-click="date_start.update">
             <select class="date-start-select"
                     rv-jq-class="'trade-dialog-date-start-ul'"
-                    rv-selectmenu="date_start.value | notify duration_unit.update | debounce proposal.onchange"
-                    rv-selectrefresh="date_start.array" >
+                    rv-chosen="date_start.value | notify duration_unit.update | debounce proposal.onchange"
+                    rv-chosenrefresh="date_start.array"
+                    style="width: 100px"
+                    >
                     <option rv-each-row="date_start.array" rv-value="row.value">{row.text | i18n}</option>
            </select>
         </li>

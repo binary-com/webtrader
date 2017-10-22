@@ -4,7 +4,7 @@
 					rv-class-active='route.value | eq "standard-methods"'
 					rv-on-click='route.update | bind "standard-methods"'>Standard methods</span>
 		<span class='tab'
-					rv-if='payment_agents.list | prop "length"'
+					rv-if='payment_agents.list | prop "length" | and-not is_cryptocurrency'
 					rv-class-active='route.value | eq "payment-agents"'
 					rv-on-click='route.update | bind "payment-agents"'>Payment agents</span>
 	</div>

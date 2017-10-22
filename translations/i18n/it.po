@@ -3470,7 +3470,7 @@ msgid "Wed"
 msgstr "Merc"
 
 msgid "Wednesday"
-msgstr "Mercoledì"
+msgstr "Mercoled"
 
 msgid "Weighted Close Price (WCLPRICE)"
 msgstr ""
