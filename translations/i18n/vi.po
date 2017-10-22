@@ -457,6 +457,9 @@ msgstr "Hành động"
 msgid "Active"
 msgstr "Còn hoạt động"
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Thêm các so sánh"
 
@@ -495,6 +498,9 @@ msgstr "Các khoản thanh toán"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tất cả thời gian ở GMT (Thời gian trung bình Greenwich )"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "Tổng"
@@ -568,6 +574,9 @@ msgstr "Tài sản"
 msgid "Asset Index"
 msgstr "Chỉ số Tài sản"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Tháng tám"
 
@@ -588,6 +597,15 @@ msgstr "Điểm đánh giá di chuyển trung bình trực tiếp đánh giá m�
 
 msgid "Average True Range (ATR)"
 msgstr "Khoảng trung bình thực (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Dao động tuyệt vời (AO)"
@@ -1729,6 +1747,9 @@ msgstr "văn phòng Kuala Lumpur"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Mô hình bậc thang dưới (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
 
@@ -1782,6 +1803,9 @@ msgstr "Đang tải chỉ số tài sản"
 
 msgid "Loading Configurations"
 msgstr "Đang tải cấu hình"
+
+msgid "Loading Copy Trade"
+msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Đang tải dữ liệu tải về/xem dữ liệu"
@@ -1915,6 +1939,9 @@ msgstr "Trận đấu"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Mô hình Matching Low (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "Chỉ số Maximum (MAX)"
 
@@ -1953,6 +1980,9 @@ msgstr "Thị trấn/thành phố đáng nhớ"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "công thức Mesa Adaptive Moving Average (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
@@ -1995,6 +2025,9 @@ msgstr "Thứ 2"
 
 msgid "Monday"
 msgstr "Thứ hai"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Mô hình Sao Doji buổi sáng (CDLMORNINGDOJISTAR)"
@@ -2247,6 +2280,9 @@ msgstr "Trợ cấp"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Công cụ dao động giá theo tỷ lệ phần trăm (PPO)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Cấp phép"
@@ -3175,11 +3211,17 @@ msgstr "Công cụ chú thích nền"
 msgid "Tooltip text"
 msgstr "Chữ chú thích"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Tổng chi phí"
 
 msgid "Total Profit/Loss"
 msgstr "Tổng lợi nhuận/tổn thất"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Chạm"
@@ -3198,6 +3240,9 @@ msgstr "Giao dịch"
 
 msgid "Trade Confirmation"
 msgstr "Xác nhận giao dịch"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "Tất cả các điều kiện thị trường thương mại"
@@ -3219,6 +3264,15 @@ msgstr "Giao dịch với sự tự tin"
 
 msgid "Trade your way"
 msgstr "Giao dịch theo cách của bạn"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Thời Gian Giao Dịch"
@@ -3493,6 +3547,9 @@ msgstr "Đường kẻ ô Y-axis"
 msgid "Y-axis labels"
 msgstr "Nhãn Y-axis"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "Có"
 
@@ -3543,6 +3600,9 @@ msgstr "Tài khoản Binary.com của bạn đã được tạo, nhưng để b�
 
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Email của bạn"

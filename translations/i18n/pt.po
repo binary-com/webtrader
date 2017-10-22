@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -3820,14 +3817,3 @@ msgstr "| Prêmio"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitindo que clientes, afiliados e desenvolvedores possam comprar e vender produtos da Binary.com"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "O WebTrader é uma plataforma de negociação avançada, totalmente personalizável de acordo com as suas preferências pessoais"
-
-#~ msgid "Close all"
-#~ msgstr "Fechar tudo"
-
-#~ msgid "Tile"
-#~ msgstr "Lado a lado"
-
-#~ msgid "Windows"
-#~ msgstr "Janelas"
