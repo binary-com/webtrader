@@ -100,7 +100,7 @@
     "rivets": "0.8.1",
     "text": "requirejs/text",
     "vanderlee-colorpicker": "^1.2.13",
-    "webtrader-charts": "0.4.1"
+    "webtrader-charts": "0.4.3"
   },
   "contributors": [
     {
