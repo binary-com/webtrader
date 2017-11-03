@@ -458,7 +458,7 @@ msgid "Active"
 msgstr "活躍"
 
 msgid "Active Since"
-msgstr ""
+msgstr "開始活躍日期"
 
 msgid "Add comparisons"
 msgstr "新增比較"
@@ -500,7 +500,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "所有時間均採用格林威治標準時間（GMT）"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "允許他人複製您的交易"
 
 msgid "Amount"
 msgstr "金額"
@@ -3817,62 +3817,3 @@ msgstr "| 賠付"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
 
-msgid "Active Since"
-msgstr ""
-
-msgid "Allow others to copy your trades"
-msgstr ""
-
-msgid "Assets"
-msgstr ""
-
-msgid "Avg. Duration"
-msgstr ""
-
-msgid "Avg. Loss"
-msgstr ""
-
-msgid "Avg. Profit"
-msgstr ""
-
-msgid "Last 12 mnts Profitable Trades"
-msgstr ""
-
-msgid "Loading Copy Trade"
-msgstr ""
-
-msgid "Max. Trade Stake"
-msgstr ""
-
-msgid "Min. Trade Stake"
-msgstr ""
-
-msgid "Monthly Profitable Trades"
-msgstr ""
-
-msgid "Performance Probability"
-msgstr ""
-
-msgid "Total Copiers"
-msgstr ""
-
-msgid "Total Trades"
-msgstr ""
-
-msgid "Trade Types"
-msgstr ""
-
-msgid "Trader's Statistics"
-msgstr ""
-
-msgid "Trades Profitability"
-msgstr ""
-
-msgid "Trades break down"
-msgstr ""
-
-msgid "Yearly Profitable Trades"
-msgstr ""
-
-msgid "Your copying settings"
-msgstr ""
