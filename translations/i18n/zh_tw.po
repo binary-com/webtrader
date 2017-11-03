@@ -3269,10 +3269,10 @@ msgid "Trader's Statistics"
 msgstr "交易員統計"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "交易獲利率"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "交易明細"
 
 msgid "Trading Times"
 msgstr "交易時間"
@@ -3548,7 +3548,7 @@ msgid "Y-axis labels"
 msgstr "Y-軸標籤"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "年度盈利交易"
 
 msgid "Yes"
 msgstr "是"
@@ -3602,7 +3602,7 @@ msgid "Your browser is not supported"
 msgstr "不支持您的瀏覽器"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "您的複製設置"
 
 msgid "Your email"
 msgstr "您的電子郵件"
