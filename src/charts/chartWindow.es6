@@ -12,7 +12,7 @@ const app_config = local_storage.get("config");
 WebtraderCharts.init({
   appId: liveapi.app_id,
   lang: 'en',
-  server: app_config ? app_config.websocket_url : 'wss://ws.binaryws.com/websockets/v3'
+  server: liveapi.socket_url
 });
 
 export const addNewWindow = function(options) {
