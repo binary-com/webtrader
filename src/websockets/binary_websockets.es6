@@ -11,7 +11,26 @@ let socket = null;
 let is_website_up = false;
 let queued_requests = {};
 
-const get_app_id = () => window.localStorage.getItem('config.app_id') || 11;
+
+const get_app_default_appid = () => {
+  const app_ids = JSON.parse(app_ids_json);
+  const config = local_storage.get('config');
+  let token = (config && config.app_id) || '';
+
+  if(!token) { /* find the appropriate token */
+    const href = window.location.href;
+    for(const web_address in app_ids) {
+      if(href.lastIndexOf(web_address, 0) == 0) {
+        token = app_ids[web_address];
+        break;
+      }
+    }
+  }
+  localStorage.setItem('config.default_app_id', token);
+  return token;
+};
+
+const get_app_id = () => window.localStorage.getItem('config.app_id') || get_app_default_appid() || 11;
 
 const get_socket_url = () => {
    let server_url = window.localStorage.getItem('config.server_url');
