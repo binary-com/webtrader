@@ -11,29 +11,43 @@ let socket = null;
 let is_website_up = false;
 let queued_requests = {};
 
-const get_app_id = () => {
-   const app_ids = JSON.parse(app_ids_json);
-   const config = local_storage.get('config');
-   let token = (config && config.app_id) || '';
 
-   if(!token) { /* find the appropriate token */
-      const href = window.location.href;
-      for(const web_address in app_ids) {
-         if(href.lastIndexOf(web_address, 0) == 0) {
-            token = app_ids[web_address];
-            break;
-         }
+const get_app_default_appid = () => {
+  const app_ids = JSON.parse(app_ids_json);
+  const config = local_storage.get('config');
+  let token = (config && config.app_id) || '';
+
+  if(!token) { /* find the appropriate token */
+    const href = window.location.href;
+    for(const web_address in app_ids) {
+      if(href.lastIndexOf(web_address, 0) == 0) {
+        token = app_ids[web_address];
+        break;
       }
-   }
-   return token;
+    }
+  }
+  localStorage.setItem('config.default_app_id', token);
+  return token;
 };
 
+const get_app_id = () => window.localStorage.getItem('config.app_id') || get_app_default_appid() || 11;
+
+const get_socket_url = () => {
+   let server_url = window.localStorage.getItem('config.server_url');
+   if (!server_url) {
+      let server = 'frontend';
+      server_url = `${server}.binaryws.com`;
+   }
+   return `wss://${server_url}/websockets/v3`;
+};
+
+export const socket_url = get_socket_url();
 export const app_id = get_app_id();
 
 const connect = () => {
    const config = local_storage.get('config');
    const i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-   const api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l='+i18n_name) + '&app_id=' + app_id;
+   const api_url = `${socket_url}?l=${i18n_name}&app_id=${app_id}`;
    const ws = new WebSocket(api_url);
 
    ws.addEventListener('open', onopen);
@@ -482,7 +496,8 @@ const api = {
    is_authenticated,
    sell_expired,
    invalidate,
-   app_id
+   app_id,
+   socket_url
 }
 /* subscribe to website_status */
 api.events.on('website_status', (data) => {

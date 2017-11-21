@@ -4,6 +4,7 @@
 import $ from 'jquery';
 import windows from '../windows/windows';
 import rv from '../common/rivetsExtra';
+import liveapi from '../websockets/binary_websockets';
 import _ from 'lodash';
 import '../common/util';
 import html from 'text!./config.html';
@@ -26,8 +27,8 @@ const initConfigWindow = () => {
       ignoreTileAction:true,
       open: () => {
          const config = local_storage.get('config');
-         if(config && config.app_id) state.app_id = config.app_id;
-         if(config && config.websocket_url) state.websocket_url = _.replace(_.replace(config.websocket_url || '', 'wss://', ''), '/websockets/v3?l=EN', '');
+         state.app_id = liveapi.app_id;
+         state.websocket_url = liveapi.socket_url;
          if(config && config.oauth_url) state.oauth_url = _.replace(_.replace(config.oauth_url || '', 'https://', ''), '/oauth2/authorize', '');
       },
       close: () => {
@@ -54,9 +55,9 @@ const initConfigWindow = () => {
 
 const init_state = (root) => {
    const state = {
-      websocket_url: 'ws.binaryws.com',
+      websocket_url: liveapi.socket_url,
       oauth_url: 'oauth.binary.com',
-      app_id: ''
+      app_id: liveapi.app_id
    };
 
    state.apply = () => {
