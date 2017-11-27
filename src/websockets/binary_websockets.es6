@@ -33,7 +33,7 @@ export const app_id = get_app_id();
 const connect = () => {
    const config = local_storage.get('config');
    const i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-   const api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l='+i18n_name) + '&app_id=' + app_id;
+   const api_url = ((config && config.websocket_url)  || 'wss://frontend.binaryws.com/websockets/v3?l='+i18n_name) + '&app_id=' + app_id;
    const ws = new WebSocket(api_url);
 
    ws.addEventListener('open', onopen);
