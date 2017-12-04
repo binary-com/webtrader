@@ -1012,6 +1012,9 @@ msgstr "合約"
 msgid "Coppock Curve (CC)"
 msgstr "估波曲線 (CC)"
 
+msgid "Copy Trade"
+msgstr ""
+
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "反攻 (CDLCOUNTERATTACK)"
 
@@ -1809,6 +1812,9 @@ msgstr "正在載入複製交易"
 
 msgid "Loading Download/View Data"
 msgstr "載入下載/檢視資料"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "載入密碼對話"
