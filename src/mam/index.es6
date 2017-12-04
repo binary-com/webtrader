@@ -9,7 +9,6 @@ import html from 'text!./index.html';
 import 'css!./index.css';
 import '../common/util';
 import liveapi from 'websockets/binary_websockets';
-import validateToken from 'websockets/validateToken';
 import { init as instrumentPromise } from '../instruments/instruments';
 
 const TRADE_TYPES = [{
@@ -70,18 +69,18 @@ const TRADE_TYPES = [{
 }];
 const COPY_TRADE_LOCAL_STORE_NAME = "copyTrade";
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
-const defaultCopySettings = (traderApiToken) => ({
+const defaultCopySettings = traderApiToken => ({
   copy_start: traderApiToken,
   min_trade_stake: 10,
   max_trade_stake: 100,
   assets: _.cloneDeep(DEFAULT_ASSETS),
   trade_types: _.cloneDeep(DEFAULT_TRADE_TYPES),
 });
-const defaultTraderDetails = (traderApiToken, loginid) => ({
+const defaultTraderDetails = traderApiToken => ({
   open: false,
   started: false,
+  disableRemove: false,
   disableStart: false,
-  loginid,
   yourCopySettings: defaultCopySettings(traderApiToken),
 });
 const validateYourCopySettingsData = yourCopySettingsData => {
@@ -117,11 +116,17 @@ const validateYourCopySettingsData = yourCopySettingsData => {
   }
   return valid;
 };
-const updateLocalStorage = _.debounce(scope => {
+const updateLocalStorage = scope => {
   const clonedScope = _.cloneDeep(scope);
   delete clonedScope.searchToken.disable;
+  clonedScope.traderTokens.forEach(f => {
+    delete f.open;
+    delete f.started; //TODO - if server continues to copy trade when Webtrader is closed, we might not have to delete this
+    delete f.disableRemove;
+    delete f.disableStart;
+  });
   local_storage.set(COPY_TRADE_LOCAL_STORE_NAME, clonedScope);
-}, 50);
+};
 
 let GROUPED_INTRUMENTS = null; // For nice display purpose only
 let DEFAULT_ASSETS = null;
@@ -148,31 +153,8 @@ instrumentPromise().then(instruments => {
   state.masterAssetList = assets;
   state.groupedAssets = GROUPED_INTRUMENTS;
   // Randomly add top 2 assets in default list
-  DEFAULT_ASSETS = assets.filter(f => f.code === 'R_10').map(m => m.code);
+  DEFAULT_ASSETS = assets.slice(0, 2).map(m => m.code);
 });
-
-const refreshTraderStats = (loginid, token, scope) => liveapi
-  .send({
-    copytrading_statistics: 1,
-    trader_id: loginid,
-  })
-  .then(copyStatData => {
-    if (copyStatData.copytrading_statistics) {
-      const traderTokenDetails = _.find(scope.traderTokens, f =>
-        f.yourCopySettings && f.yourCopySettings.copy_start === token);
-      //Check if we already added this trader. If yes, then merge the changes
-      if (traderTokenDetails) {
-        _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
-      }
-      //If not added, then add this along with default yourCopySettings object
-      else {
-        scope.traderTokens.push(_.merge({
-          traderStatistics: copyStatData.copytrading_statistics,
-        }, defaultTraderDetails(token, loginid)));
-      }
-    }
-    updateLocalStorage(scope);
-  });
 
 let win = null, win_view = null;
 
@@ -221,12 +203,10 @@ const state = {
               .then(() => {
                 newObj.disableStart = false;
                 newObj.started = true;
-                updateLocalStorage(state);
               })
               .catch(e => {
                 $.growl.error({ message: e.message });
                 newObj.disableStart = false;
-                updateLocalStorage(state);
               });
           });
         }
@@ -239,49 +219,32 @@ const state = {
         .then(() => {
           state.traderTokens[index].disableStart = false;
           state.traderTokens[index].started = false;
-          updateLocalStorage(state);
         })
         .catch(e => {
           $.growl.error({ message: e.message });
           state.traderTokens[index].disableStart = false;
-          updateLocalStorage(state);
         });
     }
   },
   onRemove: (index) => {
     const toBeRemovedItem = state.traderTokens[index];
-    state.traderTokens.splice(index, 1);
-    updateLocalStorage(state);
-    // Gracefully delete it.
+    toBeRemovedItem.disableRemove = true;
     liveapi.send({
       copy_stop: toBeRemovedItem.yourCopySettings.copy_start
     })
-    .catch(e => {});
-  },
-  onRefresh: (index) => {
-    const trader = state.traderTokens[index];
-    const loginid = trader.loginid;
-    const token = trader.yourCopySettings.copy_start;
-    if (loginid && token) {
-      trader.disableRefresh = true;
-      refreshTraderStats(loginid, token, state)
-        .then(() => {
-          trader.disableRefresh = false;
-          updateLocalStorage(state);
-        })
-        .catch(e => {
-          $.growl.error({ message: 'Refresh failed'});
-          console.error(e);
-          trader.disableRefresh = false;
-          updateLocalStorage(scope);
-        });
-    }
+    .then(() => {
+      state.traderTokens.splice(index, 1);
+      updateLocalStorage(state);
+    })
+    .catch(e => {
+      $.growl.error({ message: e.message });
+      toBeRemovedItem.disableRemove = false;
+    });
   },
   onMinTradeChange: (event, scope) => {
     const index = $(event.target).data('index');
     const value = event.target.value;
-    if (!isNaN(parseInt(value)))
-      scope.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(value);
+    scope.traderTokens[index].yourCopySettings.min_trade_stake = value;
   },
   onMaxTradeChange: (event, scope) => {
     const index = $(event.target).data('index');
@@ -290,11 +253,6 @@ const state = {
   },
   onUpdateYourSettings: (index) => {
     if (validateYourCopySettingsData(state.traderTokens[index].yourCopySettings)) {
-      /**
-       * Make sure min_trade_stake & max_trade_stack are numeric
-       */
-      state.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.min_trade_stake);
-      state.traderTokens[index].yourCopySettings.max_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.max_trade_stake);
       updateLocalStorage(state);
       $.growl.notice({
         message: 'Updated successfully',
@@ -312,34 +270,43 @@ const state = {
     },
     addToken: (event, scope) => {
       //If searchToken.token is empty, do nothing
-      if (!scope.searchToken.token) {
-        $.growl.error({
-          message: 'Enter a valid trader token',
-        });
-        return;
+      if (!scope.searchToken.token.match(/^[A-Za-z]+\d+$/)) {
+        //TODO
+        //$.growl.error({
+        //  message: 'Enter a valid trader token',
+        //});
+        //return;
       }
 
       scope.searchToken.disable = true;
 
-      validateToken(scope.searchToken.token)
-        .then(tokenUserData => {
-          refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope)
-            .then(() => {
-              scope.searchToken.token = '';
-              scope.searchToken.disable = false;
-              updateLocalStorage(scope);
-            })
-            .catch(e => {
-              $.growl.error({ message: e.message });
-              scope.searchToken.disable = false;
-              updateLocalStorage(scope);
-              _.defer(() => $(event.target).focus());
-            });
+      liveapi
+        .send({
+          copytrading_statistics: 1,
+          trader_id: scope.searchToken.token,
         })
-        .catch(error => {
-          $.growl.error({ message: error.message });
+        .then(copyStatData => {
+          if (copyStatData.copytrading_statistics) {
+            const traderTokenDetails = _.find(scope.traderTokens, f => f.yourCopySettings && f.yourCopySettings.copy_start === scope.searchToken.token);
+            //Check if we already added this trader. If yes, then merge the changes
+            if (traderTokenDetails) {
+              _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
+            }
+            //If not added, then add this along with default yourCopySettings object
+            else {
+              scope.traderTokens.push(_.merge({
+                traderStatistics: copyStatData.copytrading_statistics,
+              }, defaultTraderDetails(scope.searchToken.token)));
+            }
+          }
+          scope.searchToken.token = '';
           scope.searchToken.disable = false;
           updateLocalStorage(scope);
+          _.defer(() => $(event.target).focus());
+        })
+        .catch(e => {
+          $.growl.error({ message: e.message });
+          scope.searchToken.disable = false;
         });
     },
   },
@@ -369,8 +336,7 @@ const state = {
      },
      open: false, // if this section is open
      started: false, // If this is currently being used for copying
-     disableRefresh: false, // If refresh button clicked
-     loginid: , // login ID of trader
+     disableRemove: false,
    }
    */
   traderTokens: [],
@@ -397,20 +363,28 @@ const initConfigWindow = () => {
       }
       //Get the copy settings
       liveapi.send({ get_settings: 1 }).then(({get_settings = {}}) =>
-        state.allowCopy.allow_copiers = (get_settings.allow_copiers === 1));
+        state.allowCopy.allow_copiers = get_settings.allow_copiers === 1);
       //Refresh locally stored trader statistics
-      if (copyTrade) {
-        (async function () {
-          for (let traderToken of copyTrade.traderTokens) {
-            try {
-              const loginid = traderToken.loginid;
-              const token = traderToken.yourCopySettings.copy_start;
-              await refreshTraderStats(loginid, token, state);
-            } catch (e) {
-              console.error(e);
+      const _refreshTraderStat = async function () {
+        for (let traderToken of copyTrade.traderTokens) {
+          try {
+            const copyStatData = await liveapi.send({
+              copytrading_statistics: 1,
+              trader_id: traderToken,
+            });
+            if (copyStatData.copytrading_statistics) {
+              const traderTokenDetails = _.find(state.traderTokens, f => f.yourCopySettings && f.yourCopySettings.copy_start === traderToken);
+              //Check if we already added this trader. If yes, then merge the changes
+              if (traderTokenDetails) {
+                _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
+              }
             }
+          } catch (e) {
           }
-        })();
+        }
+      }
+      if (copyTrade) {
+        _refreshTraderStat();
       }
     },
     close: () => {

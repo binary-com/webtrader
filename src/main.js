@@ -303,6 +303,12 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                   elem.click();
               });
 
+            load_ondemand($navMenu.find("a.mam"), "click", "Loading MAM...".i18n(), "mam/index",
+              function(mam) {
+                  var elem = $navMenu.find("a.mam");
+                  mam.init(elem);
+                  elem.click();
+              });
         };
         
         require(["navigation/navigation", "jquery-ui", "css!main.css","css!binary-style"], function(navigation) {

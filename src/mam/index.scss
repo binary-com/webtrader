@@ -1,4 +1,4 @@
-.copytrade-dialog {
+.mam-dialog {
   padding: 15px !important;
   span.text {
     white-space: nowrap;
@@ -11,58 +11,55 @@
     border-radius: 2px;
     padding: 8px;
     .row {
-      background-color: white;
-      .cell:first-child {
-        width: 20px;
-        color: lightgrey;
-        padding: 5px;
-        span {
-          position: relative;
-          top: 3px;
-          left: 3px;
+        background-color: white;
+        .cell:first-child {
+          width: 20px;
+          color: lightgrey;
+          padding: 5px;
+          span {
+            position: relative;
+            top: 3px;
+            left: 3px;
+          }
         }
-      }
-      .cell:nth-child(2) {
-        input {
-          border: none;
-          outline: none;
-          margin: 5px;
-          width: 90%;
-          &:focus {
-            box-shadow: none;
+        .cell:nth-child(2) {
+          input {
+            border: none;
+            outline: none;
+            margin: 5px;
+            width: 90%;
+            &:focus {
+              box-shadow:  none;
+            }
+          }
+        }
+        .cell:nth-child(3) {
+          background-color: lightgrey;
+          padding-left: 10px;
+          width: 20px;
+          button {
+            padding: 5px;
           }
         }
       }
-      .cell:nth-child(3) {
-        background-color: lightgrey;
-        padding-left: 10px;
-        width: 20px;
-        button {
-          padding: 5px;
-        }
-      }
-    }
   }
   .tokens {
     .table {
       .row {
+        .pointer-cursor {
+          cursor: pointer;
+        }
         .section-toggle {
           width: 24px;
           white-space: nowrap;
           span {
             font-size: 25px;
             position: relative;
-            top: 10px;
+            top: 6px;
           }
         }
         .cell {
           padding: 5px;
-          &:nth-child(2) {
-            padding-right: 10px;
-          }
-          .pointer-cursor {
-            cursor: pointer;
-          }
           button {
             padding: 8px;
             vertical-align: middle;
@@ -78,6 +75,7 @@
             .tag {
               background-color: lightgrey;
               border-radius: 20px;
+              width: 150px;
               text-align: center;
               display: inline-block;
               white-space: nowrap;
@@ -92,9 +90,6 @@
                 .cell {
                   white-space: nowrap;
                   border-bottom: 1px solid lightgrey;
-                  &:nth-child(2) {
-                    text-align: right;
-                  }
                   input {
                     max-width: 400px;
                   }
@@ -113,18 +108,10 @@
               }
             }
           }
-          .sectionHeader {
-            display: inline-flex;
-            width: 100%;
-            .token-header-text {
-              width: 100%;
-              position: relative;
-              top: 4px;
-            }
-            .token-header-controls {
-              width: 150px;
-            }
-          }
+        }
+        .token-header-controls {
+          width: 70px;
+          text-align: right;
         }
       }
     }
