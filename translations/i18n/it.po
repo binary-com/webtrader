@@ -1012,6 +1012,9 @@ msgstr "Contratti"
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
 
+msgid "Copy Trade"
+msgstr ""
+
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Counterattack (CDLCOUNTERATTACK)"
 
@@ -1809,6 +1812,9 @@ msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Caricamento del download/Mostra dati"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "Caricamento della finestra di dialogo della password"
@@ -3470,7 +3476,7 @@ msgid "Wed"
 msgstr "Merc"
 
 msgid "Wednesday"
-msgstr "Mercoled"
+msgstr "Mercoledì"
 
 msgid "Weighted Close Price (WCLPRICE)"
 msgstr ""
