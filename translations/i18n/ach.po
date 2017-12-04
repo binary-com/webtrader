@@ -3817,3 +3817,8 @@ msgstr "crwdns20452:0crwdne20452:0"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "crwdns20453:0crwdne20453:0"
 
+msgid "Copy Trade"
+msgstr "" 
+
+msgid "Loading MAM"
+msgstr "" 

@@ -3876,3 +3876,9 @@ msgstr ""
 
 msgid "Your copying settings"
 msgstr ""
+
+msgid "Copy Trade"
+msgstr "" 
+
+msgid "Loading MAM"
+msgstr "" 

@@ -3837,3 +3837,9 @@ msgstr "| ペイアウト"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
 
+msgid "Copy Trade"
+msgstr "" 
+
+msgid "Loading MAM"
+msgstr "" 
+
