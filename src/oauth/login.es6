@@ -99,16 +99,16 @@ const init_state = (root, win) => {
 
    state.login.login = () => {
       state.login.disabled = true;
-      const config = local_storage.get('config');
       const lang = (local_storage.get('i18n') || {value:"en"}).value;
-      const oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
+      const server_url = liveapi.server_url;
+      const oauth_url = `https://${server_url}/oauth2/authorize`;
       window.location =  oauth_url + '?app_id=' + app_id + '&l=' +lang;
    }
 
    state.confirm.confirm = () => {
       state.confirm.disabled = true;
-      const config = local_storage.get('config');
-      const oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
+      const server_url = liveapi.server_url;
+      const oauth_url = `https://${server_url}/oauth2/authorize`;
       window.location =  oauth_url + '?app_id=' + app_id;
    }
 
@@ -248,8 +248,8 @@ const init_state = (root, win) => {
 
 export const login = () => {
    const app_id = liveapi.app_id;
-   const config = local_storage.get('config');
-   const oauth_url = (config && config.oauth_url) || 'https://oauth.binary.com/oauth2/authorize';
+   const server_url = liveapi.server_url;
+   const oauth_url = `https://${server_url}/oauth2/authorize`;
    window.location =  oauth_url + '?app_id=' + app_id;
 }
 
