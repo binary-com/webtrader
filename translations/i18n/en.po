@@ -1028,6 +1028,9 @@ msgstr "Contracts"
 msgid "Coppock Curve (CC)"
 msgstr ""
 
+msgid "Copy Trade"
+msgstr ""
+
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr ""
 
@@ -1826,6 +1829,9 @@ msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Loading Download/View Data"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "Loading Password dialog"
