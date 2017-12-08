@@ -1012,6 +1012,9 @@ msgstr "Kontrak"
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
 
+msgid "Copy Trade"
+msgstr ""
+
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Counterattack (CDLCOUNTERATTACK)"
 
@@ -1809,6 +1812,9 @@ msgstr ""
 
 msgid "Loading Download/View Data"
 msgstr "Pemuatan Download/Lihat Data"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "Pemuatan dialog kata sandi"

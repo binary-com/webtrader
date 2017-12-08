@@ -1012,6 +1012,9 @@ msgstr "crwdns15563:0crwdne15563:0"
 msgid "Coppock Curve (CC)"
 msgstr "crwdns19995:0crwdne19995:0"
 
+msgid "Copy Trade"
+msgstr "crwdns41967:0crwdne41967:0"
+
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "crwdns19996:0crwdne19996:0"
 
@@ -1809,6 +1812,9 @@ msgstr "crwdns41530:0crwdne41530:0"
 
 msgid "Loading Download/View Data"
 msgstr "crwdns15734:0crwdne15734:0"
+
+msgid "Loading MAM"
+msgstr "crwdns41968:0crwdne41968:0"
 
 msgid "Loading Password dialog"
 msgstr "crwdns15735:0crwdne15735:0"
