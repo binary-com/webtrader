@@ -11,14 +11,14 @@
  *  for now.
  */
 import 'common/util';
-import { app_id } from 'websockets/binary_websockets';
+import { socket_url, app_id } from 'websockets/binary_websockets';
+
+const lang = (local_storage.get('i18n') || {value:"en"}).value;
+const url = socket_url + '?app_id=' + app_id + '&l=' +lang;
 
 export default (token) => {
   return new Promise((resolve, reject) => {
-    const config = local_storage.get('config');
-    const i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-    const api_url = ((config && config.websocket_url)  || 'wss://ws.binaryws.com/websockets/v3?l=' + i18n_name) + '&app_id=' + app_id;
-    const ws = new WebSocket(api_url);
+    const ws = new WebSocket(url);
 
     ws.addEventListener('open', () => {
       ws.send(JSON.stringify({

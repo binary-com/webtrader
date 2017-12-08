@@ -272,14 +272,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     elem.click();
                 });
 
-            //Register async loading of config dialog
-            load_ondemand($navMenu.find("a.config"), "click", "Loading Configurations ...".i18n(), "config/config",
-                function(config) {
-                    var elem = $navMenu.find("a.config");
-                    config.init(elem);
-                    elem.click();
-                });
-
             //Register async loading of custom theme dialog
             load_ondemand($navMenu.find("a.theme_custom"), "click", "Loading custom theme configuration...".i18n(), "themes/custom_theme/custom_theme",
                 function(custom_theme) {

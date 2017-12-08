@@ -44,7 +44,7 @@ export const server_url = get_server_url();
 
 const connect = () => {
    const i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-   const api_url = `wss://${server_url}/websockets/v3?l=${i18n_name}&app_id=${app_id}`;
+   const api_url = `${socket_url}?l=${i18n_name}&app_id=${app_id}`;
    const ws = new WebSocket(api_url);
 
    ws.addEventListener('open', onopen);
