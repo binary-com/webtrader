@@ -188,7 +188,7 @@ msgid "1"
 msgstr "1"
 
 msgid "1 Day"
-msgstr "1 天"
+msgstr "1天"
 
 msgid "1 Hour"
 msgstr "1小时"
@@ -203,7 +203,7 @@ msgid "1 million transactions/day"
 msgstr "1百万笔交易/天"
 
 msgid "1-2 years"
-msgstr "1-2 年"
+msgstr "1-2年"
 
 msgid "10"
 msgstr "10"
@@ -806,7 +806,7 @@ msgid "Browser upgrade required"
 msgstr "需更新浏览器"
 
 msgid "But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr "但不需等到合约到期。您可随时利用市场环境变化售出长期合约获利"
+msgstr "但无需等到合约到期。您可随时利用市场环境变化售出长期合约获利"
 
 msgid "Buy Price"
 msgstr "购入价"
@@ -839,7 +839,7 @@ msgid "Candles"
 msgstr "蜡烛"
 
 msgid "Candlestick down-color"
-msgstr "K 线图下跌颜色"
+msgstr "K线图下跌颜色"
 
 msgid "Candlestick down-line"
 msgstr "K 线图下跌线"
@@ -3056,7 +3056,7 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "赔付金额即期权交易者因预测正确而获得的金额"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr "贯穿形态由两支K 线图组成，第一支黑色，第二支白色。两支K 线图的体形须巨大，且阴影通常、但不一定是细小或不存在。白色K线图必须在前收盘价下开盘，并在黑色K 线图体内中部以上收盘。如果在中部以下收盘可能归纳为逆转，但不会被考虑为看涨"
+msgstr "贯穿形态由两支K线图组成，第一支黑色，第二支白色。两支K线图的体形须巨大，且阴影通常、但不一定是细小或不存在。白色K线图必须在前收盘价下开盘，并在黑色K线图体内中部以上收盘。如果在中部以下收盘可能归纳为逆转，但不会被考虑为看涨"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
 msgstr "全世界金融市场二元期权交易的首选平台"
