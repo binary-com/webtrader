@@ -1079,7 +1079,7 @@ msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 msgstr "乌云盖顶 (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
-msgstr "乌云盖顶是看跌K 线图逆转形态，当第二天的红色看跌K 线图（收盘价低于开盘价）收盘价低于第一天的看涨K 线图（收盘价高于开盘价）的中间价位时即会发生。我们将使用此形态在看涨货币市场中逢高卖出"
+msgstr "乌云盖顶是看跌K线图逆转形态，当第二天的红色看跌K线图（收盘价低于开盘价）收盘价低于第一天的看涨K线图（收盘价高于开盘价）的中间价位时即会发生。我们将使用此形态在看涨货币市场中逢高卖出"
 
 msgid "Dark Green"
 msgstr "深绿"
@@ -2252,7 +2252,7 @@ msgid "Overlap Studies"
 msgstr "重叠研究"
 
 msgid "PEP Declaration"
-msgstr "PEP 声明"
+msgstr "PEP声明"
 
 msgid "Parabolic SAR (SAR)"
 msgstr "抛物线转向指标 (SAR)"
@@ -2372,7 +2372,7 @@ msgid "Points"
 msgstr "点"
 
 msgid "Polski"
-msgstr "波兰文"
+msgstr "波兰语"
 
 msgid "Portfolio"
 msgstr "投资组合"
@@ -2978,7 +2978,7 @@ msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is
 msgstr "探水竿缺口形态由三支K线图组成。第一支是位于指定下跌趋势内的红色K线图。第二支也是红色K线图，在前支线收盘价下有缺口。最后是一支白色K线图，在首两支线缺口间收盘"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
-msgstr "三法形态是持续趋势形态，可在上升或下降趋势中出现。在上升趋势中，它被称为上涨三法形态。在下降趋势中，它被称为下跌三法形态。三法形态由至少五支K 线图组成"
+msgstr "三法形态是持续趋势形态，可在上升或下降趋势中出现。在上升趋势中，它被称为上涨三法形态。在下降趋势中，它被称为下跌三法形态。三法形态由至少五支K线图组成"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
 msgstr "三角移动平均线(TRIMA)表示平均价格，但给予交易周期的中间部分更多的权重。计算时使用的窗口宽度是价格系列长度的一半，使数据加倍平滑"
@@ -3488,7 +3488,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "欢迎来到 Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr "Pep 是什么？"
+msgstr "Pep是什么？"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "一旦您对交易价格感到满意，即可立刻执行交易"
