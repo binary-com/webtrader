@@ -842,13 +842,13 @@ msgid "Candlestick down-color"
 msgstr "K线图下跌颜色"
 
 msgid "Candlestick down-line"
-msgstr "K 线图下跌线"
+msgstr "K线图下跌线"
 
 msgid "Candlestick up-color"
-msgstr "K 线图上升颜色"
+msgstr "K线图上升颜色"
 
 msgid "Candlestick up-line"
-msgstr "K 线图上升线"
+msgstr "K线图上升线"
 
 msgid "Cash Balance"
 msgstr "现金余额"
@@ -1181,7 +1181,7 @@ msgid "Doji Star (CDLDOJISTAR)"
 msgstr "十字星 (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
-msgstr "当证卷的开盘价与收盘价几乎相等时就会形成十字线。上下暗影长度可能不相同，所形成的K 线图呈交叉形、反交叉形或十字形"
+msgstr "当证卷的开盘价与收盘价几乎相等时就会形成十字线。上下暗影长度可能不相同，所形成的K线图呈交叉形、反交叉形或十字形"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
@@ -1433,7 +1433,7 @@ msgid "Fractal (FRACTAL)"
 msgstr "分形(FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr "分形是K 线图图表上用于识别市场价格反转点的指标。交易员一般通过使用分形来判断价格的走势方向。当图表出现某一价格形态时即会形成分形"
+msgstr "分形是K线图图表上用于识别市场价格反转点的指标。交易员一般通过使用分形来判断价格的走势方向。当图表出现某一价格形态时即会形成分形"
 
 msgid "Fran ais"
 msgstr "法文"
@@ -2666,7 +2666,7 @@ msgid "Short-term action"
 msgstr "短期交易操作"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
-msgstr "并排的白色K 线图形态是三重形态。看涨形态：上升走势中，首支K 线图后面的是另一支以高于首支收盘价开盘的上升K 线图（高开缺口），再后面的是第三支以低于第二支收盘价开盘的上升K 线图（低开缺口）。看跌形态：下降走势中，首支K 线图下跌，后面的是一支以低于首支收盘价开盘的上升K 线图（低开缺口），再后面的是以低于第二支收盘价开盘的上升K 线图。此形态显示持续下跌走势"
+msgstr "并排的白色K线图形态是三重形态。看涨形态：上升走势中，首支K线图后面的是另一支以高于首支收盘价开盘的上升K线图（高开缺口），再后面的是第三支以低于第二支收盘价开盘的上升K 线图（低开缺口）。看跌形态：下降走势中，首支K线图下跌，后面的是一支以低于首支收盘价开盘的上升K线图（低开缺口），再后面的是以低于第二支收盘价开盘的上升K线图。此形态显示持续下跌走势"
 
 msgid "Simple Moving Average (SMA)"
 msgstr "简单移动平均线 (SMA)"
