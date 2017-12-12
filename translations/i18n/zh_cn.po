@@ -44,7 +44,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "（如期限不到一天），或于交易日结束时（如期限是一天及以上）"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
-msgstr "正式上线，提供基于各种金融指数的全天侯金融投注服务。公司业务快速增长，我们很快即成为固定赔率金融投注的市场领导者"
+msgstr "正式上线，提供基于各种金融指数的全天侯金融投注服务。公司业务快速增长，我们很快将成为固定赔率金融投注的市场领导者"
 
 msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives markets"
 msgstr "- Binary.com每日基于银行间衍生品市场提供基准价格"
@@ -353,28 +353,28 @@ msgid "8h"
 msgstr "8小时"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr "十字夜星包括长线看涨烛图， 接下来是其上有缺口的十字图，然后是在首个烛图主体内完整收盘并同时确认翻转的第三看跌烛图。被视为强大的看跌价逆转K 线图形态"
+msgstr "十字夜星包括长线看涨烛图， 接下来是其上有缺口的十字图，然后是在首个烛图主体内完整收盘并同时确认翻转的第三看跌烛图。被视为强大的看跌价逆转K线图形态"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "平滑移动平均线类似简单移动平均线与指数移动平均线的混合，但应用期限较长"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr "陀螺型K 线图是体型较小的看涨或看跌K 线图。影子头部和尾部长度不一。它与十字星K 线图一样代表买卖双方相符时的犹疑不决点"
+msgstr "陀螺型K 线图是体型较小的看涨或看跌K线图。影子头部和尾部长度不一。它与十字星K线图一样代表买卖双方相符时的犹疑不决点"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
 msgstr "如果市场在所选期限内一直保持在（没有触及）高障碍或低障碍之间，所选择的“保持在范围之内”交易即可获利。如果市场在所选期限内只要触及高障碍或低障碍，所选择的“超出范围之外”交易即可获利"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr "看跌K 线图包含演示以下特性的三个烛形线。首个条形图是位于上涨趋势中的巨大白色K 线图，中间条形图是体积较小、在首个白条形图上方收盘的红色或白色烛形线， 最后的条形图是比较大的红色烛形线， 在中间烛形线下方开盘，在首个条形图主体中间附近收盘"
+msgstr "看跌K线图包含演示以下特性的三个烛形线。首个条形图是位于上涨趋势中的巨大白色K线图，中间条形图是体积较小、在首个白条形图上方收盘的红色或白色烛形线， 最后的条形图是比较大的红色烛形线， 在中间烛形线下方开盘，在首个条形图主体中间附近收盘"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr "看跌K 线图用于预测当前上涨趋势的翻转。此图形包含三个连续的长体K 线图，其收盘价比前一天为低，每一交易周期在前一烛形线之中开盘"
+msgstr "看跌K线图用于预测当前上涨趋势的翻转。此图形包含三个连续的长体K线图，其收盘价比前一天为低，每一交易周期在前一烛形线之中开盘"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
 msgstr "看跌反攻线是上涨趋势中的长条白色烛线，其后是一长条黑色烛线。两条烛线的收盘价相同。看涨反攻线是下跌趋势中的长条黑色烛线，其后是一长条白色烛线。两条烛线的收盘价相同"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
-msgstr "看跌分手线是连续看跌形势。它与看涨分手线正好相反。看跌分手线有两部分：第一天是绿色K 线图，第二天缺口变小，按首个K 线图开盘价开盘，及弱势收盘"
+msgstr "看跌分手线是连续看跌形势。它与看涨分手线正好相反。看跌分手线有两部分：第一天是绿色K线图，第二天缺口变小，按首个K线图开盘价开盘，及弱势收盘"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
 msgstr "二元期权为交易者所买入之合约，如果预测正确即可获得预先确定的获利金额"
@@ -386,7 +386,7 @@ msgid "A bullish candlestick pattern that consists of five candles, the first da
 msgstr "看涨K 线图包含五个烛形线，第一天是长白色天，第二天缺口打开，是黑色天，第二天、第三天和第四天具小型实体，接下来是短暂的下跌走势，但保留在第一天范围内，第五天是长白色天，收盘价高于第一天的收盘水平"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr "看涨K 线图包含三个烛形线。首个条形图是位于指定下跌趋势中的巨大红色K 线图，第二条形图是体积较小、在首个红条形图下方收盘的红色或白色烛形线， 最后的条形图是比较大的白色烛形线， 在中间烛形线上方开盘，在首个条形图主体中间附近收盘"
+msgstr "看涨K线图包含三个烛形线。首个条形图是位于指定下跌趋势中的巨大红色K线图，第二条形图是体积较小、在首个红条形图下方收盘的红色或白色烛形线， 最后的条形图是比较大的白色烛形线， 在中间烛形线上方开盘，在首个条形图主体中间附近收盘"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
 msgstr "看涨K 线图包含三个烛形线。首个条形图是位于指定下跌趋势中的巨大红色K 线图，第二条形图是体积较小、在首个红条形图下方收盘的红色或白色烛形线， 最后的条形图是比较大的白色烛形线， 在中间烛形线上方开盘，在首个条形图主体中间附近收盘"
@@ -3822,10 +3822,4 @@ msgstr "| 赔付"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "让客户、联盟会员和程序开发员买卖Binary.com的产品"
-
-msgid "Copy Trade"
-msgstr "" 
-
-msgid "Loading MAM"
-msgstr "" 
 
