@@ -1691,7 +1691,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "可否通过不同的付款方式存入同一类资金？"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr "它有一根长白色烛形线，接着是另一根在首根线上端开盘（高开缺口）的烛形线，接下来是一根在第二天收盘价下端开盘（低开缺口）并低于第一天的收盘价下端的下降黑色K 线图。预期上涨趋势将继续"
+msgstr "它有一根长白色烛形线，接着是另一根在首根线上端开盘（高开缺口）的烛形线，接下来是一根在第二天收盘价下端开盘（低开缺口）并低于第一天的收盘价下端的下降黑色K线图。预期上涨趋势将继续"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "有时候您能在交易到期前卖出合约，但仅在可确定公平价格时能够实现。如果此选项可用，您会在投资组合中您的交易旁边看到蓝色的“卖出”按钮"
@@ -1700,7 +1700,7 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "扩大规模的时机到了。我们在有“吉隆坡硅谷”美誉的 Cyberjaya 成立了一个编程中心，旨在维持和提高BetOnMarkets.com的效率"
 
 msgid "Italiano"
-msgstr "意大利文"
+msgstr "意大利语"
 
 msgid "Jan"
 msgstr "一月"
@@ -1721,7 +1721,7 @@ msgid "June"
 msgstr "六月"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "仅须在您即将看到的页面上点击 授予 按钮"
+msgstr "仅须在您即将看到的页面上点击‘’授予”按钮"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
 msgstr "考夫曼自适应移动平均线 (KAMA)"
@@ -1736,10 +1736,10 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "反扑 - 由长身实体线判断看涨/看跌趋势 (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "当K 线图图表出现两根长身实体线（一白一黑）及中间有缺口时，即形成反扑形态。看涨反扑形态将显示无暗影的黑色或实体K 线图，其后有高开缺口及也是无暗影的白色或中空K 线图"
+msgstr "当K线图图表出现两根长身实体线（一白一黑）及中间有缺口时，即形成反扑形态。看涨反扑形态将显示无暗影的黑色或实体K线图，其后有高开缺口及也是无暗影的白色或中空K线图"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "当K 线图图表出现两根实体线（一白一黑）及中间有缺口时，即形成反扑形态。看涨反扑形态将显示无暗影的黑色或实体K 线图，其后有高开缺口及也是无暗影的白色或中空K 线图"
+msgstr "当K线图图表出现两根实体线（一白一黑）及中间有缺口时，即形成反扑形态。看涨反扑形态将显示无暗影的黑色或实体K线图，其后有高开缺口及也是无暗影的白色或中空K线图"
 
 msgid "Known risks"
 msgstr "已知风险"
@@ -1751,7 +1751,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "梯底 (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr "最后 12 个月盈利交易"
+msgstr "最后12个月盈利交易"
 
 msgid "Last used"
 msgstr "上一次使用"
@@ -2378,7 +2378,7 @@ msgid "Portfolio"
 msgstr "投资组合"
 
 msgid "Portugu s"
-msgstr "葡萄牙文"
+msgstr "葡萄牙语"
 
 msgid "Postal code/ZIP"
 msgstr "邮编"
@@ -2975,7 +2975,7 @@ msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar
 msgstr "随机相对强弱指数 (STOCHRSI) 由Tushar Chande 和 Stanley Kroll 提出。StochRSI 是个震荡指标，测量特定周期内相对于高低范围的相对强弱指数(RSI)值。StochRSI 对RSI值而不是价格应用随机公式。因此导致它成为指标中的指标。结果是个在0和1之间波动的指标"
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
-msgstr "探水竿缺口形态由三支K 线图组成。第一支是位于指定下跌趋势内的红色K 线图。第二支也是红色K 线图，在前支线收盘价下有缺口。最后是一支白色K 线图，在首两支线缺口间收盘"
+msgstr "探水竿缺口形态由三支K线图组成。第一支是位于指定下跌趋势内的红色K线图。第二支也是红色K线图，在前支线收盘价下有缺口。最后是一支白色K线图，在首两支线缺口间收盘"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
 msgstr "三法形态是持续趋势形态，可在上升或下降趋势中出现。在上升趋势中，它被称为上涨三法形态。在下降趋势中，它被称为下跌三法形态。三法形态由至少五支K 线图组成"
