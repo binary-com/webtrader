@@ -1595,7 +1595,7 @@ msgid "In April"
 msgstr "今年四月"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
-msgstr "看涨捉腰带线中经过一段看跌K 线图后，形成看涨或白色K 线图。成为交易日最低点的开盘价明显比收盘价低。这将造成具短上端暗影，无下端暗影的长白色K 线图。看跌捉腰带线中，形成看跌或黑色K 线图，成为交易日最高点的开盘价比前一天的收盘价高，造成具短下端暗影，无上端暗影的长黑K 线图"
+msgstr "看涨捉腰带线中经过一段看跌K线图后，形成看涨或白色K线图。成为交易日最低点的开盘价明显比收盘价低。这将造成具短上端暗影，无下端暗影的长白色K线图。看跌捉腰带线中，形成看跌或黑色K线图，成为交易日最高点的开盘价比前一天的收盘价高，造成具短下端暗影，无上端暗影的长黑K线图"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
 msgstr "看涨圈套形态中经过下跌移动后，看涨烛形线达到超出前三根烛形线的范围，及非常可能触发一些止损订单。此额外购入交易导致明显的上升趋势。看跌圈套形态中经过上升移动后，看跌烛形线达到低于前三根烛形线的范围，及非常可能触发一些止损订单。此额外售出交易导致明显的下降趋势"
@@ -1604,7 +1604,7 @@ msgid "In October 1999, Regent Markets receives US$ 2 million investment funding
 msgstr "1999年10月，Regent Markets获得吉姆•梅隆先生 (Jim Mellon)的200万美元投资， 这笔投资通过他在香港的基金管理公司 Regent Pacific Group 支付"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
-msgstr "下降趋势中，一根体形短小的K 线图具比真实体形长至少三倍的下端暗影，而上端暗影却很小或完全没有。这确认了第二天较高的收盘价"
+msgstr "下降趋势中，一根体形短小的K线图具比真实体形长至少三倍的下端暗影，而上端暗影却很小或完全没有。这确认了第二天较高的收盘价"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
 msgstr "下降趋势中，首先显示黑色烛形线，接着是一根白色烛形线在先前体形下端开盘，但图表上可能较难看出来。白色烛形线也在体形上端收盘。在此示例中，三支烛形线的最后一天是另一根白色烛形线。它显示较高的收盘价"
@@ -2114,7 +2114,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "标准化真实波动幅度均值 (NATR) 尝试使用以下公式将各工具之间的真实波动幅度均值标准化"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "注： 您只能拥有一个法定货币账户以及每种加密货币一个账户"
+msgstr "注： 您只能拥有一个法定货币账户以及任一种加密货币账户"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "注意：您必须完全通过付款代理存款才可使用付款代理提款"
