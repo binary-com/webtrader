@@ -2411,7 +2411,7 @@ msgid "Price the trade"
 msgstr "交易報價"
 
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
-msgstr "價格趨勢在形態開始時下降，出現高身黑色燭形線。接下來，一支恰好可容納在前支燭形線體內的白色燭形線出現， 從而完成了看漲母子K 線圖。形態的最後一天是於前收盤價上方收盤的確認燭形線，它確實能夠做到。此組合顯示價格具反轉趨勢"
+msgstr "價格趨勢在形態開始時下降，出現高身黑色燭形線。接下來，一支恰好可容納在前支燭形線體內的白色燭形線出現， 從而完成了看漲母子K線圖。形態的最後一天是於前收盤價上方收盤的確認燭形線，它確實能夠做到。此組合顯示價格具反轉趨勢"
 
 msgid "Primary"
 msgstr "主要"
@@ -2666,7 +2666,7 @@ msgid "Short-term action"
 msgstr "短期交易操作"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
-msgstr "並排的白色K 線圖形態是三重形態。看漲形態：上升走勢中，首支K 線圖後面的是另一支以高於首支收盤價開盤的上升K 線圖（高開缺口），再後面的是第三支以低於第二支收盤價開盤的上升K 線圖（低開缺口）。看跌形態：下降走勢中，首支K 線圖下跌，後面的是一支以低於首支收盤價開盤的上升K 線圖（低開缺口），再後面的是以低於第二支收盤價開盤的上升K 線圖。此形態顯示持續下跌走勢"
+msgstr "並排的白色K線圖形態是三重形態。看漲形態：上升走勢中，首支K線圖後面的是另一支以高於首支收盤價開盤的上升K線圖（高開缺口），再後面的是第三支以低於第二支收盤價開盤的上升K線圖（低開缺口）。看跌形態：下降走勢中，首支K線圖下跌，後面的是一支以低於首支收盤價開盤的上升K線圖（低開缺口），再後面的是以低於第二支收盤價開盤的上升K線圖。此形態顯示持續下跌走勢"
 
 msgid "Simple Moving Average (SMA)"
 msgstr "簡單移動平均線 (SMA)"
@@ -2975,10 +2975,10 @@ msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar
 msgstr "隨機相對強弱指數（STOCHRSI）由Tushar Chande和Stanley Kroll提出。StochRSI是個震盪指標，測量特定週期內相對於高低範圍的相對強弱指數（RSI）值。StochRSI對RSI值而不是價格應用隨機公式。 因此導致它成為指標中的指標。結果是個在0和1之間波動的指標"
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
-msgstr "探水竿缺口形態由三支K 線圖組成。第一支是位於指定下跌趨勢內的紅色K 線圖。第二支也是紅色K 線圖，在前支線收盤價下有缺口。最後是一支白色K 線圖，在首兩支線缺口間收盤"
+msgstr "探水竿缺口形態由三支K線圖組成。第一支是位於指定下跌趨勢內的紅色K線圖。第二支也是紅色K線圖，在前支線收盤價下有缺口。最後是一支白色K線圖，在首兩支線缺口間收盤"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
-msgstr "三法形態是持續趨勢形態，可在上升或下降趨勢中出現。在上升趨勢中，它被稱為上漲三法形態。在下降趨勢中，它被稱為下跌三法形態。三法形態由至少五支K 線圖組成"
+msgstr "三法形態是持續趨勢形態，可在上升或下降趨勢中出現。在上升趨勢中，它被稱為上漲三法形態。在下降趨勢中，它被稱為下跌三法形態。三法形態由至少五支K線圖組成"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
 msgstr "三角移動平均線(TRIMA)表示平均價格，但給予交易週期的中間部分更多的權重。計算時使用的窗口寬度是價格系列長度的一半，使資料加倍平滑"
@@ -3008,7 +3008,7 @@ msgid "The breakaway pattern begins with a long candle representing the current 
 msgstr "突破形態以長燭形線開始，代表目前趨勢。下一支燭形線顏色相同，從首支燭形線開缺口脫離。第三支燭形線可能是兩種色的其中一種，不會顯示目前趨勢有何變化。第四天趨勢持續不變，因此繼續產生同樣顏色的燭形線。但第五天的趨勢逆轉。請留意，它僅以目前趨勢稍微相反的價格開盤，並以相同方向繼續，最後在缺口區內收盤"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
-msgstr "收盤黑色實體燭形線是高黑K 線圖，有上影，但無下影。收盤白色實體K 線圖是高白燭形線，有下影，但無上影"
+msgstr "收盤黑色實體燭形線是高黑K線圖，有上影，但無下影。收盤白色實體K線圖是高白燭形線，有下影，但無上影"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "公司把客戶資金存在獨立的銀行帳戶，與操作帳戶分開，因此如果公司破產，客戶資金不會成為公司資產的一部分。這符合客戶資金獨立分離帳戶管理的博彩委員會要求，級別為"
