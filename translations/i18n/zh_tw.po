@@ -2114,7 +2114,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "標準化真實波動幅度均值 (NATR)嘗試使用以下公式將各工具之間的真實波動幅度均值標準化"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "注： 您只能擁有一個法定貨幣帳戶以及每種加密貨幣一個帳戶"
+msgstr "注： 您只能擁有一個法定貨幣帳戶以及任一種加密貨幣帳戶"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "請注意:如果要使用付款代理提款，您必須僅通過付款代理存款"
