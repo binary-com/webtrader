@@ -179,7 +179,7 @@ msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees
 msgstr "- 我們將永不向您追加保證金、不會有缺口風險、或收取滑價費用、隱藏費或佣金"
 
 msgid "0-1 year"
-msgstr "0-1 年"
+msgstr "0-1年"
 
 msgid "0-5 transactions in the past 12 months"
 msgstr "過去12月內0-5次交易"
@@ -188,7 +188,7 @@ msgid "1"
 msgstr "1"
 
 msgid "1 Day"
-msgstr "1 天"
+msgstr "1天"
 
 msgid "1 Hour"
 msgstr "1小時"
@@ -203,7 +203,7 @@ msgid "1 million transactions/day"
 msgstr "1百萬筆交易/天"
 
 msgid "1-2 years"
-msgstr "1-2 年"
+msgstr "1-2年"
 
 msgid "10"
 msgstr "10"
@@ -839,16 +839,16 @@ msgid "Candles"
 msgstr "蠟燭"
 
 msgid "Candlestick down-color"
-msgstr "K 線圖下跌顏色"
+msgstr "K線圖下跌顏色"
 
 msgid "Candlestick down-line"
-msgstr "K 線圖下跌線"
+msgstr "K線圖下跌線"
 
 msgid "Candlestick up-color"
-msgstr "K 線圖上升顏色"
+msgstr "K線圖上升顏色"
 
 msgid "Candlestick up-line"
-msgstr "K 線圖上升線"
+msgstr "K線圖上升線"
 
 msgid "Cash Balance"
 msgstr "現金餘額"
@@ -1433,7 +1433,7 @@ msgid "Fractal (FRACTAL)"
 msgstr "分形 (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr "分形是K 線圖圖表上用於識別市場價格反轉點的指標。交易員一般通過使用分形來判斷價格的走勢方向。當圖表出現某一價格形態時即會形成分形"
+msgstr "分形是K線圖圖表上用於識別市場價格反轉點的指標。交易員一般通過使用分形來判斷價格的走勢方向。當圖表出現某一價格形態時即會形成分形"
 
 msgid "Fran ais"
 msgstr "法文"
@@ -1691,7 +1691,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "可否透過不同的付款方式存入同一類資金?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr "它有一根長白色燭形線，接著是另一根在首根線上端開盤（高開缺口）的燭形線，接下來是一根在第二天收盤價下端開盤（低開缺口）並低於第一天的收盤價下端的下降黑色K 線圖。預期上漲趨勢將繼續"
+msgstr "它有一根長白色燭形線，接著是另一根在首根線上端開盤（高開缺口）的燭形線，接下來是一根在第二天收盤價下端開盤（低開缺口）並低於第一天的收盤價下端的下降黑色K線圖。預期上漲趨勢將繼續"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "有時候您能在交易到期前賣出合約，但僅在可確定公平價格時方可實現。如果此選項可用，您會在投資組合中您的交易旁邊看到藍色的「賣出」按鈕"
@@ -1721,7 +1721,7 @@ msgid "June"
 msgstr "六月"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "僅須即將導入的頁面上點擊 授予"
+msgstr "僅須即將導入的頁面上點擊“授予”"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
 msgstr "考夫曼自適應移動平均線 (KAMA)"
@@ -1736,10 +1736,10 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "反撲 - 由長身實體線判斷看漲/看跌趨勢 (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "當K 線圖圖表出現兩根長身實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K 線圖，其後有高開缺口及也是無暗影的白色或中空K 線圖"
+msgstr "當K線圖圖表出現兩根長身實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K線圖，其後有高開缺口及也是無暗影的白色或中空K線圖"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "當K 線圖圖表出現兩根實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K 線圖，其後有高開缺口及也是無暗影的白色或中空K 線圖"
+msgstr "當K線圖圖表出現兩根實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K線圖，其後有高開缺口及也是無暗影的白色或中空K線圖"
 
 msgid "Known risks"
 msgstr "已知風險"
