@@ -12,6 +12,9 @@ import liveapi from 'websockets/binary_websockets';
 import validateToken from 'websockets/validateToken';
 import { init as instrumentPromise } from '../instruments/instruments';
 
+// While using copy trader, this cannot be NULL
+const getLoggedInUserId = () => local_storage.get("oauth")[0].id;
+
 const TRADE_TYPES = [{
     code: 'CALL',
     name: 'Rise/Higher',
@@ -68,8 +71,11 @@ const TRADE_TYPES = [{
     code: 'ASIAND',
     name: 'Asians Down',
 }];
-const COPY_TRADE_LOCAL_STORE_NAME = "copyTrade";
+
+const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
+
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
+
 const defaultCopySettings = (traderApiToken) => ({
   copy_start: traderApiToken,
   min_trade_stake: 10,
@@ -77,6 +83,7 @@ const defaultCopySettings = (traderApiToken) => ({
   assets: _.cloneDeep(DEFAULT_ASSETS),
   trade_types: _.cloneDeep(DEFAULT_TRADE_TYPES),
 });
+
 const defaultTraderDetails = (traderApiToken, loginid) => ({
   open: false,
   started: false,
@@ -120,7 +127,7 @@ const validateYourCopySettingsData = yourCopySettingsData => {
 const updateLocalStorage = _.debounce(scope => {
   const clonedScope = _.cloneDeep(scope);
   delete clonedScope.searchToken.disable;
-  local_storage.set(COPY_TRADE_LOCAL_STORE_NAME, clonedScope);
+  local_storage.set(getStorageName(), clonedScope);
 }, 50);
 
 let GROUPED_INTRUMENTS = null; // For nice display purpose only
@@ -206,7 +213,7 @@ const state = {
     if (newStarted) {
       //Start copying
       //if started, revert back to last saved changes(in case user changed anything)
-      const fromLocalStorage = local_storage.get(COPY_TRADE_LOCAL_STORE_NAME);
+      const fromLocalStorage = local_storage.get(getStorageName());
       if (fromLocalStorage) {
         const currentTraderTokenDetails_localSto = fromLocalStorage.traderTokens[index];
         if (currentTraderTokenDetails_localSto) {
@@ -390,7 +397,8 @@ const initConfigWindow = () => {
     width: 600,
     open: () => {
       //Refresh all token details
-      const copyTrade = local_storage.get(COPY_TRADE_LOCAL_STORE_NAME);
+      console.log('Called!');
+      const copyTrade = local_storage.get(getStorageName());
       if (copyTrade) {
         _.merge(state, copyTrade);
         state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
@@ -417,6 +425,8 @@ const initConfigWindow = () => {
       win_view && win_view.unbind();
       win && win.dialog('destroy').remove();
       win_view = win = null;
+      // Clear tokens
+      state.traderTokens = [];
     },
     'data-authorized' :'true',
   });
