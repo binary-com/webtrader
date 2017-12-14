@@ -47,7 +47,7 @@ rv.formatters['one-of'] = (...args) => {
 rv.formatters['trim'] = (value) => _.trim(value);
 /* rivets formatter to negate a value */
 rv.formatters['negate'] = (value) => !value;
-/* rivets formatter to check equallity of two values */
+/* rivets formatter to check equality of two values */
 rv.formatters.eq = (value, other) => value === other;
 /* formatter to check not-equality of values */
 rv.formatters['not-eq'] = (value, other) => value !== other;
@@ -254,15 +254,38 @@ rv.binders.chosen = {
    publishes: true,
    bind: function(el){
       const publish = this.publish;
+     //The disabling overlay element. chosen-disable is defined in main.css
+     //There is no real CSS class webtrader-chosen-disable
+     const disablingElement = $('<div class="webtrader-chosen-disable chosen-disable"></div>');
+     disablingElement.click(e => e.stopPropagation());
       $(el).chosen({width:$(el).css("width")}).change(function() {
          publish($(this).val())
       });
+     $(el).next() //Select the chosen generated element
+      .prepend(disablingElement);
    },
    unbind: (el) => $(el).chosen("destroy")
-}
+};
 
 /* binder for chosen refresh */
 rv.binders.chosenrefresh = (el) => $(el).trigger("chosen:updated");
+
+/* binder for disabling chosen */
+rv.binders.chosendisable = (el, value) => {
+  const chosenContainer = $(el).next();
+  const inputElement = chosenContainer.find('.chosen-choices input');
+  const chosenDrop = chosenContainer.find('.chosen-drop');
+  const chosenDisableElement = chosenContainer.find('.webtrader-chosen-disable');
+  if(value) {
+    inputElement.attr('disabled', value);
+    chosenDrop.hide();
+    chosenDisableElement.addClass('chosen-disable');
+  } else {
+    inputElement.removeAttr('disabled');
+    chosenDrop.show();
+    chosenDisableElement.removeClass('chosen-disable');
+  }
+};
 
 /* extend jquery ui spinner to support multiple buttons */
 $.widget('ui.webtrader_spinner', $.ui.spinner, {

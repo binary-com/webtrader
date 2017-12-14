@@ -125,9 +125,7 @@ const initTradingWin = ($html) => {
 
       /* update the table with the given marketname and submarketname */
       const updateTable =(result, market_name,submarket_name) => {
-         console.log(market_name, submarket_name)
          const rows = result.getRowsFor(market_name, submarket_name);
-         console.log(rows);
          table.api().rows().remove();
          table.api().rows.add(rows);
          table.api().draw();

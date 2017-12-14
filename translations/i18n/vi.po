@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
 
@@ -458,6 +455,9 @@ msgid "Action"
 msgstr "Hành động"
 
 msgid "Active"
+msgstr "Còn hoạt động"
+
+msgid "Active Since"
 msgstr ""
 
 msgid "Add comparisons"
@@ -499,6 +499,9 @@ msgstr "Các khoản thanh toán"
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tất cả thời gian ở GMT (Thời gian trung bình Greenwich )"
 
+msgid "Allow others to copy your trades"
+msgstr ""
+
 msgid "Amount"
 msgstr "Tổng"
 
@@ -518,7 +521,7 @@ msgid "Answer"
 msgstr "Câu trả lời"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Dự đoán doanh thu tài khoản"
 
 msgid "Apply"
 msgstr "Áp dụng"
@@ -554,7 +557,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Dao động Aroon (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Sắp xếp"
 
 msgid "Asian down"
 msgstr "Châu Á xuống"
@@ -571,6 +574,9 @@ msgstr "Tài sản"
 msgid "Asset Index"
 msgstr "Chỉ số Tài sản"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Tháng tám"
 
@@ -578,7 +584,7 @@ msgid "August"
 msgstr "Tháng tám"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Các loại tiền tệ có sẵn"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Chỉ số di chuyển trung bình trực tiếp (ADX)"
@@ -591,6 +597,15 @@ msgstr "Điểm đánh giá di chuyển trung bình trực tiếp đánh giá m�
 
 msgid "Average True Range (ATR)"
 msgstr "Khoảng trung bình thực (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Dao động tuyệt vời (AO)"
@@ -617,7 +632,7 @@ msgid "Barrier(s)"
 msgstr "Các rào cản"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Hướng giảm: Đây là một mô hình kết thúc xu hướng bao gồm ba chân nến trong một xu hướng tăng. Nến thứ hai phải mở gần kết thúc ngày hôm trước. Nến cuối nên ngắn và có thể tạo ra một lỗ ngược. Cũng có thể một bóng bán. Các mẫu đại diện cho một điểm yếu trong sự gia tăng với một nguy cơ của củng cố và có thể đảo ngược. Hướng tích cực: Đây là một mô hình kết thúc xu hướng bao gồm ba chân nến trong một xu hướng. Nến thứ hai phải mở gần kết thúc ngày hôm trước. nến cuối cùng phải vững. Các mẫu đại diện cho một điểm yếu và củng cố và một có thể đảo ngược xu hướng"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Vành đai giữ (CDLBELTHOLD)"
@@ -941,7 +956,7 @@ msgid "Close"
 msgstr "Đóng"
 
 msgid "Close All"
-msgstr ""
+msgstr "Đóng tất cả"
 
 msgid "Closes"
 msgstr "Kết thúc"
@@ -997,6 +1012,9 @@ msgstr "Hợp đồng"
 msgid "Coppock Curve (CC)"
 msgstr "Đường cong Coppock (CC)"
 
+msgid "Copy Trade"
+msgstr ""
+
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Phản công (CDLCOUNTERATTACK)"
 
@@ -1007,7 +1025,7 @@ msgid "Create"
 msgstr "Tạo"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Tạo Tài khoản"
 
 msgid "Create token"
 msgstr "Tạo token"
@@ -1253,7 +1271,7 @@ msgid "Embed code"
 msgstr "Mã nhúng"
 
 msgid "Employment status"
-msgstr ""
+msgstr "Tình trạng tuyển dụng"
 
 msgid "End Time"
 msgstr "Thời gian kết thúc"
@@ -1511,7 +1529,7 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Mẫu Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "Dữ liệu lịch sử"
 
 msgid "Home Address"
 msgstr "Địa chỉ nhà"
@@ -1732,6 +1750,9 @@ msgstr "văn phòng Kuala Lumpur"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Mô hình bậc thang dưới (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
 
@@ -1769,7 +1790,7 @@ msgid "Link"
 msgstr "Liên kết"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Tải Workspace"
 
 msgid "Load chart template"
 msgstr "Tải mẫu biểu đồ"
@@ -1786,8 +1807,14 @@ msgstr "Đang tải chỉ số tài sản"
 msgid "Loading Configurations"
 msgstr "Đang tải cấu hình"
 
+msgid "Loading Copy Trade"
+msgstr ""
+
 msgid "Loading Download/View Data"
 msgstr "Đang tải dữ liệu tải về/xem dữ liệu"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "Đang tải Mật Khẩu hội thoại"
@@ -1889,7 +1916,7 @@ msgid "Make your trade"
 msgstr "thực hiện giao dịch của bạn"
 
 msgid "Manage"
-msgstr ""
+msgstr "Quản lý"
 
 msgid "Mar"
 msgstr "Tháng ba"
@@ -1917,6 +1944,9 @@ msgstr "Trận đấu"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Mô hình Matching Low (CDLMATCHINGLOW)"
+
+msgid "Max. Trade Stake"
+msgstr ""
 
 msgid "Maximum (MAX)"
 msgstr "Chỉ số Maximum (MAX)"
@@ -1956,6 +1986,9 @@ msgstr "Thị trấn/thành phố đáng nhớ"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "công thức Mesa Adaptive Moving Average (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
@@ -1998,6 +2031,9 @@ msgstr "Thứ 2"
 
 msgid "Monday"
 msgstr "Thứ hai"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Mô hình Sao Doji buổi sáng (CDLMORNINGDOJISTAR)"
@@ -2078,7 +2114,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Chỉ số Normalized Average True Range (NATR) cố gắng để bình thường hóa các giá trị trung bình phạm vi chuẩn trên thiết bị bằng cách sử dụng công thức dưới đây"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Lưu ý: bạn chỉ có thể có một tài khoản tiền tệ định danh và một của mỗi tài khoản cryptocurrency"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Lưu ý: Rút tiền thông qua đại lý thanh toán sẽ chỉ khả dụng nếu bạn gửi tiền duy nhất thông qua đại lý thanh toán"
@@ -2251,6 +2287,9 @@ msgstr "Trợ cấp"
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Công cụ dao động giá theo tỷ lệ phần trăm (PPO)"
 
+msgid "Performance Probability"
+msgstr ""
+
 msgid "Permissions"
 msgstr "Cấp phép"
 
@@ -2315,7 +2354,7 @@ msgid "Please select"
 msgstr "Vui lòng chọn"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Vui lòng lựa chọn một lý do mở tài khoản trước khi tiếp tục"
 
 msgid "Please submit a valid verification token"
 msgstr "Xin vui lòng nhập một mã thông báo xác nhận hợp lệ"
@@ -2558,7 +2597,7 @@ msgid "Save changes"
 msgstr "Lưu các thay đổi"
 
 msgid "Saved"
-msgstr ""
+msgstr "Đã lưu lại"
 
 msgid "Scalable trading"
 msgstr "giao dịch có thể mở rộng"
@@ -2642,7 +2681,7 @@ msgid "Sold"
 msgstr "Đã bán"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "Nguồn tài sản"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Mô hình ngọn quay (CDLSPINNINGTOP)"
@@ -3178,11 +3217,17 @@ msgstr "Công cụ chú thích nền"
 msgid "Tooltip text"
 msgstr "Chữ chú thích"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Tổng chi phí"
 
 msgid "Total Profit/Loss"
 msgstr "Tổng lợi nhuận/tổn thất"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Chạm"
@@ -3201,6 +3246,9 @@ msgstr "Giao dịch"
 
 msgid "Trade Confirmation"
 msgstr "Xác nhận giao dịch"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "Tất cả các điều kiện thị trường thương mại"
@@ -3222,6 +3270,15 @@ msgstr "Giao dịch với sự tự tin"
 
 msgid "Trade your way"
 msgstr "Giao dịch theo cách của bạn"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Thời Gian Giao Dịch"
@@ -3410,7 +3467,7 @@ msgid "Webtrader"
 msgstr "WebTrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "WebTrader là một nền tảng giao dịch tiên tiến mà có thể tùy biến toàn bộ theo sở thích cá nhân của bạn"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "WebTrader sử dụng công nghệ web mới để cho ra một trải nghiệm giao dịch thú vị và phong phú"
@@ -3431,7 +3488,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Chào mừng đến với Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Pep là gì?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Khi bạn đang hài lòng với giá giao dịch, ngay lập tức thực hiện giao dịch của bạn"
@@ -3476,7 +3533,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Rút tiền thông qua đại lý thanh toán"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Không gian làm việc"
 
 msgid "X-axis labels"
 msgstr "Nhãn X-axis"
@@ -3495,6 +3552,9 @@ msgstr "Đường kẻ ô Y-axis"
 
 msgid "Y-axis labels"
 msgstr "Nhãn Y-axis"
+
+msgid "Yearly Profitable Trades"
+msgstr ""
 
 msgid "Yes"
 msgstr "Có"
@@ -3546,6 +3606,9 @@ msgstr "Tài khoản Binary.com của bạn đã được tạo, nhưng để b�
 
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Email của bạn"
@@ -3760,14 +3823,3 @@ msgstr "| Thanh toán"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "WebTrader là một nền tảng giao dịch tiên tiến mà có thể tùy biến toàn bộ theo sở thích cá nhân của bạn"
-
-#~ msgid "Close all"
-#~ msgstr "Đóng tất cả"
-
-#~ msgid "Tile"
-#~ msgstr "Kiểu xếp ngói"
-
-#~ msgid "Windows"
-#~ msgstr "Windows"

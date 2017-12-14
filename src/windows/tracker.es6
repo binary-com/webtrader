@@ -46,6 +46,7 @@ const reopen_dialogs = (symbols, saved_states) => {
       token: '#nav-menu .token-management',
       deposit: '#nav-menu .deposit',
       withdraw: '#nav-menu .withdraw',
+      copyTrade: '#nav-menu .copytrade',
    };
 
    let counter = 0;

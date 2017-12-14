@@ -457,6 +457,9 @@ msgstr "crwdns15478:0crwdne15478:0"
 msgid "Active"
 msgstr "crwdns33464:0crwdne33464:0"
 
+msgid "Active Since"
+msgstr "crwdns41523:0crwdne41523:0"
+
 msgid "Add comparisons"
 msgstr "crwdns15479:0crwdne15479:0"
 
@@ -495,6 +498,9 @@ msgstr "crwdns19895:0crwdne19895:0"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "crwdns15486:0crwdne15486:0"
+
+msgid "Allow others to copy your trades"
+msgstr "crwdns41524:0crwdne41524:0"
 
 msgid "Amount"
 msgstr "crwdns15487:0crwdne15487:0"
@@ -568,6 +574,9 @@ msgstr "crwdns15501:0crwdne15501:0"
 msgid "Asset Index"
 msgstr "crwdns15502:0crwdne15502:0"
 
+msgid "Assets"
+msgstr "crwdns41525:0crwdne41525:0"
+
 msgid "Aug"
 msgstr "crwdns15503:0crwdne15503:0"
 
@@ -588,6 +597,15 @@ msgstr "crwdns19905:0crwdne19905:0"
 
 msgid "Average True Range (ATR)"
 msgstr "crwdns19906:0crwdne19906:0"
+
+msgid "Avg. Duration"
+msgstr "crwdns41526:0crwdne41526:0"
+
+msgid "Avg. Loss"
+msgstr "crwdns41527:0crwdne41527:0"
+
+msgid "Avg. Profit"
+msgstr "crwdns41528:0crwdne41528:0"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "crwdns19907:0crwdne19907:0"
@@ -993,6 +1011,9 @@ msgstr "crwdns15563:0crwdne15563:0"
 
 msgid "Coppock Curve (CC)"
 msgstr "crwdns19995:0crwdne19995:0"
+
+msgid "Copy Trade"
+msgstr "crwdns41967:0crwdne41967:0"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "crwdns19996:0crwdne19996:0"
@@ -1729,6 +1750,9 @@ msgstr "crwdns20115:0crwdne20115:0"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "crwdns20116:0crwdne20116:0"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr "crwdns41529:0crwdne41529:0"
+
 msgid "Last used"
 msgstr "crwdns15721:0crwdne15721:0"
 
@@ -1783,8 +1807,14 @@ msgstr "crwdns15732:0crwdne15732:0"
 msgid "Loading Configurations"
 msgstr "crwdns15733:0crwdne15733:0"
 
+msgid "Loading Copy Trade"
+msgstr "crwdns41530:0crwdne41530:0"
+
 msgid "Loading Download/View Data"
 msgstr "crwdns15734:0crwdne15734:0"
+
+msgid "Loading MAM"
+msgstr "crwdns41968:0crwdne41968:0"
 
 msgid "Loading Password dialog"
 msgstr "crwdns15735:0crwdne15735:0"
@@ -1915,6 +1945,9 @@ msgstr "crwdns20143:0crwdne20143:0"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "crwdns20144:0crwdne20144:0"
 
+msgid "Max. Trade Stake"
+msgstr "crwdns41531:0crwdne41531:0"
+
 msgid "Maximum (MAX)"
 msgstr "crwdns20145:0crwdne20145:0"
 
@@ -1953,6 +1986,9 @@ msgstr "crwdns15779:0crwdne15779:0"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "crwdns20147:0crwdne20147:0"
+
+msgid "Min. Trade Stake"
+msgstr "crwdns41532:0crwdne41532:0"
 
 msgid "Min: 10 Max: 2000"
 msgstr "crwdns15781:0crwdne15781:0"
@@ -1995,6 +2031,9 @@ msgstr "crwdns15786:0crwdne15786:0"
 
 msgid "Monday"
 msgstr "crwdns15787:0crwdne15787:0"
+
+msgid "Monthly Profitable Trades"
+msgstr "crwdns41533:0crwdne41533:0"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "crwdns20155:0crwdne20155:0"
@@ -2247,6 +2286,9 @@ msgstr "crwdns15854:0crwdne15854:0"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "crwdns20188:0crwdne20188:0"
+
+msgid "Performance Probability"
+msgstr "crwdns41534:0crwdne41534:0"
 
 msgid "Permissions"
 msgstr "crwdns15859:0crwdne15859:0"
@@ -3175,11 +3217,17 @@ msgstr "crwdns16050:0crwdne16050:0"
 msgid "Tooltip text"
 msgstr "crwdns16051:0crwdne16051:0"
 
+msgid "Total Copiers"
+msgstr "crwdns41535:0crwdne41535:0"
+
 msgid "Total Cost"
 msgstr "crwdns16052:0crwdne16052:0"
 
 msgid "Total Profit/Loss"
 msgstr "crwdns16053:0crwdne16053:0"
+
+msgid "Total Trades"
+msgstr "crwdns41536:0crwdne41536:0"
 
 msgid "Touch"
 msgstr "crwdns20370:0crwdne20370:0"
@@ -3198,6 +3246,9 @@ msgstr "crwdns16057:0crwdne16057:0"
 
 msgid "Trade Confirmation"
 msgstr "crwdns16058:0crwdne16058:0"
+
+msgid "Trade Types"
+msgstr "crwdns41537:0crwdne41537:0"
 
 msgid "Trade all market conditions"
 msgstr "crwdns20371:0crwdne20371:0"
@@ -3219,6 +3270,15 @@ msgstr "crwdns20375:0crwdne20375:0"
 
 msgid "Trade your way"
 msgstr "crwdns20376:0crwdne20376:0"
+
+msgid "Trader's Statistics"
+msgstr "crwdns41538:0crwdne41538:0"
+
+msgid "Trades Profitability"
+msgstr "crwdns41539:0crwdne41539:0"
+
+msgid "Trades break down"
+msgstr "crwdns41540:0crwdne41540:0"
 
 msgid "Trading Times"
 msgstr "crwdns16060:0crwdne16060:0"
@@ -3493,6 +3553,9 @@ msgstr "crwdns16103:0crwdne16103:0"
 msgid "Y-axis labels"
 msgstr "crwdns16104:0crwdne16104:0"
 
+msgid "Yearly Profitable Trades"
+msgstr "crwdns41541:0crwdne41541:0"
+
 msgid "Yes"
 msgstr "crwdns16105:0crwdne16105:0"
 
@@ -3543,6 +3606,9 @@ msgstr "crwdns16112:0crwdne16112:0"
 
 msgid "Your browser is not supported"
 msgstr "crwdns16115:0crwdne16115:0"
+
+msgid "Your copying settings"
+msgstr "crwdns41542:0crwdne41542:0"
 
 msgid "Your email"
 msgstr "crwdns16117:0crwdne16117:0"
@@ -3757,6 +3823,8 @@ msgstr "crwdns20452:0crwdne20452:0"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "crwdns20453:0crwdne20453:0"
 
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
+msgid "Copy Trade"
+msgstr "" 
 
+msgid "Loading MAM"
+msgstr "" 

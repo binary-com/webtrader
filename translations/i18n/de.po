@@ -1,6 +1,3 @@
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8\n"
-
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -460,6 +457,9 @@ msgstr "Aktion"
 msgid "Active"
 msgstr "Aktiv"
 
+msgid "Active Since"
+msgstr "Aktiv seit"
+
 msgid "Add comparisons"
 msgstr "Vergleiche hinzufügen"
 
@@ -498,6 +498,9 @@ msgstr "Alle Auszahlungen"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Alle Zeiten sind in GTM (Greenwich Mean Time)"
+
+msgid "Allow others to copy your trades"
+msgstr "Erlauben Sie anderen, Ihre Trades zu kopieren"
 
 msgid "Amount"
 msgstr "Betrag"
@@ -571,6 +574,9 @@ msgstr "Aktie"
 msgid "Asset Index"
 msgstr "Aktienindex"
 
+msgid "Assets"
+msgstr "Anlagen"
+
 msgid "Aug"
 msgstr "Aug"
 
@@ -591,6 +597,15 @@ msgstr "Average Directional Movement Rating mißt Impulsänderungen im ADX. Er w
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
+
+msgid "Avg. Duration"
+msgstr "Durchschnittliche Dauer"
+
+msgid "Avg. Loss"
+msgstr "Durchschnittlicher Verlust"
+
+msgid "Avg. Profit"
+msgstr "Durchschnittlicher Gewinn"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oszillator (AO)"
@@ -996,6 +1011,9 @@ msgstr "Kontrakte"
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Kurve (CC)"
+
+msgid "Copy Trade"
+msgstr ""
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Counterattack (CDLCOUNTERATTACK)"
@@ -1732,6 +1750,9 @@ msgstr "Kuala Lumpur Firmensitz"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr "Profitable Trades der letzten 12 Monate"
+
 msgid "Last used"
 msgstr "Zuletzt verwendet"
 
@@ -1786,8 +1807,14 @@ msgstr "Aktienindex wird geladen"
 msgid "Loading Configurations"
 msgstr "Konfigurationen werden geladen"
 
+msgid "Loading Copy Trade"
+msgstr "Lade Kopie-Trade"
+
 msgid "Loading Download/View Data"
 msgstr "Download/Daten Einsehen wird geladen"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "Passwortdialog wird geladen"
@@ -1918,6 +1945,9 @@ msgstr "Gleicht"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr "Max. Handelseinsatz"
+
 msgid "Maximum (MAX)"
 msgstr "Maximum (MAX)"
 
@@ -1956,6 +1986,9 @@ msgstr "Einprägsamer Ort/Stadt"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa Adaptive Moving Average (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr "Min. Handelseinsatz"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -1998,6 +2031,9 @@ msgstr "Mo"
 
 msgid "Monday"
 msgstr "Montag"
+
+msgid "Monthly Profitable Trades"
+msgstr "Monatliche Gewinn-Trades"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2250,6 +2286,9 @@ msgstr "Rente/Pension"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Percentage Price Oscillator (PPO)"
+
+msgid "Performance Probability"
+msgstr "Leistungs-Wahrscheinlichkeit"
 
 msgid "Permissions"
 msgstr "Genehmigungen"
@@ -3178,11 +3217,17 @@ msgstr "Tooltip Hintergrund"
 msgid "Tooltip text"
 msgstr "Tooltip Text"
 
+msgid "Total Copiers"
+msgstr "Gesamte Kopierer"
+
 msgid "Total Cost"
 msgstr "Gesamtkosten"
 
 msgid "Total Profit/Loss"
 msgstr "Gesamt Gewinn/Verlust"
+
+msgid "Total Trades"
+msgstr "Gesamte Trades"
 
 msgid "Touch"
 msgstr "Ziel"
@@ -3201,6 +3246,9 @@ msgstr "Handel"
 
 msgid "Trade Confirmation"
 msgstr "Kontraktbestätigung"
+
+msgid "Trade Types"
+msgstr "Handelsarten"
 
 msgid "Trade all market conditions"
 msgstr "Handeln Sie alle Marktkonditionen"
@@ -3222,6 +3270,15 @@ msgstr "Handeln Sie mit Selbstvertrauen"
 
 msgid "Trade your way"
 msgstr "Handeln Sie auf Ihre Weise"
+
+msgid "Trader's Statistics"
+msgstr "Trader Statistiken"
+
+msgid "Trades Profitability"
+msgstr "Trade Profitabilität"
+
+msgid "Trades break down"
+msgstr "Trade Break-Down"
 
 msgid "Trading Times"
 msgstr "Handelszeiten"
@@ -3496,6 +3553,9 @@ msgstr "Y-Achse Gitternetzlinie"
 msgid "Y-axis labels"
 msgstr "Y-Achse Labels"
 
+msgid "Yearly Profitable Trades"
+msgstr "Jährliche Gewinn-Trades"
+
 msgid "Yes"
 msgstr "Ja"
 
@@ -3546,6 +3606,9 @@ msgstr "Ihr Binary.com Konto ist erstellt, aber um mit dem Handeln zu beginnen, 
 
 msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
+
+msgid "Your copying settings"
+msgstr "Ihre Kopie-Einstellungen"
 
 msgid "Your email"
 msgstr "Ihre E-Mail"
@@ -3760,14 +3823,9 @@ msgstr "| Auszahlung"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kaufen und zu verkaufen"
 
-#~ msgid "Webtrader is an advanced trading platform that s fully-customisable according to your personal preferences"
-#~ msgstr "Webtrader ist eine fortschrittliche Handelsplattform, die ganz individuell Ihren persönlichen Vorlieben angepasst werden kann"
+msgid "Copy Trade"
+msgstr "" 
 
-#~ msgid "Close all"
-#~ msgstr "Alle schließen"
+msgid "Loading MAM"
+msgstr "" 
 
-#~ msgid "Tile"
-#~ msgstr "Tile"
-
-#~ msgid "Windows"
-#~ msgstr "Windows"

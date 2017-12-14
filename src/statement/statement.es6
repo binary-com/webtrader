@@ -29,7 +29,6 @@ export const init = ($menuLink) => {
 };
 
 let loading = false;
-const options = { offset : 0, limit: 200 };
 let is_specific_date_shown = false; /* is data for a specific date is shown */
 
 const refreshTable  = (yyy_mm_dd) => {

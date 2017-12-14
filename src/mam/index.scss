@@ -1,0 +1,119 @@
+.mam-dialog {
+  padding: 15px !important;
+  span.text {
+    white-space: nowrap;
+  }
+  .table {
+    width: 100%;
+  }
+  .search {
+    background-color: lightgrey;
+    border-radius: 2px;
+    padding: 8px;
+    .row {
+        background-color: white;
+        .cell:first-child {
+          width: 20px;
+          color: lightgrey;
+          padding: 5px;
+          span {
+            position: relative;
+            top: 3px;
+            left: 3px;
+          }
+        }
+        .cell:nth-child(2) {
+          input {
+            border: none;
+            outline: none;
+            margin: 5px;
+            width: 90%;
+            &:focus {
+              box-shadow:  none;
+            }
+          }
+        }
+        .cell:nth-child(3) {
+          background-color: lightgrey;
+          padding-left: 10px;
+          width: 20px;
+          button {
+            padding: 5px;
+          }
+        }
+      }
+  }
+  .tokens {
+    .table {
+      .row {
+        .pointer-cursor {
+          cursor: pointer;
+        }
+        .section-toggle {
+          width: 24px;
+          white-space: nowrap;
+          span {
+            font-size: 25px;
+            position: relative;
+            top: 6px;
+          }
+        }
+        .cell {
+          padding: 5px;
+          button {
+            padding: 8px;
+            vertical-align: middle;
+            &.started {
+              background-color: red;
+            }
+            &.remove {
+              background-color: red;
+            }
+          }
+          .details-section {
+            margin-top: 10px;
+            .tag {
+              background-color: lightgrey;
+              border-radius: 20px;
+              width: 150px;
+              text-align: center;
+              display: inline-block;
+              white-space: nowrap;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+            .table {
+              margin-left: 10px;
+              .row {
+                .cell {
+                  white-space: nowrap;
+                  border-bottom: 1px solid lightgrey;
+                  input {
+                    max-width: 400px;
+                  }
+                  div.chosen-container {
+                    width: 100% !important;
+                    text-align: left;
+                    max-width: 400px;
+                  }
+                }
+                .button-cell {
+                  text-align: right;
+                }
+                .ignore-bottom-border {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+        .token-header-controls {
+          width: 70px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

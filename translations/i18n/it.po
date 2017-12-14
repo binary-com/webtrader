@@ -374,7 +374,7 @@ msgid "A bearish counterattack is a long white candle in an uptrend, followed by
 msgstr ""
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
-msgstr ""
+msgstr "Una linea di separazione ribassista è un modello di continuazione al ribasso. È l'esatto opposto della linea di separazione rialzista. Esistono due componenti per la linea di separazione ribassista: il primo giorno è una candela verde e il secondo giorno va verso il basso, apre all'apertura della prima candela e chiude debolmente"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
 msgstr "Un'opzione binaria è un contratto acquistato da un trader in base al quale si riceve un importo predefinito se la previsione è corretta"
@@ -392,7 +392,7 @@ msgid "A bullish candlestick pattern that consists of three candles, the first b
 msgstr ""
 
 msgid "A bullish or bearish candle followed by a doji with with a downward or uptrend gap"
-msgstr ""
+msgstr "Una candela al rialzo o al ribasso seguita da un doji con un gap al ribasso o al rialzo"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
 msgstr ""
@@ -455,6 +455,9 @@ msgid "Action"
 msgstr "Azione"
 
 msgid "Active"
+msgstr "Attivo"
+
+msgid "Active Since"
 msgstr ""
 
 msgid "Add comparisons"
@@ -496,6 +499,9 @@ msgstr "Tutti i payout"
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tutti gli orari sono in GMT (Greenwich Mean Time)"
 
+msgid "Allow others to copy your trades"
+msgstr ""
+
 msgid "Amount"
 msgstr "Importo"
 
@@ -515,7 +521,7 @@ msgid "Answer"
 msgstr "Risposta"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "Fatturato previsto sull'account"
 
 msgid "Apply"
 msgstr "Richiedi"
@@ -568,6 +574,9 @@ msgstr "Asset"
 msgid "Asset Index"
 msgstr "Indice degli asset"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Ago"
 
@@ -575,7 +584,7 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Valute disponibili"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Average Directional Movement Index (ADX)"
@@ -588,6 +597,15 @@ msgstr "Average Directional Movement Rating quantifica la variazione del momentu
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oscillator (AO)"
@@ -614,7 +632,7 @@ msgid "Barrier(s)"
 msgstr "Barriera(e)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "Ribassista: questo è un modello di fine trend composto da tre candele rialziste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela dovrebbe essere corta e può formare un gap al rialzo. Potrebbe anche esserci un'ombra di vendita. Il modello rappresenta una debolezza in un rialzo con un rischio di consolidamento e una possibile inversione del trend. Rialzista: questo è un modello di fine trend composto da tre candele ribassiste. La seconda candela deve aprirsi vicino alla chiusura del giorno precedente. L'ultima candela deve essere corta. Il modello rappresenta una debolezza, un consolidamento e una possibile inversione del trend"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -869,10 +887,10 @@ msgid "Choose Asian Rise/Fall when you want to profit from the market ending hig
 msgstr ""
 
 msgid "Choose Ends In/Out to profit from the market stopping inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "Scegli Ends In/Out per sfruttare la chiusura del mercato all'interno o all'esterno di due prezzi scelti alla fine del periodo di tempo"
 
 msgid "Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target"
-msgstr ""
+msgstr "Scegli High/Low quando desideri sfruttare la chiusura del mercato a un prezzo più alto o più basso del prezzo scelto"
 
 msgid "Choose Rise/Fall when you want to profit from the market rising or falling from its current level"
 msgstr ""
@@ -993,6 +1011,9 @@ msgstr "Contratti"
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
+
+msgid "Copy Trade"
+msgstr ""
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Counterattack (CDLCOUNTERATTACK)"
@@ -1729,6 +1750,9 @@ msgstr "Sede di Kuala Lumpur"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Ultima volta"
 
@@ -1783,8 +1807,14 @@ msgstr "Caricamento dell'indice degli asset"
 msgid "Loading Configurations"
 msgstr "Caricamento delle configurazioni"
 
+msgid "Loading Copy Trade"
+msgstr ""
+
 msgid "Loading Download/View Data"
 msgstr "Caricamento del download/Mostra dati"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "Caricamento della finestra di dialogo della password"
@@ -1915,6 +1945,9 @@ msgstr "Corrisponde"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "Massimo (MAX)"
 
@@ -1953,6 +1986,9 @@ msgstr "Città indimenticabile"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Media mobile adattiva Mesa (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -1995,6 +2031,9 @@ msgstr "Lun"
 
 msgid "Monday"
 msgstr "Lunedì"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2247,6 +2286,9 @@ msgstr "Pensione"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Percentage Price Oscillator (PPO)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -3175,11 +3217,17 @@ msgstr "Sfondo della tooltip"
 msgid "Tooltip text"
 msgstr "Testo nella tooltip"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Costo totale"
 
 msgid "Total Profit/Loss"
 msgstr "Profitto/Perdita totale"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Touch"
@@ -3198,6 +3246,9 @@ msgstr "Trade"
 
 msgid "Trade Confirmation"
 msgstr "Conferma del trade"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr ""
@@ -3219,6 +3270,15 @@ msgstr ""
 
 msgid "Trade your way"
 msgstr "Negozia a modo tuo"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Orari di trading"
@@ -3493,6 +3553,9 @@ msgstr "Griglia dell'asse delle Y"
 msgid "Y-axis labels"
 msgstr "Etichetta dell'asse delle Y"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "Sì"
 
@@ -3543,6 +3606,9 @@ msgstr "Il tuo account Binary.com è stato creato ma per iniziare a fare trading
 
 msgid "Your browser is not supported"
 msgstr "Il tuo browser non è supportato"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Il tuo indirizzo email"
@@ -3756,4 +3822,10 @@ msgstr "| Payout"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
+
+msgid "Copy Trade"
+msgstr "" 
+
+msgid "Loading MAM"
+msgstr "" 
 

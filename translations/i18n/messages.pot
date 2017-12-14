@@ -458,6 +458,9 @@ msgstr ""
 msgid "Active"
 msgstr "" 
 
+msgid "Active Since"
+msgstr "" 
+
 msgid "Add comparisons"
 msgstr "" 
 
@@ -495,6 +498,9 @@ msgid "All payouts"
 msgstr "" 
 
 msgid "All times are in GMT (Greenwich Mean Time)"
+msgstr "" 
+
+msgid "Allow others to copy your trades"
 msgstr "" 
 
 msgid "Amount"
@@ -569,6 +575,9 @@ msgstr ""
 msgid "Asset Index"
 msgstr "" 
 
+msgid "Assets"
+msgstr "" 
+
 msgid "Aug"
 msgstr "" 
 
@@ -588,6 +597,15 @@ msgid "Average Directional Movement Rating quantifies momentum change in the ADX
 msgstr "" 
 
 msgid "Average True Range (ATR)"
+msgstr "" 
+
+msgid "Avg. Duration"
+msgstr "" 
+
+msgid "Avg. Loss"
+msgstr "" 
+
+msgid "Avg. Profit"
 msgstr "" 
 
 msgid "Awesome Oscillator (AO)"
@@ -993,6 +1011,9 @@ msgid "Contracts"
 msgstr "" 
 
 msgid "Coppock Curve (CC)"
+msgstr "" 
+
+msgid "Copy Trade"
 msgstr "" 
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -1730,6 +1751,9 @@ msgstr ""
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "" 
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr "" 
+
 msgid "Last used"
 msgstr "" 
 
@@ -1784,7 +1808,13 @@ msgstr ""
 msgid "Loading Configurations"
 msgstr "" 
 
+msgid "Loading Copy Trade"
+msgstr "" 
+
 msgid "Loading Download/View Data"
+msgstr "" 
+
+msgid "Loading MAM"
 msgstr "" 
 
 msgid "Loading Password dialog"
@@ -1916,6 +1946,9 @@ msgstr ""
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "" 
 
+msgid "Max. Trade Stake"
+msgstr "" 
+
 msgid "Maximum (MAX)"
 msgstr "" 
 
@@ -1953,6 +1986,9 @@ msgid "Memorable town/city"
 msgstr "" 
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
+msgstr "" 
+
+msgid "Min. Trade Stake"
 msgstr "" 
 
 msgid "Min: 10 Max: 2000"
@@ -1995,6 +2031,9 @@ msgid "Mon"
 msgstr "" 
 
 msgid "Monday"
+msgstr "" 
+
+msgid "Monthly Profitable Trades"
 msgstr "" 
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2247,6 +2286,9 @@ msgid "Pension"
 msgstr "" 
 
 msgid "Percentage Price Oscillator (PPO)"
+msgstr "" 
+
+msgid "Performance Probability"
 msgstr "" 
 
 msgid "Permissions"
@@ -3176,10 +3218,16 @@ msgstr ""
 msgid "Tooltip text"
 msgstr "" 
 
+msgid "Total Copiers"
+msgstr "" 
+
 msgid "Total Cost"
 msgstr "" 
 
 msgid "Total Profit/Loss"
+msgstr "" 
+
+msgid "Total Trades"
 msgstr "" 
 
 msgid "Touch"
@@ -3198,6 +3246,9 @@ msgid "Trade"
 msgstr "" 
 
 msgid "Trade Confirmation"
+msgstr "" 
+
+msgid "Trade Types"
 msgstr "" 
 
 msgid "Trade all market conditions"
@@ -3219,6 +3270,15 @@ msgid "Trade with confidence"
 msgstr "" 
 
 msgid "Trade your way"
+msgstr "" 
+
+msgid "Trader's Statistics"
+msgstr "" 
+
+msgid "Trades Profitability"
+msgstr "" 
+
+msgid "Trades break down"
 msgstr "" 
 
 msgid "Trading Times"
@@ -3494,6 +3554,9 @@ msgstr ""
 msgid "Y-axis labels"
 msgstr "" 
 
+msgid "Yearly Profitable Trades"
+msgstr "" 
+
 msgid "Yes"
 msgstr "" 
 
@@ -3543,6 +3606,9 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "" 
 
 msgid "Your browser is not supported"
+msgstr "" 
+
+msgid "Your copying settings"
 msgstr "" 
 
 msgid "Your email"

@@ -1,0 +1,184 @@
+<div class="mam-dialog">
+  <label class="checkbox">
+    <input type="checkbox" rv-checked="allowCopy.allow_copiers" rv-on-change="allowCopy.onAllowCopyChange">
+    <span class="check"></span>
+    <span class="box"></span>
+    <span class="text">Allow others to copy your trades</span>
+  </label>
+  <div class="search">
+    <div class="input table">
+      <div class="row">
+        <div class="cell">
+          <span class="ui-icon-search"></span>
+        </div>
+        <div class="cell">
+          <input
+            type="text"
+            rv-value="searchToken.token"
+            rv-on-change="searchToken.onTokenChange"
+            placeholder="Enter trader's API token"
+            rv-disabled="searchToken.disable"
+            rv-on-keydown="searchToken.onKeyDown"
+          />
+        </div>
+        <div class="cell">
+          <button rv-on-click="searchToken.addToken" rv-disabled="searchToken.disable">
+            <span class="ui-icon-plus"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tokens">
+    <div class="table">
+      <div class="row" rv-each-item='traderTokens'>
+        <div class="cell section-toggle">
+          <span class="pointer-cursor" rv-class-ui-icon-triangle-1-e="item.open | negate" rv-on-click="onOpenChange | bind index"></span>
+          <span class="pointer-cursor" rv-class-ui-icon-triangle-1-s="item.open" rv-on-click="onOpenChange | bind index"></span>
+        </div>
+        <div class="cell">
+          <div class="pointer-cursor" rv-on-click="onOpenChange | bind index">{item.yourCopySettings.copy_start}</div>
+          <div rv-show="item.open" class="details-section">
+            <div class="tag">Your copying settings</div>
+            <div class="table">
+              <div class="row">
+                <div class="cell ignore-bottom-border">Min. Trade Stake</div>
+                <div class="cell ignore-bottom-border">
+                  <input
+                    type="number"
+                    min="0" max="1000"
+                    rv-value="item.yourCopySettings.min_trade_stake"
+                    rv-data-index="index"
+                    rv-on-keyup="onMinTradeChange"
+                    rv-disabled="item.started"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell ignore-bottom-border">Max. Trade Stake</div>
+                <div class="cell ignore-bottom-border">
+                  <input
+                    type="number"
+                    min="100"
+                    max="10000000"
+                    rv-value="item.yourCopySettings.max_trade_stake"
+                    rv-data-index="index"
+                    rv-on-keyup="onMaxTradeChange"
+                    rv-disabled="item.started"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell ignore-bottom-border">Assets</div>
+                <div class="cell ignore-bottom-border">
+                  <select
+                    style="width: 200px"
+                    multiple
+                    rv-value="item.yourCopySettings.assets"
+                    data-placeholder="Select Assets"
+                    rv-chosen="item.yourCopySettings.assets"
+                    rv-chosenrefresh="masterAssetList"
+                    rv-chosendisable="item.started"
+                  >
+                    <optgroup rv-each-row="groupedAssets" rv-label="row.displayName">
+                      <option rv-each-instrument="row.instruments" rv-value="instrument.symbol">{instrument.display_name}</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell ignore-bottom-border">Trade Types</div>
+                <div class="cell ignore-bottom-border">
+                  <select
+                    style="width: 200px"
+                    multiple
+                    rv-value="item.yourCopySettings.trade_types"
+                    data-placeholder="Select trade types"
+                    rv-chosen="item.yourCopySettings.trade_types"
+                    rv-chosenrefresh="masterTradeTypeList"
+                    rv-chosendisable="item.started"
+                  >
+                    <option rv-each-row="masterTradeTypeList" rv-value="row.code">{row.name}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell ignore-bottom-border"></div>
+                <div class="cell button-cell ignore-bottom-border">
+                  <button
+                    rv-on-click="onUpdateYourSettings | bind index"
+                    rv-disabled="item.started"
+                  >
+                    Update
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div rv-show="item.open" class="details-section">
+            <div class="tag">Trader's Statistics</div>
+            <div class="table">
+              <div class="row">
+                <div class="cell">Active Since</div>
+                <div class="cell"><span rv-text="item.traderStatistics.active_since"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Avg. Duration</div>
+                <div class="cell"><span rv-text="item.traderStatistics.avg_duration"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Avg. Loss</div>
+                <div class="cell"><span rv-text="item.traderStatistics.avg_loss"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Avg. Profit</div>
+                <div class="cell"><span rv-text="item.traderStatistics.avg_profit"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Total Copiers</div>
+                <div class="cell"><span rv-text="item.traderStatistics.copiers"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Last 12 mnts Profitable Trades</div>
+                <div class="cell"><span rv-text="item.traderStatistics.last_12months_profitable_trades"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Monthly Profitable Trades</div>
+                <div class="cell"><span rv-text="item.traderStatistics.monthly_profitable_trades"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Yearly Profitable Trades</div>
+                <div class="cell"><span rv-text="item.traderStatistics.yearly_profitable_trades"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Total Trades</div>
+                <div class="cell"><span rv-text="item.traderStatistics.total_trades"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Performance Probability</div>
+                <div class="cell"><span rv-text="item.traderStatistics.performance_probability"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Trades break down</div>
+                <div class="cell"><span rv-text="item.traderStatistics.trades_breakdown"></span></div>
+              </div>
+              <div class="row">
+                <div class="cell">Trades Profitability</div>
+                <div class="cell"><span rv-text="item.traderStatistics.trades_profitable"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell token-header-controls">
+          <button rv-class-started="item.started" rv-on-click="onStartedChange | bind index" rv-disabled="item.disableStart">
+            <span rv-class-ui-icon-stop="item.started"></span>
+            <span rv-class-ui-icon-play="item.started | negate"></span>
+          </button>
+          <button class="remove" rv-on-click="onRemove | bind index" rv-disabled="item.disableRemove">
+            <span class="ui-icon-delete"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

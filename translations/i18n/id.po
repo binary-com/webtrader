@@ -457,6 +457,9 @@ msgstr "Aksi"
 msgid "Active"
 msgstr "Aktif"
 
+msgid "Active Since"
+msgstr ""
+
 msgid "Add comparisons"
 msgstr "Tambah perbandingan"
 
@@ -495,6 +498,9 @@ msgstr "Semua hasil"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Semua waktu dalam GMT (Greenwich Mean Time)"
+
+msgid "Allow others to copy your trades"
+msgstr ""
 
 msgid "Amount"
 msgstr "Jumlah"
@@ -568,6 +574,9 @@ msgstr "Aset"
 msgid "Asset Index"
 msgstr "Indeks Aset"
 
+msgid "Assets"
+msgstr ""
+
 msgid "Aug"
 msgstr "Agst"
 
@@ -588,6 +597,15 @@ msgstr "Average Directional Movement Rating mengkuantifikasi perubahan momentum 
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
+
+msgid "Avg. Duration"
+msgstr ""
+
+msgid "Avg. Loss"
+msgstr ""
+
+msgid "Avg. Profit"
+msgstr ""
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oscillator (AO)"
@@ -993,6 +1011,9 @@ msgstr "Kontrak"
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
+
+msgid "Copy Trade"
+msgstr ""
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Counterattack (CDLCOUNTERATTACK)"
@@ -1729,6 +1750,9 @@ msgstr "Kantor Kuala Lumpur"
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
+msgid "Last 12 mnts Profitable Trades"
+msgstr ""
+
 msgid "Last used"
 msgstr "Terakhir digunakan"
 
@@ -1783,8 +1807,14 @@ msgstr "Loading Indeks Aset"
 msgid "Loading Configurations"
 msgstr "Loading Konfigurasi"
 
+msgid "Loading Copy Trade"
+msgstr ""
+
 msgid "Loading Download/View Data"
 msgstr "Pemuatan Download/Lihat Data"
+
+msgid "Loading MAM"
+msgstr ""
 
 msgid "Loading Password dialog"
 msgstr "Pemuatan dialog kata sandi"
@@ -1915,6 +1945,9 @@ msgstr "Matches"
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
+msgid "Max. Trade Stake"
+msgstr ""
+
 msgid "Maximum (MAX)"
 msgstr "Maksimum (MAK)"
 
@@ -1953,6 +1986,9 @@ msgstr "Kota bersejarah"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa Adaptive Moving Average (MAMA)"
+
+msgid "Min. Trade Stake"
+msgstr ""
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Mak: 2000"
@@ -1995,6 +2031,9 @@ msgstr "Senin"
 
 msgid "Monday"
 msgstr "Senin"
+
+msgid "Monthly Profitable Trades"
+msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2247,6 +2286,9 @@ msgstr "Pensiun"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr "Percentage Price Oscillator (PPO)"
+
+msgid "Performance Probability"
+msgstr ""
 
 msgid "Permissions"
 msgstr "Izin"
@@ -3175,11 +3217,17 @@ msgstr "Latar belakang tooltip"
 msgid "Tooltip text"
 msgstr "Teks tooltip"
 
+msgid "Total Copiers"
+msgstr ""
+
 msgid "Total Cost"
 msgstr "Total Biaya"
 
 msgid "Total Profit/Loss"
 msgstr "Total Untung/Rugi"
+
+msgid "Total Trades"
+msgstr ""
 
 msgid "Touch"
 msgstr "Touch"
@@ -3198,6 +3246,9 @@ msgstr "Trading"
 
 msgid "Trade Confirmation"
 msgstr "Konfirmasi Trading"
+
+msgid "Trade Types"
+msgstr ""
 
 msgid "Trade all market conditions"
 msgstr "Trading pada semua kondisi pasar"
@@ -3219,6 +3270,15 @@ msgstr "Trading dengan percaya diri"
 
 msgid "Trade your way"
 msgstr "Trading dengan gaya Anda"
+
+msgid "Trader's Statistics"
+msgstr ""
+
+msgid "Trades Profitability"
+msgstr ""
+
+msgid "Trades break down"
+msgstr ""
 
 msgid "Trading Times"
 msgstr "Waktu Trading"
@@ -3493,6 +3553,9 @@ msgstr "Garis grid Y-axis"
 msgid "Y-axis labels"
 msgstr "Label y-axis"
 
+msgid "Yearly Profitable Trades"
+msgstr ""
+
 msgid "Yes"
 msgstr "Iya"
 
@@ -3543,6 +3606,9 @@ msgstr "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda p
 
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
+
+msgid "Your copying settings"
+msgstr ""
 
 msgid "Your email"
 msgstr "Email Anda"
@@ -3756,4 +3822,10 @@ msgstr "| Hasil"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
+
+msgid "Copy Trade"
+msgstr "" 
+
+msgid "Loading MAM"
+msgstr "" 
 
