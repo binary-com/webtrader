@@ -1013,7 +1013,7 @@ msgid "Coppock Curve (CC)"
 msgstr "估波曲線 (CC)"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "複製交易"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "反攻 (CDLCOUNTERATTACK)"
@@ -1814,7 +1814,7 @@ msgid "Loading Download/View Data"
 msgstr "載入下載/檢視資料"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "MAM裝載"
 
 msgid "Loading Password dialog"
 msgstr "載入密碼對話"
@@ -3822,10 +3822,4 @@ msgstr "| 賠付"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
-
-msgid "Copy Trade"
-msgstr "" 
-
-msgid "Loading MAM"
-msgstr "" 
 
