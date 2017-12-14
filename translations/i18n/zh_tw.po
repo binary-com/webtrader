@@ -353,22 +353,22 @@ msgid "8h"
 msgstr "8小時"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr "十字夜星包括長線看漲燭圖， 接下來是其上有缺口的十字圖，然後是在首個燭圖主體內完整收盤並同時確認翻轉的第三看跌燭圖。被視為強大的看跌價逆轉K 線圖形態"
+msgstr "十字夜星包括長線看漲燭圖， 接下來是其上有缺口的十字圖，然後是在首個燭圖主體內完整收盤並同時確認翻轉的第三看跌燭圖。被視為強大的看跌價逆轉K線圖形態"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "平滑移動平均線類似簡單移動平均線與指數移動平均線的混合，但應用期限較長"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr "陀螺型K 線圖是體型較小的看漲或看跌K 線圖。影子頭部和尾部長度不一。它與十字星K 線圖一樣代表買賣雙方相符時的猶疑不決點"
+msgstr "陀螺型K線圖是體型較小的看漲或看跌K線圖。影子頭部和尾部長度不一。它與十字星K線圖一樣代表買賣雙方相符時的猶疑不決點"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
 msgstr "如果市場在所選期限內一直保持在（沒有觸及）高障礙或低障礙之間，所選擇的「保持在範圍之內」交易即可獲利。如果市場在所選期限內只要觸及高障礙或低障礙，所選擇的「超出範圍之外」交易即可獲利"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr "看跌K 線圖包含示範以下特性的三個燭形線。首個條形圖是位於上漲趨勢中的巨大白色K 線圖，中間條形圖是體積較小、在首個白條形圖上方收盤的紅色或白色燭形線， 最後的條形圖是比較大的紅色燭形線， 在中間燭形線下方開盤，在首個條形圖主體中間附近收盤"
+msgstr "看跌K線圖包含示範以下特性的三個燭形線。首個條形圖是位於上漲趨勢中的巨大白色K線圖，中間條形圖是體積較小、在首個白條形圖上方收盤的紅色或白色燭形線， 最後的條形圖是比較大的紅色燭形線， 在中間燭形線下方開盤，在首個條形圖主體中間附近收盤"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr "看跌K 線圖用於預測目前上漲趨勢的翻轉。此圖形包含三個連續的長體型K 線圖，其收盤價比前一天為低，每一交易週期在前一燭形線之中開盤"
+msgstr "看跌K 線圖用於預測目前上漲趨勢的翻轉。此圖形包含三個連續的長體型K線圖，其收盤價比前一天為低，每一交易週期在前一燭形線之中開盤"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
 msgstr "看跌反攻線是上漲趨勢中的長條白色燭線，其後是一長條黑色燭線。兩條燭線的收盤價相同。看漲反攻線是下跌趨勢中的長條黑色燭線，其後是一長條白色燭線。兩條燭線的收盤價相同"
@@ -395,10 +395,10 @@ msgid "A bullish or bearish candle followed by a doji with with a downward or up
 msgstr "看漲或看跌燭形圖，其後是具下跌或上漲趨勢缺口的十字"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr "K 線圖圖表上有巨大K 線圖，其後是位於較大體形垂直面範圍內的較小體形K 線圖。關於K 線圖的顏色，看漲孕線是黑負面色下跌走勢K 線圖中包含小型白正面色K 線圖，提供下跌走勢的反轉訊號"
+msgstr "K 線圖圖表上有巨大K線圖，其後是位於較大體形垂直面範圍內的較小體形K線圖。關於K線圖的顏色，看漲孕線是黑負面色下跌走勢K線圖中包含小型白正面色K線圖，提供下跌走勢的反轉訊號"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
-msgstr "具長黑體形（長線）的K 線圖代表市場看跌力量。股票價格大幅起伏，以接近當日最高水平開盤，並以接近當日最低水平收盤。具長白線的燭形圖表示市場看漲力量。股票價格大幅起伏，以接近當日最低水平開盤，並以接近當日最高水平收盤"
+msgstr "具長黑體形（長線）的K線圖代表市場看跌力量。股票價格大幅起伏，以接近當日最高水平開盤，並以接近當日最低水平收盤。具長白線的燭形圖表示市場看漲力量。股票價格大幅起伏，以接近當日最低水平開盤，並以接近當日最高水平收盤"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
 msgstr "帶特長上下暗影的K 線圖，並在日本K 線圖圖表中具較小真實體形。它顯示市場失去了在此燭形圖出現以前所具的市場方向偏差"
@@ -422,7 +422,7 @@ msgid "A technical momentum indicator that compares a security's closing price t
 msgstr "將證卷的收盤價與某個固定週期中的價格範圍相比較的技術性動量指標。可通過週期調整或取結果的移動平均值將振盪器對市場走勢的敏感度降低"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr "交易員螢幕上由三個K 線圖形成類似三明治形的技術性交易形式。豎狀三明治的中間K 線圖顏色與兩旁K 線圖的顏色呈對比。兩旁K 線圖的交易範圍比中間K 線圖大。看漲和看跌指標市場均可能發生豎狀三明治形式"
+msgstr "交易員螢幕上由三個K線圖形成類似三明治形的技術性交易形式。豎狀三明治的中間K線圖顏色與兩旁K 線圖的顏色呈對比。兩旁K線圖的交易範圍比中間K線圖大。看漲和看跌指標市場均可能發生豎狀三明治形式"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
 msgstr "跳動點指市場價格的最小上漲或下跌數值"
@@ -632,7 +632,7 @@ msgid "Barrier(s)"
 msgstr "障礙"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "看跌：顯示趨勢到了盡頭的形式，由三個上升趨勢K 線圖組成。第二K 線圖必須以與前一天收盤價相近的價格開盤。最後的K 線圖的長度須短，並可形成向上缺口。另外還可能會有拋售暗影。走勢顯示上漲乏力，存在合併風險與反轉的可能性。看漲：顯示趨勢到了盡頭的形式，由三個下跌趨勢K 線圖組成。第二K 線圖必須以與前一天收盤價相近的價格開盤。最後的K 線圖的長度須長。形式顯示乏力及合併趨勢，並存在反轉的可能性"
+msgstr "看跌：顯示趨勢到了盡頭的形式，由三個上升趨勢K線圖組成。第二K線圖必須以與前一天收盤價相近的價格開盤。最後的K線圖的長度須短，並可形成向上缺口。另外還可能會有拋售暗影。走勢顯示上漲乏力，存在合併風險與反轉的可能性。看漲：顯示趨勢到了盡頭的形式，由三個下跌趨勢K線圖組成。第二K線圖必須以與前一天收盤價相近的價格開盤。最後的K線圖的長度須長。形式顯示乏力及合併趨勢，並存在反轉的可能性"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "執帶 (CDLBELTHOLD)"
@@ -650,7 +650,7 @@ msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets 正式上線"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr "BetOnMarkets.com 的資料庫中有超過400,000個客戶，並僅在第13年即達到10億美元的里程碑，使我們成為領先的固定賠率交易提供商之一"
+msgstr "BetOnMarkets.com 的資料庫中有超過400,000個客戶，在第13年即達到10億美元的里程碑，使我們成為領先的固定賠率交易提供商之一"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
 msgstr "BetOnMarkets.com 把賠付額增至100,000美元、歐元、英鎊及澳元"
@@ -731,7 +731,7 @@ msgid "Binary.com has earned an enviable reputation for our commitment to high e
 msgstr "Binary.com竭誠達到極高的道德標準和優質的交易體驗，因此獲得了令人羨慕的聲譽"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
-msgstr "Binary.com的資料庫中有超過 800,000 個客戶，並僅在第 15 年即達到 20 億美元的里程碑，使我們成為領先的二元期權交易提供商之一"
+msgstr "Binary.com的資料庫中有超過 800,000 個客戶，在第 15 年即達到 20 億美元的里程碑，使我們成為領先的二元期權交易提供商之一"
 
 msgid "Binary.com has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades"
 msgstr "Binary.com在任一時間內均有數千名客戶交易各類金融產品，該平台在這些交易中僅賺取極低的利潤率"
