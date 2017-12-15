@@ -1079,7 +1079,7 @@ msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 msgstr "烏雲罩頂 (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
-msgstr "烏雲罩頂是看跌K 線圖反轉形態，當第二天的紅色看跌K 線圖（收盤價低於開盤價）收盤價低於第一天的看漲K 線圖（收盤價高於開盤價）的中間價位時即會發生。我們將使用此形態在看漲貨幣市場中逢高賣出"
+msgstr "烏雲罩頂是看跌K線圖反轉形態，當第二天的紅色看跌K線圖（收盤價低於開盤價）收盤價低於第一天的看漲K線圖（收盤價高於開盤價）的中間價位時即會發生。我們將使用此形態在看漲貨幣市場中逢高賣出"
 
 msgid "Dark Green"
 msgstr "深綠"
@@ -1595,7 +1595,7 @@ msgid "In April"
 msgstr "今年四月"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
-msgstr "看漲捉腰帶線中經過一段看跌K 線圖後，形成看漲或白色K 線圖。成為交易日最低點的開盤價明顯比收盤價低。這將造成具短上端暗影，無下端暗影的長白色K 線圖。看跌捉腰帶線中，形成看跌或黑色K 線圖，成為交易日最高點的開盤價比前一天的收盤價高，造成具短下端暗影，無上端暗影的長黑K 線圖"
+msgstr "看漲捉腰帶線中經過一段看跌K線圖後，形成看漲或白色K線圖。成為交易日最低點的開盤價明顯比收盤價低。這將造成具短上端暗影，無下端暗影的長白色K線圖。看跌捉腰帶線中，形成看跌或黑色K線圖，成為交易日最高點的開盤價比前一天的收盤價高，造成具短下端暗影，無上端暗影的長黑K線圖"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
 msgstr "看漲圈套形態中經過下跌移動後，看漲燭形線達到超出前三根燭形線的範圍，及非常可能觸發一些止損訂單。此額外購入交易導致明顯的上升趨勢。看跌圈套形態中經過上升移動後，看跌燭形線達到低於前三根燭形線的範圍，及非常可能觸發一些止損訂單。此額外售出交易導致明顯的下降趨勢"
