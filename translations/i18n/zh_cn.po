@@ -1814,7 +1814,7 @@ msgid "Loading Download/View Data"
 msgstr "加载下载/查看数据"
 
 msgid "Loading MAM"
-msgstr "MAM装载"
+msgstr "加载MAM"
 
 msgid "Loading Password dialog"
 msgstr "加载密码对话"
