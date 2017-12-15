@@ -1181,7 +1181,7 @@ msgid "Doji Star (CDLDOJISTAR)"
 msgstr "十字星 (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
-msgstr "當證券的開盤價與收盤價幾乎相等時就會形成十字線。上下暗影長度可能不相同，所形成的K 線圖呈交叉形、反交叉形或十字形"
+msgstr "當證券的開盤價與收盤價幾乎相等時就會形成十字線。上下暗影長度可能不相同，所形成的K線圖呈交叉形、反交叉形或十字形"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
@@ -3035,7 +3035,7 @@ msgid "The first step is to open an account. You can apply online in just a few 
 msgstr "第一步是開戶。您可以線上申請開戶，只需佔用您幾分鐘的時間"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
-msgstr "看漲梯底形態的首三天是擁有連續較低開盤價和較低收盤價的強大黑色K 線圖。第四天是短黑K 線圖，但開盤價較高，交易價也較高，留下長上影，然後以新低價格收盤。第五天是與第四天形成體形缺口的強大白色K 線圖"
+msgstr "看漲梯底形態的首三天是擁有連續較低開盤價和較低收盤價的強大黑色K線圖。第四天是短黑K線圖，但開盤價較高，交易價也較高，留下長上影，然後以新低價格收盤。第五天是與第四天形成體形缺口的強大白色K線圖"
 
 msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
 msgstr "信鴿是看漲K 線圖逆轉形態，由兩支紅色K 線圖組成。首支燭形線是高黑線，在下降價格趨勢中出現。第二天也是黑色燭形線，但比較小，且位於首支黑色燭形線體內"
@@ -3056,7 +3056,7 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "賠付金額即期權交易者預測正確所獲得的金額"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr "貫穿形態由兩支K 線圖組成，第一支黑色，第二支白色。兩支K 線圖的體形須巨大，且陰影通常、但不一定是細小或不存在。白色K線圖必須在前收盤價下開盤，並在黑色K 線圖體內中部以上收盤。如果在中部以下收盤可能歸納為逆轉，但不會被考慮為看漲"
+msgstr "貫穿形態由兩支K線圖組成，第一支黑色，第二支白色。兩支K線圖的體形須巨大，且陰影通常、但不一定是細小或不存在。白色K線圖必須在前收盤價下開盤，並在黑色K線圖體內中部以上收盤。如果在中部以下收盤可能歸納為逆轉，但不會被考慮為看漲"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
 msgstr "全世界金融市場二元期權交易的頂尖平台"
