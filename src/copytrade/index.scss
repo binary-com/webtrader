@@ -1,13 +1,38 @@
 .copytrade-dialog {
-  padding: 15px !important;
+  padding: 15px 0px !important;
   span.text {
     white-space: nowrap;
   }
   .table {
     width: 100%;
   }
+  .copytrade-settings {
+    margin-bottom: 10px;
+    .table {
+      margin-left: 5px;
+      width: 98%;
+      .row {
+        cursor: pointer;
+        .cell {
+          &:first-child {
+            width: 30px;
+          }
+          vertical-align: top;
+          input{
+            width: 15px;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
   .search {
-    background-color: lightgrey;
+    background-color: #F2F2F2;
     border-radius: 2px;
     padding: 8px;
     .row {
@@ -26,6 +51,7 @@
       .cell:nth-child(2) {
         background-color: lightgrey;
         padding-left: 10px;
+        padding-right: 10px;
         width: 20px;
         button {
           padding: 5px;
@@ -33,7 +59,16 @@
       }
     }
   }
+  .traderTokensEmpty {
+    text-align: center;
+    color: #F2F2F2;
+    * {
+      display: block;
+      margin: auto;
+    }
+  }
   .tokens {
+    margin-left: 5px;
     .table {
       .row {
         .section-toggle {
@@ -118,5 +153,12 @@
         }
       }
     }
+  }
+  .copytrade-tradermsg {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: lightgray;
+    text-align: center;
   }
 }

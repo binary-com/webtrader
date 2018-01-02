@@ -183,6 +183,20 @@ const refreshTraderStats = (loginid, token, scope) => liveapi
 
 let win = null, win_view = null;
 
+const onChangeCopytradeSettings = _.debounce((newOption) => {
+  state.allowCopy.allow_copiers = newOption;
+  liveapi
+    .send({
+      set_settings: 1,
+      allow_copiers: newOption,
+    })
+    .catch(e => {
+      $.growl.error({ message: e.message });
+      //revert
+      state.allowCopy.allow_copiers = (newOption == 1 ? 0 : 1);
+    });
+}, 250);
+
 const state = {
   //[{ code: , name: }]
   masterAssetList: [],
@@ -190,19 +204,9 @@ const state = {
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
   groupedAssets: [],
   allowCopy: {
-    allow_copiers: false,
-    onAllowCopyChange: _.debounce((event, scope) => {
-      liveapi
-        .send({
-          set_settings: 1,
-          allow_copiers: +scope.allowCopy.allow_copiers,
-        })
-        .catch(e => {
-          $.growl.error({ message: e.message });
-          //revert
-          scope.allowCopy.allow_copiers = !scope.allowCopy.allow_copiers;
-        });
-    }, 250),
+    allow_copiers: 0,
+    onAllowCopyChangeCopierCellClick: () => onChangeCopytradeSettings(0),
+    onAllowCopyChangeTraderCellClick: () => onChangeCopytradeSettings(1),
   },
   onOpenChange: (index) => {
     state.traderTokens[index].open = !state.traderTokens[index].open;
@@ -397,15 +401,17 @@ const initConfigWindow = () => {
     width: 600,
     open: () => {
       //Refresh all token details
-      console.log('Called!');
       const copyTrade = local_storage.get(getStorageName());
       if (copyTrade) {
         _.merge(state, copyTrade);
         state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
       }
+
       //Get the copy settings
-      liveapi.send({ get_settings: 1 }).then(({get_settings = {}}) =>
-        state.allowCopy.allow_copiers = (get_settings.allow_copiers === 1));
+      liveapi
+        .send({ get_settings: 1 })
+        .then(({ get_settings = {} }) => state.allowCopy.allow_copiers = get_settings.allow_copiers);
+
       //Refresh locally stored trader statistics
       if (copyTrade) {
         (async function () {
