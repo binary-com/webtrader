@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: webtrader\n"
+"X-Crowdin-Language: ach\n"
+"X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Acholi\n"
+"Language: ach_UG\n"
+"PO-Revision-Date: 2018-01-02 22:20-0500\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "crwdns19787:0crwdne19787:0"
 
@@ -859,9 +873,6 @@ msgstr "crwdns19968:0crwdne19968:0"
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "crwdns19969:0crwdne19969:0"
 
-msgid "Change Backend Server"
-msgstr "crwdns15531:0crwdne15531:0"
-
 msgid "Change password"
 msgstr "crwdns15532:0crwdne15532:0"
 
@@ -1008,6 +1019,9 @@ msgstr "crwdns19994:0crwdne19994:0"
 
 msgid "Contracts"
 msgstr "crwdns15563:0crwdne15563:0"
+
+msgid "Copier"
+msgstr "crwdns42933:0crwdne42933:0"
 
 msgid "Coppock Curve (CC)"
 msgstr "crwdns19995:0crwdne19995:0"
@@ -1173,6 +1187,9 @@ msgstr "crwdns20015:0crwdne20015:0"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "crwdns15602:0crwdne15602:0"
+
+msgid "Do you want to install the Webtrader chrome extension?"
+msgstr "crwdns42934:0crwdne42934:0"
 
 msgid "Doji (CDLDOJI)"
 msgstr "crwdns20016:0crwdne20016:0"
@@ -1459,8 +1476,14 @@ msgstr "crwdns20054:0crwdne20054:0"
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "crwdns20055:0crwdne20055:0"
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr "crwdns42935:0crwdne42935:0"
+
 msgid "Get your price"
 msgstr "crwdns20056:0crwdne20056:0"
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgstr "crwdns42936:0crwdne42936:0"
 
 msgid "Goes out"
 msgstr "crwdns20057:0crwdne20057:0"
@@ -1804,9 +1827,6 @@ msgstr "crwdns15731:0crwdne15731:0"
 msgid "Loading Asset Index"
 msgstr "crwdns15732:0crwdne15732:0"
 
-msgid "Loading Configurations"
-msgstr "crwdns15733:0crwdne15733:0"
-
 msgid "Loading Copy Trade"
 msgstr "crwdns41530:0crwdne41530:0"
 
@@ -2127,12 +2147,6 @@ msgstr "crwdns15812:0crwdne15812:0"
 
 msgid "Now"
 msgstr "crwdns15813:0crwdne15813:0"
-
-msgid "OAuth App ID (Optional)"
-msgstr "crwdns15815:0crwdne15815:0"
-
-msgid "OAuth Server"
-msgstr "crwdns15816:0crwdne15816:0"
 
 msgid "OHLC"
 msgstr "crwdns15817:0crwdne15817:0"
@@ -3271,6 +3285,9 @@ msgstr "crwdns20375:0crwdne20375:0"
 msgid "Trade your way"
 msgstr "crwdns20376:0crwdne20376:0"
 
+msgid "Trader"
+msgstr "crwdns42937:0crwdne42937:0"
+
 msgid "Trader's Statistics"
 msgstr "crwdns41538:0crwdne41538:0"
 
@@ -3460,9 +3477,6 @@ msgstr "crwdns20412:0crwdne20412:0"
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "crwdns20413:0crwdne20413:0"
 
-msgid "Websocket Server"
-msgstr "crwdns16091:0crwdne16091:0"
-
 msgid "Webtrader"
 msgstr "crwdns16092:0crwdne16092:0"
 
@@ -3559,8 +3573,17 @@ msgstr "crwdns41541:0crwdne41541:0"
 msgid "Yes"
 msgstr "crwdns16105:0crwdne16105:0"
 
+msgid "You are not copying any trade(s) yet"
+msgstr "crwdns42938:0crwdne42938:0"
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "crwdns20430:0crwdne20430:0"
+
+msgid "You can only allow other traders to copy your trade"
+msgstr "crwdns42939:0crwdne42939:0"
+
+msgid "You can only copy other trader's trade"
+msgstr "crwdns42940:0crwdne42940:0"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "crwdns20431:0crwdne20431:0"
@@ -3583,9 +3606,6 @@ msgstr "crwdns20436:0crwdne20436:0"
 msgid "You have sold the following contract"
 msgstr "crwdns16107:0crwdne16107:0"
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "crwdns16108:0crwdne16108:0"
-
 msgid "You haven't saved any templates yet"
 msgstr "crwdns16109:0crwdne16109:0"
 
@@ -3603,6 +3623,9 @@ msgstr "crwdns20438:0crwdne20438:0"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "crwdns16112:0crwdne16112:0"
+
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr "crwdns42941:0crwdne42941:0"
 
 msgid "Your browser is not supported"
 msgstr "crwdns16115:0crwdne16115:0"
@@ -3670,12 +3693,6 @@ msgstr "crwdns20446:0crwdne20446:0"
 msgid "e-commerce site for branded merchandise"
 msgstr "crwdns20447:0crwdne20447:0"
 
-msgid "e.g"
-msgstr "crwdns16131:0crwdne16131:0"
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "crwdns16132:0crwdne16132:0"
-
 msgid "end time"
 msgstr "crwdns16133:0crwdne16133:0"
 
@@ -3696,12 +3713,6 @@ msgstr "crwdns16143:0crwdne16143:0"
 
 msgid "hours"
 msgstr "crwdns16144:0crwdne16144:0"
-
-msgid "https://developers.binary.com/"
-msgstr "crwdns16145:0crwdne16145:0"
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr "crwdns16146:0crwdne16146:0"
 
 msgid "if this is not your country of residence"
 msgstr "crwdns16147:0crwdne16147:0"
@@ -3754,9 +3765,6 @@ msgstr "crwdns16162:0crwdne16162:0"
 msgid "next tick"
 msgstr "crwdns16163:0crwdne16163:0"
 
-msgid "oauth"
-msgstr "crwdns16164:0crwdne16164:0"
-
 msgid "of \"Now\", the"
 msgstr "crwdns16165:0crwdne16165:0"
 
@@ -3805,9 +3813,6 @@ msgstr "crwdns16182:0crwdne16182:0"
 msgid "view license"
 msgstr "crwdns20450:0crwdne20450:0"
 
-msgid "websocket"
-msgstr "crwdns16183:0crwdne16183:0"
-
 msgid "www.Binary.com"
 msgstr "crwdns20451:0crwdne20451:0"
 
@@ -3823,8 +3828,3 @@ msgstr "crwdns20452:0crwdne20452:0"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "crwdns20453:0crwdne20453:0"
 
-msgid "Copy Trade"
-msgstr "" 
-
-msgid "Loading MAM"
-msgstr "" 
