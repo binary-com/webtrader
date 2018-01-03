@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+"PO-Revision-Date: 2018-01-03 00:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1021,13 +1021,13 @@ msgid "Contracts"
 msgstr "合約"
 
 msgid "Copier"
-msgstr ""
+msgstr "複製者"
 
 msgid "Coppock Curve (CC)"
 msgstr "估波曲線 (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "複製交易"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "反攻 (CDLCOUNTERATTACK)"
@@ -1189,7 +1189,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "是否安裝Webtrader chrome擴充套件?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "是否安裝Webtrader chrome擴充套件?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "十字線 (CDLDOJI)"
@@ -1477,7 +1477,7 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "格林威治標準時間是英國在冬季使用的官方時間。夏季則改為英國夏令時，即格林威治標準時間加1 小時。 Binary.com網站全年均使用格林威治標準時間"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "獲取交易者的 API 權杖, 並將其添加到您的清單中"
 
 msgid "Get your price"
 msgstr "獲取報價"
