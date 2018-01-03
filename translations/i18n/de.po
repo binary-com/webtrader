@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: webtrader\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"PO-Revision-Date: 2018-01-02 22:20-0500\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -859,9 +873,6 @@ msgstr "Chande Kroll Stop (CKS)"
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "Chande Momentum Oszillator (CMO)"
 
-msgid "Change Backend Server"
-msgstr "Backend Server wechseln"
-
 msgid "Change password"
 msgstr "Passwort ändern"
 
@@ -1008,6 +1019,9 @@ msgstr "Kontraktlaufzeit"
 
 msgid "Contracts"
 msgstr "Kontrakte"
+
+msgid "Copier"
+msgstr ""
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Kurve (CC)"
@@ -1173,6 +1187,9 @@ msgstr "Bieten Sie Konten mit virtuellem Geld an?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Möchten Sie Webtrader Chrome Extension installieren?"
+
+msgid "Do you want to install the Webtrader chrome extension?"
+msgstr ""
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1459,8 +1476,14 @@ msgstr "GMT"
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT steht für Greenwich Mean Time, die offizielle Uhrzeit, die im Winter in Großbritannien verwendet wird. Im Sommer wechselt Großbritannien zur British Summer Time, welche GMT + 1 Stunde ist. Alle Zeiten auf der Binary.com Site verwenden GMT, das ganze Jahr über"
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr ""
+
 msgid "Get your price"
 msgstr "Erhalten Sie Ihren Kurs"
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "Goes out"
 msgstr "Geht außerhalb"
@@ -1804,9 +1827,6 @@ msgstr "Wird geladen"
 msgid "Loading Asset Index"
 msgstr "Aktienindex wird geladen"
 
-msgid "Loading Configurations"
-msgstr "Konfigurationen werden geladen"
-
 msgid "Loading Copy Trade"
 msgstr "Lade Kopie-Trade"
 
@@ -2127,12 +2147,6 @@ msgstr "November"
 
 msgid "Now"
 msgstr "Jetzt"
-
-msgid "OAuth App ID (Optional)"
-msgstr "OAuth App ID (optional)"
-
-msgid "OAuth Server"
-msgstr "OAuth Server"
 
 msgid "OHLC"
 msgstr "OHLC"
@@ -3271,6 +3285,9 @@ msgstr "Handeln Sie mit Selbstvertrauen"
 msgid "Trade your way"
 msgstr "Handeln Sie auf Ihre Weise"
 
+msgid "Trader"
+msgstr ""
+
 msgid "Trader's Statistics"
 msgstr "Trader Statistiken"
 
@@ -3460,9 +3477,6 @@ msgstr "Uns wurden Patente für ein 'Computerhandelssystem und die Methode zur S
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "Wir sind auf diese Auszeichnung wirklich sehr stolz. Wir engagieren uns stark im Angebot eines ethischen und kundenbezogenen Handelserlebnisses und die Auszeichnung zeigt, dass BetOnMarkets eine vertrauenswürdige Firma ist, die ihren Kunden, gleichgültig, ob sie erfahrene Trader oder Anfänger sind, zuhört und sich um sie kümmert. Wir bieten unseren Kundendienst in Englisch, Indonesisch, Russisch, Chinesisch und Spanisch an"
 
-msgid "Websocket Server"
-msgstr "Websocket Server"
-
 msgid "Webtrader"
 msgstr "Web trader"
 
@@ -3559,8 +3573,17 @@ msgstr "Jährliche Gewinn-Trades"
 msgid "Yes"
 msgstr "Ja"
 
+msgid "You are not copying any trade(s) yet"
+msgstr ""
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "Sie können Auszahlungen von 1 $ bis 50 000 $ wählen. Dieses breite Angebot an Auszahlungen ist ideal für sowohl kleine als auch große Händler"
+
+msgid "You can only allow other traders to copy your trade"
+msgstr ""
+
+msgid "You can only copy other trader's trade"
+msgstr ""
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "Sie können in Minuten ein Konto eröffnen, Gelder einzahlen und zu Handeln beginnen"
@@ -3583,9 +3606,6 @@ msgstr "Sie erhalten eine faire und transparente Preispolitik, was auch immer Ih
 msgid "You have sold the following contract"
 msgstr "Sie haben den folgenden Kontrakt verkauft"
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "Sie müssen sich anmelden und eine App ID erhalten, bevor Sie einen anderen OAuth Server für eine Authentifizierung verwenden können. Für weitere Informationen wird verwiesen auf die OAuth Details auf"
-
 msgid "You haven't saved any templates yet"
 msgstr "Sie haben noch keine Vorlagen gespeichert"
 
@@ -3603,6 +3623,9 @@ msgstr "Sie werden davon überrascht sein, welche Renditen Sie machen können"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Ihr Binary.com Konto ist erstellt, aber um mit dem Handeln zu beginnen, müssen Sie Webtrader erlauben darauf zuzugreifen"
+
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr ""
 
 msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
@@ -3670,12 +3693,6 @@ msgstr "setzt den Einsatz ab"
 msgid "e-commerce site for branded merchandise"
 msgstr "E-commerce Site für Markenartikel"
 
-msgid "e.g"
-msgstr "z.B."
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "z.B.  www2.binary.com, www.binaryqa36.com"
-
 msgid "end time"
 msgstr "Endzeit"
 
@@ -3696,12 +3713,6 @@ msgstr "Stunde"
 
 msgid "hours"
 msgstr "Stunden"
-
-msgid "https://developers.binary.com/"
-msgstr "https://developers.binary.com/"
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "Dies ist nicht Ihr Wohnsitzland"
@@ -3754,9 +3765,6 @@ msgstr "Minuten"
 msgid "next tick"
 msgstr "Nächster Tick"
 
-msgid "oauth"
-msgstr "OAuth"
-
 msgid "of \"Now\", the"
 msgstr "von „jetzt“, der"
 
@@ -3805,9 +3813,6 @@ msgstr "Handelshäufigkeit"
 msgid "view license"
 msgstr "Lizenz ansehen"
 
-msgid "websocket"
-msgstr "Websocket"
-
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
@@ -3822,10 +3827,4 @@ msgstr "| Auszahlung"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kaufen und zu verkaufen"
-
-msgid "Copy Trade"
-msgstr "" 
-
-msgid "Loading MAM"
-msgstr "" 
 
