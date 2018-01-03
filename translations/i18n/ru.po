@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-01-02 22:20-0500\n"
+"PO-Revision-Date: 2018-01-02 23:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1026,7 +1026,7 @@ msgstr ""
 msgid "Coppock Curve (CC)"
 msgstr "Кривая Коппока (CC)"
 
-msgid "Copy Trade"
+msgid "Copy Trading"
 msgstr ""
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -3636,8 +3636,8 @@ msgstr ""
 msgid "Your email"
 msgstr "Ваш эл. адрес"
 
-msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr "Ваши деньги на Binary.com всегда в безопасности. Мы отделяем и держим средства клиентов в банках рейтинга ААА, что является условием нашей лицензии"
+msgid "Your money is always safe with Binary.com"
+msgstr ""
 
 msgid "Your new account balance is"
 msgstr "Новый баланс Вашего счёта"
