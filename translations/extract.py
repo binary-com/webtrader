@@ -46,7 +46,8 @@ static = [
    'Template changes saved', 'Invalid JSON file', 'Invalid template type', 'Successfully applied the template and saved it as',
    'Downloading template as', 'Template name already exists',
    'Add/Remove indicators', 'Add/Remove comparisons',
-   'Error getting data for %1', 'Downloading .csv', 'Stroke width', 'Stroke color'
+   'Error getting data for %1', 'Downloading .csv', 'Stroke width', 'Stroke color',
+   'Your account (%) is locked, please contact customer support for more info.'
 ]
 
 # Parsing webtrader html files.

@@ -159,7 +159,7 @@ const initLoginButton = (root) => {
             $.growl.error({
                fixed: true,
                message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
-               + "Your account(%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
+               + "Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
                + "</a>"
             });
          }
