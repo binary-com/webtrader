@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: webtrader\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"PO-Revision-Date: 2018-01-02 22:20-0500\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -872,9 +886,6 @@ msgstr "シャンデクロールストップ（CKS）"
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "シャンデ・モメンタム・オシレーター (CMO)"
 
-msgid "Change Backend Server"
-msgstr "バックエンドサーバーの変更"
-
 msgid "Change password"
 msgstr "パスワード変更"
 
@@ -1021,6 +1032,9 @@ msgstr "取引期間"
 
 msgid "Contracts"
 msgstr "トレード"
+
+msgid "Copier"
+msgstr ""
 
 msgid "Coppock Curve (CC)"
 msgstr "コポックカーブ（CC）"
@@ -1189,6 +1203,9 @@ msgstr "デモ口座を利用できますか？"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "ウェブトレーダーのchrome拡張機能をインストールしますか？"
+
+msgid "Do you want to install the Webtrader chrome extension?"
+msgstr ""
 
 msgid "Doji (CDLDOJI)"
 msgstr "十字線（CDLDOJI）"
@@ -1475,8 +1492,14 @@ msgstr "GMT"
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "グリニッジ標準時とは、イギリスの冬時間を示します。イギリスの夏時間はグリニッジ標準時に１時間プラスされGMT+１と表記されます。%1サイトの時間は全てGMTで表記されます。"
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr ""
+
 msgid "Get your price"
 msgstr "価格を確認"
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "Goes out"
 msgstr "BREAK-OUT"
@@ -1822,9 +1845,6 @@ msgstr "読み込み中"
 msgid "Loading Asset Index"
 msgstr "資産インデックスの読み込み"
 
-msgid "Loading Configurations"
-msgstr "設定の読込み中"
-
 msgid "Loading Copy Trade"
 msgstr ""
 
@@ -2145,12 +2165,6 @@ msgstr "11月"
 
 msgid "Now"
 msgstr "Now"
-
-msgid "OAuth App ID (Optional)"
-msgstr "OAuth アプリ ID (任意)"
-
-msgid "OAuth Server"
-msgstr "OAuthサーバー"
 
 msgid "OHLC"
 msgstr "OHLC"
@@ -3290,6 +3304,9 @@ msgstr "安心してお取引できます"
 msgid "Trade your way"
 msgstr "柔軟な取引"
 
+msgid "Trader"
+msgstr ""
+
 msgid "Trader's Statistics"
 msgstr ""
 
@@ -3480,9 +3497,6 @@ msgstr "米国で「金融市場投機用コンピューター取引システム
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "この受賞は大変光栄なものです。当社は、倫理的で顧客を重視したトレード機会を提供することに注力します。そしてこの受賞は、BetOnMarketsがトレード初心者、及び上級者に対し、顧客の声を重視したサービスを提供するブランドであることを示します。当社は英語、インドネシア語、ロシア語、中国語、及びスペイン語でのカスタマーサービスを提供します。"
 
-msgid "Websocket Server"
-msgstr "Websocket サーバー"
-
 msgid "Webtrader"
 msgstr "ウェブトレーダー"
 
@@ -3579,8 +3593,17 @@ msgstr ""
 msgid "Yes"
 msgstr "はい"
 
+msgid "You are not copying any trade(s) yet"
+msgstr ""
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "ペイアウトは¥1,000からご選択いただけます。幅広い当社のペイアウトはどのトレードの規模にも最適です"
+
+msgid "You can only allow other traders to copy your trade"
+msgstr ""
+
+msgid "You can only copy other trader's trade"
+msgstr ""
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "口座を開設し、資金を入金するだけですぐに取引を始められます"
@@ -3603,9 +3626,6 @@ msgstr "より良い取引条件をお客さまに提供できるよう努めて
 msgid "You have sold the following contract"
 msgstr "以下のトレードを売却しました"
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "異なるOAuthのサーバーを認可に使用するためには、ウェブトレーダーにご登録いただき、アプリIDを取得いただく必要があります。OAuthに関する詳細は"
-
 msgid "You haven't saved any templates yet"
 msgstr "テンプレートはまだ保存されていません"
 
@@ -3623,6 +3643,9 @@ msgstr "リターンに驚かれることでしょう"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダーのアクセスを許可頂く必要があります"
+
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr ""
 
 msgid "Your browser is not supported"
 msgstr "お使いのブラウザは対応しておりません"
@@ -3690,12 +3713,6 @@ msgstr "保有する当社の株式をすべて売却しました"
 msgid "e-commerce site for branded merchandise"
 msgstr "海外で自社ブランド商品のECサイト"
 
-msgid "e.g"
-msgstr "例"
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "例：www2.binary.com, www.binaryqa36.com"
-
 msgid "end time"
 msgstr "終了時刻"
 
@@ -3716,12 +3733,6 @@ msgstr "時間"
 
 msgid "hours"
 msgstr "時間"
-
-msgid "https://developers.binary.com/"
-msgstr "https://developers.binary.com/"
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "お住まいの国ではない場合"
@@ -3774,9 +3785,6 @@ msgstr "分"
 msgid "next tick"
 msgstr "次のティック"
 
-msgid "oauth"
-msgstr "oauth"
-
 msgid "of \"Now\", the"
 msgstr "「今」のXXX"
 
@@ -3825,9 +3833,6 @@ msgstr "取引の頻度"
 msgid "view license"
 msgstr "ライセンスを表示する"
 
-msgid "websocket"
-msgstr "websocket"
-
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
@@ -3842,10 +3847,4 @@ msgstr "| ペイアウト"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
-
-msgid "Copy Trade"
-msgstr "" 
-
-msgid "Loading MAM"
-msgstr "" 
 
