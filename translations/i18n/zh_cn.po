@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-01-03 00:16-0500\n"
+"PO-Revision-Date: 2018-01-03 01:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3580,10 +3580,10 @@ msgid "You can choose payouts from $1 to $50,000. This wide payout range is idea
 msgstr "您可选择从1美元到5万美元的赔付额。此范围广泛的赔付额对大小交易者都非常适合"
 
 msgid "You can only allow other traders to copy your trade"
-msgstr ""
+msgstr "您只能允许其他交易者复制您的交易"
 
 msgid "You can only copy other trader's trade"
-msgstr ""
+msgstr "您只能复制其他交易者的交易"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "仅需数分钟，您就可以完成开户、入金并开始交易"
@@ -3625,7 +3625,7 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "您的账户 (%) 已锁定, 请联系客服部了解更多信息。"
 
 msgid "Your browser is not supported"
 msgstr "您的浏览器不受支持"
@@ -3637,7 +3637,7 @@ msgid "Your email"
 msgstr "您的电子邮件"
 
 msgid "Your money is always safe with Binary.com"
-msgstr ""
+msgstr "Binary.com对您的资金提供安全保障"
 
 msgid "Your new account balance is"
 msgstr "您的新账户余额是"
