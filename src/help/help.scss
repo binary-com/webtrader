@@ -38,10 +38,7 @@
         width: 180px;
     }
     .sublist {
-        width: 285px;
-        .items {
-            padding-top: 42px;
-        }
+        min-width: 285px;
     }
     .content {
         height: 100%;

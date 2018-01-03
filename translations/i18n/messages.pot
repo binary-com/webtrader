@@ -1013,7 +1013,7 @@ msgstr ""
 msgid "Coppock Curve (CC)"
 msgstr "" 
 
-msgid "Copy Trade"
+msgid "Copy Trading"
 msgstr "" 
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -3623,7 +3623,7 @@ msgstr ""
 msgid "Your email"
 msgstr "" 
 
-msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
+msgid "Your money is always safe with Binary.com"
 msgstr "" 
 
 msgid "Your new account balance is"

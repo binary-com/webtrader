@@ -392,7 +392,7 @@ const initConfigWindow = () => {
   win_view = rv.bind(root[0], state);
 
   win = windows.createBlankWindow(root, {
-    title: 'Copy Trade'.i18n(),
+    title: 'Copy Trading'.i18n(),
     resizable: true,
     collapsable: true,
     minimizable: true,
