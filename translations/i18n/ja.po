@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-01-02 22:20-0500\n"
+"PO-Revision-Date: 2018-01-02 23:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1039,7 +1039,7 @@ msgstr ""
 msgid "Coppock Curve (CC)"
 msgstr "コポックカーブ（CC）"
 
-msgid "Copy Trade"
+msgid "Copy Trading"
 msgstr ""
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -3656,8 +3656,8 @@ msgstr ""
 msgid "Your email"
 msgstr "メールアドレス"
 
-msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr "皆様の資金は日証金信託銀行の顧客区分管理信託口にて、当社の固有財産とは区分して管理されます。"
+msgid "Your money is always safe with Binary.com"
+msgstr ""
 
 msgid "Your new account balance is"
 msgstr "最新の口座残高："
