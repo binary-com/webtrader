@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: webtrader\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"PO-Revision-Date: 2018-01-02 22:20-0500\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -859,9 +873,6 @@ msgstr "钱德克罗止损 (CKS)"
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "钱德动量震荡指标 (CMO)"
 
-msgid "Change Backend Server"
-msgstr "更换后端服务器"
-
 msgid "Change password"
 msgstr "更改密码"
 
@@ -1008,6 +1019,9 @@ msgstr "合约期间"
 
 msgid "Contracts"
 msgstr "合约"
+
+msgid "Copier"
+msgstr ""
 
 msgid "Coppock Curve (CC)"
 msgstr "估波曲线 (CC)"
@@ -1173,6 +1187,9 @@ msgstr "是否提供虚拟资金账户？"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "是否安装Webtrader chrome扩展程序？"
+
+msgid "Do you want to install the Webtrader chrome extension?"
+msgstr ""
 
 msgid "Doji (CDLDOJI)"
 msgstr "十字线 (CDLDOJI)"
@@ -1459,8 +1476,14 @@ msgstr "格林威治标准时间"
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "格林威治标准时间是英国在冬季使用的官方时间。夏季则改为英国夏令时，即格林威治标准时间加1小时。Binary.com网站全年均使用格林威治标准时间"
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr ""
+
 msgid "Get your price"
 msgstr "获取报价"
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "Goes out"
 msgstr "范围外"
@@ -1804,9 +1827,6 @@ msgstr "加载"
 msgid "Loading Asset Index"
 msgstr "加载资产指数"
 
-msgid "Loading Configurations"
-msgstr "加载配置"
-
 msgid "Loading Copy Trade"
 msgstr "正在加载复制交易"
 
@@ -2127,12 +2147,6 @@ msgstr "十一月"
 
 msgid "Now"
 msgstr "现在"
-
-msgid "OAuth App ID (Optional)"
-msgstr "OAuth 应用 ID (可选)"
-
-msgid "OAuth Server"
-msgstr "OAuth 服务器"
 
 msgid "OHLC"
 msgstr "OHLC条形图"
@@ -3271,6 +3285,9 @@ msgstr "充满自信地交易"
 msgid "Trade your way"
 msgstr "以您的方式交易"
 
+msgid "Trader"
+msgstr ""
+
 msgid "Trader's Statistics"
 msgstr "交易员统计"
 
@@ -3460,9 +3477,6 @@ msgstr "我们获得了“用于金融市场投机的电脑交易系统及方法
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "获得这个奖项，我们真的很自豪。我们不懈努力，提供合乎道德、以客户为中心的交易体验。该奖项表明 BetOnMarkets 是一个值得信赖的品牌，愿意接受客户意见并满足客户需求，无论客户是经验丰富的交易者还是新手。我们为客户提供英语、印尼语、俄语、中文和西班牙语服务"
 
-msgid "Websocket Server"
-msgstr "Websocket 服务器"
-
 msgid "Webtrader"
 msgstr "Webtrader"
 
@@ -3559,8 +3573,17 @@ msgstr "年度盈利交易"
 msgid "Yes"
 msgstr "是"
 
+msgid "You are not copying any trade(s) yet"
+msgstr ""
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "您可选择从1美元到5万美元的赔付额。此范围广泛的赔付额对大小交易者都非常适合"
+
+msgid "You can only allow other traders to copy your trade"
+msgstr ""
+
+msgid "You can only copy other trader's trade"
+msgstr ""
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "仅需数分钟，您就可以完成开户、入金并开始交易"
@@ -3583,9 +3606,6 @@ msgstr "您不论身处何地都可获得最公平、透明的报价"
 msgid "You have sold the following contract"
 msgstr "您已卖出以下合约"
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "使用各OAuth服务器进行验证前须先注册webtrader并领取应用程序ID。欲知详情，请到此参阅OAuth信息"
-
 msgid "You haven't saved any templates yet"
 msgstr "您尚未保存任何模板"
 
@@ -3603,6 +3623,9 @@ msgstr "您将对您所能获得的回报感到惊讶"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
+
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr ""
 
 msgid "Your browser is not supported"
 msgstr "您的浏览器不受支持"
@@ -3670,12 +3693,6 @@ msgstr "将其股份抛售"
 msgid "e-commerce site for branded merchandise"
 msgstr "品牌商品专用电子商务网站"
 
-msgid "e.g"
-msgstr "例如"
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "例如www2.binary.com, www.binaryqa36.com"
-
 msgid "end time"
 msgstr "结束时间"
 
@@ -3696,12 +3713,6 @@ msgstr "小时"
 
 msgid "hours"
 msgstr "小时"
-
-msgid "https://developers.binary.com/"
-msgstr "https://developers.binary.com/"
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "如不是您的居住国"
@@ -3754,9 +3765,6 @@ msgstr "分钟"
 msgid "next tick"
 msgstr "下一个跳动点"
 
-msgid "oauth"
-msgstr "oauth"
-
 msgid "of \"Now\", the"
 msgstr "是“现在”，"
 
@@ -3804,9 +3812,6 @@ msgstr "交易频率"
 
 msgid "view license"
 msgstr "查看牌照"
-
-msgid "websocket"
-msgstr "websocket"
 
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
