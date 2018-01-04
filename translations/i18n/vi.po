@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: webtrader\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
 
@@ -859,9 +873,6 @@ msgstr "Chỉ số dừng Chande Kroll (CKS)"
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "Bộ đà dao động Chande (CMO)"
 
-msgid "Change Backend Server"
-msgstr "Thay đổi máy chủ đầu cuối"
-
 msgid "Change password"
 msgstr "Thay đổi mật khẩu"
 
@@ -1009,10 +1020,13 @@ msgstr "Thời hạn hợp đồng"
 msgid "Contracts"
 msgstr "Hợp đồng"
 
+msgid "Copier"
+msgstr ""
+
 msgid "Coppock Curve (CC)"
 msgstr "Đường cong Coppock (CC)"
 
-msgid "Copy Trade"
+msgid "Copy Trading"
 msgstr ""
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -1173,6 +1187,9 @@ msgstr "Bạn có cung cấp các tài khoản tiền ảo?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
+
+msgid "Do you want to install the Webtrader chrome extension?"
+msgstr ""
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1459,8 +1476,14 @@ msgstr "Giờ quốc tế"
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT là viết tắt của Greenwich Mean Time, thời gian chính thức được sử dụng ở vương quốc Anh trong suốt mùa đông. Vào mùa hè,  vương quốc Anh thay đổi thành thời gian mùa hè ở Anh, tức là GMT + 1 giờ. Tất cả thời gian trên trang web Binary.com sử dụng GMT quanh năm"
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr ""
+
 msgid "Get your price"
 msgstr "Nhận giá của bạn"
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "Goes out"
 msgstr "Ra ngoài"
@@ -1804,9 +1827,6 @@ msgstr "Đang tải"
 msgid "Loading Asset Index"
 msgstr "Đang tải chỉ số tài sản"
 
-msgid "Loading Configurations"
-msgstr "Đang tải cấu hình"
-
 msgid "Loading Copy Trade"
 msgstr ""
 
@@ -2127,12 +2147,6 @@ msgstr "Tháng mười một"
 
 msgid "Now"
 msgstr "Bây giờ"
-
-msgid "OAuth App ID (Optional)"
-msgstr "OAuth App ID (tùy chọn)"
-
-msgid "OAuth Server"
-msgstr "Máy chủ OAuth"
 
 msgid "OHLC"
 msgstr "OHLC"
@@ -3271,6 +3285,9 @@ msgstr "Giao dịch với sự tự tin"
 msgid "Trade your way"
 msgstr "Giao dịch theo cách của bạn"
 
+msgid "Trader"
+msgstr ""
+
 msgid "Trader's Statistics"
 msgstr ""
 
@@ -3460,9 +3477,6 @@ msgstr "Chúng tôi được cấp bằng sáng chế cho 'Hệ thống kinh doa
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "Chúng tôi thực sự tự hào về giải thưởng này. Chúng tôi cam kết cung cấp cho quý khách một trải nghiệm giao dịch có đạo đức và lấy khách hàng làm trung tâm, và các giải thưởng này cho thấy BetOnMarkets là một thương hiệu đáng tin cậy, luôn lắng nghe và phục vụ khách hàng, cho dù họ là nhà giao dịch có kinh nghiệm hay người mới. Chúng tôi cung cấp dịch vụ khách hàng bằng tiếng Anh, Indonesia, Nga, Trung Quốc và Tây Ban Nha"
 
-msgid "Websocket Server"
-msgstr "Máy chủ Websocket"
-
 msgid "Webtrader"
 msgstr "WebTrader"
 
@@ -3559,8 +3573,17 @@ msgstr ""
 msgid "Yes"
 msgstr "Có"
 
+msgid "You are not copying any trade(s) yet"
+msgstr ""
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "Bạn có thể chọn thanh toán từ $1 đến $50,000. Phạm vi thanh toán rộng này là lý tưởng cho các nhà giao dịch lớn và nhỏ"
+
+msgid "You can only allow other traders to copy your trade"
+msgstr ""
+
+msgid "You can only copy other trader's trade"
+msgstr ""
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "Bạn có thể mở một tài khoản, gửi tiền và bắt đầu giao dịch trong vòng vài phút"
@@ -3583,9 +3606,6 @@ msgstr "Bạn có được công bằng và minh bạch giá cả, không quan t
 msgid "You have sold the following contract"
 msgstr "Bạn đã bán hợp đồng sau"
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "Bạn phải đăng ký webtrader và cài App ID trước khi bạn có thể sử dụng các máy chủ OAuth khác nhau cho việc xác thực. Để biết thêm thông tin vui lòng tham khảo chi tiết OAuth trên"
-
 msgid "You haven't saved any templates yet"
 msgstr "Bạn chưa lưu lại bất kỳ mẫu nào"
 
@@ -3604,6 +3624,9 @@ msgstr "Bạn sẽ ngạc nhiên bởi lãi suất mà bạn có thể kiếm đ
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Tài khoản Binary.com của bạn đã được tạo, nhưng để bắt đầu giao dịch bạn cần cho phép Webtrader truy cập nó"
 
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr ""
+
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
 
@@ -3613,8 +3636,8 @@ msgstr ""
 msgid "Your email"
 msgstr "Email của bạn"
 
-msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr "Tiền của bạn là luôn luôn an toàn với Binary.com. Tại mọi thời điểm, nó được bảo quản tách biệt tại các ngân hàng được xếp hạng bởi AAA mà đó là một trong những điều kiện của giấy phép kinh doanh của chúng tôi"
+msgid "Your money is always safe with Binary.com"
+msgstr ""
 
 msgid "Your new account balance is"
 msgstr "Số dư tài khoản mới của bạn là"
@@ -3670,12 +3693,6 @@ msgstr "loại bỏ cổ phần của mình"
 msgid "e-commerce site for branded merchandise"
 msgstr "Trang web thương mại điện tử cho các nhãn hiệu hàng hóa"
 
-msgid "e.g"
-msgstr "ví dụ"
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "Ví dụ: www2.binary.com, www.binaryqa36.com"
-
 msgid "end time"
 msgstr "thời gian kết thúc"
 
@@ -3696,12 +3713,6 @@ msgstr "giờ"
 
 msgid "hours"
 msgstr "giờ"
-
-msgid "https://developers.binary.com/"
-msgstr "https://Developers.Binary.com/"
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr "ID-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "nếu như đây không phải quốc gia bạn cư trú"
@@ -3754,9 +3765,6 @@ msgstr "phút"
 msgid "next tick"
 msgstr "đánh dấu tiếp theo"
 
-msgid "oauth"
-msgstr "OAuth"
-
 msgid "of \"Now\", the"
 msgstr "của \"bây giờ\","
 
@@ -3804,9 +3812,6 @@ msgstr "tần xuất giao dịch"
 
 msgid "view license"
 msgstr "xem giấy phép"
-
-msgid "websocket"
-msgstr "websocket"
 
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
