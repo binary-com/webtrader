@@ -95,27 +95,17 @@ const validateYourCopySettingsData = yourCopySettingsData => {
   let valid = false;
   let errorMessage = '';
   if (yourCopySettingsData) {
-    if (yourCopySettingsData.assets && yourCopySettingsData.assets.length > 0) {
-      if (yourCopySettingsData.trade_types && yourCopySettingsData.trade_types.length > 0) {
-        if (yourCopySettingsData.min_trade_stake >= 1 && yourCopySettingsData.min_trade_stake <= 50000) {
-          if (yourCopySettingsData.max_trade_stake >= 1 && yourCopySettingsData.max_trade_stake <= 50000) {
-            if (yourCopySettingsData.min_trade_stake < yourCopySettingsData.max_trade_stake) {
+        if (!yourCopySettingsData.min_trade_stake ||
+          (yourCopySettingsData.min_trade_stake >= 1 && yourCopySettingsData.min_trade_stake <= 50000)) {
+          if (!yourCopySettingsData.max_trade_stake ||
+            (yourCopySettingsData.max_trade_stake >= 1 && yourCopySettingsData.max_trade_stake <= 50000)) {
               valid = true;
-            } else {
-              errorMessage = 'Min Trade Stake cannot be more than or equal to Max Trader stake';
-            }
           } else {
             errorMessage = 'Max Trade Stake should between 1 and 50000';
           }
         } else {
           errorMessage = 'Min Trade Stake should between 1 and 50000';
         }
-      } else {
-        errorMessage = 'Trade types required';
-      }
-    } else {
-      errorMessage = 'Assets required';
-    }
   } else {
     errorMessage = 'Enter valid values for copy settings';
   }
@@ -227,8 +217,13 @@ const state = {
           //Have to apply this trick in order to trigger update of UI using rivetsjs.
           _.defer(() => {
             state.traderTokens.splice(index, 0, newObj);
+            const settingsToSend = _.cloneDeep(newObj.yourCopySettings);
+            if (!settingsToSend.min_trade_stake) delete settingsToSend.min_trade_stake;
+            if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
+            if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
+            if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
             liveapi
-              .send(newObj.yourCopySettings)
+              .send(settingsToSend)
               .then(() => {
                 newObj.disableStart = false;
                 newObj.started = true;
@@ -304,8 +299,13 @@ const state = {
       /**
        * Make sure min_trade_stake & max_trade_stack are numeric
        */
-      state.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.min_trade_stake);
-      state.traderTokens[index].yourCopySettings.max_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.max_trade_stake);
+      console.log(state.traderTokens[index].yourCopySettings);
+      if(state.traderTokens[index].yourCopySettings.min_trade_stake)
+        state.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.min_trade_stake);
+
+      if (state.traderTokens[index].yourCopySettings.max_trade_stake)
+        state.traderTokens[index].yourCopySettings.max_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.max_trade_stake);
+
       updateLocalStorage(state);
       $.growl.notice({
         message: 'Updated successfully',
@@ -330,10 +330,17 @@ const state = {
         return;
       }
 
+      //If already added, throw error
+      if (_.some(state.traderTokens, f => f.yourCopySettings.copy_start === scope.searchToken.token)) {
+        $.growl.error({ message: 'Token already added' });
+        return;
+      }
+
       scope.searchToken.disable = true;
 
       validateToken(scope.searchToken.token)
         .then(tokenUserData => {
+          if (!tokenUserData) throw new Error('Invalid token');
           refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope)
             .then(() => {
               scope.searchToken.token = '';
