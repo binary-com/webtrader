@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+"PO-Revision-Date: 2018-01-05 07:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -544,7 +544,7 @@ msgid "Apply to become a Binary.com"
 msgstr "สมัครเพื่อเป็นตัวแทนรับชำระเงินกับ Binary.com"
 
 msgid "Appropriateness Test: WARNING"
-msgstr ""
+msgstr "Appropriateness Test: คำเตือน"
 
 msgid "Apr"
 msgstr "เม.ย."
@@ -553,7 +553,7 @@ msgid "April"
 msgstr "เมษายน"
 
 msgid "Are you sure you want to delete template?"
-msgstr ""
+msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการลบแม่แบบนี้?"
 
 msgid "Are you sure you want to delete this token?"
 msgstr ""
@@ -562,7 +562,7 @@ msgid "Are you sure you want to overwrite current template?"
 msgstr ""
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
-msgstr ""
+msgstr "Arnaud Legoux Moving Average (ALMA)"
 
 msgid "Aroon (AROON)"
 msgstr "Aroon (AROON)"
@@ -589,7 +589,7 @@ msgid "Asset Index"
 msgstr "ดัชนีสินทรัพย์"
 
 msgid "Assets"
-msgstr ""
+msgstr "สินทรัพย์"
 
 msgid "Aug"
 msgstr "ส.ค."
@@ -598,7 +598,7 @@ msgid "August"
 msgstr "สิงหาคม"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "สกุลเงินที่มีอยู่"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Average Directional Movement Index (ADX)"
@@ -613,13 +613,13 @@ msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
 
 msgid "Avg. Duration"
-msgstr ""
+msgstr "เวลาเฉลี่ย"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "ขาดทุนเฉลี่ย"
 
 msgid "Avg. Profit"
-msgstr ""
+msgstr "กำไรเฉลี่ย"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oscillator (AO)"
@@ -685,7 +685,7 @@ msgid "Binary Bot released"
 msgstr ""
 
 msgid "Binary KK granted Japan license"
-msgstr ""
+msgstr "Binary KK ได้รับใบอนุญาตของประเทศญี่ปุ่น"
 
 msgid "Binary Trading is simple to learn and to execute"
 msgstr ""
@@ -694,7 +694,7 @@ msgid "Binary granted Investment Services license"
 msgstr ""
 
 msgid "Binary opens Japan office"
-msgstr ""
+msgstr "Binary เปิดสำนักงานที่ประเทศญี่ปุ่น"
 
 msgid "Binary option"
 msgstr "ไบนารีออปชั่น"
@@ -730,10 +730,10 @@ msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
 msgstr ""
 
 msgid "Binary.com"
-msgstr ""
+msgstr "Binary.com"
 
 msgid "Binary.com : Webtrader"
-msgstr ""
+msgstr "Binary.com : เว็บเทรดเดอร์ (Webtrader)"
 
 msgid "Binary.com Shop introduced"
 msgstr ""
@@ -823,10 +823,10 @@ msgid "But there's no need to wait until expiry. You can sell back long-term tra
 msgstr ""
 
 msgid "Buy Price"
-msgstr ""
+msgstr "ราคาซื้อ"
 
 msgid "Buy price"
-msgstr ""
+msgstr "ราคาซื้อ"
 
 msgid "By clicking"
 msgstr "โดยการคลิก"
@@ -1435,7 +1435,7 @@ msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds F
 msgstr ""
 
 msgid "Forex"
-msgstr ""
+msgstr "ฟอเร็กซ์"
 
 msgid "Forex trading experience"
 msgstr ""
@@ -1447,7 +1447,7 @@ msgid "Founded October 1999"
 msgstr ""
 
 msgid "Fractal (FRACTAL)"
-msgstr ""
+msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr ""
@@ -1564,10 +1564,10 @@ msgid "Horizontal line"
 msgstr ""
 
 msgid "Hours"
-msgstr ""
+msgstr "ชั่วโมง"
 
 msgid "How do I fund my account?"
-msgstr ""
+msgstr "ฉันจะฝากเงินเข้าบัญชีของฉันได้อย่างไร?"
 
 msgid "How does Binary.com make money?"
 msgstr "Binary.com ทำให้เงินงอกเงยได้อย่างไร?"
@@ -1582,7 +1582,7 @@ msgid "How to trade binaries?"
 msgstr "ซื้อขายไบนารีอย่างไร?"
 
 msgid "Hull Moving Average (HMA)"
-msgstr ""
+msgstr "Hull Moving Average (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr ""
@@ -1603,7 +1603,7 @@ msgid "Ideal for both pros and novices"
 msgstr "เหมาะสำหรับมืออาชีพและมือใหม่"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
-msgstr ""
+msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
 
 msgid "If you select a"
 msgstr ""
@@ -1651,7 +1651,7 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
-msgstr ""
+msgstr "In-Neck Pattern (CDLINNECK)"
 
 msgid "In/Out"
 msgstr ""
@@ -1666,10 +1666,10 @@ msgid "Indicative Price"
 msgstr ""
 
 msgid "Indicators"
-msgstr ""
+msgstr "อินดิเคเตอร์"
 
 msgid "Indices"
-msgstr ""
+msgstr "ดัชนี"
 
 msgid "Indices trading experience"
 msgstr ""
@@ -1726,22 +1726,22 @@ msgid "Italiano"
 msgstr ""
 
 msgid "Jan"
-msgstr ""
+msgstr "ม.ค."
 
 msgid "January"
-msgstr ""
+msgstr "มกราคม"
 
 msgid "Jul"
-msgstr ""
+msgstr "ก.ค."
 
 msgid "July"
-msgstr ""
+msgstr "กรกฎาคม"
 
 msgid "Jun"
-msgstr ""
+msgstr "มิ.ย."
 
 msgid "June"
-msgstr ""
+msgstr "มิถุนายน"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
@@ -1753,7 +1753,7 @@ msgid "Key facts"
 msgstr ""
 
 msgid "Kicking (CDLKICKING)"
-msgstr ""
+msgstr "Kicking (CDLKICKING)"
 
 msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
 msgstr ""
@@ -1771,7 +1771,7 @@ msgid "Kuala Lumpur Office"
 msgstr ""
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
-msgstr ""
+msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
 msgstr ""
@@ -1963,13 +1963,13 @@ msgid "Matches"
 msgstr ""
 
 msgid "Matching Low (CDLMATCHINGLOW)"
-msgstr ""
+msgstr "Matching Low (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
 msgstr ""
 
 msgid "Maximum (MAX)"
-msgstr ""
+msgstr "Maximum (MAX)"
 
 msgid "Maximum account cash balance"
 msgstr ""
@@ -1996,7 +1996,7 @@ msgid "Maximum price over selected period"
 msgstr ""
 
 msgid "May"
-msgstr ""
+msgstr "พ.ค."
 
 msgid "Memorable date"
 msgstr ""
@@ -2005,7 +2005,7 @@ msgid "Memorable town/city"
 msgstr ""
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
-msgstr ""
+msgstr "Mesa Adaptive Moving Average (MAMA)"
 
 msgid "Min. Trade Stake"
 msgstr ""
@@ -2014,7 +2014,7 @@ msgid "Min: 10 Max: 2000"
 msgstr ""
 
 msgid "Minimum (MIN)"
-msgstr ""
+msgstr "Minimum (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr ""
@@ -2035,55 +2035,55 @@ msgid "Minus the agent's commission"
 msgstr ""
 
 msgid "Minutes"
-msgstr ""
+msgstr "นาที"
 
 msgid "Miss"
-msgstr ""
+msgstr "นางสาว"
 
 msgid "Momentum (MOM)"
-msgstr ""
+msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
 msgstr ""
 
 msgid "Mon"
-msgstr ""
+msgstr "จ."
 
 msgid "Monday"
-msgstr ""
+msgstr "วันจันทร์"
 
 msgid "Monthly Profitable Trades"
 msgstr ""
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
-msgstr ""
+msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
 
 msgid "Morning Star (CDLMORNINGSTAR)"
-msgstr ""
+msgstr "Morning Star (CDLMORNINGSTAR)"
 
 msgid "Mother's maiden name"
-msgstr ""
+msgstr "ชื่อกลางของมารดา"
 
 msgid "Moving Average Convergence/Divergence (MACD)"
-msgstr ""
+msgstr "Moving Average Convergence/Divergence (MACD)"
 
 msgid "Mr"
-msgstr ""
+msgstr "นาย"
 
 msgid "Mrs"
-msgstr ""
+msgstr "นาง"
 
 msgid "Ms"
-msgstr ""
+msgstr "นางสาว"
 
 msgid "Name"
-msgstr ""
+msgstr "ชื่อ"
 
 msgid "Name of first love"
-msgstr ""
+msgstr "ชื่อของคนรักคนแรก"
 
 msgid "Name of your pet"
-msgstr ""
+msgstr "ชื่อของสัตว์เลี้ยงของท่าน"
 
 msgid "Navigator handles background"
 msgstr ""
@@ -2107,7 +2107,7 @@ msgid "Net Annual Income"
 msgstr ""
 
 msgid "Net Profit"
-msgstr ""
+msgstr "กำไรสุทธิ"
 
 msgid "New password"
 msgstr ""
@@ -2176,7 +2176,7 @@ msgid "On the basis of the information provided in relation to your knowledge an
 msgstr ""
 
 msgid "On-Neck Pattern (CDLONNECK)"
-msgstr ""
+msgstr "On-Neck Pattern (CDLONNECK)"
 
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr ""
@@ -2212,22 +2212,22 @@ msgid "Open"
 msgstr ""
 
 msgid "Open Account"
-msgstr ""
+msgstr "เปิดบัญชี "
 
 msgid "Open a Financial Account"
 msgstr ""
 
 msgid "Open account"
-msgstr ""
+msgstr "เปิดบัญชี"
 
 msgid "Opening an account"
-msgstr ""
+msgstr "เปิดบัญชี"
 
 msgid "Opens"
-msgstr ""
+msgstr "เปิด"
 
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
 msgstr ""
@@ -2266,37 +2266,37 @@ msgid "Overlap Studies"
 msgstr ""
 
 msgid "PEP Declaration"
-msgstr ""
+msgstr "การแสดงเจตนารมณ์ไม่เกี่ยวข้องทางการเมือง (PEP Declaration)"
 
 msgid "Parabolic SAR (SAR)"
-msgstr ""
+msgstr "Parabolic SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr ""
 
 msgid "Patented technology"
-msgstr ""
+msgstr "เทคโนโลยีที่จดสิทธิบัตร"
 
 msgid "Pattern Recognition"
-msgstr ""
+msgstr "การรู้จำรูปแบบ"
 
 msgid "Payment agent"
-msgstr ""
+msgstr "ตัวแทนรับชำระเงิน"
 
 msgid "Payment agents"
-msgstr ""
+msgstr "ตัวแทนรับชำระเงิน"
 
 msgid "Payment options"
-msgstr ""
+msgstr "วิธีการชำระเงิน"
 
 msgid "Payments"
-msgstr ""
+msgstr "การชำระเงิน"
 
 msgid "Payout"
 msgstr ""
 
 msgid "Pension"
-msgstr ""
+msgstr "บำนาญ"
 
 msgid "Percentage Price Oscillator (PPO)"
 msgstr ""
@@ -2314,10 +2314,10 @@ msgid "Phone"
 msgstr ""
 
 msgid "Piercing Pattern (CDLPIERCING)"
-msgstr ""
+msgstr "Piercing Pattern (CDLPIERCING)"
 
 msgid "Pip"
-msgstr ""
+msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
 msgstr ""
@@ -2395,7 +2395,7 @@ msgid "Portugu s"
 msgstr ""
 
 msgid "Postal code/ZIP"
-msgstr ""
+msgstr "รหัสไปรษณีย์"
 
 msgid "Potential Payout"
 msgstr ""
@@ -2440,7 +2440,7 @@ msgid "Profit table"
 msgstr ""
 
 msgid "Profit/ Loss"
-msgstr ""
+msgstr "กำไร / ขาดทุน"
 
 msgid "Profit/Loss (points)"
 msgstr ""
@@ -2461,13 +2461,13 @@ msgid "Quiet markets"
 msgstr ""
 
 msgid "Rate Of Change (ROC)"
-msgstr ""
+msgstr "Rate Of Change (ROC)"
 
 msgid "Rate Of Change Percentage (ROCP)"
-msgstr ""
+msgstr "Rate Of Change Percentage (ROCP)"
 
 msgid "Rate Of Change Ratio (ROCR)"
-msgstr ""
+msgstr "Rate Of Change Ratio (ROCR)"
 
 msgid "Read"
 msgstr ""
@@ -2539,7 +2539,7 @@ msgid "Repeat password"
 msgstr ""
 
 msgid "Resale price"
-msgstr ""
+msgstr "ราคาจำหน่ายต่อ"
 
 msgid "Reset zoom"
 msgstr ""
@@ -2671,7 +2671,7 @@ msgid "Share chart"
 msgstr ""
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
-msgstr ""
+msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term"
 msgstr ""
@@ -2683,7 +2683,7 @@ msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish
 msgstr ""
 
 msgid "Simple Moving Average (SMA)"
-msgstr ""
+msgstr "Simple Moving Average (SMA)"
 
 msgid "Simplicity"
 msgstr ""
@@ -2698,7 +2698,7 @@ msgid "Source of wealth"
 msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
-msgstr ""
+msgstr "Spinning Top (CDLSPINNINGTOP)"
 
 msgid "Spline"
 msgstr ""
@@ -2719,10 +2719,10 @@ msgid "Stake"
 msgstr ""
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
-msgstr ""
+msgstr "Stalled Pattern (CDLSTALLEDPATTERN)"
 
 msgid "Standard Deviation (STDDEV)"
-msgstr ""
+msgstr "Standard Deviation (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
 msgstr ""
@@ -2764,28 +2764,28 @@ msgid "Stays in"
 msgstr ""
 
 msgid "Step 1: Define your position"
-msgstr ""
+msgstr "ขั้นตอนที่ 1: กำหนดโพซิชั่นของท่าน"
 
 msgid "Step 2: Get your trade price"
-msgstr ""
+msgstr "ขั้นตอนที่ 2: ตั้งราคาซื้อขายของท่าน"
 
 msgid "Step 3: Make your trade"
-msgstr ""
+msgstr "ขั้นตอนที่ 3: ทำการซื้อขาย"
 
 msgid "Stick Sandwich (CDLSTICKSANDWICH)"
-msgstr ""
+msgstr "Stick Sandwich (CDLSTICKSANDWICH)"
 
 msgid "Stochastic (STOCH )"
-msgstr ""
+msgstr "Stochastic (STOCH )"
 
 msgid "Stochastic Fast (STOCHF)"
-msgstr ""
+msgstr "Stochastic Fast (STOCHF)"
 
 msgid "Stochastic Relative Strength Index (STOCHRSI)"
-msgstr ""
+msgstr "Stochastic Relative Strength Index (STOCHRSI)"
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr ""
+msgstr "Stochastic Slow (STOCHS)"
 
 msgid "Stock Indices"
 msgstr ""
@@ -2830,16 +2830,16 @@ msgid "Successfully applied the template and saved it as"
 msgstr ""
 
 msgid "Summation (SUM)"
-msgstr ""
+msgstr "Summation (SUM)"
 
 msgid "Sun"
-msgstr ""
+msgstr "อา"
 
 msgid "Sunday"
-msgstr ""
+msgstr "วันอาทิตย์"
 
 msgid "Table"
-msgstr ""
+msgstr "ตาราง"
 
 msgid "Take early profits"
 msgstr ""
@@ -3139,19 +3139,19 @@ msgid "This website is marketed in the rest of the EU, for investment products b
 msgstr ""
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
-msgstr ""
+msgstr "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 
 msgid "Three Black Crows (CDL3BLACKCROWS)"
-msgstr ""
+msgstr "Three Black Crows (CDL3BLACKCROWS)"
 
 msgid "Three Inside Up/Down (CDL3INSIDE)"
-msgstr ""
+msgstr "Three Inside Up/Down (CDL3INSIDE)"
 
 msgid "Three Outside Up/Down (CDL3OUTSIDE)"
-msgstr ""
+msgstr "Three Outside Up/Down (CDL3OUTSIDE)"
 
 msgid "Three Stars In The South (CDL3STARSSOUTH)"
-msgstr ""
+msgstr "Three Stars In The South (CDL3STARSSOUTH)"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
 msgstr ""
@@ -3160,31 +3160,31 @@ msgid "Three white days occur. Each successive day opens within the body of the 
 msgstr ""
 
 msgid "Three-Line Strike (CDL3LINESTRIKE)"
-msgstr ""
+msgstr "Three-Line Strike (CDL3LINESTRIKE)"
 
 msgid "Thrusting Pattern (CDLTHRUSTING)"
-msgstr ""
+msgstr "Thrusting Pattern (CDLTHRUSTING)"
 
 msgid "Thu"
-msgstr ""
+msgstr "พฤ"
 
 msgid "Thursday"
-msgstr ""
+msgstr "วันพฤหัสบดี"
 
 msgid "Tick"
-msgstr ""
+msgstr "ช่วงห่างของราคา"
 
 msgid "Tick Trade app"
-msgstr ""
+msgstr "แอพ Tick Trade "
 
 msgid "Tick {row.number}"
-msgstr ""
+msgstr "ช่วงราคา {row.number}"
 
 msgid "Ticks"
-msgstr ""
+msgstr "ช่วงห่างของราคา"
 
 msgid "Time interval"
-msgstr ""
+msgstr "ช่วงเวลา"
 
 msgid "Time out until"
 msgstr ""
@@ -3235,10 +3235,10 @@ msgid "Total Copiers"
 msgstr ""
 
 msgid "Total Cost"
-msgstr ""
+msgstr "ต้นทุนรวม"
 
 msgid "Total Profit/Loss"
-msgstr ""
+msgstr "รวมกำไร/ขาดทุน"
 
 msgid "Total Trades"
 msgstr ""
@@ -3247,13 +3247,13 @@ msgid "Touch"
 msgstr ""
 
 msgid "Touch/No Touch"
-msgstr ""
+msgstr "Touch/No Touch"
 
 msgid "Tourism"
-msgstr ""
+msgstr "การท่องเที่ยว"
 
 msgid "Town/City"
-msgstr ""
+msgstr "เมือง"
 
 msgid "Trade"
 msgstr ""
@@ -3262,7 +3262,7 @@ msgid "Trade Confirmation"
 msgstr ""
 
 msgid "Trade Types"
-msgstr ""
+msgstr "ประเภทการซื้อขาย"
 
 msgid "Trade all market conditions"
 msgstr ""
@@ -3319,19 +3319,19 @@ msgid "Transfer to another Binary account"
 msgstr ""
 
 msgid "Triangular Moving Average (TRIMA)"
-msgstr ""
+msgstr "Triangular Moving Average (TRIMA)"
 
 msgid "Triple Exponential Moving Average (T3)"
-msgstr ""
+msgstr "Triple Exponential Moving Average (T3)"
 
 msgid "Triple Exponential Moving Average (TEMA)"
-msgstr ""
+msgstr "Triple Exponential Moving Average (TEMA)"
 
 msgid "Tristar Pattern (CDLTRISTAR)"
-msgstr ""
+msgstr "Tristar Pattern (CDLTRISTAR)"
 
 msgid "True Range (TRANGE)"
-msgstr ""
+msgstr "True Range (TRANGE)"
 
 msgid "Try"
 msgstr ""
@@ -3346,10 +3346,10 @@ msgid "Turnover"
 msgstr ""
 
 msgid "Two Crows (CDL2CROWS)"
-msgstr ""
+msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Typical Price (TYPPRICE)"
-msgstr ""
+msgstr "Typical Price (TYPPRICE)"
 
 msgid "USD"
 msgstr ""
@@ -3358,7 +3358,7 @@ msgid "USDJPY"
 msgstr ""
 
 msgid "Ultimate Oscillator (ULTOSC)"
-msgstr ""
+msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
 msgstr ""
@@ -3373,7 +3373,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr ""
 
 msgid "Unique 3 River (CDLUNIQUE3RIVER)"
-msgstr ""
+msgstr "Unique 3 River (CDLUNIQUE3RIVER)"
 
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 msgstr ""
@@ -3430,28 +3430,28 @@ msgid "Verification code has been sent to your email"
 msgstr ""
 
 msgid "Verification token"
-msgstr ""
+msgstr "รหัสตรวจสอบ"
 
 msgid "Verify new password"
-msgstr ""
+msgstr "ตรวจสอบรหัสผ่านใหม่"
 
 msgid "Vertical line"
 msgstr ""
 
 msgid "View"
-msgstr ""
+msgstr "ดูรายการ"
 
 msgid "View Statement"
-msgstr ""
+msgstr "ดูรายการเดินบัญชี"
 
 msgid "Volatile markets"
-msgstr ""
+msgstr "ตลาดผันผวน"
 
 msgid "Volatility Indicators"
-msgstr ""
+msgstr "ดัชนีความผันผวน"
 
 msgid "Volatility Indices"
-msgstr ""
+msgstr "ดัชนีความผันผวน"
 
 msgid "Volatility indices"
 msgstr ""
@@ -3478,7 +3478,7 @@ msgid "We're really proud of this award. We're strongly committed to offering an
 msgstr ""
 
 msgid "Webtrader"
-msgstr ""
+msgstr "เว็บเทรดเดอร์"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
 msgstr ""
@@ -3487,19 +3487,19 @@ msgid "Webtrader uses new web technologies for rich and enjoyable trading experi
 msgstr ""
 
 msgid "Wed"
-msgstr ""
+msgstr "พ"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "วันพุธ"
 
 msgid "Weighted Close Price (WCLPRICE)"
-msgstr ""
+msgstr "Weighted Close Price (WCLPRICE)"
 
 msgid "Weighted Moving Average (WMA)"
-msgstr ""
+msgstr "Weighted Moving Average (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr ""
+msgstr "ยินดีต้อนรับสู่ Binary.com เว็บเทรดเดอร์"
 
 msgid "What is pep?"
 msgstr ""
@@ -3520,7 +3520,7 @@ msgid "Will I need to install any software?"
 msgstr ""
 
 msgid "Williams' %R (WILLR)"
-msgstr ""
+msgstr "Williams' %R (WILLR)"
 
 msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
 msgstr ""
@@ -3550,28 +3550,28 @@ msgid "Workspace"
 msgstr ""
 
 msgid "X-axis labels"
-msgstr ""
+msgstr "ป้ายชื่อแกนเอ็กซ์ (แนวนอน)"
 
 msgid "X-axis line"
-msgstr ""
+msgstr "เส้นแกนเอ็กซ์ (แนวนอน)"
 
 msgid "X-axis tick"
-msgstr ""
+msgstr "ช่วงราคาบนแกนเอ็กซ์ (แนวนอน)"
 
 msgid "Xodds.com"
-msgstr ""
+msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
-msgstr ""
+msgstr "เส้นกริดแกนวาย (แนวตั้ง)"
 
 msgid "Y-axis labels"
-msgstr ""
+msgstr "ป้ายชื่อแกนวาย (แนวตั้ง)"
 
 msgid "Yearly Profitable Trades"
 msgstr ""
 
 msgid "Yes"
-msgstr ""
+msgstr "ใช่"
 
 msgid "You are not copying any trade(s) yet"
 msgstr ""
@@ -3652,7 +3652,7 @@ msgid "Your transaction reference number is"
 msgstr ""
 
 msgid "Zoom"
-msgstr ""
+msgstr "ขยาย"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr ""
@@ -3682,10 +3682,10 @@ msgid "customer support"
 msgstr ""
 
 msgid "day"
-msgstr ""
+msgstr "วัน"
 
 msgid "days"
-msgstr ""
+msgstr "วัน"
 
 msgid "disposes of its stake"
 msgstr ""
@@ -3709,10 +3709,10 @@ msgid "has updated its"
 msgstr ""
 
 msgid "hour"
-msgstr ""
+msgstr "ชั่วโมง"
 
 msgid "hours"
-msgstr ""
+msgstr "ชั่วโมง"
 
 msgid "if this is not your country of residence"
 msgstr ""
@@ -3814,16 +3814,16 @@ msgid "view license"
 msgstr ""
 
 msgid "www.Binary.com"
-msgstr ""
+msgstr "www.Binary.com"
 
 msgid "yes"
 msgstr ""
 
 msgid "{agent.commission}%"
-msgstr ""
+msgstr "{agent.commission}%"
 
 msgid "| Payout"
-msgstr ""
+msgstr "| การชำระเงิน"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr ""
