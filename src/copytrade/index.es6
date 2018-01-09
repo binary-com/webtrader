@@ -24,7 +24,7 @@ const TRADE_TYPES = [{
   },
   {
     code: 'PUT',
-    name: 'Lower',
+    name: 'Fall',
   },
   {
     code: 'PUT',
