@@ -17,11 +17,18 @@ const getLoggedInUserId = () => local_storage.get("oauth")[0].id;
 
 const TRADE_TYPES = [{
     code: 'CALL',
-    name: 'Rise/Higher',
+    name: 'Rise',
+  }, {
+    code: 'CALL',
+    name: 'Higher',
   },
   {
     code: 'PUT',
-    name: 'Fall/Lower',
+    name: 'Lower',
+  },
+  {
+    code: 'PUT',
+    name: 'Lower',
   },
   {
     code: 'ONETOUCH',
@@ -99,7 +106,15 @@ const validateYourCopySettingsData = yourCopySettingsData => {
           (yourCopySettingsData.min_trade_stake >= 1 && yourCopySettingsData.min_trade_stake <= 50000)) {
           if (!yourCopySettingsData.max_trade_stake ||
             (yourCopySettingsData.max_trade_stake >= 1 && yourCopySettingsData.max_trade_stake <= 50000)) {
-              valid = true;
+              if (yourCopySettingsData.min_trade_stake && yourCopySettingsData.max_trade_stake) {
+                if (yourCopySettingsData.min_trade_stake > yourCopySettingsData.max_trade_stake) {
+                  errorMessage = 'Min Trade Stake should be less than Max Trade Stake';
+                } else {
+                  valid = true;
+                }
+              } else {
+                valid = true;
+              }
           } else {
             errorMessage = 'Max Trade Stake should between 1 and 50000';
           }
@@ -299,7 +314,6 @@ const state = {
       /**
        * Make sure min_trade_stake & max_trade_stack are numeric
        */
-      console.log(state.traderTokens[index].yourCopySettings);
       if(state.traderTokens[index].yourCopySettings.min_trade_stake)
         state.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.min_trade_stake);
 

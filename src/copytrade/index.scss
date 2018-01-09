@@ -179,6 +179,9 @@
             }
             .token-header-controls {
               width: 150px;
+              span {
+                pointer-events: none;
+              }
             }
           }
         }
