@@ -90,9 +90,10 @@
           width: 35px;
           white-space: nowrap;
           span {
-            font-size: 25px;
+            font-size: 20px;
             position: relative;
-            top: 10px;
+            top: 8px;
+            margin: auto;
           }
         }
         .cell {
@@ -181,6 +182,7 @@
               width: 150px;
               span {
                 pointer-events: none;
+                background: none;
               }
             }
           }
