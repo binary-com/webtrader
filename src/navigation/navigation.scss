@@ -50,6 +50,9 @@ body {
          transition: visibility 0s 0.1s;
       }
    }
+  .resources {
+    .ui-icon { left: 10px; }
+  }
   .trade, .instruments, .resources {
       .ui-menu .ui-menu-item {
          list-style-image: none !important;
@@ -57,6 +60,10 @@ body {
          .ui-menu-item-wrapper {
             padding: 7px 1em 7px .4em;
          }
+        div {
+          font-size: 1rem;
+          text-align: left;
+        }
       }
       .ui-widget.ui-widget-content {
          border: none !important;
@@ -70,16 +77,6 @@ body {
             color: white;
             padding-left: 30px !important;
          }
-      }
-      .ui-icon { left: 6px; }
-      .ui-icon-caret-1-e {
-         background-image: url('../images/single-angle-pointing-to-right.svg') !important;
-         background-size: 12px 12px !important;
-         background-position: 2px 5px !important;
-         margin: 0;
-         top: calc(50% - 12px);
-         right: 2px;
-         left: auto;
       }
       .ui-state-active {
          margin: 0 !important;
