@@ -383,7 +383,7 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
 select + .ui-selectmenu-button { border-radius: 3px;}
 
 #doorbell-button  {
-    right: -37px;
+    right: -67px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
