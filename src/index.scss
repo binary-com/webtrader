@@ -109,4 +109,8 @@ body {
     background-color: #2E8836;
     bottom: 100px;
     z-index: +1000;
+    &:hover {
+        right: -37px;
+        transition: right 100ms linear;
+    }
 }
