@@ -383,7 +383,7 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
 select + .ui-selectmenu-button { border-radius: 3px;}
 
 #doorbell-button  {
-    right: -37px;
+    right: -67px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -393,6 +393,10 @@ select + .ui-selectmenu-button { border-radius: 3px;}
     background-color: #2E8836;
     bottom: 100px;
     z-index: +1000;
+}
+#doorbell-button:hover {
+    right: -40px;
+    transition: right 100ms linear;
 }
 
 #doorbell-error { color: red; }
