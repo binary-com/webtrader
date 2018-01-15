@@ -860,9 +860,6 @@ msgstr ""
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "" 
 
-msgid "Change Backend Server"
-msgstr "" 
-
 msgid "Change password"
 msgstr "" 
 
@@ -1010,10 +1007,13 @@ msgstr ""
 msgid "Contracts"
 msgstr "" 
 
+msgid "Copier"
+msgstr "" 
+
 msgid "Coppock Curve (CC)"
 msgstr "" 
 
-msgid "Copy Trade"
+msgid "Copy Trading"
 msgstr "" 
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -1173,6 +1173,9 @@ msgid "Do you offer virtual-money accounts?"
 msgstr "" 
 
 msgid "Do you want to install Webtrader chrome extension?"
+msgstr "" 
+
+msgid "Do you want to install the Webtrader chrome extension?"
 msgstr "" 
 
 msgid "Doji (CDLDOJI)"
@@ -1460,7 +1463,13 @@ msgstr ""
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "" 
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr "" 
+
 msgid "Get your price"
+msgstr "" 
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
 msgstr "" 
 
 msgid "Goes out"
@@ -1805,9 +1814,6 @@ msgstr ""
 msgid "Loading Asset Index"
 msgstr "" 
 
-msgid "Loading Configurations"
-msgstr "" 
-
 msgid "Loading Copy Trade"
 msgstr "" 
 
@@ -2127,12 +2133,6 @@ msgid "November"
 msgstr "" 
 
 msgid "Now"
-msgstr "" 
-
-msgid "OAuth App ID (Optional)"
-msgstr "" 
-
-msgid "OAuth Server"
 msgstr "" 
 
 msgid "OHLC"
@@ -3272,6 +3272,9 @@ msgstr ""
 msgid "Trade your way"
 msgstr "" 
 
+msgid "Trader"
+msgstr "" 
+
 msgid "Trader's Statistics"
 msgstr "" 
 
@@ -3461,9 +3464,6 @@ msgstr ""
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "" 
 
-msgid "Websocket Server"
-msgstr "" 
-
 msgid "Webtrader"
 msgstr "" 
 
@@ -3560,7 +3560,16 @@ msgstr ""
 msgid "Yes"
 msgstr "" 
 
+msgid "You are not copying any trade(s) yet"
+msgstr "" 
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
+msgstr "" 
+
+msgid "You can only allow other traders to copy your trade"
+msgstr "" 
+
+msgid "You can only copy other trader's trade"
 msgstr "" 
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
@@ -3584,9 +3593,6 @@ msgstr ""
 msgid "You have sold the following contract"
 msgstr "" 
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "" 
-
 msgid "You haven't saved any templates yet"
 msgstr "" 
 
@@ -3605,6 +3611,9 @@ msgstr ""
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "" 
 
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr "" 
+
 msgid "Your browser is not supported"
 msgstr "" 
 
@@ -3614,7 +3623,7 @@ msgstr ""
 msgid "Your email"
 msgstr "" 
 
-msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
+msgid "Your money is always safe with Binary.com"
 msgstr "" 
 
 msgid "Your new account balance is"
@@ -3671,12 +3680,6 @@ msgstr ""
 msgid "e-commerce site for branded merchandise"
 msgstr "" 
 
-msgid "e.g"
-msgstr "" 
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "" 
-
 msgid "end time"
 msgstr "" 
 
@@ -3696,12 +3699,6 @@ msgid "hour"
 msgstr "" 
 
 msgid "hours"
-msgstr "" 
-
-msgid "https://developers.binary.com/"
-msgstr "" 
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 msgstr "" 
 
 msgid "if this is not your country of residence"
@@ -3755,9 +3752,6 @@ msgstr ""
 msgid "next tick"
 msgstr "" 
 
-msgid "oauth"
-msgstr "" 
-
 msgid "of \"Now\", the"
 msgstr "" 
 
@@ -3804,9 +3798,6 @@ msgid "trading frequency"
 msgstr "" 
 
 msgid "view license"
-msgstr "" 
-
-msgid "websocket"
 msgstr "" 
 
 msgid "www.Binary.com"

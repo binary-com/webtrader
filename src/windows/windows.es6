@@ -181,25 +181,6 @@ const addDateToHeader = function(options) {
    const addDatePicker = (opts) => {
       const dpicker_input = $("<input type='hidden' />")
          .insertAfter(header);
-      const add_clear_button = (input) => {
-         /* Run this after date-picker is constructed
-                Source: stackoverflow.com/questions/4598850 */
-         setTimeout(() => {
-            const button_pane = $(input)
-               .datepicker('widget')
-               .find('.ui-datepicker-buttonpane');
-
-            $('<button/>', {
-               text: 'Clear'.i18n(),
-               click: function () {
-                  opts.onclear && opts.onclear();
-                  $(input).datepicker('hide');
-               }
-            })
-               .addClass('ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all')
-               .appendTo(button_pane);
-         }, 0);
-      };
 
       var options = {
          showOn: 'both',
@@ -213,10 +194,8 @@ const addDateToHeader = function(options) {
          changeYear: true,
          onSelect: function () { $(this).change(); },
          beforeShow: (input, inst) => {
-            add_clear_button(input);
             inst.dpDiv.css({ marginTop: '10px', marginLeft: '-220px' });
          },
-         onChangeMonthYear:add_clear_button,
          closeText: 'Done'.i18n(),
          currentText: 'Today'.i18n()
       };

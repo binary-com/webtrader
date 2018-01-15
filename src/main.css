@@ -485,3 +485,13 @@ label.checkbox input:checked ~ span.check {
     position: absolute;
     z-index: +1;
 }
+
+.ui-icon-caret-1-e {
+    background-image: url('./images/single-angle-pointing-to-right.svg') !important;
+    background-size: 12px 10px !important;
+    background-position: 2px 5px !important;
+    margin: 0 !important;
+    top: calc(50% - 10px) !important;
+    right: 2px !important;
+    left: auto;
+}

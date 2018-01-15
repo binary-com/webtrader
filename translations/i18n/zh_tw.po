@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: webtrader\n"
+"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"PO-Revision-Date: 2018-01-03 01:00-0500\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -179,7 +193,7 @@ msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees
 msgstr "- 我們將永不向您追加保證金、不會有缺口風險、或收取滑價費用、隱藏費或佣金"
 
 msgid "0-1 year"
-msgstr "0-1 年"
+msgstr "0-1年"
 
 msgid "0-5 transactions in the past 12 months"
 msgstr "過去12月內0-5次交易"
@@ -188,7 +202,7 @@ msgid "1"
 msgstr "1"
 
 msgid "1 Day"
-msgstr "1 天"
+msgstr "1天"
 
 msgid "1 Hour"
 msgstr "1小時"
@@ -203,7 +217,7 @@ msgid "1 million transactions/day"
 msgstr "1百萬筆交易/天"
 
 msgid "1-2 years"
-msgstr "1-2 年"
+msgstr "1-2年"
 
 msgid "10"
 msgstr "10"
@@ -353,22 +367,22 @@ msgid "8h"
 msgstr "8小時"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr "十字夜星包括長線看漲燭圖， 接下來是其上有缺口的十字圖，然後是在首個燭圖主體內完整收盤並同時確認翻轉的第三看跌燭圖。被視為強大的看跌價逆轉K 線圖形態"
+msgstr "十字夜星包括長線看漲燭圖， 接下來是其上有缺口的十字圖，然後是在首個燭圖主體內完整收盤並同時確認翻轉的第三看跌燭圖。被視為強大的看跌價逆轉K線圖形態"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "平滑移動平均線類似簡單移動平均線與指數移動平均線的混合，但應用期限較長"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr "陀螺型K 線圖是體型較小的看漲或看跌K 線圖。影子頭部和尾部長度不一。它與十字星K 線圖一樣代表買賣雙方相符時的猶疑不決點"
+msgstr "陀螺型K線圖是體型較小的看漲或看跌K線圖。影子頭部和尾部長度不一。它與十字星K線圖一樣代表買賣雙方相符時的猶疑不決點"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
 msgstr "如果市場在所選期限內一直保持在（沒有觸及）高障礙或低障礙之間，所選擇的「保持在範圍之內」交易即可獲利。如果市場在所選期限內只要觸及高障礙或低障礙，所選擇的「超出範圍之外」交易即可獲利"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr "看跌K 線圖包含示範以下特性的三個燭形線。首個條形圖是位於上漲趨勢中的巨大白色K 線圖，中間條形圖是體積較小、在首個白條形圖上方收盤的紅色或白色燭形線， 最後的條形圖是比較大的紅色燭形線， 在中間燭形線下方開盤，在首個條形圖主體中間附近收盤"
+msgstr "看跌K線圖包含示範以下特性的三個燭形線。首個條形圖是位於上漲趨勢中的巨大白色K線圖，中間條形圖是體積較小、在首個白條形圖上方收盤的紅色或白色燭形線， 最後的條形圖是比較大的紅色燭形線， 在中間燭形線下方開盤，在首個條形圖主體中間附近收盤"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr "看跌K 線圖用於預測目前上漲趨勢的翻轉。此圖形包含三個連續的長體型K 線圖，其收盤價比前一天為低，每一交易週期在前一燭形線之中開盤"
+msgstr "看跌K 線圖用於預測目前上漲趨勢的翻轉。此圖形包含三個連續的長體型K線圖，其收盤價比前一天為低，每一交易週期在前一燭形線之中開盤"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
 msgstr "看跌反攻線是上漲趨勢中的長條白色燭線，其後是一長條黑色燭線。兩條燭線的收盤價相同。看漲反攻線是下跌趨勢中的長條黑色燭線，其後是一長條白色燭線。兩條燭線的收盤價相同"
@@ -395,10 +409,10 @@ msgid "A bullish or bearish candle followed by a doji with with a downward or up
 msgstr "看漲或看跌燭形圖，其後是具下跌或上漲趨勢缺口的十字"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr "K 線圖圖表上有巨大K 線圖，其後是位於較大體形垂直面範圍內的較小體形K 線圖。關於K 線圖的顏色，看漲孕線是黑負面色下跌走勢K 線圖中包含小型白正面色K 線圖，提供下跌走勢的反轉訊號"
+msgstr "K 線圖圖表上有巨大K線圖，其後是位於較大體形垂直面範圍內的較小體形K線圖。關於K線圖的顏色，看漲孕線是黑負面色下跌走勢K線圖中包含小型白正面色K線圖，提供下跌走勢的反轉訊號"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
-msgstr "具長黑體形（長線）的K 線圖代表市場看跌力量。股票價格大幅起伏，以接近當日最高水平開盤，並以接近當日最低水平收盤。具長白線的燭形圖表示市場看漲力量。股票價格大幅起伏，以接近當日最低水平開盤，並以接近當日最高水平收盤"
+msgstr "具長黑體形（長線）的K線圖代表市場看跌力量。股票價格大幅起伏，以接近當日最高水平開盤，並以接近當日最低水平收盤。具長白線的燭形圖表示市場看漲力量。股票價格大幅起伏，以接近當日最低水平開盤，並以接近當日最高水平收盤"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
 msgstr "帶特長上下暗影的K 線圖，並在日本K 線圖圖表中具較小真實體形。它顯示市場失去了在此燭形圖出現以前所具的市場方向偏差"
@@ -422,7 +436,7 @@ msgid "A technical momentum indicator that compares a security's closing price t
 msgstr "將證卷的收盤價與某個固定週期中的價格範圍相比較的技術性動量指標。可通過週期調整或取結果的移動平均值將振盪器對市場走勢的敏感度降低"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr "交易員螢幕上由三個K 線圖形成類似三明治形的技術性交易形式。豎狀三明治的中間K 線圖顏色與兩旁K 線圖的顏色呈對比。兩旁K 線圖的交易範圍比中間K 線圖大。看漲和看跌指標市場均可能發生豎狀三明治形式"
+msgstr "交易員螢幕上由三個K線圖形成類似三明治形的技術性交易形式。豎狀三明治的中間K線圖顏色與兩旁K 線圖的顏色呈對比。兩旁K線圖的交易範圍比中間K線圖大。看漲和看跌指標市場均可能發生豎狀三明治形式"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
 msgstr "跳動點指市場價格的最小上漲或下跌數值"
@@ -632,7 +646,7 @@ msgid "Barrier(s)"
 msgstr "障礙"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "看跌：顯示趨勢到了盡頭的形式，由三個上升趨勢K 線圖組成。第二K 線圖必須以與前一天收盤價相近的價格開盤。最後的K 線圖的長度須短，並可形成向上缺口。另外還可能會有拋售暗影。走勢顯示上漲乏力，存在合併風險與反轉的可能性。看漲：顯示趨勢到了盡頭的形式，由三個下跌趨勢K 線圖組成。第二K 線圖必須以與前一天收盤價相近的價格開盤。最後的K 線圖的長度須長。形式顯示乏力及合併趨勢，並存在反轉的可能性"
+msgstr "看跌：顯示趨勢到了盡頭的形式，由三個上升趨勢K線圖組成。第二K線圖必須以與前一天收盤價相近的價格開盤。最後的K線圖的長度須短，並可形成向上缺口。另外還可能會有拋售暗影。走勢顯示上漲乏力，存在合併風險與反轉的可能性。看漲：顯示趨勢到了盡頭的形式，由三個下跌趨勢K線圖組成。第二K線圖必須以與前一天收盤價相近的價格開盤。最後的K線圖的長度須長。形式顯示乏力及合併趨勢，並存在反轉的可能性"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "執帶 (CDLBELTHOLD)"
@@ -650,7 +664,7 @@ msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets 正式上線"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr "BetOnMarkets.com 的資料庫中有超過400,000個客戶，並僅在第13年即達到10億美元的里程碑，使我們成為領先的固定賠率交易提供商之一"
+msgstr "BetOnMarkets.com 的資料庫中有超過400,000個客戶，在第13年即達到10億美元的里程碑，使我們成為領先的固定賠率交易提供商之一"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
 msgstr "BetOnMarkets.com 把賠付額增至100,000美元、歐元、英鎊及澳元"
@@ -731,7 +745,7 @@ msgid "Binary.com has earned an enviable reputation for our commitment to high e
 msgstr "Binary.com竭誠達到極高的道德標準和優質的交易體驗，因此獲得了令人羨慕的聲譽"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
-msgstr "Binary.com的資料庫中有超過 800,000 個客戶，並僅在第 15 年即達到 20 億美元的里程碑，使我們成為領先的二元期權交易提供商之一"
+msgstr "Binary.com的資料庫中有超過 800,000 個客戶，在第 15 年即達到 20 億美元的里程碑，使我們成為領先的二元期權交易提供商之一"
 
 msgid "Binary.com has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades"
 msgstr "Binary.com在任一時間內均有數千名客戶交易各類金融產品，該平台在這些交易中僅賺取極低的利潤率"
@@ -839,16 +853,16 @@ msgid "Candles"
 msgstr "蠟燭"
 
 msgid "Candlestick down-color"
-msgstr "K 線圖下跌顏色"
+msgstr "K線圖下跌顏色"
 
 msgid "Candlestick down-line"
-msgstr "K 線圖下跌線"
+msgstr "K線圖下跌線"
 
 msgid "Candlestick up-color"
-msgstr "K 線圖上升顏色"
+msgstr "K線圖上升顏色"
 
 msgid "Candlestick up-line"
-msgstr "K 線圖上升線"
+msgstr "K線圖上升線"
 
 msgid "Cash Balance"
 msgstr "現金餘額"
@@ -858,9 +872,6 @@ msgstr "錢德克羅止損 (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "錢德動量震盪指標 (CMO)"
-
-msgid "Change Backend Server"
-msgstr "更換後端伺服器"
 
 msgid "Change password"
 msgstr "更改密碼"
@@ -1009,10 +1020,13 @@ msgstr "合約期間"
 msgid "Contracts"
 msgstr "合約"
 
+msgid "Copier"
+msgstr "複製者"
+
 msgid "Coppock Curve (CC)"
 msgstr "估波曲線 (CC)"
 
-msgid "Copy Trade"
+msgid "Copy Trading"
 msgstr "複製交易"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -1079,7 +1093,7 @@ msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 msgstr "烏雲罩頂 (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
-msgstr "烏雲罩頂是看跌K 線圖反轉形態，當第二天的紅色看跌K 線圖（收盤價低於開盤價）收盤價低於第一天的看漲K 線圖（收盤價高於開盤價）的中間價位時即會發生。我們將使用此形態在看漲貨幣市場中逢高賣出"
+msgstr "烏雲罩頂是看跌K線圖反轉形態，當第二天的紅色看跌K線圖（收盤價低於開盤價）收盤價低於第一天的看漲K線圖（收盤價高於開盤價）的中間價位時即會發生。我們將使用此形態在看漲貨幣市場中逢高賣出"
 
 msgid "Dark Green"
 msgstr "深綠"
@@ -1174,6 +1188,9 @@ msgstr "是否提供虛擬資金帳戶？"
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "是否安裝Webtrader chrome擴充套件?"
 
+msgid "Do you want to install the Webtrader chrome extension?"
+msgstr "是否安裝Webtrader chrome擴充套件?"
+
 msgid "Doji (CDLDOJI)"
 msgstr "十字線 (CDLDOJI)"
 
@@ -1181,7 +1198,7 @@ msgid "Doji Star (CDLDOJISTAR)"
 msgstr "十字星 (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
-msgstr "當證券的開盤價與收盤價幾乎相等時就會形成十字線。上下暗影長度可能不相同，所形成的K 線圖呈交叉形、反交叉形或十字形"
+msgstr "當證券的開盤價與收盤價幾乎相等時就會形成十字線。上下暗影長度可能不相同，所形成的K線圖呈交叉形、反交叉形或十字形"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
@@ -1433,7 +1450,7 @@ msgid "Fractal (FRACTAL)"
 msgstr "分形 (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr "分形是K 線圖圖表上用於識別市場價格反轉點的指標。交易員一般通過使用分形來判斷價格的走勢方向。當圖表出現某一價格形態時即會形成分形"
+msgstr "分形是K線圖圖表上用於識別市場價格反轉點的指標。交易員一般通過使用分形來判斷價格的走勢方向。當圖表出現某一價格形態時即會形成分形"
 
 msgid "Fran ais"
 msgstr "法文"
@@ -1459,8 +1476,14 @@ msgstr "格林威治標準時間"
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "格林威治標準時間是英國在冬季使用的官方時間。夏季則改為英國夏令時，即格林威治標準時間加1 小時。 Binary.com網站全年均使用格林威治標準時間"
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr "獲取交易者的 API 權杖, 並將其添加到您的清單中"
+
 msgid "Get your price"
 msgstr "獲取報價"
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgstr "前往權杖管理, 創建權杖, 並與複製者共用權杖"
 
 msgid "Goes out"
 msgstr "範圍外"
@@ -1595,7 +1618,7 @@ msgid "In April"
 msgstr "今年四月"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
-msgstr "看漲捉腰帶線中經過一段看跌K 線圖後，形成看漲或白色K 線圖。成為交易日最低點的開盤價明顯比收盤價低。這將造成具短上端暗影，無下端暗影的長白色K 線圖。看跌捉腰帶線中，形成看跌或黑色K 線圖，成為交易日最高點的開盤價比前一天的收盤價高，造成具短下端暗影，無上端暗影的長黑K 線圖"
+msgstr "看漲捉腰帶線中經過一段看跌K線圖後，形成看漲或白色K線圖。成為交易日最低點的開盤價明顯比收盤價低。這將造成具短上端暗影，無下端暗影的長白色K線圖。看跌捉腰帶線中，形成看跌或黑色K線圖，成為交易日最高點的開盤價比前一天的收盤價高，造成具短下端暗影，無上端暗影的長黑K線圖"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
 msgstr "看漲圈套形態中經過下跌移動後，看漲燭形線達到超出前三根燭形線的範圍，及非常可能觸發一些止損訂單。此額外購入交易導致明顯的上升趨勢。看跌圈套形態中經過上升移動後，看跌燭形線達到低於前三根燭形線的範圍，及非常可能觸發一些止損訂單。此額外售出交易導致明顯的下降趨勢"
@@ -1691,7 +1714,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "可否透過不同的付款方式存入同一類資金?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr "它有一根長白色燭形線，接著是另一根在首根線上端開盤（高開缺口）的燭形線，接下來是一根在第二天收盤價下端開盤（低開缺口）並低於第一天的收盤價下端的下降黑色K 線圖。預期上漲趨勢將繼續"
+msgstr "它有一根長白色燭形線，接著是另一根在首根線上端開盤（高開缺口）的燭形線，接下來是一根在第二天收盤價下端開盤（低開缺口）並低於第一天的收盤價下端的下降黑色K線圖。預期上漲趨勢將繼續"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "有時候您能在交易到期前賣出合約，但僅在可確定公平價格時方可實現。如果此選項可用，您會在投資組合中您的交易旁邊看到藍色的「賣出」按鈕"
@@ -1721,7 +1744,7 @@ msgid "June"
 msgstr "六月"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "僅須即將導入的頁面上點擊 授予"
+msgstr "僅須即將導入的頁面上點擊“授予”"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
 msgstr "考夫曼自適應移動平均線 (KAMA)"
@@ -1736,10 +1759,10 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "反撲 - 由長身實體線判斷看漲/看跌趨勢 (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "當K 線圖圖表出現兩根長身實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K 線圖，其後有高開缺口及也是無暗影的白色或中空K 線圖"
+msgstr "當K線圖圖表出現兩根長身實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K線圖，其後有高開缺口及也是無暗影的白色或中空K線圖"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "當K 線圖圖表出現兩根實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K 線圖，其後有高開缺口及也是無暗影的白色或中空K 線圖"
+msgstr "當K線圖圖表出現兩根實體線（一白一黑）及中間有缺口時，即形成反撲形態。看漲反撲形態將顯示無暗影的黑色或實體K線圖，其後有高開缺口及也是無暗影的白色或中空K線圖"
 
 msgid "Known risks"
 msgstr "已知風險"
@@ -1803,9 +1826,6 @@ msgstr "載入"
 
 msgid "Loading Asset Index"
 msgstr "載入資產指數"
-
-msgid "Loading Configurations"
-msgstr "載入設定"
 
 msgid "Loading Copy Trade"
 msgstr "正在載入複製交易"
@@ -2114,7 +2134,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "標準化真實波動幅度均值 (NATR)嘗試使用以下公式將各工具之間的真實波動幅度均值標準化"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "注： 您只能擁有一個法定貨幣帳戶以及每種加密貨幣一個帳戶"
+msgstr "注： 您只能擁有一個法定貨幣帳戶以及任一種加密貨幣帳戶"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "請注意:如果要使用付款代理提款，您必須僅通過付款代理存款"
@@ -2127,12 +2147,6 @@ msgstr "十一月"
 
 msgid "Now"
 msgstr "現在"
-
-msgid "OAuth App ID (Optional)"
-msgstr "OAuth 應用 ID (可選項目)"
-
-msgid "OAuth Server"
-msgstr "OAuth 伺服器"
 
 msgid "OHLC"
 msgstr "OHLC條形圖"
@@ -2411,7 +2425,7 @@ msgid "Price the trade"
 msgstr "交易報價"
 
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
-msgstr "價格趨勢在形態開始時下降，出現高身黑色燭形線。接下來，一支恰好可容納在前支燭形線體內的白色燭形線出現， 從而完成了看漲母子K 線圖。形態的最後一天是於前收盤價上方收盤的確認燭形線，它確實能夠做到。此組合顯示價格具反轉趨勢"
+msgstr "價格趨勢在形態開始時下降，出現高身黑色燭形線。接下來，一支恰好可容納在前支燭形線體內的白色燭形線出現， 從而完成了看漲母子K線圖。形態的最後一天是於前收盤價上方收盤的確認燭形線，它確實能夠做到。此組合顯示價格具反轉趨勢"
 
 msgid "Primary"
 msgstr "主要"
@@ -2666,7 +2680,7 @@ msgid "Short-term action"
 msgstr "短期交易操作"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
-msgstr "並排的白色K 線圖形態是三重形態。看漲形態：上升走勢中，首支K 線圖後面的是另一支以高於首支收盤價開盤的上升K 線圖（高開缺口），再後面的是第三支以低於第二支收盤價開盤的上升K 線圖（低開缺口）。看跌形態：下降走勢中，首支K 線圖下跌，後面的是一支以低於首支收盤價開盤的上升K 線圖（低開缺口），再後面的是以低於第二支收盤價開盤的上升K 線圖。此形態顯示持續下跌走勢"
+msgstr "並排的白色K線圖形態是三重形態。看漲形態：上升走勢中，首支K線圖後面的是另一支以高於首支收盤價開盤的上升K線圖（高開缺口），再後面的是第三支以低於第二支收盤價開盤的上升K線圖（低開缺口）。看跌形態：下降走勢中，首支K線圖下跌，後面的是一支以低於首支收盤價開盤的上升K線圖（低開缺口），再後面的是以低於第二支收盤價開盤的上升K線圖。此形態顯示持續下跌走勢"
 
 msgid "Simple Moving Average (SMA)"
 msgstr "簡單移動平均線 (SMA)"
@@ -2975,10 +2989,10 @@ msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar
 msgstr "隨機相對強弱指數（STOCHRSI）由Tushar Chande和Stanley Kroll提出。StochRSI是個震盪指標，測量特定週期內相對於高低範圍的相對強弱指數（RSI）值。StochRSI對RSI值而不是價格應用隨機公式。 因此導致它成為指標中的指標。結果是個在0和1之間波動的指標"
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
-msgstr "探水竿缺口形態由三支K 線圖組成。第一支是位於指定下跌趨勢內的紅色K 線圖。第二支也是紅色K 線圖，在前支線收盤價下有缺口。最後是一支白色K 線圖，在首兩支線缺口間收盤"
+msgstr "探水竿缺口形態由三支K線圖組成。第一支是位於指定下跌趨勢內的紅色K線圖。第二支也是紅色K線圖，在前支線收盤價下有缺口。最後是一支白色K線圖，在首兩支線缺口間收盤"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
-msgstr "三法形態是持續趨勢形態，可在上升或下降趨勢中出現。在上升趨勢中，它被稱為上漲三法形態。在下降趨勢中，它被稱為下跌三法形態。三法形態由至少五支K 線圖組成"
+msgstr "三法形態是持續趨勢形態，可在上升或下降趨勢中出現。在上升趨勢中，它被稱為上漲三法形態。在下降趨勢中，它被稱為下跌三法形態。三法形態由至少五支K線圖組成"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
 msgstr "三角移動平均線(TRIMA)表示平均價格，但給予交易週期的中間部分更多的權重。計算時使用的窗口寬度是價格系列長度的一半，使資料加倍平滑"
@@ -3008,7 +3022,7 @@ msgid "The breakaway pattern begins with a long candle representing the current 
 msgstr "突破形態以長燭形線開始，代表目前趨勢。下一支燭形線顏色相同，從首支燭形線開缺口脫離。第三支燭形線可能是兩種色的其中一種，不會顯示目前趨勢有何變化。第四天趨勢持續不變，因此繼續產生同樣顏色的燭形線。但第五天的趨勢逆轉。請留意，它僅以目前趨勢稍微相反的價格開盤，並以相同方向繼續，最後在缺口區內收盤"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
-msgstr "收盤黑色實體燭形線是高黑K 線圖，有上影，但無下影。收盤白色實體K 線圖是高白燭形線，有下影，但無上影"
+msgstr "收盤黑色實體燭形線是高黑K線圖，有上影，但無下影。收盤白色實體K線圖是高白燭形線，有下影，但無上影"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "公司把客戶資金存在獨立的銀行帳戶，與操作帳戶分開，因此如果公司破產，客戶資金不會成為公司資產的一部分。這符合客戶資金獨立分離帳戶管理的博彩委員會要求，級別為"
@@ -3035,7 +3049,7 @@ msgid "The first step is to open an account. You can apply online in just a few 
 msgstr "第一步是開戶。您可以線上申請開戶，只需佔用您幾分鐘的時間"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
-msgstr "看漲梯底形態的首三天是擁有連續較低開盤價和較低收盤價的強大黑色K 線圖。第四天是短黑K 線圖，但開盤價較高，交易價也較高，留下長上影，然後以新低價格收盤。第五天是與第四天形成體形缺口的強大白色K 線圖"
+msgstr "看漲梯底形態的首三天是擁有連續較低開盤價和較低收盤價的強大黑色K線圖。第四天是短黑K線圖，但開盤價較高，交易價也較高，留下長上影，然後以新低價格收盤。第五天是與第四天形成體形缺口的強大白色K線圖"
 
 msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
 msgstr "信鴿是看漲K 線圖逆轉形態，由兩支紅色K 線圖組成。首支燭形線是高黑線，在下降價格趨勢中出現。第二天也是黑色燭形線，但比較小，且位於首支黑色燭形線體內"
@@ -3056,7 +3070,7 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "賠付金額即期權交易者預測正確所獲得的金額"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr "貫穿形態由兩支K 線圖組成，第一支黑色，第二支白色。兩支K 線圖的體形須巨大，且陰影通常、但不一定是細小或不存在。白色K線圖必須在前收盤價下開盤，並在黑色K 線圖體內中部以上收盤。如果在中部以下收盤可能歸納為逆轉，但不會被考慮為看漲"
+msgstr "貫穿形態由兩支K線圖組成，第一支黑色，第二支白色。兩支K線圖的體形須巨大，且陰影通常、但不一定是細小或不存在。白色K線圖必須在前收盤價下開盤，並在黑色K線圖體內中部以上收盤。如果在中部以下收盤可能歸納為逆轉，但不會被考慮為看漲"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
 msgstr "全世界金融市場二元期權交易的頂尖平台"
@@ -3271,6 +3285,9 @@ msgstr "充滿自信地交易"
 msgid "Trade your way"
 msgstr "以您的方式交易"
 
+msgid "Trader"
+msgstr "交易者"
+
 msgid "Trader's Statistics"
 msgstr "交易員統計"
 
@@ -3460,9 +3477,6 @@ msgstr "我們獲得「用於金融市場投機的電腦交易系統及方法」
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "獲得這個獎項，我們真的很自豪。我們堅定地致力於提供一個合乎道德和以客戶為中心的交易體驗。獲取獎項表明 BetOnMarkets 是一個值得信賴的品牌，接受客戶意見，能夠滿足客戶的需求，無論他們是經驗豐富的交易者還是交易新手。我們為客戶提供英語、印尼語、俄語、中文和西班牙語服務"
 
-msgid "Websocket Server"
-msgstr "Websocket 伺服器"
-
 msgid "Webtrader"
 msgstr "Webtrader"
 
@@ -3559,8 +3573,17 @@ msgstr "年度盈利交易"
 msgid "Yes"
 msgstr "是"
 
+msgid "You are not copying any trade(s) yet"
+msgstr "您尚未複製任何交易"
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "您可選擇從1美元到5萬美元的賠付額。此範圍廣泛的賠付額對大小交易者都非常適合"
+
+msgid "You can only allow other traders to copy your trade"
+msgstr "您只能允許其他交易者複製您的交易"
+
+msgid "You can only copy other trader's trade"
+msgstr "您只能複製其他交易者的交易"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "僅需數分鐘，您就可以完成開戶、入金並開始交易"
@@ -3583,9 +3606,6 @@ msgstr "您不論身在何處都可獲得最公平、透明的報價"
 msgid "You have sold the following contract"
 msgstr "您已賣出以下合約"
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "使用各OAuth伺服器進行驗證前，須先註冊webtrader 並領取應用程式ID。欲知詳細資訊，請前往此處參閱OAuth資料"
-
 msgid "You haven't saved any templates yet"
 msgstr "您尚未儲存任何範本"
 
@@ -3604,6 +3624,9 @@ msgstr "您將對您所能獲得的回報感到驚訝"
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
 
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr "您的帳戶 (%) 已鎖定, 請聯繫客服部瞭解更多資訊。"
+
 msgid "Your browser is not supported"
 msgstr "不支持您的瀏覽器"
 
@@ -3613,8 +3636,8 @@ msgstr "您的複製設置"
 msgid "Your email"
 msgstr "您的電子郵件"
 
-msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr "您存入Binary.com的資金始終是安全的。資金將集合並一直由AAA級的銀行託管，這是我們的交易執照條件之一"
+msgid "Your money is always safe with Binary.com"
+msgstr "Binary.com對您的資金提供安全保障"
 
 msgid "Your new account balance is"
 msgstr "您的新帳戶餘額是"
@@ -3670,12 +3693,6 @@ msgstr "將其股份拋售"
 msgid "e-commerce site for branded merchandise"
 msgstr "品牌商品專用電子商務網站"
 
-msgid "e.g"
-msgstr "例如"
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "例如www2.binary.com， www.binaryqa36.com"
-
 msgid "end time"
 msgstr "結束時間"
 
@@ -3696,12 +3713,6 @@ msgstr "小時"
 
 msgid "hours"
 msgstr "小時"
-
-msgid "https://developers.binary.com/"
-msgstr "https://developers.binary.com/"
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "如不是您的居住國"
@@ -3754,9 +3765,6 @@ msgstr "分鐘"
 msgid "next tick"
 msgstr "下一個跳動點"
 
-msgid "oauth"
-msgstr "oauth"
-
 msgid "of \"Now\", the"
 msgstr "是「現在」"
 
@@ -3804,9 +3812,6 @@ msgstr "交易頻率"
 
 msgid "view license"
 msgstr "檢視執照"
-
-msgid "websocket"
-msgstr "websocket"
 
 msgid "www.Binary.com"
 msgstr "www.Binary.com"

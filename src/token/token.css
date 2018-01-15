@@ -85,6 +85,9 @@
   width: auto;
   display: inline-block;
   margin-bottom: 20px;
+  margin-right: 15px;
+  position: relative;
+  top: 2px;
 }
 
 .token-dialog .create-token-pane > button {
@@ -119,7 +122,4 @@
 .token-dialog label[data-balloon]:before {
   margin-left: 115px;
   width: 275px;
-}
-[data-balloon] {
-  border-bottom: 3px solid #F2F2F2;
 }

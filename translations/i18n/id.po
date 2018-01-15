@@ -1,3 +1,17 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: webtrader\n"
+"X-Crowdin-Language: id\n"
+"X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
@@ -859,9 +873,6 @@ msgstr "Chande Kroll Stop (CKS)"
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr "Chande Momentum Oscillator (CMO)"
 
-msgid "Change Backend Server"
-msgstr "Perubahan Server Backend"
-
 msgid "Change password"
 msgstr "Ubah kata sandi"
 
@@ -1009,10 +1020,13 @@ msgstr "Periode kontrak"
 msgid "Contracts"
 msgstr "Kontrak"
 
+msgid "Copier"
+msgstr ""
+
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
 
-msgid "Copy Trade"
+msgid "Copy Trading"
 msgstr ""
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
@@ -1173,6 +1187,9 @@ msgstr "Apakah Anda menawarkan akun uang virtual?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
+
+msgid "Do you want to install the Webtrader chrome extension?"
+msgstr ""
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1459,8 +1476,14 @@ msgstr "GMT"
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
 msgstr "GMT adalah singkatan dari Greenwich Mean Time, waktu resmi digunakan di Inggris selama musim dingin. Di musim panas perubahan waktu Inggris adalah GMT +1 jam. Waktu yang digunakan pada website %1 adalah GMT sepanjang waktu"
 
+msgid "Get API token from trader(s) and add it in your list"
+msgstr ""
+
 msgid "Get your price"
 msgstr "Dapatkan harga"
+
+msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "Goes out"
 msgstr "Goes out"
@@ -1804,9 +1827,6 @@ msgstr "Loading"
 msgid "Loading Asset Index"
 msgstr "Loading Indeks Aset"
 
-msgid "Loading Configurations"
-msgstr "Loading Konfigurasi"
-
 msgid "Loading Copy Trade"
 msgstr ""
 
@@ -2127,12 +2147,6 @@ msgstr "Nopember"
 
 msgid "Now"
 msgstr "Sekarang"
-
-msgid "OAuth App ID (Optional)"
-msgstr "OAuth App ID (Pilihan)"
-
-msgid "OAuth Server"
-msgstr "Server OAuth"
 
 msgid "OHLC"
 msgstr "OHLC"
@@ -3271,6 +3285,9 @@ msgstr "Trading dengan percaya diri"
 msgid "Trade your way"
 msgstr "Trading dengan gaya Anda"
 
+msgid "Trader"
+msgstr ""
+
 msgid "Trader's Statistics"
 msgstr ""
 
@@ -3460,9 +3477,6 @@ msgstr "Kami memperoleh hak paten sebagai 'Sistem trading komputer dan metode un
 msgid "We're really proud of this award. We're strongly committed to offering an ethical and customer-focused trading experience, and the award shows that BetOnMarkets is a trusted brand that listens and caters to customers, whether they are experienced traders or novices. We offer customer services in English, Indonesian, Russian, Chinese and Spanish"
 msgstr "Kami sangat bangga dengan penghargaan ini. Kami berdedikasi penuh dalam menawarkan etika dan memusatkan pada pengalaman trading pelanggan dan penghargaan ini menunjukkan BetOnMarkets adalah merek dagang terpercaya yang mendengar dan mengutamakan pelanggan, tidak peduli apakah mereka adalah trader berpengalaman atau pemula. Kami memberi layanan dalam bahasa Inggris, Indonesia, Rusia, Cina dan Spanyol"
 
-msgid "Websocket Server"
-msgstr "Server Websocket"
-
 msgid "Webtrader"
 msgstr "Webtrader"
 
@@ -3559,8 +3573,17 @@ msgstr ""
 msgid "Yes"
 msgstr "Iya"
 
+msgid "You are not copying any trade(s) yet"
+msgstr ""
+
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "Anda dapat memilih hasil dari $1 hingga $50.000. Pilihan hasil yang luas ini ideal untuk trader kecil dan besar"
+
+msgid "You can only allow other traders to copy your trade"
+msgstr ""
+
+msgid "You can only copy other trader's trade"
+msgstr ""
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "Anda dapat mendaftar akun, mendeposit dana dan memulai trading dalam hitungan menit"
@@ -3583,9 +3606,6 @@ msgstr "Anda mendapatkan harga yang adil dan transparan, apapun posisi Anda"
 msgid "You have sold the following contract"
 msgstr "Anda telah menjual kontrak berikut ini"
 
-msgid "You have to register webtrader and get App ID before you can use different OAuth server for authentication. For more information refer to OAuth details on"
-msgstr "Anda perlu mendaftar webtrader dan dapatkan ID App sebelum dapat menggunakan server OAuth lain. Untuk informasi lanjut silahkan lihat detail OAuth di"
-
 msgid "You haven't saved any templates yet"
 msgstr "Anda belum menyimpan template apa pun"
 
@@ -3604,6 +3624,9 @@ msgstr "Anda akan terkejut dengan keuntungan yang bisa Anda hasilkan"
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu mengijinkan Webtrader untuk mengaksesnya"
 
+msgid "Your account (%) is locked, please contact customer support for more info."
+msgstr ""
+
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
 
@@ -3613,8 +3636,8 @@ msgstr ""
 msgid "Your email"
 msgstr "Email Anda"
 
-msgid "Your money is always safe with Binary.com. At all times, it is held in segregated AAA-rated banks, which is a condition of our trading licenses"
-msgstr "Dana Anda akan selalu aman di Binary.com. Setiap waktu, dana Anda disimpan pada bank terkemuka, yang merupakan syarat bagi perijinan trading kami"
+msgid "Your money is always safe with Binary.com"
+msgstr ""
 
 msgid "Your new account balance is"
 msgstr "Saldo akun baru Anda adalah"
@@ -3670,12 +3693,6 @@ msgstr "melepaskan sahamnya"
 msgid "e-commerce site for branded merchandise"
 msgstr "situs e-commerce untuk barang-barang bermerek"
 
-msgid "e.g"
-msgstr "contoh"
-
-msgid "e.g, www2.binary.com, www.binaryqa36.com"
-msgstr "contoh www2.binary.com, www.binaryqa36.com"
-
 msgid "end time"
 msgstr "waktu akhir"
 
@@ -3696,12 +3713,6 @@ msgstr "jam"
 
 msgid "hours"
 msgstr "jam"
-
-msgid "https://developers.binary.com/"
-msgstr "https://developers.binary.com/"
-
-msgid "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
-msgstr "id-HXSSH5AIQylFwsiUcXGqpXApvnFeg"
 
 msgid "if this is not your country of residence"
 msgstr "jika ini adalah bukan negara domisili Anda"
@@ -3754,9 +3765,6 @@ msgstr "menit"
 msgid "next tick"
 msgstr "tik berikutnya"
 
-msgid "oauth"
-msgstr "oauth"
-
 msgid "of \"Now\", the"
 msgstr "dari \"Sekarang\","
 
@@ -3805,9 +3813,6 @@ msgstr "frekuensi trading"
 msgid "view license"
 msgstr "lihat lisensi"
 
-msgid "websocket"
-msgstr "websocket"
-
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
@@ -3822,10 +3827,4 @@ msgstr "| Hasil"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
-
-msgid "Copy Trade"
-msgstr "" 
-
-msgid "Loading MAM"
-msgstr "" 
 

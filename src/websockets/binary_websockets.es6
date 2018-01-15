@@ -457,7 +457,6 @@ export const cached  = {
    }
 }
 
-
 /* sends a request and returns an es6-promise */
 export const send = (data, timeout) => {
    if (data && needs_authentication(data))
@@ -470,7 +469,6 @@ export const send = (data, timeout) => {
 
 /* whether current session is authenticated or not */
 export const is_authenticated = () => is_authenitcated_session;
-
 
 export const sell_expired = (epoch) => {
    const now = (new Date().getTime())/1000 | 0;
@@ -528,4 +526,7 @@ api.events.on('logout',() => {
       .catch((err) => console.error(err));
 });
 
- export default api;
+/* backend closes connection if there is no activity in the websocket connection */
+ setInterval(() => api.send({ "ping": 1 }), 30000);
+
+export default api;

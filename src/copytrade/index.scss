@@ -1,28 +1,43 @@
 .copytrade-dialog {
-  padding: 15px !important;
+  padding: 15px 0px !important;
   span.text {
     white-space: nowrap;
   }
   .table {
     width: 100%;
   }
+  .copytrade-settings {
+    margin-bottom: 10px;
+    .table {
+      margin-left: 5px;
+      width: 98%;
+      .row {
+        cursor: pointer;
+        .cell {
+          &:first-child {
+            width: 30px;
+          }
+          vertical-align: top;
+          input{
+            width: 15px;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
   .search {
-    background-color: lightgrey;
+    background-color: #F2F2F2;
     border-radius: 2px;
     padding: 8px;
     .row {
       background-color: white;
       .cell:first-child {
-        width: 20px;
-        color: lightgrey;
-        padding: 5px;
-        span {
-          position: relative;
-          top: 3px;
-          left: 3px;
-        }
-      }
-      .cell:nth-child(2) {
         input {
           border: none;
           outline: none;
@@ -33,70 +48,97 @@
           }
         }
       }
-      .cell:nth-child(3) {
-        background-color: lightgrey;
+      .cell:nth-child(2) {
+        background-color: #F2F2F2;
         padding-left: 10px;
         width: 20px;
         button {
           padding: 5px;
+          width: 40px;
+          height: 40px;
         }
       }
     }
   }
+  .traderTokensEmpty {
+    text-align: center;
+    color: #F2F2F2;
+    * {
+      display: block;
+      margin: auto;
+    }
+  }
   .tokens {
+    .row-borders {
+      &:nth-child(odd) {
+        .cell-borders {
+          border-top: 1px solid #DEDEDE;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #DEDEDE;
+        }
+      }
+      &:last-child {
+        .cell-borders {
+          padding-bottom: 5px;
+          border-bottom: 1px solid #DEDEDE;
+        }
+      }
+    }
     .table {
       .row {
         .section-toggle {
-          width: 24px;
+          width: 35px;
           white-space: nowrap;
           span {
-            font-size: 25px;
+            font-size: 20px;
             position: relative;
-            top: 10px;
+            top: 8px;
+            margin: auto;
           }
         }
         .cell {
-          padding: 5px;
-          &:nth-child(2) {
-            padding-right: 10px;
-          }
           .pointer-cursor {
             cursor: pointer;
           }
           button {
-            padding: 8px;
+            width: 35px;
+            height: 35px;
+            padding: 0px;
+            margin: auto;
             vertical-align: middle;
-            &.started {
-              background-color: red;
-            }
-            &.remove {
-              background-color: red;
+            span {
+              padding: 0px;
+              margin: auto;
             }
           }
           .details-section {
-            margin-top: 10px;
+            margin-bottom: 10px;
             .tag {
-              background-color: lightgrey;
-              border-radius: 20px;
-              text-align: center;
-              display: inline-block;
+              margin-top: 5px;
+              background-color: #F2F2F2;
               white-space: nowrap;
               padding-top: 10px;
               padding-bottom: 10px;
               padding-left: 15px;
-              padding-right: 15px;
+              font-weight: bold;
+              div {
+                width: 92%;
+              }
             }
             .table {
-              margin-left: 10px;
+              width: 90%;
+              margin: auto;
               .row {
                 .cell {
+                  padding: 5px;
                   white-space: nowrap;
-                  border-bottom: 1px solid lightgrey;
+                  border: none;
                   &:nth-child(2) {
                     text-align: right;
                   }
                   input {
                     max-width: 400px;
+                    height: 40px;
                   }
                   div.chosen-container {
                     width: 100% !important;
@@ -106,9 +148,24 @@
                 }
                 .button-cell {
                   text-align: right;
+                  button {
+                    width: 100px;
+                  }
                 }
                 .ignore-bottom-border {
                   border-bottom: none;
+                }
+              }
+            }
+            .traderStats {
+              .row {
+                &:not(:last-child) {
+                  .cell {
+                    border-bottom: 1px solid #DEDEDE;
+                  }
+                }
+                .cell {
+                  padding: 10px;
                 }
               }
             }
@@ -123,9 +180,36 @@
             }
             .token-header-controls {
               width: 150px;
+              span {
+                pointer-events: none;
+                background: none;
+              }
             }
           }
         }
+      }
+    }
+  }
+  .copytrade-tradermsg {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: lightgray;
+    text-align: center;
+  }
+  .chosen-choices {
+    box-shadow: none;
+    outline: 0;
+    box-sizing: border-box;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    background-image: none;
+    .search-choice {
+      border-radius: 10px !important;
+      padding: 6px 20px 6px 5px !important;
+      border: none !important;
+      .search-choice-close {
+        top: 7px !important;
       }
     }
   }

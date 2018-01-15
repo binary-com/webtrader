@@ -224,7 +224,7 @@
 .trade-dialog-digits-select-ul:hover { margin-top: -20px; }
 .trade-dialog-digits-select-ul { transition: margin-top 0.5s ease; }
 .trade-dialog-digits-select-ul li {
-    overflow-y:hidden;
+    overflow:hidden;
     /*height:10px;*/
     line-height: 8px;
     font-size:13px;
