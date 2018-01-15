@@ -395,7 +395,7 @@ select + .ui-selectmenu-button { border-radius: 3px;}
     z-index: +1000;
 }
 #doorbell-button:hover {
-    right: -37px;
+    right: -40px;
     transition: right 100ms linear;
 }
 
