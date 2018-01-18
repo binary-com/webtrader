@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-01-18 17:51-0500\n"
+"PO-Revision-Date: 2018-01-18 18:01-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1477,13 +1477,13 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT là viết tắt của Greenwich Mean Time, thời gian chính thức được sử dụng ở vương quốc Anh trong suốt mùa đông. Vào mùa hè,  vương quốc Anh thay đổi thành thời gian mùa hè ở Anh, tức là GMT + 1 giờ. Tất cả thời gian trên trang web Binary.com sử dụng GMT quanh năm"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Lấy API token từ (các) nhà giao dịch và thêm nó vào danh sách của bạn"
 
 msgid "Get your price"
 msgstr "Nhận giá của bạn"
 
 msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "Đến mục quản lý token, tạo một token, và chia sẻ token với copier(s)"
 
 msgid "Goes out"
 msgstr "Ra ngoài"
@@ -1774,7 +1774,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Mô hình bậc thang dưới (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Các giao dịch kéo dài 12 phút có lợi nhuận"
 
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
@@ -1828,13 +1828,13 @@ msgid "Loading Asset Index"
 msgstr "Đang tải chỉ số tài sản"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Tải bản sao thương mại"
 
 msgid "Loading Download/View Data"
 msgstr "Đang tải dữ liệu tải về/xem dữ liệu"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "Tải MAM"
 
 msgid "Loading Password dialog"
 msgstr "Đang tải Mật Khẩu hội thoại"
@@ -1966,7 +1966,7 @@ msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Mô hình Matching Low (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Cổ phần thương mại tối đa"
 
 msgid "Maximum (MAX)"
 msgstr "Chỉ số Maximum (MAX)"
@@ -2008,7 +2008,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "công thức Mesa Adaptive Moving Average (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Thương mại cổ phần tối thiểu"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
@@ -2053,7 +2053,7 @@ msgid "Monday"
 msgstr "Thứ hai"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Các giao dịch có lợi nhuận hàng tháng"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Mô hình Sao Doji buổi sáng (CDLMORNINGDOJISTAR)"
