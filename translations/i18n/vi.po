@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-01-18 18:10-0500\n"
+"PO-Revision-Date: 2018-01-18 18:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -3232,7 +3232,7 @@ msgid "Tooltip text"
 msgstr "Chữ chú thích"
 
 msgid "Total Copiers"
-msgstr "Tất cả các bot Copiers"
+msgstr "Tất cả các bot sao chép"
 
 msgid "Total Cost"
 msgstr "Tổng chi phí"
@@ -3580,10 +3580,10 @@ msgid "You can choose payouts from $1 to $50,000. This wide payout range is idea
 msgstr "Bạn có thể chọn thanh toán từ $1 đến $50,000. Phạm vi thanh toán rộng này là lý tưởng cho các nhà giao dịch lớn và nhỏ"
 
 msgid "You can only allow other traders to copy your trade"
-msgstr ""
+msgstr "Bạn chỉ có thể cho phép các nhà giao dịch khác sao chép giao dịch của bạn"
 
 msgid "You can only copy other trader's trade"
-msgstr ""
+msgstr "Bạn chỉ có thể sao chép giao dịch của các nhà giao dịch khác"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "Bạn có thể mở một tài khoản, gửi tiền và bắt đầu giao dịch trong vòng vài phút"
@@ -3625,19 +3625,19 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "Tài khoản Binary.com của bạn đã được tạo, nhưng để bắt đầu giao dịch bạn cần cho phép Webtrader truy cập nó"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Tài khoản của bạn (%) bị khóa, xin vui lòng liên hệ với hỗ trợ khách hàng để xem thêm thông tin."
 
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Cài đặt sao chép của bạn"
 
 msgid "Your email"
 msgstr "Email của bạn"
 
 msgid "Your money is always safe with Binary.com"
-msgstr ""
+msgstr "Tiền của bạn luôn luôn an toàn với Binary.com"
 
 msgid "Your new account balance is"
 msgstr "Số dư tài khoản mới của bạn là"
