@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-01-18 18:01-0500\n"
+"PO-Revision-Date: 2018-01-18 18:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -2302,7 +2302,7 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Công cụ dao động giá theo tỷ lệ phần trăm (PPO)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Xác suất hiệu suất"
 
 msgid "Permissions"
 msgstr "Cấp phép"
@@ -3232,7 +3232,7 @@ msgid "Tooltip text"
 msgstr "Chữ chú thích"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Tất cả các bot Copiers"
 
 msgid "Total Cost"
 msgstr "Tổng chi phí"
@@ -3241,7 +3241,7 @@ msgid "Total Profit/Loss"
 msgstr "Tổng lợi nhuận/tổn thất"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Tất cả các giao dịch"
 
 msgid "Touch"
 msgstr "Chạm"
@@ -3262,7 +3262,7 @@ msgid "Trade Confirmation"
 msgstr "Xác nhận giao dịch"
 
 msgid "Trade Types"
-msgstr ""
+msgstr "Kiểu Giao dịch"
 
 msgid "Trade all market conditions"
 msgstr "Tất cả các điều kiện thị trường thương mại"
@@ -3286,16 +3286,16 @@ msgid "Trade your way"
 msgstr "Giao dịch theo cách của bạn"
 
 msgid "Trader"
-msgstr ""
+msgstr "Nhà giao dịch"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Số liệu thống kê của nhà giao dịch"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Tính lợi nhuận của giao dịch"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Phân tích các giao dịch"
 
 msgid "Trading Times"
 msgstr "Thời Gian Giao Dịch"
@@ -3568,13 +3568,13 @@ msgid "Y-axis labels"
 msgstr "Nhãn Y-axis"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Các giao dịch có lợi nhuận hàng năm"
 
 msgid "Yes"
 msgstr "Có"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Bạn chưa sao chép bất kỳ (những) giao dịch nào"
 
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "Bạn có thể chọn thanh toán từ $1 đến $50,000. Phạm vi thanh toán rộng này là lý tưởng cho các nhà giao dịch lớn và nhỏ"
