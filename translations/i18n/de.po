@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+"PO-Revision-Date: 2018-01-22 10:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1021,13 +1021,13 @@ msgid "Contracts"
 msgstr "Kontrakte"
 
 msgid "Copier"
-msgstr ""
+msgstr "Kopierer"
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Kurve (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "Kopierter Handel"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Counterattack (CDLCOUNTERATTACK)"
@@ -1189,7 +1189,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Möchten Sie Webtrader Chrome Extension installieren?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "Möchten Sie die Webtrader Chrome Extension installieren?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1477,13 +1477,13 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT steht für Greenwich Mean Time, die offizielle Uhrzeit, die im Winter in Großbritannien verwendet wird. Im Sommer wechselt Großbritannien zur British Summer Time, welche GMT + 1 Stunde ist. Alle Zeiten auf der Binary.com Site verwenden GMT, das ganze Jahr über"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Erhalten Sie API Token von Händlern und fügen Sie sie zu Ihrer Liste hinzu"
 
 msgid "Get your price"
 msgstr "Erhalten Sie Ihren Kurs"
 
 msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "Gehen Sie zur Token-Verwaltung, erstellen Sie einen Token, und teilen Sie den Token mit Kopierern"
 
 msgid "Goes out"
 msgstr "Geht außerhalb"
@@ -1834,7 +1834,7 @@ msgid "Loading Download/View Data"
 msgstr "Download/Daten Einsehen wird geladen"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "MAM wird geladen"
 
 msgid "Loading Password dialog"
 msgstr "Passwortdialog wird geladen"
@@ -3286,7 +3286,7 @@ msgid "Trade your way"
 msgstr "Handeln Sie auf Ihre Weise"
 
 msgid "Trader"
-msgstr ""
+msgstr "Händler"
 
 msgid "Trader's Statistics"
 msgstr "Trader Statistiken"
@@ -3574,16 +3574,16 @@ msgid "Yes"
 msgstr "Ja"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Sie kopieren derzeit keine(n) Trade(s)"
 
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "Sie können Auszahlungen von 1 $ bis 50 000 $ wählen. Dieses breite Angebot an Auszahlungen ist ideal für sowohl kleine als auch große Händler"
 
 msgid "You can only allow other traders to copy your trade"
-msgstr ""
+msgstr "Sie können nur anderen Händlern erlauben, Ihr Geschäft zu kopieren"
 
 msgid "You can only copy other trader's trade"
-msgstr ""
+msgstr "Sie können nur das Geschäft anderer Händler kopieren"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "Sie können in Minuten ein Konto eröffnen, Gelder einzahlen und zu Handeln beginnen"
@@ -3625,7 +3625,7 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "Ihr Binary.com Konto ist erstellt, aber um mit dem Handeln zu beginnen, müssen Sie Webtrader erlauben darauf zuzugreifen"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Ihr Konto (%) ist gesperrt, bitte kontaktieren Sie den Kunden-Support für weitere Informationen."
 
 msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
@@ -3637,7 +3637,7 @@ msgid "Your email"
 msgstr "Ihre E-Mail"
 
 msgid "Your money is always safe with Binary.com"
-msgstr ""
+msgstr "Ihr Geld ist immer sicher mit Binary.com"
 
 msgid "Your new account balance is"
 msgstr "Ihr neuer Kontostand beträgt"
