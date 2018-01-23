@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+"PO-Revision-Date: 2018-01-23 17:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1483,7 +1483,7 @@ msgid "Get your price"
 msgstr "Ottieni il tuo prezzo"
 
 msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "Vai su Gestione dei token, crea un token e condividi il token con la fotocopiatrice(i)"
 
 msgid "Goes out"
 msgstr "Goes out"
