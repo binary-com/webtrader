@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-01-23 17:10-0500\n"
+"PO-Revision-Date: 2018-01-23 17:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1627,7 +1627,7 @@ msgid "In October 1999, Regent Markets receives US$ 2 million investment funding
 msgstr "Nell'ottobre del 1999, Regent Markets riceve un finanziamento da $2 milioni di dollari da parte di Jim Mellon attraverso il suo Regent Pacific Group, una società di gestione di fondi con sede a Hong Kong"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
-msgstr ""
+msgstr "In un trend ribassista, una candela piccola ha un'ombra inferiore tre volte più lunga del corpo, e un'ombra superiore piccola o inesistente, Conferma dai prezzi di chiusura più alti del giorno successivo"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
 msgstr ""
@@ -3481,7 +3481,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader è una piattaforma di trading avanzata, totalmente personalizzabile, in base alle tue preferenze personali"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilizza nuove tecnologie web per un'esperienza di trading ricca e piacevole"
@@ -3493,7 +3493,7 @@ msgid "Wednesday"
 msgstr "Mercoledì"
 
 msgid "Weighted Close Price (WCLPRICE)"
-msgstr ""
+msgstr "Prezzo di chiusura ponderato (WCLPRICE)"
 
 msgid "Weighted Moving Average (WMA)"
 msgstr "Media mobile ponderata (WMA)"
@@ -3502,7 +3502,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Benvenuto su Binary.com Webtrader"
 
 msgid "What is pep?"
-msgstr ""
+msgstr "Che cosa è pep?"
 
 msgid "When you are satisfied with the trade price, instantly execute your trade"
 msgstr "Quando sei soddisfatto del prezzo del trade, esegui immediatamente l'operazione"
@@ -3568,22 +3568,22 @@ msgid "Y-axis labels"
 msgstr "Etichetta dell'asse delle Y"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Trade remunerativi annuali"
 
 msgid "Yes"
 msgstr "Sì"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Non hai ancora copiato alcun trade"
 
 msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
 msgstr "Puoi scegliere payout da $1 a $50.000. Quest'ampio range di payout è ideale per i piccoli e i grandi trader"
 
 msgid "You can only allow other traders to copy your trade"
-msgstr ""
+msgstr "Puoi solo consentire agli altri trader di copiare il tuo trade"
 
 msgid "You can only copy other trader's trade"
-msgstr ""
+msgstr "Puoi copiare solo i trade degli altri trader"
 
 msgid "You can open an account, deposit funds and begin trading within minutes"
 msgstr "Puoi aprire un account, depositare fondi e iniziare a fare trading in pochi minuti"
@@ -3625,19 +3625,19 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "Il tuo account Binary.com è stato creato ma per iniziare a fare trading bisogna consentire a Webtrader di accedere"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Il tuo account (%) è bloccato. Per ulteriori informazioni, contatta l'assistenza clienti."
 
 msgid "Your browser is not supported"
 msgstr "Il tuo browser non è supportato"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Le tue impostazioni per la copia"
 
 msgid "Your email"
 msgstr "Il tuo indirizzo email"
 
 msgid "Your money is always safe with Binary.com"
-msgstr ""
+msgstr "Con Binary.com, i tuoi soldi sono sempre al sicuro"
 
 msgid "Your new account balance is"
 msgstr "Il saldo del tuo nuovo account è"
@@ -3658,7 +3658,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "consentire ai clienti di sviluppare i propri robot di trading automatici con una semplicità tipo trascina e rilascia"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "e per i clienti irlandesi dai (3) Revenue Commissioners dell'Irlanda, una licenza attuale di bookmaker a distanza emessa il 29 Settembre 2015 (licenza n. 1010285). I servizi di questo sito web non sono disponibili in alcuni paesi come gli Stati Uniti, la Costa Rica, Hong Kong o per le persone minorenni"
 
 msgid "apostrophe (') are allowed"
 msgstr "è consentito l'apostrofo (')"
@@ -3811,7 +3811,7 @@ msgid "trading frequency"
 msgstr "frequenza del trading"
 
 msgid "view license"
-msgstr ""
+msgstr "visualizza la licenza"
 
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
