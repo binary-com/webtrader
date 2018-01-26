@@ -1,9 +1,6 @@
 ## Up/Down
 
-Choose Rise/Fall when you want to profit from the market rising or falling from its current level.
+There are two types of Up/Down trades:
 
-Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target.
-
-1. Choose the market, the time period, and how much you wish to win.
-2. Price the trade.
-3. Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price.
+1. Rise/Fall – Predict that the market will rise or fall from its current level
+2. Higher/Lower – Predict that the market will end higher or lower than a price target
