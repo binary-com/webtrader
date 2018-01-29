@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-28 22:50-0500\n"
+"PO-Revision-Date: 2018-01-28 23:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -332,16 +332,16 @@ msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a sma
 msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัวหรือตลาดซบเซาที่มีแท่งขนาดเล็ก ความยาวของหัวหรือหางแตกต่างกันไป อย่างแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันกับผู้ซื้อและผู้ขาย"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
-msgstr "การซื้อขาย Stays Between จะชำระเงิน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้ การซื้อขาย Goes Outside จะชำระเงิน หากตลาดแตะค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้"
+msgstr "การซื้อขาย Stays Between จะให้ผลตอบแทน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้ การซื้อขาย Goes Outside จะให้ผลตอบแทน หากตลาดแตะค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "รูปแบบแท่งเทียนแบบซบเซาประกอบด้วยแท่งเทียนสามแท่งซึ่งแสดงลักษณะดังต่อไปนี้ แท่งแรกเป็นเทียนสีขาวขนาดใหญ่อยู่ภายในแนวโน้มขึ้น แท่งกลางเป็นแท่งเทียนขนาดเล็ก (แดงหรือขาว) ที่ปิดเหนือแท่งสีขาวแรก และแท่งสุดท้ายคือเทียนสีแดงขนาดใหญ่ที่เปิดใต้เทียนแท่งกลางและปิดใกล้กับตำแหน่งตรงกลางของแท่งเทียนแรก"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr ""
+msgstr "รูปแบบแท่งเทียนแบบซบเซาที่ถูกใช้เพื่อคาดการณ์การพลิกกลับของแนวโน้มขึ้นปัจจุบัน รูปแบบนี้ประกอบด้วยแท่งเทียนขนาดยาวสามแท่งต่อกันซึ่งได้ปิดที่ต่ำกว่าวันก่อนโดยการเปิดของแต่ละช่วงเกิดขึ้นภายในตัวของแท่งเทียนอันก่อน"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
-msgstr ""
+msgstr "การโต้กลับของตลาดซบเซาคือแท่งเทียนยาวสีขาวในแนวโน้มขึ้น ตามด้วยแท่งเทียนยาวสีดำ ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน การโต้กลับของตลาดตื่นตัวคือแท่งเทียนยาวสีดำในแนวโน้มลง ตามด้วยแท่งเทียนยาวสีขาว ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
 msgstr ""
