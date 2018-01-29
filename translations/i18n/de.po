@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-01-29 10:01-0500\n"
+"PO-Revision-Date: 2018-01-29 10:11-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1243,7 +1243,7 @@ msgid "EURUSD"
 msgstr "EUR/USD"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr "Jeder Kontrakt für eine Binäre Option hat eine begrenzte Laufzeit - bei Binary.com können Sie für einen Kontrakt eine Laufzeit ab 10 Sekunden bis zu 365 Tagen auswählen"
+msgstr "Jeder Kontrakt für eine binäre Option hat eine begrenzte Laufzeit - bei Binary.com können Sie für einen Kontrakt eine Laufzeit ab 10 Sekunden bis zu 365 Tagen auswählen"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Jede Binäre Option ist eine Voraussage über die zukünftigen Bewegungen eines bestimmten Kurses"
@@ -3610,7 +3610,7 @@ msgid "You haven't saved any templates yet"
 msgstr "Sie haben noch keine Vorlagen gespeichert"
 
 msgid "You only need to make four decisions to execute a binary contract"
-msgstr "Sie müssen nur vier Entscheidungen treffen, um einen Binären Kontrakt abzuschließen"
+msgstr "Sie müssen nur vier Entscheidungen treffen, um einen binären Kontrakt abzuschließen"
 
 msgid "You pay"
 msgstr "Sie zahlen"
