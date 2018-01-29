@@ -10,28 +10,28 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-01-28 22:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr ""
+msgstr "รางวัล ‘Best Customer Communication Firm’ จาก Investors Chronicle"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Broker’ ประเภทเหรียญเงิน จาก Trade2Win"
 
 msgid "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors Chronicle UK"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Financial Provider’ จาก Financial Times และ Investors Chronicle สหราชอาณาจักร"
 
 msgid "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Financial Trading Provider’ จาก Shares Magazine สหราชอาณาจักร"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Firm 2012’ จาก Global Banking และ Finance Review"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr ""
+msgstr "รางวัล ‘Financial Betting Operator of the Year’ จาก eGaming Review"
 
 msgid "'contract period'"
 msgstr "'ระยะเวลาสัญญา'"
@@ -43,49 +43,50 @@ msgid "(formerly known as"
 msgstr "(เดิมชื่อ"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
-msgstr ""
+msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือสิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
-msgstr ""
+msgstr ") ได้เปิดใช้งานจริง ให้บริการการพนันทางการเงินในดัชนีทางการเงินต่างๆที่หลากหลายทั้งวันทั้งคืน ธุรกิจเติบโตอย่างรวดเร็ว และในไม่ช้าพวกเราก้าวสู่การเป็นผู้นำตลาดการพนันทางการเงินแบบ Fixed-Odds"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- ประโยชน์จากอัตราผลตอบแทนที่เท่ากับของนักลงทุนระหว่างธนาคาร ราคาของเราถูกเปรียบเทียบเป็นรายวันกับ\n"
+"ตลาดออปชั่นระหว่างธนาคาร"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
-msgstr ""
+msgstr "- Binary.com ไม่ได้เข้าร่วมเป็นพันธมิตรกับตัวแทนรับชำระเงินที่แจกแจงข้างต้น ตัวแทนรับชำระเงินแต่ละรายดำเนินการในฐานะผู้ให้บริการอิสระ และไม่ได้รับการรับรอง รับประกัน หรืออนุมัติโดย Binary.com ลูกค้าที่ติดต่อกับตัวแทนรับชำระเงินจะต้องรับผิดชอบต่อความเสี่ยงต่างๆด้วยตัวเอง ขอแนะนำให้ลูกค้าตรวจสอบข้อมูลหลักฐานอ้างอิงของตัวแทนรับชำระเงินก่อนที่จะส่งเงินใดๆให้กับตัวแทน Binary.com ไม่ว่าในกรณีใดๆก็ตาม จะไม่รับผิดชอบต่อธุรกรรมที่กระทำขึ้นระหว่างลูกค้ากับตัวแทนรับชำระเงิน"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- เลือกจากการซื้อขายหลากหลายแบบที่มีมากกว่าหนึ่งล้านแบบเมื่อใดก็ได้ และปรับแต่งการซื้อขายของคุณตามกลยุทธ์ที่คุณต้องการ"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- เลือกระยะเวลา จาก 10 วินาที ถึง 365 วัน"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- ฝากเงินแค่เพียง 5 เหรียญสหรัฐเพื่อเริ่มซื้อขาย"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- ได้ผลตอบแทนต่อเงินที่ลงไปของมูลค่าทั้งหมดเป็นสัดส่วนเดียวกัน"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- เพลิดเพลินไปกับแพลตฟอร์มการซื้อขายที่ง่ายต่อการหาทางและใช้งาน"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- รู้ว่าจะได้เงิน หรือขาดทุนเท่าไหร่ก่อนจะซื้อสัญญา"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- เปิดบัญชีและเริ่มซื้อขายภายในไม่กี่นาที การฝากและถอนเงินทำได้ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- คาดการณ์ว่าตลาดจะปิดที่สูงกว่าหรือต่ำกว่าราคาเป้าหมาย"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- คาดการณ์ตลาดเพิ่มขึ้น หรือลดลงจากระดับปัจจุบัน"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- คาดการณ์ตลาดจะอยู่ระหว่างหรือออกนอกราคาเป้าหมายทั้งสอง"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- คาดการณ์ตลาดจะแตะ หรือไม่แตะราคาเป้าหมาย"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
 msgstr ""
