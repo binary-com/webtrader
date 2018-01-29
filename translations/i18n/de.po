@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-01-29 09:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,64 +49,64 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr ") geht, einen rund-um-die-Uhr Finanzwettendienst auf einer Vielzahl von Finanzindizes aufbauend, live. Das Geschäft wächst schnell, und wir werden bald der Marktführer für Fixed-Odds Finanzwetten"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- Profitieren Sie von den gleichen Renditen wie Interbank-Händler. Unsere Preise werden täglich mit den Interbank-Optionsmärkten verglichen"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com ist kein Geschäftspartner einer der oben aufgeführten Zahlungsagenten. Jeder Zahlungsagent arbeitet als eigenständiger Dienstleister und wird nicht von Binary.com empfohlen, garantiert oder anderweitig genehmigt. DIE KUNDEN HANDELN MIT ZAHLUNGSAGENTEN AUF IHR EIGENES RISIKO UND IHRE EIGENE GEFAHR. Den Kunden wird empfohlen, die Angaben der Zahlungsagenten zu überprüfen, bevor sie Geld überweisen. Binary.com kann für Transaktionen zwischen Kunden und Zahlungsagenten nicht haftbar gemacht werden"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- Wählen Sie jederzeit aus über einer Million möglicher Handels-Variationen und passen Sie Ihre Geschäfte Ihrer bevorzugten Strategie an"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- Wählen Sie Zeitrahmen von 10 Sekunden bis zu 365 Tage aus"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- Zahlen Sie so wenig wie 5 USD ein, um mit dem Handel zu beginnen"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Verdienen Sie die gleiche proportionale Rendite auf Einsätze aller Werte"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- Genießen Sie eine Handelsplattform, die leicht zu navigieren und zu verwenden ist"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- Sie wissen, wie viel Sie gewinnen oder verlieren, bevor Sie den Kontrakt kaufen"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- Eröffnen Sie ein Konto und beginnen Sie innerhalb von Minuten zu handeln. Einzahlungen und Auszahlungen sind auch 24/7 verfügbar"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- Sagen Sie voraus ob der Kurs höher oder niedriger als ein Kursziel enden wird"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Sagen Sie voraus, ob der Kurs von seinem aktuellen Level steigen oder fallen wird"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- Sagen Sie voraus, ob der Kurs zwischen oder außerhalb zweier Kursziele sein wird"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Sagen Sie voraus, oben der Kurs einen Zielkurs erreichen oder nicht erreichen wird"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Erhalten Sie Notierungen für ein Geschäft und Gegengeschäft, so dass Sie immer unvoreingenommene, transparente Tarife von Binary.com bekommen"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Verkaufen Sie Ihre langfristigen Kontrakte vor Ablauf, um etwaige Gewinne die Sie gemacht haben zu schützen, oder um Ihre Verluste zu minimieren"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- Handeln Sie auf \"Bauchgefühl\" basierend, oder verlassen Sie sich auf technische und fundamentale Analyse"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- Handeln Sie selbstbewusst, in dem Wissen, dass Ihre persönlichen Daten, Transaktionen und Gelder immer sicher sind"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- Handeln Sie Währungen, Indizes, Rohstoffe und mehr auf steigenden, fallenden, seitwärtigen, stillen und volatilen Märkten"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- Handeln Sie wann Sie wollen. Binary.com ist 24/7 verfügbar, auch am Wochenende"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- Handeln Sie mit dem Industrieführer und Inhaber einer patentierten Preistechnologie"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- Währungen, Aktienindizes, und Rohstoffe"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- von 10 Sekunden bis 365 Tage"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- auf/ab, Ziel/kein Ziel, bleibt innerhalb/geht außerhalb"
 
 msgid "0-1 year"
 msgstr "0-1 Jahr"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2 Jahre"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. Wählen Sie den Basiswert"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. Zugrundeliegender Markt"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2 Minuten"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. Wählen Sie die Dauer des Handels"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. Handelstyp"
 
 msgid "2000"
 msgstr "2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2 Std."
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3 Minuten"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. Entscheiden Sie, wie Sie den Markt handeln wollen"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. Laufzeit"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4 Stunden"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. Schwelle(n)"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. Wählen Sie Ihren Einsatz und Ihre mögliche Rendite"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 Transaktionen in den letzten 12 Monaten"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5 Minuten"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. Auszahlung"
 
 msgid "5m"
 msgstr "5 Min"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "Alle Marktbedingungen"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "Alle Marktkonditionen und Zeitspannen"
 
 msgid "All markets"
 msgstr "Alle Märkte"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "Alle Märkte und Bedingungen"
 
 msgid "All payouts"
 msgstr "Alle Auszahlungen"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "August"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "Rund um die Uhr verfügbar"
 
 msgid "Available Currencies"
 msgstr "Verfügbare Währungen"
@@ -583,7 +583,7 @@ msgid "Avg. Profit"
 msgstr "Durchschnittlicher Gewinn"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "Ausgezeichnete Online-Handelsplattform"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oszillator (AO)"
@@ -637,7 +637,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "Wettsystem und Methode"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -649,7 +649,7 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK gewährte Japan-Zulassung"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "Grundlagen der Binären Optionen"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary wurde eine Lizenz für Investmentdienstleistungen erteilt"
@@ -661,7 +661,7 @@ msgid "Binary option"
 msgstr "Binäre Option"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "Binäre Optionen sind leicht zu verstehen. Sie werden „Binär\" genannt, weil es nur zwei Ergebnisse geben kann - gewinnen oder verlieren. Wenn Ihre Voraussage richtig ist, erhalten Sie eine im Voraus festgelegte Auszahlung. Anderenfalls verlieren Sie nur Ihren ursprünglichen Einsatz"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Binäre Optionen oder andere Finanzderivate"
@@ -688,7 +688,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Der Binary Tochtergesellschaft  Binary Investments (Europe) Ltd. wurde von der Maltesischen Finanzdienstleistungsaufsichtsbehörde eine Kategorie 3 Investmentdienstleistungen Lizenz erteilt"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "Binarys Plattform führt im Durchschnitt 20 Transaktionen pro Sekunde durch, 24/7"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -700,13 +700,13 @@ msgid "Binary.com Shop introduced"
 msgstr "Binary.com Shop eingeführt"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com kündigt Pläne an, für eine"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com führt weiter Neuerungen ein und wächst"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Binary.com hat Random Indizes (Zufallsindizes) geschaffen, die Sie 24/7 handeln können. Sie können diese mit allen Vertragsarten handeln"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com hat sich eine beneidenswerte Reputation für unser Engagement zu höheren ethischen Standards und für die Qualität der Handelserfahrung die wir anbieten, verdient"
@@ -724,7 +724,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com führt eine"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "Binary.com wird als Best Binary Options Broker von den UK-basierten Online Personal Wealth Awards 2017 ausgezeichnet, sowie von Investoren weltweit ausgewählt"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com ist ausschließlich webbasiert und benötigt keine Softwareinstallation"
@@ -733,13 +733,13 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "Binary.com ist als der Welt \"Beste Binäre Optionen Broker\" bei der 16ten jährlichen MENA International Financial Conference and Exhibition, die in Dubai ausgerichtet wird, geehrt"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com ist im Besitz und wird ausgeführt von der Binary Group Ltd. Gruppe von Unternehmen. Für weitere Informationen, besuche Sie unsere Historie Seite"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com startet Bitcoin (BTC) Konten für Kunden außerhalb der EU"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com startet Bitcoin Konten"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com startet eine"
