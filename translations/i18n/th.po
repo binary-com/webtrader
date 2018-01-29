@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-28 23:00-0500\n"
+"PO-Revision-Date: 2018-01-28 23:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -344,13 +344,13 @@ msgid "A bearish counterattack is a long white candle in an uptrend, followed by
 msgstr "การโต้กลับของตลาดซบเซาคือแท่งเทียนยาวสีขาวในแนวโน้มขึ้น ตามด้วยแท่งเทียนยาวสีดำ ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน การโต้กลับของตลาดตื่นตัวคือแท่งเทียนยาวสีดำในแนวโน้มลง ตามด้วยแท่งเทียนยาวสีขาว ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
-msgstr ""
+msgstr "เส้นแยกของตลาดซบเซาคือรูปแบบความต่อเนื่องของตลาดซบเซา ซึ่งตรงกันข้ามกับเส้นแยกของตลาดตื่นตัว มีองค์ประกอบสองตัวของเส้นแยกตลาดซบเซา วันแรกคือแท่งเทียนสีเขียว และวันที่สองห่างลง เปิดที่ระดับเปิดของแท่งเทียนแรกและปิดแบบอ่อนตัว"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
-msgstr ""
+msgstr "ไบนารีออปชั่นเป็นสัญญาซื้อขายประเภทหนึ่งที่ผู้ซื้อขายจะได้รับเงินตามจำนวนเงินที่กำหนดไว้ล่วงหน้า หากการคาดการณ์ถูกต้อง"
 
 msgid "A binary option is an option with a fixed payout that is determined at the start of the trade. If your prediction is correct, you receive an agreed payout. If not, you lose your initial stake, and no more. The options are called 'binary' because there can be only two outcomes - win or lose"
-msgstr ""
+msgstr "ไบนารีออปชั่นคือออปชั่นที่มีการชำระเงินที่คงที่ซึ่งถูกกำหนดตั้งแต่เริ่มต้นของการซื้อขาย หากการคาดการณ์ของท่านถูกต้อง ท่านจะได้รับการจ่ายเงินตามมูลค่าที่ตกลงไว้ แต่หากการทำนายไม่ถูกต้อง ท่านจะเสียมูลค่าที่วางตั้งต้นไว้ และจะไม่มากไปกว่านั้น ออปชั่นถูกเรียกว่า 'ไบนารี' เนื่องจากมีผลลัพธ์เพียง 2 ทาง คือ ได้ และ เสีย"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
 msgstr ""
@@ -671,16 +671,16 @@ msgid "Binary options or other financial derivatives trading experience"
 msgstr ""
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
 
 msgid "Binary trading is flexible"
-msgstr ""
+msgstr "การซื้อขายไบนารีมีความยืดหยุ่น"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
-msgstr ""
+msgstr "การซื้อขายไบนารีเหมาะสมสำหรับทั้งบุคคลและผู้เชี่ยวชาญทางตลาด"
 
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
-msgstr ""
+msgstr "สาขาที่ญี่ปุ่น ของ Binary KK ได้รับใบอนุญาตจาก KLFB เทียบเท่า Type 1 Financial Instruments Business ในประเทศญี่ปุ่น"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
 msgstr ""
