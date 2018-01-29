@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-28 22:30-0500\n"
+"PO-Revision-Date: 2018-01-28 22:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -299,7 +299,7 @@ msgid "5 Minutes"
 msgstr "5 นาที"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. ผลตอบแทน"
 
 msgid "5m"
 msgstr "5 นาที"
@@ -323,7 +323,7 @@ msgid "8h"
 msgstr "8 ชั่วโมง"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr ""
+msgstr "Evening Doji Star ประกอบด้วยแท่งเทียนยาวท่ี่แสดงความตื่นตัว ตามด้วย Doji ที่มีช่องว่างด้านบน จากนั้นเป็นแท่งเทียนที่สามที่แสดงความซบเซาที่ปิดอย่างดีภายในแท่งเทียนแรก และเช่นนี้เป็นการยืนยันถึงการพลิกกลับ ซึ่งถือว่าเป็นรูปแบบแท่งเทียนที่แสดงการพลิกกลับอย่างแข็งแกร่งของราคาที่ซบเซา"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr ""
