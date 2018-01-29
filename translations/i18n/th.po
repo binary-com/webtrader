@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-28 23:10-0500\n"
+"PO-Revision-Date: 2018-01-28 23:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -680,13 +680,13 @@ msgid "Binary trading is ideal for both individuals and market professionals"
 msgstr "การซื้อขายไบนารีเหมาะสมสำหรับทั้งบุคคลและผู้เชี่ยวชาญทางตลาด"
 
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
-msgstr "สาขาที่ญี่ปุ่น ของ Binary KK ได้รับใบอนุญาตจาก KLFB เทียบเท่า Type 1 Financial Instruments Business ในประเทศญี่ปุ่น"
+msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK ได้รับใบอนุญาตจาก KLFB เทียบเท่าธุรกิจด้านเครื่องมือทางการเงินประเภทที่ 1 ในประเทศญี่ปุ่น"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
-msgstr ""
+msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK เปิดสำนักงานที่โตเกียว และเริ่มดำเนินการในการขอใบอนุญาตต่างๆที่เกี่ยวข้อง"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
-msgstr ""
+msgstr "สำนักงานสาขามอลเตสของ Binary คือ Binary Investments (Europe) Ltd. ได้รับอนุญาตในการให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
 msgstr ""
