@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-01-30 02:00-0500\n"
+"PO-Revision-Date: 2018-01-30 02:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -781,7 +781,7 @@ msgid "Binary.com's Smart FX are smart markets that measure the value of a curre
 msgstr "Binary.com的智慧外匯是衡量一種貨幣相對一籃子主要貨幣價值的智慧型市場"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Binary.com的波動率指數由經過加密的安全隨機數字生成器生成，並由獨立的第三方審計其公平度"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Binary.com每天處理超過百萬筆交易(包括虛擬帳戶)"
@@ -805,7 +805,7 @@ msgid "Browser upgrade required"
 msgstr "需更新瀏覽器"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "每天，牛市和熊市指數于格林尼治時間00:00 時開始，分別複製看漲和看跌市場"
 
 msgid "Buy Price"
 msgstr "購入價"
@@ -880,16 +880,16 @@ msgid "Chart type"
 msgstr "圖表類型"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "從五種市場與相關資產中選擇"
 
 msgid "Choose password"
 msgstr "選擇密碼"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "如您希望通過預測市場在合約期限內是否會觸及或不觸及目標價格而獲利，您可以選擇交易「觸及/未觸及」期權"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "選擇您要交易的資產，如黃金、石油、股票或貨幣對。二元期權的價值基於標的資產價格。二元期權交易的一個優勢就是您並非買賣實際資產，只是一個確認資產表現狀況的合約"
 
 msgid "Choose your pereferred payment agent"
 msgstr "選擇您較傾向的支付代理"
@@ -907,7 +907,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "點選登入Binary.com帳戶"
 
 msgid "Client funds"
-msgstr ""
+msgstr "客戶基金"
 
 msgid "Close"
 msgstr "關"
@@ -925,7 +925,7 @@ msgid "Commodities"
 msgstr "大宗商品"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "商品 - 黃金和原油等主要商品"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "大宗商品是生長在地上或從地面開採的寶貴資源，例如白銀、黃金和石油。在Binary.com，大宗商品按美元報價"
@@ -943,13 +943,13 @@ msgid "Comparisons"
 msgstr "比較"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "競爭及透明的價格"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "金融市場進行預測之電腦系統和方法"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "提供自訂金融市場預測之電腦交易系統"
 
 msgid "Conditions"
 msgstr "條件"
@@ -970,7 +970,7 @@ msgid "Continue Trading"
 msgstr "繼續交易"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "連續指數"
 
 msgid "Contract"
 msgstr "合約"
@@ -1012,7 +1012,7 @@ msgid "Crosshair"
 msgstr "交叉線"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "貨幣 - 所有主要外匯貨幣對"
 
 msgid "Current Level"
 msgstr "目前價位"
@@ -1042,10 +1042,10 @@ msgid "Custom Theme"
 msgstr "自訂主題"
 
 msgid "Daily Reset Indices"
-msgstr ""
+msgstr "每日重置指數"
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
-msgstr ""
+msgstr "每日重置指數以持續波動率複製市場的看漲和看跌趨勢"
 
 msgid "Daily limit on losses"
 msgstr "每日損失限額"
@@ -1138,7 +1138,7 @@ msgid "Digits"
 msgstr "數字"
 
 msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
-msgstr ""
+msgstr "讓您預測現貨價格最後小數點數值的數字。共有三種數字交易"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "動向指標 (DMI) 其實是由三個不同的指標組成， 包括平均動向指標 (ADX)、正動向指標 (+DI) 和負動向指標 (-DI)"
@@ -1189,7 +1189,7 @@ msgid "Double click the object to remove"
 msgstr "雙擊物件執行刪除"
 
 msgid "Down - Predict that the market will end lower than the average price"
-msgstr ""
+msgstr "下跌 - 預測收盤市場價格低於平均價格"
 
 msgid "Download"
 msgstr "下載"
@@ -1243,13 +1243,13 @@ msgid "EURUSD"
 msgstr "歐元美元"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr ""
+msgstr "每個二元期權合約都有固定期限- 在Binary.com，您可選擇從10秒至365天之間的任何期限"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "二元期權交易是對標的市場未來變化的預測"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr ""
+msgstr "每次調整參數後您將看到每個交易的預先設定賠付額。一旦您預測正確即可贏得賠付額。否則您將僅損失初始投注額"
 
 msgid "Edge"
 msgstr "邊緣"
@@ -1270,10 +1270,10 @@ msgid "Ends Between/Ends Outside trades"
 msgstr "「收於範圍之內/之外」的交易"
 
 msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "到期時價格處於範圍之內/之外   預測市場價格在合約到期時處於兩個目標價格範圍之內或之外"
 
 msgid "Ends Between/Outside"
-msgstr ""
+msgstr "到期時價格處於範圍之內/之外"
 
 msgid "Ends in"
 msgstr "範圍之內收盤"
@@ -1315,7 +1315,7 @@ msgid "Even"
 msgstr "偶"
 
 msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
-msgstr ""
+msgstr "偶/奇-預測最後跳動點的最後數字為偶數或奇數"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "十字夜星 (CDLEVENINGDOJISTAR)"
@@ -1399,7 +1399,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "您需首先設定交易參數。您需要考慮以下因素"
 
 msgid "Flexible"
-msgstr ""
+msgstr "靈活"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "BetOnMarkets.com 連續三年被英國股票雜誌《Shares Magazine》選為「最佳固定賠率金融交易提供商」。這是我們最後一次獲獎，因為該雜誌已停止頒發這一類獎項"
@@ -1417,7 +1417,7 @@ msgid "Founded October 1999"
 msgstr "成立於1999年"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Binary.com成立於1999年，是線上二元期權交易行業中歷史最悠久、享有最高聲譽之佼佼者之一"
 
 msgid "Fractal (FRACTAL)"
 msgstr "分形 (FRACTAL)"
@@ -1516,13 +1516,13 @@ msgid "Higher/Lower"
 msgstr "「高於/低於」"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr ""
+msgstr "高於/低於 - 預測到期時市場價格是高於還是低於目標價格"
 
 msgid "Higher/Lower trades"
 msgstr "「高於/低於」交易"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr ""
+msgstr "高於/低於   預測到期時市場價格是高於還是低於目標價格"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "圈套形態 (CDLHIKKAKE)"
@@ -1555,7 +1555,7 @@ msgid "How to trade binaries?"
 msgstr "二元期權如何交易?"
 
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
+msgstr "如何在波動率指數市場上交易？"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "赫爾移動平均線 (HMA)"
@@ -1576,10 +1576,10 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "重要免責聲明 - Binary.com與上述所有支付代理不存在附屬關係。各支付代理均以獨立服務提供商的身份運營，未由Binary.com支持、擔保或經其它方式批准。客戶與支付代理的業務往來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
 
 msgid "IPO on the blockchain"
-msgstr ""
+msgstr "區塊鏈上首次公開發售"
 
 msgid "Ideal for beginners and experienced traders"
-msgstr ""
+msgstr "最適於新手和經驗豐富的交易者"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "一模一樣的三鴉 (CDLIDENTICAL3CROWS)"
@@ -1636,10 +1636,10 @@ msgid "In/Out"
 msgstr "「範圍之內/之外」"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr ""
+msgstr "「範圍之內/之外」期權(收盤位於範圍之內/之外以及保持在範圍之內/超出範圍之外)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
-msgstr ""
+msgstr "範圍內/範圍外 - 預測市場價格是否會保持在兩個目標價格之內/之外"
 
 msgid "In/Out trades"
 msgstr "「範圍之內/之外」交易"
@@ -1657,7 +1657,7 @@ msgid "Indices"
 msgstr "指數"
 
 msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
-msgstr ""
+msgstr "指數 - 全球所有主要的股票指數源自場外交易市場"
 
 msgid "Indices trading experience"
 msgstr "指數交易經驗"
@@ -1675,7 +1675,7 @@ msgid "Industry of Employment"
 msgstr "職業領域"
 
 msgid "Initial Coin Offering (ICO)"
-msgstr ""
+msgstr "首次代幣發售 (ICO)"
 
 msgid "Instant access"
 msgstr "即時存取"
@@ -1945,7 +1945,7 @@ msgid "Matches"
 msgstr "相符"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "符合/相差 - 預測最後數字是否符合"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "相同低價 (CDLMATCHINGLOW)"
@@ -2134,7 +2134,7 @@ msgid "OK"
 msgstr "確定"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
-msgstr ""
+msgstr "場外交易股票 - 源自場外交易市場的藍籌股票合約"
 
 msgid "Occupation"
 msgstr "職業"
@@ -2167,7 +2167,7 @@ msgid "One last step left"
 msgstr "剩下最後一步"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "線上交易可能使人上癮。請填寫下表以限制您對本網站的參與，您也可以傳送簽名信或傳真到我們的客服團隊。設定好後，您將只能收緊限制。限制只能在7天后取消或放寬，而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "成立後僅五年，我們的線上交易服務即斬獲這一重要獎項。該獎項旨在表彰 BetOnMarkets.com 向交易新手和資深交易者提供可靠、快速和安全的網上交易。此時，我們網站的交易數量已超過1500萬筆"
@@ -2236,7 +2236,7 @@ msgid "Our fast organic growth is supplemented by the acquisition of the client 
 msgstr "我們獲取了主要競爭對手之一 BetsForTraders 的客戶群，補充了公司快速的有機增長"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "我們的報價基於銀行間期權市場基準價格，讓您不論身在何處都可獲得最公平、透明的報價"
 
 msgid "Over"
 msgstr "超過"
@@ -2245,13 +2245,13 @@ msgid "Over 1 million registered accounts worldwide"
 msgstr "全球各地擁有超過1百萬個註冊帳號"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "世界各地擁有超過130名職員和約聘員工"
 
 msgid "Over 3 years"
 msgstr "3年以上"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr ""
+msgstr "大於/小於 - 預測最後數字是大於或小於"
 
 msgid "Overlap Studies"
 msgstr "重疊研究"
@@ -2299,7 +2299,7 @@ msgid "Personal Details"
 msgstr "個人資料"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "2017個人財富獎"
 
 msgid "Phone"
 msgstr "電話"
@@ -2353,7 +2353,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "請從以下瀏覽器中選擇一個，並安裝最新版本"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "請注意，由於其場外交易性質，OTC 指數和股票的價格與中央交易所的相應指數和股票價格有所不同"
 
 msgid "Please provide your tax information"
 msgstr "請提供稅務資訊"
@@ -2437,7 +2437,7 @@ msgid "Profit/Loss (points)"
 msgstr "利潤/虧損(點)"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "保護利潤"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "以英文、印尼文、日文、中文、波蘭文、德文、法文、西班牙文、葡萄牙文、意大利文、俄文和泰文發佈"
@@ -2557,13 +2557,13 @@ msgid "Rise/Fall"
 msgstr "上漲/下跌"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "上漲/下跌 - 預測市場價格是否會從目前水平上漲或下跌"
 
 msgid "Rise/Fall trades"
 msgstr "上漲/下跌交易"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr ""
+msgstr "上漲/下跌   預測市場價格是否會從目前水平上漲或下跌"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "上漲/下跌三法 (CDLRISEFALL3METHODS)"
@@ -2605,7 +2605,7 @@ msgid "Saved"
 msgstr "已儲存"
 
 msgid "Scalable"
-msgstr ""
+msgstr "可縮放"
 
 msgid "Second line of home address"
 msgstr "家庭地址第二行"
@@ -2617,7 +2617,7 @@ msgid "Security"
 msgstr "安全"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "安全隱私"
 
 msgid "Security question"
 msgstr "安全提示問題"
@@ -2653,10 +2653,10 @@ msgid "Session duration limit, in minutes"
 msgstr "交易期持續時間限制，以分鐘作單位"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "您可設定障礙水平用於確認頭寸參數以及觸發賠付"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "設定交易期限，從10 秒至365 天"
 
 msgid "Settles"
 msgstr "結算"
@@ -2668,13 +2668,13 @@ msgid "Share chart"
 msgstr "共享圖表"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "精確基準報價"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "射擊之星 (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "短期限到長期限"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "並排的白色K線圖形態是三重形態。看漲形態：上升走勢中，首支K線圖後面的是另一支以高於首支收盤價開盤的上升K線圖（高開缺口），再後面的是第三支以低於第二支收盤價開盤的上升K線圖（低開缺口）。看跌形態：下降走勢中，首支K線圖下跌，後面的是一支以低於首支收盤價開盤的上升K線圖（低開缺口），再後面的是以低於第二支收盤價開盤的上升K線圖。此形態顯示持續下跌走勢"
@@ -2683,7 +2683,7 @@ msgid "Simple Moving Average (SMA)"
 msgstr "簡單移動平均線 (SMA)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "簡單和直觀化"
 
 msgid "Smart FX"
 msgstr "智慧外匯"
