@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-01-30 01:50-0500\n"
+"PO-Revision-Date: 2018-01-30 02:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -781,7 +781,7 @@ msgid "Binary.com's Smart FX are smart markets that measure the value of a curre
 msgstr "Binary.com的智能外汇是衡量一种货币相对一篮子主要货币价值的智能型市场"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Binary.com的波动率指数由经过加密的安全随机数字生成器生成，并由独立的第三方审计其公平度"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Binary.com系统每天处理超过百万笔交易（包括虚拟账户）"
@@ -805,7 +805,7 @@ msgid "Browser upgrade required"
 msgstr "需更新浏览器"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "每天，牛市和熊市指数于格林尼治时间 00:00 时开始，分别复制看涨和看跌市场"
 
 msgid "Buy Price"
 msgstr "购入价"
@@ -880,16 +880,16 @@ msgid "Chart type"
 msgstr "图表类型"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "从五种市场与相关资产中选择"
 
 msgid "Choose password"
 msgstr "选择密码"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "如您希望通过预测市场在合约期限内是否会触及目标价格而获利，您可以选择交易“触及/未触及”期权"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "选择您要交易的资产，如黄金、原油、股票或货币对。二元期权的价值基于标的资产价格。二元期权交易的一个优势就是您并非买卖实际资产， 只是一个确认资产表现状况的合约"
 
 msgid "Choose your pereferred payment agent"
 msgstr "选择您较倾向的支付代理"
@@ -907,7 +907,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "点击登录Binary.com账户"
 
 msgid "Client funds"
-msgstr ""
+msgstr "客户基金"
 
 msgid "Close"
 msgstr "关"
@@ -925,7 +925,7 @@ msgid "Commodities"
 msgstr "大宗商品"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "大宗商品 - 黄金和原油等主要大宗商品"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "大宗商品是生长在地上或从地面开采的宝贵资源，例如白银、黄金和石油。在Binary.com，大宗商品按美元报价"
@@ -943,13 +943,13 @@ msgid "Comparisons"
 msgstr "比较"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "竞争及透明的价格"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "为预测金融市场而设的电脑系统和方法"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "提供自订金融市场预测的电脑交易系统"
 
 msgid "Conditions"
 msgstr "条件"
@@ -970,7 +970,7 @@ msgid "Continue Trading"
 msgstr "继续交易"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "连续指数"
 
 msgid "Contract"
 msgstr "合约"
@@ -1012,7 +1012,7 @@ msgid "Crosshair"
 msgstr "交叉线"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "货币 - 所有主要外汇货币对"
 
 msgid "Current Level"
 msgstr "当前价位"
@@ -3772,10 +3772,10 @@ msgid "of \"Now\", the"
 msgstr "是“现在”，"
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "免费开立资金总额高达一万美元的全功能虚拟资金账户"
 
 msgid "open an account"
-msgstr ""
+msgstr "开立账户"
 
 msgid "our helpful support desk"
 msgstr "我们热心的支持人员"
