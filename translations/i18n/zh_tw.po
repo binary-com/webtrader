@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-01-30 01:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,64 +49,64 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr "正式上線，提供基於各種金融指數的全天侯金融投注服務。公司業務快速增長，我們很快即成為固定賠率金融投注的市場領導者"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "-與銀行間交易員享有相同的回報率。我們每日都對比銀行間選項市場來制訂基準價格"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com與上述所有支付代理不存在附屬關係。各支付代理均以獨立服務提供商的身份運營，未由Binary.com支持、擔保或經其它方式批准。客戶與支付代理的業務往來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- 隨時從一百多萬個交易選項中挑選並按照您傾向的策略自訂交易"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- 選擇時間範圍為10 秒到365 天"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- 存款最低僅需5美元即可開始交易"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- 無論投入多少資金進行交易，均可獲得同等回報率"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- 享受簡單操作、輕鬆瀏覽的交易平台"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- 購入合約交易前，您已知道贏或輸的金額"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- 僅需數分鐘即可開設帳戶並開始交易。也可全天候存取款"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "-預測到期時市場價格是高於還是低於目標價格"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "-預測市場價格是否會從目前水平上漲或下跌"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "-預測市場價格是否會在兩個目標價格的範圍之內"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "-預測市場價格是否會觸及目標價格"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Binary.com提供交易與反向交易的報價，因此您將始終獲得公正透明的價格"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- 長期合約到期前售出交易，以保護您的盈利或將虧損降至最低"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- 使用技術或基本面分析或按您的「直覺」執行交易"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- 讓您了解個人資料、交易和資金總是安全並充滿信心進行交易"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- 在各種市場環境（上漲、下跌、橫盤整理、交易清淡和震盪）中交易外匯、指數、商品及其它"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "-Binary.com全天候均可進行交易（包括週末）"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- 通過擁有受專利保護的報價技術的業內領先企業進行交易"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- 貨幣、股票指數和大宗商品"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- 從10秒到365天"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "-上漲/下跌，觸及/未觸及，保持在範圍內/範圍外"
 
 msgid "0-1 year"
 msgstr "0-1年"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2年"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. 選擇標的資產"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. 標的市場"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2分鐘"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. 選擇交易期限"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. 交易類型"
 
 msgid "2000"
 msgstr "2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2小時"
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3分鐘"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. 選擇如何進行市場交易"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. 持續時間"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4小時"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. 障礙"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. 選擇您的投注額與潛在回報率"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "過去12月內交易40次或以上"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5分鐘"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. 賠付"
 
 msgid "5m"
 msgstr "5分鐘"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "所有市場條件"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "所有市場環境和期限"
 
 msgid "All markets"
 msgstr "所有市場"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "所有市場和環境"
 
 msgid "All payouts"
 msgstr "所有賠付額"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "八月"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "全天候無休"
 
 msgid "Available Currencies"
 msgstr "可用的貨幣"
@@ -583,7 +583,7 @@ msgid "Avg. Profit"
 msgstr "平均利潤"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "獲頒大獎的線上交易平台"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "動量震盪指標 (AO)"
@@ -637,7 +637,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "博彩系統和方法"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -649,7 +649,7 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK 被授予日本執照"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "二元期權基本知識"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary 被授予投資服務執照"
@@ -661,7 +661,7 @@ msgid "Binary option"
 msgstr "二元期權"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "二元期權很容易了解。它被稱為「二元」是因為只能有2種結果：贏或輸。如果預測正確，您會獲得交易開始時設定的賠付額。不然，您將損失起始資金。"
 
 msgid "Binary options or other financial derivatives"
 msgstr "二元期權或其他金融衍生品"
@@ -688,7 +688,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Binary 的馬爾他附屬公司 Binary Investments (Europe) Ltd. 由 Malta Financial Services Authority 授予第3類投資服務執照"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "Binary平台平均每秒鐘進行20宗交易，全天候提供服務，整年無休"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -700,13 +700,13 @@ msgid "Binary.com Shop introduced"
 msgstr "Binary.com新商店"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com 宣佈計畫"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com不斷創新、日漸成長"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Binary.com已經建立可讓您全天候交易的波動率指數。您可通過所有合約類型交易此類指數"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com竭誠達到極高的道德標準和優質的交易體驗，因此獲得了令人羨慕的聲譽"
@@ -724,7 +724,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com導入了"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "2017 年英國網上個人財富獎中，Binary.com被全球投資人評選為最佳二元期權代理商"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com完全基於網路，無需安裝任何軟體即可交易"
@@ -733,10 +733,10 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "在迪拜主辦的第16 屆年度中東和北非國際金融會議和展覽會中，Binary.com被譽為世界上「最佳二元期權經紀商」"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com由Binary集團有限公司擁有和經營。欲了解更多資訊，請參閱我們的歷史頁面"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com為非歐盟客戶推出比特幣 (BTC) 帳戶"
 
 msgid "Binary.com launches Bitcoin accounts"
 msgstr ""
