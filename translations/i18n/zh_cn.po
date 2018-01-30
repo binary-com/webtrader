@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-01-30 01:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,64 +49,64 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr "正式上线，提供基于各种金融指数的全天侯金融投注服务。公司业务快速增长，我们很快将成为固定赔率金融投注的市场领导者"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "-与银行间交易员享有相同的回报率。我们每日都对比银行间选项市场来制定基准价格。"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- 随时从一百多万个交易选项中挑选并按照您倾向的策略自定义交易"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- 选择时间范围为10 秒到 365 天"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- 存款最低仅需 5 美元即可开始交易"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- 无论投入多少资金进行交易，均可获得同等回报率"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- 享受简单操作、轻松浏览的交易平台"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- 购入合约交易前，您已知道赢或输的金额"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- 仅需数分钟即可开设账户并开始交易。也可全天候存取款"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "-预测到期时市场价格是高于还是低于目标价格。"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "-预测市价是否从目前价位上升或下跌。"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "-预测市价是否保持在两个目标价格的范围之内，或超出范围之外。"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "-预测市价是否触及或不触及一个目标价格。"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Binary.com提供交易与反向交易的报价，因此您将始终获得公正透明的价格"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- 长期合约到期前售出交易，以保护您的盈利或将亏损降至最低"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- 使用技术或基本面分析或按您的‘直觉’执行交易"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- 让您了解个人数据、交易和资金总是安全并充满信心进行交易"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- 在各种市场环境（上涨、下跌、横盘整理、交易清淡和震荡）中交易外汇、指数、大宗商品及其它"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "-Binary.com全天候均可进行交易（包括周末）"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- 通过拥有受专利保护的报价技术的业内领先企业进行交易"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- 货币、股票指数和大宗商品"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- 从10秒到365天"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "-上涨/下跌，触及/未触及，保持在范围内/范围外"
 
 msgid "0-1 year"
 msgstr "0-1 年"
