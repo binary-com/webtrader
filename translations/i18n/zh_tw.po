@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-01-30 01:50-0500\n"
+"PO-Revision-Date: 2018-01-30 02:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -769,16 +769,16 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com在久負盛名的倫敦EGR操作員頒獎儀式中榮獲2015年金融搏彩操作員第一獎"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Binary.com的連續指數包括波動率10指數、波動率25指數、波動率50指數、波動率75指數及波動率100指數。這些指數跟具10%、25%、50%、75%和100%持續波動率的類比市場對應"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Binary.com的 OTC 指數和股票來自場外交易市場，並為您提供源自中央交易所外的替代式股票指數和股票交易方式"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Binary.com的 OTC 指數和股票提供即時圖表和定價優勢。 此嶄新即時產品讓您在我們獨特市場進行指數和股票交易，享受更多令人興奮的機會"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Binary.com的智慧外匯是衡量一種貨幣相對一籃子主要貨幣價值的智慧型市場"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
 msgstr ""
@@ -2686,10 +2686,10 @@ msgid "Simple and intuitive"
 msgstr ""
 
 msgid "Smart FX"
-msgstr ""
+msgstr "智慧外匯"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "智慧指數"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "平滑移動平均線 (SMMA)"
@@ -2701,7 +2701,7 @@ msgid "Source of wealth"
 msgstr "財富來源"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "確定賠付額，如果您的預測正確的話，這就是您的潛在回報率。我們的系統將進一步計算您的投注額，即購入合約的總成本。 Binary.com提供從1美元到5萬美元的賠付額"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "陀螺線 (CDLSPINNINGTOP)"
@@ -2761,13 +2761,13 @@ msgid "Status"
 msgstr "狀況"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "「保持在範圍之內/超出範圍之外」"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "「保持在範圍之內/超出範圍之外」的交易"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "保持在範圍之內/之外  預測市價在合約期限內的任何時間都保持在兩個目標價位範圍之內或超出範圍之外"
 
 msgid "Stays in"
 msgstr "範圍內"
@@ -2776,7 +2776,7 @@ msgid "Step 1: Define your position"
 msgstr "步驟 1：設定您的頭寸參數"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "步驟 2：獲取合約報價"
 
 msgid "Step 3: Make your trade"
 msgstr "步驟 3：執行交易"
@@ -2881,7 +2881,7 @@ msgid "The"
 msgstr "關於"
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "澳元指數是個加權指數，衡量澳元相對5種國際貨幣（美元、歐元、英鎊、日圓、加元）的價值，各貨幣的權重均為20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "絕對價格震盪指標 (APO) 是根據兩個不同長度如快與慢速移動平均線的絕對相差數值"
@@ -2929,7 +2929,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "蜻蜓十字線指標在開盤價，收盤價與最高價相同或大約相同（當開盤價，收盤價與最高價位很少完全相同時）時出現。蜻蜓十字線最重要的部分是長長的下影線"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "歐元指數是加權指數，衡量歐元相對5種國際貨幣（美元、澳元、英鎊、日圓、加元）的價值，每種貨幣的權重均為20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "指數移動平均線（EMA）代表平均價格，但對近期價格加權。加權方式以最近價格根據移動平均的選定週期增加。EMA週期越短，對最近價格加權越多"
@@ -2938,7 +2938,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr "快速隨機擺動指標是根據喬治·藍恩對％K和％D的原公式計算的。快速版％K線波動較大。％D相等於％K的3天期慢速移動平均數"
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "英鎊指數是加權指數，衡量英鎊相對5種國際貨幣（美元、歐元、澳元、日圓、加元）的價值，每種貨幣的權重均為20%"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "墓碑十字線指標在開盤價、收盤價與最低價位相同或大約相同（當開盤價、收盤價與最低價位很少完全相同時）時出現。墓碑十字線最重要的部分是長長的上影線"
@@ -3013,10 +3013,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr "典型價格功能使用簡單的單線圖測量當天交易的最高價、最低價和收盤價的平均值。普通價格提供當天交易價格的簡視圖以及當進行其他價格調整功能後所發生的結果。您可利用它來使收盤價的一些波動變得平滑，因為它包含當天交易的所有資訊，不只是閉市結果。典型價格指標計算法是把最高價、最低價和收盤價相加，然後除以三"
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "美元指數是加權指數，衡量美元相對於5種全球貨幣（歐元、英鎊、日圓、加元、澳元）的價值，每種貨幣的權重均為20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "波動率100指數的波幅是波動率50指數的兩倍，是波動率25指數的四倍"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "加權收盤價指標顯示每日平均價。它可使收盤價圖表的一些波動變得平滑，因為它包含整天交易的資訊"
@@ -3055,10 +3055,10 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "本網站所涵蓋的金融交易服務僅適合這樣的客戶：能夠承受全部投入資金虧損的風險，了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風險。如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "第一步是開立帳戶。您可"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "首先選擇您要交易的資產，如黃金、石油、股票或外匯（二元期權的價值基於標的資產價格）。期權交易一個很大的優勢就是您並非買賣實際資產"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "看漲梯底形態的首三天是擁有連續較低開盤價和較低收盤價的強大黑色K線圖。第四天是短黑K線圖，但開盤價較高，交易價也較高，留下長上影，然後以新低價格收盤。第五天是與第四天形成體形缺口的強大白色K線圖"
@@ -3112,16 +3112,16 @@ msgid "The volatility indices simulate various real market situations and provid
 msgstr "波動率指數類比各種真實的市場情況，並根據不同的市場情況提供理想的平台交易實踐和測試策略。這些指數取決於波動率和漂移率，並協助使用者嘗試各種場景，如高波動率、低波動率、看漲和看跌趨勢"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "共有四種交易供您選擇"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "範圍內/外交易有兩種類型"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "上漲/下跌交易有兩種類型"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "亞洲期權交易有兩種方式"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "交易者預測市場收盤價會高於或低於設定目標價的交易"
@@ -3274,7 +3274,7 @@ msgid "Touch/No Touch"
 msgstr "觸及/未觸及"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "觸及/未觸及 - 預測市場價格是否會觸及目標價格"
 
 msgid "Tourism"
 msgstr "旅遊"
@@ -3292,7 +3292,7 @@ msgid "Trade Types"
 msgstr "交易類型"
 
 msgid "Trade according to your preferred strategy"
-msgstr ""
+msgstr "按照您傾向的策略交易"
 
 msgid "Trade using"
 msgstr "交易方法為"
@@ -3313,7 +3313,7 @@ msgid "Trading Times"
 msgstr "交易時間"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
-msgstr ""
+msgstr "二元期權交易非常簡單，僅需執行三個簡單的步驟即可購入交易"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "二元期權交易不一定適合每一個人。因此，請確保您完全明白有關的風險。您的虧損可能會超越起始資金存款，而您並不擁有或占有任何標的資產。對於進行博彩產品交易之二元期權，請務必要記住博彩活動可能會上癮，請在玩時提醒自己要承擔責任"
@@ -3328,7 +3328,7 @@ msgid "Transfer to another Binary account"
 msgstr "轉帳到另一個Binary帳戶"
 
 msgid "Transparent risk and potential reward"
-msgstr ""
+msgstr "透明風險和潛在獎勵"
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "三角移動平均線 (TRIMA)"
@@ -3361,13 +3361,13 @@ msgid "Two Crows (CDL2CROWS)"
 msgstr "二鴉 (CDL2CROWS)"
 
 msgid "Two-way pricing"
-msgstr ""
+msgstr "雙向報價"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "典型價格 (TYPPRICE)"
 
 msgid "US Patents"
-msgstr ""
+msgstr "美國專利"
 
 msgid "USD"
 msgstr "美元"
@@ -3397,7 +3397,7 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr "獨特三河床是三支燭形線組成的看漲K線圖形態：第一支燭形線具長看跌體形，第二支燭形線是鎚子，其體形位於第一條形體內。第三支燭形線較小，是看漲形態，其收盤價比第二條形的收盤價低"
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr ""
+msgstr "高於 - 預測到期時市場價格高於平均價格"
 
 msgid "Up/Down"
 msgstr "上漲/下跌"
@@ -3463,7 +3463,7 @@ msgid "View Statement"
 msgstr "檢視帳單"
 
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "波動率指數市場"
 
 msgid "Volatility Indicators"
 msgstr "波動率指標"
@@ -3472,10 +3472,10 @@ msgid "Volatility Indices"
 msgstr "波動率指數"
 
 msgid "Volatility Indices are further categorized into two types"
-msgstr ""
+msgstr "波動率指數進一步分為兩種類型"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
-msgstr ""
+msgstr "波動率指數 - Binary.com專屬的模擬市場力量指數"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "WMA代表加權移動平均指標。它使價格曲線更加平滑，讓趨勢識別工作更加方便。它比EMA更加注重近期資訊"
@@ -3490,7 +3490,7 @@ msgid "We rebrand BetOnMarkets.com as"
 msgstr "我們把 BetOnMarkets.com 更名為"
 
 msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
-msgstr ""
+msgstr "我們按照交易牌照規定條件將所有客戶的基金集合並保留在安全及擁有牌照的金融機構裡"
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "我們獲得「用於金融市場投機的電腦交易系統及方法」和「用於自訂金融市場投機的電腦交易系統」的專利授權。這些專利表明我們的創新和保持領先群雄的能力"
@@ -3523,19 +3523,19 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "歡迎來到Binary.com Webtrader"
 
 msgid "What are OTC indices and stocks?"
-msgstr ""
+msgstr "場外交易指數和股票是什麼？"
 
 msgid "What is pep?"
 msgstr "Pep 是什麼？"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr ""
+msgstr "當您對收到的價格感到滿意時請立刻執行交易。通過我們的獨特平台，您不會遇到滑價或跳空市場。更重要的是，不會有任何未顯示費用。您也可在任何長期合約到期前隨時售出，以保護您的賺取利潤或將虧損降至最低額"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "通過Binary.com進行交易，我們保證您的訂金將由獨立信託帳戶保管，不會用在任何其他用途"
 
 msgid "Where does Binary.com hold my funds?"
-msgstr ""
+msgstr "Binary.com將我的基金保留在哪裡？"
 
 msgid "While on the go, you can"
 msgstr "出門在外時，您可"
@@ -3544,7 +3544,7 @@ msgid "Why Choose Binary Trading?"
 msgstr "為何選擇二元期權交易？"
 
 msgid "Why trade with Binary.com"
-msgstr ""
+msgstr "為何通過Binary.com進行交易"
 
 msgid "Will I need to install any software?"
 msgstr "我需要安裝任何軟體嗎？"
@@ -3592,7 +3592,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "您尚未複製任何交易"
 
 msgid "You can"
-msgstr ""
+msgstr "您可以"
 
 msgid "You can only allow other traders to copy your trade"
 msgstr "您只能允許其他交易者複製您的交易"
@@ -3610,7 +3610,7 @@ msgid "You haven't saved any templates yet"
 msgstr "您尚未儲存任何範本"
 
 msgid "You only need to make four decisions to execute a binary contract"
-msgstr ""
+msgstr "您只需要做四個決定，即可交易二元期權合約"
 
 msgid "You pay"
 msgstr "您支付"
@@ -3652,13 +3652,13 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "而愛爾蘭客戶由(3)愛爾蘭稅務專員辦事處授予執照和監管，執照號碼為1010285 (2015年9 月29 日）。本網站的服務不向一些國家如美國、哥斯大黎加及香港或對年齡不到18歲的使用者提供"
 
 msgid "and start learning how to trade"
-msgstr ""
+msgstr "並開始學習如何交易"
 
 msgid "apostrophe (') are allowed"
 msgstr "允許使用所有格號(')"
 
 msgid "apply online"
-msgstr ""
+msgstr "線上申請"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr "5千零50萬美元的計值"
@@ -3685,7 +3685,7 @@ msgid "days"
 msgstr "天"
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "存入資金並於數分鐘內開始交易"
 
 msgid "disposes of its stake"
 msgstr "將其股份拋售"
@@ -3718,7 +3718,7 @@ msgid "if this is not your country of residence"
 msgstr "如不是您的居住國"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "於數分鐘內"
 
 msgid "in the future, the"
 msgstr "未來的"
@@ -3772,10 +3772,10 @@ msgid "of \"Now\", the"
 msgstr "是「現在」"
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "免費開立資金總額高達一萬美元的全功能虛擬資金帳戶"
 
 msgid "open an account"
-msgstr ""
+msgstr "開立帳戶"
 
 msgid "our helpful support desk"
 msgstr "我們熱心的支援人員"
