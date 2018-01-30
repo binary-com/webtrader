@@ -10,28 +10,28 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-01-28 23:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
-msgstr ""
+msgstr "รางวัล ‘Best Customer Communication Firm’ จาก Investors Chronicle"
 
 msgid "'Best Fixed-Odds Broker' silver award by Trade2Win"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Broker’ ประเภทเหรียญเงิน จาก Trade2Win"
 
 msgid "'Best Fixed-Odds Financial Provider' award by Financial Times and Investors Chronicle UK"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Financial Provider’ จาก Financial Times และ Investors Chronicle สหราชอาณาจักร"
 
 msgid "'Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Financial Trading Provider’ จาก Shares Magazine สหราชอาณาจักร"
 
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Firm 2012’ จาก Global Banking และ Finance Review"
 
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr ""
+msgstr "รางวัล ‘Financial Betting Operator of the Year’ จาก eGaming Review"
 
 msgid "'contract period'"
 msgstr "'ระยะเวลาสัญญา'"
@@ -43,73 +43,74 @@ msgid "(formerly known as"
 msgstr "(เดิมชื่อ"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
-msgstr ""
+msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือสิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
-msgstr ""
+msgstr ") ได้เปิดใช้งานจริง ให้บริการการพนันทางการเงินในดัชนีทางการเงินต่างๆที่หลากหลายทั้งวันทั้งคืน ธุรกิจเติบโตอย่างรวดเร็ว และในไม่ช้าพวกเราก้าวสู่การเป็นผู้นำตลาดการพนันทางการเงินแบบ Fixed-Odds"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- ประโยชน์จากอัตราผลตอบแทนที่เท่ากับของนักลงทุนระหว่างธนาคาร ราคาของเราถูกเปรียบเทียบเป็นรายวันกับ\n"
+"ตลาดออปชั่นระหว่างธนาคาร"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
-msgstr ""
+msgstr "- Binary.com ไม่ได้เข้าร่วมเป็นพันธมิตรกับตัวแทนรับชำระเงินที่แจกแจงข้างต้น ตัวแทนรับชำระเงินแต่ละรายดำเนินการในฐานะผู้ให้บริการอิสระ และไม่ได้รับการรับรอง รับประกัน หรืออนุมัติโดย Binary.com ลูกค้าที่ติดต่อกับตัวแทนรับชำระเงินจะต้องรับผิดชอบต่อความเสี่ยงต่างๆด้วยตัวเอง ขอแนะนำให้ลูกค้าตรวจสอบข้อมูลหลักฐานอ้างอิงของตัวแทนรับชำระเงินก่อนที่จะส่งเงินใดๆให้กับตัวแทน Binary.com ไม่ว่าในกรณีใดๆก็ตาม จะไม่รับผิดชอบต่อธุรกรรมที่กระทำขึ้นระหว่างลูกค้ากับตัวแทนรับชำระเงิน"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- เลือกจากการซื้อขายหลากหลายแบบที่มีมากกว่าหนึ่งล้านแบบเมื่อใดก็ได้ และปรับแต่งการซื้อขายของคุณตามกลยุทธ์ที่คุณต้องการ"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- เลือกระยะเวลา จาก 10 วินาที ถึง 365 วัน"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- ฝากเงินแค่เพียง 5 เหรียญสหรัฐเพื่อเริ่มซื้อขาย"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- ได้ผลตอบแทนต่อเงินที่ลงไปของมูลค่าทั้งหมดเป็นสัดส่วนเดียวกัน"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- เพลิดเพลินไปกับแพลตฟอร์มการซื้อขายที่ง่ายต่อการหาทางและใช้งาน"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- รู้ว่าจะได้เงิน หรือขาดทุนเท่าไหร่ก่อนจะซื้อสัญญา"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- เปิดบัญชีและเริ่มซื้อขายภายในไม่กี่นาที การฝากและถอนเงินทำได้ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- คาดการณ์ว่าตลาดจะปิดที่สูงกว่าหรือต่ำกว่าราคาเป้าหมาย"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- คาดการณ์ตลาดเพิ่มขึ้น หรือลดลงจากระดับปัจจุบัน"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- คาดการณ์ตลาดจะอยู่ระหว่างหรือออกนอกราคาเป้าหมายทั้งสอง"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- คาดการณ์ตลาดจะแตะ หรือไม่แตะราคาเป้าหมาย"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- ได้รับใบเสนอราคาสำหรับการซื้อขาย และการซื้อขายเองจากตลาด คุณจะได้รับอัตราที่เป็นกลาง โปร่งใสราคาจาก Binary.com เสมอ"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- ขายสัญญาระยะยาวของคุณก่อนหมดอายุเพื่อรักษากำไรของที่พึงได้ หรือเพื่อลดการขาดทุน"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- ซื้อขายตาม \"สัญชาตญาณ\" หรือดูจากการวิเคราะห์ทางด้านเทคนิค และพื้นฐาน"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- ซื้อขายอย่างมั่นใจว่าข้อมูลส่วนบุคคล ธุรกรรม และเงินทุนนั้นปลอดภัยเสมอ"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- ซื้อขายสกุลเงิน ดัชนี สินค้าโภคภัณฑ์ และอื่นๆอีกมาก ในตลาดที่กำลังขึ้น ลง ไปด้านข้าง เงียบ และผันผวน"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- ซื้อขายเมื่อคุณต้องการ สามารถเข้า Binary.com ได้ตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- ซื้อขายกับผู้บุกเบิกอุตสาหกรรมและเจ้าของเทคโนโลยีการกำหนดราคาที่ได้รับสิทธิบัตร"
 
 msgid "- currencies, stock indices, and commodities"
-msgstr ""
+msgstr "- สกุลเงินต่างๆ หลักทรัพย์ต่างๆ ดัชนีต่างๆ และสินค้าโภคภัณฑ์ต่างๆ"
 
 msgid "- from $1 to $50,000"
 msgstr "- ตั้งแต่ 1 ถึง 50,000 เหรียญสหรัฐ"
@@ -118,7 +119,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- ตั้งแต่ 10 วินาที ถึง 365 วัน"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- ขึ้น/ลง แตะ/ไม่แตะ อยู่ระหว่าง/ออกนอก"
 
 msgid "0-1 year"
 msgstr "0-1 ปี"
@@ -148,10 +149,10 @@ msgid "1-2 years"
 msgstr "1-2 ปี"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. เลือกผลิตภัณฑ์อ้างอิง"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. ตลาดอ้างอิง"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +197,10 @@ msgid "2 Minutes"
 msgstr "2 นาที"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. เลือกระยะเวลาของการซื้อขาย"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. ประเภทการซื้อขาย"
 
 msgid "2000"
 msgstr "2000 (พ.ศ. 2543)"
@@ -235,7 +236,7 @@ msgid "2016"
 msgstr "2016 (พ.ศ. 2559)"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2 ชั่วโมง"
@@ -250,10 +251,10 @@ msgid "3 Minutes"
 msgstr "3 นาที"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. เลือกว่าท่านต้องการซื้อขายอย่างไร"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. ระยะเวลา"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +281,10 @@ msgid "4 Hours"
 msgstr "4 ชั่วโมง"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. Barrier(s)"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. เลือกจำนวนเงินเดิมพันและผลกำไร"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "มีมากกว่า 40 ธุรกรรม ภายใน 12 เดือนที่ผ่านมา"
@@ -298,7 +299,7 @@ msgid "5 Minutes"
 msgstr "5 นาที"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. ผลตอบแทน"
 
 msgid "5m"
 msgstr "5 นาที"
@@ -322,34 +323,34 @@ msgid "8h"
 msgstr "8 ชั่วโมง"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr ""
+msgstr "Evening Doji Star ประกอบด้วยแท่งเทียนยาวท่ี่แสดงความตื่นตัว ตามด้วย Doji ที่มีช่องว่างด้านบน จากนั้นเป็นแท่งเทียนที่สามที่แสดงความซบเซาที่ปิดอย่างดีภายในแท่งเทียนแรก และเช่นนี้เป็นการยืนยันถึงการพลิกกลับ ซึ่งถือว่าเป็นรูปแบบแท่งเทียนที่แสดงการพลิกกลับอย่างแข็งแกร่งของราคาที่ซบเซา"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
-msgstr ""
+msgstr "Smoothed Moving Average คือการผสมผสานระหว่าง Simple Moving Average และ Exponential Moving Average ใช้กับระยะเวลาที่ยาวกว่าเท่านั้น"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr ""
+msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัวหรือตลาดซบเซาที่มีแท่งขนาดเล็ก ความยาวของหัวหรือหางแตกต่างกันไป อย่างแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันกับผู้ซื้อและผู้ขาย"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
-msgstr ""
+msgstr "การซื้อขาย Stays Between จะให้ผลตอบแทน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้ การซื้อขาย Goes Outside จะให้ผลตอบแทน หากตลาดแตะค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "รูปแบบแท่งเทียนแบบซบเซาประกอบด้วยแท่งเทียนสามแท่งซึ่งแสดงลักษณะดังต่อไปนี้ แท่งแรกเป็นเทียนสีขาวขนาดใหญ่อยู่ภายในแนวโน้มขึ้น แท่งกลางเป็นแท่งเทียนขนาดเล็ก (แดงหรือขาว) ที่ปิดเหนือแท่งสีขาวแรก และแท่งสุดท้ายคือเทียนสีแดงขนาดใหญ่ที่เปิดใต้เทียนแท่งกลางและปิดใกล้กับตำแหน่งตรงกลางของแท่งเทียนแรก"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
-msgstr ""
+msgstr "รูปแบบแท่งเทียนแบบซบเซาที่ถูกใช้เพื่อคาดการณ์การพลิกกลับของแนวโน้มขึ้นปัจจุบัน รูปแบบนี้ประกอบด้วยแท่งเทียนขนาดยาวสามแท่งต่อกันซึ่งได้ปิดที่ต่ำกว่าวันก่อนโดยการเปิดของแต่ละช่วงเกิดขึ้นภายในตัวของแท่งเทียนอันก่อน"
 
 msgid "A bearish counterattack is a long white candle in an uptrend, followed by a long black candle. Closing prices of both candles are at the same price level. A bullish counterattack is a long black candle in an downtrend, followed by a long white candle. Closing prices of both candles are at the same price level"
-msgstr ""
+msgstr "การโต้กลับของตลาดซบเซาคือแท่งเทียนยาวสีขาวในแนวโน้มขึ้น ตามด้วยแท่งเทียนยาวสีดำ ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน การโต้กลับของตลาดตื่นตัวคือแท่งเทียนยาวสีดำในแนวโน้มลง ตามด้วยแท่งเทียนยาวสีขาว ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
-msgstr ""
+msgstr "เส้นแยกของตลาดซบเซาคือรูปแบบความต่อเนื่องของตลาดซบเซา ซึ่งตรงกันข้ามกับเส้นแยกของตลาดตื่นตัว มีองค์ประกอบสองตัวของเส้นแยกตลาดซบเซา วันแรกคือแท่งเทียนสีเขียว และวันที่สองห่างลง เปิดที่ระดับเปิดของแท่งเทียนแรกและปิดแบบอ่อนตัว"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
-msgstr ""
+msgstr "ไบนารีออปชั่นเป็นสัญญาซื้อขายประเภทหนึ่งที่ผู้ซื้อขายจะได้รับเงินตามจำนวนเงินที่กำหนดไว้ล่วงหน้า หากการคาดการณ์ถูกต้อง"
 
 msgid "A binary option is an option with a fixed payout that is determined at the start of the trade. If your prediction is correct, you receive an agreed payout. If not, you lose your initial stake, and no more. The options are called 'binary' because there can be only two outcomes - win or lose"
-msgstr ""
+msgstr "ไบนารีออปชั่นคือออปชั่นที่มีการชำระเงินที่คงที่ซึ่งถูกกำหนดตั้งแต่เริ่มต้นของการซื้อขาย หากการคาดการณ์ของท่านถูกต้อง ท่านจะได้รับการจ่ายเงินตามมูลค่าที่ตกลงไว้ แต่หากการทำนายไม่ถูกต้อง ท่านจะเสียมูลค่าที่วางตั้งต้นไว้ และจะไม่มากไปกว่านั้น ออปชั่นถูกเรียกว่า 'ไบนารี' เนื่องจากมีผลลัพธ์เพียง 2 ทาง คือ ได้ และ เสีย"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
 msgstr ""
@@ -670,22 +671,22 @@ msgid "Binary options or other financial derivatives trading experience"
 msgstr ""
 
 msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
 
 msgid "Binary trading is flexible"
-msgstr ""
+msgstr "การซื้อขายไบนารีมีความยืดหยุ่น"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
-msgstr ""
+msgstr "การซื้อขายไบนารีเหมาะสมสำหรับทั้งบุคคลและผู้เชี่ยวชาญทางตลาด"
 
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
-msgstr ""
+msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK ได้รับใบอนุญาตจาก KLFB เทียบเท่าธุรกิจด้านเครื่องมือทางการเงินประเภทที่ 1 ในประเทศญี่ปุ่น"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
-msgstr ""
+msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK เปิดสำนักงานที่โตเกียว และเริ่มดำเนินการในการขอใบอนุญาตต่างๆที่เกี่ยวข้อง"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
-msgstr ""
+msgstr "สำนักงานสาขามอลเตสของ Binary คือ Binary Investments (Europe) Ltd. ได้รับอนุญาตในการให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
 msgstr ""
