@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-01-30 02:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,64 +49,64 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr "正式上线，提供基于各种金融指数的全天侯金融投注服务。公司业务快速增长，我们很快将成为固定赔率金融投注的市场领导者"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "-与银行间交易员享有相同的回报率。我们每日都对比银行间选项市场来制定基准价格。"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- 随时从一百多万个交易选项中挑选并按照您倾向的策略自定义交易"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- 选择时间范围为10 秒到 365 天"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- 存款最低仅需 5 美元即可开始交易"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- 无论投入多少资金进行交易，均可获得同等回报率"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- 享受简单操作、轻松浏览的交易平台"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- 购入合约交易前，您已知道赢或输的金额"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- 仅需数分钟即可开设账户并开始交易。也可全天候存取款"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "-预测到期时市场价格是高于还是低于目标价格。"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "-预测市价是否从目前价位上升或下跌。"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "-预测市价是否保持在两个目标价格的范围之内，或超出范围之外。"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "-预测市价是否触及或不触及一个目标价格。"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Binary.com提供交易与反向交易的报价，因此您将始终获得公正透明的价格"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- 长期合约到期前售出交易，以保护您的盈利或将亏损降至最低"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- 使用技术或基本面分析或按您的‘直觉’执行交易"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- 让您了解个人数据、交易和资金总是安全并充满信心进行交易"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- 在各种市场环境（上涨、下跌、横盘整理、交易清淡和震荡）中交易外汇、指数、大宗商品及其它"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "-Binary.com全天候均可进行交易（包括周末）"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- 通过拥有受专利保护的报价技术的业内领先企业进行交易"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- 货币、股票指数和大宗商品"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- 从10秒到365天"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "-上涨/下跌，触及/未触及，保持在范围内/范围外"
 
 msgid "0-1 year"
 msgstr "0-1 年"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2年"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. 选择标的资产"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. 标的市场"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2分钟"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. 选择交易期限"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. 交易类型"
 
 msgid "2000"
 msgstr "2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2小时"
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3分钟"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. 选择如何进行市场交易"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. 持续时间"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4小时"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. 障碍"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. 选择您的投注额与潜在回报率"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "过去12月内交易40次及以上"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5分钟"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. 赔付"
 
 msgid "5m"
 msgstr "5分钟"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "所有市场条件"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "所有市场环境和期限"
 
 msgid "All markets"
 msgstr "所有市场"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "所有市场和环境"
 
 msgid "All payouts"
 msgstr "所有赔付额"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "八月"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "全天候无休"
 
 msgid "Available Currencies"
 msgstr "可用的货币"
@@ -583,7 +583,7 @@ msgid "Avg. Profit"
 msgstr "平均利润"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "屡获殊荣的在线交易平台"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "动量震荡指标 (AO)"
@@ -637,7 +637,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "博彩系统和方法"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -649,7 +649,7 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK 被授予日本牌照"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "二元期权基础知识"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary 被授予投资服务牌照"
@@ -661,7 +661,7 @@ msgid "Binary option"
 msgstr "二元期权"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "二元期权很容易了解。它被称为“二元”是因为只能有2种结果：赢或输。如果预测正确，您会获得交易开始时设定的赔付额。不然，您将损失初始资金。"
 
 msgid "Binary options or other financial derivatives"
 msgstr "二元期权或其他金融衍生品"
@@ -688,7 +688,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Binary 的马耳他附属公司 Binary Investments (Europe) Ltd. 由 Malta Financial Services Authority 授予3级投资服务牌照"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "Binary 平台平均每秒钟进行20宗交易，全天候提供服务，整年无休"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -700,13 +700,13 @@ msgid "Binary.com Shop introduced"
 msgstr "新增Binary.com商店"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com 宣布计划"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com不断创新、日渐成长"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Binary.com已经创建可让您全天候交易的波动率指数。您可通过所有合约类型交易此类指数"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com竭诚达到极高的道德标准和优质的交易体验，因此获得了令人羡慕的声誉"
@@ -724,7 +724,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com引入了"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "2017 年英国网上个人财富奖中，Binary.com被全球投资人评选为最佳二元期权代理商"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com完全基于网络，无需安装任何软件即可交易"
@@ -733,13 +733,13 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "在迪拜主办的第16 届年度中东和北非国际金融会议和展览会中，Binary.com被誉为世界上\"最佳二元期权经纪商\""
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com由Binary集团有限公司拥有和经营。欲了解更多信息，请参阅我们的历史页面"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com为非欧盟客户推出比特币 (BTC) 账户"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com推出比特币账户"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com启动了"
@@ -748,13 +748,13 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com%1提供各种常见的存取款方式，包括借记卡和信用卡、银行电汇、电子现金及电子钱包等"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com 提供虚拟货币账户, 方便您得到二元期权交易的窍门。何不试试"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com提供新的交易方式"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Binary.com为每一资产提供以下四种交易方式"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com在吉隆坡市中心QSentral 办公大楼开设办公室，进一步扩大 IT 开发团队"
@@ -769,19 +769,19 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com在久负盛名的伦敦EGR操作员颁奖仪式中荣获2015年金融博彩操作员第一奖"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Binary.com的连续指数包括波动率10指数、波动率25指数、波动率50指数、波动率75指数及波动率100指数。这些指数跟具10%、25%、50%、75% 和100% 持续波动率的模拟市场对应"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Binary.com的 OTC 指数和股票来自场外交易市场，并为您提供源自中央交易所外的替代式股票指数和股票交易方式"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Binary.com的 OTC 指数和股票提供实时图表和定价优势。此崭新实时产品让您在我们独特市场进行指数和股票交易，享受更多令人兴奋的机会"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Binary.com的智能外汇是衡量一种货币相对一篮子主要货币价值的智能型市场"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Binary.com的波动率指数由经过加密的安全随机数字生成器生成，并由独立的第三方审计其公平度"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Binary.com系统每天处理超过百万笔交易（包括虚拟账户）"
@@ -805,7 +805,7 @@ msgid "Browser upgrade required"
 msgstr "需更新浏览器"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "每天，牛市和熊市指数于格林尼治时间 00:00 时开始，分别复制看涨和看跌市场"
 
 msgid "Buy Price"
 msgstr "购入价"
@@ -880,16 +880,16 @@ msgid "Chart type"
 msgstr "图表类型"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "从五种市场与相关资产中选择"
 
 msgid "Choose password"
 msgstr "选择密码"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "如您希望通过预测市场在合约期限内是否会触及目标价格而获利，您可以选择交易“触及/未触及”期权"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "选择您要交易的资产，如黄金、原油、股票或货币对。二元期权的价值基于标的资产价格。二元期权交易的一个优势就是您并非买卖实际资产， 只是一个确认资产表现状况的合约"
 
 msgid "Choose your pereferred payment agent"
 msgstr "选择您较倾向的支付代理"
@@ -907,7 +907,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "点击登录Binary.com账户"
 
 msgid "Client funds"
-msgstr ""
+msgstr "客户基金"
 
 msgid "Close"
 msgstr "关"
@@ -925,7 +925,7 @@ msgid "Commodities"
 msgstr "大宗商品"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "大宗商品 - 黄金和原油等主要大宗商品"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "大宗商品是生长在地上或从地面开采的宝贵资源，例如白银、黄金和石油。在Binary.com，大宗商品按美元报价"
@@ -943,13 +943,13 @@ msgid "Comparisons"
 msgstr "比较"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "竞争及透明的价格"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "为预测金融市场而设的电脑系统和方法"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "提供自订金融市场预测的电脑交易系统"
 
 msgid "Conditions"
 msgstr "条件"
@@ -970,7 +970,7 @@ msgid "Continue Trading"
 msgstr "继续交易"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "连续指数"
 
 msgid "Contract"
 msgstr "合约"
@@ -1012,7 +1012,7 @@ msgid "Crosshair"
 msgstr "交叉线"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "货币 - 所有主要外汇货币对"
 
 msgid "Current Level"
 msgstr "当前价位"
@@ -1042,10 +1042,10 @@ msgid "Custom Theme"
 msgstr "自定义主题"
 
 msgid "Daily Reset Indices"
-msgstr ""
+msgstr "每日重置指数"
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
-msgstr ""
+msgstr "每日重置指数以持续波动率复制市场的看涨和看跌趋势"
 
 msgid "Daily limit on losses"
 msgstr "每日损失限额"
@@ -1138,7 +1138,7 @@ msgid "Digits"
 msgstr "数字"
 
 msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
-msgstr ""
+msgstr "让您预测现货价格最后小数点数值的数字。共有三种数字交易"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "动向指标 (DMI) 其实是由三个不同的指标组成， 包括平均动向指标 (ADX)、正动向指标 (+DI) 和负动向指标 (-DI)"
@@ -1189,7 +1189,7 @@ msgid "Double click the object to remove"
 msgstr "双击对象执行删除"
 
 msgid "Down - Predict that the market will end lower than the average price"
-msgstr ""
+msgstr "下跌 - 预测市价在收盘时低于平均价格"
 
 msgid "Download"
 msgstr "下载"
@@ -1243,13 +1243,13 @@ msgid "EURUSD"
 msgstr "欧元美元"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr ""
+msgstr "每个二元期权合约都有固定期限- 在Binary.com，您可选择从10秒至365天之间的任何期限"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "二元期权交易是对标的市场未来变化的预测"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr ""
+msgstr "每次调整参数后您将看到每个交易的预先设定赔付额。一旦您预测正确即可赢得赔付额。否则您将仅损失初始投注额"
 
 msgid "Edge"
 msgstr "边缘"
@@ -1270,10 +1270,10 @@ msgid "Ends Between/Ends Outside trades"
 msgstr "“收于范围之内/之外”的交易"
 
 msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "到期时价格处于某个范围之内/之外  预测市场价格在合约到期时处于两个目标价格范围之内或之外"
 
 msgid "Ends Between/Outside"
-msgstr ""
+msgstr "到期时价格处于某个范围之内/之外"
 
 msgid "Ends in"
 msgstr "范围之内收盘"
@@ -1315,7 +1315,7 @@ msgid "Even"
 msgstr "偶"
 
 msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
-msgstr ""
+msgstr "偶/奇-预测最后跳动点的最后数字为偶数或奇数"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "十字夜星 (CDLEVENINGDOJISTAR)"
@@ -1399,7 +1399,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "首先，您要设置交易参数。请考虑以下因素"
 
 msgid "Flexible"
-msgstr ""
+msgstr "灵活"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "连续第三年，BetOnMarkets.com被英国财经杂志《Shares Magazine》评为“最佳固定赔率金融交易提供商”。这是我们最后一次获奖，因为该杂志已停止颁发这一类奖项"
@@ -1417,7 +1417,7 @@ msgid "Founded October 1999"
 msgstr "成立于1999年"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Binary.com成立于1999年，是在线二元期权交易行业中历史最悠久、声誉最好的佼佼者之一"
 
 msgid "Fractal (FRACTAL)"
 msgstr "分形(FRACTAL)"
@@ -1516,13 +1516,13 @@ msgid "Higher/Lower"
 msgstr "\"高于/低于\""
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr ""
+msgstr "高于/低于 - 预测到期时市场价格是高于还是低于目标价格"
 
 msgid "Higher/Lower trades"
 msgstr "“高于/低于”交易"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr ""
+msgstr "高于/低于   预测到期时市场价格是高于还是低于目标价格"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "圈套形态 (CDLHIKKAKE)"
@@ -1555,7 +1555,7 @@ msgid "How to trade binaries?"
 msgstr "二元期权如何交易?"
 
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
+msgstr "如何在波动率指数市场上交易？"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "赫尔移动平均线 (HMA)"
@@ -1576,10 +1576,10 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "重要免责声明 - Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com都不对客户与支付代理之间的交易承担责任"
 
 msgid "IPO on the blockchain"
-msgstr ""
+msgstr "区块链上首次公开发售"
 
 msgid "Ideal for beginners and experienced traders"
-msgstr ""
+msgstr "最适于新手和经验丰富的交易者"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "一模一样的三鸦 (CDLIDENTICAL3CROWS)"
@@ -1636,10 +1636,10 @@ msgid "In/Out"
 msgstr "“范围之内/之外”"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr ""
+msgstr "“范围之内/之外”期权(收盘位于范围之内/之外且保持在范围之内/超出范围之外)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
-msgstr ""
+msgstr "范围之内/之外 - 预测市场价格是否会保持在两个目标价格之内/之外"
 
 msgid "In/Out trades"
 msgstr "“范围之内 / 之外”交易"
@@ -1657,7 +1657,7 @@ msgid "Indices"
 msgstr "指数"
 
 msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
-msgstr ""
+msgstr "指数 - 全球所有主要的股票指数源自场外交易市场"
 
 msgid "Indices trading experience"
 msgstr "指数交易经验"
@@ -1675,7 +1675,7 @@ msgid "Industry of Employment"
 msgstr "职业领域"
 
 msgid "Initial Coin Offering (ICO)"
-msgstr ""
+msgstr "首次代币发售 (ICO)"
 
 msgid "Instant access"
 msgstr "即时访问"
@@ -1945,7 +1945,7 @@ msgid "Matches"
 msgstr "相符"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "符合/相差 - 预测最后数字是否符合"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "相同低价 (CDLMATCHINGLOW)"
@@ -2134,7 +2134,7 @@ msgid "OK"
 msgstr "确定"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
-msgstr ""
+msgstr "场外交易股票 - 源自场外交易市场的蓝筹股票合约"
 
 msgid "Occupation"
 msgstr "职业"
@@ -2167,7 +2167,7 @@ msgid "One last step left"
 msgstr "剩下最后一步"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "在线交易可能使人上瘾。请填写下表以限制您对本网站的参与。您也可发送签名信或传真到我们的客服团队。一旦设定好，您只能收紧您的限制。限制只能在 7 天后取消或放宽，自我禁止期在确认后不能取消或更改。若要解除或增加您的限制，请联系"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "成立后仅五年，我们的在线交易服务即斩获这一重要奖项。该奖项旨在表彰 BetOnMarkets.com 向交易新手和资深交易者提供可靠、快速和安全的网上交易。此时，我们网站的交易数量已超过1500万笔"
@@ -2236,7 +2236,7 @@ msgid "Our fast organic growth is supplemented by the acquisition of the client 
 msgstr "我们获取了主要竞争对手之一BetsForTraders 的客户群，为公司快速的内生性增长提供支持"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "我们的报价基于银行间期权市场基准价格，让您不论身处何地都可获得最公平、透明的报价"
 
 msgid "Over"
 msgstr "超过"
@@ -2245,13 +2245,13 @@ msgid "Over 1 million registered accounts worldwide"
 msgstr "在全球拥有超过一百万个注册账户"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "世界各地拥有超过130名职员和合同工"
 
 msgid "Over 3 years"
 msgstr "3年以上"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr ""
+msgstr "大于/小于 - 预测最后数字是大于或小于"
 
 msgid "Overlap Studies"
 msgstr "重叠研究"
@@ -2299,7 +2299,7 @@ msgid "Personal Details"
 msgstr "个人资料"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "2017个人财富奖"
 
 msgid "Phone"
 msgstr "电话"
@@ -2353,7 +2353,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "以下浏览器请选择一个并安装最新版本"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "请注意，由于其场外交易性质，OTC 指数和股票的价格与中央交易所的相应指数和股票价格有所不同"
 
 msgid "Please provide your tax information"
 msgstr "请提供税务信息"
@@ -2437,7 +2437,7 @@ msgid "Profit/Loss (points)"
 msgstr "利润/亏损（点）"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "保护利润"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "以英语、印尼文、日文、中文、波兰文、德文、法文、西班牙文、葡萄牙文、意大利文、俄文和泰文发布"
@@ -2557,13 +2557,13 @@ msgid "Rise/Fall"
 msgstr "上涨/下跌"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "上涨/下跌 - 预测市场价格是否会从当前水平上涨或下跌"
 
 msgid "Rise/Fall trades"
 msgstr "上涨/下跌交易"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr ""
+msgstr "上涨/下跌   预测市场价格是否会从当前水平上涨或下跌"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "上涨/下跌三法 (CDLRISEFALL3METHODS)"
@@ -2605,7 +2605,7 @@ msgid "Saved"
 msgstr "已保存"
 
 msgid "Scalable"
-msgstr ""
+msgstr "可缩放"
 
 msgid "Second line of home address"
 msgstr "家庭地址第二行"
@@ -2617,7 +2617,7 @@ msgid "Security"
 msgstr "安全"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "安全隐私"
 
 msgid "Security question"
 msgstr "安全提示问题"
@@ -2653,10 +2653,10 @@ msgid "Session duration limit, in minutes"
 msgstr "交易期持续时间限制，以分钟为单位"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "您可设置障碍水平用于确认头寸参数以及触发赔付"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "设定交易期限，从10 秒至 365 天"
 
 msgid "Settles"
 msgstr "结算"
@@ -2668,13 +2668,13 @@ msgid "Share chart"
 msgstr "分享图表"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "精确基准报价"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "射击之星 (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "短期限到长期限"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "并排的白色K线图形态是三重形态。看涨形态：上升走势中，首支K线图后面的是另一支以高于首支收盘价开盘的上升K线图（高开缺口），再后面的是第三支以低于第二支收盘价开盘的上升K 线图（低开缺口）。看跌形态：下降走势中，首支K线图下跌，后面的是一支以低于首支收盘价开盘的上升K线图（低开缺口），再后面的是以低于第二支收盘价开盘的上升K线图。此形态显示持续下跌走势"
@@ -2683,13 +2683,13 @@ msgid "Simple Moving Average (SMA)"
 msgstr "简单移动平均线 (SMA)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "简单和直观化"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "智能外汇"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "智能指数"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "平滑移动平均线 (SMMA)"
@@ -2701,7 +2701,7 @@ msgid "Source of wealth"
 msgstr "财富来源"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "确定赔付额，如果您的预测正确的话，这就是您的潜在回报率。我们的系统将进一步计算您的投注额，即购入合约的总成本。Binary.com提供从1美元到5万美元的赔付额"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "陀螺线 (CDLSPINNINGTOP)"
@@ -2761,13 +2761,13 @@ msgid "Status"
 msgstr "统计"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "“保持在范围之内/超出范围之外”"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "“保持在范围内/超出范围”的交易"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "保持在某个范围之内/之外  预测市价在合约期限内的任何时间都保持在两个目标价位范围之内或超出范围之外"
 
 msgid "Stays in"
 msgstr "范围内"
@@ -2776,7 +2776,7 @@ msgid "Step 1: Define your position"
 msgstr "步骤 1：设置您的头寸参数"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "步骤 2：获取合约报价"
 
 msgid "Step 3: Make your trade"
 msgstr "步骤 3：执行交易"
@@ -2881,7 +2881,7 @@ msgid "The"
 msgstr "关于"
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "澳元指数是一个加权指数，衡量澳元相对5种全球货币（美元、欧元、英镑、日元、加元）的价值，每种货币的权重均为20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "绝对价格震荡指标 (APO) 是根据两个不同长度如快与慢速移动平均线的绝对相差数值"
@@ -2929,7 +2929,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "蜻蜓十字线指标在开盘价、收盘价与最高价位相同或大约相同（当开盘价、收盘价与最高价位很少完全相同时）时出现。蜻蜓十字线最重要的部分是长长的下影线"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "欧元指数是加权指数，衡量欧元相对5种全球货币（美元、澳元、英镑、日元、加元）的价值，每种货币的权重均为 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "指数移动平均线 (EMA)代表平均价格，但对近期价格加权。加权方式以最近价格根据移动平均的选定周期增加。EMA周期越短，对最近价格加权越多"
@@ -2938,7 +2938,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr "快速随机摆动指标是根据乔治·蓝恩对%K和%D的原公式计算的。快速版%K线波动较大。%D相等于%K的3天期慢速移动平均数"
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "英镑指数是加权指数，衡量英镑相对5种全球货币（美元、欧元、澳元、日元、加元）的价值，每种货币的权重均为20%"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "墓碑十字线指标在开盘价、收盘价与最低价位相同或大约相同（当开盘价、收盘价与最低价位很少完全相同时）时出现。墓碑十字线最重要的部分是长长的上影线"
@@ -3013,10 +3013,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr "典型价格功能使用简单的单线图测量当天交易的最高价、最低价和收盘价的平均值。普通价格提供当天交易价格的简视图以及当进行其他价格调整功能后所发生的结果。您可利用它来使收盘价的一些波动变得平滑，因为它包含当天交易的所有信息，不只是闭市结果。典型价格指标计算法是把最高价、最低价和收盘价相加，然后除以三"
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "美元指数是加权指数，衡量美元相对于5种全球货币（欧元、英镑、日元、加元、澳元）的价值，每种货币的权重均为20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "波动率100指数的波幅是波动率50指数的两倍，是波动率25指数的四倍"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "加权收盘价指标显示每日平均价。它可使收盘价图表的一些波动变得平滑，因为它包含整天交易的信息"
@@ -3055,10 +3055,10 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约到期时一文不值，您将损失全部投资，包括合约费用"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "第一步是开立账户。您可以"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "首先选择您要交易的资产，如黄金、原油、股票或外汇（二元期权的价值基于标的资产价格）。期权交易一个很大的优势就是您并非买卖实际资产"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "看涨梯底形态的首三天是拥有连续较低开盘价和较低收盘价的强大黑色K线图。第四天是短黑K 线图，但开盘价较高，交易价也较高，留下长上影，然后以新低价格收盘。第五天是与第四天形成体形缺口的强大白色K线图"
@@ -3112,16 +3112,16 @@ msgid "The volatility indices simulate various real market situations and provid
 msgstr "波动率指数模拟各种真实的市场情况，并根据不同的市场情况提供理想的平台交易实践和测试策略。这些指数取决于波动率和漂移率，并帮助用户尝试各种场景，如高波动率、低波动率、看涨和看跌趋势"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "共有四种主要交易供您选择"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "范围内/外交易有两种类型"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "上涨/下跌交易有两种类型"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "亚洲期权交易有两种方式"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "交易者预测市场收盘价将高于或低于设定目标价的交易"
@@ -3274,7 +3274,7 @@ msgid "Touch/No Touch"
 msgstr "触及/未触及"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "触及/未触及 - 预测市场价格是否会触及目标价格"
 
 msgid "Tourism"
 msgstr "旅游"
@@ -3292,7 +3292,7 @@ msgid "Trade Types"
 msgstr "交易类型"
 
 msgid "Trade according to your preferred strategy"
-msgstr ""
+msgstr "按照您倾向的策略交易"
 
 msgid "Trade using"
 msgstr "交易方法为"
@@ -3313,7 +3313,7 @@ msgid "Trading Times"
 msgstr "交易时间"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
-msgstr ""
+msgstr "二元期权交易非常简单，仅需执行三个简单的步骤即可购入交易"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会超越起始资金存款，而您并不拥有或占有任何标的资产。在进行博彩产品交易的二元期权交易时，请务必记住博彩活动可能会上瘾，并提醒自己要承担责任"
@@ -3328,7 +3328,7 @@ msgid "Transfer to another Binary account"
 msgstr "转账到另一个Binary账户"
 
 msgid "Transparent risk and potential reward"
-msgstr ""
+msgstr "风险透明化和潜在奖励"
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "三角移动平均线(TRIMA)"
@@ -3361,13 +3361,13 @@ msgid "Two Crows (CDL2CROWS)"
 msgstr "二鸦 (CDL2CROWS)"
 
 msgid "Two-way pricing"
-msgstr ""
+msgstr "双边报价"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "典型价格 (TYPPRICE)"
 
 msgid "US Patents"
-msgstr ""
+msgstr "美国专利"
 
 msgid "USD"
 msgstr "美元"
@@ -3397,7 +3397,7 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr "独特三河床是三支烛形线组成的看涨K线图形态：第一支烛形线具长看跌体形，第二支烛形线是锤子，其体形位于第一条形体内。第三支烛形线较小，是看涨形态，其收盘价比第二条形的收盘价低"
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr ""
+msgstr "高于 - 预测市价在收盘时高于平均价格"
 
 msgid "Up/Down"
 msgstr "上涨/下跌"
@@ -3463,7 +3463,7 @@ msgid "View Statement"
 msgstr "查看报表"
 
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "波动率指数市场"
 
 msgid "Volatility Indicators"
 msgstr "波动率指标"
@@ -3472,10 +3472,10 @@ msgid "Volatility Indices"
 msgstr "波动率指数"
 
 msgid "Volatility Indices are further categorized into two types"
-msgstr ""
+msgstr "波动率指数进一步分为两种类型"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
-msgstr ""
+msgstr "波动率指数 - Binary.com内部编制的模拟市场力量指数"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "WMA代表加权移动平均指标。它使价格曲线更加平滑，让趋势识别工作更加方便。它比EMA更加注重近期数据"
@@ -3490,7 +3490,7 @@ msgid "We rebrand BetOnMarkets.com as"
 msgstr "我们把 BetOnMarkets.com 更名为"
 
 msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
-msgstr ""
+msgstr "我们按照交易牌照规定条件将所有客户的基金集合并保留在安全及拥有牌照的金融机构里"
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "我们获得了“用于金融市场投机的电脑交易系统及方法”和“用于定制金融市场投机的电脑交易系统”两项专利。这些专利说明了我们的创新性和领先水平"
@@ -3523,19 +3523,19 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "欢迎来到 Binary.com Webtrader"
 
 msgid "What are OTC indices and stocks?"
-msgstr ""
+msgstr "场外交易指数和股票是什么？"
 
 msgid "What is pep?"
 msgstr "Pep是什么？"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr ""
+msgstr "当您对收到的价格感到满意时请立刻执行交易。通过我们的独特平台，您不会遇到滑价或跳空市场。更重要的是，不会有任何未显示的费用。您也可在任何长期合约到期前随时售出，以保护您的赚取利润或将亏损降至最低额"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "通过Binary.com进行交易，我们保证您的定金将由独立信托账户保管，不会用作任何其他用途"
 
 msgid "Where does Binary.com hold my funds?"
-msgstr ""
+msgstr "Binary.com将我的基金保留在哪里？"
 
 msgid "While on the go, you can"
 msgstr "出门在外时，您可"
@@ -3544,7 +3544,7 @@ msgid "Why Choose Binary Trading?"
 msgstr "为何选择二元期权交易？"
 
 msgid "Why trade with Binary.com"
-msgstr ""
+msgstr "为何通过Binary.com进行交易"
 
 msgid "Will I need to install any software?"
 msgstr "我需要安装任何软件吗？"
@@ -3592,7 +3592,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "您尚未复制任何交易"
 
 msgid "You can"
-msgstr ""
+msgstr "您可以"
 
 msgid "You can only allow other traders to copy your trade"
 msgstr "您只能允许其他交易者复制您的交易"
@@ -3610,7 +3610,7 @@ msgid "You haven't saved any templates yet"
 msgstr "您尚未保存任何模板"
 
 msgid "You only need to make four decisions to execute a binary contract"
-msgstr ""
+msgstr "您只需要做四个决定，即可交易二元期权合约"
 
 msgid "You pay"
 msgstr "您支付"
@@ -3652,13 +3652,13 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "以及爱尔兰客户由 (3) 爱尔兰税务专员办事处授予牌照和监管，当前远程博彩牌照号码为 1010285（2015年9月29日)。本网站不向一些国家如美国、哥斯达黎加、香港及18岁以下的用户提供服务"
 
 msgid "and start learning how to trade"
-msgstr ""
+msgstr "及开始学习如何交易"
 
 msgid "apostrophe (') are allowed"
 msgstr "允许使用省略号(')"
 
 msgid "apply online"
-msgstr ""
+msgstr "在线申请"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr "价值为5050万美元"
@@ -3685,7 +3685,7 @@ msgid "days"
 msgstr "日"
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "存入资金并于数分钟内开始交易"
 
 msgid "disposes of its stake"
 msgstr "将其股份抛售"
@@ -3718,7 +3718,7 @@ msgid "if this is not your country of residence"
 msgstr "如不是您的居住国"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "于数分钟内"
 
 msgid "in the future, the"
 msgstr "未来的"
@@ -3772,10 +3772,10 @@ msgid "of \"Now\", the"
 msgstr "是“现在”，"
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "免费开立资金总额高达一万美元的全功能虚拟资金账户"
 
 msgid "open an account"
-msgstr ""
+msgstr "开立账户"
 
 msgid "our helpful support desk"
 msgstr "我们热心的支持人员"
