@@ -53,7 +53,7 @@ var replacer = function (field_name, value) { return function (obj) { obj[field_
 var debounce = rv.formatters.debounce;
 
 function apply_fixes(available){
-    /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
+    /* fix for server side api, not seperating higher/lower from rise/fall in up/down category */
     _(available).filter({
       'contract_category': 'callput',
       'barrier_category' : 'euro_atm',
@@ -68,18 +68,16 @@ function apply_fixes(available){
       'sentiment': 'down'
     }).each(replacer('contract_display','fall'));
     /* fix for server side api, returning two different contract_category_displays for In/Out */
-    _(available).filter(['contract_category', 'staysinout'])
-                .each(replacer('contract_category_display', 'In/Out'));
-    _(available).filter(['contract_category', 'endsinout'])
-                .each(replacer('contract_category_display', 'In/Out'));
+    _(available).filter(['contract_category', 'endsinout']).each(replacer('contract_category', 'staysinout'));
+    _(available).filter(['contract_category', 'staysinout']).each(replacer('contract_category_display', 'In/Out'));
     /* fix for websocket having a useless barrier value for digits */
     _(available).filter(['contract_category', 'digits'])
                 .each(replacer('barriers', 0));
     /* fix for contract_display text in In/Out menue */
-    _(available).filter({"contract_type": "EXPIRYMISS"}).each(replacer('contract_display', 'ends out'));
-    _(available).filter({"contract_type": "EXPIRYRANGE"}).each(replacer('contract_display', 'ends in'));
-    _(available).filter({"contract_type": "RANGE"}).each(replacer('contract_display', 'stays in'));
-    _(available).filter({"contract_type": "UPORDOWN"}).each(replacer('contract_display', 'goes out'));
+    _(available).filter({"contract_type": "EXPIRYMISS"}).each(replacer('contract_display', 'ends outside'));
+    _(available).filter({"contract_type": "EXPIRYRANGE"}).each(replacer('contract_display', 'ends between'));
+    _(available).filter({"contract_type": "RANGE"}).each(replacer('contract_display', 'stays between'));
+    _(available).filter({"contract_type": "UPORDOWN"}).each(replacer('contract_display', 'goes outside'));
     _(available).filter({"contract_type": "ONETOUCH"}).each(replacer('contract_display', 'touch'));
     _(available).filter({"contract_type": "NOTOUCH"}).each(replacer('contract_display', 'no touch'));
 
@@ -832,16 +830,16 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     var show = function(div){
       div.appendTo(root);
 
-      root.find('.trade-fields').css({ left : '350px'});
+      root.find('.trade-fields').css({ left : '400px'});
       root.find('.trade-conf').css({ left : '0'});
-      // root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
-      // root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
+      // root.find('.trade-fields').animate({ left : '+=400'}, 1000, 'linear');
+      // root.find('.trade-conf').animate({ left : '+=400'}, 1000, 'linear');
     };
     var hide = function(div){
       root.find('.trade-fields').css({ left : '0'});
-      root.find('.trade-conf').css({ left : '-350px'});
-      // root.find('.trade-fields').animate({ left : '-=350'}, 500, 'linear');
-      // root.find('.trade-conf').animate({ left : '-=350'}, 500, 'linear', function(){ ... });
+      root.find('.trade-conf').css({ left : '-400px'});
+      // root.find('.trade-fields').animate({ left : '-=400'}, 500, 'linear');
+      // root.find('.trade-conf').animate({ left : '-=400'}, 500, 'linear', function(){ ... });
       state.purchase.loading = false;
       div.remove();
       /* trigger a new proposal stream */
@@ -988,6 +986,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         collapsable: false,
         minimizable: true,
         maximizable: false,
+        width:  400,
         'data-authorized': 'true',
         isTrackerInitiated: isTrackerInitiated,
         relativePosition: true,
