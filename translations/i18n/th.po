@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-01 22:20-0500\n"
+"PO-Revision-Date: 2018-02-01 22:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -848,10 +848,10 @@ msgid "Candlestick up-color"
 msgstr "แท่งเทียน สีขึ้น"
 
 msgid "Candlestick up-line"
-msgstr ""
+msgstr "แท่งเทียน เส้นขึ้น"
 
 msgid "Cash Balance"
-msgstr ""
+msgstr "เงินสดคงเหลือ"
 
 msgid "Chande Kroll Stop (CKS)"
 msgstr ""
@@ -881,34 +881,34 @@ msgid "Chart type"
 msgstr "ชนิดแผนภูมิ"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "เลือกจากตลาด 5 ประเภท กลุ่มสินทรัพย์ของตลาดนั้นๆ"
 
 msgid "Choose password"
 msgstr "กำหนดรหัสผ่าน"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "เลือกซื้อขายแบบ แตะ / ไม่แตะ เมื่อต้องการคาดการณ์ว่าตลาดจะแตะ หรือ ไม่แตะ ราคาเป้าหมาย เวลาใดก็ตามในระยะเวลาของสัญญา"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "เลือกสินทรัพย์ที่คุณต้องการจะซื้อขาย เช่น ทองคำ น้ำมัน หุ้น หรือ คู่สกุลเงิน มูลค่าของไบนารีออปชั่นได้มาจากราคาของสินทรัพย์อ้างอิง ประโยชน์อย่างหนึ่งของการซื้อขายไบนารี ออปชั่น คือ คุณไม่ได้กำลังซื้อ หรือ ขายสินทรัพย์จริง คุณเพียงแต่ดำเนินการผ่านสัญญาที่กำหนดดูการเคลื่อนไหวของสินทรัพย์"
 
 msgid "Choose your pereferred payment agent"
-msgstr ""
+msgstr "เลือกตัวแทนชำระเงินที่คุณพอใจ"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr ""
+msgstr "เลือกวิธีการถอนเงินที่คุณพอใจ"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "ดัชนี Choppiness (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click to log in with your Binary.com account"
-msgstr ""
+msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของคุณ"
 
 msgid "Client funds"
-msgstr ""
+msgstr "เงินทุนของลูกค้า"
 
 msgid "Close"
 msgstr "ปิด"
@@ -917,37 +917,37 @@ msgid "Close All"
 msgstr "ปิดทั้งหมด"
 
 msgid "Closes"
-msgstr ""
+msgstr "ปิด"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "ปิด Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
 msgstr "สินค้าโภคภัณฑ์"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "สินค้าโภคภัณฑ์ - สินค้าโภคภัณฑ์หลักๆ เช่น ทองคำ และ น้ำมัน"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
-msgstr ""
+msgstr "สินค้าโภคภัณฑ์ คือ ทรัพยากรที่มีอยู่ หรือ สกัด จากพื้นผิวโลก อันได้แก่ เงิน ทอง และน้ำมัน บน Binary.com การตั้งราคาจะเป็นดอลล่าร์สหรัฐ"
 
 msgid "Commodities trading experience"
-msgstr ""
+msgstr "ประสบการณ์ในการซื้อขายสินค้าโภคภัณฑ์"
 
 msgid "Commodities trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายสินค้าโภคภัณฑ์"
 
 msgid "Commodity Channel Index (CCI)"
-msgstr ""
+msgstr "ดัชนี Commodity Channel (CCI)"
 
 msgid "Comparisons"
-msgstr ""
+msgstr "การเปรียบเทียบ"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "ราคาสมเหตุสมผลและโปร่งใส"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "ระเบียบวิธีและระบบคอมพิวเตอร์สำหรับการเก็งกำไรในตลาดการเงิน"
 
 msgid "Computer trading system for offering custom financial market speculations"
 msgstr ""
@@ -971,7 +971,7 @@ msgid "Continue Trading"
 msgstr "ดำเนินการซื้อขาย"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "ดัชนีต่อเนื่อง"
 
 msgid "Contract"
 msgstr "สัญญา"
@@ -983,19 +983,19 @@ msgid "Contracts"
 msgstr "สัญญา"
 
 msgid "Copier"
-msgstr ""
+msgstr "เครื่องถ่ายเอกสาร"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Coppock Curve (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "คัดลอกการซื้อขาย"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr ""
 
 msgid "Country of residence"
-msgstr ""
+msgstr "ประเทศที่พำนัก"
 
 msgid "Create"
 msgstr "สร้าง"
@@ -1007,13 +1007,13 @@ msgid "Create token"
 msgstr "สร้างโทเค่น"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "เครดิต/เดบิต"
 
 msgid "Crosshair"
-msgstr ""
+msgstr "Crosshair"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "สกุลเงินต่างๆ - คู่สกุลเงินหลักๆ"
 
 msgid "Current Level"
 msgstr "ระดับปัจจุบัน"
@@ -1031,13 +1031,13 @@ msgid "Current indicators"
 msgstr "ตัวชี้วัดปัจจุบัน"
 
 msgid "Current password"
-msgstr ""
+msgstr "รหัสผ่านปัจจุบัน"
 
 msgid "Current regulations require that you provide us the following"
 msgstr ""
 
 msgid "Current time"
-msgstr ""
+msgstr "เวลาปัจจุบัน"
 
 msgid "Custom Theme"
 msgstr ""
@@ -1262,10 +1262,10 @@ msgid "Embed code"
 msgstr ""
 
 msgid "Employment status"
-msgstr ""
+msgstr "สถานะการจ้างงาน"
 
 msgid "End Time"
-msgstr ""
+msgstr "เวลาสิ้นสุด"
 
 msgid "Ends Between/Ends Outside trades"
 msgstr ""
