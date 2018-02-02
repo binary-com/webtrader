@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-01 22:10-0500\n"
+"PO-Revision-Date: 2018-02-01 22:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -485,7 +485,7 @@ msgid "Amount per point"
 msgstr "จำนวนต่อจุด"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr ""
+msgstr "การซื้อขายแบบสิ้้นสุดระหว่าง จะให้ผลตอบแทน หากราคาปิดของตลาดมีค่าสูงกว่ามูลค่าราคาเป้าหมายต่ำ และ ต่ำกว่ามูลค่าราคาเป้าหมายสูง การซื้อขายแบบสิ้นสุดนอกขอบเขต จะให้ผลตอบแทน หากราคาปิดของตลาด สูงกว่ามูลค่าราคาเป้าหมายสูง หรือ ต่ำกว่ามูลค่าราคาเป้าหมายต่ำ"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
 msgstr ""
@@ -494,7 +494,7 @@ msgid "Answer"
 msgstr "คำตอบ"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "ปริมาณการซื้อขายที่คาดการณ์เอาไว้ของบัญชี"
 
 msgid "Apply"
 msgstr "สมัคร"
@@ -515,10 +515,10 @@ msgid "Are you sure you want to delete template?"
 msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการลบแม่แบบนี้?"
 
 msgid "Are you sure you want to delete this token?"
-msgstr ""
+msgstr "คุณแน่ใจหรือไม่ที่ต้องการลบโทเค่นนี้"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "คุณแน่ใจหรือไม่ว่า ต้องการเขียนทับแม่แบบปัจจุบัน"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Moving Average (ALMA)"
@@ -557,7 +557,7 @@ msgid "August"
 msgstr "สิงหาคม"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid "Available Currencies"
 msgstr "สกุลเงินที่มีอยู่"
@@ -584,7 +584,7 @@ msgid "Avg. Profit"
 msgstr "กำไรเฉลี่ย"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "แพลตฟอร์มซื้อขายออนไลน์ที่ได้รับรางวัล"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oscillator (AO)"
@@ -620,7 +620,7 @@ msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr ""
 
 msgid "BetOnMarkets goes live"
-msgstr ""
+msgstr "BetOnMarkets ประกาศใช้งาน"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
 msgstr ""
@@ -632,13 +632,13 @@ msgid "BetOnMarkets.com is successfully rebranded Binary.com"
 msgstr ""
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
-msgstr ""
+msgstr "BetOnMarkets.com มีมูลค่าซื้อขายรวม 1 พันล้านเหรียญสหรัฐ ตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
 
 msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "ระบบการพนันและวิธีการ"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -650,10 +650,10 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK ได้รับใบอนุญาตของประเทศญี่ปุ่น"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "พื้นฐานไบนารีออปชั่น"
 
 msgid "Binary granted Investment Services license"
-msgstr ""
+msgstr "ไบนารีได้รับใบอนุญาตการให้บริการการลงทุน"
 
 msgid "Binary opens Japan office"
 msgstr "Binary เปิดสำนักงานที่ประเทศญี่ปุ่น"
@@ -662,13 +662,13 @@ msgid "Binary option"
 msgstr "ไบนารีออปชั่น"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "ไบนารีออปชั่นเข้าใจง่าย เหตุที่ถูกเรียกว่า 'ไบนารี' เนื่องจากผลลัพธ์มีเพียง 2 อย่าง คือ ชนะ หรือ แพ้ หากคุณคาดการณ์ถูกต้อง คุณจะได้รับการชำระเงินตามที่กำหนดไว้ตั้งแต่เริ่มต้นของการซื้อขาย หากคุณแพ้ คุณจะเสียเพียงเงินที่วางเดิมพันครั้งแรกของคุณ"
 
 msgid "Binary options or other financial derivatives"
-msgstr ""
+msgstr "ไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขายไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "ความถี่ในการซื้อขายไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
@@ -788,25 +788,25 @@ msgid "Binary.com's systems are now processing in excess of 1 million transactio
 msgstr ""
 
 msgid "Bollinger Bands (BBANDS)"
-msgstr ""
+msgstr "โบลินเจอร์ แบนด์ (BBANDS)"
 
 msgid "Bollinger Bands can be used to measure the highness or lowness of the price relative to previous trades"
-msgstr ""
+msgstr "สามารถใช้โบลินเจอร์ แบนด์เพื่อวัดความสูงหรือต่ำของราคาเปรียบเทียบกับการซื้อขายก่อน"
 
 msgid "Bought"
 msgstr "ซื้อ"
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "ยี่ห้อของรถยนต์คันแรก"
 
 msgid "Breakaway (CDLBREAKAWAY)"
 msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
-msgstr ""
+msgstr "จำเป็นต้องอัพเกรดเบราว์เซอร์"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "ดัชนีกระทิง และดัชนีหมี เริ่มที่ 00:00 GMT ในแต่ละวัน เพื่อจำลองสภาพตลาดกระทิงและตลาดหมีตามลำดับ"
 
 msgid "Buy Price"
 msgstr "ราคาซื้อ"
@@ -818,19 +818,19 @@ msgid "By clicking"
 msgstr "โดยการคลิก"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
-msgstr ""
+msgstr "โดยการกดปุ่มตกลง (OK) คุณยืนยันว่าได้อ่านและยอมรับการปรับปรุง"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
-msgstr ""
+msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
 
 msgid "Can be used to open accounts, set settings, manage token usage, and more."
-msgstr ""
+msgstr "สามารถใช้เพื่อเปิดบัญชี ตั้งค่าต่างๆ จัดการการใช้โทเค่น และอื่นๆ"
 
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
-msgstr ""
+msgstr "สามารถใช้ในการดูกิจกรรมที่เกิดขึ้นของบัญชี รวมถึงการตั้งค่า วงเงิน งบดุล ประวัติการซื้อขาย และอื่นๆ"
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
-msgstr ""
+msgstr "สามารถใช้เพื่อถอนเงินให้แก่ตัวแทนชำระ โอนเงินระหว่างบัญชี และตั้งค่า/ลบรหัสผ่านแคชเชียร์"
 
 msgid "Cancel"
 msgstr "ยกเลิก"
@@ -839,13 +839,13 @@ msgid "Candles"
 msgstr "เทียน"
 
 msgid "Candlestick down-color"
-msgstr ""
+msgstr "แท่งเทียน สีลง"
 
 msgid "Candlestick down-line"
-msgstr ""
+msgstr "แท่งเทียน เส้นลง"
 
 msgid "Candlestick up-color"
-msgstr ""
+msgstr "แท่งเทียน สีขึ้น"
 
 msgid "Candlestick up-line"
 msgstr ""
