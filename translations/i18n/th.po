@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-01 22:00-0500\n"
+"PO-Revision-Date: 2018-02-01 22:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -377,19 +377,19 @@ msgid "A chart pattern that consists of a small white candlestick with short sha
 msgstr "รูปแบบแผนภูมิที่ประกอบด้วยแท่งเทียนสีขาวสั้นที่มีเงาหรือหางสั้นตามด้วยแท่งเทียนสีดำขนาดใหญ่ซึ่งลดความสำคัญหรือ \"ปกคลุม\" แท่งสีขาวเล็ก"
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
-msgstr ""
+msgstr "อนุพันธ์คือเครื่องมือทางการเงินที่มูลค่าถูกกำหนดโดยอ้างอิงตลาดที่อ้างถึง มีการซื้อขายอนุพันธ์เป็นปกติในตลาดระหว่างธนาคาร และไบนารีถือเป็นหนึ่งในรูปแบบอนุพันธ์ที่ไม่ซับซ้อนที่สุด"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
-msgstr ""
+msgstr "สื่อกลางไปยังแท่งเทียนขนาดยาวของตลาดตื่นตัว หรือตลาดซบเซา โดยมีคุณสมบัติหลักๆคือไม่มีเงาหัวหรือหาง"
 
 msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Betting Operator of the Year' over two other finalists. It's a major victory for our brand and further recognition of our world-beating service. Ten years on, and going from strength to strength"
-msgstr ""
+msgstr "เหล่าคณะผู้นำในอุตสาหกรรมมอบรางวัล ‘Financial Betting Operator of the Year’ ให้กับ BetOnMarkets.com จากผู้เข้ารอบสุดท้ายอีกสองคน มันเป็นชัยชนะหลักของแบรนด์ของพวกเราและการยอมรับของบริการระดับโลกของพวกเรา สิบปีที่ผ่านมาจากจุดแข็งสู่จุดแข็งที่ยั่งยืน"
 
 msgid "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period"
-msgstr ""
+msgstr "ตัวบ่งชี้ทางเทคนิคที่คิดค้นโดย Larry Williams ที่ใช้ค่าเฉลี่ยถ่วงน้ำหนักของรอบระยะเวลาต่างๆกันสามรอบ เพื่อลดความผันผวนและสัญญาณธุรกรรมเท็จที่เกี่ยวข้องกับตัวชี้วัดอื่น ๆ หลายที่ส่วนใหญ่ใช้แค่รอบระยะเวลาหนึ่ง"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
-msgstr ""
+msgstr "ตัวบ่งชี้แรงผลักดันทางเทคนิคที่เปรียบเทียบราคาปิดของหลักทรัพย์กับของเขตของราคาในช่วงเวลาหนึ่ง สามารถลดการตอบสนองของตัวแกว่งต่อการเคลื่อนไหวของตลาดได้โดยการปรับช่วงระยะเวลาหรือด้วยการใช้ค่าเฉลี่ยเคลื่อนที่เป็นผลลัพธ์"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
 msgstr ""
@@ -464,13 +464,13 @@ msgid "All markets"
 msgstr "ตลาดทั้งหมด"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All payouts"
-msgstr ""
+msgstr "การชำระเงินทั้งหมด"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
-msgstr ""
+msgstr "เวลาที่ใช้อ้างอิง คือ GMT (Greenwich Mean Time) เวลามาตรฐานเมืองกรีนิช"
 
 msgid "Allow others to copy your trades"
 msgstr ""
