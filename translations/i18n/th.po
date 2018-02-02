@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-01 21:50-0500\n"
+"PO-Revision-Date: 2018-02-01 22:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -365,16 +365,16 @@ msgid "A bullish or bearish candle followed by a doji with with a downward or up
 msgstr "แท่งเทียนในตลาดตื่นตัวหรือซบเซานั้นตามด้วย doji ที่มีช่องว่างลดต่ำลงหรือขาขึ้น"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr ""
+msgstr "รูปแบบแผนภูมิแท่งเทียนซึ่งแท่งเทียนขนาดใหญ่จะตามด้วยแท่งเทียนขนาดเล็กซึ่งตัวแท่งเทียนนั้นอยู่ภายในช่วงแนวตั้งของแท่งที่ใหญ่กว่า สำหรับสีของแท่งเทียน harami ในตลาดตื่นตัวเป็นแนวโน้มขาลงของแท่งเทียนสีที่เป็นลบ (ดำ) ปกคลุมแท่งเทียนที่เป็นบวก (ขาว) ขนาดเล็ก ให้สัญญาณของการกลับตัวของแนวโน้มขาลง"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
-msgstr ""
+msgstr "แท่งเทียนที่มีสีดำขนาดยาว (เส้นยาว) หมายถึงแรงผลักของตลาดซบเซา ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาสูงและปิดใกล้กับราคาต่ำของวัน อันที่มีเส้นสีขาวยาวหมายถึงแรงผลักของตลาดตื่นตัว ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาต่ำของวันและปิดใกล้กับราคาสูง"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr ""
+msgstr "แท่งเทียนที่มีเงายาวมากบนและล่างและมีขนาดแท่งเทียนจริงเล็กบนแผนภูมิแท่งเทียนญี่ปุ่น แสดงให้เห็นว่าตลาดกำลังเสียทิศทางของลักษณะโน้มเอียงที่เคยมีก่อนที่แท่งเทียนจะปรากฎขึ้น"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
-msgstr ""
+msgstr "รูปแบบแผนภูมิที่ประกอบด้วยแท่งเทียนสีขาวสั้นที่มีเงาหรือหางสั้นตามด้วยแท่งเทียนสีดำขนาดใหญ่ซึ่งลดความสำคัญหรือ \"ปกคลุม\" แท่งสีขาวเล็ก"
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr ""
