@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-03 17:10-0500\n"
+"PO-Revision-Date: 2018-02-03 17:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -599,7 +599,7 @@ msgid "Balance of Power (BOP)"
 msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
-msgstr ""
+msgstr "ธนาคาร เฮดจ์ฟัน และนักลงทุนมืออาชีพทำการซื้อขายไบนารีออปชั่นเป็นกิจวัตรในตลาดอนุพันธ์ซื้อขายเอง ผู้เชี่ยวชาญตลาดหลายคนใช้และเชื่อมั่นในแพลตฟอร์มของ Binary.com สำหรับการซื้อขายปริมาณสูงที่ยืดหยุ่น"
 
 msgid "Barrier"
 msgstr "Barrier"
