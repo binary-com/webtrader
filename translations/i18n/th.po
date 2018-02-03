@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-03 09:30-0500\n"
+"PO-Revision-Date: 2018-02-03 17:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -392,16 +392,16 @@ msgid "A technical momentum indicator that compares a security's closing price t
 msgstr "ตัวบ่งชี้แรงผลักดันทางเทคนิคที่เปรียบเทียบราคาปิดของหลักทรัพย์กับของเขตของราคาในช่วงเวลาหนึ่ง สามารถลดการตอบสนองของตัวแกว่งต่อการเคลื่อนไหวของตลาดได้โดยการปรับช่วงระยะเวลาหรือด้วยการใช้ค่าเฉลี่ยเคลื่อนที่เป็นผลลัพธ์"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr ""
+msgstr "รูปแบบการซื้อขายทางเทคนิคที่แท่งเทียนสามแท่งก่อเป็นรูปร่างที่ดูเหมือนกับแซนด์วิชบนหน้าจอของนักลงทุน แซนด์วิชแท่งจะมีแท่งเทียนตรงกลางที่มีสีตรงข้ามกับแท่งเทียนที่ขนาบทั้งสองข้าง ซึ่งแท่งเทียนทั้งคู่นั้นจะมีระยะการซื้อขายที่ใหญ่กว่าแท่งเทียนตรงกลาง รูปแบบแซนด์วิชแท่งสามารถเกิดขึ้นได้ทั้งในตัวบ่งชี้ตลาดซบเซา และตื่นตัว"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
-msgstr ""
+msgstr "ช่วงห่างราคา (Tick) คือ การเคลื่อนไหวของราคาในตลาดที่เล็กที่สุดในทิศทางขึ้น หรือ ลง"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
-msgstr ""
+msgstr "จะมีการบ่งชี้ถึงแนวโน้มโดยแท่งเทียนขนาดใหญ่ตามด้วย doji ซึ่งอยู่ภายในด้านบนและล่างของแท่งเทียน ซึ่งบ่งชี้ว่าแนวโน้มก่อนหน้านี้กำลังจะย้อนกลับ"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr ""
+msgstr "แท่งเทียนสีขาวในแนวโน้มราคาขาขึ้น ตามด้วย doji ซึ่งเงาด้านล่างยังคงอยู่เหนือส่วนที่สูงของแท่งเทียนก่อนหน้านี้ วันที่สามคือแท่งเทียนสีดำซึ่งเงาด้านบนอยู่ด้านล่างของส่วนล่างของ doji"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "Abandoned Baby (CDLABANDONEDBABY)"
@@ -458,7 +458,7 @@ msgid "All market conditions"
 msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "ทุกเงื่อนไขของตลาด และทุกช่วงเวลา"
 
 msgid "All markets"
 msgstr "ตลาดทั้งหมด"
@@ -473,7 +473,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "เวลาที่ใช้อ้างอิง คือ GMT (Greenwich Mean Time) เวลามาตรฐานเมืองกรีนิช"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "อนุญาตให้ผู้อื่นคัดลอกการซื้อขายของคุณ"
 
 msgid "Amount"
 msgstr "มูลค่า"
