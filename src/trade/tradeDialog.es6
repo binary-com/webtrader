@@ -68,11 +68,10 @@ function apply_fixes(available){
       'sentiment': 'down'
     }).each(replacer('contract_display','fall'));
     /* fix for server side api, returning two different contract_category_displays for In/Out */
-    _(available).filter(['contract_category', 'endsinout']).each(replacer('contract_category', 'staysinout'));
+    _(available).filter(['contract_category', 'endsinout']).each(replacer('contract_category_display', 'In/Out'));
     _(available).filter(['contract_category', 'staysinout']).each(replacer('contract_category_display', 'In/Out'));
     /* fix for websocket having a useless barrier value for digits */
-    _(available).filter(['contract_category', 'digits'])
-                .each(replacer('barriers', 0));
+    _(available).filter(['contract_category', 'digits']).each(replacer('barriers', 0));
     /* fix for contract_display text in In/Out menue */
     _(available).filter({"contract_type": "EXPIRYMISS"}).each(replacer('contract_display', 'ends outside'));
     _(available).filter({"contract_type": "EXPIRYRANGE"}).each(replacer('contract_display', 'ends between'));
@@ -444,8 +443,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   state.categories.update = function (msg) {
     state.categories.value = _.find(state.categories.array,{contract_category: state.categories.selected});
     var category = state.categories.value.contract_category;
+    var isInOut = v => ['staysinout', 'endsinout'].indexOf(v) !== -1;
+    const check = isInOut(category) ? el => isInOut(el.contract_category) : el => el.contract_category == category;
     state.category_displays.array = [];
-    _(available).filter(['contract_category', category]).map('contract_display').uniq().value().forEach(
+    _(available).filter(check).map('contract_display').uniq().value().forEach(
       x => {
         let y = {};
         y.name = x;
