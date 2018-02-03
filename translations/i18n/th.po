@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-01-28 23:20-0500\n"
+"PO-Revision-Date: 2018-02-01 22:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -353,43 +353,43 @@ msgid "A binary option is an option with a fixed payout that is determined at th
 msgstr "ไบนารีออปชั่นคือออปชั่นที่มีการชำระเงินที่คงที่ซึ่งถูกกำหนดตั้งแต่เริ่มต้นของการซื้อขาย หากการคาดการณ์ของท่านถูกต้อง ท่านจะได้รับการจ่ายเงินตามมูลค่าที่ตกลงไว้ แต่หากการทำนายไม่ถูกต้อง ท่านจะเสียมูลค่าที่วางตั้งต้นไว้ และจะไม่มากไปกว่านั้น ออปชั่นถูกเรียกว่า 'ไบนารี' เนื่องจากมีผลลัพธ์เพียง 2 ทาง คือ ได้ และ เสีย"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
-msgstr ""
+msgstr "รูปแบบแท่งเทียนของตลาดที่ตื่นตัวประกอบด้วยเทียนห้าแท่ง วันแรกคือ วันขาวยาว วันที่สองมีช่องว่างขึ้นและเป็นวันดำ วันที่สอง สาม และสี่ มีร่างจริงขนาดเล็ก และตามด้วยรูปแบบแนวโน้มขาลงสั้น ๆ แต่อยู่ในช่วงของวันแรก และวันที่ห้าคือวันยาวสีขาวที่ปิดเหนือการปิดของวันแรก"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "รูปแบบแท่งเทียนของตลาดที่ตื่นตัวประกอบด้วยเทียนสามแท่ง แท่งแรกเป็นเทียนขนาดใหญ่สีแดงที่อยู่ในแนวโน้มขาขึ้น แท่งที่สองเป็นเทียนขนาดเล็ก (แดงหรือขาว) ที่ปิดต่ำกว่าแท่งแรก และแท่งสุดท้ายคือเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลางและปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr ""
+msgstr "รูปแบบแท่งเทียนของตลาดที่ตื่นตัวประกอบด้วยเทียนสามแท่ง แท่งแรกเป็นเทียนขนาดใหญ่สีแดงที่อยู่ในแนวโน้มขาขึ้น แท่งที่สองเป็นเทียนขนาดเล็ก (แดงหรือขาว) ที่ปิดต่ำกว่าแท่งแรก และแท่งสุดท้ายคือเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลางและปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
 
 msgid "A bullish or bearish candle followed by a doji with with a downward or uptrend gap"
-msgstr ""
+msgstr "แท่งเทียนในตลาดตื่นตัวหรือซบเซานั้นตามด้วย doji ที่มีช่องว่างลดต่ำลงหรือขาขึ้น"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr ""
+msgstr "รูปแบบแผนภูมิแท่งเทียนซึ่งแท่งเทียนขนาดใหญ่จะตามด้วยแท่งเทียนขนาดเล็กซึ่งตัวแท่งเทียนนั้นอยู่ภายในช่วงแนวตั้งของแท่งที่ใหญ่กว่า สำหรับสีของแท่งเทียน harami ในตลาดตื่นตัวเป็นแนวโน้มขาลงของแท่งเทียนสีที่เป็นลบ (ดำ) ปกคลุมแท่งเทียนที่เป็นบวก (ขาว) ขนาดเล็ก ให้สัญญาณของการกลับตัวของแนวโน้มขาลง"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
-msgstr ""
+msgstr "แท่งเทียนที่มีสีดำขนาดยาว (เส้นยาว) หมายถึงแรงผลักของตลาดซบเซา ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาสูงและปิดใกล้กับราคาต่ำของวัน อันที่มีเส้นสีขาวยาวหมายถึงแรงผลักของตลาดตื่นตัว ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาต่ำของวันและปิดใกล้กับราคาสูง"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr ""
+msgstr "แท่งเทียนที่มีเงายาวมากบนและล่างและมีขนาดแท่งเทียนจริงเล็กบนแผนภูมิแท่งเทียนญี่ปุ่น แสดงให้เห็นว่าตลาดกำลังเสียทิศทางของลักษณะโน้มเอียงที่เคยมีก่อนที่แท่งเทียนจะปรากฎขึ้น"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
-msgstr ""
+msgstr "รูปแบบแผนภูมิที่ประกอบด้วยแท่งเทียนสีขาวสั้นที่มีเงาหรือหางสั้นตามด้วยแท่งเทียนสีดำขนาดใหญ่ซึ่งลดความสำคัญหรือ \"ปกคลุม\" แท่งสีขาวเล็ก"
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
-msgstr ""
+msgstr "อนุพันธ์คือเครื่องมือทางการเงินที่มูลค่าถูกกำหนดโดยอ้างอิงตลาดที่อ้างถึง มีการซื้อขายอนุพันธ์เป็นปกติในตลาดระหว่างธนาคาร และไบนารีถือเป็นหนึ่งในรูปแบบอนุพันธ์ที่ไม่ซับซ้อนที่สุด"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
-msgstr ""
+msgstr "สื่อกลางไปยังแท่งเทียนขนาดยาวของตลาดตื่นตัว หรือตลาดซบเซา โดยมีคุณสมบัติหลักๆคือไม่มีเงาหัวหรือหาง"
 
 msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Betting Operator of the Year' over two other finalists. It's a major victory for our brand and further recognition of our world-beating service. Ten years on, and going from strength to strength"
-msgstr ""
+msgstr "เหล่าคณะผู้นำในอุตสาหกรรมมอบรางวัล ‘Financial Betting Operator of the Year’ ให้กับ BetOnMarkets.com จากผู้เข้ารอบสุดท้ายอีกสองคน มันเป็นชัยชนะหลักของแบรนด์ของพวกเราและการยอมรับของบริการระดับโลกของพวกเรา สิบปีที่ผ่านมาจากจุดแข็งสู่จุดแข็งที่ยั่งยืน"
 
 msgid "A technical indicator invented by Larry Williams that uses the weighted average of three different time periods to reduce the volatility and false transaction signals that are associated with many other indicators that mainly rely on a single time period"
-msgstr ""
+msgstr "ตัวบ่งชี้ทางเทคนิคที่คิดค้นโดย Larry Williams ที่ใช้ค่าเฉลี่ยถ่วงน้ำหนักของรอบระยะเวลาต่างๆกันสามรอบ เพื่อลดความผันผวนและสัญญาณธุรกรรมเท็จที่เกี่ยวข้องกับตัวชี้วัดอื่น ๆ หลายที่ส่วนใหญ่ใช้แค่รอบระยะเวลาหนึ่ง"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
-msgstr ""
+msgstr "ตัวบ่งชี้แรงผลักดันทางเทคนิคที่เปรียบเทียบราคาปิดของหลักทรัพย์กับของเขตของราคาในช่วงเวลาหนึ่ง สามารถลดการตอบสนองของตัวแกว่งต่อการเคลื่อนไหวของตลาดได้โดยการปรับช่วงระยะเวลาหรือด้วยการใช้ค่าเฉลี่ยเคลื่อนที่เป็นผลลัพธ์"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
 msgstr ""
@@ -464,13 +464,13 @@ msgid "All markets"
 msgstr "ตลาดทั้งหมด"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All payouts"
-msgstr ""
+msgstr "การชำระเงินทั้งหมด"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
-msgstr ""
+msgstr "เวลาที่ใช้อ้างอิง คือ GMT (Greenwich Mean Time) เวลามาตรฐานเมืองกรีนิช"
 
 msgid "Allow others to copy your trades"
 msgstr ""
@@ -485,7 +485,7 @@ msgid "Amount per point"
 msgstr "จำนวนต่อจุด"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr ""
+msgstr "การซื้อขายแบบสิ้้นสุดระหว่าง จะให้ผลตอบแทน หากราคาปิดของตลาดมีค่าสูงกว่ามูลค่าราคาเป้าหมายต่ำ และ ต่ำกว่ามูลค่าราคาเป้าหมายสูง การซื้อขายแบบสิ้นสุดนอกขอบเขต จะให้ผลตอบแทน หากราคาปิดของตลาด สูงกว่ามูลค่าราคาเป้าหมายสูง หรือ ต่ำกว่ามูลค่าราคาเป้าหมายต่ำ"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
 msgstr ""
@@ -494,7 +494,7 @@ msgid "Answer"
 msgstr "คำตอบ"
 
 msgid "Anticipated account turnover"
-msgstr ""
+msgstr "ปริมาณการซื้อขายที่คาดการณ์เอาไว้ของบัญชี"
 
 msgid "Apply"
 msgstr "สมัคร"
@@ -515,10 +515,10 @@ msgid "Are you sure you want to delete template?"
 msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการลบแม่แบบนี้?"
 
 msgid "Are you sure you want to delete this token?"
-msgstr ""
+msgstr "คุณแน่ใจหรือไม่ที่ต้องการลบโทเค่นนี้"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr ""
+msgstr "คุณแน่ใจหรือไม่ว่า ต้องการเขียนทับแม่แบบปัจจุบัน"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Moving Average (ALMA)"
@@ -557,7 +557,7 @@ msgid "August"
 msgstr "สิงหาคม"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid "Available Currencies"
 msgstr "สกุลเงินที่มีอยู่"
@@ -584,7 +584,7 @@ msgid "Avg. Profit"
 msgstr "กำไรเฉลี่ย"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "แพลตฟอร์มซื้อขายออนไลน์ที่ได้รับรางวัล"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oscillator (AO)"
@@ -620,7 +620,7 @@ msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr ""
 
 msgid "BetOnMarkets goes live"
-msgstr ""
+msgstr "BetOnMarkets ประกาศใช้งาน"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
 msgstr ""
@@ -632,13 +632,13 @@ msgid "BetOnMarkets.com is successfully rebranded Binary.com"
 msgstr ""
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
-msgstr ""
+msgstr "BetOnMarkets.com มีมูลค่าซื้อขายรวม 1 พันล้านเหรียญสหรัฐ ตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
 
 msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "ระบบการพนันและวิธีการ"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -650,10 +650,10 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK ได้รับใบอนุญาตของประเทศญี่ปุ่น"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "พื้นฐานไบนารีออปชั่น"
 
 msgid "Binary granted Investment Services license"
-msgstr ""
+msgstr "ไบนารีได้รับใบอนุญาตการให้บริการการลงทุน"
 
 msgid "Binary opens Japan office"
 msgstr "Binary เปิดสำนักงานที่ประเทศญี่ปุ่น"
@@ -662,13 +662,13 @@ msgid "Binary option"
 msgstr "ไบนารีออปชั่น"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "ไบนารีออปชั่นเข้าใจง่าย เหตุที่ถูกเรียกว่า 'ไบนารี' เนื่องจากผลลัพธ์มีเพียง 2 อย่าง คือ ชนะ หรือ แพ้ หากคุณคาดการณ์ถูกต้อง คุณจะได้รับการชำระเงินตามที่กำหนดไว้ตั้งแต่เริ่มต้นของการซื้อขาย หากคุณแพ้ คุณจะเสียเพียงเงินที่วางเดิมพันครั้งแรกของคุณ"
 
 msgid "Binary options or other financial derivatives"
-msgstr ""
+msgstr "ไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
 
 msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขายไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "ความถี่ในการซื้อขายไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
@@ -788,25 +788,25 @@ msgid "Binary.com's systems are now processing in excess of 1 million transactio
 msgstr ""
 
 msgid "Bollinger Bands (BBANDS)"
-msgstr ""
+msgstr "โบลินเจอร์ แบนด์ (BBANDS)"
 
 msgid "Bollinger Bands can be used to measure the highness or lowness of the price relative to previous trades"
-msgstr ""
+msgstr "สามารถใช้โบลินเจอร์ แบนด์เพื่อวัดความสูงหรือต่ำของราคาเปรียบเทียบกับการซื้อขายก่อน"
 
 msgid "Bought"
 msgstr "ซื้อ"
 
 msgid "Brand of first car"
-msgstr ""
+msgstr "ยี่ห้อของรถยนต์คันแรก"
 
 msgid "Breakaway (CDLBREAKAWAY)"
 msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
-msgstr ""
+msgstr "จำเป็นต้องอัพเกรดเบราว์เซอร์"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "ดัชนีกระทิง และดัชนีหมี เริ่มที่ 00:00 GMT ในแต่ละวัน เพื่อจำลองสภาพตลาดกระทิงและตลาดหมีตามลำดับ"
 
 msgid "Buy Price"
 msgstr "ราคาซื้อ"
@@ -818,19 +818,19 @@ msgid "By clicking"
 msgstr "โดยการคลิก"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
-msgstr ""
+msgstr "โดยการกดปุ่มตกลง (OK) คุณยืนยันว่าได้อ่านและยอมรับการปรับปรุง"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
-msgstr ""
+msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
 
 msgid "Can be used to open accounts, set settings, manage token usage, and more."
-msgstr ""
+msgstr "สามารถใช้เพื่อเปิดบัญชี ตั้งค่าต่างๆ จัดการการใช้โทเค่น และอื่นๆ"
 
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
-msgstr ""
+msgstr "สามารถใช้ในการดูกิจกรรมที่เกิดขึ้นของบัญชี รวมถึงการตั้งค่า วงเงิน งบดุล ประวัติการซื้อขาย และอื่นๆ"
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
-msgstr ""
+msgstr "สามารถใช้เพื่อถอนเงินให้แก่ตัวแทนชำระ โอนเงินระหว่างบัญชี และตั้งค่า/ลบรหัสผ่านแคชเชียร์"
 
 msgid "Cancel"
 msgstr "ยกเลิก"
@@ -839,19 +839,19 @@ msgid "Candles"
 msgstr "เทียน"
 
 msgid "Candlestick down-color"
-msgstr ""
+msgstr "แท่งเทียน สีลง"
 
 msgid "Candlestick down-line"
-msgstr ""
+msgstr "แท่งเทียน เส้นลง"
 
 msgid "Candlestick up-color"
-msgstr ""
+msgstr "แท่งเทียน สีขึ้น"
 
 msgid "Candlestick up-line"
-msgstr ""
+msgstr "แท่งเทียน เส้นขึ้น"
 
 msgid "Cash Balance"
-msgstr ""
+msgstr "เงินสดคงเหลือ"
 
 msgid "Chande Kroll Stop (CKS)"
 msgstr ""
@@ -881,34 +881,34 @@ msgid "Chart type"
 msgstr "ชนิดแผนภูมิ"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "เลือกจากตลาด 5 ประเภท กลุ่มสินทรัพย์ของตลาดนั้นๆ"
 
 msgid "Choose password"
 msgstr "กำหนดรหัสผ่าน"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "เลือกซื้อขายแบบ แตะ / ไม่แตะ เมื่อต้องการคาดการณ์ว่าตลาดจะแตะ หรือ ไม่แตะ ราคาเป้าหมาย เวลาใดก็ตามในระยะเวลาของสัญญา"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "เลือกสินทรัพย์ที่คุณต้องการจะซื้อขาย เช่น ทองคำ น้ำมัน หุ้น หรือ คู่สกุลเงิน มูลค่าของไบนารีออปชั่นได้มาจากราคาของสินทรัพย์อ้างอิง ประโยชน์อย่างหนึ่งของการซื้อขายไบนารี ออปชั่น คือ คุณไม่ได้กำลังซื้อ หรือ ขายสินทรัพย์จริง คุณเพียงแต่ดำเนินการผ่านสัญญาที่กำหนดดูการเคลื่อนไหวของสินทรัพย์"
 
 msgid "Choose your pereferred payment agent"
-msgstr ""
+msgstr "เลือกตัวแทนชำระเงินที่คุณพอใจ"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr ""
+msgstr "เลือกวิธีการถอนเงินที่คุณพอใจ"
 
 msgid "Choppiness Index (CHOP)"
-msgstr ""
+msgstr "ดัชนี Choppiness (CHOP)"
 
 msgid "Chrome"
-msgstr ""
+msgstr "Chrome"
 
 msgid "Click to log in with your Binary.com account"
-msgstr ""
+msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของคุณ"
 
 msgid "Client funds"
-msgstr ""
+msgstr "เงินทุนของลูกค้า"
 
 msgid "Close"
 msgstr "ปิด"
@@ -917,37 +917,37 @@ msgid "Close All"
 msgstr "ปิดทั้งหมด"
 
 msgid "Closes"
-msgstr ""
+msgstr "ปิด"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr ""
+msgstr "ปิด Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
 msgstr "สินค้าโภคภัณฑ์"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "สินค้าโภคภัณฑ์ - สินค้าโภคภัณฑ์หลักๆ เช่น ทองคำ และ น้ำมัน"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
-msgstr ""
+msgstr "สินค้าโภคภัณฑ์ คือ ทรัพยากรที่มีอยู่ หรือ สกัด จากพื้นผิวโลก อันได้แก่ เงิน ทอง และน้ำมัน บน Binary.com การตั้งราคาจะเป็นดอลล่าร์สหรัฐ"
 
 msgid "Commodities trading experience"
-msgstr ""
+msgstr "ประสบการณ์ในการซื้อขายสินค้าโภคภัณฑ์"
 
 msgid "Commodities trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายสินค้าโภคภัณฑ์"
 
 msgid "Commodity Channel Index (CCI)"
-msgstr ""
+msgstr "ดัชนี Commodity Channel (CCI)"
 
 msgid "Comparisons"
-msgstr ""
+msgstr "การเปรียบเทียบ"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "ราคาสมเหตุสมผลและโปร่งใส"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "ระเบียบวิธีและระบบคอมพิวเตอร์สำหรับการเก็งกำไรในตลาดการเงิน"
 
 msgid "Computer trading system for offering custom financial market speculations"
 msgstr ""
@@ -971,7 +971,7 @@ msgid "Continue Trading"
 msgstr "ดำเนินการซื้อขาย"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "ดัชนีต่อเนื่อง"
 
 msgid "Contract"
 msgstr "สัญญา"
@@ -983,19 +983,19 @@ msgid "Contracts"
 msgstr "สัญญา"
 
 msgid "Copier"
-msgstr ""
+msgstr "เครื่องถ่ายเอกสาร"
 
 msgid "Coppock Curve (CC)"
-msgstr ""
+msgstr "Coppock Curve (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "คัดลอกการซื้อขาย"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr ""
 
 msgid "Country of residence"
-msgstr ""
+msgstr "ประเทศที่พำนัก"
 
 msgid "Create"
 msgstr "สร้าง"
@@ -1007,13 +1007,13 @@ msgid "Create token"
 msgstr "สร้างโทเค่น"
 
 msgid "Credit/Debit"
-msgstr ""
+msgstr "เครดิต/เดบิต"
 
 msgid "Crosshair"
-msgstr ""
+msgstr "Crosshair"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "สกุลเงินต่างๆ - คู่สกุลเงินหลักๆ"
 
 msgid "Current Level"
 msgstr "ระดับปัจจุบัน"
@@ -1031,13 +1031,13 @@ msgid "Current indicators"
 msgstr "ตัวชี้วัดปัจจุบัน"
 
 msgid "Current password"
-msgstr ""
+msgstr "รหัสผ่านปัจจุบัน"
 
 msgid "Current regulations require that you provide us the following"
 msgstr ""
 
 msgid "Current time"
-msgstr ""
+msgstr "เวลาปัจจุบัน"
 
 msgid "Custom Theme"
 msgstr ""
@@ -1262,28 +1262,28 @@ msgid "Embed code"
 msgstr ""
 
 msgid "Employment status"
-msgstr ""
+msgstr "สถานะการจ้างงาน"
 
 msgid "End Time"
-msgstr ""
+msgstr "เวลาสิ้นสุด"
 
 msgid "Ends Between/Ends Outside trades"
-msgstr ""
+msgstr "การซื้อขายแบบ สิ้นสุดระหว่าง/สิ้นสุดนอกขอบเขต"
 
 msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "สิ้นสุดระหว่าง/สิ้นสุดนอกขอบเขต คาดการณ์ว่าตลาดจะสิ้นสุดที่ราคา ใน หรือ นอกของ ราคาเป้าหมายสองราคา เมื่อเวลาสิ้นสุด"
 
 msgid "Ends Between/Outside"
-msgstr ""
+msgstr "สิ้นสุดระหว่าง/นอกขอบเขต"
 
 msgid "Ends in"
-msgstr ""
+msgstr "สิ้นสุดใน"
 
 msgid "Ends out"
-msgstr ""
+msgstr "สิ้นสุดนอก"
 
 msgid "English"
-msgstr ""
+msgstr "อังกฤษ"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr ""
@@ -1292,7 +1292,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr ""
 
 msgid "Enter your current password"
-msgstr ""
+msgstr "ป้อนรหัสผ่านปัจจุบันของคุณ"
 
 msgid "Entry Spot"
 msgstr ""
@@ -1307,25 +1307,25 @@ msgid "Error getting data for %1"
 msgstr ""
 
 msgid "Espa ol"
-msgstr ""
+msgstr "ภาษาสเปน"
 
 msgid "Estimated Net Worth"
-msgstr ""
+msgstr "ประมาณการมูลค่าสุทธิ"
 
 msgid "Even"
 msgstr "คู่"
 
 msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
-msgstr ""
+msgstr "คู่/คี่ พยากรณ์ว่า เลขหลักสุดท้ายจะเป็นเลขคู่ หรือ เลขคี่ หลังจากช่วงราคาสุดท้าย"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
-msgstr ""
+msgstr "Evening Doji Star (CDLEVENINGDOJISTAR)"
 
 msgid "Evening Star (CDLEVENINGSTAR)"
-msgstr ""
+msgstr "Evening Star (CDLEVENINGSTAR)"
 
 msgid "Exclude me from the website until"
-msgstr ""
+msgstr "แยกฉันจากเว็บไซต์จนถึง"
 
 msgid "Exit Spot"
 msgstr "สปอตสิ้นสุด"
@@ -1343,10 +1343,10 @@ msgid "Explanation"
 msgstr "คำอธิบาย"
 
 msgid "Exponential Moving Average (EMA)"
-msgstr ""
+msgstr "Exponential Moving Average (EMA)"
 
 msgid "Fall"
-msgstr ""
+msgstr "ตก"
 
 msgid "Family name"
 msgstr "นามสกุล"
@@ -1397,10 +1397,10 @@ msgid "First name"
 msgstr "ชื่อตัว"
 
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
-msgstr ""
+msgstr "ขั้นแรก คุณต้องกำหนดตัวแปรในการซื้อขาย เหล่านี้คือสิ่งที่คุณต้องพิจารณา"
 
 msgid "Flexible"
-msgstr ""
+msgstr "ยืดหยุ่น"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr ""
@@ -1409,16 +1409,16 @@ msgid "Forex"
 msgstr "ฟอเร็กซ์"
 
 msgid "Forex trading experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขายฟอเร็กซ์"
 
 msgid "Forex trading frequency"
-msgstr ""
+msgstr "ความถี่ของการซื้อขายฟอเร็กซ์"
 
 msgid "Founded October 1999"
-msgstr ""
+msgstr "ก่อตั้งเมื่อ ตุลาคม พ.ศ. 2542 (ค.ศ. 1999)"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "ก่อตั้งขึ้นในปี 1999 (พ.ศ. 2542) Binary.com เป็นชื่อที่เก่าแก่ที่สุด และได้รับการยอมรับมากที่สุดในการซื้อขายไบนารีออนไลน์"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
@@ -1442,7 +1442,7 @@ msgid "Full-screen trading interface"
 msgstr ""
 
 msgid "Further instructions"
-msgstr ""
+msgstr "คำแนะนำเพิ่มเติม"
 
 msgid "GMT"
 msgstr "GMT"
@@ -1460,10 +1460,10 @@ msgid "Go to Token Management, create a token, and share the token with copier(s
 msgstr ""
 
 msgid "Goes out"
-msgstr ""
+msgstr "ออกนอก"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
-msgstr ""
+msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
 msgstr ""
@@ -1475,7 +1475,7 @@ msgid "Grid Light"
 msgstr ""
 
 msgid "Group History"
-msgstr ""
+msgstr "ประวัติของกลุ่ม"
 
 msgid "Hammer (CDLHAMMER)"
 msgstr ""
@@ -1490,7 +1490,7 @@ msgid "Harami Pattern (CDLHARAMI)"
 msgstr ""
 
 msgid "Health"
-msgstr ""
+msgstr "สุขภาพ"
 
 msgid "Help"
 msgstr ""
