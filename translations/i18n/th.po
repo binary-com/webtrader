@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-01 22:40-0500\n"
+"PO-Revision-Date: 2018-02-03 09:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -404,10 +404,10 @@ msgid "A white candle in an upward price trend followed by a doji whose lower sh
 msgstr ""
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Abandoned Baby (CDLABANDONEDBABY)"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "Absolute Price Oscillator (APO)"
 
 msgid "Accept"
 msgstr "ยอมรับ"
@@ -428,7 +428,7 @@ msgid "Active"
 msgstr "ใช้งานอยู่"
 
 msgid "Active Since"
-msgstr ""
+msgstr "ใช้งานเมื่อ"
 
 msgid "Add comparisons"
 msgstr "เพิ่มการเปรียบเทียบ"
@@ -449,7 +449,7 @@ msgid "Admin"
 msgstr "ผู้ดูแลระบบ"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "Advance Block (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
@@ -608,7 +608,7 @@ msgid "Barrier offset"
 msgstr "Barrier ออฟเซ็ท"
 
 msgid "Barrier(s)"
-msgstr ""
+msgstr "Barrier(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
 msgstr ""
