@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-03 17:00-0500\n"
+"PO-Revision-Date: 2018-02-03 17:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -488,7 +488,7 @@ msgid "An Ends Between trade pays out if the market exit price is strictly highe
 msgstr "การซื้อขายแบบสิ้้นสุดระหว่าง จะให้ผลตอบแทน หากราคาปิดของตลาดมีค่าสูงกว่ามูลค่าราคาเป้าหมายต่ำ และ ต่ำกว่ามูลค่าราคาเป้าหมายสูง การซื้อขายแบบสิ้นสุดนอกขอบเขต จะให้ผลตอบแทน หากราคาปิดของตลาด สูงกว่ามูลค่าราคาเป้าหมายสูง หรือ ต่ำกว่ามูลค่าราคาเป้าหมายต่ำ"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr ""
+msgstr "รางวัลใหญ่อีกรายการหนึ่ง ในครั้งนี่พวกเราได้รับการเสนอชื่อเข้าชิงโดยผู้อ่านออนไลน์ Global Banking and Finance Review และตัดสินโดยคณะผู้เชี่ยวชาญและนักวิเคราะห์ของอุตสาหกรรม ซึ่งเห็นว่า เรามีระบบที่เชื่อถือได้ มีการซื้อขายหลายระดับ นโยบายราคา มีการบริการลูกค้า และทักษะความรู้เชิงลึก มายาวนานกว่า 13 ปี"
 
 msgid "Answer"
 msgstr "คำตอบ"
