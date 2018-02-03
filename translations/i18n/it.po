@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-01-28 18:00-0500\n"
+"PO-Revision-Date: 2018-02-02 18:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -76,22 +76,22 @@ msgid "- Open an account and start trading in minutes. Deposits and withdrawals 
 msgstr ""
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- Prevedi se il mercato chiuderà a un prezzo più alto o più basso rispetto a quello deciso"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Prevedi se il mercato incrementerà o decrementerà rispetto al livello attuale"
 
 msgid "- Predict the market staying between or going outside two price targets"
 msgstr ""
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Prevedi se il mercato toccherà o non toccherà il prezzo deciso"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Ricevi quote per un trade e un contro-trade al fine di avere sempre dei tassi imparziali e trasparenti da parte di Binary.com"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Vendi i tuoi contratti a lungo termine prima della scadenza in modo da proteggere gli eventuali profitti oppure per ridurre le perdite"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
 msgstr ""
@@ -100,13 +100,13 @@ msgid "- Trade confidently, knowing that your personal data, transactions, and f
 msgstr ""
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- Fai trading su valute, indici, materie prime e altro su mercati al rialzo, ribasso, laterali, calmi e volatili"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- Fai trading quando vuoi. Binary.com è disponibile 24/7, anche durante i weekend"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- Fai trading con il precursore e detentore di una tecnologia brevettata per la determinazione dei prezzi"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- valute, indici azionari e materie prime"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- da 10 secondi a 365 giorni"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- up/down, touch/no-touch, stays between/goes outside"
 
 msgid "0-1 year"
 msgstr "0-1 anno"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2 anni"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. Scegli l'asset sottostante"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. Mercato sottostante"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2 minuti"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. Scegli la durata del trade"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. Tipologia di trade"
 
 msgid "2000"
 msgstr "2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2h"
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3 minuti"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. Scegli come desideri fare trading sul mercato"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. Durata"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4 ore"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. Barriera(e)"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. Scegli la tua puntata e il potenziale rendimento"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transazioni o più negli ultimi 12 mesi"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5 minuti"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. Payout"
 
 msgid "5m"
 msgstr "5 min"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "Tutte le condizioni di mercato"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "Tutte le condizioni di mercato e le durate"
 
 msgid "All markets"
 msgstr "Tutti i mercati"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "Tutti i mercati e condizioni"
 
 msgid "All payouts"
 msgstr "Tutti i payout"
@@ -472,7 +472,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tutti gli orari sono in GMT (Greenwich Mean Time)"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "Consenti agli altri di copiare i tuoi trade"
 
 msgid "Amount"
 msgstr "Importo"
@@ -547,7 +547,7 @@ msgid "Asset Index"
 msgstr "Indice degli asset"
 
 msgid "Assets"
-msgstr ""
+msgstr "Asset"
 
 msgid "Aug"
 msgstr "Ago"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "Disponibile 24/7"
 
 msgid "Available Currencies"
 msgstr "Valute disponibili"
@@ -574,10 +574,10 @@ msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
 
 msgid "Avg. Duration"
-msgstr ""
+msgstr "Durata media"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "Perdita media"
 
 msgid "Avg. Profit"
 msgstr ""
@@ -946,10 +946,10 @@ msgid "Competitive and transparent pricing"
 msgstr ""
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "Sistema operativo e metodo per speculare su un mercato finanziario"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "Sistema di trading su computer per offrire speculazioni personalizzate sui mercati finanziari"
 
 msgid "Conditions"
 msgstr "Condizioni"
@@ -970,7 +970,7 @@ msgid "Continue Trading"
 msgstr "Continua il trading"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "Indici continui"
 
 msgid "Contract"
 msgstr "Contratto"
@@ -1012,7 +1012,7 @@ msgid "Crosshair"
 msgstr "Mirino"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "Valute - Tutte le principali coppie Forex"
 
 msgid "Current Level"
 msgstr "Livello attuale"
@@ -1042,10 +1042,10 @@ msgid "Custom Theme"
 msgstr "Personalizza argomento"
 
 msgid "Daily Reset Indices"
-msgstr ""
+msgstr "Indici di Reset giornalieri"
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
-msgstr ""
+msgstr "Gli indici di Reseti giornalieri riproducono i mercati con un trend in rialzo e in ribasso, con una volatilità costante"
 
 msgid "Daily limit on losses"
 msgstr "Limite giornaliero delle perdite"
@@ -1156,7 +1156,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Desideri installare l'estensione chrome di Webtrader?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "Desideri installare l'estensione chrome di Webtrader?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1243,7 +1243,7 @@ msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr ""
+msgstr "Ogni contratto di opzioni binarie è valido per un determinato periodo di tempo. Con Binary.com puoi scegliere un contratto con durata da 10 secondi a 365 giorni"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Ogni opzione binaria è una previsione su un movimento futuro di un mercato sottostante"
@@ -1270,10 +1270,10 @@ msgid "Ends Between/Ends Outside trades"
 msgstr "Trade Ends Between (Finisce tra)/Ends Outside (Termina fuori)"
 
 msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "Ends Between/Ends Outside  Prevedi che il mercato chiuderà all'interno o all'esterno di due prezzi scelti alla fine del periodo di tempo"
 
 msgid "Ends Between/Outside"
-msgstr ""
+msgstr "Ends Between/Outside"
 
 msgid "Ends in"
 msgstr "Ends in"
@@ -1315,7 +1315,7 @@ msgid "Even"
 msgstr "Pari"
 
 msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
-msgstr ""
+msgstr "Pari/dispari - Prevede che l'ultima cifra è pari o dispari dopo l'ultimo tick"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "Evening Doji Star (CDLEVENINGDOJISTAR)"
@@ -1399,7 +1399,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "Innanzitutto devi impostare i parametri del tuo trade. Ecco cosa devi considerare"
 
 msgid "Flexible"
-msgstr ""
+msgstr "Flessibile"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Per il terzo anno consecutivo, BetOnMarkets.com è stato votato come il \"Miglior provider di opzioni finanziarie con probabilità fisse\" da parte di Shares Magazine UK. Questa sarà l'ultima volta che ci aggiudichiamo tale premio in quanto Shares Magazine smetterà di attribuire premi in questa categoria"
@@ -1417,7 +1417,7 @@ msgid "Founded October 1999"
 msgstr "Fondato a Ottobre 1999"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Fondato nel 1999, Binary.com è uno dei primi e più stimati nomi nel trading in opzioni binarie"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
@@ -1516,13 +1516,13 @@ msgid "Higher/Lower"
 msgstr "High/Low"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr ""
+msgstr "High/Low - Prevedi se il mercato chiuderà ad un prezzo più alto o più basso rispetto a quello deciso"
 
 msgid "Higher/Lower trades"
 msgstr "Trade High/Low"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr ""
+msgstr "High/Low  Prevedi che il mercato chiuderà ad un prezzo più alto o più basso rispetto a quello deciso"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Modello Hikkake (CDLHIKKAKE)"
@@ -1555,7 +1555,7 @@ msgid "How to trade binaries?"
 msgstr "Come si negoziano le opzioni binarie?"
 
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
+msgstr "Come si negozia nei mercati con Indici di volatilità?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Hull Moving Average (HMA)"
@@ -1579,7 +1579,7 @@ msgid "IPO on the blockchain"
 msgstr ""
 
 msgid "Ideal for beginners and experienced traders"
-msgstr ""
+msgstr "Ideale per trader novizi ed esperti"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
@@ -1636,10 +1636,10 @@ msgid "In/Out"
 msgstr "In/Out"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr ""
+msgstr "In/Out (ends between/outside e stays between/goes outside)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
-msgstr ""
+msgstr "In/Out - Prevedi se il mercato rimarrà all'interno o all'esterno dei due prezzi scelti"
 
 msgid "In/Out trades"
 msgstr "Trade In/Out"
@@ -1675,7 +1675,7 @@ msgid "Industry of Employment"
 msgstr "Settore lavorativo"
 
 msgid "Initial Coin Offering (ICO)"
-msgstr ""
+msgstr "Initial Coin Offering (ICO)"
 
 msgid "Instant access"
 msgstr "Accesso istantaneo"
@@ -2617,7 +2617,7 @@ msgid "Security"
 msgstr "Sicurezza"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "Sicurezza e privacy"
 
 msgid "Security question"
 msgstr "Domanda di sicurezza"
@@ -2653,10 +2653,10 @@ msgid "Session duration limit, in minutes"
 msgstr "Limite di durata della sessione, in minuti"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "Imposta la barriera(e) per definire la tua posizione e attiva il payout che riceverai"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "Imposta la lunghezza del tuo trade, da 10 secondi fino a 365 giorni"
 
 msgid "Settles"
 msgstr "Depositi"
@@ -2683,13 +2683,13 @@ msgid "Simple Moving Average (SMA)"
 msgstr "Media mobile semplice (SMA)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "Semplice e intuitivo"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Smart FX"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "Indici Smart"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr ""
@@ -2761,7 +2761,7 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Stays Between/Goes Outside"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Trade Stays Between (Staziona fra) / Goes Outside (Esce fuori)"
@@ -2776,7 +2776,7 @@ msgid "Step 1: Define your position"
 msgstr "Step 1: Definisci la tua posizione"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "Step 2: Ottieni il prezzo del tuo contratto"
 
 msgid "Step 3: Make your trade"
 msgstr "Step 3: Effettua il tuo trade"
