@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-01 22:40-0500\n"
+"PO-Revision-Date: 2018-02-03 17:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -392,22 +392,22 @@ msgid "A technical momentum indicator that compares a security's closing price t
 msgstr "ตัวบ่งชี้แรงผลักดันทางเทคนิคที่เปรียบเทียบราคาปิดของหลักทรัพย์กับของเขตของราคาในช่วงเวลาหนึ่ง สามารถลดการตอบสนองของตัวแกว่งต่อการเคลื่อนไหวของตลาดได้โดยการปรับช่วงระยะเวลาหรือด้วยการใช้ค่าเฉลี่ยเคลื่อนที่เป็นผลลัพธ์"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr ""
+msgstr "รูปแบบการซื้อขายทางเทคนิคที่แท่งเทียนสามแท่งก่อเป็นรูปร่างที่ดูเหมือนกับแซนด์วิชบนหน้าจอของนักลงทุน แซนด์วิชแท่งจะมีแท่งเทียนตรงกลางที่มีสีตรงข้ามกับแท่งเทียนที่ขนาบทั้งสองข้าง ซึ่งแท่งเทียนทั้งคู่นั้นจะมีระยะการซื้อขายที่ใหญ่กว่าแท่งเทียนตรงกลาง รูปแบบแซนด์วิชแท่งสามารถเกิดขึ้นได้ทั้งในตัวบ่งชี้ตลาดซบเซา และตื่นตัว"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
-msgstr ""
+msgstr "ช่วงห่างราคา (Tick) คือ การเคลื่อนไหวของราคาในตลาดที่เล็กที่สุดในทิศทางขึ้น หรือ ลง"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
-msgstr ""
+msgstr "จะมีการบ่งชี้ถึงแนวโน้มโดยแท่งเทียนขนาดใหญ่ตามด้วย doji ซึ่งอยู่ภายในด้านบนและล่างของแท่งเทียน ซึ่งบ่งชี้ว่าแนวโน้มก่อนหน้านี้กำลังจะย้อนกลับ"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr ""
+msgstr "แท่งเทียนสีขาวในแนวโน้มราคาขาขึ้น ตามด้วย doji ซึ่งเงาด้านล่างยังคงอยู่เหนือส่วนที่สูงของแท่งเทียนก่อนหน้านี้ วันที่สามคือแท่งเทียนสีดำซึ่งเงาด้านบนอยู่ด้านล่างของส่วนล่างของ doji"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
-msgstr ""
+msgstr "Abandoned Baby (CDLABANDONEDBABY)"
 
 msgid "Absolute Price Oscillator (APO)"
-msgstr ""
+msgstr "Absolute Price Oscillator (APO)"
 
 msgid "Accept"
 msgstr "ยอมรับ"
@@ -428,7 +428,7 @@ msgid "Active"
 msgstr "ใช้งานอยู่"
 
 msgid "Active Since"
-msgstr ""
+msgstr "ใช้งานเมื่อ"
 
 msgid "Add comparisons"
 msgstr "เพิ่มการเปรียบเทียบ"
@@ -449,7 +449,7 @@ msgid "Admin"
 msgstr "ผู้ดูแลระบบ"
 
 msgid "Advance Block (CDLADVANCEBLOCK)"
-msgstr ""
+msgstr "Advance Block (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
@@ -458,7 +458,7 @@ msgid "All market conditions"
 msgstr "เงื่อนไขทั้งหมดในตลาด"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "ทุกเงื่อนไขของตลาด และทุกช่วงเวลา"
 
 msgid "All markets"
 msgstr "ตลาดทั้งหมด"
@@ -473,7 +473,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "เวลาที่ใช้อ้างอิง คือ GMT (Greenwich Mean Time) เวลามาตรฐานเมืองกรีนิช"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "อนุญาตให้ผู้อื่นคัดลอกการซื้อขายของคุณ"
 
 msgid "Amount"
 msgstr "มูลค่า"
@@ -488,7 +488,7 @@ msgid "An Ends Between trade pays out if the market exit price is strictly highe
 msgstr "การซื้อขายแบบสิ้้นสุดระหว่าง จะให้ผลตอบแทน หากราคาปิดของตลาดมีค่าสูงกว่ามูลค่าราคาเป้าหมายต่ำ และ ต่ำกว่ามูลค่าราคาเป้าหมายสูง การซื้อขายแบบสิ้นสุดนอกขอบเขต จะให้ผลตอบแทน หากราคาปิดของตลาด สูงกว่ามูลค่าราคาเป้าหมายสูง หรือ ต่ำกว่ามูลค่าราคาเป้าหมายต่ำ"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr ""
+msgstr "รางวัลใหญ่อีกรายการหนึ่ง ในครั้งนี่พวกเราได้รับการเสนอชื่อเข้าชิงโดยผู้อ่านออนไลน์ Global Banking and Finance Review และตัดสินโดยคณะผู้เชี่ยวชาญและนักวิเคราะห์ของอุตสาหกรรม ซึ่งเห็นว่า เรามีระบบที่เชื่อถือได้ มีการซื้อขายหลายระดับ นโยบายราคา มีการบริการลูกค้า และทักษะความรู้เชิงลึก มายาวนานกว่า 13 ปี"
 
 msgid "Answer"
 msgstr "คำตอบ"
@@ -599,7 +599,7 @@ msgid "Balance of Power (BOP)"
 msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
-msgstr ""
+msgstr "ธนาคาร เฮดจ์ฟัน และนักลงทุนมืออาชีพทำการซื้อขายไบนารีออปชั่นเป็นกิจวัตรในตลาดอนุพันธ์ซื้อขายเอง ผู้เชี่ยวชาญตลาดหลายคนใช้และเชื่อมั่นในแพลตฟอร์มของ Binary.com สำหรับการซื้อขายปริมาณสูงที่ยืดหยุ่น"
 
 msgid "Barrier"
 msgstr "Barrier"
@@ -608,7 +608,7 @@ msgid "Barrier offset"
 msgstr "Barrier ออฟเซ็ท"
 
 msgid "Barrier(s)"
-msgstr ""
+msgstr "Barrier(s)"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
 msgstr ""
