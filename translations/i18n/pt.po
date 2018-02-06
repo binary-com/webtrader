@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 07:43-0500\n"
+"PO-Revision-Date: 2018-02-06 07:51-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2 minutos"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. Escolha a duração da negociação"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. Tipo de negociação"
 
 msgid "2000"
 msgstr "2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2h"
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3 minutos"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. Escolha como você deseja negociar no mercado"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. Duração"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4 horas"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. Barreira(s)"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. Escolha a sua aposta e o seu retorno potencial"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transações ou mais nos últimos 12 meses"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5 minutos"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. Prêmio"
 
 msgid "5m"
 msgstr "5m"
@@ -427,7 +427,7 @@ msgid "Active"
 msgstr "Ativa"
 
 msgid "Active Since"
-msgstr ""
+msgstr "Em operação desde"
 
 msgid "Add comparisons"
 msgstr "Adicionar comparações"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "Todas as condições de mercad"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "Todas as condições e durações do mercado"
 
 msgid "All markets"
 msgstr "Todos os mercados"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "Todos os mercados e condições"
 
 msgid "All payouts"
 msgstr "Todos os pagamentos de prêmios"
@@ -472,7 +472,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todos os horários são exibidos em GMT (Greenwich Mean Time)"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "Permitir que outros copiem as suas negociações"
 
 msgid "Amount"
 msgstr "Valor"
@@ -547,7 +547,7 @@ msgid "Asset Index"
 msgstr "Índice de ativos"
 
 msgid "Assets"
-msgstr ""
+msgstr "Ativos"
 
 msgid "Aug"
 msgstr "Ago"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "Disponível 24/7"
 
 msgid "Available Currencies"
 msgstr "Moedas disponíveis"
@@ -574,16 +574,16 @@ msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
 
 msgid "Avg. Duration"
-msgstr ""
+msgstr "Duração média"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "Perda média"
 
 msgid "Avg. Profit"
-msgstr ""
+msgstr "Lucro médio"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "Plataforma de negociação premiada"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Oscilador Awesome (AO)"
@@ -637,7 +637,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "Sistema e método de apostas"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -649,7 +649,7 @@ msgid "Binary KK granted Japan license"
 msgstr "A Binary KK é concedida uma licença no Japão"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "Princípios de opções binárias"
 
 msgid "Binary granted Investment Services license"
 msgstr "A Binary é concedida uma licença de serviços de investimento"
