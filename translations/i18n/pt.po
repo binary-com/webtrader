@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 07:51-0500\n"
+"PO-Revision-Date: 2018-02-06 08:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -661,7 +661,7 @@ msgid "Binary option"
 msgstr "Opção binária"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "As opções binárias são fáceis de entender. Elas são chamadas \"binárias\" porque só pode haver dois resultados – ganhar ou perder. Se a sua aposta estiver correta, você recebe o pagamento de prêmio que é determinado no início da sua negociação. Se não, você perde apenas a sua aposta inicial"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opções binárias ou outros derivados financeiros"
@@ -736,10 +736,10 @@ msgid "Binary.com is owned and operated by the Binary Group Ltd. group of compan
 msgstr ""
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "A Binary.com lança contas de Bitcoin (BTC) para clientes fora da UE"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "A Binary.com lança contas de Bitcoin"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com lança"
