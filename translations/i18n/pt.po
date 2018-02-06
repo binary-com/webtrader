@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 08:43-0500\n"
+"PO-Revision-Date: 2018-02-06 08:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3256,7 +3256,7 @@ msgid "Tooltip text"
 msgstr "Texto da dica de ferramenta"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Copiadores totais"
 
 msgid "Total Cost"
 msgstr "Custo total"
@@ -3265,7 +3265,7 @@ msgid "Total Profit/Loss"
 msgstr "Lucro/Perda Total"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Negociações totais"
 
 msgid "Touch"
 msgstr "Toca"
@@ -3274,7 +3274,7 @@ msgid "Touch/No Touch"
 msgstr "Toca/não toca"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "Toca/Não toca- preveja se o mercado irá tocar ou não tocar num preço-alvo"
 
 msgid "Tourism"
 msgstr "Turismo"
@@ -3289,22 +3289,22 @@ msgid "Trade Confirmation"
 msgstr "Confirmação da negociação"
 
 msgid "Trade Types"
-msgstr ""
+msgstr "Tipos de negociações"
 
 msgid "Trade according to your preferred strategy"
-msgstr ""
+msgstr "Negocie de acordo com a sua estratégia preferida"
 
 msgid "Trade using"
 msgstr "Negociar usando"
 
 msgid "Trader"
-msgstr ""
+msgstr "Negociador"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Estatísticas do negociador"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Rentabilidade das negociações"
 
 msgid "Trades break down"
 msgstr ""
