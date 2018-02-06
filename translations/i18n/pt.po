@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 09:20-0500\n"
+"PO-Revision-Date: 2018-02-06 09:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -706,7 +706,7 @@ msgid "Binary.com continues to innovate and grow"
 msgstr "A Binary.com continua a inovar e a crescer"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "A Binary.com desenvolveu os índices Volatility, que podem ser negociados 24/7. É possível negociar estes índices com todos os tipos de contratos"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "A Binary.com já ganhou uma reputação invejável pelo nosso compromisso com altos padrões éticos e pela qualidade da experiência de negociação que fornecemos"
@@ -724,7 +724,7 @@ msgid "Binary.com introduces an"
 msgstr "A Binary.com apresenta"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "A Binary.com recebe o prêmio de Melhor Corretora de Opções Binárias nos Online Personal Wealth Awards 2017 do Reino Unido, conforme as votações de investidores de todo o mundo"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "A Binary.com é totalmente baseada na Web e não necessita de nenhuma instalação de software"
