@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 08:00-0500\n"
+"PO-Revision-Date: 2018-02-06 08:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1759,7 +1759,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Negociações rentáveis dos últimos 12 mins."
 
 msgid "Last used"
 msgstr "Última utilização"
@@ -1813,13 +1813,13 @@ msgid "Loading Asset Index"
 msgstr "Carregando índice de ativos"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Carregando negociação de cópia"
 
 msgid "Loading Download/View Data"
 msgstr "Carregando dados de download/visualização"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "Carregando MAM (Gestor de contas múltiplas)"
 
 msgid "Loading Password dialog"
 msgstr "Carregando caixa de diálogo da senha"
@@ -1945,13 +1945,13 @@ msgid "Matches"
 msgstr "Combina"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "Combina/Difere - Preveja se o último dígito irá combinar ou diferir"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Atingindo o mínimo (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Aposta máxima da negociação"
 
 msgid "Maximum (MAX)"
 msgstr "Máximo (MAX)"
@@ -1993,7 +1993,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Média Móvel Adaptativa Mesa (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Aposta mínima de negociação"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Mín: {1} Máx: 2000"
@@ -2038,7 +2038,7 @@ msgid "Monday"
 msgstr "Segunda-feira"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Negociações rentáveis do mês"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Estrela Doji Matinal (CDLMORNINGDOJISTAR)"
