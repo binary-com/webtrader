@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 08:33-0500\n"
+"PO-Revision-Date: 2018-02-06 08:43-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2701,7 +2701,7 @@ msgid "Source of wealth"
 msgstr "Fonte de riqueza"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "Especifique o seu prêmio, que representa o seu retorno potencial se a sua previsão for correta. O nosso sistema irá proceder com o cálculo da sua aposta, que representa o custo total da compra do contrato. A Binary.com disponibiliza prêmios de 1 USD a 50.000 USD"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Pião (CDLSPINNINGTOP)"
@@ -2761,13 +2761,13 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Fica entre/Sai fora"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Negociações Fica entre/Sai fora"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "Fica entre/Sai fora – Preveja se o mercado permanecerá dentro ou sairá fora de dois preços-alvo em qualquer momento durante o período do contrato"
 
 msgid "Stays in"
 msgstr "Fica dentro"
@@ -2776,7 +2776,7 @@ msgid "Step 1: Define your position"
 msgstr "Etapa 1: Defina a sua posição"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "Etapa 2: Receba o seu preço de contrato"
 
 msgid "Step 3: Make your trade"
 msgstr "Etapa 3: Realize a sua negociação"
@@ -2881,7 +2881,7 @@ msgid "The"
 msgstr "O"
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "O Índice AUD é um índice ponderado, que mede o valor do Dólar australiano em relação a uma cesta de 5 moedas globais (USD, EUR, GBP, JPY e CAD), cada uma ponderada em 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "O Oscilador de Preço Absoluto (OPA) é baseado nas diferenças absolutas entre duas médias móveis de comprimentos diferentes, uma média móvel rápida e outra lenta"
@@ -2929,7 +2929,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "O Dragonfly Doji é criado quando a abertura, a alta e o fechamento são iguais ou próximos do mesmo preço (uma situação em que o preço da abertura da alta e do fechamento sejam iguais é bastante raro). A parte mais importante do Dragonfly Doji é a sombra inferior comprida"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "O EUR é um índice ponderado, que mede o valor do Euro em relação a uma cesta de 5 moedas globais (USD, AUD, GBP, JPY e CAD), cada uma ponderada em 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "A Média Móvel Exponencial (MME) representa uma média de preços, mas coloca mais peso nos preços recentes. O peso aplicado ao preço mais recente depende do período selecionado da média móvel. Quanto mais curto o período do MME, mais peso será aplicado ao preço mais recente"
@@ -2938,7 +2938,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr "O Oscilador Estocástico Rápido é baseado na formulas originais de George Lane para %K e %D. %K na versão rápida que parece bastante instável. %D é o MMS de três dias de %K "
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "O GBP é um índice ponderado, que mede o valor da Libra britânica em relação a uma cesta de 5 moedas globais (USD, AUD, EUR, JPY e CAD), cada uma ponderada em 20%"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "O Gravestone Doji é criado quando a abertura, a baixa e o fechamento são iguais ou próximos do mesmo preço (uma situação em que o preço da abertura da alta e do fechamento sejam iguais é bastante raro). A parte mais importante do Graveston Doji é a sombra superior comprida"
@@ -3013,10 +3013,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr "A função de Preço Típico mede a média dos preços da alta, da baixa e do fechamento do dia usando um traço simples de linha única. O preço vulgar proporciona uma vista simples dos preços de negociações intradiárias, tal como acontece com outras funções de ajuste de preço. É possível usá-la para suavização de alguma de inconstância do preço de fechamento porque ela engloba informações do dia inteiro de negociações e não só os resultados do fim do dia. O indicador de preços típico é medido ao somar o preço da alta, da baixa e do fechamento e depois dividir por três"
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "O USD é um índice ponderado, que mede o valor do Dólar em relação a uma cesta de 5 moedas globais (EUR, AUD, GBP, JPY e CAD), cada uma ponderada em 20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "O Índice Volatility 100 é duas vezes mais volátil que o Índice Volatility 50, e quatro vezes mais volátil que o Índice Volatility 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "O indicador de fechamento ponderado é simplesmente uma média do preço de cada dia. Ele pode ser usado para suavizar alguma da inconstância de um gráfico de preços de fechamento, visto que engloba informações sobre o dia inteiro de negociações"
@@ -3055,10 +3055,10 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Os serviços de negociação financeira contidos neste site são apenas adequados para clientes que tenham a capacidade de suportar as perdas de todo o dinheiro que investem e que compreendam e tenham experiência com os riscos envolvidos na aquisição de contratos financeiros. Transações de contratos financeiros implicam um alto grau de risco. Se os contratos adquiridos expirarem sem ganhos, você irá sofrer uma perda total do seu investimento, que consiste no prêmio do contrato"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "O primeiro passo é abrir uma conta. É possível"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "A primeira coisa a fazer é escolher o ativo que você deseja negociar, como o ouro ou o petróleo, as ações ou as taxas cambiais (o valor de uma opção binária é derivado do preço do ativo subjacente). A grande vantagem de negociar opções é que você não está comprando nem vendendo o ativo real"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Os três primeiros dias da Escada da Alta são velas pretas com aberturas e fechamentos mais baixos consecutivos. O quarto dia é uma curta vela preta, mas abre mais alto e negocia mais alto, deixando uma longa sombra superior, e depois se fecha criando uma nova baixa. O quinto dia é uma forte vela branca que registra uma lacuna de corpo com o quarto dia "
@@ -3112,16 +3112,16 @@ msgid "The volatility indices simulate various real market situations and provid
 msgstr "Os índices \"Volatility\" simulam várias situações reais de mercado e proporcionam uma plataforma ideal para treinar negociações e testar estratégias sob várias condições do mercado. Estes índices dependem da volatilidade e do deslocamento e ajudar usuários a experimentar cenários diferentes, como: volatilidade alta, volatilidade baixa, tendências de baixa e tendências de alta"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "Há quatro tipos de negociação principais entre quais você pode escolher"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "Existem dois tipos de negociações Dentro/Fora"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "Existem dois tipos de negociações Acima/Abaixo"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "Há duas maneiras de se negociar Asiáticos"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Estas são negociações em que o negociador prevê se o mercado irá terminar acima ou abaixo de um determinado preço-alvo"
