@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 07:30-0500\n"
+"PO-Revision-Date: 2018-02-06 07:43-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -70,43 +70,43 @@ msgid "- Enjoy a trading platform that s easy to navigate and use"
 msgstr "- Desfrute de uma plataforma de negociação de fácil navegação e uso"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- Saiba quanto você irá ganhar ou perder antes de comprar o contrato"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- Abra uma conta e comece a negociar em poucos minutos. Depósitos e retiradas também estão disponíveis 24/7"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- Preveja se mercado irá terminar mais alto ou mais baixo do que um preço-alvo"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Preveja se o mercado irá subir ou descer do seu nível atual"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- Preveja se o mercado ficará dentro ou sairá fora de dois preços-alvo"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Preveja se o mercado irá tocar ou não num preço-alvo"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Receba cotações de uma negociação e de uma negociação oposta. Assim você recebe sempre taxas imparciais e transparentes da Binary.com"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Venda os seus contratos de longo prazo antes de expiração para proteger quaisquer lucros que tenha realizado ou para minimizar as suas perdas"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- Escolha as suas negociações através da sua intuição ou use análises técnicas e fundamentais"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- Negocie com confiança, sabendo que os seus dados pessoais, as suas transações e os seus fundos estão sempre seguros"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- Negocie moedas, índices e matérias-primas em mercados em subida, descida, movimento lateral, calmos e voláteis"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- Negocie quando quiser. A Binary.com está disponível 24/7, inclusive nos fins de semana"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- Negocie com a pioneira da indústria e detentora de uma tecnologia de preços patenteada"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- moedas, índices de ações e matérias-primas"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- de 10 segundos a 365 dias"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- acima/abaixo, toca/não toca, fica entre/sai fora"
 
 msgid "0-1 year"
 msgstr "0 a 1 ano"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1 a 2 anos"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. Escolha o mercado subjacente"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. Mercado subjacente"
 
 msgid "10"
 msgstr "10"
