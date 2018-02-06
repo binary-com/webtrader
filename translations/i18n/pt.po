@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-02-06 07:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,25 +49,25 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr ") entra em operação, estabelecendo um serviço de apostas 24 horas por dia numa variedade de índices financeiros. O negócio cresce rapidamente e em pouco tempo tornamo-nos o líder de mercado em apostas financeiras de probabilidades fixas"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- Beneficie-se das mesmas taxas de retorno que os negociadores interbancários. Os nossos preços são comparados diariamente com os mercados de opções interbancários"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- A Binary.com não está afiliada com qualquer um dos agentes de pagamentos listados acima. Cada agente de pagamentos opera como um fornecedor de serviços independente e não é endossado, garantido ou de outra forma aprovado pela Binary.com. OS CLIENTES LIDAM COM AGENTES DE PAGAMENTOS POR SUA CONTA E RISCO. Recomenda-se que os clientes verifiquem as credenciais dos agentes de pagamentos antes de lhes enviar quaisquer fundos. A Binary.com não será responsável, em qualquer circunstância, pelas transações efetuadas entre clientes e agentes de pagamentos"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- Escolha entre mais de um milhão de variações de negociação, a qualquer momento, e personalize as suas negociações de acordo com a sua estratégia preferida"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- Escolha prazos de 10 segundos a 365 dias"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- Deposite tão pouco quanto 5 USD para começar a negociar"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Ganhe o mesmo retorno proporcional em apostas de todos os valores"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- Desfrute de uma plataforma de negociação de fácil navegação e uso"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
 msgstr ""
