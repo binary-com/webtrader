@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 08:40-0500\n"
+"PO-Revision-Date: 2018-02-07 08:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3361,13 +3361,13 @@ msgid "Two Crows (CDL2CROWS)"
 msgstr "Dois corvos (CDL2CROWS)"
 
 msgid "Two-way pricing"
-msgstr ""
+msgstr "Determinação de preços bidirecional"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Preço Típico (TYPPRICE)"
 
 msgid "US Patents"
-msgstr ""
+msgstr "Patentes dos EUA"
 
 msgid "USD"
 msgstr "USD"
@@ -3397,7 +3397,7 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr "O fundo único de três rios é um padrão de velas altista composto de três velas: A primeira vela possui um longo corpo baixista, a segunda vela é um martelo e o seu corpo encontra-se dentro do corpo da primeira vela, a terceira vela é pequena e altista, o seu preço de fechamento está mais baixo que o da segunda barra"
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr ""
+msgstr "Acima - Preveja se o mercado terminará mais alto que o preço médio"
 
 msgid "Up/Down"
 msgstr "Acima/Abaixo"
@@ -3463,7 +3463,7 @@ msgid "View Statement"
 msgstr "Ver extrato"
 
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "Mercados de índices \"Volatility\""
 
 msgid "Volatility Indicators"
 msgstr "Indicadores Volatility"
@@ -3472,10 +3472,10 @@ msgid "Volatility Indices"
 msgstr "Índices Volatility"
 
 msgid "Volatility Indices are further categorized into two types"
-msgstr ""
+msgstr "Os índices \"Volatility\" são ainda categorizados em dois tipos"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
-msgstr ""
+msgstr "Índices \"Volatility\" - os índices \"Volatility\" da Binary.com que simulam as forças do mercado"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "MMP é abreviatura de Média Móvel Ponderada. Ajuda na suavização da curva de preço para melhor identificação de tendências. Coloca ainda mais importância em dados recentes do que a MME"
@@ -3490,7 +3490,7 @@ msgid "We rebrand BetOnMarkets.com as"
 msgstr "Alteramos a marca BetOnMarkets.com para"
 
 msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
-msgstr ""
+msgstr "Segregamos todos os fundos de clientes e mantemo-los em instituições financeiras seguras e licenciadas, de acordo com as condições das nossas licenças de operação"
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "São nos concedidas patentes para \"Sistema de negociação informática e método de especulação em mercados financeiros\" e \"Sistema de negociação informática para a disponibilização de especulações personalizadas do mercado financeiro\". As patentes mostram a nossa capacidade de inovar e de ficar à frente da concorrência"
@@ -3523,7 +3523,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Bem-vindo(a) ao WebTrader da Binary.com"
 
 msgid "What are OTC indices and stocks?"
-msgstr ""
+msgstr "O que são os índices e as ações OTC?"
 
 msgid "What is pep?"
 msgstr ""
