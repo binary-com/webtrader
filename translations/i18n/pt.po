@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 08:10-0500\n"
+"PO-Revision-Date: 2018-02-07 08:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1243,13 +1243,13 @@ msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr ""
+msgstr "Cada contrato de opção binária dura um determinado tempo – com a Binary.com você pode escolher um contrato que dura de 10 segundos a 365 dias"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Cada opção binária é uma previsão de um movimento futuro de um mercado subjacente"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr ""
+msgstr "Cada negociação binária vem com um prêmio predeterminado que você verá depois de ajustar cada parâmetro. Você ganhará o prêmio se a sua previsão for correta. Se não for correta, você perderá apenas o valor da sua aposta inicial"
 
 msgid "Edge"
 msgstr "Borda"
@@ -1270,10 +1270,10 @@ msgid "Ends Between/Ends Outside trades"
 msgstr "Negociações Termina entre/Termina fora"
 
 msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "Termina Entre/Termina Fora – Preveja se o mercado terminará dentro ou fora de dois preços-alvo no fim do período de tempo"
 
 msgid "Ends Between/Outside"
-msgstr ""
+msgstr "Termina entre/fora"
 
 msgid "Ends in"
 msgstr "Termina dentro"
@@ -1315,7 +1315,7 @@ msgid "Even"
 msgstr "Par"
 
 msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
-msgstr ""
+msgstr "Par/Ímpar - Preveja se o último dígito será par ou ímpar depois do último tique-taque"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "Estrela Doji da noite (CDLEVENINGDOJISTAR)"
@@ -1399,7 +1399,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "Primeiro, você precisa definir os parâmetros da sua negociação. Eis o que você precisa considerar"
 
 msgid "Flexible"
-msgstr ""
+msgstr "Flexível"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Pelo terceiro ano seguido, a BetOnMarkets.com é votada o \"Melhor Fornecedor de Negociação Financeira de Probabilidades Fixas\" pela Shares Magazine UK. Foi a última vez que ganhamos este prêmio porque a Shares Magazine para de atribuir prêmios nesta categoria."
