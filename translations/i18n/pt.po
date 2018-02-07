@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 08:00-0500\n"
+"PO-Revision-Date: 2018-02-07 08:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -946,10 +946,10 @@ msgid "Competitive and transparent pricing"
 msgstr "Preços competitivos e transparentes"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "Sistema informático e método para a especulação em mercados financeiros"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "Sistema informático de negociação para a disponibilização de especulações personalizadas de mercados financeiros"
 
 msgid "Conditions"
 msgstr "Condições"
@@ -970,7 +970,7 @@ msgid "Continue Trading"
 msgstr "Continuar a negociar"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "Índices Contínuos"
 
 msgid "Contract"
 msgstr "Contrato"
@@ -982,13 +982,13 @@ msgid "Contracts"
 msgstr "Contratos"
 
 msgid "Copier"
-msgstr ""
+msgstr "Copiador"
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "Negociações de cópia"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Contra-ataque (CDLCOUNTERATTACK)"
@@ -1012,7 +1012,7 @@ msgid "Crosshair"
 msgstr "Fio de retículo"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "Moedas - Todos os pares principais"
 
 msgid "Current Level"
 msgstr "Nível atual"
@@ -1042,10 +1042,10 @@ msgid "Custom Theme"
 msgstr "Tema personalizado"
 
 msgid "Daily Reset Indices"
-msgstr ""
+msgstr "Índices \"Reinício Diário\""
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
-msgstr ""
+msgstr "Os índices \"Reinício diário\" replicam mercados com tendências altista e baixista, com volatilidade constante"
 
 msgid "Daily limit on losses"
 msgstr "Limite diário de perdas"
@@ -1138,7 +1138,7 @@ msgid "Digits"
 msgstr "Dígitos"
 
 msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
-msgstr ""
+msgstr "Os Dígitos permitem-lhe prever o último dígito do preço à vista. Há 3 tipos de negociações Dígitos"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "Movimento Direcional (IMD) é uma coleção de três indicadores separados combinados em um. Movimento Direcional consiste do Índice Direcional Médio (IDM), do Indicador Direcional Mais (ID+) e do Índice Direcional Menos (ID-)"
@@ -1156,7 +1156,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Deseja instalar a extensão do Chrome do Webtrader?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "Deseja instalar a extensão do Webtrader para Chrome?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1189,7 +1189,7 @@ msgid "Double click the object to remove"
 msgstr "Clique duas vezes no objeto para removê-lo"
 
 msgid "Down - Predict that the market will end lower than the average price"
-msgstr ""
+msgstr "Abaixo - Preveja se o mercado terminará mais baixo que o preço médio"
 
 msgid "Download"
 msgstr "Baixar"
