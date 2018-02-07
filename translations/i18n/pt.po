@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 08:30-0500\n"
+"PO-Revision-Date: 2018-02-07 08:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1636,10 +1636,10 @@ msgid "In/Out"
 msgstr "Dentro/Fora"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr ""
+msgstr "Dentro/Fora (termina entre/fora e fica entre/sai fora)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
-msgstr ""
+msgstr "Dentro/Fora - Preveja se o mercado irá ficar dentro ou fora de dois preços-alvo"
 
 msgid "In/Out trades"
 msgstr "Negociações dentro/fora"
@@ -1657,7 +1657,7 @@ msgid "Indices"
 msgstr "Índices"
 
 msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
-msgstr ""
+msgstr "Índices - Todos os índices de ações principais do mundo proveniente do mercado de balcão"
 
 msgid "Indices trading experience"
 msgstr "Experiência com a negociação de índices"
@@ -1675,7 +1675,7 @@ msgid "Industry of Employment"
 msgstr "Área profissional"
 
 msgid "Initial Coin Offering (ICO)"
-msgstr ""
+msgstr "Oferta Inicial de Moedas (OIM)"
 
 msgid "Instant access"
 msgstr "Acesso instantâneo"
@@ -3307,13 +3307,13 @@ msgid "Trades Profitability"
 msgstr "Rentabilidade das negociações"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Decomposição das negociações"
 
 msgid "Trading Times"
 msgstr "Horas de negociação"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
-msgstr ""
+msgstr "A negociação de opções binárias é relativamente fácil e é possível comprar um contrato em apenas três etapas simples"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "A negociação de opções binárias pode não ser adequada para todos. Por essa razão, pedimos que se certifique de que compreenda totalmente todos os riscos envolvidos. As suas perdas podem exceder o seu depósito inicial e você não será titular de, nem possuirá interesses em, o ativo subjacente. Em relação a opções binárias que são produtos de jogo, lembre-se de que os jogos a dinheiro podem ser viciantes - jogue responsavelmente"
@@ -3328,7 +3328,7 @@ msgid "Transfer to another Binary account"
 msgstr "Transferir para outra conta Binary"
 
 msgid "Transparent risk and potential reward"
-msgstr ""
+msgstr "Risco transparente e recompensa potencial"
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "Média Móvel Triangular (TRIMA)"
