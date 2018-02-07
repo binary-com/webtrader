@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 08:20-0500\n"
+"PO-Revision-Date: 2018-02-07 08:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1417,7 +1417,7 @@ msgid "Founded October 1999"
 msgstr "Fundada em Outubro de 1999"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Fundada em 1999, a Binary.com é um dos mais antigos e mais respeitados nomes na negociação de opções binárias"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
@@ -1450,13 +1450,13 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT significa Tempo Médio de Greenwich (ou Greenwich Mean Time em inglês), o horário oficial usado no Reino Unido no inverno. Durante o verão, o Reino Unido muda para o Horário de Verão Britânico, que é GMT + 1 hora. Todas as horas no site da Binary.com usam GMT durante todo o ano"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Obtenha o token de API de negociadores e adicioná-lo à sua lista"
 
 msgid "Get your price"
 msgstr "Receba o seu preço"
 
 msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "Vá para \"Gerenciamento de tokens\", crie um token e compartilhe-o com os copiadores"
 
 msgid "Goes out"
 msgstr "Sai fora"
@@ -1516,13 +1516,13 @@ msgid "Higher/Lower"
 msgstr "Superior/Inferior"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr ""
+msgstr "Superior/Inferior - Preveja se o mercado irá terminar acima ou abaixo de um preço-alvo"
 
 msgid "Higher/Lower trades"
 msgstr "Negociações Superior/Inferior"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr ""
+msgstr "Superior/Inferior - Preveja se o mercado irá terminar acima ou abaixo de um preço-alvo"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Padrão Hikkake (CDLHIKKAKE)"
@@ -1555,7 +1555,7 @@ msgid "How to trade binaries?"
 msgstr "Como negociar opções binárias?"
 
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
+msgstr "Como negociar os mercados dos índices Volatility?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Média Móvel Hull (MMH)"
@@ -1576,10 +1576,10 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "ISENÇÃO DE RESPONSABILIDADE IMPORTANTE - A Binary.com não está afiliada com qualquer um dos agentes de pagamentos listados acima. Cada agente de pagamentos opera como um fornecedor de serviços independente e não é recomendando, garantido ou, de outra forma, aprovado pela Binary.com. OS CLIENTES LIDAM COM AGENTES DE PAGAMENTOS POR SUA PRÓPRIA CONTA E RISCO. Os clientes são aconselhados a verificar as credenciais dos agentes de pagamentos antes de lhes enviar quaisquer fundos. A Binary.com não terá nenhuma responsabilidade, em qualquer circunstância, nas transações entre clientes e agentes de pagamentos"
 
 msgid "IPO on the blockchain"
-msgstr ""
+msgstr "OPI na blockchain"
 
 msgid "Ideal for beginners and experienced traders"
-msgstr ""
+msgstr "Ideal para principiantes e negociadores experientes"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Três corvos idênticos (CDLIDENTICAL3CROWS)"
