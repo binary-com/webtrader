@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 07:30-0500\n"
+"PO-Revision-Date: 2018-02-07 07:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -769,10 +769,10 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "A Binary.com leva para casa o primeiro prêmio na categoria \"Operador de Apostas Financeiras\" na prestigiosa cerimônia EGR Operator Awards de 2015, realizada em Londres "
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Os índices contínuos da Binary.com são o Índice Volatility 10, o Índice Volatility 25, o Índice Volatility 50, o Índice Volatility 75 e o Índice Volatility 100. Estes índices correspondem a mercados simulados com volatilidades constantes de 10%, 25%, 50%, 75% e 100%"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Os índices e ações OTC (Over The Counter - mercado de balcão) da Binary.com provêm do mercado de balcão e proporcionam-lhe um meio alternativo de negociar índices de ações e ações - disponíveis de fontes exteriores às bolsas centralizadas"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
 msgstr ""
