@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 09:10-0500\n"
+"PO-Revision-Date: 2018-02-07 09:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3592,7 +3592,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Você ainda não está copiando quaisquer negociações"
 
 msgid "You can"
-msgstr ""
+msgstr "É possível"
 
 msgid "You can only allow other traders to copy your trade"
 msgstr "Apenas é possível permitir que outros copiem as suas negociações"
@@ -3622,13 +3622,13 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "A sua conta Binary foi criada, mas para começar a negociar você precisa permitir que o Webtrader tenha acesso a ela"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "A sua conta (%) encontra-se bloqueada. Contate o apoio ao cliente para mais informações."
 
 msgid "Your browser is not supported"
 msgstr "O seu navegador não é suportado"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "As suas configurações de cópia"
 
 msgid "Your email"
 msgstr "O seu e-mail"
@@ -3652,13 +3652,13 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "e para clientes irlandeses pelas (3) Autoridades Fiscais na Irlanda, licença de casa de apostas emitida em 29 setembro de 2015 (licença no 1010285). Os serviços deste site não são disponibilizados em certos países como os EUA, a Costa Rica ou Hong Kong e a pessoas menores de 18 anos"
 
 msgid "and start learning how to trade"
-msgstr ""
+msgstr "e comece a aprender a negociar"
 
 msgid "apostrophe (') are allowed"
 msgstr "apóstrofo (') é permitido"
 
 msgid "apply online"
-msgstr ""
+msgstr "faça o requerimento online"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr "numa avaliação de mais de US$ 50,5 milhões"
@@ -3685,7 +3685,7 @@ msgid "days"
 msgstr "dias"
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "deposite fundos e comece e negociar dentro de poucos minutos"
 
 msgid "disposes of its stake"
 msgstr "aliena a sua aposta"
@@ -3718,7 +3718,7 @@ msgid "if this is not your country of residence"
 msgstr "se este não for o seu país de residência"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "em poucos minutos"
 
 msgid "in the future, the"
 msgstr "no futuro, a"
@@ -3772,10 +3772,10 @@ msgid "of \"Now\", the"
 msgstr " para a quantia de "
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "abra uma conta gratuita de dinheiro virtual totalmente funcional com 10.000 USD"
 
 msgid "open an account"
-msgstr ""
+msgstr "abra uma conta"
 
 msgid "our helpful support desk"
 msgstr "o nosso útil apoio ao cliente"
@@ -3802,7 +3802,7 @@ msgid "terms and conditions"
 msgstr "termos e condições"
 
 msgid "the"
-msgstr ""
+msgstr "o"
 
 msgid "thereafter"
 msgstr "depois"
