@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-06 09:30-0500\n"
+"PO-Revision-Date: 2018-02-07 07:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -733,7 +733,7 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "A Binary.com é premiada como a \"Melhor Corretora de Opções Binárias\" no 16.º MENA International Financial Conference and Exhibition, realizado em Dubai"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "A Binary.com é detida e operada pelo grupo de empresas Binary Ltd. Para mais informações, visite a nossa página de história"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
 msgstr "A Binary.com lança contas de Bitcoin (BTC) para clientes fora da UE"
@@ -748,13 +748,13 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "A Binary.com disponibiliza uma variedade de métodos de depósito e retirada, desde cartões de crédito e débito a transferências bancárias, dinheiro eletrônico e carteiras eletrônicas"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "A Binary.com disponibiliza contas de dinheiro virtual para que você possa se habituar à negociação de opções binárias. Por que não"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "A Binary.com proporciona outras maneiras de negociar"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "A Binary.com disponibiliza-lhe quatro maneiras de negociar determinados ativos"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "A Binary.com abre um escritório no edifício de escritórios Qsentral no centro de Kuala Lumpur para expandir ainda mais a sua equipe de desenvolvimento de TI"
