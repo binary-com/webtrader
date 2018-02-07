@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 08:50-0500\n"
+"PO-Revision-Date: 2018-02-07 09:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3529,13 +3529,13 @@ msgid "What is pep?"
 msgstr ""
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr ""
+msgstr "Quando você estiver satisfeito com o preço recebido, execute a sua negociação imediatamente. Com a nossa plataforma única, você não terá que lidar com desvios nem mercados com disparidades. E, sobretudo, não há taxas invisíveis. É também possível vender quaisquer contratos de longo prazo em qualquer momento, antes de expiração, para proteger os lucros que possa ter ganho ou para minimizar as suas perdas"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "Quando você negocia na Binary.com, pode ter a certeza de que os seus depósitos são mantidos em contas separadas e não serão usados para quaisquer outros fins"
 
 msgid "Where does Binary.com hold my funds?"
-msgstr ""
+msgstr "Onde é que a Binary.com guarda o meu dinheiro?"
 
 msgid "While on the go, you can"
 msgstr "Em qualquer lugar, você pode"
@@ -3544,7 +3544,7 @@ msgid "Why Choose Binary Trading?"
 msgstr "Por que escolher a negociação de opções binárias?"
 
 msgid "Why trade with Binary.com"
-msgstr ""
+msgstr "Por que negociar com a Binary.com"
 
 msgid "Will I need to install any software?"
 msgstr "Vou precisar instalar qualquer software?"
@@ -3583,13 +3583,13 @@ msgid "Y-axis labels"
 msgstr "Etiquetas do eixo Y"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Negociações rentáveis do ano"
 
 msgid "Yes"
 msgstr "Sim"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Você ainda não está copiando quaisquer negociações"
 
 msgid "You can"
 msgstr ""
