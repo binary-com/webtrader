@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 09:00-0500\n"
+"PO-Revision-Date: 2018-02-07 09:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3595,10 +3595,10 @@ msgid "You can"
 msgstr ""
 
 msgid "You can only allow other traders to copy your trade"
-msgstr ""
+msgstr "Apenas é possível permitir que outros copiem as suas negociações"
 
 msgid "You can only copy other trader's trade"
-msgstr ""
+msgstr "Apenas é possível copiar as negociações de outros"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Não é necessário depositar qualquer dinheiro para abrir uma conta, mas é necessário depositar fundos antes de começar a negociar"
@@ -3610,7 +3610,7 @@ msgid "You haven't saved any templates yet"
 msgstr "Você ainda não salvou nenhum modelo"
 
 msgid "You only need to make four decisions to execute a binary contract"
-msgstr ""
+msgstr "Você precisa tomar apenas quatro decisões para executar um contrato binário"
 
 msgid "You pay"
 msgstr "Você paga"
