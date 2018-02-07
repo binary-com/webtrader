@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 07:40-0500\n"
+"PO-Revision-Date: 2018-02-07 07:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -775,13 +775,13 @@ msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter
 msgstr "Os índices e ações OTC (Over The Counter - mercado de balcão) da Binary.com provêm do mercado de balcão e proporcionam-lhe um meio alternativo de negociar índices de ações e ações - disponíveis de fontes exteriores às bolsas centralizadas"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Os índices e ações OTC da Binary.com oferecem o benefício de gráficos e preços em tempo real. Desfrute de ainda mais oportunidades emocionantes de negociar os nossos índices e ações de destaque através desta nova oferta em tempo real"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Os Índices Inteligentes FX da Binary.com são mercados inteligentes que medem o valor de uma moeda em relação a uma cesta de moedas principais"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Os índices Volatility da Binary.com são baseados num gerador de números aleatórios criptograficamente seguro, sujeito a fiscalizações por imparcialidade por terceiros independentes"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Os sistemas da Binary.com processam atualmente mais de 1 milhão de transações/dia (incluindo contas virtuais)"
