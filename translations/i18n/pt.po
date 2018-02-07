@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 07:50-0500\n"
+"PO-Revision-Date: 2018-02-07 08:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -805,7 +805,7 @@ msgid "Browser upgrade required"
 msgstr "Atualização de navegador necessária"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "Os índices \"Mercado em alta\" e \"Mercado em baixa\" entram em funcionamento às 00:00 GMT todos os dias, replicando os mercados com tendência altista e tendência baixista, respectivamente"
 
 msgid "Buy Price"
 msgstr "Preço de compra"
@@ -880,16 +880,16 @@ msgid "Chart type"
 msgstr "Tipo de gráfico"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "Escolha entre cinco tipos de mercados e os seus respectivos ativos"
 
 msgid "Choose password"
 msgstr "Escolher senha"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "Escolha Toca/Não toca se deseja lucrar da previsão do mercado tocar ou não tocar um preço-alvo em qualquer momento durante a duração do contrato"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "A primeira coisa a fazer é escolher o ativo que você deseja negociar, como o ouro ou o petróleo, as ações ou as taxas cambiais (o valor de uma opção binária é derivado do preço do ativo subjacente). A grande vantagem de negociar opções é que você não está comprando nem vendendo o ativo real, apenas um contrato que determina o desempenho do ativo"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Escolha o seu agente de pagamentos preferido"
@@ -907,7 +907,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "Clique para conectar-se com a sua conta Binary.com"
 
 msgid "Client funds"
-msgstr ""
+msgstr "Fundos de clientes"
 
 msgid "Close"
 msgstr "Fechar"
@@ -925,7 +925,7 @@ msgid "Commodities"
 msgstr "Matérias-primas"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "Matérias-primas - Matérias-primas principais como ouro e petróleo"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Matérias-primas são recursos que cultivados ou extraídos do solo, tais como prata, ouro ou óleo. Na Binary.com, os preços são refletidos em dólares US"
@@ -943,7 +943,7 @@ msgid "Comparisons"
 msgstr "Comparações"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "Preços competitivos e transparentes"
 
 msgid "Computer system and method for speculating on a financial market"
 msgstr ""
