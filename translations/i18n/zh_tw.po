@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-01-30 02:10-0500\n"
+"PO-Revision-Date: 2018-02-08 04:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -55,10 +55,10 @@ msgid "- Binary.com is not affiliated with any of the Payment Agents listed abov
 msgstr "- Binary.com與上述所有支付代理不存在附屬關係。各支付代理均以獨立服務提供商的身份運營，未由Binary.com支持、擔保或經其它方式批准。客戶與支付代理的業務往來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr "- 隨時從一百多萬個交易選項中挑選並按照您傾向的策略自訂交易"
+msgstr "- 隨時從一百多萬個交易選項中挑選，並按照您傾向的策略自訂交易"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr "- 選擇時間範圍為10 秒到365 天"
+msgstr "- 選擇時間範圍為10秒到365天"
 
 msgid "- Deposit as little as USD 5 to start trading"
 msgstr "- 存款最低僅需5美元即可開始交易"
@@ -97,7 +97,7 @@ msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analys
 msgstr "- 使用技術或基本面分析或按您的「直覺」執行交易"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr "- 讓您了解個人資料、交易和資金總是安全並充滿信心進行交易"
+msgstr "- 讓您了解個人資料、交易和資金總是安全，並充滿信心進行交易"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
 msgstr "- 在各種市場環境（上漲、下跌、橫盤整理、交易清淡和震盪）中交易外匯、指數、商品及其它"
@@ -700,7 +700,7 @@ msgid "Binary.com Shop introduced"
 msgstr "Binary.com新商店"
 
 msgid "Binary.com announces plans for an"
-msgstr "Binary.com 宣佈計畫"
+msgstr "Binary.com宣佈計畫"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com不斷創新、日漸成長"
@@ -739,7 +739,7 @@ msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
 msgstr "Binary.com為非歐盟客戶推出比特幣 (BTC) 帳戶"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr "Binary.com 推出比特幣帳戶"
+msgstr "Binary.com推出比特幣帳戶"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com啟動了"
@@ -748,7 +748,7 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com%1 提供各種常見的存提款方式，包括信用卡和轉帳卡、銀行電匯、電子現金及電子錢包等"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr "Binary.com 提供虛擬貨幣帳戶, 方便您得到二元期權交易的竅門。何不試試"
+msgstr "Binary.com提供虛擬貨幣帳戶, 方便您得到二元期權交易的竅門。何不試試"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com提供新的交易方式"
