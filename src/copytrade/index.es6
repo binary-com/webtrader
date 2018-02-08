@@ -414,6 +414,7 @@ const state = {
    }
    */
   traderTokens: [],
+  openTokenMgmt: () => $('li.account ul a.token-management').click(),
 };
 
 const initConfigWindow = () => {
