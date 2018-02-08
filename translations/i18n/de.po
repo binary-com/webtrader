@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-01-29 10:11-0500\n"
+"PO-Revision-Date: 2018-02-07 11:01-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3271,7 +3271,7 @@ msgid "Touch"
 msgstr "Ziel"
 
 msgid "Touch/No Touch"
-msgstr "Erreicht/Erreicht nicht"
+msgstr "Ziel/kein Ziel"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
 msgstr "Ziel/Kein Ziel - Sagen Sie voraus, ob der Kurs einen vorher festgelegten Zielkurs erreichen wird oder nicht"
