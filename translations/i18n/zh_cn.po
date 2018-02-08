@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-01-30 02:10-0500\n"
+"PO-Revision-Date: 2018-02-08 04:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -55,13 +55,13 @@ msgid "- Binary.com is not affiliated with any of the Payment Agents listed abov
 msgstr "- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr "- 随时从一百多万个交易选项中挑选并按照您倾向的策略自定义交易"
+msgstr "- 随时从一百多万个交易选项中挑选，并按照您倾向的策略自定义交易"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr "- 选择时间范围为10 秒到 365 天"
+msgstr "- 选择时间范围为10秒到365天"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr "- 存款最低仅需 5 美元即可开始交易"
+msgstr "- 存款最低仅需5美元即可开始交易"
 
 msgid "- Earn the same proportional return on stakes of all values"
 msgstr "- 无论投入多少资金进行交易，均可获得同等回报率"
@@ -79,13 +79,13 @@ msgid "- Predict the market ending higher or lower than a price target"
 msgstr "-预测到期时市场价格是高于还是低于目标价格。"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr "-预测市价是否从目前价位上升或下跌。"
+msgstr "-预测市价从目前价位上升或下跌。"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr "-预测市价是否保持在两个目标价格的范围之内，或超出范围之外。"
+msgstr "-预测市价是保持在两个目标价格的范围之内，还是超出范围之外。"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr "-预测市价是否触及或不触及一个目标价格。"
+msgstr "-预测市价触及或不触及一个目标价格。"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
 msgstr "- Binary.com提供交易与反向交易的报价，因此您将始终获得公正透明的价格"
@@ -94,10 +94,10 @@ msgid "- Sell your long-term contracts before expiry to protect any profits you 
 msgstr "- 长期合约到期前售出交易，以保护您的盈利或将亏损降至最低"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr "- 使用技术或基本面分析或按您的‘直觉’执行交易"
+msgstr "- 使用技术或基本面分析或按您的“直觉”进行交易"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr "- 让您了解个人数据、交易和资金总是安全并充满信心进行交易"
+msgstr "- 得知个人数据、交易和资金总是安全的，您可以充满信心地进行交易"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
 msgstr "- 在各种市场环境（上涨、下跌、横盘整理、交易清淡和震荡）中交易外汇、指数、大宗商品及其它"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "所有市场条件"
 
 msgid "All market conditions and durations"
-msgstr "所有市场环境和期限"
+msgstr "所有市场条件和期限"
 
 msgid "All markets"
 msgstr "所有市场"
 
 msgid "All markets and conditions"
-msgstr "所有市场和环境"
+msgstr "所有市场和条件"
 
 msgid "All payouts"
 msgstr "所有赔付额"
@@ -688,7 +688,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Binary 的马耳他附属公司 Binary Investments (Europe) Ltd. 由 Malta Financial Services Authority 授予3级投资服务牌照"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr "Binary 平台平均每秒钟进行20宗交易，全天候提供服务，整年无休"
+msgstr "Binary平台平均每秒钟进行20宗交易，全天候提供服务，整年无休"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -700,7 +700,7 @@ msgid "Binary.com Shop introduced"
 msgstr "新增Binary.com商店"
 
 msgid "Binary.com announces plans for an"
-msgstr "Binary.com 宣布计划"
+msgstr "Binary.com宣布计划"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com不断创新、日渐成长"
