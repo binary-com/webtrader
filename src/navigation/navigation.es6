@@ -154,7 +154,9 @@ const initLoginButton = (root) => {
          state.show_new_account_link = what_todo === 'new-account';
          state.has_disabled_account =  _.some(loginids, {is_disabled: true});
 
-         if(_.some(loginids, {is_disabled: true})) {
+         // https://trello.com/c/9PCHncnx/5146-8-raunak-accountlistordering
+         // https://trello.com/c/fNZ1Zkbb/2529-negar-accountlistauthorize
+         if(_.some(Cookies.oAuthLoginIds(), {is_disabled: true})) {
             const lockedIds = _.filter(loginids, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
