@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-02-08 04:30-0500\n"
+"PO-Revision-Date: 2018-02-08 04:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -775,7 +775,7 @@ msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter
 msgstr "Binary.com的 OTC 指数和股票来自场外交易市场，并为您提供源自中央交易所外的替代式股票指数和股票交易方式"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr "Binary.com的 OTC 指数和股票提供实时图表和定价优势。此崭新实时产品让您在我们独特市场进行指数和股票交易，享受更多令人兴奋的机会"
+msgstr "Binary.com的OTC指数和股票提供实时图表和定价优势。此崭新实时产品让您在我们独特市场进行指数和股票交易，享受更多令人兴奋的机会"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
 msgstr "Binary.com的智能外汇是衡量一种货币相对一篮子主要货币价值的智能型市场"
@@ -1243,13 +1243,13 @@ msgid "EURUSD"
 msgstr "欧元美元"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr "每个二元期权合约都有固定期限- 在Binary.com，您可选择从10秒至365天之间的任何期限"
+msgstr "每个二元期权合约都有固定期限 - 在Binary.com，您可选择从10秒至365天之间的任何期限"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "二元期权交易是对标的市场未来变化的预测"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr "每次调整参数后您将看到每个交易的预先设定赔付额。一旦您预测正确即可赢得赔付额。否则您将仅损失初始投注额"
+msgstr "每次调整参数后您将看到每个交易的预先设定赔付额。一旦您预测正确即可赢得赔付额，否则您将仅损失初始投注额"
 
 msgid "Edge"
 msgstr "边缘"
@@ -2557,13 +2557,13 @@ msgid "Rise/Fall"
 msgstr "上涨/下跌"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr "上涨/下跌 - 预测市场价格是否会从当前水平上涨或下跌"
+msgstr "上涨/下跌 - 预测市场价格会从当前水平上涨或下跌"
 
 msgid "Rise/Fall trades"
 msgstr "上涨/下跌交易"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr "上涨/下跌   预测市场价格是否会从当前水平上涨或下跌"
+msgstr "上涨/下跌   预测市场价格会从当前水平上涨或下跌"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "上涨/下跌三法 (CDLRISEFALL3METHODS)"
@@ -3652,7 +3652,7 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "以及爱尔兰客户由 (3) 爱尔兰税务专员办事处授予牌照和监管，当前远程博彩牌照号码为 1010285（2015年9月29日)。本网站不向一些国家如美国、哥斯达黎加、香港及18岁以下的用户提供服务"
 
 msgid "and start learning how to trade"
-msgstr "及开始学习如何交易"
+msgstr "并开始学习如何交易"
 
 msgid "apostrophe (') are allowed"
 msgstr "允许使用省略号(')"
@@ -3772,7 +3772,7 @@ msgid "of \"Now\", the"
 msgstr "是“现在”，"
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr "免费开立资金总额高达一万美元的全功能虚拟资金账户"
+msgstr "免费开立总额高达一万美元的全功能虚拟资金账户"
 
 msgid "open an account"
 msgstr "开立账户"
