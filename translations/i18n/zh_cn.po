@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-01-30 02:10-0500\n"
+"PO-Revision-Date: 2018-02-08 04:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -55,13 +55,13 @@ msgid "- Binary.com is not affiliated with any of the Payment Agents listed abov
 msgstr "- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr "- 随时从一百多万个交易选项中挑选并按照您倾向的策略自定义交易"
+msgstr "- 随时从一百多万个交易选项中挑选，并按照您倾向的策略自定义交易"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr "- 选择时间范围为10 秒到 365 天"
+msgstr "- 选择时间范围为10秒到365天"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr "- 存款最低仅需 5 美元即可开始交易"
+msgstr "- 存款最低仅需5美元即可开始交易"
 
 msgid "- Earn the same proportional return on stakes of all values"
 msgstr "- 无论投入多少资金进行交易，均可获得同等回报率"
@@ -79,13 +79,13 @@ msgid "- Predict the market ending higher or lower than a price target"
 msgstr "-预测到期时市场价格是高于还是低于目标价格。"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr "-预测市价是否从目前价位上升或下跌。"
+msgstr "-预测市价从目前价位上升或下跌。"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr "-预测市价是否保持在两个目标价格的范围之内，或超出范围之外。"
+msgstr "-预测市价是保持在两个目标价格的范围之内，还是超出范围之外。"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr "-预测市价是否触及或不触及一个目标价格。"
+msgstr "-预测市价触及或不触及一个目标价格。"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
 msgstr "- Binary.com提供交易与反向交易的报价，因此您将始终获得公正透明的价格"
@@ -94,10 +94,10 @@ msgid "- Sell your long-term contracts before expiry to protect any profits you 
 msgstr "- 长期合约到期前售出交易，以保护您的盈利或将亏损降至最低"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr "- 使用技术或基本面分析或按您的‘直觉’执行交易"
+msgstr "- 使用技术或基本面分析或按您的“直觉”进行交易"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr "- 让您了解个人数据、交易和资金总是安全并充满信心进行交易"
+msgstr "- 得知个人数据、交易和资金总是安全的，您可以充满信心地进行交易"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
 msgstr "- 在各种市场环境（上涨、下跌、横盘整理、交易清淡和震荡）中交易外汇、指数、大宗商品及其它"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "所有市场条件"
 
 msgid "All market conditions and durations"
-msgstr "所有市场环境和期限"
+msgstr "所有市场条件和期限"
 
 msgid "All markets"
 msgstr "所有市场"
 
 msgid "All markets and conditions"
-msgstr "所有市场和环境"
+msgstr "所有市场和条件"
 
 msgid "All payouts"
 msgstr "所有赔付额"
@@ -688,7 +688,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Binary 的马耳他附属公司 Binary Investments (Europe) Ltd. 由 Malta Financial Services Authority 授予3级投资服务牌照"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr "Binary 平台平均每秒钟进行20宗交易，全天候提供服务，整年无休"
+msgstr "Binary平台平均每秒钟进行20宗交易，全天候提供服务，整年无休"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -700,7 +700,7 @@ msgid "Binary.com Shop introduced"
 msgstr "新增Binary.com商店"
 
 msgid "Binary.com announces plans for an"
-msgstr "Binary.com 宣布计划"
+msgstr "Binary.com宣布计划"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com不断创新、日渐成长"
@@ -775,7 +775,7 @@ msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter
 msgstr "Binary.com的 OTC 指数和股票来自场外交易市场，并为您提供源自中央交易所外的替代式股票指数和股票交易方式"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr "Binary.com的 OTC 指数和股票提供实时图表和定价优势。此崭新实时产品让您在我们独特市场进行指数和股票交易，享受更多令人兴奋的机会"
+msgstr "Binary.com的OTC指数和股票提供实时图表和定价优势。此崭新实时产品让您在我们独特市场进行指数和股票交易，享受更多令人兴奋的机会"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
 msgstr "Binary.com的智能外汇是衡量一种货币相对一篮子主要货币价值的智能型市场"
@@ -1243,13 +1243,13 @@ msgid "EURUSD"
 msgstr "欧元美元"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr "每个二元期权合约都有固定期限- 在Binary.com，您可选择从10秒至365天之间的任何期限"
+msgstr "每个二元期权合约都有固定期限 - 在Binary.com，您可选择从10秒至365天之间的任何期限"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "二元期权交易是对标的市场未来变化的预测"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr "每次调整参数后您将看到每个交易的预先设定赔付额。一旦您预测正确即可赢得赔付额。否则您将仅损失初始投注额"
+msgstr "每次调整参数后您将看到每个交易的预先设定赔付额。一旦您预测正确即可赢得赔付额，否则您将仅损失初始投注额"
 
 msgid "Edge"
 msgstr "边缘"
@@ -2557,13 +2557,13 @@ msgid "Rise/Fall"
 msgstr "上涨/下跌"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr "上涨/下跌 - 预测市场价格是否会从当前水平上涨或下跌"
+msgstr "上涨/下跌 - 预测市场价格会从当前水平上涨或下跌"
 
 msgid "Rise/Fall trades"
 msgstr "上涨/下跌交易"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr "上涨/下跌   预测市场价格是否会从当前水平上涨或下跌"
+msgstr "上涨/下跌   预测市场价格会从当前水平上涨或下跌"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "上涨/下跌三法 (CDLRISEFALL3METHODS)"
@@ -3652,7 +3652,7 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "以及爱尔兰客户由 (3) 爱尔兰税务专员办事处授予牌照和监管，当前远程博彩牌照号码为 1010285（2015年9月29日)。本网站不向一些国家如美国、哥斯达黎加、香港及18岁以下的用户提供服务"
 
 msgid "and start learning how to trade"
-msgstr "及开始学习如何交易"
+msgstr "并开始学习如何交易"
 
 msgid "apostrophe (') are allowed"
 msgstr "允许使用省略号(')"
@@ -3772,7 +3772,7 @@ msgid "of \"Now\", the"
 msgstr "是“现在”，"
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr "免费开立资金总额高达一万美元的全功能虚拟资金账户"
+msgstr "免费开立总额高达一万美元的全功能虚拟资金账户"
 
 msgid "open an account"
 msgstr "开立账户"
