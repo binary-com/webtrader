@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-03 17:30-0500\n"
+"PO-Revision-Date: 2018-02-12 23:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -617,19 +617,19 @@ msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
 
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
-msgstr ""
+msgstr "รางวัล ‘Best Fixed-Odds Financial Trading Provider’ ได้รับจาก Shares Magazine สหราชอาณาจักร"
 
 msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets ประกาศใช้งาน"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr ""
+msgstr "BetOnMarkets.com มีลูกค้าเกินกว่า 400,000 ราย ในฐานข้อมูลและเข้าสู่เป้าหมาย 1 พันล้านเหรียนสหรัฐในปีที่ 13 ของเรา ทำให้เราเป็นหนึ่งในผู้ให้บริการซื้อขาย แบบ Fixed-Odds"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
-msgstr ""
+msgstr "BetOnMarkets.com เพิ่มการชำระเงินหลากหลายสกุล เช่น 100,000 USD, EUR, GBP และ AUD"
 
 msgid "BetOnMarkets.com is successfully rebranded Binary.com"
-msgstr ""
+msgstr "BetOnMarkets.com ประสบความสำเร็จในการสร้างแบรนด์ใหม่ของ Binary.com"
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com มีมูลค่าซื้อขายรวม 1 พันล้านเหรียญสหรัฐ ตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
@@ -689,7 +689,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "สำนักงานสาขามอลเตสของ Binary คือ Binary Investments (Europe) Ltd. ได้รับอนุญาตในการให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "แพลตฟอร์มของ Binary ดำเนินธุรกรรมโดยเฉลี่ย 20 การซื้อขาย ต่อวินาที ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -698,25 +698,25 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : เว็บเทรดเดอร์ (Webtrader)"
 
 msgid "Binary.com Shop introduced"
-msgstr ""
+msgstr "แนะนำร้าน Binary.com"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com ประกาศแผนการสำหรับ"
 
 msgid "Binary.com continues to innovate and grow"
-msgstr ""
+msgstr "Binary.com สร้างสรรค์สิ่งใหม่ๆและเติบโต อย่างต่อเนื่อง"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Binary.com ได้สร้างดัชนีผันผวนที่คุณสามารถซื้อขายได้ ตลอด 24 ชั่วโมง 7 วัน คุณสามารถซื้อขายนี้ได้กับสัญญาทุกประเภท"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
-msgstr ""
+msgstr "Binary.com ซึ่งมีชื่อเสียงอย่างกว้างขวางจากพันธสัญญาของเราต่อมาตรฐานระดับสูงทางจริยธรรมและคุณภาพจากประสบการณ์ความเชี่ยวชาญในการซื้อขายที่เรามี"
 
 msgid "Binary.com has over 800,000 clients in its database and reaches the US$ 2 billion milestone in our 15th year, making us one of the leading binary options providers"
-msgstr ""
+msgstr "Binary.com มีฐานลูกค้ากว่า 800,000 คน และถึงเป้าหมาย 2 พันล้านเหรียญสหรัฐในปีที่ 15 ของเรา ทำให้เราก้าวสู่ตำแหน่งผู้นำการให้บริการซื้อขายไบนารีออปชั่น"
 
 msgid "Binary.com has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades"
-msgstr ""
+msgstr "Binary.com มีลูกค้าจำนวนมากมายที่เข้าสู่ตลาดการเงินต่างๆ และได้เข้ามาทำกำไรเล็กๆ ในการซื้อขาย"
 
 msgid "Binary.com hits 1 million users, reaching a historic milestone. The company continues to see exponential growth and this reconfirms its position as an industry leader"
 msgstr ""
