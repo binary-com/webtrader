@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-07 09:20-0500\n"
+"PO-Revision-Date: 2018-02-08 09:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1564,7 +1564,7 @@ msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Eu declaro não ser uma pessoa politicamente exposta (PPE)"
 
 msgid "I have read and agree to Binary.com"
-msgstr ""
+msgstr "Eu li e concordo com os"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Sou principiante com opções binárias, onde começo?"
@@ -1588,7 +1588,7 @@ msgid "If you select a"
 msgstr "Se você selecionou"
 
 msgid "If you select a specific"
-msgstr ""
+msgstr "Se você escolher uma determinada"
 
 msgid "If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access"
 msgstr "Caso você seja um negociador individual, irá valorizar a simplicidade, a flexibilidade e os riscos limitados da negociação de opções binárias. Com o baixo valor mínimo para apostas da Binary.com, em pouco tempo você aprenderá como negociar com habilidade e confiança. E, caso tenha dúvidas, sempre pode acessar"
