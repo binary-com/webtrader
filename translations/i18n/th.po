@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-12 23:00-0500\n"
+"PO-Revision-Date: 2018-02-12 23:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -719,10 +719,10 @@ msgid "Binary.com has thousands of clients taking a variety of positions on the 
 msgstr "Binary.com มีลูกค้าจำนวนมากมายที่เข้าสู่ตลาดการเงินต่างๆ และได้เข้ามาทำกำไรเล็กๆ ในการซื้อขาย"
 
 msgid "Binary.com hits 1 million users, reaching a historic milestone. The company continues to see exponential growth and this reconfirms its position as an industry leader"
-msgstr ""
+msgstr "Binary.com มีผู้ใช้งาน 1 ล้านคน ซึ่งเป็นเป้าหมายที่เป็นประวัติศาสตร์ บริษัทยังคงมองเห็นการเจริญเติบโตอย่างมีนัยสำคัญ และสิ่งนี้ได้ยืนยันอีกครั้งถึงการเป็นผู้นำตลาดของเรา"
 
 msgid "Binary.com introduces an"
-msgstr ""
+msgstr "Binary.com แนะนำ"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr ""
