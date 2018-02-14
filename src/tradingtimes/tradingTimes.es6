@@ -8,6 +8,7 @@ import menu from 'navigation/menu';
 import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
+import moment from 'moment';
 
 let table = null;
 let tradingWin = null;
@@ -198,11 +199,13 @@ const initTradingWin = ($html) => {
        });
    }
 
-   refreshTable(new Date().toISOString().slice(0, 10));
+   refreshTable(moment.utc().format('YYYY-MM-DD'));
+   const maxDate = moment.utc().add(1, 'years').toDate();
    tradingWin.addDateToHeader({
       title: 'Date: ',
-      date: new Date(),
-      changed: refreshTable
+      date: moment.utc().toDate(),
+      changed: refreshTable,
+      maxDate,
    });
 }
 

@@ -51,18 +51,19 @@ const fire_event = (name , ...args) => {
      @param: options.date    javascript Date object representing initial time
      @param: options.title   the header title for spinners
      @param: options.changed  called when Date changes, callback argument is a string in yyyy_mm_dd format.
+     @param: options.maxDate (optional) max selectable date
    useage:
       var win = createBlankWindow(...);
       win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
       */
-const addDateToHeader = function(options) {
-   options = $.extend({
+const addDateToHeader = function(mainOptions) {
+   mainOptions = $.extend({
       title: 'title',
       date: null,
       changed: () => { },
       cleared: () => { },
       addDateDropDowns: true,
-   },options);
+   }, mainOptions);
 
    const header = this.parent().find('.ui-dialog-title').addClass('with-content');
 
@@ -111,8 +112,9 @@ const addDateToHeader = function(options) {
       let year = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
       let month = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
       let day = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto'});
-      day.selectmenu( "menuWidget" ).addClass('date-day'); 
-      year = update(year, { min: 2010, max: dt.getFullYear(), initial: dt.getFullYear()});
+      day.selectmenu( "menuWidget" ).addClass('date-day');
+      const maxYear = mainOptions.maxDate ? mainOptions.maxDate.getFullYear() : dt.getFullYear();
+      year = update(year, { min: 2010, max: maxYear, initial: dt.getFullYear()});
       month = update(month, {
          min: 0, max: 11, initial: dt.getMonth(),
          render: (inx) => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][inx]
@@ -179,13 +181,12 @@ const addDateToHeader = function(options) {
 
    /* options: {date: date, onchange: fn} , events => element.on('change',...) */
    const addDatePicker = (opts) => {
-      const dpicker_input = $("<input type='hidden' />")
-         .insertAfter(header);
+      const dpicker_input = $("<input type='hidden' />").insertAfter(header);
 
       var options = {
          showOn: 'both',
          numberOfMonths: 1,
-         maxDate: 0,
+         maxDate: mainOptions.maxDate ? mainOptions.maxDate : 0,
          minDate: new Date(2010, 0, 1),
          dateFormat: 'yy-mm-dd',
          showAnim: 'drop',
@@ -222,32 +223,32 @@ const addDateToHeader = function(options) {
 
    const date_string = $('<span style="line-height: 24px; position: relative; left: 10px"></span>');
    const dpicker = addDatePicker({
-      date: options.date || new Date(),
+      date: mainOptions.date || new Date(),
       onchange: (yyyy_mm_dd) => {
          date_string.text(yyyy_mm_dd);
          dropdonws && dropdonws.update(yyyy_mm_dd);
-         options.changed(yyyy_mm_dd);
+         mainOptions.changed(yyyy_mm_dd);
       },
       onclear: () => {
          dropdonws && dropdonws.clear();
-         options.cleared();
+         mainOptions.cleared();
       }
    });
    let dropdonws = null;
-   if(options.addDateDropDowns) {
+   if(mainOptions.addDateDropDowns) {
       dropdonws = addDateDropDowns({
-         date: options.date, onchange: (yyyy_mm_dd) => {
+         date: mainOptions.date, onchange: (yyyy_mm_dd) => {
             dpicker.datepicker("setDate", yyyy_mm_dd);
-            options.changed(yyyy_mm_dd);
+            mainOptions.changed(yyyy_mm_dd);
          }
       });
    }
    else {
       date_string.insertAfter(header);
-      date_string.text(options.date.toISOString().slice(0, 10));
+      date_string.text(mainOptions.date.toISOString().slice(0, 10));
    }
 
-   $('<span class="span-in-dialog-header">' + options.title + '</span>').insertAfter(header);
+   $('<span class="span-in-dialog-header">' + mainOptions.title + '</span>').insertAfter(header);
 
    return {
       clear:() => dropdonws && dropdonws.clear()
