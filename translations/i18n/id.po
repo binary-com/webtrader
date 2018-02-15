@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 08:20-0500\n"
+"PO-Revision-Date: 2018-02-15 08:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1576,7 +1576,7 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "SANGGAHAN PENTING - Binary.com tidak berafiliasi dengan Agen Pembayaran manapun. Setiap Agen Pembayaran beroperasi sendiri dan Binary.com tidak bertanggungjawab atas risiko penggunaannya. PELANGGAN BERURUSAN DENGAN AGEN PEMBAYARAN ATAS RISIKO SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka"
 
 msgid "IPO on the blockchain"
-msgstr ""
+msgstr "IPO pada blockchain"
 
 msgid "Ideal for beginners and experienced traders"
 msgstr "Ideal untuk pemula dan trader berpengalaman"
@@ -1636,10 +1636,10 @@ msgid "In/Out"
 msgstr "In/Out"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr ""
+msgstr "In/Out (ends between/outside dan stays between/goes outside)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
-msgstr ""
+msgstr "In/Out - Menganalisa pasar akan tetap berada diantara atau diluar dua harga target"
 
 msgid "In/Out trades"
 msgstr "Kontrak In/Out"
@@ -1657,7 +1657,7 @@ msgid "Indices"
 msgstr "Indeks"
 
 msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
-msgstr ""
+msgstr "Indeks - Semua indeks saham utama di seluruh dunia bersumber dari pasar Otc (over-the-counter)"
 
 msgid "Indices trading experience"
 msgstr "Pengalaman trading indeks"
@@ -1675,7 +1675,7 @@ msgid "Industry of Employment"
 msgstr "Industri Tenaga Kerja"
 
 msgid "Initial Coin Offering (ICO)"
-msgstr ""
+msgstr "Initial Coin Offering (ICO)"
 
 msgid "Instant access"
 msgstr "Akses cepat"
@@ -1759,7 +1759,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Trading Menguntungkan 12 bulan Terakhir"
 
 msgid "Last used"
 msgstr "Terakhir digunakan"
@@ -1813,13 +1813,13 @@ msgid "Loading Asset Index"
 msgstr "Loading Indeks Aset"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Pemuatan Copy Trade"
 
 msgid "Loading Download/View Data"
 msgstr "Pemuatan Download/Lihat Data"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "Pemuatan MAM"
 
 msgid "Loading Password dialog"
 msgstr "Pemuatan dialog kata sandi"
@@ -1945,13 +1945,13 @@ msgid "Matches"
 msgstr "Matches"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "Matches/Differs - Menganalisa angka terakhir akan cocok atau tidak"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Mak. Modal Trading"
 
 msgid "Maximum (MAX)"
 msgstr "Maksimum (MAK)"
@@ -1993,7 +1993,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa Adaptive Moving Average (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Min. Modal Trading"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Mak: 2000"
@@ -2038,7 +2038,7 @@ msgid "Monday"
 msgstr "Senin"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Kontrak Menguntungkan Bulanan"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
