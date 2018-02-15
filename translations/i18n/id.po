@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 04:20-0500\n"
+"PO-Revision-Date: 2018-02-15 04:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -67,46 +67,46 @@ msgid "- Earn the same proportional return on stakes of all values"
 msgstr "- Dapatkan laba yang sebanding dengan modal pada semua nilai"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- Nikmati platform trading yang mudah dinavigasikan dan digunakan"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- Ketahui berapa banyak potensi keuntungan atau kerugian sebelum melakukan pembelian kontrak"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- Mendaftar akun dan mulai trading hanya dalam beberapa menit. Deposit dan penarikan tersedia 24/7"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- Menganalisa pasar akan berakhir lebih tinggi atau lebih rendah dari target harga"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Menganalisa pasar naik atau turun dari tingkat saat ini"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- Menganalisa pasar akan tetap antara atau keluar dua target harga"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Menganalisa pasar akan menyentuh atau tidak target harga"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Menerima harga untuk trading dan trading konter, dimana Anda tidak akan terpengaruh, harga transparan dari Binary.com"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Jual kontrak jangka panjang Anda sebelum berakhir untuk melindungi keuntungan atau untuk mengurangkan risiko kerugian"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- Bertrading berdasarkan \"insting\" atau mengandalkan analisis teknis dan fundamental"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- Bertradinglah dengan percaya diri, ketahui data pribadi, transaksi dan dana Anda akan selalu aman"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- Trading pada mata uang, indeks, komoditas dan lainnya pada kenaikan, penurunan, sideway, sepi atau volatilitas pasar"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- Trading kapan saja. Binary.com tersedia 24/7, bahkan pada akhir pekan"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- Bertrading dengan pelopor industri dan pemegang teknologi harga yang dipatenkan"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- valuta asing, indeks saham dan komoditas"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- dari 10 detik hingga 365 hari"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- up/down, touch/no-touch, stays between/goes outside"
 
 msgid "0-1 year"
 msgstr "0-1 tahun"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2 tahun"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. Pilih Pasar Dasar"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. Pasar dasar"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2 Menit"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. Pilih Durasi Trading"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. Jenis kontrak"
 
 msgid "2000"
 msgstr "2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2h"
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3 Menit"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. Pilih bagaimana Anda ingin Mentradingkan Pasar"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. Durasi"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4 Jam"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. Batasan"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. Pilih Modal dan Potensi Laba Anda"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 transaksi atau lebih dalam 12 bulan terakhir"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5 Menit"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. Hasil"
 
 msgid "5m"
 msgstr "5m"
@@ -427,7 +427,7 @@ msgid "Active"
 msgstr "Aktif"
 
 msgid "Active Since"
-msgstr ""
+msgstr "Aktif Sejak"
 
 msgid "Add comparisons"
 msgstr "Tambah perbandingan"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "Semua kondisi pasar"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "Semua kondisi pasar dan durasi"
 
 msgid "All markets"
 msgstr "Semua pasar"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "Semua kondisi pasar"
 
 msgid "All payouts"
 msgstr "Semua hasil"
@@ -472,7 +472,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Semua waktu dalam GMT (Greenwich Mean Time)"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "Membolehkan orang lain untuk menyalin trading Anda"
 
 msgid "Amount"
 msgstr "Jumlah"
@@ -547,7 +547,7 @@ msgid "Asset Index"
 msgstr "Indeks Aset"
 
 msgid "Assets"
-msgstr ""
+msgstr "Berbagai Aset"
 
 msgid "Aug"
 msgstr "Agst"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "Agustus"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "Tersedia 24/7"
 
 msgid "Available Currencies"
 msgstr "Mata Uang Yang Tersedia"
@@ -574,16 +574,16 @@ msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
 
 msgid "Avg. Duration"
-msgstr ""
+msgstr "Rata-rata Durasi"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "Rata-rata Kerugian"
 
 msgid "Avg. Profit"
-msgstr ""
+msgstr "Rata-rata Keuntungan"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "Platform trading online yang memenangi berbagai penghargaan"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Awesome Oscillator (AO)"
@@ -637,7 +637,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "Sistem dan metode trading"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -649,7 +649,7 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK telah menerima lisensi Jepang"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "Opsi Binary Dasar"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary telah diberikan lisensi Layanan Investasi"
@@ -661,7 +661,7 @@ msgid "Binary option"
 msgstr "Opsi Binary"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "Opsi Binary mudah untuk dimengerti. Disebut 'binary' karena hanya dapat menghasilkan dua kemungkinan - untung atau rugi. Jika analisa Anda tepat, Anda akan menerima hasil yang sudah ditentukan pada awal trading. Jika tidak, maka Anda hanya akan kehilangan modal awal Anda"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opsi Binary atau derivatif keuangan lainnya"
@@ -688,7 +688,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Cabang Binary Malta yaitu Binary Investments (Europe) Ltd. diberikan sebuah lisensi Category 3 Investment Services oleh Malta Financial Services Authority"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "Platform Binary memproses rata-rata 20 transaksi per detik, 24/7"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -700,13 +700,13 @@ msgid "Binary.com Shop introduced"
 msgstr "Toko Binary.com diperkenalkan"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com mengumumkan rencana untuk"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com terus berinovasi dan berkembang"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Binary.com menciptakan Indeks Volatilitas dimana Anda dapat bertrading 24/7. Anda dapat bertrading pada semua jenis kontrak"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com telah memperoleh reputasi tinggi untuk komitmen kami yang memenuhi standar etika dan kualitas pengalaman trading yang kami sediakan"
@@ -724,7 +724,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com memperkenalkan sebuah"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "Binary.com dianugerahi sebagai Broker Opsi Binary Terbaik oleh Online Personal Wealth Awards 2017 di Inggris, yang dipilih oleh para investor di seluruh dunia"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com sepenuhnya berbasis web dan tidak memerlukan instalasi software"
@@ -733,13 +733,13 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "Binary.com dianugerahkan sebagai \"Broker Opsi Binary Terbaik\" dunia pada Konfrensi dan Pameran Keuangan International MENA ke 16, diselenggarakan di Dubai"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com dimiliki dan dioperasikan oleh group perusahaan Binary Group Ltd. Untuk informasi lebih lanjut, kunjungi halaman sejarah kami"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com meluncurkan akun Bitcoin (BTC) bagi pelanggan non-uni eropa"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com meluncurkan akun Bitcoin"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com meluncurkan sebuah"
