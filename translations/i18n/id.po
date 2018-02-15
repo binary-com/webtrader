@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 08:30-0500\n"
+"PO-Revision-Date: 2018-02-15 08:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -748,7 +748,7 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com menawarkan berbagai metode pembayaran dari lokal exchanger, kartu kredit dan debit hingga transfer bank, e-cash dan juga e-wallet"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com menyediakan akun dana virtual dimana Anda dapat mencoba bertrading binary. Kenapa tidak"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com menawarkan cara baru bertrading"
@@ -1450,13 +1450,13 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT adalah singkatan dari Greenwich Mean Time, waktu resmi digunakan di Inggris selama musim dingin. Di musim panas perubahan waktu Inggris adalah GMT +1 jam. Waktu yang digunakan pada website %1 adalah GMT sepanjang waktu"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Dapatkan token API dari trader dan tambahkan pada daftar Anda"
 
 msgid "Get your price"
 msgstr "Dapatkan harga"
 
 msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "Kunjungi Managemen Token, buat token dan bagikan token menggunakan duplikasi"
 
 msgid "Goes out"
 msgstr "Goes out"
