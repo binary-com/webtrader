@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 04:30-0500\n"
+"PO-Revision-Date: 2018-02-15 04:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2134,7 +2134,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
-msgstr ""
+msgstr "Saham OTC - Kontrak saham blue-chip yang bersumber dari pasar over-the-counter"
 
 msgid "Occupation"
 msgstr "Pekerjaan"
@@ -2167,7 +2167,7 @@ msgid "One last step left"
 msgstr "Satu langkah terakhir"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "Trading online dapat menyebabkan ketagihan. Isikan formulir dibawah ini untuk membatasi keikutsertaan Anda pada situs web ini atau kirimkan surat yang ditandatangani atau kirimkan fax kepada tim customer support kami. Setelah ditetapkan, Anda hanya dapat merubah batasan Anda. Batas hanya akan dihapus atau dirubah setelah 7 hari dengan pengecualian dari tanggal pengecualian diri, yang tidak dapat dihapus atau diubah setelah Anda konfirmasi. Untuk menghapus atau meningkatkan batasan Anda, silahkan hubungi customer support"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "Dalam waktu lima tahun kami telah mengantongi beberapa penghargaan. Hal ini membuktikan bahwa BetOnMarkets.com adalah online trading yang handal, cepat dan aman bagi pemula atau trader mahir. Saat ini, sudah 15 juta kontrak terjual"
@@ -2236,7 +2236,7 @@ msgid "Our fast organic growth is supplemented by the acquisition of the client 
 msgstr "Pertumbuhan cepat kami dilengkapi dengan akuisisi dari klien BetsForTraders, salah satu pesaing utama kami"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "Harga kami mengacu pada pasar opsi antar bank. Anda akan menerima harga yang adil dan transparan, apa pun posisi Anda"
 
 msgid "Over"
 msgstr "Lebih"
@@ -2245,13 +2245,13 @@ msgid "Over 1 million registered accounts worldwide"
 msgstr "Lebih dari 1 juta akun yang terdaftar di seluruh dunia"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "Lebih dari 130 staf dan kontraktor di seluruh dunia"
 
 msgid "Over 3 years"
 msgstr "3 tahun lebih"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr ""
+msgstr "Over/Under - Menganalisa angka terakhir akan lebih tinggi atau lebih rendah"
 
 msgid "Overlap Studies"
 msgstr "Studi Tumpang Tindih"
@@ -2290,7 +2290,7 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Percentage Price Oscillator (PPO)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Probabilitas Kinerja"
 
 msgid "Permissions"
 msgstr "Izin"
@@ -2299,7 +2299,7 @@ msgid "Personal Details"
 msgstr "Data Pribadi"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "Personal Wealth Awards 2017"
 
 msgid "Phone"
 msgstr "Telepon"
@@ -2353,7 +2353,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Silahkan install versi terbaru dari salah satu browser ini"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "Harap dicatat bahwa karena sifat over-the-counter, harga dari Indeks dan saham OTC akan sedikit berbeda dari harga indeks dan saham pada bursa pusat"
 
 msgid "Please provide your tax information"
 msgstr "Mohon sediakan informasi pajak Anda"
@@ -2437,7 +2437,7 @@ msgid "Profit/Loss (points)"
 msgstr "Untung/Rugi (poin)"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "Melindungi keuntungan Anda"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "Diterbitkan dalam bahasa Indonesia"
@@ -2557,13 +2557,13 @@ msgid "Rise/Fall"
 msgstr "Rise/Fall"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "Rise/Fall - Menganalisa pasar akan naik atau turun dari level terkininya"
 
 msgid "Rise/Fall trades"
 msgstr "kontrak Rise/Fall"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr ""
+msgstr "Rise/Fall   Menganalisa pasar akan naik atau turun dari level terkini"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
@@ -2605,7 +2605,7 @@ msgid "Saved"
 msgstr "Tersimpan"
 
 msgid "Scalable"
-msgstr ""
+msgstr "Skalabilitas"
 
 msgid "Second line of home address"
 msgstr "Baris kedua alamat rumah"
@@ -2617,7 +2617,7 @@ msgid "Security"
 msgstr "Keamanan"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "Keamanan dan privasi"
 
 msgid "Security question"
 msgstr "Pertanyaan keamanan"
@@ -2653,10 +2653,10 @@ msgid "Session duration limit, in minutes"
 msgstr "Batas sesi durasi, dalam menit"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "Susun batasan untuk menentukan posisi Anda dan memperoleh hasil yang akan Anda terima"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "Susun periode trading, dari 10 detik hingga 365 hari"
 
 msgid "Settles"
 msgstr "Diselesaikan"
@@ -2668,13 +2668,13 @@ msgid "Share chart"
 msgstr "Bagikan grafik"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "Tajam, harga benchmark"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "Durasi pendek hingga panjang"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Berdampingan garis-garis putih pola tiga candlestick. Pola bullish: Dalam sebuah tren, candlestick pertama diikuti oleh kenaikan candlestick lain yang terbuka di atas penutupan pertama (gap up), yang diikuti oleh ke atas candlestick ketiga yang terbuka di bawah penutupan kedua (gap down). Pola bearish: Selama downtrend, candlestick pertama ke bawah, diikuti oleh candlestick ke atas yang terbuka di bawah penutupan yang pertama (gap down), diikuti oleh candlestick ke atas yang terbuka di bawah penutupan yang kedua. Pola ini menunjukkan kelanjutan dari downtrend"
@@ -2683,13 +2683,13 @@ msgid "Simple Moving Average (SMA)"
 msgstr "Simple Moving Average (SMA)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "Sederhana dan intuitif"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Smart FX"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "Indeks Smart"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "Smoothed Moving Average (SMMA)"
@@ -2701,7 +2701,7 @@ msgid "Source of wealth"
 msgstr "Sumber kekayaan"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "Tentukan hasil Anda, yaitu potensi laba Anda jika analisa Anda tepat. Sistem kami akan melanjutkan perhitungan modal, yaitu total jumlah pembelian kontrak. Binary.com menawarkan hasil dari $1 hingga $50,000"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -2761,13 +2761,13 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Stays Between/Goes Outside"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "kontrak Stays Between/Goes Outside"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "Stays Between/Goes Outside   Menganalisa pasar akan tetap didalam atau bergerak keluar dua harga target kapan saja selama periode kontrak berlangsung"
 
 msgid "Stays in"
 msgstr "Stays in"
@@ -2776,7 +2776,7 @@ msgid "Step 1: Define your position"
 msgstr "Langkah 1: Tentukan posisi Anda"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "Langkah 2: Dapatkan harga kontrak Anda"
 
 msgid "Step 3: Make your trade"
 msgstr "Langkah 3: Lakukan Trading"
@@ -2881,7 +2881,7 @@ msgid "The"
 msgstr "Itu"
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks AUD adalah Indeks yang ditimbang dengan mengukur nilai Dolar Australia melawan 5 mata uang global (USD, EUR, GBP, JPY, CAD), masing-masing ditimbang dengan 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "Harga Mutlak Oscillator (APO) didasarkan pada perbedaan mutlak antara dua moving average panjang yang berbeda, moving average Cepat dan rata-rata bergerak Lambat"
@@ -2929,7 +2929,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "Dragonfly Doji dibuat saat terbuka, tinggi, dan dekat sama atau harganya sama (Dimana yang terbuka, tinggi, dan dekat harganya persis sama cukup langka). Bagian terpenting dari Dragonfly Doji adalah bayangan yang jauh lebih rendah"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks EUR adalah Indeks yang ditimbang dengan mengukur nilai Euro melawan 5 mata uang global (USD, EUR, GBP, JPY, CAD), masing-masing ditimbang dengan 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "Exponential Moving Average (EMA) mewakili rata-rata harga, namun menempatkan bobot lebih banyak pada harga terakhir. Bobot yang diterapkan pada harga terbaru bergantung pada periode moving average yang dipilih. Semakin pendek periode EMA, semakin berat bobot yang akan diaplikasikan pada harga terbaru"
@@ -2938,7 +2938,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr "Fast Stochastic Oscillator didasarkan pada formula asli George Lane untuk %K dan %D. %K dalam versi cepat yang tampil agak berombak. %D adalah SMA hari ke-3 dari %K"
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks GBP adalah Indeks yang ditimbang dengan mengukur nilai Pound Inggris melawan 5 mata uang global (USD, EUR, GBP, JPY, CAD), masing-masing ditimbang dengan 20%"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "Gravestone Doji terjadi ketika open, low, dan close adalah sama atau hampir sama (Dimana harga open, low dan close hampir sama adalah sangat jarang terjadi). Bagian terpenting dari Graveston Doji adalah bayangan atas yang panjang"
@@ -3013,10 +3013,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr "Fungsi Harga Khas mengukur rata-rata harga tinggi, rendah, dan harga penutupan hari ini dengan menggunakan plot satu baris sederhana. Harga biasa memberikan pandangan sederhana tentang harga trading harian dan juga terjadi pada fungsi penyesuaian harga lainnya. Anda dapat menggunakannya untuk merapikan beberapa ketidakstabilan harga penutupan karena terdiri dari informasi untuk keseluruhan hari trading dan bukan hanya hasil akhir hari. Indikator Harga Khas diukur dengan menambahkan harga tinggi, rendah, dan harga penutupan bersama-sama, dan kemudian dibagi tiga"
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks USD adalah Indeks yang ditimbang dengan mengukur nilai Dolar melawan 5 mata uang global (USD, EUR, GBP, JPY, CAD), masing-masing ditimbang dengan 20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "Indeks Volatilitas 100 memiliki volatilitas ganda dibandingkan dengan Indeks Volatilitas 50, dan empat kali lipat volatilitas berbanding Indeks Volatilitas 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Indikator Weighted Close adalah rata-rata harga per hari. Dapat digunakan untuk menghaluskan ketidak konsistenan chart harga penutupan, dimana terdiri dari informasi untuk keseluruhan hari trading"
@@ -3058,7 +3058,7 @@ msgid "The first step is to open an account. You can"
 msgstr ""
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "Hal pertama yang harus dilakukan adalah memilih aset yang ingin anda tradingkan, seperti emas (gold) atau minyak (oil), saham atau harga FX (Nilai opsi binary yang berasal dari harga aset). Kelebihan besar dari trading opsi adalah anda tidak membeli atau menjual aset yang sebenarnya"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Tiga hari pertama Bullish Ladder Bottom adalah candlestick hitam yang kokoh dengan pembukaan dan penutupan rendah. Hari ke empat adalah candlestick hitam yang pendek, namun dibuka dan ditradingkan lebih tinggi, meninggalkan bayangan atas kemudian ditutup dengan nilai rendah terbaru. Pada hari ke lima terlihat candlestick putih yang kuat yang membuat jarak candlestick dengan hari ke empat"
