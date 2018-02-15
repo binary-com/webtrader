@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 05:20-0500\n"
+"PO-Revision-Date: 2018-02-15 08:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -754,7 +754,7 @@ msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com menawarkan cara baru bertrading"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Binary.com menawarkan empat cara bertrading pada aset tertentu"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com membuka kantor pada gedung perkantoran QSentral di pusat Kuala Lumpur untuk memperluas tim pengembangan IT mereka"
@@ -769,19 +769,19 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com membawa pulang hadiah utama pada acara EGR Operator Awards 2015, yang diadakan di London"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Indeks Berterusan Binary.com adalah Indeks Volatilitas 10, Indeks Volatilitas 25, Indeks Volatilitas 50, Indeks Volatilitas 75 dan Indeks Volatilitas 100. Indeks ini sesuai dengan pasar yang disimulasikan menggunakan volatilitas konstan sebesar 10%, 25%, 50%, 75% dan 100%"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Indeks dan saham OTC Binary.com berasal dari pasar over-the-counter yang memberikan cara alternatif untuk bertrading indeks saham dan bursa saham - tersedia dari sumber di luar pertukaran pusat"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Indeks dan saham OTC Binary.com menawarkan manfaat grafik dan harga real-time. Nikmati peluang lebih menarik untuk bertrading indeks dan saham pasar utama kami dan melalui tawaran real-time terbaru ini"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Smart FX Binary.com adalah pasar yang diukur berdasarkan nilai mata uang berbanding dengan kumpulan beberapa mata uang utama"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Indeks Volatilitas Binary.com didasarkan pada kriptografi generator angka random aman yang diaudit untuk kejujuran oleh pihak ketiga yang independen"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Sistem Binary.com telah memproses lebih dari 1 juta transaksi/hari (termasuk pada akun virtual)"
@@ -805,7 +805,7 @@ msgid "Browser upgrade required"
 msgstr "Upgrade browser diperlukan"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "Indeks Market Bull dan Market Bear dimulai pada 00:00 GMT setiap hari, mereplikasi masing-masing pasar bullish dan bearish"
 
 msgid "Buy Price"
 msgstr "Harga Beli"
@@ -880,16 +880,16 @@ msgid "Chart type"
 msgstr "Jenis grafik"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "Pilih dari lima jenis pasar dan aset masing-masing"
 
 msgid "Choose password"
 msgstr "Pilih kata sandi"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "Pilih kontrak Touch/No Touch jika Anda ingin menganalisa pasar akan menyentuh atau tidak target harga kapan saja selama periode kontrak"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "Pilih aset yang ingin Anda tradingkan seperti emas (gold), minyak (oil), saham atau pasangan mata uang. Nilai opsi binary dihasilkan dari harga pasar yang mendasari. Salah satu keunggulan trading opsi binary adalah Anda tidak membeli aset berbentuk fisik, Anda hanya membeli kontrak yang menentukan bagaimana prestasi aset Anda"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Pilih agen pembayaran pilihan Anda"
@@ -907,7 +907,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "Klik untuk masuk pada akun Binary.com Anda"
 
 msgid "Client funds"
-msgstr ""
+msgstr "Dana klien"
 
 msgid "Close"
 msgstr "Tutup"
@@ -925,7 +925,7 @@ msgid "Commodities"
 msgstr "Komoditas"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "Komoditas - Komoditas utama seperti emas dan minyak"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Komoditas adalah sumber yang berkembang dan disaring dari tanah seperti perak, emas dan minyak. Di Binary.com, mereka memiliki harga dalam dolar AS"
@@ -943,13 +943,13 @@ msgid "Comparisons"
 msgstr "Perbandingan"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "Harga kompetitif dan transparan"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "Sistem dan metode komputer dalam berspekulasi pada pasar finansial"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "Sistem trading komputer untuk menawarkan spekulasi pasar finansial tertentu"
 
 msgid "Conditions"
 msgstr "Persyaratan"
@@ -970,7 +970,7 @@ msgid "Continue Trading"
 msgstr "Lanjutkan Trading"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "Indeks Berterusan"
 
 msgid "Contract"
 msgstr "Kontrak"
@@ -982,13 +982,13 @@ msgid "Contracts"
 msgstr "Kontrak"
 
 msgid "Copier"
-msgstr ""
+msgstr "Copier"
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "Copy Trading"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Counterattack (CDLCOUNTERATTACK)"
@@ -1012,7 +1012,7 @@ msgid "Crosshair"
 msgstr "Crosshair"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "Mata Uang - Semua pasangan Forex utama"
 
 msgid "Current Level"
 msgstr "Level Terkini"
@@ -1042,10 +1042,10 @@ msgid "Custom Theme"
 msgstr "Tema Wajib"
 
 msgid "Daily Reset Indices"
-msgstr ""
+msgstr "Indeks Reset Harian"
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
-msgstr ""
+msgstr "Indeks Reset Harian meniru pasar dengan trend bullish dan bearish menggunakan volatilitas yang konstan"
 
 msgid "Daily limit on losses"
 msgstr "Batas rugi harian"
@@ -1138,7 +1138,7 @@ msgid "Digits"
 msgstr "Digits"
 
 msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
-msgstr ""
+msgstr "Digits memberi Anda untuk menganalisa angka desimal terakhir harga spot. Terdapat tiga jenis kontrak Digits"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "Directional Movement (DMI) sebenarnya merupakan kumpulan dari tiga indikator terpisah yang digabungkan menjadi satu. Directional Movement terdiri dari Average Directional Index (ADX), Indikator Directional Plus (+DI) dan Indikator Directional Minus (-DI)"
@@ -1156,7 +1156,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1189,7 +1189,7 @@ msgid "Double click the object to remove"
 msgstr "Klik dua kali untuk menghapus objek"
 
 msgid "Down - Predict that the market will end lower than the average price"
-msgstr ""
+msgstr "Down - Menganalisa pasar akan berakhir lebih rendah dari harga rata-rata"
 
 msgid "Download"
 msgstr "Muat"
@@ -1243,13 +1243,13 @@ msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr ""
+msgstr "Setiap kontrak opsi binary memiliki periode waktu tertentu – dengan Binary.com Anda dapat memilih kontrak dengan durasi antara 10 detik hingga 365 hari"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Setiap opsi binary merupakan analisa pada pergerakan bursa saham pasar dasar"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr ""
+msgstr "Setiap kontrak menyediakan hasil yang akan Anda lihat setelah merubah setiap parameter. Anda akan mendapatkan hasil jika analisa Anda tepat. Jika tidak, maka Anda hanya akan kehilangan modal awal Anda"
 
 msgid "Edge"
 msgstr "Edge"
@@ -1270,10 +1270,10 @@ msgid "Ends Between/Ends Outside trades"
 msgstr "Kontrak Ends Between/Ends Outside"
 
 msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "Ends Between/Ends Outside   Menganalisa pasar akan berakhir didalam atau diluar harga target pada akhir periode"
 
 msgid "Ends Between/Outside"
-msgstr ""
+msgstr "Ends Between/Outside"
 
 msgid "Ends in"
 msgstr "Ends in"
@@ -1315,7 +1315,7 @@ msgid "Even"
 msgstr "Even"
 
 msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
-msgstr ""
+msgstr "Even/Odd - Menganalisa angka terakhir adalah genap atau ganjil setelah tik akhir"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "Evening Doji Star (CDLEVENINGDOJISTAR)"
@@ -1399,7 +1399,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "Pertama, Anda perlu menentukan parameter trading Anda. Berikut adalah hal yang perlu Anda pertimbangkan"
 
 msgid "Flexible"
-msgstr ""
+msgstr "Fleksibel"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Tiga kali berturut-turut, BetOnMarkets.com dinobatkan sebagai 'Penyedia Trading Financial Fixed-Odds Terbaik' oleh Shares Magazine UK"
@@ -1417,7 +1417,7 @@ msgid "Founded October 1999"
 msgstr "Didirikan Oktober 1999"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Didirikan pada tahun 1999, Binary.com merupakan salah satu nama tertua dan dihormati pada trading online binary"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
@@ -1516,13 +1516,13 @@ msgid "Higher/Lower"
 msgstr "Higher/Lower"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr ""
+msgstr "Higher/Lower - Menganalisa pasar akan berakhir lebih tinggi atau lebih rendah dari harga target"
 
 msgid "Higher/Lower trades"
 msgstr "Kontrak Higher/Lower"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr ""
+msgstr "Higher/Lower   Menganalisa pasar akan berakhir lebih tinggi atau lebih rendah dari harga target"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern (CDLHIKKAKE)"
@@ -1555,7 +1555,7 @@ msgid "How to trade binaries?"
 msgstr "Bagaimana cara bertrading binary?"
 
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
+msgstr "Bagaimana cara bertrading pasar Indeks Volatilitas?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Hull Moving Average (HMA)"
@@ -1579,7 +1579,7 @@ msgid "IPO on the blockchain"
 msgstr ""
 
 msgid "Ideal for beginners and experienced traders"
-msgstr ""
+msgstr "Ideal untuk pemula dan trader berpengalaman"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
