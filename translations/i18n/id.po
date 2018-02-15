@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 04:40-0500\n"
+"PO-Revision-Date: 2018-02-15 04:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3055,7 +3055,7 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk Pelanggan yang mampu menanggung kerugian pada semua modal yang mereka tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang akan dialami pada trading kontrak finansial. Kontrak transaksi finansial adalah memiliki risiko tinggi. Jika prediksi Anda tidak tepat maka Anda akan kehilangan semua modal yang anda tanamkan berupa harga kontrak yang Anda bayarkan"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "Langkah pertama adalah mendaftar akun. Anda dapat"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
 msgstr "Hal pertama yang harus dilakukan adalah memilih aset yang ingin anda tradingkan, seperti emas (gold) atau minyak (oil), saham atau harga FX (Nilai opsi binary yang berasal dari harga aset). Kelebihan besar dari trading opsi adalah anda tidak membeli atau menjual aset yang sebenarnya"
@@ -3112,16 +3112,16 @@ msgid "The volatility indices simulate various real market situations and provid
 msgstr "Indeks volatilitas mensimulasikan berbagai situasi pasar riil dan menyediakan platform yang ideal untuk digunakan bertrading dan mencoba strategi pada berbagai kondisi pasar. Indeks ini tergantung kepada volatilitas dan pergerakan cepat yang membantu pengguna untuk mencoba skenario seperti – volatilitas tinggi, volatilitas rendah, trend bullish dan bearish"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "Tersedia empat jenis kontrak utama yang dapat Anda pilih"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "Tersedia dua jenis kontrak In/Out"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "Tersedia dua jenis kontrak Up/Down"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "Tersedia dua langkah untuk bertrading Asian"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Ini adalah kontrak dimana trader menganalisa apakah pasar akan berakhir lebih tinggi atau lebih rendah dari target harga"
