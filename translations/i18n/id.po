@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 08:40-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -653,6 +653,9 @@ msgstr "Opsi Binary Dasar"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary telah diberikan lisensi Layanan Investasi"
+
+msgid "Binary mobile applications and third party tools"
+msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "Binary membuka kantor di Jepang"
@@ -1455,8 +1458,8 @@ msgstr "Dapatkan token API dari trader dan tambahkan pada daftar Anda"
 msgid "Get your price"
 msgstr "Dapatkan harga"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr "Kunjungi Managemen Token, buat token dan bagikan token menggunakan duplikasi"
+msgid "Go to"
+msgstr ""
 
 msgid "Goes out"
 msgstr "Goes out"
@@ -3237,6 +3240,9 @@ msgstr "Untuk menarik dana silahkan masukkan token verifikasi khusus yang kami b
 msgid "Token"
 msgstr "Token"
 
+msgid "Token Management"
+msgstr ""
+
 msgid "Token management"
 msgstr "Manajemen token"
 
@@ -3246,8 +3252,8 @@ msgstr "Nama token"
 msgid "Token permissions"
 msgstr "Izin token"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "Token adalah kode khusus untuk mengakses aplikasi mobile Binary dan alat-alat pihak ketiga"
+msgid "Tokens are special codes for accessing"
+msgstr ""
 
 msgid "Tooltip background"
 msgstr "Latar belakang tooltip"
@@ -3441,8 +3447,8 @@ msgstr "Pada situs kami, pelanggan dapat bertrading pada pilihan mata uang, inde
 msgid "Variance (VAR)"
 msgstr "Variance (VAR)"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr "Berbagai fitur yang dapat disesuaikan dan mengatur aset, grafik, dan sumber daya lain yang Anda perlukan"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
@@ -3594,12 +3600,6 @@ msgstr "Anda belum mengcopy kontrak manapun"
 msgid "You can"
 msgstr "Anda dapat"
 
-msgid "You can only allow other traders to copy your trade"
-msgstr "Anda hanya membenarkan trader lain untuk mengcopy kontrak Anda"
-
-msgid "You can only copy other trader's trade"
-msgstr "Anda hanya dapat mengcopy kontrak trader lain"
-
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Anda tidak harus melakukan deposit setelah mendaftar, namun Anda perlu mendeposit untuk memulai trading"
 
@@ -3617,6 +3617,12 @@ msgstr "Anda membayar"
 
 msgid "You will be automatically logged out after such time"
 msgstr "Anda akan secara otomatis keluar setelah waktu tersebut"
+
+msgid "You wish to allow other traders to copy your trades"
+msgstr ""
+
+msgid "You wish to copy another trader's trades"
+msgstr ""
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu mengijinkan Webtrader untuk mengaksesnya"
@@ -3674,6 +3680,9 @@ msgstr "komisi"
 
 msgid "contact support"
 msgstr "hubungi support"
+
+msgid "create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "customer support"
