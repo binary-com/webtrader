@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Acholi\n"
 "Language: ach_UG\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "crwdns19787:0crwdne19787:0"
@@ -653,6 +653,9 @@ msgstr "crwdns43310:0crwdne43310:0"
 
 msgid "Binary granted Investment Services license"
 msgstr "crwdns19926:0crwdne19926:0"
+
+msgid "Binary mobile applications and third party tools"
+msgstr "crwdns43481:0crwdne43481:0"
 
 msgid "Binary opens Japan office"
 msgstr "crwdns19927:0crwdne19927:0"
@@ -1455,8 +1458,8 @@ msgstr "crwdns42935:0crwdne42935:0"
 msgid "Get your price"
 msgstr "crwdns20056:0crwdne20056:0"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr "crwdns42936:0crwdne42936:0"
+msgid "Go to"
+msgstr "crwdns43482:0crwdne43482:0"
 
 msgid "Goes out"
 msgstr "crwdns20057:0crwdne20057:0"
@@ -3237,6 +3240,9 @@ msgstr "crwdns16044:0crwdne16044:0"
 msgid "Token"
 msgstr "crwdns16045:0crwdne16045:0"
 
+msgid "Token Management"
+msgstr "crwdns43483:0crwdne43483:0"
+
 msgid "Token management"
 msgstr "crwdns16046:0crwdne16046:0"
 
@@ -3246,8 +3252,8 @@ msgstr "crwdns16047:0crwdne16047:0"
 msgid "Token permissions"
 msgstr "crwdns16048:0crwdne16048:0"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "crwdns16049:0crwdne16049:0"
+msgid "Tokens are special codes for accessing"
+msgstr "crwdns43484:0crwdne43484:0"
 
 msgid "Tooltip background"
 msgstr "crwdns16050:0crwdne16050:0"
@@ -3441,8 +3447,8 @@ msgstr "crwdns20400:0crwdne20400:0"
 msgid "Variance (VAR)"
 msgstr "crwdns20401:0crwdne20401:0"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr "crwdns24298:0crwdne24298:0"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
+msgstr "crwdns43485:0crwdne43485:0"
 
 msgid "Verification code has been sent to your email"
 msgstr "crwdns16080:0crwdne16080:0"
@@ -3594,12 +3600,6 @@ msgstr "crwdns42938:0crwdne42938:0"
 msgid "You can"
 msgstr "crwdns43407:0crwdne43407:0"
 
-msgid "You can only allow other traders to copy your trade"
-msgstr "crwdns42939:0crwdne42939:0"
-
-msgid "You can only copy other trader's trade"
-msgstr "crwdns42940:0crwdne42940:0"
-
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "crwdns20435:0crwdne20435:0"
 
@@ -3617,6 +3617,12 @@ msgstr "crwdns16110:0crwdne16110:0"
 
 msgid "You will be automatically logged out after such time"
 msgstr "crwdns16111:0crwdne16111:0"
+
+msgid "You wish to allow other traders to copy your trades"
+msgstr "crwdns43486:0crwdne43486:0"
+
+msgid "You wish to copy another trader's trades"
+msgstr "crwdns43487:0crwdne43487:0"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "crwdns16112:0crwdne16112:0"
@@ -3674,6 +3680,9 @@ msgstr "crwdns16126:0crwdne16126:0"
 
 msgid "contact support"
 msgstr "crwdns16127:0crwdne16127:0"
+
+msgid "create a token, and share the token with copier(s)"
+msgstr "crwdns43488:0crwdne43488:0"
 
 msgid "customer support"
 msgstr "crwdns16128:0crwdne16128:0"

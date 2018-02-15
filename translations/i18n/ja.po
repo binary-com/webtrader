@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -666,6 +666,9 @@ msgstr ""
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary (Europe) Ltd.は、投資サービスライセンスを付与されています。"
+
+msgid "Binary mobile applications and third party tools"
+msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "日本オフィスを開設"
@@ -1471,7 +1474,7 @@ msgstr ""
 msgid "Get your price"
 msgstr "価格を確認"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgid "Go to"
 msgstr ""
 
 msgid "Goes out"
@@ -3256,6 +3259,9 @@ msgstr "資金のご出金には、お客様のアドレスに只今送信され
 msgid "Token"
 msgstr "トークン"
 
+msgid "Token Management"
+msgstr ""
+
 msgid "Token management"
 msgstr "トークン設定"
 
@@ -3265,8 +3271,8 @@ msgstr "トークン名"
 msgid "Token permissions"
 msgstr "トークンのアクセス許可"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "トークンはBinary.comのアプリやサードパーティツールにアクセスするための特別なコードです"
+msgid "Tokens are special codes for accessing"
+msgstr ""
 
 msgid "Tooltip background"
 msgstr "ツールチップ背景"
@@ -3460,8 +3466,8 @@ msgstr "当WEBブラウザ版取引画面上で、お客さまは最も柔軟な
 msgid "Variance (VAR)"
 msgstr "偏差 (VAR)"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr "カスタマイズ可能な多彩機能　資産、チャート、その他リソースをお好みでロード＆配置ができます"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "認証コードが送信されました"
@@ -3613,12 +3619,6 @@ msgstr ""
 msgid "You can"
 msgstr ""
 
-msgid "You can only allow other traders to copy your trade"
-msgstr ""
-
-msgid "You can only copy other trader's trade"
-msgstr ""
-
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "口座開設条件として預託金は必須ではありませんが、取引を開始するにはあらかじめ預託金をご入金いただく必要があります。"
 
@@ -3636,6 +3636,12 @@ msgstr "xxxを支払う"
 
 msgid "You will be automatically logged out after such time"
 msgstr "その時間が経過しますと、自動的にログアウトされます"
+
+msgid "You wish to allow other traders to copy your trades"
+msgstr ""
+
+msgid "You wish to copy another trader's trades"
+msgstr ""
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "お客様のBinry.com口座が作成されました。お取引を開始するには、ウェブトレーダーのアクセスを許可頂く必要があります"
@@ -3693,6 +3699,9 @@ msgstr "手数料"
 
 msgid "contact support"
 msgstr "サポートへのお問い合わせ"
+
+msgid "create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "カスタマーサポート"

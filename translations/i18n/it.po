@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-02-02 18:00-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -653,6 +653,9 @@ msgstr ""
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary ha ricevuto l'autorizzazione per i Servizi d'Investimento"
+
+msgid "Binary mobile applications and third party tools"
+msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "Binary apre una sede in Giappone"
@@ -1455,8 +1458,8 @@ msgstr ""
 msgid "Get your price"
 msgstr "Ottieni il tuo prezzo"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr "Vai su Gestione dei token, crea un token e condividi il token con la fotocopiatrice(i)"
+msgid "Go to"
+msgstr ""
 
 msgid "Goes out"
 msgstr "Goes out"
@@ -3237,6 +3240,9 @@ msgstr "Per prelevare fondi, inserisci lo speciale token di verifica che ti abbi
 msgid "Token"
 msgstr "Token"
 
+msgid "Token Management"
+msgstr ""
+
 msgid "Token management"
 msgstr "Gestione dei token"
 
@@ -3246,8 +3252,8 @@ msgstr "Nome del token"
 msgid "Token permissions"
 msgstr "Autorizzazioni dei token"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "I token sono codici speciali per accedere alle applicazioni mobili di Binary e agli strumenti di terze parti"
+msgid "Tokens are special codes for accessing"
+msgstr ""
 
 msgid "Tooltip background"
 msgstr "Sfondo della tooltip"
@@ -3441,7 +3447,7 @@ msgstr "Utilizzando il nostro sito internet, i clienti possono negoziare valute,
 msgid "Variance (VAR)"
 msgstr "Varianza (VAR)"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr ""
 
 msgid "Verification code has been sent to your email"
@@ -3594,12 +3600,6 @@ msgstr "Non hai ancora copiato alcun trade"
 msgid "You can"
 msgstr ""
 
-msgid "You can only allow other traders to copy your trade"
-msgstr "Puoi solo consentire agli altri trader di copiare il tuo trade"
-
-msgid "You can only copy other trader's trade"
-msgstr "Puoi copiare solo i trade degli altri trader"
-
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Per aprire un account non devi effettuare alcun deposito ma devi depositare fondi prima di poter iniziare a fare trading"
 
@@ -3617,6 +3617,12 @@ msgstr "Paghi"
 
 msgid "You will be automatically logged out after such time"
 msgstr "Dopo questo tempo, verrai automaticamente loggato"
+
+msgid "You wish to allow other traders to copy your trades"
+msgstr ""
+
+msgid "You wish to copy another trader's trades"
+msgstr ""
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Il tuo account Binary.com è stato creato ma per iniziare a fare trading bisogna consentire a Webtrader di accedere"
@@ -3674,6 +3680,9 @@ msgstr "commissione"
 
 msgid "contact support"
 msgstr "contatta l'assistenza"
+
+msgid "create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "assistenza clienti"
