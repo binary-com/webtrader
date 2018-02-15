@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-02-08 05:01-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -653,6 +653,9 @@ msgstr "二元期權基本知識"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary 被授予投資服務執照"
+
+msgid "Binary mobile applications and third party tools"
+msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "Binary 開設日本辦公室"
@@ -1455,8 +1458,8 @@ msgstr "獲取交易者的 API 權杖, 並將其添加到您的清單中"
 msgid "Get your price"
 msgstr "獲取報價"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr "前往權杖管理, 創建權杖, 並與複製者共用權杖"
+msgid "Go to"
+msgstr ""
 
 msgid "Goes out"
 msgstr "範圍外"
@@ -3237,6 +3240,9 @@ msgstr "如要提款，請輸入剛發送到您郵箱的權杖驗證碼"
 msgid "Token"
 msgstr "權杖"
 
+msgid "Token Management"
+msgstr ""
+
 msgid "Token management"
 msgstr "權杖管理"
 
@@ -3246,8 +3252,8 @@ msgstr "權杖名稱"
 msgid "Token permissions"
 msgstr "權杖權限"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "權杖是存取Binary行動應用程式和第三方工具的特殊代碼"
+msgid "Tokens are special codes for accessing"
+msgstr ""
 
 msgid "Tooltip background"
 msgstr "工具提示背景"
@@ -3441,8 +3447,8 @@ msgstr "客戶可使用我們網站全天候進行貨幣、指數、股票和大
 msgid "Variance (VAR)"
 msgstr "差異 (VAR)"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr "隨意設定各種自訂功能加載和安排資產、圖表和其他資源"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "驗證代碼已發送到您的郵箱"
@@ -3594,12 +3600,6 @@ msgstr "您尚未複製任何交易"
 msgid "You can"
 msgstr "您可以"
 
-msgid "You can only allow other traders to copy your trade"
-msgstr "您只能允許其他交易者複製您的交易"
-
-msgid "You can only copy other trader's trade"
-msgstr "您只能複製其他交易者的交易"
-
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "開戶無需存入資金，但在您準備好要進行交易前需要入金"
 
@@ -3617,6 +3617,12 @@ msgstr "您支付"
 
 msgid "You will be automatically logged out after such time"
 msgstr "在該時間後您將自動退出登入"
+
+msgid "You wish to allow other traders to copy your trades"
+msgstr ""
+
+msgid "You wish to copy another trader's trades"
+msgstr ""
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
@@ -3674,6 +3680,9 @@ msgstr "佣金"
 
 msgid "contact support"
 msgstr "聯繫客服部"
+
+msgid "create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "客服部"
