@@ -641,6 +641,9 @@ msgstr ""
 msgid "Binary granted Investment Services license"
 msgstr "" 
 
+msgid "Binary mobile applications and third party tools"
+msgstr "" 
+
 msgid "Binary opens Japan office"
 msgstr "" 
 
@@ -1442,7 +1445,7 @@ msgstr ""
 msgid "Get your price"
 msgstr "" 
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgid "Go to"
 msgstr "" 
 
 msgid "Goes out"
@@ -3224,6 +3227,9 @@ msgstr ""
 msgid "Token"
 msgstr "" 
 
+msgid "Token Management"
+msgstr "" 
+
 msgid "Token management"
 msgstr "" 
 
@@ -3233,7 +3239,7 @@ msgstr ""
 msgid "Token permissions"
 msgstr "" 
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
+msgid "Tokens are special codes for accessing"
 msgstr "" 
 
 msgid "Tooltip background"
@@ -3428,7 +3434,7 @@ msgstr ""
 msgid "Variance (VAR)"
 msgstr "" 
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr "" 
 
 msgid "Verification code has been sent to your email"
@@ -3581,12 +3587,6 @@ msgstr ""
 msgid "You can"
 msgstr "" 
 
-msgid "You can only allow other traders to copy your trade"
-msgstr "" 
-
-msgid "You can only copy other trader's trade"
-msgstr "" 
-
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "" 
 
@@ -3603,6 +3603,12 @@ msgid "You pay"
 msgstr "" 
 
 msgid "You will be automatically logged out after such time"
+msgstr "" 
+
+msgid "You wish to allow other traders to copy your trades"
+msgstr "" 
+
+msgid "You wish to copy another trader's trades"
 msgstr "" 
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
@@ -3660,6 +3666,9 @@ msgid "commission"
 msgstr "" 
 
 msgid "contact support"
+msgstr "" 
+
+msgid "create a token, and share the token with copier(s)"
 msgstr "" 
 
 msgid "customer support"
