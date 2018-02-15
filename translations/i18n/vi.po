@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-01-25 23:50-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -653,6 +653,9 @@ msgstr ""
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary được cấp giấy phép Dịch vụ đầu tư"
+
+msgid "Binary mobile applications and third party tools"
+msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "Binary mở văn phòng tại Nhật Bản"
@@ -1455,8 +1458,8 @@ msgstr "Lấy API token từ (các) nhà giao dịch và thêm nó vào danh sá
 msgid "Get your price"
 msgstr "Nhận giá của bạn"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
-msgstr "Đến mục quản lý token, tạo một token, và chia sẻ token với copier(s)"
+msgid "Go to"
+msgstr ""
 
 msgid "Goes out"
 msgstr "Ra ngoài"
@@ -3237,6 +3240,9 @@ msgstr "Để rút tiền xin vui lòng nhập mã xác minh token đặc biệt
 msgid "Token"
 msgstr "Token"
 
+msgid "Token Management"
+msgstr ""
+
 msgid "Token management"
 msgstr "Quản lý Token"
 
@@ -3246,8 +3252,8 @@ msgstr "Tên Token"
 msgid "Token permissions"
 msgstr "Cấp phép Token"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "Token là những mã đặc biệt để truy cập ứng dụng Nhị phân trên điện thoại và các công cụ của bên thứ ba"
+msgid "Tokens are special codes for accessing"
+msgstr ""
 
 msgid "Tooltip background"
 msgstr "Công cụ chú thích nền"
@@ -3441,8 +3447,8 @@ msgstr "Sử dụng trang web của chúng tôi, khách hàng có thể gi
 msgid "Variance (VAR)"
 msgstr "Phương sai (VAR)"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr "Các tính năng tuỳ chỉnh tải và sắp xếp các tài sản, bảng xếp hạng và các tài nguyên khác tùy theo cách mà bạn thấy phù hợp"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Mã xác minh đã được gửi đến email của bạn"
@@ -3594,12 +3600,6 @@ msgstr "Bạn chưa sao chép bất kỳ (những) giao dịch nào"
 msgid "You can"
 msgstr ""
 
-msgid "You can only allow other traders to copy your trade"
-msgstr "Bạn chỉ có thể cho phép các nhà giao dịch khác sao chép giao dịch của bạn"
-
-msgid "You can only copy other trader's trade"
-msgstr "Bạn chỉ có thể sao chép giao dịch của các nhà giao dịch khác"
-
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Bạn không cần gửi tiền để mở tài khoản, nhưng bạn cần gửi tiền trước khi bạn bắt đầu giao dịch"
 
@@ -3617,6 +3617,12 @@ msgstr "Bạn trả"
 
 msgid "You will be automatically logged out after such time"
 msgstr "Bạn sẽ được tự động đăng xuất sau thời gian như vậy"
+
+msgid "You wish to allow other traders to copy your trades"
+msgstr ""
+
+msgid "You wish to copy another trader's trades"
+msgstr ""
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Tài khoản Binary.com của bạn đã được tạo, nhưng để bắt đầu giao dịch bạn cần cho phép Webtrader truy cập nó"
@@ -3674,6 +3680,9 @@ msgstr "Hoa hồng"
 
 msgid "contact support"
 msgstr "liên hệ hỗ trợ"
+
+msgid "create a token, and share the token with copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "hỗ trợ khách hàng"
