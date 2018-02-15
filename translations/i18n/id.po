@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 05:01-0500\n"
+"PO-Revision-Date: 2018-02-15 05:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3475,7 +3475,7 @@ msgid "Volatility Indices are further categorized into two types"
 msgstr "Indeks Volatilitas lebih lanjut dikategorikan menjadi dua jenis"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
-msgstr ""
+msgstr "Indeks volatilitas - Indeks Binary.com yang disimulasi menggunakan kekuatan pasar"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "WMA adalah singkatan dari weighted moving average. Fungsinya adalah untuk membantu melembutkan kurva harga dalam mengidentifikasi tren yang lebih baik. Berperan lebih penting pada data terbaru berbanding fungsi EMA"
@@ -3490,7 +3490,7 @@ msgid "We rebrand BetOnMarkets.com as"
 msgstr "Kami merebrending BetOnMarkets.com sebagai"
 
 msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
-msgstr ""
+msgstr "Kami memisahkan semua dana klien dan menyimpannya pada lembaga-lembaga keuangan yang aman dan berlisensi, sesuai dengan kondisi lisensi tarding kami"
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "Kami memperoleh hak paten sebagai 'Sistem trading komputer dan metode untuk berspekulasi dalam pasar finansial' dan 'Sistem trading komputer yang menawarkan spekulasi khusus pasar finansial'. Paten tersebut memperlihatkan kemampuan kami dalam berinovasi dan tetap terdepan dalam bisnis ini"
@@ -3523,19 +3523,19 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Selamat datang di Webtrader Binary.com"
 
 msgid "What are OTC indices and stocks?"
-msgstr ""
+msgstr "Apa itu indeks dan saham OTC?"
 
 msgid "What is pep?"
 msgstr "Apa itu pep?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr ""
+msgstr "Bila Anda puas dengan harga yang Anda terima, eksekusi trading Anda segera. Dengan platform kami yang unik, Anda tidak akan harus bersaing dengan 'slippages' atau gaping pasar. Dan yang terpenting, tanpa biaya tersembunyi. Anda juga dapat menjual kembali setiap kontrak jangka panjang setiap saat sebelum kontrak tersebut berakhir untuk melindungi keuntungan yang telah Anda dapatkan atau untuk mengurangi risiko kerugian Anda"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "Saat Anda bertrading di Binary.com, Anda dapat yakin bahwa saldo Anda disimpan pada rekening bank terpisah dan tidak digunakan untuk tujuan lain"
 
 msgid "Where does Binary.com hold my funds?"
-msgstr ""
+msgstr "Dimanakah Binary.com menyimpan dana saya?"
 
 msgid "While on the go, you can"
 msgstr "Saat bepergian, Anda dapat"
@@ -3544,7 +3544,7 @@ msgid "Why Choose Binary Trading?"
 msgstr "Mengapa Memilih Trading Binary?"
 
 msgid "Why trade with Binary.com"
-msgstr ""
+msgstr "Mengapa bertrading di Binary.com"
 
 msgid "Will I need to install any software?"
 msgstr "Apakah saya perlu menginstal software?"
@@ -3583,22 +3583,22 @@ msgid "Y-axis labels"
 msgstr "Label y-axis"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Kontrak Menguntungkan Tahunan"
 
 msgid "Yes"
 msgstr "Iya"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Anda belum mengcopy kontrak manapun"
 
 msgid "You can"
-msgstr ""
+msgstr "Anda dapat"
 
 msgid "You can only allow other traders to copy your trade"
-msgstr ""
+msgstr "Anda hanya membenarkan trader lain untuk mengcopy kontrak Anda"
 
 msgid "You can only copy other trader's trade"
-msgstr ""
+msgstr "Anda hanya dapat mengcopy kontrak trader lain"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Anda tidak harus melakukan deposit setelah mendaftar, namun Anda perlu mendeposit untuk memulai trading"
@@ -3610,7 +3610,7 @@ msgid "You haven't saved any templates yet"
 msgstr "Anda belum menyimpan template apa pun"
 
 msgid "You only need to make four decisions to execute a binary contract"
-msgstr ""
+msgstr "Anda hanya perlu membuat empat keputusan untuk membeli kontrak binary"
 
 msgid "You pay"
 msgstr "Anda membayar"
@@ -3622,13 +3622,13 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu mengijinkan Webtrader untuk mengaksesnya"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Akun Anda (%) dibatalkan, silahkan hubungi customer support untuk info lebih lanjut."
 
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Susunan duplikasi Anda"
 
 msgid "Your email"
 msgstr "Email Anda"
@@ -3652,13 +3652,13 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "Dan untuk klien Irlandia dikeluarkan oleh (3) Komisaris Pendapatan di Irlandia pada tanggal 29 September 2015 (lisensi no. 1010285). Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Costa Rica, Hong Kong, atau orang-orang di bawah usia 18 tahun"
 
 msgid "and start learning how to trade"
-msgstr ""
+msgstr "dan mulai belajar cara bertrading"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrof (') diperbolehkan"
 
 msgid "apply online"
-msgstr ""
+msgstr "daftar online"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr "pada valuasi US$ 50.5 juta"
@@ -3685,7 +3685,7 @@ msgid "days"
 msgstr "hari"
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "depositkan dana dan mulai bertrading dalam hitungan menit"
 
 msgid "disposes of its stake"
 msgstr "melepaskan sahamnya"
@@ -3718,7 +3718,7 @@ msgid "if this is not your country of residence"
 msgstr "jika ini adalah bukan negara domisili Anda"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "hanya dalam beberapa menit"
 
 msgid "in the future, the"
 msgstr "di masa depan,"
