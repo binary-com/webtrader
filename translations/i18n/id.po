@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 04:50-0500\n"
+"PO-Revision-Date: 2018-02-15 05:01-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3256,7 +3256,7 @@ msgid "Tooltip text"
 msgstr "Teks tooltip"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Total Pengcopy"
 
 msgid "Total Cost"
 msgstr "Total Biaya"
@@ -3265,7 +3265,7 @@ msgid "Total Profit/Loss"
 msgstr "Total Untung/Rugi"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Total Kontrak"
 
 msgid "Touch"
 msgstr "Touch"
@@ -3274,7 +3274,7 @@ msgid "Touch/No Touch"
 msgstr "Touch/No Touch"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "Touch/No Touch - Menganalisa pasar akan menyentuh atau tidak harga target"
 
 msgid "Tourism"
 msgstr "Pariwisata"
@@ -3289,31 +3289,31 @@ msgid "Trade Confirmation"
 msgstr "Konfirmasi Trading"
 
 msgid "Trade Types"
-msgstr ""
+msgstr "Jenis Trading"
 
 msgid "Trade according to your preferred strategy"
-msgstr ""
+msgstr "Bertrading menurut strategi pilihan Anda"
 
 msgid "Trade using"
 msgstr "Trading menggunakan"
 
 msgid "Trader"
-msgstr ""
+msgstr "Trader"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Statistik Trader"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Kontrak Profitabilitas"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Penjelasan kontrak"
 
 msgid "Trading Times"
 msgstr "Waktu Trading"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
-msgstr ""
+msgstr "Trading opsi binary relatif mudah, dan Anda dapat membeli kontrak hanya dengan tiga langkah sederhana"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "Trading opsi Binary mungkin tidak cocok untuk semua orang, maka pastikan Anda sudah memahami risiko yang terlibat. Jumlah kerugian bisa lebih dari jumlah modal awal dan Anda tidak memperoleh bunga dari aset dasar yang Anda tradingkan"
@@ -3328,7 +3328,7 @@ msgid "Transfer to another Binary account"
 msgstr "Transfer ke akun Binary lainnya"
 
 msgid "Transparent risk and potential reward"
-msgstr ""
+msgstr "Risiko transparan dan potensi laba"
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "Triangular Moving Average (TRIMA)"
@@ -3361,13 +3361,13 @@ msgid "Two Crows (CDL2CROWS)"
 msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Two-way pricing"
-msgstr ""
+msgstr "Harga dua-arah"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Typical Price (TYPPRICE)"
 
 msgid "US Patents"
-msgstr ""
+msgstr "Hak Paten AS"
 
 msgid "USD"
 msgstr "USD"
@@ -3397,7 +3397,7 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr "Unique Three River Bottom adalah pola candlestick bullish yang terdiri dari tiga candle: Candle pertama memiliki tubuh yang panjang dan bearish, candle kedua adalah palu, dan tubuhnya berada di dalam tubuh bar 1, candle ke-3 kecil dan bullish, harga Close nya lebih rendah dari bar ke 2"
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr ""
+msgstr "Up - Menganalisa pasar akan berakhir lebih tinggi dari harga rata-rata"
 
 msgid "Up/Down"
 msgstr "Up/Down"
@@ -3463,7 +3463,7 @@ msgid "View Statement"
 msgstr "Lihat Pernyataan"
 
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "Pasar Indeks Volatilitas"
 
 msgid "Volatility Indicators"
 msgstr "Indikator Volatilitas"
@@ -3472,7 +3472,7 @@ msgid "Volatility Indices"
 msgstr "Indeks Volatilitas"
 
 msgid "Volatility Indices are further categorized into two types"
-msgstr ""
+msgstr "Indeks Volatilitas lebih lanjut dikategorikan menjadi dua jenis"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
 msgstr ""
