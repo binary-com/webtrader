@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-02-15 05:10-0500\n"
+"PO-Revision-Date: 2018-02-15 05:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3772,10 +3772,10 @@ msgid "of \"Now\", the"
 msgstr "dari \"Sekarang\","
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "daftar gratis $10k akun uang virtual dengan fungsi penuh"
 
 msgid "open an account"
-msgstr ""
+msgstr "mendaftar akun"
 
 msgid "our helpful support desk"
 msgstr "layanan support kami"
