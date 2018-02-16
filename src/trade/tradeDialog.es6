@@ -909,15 +909,21 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     }
   };
 
-  _(available).map('contract_category_display').uniq().value().forEach(x => {
-    let y = {}; 
-    y.contract_category_display = x; 
-    let contract_object = _.find(available, {contract_category_display: x});
-    if(contract_object){
-      y.contract_category = contract_object.contract_category;
-      state.categories.array.push(y);
-    }
-  });
+  _(available)
+    .map('contract_category_display')
+    .uniq()
+    .value()
+    // TODO temp filter until https://trello.com/c/Rj2a7K8e/558-shahrizal-lbuiminoradjustment is released
+    .filter(f => f !== 'Lookback Options')
+    .forEach(x => {
+      let y = {}; 
+      y.contract_category_display = x; 
+      let contract_object = _.find(available, {contract_category_display: x});
+      if(contract_object){
+        y.contract_category = contract_object.contract_category;
+        state.categories.array.push(y);
+      }
+    });
 
   state.categories.value = _(state.categories.array).head(); // TODO: show first tab
   state.categories.selected = state.categories.value.contract_category;
