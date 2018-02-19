@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-02-19 15:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -655,7 +655,7 @@ msgid "Binary granted Investment Services license"
 msgstr "A Binary é concedida uma licença de serviços de investimento"
 
 msgid "Binary mobile applications and third party tools"
-msgstr ""
+msgstr "Aplicativos móveis da Binary e ferramentas de terceiros"
 
 msgid "Binary opens Japan office"
 msgstr "A Binary abre escritório no Japão"
@@ -1459,7 +1459,7 @@ msgid "Get your price"
 msgstr "Receba o seu preço"
 
 msgid "Go to"
-msgstr ""
+msgstr "Vá para"
 
 msgid "Goes out"
 msgstr "Sai fora"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "Token"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Gerenciamento de tokens"
 
 msgid "Token management"
 msgstr "Gerenciamento do token"
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "Permissões do token"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "Tokens são códigos especiais para o acesso a"
 
 msgid "Tooltip background"
 msgstr "Plano de fundo da dica de ferramenta"
@@ -3448,7 +3448,7 @@ msgid "Variance (VAR)"
 msgstr "Variância (VAR)"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "Vários recursos personalizáveis como o carregamento e organização de ativos, gráficos e outros recursos, conforme você pretenda"
 
 msgid "Verification code has been sent to your email"
 msgstr "O código de verificação foi enviado para o seu e-mail"
@@ -3619,10 +3619,10 @@ msgid "You will be automatically logged out after such time"
 msgstr "Você será automaticamente desconectado após tal hora"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "Deseja permitir que outros negociadores copiem as suas negociações"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "Deseja copiar as negociações de outros negociadores"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "A sua conta Binary foi criada, mas para começar a negociar você precisa permitir que o Webtrader tenha acesso a ela"
@@ -3682,7 +3682,7 @@ msgid "contact support"
 msgstr "contatar o apoio ao cliente"
 
 msgid "create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "crie um token e compartilhe o token com copiador(es)"
 
 msgid "customer support"
 msgstr "apoio ao cliente"
