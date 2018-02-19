@@ -148,7 +148,7 @@ const initLoginButton = (root) => {
       getLandingCompany().then((what_todo) => {
          state.show_financial_link = (what_todo === 'upgrade-mf');
          state.show_realaccount_link = (what_todo === 'upgrade-mlt');
-         const loginids = Cookies.loginids();
+         const loginids = loginids();
          state.has_real_account = _.some(loginids, {is_real: true});
          state.has_mf_or_mlt = _.some(loginids, {is_mf: true}) || _.some(loginids, {is_mlt: true});
          state.show_new_account_link = what_todo === 'new-account';
@@ -156,7 +156,7 @@ const initLoginButton = (root) => {
 
          // https://trello.com/c/9PCHncnx/5146-8-raunak-accountlistordering
          // https://trello.com/c/fNZ1Zkbb/2529-negar-accountlistauthorize
-         if(_.some(Cookies.oAuthLoginIds(), {is_disabled: true})) {
+         if(_.some(oAuthLoginIds(), {is_disabled: true})) {
             const lockedIds = _.filter(loginids, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
@@ -290,7 +290,7 @@ export const getLandingCompany = () => {
               results[1].landing_company_details || {};
             const financial = data.landing_company.financial_company;
             const gaming = data.landing_company.gaming_company;
-            const loginids = Cookies.loginids();
+            const loginids = loginids();
             const curr_login = local_storage.get("oauth")[0];
             curr_login.is_mlt = /MLT/.test(curr_login.id);
             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:

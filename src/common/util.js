@@ -292,54 +292,40 @@ function isLangSupported(lang) {
             || lang === "ach"//Crowdin in context language;
 }
 
-var Cookies = {
-  get_by_name: function(name) {
-    var cookie = document.cookie;
-    var res = cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
-    return res ? res.pop() : "";
-  },
-  loginids: function () {
-    var loginids = Cookies.get_by_name("loginid_list");
-    loginids = decodeURIComponent(loginids).split("+");
-    loginids = loginids.map(function(id){
-      var parts = id.split(":");
-      return {
-        id: parts[0],
-        is_real: parts[1] === "R",
-        is_disabled: parts[2] === "D",
-        is_mf: /MF/gi.test(parts[0]),
-        is_mlt: /MLT/gi.test(parts[0]),
-        is_mx: /MX/gi.test(parts[0]),
-        is_cr: /CR/gi.test(parts[0])
-      };
-    });
-   /* when new accounts are created document.cookie doesn"t change,
-    * use local_storage to return the full list of loginids. */
-    var oauth_loginids = Cookies.oAuthLoginIds().filter(function(id) {
-      return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
-    });
+/**
+ * This includes all loginIds, including the disabled accounts too
+*/
+function loginids() {
+  var loginids = local_storage.get('authorize').account_list
+  loginids = loginids.map(function(parts){
+    return {
+      id: parts.loginid,
+      is_real: parts.is_virtual == 0,
+      is_disabled: parts.is_disabled == 1,
+      is_mf: /MF/gi.test(parts.loginid),
+      is_mlt: /MLT/gi.test(parts.loginid),
+      is_mx: /MX/gi.test(parts.loginid),
+      is_cr: /CR/gi.test(parts.loginid),
+    };
+  });
+  return loginids;
+}
 
-    return oauth_loginids && oauth_loginids.length > 0 ? oauth_loginids : loginids;
-  },
-  residence: function() {
-    return Cookies.get_by_name("residence");
-  },
-  oAuthLoginIds: function() {
-    var currencies_config = local_storage.get("currencies_config") || {};
-    return (local_storage.get("oauth") || []).map(function(id){
-      return {
-        id: id.id,
-        is_real: !id.is_virtual,
-        is_disabled: false,
-        is_mf: /MF/gi.test(id.id),
-        is_mlt: /MLT/gi.test(id.id),
-        is_mx: /MX/gi.test(id.id),
-        is_cr: /CR/gi.test(id.id),
-        currency: id.currency,
-        type: currencies_config[id.currency] ? currencies_config[id.currency].type : ''
-      }
-    })
-  },
+function oAuthLoginIds() {
+  var currencies_config = local_storage.get("currencies_config") || {};
+  return (local_storage.get("oauth") || []).map(function(id){
+    return {
+      id: id.id,
+      is_real: !id.is_virtual,
+      is_disabled: false,
+      is_mf: /MF/gi.test(id.id),
+      is_mlt: /MLT/gi.test(id.id),
+      is_mx: /MX/gi.test(id.id),
+      is_cr: /CR/gi.test(id.id),
+      currency: id.currency,
+      type: currencies_config[id.currency] ? currencies_config[id.currency].type : ''
+    }
+  })
 }
 
 /* setup translating string literals */
