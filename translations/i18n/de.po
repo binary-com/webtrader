@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-02-19 08:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -655,7 +655,7 @@ msgid "Binary granted Investment Services license"
 msgstr "Binary wurde eine Lizenz für Investmentdienstleistungen erteilt"
 
 msgid "Binary mobile applications and third party tools"
-msgstr ""
+msgstr "Binary mobile Anwendungen und Tools von Drittanbietern"
 
 msgid "Binary opens Japan office"
 msgstr "Binary eröffnet eine Zweigstelle in Japan"
@@ -1459,7 +1459,7 @@ msgid "Get your price"
 msgstr "Erhalten Sie Ihren Kurs"
 
 msgid "Go to"
-msgstr ""
+msgstr "Gehe zu"
 
 msgid "Goes out"
 msgstr "Geht außerhalb"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "Token"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Tokenmanagement"
 
 msgid "Token management"
 msgstr "Tokenmanagement"
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "Tokengenehmigungen"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "Token sind spezielle Codes für den Zugriff auf"
 
 msgid "Tooltip background"
 msgstr "Tooltip Hintergrund"
