@@ -134,24 +134,20 @@ const addDateToHeader = function(mainOptions) {
     Drop down was allowing certain dates to be selected whereas date picker was not.
     Such complexity is needed when I compared it with binary.com implementation.
    */
-   const addDateDropDowns = (opts) => {
-    const dt = opts.date || new Date();
+  const addDateDropDowns = (dt) => {
     let inputElementForDate = $('<input placeholder="Select date" readonly class="windows-dateInput" />').insertAfter(header);
-    const maxYear = mainOptions.maxDate ? mainOptions.maxDate.getFullYear() : dt.getFullYear();
-    inputElementForDate.on('click', () => dpicker.datepicker('open'));
+    inputElementForDate.on('click', () => dpicker.datepicker('show'));
+    if (dt) {
+      inputElementForDate.val(moment(dt).format('DD MMM, YYYY'));
+    }
     return {
-       update: yyyy_mm_dd => inputElementForDate.val(moment.utc(yyyy_mm_dd, 'YYYY-MM-DD').format('DD MMM, YYYY')),
-       clear: () => inputElementForDate.val(''),
+      update: yyyy_mm_dd => inputElementForDate.val(moment.utc(yyyy_mm_dd, 'YYYY-MM-DD').format('DD MMM, YYYY')),
+      clear: () => inputElementForDate.val(''),
     };
   }
 
    if(mainOptions.addDateDropDowns) {
-      dropdonws = addDateDropDowns({
-         date: mainOptions.date, onchange: (yyyy_mm_dd) => {
-            dpicker.datepicker("setDate", yyyy_mm_dd);
-            mainOptions.changed(yyyy_mm_dd);
-         }
-      });
+      dropdonws = addDateDropDowns(mainOptions.date);
    }
    else {
       date_string.insertAfter(header);
