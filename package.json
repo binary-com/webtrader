@@ -57,7 +57,8 @@
     "sloc": "grunt sloc",
     "major-rel": "grunt bump:major",
     "minor-rel": "grunt bump:minor",
-    "patch-rel": "grunt bump:patch"
+    "patch-rel": "grunt bump:patch",
+    "test": "echo 'test command not supported'"
   },
   "repository": {
     "type": "git",
