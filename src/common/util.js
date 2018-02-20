@@ -296,8 +296,7 @@ function isLangSupported(lang) {
  * This includes all loginIds, including the disabled accounts too
 */
 function loginids() {
-  var loginids = local_storage.get('authorize').account_list
-  loginids = loginids.map(function(parts){
+  return local_storage.get('authorize').account_list.map(function(parts){
     return {
       id: parts.loginid,
       is_real: parts.is_virtual == 0,
@@ -308,7 +307,6 @@ function loginids() {
       is_cr: /CR/gi.test(parts.loginid),
     };
   });
-  return loginids;
 }
 
 function oAuthLoginIds() {

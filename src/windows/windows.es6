@@ -11,6 +11,7 @@ import 'jquery.dialogextend';
 import 'modernizr';
 import 'common/util';
 import 'css!windows/windows.css';
+import moment from 'moment';
 import workspace from  '../workspace/workspace.js';
 
 let dialogCounter = 0;
@@ -68,117 +69,6 @@ const addDateToHeader = function(mainOptions) {
    const header = this.parent().find('.ui-dialog-title').addClass('with-content');
 
 
-   /* options: {date: date, onchange: fn } */
-   const addDateDropDowns = (opts) => {
-      // note that month is 0-based, like in the Date object. Adjust if necessary.
-      const numberOfDays = (year, month) => {
-         var isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
-         return [31, (isLeap ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
-      }
-
-      const update = function(select, options) {
-         var render = options.render || (v => v + '');
-         select.children().remove();
-         /* add the title */
-         for (let i = options.min; i <= options.max; ++i)
-            $('<option/>').val(i).text(render(i)).appendTo(select);
-         select.val(options.initial || options.min);
-         select.selectmenu('refresh');
-
-         select.title = select.title || (function(text) {
-            if (text) {
-               select._title = select._title || $('<option/>').val(-1).prependTo(select);
-               select._title.text(text);
-               select.updating = true;
-               select.val(-1).selectmenu('refresh');
-               select.updating = false;
-            }
-            else {
-               if (select._title) {
-                  const value = select.val() === -1 ? options.initial : select.val();
-                  select._title.remove();
-                  select.updating = true;
-                  select.val(value).selectmenu('refresh');
-                  select.updating = false;
-                  this._title = null;
-               }
-            }
-         });
-
-         return select;
-      }
-
-      const dt = opts.date || new Date();
-      let year = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
-      let month = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto' });
-      let day = $('<select />').insertAfter(header).selectmenu({ classes: {"ui-selectmenu-button": "ui-selectmenu-button ui-state-default"}, width: 'auto'});
-      day.selectmenu( "menuWidget" ).addClass('date-day');
-      const maxYear = mainOptions.maxDate ? mainOptions.maxDate.getFullYear() : dt.getFullYear();
-      year = update(year, { min: 2010, max: maxYear, initial: dt.getFullYear()});
-      month = update(month, {
-         min: 0, max: 11, initial: dt.getMonth(),
-         render: (inx) => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][inx]
-      });
-      day = update(day, { min: 1, max: numberOfDays(dt.getFullYear(),dt.getMonth()), initial: dt.getDate()});
-
-      /* add title elements if no date is specified */
-      if (!opts.date) {
-         year.title('Year');
-         month.title('Month');
-         day.title('Day');
-      }
-
-      const trigger_change = () => {
-         /* TODO: search other files and make sure to use a UTC date */
-         const yyyy_mm_dd = new Date(Date.UTC(year.val(), month.val(), day.val())).toISOString().slice(0, 10);
-         opts.onchange(yyyy_mm_dd);
-      }
-      day.on('selectmenuchange', () => {
-         if (day.updating) {
-            return;
-         }
-         day.title(null);
-         month.title(null);
-         year.title(null);
-
-         trigger_change();
-      });
-
-      const update_day = () => {
-         const options = { min: 1, max: numberOfDays(year.val(), month.val()), initial: day.val() };
-         if (options.initial > options.max)
-            options.initial = options.min;
-         update(day, options);
-      };
-
-      [year, month].forEach(function (select) {
-         select.on('selectmenuchange', function () {
-            if (month.updating || year.updating) return;
-            day.title(null);
-            month.title(null);
-            year.title(null);
-            update_day();
-            trigger_change();
-         });
-      })
-      return {
-         update: (yyyy_mm_dd) => {
-            day.title(null);
-            month.title(null);
-            year.title(null);
-            var args = yyyy_mm_dd.split('-');
-            year.val(args[0] | 0); year.selectmenu('refresh');
-            month.val((args[1] | 0)-1); month.selectmenu('refresh');
-            day.val(args[2] | 0); update_day();
-         },
-         clear: () => {
-            year.title('Year');
-            month.title('Month');
-            day.title('Day');
-         }
-      };
-   }
-
    /* options: {date: date, onchange: fn} , events => element.on('change',...) */
    const addDatePicker = (opts) => {
       const dpicker_input = $("<input type='hidden' />").insertAfter(header);
@@ -221,6 +111,7 @@ const addDateToHeader = function(mainOptions) {
    }
 
 
+   let dropdonws = null;
    const date_string = $('<span style="line-height: 24px; position: relative; left: 10px"></span>');
    const dpicker = addDatePicker({
       date: mainOptions.date || new Date(),
@@ -234,7 +125,26 @@ const addDateToHeader = function(mainOptions) {
          mainOptions.cleared();
       }
    });
-   let dropdonws = null;
+
+   /*
+    options: {date: date, onchange: fn }
+    There were lot of complexity introduced because of drop down.
+    For example, there were scenarios, where it is not allowed to select dates in future
+    There were scenarios, where it is not allowed to select date in future
+    Drop down was allowing certain dates to be selected whereas date picker was not.
+    Such complexity is needed when I compared it with binary.com implementation.
+   */
+   const addDateDropDowns = (opts) => {
+    const dt = opts.date || new Date();
+    let inputElementForDate = $('<input placeholder="Select date" readonly class="windows-dateInput" />').insertAfter(header);
+    const maxYear = mainOptions.maxDate ? mainOptions.maxDate.getFullYear() : dt.getFullYear();
+    inputElementForDate.on('click', () => dpicker.datepicker('open'));
+    return {
+       update: yyyy_mm_dd => inputElementForDate.val(moment.utc(yyyy_mm_dd, 'YYYY-MM-DD').format('DD MMM, YYYY')),
+       clear: () => inputElementForDate.val(''),
+    };
+  }
+
    if(mainOptions.addDateDropDowns) {
       dropdonws = addDateDropDowns({
          date: mainOptions.date, onchange: (yyyy_mm_dd) => {
