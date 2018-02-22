@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-02-19 09:02-0500\n"
+"PO-Revision-Date: 2018-02-22 14:41-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -532,10 +532,10 @@ msgid "Arrange"
 msgstr "Vereinbaren"
 
 msgid "Asian down"
-msgstr "Asiaten Tief"
+msgstr "Asiatisches Tief"
 
 msgid "Asian up"
-msgstr "Asiaten Hoch"
+msgstr "Asiatisches Hoch"
 
 msgid "Asians"
 msgstr "Asiaten"
