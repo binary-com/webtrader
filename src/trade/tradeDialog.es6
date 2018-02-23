@@ -154,6 +154,7 @@ function get_current_template(state) {
 
 function set_current_template(state, tpl) {
   state.template.name = tpl.name;
+  state.categories.array = state.categories.array.filter(function(o){return o.contract_category !== "lookback"});
   var warn = function(msg) { $.growl.warning({ message: msg || 'Template applied partially.'.i18n() }); }
   if(!_.find(state.categories.array, tpl.categories_value)) {
     $.growl.error({ message: 'Template is not applicable.'.i18n() });
