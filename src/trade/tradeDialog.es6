@@ -984,6 +984,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   return state;
 }
 export function init(symbol, contracts_for, saved_template, isTrackerInitiated) {
+    contracts_for.available = contracts_for.available.filter(function(o){return o.contract_category !== "lookback"});
     var root = $(html).i18n();
     var available = apply_fixes(contracts_for.available);
 
