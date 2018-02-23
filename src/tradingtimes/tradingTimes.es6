@@ -16,7 +16,7 @@ let select = null;
 let sub_select = null;
 
 /* data: result of trading_times api */
-const processData = (markets, activeSymbols) => {
+const processData = (markets) => {
    markets = markets || [];
    //    || [{
    //    display_name: 'Forex',
@@ -40,12 +40,11 @@ const processData = (markets, activeSymbols) => {
    const submarket_names = { };
    markets
     .filter(eMarket => {
-      let allInstruments = [];
-      eMarket.submarkets.forEach(f => allInstruments = allInstruments.concat(f.instruments));
-      return _.some(allInstruments, eInstrument => {
-        const found = (activeSymbols.find(f => f.symbol === eInstrument.symbol) || {});
-        return !found.is_trading_suspended && found.exchange_is_open;
-      });
+      const loginId = (local_storage.get('authorize') || {}).loginid || '';
+      return (/MF/gi.test(loginId) && eMarket.name === 'Forex')
+        || (/MLT/gi.test(loginId) && eMarket.name === 'Volatility Indices')
+        || (/MX/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
+        || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
     })
     .forEach((market) => {
       market_names.push(market.display_name);
@@ -87,7 +86,7 @@ export const init = ($menuLink) => {
          tradingWin = windows.createBlankWindow($('<div/>'), {
             title: 'Trading Times'.i18n(),
             dialogClass: 'tradingTimes',
-            width: 700 ,
+            width: 800 ,
             height: 400
          });
          tradingWin.track({
@@ -145,10 +144,12 @@ const initTradingWin = ($html) => {
       }
 
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
-      const refresh = (data, active_symbols) => {
-         data = menu.extractChartableMarkets(data);
+      const refresh = (data) => {
 
-         const result = processData(data, active_symbols.active_symbols || []);
+        data = menu.extractFilteredMarkets(data);
+
+        const result = processData(data);
+        console.log(result, data);
 
           if (market_names == null) {
               select = $('<select />');
@@ -182,14 +183,11 @@ const initTradingWin = ($html) => {
          
       };
 
-      const getCachedData = () => Promise.all([
-        liveapi.cached.send({ trading_times: yyyy_mm_dd }),
-        liveapi.send({ active_symbols: 'brief' }),
-      ])
-      .then(result => refresh(result[0], result[1]))
+      const getCachedData = () => liveapi.cached.send({ trading_times: yyyy_mm_dd })
+      .then(result => refresh(result))
       .catch((error) => {
         $.growl.error({ message: error.message });
-        refresh({}, {});
+        refresh({});
       });
 
       getCachedData();

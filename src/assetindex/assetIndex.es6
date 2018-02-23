@@ -8,6 +8,7 @@ import menu from "../navigation/menu";
 import _ from "lodash";
 import "datatables";
 import "jquery-growl";
+import 'css!./assetIndex.css';
 
 let table = null;
 let assetWin = null;
@@ -22,7 +23,7 @@ export const init = (li) => {
             assetWin = windows.createBlankWindow($('<div/>'), {
                 title: 'Asset Index'.i18n(),
                 dialogClass: 'assetIndex',
-                width: 700,
+                width: 800,
                 height: 400
             });
             assetWin.track({
@@ -37,18 +38,17 @@ export const init = (li) => {
     });
 }
 
-const processMarketSubmarkets = (markets, activeSymbols) => {
-    markets = menu.extractChartableMarkets(markets);
+const processMarketSubmarkets = (markets) => {
+    markets = menu.extractFilteredMarkets(markets);
 
     const ret = {};
     markets
       .filter(eMarket => {
-        let allInstruments = [];
-        eMarket.submarkets.forEach(f => allInstruments = allInstruments.concat(f.instruments));
-        return _.some(allInstruments, eInstrument => {
-          const found = (activeSymbols.find(f => f.symbol === eInstrument.symbol) || {});
-          return !found.is_trading_suspended && found.exchange_is_open;
-        });
+        const loginId = (local_storage.get('authorize') || {}).loginid || '';
+        return (/MF/gi.test(loginId) && eMarket.name === 'Forex')
+          || (/MLT/gi.test(loginId) && eMarket.name === 'Volatility Indices')
+          || (/MX/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
+          || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
       })
       .forEach((market) => {
         const smarkets = ret[market.display_name] = {};
@@ -70,20 +70,44 @@ const refreshTable = () => {
             .map((asset) => {
                 /* secham:
                     [ "frxAUDJPY","AUD/JPY",
+                      [
                         ["callput","callput","5t","365d"],
                         ["touchnotouch","Touch/No Touch","1h","1h"],
                         ["endsinout","endsinout","1d","1d"],
                         ["staysinout","staysinout","1d","1d"]
+                      ]
                     ]
+                    asset[0] = frxAUDJPY
+                    asset[1] = AUD/JPY
+                    asset[2] = ["callput","callput","5t","365d"]
+                      prop[0] = callput
+                      prop[1] = callput
+                      prop[2] = 5t
+                      prop[3] = 365d
                 */
-                const props = asset[2] /* asset.props */
-                    .map(prop => prop[2] + ' - ' + prop[3]); /* for each property extract a string */
-                props.unshift(asset[1]); /* add asset.name to the beginning of array */
+                const props = [];
+                const getRowValue = (key) => {
+                  const prop = _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
+                  return `${_.trim(prop[2])} - ${_.trim(prop[3])}`;
+                };
+                props.push(asset[1]);
+                props.push(getRowValue('lookback'));
+                props.push(getRowValue('callput'));
+                props.push(getRowValue('touchnotouch'));
+                props.push(getRowValue('endsinout'));
+                props.push(getRowValue('staysinout'));
+                props.push(getRowValue('digits'));
+                props.push(getRowValue('asian'));
 
                 return props;
             });
         table.api().rows().remove();
         table.api().rows.add(rows);
+        // Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
+        const show = market_name.indexOf('Volatility Indices') !== -1;
+        table.api().column(1).visible(show);
+        table.api().column(6).visible(show);
+        table.api().column(7).visible(show);
         table.api().draw();
     }
 
@@ -92,15 +116,11 @@ const refreshTable = () => {
             [
                 liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
                 liveapi.cached.send({ asset_index: 1 }),
-                liveapi.send({ active_symbols: 'brief' }),
             ])
         .then((results) => {
             try {
-                assets = results[1].asset_index.filter(f => {
-                  const active_symbols = results[2].active_symbols;
-                  return _.find(active_symbols, ff => _.head(f) === ff.symbol);
-                });
-                markets = processMarketSubmarkets(results[0], results[2].active_symbols);
+              assets = results[1].asset_index;
+              markets = processMarketSubmarkets(results[0]);
                 const header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 const dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
 
@@ -155,8 +175,8 @@ const initAssetWin = ($html) => {
     table = table.dataTable({
         data: [],
         "columnDefs": [
-            { className: "dt-body-center dt-header-center", "targets": [0, 1, 2, 3, 4] },
-            { "defaultContent": "-", "targets": [0, 1, 2, 3, 4] }
+            { className: "dt-body-center dt-header-center", "targets": [0, 1, 2, 3, 4, 5, 6, 7] },
+            { "defaultContent": "-", "targets": [0, 1, 2, 3, 4, 5, 6, 7] }
         ],
         paging: false,
         ordering: false,
