@@ -198,7 +198,7 @@ const update_indicative = (data, state) => {
       return;
    }
    
-   state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry
+   state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
 
    if(id != state.contract_id) { return; }
    if(contract.validation_error)
@@ -226,8 +226,7 @@ const update_indicative = (data, state) => {
          state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
          state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
       }
-      state.sell.is_valid_to_sell = false;
-      state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+      state.sell.is_valid_to_sell = contract.is_valid_to_sell && !contract.is_expired;
       state.chart.manual_reflow();
    } else {
       /*Just change the current_spot_time to date_expiry*/
