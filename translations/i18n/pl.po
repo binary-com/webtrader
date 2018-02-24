@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=((n == 1) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || n%10 == 1 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 12 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: pl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-02-24 18:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,64 +49,64 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr ") rozpoczyna działalność jako całodobowa usługa zawierania zakładów dla różnorodnych wskaźników finansowych. Biznes rozwija się prężnie i w krótkim czasie stajemy się liderem rynku w branży zakładów o ustalonej stawce"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- Korzystaj z takich samych stóp zwrotu, co inwestorzy na rynku międzybankowym. Nasze ceny są zestawiane z cenami na rynku opcji międzybankowych"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Firma Binary.com nie jest związana z żadnym z pośredników płatności wymienionych powyżej. Każdy pośrednik płatności działa jako niezależny usługodawca i nie jest w żaden sposób zatwierdzony ani popierany przez Binary.com. KLIENCI KORZYSTAJĄ Z USŁUG POŚREDNIKÓW NA WŁASNE RYZYKO. Zaleca się sprawdzenie danych pośredników płatności przed wysłaniem do nich pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za transakcje zawarte między klientami a pośrednikami płatności"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- Wybieraj w dowolnej chwili z ponad miliona różnorodnych zakładów i dostosuj swoje zakłady do preferowanej strategii handlowej"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- Wybierz czas trwania od 10 sekund do 365 dni"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- Wpłać zaledwie 5 USD, aby rozpocząć handlowanie"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Zdobywaj taki sam proporcjonalny zysk od stawek o dowolnej wartości"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- Ciesz się platformę handlową, która jest łatwa w nawigacji i obsłudze"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- Poznaj wysokość potencjalnego zysku lub potencjalnej straty przed zakupem kontraktu"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- Otwórz konto w jedną minutę i zacznij handlować. Dokonywanie wpłat i wypłat jest możliwe 24 godz. na dobę"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- Prognozuj, czy cena rynkowa będzie wyższa czy niższa od ceny docelowej"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Prognozuj, czy cena rynkowa wzrośnie czy spadnie w odniesieniu do jej obecnego poziomu"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- Prognozuj, czy cena rynkowa pozostanie w przedziale dwóch cen docelowych, czy wyjdzie poza ten przedział"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Prognozuj, czy cena rynkowa osiągnie poziom ceny docelowej"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Kwotowanie dla zakładu i jego odwrotności – Binary.com zawsze gwarantuje Ci obiektywne i przejrzyste stawki"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Sprzedaj swoje kontrakty długoterminowe przed datą wygaśnięcia, aby zachować potencjalne zyski lub ograniczyć straty"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- Handluj, kierując się przeczuciem lub w oparciu o analizy fundamentalne i techniczne"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- Ciesz się spokojem podczas handlowania dzięki pewności, że Twoje dane osobowe, środki finansowe oraz informacje o transakcjach są całkowicie bezpieczne"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- Handluj walutami, wskaźnikami, towarami i innymi aktywami na rynkach o tendencji wzrostowej lub spadkowej, o trendzie bocznym bądź na rynkach spokojnych lub zmiennych"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- Handluj, kiedy chcesz. Platforma Binary.com jest dostępna 24 godz. 7 dni w tygodniu, również w weekendy"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- Handluj z pionierem w branży posiadającym opatentowaną technologią wyceny"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "– waluty, wskaźniki giełdowe i towary"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "– od 10 sekund do 365 dni"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- zakłady typu góra/dół, osiągnie/nie osiągnie, pozostanie pomiędzy/przekroczy"
 
 msgid "0-1 year"
 msgstr "0-1 rok"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2 lata"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. Wybierz instrument bazowy"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. Rynek bazowy"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2 minuty"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. Wybierz czas trwania zakładu"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. Rodzaj zakładu"
 
 msgid "2000"
 msgstr "2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016"
 
 msgid "2017"
-msgstr ""
+msgstr "2017"
 
 msgid "2h"
 msgstr "2 godz."
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3 minuty"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. Wybierz, jak chcesz handlować na rynku"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. Czas trwania"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4 godziny"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. Limit(y)"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. Wybierz stawkę i potencjalny zysk"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "Co najmniej 40 transakcji w ciągu ostatnich 12 miesięcy"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5 minut"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. Wypłata"
 
 msgid "5m"
 msgstr "5 min"
@@ -424,10 +424,10 @@ msgid "Action"
 msgstr "Czynność"
 
 msgid "Active"
-msgstr ""
+msgstr "Aktywne"
 
 msgid "Active Since"
-msgstr ""
+msgstr "Aktywne od"
 
 msgid "Add comparisons"
 msgstr "Dodaj porównania"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "Wszystkie warunki rynkowe"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "Wszystkie warunki rynkowe i okresy trwania zakładu"
 
 msgid "All markets"
 msgstr "Wszystkie rynki"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "Wszystkie rynki i warunki rynkowe"
 
 msgid "All payouts"
 msgstr "Wypłaty w każdej wysokości"
@@ -472,7 +472,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Wszystkie godziny są podane według czasu GMT (Greenwich Mean Time)"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "Pozwól innym kopiować Twoje zakłady"
 
 msgid "Amount"
 msgstr "Kwota"
