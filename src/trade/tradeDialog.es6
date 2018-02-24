@@ -914,7 +914,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .uniq()
     .value()
     // TODO temp filter until https://trello.com/c/Rj2a7K8e/558-shahrizal-lbuiminoradjustment is released
-    .filter(f => f !== 'Lookbacks')
+    .filter(f => f.toLowerCase().indexOf('lookback') === -1)
     .forEach(x => {
       let y = {}; 
       y.contract_category_display = x; 
