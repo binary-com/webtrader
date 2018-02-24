@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-02-24 18:30-0500\n"
+"PO-Revision-Date: 2018-02-24 18:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -547,7 +547,7 @@ msgid "Asset Index"
 msgstr "Indeks kapitałowy"
 
 msgid "Assets"
-msgstr ""
+msgstr "Aktywa"
 
 msgid "Aug"
 msgstr "Sie"
@@ -556,10 +556,10 @@ msgid "August"
 msgstr "Sierpień"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "Dostępność 24 godz. na dobę 7 dni w tygodniu"
 
 msgid "Available Currencies"
-msgstr ""
+msgstr "Dostępne waluty"
 
 msgid "Average Directional Movement Index (ADX)"
 msgstr "Wskaźnik ADX (Average Directional Movement Index)"
@@ -574,16 +574,16 @@ msgid "Average True Range (ATR)"
 msgstr "Wskaźnik ATR (Average True Range)"
 
 msgid "Avg. Duration"
-msgstr ""
+msgstr "Średni czas trwania"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "Średnia strata"
 
 msgid "Avg. Profit"
-msgstr ""
+msgstr "Średni zysk"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "Nagradzana platforma handlowa on-line"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Oscylator Awesome (AO)"
@@ -637,7 +637,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "System i metody zawierania zakładów"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -649,13 +649,13 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK uzyskuje licencję na świadczenie usług w Japonii"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "Podstawowe informacje o opcjach binarnych"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary uzyskuje licencję na świadczenie usług inwestycyjnych"
 
 msgid "Binary mobile applications and third party tools"
-msgstr ""
+msgstr "Mobilne aplikacje Binary i narzędzia stron trzecich"
 
 msgid "Binary opens Japan office"
 msgstr "Binary otwiera biuro w Japonii"
@@ -664,7 +664,7 @@ msgid "Binary option"
 msgstr "Opcja binarna"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "Nietrudno zrozumieć opcje binarne. Nazywane są „binarnymi”, ponieważ mogą dawać tylko dwa wyniki – wygraną lub przegraną. Jeśli Twoja prognoza się sprawdzi, otrzymasz wypłatę ustaloną przy zawieraniu zakładu. W przeciwnym razie tracisz tylko swoją początkową stawkę"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opcje binarne lub inne instrumenty pochodne"
@@ -691,7 +691,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Urząd ds. Usług Finansowych (Malta Financial Services Authority) na Malcie przyznał maltańskiej spółce zależnej firmy Binary, Binary Investments (Europe) Ltd., licencję dla podmiotów świadczących usługi inwestycyjne kategorii 3"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "Na platformie Binary.com dokonywanych jest średnio 20 transakcji na sekundę, 24 godz. na dobę"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -703,13 +703,13 @@ msgid "Binary.com Shop introduced"
 msgstr "Otwarcie sklepu Binary.com"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com ogłasza plany"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com stawia na innowacyjność i rozwój"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Firma Binary.com stworzyła wskaźniki zmienności, którymi można handlować 24 godz. na dobę. Możesz nimi handlować w przypadku wszystkich rodzajów kontraktów"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Dzięki dbaniu o najwyższe standardy etyczne i jakość oferowanych usług firma Binary.com zyskała reputację, której może jej pozazdrościć konkurencja"
@@ -727,7 +727,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com przedstawia"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "Firma Binary.com zostaje nagrodzona brytyjską nagrodą Online Personal Wealth Awards 2017, zdobywając tytuł „najlepszego brokera opcji binarnych” w oparciu o głosy oddane przez inwestorów z całego świata"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com to narzędzie internetowe i nie wymaga instalowania żadnego oprogramowania"
@@ -736,13 +736,13 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "Podczas 16. edycji corocznego wydarzenia MENA International Financial Conference and Exhibition w Dubaju firma Binary.com zostaje uznana za „Najlepszego brokera opcji binarnych”"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Właścicielem i firmą zarządzającą Binary.com jest grupa Binary Group Ltd. Jeśli chcesz uzyskać więcej informacji, odwiedź stronę poświęconą naszej historii"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com uruchamia konta Bitcoin (BTC) dla klientów spoza UE"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com uruchamia konta Bitcoin"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com uruchamia"
@@ -751,13 +751,13 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com oferuje pełną gamę metod wpłaty i wypłaty środków, w tym wypłatę za pomocą kart kredytowych i kart debetowych, poprzez przelewy bankowe oraz przy użyciu e-gotówki lub e-portfela"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Firma Binary.com oferuje konto z wirtualnymi pieniędzmi, aby umożliwić przećwiczenie handlowania opcjami binarnymi. Dlaczego nie"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com oferuje nowe sposoby handlowania"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Firma Binary.com proponuje cztery sposoby handlu określonym aktywem"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com otwiera biuro w centrum Kuala Lumpur w biurowcu QSentral, aby umożliwić dalszy rozwój swojego zespołu IT"
@@ -772,19 +772,19 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com zdobywa pierwszą nagrodę w kategorii „Operator finansowy roku” na prestiżowej ceremonii wręczenia nagród EGR Operator Awards w Londynie w 2015 r."
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Wskaźniki ciągłe Binary.com to Indeks zmienności 10, Indeks zmienności 25, Indeks zmienności 50, Indeks zmienności 75 i Indeks zmienności 100. Symulują sytuację na rynkach o stałej zmienności wynoszącej 10%, 25%, 50%, 75% i 100%"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Wskaźniki i akcje OTC Binary.com pochodzą z rynku pozagiełdowego i umożliwiają handel akcjami i wskaźnikami przy użyciu alternatywnych metod opartych na instrumentach dostępnych w obrocie pozagiełdowym"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Handlując wskaźnikami i akcjami OTC Binary.com masz możliwość korzystania z wykresów i wycen w czasie rzeczywistym. Ciesz się jeszcze bardziej ekscytującymi możliwościami dzięki naszym wskaźnikom i akcjom OTC dostępnym w czasie rzeczywistym"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Inteligentne rynki forex na Binary.com to inteligentne rynki, które mierzą wartość waluty w stosunku do koszyka głównych walut"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Wskaźniki zmienności Binary.com są oparte na zabezpieczonym kryptograficznie generatorze losowych liczb, za którego audyt odpowiada niezależna strona trzecia"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Systemy Binary.com przetwarzają obecnie ponad milion transakcji dziennie (z uwzględnieniem kont wirtualnych)"
@@ -808,7 +808,7 @@ msgid "Browser upgrade required"
 msgstr "Konieczna jest aktualizacja przeglądarki"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "Wskaźniki hossy i bessy rozpoczynają się codziennie o godz. 00:00 GMT, naśladując odpowiednio rynek w hossie i w bessie"
 
 msgid "Buy Price"
 msgstr "Cena zakupu"
@@ -883,16 +883,16 @@ msgid "Chart type"
 msgstr "Rodzaj wykresu"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "Wybieraj spośród pięciu rodzajów rynku i odpowiadających im aktywów"
 
 msgid "Choose password"
 msgstr "Wybierz hasło"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "Wybierz zakład typu \"osiągnie/nie osiągnie\", jeśli chcesz prognozować, czy rynek osiągnie czy nie osiągnie ceny docelowej w dowolnym momencie trwania kontraktu"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "Wybierz aktywa, którymi chcesz handlować, np. złoto, ropę, akcje czy pary walutowe. Wartość opcji binarnej jest uzależniona od ceny instrumentu bazowego. Jedną z zalet handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz aktywów, jedynie kontrakty, które określają, jak dane aktywa zachowują się na rynku"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Wybierz preferowanego pośrednika płatności"
@@ -910,13 +910,13 @@ msgid "Click to log in with your Binary.com account"
 msgstr "Kliknij, aby zalogować się przy użyciu konta na Binary.com"
 
 msgid "Client funds"
-msgstr ""
+msgstr "Środki klienta"
 
 msgid "Close"
 msgstr "Zamknij"
 
 msgid "Close All"
-msgstr ""
+msgstr "Zamknij wszystko"
 
 msgid "Closes"
 msgstr "Zamknięcie"
@@ -928,7 +928,7 @@ msgid "Commodities"
 msgstr "Towary"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "Towary – Główne towary, takie jak złoto i ropa"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Towary to zasoby będące rezultatem upraw lub zasoby wydobyte z ziemi, takie jak srebro, złoto, ropa naftowa. Na portalu Binary.com ich ceny podawane są w dolarach amerykańskich"
@@ -946,13 +946,13 @@ msgid "Comparisons"
 msgstr "Porównania"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "Konkurencyjne i przejrzyste ceny"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "System komputerowy i metoda spekulacji na rynkach finansowych"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "System komputerowy do handlowania umożliwiający spekulację na rynkach finansowych dostosowaną do Twoich potrzeb"
 
 msgid "Conditions"
 msgstr "Warunki"
@@ -973,7 +973,7 @@ msgid "Continue Trading"
 msgstr "Kontynuuj handlowanie"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "Wskaźniki ciągłe"
 
 msgid "Contract"
 msgstr "Kontrakt"
@@ -985,7 +985,7 @@ msgid "Contracts"
 msgstr "Kontrakty"
 
 msgid "Copier"
-msgstr ""
+msgstr "Kopiujący"
 
 msgid "Coppock Curve (CC)"
 msgstr "Krzywa CC (Coppock Curve)"
