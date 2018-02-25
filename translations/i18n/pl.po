@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-02-24 18:50-0500\n"
+"PO-Revision-Date: 2018-02-24 19:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1801,7 +1801,7 @@ msgid "Link"
 msgstr "Łącze"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Załaduj obszar roboczy"
 
 msgid "Load chart template"
 msgstr "Załaduj szablon wykresu"
@@ -1816,13 +1816,13 @@ msgid "Loading Asset Index"
 msgstr "Ładowanie indeksu aktywów"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Ładowanie Kopiowania zakłdaów"
 
 msgid "Loading Download/View Data"
 msgstr "Ładowanie danych pobierania/przeglądania"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "Ładowanie MAM"
 
 msgid "Loading Password dialog"
 msgstr "Ładowanie okna dialogowego wprowadzania hasła"
@@ -1948,13 +1948,13 @@ msgid "Matches"
 msgstr "Zgadza się"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "Zgadza się/Różni się – Przewidywanie, czy ostatnia cyfra będzie taka sama, czy nie"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Formacja Matching Low (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Maks. stawka zakładu"
 
 msgid "Maximum (MAX)"
 msgstr "Maksimum (MAX)"
@@ -1996,7 +1996,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Adaptacyjna średnia krocząca Mesa (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Min. stawka zakładu"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min.: 10 Maks.: 2000"
@@ -2116,7 +2116,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Wskaźnik NATR służy do znormalizowania wartości ATR poszczególnych instrumentów finansowych przy użyciu poniższego wzoru"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "Uwaga: Możesz mieć konto z tylko jedną walutą fiducjarną i jedno konto dla każdej kryptowaluty"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Uwaga: Wypłaty poprzez pośredników płatności są dostępne tylko w przypadku dokonania wpłaty poprzez pośrednika płatności"
@@ -2137,7 +2137,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
-msgstr ""
+msgstr "Akcje OTC – Kontrakty oparte na akcjach dużych spółek z rynku pozagiełdowego"
 
 msgid "Occupation"
 msgstr "Zawód"
@@ -2170,7 +2170,7 @@ msgid "One last step left"
 msgstr "Został ostatni krok"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "Handlowanie online może być uzależniające. Wypełnij poniższy formularz, aby ograniczyć swoją działalność na portalu lub wyślij podpisany list lub faks do naszego działu obsługi klienta. Po ustanowieniu limitów, możesz je tylko zwiększać. Limity zostaną usunięte lub zwiększone dopiero po 7 dniach, chyba że obowiązuje okres samodzielnego wyłączenia, który nie może zostać usunięty, ani zmieniony, jeśli został wcześniej potwierdzony. Aby znieść lub zwiększyć limity, proszę skontaktować się z"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "Zaledwie pięć lat od powstania zdobyliśmy tę ważną nagrodę za nasze usługi handlu online. Nagroda potwierdza, że BetOnMarkets.com to wiarygodny, szybki i bezpieczny portal zarówno dla początkujących, jak i profesjonalnych graczy. W tym okresie nasz portal obsłużył ponad 15 milionów zakładów"
@@ -2239,7 +2239,7 @@ msgid "Our fast organic growth is supplemented by the acquisition of the client 
 msgstr "Nasz szybki wzrost zostaje poprawiony przez nabycie bazy klientów BetsForTraders, jednego z naszych głównych konkurentów"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "Nasze ceny są zestawiane z cenami na rynku opcji międzybankowych. Otrzymasz sprawiedliwą i przejrzystą wycenę bez względu na swoją pozycję"
 
 msgid "Over"
 msgstr "Ponad"
@@ -2248,13 +2248,13 @@ msgid "Over 1 million registered accounts worldwide"
 msgstr "Ponad milion zarejestrowanych kont na całym świecie"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "Ponad 130 pracowników i podwykonawców na całym świecie"
 
 msgid "Over 3 years"
 msgstr "Ponad 3 lata"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr ""
+msgstr "Ponad/Poniżej – Przewidywanie, czy ostatnia cyfra będzie wyższa czy niższa niż dana wartość"
 
 msgid "Overlap Studies"
 msgstr "Analiza techniczna „Overlap Studies”"
@@ -2302,7 +2302,7 @@ msgid "Personal Details"
 msgstr "Dane osobowe"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "Nagroda Personal Wealth Award 2017"
 
 msgid "Phone"
 msgstr "Telefon"
@@ -2356,7 +2356,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Zainstaluj najnowszą wersję jednej z tych przeglądarek"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "Pamiętaj, że cena wskaźników i akcji OTC będzie różnić się od cen odpowiadającym im wskaźnikom i cenom na oficjalnych giełdach, gdyż są one dostępne w obrocie pozagiełdowym"
 
 msgid "Please provide your tax information"
 msgstr "Proszę podać informacje podatkowe"
@@ -2365,7 +2365,7 @@ msgid "Please select"
 msgstr "Wybierz"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "Zanim przejdziesz dalej, wybierz powód otwarcia konta"
 
 msgid "Please submit a valid verification token"
 msgstr "Proszę podać poprawny token weryfikujący"
@@ -2440,7 +2440,7 @@ msgid "Profit/Loss (points)"
 msgstr "Zysk/strata (punkty)"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "Chroń swoje zyski"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "Dostępność w języku angielskim, indonezyjskim, japońskim, chińskim, polskim, niemieckim, francuskim, hiszpańskim, portugalskim, włoskim, rosyjskim i tajskim"
@@ -2560,13 +2560,13 @@ msgid "Rise/Fall"
 msgstr "Wzrost/spadek"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "Wzrost/spadek – Prognozuj, czy rynek zyska czy straci w stosunku do obecnego poziomu"
 
 msgid "Rise/Fall trades"
 msgstr "Zakłady typu „wzrost/spadek”"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr ""
+msgstr "Wzrost/spadek  Prognozuj, czy rynek zyska czy straci w stosunku do obecnego poziomu"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
@@ -2605,10 +2605,10 @@ msgid "Save changes"
 msgstr "Zapisz zmiany"
 
 msgid "Saved"
-msgstr ""
+msgstr "Zapisane"
 
 msgid "Scalable"
-msgstr ""
+msgstr "Skalowalność"
 
 msgid "Second line of home address"
 msgstr "Druga część adresu zamieszkania"
@@ -2620,7 +2620,7 @@ msgid "Security"
 msgstr "Bezpieczeństwo"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "Bezpieczeństwo i prywatność"
 
 msgid "Security question"
 msgstr "Pytanie zabezpieczające"
@@ -2656,10 +2656,10 @@ msgid "Session duration limit, in minutes"
 msgstr "Limit czasu sesji, w minutach"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "Ustaw limity, aby określić swoją pozycję, która inicjuje Twoją wypłatę"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "Określ długość swojego zakładu od 10 sekund do 365 dni"
 
 msgid "Settles"
 msgstr "Rozliczenie"
@@ -2671,13 +2671,13 @@ msgid "Share chart"
 msgstr "Udostępnij wykres"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "Atrakcyjne, benchmarkowe ceny"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star – spadająca gwiazda (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "Krótki lub długi okres trwania"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Formacja świecowa przybierająca postać białych linii ułożonych blisko siebie to formacja potrójna. Formacja hossy: w trendzie wzrostowym po pierwszej świecy występuje kolejna świeca o tendencji wzrostowej, która otwiera się powyżej zamknięcia pierwszej świecy (luka górna), a następnie kolejna świeca wzrostowa, która otwiera się poniżej zamknięcia drugiej (luka dolna). Formacja bessy: W trendzie spadkowym po pierwszej świecy o tendencji spadkowej występuje świeca wzrostowa otwierająca się poniżej zamknięcia świecy pierwszej (luka dolna), po czym widzimy świecę wzrostową, która otwiera się poniżej zamknięcia drugiej świecy. Ta formacja wskazuje na kontynuację trendu spadkowego"
@@ -2686,13 +2686,13 @@ msgid "Simple Moving Average (SMA)"
 msgstr "Prosta średnia krocząca (SMA – Simple Moving Average)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "Prostota i intuicyjność"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Inteligentny forex"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "Inteligentne wskaźniki"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "Wygładzona średnia krocząca (SMMA – Smoothed Moving Average)"
@@ -2704,7 +2704,7 @@ msgid "Source of wealth"
 msgstr "Źródło majątku"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "Określ kwotę wypłaty, która stanowi Twój potencjalny zysk, jeśli przewidywanie się sprawdzi. Nasz system obliczy stawkę, która jest całkowitym kosztem zakupu kontraktu. Binary.com oferuje wypłaty w wysokości od 1$ do 50000$."
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -2764,13 +2764,13 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Pozostanie pomiędzy/ Przekroczy"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Zakłady typu „pozostanie pomiędzy/przekroczy”"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "Pozostanie pomiędzy/ Przekroczy  Prognozuj, czy cena rynkowa pozostanie w przedziale cen docelowych lub przekroczy ten przedział w dowolnym momencie w danym okresie trwania kontraktu"
 
 msgid "Stays in"
 msgstr "Pozostanie w"
@@ -2779,7 +2779,7 @@ msgid "Step 1: Define your position"
 msgstr "Krok 1: Określ swoją pozycję"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "Krok 2: Zobacz cenę kontraktu"
 
 msgid "Step 3: Make your trade"
 msgstr "Krok 3: Dokonaj transakcji"
@@ -2884,7 +2884,7 @@ msgid "The"
 msgstr " "
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks AUD to indeks ważony mierzący wartość dolara australijskiego w stosunku do koszyka 5 światowych walut (USD, EUR, GBP, JPY, CAD), z których każda ma wagę 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "Oscylator APO (Absolute Price Oscillator) opiera się na wartościach bezwzględnych pomiędzy dwoma średnimi kroczącymi o różnej długości: średniej kroczącej szybkiej i średniej kroczącej wolnej"
@@ -2932,7 +2932,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "Ważka doji (Dragonfly Doji) tworzy się, gdy cena otwarcia, cena wysoka i cena zamknięcia są zbliżone lub takie same (sytuacja, gdy cena otwarcia, wysoka i zamknięcia są jednakowe jest dość rzadka). Najważniejszą cechą charakterystyczną tej świecy jest długi dolny cień"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks EUR to indeks ważony mierzący wartość euro w stosunku do koszyka 5 światowych walut (USD, AUD, GBP, JPY, CAD), z których każda ma wagę 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "Wykładnicza średnia krocząca (EMA) przedstawia średnią cen, lecz przykłada większą wagę do cen niedawnych. To, jaką wagę przydziela się ostatnim cenom zależy od wybranego okresu średniej kroczącej. Im krótszy jest okres średniej EMA, tym większą wagę mają bardziej aktualne ceny"
@@ -2941,7 +2941,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr "Oscylator stochastyczny szybki jest oparty na oryginalnych formułach Georga Lane'a dla %K i %D. Wersja szybka oscylatora, czyli %K, jest dość zmienna. %D jest 3-dniową prostą średnią kroczącą %K"
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks GBP to indeks ważony mierzący wartość funta brytyjskiego w stosunku do koszyka 5 światowych walut (USD, EUR, AUD, JPY, CAD), z których każda ma wagę 20%"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "Nagrobek doji (Gravestone Doji) tworzy się, gdy cena otwarcia, cena niska i cena zamknięcia są zbliżone lub takie same (sytuacja, gdy cena otwarcia, niska i zamknięcia są jednakowe jest dość rzadka). Najważniejszą cechą charakterystyczną tej świecy jest długi górny cień"
@@ -3016,10 +3016,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr "Funkcja typowej ceny mierzy średnią cen danego dnia: wysokiej, niskiej i zamknięcia, korzystając z prostej, pojedynczej linii. Przeciętna cena zapewnia uproszczony widok handlowych cen danego dnia oraz, jeśli występują, zestawienie z innymi funkcjami dostosowania ceny. Funkcja typowej ceny jest przydatna do wygładzania niektórych nieścisłości ceny zamknięcia, gdyż skupia informacje z całego dnia handlowego, nie tylko z końca dnia. Wskaźnik typowej ceny oblicza się, sumując cenę wysoką, niską i cenę zamknięcia i dzieląc ją przez trzy"
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "Indeks USD to indeks ważony mierzący wartość dolara amerykańskiego w stosunku do koszyka 5 światowych walut (EUR, GBP, JPY, CAD, AUD), z których każda ma wagę 20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "Indeks zmienności 100 jest dwa razy bardziej zmienny niż Indeks zmienności 50 i cztery razy bardziej zmienny niż Indeks zmienności 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Wskaźnik ważonej ceny zamknięcia jest po prostu średnią cen poszczególnych dni. Zawiera informacje z całego dnia handlowego, dlatego stosuje się go w celu wygładzenia niektórych nieścisłości wykresu cen zamknięcia"
@@ -3058,10 +3058,10 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Usługi zawierania transakcji finansowych oferowane na niniejszym portalu są odpowiednie tylko dla klientów, którzy są w stanie ponieść stratę wszystkich zainwestowanych pieniędzy i którzy rozumieją zagrożenia związane z nabywaniem kontraktów finansowych i mają doświadczenie w tym zakresie. Transakcje finansowe niosą ze sobą wysokie ryzyko. Jeśli zakupiony kontrakt zakończy się bez wartości, stracisz całą zainwestowaną sumę, na którą składać się będzie premia z kontraktu"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "Pierwszym krokiem jest otwarcie konta. Możesz"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "Najpierw należy wybrać aktywa, którymi chcesz handlować, np. złoto, ropę, akcje czy kursy wymiany walut (wartość opcji binarnej jest pochodną instrumentu bazowego). Wielką zaletą handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz konkretnych aktywów"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Pierwsze trzy dni formacji dna drabiny o tendencji wzrostowej przybierają formę silnych czarnych świec z niższymi kolejnymi cenami otwarcia i zamknięcia. Czwarty dzień to czarna świeca o krótkim korpusie z wyższymi cenami otwarcia i cenami handlowymi i długim górnym cieniem, która następnie zamyka się nisko. Piąty dzień to silna biała świeca występująca po luce"
@@ -3115,16 +3115,16 @@ msgid "The volatility indices simulate various real market situations and provid
 msgstr "Wskaźniki zmienności symulują różne sytuacje rynkowe i zapewniają doskonałe warunki do przećwiczenia strategii handlowych w różnych warunkach rynkowych. Indeksy są zależne od zmienności rynku i pomagają użytkownikom wypróbować różne scenariusze: wysokiej i niskiej zmienności, trendów wzrostowych i spadkowych"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "Możesz wybrać spośród czterech głównych rodzajów kontraktów"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "Istnieją dwa rodzaje zakładów typu „w/poza”"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "Istnieją dwa rodzaje zakładów typu „góra/dół”"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "Są dwa sposoby handlowania zakładami azjatyckimi"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Są to zakłady, w których gracz prognozuje, czy cena rynkowa będzie wyższa czy niższa od wybranej ceny docelowej"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "Token"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Zarządzanie tokenami"
 
 msgid "Token management"
 msgstr "Zarządzanie tokenami"
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "Pozwolenia dla tokenu"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "Tokeny to specjalne kody dostępu do"
 
 msgid "Tooltip background"
 msgstr "Tło tooltipa"
