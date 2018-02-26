@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-02-25 20:10-0500\n"
+"PO-Revision-Date: 2018-02-25 20:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "令牌权限"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "令牌是访问的特殊代码"
 
 msgid "Tooltip background"
 msgstr "工具提示背景"
@@ -3448,7 +3448,7 @@ msgid "Variance (VAR)"
 msgstr "差异 (VAR)"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "随意设置各种可定制功能如资产、图表和其他资源的加载和安排"
 
 msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
@@ -3619,10 +3619,10 @@ msgid "You will be automatically logged out after such time"
 msgstr "在该时间后您将自动退出登录"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "您想允许其他交易者复制您的交易"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "您想要复制其他交易者的交易"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
@@ -3682,7 +3682,7 @@ msgid "contact support"
 msgstr "联系客服部"
 
 msgid "create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "创建令牌并与复制者共享"
 
 msgid "customer support"
 msgstr "客服部"
