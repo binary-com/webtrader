@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-02-25 20:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -655,7 +655,7 @@ msgid "Binary granted Investment Services license"
 msgstr "Binary 被授予投資服務執照"
 
 msgid "Binary mobile applications and third party tools"
-msgstr ""
+msgstr "Binary移動應用程式和第三方工具"
 
 msgid "Binary opens Japan office"
 msgstr "Binary 開設日本辦公室"
@@ -1459,7 +1459,7 @@ msgid "Get your price"
 msgstr "獲取報價"
 
 msgid "Go to"
-msgstr ""
+msgstr "前往"
 
 msgid "Goes out"
 msgstr "範圍外"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "權杖"
 
 msgid "Token Management"
-msgstr ""
+msgstr "權杖管理"
 
 msgid "Token management"
 msgstr "權杖管理"
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "權杖權限"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "權杖是存取的特殊代碼"
 
 msgid "Tooltip background"
 msgstr "工具提示背景"
@@ -3448,7 +3448,7 @@ msgid "Variance (VAR)"
 msgstr "差異 (VAR)"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "隨意設定各種自訂功能如資產、圖表和其他資源的加載和安排"
 
 msgid "Verification code has been sent to your email"
 msgstr "驗證代碼已發送到您的郵箱"
@@ -3619,10 +3619,10 @@ msgid "You will be automatically logged out after such time"
 msgstr "在該時間後您將自動退出登入"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "您想允許其他交易者複製您的交易"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "您想複製其他交易者的交易"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
@@ -3682,7 +3682,7 @@ msgid "contact support"
 msgstr "聯繫客服部"
 
 msgid "create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "建立權杖並與複製者共用"
 
 msgid "customer support"
 msgstr "客服部"
