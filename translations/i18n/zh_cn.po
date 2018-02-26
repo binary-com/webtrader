@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-02-25 20:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -655,7 +655,7 @@ msgid "Binary granted Investment Services license"
 msgstr "Binary 被授予投资服务牌照"
 
 msgid "Binary mobile applications and third party tools"
-msgstr ""
+msgstr "Binary移动应用程序和第三方工具"
 
 msgid "Binary opens Japan office"
 msgstr "Binary 开设日本办公室"
@@ -1459,7 +1459,7 @@ msgid "Get your price"
 msgstr "获取报价"
 
 msgid "Go to"
-msgstr ""
+msgstr "前往"
 
 msgid "Goes out"
 msgstr "范围外"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "令牌"
 
 msgid "Token Management"
-msgstr ""
+msgstr "令牌管理"
 
 msgid "Token management"
 msgstr "令牌管理"
