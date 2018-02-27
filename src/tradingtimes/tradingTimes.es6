@@ -41,9 +41,9 @@ const processData = (markets) => {
    markets
     .filter(eMarket => {
       const loginId = (local_storage.get('authorize') || {}).loginid || '';
-      return (/MF/gi.test(loginId) && eMarket.name === 'Forex')
+      return (/MF/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
         || (/MLT/gi.test(loginId) && eMarket.name === 'Volatility Indices')
-        || (/MX/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
+        || (/MX/gi.test(loginId) && eMarket.name === 'Volatility Indices')
         || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
     })
     .forEach((market) => {
