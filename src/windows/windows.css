@@ -1,9 +1,4 @@
-﻿.span-in-dialog-header {
-    margin: 1px 5px 0;
-    float:left;
-}
-
-.ui-dialog-titlebar {
+﻿.ui-dialog-titlebar {
     height:20px;
     overflow: hidden;
     direction: ltr; /* .ltr-direction */
@@ -92,11 +87,18 @@ img.reload {
     right: 3px;
 }
 .ui-datepicker-trigger.ui-button {
-    margin-top: -20px;
+    margin-top: -30px;
+    margin-left: -10px;
     position: relative;
     border: none;
     background: none;
     box-shadow: none;
     font-weight: normal;
     color: #FFFFFF;
+}
+
+.windows-dateInput {
+  width: initial !important;
+  position: relative;
+  top: -3px;
 }

@@ -7,9 +7,13 @@ import liveapi from 'websockets/binary_websockets';
 import menu from 'navigation/menu';
 import 'datatables';
 import 'jquery-growl';
+import _ from 'lodash';
+import moment from 'moment';
 
 let table = null;
 let tradingWin = null;
+let select = null;
+let sub_select = null;
 
 /* data: result of trading_times api */
 const processData = (markets) => {
@@ -34,12 +38,20 @@ const processData = (markets) => {
    /* extract market and submarket names */
    const market_names = [];
    const submarket_names = { };
-   markets.forEach((market) => {
+   markets
+    .filter(eMarket => {
+      const loginId = (local_storage.get('authorize') || {}).loginid || '';
+      return (/MF/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
+        || (/MLT/gi.test(loginId) && eMarket.name === 'Volatility Indices')
+        || (/MX/gi.test(loginId) && eMarket.name === 'Volatility Indices')
+        || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
+    })
+    .forEach((market) => {
       market_names.push(market.display_name);
       submarket_names[market.display_name] = [];
       market.submarkets.forEach(
-         (submarket) => submarket_names[market.display_name].push(submarket.display_name)
-      )
+        (submarket) => submarket_names[market.display_name].push(submarket.display_name)
+     )
    });
 
    /* get the rows for this particular marketname and sumbarket_name */
@@ -74,7 +86,7 @@ export const init = ($menuLink) => {
          tradingWin = windows.createBlankWindow($('<div/>'), {
             title: 'Trading Times'.i18n(),
             dialogClass: 'tradingTimes',
-            width: 700 ,
+            width: 800 ,
             height: 400
          });
          tradingWin.track({
@@ -133,50 +145,65 @@ const initTradingWin = ($html) => {
 
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
       const refresh = (data) => {
-         data = menu.extractChartableMarkets(data);
-         const result = processData(data);
 
-         if (market_names == null) {
-            const select = $('<select />');
-            select.appendTo(subheader);
-            market_names = windows.makeSelectmenu(select, {
-               list: result.market_names,
-               inx: 0,
-               changed: (val) => {
-                  submarket_names.update_list(result.submarket_names[val]);
-                  updateTable(result, market_names.val(), submarket_names.val());
-               }
-            });
-         }
+        data = menu.extractFilteredMarkets(data);
 
-         if (submarket_names == null) {
-            const sub_select = $('<select />');
-            sub_select.appendTo(subheader);
-            submarket_names = windows.makeSelectmenu(sub_select, {
-               list: result.submarket_names[market_names.val()],
-               inx: 0,
-               changed: (val) => updateTable(result, market_names.val(), submarket_names.val())
-            });
-         }
+        const result = processData(data);
+        console.log(result, data);
 
-         updateTable(result, market_names.val(), submarket_names.val());
-         processing_msg.hide();
+          if (market_names == null) {
+              select = $('<select />');
+              select.appendTo(subheader);
+              market_names = windows.makeSelectmenu(select, {
+                list: result.market_names,
+                inx: 0,
+                changed: (val) => {
+                    submarket_names.update_list(result.submarket_names[val]);
+                    updateTable(result, market_names.val(), submarket_names.val());
+                }
+              });
+          } else {
+            select.update_list(result.market_names);
+          }
+
+          if (submarket_names == null) {
+              sub_select = $('<select />');
+              sub_select.appendTo(subheader);
+              submarket_names = windows.makeSelectmenu(sub_select, {
+                list: result.submarket_names[market_names.val()],
+                inx: 0,
+                changed: (val) => updateTable(result, market_names.val(), submarket_names.val())
+              });
+          } else {
+            sub_select.update_list(result.submarket_names[market_names.val()]);
+          }
+
+          updateTable(result, market_names.val(), submarket_names.val());
+          processing_msg.hide();
+         
       };
 
-      liveapi.cached.send({ trading_times: yyyy_mm_dd })
-         .then(refresh)
-         .catch((error) => {
-            $.growl.error({ message: error.message });
-            console.warn(error);
-            refresh({});
-         });
+      const getCachedData = () => liveapi.cached.send({ trading_times: yyyy_mm_dd })
+      .then(result => refresh(result))
+      .catch((error) => {
+        $.growl.error({ message: error.message });
+        refresh({});
+      });
+
+      getCachedData();
+      require(['websockets/binary_websockets'], (liveapi) => {
+          liveapi.events.on('login', getCachedData);
+          liveapi.events.on('logout', getCachedData);
+       });
    }
 
-   refreshTable(new Date().toISOString().slice(0, 10));
+   refreshTable(moment.utc().format('YYYY-MM-DD'));
+   const maxDate = moment.utc().add(1, 'years').toDate();
    tradingWin.addDateToHeader({
       title: 'Date: ',
-      date: new Date(),
-      changed: refreshTable
+      date: moment.utc().toDate(),
+      changed: refreshTable,
+      maxDate,
    });
 }
 

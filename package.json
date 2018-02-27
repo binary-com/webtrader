@@ -1,11 +1,10 @@
 {
   "name": "Webtrader",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">=6.0",
-    "npm": ">=3.0"
+    "node": ">=9.0"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -101,7 +100,7 @@
     "rivets": "0.8.1",
     "text": "requirejs/text",
     "vanderlee-colorpicker": "^1.2.13",
-    "webtrader-charts": "0.4.11"
+    "webtrader-charts": "^0.4.12"
   },
   "contributors": [
     {

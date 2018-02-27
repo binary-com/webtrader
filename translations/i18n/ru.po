@@ -10,16 +10,10 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-
-msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr "\"Азиатские–Падение\" – Вы выигрываете, когда последний тик окажется ниже, чем общее среднее значение тиков на протяжении контракта"
-
-msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
-msgstr "\"Азиатские – Повышение\" – Вы выигрываете, когда последний тик оказывается выше общего среднего значения тиков на протяжении контракта"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr "Награда “Лучшая компания в области коммуникации с клиентами“ от Investors Chronicle"
@@ -36,14 +30,8 @@ msgstr "Награда “Лучший предоставитель финанс
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr "Награда \"Лучшая компания по опционам с фиксированным коэффициентом выигрыша 2012\" от Global Banking and Finance Review"
 
-msgid "'Differs' - You win when the last digit of the last tick does not match your prediction"
-msgstr "\"Отличается\" – Вы выигрываете, если последняя десятичная последнего тика не совпадёт с Вашим прогнозом"
-
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "Награда \"Оператор года по финансовому беттингу\" от eGaming Review"
-
-msgid "'Matches' - You win when the last digit of the last tick matches your prediction"
-msgstr "\"Совпадет\" – Вы выигрываете, если последняя десятичная последнего тика совпадает с Вашим прогнозом"
 
 msgid "'contract period'"
 msgstr "\"период контракта\""
@@ -60,59 +48,68 @@ msgstr "(если длительность составляет менее од�
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr "), предоставляющий круглосуточный сервис финансовых ставок на нескольких индексах. Бизнес быстро растёт, и вскоре сайт становится лидером в индустрии финансовых ставок с фиксированным коэффициентом выигрыша"
 
-msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives markets"
-msgstr "– Binary.com ежедневно сопоставляет свои цены с данными рынка межбанковских производных"
-
-msgid "- Binary.com ensures your personal data and transactions are always secure"
-msgstr "– Binary.com гарантирует, что информация о Ваших данных и контрактах всегда будет надёжно защищена"
+msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
+msgstr ""
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com не является партнёром ни одного из вышеперечисленных платёжных агентов. Каждый платёжный агент действует в качестве независимого поставщика услуг и не получает поощрения, гарантий или иного одобрения от Binary.com. КЛИЕНТЫ СОТРУДНИЧАЮТ С ПЛАТЁЖНЫМИ АГЕНТАМИ НА СВОЙ СТРАХ И РИСК. Клиентам рекомендуется проверять рекомендации платёжных агентов перед отправкой им денег. Ни при каких обстоятельствах Binary.com не будет нести ответственности за транзакции, осуществляемые между клиентами и платёжными агентами"
 
-msgid "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr "– Binary.com – признанный новатор в данной индустрии, обладающий запатентованной ценовой технологией"
+msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
+msgstr ""
 
-msgid "- Binary.com offers many payment methods, such as credit/debit cards, bank wires, e-cash and e-wallets"
-msgstr "– Binary.com предлагает много способов оплаты, включая кредитные/дебетовые карты, банковские переводы, электронные деньги и кошельки"
+msgid "- Choose timeframes from 10 seconds to 365 days"
+msgstr ""
 
-msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
-msgstr "– Binary.com предоставляет котировку для контракта и встречного контракта, чтобы Вы всегда получали точные и прозрачные цены"
+msgid "- Deposit as little as USD 5 to start trading"
+msgstr ""
 
-msgid "- binaries are licensed as a betting activity in the UK, so your winnings are tax-free"
-msgstr "– торговля бинарными опционами лицензируется в Великобритании в качестве игорной деятельности, поэтому Ваши выигрыши не облагаются налогами"
+msgid "- Earn the same proportional return on stakes of all values"
+msgstr ""
 
-msgid "- choose intraday trades from 1 minute to 24 hours"
-msgstr "– выберите внутридневные контракты продолжительностью от 1 минуты до 24 часов"
+msgid "- Enjoy a trading platform that s easy to navigate and use"
+msgstr ""
 
-msgid "- choose the falls trade, lower trade, one-touch trade with a low barrier, or no-touch trade with a high barrier"
-msgstr "– выберите один из следующих типов контрактов: Падение, Ниже, контракты с одним касанием нижнего барьера или без касания верхнего барьера"
+msgid "- Know how much you will win or lose before you purchase the contract"
+msgstr ""
 
-msgid "- choose the no-touch trade, the stays-between trade, or the ends-between trade"
-msgstr "– выберите контракт Нет касания, Останется внутри, или Закончится внутри"
+msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
+msgstr ""
 
-msgid "- choose the one-touch trade, the goes-outside trade, or the ends outside trade"
-msgstr "– выберите контракты Касание, Выйдет за пределы или Закончится вне"
+msgid "- Predict the market ending higher or lower than a price target"
+msgstr ""
 
-msgid "- choose the rise trade, higher trade, one-touch trade with a high barrier, or no-touch trade with a low barrier"
-msgstr "– выберите контракты Повышение, Выше, Касание с верхним барьером или Нет касания с нижним барьером"
+msgid "- Predict the market rising or falling from its current level"
+msgstr ""
 
-msgid "- choose timeframes from 10 seconds to 365 days"
-msgstr "– выбирайте любую продолжительность контрактов: от 10 секунд до 365 дней"
+msgid "- Predict the market staying between or going outside two price targets"
+msgstr ""
 
-msgid "- choose trades with durations of up to 365 days"
-msgstr "– выберите контракты сроком действия до 365 дней"
+msgid "- Predict the market touching or not touching a price target"
+msgstr ""
 
-msgid "- choose trades with high returns and a low probability to win, or with low returns and a high probability to win"
-msgstr "– выбирайте контракты с высокой прибылью и низкой вероятностью выигрыша, а также с низкой прибылью и высокой вероятностью выигрыша"
+msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
+msgstr ""
+
+msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
+msgstr ""
+
+msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
+msgstr ""
+
+msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
+msgstr ""
+
+msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
+msgstr ""
+
+msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
+msgstr ""
+
+msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
+msgstr ""
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "– валютными парами, индексами и сырьевыми материалами"
-
-msgid "- customize your trades to meet your needs"
-msgstr "– выбирайте параметры контрактов согласно своим нуждам"
-
-msgid "- dip a toe in the water with $2 or go all out for $50,000"
-msgstr "– попробуйте свои силы с маленького выигрыша $2 или откройте крупную сделку с потенциальной прибылью в $50 000"
 
 msgid "- from $1 to $50,000"
 msgstr "– от $1 до $50 000"
@@ -120,77 +117,8 @@ msgstr "– от $1 до $50 000"
 msgid "- from 10 seconds to 365 days"
 msgstr "– от 10 секунд до 365 дней"
 
-msgid "- get pricing that is normally reserved for big institutional players"
-msgstr "– получите цены, которые зачастую доступны лишь крупным инвесторам"
-
-msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions"
-msgstr "– никакого \"проскальзывания\", приостановки контрактов, никаких запросов на повышение маржевых требований, скрытых взносов и комиссий"
-
-msgid "- open an account in minutes"
-msgstr "– откройте счет в считанные минуты"
-
-msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr "– откройте, пополните или выведите средства со счета за считанные минуты, в любое время суток"
-
-msgid "- predict if the market will end higher or lower than a price target"
-msgstr "– сделайте прогноз, окончится ли контракт выше или ниже заданного барьера"
-
-msgid "- predict if the market will rise or fall from its current level"
-msgstr "– сделайте прогноз, упадет или поднимется цена относительно текущего уровня"
-
-msgid "- predict if the market will stay inside two price targets, or end between or outside them"
-msgstr "– сделайте прогноз, останется ли рынок внутри двух ценовых барьеров или выйдет за них"
-
-msgid "- predict if the market will touch or not touch a price target"
-msgstr "– сделайте прогноз, коснется ли рынок выбранного ценового барьера"
-
-msgid "- sell your long-term trades at market prices before they expire"
-msgstr "– досрочно продайте свои долгосрочные контракты по рыночной цене"
-
-msgid "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr "– устанавливайте контракты, руководствуясь своим чутьем или применяйте технический и фундаментальный анализа рынка"
-
-msgid "- start trading with as little as $5"
-msgstr "– начните торговлю с минимальной инвестиции в размере всего лишь $5"
-
-msgid "- trade 24/7, even on weekends"
-msgstr "– торгуйте 24/7, даже на выходных"
-
-msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr "– круглосуточно торгуйте Индексами волатильности, собственной разработкой Binary.com"
-
-msgid "- trade Binary.com's proprietary volatility indices"
-msgstr "– торгуйте Индексами волатильности – уникальной разработкой Binary.com"
-
-msgid "- trade all major FX pairs"
-msgstr "– торгуйте всеми основными валютными парами"
-
-msgid "- trade all major FX pairs, around the clock"
-msgstr "– круглосуточно торгуйте всеми основными валюными парами"
-
-msgid "- trade all major worldwide stock indices"
-msgstr "– торгуйте крупнейшими мировыми биржевыми индексами"
-
-msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
-msgstr "– торгуйте валютами, индексами и сырьевыми товарами в условиях снижающихся или растущих, волатильных или неподвижных рынков"
-
-msgid "- trade major commodities such as gold and oil"
-msgstr "– торгуйте золотом и нефтью – самыми популярными сырьевыми товарами"
-
-msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr "– вверх/вниз, касание/нет касания, внутри/вне"
-
-msgid "- we challenge you to find better returns on any competing website"
-msgstr "– Вы едва ли сможете найти более выгодное предложение на сайтах конкурентов"
-
-msgid "- win the same proportional return on stakes of all values"
-msgstr "– получайте прибыль, пропорциональную Вашей инвестиции"
-
-msgid "- you know from the start what you will win or lose"
-msgstr "– Вы всегда знаете сумму возможной прибыли или потерь ещё до начала контракта"
-
-msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees or commissions"
-msgstr "– Вы никогда не столкнётесь с запросом на увеличение маржи, риском гэпов, проскальзыванием, скрытыми взносами или комиссиями"
+msgid "- up/down, touch/no-touch, stays between/goes outside"
+msgstr ""
 
 msgid "0-1 year"
 msgstr "0-1 года"
@@ -218,6 +146,12 @@ msgstr "1 миллион транзакций в день"
 
 msgid "1-2 years"
 msgstr "1-2 года"
+
+msgid "1. Choose the Underlying"
+msgstr ""
+
+msgid "1. Underlying market"
+msgstr ""
 
 msgid "10"
 msgstr "10"
@@ -261,8 +195,11 @@ msgstr "2 Часа"
 msgid "2 Minutes"
 msgstr "2 Минуты"
 
-msgid "2-way pricing"
-msgstr "Оцените движение рынка в двух направлениях"
+msgid "2. Choose the Duration of the Trade"
+msgstr ""
+
+msgid "2. Trade type"
+msgstr ""
 
 msgid "2000"
 msgstr "2000"
@@ -297,6 +234,9 @@ msgstr "2015"
 msgid "2016"
 msgstr "2016"
 
+msgid "2017"
+msgstr ""
+
 msgid "2h"
 msgstr "2ч"
 
@@ -308,6 +248,12 @@ msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 Минуты"
+
+msgid "3. Choose how you want to Trade the Market"
+msgstr ""
+
+msgid "3. Duration"
+msgstr ""
 
 msgid "30"
 msgstr "30"
@@ -333,6 +279,12 @@ msgstr "4"
 msgid "4 Hours"
 msgstr "4 часа"
 
+msgid "4. Barrier(s)"
+msgstr ""
+
+msgid "4. Choose your Stake and Potential Return"
+msgstr ""
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 или более транзакций за последние 12 мес"
 
@@ -344,6 +296,9 @@ msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 минут"
+
+msgid "5. Payout"
+msgstr ""
 
 msgid "5m"
 msgstr "5м"
@@ -501,11 +456,14 @@ msgstr "С любой длительностью"
 msgid "All market conditions"
 msgstr "При любых условиях рынка"
 
+msgid "All market conditions and durations"
+msgstr ""
+
 msgid "All markets"
 msgstr "На всех рынках"
 
-msgid "All markets, all conditions"
-msgstr "На любых рынках, при любых условиях"
+msgid "All markets and conditions"
+msgstr ""
 
 msgid "All payouts"
 msgstr "С выплатами по контрактам"
@@ -597,6 +555,9 @@ msgstr "Авг"
 msgid "August"
 msgstr "Август"
 
+msgid "Available 24/7"
+msgstr ""
+
 msgid "Available Currencies"
 msgstr "Доступные валюты"
 
@@ -619,6 +580,9 @@ msgid "Avg. Loss"
 msgstr ""
 
 msgid "Avg. Profit"
+msgstr ""
+
+msgid "Award-winning online trading platform"
 msgstr ""
 
 msgid "Awesome Oscillator (AO)"
@@ -651,12 +615,6 @@ msgstr "Медвежья фигура: это фигура окончания т
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Захват за пояс (CDLBELTHOLD)"
 
-msgid "Benchmarked prices"
-msgstr "Стандартизированные цены"
-
-msgid "Benefits of binary trading"
-msgstr "Преимущества торговли бинарными опционами"
-
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr "Награда “Лучший предоставитель финансового трейдинга с фиксированным коэффициентом выигрыша“ от Shares Magazine UK"
 
@@ -678,6 +636,9 @@ msgstr "BetOnMarkets.com достигает оборота в 1 миллиард
 msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
+msgid "Betting system and method"
+msgstr ""
+
 msgid "Bill Williams"
 msgstr "Билл Вилльямс"
 
@@ -687,17 +648,23 @@ msgstr "Запущен робот Binary Bot"
 msgid "Binary KK granted Japan license"
 msgstr "Binary KK получил японскую лицензию"
 
-msgid "Binary Trading is simple to learn and to execute"
-msgstr "Торговля бинарными опционами проста в теории и на практике"
+msgid "Binary Options Basics"
+msgstr ""
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary получает лицензию на оказание инвестиционных услуг"
+
+msgid "Binary mobile applications and third party tools"
+msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "Binary открыл офис в Японии"
 
 msgid "Binary option"
 msgstr "Бинарный опцион"
+
+msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
+msgstr ""
 
 msgid "Binary options or other financial derivatives"
 msgstr "Бинарные опционы и другие деривативы"
@@ -714,9 +681,6 @@ msgstr "Торговля на бинарных опционах характер
 msgid "Binary trading is ideal for both individuals and market professionals"
 msgstr "Торговля бинарными опционами идеально подходит как частным лицам, так и профессионалам рынка"
 
-msgid "Binary trading is very simple"
-msgstr "Торговля бинарными опционами очень проста"
-
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
 msgstr "Binary KK – японский филиал Binary, лицензированный Управлением по финансовому регулированию Японии (KLFB) в качестве Организации в сфере финансовых инструментов 1-го типа"
 
@@ -726,8 +690,8 @@ msgstr "Binary KK – дочерняя компания Binary в Японии �
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
 msgstr "Мальтийская дочерняя компания Binary под названием Binary Investments (Europe) Ltd. получает лицензию на инвестиционные услуги категории 3 от Мальтийского управления финансовых услуг (Malta Financial Services Authority)"
 
-msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
-msgstr "Платформа Binary работает 24/7 и в среднем исполняет 15 контрактов в секунду"
+msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
+msgstr ""
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -738,8 +702,14 @@ msgstr "Binary.com: Webtrader"
 msgid "Binary.com Shop introduced"
 msgstr "Начал работу Магазин Binary.com"
 
+msgid "Binary.com announces plans for an"
+msgstr ""
+
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com продолжает расти и развиваться"
+
+msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
+msgstr ""
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com заслужил завидную репутацию за стремление к высоким этическим стандартам и качество предоставляемого нами торгового опыта"
@@ -756,20 +726,23 @@ msgstr "Число пользователей Binary.com достигло 1 ми
 msgid "Binary.com introduces an"
 msgstr "Binary.com представляет"
 
+msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
+msgstr ""
+
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com функционирует полностью онлайн и не требует специального программного обеспечения"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
 msgstr "Binary.com завоевал награду в категории “Лучший брокер бинарных опционов” на 16-й Международной финансовой конференции и выставке стран MENA, которая состоялась в Дубае"
 
-msgid "Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr "Binary.com – одно из первых и самых авторитетных имён в онлайн торговле бинарными опционами"
+msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
+msgstr ""
 
-msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. For more information, visit our history page"
-msgstr "Binary.com принадлежит и находится под управлением группы компаний Binary Ltd. Для получения дополнительной информации, пожалуйста, посетите страницу нашей истории"
+msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
+msgstr ""
 
-msgid "Binary.com is tailored to traders of all levels"
-msgstr "Binary.com предназначен для трейдеров любого уровня"
+msgid "Binary.com launches Bitcoin accounts"
+msgstr ""
 
 msgid "Binary.com launches an"
 msgstr "Binary.com запускает"
@@ -777,17 +750,17 @@ msgstr "Binary.com запускает"
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
 msgstr "Binary.com предлагает широкий выбор способов пополнения и вывода средств, от кредитных карт и банковского перевода до электронных кошельков и валют"
 
-msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
-msgstr "Binary.com предлагает демо-счета, на которых Вы можете научиться торговать бинарными опционами. Откройте бесплатный демо-счет с 10 000 виртуальных денег и научитесь работе на рынках"
+msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
+msgstr ""
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com предлагает новые способы торговли"
 
+msgid "Binary.com offers you four ways to trade a particular asset"
+msgstr ""
+
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com открывает офис в здании QSentral, в самом центре Куала-Лумпура, чтобы продолжить расширять свою команду разработчиков IT"
-
-msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
-msgstr "Binary.com оценивает все основные активы по курсу межбанковского рынка, чтобы всегда предоставлять Вам наиболее выгодные цены для контрактов"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
 msgstr "Binary.com достигает оборота в 2 миллиарда долларов, начав работу в 1999 г."
@@ -797,6 +770,21 @@ msgstr "Binary.com достигает 1 миллиона пользовател�
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
 msgstr "Binary.com завоевал первое место в категории Оператор по финансовому беттингу (Financial Betting Operator) на престижной церемонии 2015 EGR Operator Awards, которая состоялась в Лондоне"
+
+msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
+msgstr ""
+
+msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
+msgstr ""
+
+msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
+msgstr ""
+
+msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
+msgstr ""
+
+msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
+msgstr ""
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Системы Binary.com обрабатывают более 1 миллиона транзакций в день (включая демо-счета)"
@@ -819,8 +807,8 @@ msgstr "Разрыв (CDLBREAKAWAY)"
 msgid "Browser upgrade required"
 msgstr "Необходимо обновление браузера"
 
-msgid "But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr "Но не нужно ждать окончания действия контракта. Вы можете в любое время продать долгосрочные контракты и получить прибыль от изменений рыночных условий"
+msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
+msgstr ""
 
 msgid "Buy Price"
 msgstr "Цена покупки"
@@ -894,59 +882,17 @@ msgstr "Шаблон графика"
 msgid "Chart type"
 msgstr "Вид графика"
 
-msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
-msgstr "Выберите Азиатские – Повышение/Падение и предскажите, будет ли цена актива выше или ниже средней рыночной цены на момент окончания контракта"
-
-msgid "Choose Ends In/Out to profit from the market stopping inside or outside two price targets at the end of the time period"
-msgstr "Выберите Закончится Внутри/Вне и получите прибыль, предсказав, окажется ли цена внутри или вне двух целевых уровней на момент окончания действия контракта"
-
-msgid "Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target"
-msgstr "Выберите Выше/Ниже, если Вы хотите получить прибыль, предсказав, окончится ли контракт выше или ниже заданной цены"
-
-msgid "Choose Rise/Fall when you want to profit from the market rising or falling from its current level"
-msgstr "Выберите Повышение/Падение и предскажите, вырастет или снизится цена по отношению к текущему уровню"
-
-msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period"
-msgstr "Выберите Останется Внутри/Вне и предскажите, будет ли цена находиться внутри или вне двух целевых уровней на протяжении действия контракта"
-
-msgid "Choose Touch / No Touch when you want to profit from the market touching or not touching a target any time during the contract period"
-msgstr "Выберите Касание/Нет касания и предскажите, коснётся ли рынок целевого уровня в любой момент на протяжении действия контракта"
-
-msgid "Choose a trade type"
-msgstr "Выберите тип контракта"
-
-msgid "Choose digit if you want to profit from predicting the last decimal digit of the spot"
-msgstr "Выберите десятичную и получите прибыль, правильно предсказав последнюю десятичную цифру котировки"
-
-msgid "Choose from over 1 million trades"
-msgstr "Выберите один из миллиона доступных контрактов"
-
-msgid "Choose from over a million possible trades at any time"
-msgstr "Выберите один из миллиона контрактов, доступных в любое время"
+msgid "Choose from five types of markets and their respective assets"
+msgstr ""
 
 msgid "Choose password"
 msgstr "Выберите пароль"
 
-msgid "Choose the barrier(s)"
-msgstr "Выберите барьер(ы)"
+msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
+msgstr ""
 
-msgid "Choose the duration"
-msgstr "Укажите длительность"
-
-msgid "Choose the market, the price target, the time period, and how much you wish to win"
-msgstr "Выберите рынок, ценовой барьер, период и желаемую выплату"
-
-msgid "Choose the market, the price targets, the time period, and how much you wish to win"
-msgstr "Выберите рынок, ценовой барьер, период и желаемую выплату"
-
-msgid "Choose the market, the time period, and how much you wish to win"
-msgstr "Выберите рынок, период и желаемую выплату"
-
-msgid "Choose the payout"
-msgstr "Выберите выплату"
-
-msgid "Choose the underlying market"
-msgstr "Выберите основной актив"
+msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
+msgstr ""
 
 msgid "Choose your pereferred payment agent"
 msgstr "Выберите платёжного агента"
@@ -963,6 +909,9 @@ msgstr "Chrome"
 msgid "Click to log in with your Binary.com account"
 msgstr "Нажмите, чтобы войти через счёт на Binary.com"
 
+msgid "Client funds"
+msgstr ""
+
 msgid "Close"
 msgstr "Закрыть"
 
@@ -978,6 +927,9 @@ msgstr "Закрытый марубозу (CDLCLOSINGMARUBOZU)"
 msgid "Commodities"
 msgstr "Сырьевые товары"
 
+msgid "Commodities - Major commodities such as gold and oil"
+msgstr ""
+
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Сырьевые товары – это материалы, которые растут или добываются из недр земли, как серебро, золото и нефть. На Binary.com они оцениваются в американских долларах"
 
@@ -992,6 +944,15 @@ msgstr "Индекс товарного канала (CCI)"
 
 msgid "Comparisons"
 msgstr "Сравнение"
+
+msgid "Competitive and transparent pricing"
+msgstr ""
+
+msgid "Computer system and method for speculating on a financial market"
+msgstr ""
+
+msgid "Computer trading system for offering custom financial market speculations"
+msgstr ""
 
 msgid "Conditions"
 msgstr "Условия"
@@ -1010,6 +971,9 @@ msgstr "Продолжить"
 
 msgid "Continue Trading"
 msgstr "Продолжить торговлю"
+
+msgid "Continuous Indices"
+msgstr ""
 
 msgid "Contract"
 msgstr "Контракт"
@@ -1050,8 +1014,8 @@ msgstr "Кредит/Дебет"
 msgid "Crosshair"
 msgstr "Пересечение"
 
-msgid "Currencies"
-msgstr "Валюты"
+msgid "Currencies - All major Forex pairs"
+msgstr ""
 
 msgid "Current Level"
 msgstr "Текущий уровень"
@@ -1079,6 +1043,12 @@ msgstr "Текущее время"
 
 msgid "Custom Theme"
 msgstr "Индивид. настройка"
+
+msgid "Daily Reset Indices"
+msgstr ""
+
+msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
+msgstr ""
 
 msgid "Daily limit on losses"
 msgstr "Дневной лимит на убытки"
@@ -1170,6 +1140,9 @@ msgstr "Отличается"
 msgid "Digits"
 msgstr "Цифровые"
 
+msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
+msgstr ""
+
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "Индикатор направленного движения (DMI) фактически представляет собой набор из трёх отдельных индикаторов, объединённых в один индекс. Индикатор направленного движения включает Индекс среднего направления (ADX), Индикатор направления вверх (+DI) и Индикатор направления вниз (-DI)"
 
@@ -1178,9 +1151,6 @@ msgstr "Индикатор направленного движения (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
 msgstr "Нужно ли вносить средства, чтобы открыть счёт?"
-
-msgid "Do I need to send any documents?"
-msgstr "Нужно ли отправлять копии документов?"
 
 msgid "Do you offer virtual-money accounts?"
 msgstr "Есть ли у Вас демо-счета?"
@@ -1220,6 +1190,9 @@ msgstr "Двойная экспоненциальная скользящая с�
 
 msgid "Double click the object to remove"
 msgstr "Дважды нажмите на объект, чтобы удалить его"
+
+msgid "Down - Predict that the market will end lower than the average price"
+msgstr ""
 
 msgid "Download"
 msgstr "Загрузить"
@@ -1272,11 +1245,14 @@ msgstr "Церемония EGR Operator Award"
 msgid "EURUSD"
 msgstr "EURUSD"
 
+msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
+msgstr ""
+
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Каждый бинарный опцион является прогнозом будущего движения конкретного актива"
 
-msgid "Each binary trade is for a pre-determined payout amount. You win the payout if your prediction is correct"
-msgstr "Каждый контракт на бинарных опционах имеет заранее установленную выплату. Если Ваш прогноз верен, Вы получаете выплату"
+msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
+msgstr ""
 
 msgid "Edge"
 msgstr "Граница"
@@ -1296,8 +1272,11 @@ msgstr "Окончание"
 msgid "Ends Between/Ends Outside trades"
 msgstr "Закончится между/Закончится вне"
 
-msgid "Ends In/Out"
-msgstr "Заканчивается Внутри/Вне"
+msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
+msgstr ""
+
+msgid "Ends Between/Outside"
+msgstr ""
 
 msgid "Ends in"
 msgstr "Закончится внутри"
@@ -1338,6 +1317,9 @@ msgstr "Собственный капитал"
 msgid "Even"
 msgstr "Чётное"
 
+msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
+msgstr ""
+
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "Вечерняя звезда дожи (CDLEVENINGDOJISTAR)"
 
@@ -1367,9 +1349,6 @@ msgstr "Экспоненциальная скользящая средняя (EM
 
 msgid "Fall"
 msgstr "Падение"
-
-msgid "Falling markets"
-msgstr "Рынки на понижение"
 
 msgid "Family name"
 msgstr "Фамилия"
@@ -1407,14 +1386,8 @@ msgstr "Финансы"
 msgid "Financial Information"
 msgstr "Финансовая информация"
 
-msgid "Financial Security"
-msgstr "Финансовая безопасность"
-
 msgid "Financial information"
 msgstr "Финансовая информация"
-
-msgid "Financial rewards"
-msgstr "Финансовые преимущества"
 
 msgid "Firefox"
 msgstr "Firefox"
@@ -1428,8 +1401,8 @@ msgstr "Имя"
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
 msgstr "Сначала необходимо задать параметры Вашего контракта. Вам нужно определиться со следующими аспектами"
 
-msgid "Flexibility"
-msgstr "Гибкость"
+msgid "Flexible"
+msgstr ""
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Третий год подряд BetOnMarkets.com становится лучшей компанией в номинации \"Лучший поставщик услуг в торговле опционами с фиксированным коэффициентом прибыли\" по версии британского журнала Shares Magazine. Это последний раз, когда мы выиграли этот приз, так как Shares Magazine перестал предлагать эту категорию номинаций"
@@ -1445,6 +1418,9 @@ msgstr "Частота торговли на Forex"
 
 msgid "Founded October 1999"
 msgstr "Время основания: октябрь 1999 г."
+
+msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
+msgstr ""
 
 msgid "Fractal (FRACTAL)"
 msgstr "Фрактал (FRACTAL)"
@@ -1482,7 +1458,7 @@ msgstr ""
 msgid "Get your price"
 msgstr "Узнайте цену"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgid "Go to"
 msgstr ""
 
 msgid "Goes out"
@@ -1533,9 +1509,6 @@ msgstr "Верхний барьер"
 msgid "High barrier offset"
 msgstr "Изменение верхнего барьера"
 
-msgid "High returns"
-msgstr "Высокая прибыль"
-
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr "Высокая волна (CDLHIGHWAVE)"
 
@@ -1545,8 +1518,14 @@ msgstr "Выше"
 msgid "Higher/Lower"
 msgstr "Выше/Ниже"
 
+msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
+msgstr ""
+
 msgid "Higher/Lower trades"
 msgstr "Контракты Выше/Ниже"
+
+msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
+msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Фигура Хиккаке (CDLHIKKAKE)"
@@ -1572,14 +1551,14 @@ msgstr "Как пополнить счёт?"
 msgid "How does Binary.com make money?"
 msgstr "Как зарабатывает Binary.com?"
 
-msgid "How safe is my money with Binary.com?"
-msgstr "Находятся ли мои деньги в безопасности на Binary.com?"
-
 msgid "How soon can I start trading?"
 msgstr "Как быстро можно начать торговать?"
 
 msgid "How to trade binaries?"
 msgstr "Как торговать бинарными опционами?"
+
+msgid "How to trade the Volatility Indices markets?"
+msgstr ""
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Скользящая средняя Хала (HMA)"
@@ -1599,8 +1578,11 @@ msgstr "ВАЖНАЯ ИНФОРМАЦИЯ"
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr "ВАЖНАЯ ИНФОРМАЦИЯ: Binary.com не является партнёром ни одного из вышеперечисленных платёжных агентов. Каждый платёжный агент действует в качестве независимого поставщика услуг и не получает поощрения, гарантий или иного одобрения от Binary.com. КЛИЕНТЫ СОТРУДНИЧАЮТ С ПЛАТЁЖНЫМИ АГЕНТАМИ НА СВОЙ СТРАХ И РИСК. Клиентам рекомендуется проверять рекомендации платёжных агентов перед отправкой им денег. Ни при каких обстоятельствах Binary.com не будет нести ответственности за транзакции, осуществляемые между клиентами и платёжными агентами"
 
-msgid "Ideal for both pros and novices"
-msgstr "Идеально как для профессионалов, так и новичков"
+msgid "IPO on the blockchain"
+msgstr ""
+
+msgid "Ideal for beginners and experienced traders"
+msgstr ""
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Три одинаковые вороны (CDLIDENTICAL3CROWS)"
@@ -1656,6 +1638,12 @@ msgstr "Фигура \"В основании\" (CDLINNECK)"
 msgid "In/Out"
 msgstr "Внутри/Вне"
 
+msgid "In/Out (ends between/outside and stays between/goes outside)"
+msgstr ""
+
+msgid "In/Out - Predict if the market will stay between or outside two target prices"
+msgstr ""
+
 msgid "In/Out trades"
 msgstr "Контракты Внутри/Вне"
 
@@ -1670,6 +1658,9 @@ msgstr "Индикаторы"
 
 msgid "Indices"
 msgstr "Индексы"
+
+msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
+msgstr ""
 
 msgid "Indices trading experience"
 msgstr "Опыт торговли индексами"
@@ -1686,11 +1677,11 @@ msgstr "Indonesia"
 msgid "Industry of Employment"
 msgstr "Сфера занятости"
 
+msgid "Initial Coin Offering (ICO)"
+msgstr ""
+
 msgid "Instant access"
 msgstr "Мгновенный доступ"
-
-msgid "Instant funding"
-msgstr "Мгновенное пополнение"
 
 msgid "Instruments"
 msgstr "Инструменты"
@@ -1763,9 +1754,6 @@ msgstr "Фигура \"Высокий прыжок\" на графике япо�
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
 msgstr "Фигуры \"Высокий прыжок\" на графике японских свечей формируются при наличии двух марубозу – белого и чёрного, с гэпом между ними. Бычья фигура \"Высокий прыжок\" представлена чёрной или закрашенной свечой без теней, за которой следует гэп на повышение и белая или незакрашенная свеча, у которой также нет теней"
-
-msgid "Known risks"
-msgstr "Заранее известный риск"
 
 msgid "Kuala Lumpur Office"
 msgstr "Офис в Куала-Лумпуре"
@@ -1893,9 +1881,6 @@ msgstr "Длинная свеча (CDLLONGLINE)"
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 msgstr "Длинноногий дожи обладает длинной верхней и нижней тенями, которые практически равны по длине. Данный дожи говорит о значительной неопределённости на рынке. Длинноногий дожи обозначает, что цена торговалась выше и ниже уровня открытия сессии, но закрыла сессию практически на уровне открытия. После многочисленных ценовых колебаний конечный результат не показал значительных изменений, по сравнению с уровнем открытия"
 
-msgid "Long-term action"
-msgstr "Долгосрочные сделки"
-
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
 msgstr "Обратите внимание на чёрную свечу в рамках нисходящего тренда, за которой следует белая свеча, которая открывается ниже предыдущего минимума, но закрывается вблизи и чуть ниже середины тела чёрной свечи"
 
@@ -1961,6 +1946,9 @@ msgstr "Подстилка (CDLMATHOLD)"
 
 msgid "Matches"
 msgstr "Совпадёт"
+
+msgid "Matches/Differs - Predict that the last digit will match or not match"
+msgstr ""
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Совпадение по нижнему уровню (CDLMATCHINGLOW)"
@@ -2118,12 +2106,6 @@ msgstr "Нет"
 msgid "No Touch trades"
 msgstr "Контракты Нет касания"
 
-msgid "No matter the market - rising or falling, quiet or volatile - you'll find a trade to suit your outlook"
-msgstr "Не важно, на каком рынке Вы работаете – растущем или падающем, спокойном или волатильном"
-
-msgid "No surprises"
-msgstr "Никаких сюрпризов"
-
 msgid "No touch"
 msgstr "Нет касания"
 
@@ -2154,6 +2136,9 @@ msgstr "OHLC"
 msgid "OK"
 msgstr "OK"
 
+msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
+msgstr ""
+
 msgid "Occupation"
 msgstr "Вид деятельности"
 
@@ -2183,6 +2168,9 @@ msgstr "Когда данный лимит будет достигнут, Вы �
 
 msgid "One last step left"
 msgstr "Остался один шаг"
+
+msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgstr ""
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "Уже через пять лет после создания сайта мы получили этот крупный приз за свои услуги онлайн трейдинга. Награда признает надежный, быстрый и безопасный трейдинг, предлагаемый BetOnMarkets.com как новичкам, так и опытным трейдерам. На тот момент на сайте было выполнено более 15 миллионов сделок"
@@ -2250,17 +2238,23 @@ msgstr "Без сомнения, нашим клиентам по душе на�
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
 msgstr "Наш быстрый рост дополняется приобретением клиентской базы BetsForTraders, одного из наших основных конкурентов"
 
+msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
+msgstr ""
+
 msgid "Over"
 msgstr "Более"
 
 msgid "Over 1 million registered accounts worldwide"
 msgstr "Свыше 1 миллиона зарегистрированных счетов по всему миру"
 
+msgid "Over 130 staff and contractors worldwide"
+msgstr ""
+
 msgid "Over 3 years"
 msgstr "Более 3 лет"
 
-msgid "Over 90 staff and contractors worldwide"
-msgstr "Более 90 сотрудников и наёмных работников по всему миру"
+msgid "Over/Under - Predict that the last digit is higher or lower"
+msgstr ""
 
 msgid "Overlap Studies"
 msgstr "Перекрытие графиков"
@@ -2286,9 +2280,6 @@ msgstr "Платёжный агент"
 msgid "Payment agents"
 msgstr "Платёжные агенты"
 
-msgid "Payment options"
-msgstr "Способы оплаты"
-
 msgid "Payments"
 msgstr "Платежи"
 
@@ -2309,6 +2300,9 @@ msgstr "Разрешения"
 
 msgid "Personal Details"
 msgstr "Личные данные"
+
+msgid "Personal Wealth Awards 2017"
+msgstr ""
 
 msgid "Phone"
 msgstr "Телефон"
@@ -2360,6 +2354,9 @@ msgstr "Пожалуйста, введите правильный ключ"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Пожалуйста, установите последнюю версию одного из следующих браузеров"
+
+msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
+msgstr ""
 
 msgid "Please provide your tax information"
 msgstr "Пожалуйста, предоставьте Вашу налоговую информацию"
@@ -2421,9 +2418,6 @@ msgstr "Трансформация цены"
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr "В рамках нисходящего тренда цена формирует на графике три чёрные свечи, каждая из которых закрывается снижением. Длинная белая свеча охватывает ценовую динамику трёх предыдущих дней. Свеча является бычьей фигурой разворота, когда цена совершает пробой вверх и закрывается выше верхнего уровня свечной фигуры"
 
-msgid "Price the trade"
-msgstr "Укажите цену контракта"
-
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
 msgstr "В начале фигуры – высокой чёрной свечи – цена стремится вниз. Затем формируется белая свеча, тело которой находится в пределах тела предыдущей свечи. Это завершает формирование бычьей свечи харами. В последний день фигуры образуется подтверждающая свеча – белая свеча, закрывающаяся выше уровня закрытия предыдущей свечи. Данная фигура предполагает, что цена совершила разворот на тренде"
 
@@ -2445,6 +2439,9 @@ msgstr "Прибыль/ Убытки"
 msgid "Profit/Loss (points)"
 msgstr "Прибыль/убытки (пункты)"
 
+msgid "Protect your profits"
+msgstr ""
+
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "Сайт работает на русском, английском, индонезийском, японском, китайском, польском, немецком, французском, испанском, португальском, итальянском, русском и тайском языках"
 
@@ -2456,9 +2453,6 @@ msgstr "Дата покупки"
 
 msgid "Purchase Price"
 msgstr "Цена покупки"
-
-msgid "Quiet markets"
-msgstr "Неподвижные рынки"
 
 msgid "Rate Of Change (ROC)"
 msgstr "Скорость изменения (ROC)"
@@ -2474,9 +2468,6 @@ msgstr "Читать"
 
 msgid "Read about"
 msgstr "Подробнее"
-
-msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
-msgstr "Наслаждайтесь торговлей бинарными опционами, зная, что Ваши средства всегда в безопасности"
 
 msgid "Ref"
 msgstr "Номер"
@@ -2568,11 +2559,14 @@ msgstr "Повышение"
 msgid "Rise/Fall"
 msgstr "Повышение/Падение"
 
+msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
+msgstr ""
+
 msgid "Rise/Fall trades"
 msgstr "Контракты Повышение/Падение"
 
-msgid "Rising markets"
-msgstr "Растущие рынки"
+msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
+msgstr ""
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Метод трёх поднимающихся/падающих (CDLRISEFALL3METHODS)"
@@ -2613,8 +2607,8 @@ msgstr "Сохранить изменения"
 msgid "Saved"
 msgstr ""
 
-msgid "Scalable trading"
-msgstr "Масштабируемость торговли"
+msgid "Scalable"
+msgstr ""
 
 msgid "Second line of home address"
 msgstr "Вторая строка адреса"
@@ -2624,6 +2618,9 @@ msgstr "Среднее"
 
 msgid "Security"
 msgstr "Безопасность"
+
+msgid "Security and privacy"
+msgstr ""
 
 msgid "Security question"
 msgstr "Секретный вопрос"
@@ -2658,8 +2655,11 @@ msgstr "Сессия"
 msgid "Session duration limit, in minutes"
 msgstr "Ограничение на длительность сессии, в минутах"
 
-msgid "Set your probability of winning"
-msgstr "Установите вероятность выигрыша"
+msgid "Set barrier(s) to define your position and trigger the payout you will receive"
+msgstr ""
+
+msgid "Set the length of your trade, from 10 seconds to 365 days"
+msgstr ""
 
 msgid "Settles"
 msgstr "Заканч."
@@ -2670,14 +2670,14 @@ msgstr "Поделиться"
 msgid "Share chart"
 msgstr "Поделиться графиком"
 
+msgid "Sharp, benchmarked prices"
+msgstr ""
+
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Падающая звезда (CDLSHOOTINGSTAR)"
 
-msgid "Short to long-term"
-msgstr "От краткосрочных до долгосрочных сделок"
-
-msgid "Short-term action"
-msgstr "Краткосрочное действие"
+msgid "Short to long-term durations"
+msgstr ""
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Фигура из трёх белых свечей. Бычья фигура: в рамках восходящего тренда после первой белой свечи формируется вторая свеча, которая начинается выше уровня закрытия предыдущей свечи (восходящий гэп). Затем на графике формируется третья восходящая свеча, начало которой находится ниже уровня закрытия второй свечи (нисходящий гэп). Медвежья фигура: в рамках нисходящего тренда, за первой нисходящей свечой  формируется восходящая свеча, начало которой находится ниже уровня закрытия первой свечи (нисходящий гэп). Затем на графике формируется ещё одна растущая свеча, которая открывается ниже уровня закрытия второй свечи. Данная фигура обозначает продолжение нисходящего тренда"
@@ -2685,8 +2685,14 @@ msgstr "Фигура из трёх белых свечей. Бычья фигу�
 msgid "Simple Moving Average (SMA)"
 msgstr "Простая скользящая средняя (SMA)"
 
-msgid "Simplicity"
-msgstr "Простота"
+msgid "Simple and intuitive"
+msgstr ""
+
+msgid "Smart FX"
+msgstr ""
+
+msgid "Smart Indices"
+msgstr ""
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "Сглаженная скользящая средняя (SMMA)"
@@ -2696,6 +2702,9 @@ msgstr "Продано"
 
 msgid "Source of wealth"
 msgstr "Источник доходов"
+
+msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Волчок (CDLSPINNINGTOP)"
@@ -2754,11 +2763,14 @@ msgstr "Статистические функции"
 msgid "Status"
 msgstr "Статус"
 
+msgid "Stays Between/Goes Outside"
+msgstr ""
+
 msgid "Stays Between/Goes Outside trades"
 msgstr "Контракты Останется между/Выйдет за пределы"
 
-msgid "Stays In/Goes Out"
-msgstr "Останется Внутри/Выйдет за пределы"
+msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
+msgstr ""
 
 msgid "Stays in"
 msgstr "Останется внутри"
@@ -2766,8 +2778,8 @@ msgstr "Останется внутри"
 msgid "Step 1: Define your position"
 msgstr "Шаг 1: Выберите условия"
 
-msgid "Step 2: Get your trade price"
-msgstr "Шаг 2: Получите цену контракта"
+msgid "Step 2: Get your contract price"
+msgstr ""
 
 msgid "Step 3: Make your trade"
 msgstr "Шаг 3: Купите контракт"
@@ -2786,12 +2798,6 @@ msgstr "Стохастический индекс относительной с�
 
 msgid "Stochastic Slow (STOCHS)"
 msgstr "Медленный стохастик (STOCHS)"
-
-msgid "Stock Indices"
-msgstr "Фондовые индексы"
-
-msgid "Stock indices"
-msgstr "Фондовые индексы"
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
 msgstr "Индексы показывают стоимость определенного набора акций компаний, котирующихся на бирже"
@@ -2841,9 +2847,6 @@ msgstr "Воскресенье"
 msgid "Table"
 msgstr "Таблица"
 
-msgid "Take early profits"
-msgstr "Получите прибыль до окончания контракта"
-
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr "Такури (Дожи-стрекоза с очень длинной нижней тенью) (CDLTAKURI)"
 
@@ -2858,9 +2861,6 @@ msgstr "Информация о налогах"
 
 msgid "Tax residence"
 msgstr "Место налоговой регистрации"
-
-msgid "Tax-free"
-msgstr "Без налогов"
 
 msgid "Tel"
 msgstr "Тел"
@@ -2882,6 +2882,9 @@ msgstr "Высшее"
 
 msgid "The"
 msgstr " "
+
+msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
+msgstr ""
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "Абсолютный ценовой осциллятор (APO) основан на абсолютной разнице между двумя скользящими средними разной длины: быстрой и медленной скользящей средней"
@@ -2928,11 +2931,17 @@ msgstr "Двойная экспоненциальная скользящая с�
 msgid "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow"
 msgstr "Дожи-стрекоза формируется, когда уровень открытия, максимум и уровень закрытия совпадают или находятся вблизи одной и той же цены (совпадение уровня открытия, максимума и уровня закрытия является довольно редкой ситуацией). Наиболее важная часть Дожи-стрекозы – длинная нижняя тень"
 
+msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
+msgstr ""
+
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "Экспоненциальная скользящая средняя (ЭСС) представляет среднее значение цен, но уделяет большое внимание недавним ценам. Значение, уделяемое наиболее недавним ценам, зависит от выбранного периода скользящей средней. Чем короче период ЭСС, тем большее значение будет уделено недавней цене"
 
 msgid "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K"
 msgstr "Быстрый стохастический осциллятор основан на оригинальных формулах Джорджа Лэйна для %K и %D. %K в быстрой версии является довольно изменчивым. %D является 3-дневной простой скользящей средней %K"
+
+msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
+msgstr ""
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "Дожи-надгробие формируется, когда уровень открытия, минимум и уровень закрытия совпадают или находятся вблизи одной цены (совпадение уровня открытия, минимума и уровня закрытия является весьма редкой ситуацией). Наиболее важная часть дожи-надгробия – длинная верхняя тень"
@@ -3006,6 +3015,12 @@ msgstr "Тройная экспоненциальная скользящая с�
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
 msgstr "Функция Типичной цены измеряет среднее значение между дневным максимумом, минимумом и ценой закрытия, используя простой график с одной линией. Типичная цена даёт упрощённое представление о торговых ценах на протяжении дня и действует совместно с другими функциями регулирования цены. Вы можете использовать её для сглаживания непостоянства цены закрытия, так как она охватывает информацию за весь торговый день, а не только конечный результат дневной сессии. Индикатор Типичной цены измеряет сумму максимума, минимума и цены закрытия и делит полученный результат на три"
 
+msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
+msgstr ""
+
+msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
+msgstr ""
+
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Индикатор Взвешенная цена закрытия представляет собой среднее значение цены за каждый день. Он может применяться для сглаживания несоответствия цен закрытия на графике, так как цена закрытия основывается на информации за весь торговый день"
 
@@ -3014,9 +3029,6 @@ msgstr "Индикатор Баланс сил (BOP) измеряет силу �
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
 msgstr "Барьер в торговле бинарными опционами представляет собой целевую цену, которую Вы устанавливаете на основном активе. Вы можете выбрать контракты, предсказывающие пребывание ниже или рост выше целевой цены, а также нахождение цены в пределах двух барьеров"
-
-msgid "The barrier(s) you choose defines your position and triggers your payout"
-msgstr "Выбранный барьер (барьеры) определяет Вашу позицию и обуславливает выплату"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
 msgstr "Разрыв начинается с длинной свечи, представляющей текущий тренд. Следующая за ней свеча будет того же цвета и образует гэп по сравнению с первой свечой. Свеча, образующаяся в третий день, может быть любого цвета, так как она не покажет изменения текущего тренда. В четвёртый день тренд продолжается, и формируется свеча того же цвета, в соответствии с трендом. В пятый день происходит разворот тренда. Обратите внимание на то, что противоречие текущему тренду будет небольшим и динамика будет происходить в том же направлении, закрывая разрыв на графике"
@@ -3045,8 +3057,11 @@ msgstr "Услуги финансового трейдинга на данном
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "Финансовые услуги, предоставляемые на данном сайте, подходят лишь для клиентов, готовых к возможной потере всех инвестированных финансовых средств, а также осознающих риск и имеющих опыт риска, связанного с приобретением финансовых контрактов. Сделки с финансовыми контрактами подразумевают высокую степень риска. Если купленный контракт истекает без выплаты, Вы теряете всю сумму инвестиции и возможную прибыль в сделке"
 
-msgid "The first step is to open an account. You can apply online in just a few minutes"
-msgstr "Первый шаг – это открытие счёта. Вы можете сделать это онлайн всего за пару минут"
+msgid "The first step is to open an account. You can"
+msgstr ""
+
+msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
+msgstr ""
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Первые три дня бычьей лестницы представлены тремя сильными чёрными свечами с последовательным снижающимся открытием и снижающимся закрытием. В четвёртый день формируется короткая чёрная свеча, которая открывается и торгуется выше, оставляя длинную верхнюю тень, а затем закрывается на новом минимуме. В пятый день формируется сильная белая свеча, тело которой закрывает свечу четвёртого дня"
@@ -3098,6 +3113,18 @@ msgstr "Вариация и близкое стандартное отклоне
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
 msgstr "Индексы волатильности моделируют различные ситуации на рынке и предоставляют идеальную платформу, на которой можно научиться торговать и протестировать свои стратегии в самых разных рыночных условиях. Данные индексы зависят от уровня волатильности и движения рынка, помогая пользователям опробовать такие сценарии, как высокая или низкая волатильность, восходящие или нисходящие тренды"
+
+msgid "There are four main trade types for you to choose from"
+msgstr ""
+
+msgid "There are two types of In/Out trades"
+msgstr ""
+
+msgid "There are two types of Up/Down trades"
+msgstr ""
+
+msgid "There are two ways to trade Asians"
+msgstr ""
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Контракты, где трейдер прогнозирует, окажется ли рынок выше или ниже заданного ценового барьера"
@@ -3213,6 +3240,9 @@ msgstr "Чтобы вывести средства, пожалуйста, вве
 msgid "Token"
 msgstr "Ключ"
 
+msgid "Token Management"
+msgstr ""
+
 msgid "Token management"
 msgstr "Управление ключами"
 
@@ -3222,8 +3252,8 @@ msgstr "Название ключа"
 msgid "Token permissions"
 msgstr "Право доступа ключа"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "Ключи представляют собой специальные коды доступа к мобильным приложениям Binary и инструментам от третьей стороны"
+msgid "Tokens are special codes for accessing"
+msgstr ""
 
 msgid "Tooltip background"
 msgstr "Фон подсказки"
@@ -3249,6 +3279,9 @@ msgstr "Касание"
 msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
 
+msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
+msgstr ""
+
 msgid "Tourism"
 msgstr "Туризм"
 
@@ -3264,26 +3297,11 @@ msgstr "Подтверждение контракта"
 msgid "Trade Types"
 msgstr ""
 
-msgid "Trade all market conditions"
-msgstr "Торгуйте при любых рыночных условиях"
-
-msgid "Trade to your budget"
-msgstr "Торгуйте согласно своему бюджету"
-
-msgid "Trade to your strategy"
-msgstr "Торгуйте в соответствии со своей стратегией"
+msgid "Trade according to your preferred strategy"
+msgstr ""
 
 msgid "Trade using"
 msgstr "Торгуйте с помощью"
-
-msgid "Trade when you want to trade"
-msgstr "Торгуйте в любое удобное время"
-
-msgid "Trade with confidence"
-msgstr "Торгуйте с уверенностью"
-
-msgid "Trade your way"
-msgstr "Торгуйте по своей методике"
 
 msgid "Trader"
 msgstr ""
@@ -3300,14 +3318,11 @@ msgstr ""
 msgid "Trading Times"
 msgstr "Торговые часы"
 
-msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
-msgstr "Торговля бинарными опционами очень проста и заключается в трёх простых шагах"
+msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
+msgstr ""
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "Торговля бинарными опционами подходит далеко не всем, поэтому, пожалуйста, убедитесь, что Вы полностью осознаёте все риски. Ваши потери могут превысить первоначальную инвестицию, а Вы не владеете и не получаете никакой доли от базового актива. Помните, что некоторые вариации бинарных опционов являются разновидностью азартных игр и могут вызвать привыкание, поэтому, пожалуйста, играйте ответственно"
-
-msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr "Торговля на финансовых рынках может перерасти в зависимость. Заполните форму для ограничения Вашего участия на сайте или отправьте службе поддержки подписанное письмо в отсканированном виде или по факсу. После установления ограничений Вы можете только усилить их. Ограничения могут быть сняты или смягчены по истечении 7 дней, за исключением даты самоисключения, которая не может быть изменена или отменена после её подтверждения. Для снятия или увеличения лимитов ограничения, пожалуйста, посетите страницу"
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview для Binary.com"
@@ -3317,6 +3332,9 @@ msgstr "Перечисление"
 
 msgid "Transfer to another Binary account"
 msgstr "Перевести на другой счёт на Binary"
+
+msgid "Transparent risk and potential reward"
+msgstr ""
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "Треугольная скользящая средняя (TRIMA)"
@@ -3348,8 +3366,14 @@ msgstr "Объём покупок"
 msgid "Two Crows (CDL2CROWS)"
 msgstr "Две вороны (CDL2CROWS)"
 
+msgid "Two-way pricing"
+msgstr ""
+
 msgid "Typical Price (TYPPRICE)"
 msgstr "Типичная цена (TYPPRICE)"
+
+msgid "US Patents"
+msgstr ""
 
 msgid "USD"
 msgstr "USD"
@@ -3378,8 +3402,8 @@ msgstr "Особое основание \"три реки\" (CDLUNIQUE3RIVER)"
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 msgstr "Особое основание \"три реки\" – это бычья фигура, состоящая из трёх свечей: первая свеча обладает длинным медвежьим телом; вторая свеча имеет форму молота, а её тело находится в пределах тела первой свечи; третья свеча является маленькой бычьей свечой, цена закрытия которой ниже, чем у второй свечи"
 
-msgid "Up to 100% returns on rise/fall trades"
-msgstr "Выплата в размере до 100% на контрактах Повышение/Падение"
+msgid "Up - Predict that the market will end higher than the average price"
+msgstr ""
 
 msgid "Up/Down"
 msgstr "Вверх/Вниз"
@@ -3423,8 +3447,8 @@ msgstr "На нашем сайте клиенты могут торговать 
 msgid "Variance (VAR)"
 msgstr "Вариация (VAR)"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr "Различные настраиваемые функции: загрузка и упорядочивание активов, графиков и других ресурсов"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
@@ -3444,8 +3468,8 @@ msgstr "Обзор"
 msgid "View Statement"
 msgstr "Смотреть историю счета"
 
-msgid "Volatile markets"
-msgstr "Волатильные рынки"
+msgid "Volatility Index Markets"
+msgstr ""
 
 msgid "Volatility Indicators"
 msgstr "Индикаторы волатильности"
@@ -3453,8 +3477,11 @@ msgstr "Индикаторы волатильности"
 msgid "Volatility Indices"
 msgstr "Индексы волатильности"
 
-msgid "Volatility indices"
-msgstr "Индексы волатильности"
+msgid "Volatility Indices are further categorized into two types"
+msgstr ""
+
+msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
+msgstr ""
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "Взвешенная скользящая средняя или WMA помогает сгладить ценовые неровности для более удобного определения тренда. Индикатор уделяет большее значение последним данным, чем экспоненциальная скользящая средняя (EMA)"
@@ -3465,11 +3492,11 @@ msgstr "Наша лицензия требует от нас, чтобы мы и
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "Мы снова это сделали. BetOnMarkets.com повторяет успех 2007 года, став по результатам голосования \"Лучшим предоставителем финансового трейдинга с ограниченным коэффициентом выигрыша\" в 2008"
 
-msgid "We don't usually require any documents as we can verify your identity online"
-msgstr "В случаях, когда мы можем проверить Ваши данные онлайн, мы не требуем документов"
-
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Мы переименовываем BetOnMarkets.com в"
+
+msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
+msgstr ""
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "Мы получаем патенты в категории \"Система компьютерной торговли и метод спекуляций на финансовых рынках\" и \"Система компьютерной торговли для предложения спекуляций на рынках\". Патенты демонстрируют наше стремление к инновациям и лидерству"
@@ -3501,14 +3528,20 @@ msgstr "Взвешенная скользящая средняя (WMA)"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Добро пожаловать на Webtrader от Binary.com"
 
+msgid "What are OTC indices and stocks?"
+msgstr ""
+
 msgid "What is pep?"
 msgstr "Кто такие ПЗЛ?"
 
-msgid "When you are satisfied with the trade price, instantly execute your trade"
-msgstr "Если Вы довольны ценой, незамедлительно исполняйте контракт"
+msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
+msgstr ""
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "Торгуя на Binary.com, Вы можете быть абсолютно уверены, что Ваши средства хранятся на отдельных надёжных счетах и не используются для любых других целей"
+
+msgid "Where does Binary.com hold my funds?"
+msgstr ""
 
 msgid "While on the go, you can"
 msgstr "Прямо на ходу Вы можете"
@@ -3516,29 +3549,17 @@ msgstr "Прямо на ходу Вы можете"
 msgid "Why Choose Binary Trading?"
 msgstr "В чём преимущества торговли бинарными опционами?"
 
+msgid "Why trade with Binary.com"
+msgstr ""
+
 msgid "Will I need to install any software?"
 msgstr "Нужно ли устанавливать программное обеспечение?"
 
 msgid "Williams' %R (WILLR)"
 msgstr "Диапазон Вильямса (%R, WILLR)"
 
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
-msgstr "Выиграйте 10-1000% от Вашей ставки, если прогноз окажется правильным. Увеличьте прибыль, выбрав опцию \"Останется внутри\" с узким ценовым диапазоном"
-
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a 'Touch' trade, with a price target farther away from the current price"
-msgstr "Выиграйте 10-1000% от Вашей ставки, если прогноз окажется правильным. Увеличьте прибыль, выбрав контракт \"Касание\" с целевой ценой, находящейся далеко от текущей цены"
-
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
-msgstr "Выиграйте 10-1000% от Вашей ставки, если прогноз окажется правильным. Увеличьте прибыль, выбрав целевую цену, которая находится далеко от текущей цены"
-
 msgid "With Binary.com you can trade"
 msgstr "На Binary.com Вы можете торговать"
-
-msgid "With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees"
-msgstr "Благодаря уникальной платформе Binary.com, Вы не столкнётесь с риском проскальзывания или формирования гэпов на рынке. И никаких скрытых комиссий"
-
-msgid "With Binary.com, the most you can lose is the amount you stake at the start of your trade"
-msgstr "Самое большое, что Вы можете потерять на Binary.com – сумма Вашей ставки за контракт"
 
 msgid "Withdraw funds"
 msgstr "Вывести средства"
@@ -3576,32 +3597,11 @@ msgstr "Да"
 msgid "You are not copying any trade(s) yet"
 msgstr ""
 
-msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
-msgstr "Вы можете выбрать любую выплату от $1 до $50 000. Столь широкий диапазон выплат идеален для крупных и небольших трейдеров"
-
-msgid "You can only allow other traders to copy your trade"
+msgid "You can"
 msgstr ""
-
-msgid "You can only copy other trader's trade"
-msgstr ""
-
-msgid "You can open an account, deposit funds and begin trading within minutes"
-msgstr "Вы можете открыть счёт, пополнить его и начать торговлю за считанные минуты"
-
-msgid "You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr "Вы можете в любое время досрочно продать долгосрочные контракты, чтобы получить уже имеющуюся прибыль при меняющихся рыночных условиях"
-
-msgid "You can set the length of your trade, from 10 seconds to 365 days"
-msgstr "Установите длительность сделки, от 10 секунд до 365 дней"
-
-msgid "You can trade a range of markets, timescales and indices - 24/7"
-msgstr "Вы можете круглосуточно торговать на широком спектре рынков, сроков и индексов, семь дней в неделю"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Вам не нужно вносить средства для открытия счёта, но Вам необходимо будет пополнить счёт для начала торговли и покупки контрактов"
-
-msgid "You get fair and transparent pricing, whatever your position"
-msgstr "Вы получаете справедливую и прозрачную оценку контракта, независимо от его параметров"
 
 msgid "You have sold the following contract"
 msgstr "Вы продали следующий контракт"
@@ -3609,17 +3609,20 @@ msgstr "Вы продали следующий контракт"
 msgid "You haven't saved any templates yet"
 msgstr "У Вас нет сохранённых шаблонов"
 
+msgid "You only need to make four decisions to execute a binary contract"
+msgstr ""
+
 msgid "You pay"
 msgstr "Вы платите"
-
-msgid "You set the barrier(s) to define your position"
-msgstr "Вы задаёте параметры позиции"
 
 msgid "You will be automatically logged out after such time"
 msgstr "По истечении данного времени Вы автоматически выйдете из системы"
 
-msgid "You'll be surprised by the returns you can make"
-msgstr "Вы удивитесь, узнав, какую прибыль Вы можете получить"
+msgid "You wish to allow other traders to copy your trades"
+msgstr ""
+
+msgid "You wish to copy another trader's trades"
+msgstr ""
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Вы успешно открыли счёт на Binary.com, но для начала торговли Вы должны открыть Webtrader доступ к нему"
@@ -3636,14 +3639,8 @@ msgstr ""
 msgid "Your email"
 msgstr "Ваш эл. адрес"
 
-msgid "Your money is always safe with Binary.com"
-msgstr ""
-
 msgid "Your new account balance is"
 msgstr "Новый баланс Вашего счёта"
-
-msgid "Your risks are known"
-msgstr "Ваш риск заранее известен"
 
 msgid "Your transaction reference is"
 msgstr "Ссылка на Вашу сделку"
@@ -3660,8 +3657,14 @@ msgstr ", позволяющий трейдерам разрабатывать �
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr "для ирландских клиентов – (3) Государственной налоговой инспекцией Ирландии; текущая лицензия удаленного букмекера выдана 29 сентября 2015 г. (лицензия номер 1010285). Услуги данного сайта не доступны в ряде стран: в США, Коста-Рике и Гонконге, а также лицам младше 18 лет"
 
+msgid "and start learning how to trade"
+msgstr ""
+
 msgid "apostrophe (') are allowed"
 msgstr "разрешен апостроф (')"
+
+msgid "apply online"
+msgstr ""
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ", оцениваемую в 50.5 миллионов долларов США"
@@ -3678,6 +3681,9 @@ msgstr "комиссия"
 msgid "contact support"
 msgstr "связаться со службой поддержки"
 
+msgid "create a token, and share the token with copier(s)"
+msgstr ""
+
 msgid "customer support"
 msgstr "служба поддержки"
 
@@ -3686,6 +3692,9 @@ msgstr "дн."
 
 msgid "days"
 msgstr "дн."
+
+msgid "deposit funds and begin trading within minutes"
+msgstr ""
 
 msgid "disposes of its stake"
 msgstr "продает свою долю"
@@ -3716,6 +3725,9 @@ msgstr "час."
 
 msgid "if this is not your country of residence"
 msgstr "если Вы живёте в другой стране"
+
+msgid "in just a few minutes"
+msgstr ""
 
 msgid "in the future, the"
 msgstr "в будущем,"
@@ -3767,6 +3779,12 @@ msgstr "следующий тик"
 
 msgid "of \"Now\", the"
 msgstr "\"Сейчас\","
+
+msgid "open a free $10k fully-functional virtual-money account"
+msgstr ""
+
+msgid "open an account"
+msgstr ""
 
 msgid "our helpful support desk"
 msgstr "служба поддержки"

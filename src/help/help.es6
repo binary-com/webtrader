@@ -76,16 +76,31 @@ const init = () => {
             }, {
                 text: "Group history".i18n(),
                 id: "group-history"
+            }, {
+                text: "Patents".i18n(),
+                id: "patents"
             }],
             getting_started: [{
                 text: "Why choose Binary Trading?".i18n(),
                 id: "why-binary"
             }, {
-                text: "Benefits of Binary Trading".i18n(),
-                id: "binary-benefits"
+                text: "Binary options basics".i18n(),
+                id: "binary-options-basics"
             }, {
-                text: "How to trade Binaries?".i18n(),
+                text: "Why trade with Binary.com".i18n(),
+                id: "why-trade-binary"
+            }, {
+                text: "How to trade binary options?".i18n(),
                 id: "trade-binaries"
+            }, {
+                text: "How to trade the Volatility Indices markets?".i18n(),
+                id: "how-trade-vol"
+            }, {
+                text: "Smart Indices".i18n(),
+                id: "smart-indices"
+            }, {
+                text: "OTC indices and stocks".i18n(),
+                id: "otc-stocks-indices"
             }],
             trade_types: [{
                 text: "Up/Down".i18n(),
@@ -129,8 +144,8 @@ const init = () => {
                 text: "Opening an account".i18n(),
                 id: "opening-account"
             }, {
-                text: "Financial Security".i18n(),
-                id: "financial-security"
+                text: "Client funds".i18n(),
+                id: "client-funds"
             }, {
                 text: "Depositing and withdrawing funds".i18n(),
                 id: "deposit-withdraw"

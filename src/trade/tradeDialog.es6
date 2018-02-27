@@ -53,7 +53,7 @@ var replacer = function (field_name, value) { return function (obj) { obj[field_
 var debounce = rv.formatters.debounce;
 
 function apply_fixes(available){
-    /* fix for server side api, not seperating higher/lower frim rise/fall in up/down category */
+    /* fix for server side api, not seperating higher/lower from rise/fall in up/down category */
     _(available).filter({
       'contract_category': 'callput',
       'barrier_category' : 'euro_atm',
@@ -62,24 +62,21 @@ function apply_fixes(available){
     }).each(replacer('contract_display', 'rise'));
 
     _(available).filter({
-      'contract_category': 'callput',      
+      'contract_category': 'callput',
       'barrier_category': 'euro_atm',
       'barriers': 0,
       'sentiment': 'down'
     }).each(replacer('contract_display','fall'));
     /* fix for server side api, returning two different contract_category_displays for In/Out */
-    _(available).filter(['contract_category', 'staysinout'])
-                .each(replacer('contract_category_display', 'In/Out'));
-    _(available).filter(['contract_category', 'endsinout'])
-                .each(replacer('contract_category_display', 'In/Out'));
+    _(available).filter(['contract_category', 'endsinout']).each(replacer('contract_category_display', 'In/Out'));
+    _(available).filter(['contract_category', 'staysinout']).each(replacer('contract_category_display', 'In/Out'));
     /* fix for websocket having a useless barrier value for digits */
-    _(available).filter(['contract_category', 'digits'])
-                .each(replacer('barriers', 0));
+    _(available).filter(['contract_category', 'digits']).each(replacer('barriers', 0));
     /* fix for contract_display text in In/Out menue */
-    _(available).filter({"contract_type": "EXPIRYMISS"}).each(replacer('contract_display', 'ends out'));
-    _(available).filter({"contract_type": "EXPIRYRANGE"}).each(replacer('contract_display', 'ends in'));
-    _(available).filter({"contract_type": "RANGE"}).each(replacer('contract_display', 'stays in'));
-    _(available).filter({"contract_type": "UPORDOWN"}).each(replacer('contract_display', 'goes out'));
+    _(available).filter({"contract_type": "EXPIRYMISS"}).each(replacer('contract_display', 'ends outside'));
+    _(available).filter({"contract_type": "EXPIRYRANGE"}).each(replacer('contract_display', 'ends between'));
+    _(available).filter({"contract_type": "RANGE"}).each(replacer('contract_display', 'stays between'));
+    _(available).filter({"contract_type": "UPORDOWN"}).each(replacer('contract_display', 'goes outside'));
     _(available).filter({"contract_type": "ONETOUCH"}).each(replacer('contract_display', 'touch'));
     _(available).filter({"contract_type": "NOTOUCH"}).each(replacer('contract_display', 'no touch'));
 
@@ -161,7 +158,7 @@ function set_current_template(state, tpl) {
   }
   state.categories.selected = tpl.categories_value.contract_category;
   _.defer(function() {
-    if(!_.find(state.category_displays.array, 
+    if(!_.find(state.category_displays.array,
       type => type.name===tpl.categoriy_displays_selected.name && type.sentiment===tpl.categoriy_displays_selected.sentiment)) {
       warn();
       return;
@@ -446,8 +443,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   state.categories.update = function (msg) {
     state.categories.value = _.find(state.categories.array,{contract_category: state.categories.selected});
     var category = state.categories.value.contract_category;
+    var isInOut = v => ['staysinout', 'endsinout'].indexOf(v) !== -1;
+    const check = isInOut(category) ? el => isInOut(el.contract_category) : el => el.contract_category == category;
     state.category_displays.array = [];
-    _(available).filter(['contract_category', category]).map('contract_display').uniq().value().forEach(
+    _(available).filter(check).map('contract_display').uniq().value().forEach(
       x => {
         let y = {};
         y.name = x;
@@ -832,22 +831,22 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     var show = function(div){
       div.appendTo(root);
 
-      root.find('.trade-fields').css({ left : '350px'});
+      root.find('.trade-fields').css({ left : '400px'});
       root.find('.trade-conf').css({ left : '0'});
-      // root.find('.trade-fields').animate({ left : '+=350'}, 1000, 'linear');
-      // root.find('.trade-conf').animate({ left : '+=350'}, 1000, 'linear');
+      // root.find('.trade-fields').animate({ left : '+=400'}, 1000, 'linear');
+      // root.find('.trade-conf').animate({ left : '+=400'}, 1000, 'linear');
     };
     var hide = function(div){
       root.find('.trade-fields').css({ left : '0'});
-      root.find('.trade-conf').css({ left : '-350px'});
-      // root.find('.trade-fields').animate({ left : '-=350'}, 500, 'linear');
-      // root.find('.trade-conf').animate({ left : '-=350'}, 500, 'linear', function(){ ... });
+      root.find('.trade-conf').css({ left : '-400px'});
+      // root.find('.trade-fields').animate({ left : '-=400'}, 500, 'linear');
+      // root.find('.trade-conf').animate({ left : '-=400'}, 500, 'linear', function(){ ... });
       state.purchase.loading = false;
       div.remove();
       /* trigger a new proposal stream */
       state.proposal.onchange();
     }
-    
+
     /* workaround for api not providing this fields */
     var extra = {
         currency: state.currency.value,
@@ -914,10 +913,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .uniq()
     .value()
     // TODO temp filter until https://trello.com/c/Rj2a7K8e/558-shahrizal-lbuiminoradjustment is released
-    .filter(f => f.toLowerCase().indexOf('lookback') === -1)
+    .filter(f => {
+        console.log(f);
+        return f.toLowerCase().indexOf('Lookbacks') === -1
+    })
     .forEach(x => {
-      let y = {}; 
-      y.contract_category_display = x; 
+      let y = {};
+      y.contract_category_display = x;
       let contract_object = _.find(available, {contract_category_display: x});
       if(contract_object){
         y.contract_category = contract_object.contract_category;
@@ -994,6 +996,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         collapsable: false,
         minimizable: true,
         maximizable: false,
+        width:  400,
         'data-authorized': 'true',
         isTrackerInitiated: isTrackerInitiated,
         relativePosition: true,
