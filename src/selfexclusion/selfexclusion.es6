@@ -212,14 +212,12 @@ function logoutBasedOnExcludeDateAndTimeOut() {
         if (moment.utc(settingsData.exclude_until, 'YYYY-MM-DD').isAfter(moment.utc().startOf('day'))) {
             _.defer(function() {
                 $.growl.error({ message: 'You have excluded yourself until '.i18n() + settingsData.exclude_until });
-                liveapi.invalidate();
             });
         }
     }
     if (settingsData.timeout_until) {
         if (moment(settingsData.timeout_until).isAfter(moment().unix().valueOf())) {
             $.growl.error({ message: 'You have excluded yourself until '.i18n() + moment.unix(settingsData.timeout_until).utc().format("YYYY-MM-DD HH:mm") + "GMT" });
-            liveapi.invalidate();
         }
     }
 }
