@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-27 21:00-0500\n"
+"PO-Revision-Date: 2018-02-27 21:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -739,10 +739,10 @@ msgid "Binary.com is owned and operated by the Binary Group Ltd. group of compan
 msgstr "Binary.com принадлежит и находится под управлением группы компаний Binary Ltd. Для получения дополнительной информации, пожалуйста, посетите страницу нашей истории"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com запускает счета с Bitcoin (BTC) для клиентов вне ЕС"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com открыл счета с Bitcoin"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com запускает"
@@ -757,7 +757,7 @@ msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com предлагает новые способы торговли"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Binary.com предлагает Вашему вниманию четыре способа торговли активами"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com открывает офис в здании QSentral, в самом центре Куала-Лумпура, чтобы продолжить расширять свою команду разработчиков IT"
@@ -772,13 +772,13 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com завоевал первое место в категории Оператор по финансовому беттингу (Financial Betting Operator) на престижной церемонии 2015 EGR Operator Awards, которая состоялась в Лондоне"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Непрерывные индексы Binary.com включают Индекс волатильности 10, Индекс волатильности 25, Индекс волатильности 50, Индекс волатильности 75 и Индекс волатильности 100. Данные индексы соответствуют моделируемым рынкам с волатильностью в размере 10%, 25%, 50%, 75% и 100%"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Внебиржевые индексы и акции (OTC) от Binary.com получены на внебиржевых рынках и предоставляют Вам альтернативный способ торговли акциями и фондовыми индексами, так как они происходят из источников, находящихся вне центральных бирж"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Внебиржевые индексы и акции (OTC) от Binary.com имеют важное преимущество: графики и цены в режиме реального времени. Воспользуйтесь возможностями захватывающей торговли на наших уникальных индексах и акциях"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
 msgstr ""
@@ -3334,7 +3334,7 @@ msgid "Transfer to another Binary account"
 msgstr "Перевести на другой счёт на Binary"
 
 msgid "Transparent risk and potential reward"
-msgstr ""
+msgstr "Прозрачный риск и потенциальная прибыль"
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "Треугольная скользящая средняя (TRIMA)"
@@ -3367,13 +3367,13 @@ msgid "Two Crows (CDL2CROWS)"
 msgstr "Две вороны (CDL2CROWS)"
 
 msgid "Two-way pricing"
-msgstr ""
+msgstr "Оцените движение рынка в двух направлениях"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Типичная цена (TYPPRICE)"
 
 msgid "US Patents"
-msgstr ""
+msgstr "Патенты США"
 
 msgid "USD"
 msgstr "USD"
@@ -3403,7 +3403,7 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr "Особое основание \"три реки\" – это бычья фигура, состоящая из трёх свечей: первая свеча обладает длинным медвежьим телом; вторая свеча имеет форму молота, а её тело находится в пределах тела первой свечи; третья свеча является маленькой бычьей свечой, цена закрытия которой ниже, чем у второй свечи"
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr ""
+msgstr "Вверх – сделайте ставку на то, что рынок закроется выше средней цены"
 
 msgid "Up/Down"
 msgstr "Вверх/Вниз"
@@ -3448,7 +3448,7 @@ msgid "Variance (VAR)"
 msgstr "Вариация (VAR)"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "Различные настраиваемые функции: загрузка и упорядочивание активов, графиков и других ресурсов"
 
 msgid "Verification code has been sent to your email"
 msgstr "Проверочный код отправлен на Ваш эл. адрес"
@@ -3469,7 +3469,7 @@ msgid "View Statement"
 msgstr "Смотреть историю счета"
 
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "Рынки Индексов волатильности"
 
 msgid "Volatility Indicators"
 msgstr "Индикаторы волатильности"
@@ -3550,7 +3550,7 @@ msgid "Why Choose Binary Trading?"
 msgstr "В чём преимущества торговли бинарными опционами?"
 
 msgid "Why trade with Binary.com"
-msgstr ""
+msgstr "Преимущества торговли на Binary.com"
 
 msgid "Will I need to install any software?"
 msgstr "Нужно ли устанавливать программное обеспечение?"
@@ -3595,7 +3595,7 @@ msgid "Yes"
 msgstr "Да"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Вы пока не копируете другие контракты"
 
 msgid "You can"
 msgstr ""
@@ -3610,7 +3610,7 @@ msgid "You haven't saved any templates yet"
 msgstr "У Вас нет сохранённых шаблонов"
 
 msgid "You only need to make four decisions to execute a binary contract"
-msgstr ""
+msgstr "Для покупки бинарного опциона Вам необходимо принять 4 решения:"
 
 msgid "You pay"
 msgstr "Вы платите"
@@ -3619,10 +3619,10 @@ msgid "You will be automatically logged out after such time"
 msgstr "По истечении данного времени Вы автоматически выйдете из системы"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "Вы разрешаете другим трейдерам копировать Ваши контракты"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "Вы хотите копировать контракты других трейдеров"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Вы успешно открыли счёт на Binary.com, но для начала торговли Вы должны открыть Webtrader доступ к нему"
@@ -3634,7 +3634,7 @@ msgid "Your browser is not supported"
 msgstr "Ваш браузер не поддерживается"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Ваши настройки копирования"
 
 msgid "Your email"
 msgstr "Ваш эл. адрес"
