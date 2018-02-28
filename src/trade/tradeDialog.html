@@ -30,6 +30,7 @@
             rv-on-click="category_displays.onclick"
             rv-data-name="row.name"
             rv-data-sentiment="row.sentiment"
+            rv-data-contract_type="row.contract_type"
             rv-class-active="category_displays.selected.name | eq row.name"
             > {row.name | capitalize | i18n} </li>
     </ul>
@@ -162,7 +163,7 @@
     <ul class="barriers-low-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <span class="dotted-underline align-text text-vertical-align" 
+        <li> <span class="dotted-underline align-text text-vertical-align"
                 rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 data-balloon-length='large'
                 data-balloon-pos="down"
@@ -282,8 +283,12 @@
         rv-if="categories.value.contract_category | not-eq 'spreads' | and proposal.error | eq ''"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li>
-          Net Profit: <span rv-html="proposal.netprofit_ < ask_price payout"> </span>
-          | Payout: <span rv-html="proposal.payout_ < ask_price payout"> </span>
+          <span rv-show='proposal.netprofit_ < ask_price payout'>
+            Net Profit: <span rv-html="proposal.netprofit_ < ask_price payout"> </span> |
+          </span>
+          <span>
+            Payout: <span rv-html="proposal.payout_ | call proposal.payout proposal.ask_price category_displays.selected.contract_type"> </span>
+          </span>
         </li>
     </ul>
 

@@ -47,6 +47,7 @@ import 'timepicker';
 import 'jquery-ui';
 import 'common/util';
 import help from 'help/help';
+import Lookback from './lookback';
 
 require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
 var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
@@ -292,7 +293,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       array: [],
       value: '',
       paddingTop: function(){
-        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "spreads":'5px' };
+        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "lookback":'26px' };
         return paddings[state.categories.value.contract_category] || '3px';
       }
     },
@@ -378,10 +379,19 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
       /* computed properties */
       netprofit_: function () {
+        const {contract_type} = state.category_displays.selected;
+        if (Lookback.isLookback(contract_type)) {
+          return false;
+        }
         return formatPrice(((this.payout - this.ask_price) || 0), state.currency.value);
       },
       payout_: function () {
-        return formatPrice((+this.payout || 0), state.currency.value);
+        const {contract_type} = state.category_displays.selected;
+        if (Lookback.isLookback(contract_type)) {
+          return Lookback.formula(contract_type, formatPrice((+state.basis.amount || 0), state.currency.value));
+        } else {
+          return formatPrice((+this.payout || 0), state.currency.value);
+        }
       }
     },
     purchase: {
@@ -445,17 +455,27 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     var category = state.categories.value.contract_category;
     var isInOut = v => ['staysinout', 'endsinout'].indexOf(v) !== -1;
     const check = isInOut(category) ? el => isInOut(el.contract_category) : el => el.contract_category == category;
+    const isLookback = v => /^lookback$/.test(v.toLowerCase());
     state.category_displays.array = [];
     _(available).filter(check).map('contract_display').uniq().value().forEach(
       x => {
         let y = {};
         y.name = x;
         let category_object = _.find(available, {contract_display:x});
-        if (category_object)
+        if (category_object){
           y.sentiment = category_object.sentiment;
+          y.contract_type = category_object.contract_type;
+        }
 
         state.category_displays.array.push(y);
     });
+    if (isLookback(category)) {
+      state.basis.array = ['Multiplier'];
+      state.basis.value = 'multiplier';
+    } else {
+      state.basis.array = ['Payout', 'Stake'];
+      state.basis.value = 'payout';
+    }
     state.category_displays.selected = _.head(state.category_displays.array);
   };
 
@@ -463,6 +483,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     state.category_displays.selected = {};
     state.category_displays.selected.name = $(e.target).attr('data-name');
     state.category_displays.selected.sentiment = $(e.target).attr('data-sentiment');
+    state.category_displays.selected.contract_type = $(e.target).attr('data-contract_type')
   };
 
   state.date_start.update = function () {
@@ -849,6 +870,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
     /* workaround for api not providing this fields */
     var extra = {
+        amount: state.basis.amount,
         currency: state.currency.value,
         symbol: state.proposal.symbol,
         symbol_name: state.proposal.symbol_name,
@@ -912,11 +934,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .map('contract_category_display')
     .uniq()
     .value()
-    // TODO temp filter until https://trello.com/c/Rj2a7K8e/558-shahrizal-lbuiminoradjustment is released
-    .filter(f => {
-        console.log(f);
-        return f.toLowerCase().indexOf('Lookbacks') === -1
-    })
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
