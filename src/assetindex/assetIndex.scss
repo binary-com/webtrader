@@ -1,6 +1,17 @@
-.asset-index-dialog {
-  width: 100%;
-  tr, td {
-    white-space: nowrap;
+.assetIndex {
+  .asset-index-dialog {
+    width: 100%;
+    tr {
+      td, th {
+        &:first-child {
+          white-space: nowrap;
+          width: 100px !important;
+        }
+        &:not(:first-child) {
+          white-space: normal;
+          width: 50px !important;
+        }
+      }
+    }
   }
 }

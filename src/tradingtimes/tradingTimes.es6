@@ -86,8 +86,8 @@ export const init = ($menuLink) => {
          tradingWin = windows.createBlankWindow($('<div/>'), {
             title: 'Trading Times'.i18n(),
             dialogClass: 'tradingTimes',
-            width: 800 ,
-            height: 400
+            width: 800,
+            height: 400,
          });
          tradingWin.track({
             module_id: 'tradingTimes',
@@ -149,7 +149,6 @@ const initTradingWin = ($html) => {
         data = menu.extractFilteredMarkets(data);
 
         const result = processData(data);
-        console.log(result, data);
 
           if (market_names == null) {
               select = $('<select />');

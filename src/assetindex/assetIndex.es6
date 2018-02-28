@@ -23,8 +23,11 @@ export const init = (li) => {
             assetWin = windows.createBlankWindow($('<div/>'), {
                 title: 'Asset Index'.i18n(),
                 dialogClass: 'assetIndex',
-                width: 800,
-                height: 400
+                minWidth: 800,
+                minHeight: 400,
+                resizable: false,
+                minimizable: true,
+                maximizable: true,
             });
             assetWin.track({
                 module_id: 'assetIndex',
