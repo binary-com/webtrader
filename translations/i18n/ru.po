@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-28 00:50-0500\n"
+"PO-Revision-Date: 2018-02-28 01:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -529,7 +529,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Осциллятор Арун (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Организовать"
 
 msgid "Asian down"
 msgstr "Азиатские вниз"
@@ -703,7 +703,7 @@ msgid "Binary.com Shop introduced"
 msgstr "Начал работу Магазин Binary.com"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com объявляет о своих планах"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com продолжает расти и развиваться"
@@ -751,7 +751,7 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com предлагает широкий выбор способов пополнения и вывода средств, от кредитных карт и банковского перевода до электронных кошельков и валют"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com предоставляет своим клиентам демо-счета, на которых можно начать торговлю бинарными опционами. Почему бы не"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com предлагает новые способы торговли"
@@ -985,7 +985,7 @@ msgid "Contracts"
 msgstr "Контракты"
 
 msgid "Copier"
-msgstr ""
+msgstr "Последователь"
 
 msgid "Coppock Curve (CC)"
 msgstr "Кривая Коппока (CC)"
@@ -1459,7 +1459,7 @@ msgid "Get your price"
 msgstr "Узнайте цену"
 
 msgid "Go to"
-msgstr ""
+msgstr "Перейти к"
 
 msgid "Goes out"
 msgstr "Выйдет за пределы"
@@ -1816,7 +1816,7 @@ msgid "Loading Asset Index"
 msgstr "Загрузка индекса активов"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Загрузка копирования"
 
 msgid "Loading Download/View Data"
 msgstr "Идет Загрузка/Обзор данных"
@@ -1921,7 +1921,7 @@ msgid "Make your trade"
 msgstr "Купите контракт"
 
 msgid "Manage"
-msgstr ""
+msgstr "Управление"
 
 msgid "Mar"
 msgstr "Мар"
@@ -2041,7 +2041,7 @@ msgid "Monday"
 msgstr "Понедельник"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Прибыльные контракты за мес."
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Утрeнняя звeзда доджи (CDLMORNINGDOJISTAR)"
@@ -2293,7 +2293,7 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Процентный ценовой осциллятор (ПЦО)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Прибыльность торговли"
 
 msgid "Permissions"
 msgstr "Разрешения"
@@ -2302,7 +2302,7 @@ msgid "Personal Details"
 msgstr "Личные данные"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "Personal Wealth Awards 2017"
 
 msgid "Phone"
 msgstr "Телефон"
@@ -2605,7 +2605,7 @@ msgid "Save changes"
 msgstr "Сохранить изменения"
 
 msgid "Saved"
-msgstr ""
+msgstr "Сохранённое"
 
 msgid "Scalable"
 msgstr "Масштабируемость"
@@ -3058,7 +3058,7 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Финансовые услуги, предоставляемые на данном сайте, подходят лишь для клиентов, готовых к возможной потере всех инвестированных финансовых средств, а также осознающих риск и имеющих опыт риска, связанного с приобретением финансовых контрактов. Сделки с финансовыми контрактами подразумевают высокую степень риска. Если купленный контракт истекает без выплаты, Вы теряете всю сумму инвестиции и возможную прибыль в сделке"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "Шаг первый: откройте счёт. Вы можете"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
 msgstr "Первое, что нужно сделать – это выбрать инструмент, на котором Вы хотите работать, например, золото или нефть, акции или форекс (стоимость бинарного опциона зависит от цены соответствующего инструмента). Большое преимущество работы на бинарных опционах в том, что Вы не покупаете и не продаёте настоящие рыночные активы"
@@ -3118,13 +3118,13 @@ msgid "There are four main trade types for you to choose from"
 msgstr "К Вашим услугам четыре основных типа контрактов:"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "Существует два типа контрактов Внутри/Вне"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "Выделяют два типа контрактов Вверх/Вниз"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "Существует два способа торговли Азиатскими контрактами"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Контракты, где трейдер прогнозирует, окажется ли рынок выше или ниже заданного ценового барьера"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "Ключ"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Управление ключами"
 
 msgid "Token management"
 msgstr "Управление ключами"
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "Право доступа ключа"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "Ключи – это специальные коды доступа"
 
 msgid "Tooltip background"
 msgstr "Фон подсказки"
@@ -3262,7 +3262,7 @@ msgid "Tooltip text"
 msgstr "Текст подсказки"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Кол-во последователей"
 
 msgid "Total Cost"
 msgstr "Общая стоимость"
@@ -3271,7 +3271,7 @@ msgid "Total Profit/Loss"
 msgstr "Общая прибыль/убыток"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Кол-во контрактов"
 
 msgid "Touch"
 msgstr "Касание"
@@ -3280,7 +3280,7 @@ msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "Касание/Нет касания – сделайте прогноз, коснется ли рынок выбранного ценового барьера"
 
 msgid "Tourism"
 msgstr "Туризм"
@@ -3295,7 +3295,7 @@ msgid "Trade Confirmation"
 msgstr "Подтверждение контракта"
 
 msgid "Trade Types"
-msgstr ""
+msgstr "Виды контрактов"
 
 msgid "Trade according to your preferred strategy"
 msgstr "Торгуйте в соответствии с выбранной стратегией"
@@ -3313,7 +3313,7 @@ msgid "Trades Profitability"
 msgstr "Прибыльность"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Анализ контрактов"
 
 msgid "Trading Times"
 msgstr "Торговые часы"
@@ -3589,7 +3589,7 @@ msgid "Y-axis labels"
 msgstr "Метки оси Y"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Прибыльные контракты за год"
 
 msgid "Yes"
 msgstr "Да"
@@ -3598,7 +3598,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Вы пока не копируете другие контракты"
 
 msgid "You can"
-msgstr ""
+msgstr "Вы можете"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Вам не нужно вносить средства для открытия счёта, но Вам необходимо будет пополнить счёт для начала торговли и покупки контрактов"
@@ -3658,13 +3658,13 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "для ирландских клиентов – (3) Государственной налоговой инспекцией Ирландии; текущая лицензия удаленного букмекера выдана 29 сентября 2015 г. (лицензия номер 1010285). Услуги данного сайта не доступны в ряде стран: в США, Коста-Рике и Гонконге, а также лицам младше 18 лет"
 
 msgid "and start learning how to trade"
-msgstr ""
+msgstr "и начать учиться торговле"
 
 msgid "apostrophe (') are allowed"
 msgstr "разрешен апостроф (')"
 
 msgid "apply online"
-msgstr ""
+msgstr "подать заявку онлайн"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ", оцениваемую в 50.5 миллионов долларов США"
@@ -3682,7 +3682,7 @@ msgid "contact support"
 msgstr "связаться со службой поддержки"
 
 msgid "create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "создать ключ и разделить его с последователями"
 
 msgid "customer support"
 msgstr "служба поддержки"
@@ -3694,7 +3694,7 @@ msgid "days"
 msgstr "дн."
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "пополнить счёт и начать торговлю за считанные минуты"
 
 msgid "disposes of its stake"
 msgstr "продает свою долю"
@@ -3727,7 +3727,7 @@ msgid "if this is not your country of residence"
 msgstr "если Вы живёте в другой стране"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "за считанные минуты"
 
 msgid "in the future, the"
 msgstr "в будущем,"
@@ -3781,10 +3781,10 @@ msgid "of \"Now\", the"
 msgstr "\"Сейчас\","
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "открыть бесплатный полностью функциональный демо-счёт с балансом в размере $10 тыс."
 
 msgid "open an account"
-msgstr ""
+msgstr "открыть счёт"
 
 msgid "our helpful support desk"
 msgstr "служба поддержки"
