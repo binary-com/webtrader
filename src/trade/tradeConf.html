@@ -21,7 +21,7 @@
           rv-if="ticks.category.contract_category | not-eq 'Spreads'">
         <li> <span>Potential Payout</span> <span rv-text='buy.payout' /> </li>
         <li> <span>Total Cost</span> <span rv-text='buy.buy_price' /> </li>
-        <li> <span>Potential Profit</span> <span rv-text='buy.potential_profit' /> </li>
+        <li rv-if='buy.potential_profit'> <span>Potential Profit</span> <span rv-text='buy.potential_profit' /> </li>
       </ul>
 
       <ul class='payout-row spreads-result'
