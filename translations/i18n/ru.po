@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-28 01:00-0500\n"
+"PO-Revision-Date: 2018-02-28 01:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -529,7 +529,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Осциллятор Арун (AROONOSC)"
 
 msgid "Arrange"
-msgstr "Организовать"
+msgstr "Организация"
 
 msgid "Asian down"
 msgstr "Азиатские вниз"
