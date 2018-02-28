@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-27 21:30-0500\n"
+"PO-Revision-Date: 2018-02-28 07:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -529,7 +529,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Осциллятор Арун (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Организация"
 
 msgid "Asian down"
 msgstr "Азиатские вниз"
@@ -703,13 +703,13 @@ msgid "Binary.com Shop introduced"
 msgstr "Начал работу Магазин Binary.com"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com объявляет о своих планах"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com продолжает расти и развиваться"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr "%1 создал собственные Индексы волатильности, которые доступны 24/7. Вы можете работать на данных индексах со всеми типами контрактов"
+msgstr "Binary.com создал собственные Индексы волатильности, которые доступны 24/7. Вы можете работать на данных индексах со всеми типами контрактов"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com заслужил завидную репутацию за стремление к высоким этическим стандартам и качество предоставляемого нами торгового опыта"
@@ -751,7 +751,7 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com предлагает широкий выбор способов пополнения и вывода средств, от кредитных карт и банковского перевода до электронных кошельков и валют"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com предоставляет своим клиентам демо-счета, на которых можно начать торговлю бинарными опционами. Почему бы не"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com предлагает новые способы торговли"
@@ -985,7 +985,7 @@ msgid "Contracts"
 msgstr "Контракты"
 
 msgid "Copier"
-msgstr ""
+msgstr "Последователь"
 
 msgid "Coppock Curve (CC)"
 msgstr "Кривая Коппока (CC)"
@@ -1459,7 +1459,7 @@ msgid "Get your price"
 msgstr "Узнайте цену"
 
 msgid "Go to"
-msgstr ""
+msgstr "Перейти к"
 
 msgid "Goes out"
 msgstr "Выйдет за пределы"
@@ -1816,7 +1816,7 @@ msgid "Loading Asset Index"
 msgstr "Загрузка индекса активов"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Загрузка копирования"
 
 msgid "Loading Download/View Data"
 msgstr "Идет Загрузка/Обзор данных"
@@ -1921,7 +1921,7 @@ msgid "Make your trade"
 msgstr "Купите контракт"
 
 msgid "Manage"
-msgstr ""
+msgstr "Управление"
 
 msgid "Mar"
 msgstr "Мар"
@@ -1954,7 +1954,7 @@ msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Совпадение по нижнему уровню (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Макс. ставка"
 
 msgid "Maximum (MAX)"
 msgstr "Максимум (MAX)"
@@ -1996,7 +1996,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "MESA адаптивная скользящая средняя (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Мин. ставка"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Мин: 10; Макс: 2000"
@@ -2041,7 +2041,7 @@ msgid "Monday"
 msgstr "Понедельник"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Прибыльные контракты за мес."
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Утрeнняя звeзда доджи (CDLMORNINGDOJISTAR)"
@@ -2239,7 +2239,7 @@ msgid "Our fast organic growth is supplemented by the acquisition of the client 
 msgstr "Наш быстрый рост дополняется приобретением клиентской базы BetsForTraders, одного из наших основных конкурентов"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "Наши цены сопоставляются с данными рынка межбанковских опционов. Таким образом, Вы всегда получаете честные и прозрачные цены для каждого контракта"
 
 msgid "Over"
 msgstr "Более"
@@ -2248,13 +2248,13 @@ msgid "Over 1 million registered accounts worldwide"
 msgstr "Свыше 1 миллиона зарегистрированных счетов по всему миру"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "Более 130 сотрудников и внештатных работников по всему миру"
 
 msgid "Over 3 years"
 msgstr "Более 3 лет"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr ""
+msgstr "Над/Под – предскажите, будет ли последняя десятичная находиться над или под заданным барьером"
 
 msgid "Overlap Studies"
 msgstr "Перекрытие графиков"
@@ -2293,7 +2293,7 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Процентный ценовой осциллятор (ПЦО)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Прибыльность торговли"
 
 msgid "Permissions"
 msgstr "Разрешения"
@@ -2302,7 +2302,7 @@ msgid "Personal Details"
 msgstr "Личные данные"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "Personal Wealth Awards 2017"
 
 msgid "Phone"
 msgstr "Телефон"
@@ -2356,7 +2356,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Пожалуйста, установите последнюю версию одного из следующих браузеров"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "Пожалуйста, примите во внимание тот факт, что цены внебиржевых индексов и акций будут отличаться от цен соответствующих индексов и акций на централизованных биржах"
 
 msgid "Please provide your tax information"
 msgstr "Пожалуйста, предоставьте Вашу налоговую информацию"
@@ -2440,7 +2440,7 @@ msgid "Profit/Loss (points)"
 msgstr "Прибыль/убытки (пункты)"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "Защитите свою прибыль"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "Сайт работает на русском, английском, индонезийском, японском, китайском, польском, немецком, французском, испанском, португальском, итальянском, русском и тайском языках"
@@ -2560,13 +2560,13 @@ msgid "Rise/Fall"
 msgstr "Повышение/Падение"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "Повышение/Падение – сделайте прогноз, упадет или поднимется цена относительно текущего уровня"
 
 msgid "Rise/Fall trades"
 msgstr "Контракты Повышение/Падение"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr ""
+msgstr "Повышение/Падение – сделайте прогноз, упадет или поднимется цена относительно текущего уровня"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Метод трёх поднимающихся/падающих (CDLRISEFALL3METHODS)"
@@ -2605,10 +2605,10 @@ msgid "Save changes"
 msgstr "Сохранить изменения"
 
 msgid "Saved"
-msgstr ""
+msgstr "Сохранённое"
 
 msgid "Scalable"
-msgstr ""
+msgstr "Масштабируемость"
 
 msgid "Second line of home address"
 msgstr "Вторая строка адреса"
@@ -2620,7 +2620,7 @@ msgid "Security"
 msgstr "Безопасность"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "Безопасность"
 
 msgid "Security question"
 msgstr "Секретный вопрос"
@@ -2656,10 +2656,10 @@ msgid "Session duration limit, in minutes"
 msgstr "Ограничение на длительность сессии, в минутах"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "Установите барьер(ы), чтобы определить позицию и узнать возможную выплату"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "Установите длительность сделки: от 10 секунд до 365 дней"
 
 msgid "Settles"
 msgstr "Заканч."
@@ -2671,13 +2671,13 @@ msgid "Share chart"
 msgstr "Поделиться графиком"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "Точные цены на активы"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Падающая звезда (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "Краткосрочные и долгосрочные контракты"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Фигура из трёх белых свечей. Бычья фигура: в рамках восходящего тренда после первой белой свечи формируется вторая свеча, которая начинается выше уровня закрытия предыдущей свечи (восходящий гэп). Затем на графике формируется третья восходящая свеча, начало которой находится ниже уровня закрытия второй свечи (нисходящий гэп). Медвежья фигура: в рамках нисходящего тренда, за первой нисходящей свечой  формируется восходящая свеча, начало которой находится ниже уровня закрытия первой свечи (нисходящий гэп). Затем на графике формируется ещё одна растущая свеча, которая открывается ниже уровня закрытия второй свечи. Данная фигура обозначает продолжение нисходящего тренда"
@@ -2686,13 +2686,13 @@ msgid "Simple Moving Average (SMA)"
 msgstr "Простая скользящая средняя (SMA)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "Просто и понятно"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Smart FX"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "Smart-индексы"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "Сглаженная скользящая средняя (SMMA)"
@@ -2704,7 +2704,7 @@ msgid "Source of wealth"
 msgstr "Источник доходов"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "Укажите выплату, которая станет Вашей потенциальной прибылью в случае правильности прогноза. Наша система рассчитает Вам ставку, которая станет итоговой ценой контракта. Binary.com предлагает выплаты в размере от $1 до $50 000"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Волчок (CDLSPINNINGTOP)"
@@ -2764,13 +2764,13 @@ msgid "Status"
 msgstr "Статус"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Останется внутри/вне"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Контракты Останется между/Выйдет за пределы"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "Останется внутри/вне – укажите, будет ли цена находиться внутри или выйдет за пределы двух барьеров в любой момент на протяжении действия контракта"
 
 msgid "Stays in"
 msgstr "Останется внутри"
@@ -2779,7 +2779,7 @@ msgid "Step 1: Define your position"
 msgstr "Шаг 1: Выберите условия"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "Шаг 2: Узнайте цену контракта"
 
 msgid "Step 3: Make your trade"
 msgstr "Шаг 3: Купите контракт"
@@ -2884,7 +2884,7 @@ msgid "The"
 msgstr " "
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Индекс AUD является взвешенным индексом, измеряющим значение австралийского доллара против корзины из 5 основных мировых валют (USD, EUR, GBP, JPY, CAD), каждая из которых взвешена на 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "Абсолютный ценовой осциллятор (APO) основан на абсолютной разнице между двумя скользящими средними разной длины: быстрой и медленной скользящей средней"
@@ -2932,7 +2932,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "Дожи-стрекоза формируется, когда уровень открытия, максимум и уровень закрытия совпадают или находятся вблизи одной и той же цены (совпадение уровня открытия, максимума и уровня закрытия является довольно редкой ситуацией). Наиболее важная часть Дожи-стрекозы – длинная нижняя тень"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Индекс EUR Index является взвешенным индексом, измеряющим значение евро против корзины из 5 основных мировых валют (USD, AUD, GBP, JPY, CAD), каждая из которых взвешена на 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "Экспоненциальная скользящая средняя (ЭСС) представляет среднее значение цен, но уделяет большое внимание недавним ценам. Значение, уделяемое наиболее недавним ценам, зависит от выбранного периода скользящей средней. Чем короче период ЭСС, тем большее значение будет уделено недавней цене"
@@ -2941,7 +2941,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr "Быстрый стохастический осциллятор основан на оригинальных формулах Джорджа Лэйна для %K и %D. %K в быстрой версии является довольно изменчивым. %D является 3-дневной простой скользящей средней %K"
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "Индекс GBP является взвешенным индексом, измеряющим значение британского фунта против корзины из 5 основных мировых валют (USD, EUR, AUD, JPY, CAD), каждая из которых взвешена на 20%"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "Дожи-надгробие формируется, когда уровень открытия, минимум и уровень закрытия совпадают или находятся вблизи одной цены (совпадение уровня открытия, минимума и уровня закрытия является весьма редкой ситуацией). Наиболее важная часть дожи-надгробия – длинная верхняя тень"
@@ -3016,10 +3016,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr "Функция Типичной цены измеряет среднее значение между дневным максимумом, минимумом и ценой закрытия, используя простой график с одной линией. Типичная цена даёт упрощённое представление о торговых ценах на протяжении дня и действует совместно с другими функциями регулирования цены. Вы можете использовать её для сглаживания непостоянства цены закрытия, так как она охватывает информацию за весь торговый день, а не только конечный результат дневной сессии. Индикатор Типичной цены измеряет сумму максимума, минимума и цены закрытия и делит полученный результат на три"
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "Индекс USD является взвешенным индексом, измеряющим значение американского доллара против корзины из 5 основных мировых валют (EUR, GBP, AUD, JPY, CAD), каждая из которых взвешена на 20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "Индекс волатильности 100 в два раза волатильнее, чем Индекс волатильности 50, и в четыре раза волатильнее, чем Индекс волатильности 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Индикатор Взвешенная цена закрытия представляет собой среднее значение цены за каждый день. Он может применяться для сглаживания несоответствия цен закрытия на графике, так как цена закрытия основывается на информации за весь торговый день"
@@ -3058,10 +3058,10 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Финансовые услуги, предоставляемые на данном сайте, подходят лишь для клиентов, готовых к возможной потере всех инвестированных финансовых средств, а также осознающих риск и имеющих опыт риска, связанного с приобретением финансовых контрактов. Сделки с финансовыми контрактами подразумевают высокую степень риска. Если купленный контракт истекает без выплаты, Вы теряете всю сумму инвестиции и возможную прибыль в сделке"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "Шаг первый: откройте счёт. Вы можете"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "Первое, что нужно сделать – это выбрать инструмент, на котором Вы хотите работать, например, золото или нефть, акции или форекс (стоимость бинарного опциона зависит от цены соответствующего инструмента). Большое преимущество работы на бинарных опционах в том, что Вы не покупаете и не продаёте настоящие рыночные активы"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Первые три дня бычьей лестницы представлены тремя сильными чёрными свечами с последовательным снижающимся открытием и снижающимся закрытием. В четвёртый день формируется короткая чёрная свеча, которая открывается и торгуется выше, оставляя длинную верхнюю тень, а затем закрывается на новом минимуме. В пятый день формируется сильная белая свеча, тело которой закрывает свечу четвёртого дня"
@@ -3115,16 +3115,16 @@ msgid "The volatility indices simulate various real market situations and provid
 msgstr "Индексы волатильности моделируют различные ситуации на рынке и предоставляют идеальную платформу, на которой можно научиться торговать и протестировать свои стратегии в самых разных рыночных условиях. Данные индексы зависят от уровня волатильности и движения рынка, помогая пользователям опробовать такие сценарии, как высокая или низкая волатильность, восходящие или нисходящие тренды"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "К Вашим услугам четыре основных типа контрактов:"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "Существует два типа контрактов Внутри/Вне"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "Выделяют два типа контрактов Вверх/Вниз"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "Существует два способа торговли Азиатскими контрактами"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Контракты, где трейдер прогнозирует, окажется ли рынок выше или ниже заданного ценового барьера"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "Ключ"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Управление ключами"
 
 msgid "Token management"
 msgstr "Управление ключами"
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "Право доступа ключа"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "Ключи – это специальные коды доступа"
 
 msgid "Tooltip background"
 msgstr "Фон подсказки"
@@ -3262,7 +3262,7 @@ msgid "Tooltip text"
 msgstr "Текст подсказки"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Кол-во последователей"
 
 msgid "Total Cost"
 msgstr "Общая стоимость"
@@ -3271,7 +3271,7 @@ msgid "Total Profit/Loss"
 msgstr "Общая прибыль/убыток"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Кол-во контрактов"
 
 msgid "Touch"
 msgstr "Касание"
@@ -3280,7 +3280,7 @@ msgid "Touch/No Touch"
 msgstr "Касание/Нет касания"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "Касание/Нет касания – сделайте прогноз, коснется ли рынок выбранного ценового барьера"
 
 msgid "Tourism"
 msgstr "Туризм"
@@ -3295,7 +3295,7 @@ msgid "Trade Confirmation"
 msgstr "Подтверждение контракта"
 
 msgid "Trade Types"
-msgstr ""
+msgstr "Виды контрактов"
 
 msgid "Trade according to your preferred strategy"
 msgstr "Торгуйте в соответствии с выбранной стратегией"
@@ -3313,7 +3313,7 @@ msgid "Trades Profitability"
 msgstr "Прибыльность"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Анализ контрактов"
 
 msgid "Trading Times"
 msgstr "Торговые часы"
@@ -3589,7 +3589,7 @@ msgid "Y-axis labels"
 msgstr "Метки оси Y"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Прибыльные контракты за год"
 
 msgid "Yes"
 msgstr "Да"
@@ -3598,7 +3598,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Вы пока не копируете другие контракты"
 
 msgid "You can"
-msgstr ""
+msgstr "Вы можете"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Вам не нужно вносить средства для открытия счёта, но Вам необходимо будет пополнить счёт для начала торговли и покупки контрактов"
@@ -3658,13 +3658,13 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "для ирландских клиентов – (3) Государственной налоговой инспекцией Ирландии; текущая лицензия удаленного букмекера выдана 29 сентября 2015 г. (лицензия номер 1010285). Услуги данного сайта не доступны в ряде стран: в США, Коста-Рике и Гонконге, а также лицам младше 18 лет"
 
 msgid "and start learning how to trade"
-msgstr ""
+msgstr "и начать учиться торговле"
 
 msgid "apostrophe (') are allowed"
 msgstr "разрешен апостроф (')"
 
 msgid "apply online"
-msgstr ""
+msgstr "подать заявку онлайн"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ", оцениваемую в 50.5 миллионов долларов США"
@@ -3682,7 +3682,7 @@ msgid "contact support"
 msgstr "связаться со службой поддержки"
 
 msgid "create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "создать ключ и разделить его с последователями"
 
 msgid "customer support"
 msgstr "служба поддержки"
@@ -3694,7 +3694,7 @@ msgid "days"
 msgstr "дн."
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "пополнить счёт и начать торговлю за считанные минуты"
 
 msgid "disposes of its stake"
 msgstr "продает свою долю"
@@ -3727,7 +3727,7 @@ msgid "if this is not your country of residence"
 msgstr "если Вы живёте в другой стране"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "за считанные минуты"
 
 msgid "in the future, the"
 msgstr "в будущем,"
@@ -3781,10 +3781,10 @@ msgid "of \"Now\", the"
 msgstr "\"Сейчас\","
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "открыть бесплатный полностью функциональный демо-счёт с балансом в размере $10 тыс."
 
 msgid "open an account"
-msgstr ""
+msgstr "открыть счёт"
 
 msgid "our helpful support desk"
 msgstr "служба поддержки"
