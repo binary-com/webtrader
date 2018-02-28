@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-27 21:20-0500\n"
+"PO-Revision-Date: 2018-02-27 21:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3310,7 +3310,7 @@ msgid "Trader's Statistics"
 msgstr "Статистика трейдера"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Прибыльность"
 
 msgid "Trades break down"
 msgstr ""
@@ -3319,7 +3319,7 @@ msgid "Trading Times"
 msgstr "Торговые часы"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
-msgstr ""
+msgstr "Торговля бинарными опционами довольно проста. Вы можете открыть контракт, выполнив три простых шага:"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "Торговля бинарными опционами подходит далеко не всем, поэтому, пожалуйста, убедитесь, что Вы полностью осознаёте все риски. Ваши потери могут превысить первоначальную инвестицию, а Вы не владеете и не получаете никакой доли от базового актива. Помните, что некоторые вариации бинарных опционов являются разновидностью азартных игр и могут вызвать привыкание, поэтому, пожалуйста, играйте ответственно"
