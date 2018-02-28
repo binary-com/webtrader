@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-28 02:30-0500\n"
+"PO-Revision-Date: 2018-02-28 07:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2932,7 +2932,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "Дожи-стрекоза формируется, когда уровень открытия, максимум и уровень закрытия совпадают или находятся вблизи одной и той же цены (совпадение уровня открытия, максимума и уровня закрытия является довольно редкой ситуацией). Наиболее важная часть Дожи-стрекозы – длинная нижняя тень"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr "Индекс EUR Index является взвешенным индексом, измеряющим значение евро против корзины из 5 основных мировых валют (USD, EUR, GBP, JPY, CAD), каждая из которых взвешена на 20%"
+msgstr "Индекс EUR Index является взвешенным индексом, измеряющим значение евро против корзины из 5 основных мировых валют (USD, AUD, GBP, JPY, CAD), каждая из которых взвешена на 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "Экспоненциальная скользящая средняя (ЭСС) представляет среднее значение цен, но уделяет большое внимание недавним ценам. Значение, уделяемое наиболее недавним ценам, зависит от выбранного периода скользящей средней. Чем короче период ЭСС, тем большее значение будет уделено недавней цене"
