@@ -62,7 +62,7 @@ function apply_fixes(available){
     }).each(replacer('contract_display', 'rise'));
 
     _(available).filter({
-      'contract_category': 'callput',      
+      'contract_category': 'callput',
       'barrier_category': 'euro_atm',
       'barriers': 0,
       'sentiment': 'down'
@@ -158,7 +158,7 @@ function set_current_template(state, tpl) {
   }
   state.categories.selected = tpl.categories_value.contract_category;
   _.defer(function() {
-    if(!_.find(state.category_displays.array, 
+    if(!_.find(state.category_displays.array,
       type => type.name===tpl.categoriy_displays_selected.name && type.sentiment===tpl.categoriy_displays_selected.sentiment)) {
       warn();
       return;
@@ -846,7 +846,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       /* trigger a new proposal stream */
       state.proposal.onchange();
     }
-    
+
     /* workaround for api not providing this fields */
     var extra = {
         currency: state.currency.value,
@@ -913,10 +913,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .uniq()
     .value()
     // TODO temp filter until https://trello.com/c/Rj2a7K8e/558-shahrizal-lbuiminoradjustment is released
-    .filter(f => f !== 'Lookbacks')
+    .filter(f => {
+        console.log(f);
+        return f.toLowerCase().indexOf('Lookbacks') === -1
+    })
     .forEach(x => {
-      let y = {}; 
-      y.contract_category_display = x; 
+      let y = {};
+      y.contract_category_display = x;
       let contract_object = _.find(available, {contract_category_display: x});
       if(contract_object){
         y.contract_category = contract_object.contract_category;
