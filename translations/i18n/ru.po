@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-27 20:50-0500\n"
+"PO-Revision-Date: 2018-02-27 21:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -736,7 +736,7 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "Binary.com завоевал награду в категории “Лучший брокер бинарных опционов” на 16-й Международной финансовой конференции и выставке стран MENA, которая состоялась в Дубае"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com принадлежит и находится под управлением группы компаний Binary Ltd. Для получения дополнительной информации, пожалуйста, посетите страницу нашей истории"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
 msgstr ""
@@ -1948,7 +1948,7 @@ msgid "Matches"
 msgstr "Совпадёт"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "Совпадение/отличие – проверьте, совпадёт ли последняя десятичная цены с Вашим прогнозом"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Совпадение по нижнему уровню (CDLMATCHINGLOW)"
@@ -2137,7 +2137,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
-msgstr ""
+msgstr "Внебиржевыне акции – контракты на голубых фишках, получаемые с внебиржевого рынка"
 
 msgid "Occupation"
 msgstr "Вид деятельности"
@@ -2170,7 +2170,7 @@ msgid "One last step left"
 msgstr "Остался один шаг"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "Онлайн торговля может перерасти в зависимость. Заполните форму для ограничения Вашего участия на сайте или вышлите в службу поддержки подписанное письмо в отсканированном виде или по факсу. После установки ограничений Вы можете только усилить их. Ограничения могут быть сняты или смягчены по истечении 7 дней, за исключением даты самоисключения, которая не может быть изменена или отменена после её подтверждения. Для снятия или увеличения лимитов ограничения, пожалуйста, свяжитесь со следующим отделом:"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "Уже через пять лет после создания сайта мы получили этот крупный приз за свои услуги онлайн трейдинга. Награда признает надежный, быстрый и безопасный трейдинг, предлагаемый BetOnMarkets.com как новичкам, так и опытным трейдерам. На тот момент на сайте было выполнено более 15 миллионов сделок"
@@ -3478,10 +3478,10 @@ msgid "Volatility Indices"
 msgstr "Индексы волатильности"
 
 msgid "Volatility Indices are further categorized into two types"
-msgstr ""
+msgstr "Индексы волатильности подразделяются на два вида"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
-msgstr ""
+msgstr "Индексы волатильности – нововведение Binary.com – индексы, которые моделируют рыночную динамику"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "Взвешенная скользящая средняя или WMA помогает сгладить ценовые неровности для более удобного определения тренда. Индикатор уделяет большее значение последним данным, чем экспоненциальная скользящая средняя (EMA)"
@@ -3496,7 +3496,7 @@ msgid "We rebrand BetOnMarkets.com as"
 msgstr "Мы переименовываем BetOnMarkets.com в"
 
 msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
-msgstr ""
+msgstr "Мы держим средства клиентов на отдельных счетах в надёжных и лицензированных финансовых учреждениях, согласно условиям нашей лицензии на предоставление торговых услуг"
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "Мы получаем патенты в категории \"Система компьютерной торговли и метод спекуляций на финансовых рынках\" и \"Система компьютерной торговли для предложения спекуляций на рынках\". Патенты демонстрируют наше стремление к инновациям и лидерству"
@@ -3529,19 +3529,19 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Добро пожаловать на Webtrader от Binary.com"
 
 msgid "What are OTC indices and stocks?"
-msgstr ""
+msgstr "Что такое внебиржевые индексы и акции?"
 
 msgid "What is pep?"
 msgstr "Кто такие ПЗЛ?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr ""
+msgstr "Когда Вы будете довольны предложенной ценой, незамедлительно исполняйте контракт. Благодаря нашей уникальной платформе, Вы никогда не столкнётесь с \"проскальзыванием\" или гэпами на рынке. Самое важное: мы не взимаем никаких скрытых комиссий. Также Вы можете в любое время продать любой долгосрочный контракт до времени окончания его действия, чтобы зафиксировать уже полученную прибыль или минимизировать убыток"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "Торгуя на Binary.com, Вы можете быть абсолютно уверены, что Ваши средства хранятся на отдельных надёжных счетах и не используются для любых других целей"
 
 msgid "Where does Binary.com hold my funds?"
-msgstr ""
+msgstr "Где Binary.com держит мои средства?"
 
 msgid "While on the go, you can"
 msgstr "Прямо на ходу Вы можете"
@@ -3628,7 +3628,7 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "Вы успешно открыли счёт на Binary.com, но для начала торговли Вы должны открыть Webtrader доступ к нему"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Ваш счёт (%) заблокирован. Пожалуйста, свяжитесь со службой поддержки для получения дополнительной информации."
 
 msgid "Your browser is not supported"
 msgstr "Ваш браузер не поддерживается"
