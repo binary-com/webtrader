@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-02-27 04:50-0500\n"
+"PO-Revision-Date: 2018-02-27 20:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,49 +49,49 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr "), предоставляющий круглосуточный сервис финансовых ставок на нескольких индексах. Бизнес быстро растёт, и вскоре сайт становится лидером в индустрии финансовых ставок с фиксированным коэффициентом выигрыша"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- Торгуйте по тем же курсам, которыми пользуются трейдеры на межбанковском рынке. Мы ежедневно корректируем котировки, согласно межбанковскому рынку валютных контрактов"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com не является партнёром ни одного из вышеперечисленных платёжных агентов. Каждый платёжный агент действует в качестве независимого поставщика услуг и не получает поощрения, гарантий или иного одобрения от Binary.com. КЛИЕНТЫ СОТРУДНИЧАЮТ С ПЛАТЁЖНЫМИ АГЕНТАМИ НА СВОЙ СТРАХ И РИСК. Клиентам рекомендуется проверять рекомендации платёжных агентов перед отправкой им денег. Ни при каких обстоятельствах Binary.com не будет нести ответственности за транзакции, осуществляемые между клиентами и платёжными агентами"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- Выберите один из миллиона доступных контрактов и задайте настройки, согласно Вашей стратегии"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "– Выбирайте любую продолжительность контрактов: от 10 секунд до 365 дней"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- Внесите на счёт всего USD 5 и начните торговлю"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Получайте прибыль, пропорциональную Вашей инвестиции"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- Воспользуйтесь торговой платформой, которая проста в работе и навигации"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- Знайте возможный выигрыш и убыток ещё до покупки контракта"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- Откройте счёт и начните торговать за считанные минуты. Пополнение и вывод средств со счёта доступны 24/7"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "– Сделайте прогноз, окончится ли контракт выше или ниже заданного барьера"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Предскажите, упадёт или вырастет цена относительно текущего уровня"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- Сделайте прогноз: останется ли цена внутри двух заданных барьеров или выйдет за их пределы"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Предскажите, коснётся ли рынок выбранного ценового барьера"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Знайте котировки на прямые и обратные контракты: получайте точные и прозрачные цены от %1"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Продавайте длинные контракты до истечения срока их действия, чтобы зафиксировать прибыль или минимизировать убыток"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
 msgstr ""
