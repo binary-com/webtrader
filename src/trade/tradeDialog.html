@@ -207,7 +207,7 @@
            </select>
         </li>
         <li rv-attr-dummy="basis.amount | debounce proposal.onchange">
-            <price-spinner class="basis-amount" value="basis.amount" min='0' decimals='currency.decimal' />
+             <input class="basis-amount" type="text" rv-decimal-round="currency.decimals | or 5" rv-value="basis.amount" no-symbol="no-symbol" />
         </li>
     </ul>
 
@@ -287,7 +287,7 @@
             Net Profit: <span rv-html="proposal.netprofit_ < ask_price payout"> </span> |
           </span>
           <span>
-            Payout: <span rv-html="proposal.payout_ | call proposal.payout proposal.ask_price category_displays.selected.contract_type"> </span>
+            Payout: <span rv-html="proposal.payout_ | call proposal.payout proposal.ask_price proposal.multiplier category_displays.selected.contract_type"> </span>
           </span>
         </li>
     </ul>

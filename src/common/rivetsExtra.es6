@@ -350,7 +350,7 @@ rv.binders['input-enter'] = {
       });
    },
    function: true
-} 
+}
 /* bind values to jquery ui spinner options like 'min', 'max', ... */
 rv.binders['spinner-*'] = function(el,value) {
    $(el).webtrader_spinner('option', this.args[0], value);
@@ -598,17 +598,23 @@ const decimalPlaces = (num) => {
 /* rviets formatter for decimal round */
 rv.binders['decimal-round'] = {
    priority: 3001,
-   routine: (input, places) => {
+   routine: (input, places, ...rest) => {
+      let last_value = null;
       const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000, '8': 100000000}[places];
-      input = $(input);
-      input.on('input', () => {
-         const prefered_sign = input.attr('prefered-sign') || '';
-         const no_symbol = input.attr('no-symbol');
-         let val = input.val();
+      const $input = $(input);
+      const listener = () => {
+         const prefered_sign = $input.attr('prefered-sign') || '';
+         const no_symbol = $input.attr('no-symbol');
+         let val = $input.val();
          if(val === '') return;
          if(val === '-' || val === '+' && !no_symbol) return;
          const dps = decimalPlaces(val);
-         if(dps && dps <= places ) return;
+         if(last_value == val ) return;
+         if(dps && dps <= places ) {
+           last_value = val;
+           $input.trigger('change');
+           return;
+         };
          const dot = val.endsWith('.') ? '.' : '';
          let symbol = val[0];
          symbol = (symbol === '+' || symbol === '-') ? symbol : '';
@@ -618,10 +624,18 @@ rv.binders['decimal-round'] = {
          if(!isNaN(val)) {
             if(prefered_sign && symbol === '') symbol = prefered_sign;
             if(no_symbol) symbol = '';
-            input.val(symbol + val + dot);
+            $input.val(symbol + val + dot);
+            last_value = val;
+            $input.trigger('input');
          }
-      })
-
+      }
+      input._listener && $input.off('input', input._listener);
+      input._listener = listener;
+      $input.on('input', listener)
+   },
+   getValue: (el) => {
+     console.warn('getValue');
+     return el.value;
    }
 }
 
@@ -679,7 +693,7 @@ const component_twoway_bind = (self, data, keypathes) => {
          if(observer) {
             observer.options.adapters['.'].observe(observer.target, _.last(observer.keypath.split('.')), () => {
                const updated = observer.target[_.last(observer.keypath.split('.'))];
-               data.value = updated;
+               data[key] = updated;
             });
             self.componentView.observe(keypath, (value) => observer.setValue(value));
          }
@@ -689,17 +703,12 @@ const component_twoway_bind = (self, data, keypathes) => {
 rivets.components['price-spinner'] = {
    static: ['class', 'min'],
    template:
-   () => `<span class="ui-spinner ui-widget ui-widget-content ui-corner-all">
+   () => `<span class="ui-spinner ui-widget ui-widget-content ui-corner-all" rv-attr-value="data.value">
                <input rv-class="data.class" type="text" rv-value="data.value" rv-decimal-round="data.decimals | or 5" no-symbol="no-symbol" />
              </span>`,
    initialize: function(el, data) {
-      const decimals = (data.decimals || 2)*1;
-      const min = (data.min || 0)*1;
       component_twoway_bind(this, data, ['data.value']);
-      $(el).on("change", () => {
-            data.value = (+data.value).toFixed(decimals);
-      });
-      $(el).trigger("change");
+      //component_twoway_bind(this, data, ['data.decimals']);
       return {
          data: data
       };
