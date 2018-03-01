@@ -325,7 +325,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
-      decimal: currencyFractionalDigits()
+      decimals: 0,
     },
     basis: {
       array: ['Payout', 'Stake'],
@@ -374,6 +374,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       payout: 0,
       spot: "0.0",
       spot_time: "0",
+      multiplier: "0",
       error: '',
       loading: true, /* the proposal request state */
 
@@ -388,7 +389,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       payout_: function () {
         const {contract_type} = state.category_displays.selected;
         if (Lookback.isLookback(contract_type)) {
-          return Lookback.formula(contract_type, formatPrice((+state.basis.amount || 0), state.currency.value));
+          return Lookback.formula(contract_type, formatPrice((+state.basis.amount || 0), state.currency.value, 3));
         } else {
           return formatPrice((+this.payout || 0), state.currency.value);
         }
@@ -472,9 +473,15 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if (isLookback(category)) {
       state.basis.array = ['Multiplier'];
       state.basis.value = 'multiplier';
+      _.defer(()=> {
+        state.currency.decimals = 3;
+      })
     } else {
       state.basis.array = ['Payout', 'Stake'];
       state.basis.value = 'payout';
+      _.defer(()=> {
+        state.currency.decimals = currencyFractionalDigits();
+      })
     }
     state.category_displays.selected = _.head(state.category_displays.array);
   };
@@ -483,7 +490,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     state.category_displays.selected = {};
     state.category_displays.selected.name = $(e.target).attr('data-name');
     state.category_displays.selected.sentiment = $(e.target).attr('data-sentiment');
-    state.category_displays.selected.contract_type = $(e.target).attr('data-contract_type')
+    state.category_displays.selected.contract_type = $(e.target).attr('data-contract_type');
   };
 
   state.date_start.update = function () {
@@ -556,7 +563,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   state.duration.update = function () {
     var category = state.categories.value.contract_category;
-    if (_(["callput", "endsinout", "staysinout", "touchnotouch"]).includes(category)) {
+    if (_(["callput", "endsinout", "staysinout", "touchnotouch", "lookback"]).includes(category)) {
       if(state.duration.array.length !== 2)
         state.duration.array = ['Duration', 'End Time'];
     }
@@ -779,6 +786,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       symbol: state.proposal.symbol, /* Symbol code */
     };
     if(state.categories.value.contract_category !== 'spreads') {
+      // format amount
+      state.basis.amount = (state.basis.amount.toString()).replace(/^0+(\d\.)/, '$1');
       request.amount = state.basis.amount*1; /* Proposed payout or stake value */
       request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
     } else {
@@ -981,6 +990,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           var proposal = data.proposal;
           state.proposal.ask_price = proposal.ask_price;
           state.proposal.date_start = proposal.date_start;
+          state.proposal.multiplier = proposal.multiplier || '0';
           state.proposal.display_value = proposal.display_value;
           state.proposal.message = proposal.longcode;
           state.proposal.payout = proposal.payout;
