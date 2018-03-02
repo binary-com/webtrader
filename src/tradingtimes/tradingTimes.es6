@@ -54,29 +54,31 @@ const processData = (markets) => {
      )
    });
 
-   /* get the rows for this particular marketname and sumbarket_name */
-   const getRowsFor = (marketname, submarket_name) => {
+  return {
+    market_names: market_names,
+    submarket_names: submarket_names,
+    /* get the rows for this particular marketname and sumbarket_name */
+    getRowsFor: function(marketname, submarket_name) {
       // TODO: comeback and use lodash once 'trade module' changes got merged.
       const market = markets.filter((m) => (m.display_name == marketname))[0];
       const symbols = market && market.submarkets.filter((s) => (s.display_name == submarket_name))[0].instruments;
 
       const rows = (symbols || []).map((sym) => {
-         return [
-            sym.display_name,
-            sym.times.open[0],
-            sym.times.close[0],
-            sym.times.settlement || sym.settlement || '-',
-            sym.events[0] ? sym.events[0].descrip + ':' + sym.events[0].dates : '-'
-         ];
+        return [
+          sym.display_name,
+          sym.times.open[0],
+          sym.times.close[0],
+          sym.times.settlement || sym.settlement || '-',
+          (sym.events && sym.events.length > 0) ?
+            sym.events
+              .map(({descrip, dates}) => `${descrip}: ${dates}`)
+              .join('<br>')
+            : '-',
+        ];
       });
       return rows;
-   }
-
-   return {
-      market_names: market_names,
-      submarket_names: submarket_names,
-      getRowsFor: getRowsFor
-   };
+    }
+  };
 }
 
 export const init = ($menuLink) => {
@@ -130,7 +132,8 @@ const initTradingWin = ($html) => {
    });
 
    let market_names = null,
-      submarket_names = null;
+      submarket_names = null,
+      changedFn = null;
 
    const refreshTable = (yyyy_mm_dd) => {
       const processing_msg = $('#' + table.attr('id') + '_processing').show();
@@ -146,36 +149,43 @@ const initTradingWin = ($html) => {
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
       const refresh = (data) => {
 
-        data = menu.extractFilteredMarkets(data);
-
-        const result = processData(data);
+        const result = processData(menu.extractFilteredMarkets(data));
+        function changed() {
+          const val = $(this).val();
+          submarket_names.update_list(result.submarket_names[val]);
+          updateTable(result, market_names.val(), submarket_names.val());
+        };
 
           if (market_names == null) {
-              select = $('<select />');
+              const select = $('<select />');
               select.appendTo(subheader);
               market_names = windows.makeSelectmenu(select, {
                 list: result.market_names,
                 inx: 0,
-                changed: (val) => {
-                    submarket_names.update_list(result.submarket_names[val]);
-                    updateTable(result, market_names.val(), submarket_names.val());
-                }
               });
+              market_names.off('selectmenuchange', changed);
+              market_names.on('selectmenuchange', changed);
           } else {
-            select.update_list(result.market_names);
-          }
+            market_names.update_list(result.market_names);
+            market_names.off('selectmenuchange', changed);
+            market_names.on('selectmenuchange', changed);
+        }
 
           if (submarket_names == null) {
-              sub_select = $('<select />');
+              const sub_select = $('<select />');
               sub_select.appendTo(subheader);
               submarket_names = windows.makeSelectmenu(sub_select, {
                 list: result.submarket_names[market_names.val()],
                 inx: 0,
-                changed: (val) => updateTable(result, market_names.val(), submarket_names.val())
+                changed: changedFn,
               });
-          } else {
-            sub_select.update_list(result.submarket_names[market_names.val()]);
-          }
+              submarket_names.off('selectmenuchange', changed);
+              submarket_names.on('selectmenuchange', changed);
+            } else {
+            submarket_names.update_list(result.submarket_names[market_names.val()]);
+            submarket_names.off('selectmenuchange', changed);
+            submarket_names.on('selectmenuchange', changed);
+        }
 
           updateTable(result, market_names.val(), submarket_names.val());
           processing_msg.hide();
