@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-02-24 19:00-0500\n"
+"PO-Revision-Date: 2018-03-04 17:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -529,7 +529,7 @@ msgid "Aroon Oscillator (AROONOSC)"
 msgstr "Oscylator Aroon (AROONOSC)"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Organizuj"
 
 msgid "Asian down"
 msgstr "Azjatyckie – Spadek"
@@ -1762,7 +1762,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom – dno drabiny (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Zakłady z zyskiem z ostatnich 12 miesięcy"
 
 msgid "Last used"
 msgstr "Ostatnio używane"
@@ -2041,7 +2041,7 @@ msgid "Monday"
 msgstr "Poniedziałek"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Miesięczne zakłady z zyskiem"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star – poranna gwiazda doji (CDLMORNINGDOJISTAR)"
@@ -2293,7 +2293,7 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Procentowy oscylator ceny PPO (Percentage Price Oscillator)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Prawdopodobieństwo zysków"
 
 msgid "Permissions"
 msgstr "Pozwolenia"
@@ -3262,7 +3262,7 @@ msgid "Tooltip text"
 msgstr "Tekst tooltipa"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Wszyscy kopiujący"
 
 msgid "Total Cost"
 msgstr "Koszt całkowity"
@@ -3271,7 +3271,7 @@ msgid "Total Profit/Loss"
 msgstr "Całkowity zysk / całkowita strata"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Wszyscy gracze"
 
 msgid "Touch"
 msgstr "Osiągnie"
@@ -3313,7 +3313,7 @@ msgid "Trades Profitability"
 msgstr "Rentowność gracza"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Podział zakładów"
 
 msgid "Trading Times"
 msgstr "Godziny handlowania"
@@ -3589,13 +3589,13 @@ msgid "Y-axis labels"
 msgstr "Etykiety osi Y"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Roczne zakłady z zyskiem"
 
 msgid "Yes"
 msgstr "Tak"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Nie kopiujesz jeszcze żadnego gracza"
 
 msgid "You can"
 msgstr "Możesz"
@@ -3781,7 +3781,7 @@ msgid "of \"Now\", the"
 msgstr "jako „Teraz”,"
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "otwórz darmowe w pełni funkcjonalne konto z 10 000 $"
 
 msgid "open an account"
 msgstr "otwórz konto "
