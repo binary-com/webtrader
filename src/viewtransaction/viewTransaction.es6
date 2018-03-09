@@ -227,7 +227,7 @@ const update_indicative = (data, state) => {
          state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
          state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
       }
-      state.sell.is_valid_to_sell = contract.is_valid_to_sell && !contract.is_expired;
+      state.sell.is_valid_to_sell = contract.is_valid_to_sell;
       state.chart.manual_reflow();
    } else {
       /*Just change the current_spot_time to date_expiry*/
