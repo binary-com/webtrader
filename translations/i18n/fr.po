@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 07:10-0500\n"
+"PO-Revision-Date: 2018-03-10 07:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3253,7 +3253,7 @@ msgid "Token permissions"
 msgstr "Permissions du jeton"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "Les jetons sont des codes spéciaux pour accéder à"
 
 msgid "Tooltip background"
 msgstr "Arrière-plan infobulle"
@@ -3262,7 +3262,7 @@ msgid "Tooltip text"
 msgstr "Texte infobulle"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Copieurs totales"
 
 msgid "Total Cost"
 msgstr "Coût total"
@@ -3271,7 +3271,7 @@ msgid "Total Profit/Loss"
 msgstr "Total des profits/pertes"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Total des trades"
 
 msgid "Touch"
 msgstr "Touche"
@@ -3280,7 +3280,7 @@ msgid "Touch/No Touch"
 msgstr "Touche/Ne touche pas"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "Touche/Ne touche pas - Déterminez si le marché touchera ou non un prix-cible"
 
 msgid "Tourism"
 msgstr "Tourisme"
@@ -3295,31 +3295,31 @@ msgid "Trade Confirmation"
 msgstr "Confirmation de l'opération"
 
 msgid "Trade Types"
-msgstr ""
+msgstr "Types de Trade"
 
 msgid "Trade according to your preferred strategy"
-msgstr ""
+msgstr "Tradez en fonction de votre stratégie préférée"
 
 msgid "Trade using"
 msgstr "Effectuez vos opérations en utilisant"
 
 msgid "Trader"
-msgstr ""
+msgstr "Trader"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Statistiques de Trader"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Rentabilité des Trades"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Les Trades se décomposent"
 
 msgid "Trading Times"
 msgstr "Horaires de trading"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
-msgstr ""
+msgstr "Le trading d'options binaires est relativement simple et vous permet d'acheter une option en trois étapes seulement"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "Le trading d'options binaires peut ne pas être approprié pour tout le monde, donc assurez vous s'il vous plaît que vous comprenez complètement les risques que cela implique. Vos pertes peuvent excéder votre dépôt initial et vous ne possédez pas ou n'avez aucun intérêt dans l'actif sous-jacent. Au regard des options binaires qui sont des produits de jeux, souvenez vous que le jeu peut être addictif - jouez de manière responsable s'il vous plaît"
@@ -3334,7 +3334,7 @@ msgid "Transfer to another Binary account"
 msgstr "Transfert vers un autre compte Binary.com"
 
 msgid "Transparent risk and potential reward"
-msgstr ""
+msgstr "Risques de transparence et rendement potentiel"
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "Moyenne Mobile Triangulaire (MMTRI)"
@@ -3367,13 +3367,13 @@ msgid "Two Crows (CDL2CROWS)"
 msgstr "Deux Corbeaux (CDL2CROWS)"
 
 msgid "Two-way pricing"
-msgstr ""
+msgstr "Fixation des prix bidirectionnelle"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Prix Typique (TYPPRICE)"
 
 msgid "US Patents"
-msgstr ""
+msgstr "Brevets des États-Unis"
 
 msgid "USD"
 msgstr "USD"
@@ -3403,7 +3403,7 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr "L'Unique Fond des Trois Rivières est un chandelier haussier composé de trois bougies: la 1ère bougie a un corps long et baissier, la 2ème bougie est un marteau, et son corps est à l'intérieur du corps de la 1ère barre, la 3ème bougie est petite et haussière, son prix de clôture est plus bas que la 2ème barre"
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr ""
+msgstr "Hausse : vous prédisez que le marché terminera à un cours supérieur au cours moyen"
 
 msgid "Up/Down"
 msgstr "Hausse/Baisse"
