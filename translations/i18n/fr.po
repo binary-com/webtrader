@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 07:50-0500\n"
+"PO-Revision-Date: 2018-03-10 08:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3682,7 +3682,7 @@ msgid "contact support"
 msgstr "contacter le service clientèle"
 
 msgid "create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "créer un jeton et partager le jeton avec un(des) copieur(s)"
 
 msgid "customer support"
 msgstr "service clientèle"
@@ -3694,7 +3694,7 @@ msgid "days"
 msgstr "jours"
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "déposez des fonds et commencez à trader en quelques minutes "
 
 msgid "disposes of its stake"
 msgstr "Dispose de ses mises"
@@ -3727,7 +3727,7 @@ msgid "if this is not your country of residence"
 msgstr "s'il ne s'agit pas de votre pays de résidence"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "en quelques minutes"
 
 msgid "in the future, the"
 msgstr "ultérieure, le"
@@ -3781,10 +3781,10 @@ msgid "of \"Now\", the"
 msgstr "équivalente à « Maintenant », le"
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "ouvrir un compte d’argent virtuel gratuit de 10k entièrement fonctionnel"
 
 msgid "open an account"
-msgstr ""
+msgstr "ouvrir un compte"
 
 msgid "our helpful support desk"
 msgstr "notre bureau d'assistance serviable"
