@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 08:20-0500\n"
+"PO-Revision-Date: 2018-03-10 08:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3619,10 +3619,10 @@ msgid "You will be automatically logged out after such time"
 msgstr "Votre compte sera automatiquement déconnecté après cette période"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr "Vous souhaitez autoriser d’autres traders à copier vos métiers"
+msgstr "Vous souhaitez autoriser d’autres traders à copier vos trades"
 
 msgid "You wish to copy another trader's trades"
-msgstr "Vous souhaitez copier des trades d'un autre Trader"
+msgstr "Vous souhaitez copier les trades d'un autre Trader"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Votre compte Binary.com a été créé. Pour commencer à effectuer des opérations de trading, vous devez autoriser Webtrader à y accéder."
@@ -3658,7 +3658,7 @@ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, curren
 msgstr "et pour les clients Irlandais par (3) les Commissionnaires de Revenu en Irlande, la licence actuelle de bookmaker à distance a été émise le 29 septembre 2015 (licence no 1010285). Les services du site internet ne sont pas disponibles dans certains pays comme les États-Unis, le Costa Rica, Hong Kong, ou pour les personnes en dessous de 18 ans"
 
 msgid "and start learning how to trade"
-msgstr "et commencer à apprendre à trader"
+msgstr "et commencez à apprendre à trader"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrophes (') sont autorisés"
