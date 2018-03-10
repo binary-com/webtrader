@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 04:20-0500\n"
+"PO-Revision-Date: 2018-03-10 04:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -85,28 +85,28 @@ msgid "- Predict the market staying between or going outside two price targets"
 msgstr "- Prédisez qu'un marché reste à l'intérieur ou sort de la zone entre deux prix-cibles"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Prédisez qu'un marché touche ou ne touche pas un prix-cible"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Recevez des cotations pour chaque opération ainsi que pour l'opération inverse, afin de vous offrir des prix justes et transparents de la part de Binary.com"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Vendez vos contrats à long terme avant leur expiration pour protéger les bénéfices déjà réalisés ou minimiser vos pertes"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- Trade basé sur une « intuition » ou s’appuyant sur l’analyse technique et fondamentale"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- Tradez en toute confiance, sachant que vos données personnelles, transactions et fonds sont toujours sécurisés"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- Tradez des devises, indices, matières premières et plus encore dans des marchés en hausse, en baisse, sans direction, calmes ou volatiles"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- Tradez quand vous voulez. %1 est disponible 24/7, même le week-end"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- Tradez avec le pionnier de l’industrie et détenteur d’une technologie brevetée de fixation des prix"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- devises, indices actions, et matières premières"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- de 10 secondes à 365 jours"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- haut/bas, touche/ne touche pas, reste dans/sort de la zone"
 
 msgid "0-1 year"
 msgstr "0-1 an"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2 ans"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. Choisissez le Sous-jacent"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. Marché sous-jacent"
 
 msgid "10"
 msgstr "10"
@@ -196,7 +196,7 @@ msgid "2 Minutes"
 msgstr "2 Minutes"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. Choisissez la Durée du Trade"
 
 msgid "2. Trade type"
 msgstr ""
