@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 08:00-0500\n"
+"PO-Revision-Date: 2018-03-10 08:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -103,7 +103,7 @@ msgid "- Trade currencies, indices, commodities and more in rising, falling, sid
 msgstr "- Tradez des devises, indices, matières premières et plus encore dans des marchés en hausse, en baisse, sans direction, calmes ou volatiles"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr "- Tradez quand vous voulez. %1 est disponible 24/7, même le week-end"
+msgstr "- Tradez quand vous voulez. Binary.com est disponible 24/7, même le week-end"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
 msgstr "- Tradez avec le pionnier de l’industrie et détenteur d’une technologie brevetée de fixation des prix"
