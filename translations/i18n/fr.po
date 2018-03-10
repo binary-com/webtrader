@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 08:10-0500\n"
+"PO-Revision-Date: 2018-03-10 08:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -655,7 +655,7 @@ msgid "Binary granted Investment Services license"
 msgstr "Binary obtient une licence de Services d'Investissement"
 
 msgid "Binary mobile applications and third party tools"
-msgstr "Applications mobiles Binary et les outils de tierce partie"
+msgstr "Applications mobiles Binary et outils de tierce partie"
 
 msgid "Binary opens Japan office"
 msgstr "Binary ouvre un bureau au Japon"
@@ -727,7 +727,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com introduit un"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr "Binary s'est vu décerné le prix du meilleur Broker d’Options binaires par le Online Personal Wealth Awards 2017 basée au Royaume-Uni , tel que voté par les investisseurs dans le monde entier"
+msgstr "Binary s'est vu décerné le prix du meilleur Broker d’Options binaires par le Online Personal Wealth Awards 2017 basé au Royaume-Uni , tel que voté par les investisseurs dans le monde entier"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com est entièrement en ligne et ne requiert pas l'installation de logiciel"
@@ -739,7 +739,7 @@ msgid "Binary.com is owned and operated by the Binary Group Ltd. group of compan
 msgstr "Binary.com appartient et est opéré par le groupe d'entreprises Binary Ltd. Pour plus d'information, visitez notre page historique"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr "Binary.co, lance des comptes Bitcoin (BTC) pour les clients hors UE"
+msgstr "Binary.com lance des comptes Bitcoin (BTC) pour les clients hors UE"
 
 msgid "Binary.com launches Bitcoin accounts"
 msgstr ""
