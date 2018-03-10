@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 05:00-0500\n"
+"PO-Revision-Date: 2018-03-10 06:40-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2704,7 +2704,7 @@ msgid "Source of wealth"
 msgstr "Source de richesse"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "Spécifiez votre versement, qui est votre retour potentiel si votre prédiction est correcte. Notre système va procéder au calcul de votre participation, qui est le cout total d'achat du contrat. Binary offre des versements de 1 à 50 000 dollars"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Toupie (CDLSPINNINGTOP)"
@@ -2764,13 +2764,13 @@ msgid "Status"
 msgstr "Statut"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "Reste dans/Sort de la zone"
 
 msgid "Stays Between/Goes Outside trades"
 msgstr "Trades Reste Entre/Sort De"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "Reste dans/Sort de la zone   Vous prédisez si le marché fluctera à l'intérieur ou à l'extérieur de la zone définie entre deux prix-cibles, à tout moment de la période du contrat"
 
 msgid "Stays in"
 msgstr "Reste dans la zone"
@@ -2779,7 +2779,7 @@ msgid "Step 1: Define your position"
 msgstr "Étape 1: Définissez votre position"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "Étape 2 : Obtenez un prix de contrat"
 
 msgid "Step 3: Make your trade"
 msgstr "Étape 3: Faites votre trade"
@@ -2884,7 +2884,7 @@ msgid "The"
 msgstr "Le"
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "L'indice AUD est un indice pondéré mesurant la valeur du Dollar Australien par rapport à un panier de 5 devises internationales (USD, EUR, GBP, JPY, CAD), dont chacune est pondérée à 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "L'Oscillateur de Prix Absolu (OPA) est basé sur les différences absolues entre deux moyennes mobiles de différentes longueurs, une Rapide et Lente moyenne mobile"
