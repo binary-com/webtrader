@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 06:40-0500\n"
+"PO-Revision-Date: 2018-03-10 06:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2932,7 +2932,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr "Le Doji Libellule est créée lorsque l'ouverture, le plus haut et la clôture sont les mêmes ou presque les mêmes prix (où l'ouverture, le plus haut et la fermeture ont exactement le même prix ce qui est rare). La partie la plus importante du Doji Libellule est la longue ombre inférieure"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "L'indice EUR est un indice pondéré mesurant la valeur de l'euro par rapport à un panier de 5 devises internationales (USD, AUD, GBP, JPY, CAD), dont chacune est pondérée à 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "La Moyenne Mobile Exponentielle (MME) représente une moyenne de prix, mais place plus de poids sur les prix récents. La pondération appliquée aux plus récents prix dépend de la période sélectionnée de la moyenne mobile. Plus courte est la période pour la MME, plus la pondération va être forte pour le plus récent prix"
@@ -2941,7 +2941,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr "L’Oscillateur de Stochastique Rapide est basé sur la formule originale de George Lane's pour %K et %D. %K est la version rapide qui apparaît plutôt volatile. %D est la MMS de 3 jours de %K"
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "L'indice GBP est un indice pondéré mesurant la valeur de la livre sterling par rapport à un panier de 5 devises internationales (USD, EUR, AUD, JPY, CAD), dont chacune est pondérée à 20%"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "Le Doji en Pierre Tombale est créé lorsque l'ouverture, le plus bas et la clôture sont au même prix ou quasiment au même prix (il est très rare que l'ouverture, le plus bas et la clôture aient le même prix). La partie la plus importante du Doji en Pierre Tombale est la longue ombre supérieure"
@@ -3016,10 +3016,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr "La fonction de Prix Typique mesure la moyenne du plus haut, plus bas et des prix de clôtures pour le jour utilisant une simple, unique ligne de traçage. Le prix ordinaire donne une vue simple des prix de trading ainsi que les autres fonctions d'ajustement de prix. Vous pouvez l'utiliser pour lisser certaines des inconsistances des prix de clôtures car cela comprend les informations pour l'ensemble du jour de trading et pas seulement le résultat de la clôture. L'indicateur de Prix Typique est mesuré en ajoutant le plus haut, le plus bas et les prix de clôture ensemble, et ensuite en le divisant par trois"
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "L'indice USD est un indice pondéré mesurant la valeur du dollar des États-Unis par rapport à un panier de 5 devises internationales (EUR, GBP, JPY, CAD, AUD), dont chacune est pondérée à 20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "L'indice Volatility 100 est deux fois plus volatile que l'indice Volatility 50, et quatre fois plus volatile que l'indice Volatility 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "L'indicateur de Pondération de Clôture est simplement une moyenne du prix de chaque jour. Il peut être utilisé pour lisser certaines inconsistances des prix de clôtures, puisqu'il comprend les informations de la totalité des jours de trading"
@@ -3058,7 +3058,7 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Les services financiers disponibles sur ce site conviennent uniquement aux clients capables d'assumer la perte de l'ensemble des fonds qu'ils investissent, et qui comprennent et ont l'expérience des risques liés à l'acquisition de contrats financiers. Les transactions sur contrats financiers impliquent un degré de risque élevé. Si les contrats achetés expirent sans valeur, vous perdrez la totalité de votre investissement, à savoir la prime de l'option"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "La première étape consiste à ouvrir un compte. Vous pouvez"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
 msgstr ""
