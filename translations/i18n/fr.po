@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 04:50-0500\n"
+"PO-Revision-Date: 2018-03-10 05:00-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2356,7 +2356,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Veuillez installer la dernière version de l'un de ces navigateurs"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "Compte tenu des spécificités du marché de gré à gré, le prix des indices et actions « OTC » diffère des cotations disponibles pour ces mêmes indices et actions sur les bourses centralisées"
 
 msgid "Please provide your tax information"
 msgstr "S'il vous plaît communiquez votre information fiscale"
@@ -2440,7 +2440,7 @@ msgid "Profit/Loss (points)"
 msgstr "Profits/pertes (points)"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "Protégez vos profits"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "Publié en Anglais, Indonésien, Japonais, Chinois, Polonais, Allemand, Français, Espagnol, Portugais, Italien, Russe, et Thai"
@@ -2560,13 +2560,13 @@ msgid "Rise/Fall"
 msgstr "Hausse/Baisse"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "Hausse/Baisse : déterminez si le marché évoluera à la hausse ou à la baisse par rapport au cours actuel"
 
 msgid "Rise/Fall trades"
 msgstr "Trades Haussières/Baissières"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr ""
+msgstr "Hausse/Baisse  Déterminez si le marché évoluera à la hausse ou à la baisse par rapport au cours actuel"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "Trois Méthodes Haussières/Baissières (CDLRISEFALL3METHODS)"
@@ -2608,7 +2608,7 @@ msgid "Saved"
 msgstr "Enregistré"
 
 msgid "Scalable"
-msgstr ""
+msgstr "Évolutif"
 
 msgid "Second line of home address"
 msgstr "Seconde ligne de l'adresse du domicile"
@@ -2620,7 +2620,7 @@ msgid "Security"
 msgstr "Sécurité"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "Sécurité et confidentialité"
 
 msgid "Security question"
 msgstr "Question de sécurité"
@@ -2656,10 +2656,10 @@ msgid "Session duration limit, in minutes"
 msgstr "Limite de durée de session, en minutes"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "Sélectionnez une/des barrière(s) pour définir votre position et déclencher le paiement que vous percevrez"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "Déterminez la durée de votre option, de 10 secondes à 365 jours"
 
 msgid "Settles"
 msgstr "Règlements"
@@ -2671,13 +2671,13 @@ msgid "Share chart"
 msgstr "Partager le graphique"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "Des prix compétitifs, comparés"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Étoile Filante (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "Durée courte à long terme"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Le schéma de chandelier avec les lignes blanches côte à côte est un schéma triple. Schéma haussier: dans une tendance haussière, le premier chandelier est suivi d'un autre haussier qui ouvre au dessus de la clôture du premier (fossé haussier), qui est suivi par un troisième chandelier haussier qui ouvre en dessous de la clôture du second (fossé baissier). Schéma baissier: durant une tendance baissière, le premier chandelier est baissier, suivi par un chandelier haussier qui ouvre en dessous de la clôture du premier (fossé baissier), suivi par un chandelier haussier qui ouvre en dessous de la clôture du second. Ce schéma indique une continuation de la tendance baissière"
@@ -2686,13 +2686,13 @@ msgid "Simple Moving Average (SMA)"
 msgstr "Moyenne Mobile Simple (MMS)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "Simple et intuitif"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Smart FX"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "Indices Intelligents"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "Moyenne Mobile Lissée (MML)"
