@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-03-10 04:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,40 +49,40 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr ") devient opérationnel, établissant un service financier de paris 24 heures sur 24 sur différents indices financiers. Les affaires croissent rapidement, et nous devenons bientôt le leader du marché sur les paris financiers à cotes fixes"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- Vous profitez des mêmes taux de retour sur investissement que les traders du marché interbancaire. Nos prix sont actualisés quotidiennement en fonction des marchés d'options du secteur interbancaire"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr ": Binary.com n'est affiliée à aucun des agents de paiement listés ci-dessus. Chaque agent de paiement agit en tant que fournisseur de services indépendant et Binary.com ne peut en aucun cas recommander, garantir ou approuver les services concernés. LES CLIENTS FONT APPEL AUX AGENTS DE PAIEMENT À LEURS RISQUES ET PÉRILS. Nous conseillons aux clients de vérifier les références des agents de paiement avant de leur envoyer toute somme d'argent. Binary.com ne pourra en aucun cas être tenue responsable des transactions réalisées entre les clients et les agents de paiement."
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- Faites votre choix parmi plus d'un million de variations de trade à tout moment, et personnalisez vos trades en fonction de votre stratégie de prédilection"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- Sélectionnez une période de 10 secondes à 365 jours"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- Un dépôt de 5 dollars US suffit pour commencer à trader"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Générez des gains proportionnels à votre investissement, quel que soit sa valeur"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- Profitez d'une plateforme de trading facile à utiliser offrant une navigation intuitive"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- Vous connaissez vos possibilités de gain ou de perte avant d'acheter le contrat"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- Ouvrez un compte en quelques minutes. Les dépôts et retraits sont également disponibles 24h/24 et 7j/7"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- Prédisez si le marché affichera un cours supérieur ou inférieur au prix-cible à l'expiration de l'option"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Prédisez qu'un marché augmente ou baisse par rapport à son niveau actuel"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- Prédisez qu'un marché reste à l'intérieur ou sort de la zone entre deux prix-cibles"
 
 msgid "- Predict the market touching or not touching a price target"
 msgstr ""
