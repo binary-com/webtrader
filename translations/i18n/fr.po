@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 04:40-0500\n"
+"PO-Revision-Date: 2018-03-10 04:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -664,7 +664,7 @@ msgid "Binary option"
 msgstr "Option binaire"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "Les options binaires sont faciles à aborder. Ces options sont dites « binaires » car elles ne présentent que deux issues possibles : gagner ou perdre. Si votre prédiction est correcte, vous percevez le paiement convenu en début d'opération. Dans le cas contraire, vous perdez uniquement votre investissement initial"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Options binaires ou autres produits financiers dérivés"
@@ -691,7 +691,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Binary Investments (Europe) Ltd. la filiale maltaise de Binary obtient une licence de Services d'Investissement en Catégorie 3 par l'Autorité des Services Financiers de Malte"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "La plateforme Binary traite en moyenne 20 transactions par seconde, 24 heures sur 24, 7 jours sur 7"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -703,13 +703,13 @@ msgid "Binary.com Shop introduced"
 msgstr "Le magasin Binary.com est introduit"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com annonce des plans pour une"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com continue à innover et à croître"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Binary a créé des indices de volatilité que vous pouvez négocier 24h/24, 7j/7. Vous pouvez négocier ces indices sur tous les types de contrat "
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com a gagné la réputation enviable pour notre engagement en matière de standards éthiques et la qualité de l’expérience de trading que nous fournissons"
@@ -727,7 +727,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com introduit un"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "Binary s'est vu décerné le prix du meilleur Broker d’Options binaires par le Online Personal Wealth Awards 2017 basée au Royaume-Uni , tel que voté par les investisseurs dans le monde entier"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com est entièrement en ligne et ne requiert pas l'installation de logiciel"
@@ -736,10 +736,10 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "Binary.com est honoré comme le \"Meilleur Courtier en Options Binaires\" au monde à la 16ème conférence et exposition financière MENA, située à Dubai"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com appartient et est opéré par le groupe d'entreprises Binary Ltd. Pour plus d'information, visitez notre page historique"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.co, lance des comptes Bitcoin (BTC) pour les clients hors UE"
 
 msgid "Binary.com launches Bitcoin accounts"
 msgstr ""
@@ -2041,7 +2041,7 @@ msgid "Monday"
 msgstr "lundi"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Trades rentables mensuels"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Étoile du matin Doji (CDLMORNINGDOJISTAR)"
@@ -2137,7 +2137,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
-msgstr ""
+msgstr "Actions OTC - Contrat d'action de premier ordre provenant du marché hors cote"
 
 msgid "Occupation"
 msgstr "Profession"
@@ -2170,7 +2170,7 @@ msgid "One last step left"
 msgstr "Une dernière étape est requise"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "La spéculation financière peut s'avérer addictive. Veuillez remplir le formulaire ci-dessous pour limiter votre participation sur le site Web ou envoyer une lettre ou un fax signé à notre équipe du service clientèle. Une fois vos limites fixées, vous pourrez uniquement les restreindre. Elles ne pourront être supprimées ou élargies qu'au bout de 7 jours, sauf si une date d'auto-exclusion a été sélectionnée, laquelle ne peut être supprimée ou modifiée une fois confirmée. Pour supprimer ou augmenter vos limites, veuillez contacter"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "Seulement cinq ans après ses débuts, nous avons reçu une récompense majeure pour nos services de trading en ligne. Cette récompense reconnaît la fiabilité, la rapidité et la sécurité du trading en ligne de BetOnMarkets.com pour les traders novices et experts. A ce moment, notre site internet avait reçu plus de 15 millions de trades"
@@ -2239,7 +2239,7 @@ msgid "Our fast organic growth is supplemented by the acquisition of the client 
 msgstr "Notre rapide croissance organique est complété par l'acquisition de la base clientèle de BetsForTraders, un de nos principaux concurrents"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "Nos prix sont fixés en fonction du marché interbancaire. Ainsi, vous obtenez toujours des prix justes et transparents, quelle que soit votre position"
 
 msgid "Over"
 msgstr "Au-dessus"
@@ -2248,13 +2248,13 @@ msgid "Over 1 million registered accounts worldwide"
 msgstr "Plus d'1 million de comptes enregistrés dans le monde"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "Plus de 130 employés et contractuels dans le monde"
 
 msgid "Over 3 years"
 msgstr "Plus de 3 ans"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr ""
+msgstr "Au dessus/En dessous - Prédire que le dernier chiffre est plus haut ou plus bas"
 
 msgid "Overlap Studies"
 msgstr "Chevauchement d’Études"
@@ -2293,7 +2293,7 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Pourcentage d'Oscillateur de Prix (POP)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Probabilité de performance"
 
 msgid "Permissions"
 msgstr "Permissions"
@@ -2302,7 +2302,7 @@ msgid "Personal Details"
 msgstr "Informations personnelles"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "Prix de fortune personnelle 2017"
 
 msgid "Phone"
 msgstr "Téléphone"
