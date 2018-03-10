@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 06:50-0500\n"
+"PO-Revision-Date: 2018-03-10 07:10-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3061,7 +3061,7 @@ msgid "The first step is to open an account. You can"
 msgstr "La première étape consiste à ouvrir un compte. Vous pouvez"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "La première étape consiste à sélectionner l'actif que vous souhaitez négocier, par exemple l'or, le pétrole, les actions ou les devises sur le Forex (la valeur d'une option binaire dépend du cours de l'actif sous-jacent). Les options binaires n'impliquent pas l'achat ou la vente de l'actif en lui-même : il s'agit de l'atout principal de ce type d'option"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Les trois premiers jours du Bas de l’Échelle Haussière sont de forts chandeliers noirs avec de plus basses ouvertures et fermetures consécutives. Le quatrième jour est un court chandelier noir, mais il ouvre plus haut et s'échange plus haut, laissant la longue ombre supérieure, puis clôturant en faisant un nouveau plus bas. Le cinquième jour est un fort chandelier blanc qui crée un fossé avec le quatrième jour"
@@ -3115,16 +3115,16 @@ msgid "The volatility indices simulate various real market situations and provid
 msgstr "L'indice de volatilité stimule les situations de divers marchés réels et fournisse une plateforme idéal pour s'habituer à trader et tester les stratégies dans les conditions de marchés. Les indices dépendent de la volatilité et du mouvement, et aide les utilisateurs à essayer des scénarios comme - haute volatilité, faible volatilité, tendances haussières et baissières"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "Il y a quatre principaux types de trade que vous pouvez choisir"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "Il existe deux types d'option In/Out "
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "Il existe deux types de trade Hausse/Baisse"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "Il existe deux types d'option Asiatique "
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Ce sont des trades où le trader prédit si le marché va finir en hausse ou en baisse par rapport à un prix cible spécifié"
@@ -3241,7 +3241,7 @@ msgid "Token"
 msgstr "Jeton"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Gestion des jetons"
 
 msgid "Token management"
 msgstr "Gestion des jetons"
