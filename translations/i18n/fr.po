@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 07:20-0500\n"
+"PO-Revision-Date: 2018-03-10 07:30-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3448,7 +3448,7 @@ msgid "Variance (VAR)"
 msgstr "Variance (VAR)"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "Différentes fonctionnalités personnalisables chargement et organisation des actifs, des graphiques et autres ressources comme vous le voulez"
 
 msgid "Verification code has been sent to your email"
 msgstr "Un code de vérification vous a été envoyé par e-mail"
@@ -3469,7 +3469,7 @@ msgid "View Statement"
 msgstr "Regardez votre relevé"
 
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "Marchés d'indices de volatilité"
 
 msgid "Volatility Indicators"
 msgstr "Indicateurs de volatilité"
@@ -3478,10 +3478,10 @@ msgid "Volatility Indices"
 msgstr "Indices de volatilité"
 
 msgid "Volatility Indices are further categorized into two types"
-msgstr ""
+msgstr "Les indices de volatilité peuvent être classés selon deux catégories"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
-msgstr ""
+msgstr "Les indices de volatilité - les indices propriétaires de Binary.com simulent les forces du marché"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "MMP signifie Moyenne Mobile Pondérée. Cela aide à lisser la courbe de prix pour améliorer l'identification de tendance. Cela place une plus grande importance sur les récentes données par rapport à ce que fait la MME"
@@ -3496,7 +3496,7 @@ msgid "We rebrand BetOnMarkets.com as"
 msgstr "Nous changeons le nom de BetOnMarkets.com pour"
 
 msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
-msgstr ""
+msgstr "Nous séparons les fonds des clients et les gardons dans des institutions financières sécurisées et autorisées, selon les conditions de nos licences de trading"
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "Nous avons obtenu les brevets pour 'Système de trading informatique et méthode pour spéculer sur le marché financier' et 'Système de trading informatique pour offrir des spéculations personnalisées sur le marché financier'. Les brevets montrent notre capacité à innover et rester en avance par rapport à nos concurrents"
@@ -3529,7 +3529,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Bienvenue sur Binary.com Webtrader"
 
 msgid "What are OTC indices and stocks?"
-msgstr ""
+msgstr "Quelles sont les actions et indices OTC ?"
 
 msgid "What is pep?"
 msgstr "Qu'est ce que pep ?"
