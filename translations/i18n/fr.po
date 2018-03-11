@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-10 08:30-0500\n"
+"PO-Revision-Date: 2018-03-11 01:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2704,7 +2704,7 @@ msgid "Source of wealth"
 msgstr "Source de richesse"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr "Spécifiez votre versement, qui est votre retour potentiel si votre prédiction est correcte. Notre système va procéder au calcul de votre participation, qui est le cout total d'achat du contrat. Binary offre des versements de 1 à 50 000 dollars"
+msgstr "Spécifiez votre versement, qui est votre retour potentiel si votre prédiction est correcte. Notre système va procéder au calcul de votre participation, qui est le coût total d'achat du contrat. Binary offre des versements de 1 à 50 000 dollars"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Toupie (CDLSPINNINGTOP)"
