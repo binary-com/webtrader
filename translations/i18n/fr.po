@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-11 08:50-0400\n"
+"PO-Revision-Date: 2018-03-11 09:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1273,10 +1273,10 @@ msgid "Ends Between/Ends Outside trades"
 msgstr "Trades Finit Entre/Hors de"
 
 msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
-msgstr ""
+msgstr "Termine dans/hors de la zone : vous prédisez que le marché terminera à l'intérieur ou à l'extérieur de la zone délimitée par deux prix-cibles à la fin de la période d'activité de l'option"
 
 msgid "Ends Between/Outside"
-msgstr ""
+msgstr "Termine dans/hors de la zone"
 
 msgid "Ends in"
 msgstr "Termine dans"
@@ -1318,7 +1318,7 @@ msgid "Even"
 msgstr "Pair"
 
 msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
-msgstr ""
+msgstr "Pair/Impair - Prédire que le dernier chiffre est pair ou impair après le dernier tick"
 
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "Étoile du Soir Doji (CDLEVENINGDOJISTAR)"
@@ -1402,7 +1402,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "Tout d'abord, vous avez besoin de définir les paramètres de votre trade. Voici ce que vous devez prendre en compte"
 
 msgid "Flexible"
-msgstr ""
+msgstr "Flexible"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Pour la troisième année consécutive, BetOnMarkets.com est désigné 'Meilleur Fournisseur Financier de Trading à Cotes Fixes' par Shares Magazine UK. C'est la dernière fois que nous gagnons car Share Magazine arrête la récompense de cette catégorie"
@@ -1420,7 +1420,7 @@ msgid "Founded October 1999"
 msgstr "Fondé en Octobre 1999"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr ""
+msgstr "Fondée en 1999, Binary.com est un des noms les plus anciens et les plus respectés dans le trading d'options binaires en ligne"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractale (FRACTAL)"
@@ -1453,13 +1453,13 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT veut dire Temps Moyen de Greenwich, le temps officiel utilisé dans le Royaume-Uni durant l'hiver. Durant l'été, le Royaume-Uni passe au Temps Estivale Britannique, qui est GMT+ 1 heure. Toutes les heures sur le site de Binary.com utilise GMT durant l'ensemble de l'année"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Obtenir le jeton API d'un(e) trader(s) et l’ajouter dans votre liste"
 
 msgid "Get your price"
 msgstr "Obtenez votre prix"
 
 msgid "Go to"
-msgstr ""
+msgstr "Aller à"
 
 msgid "Goes out"
 msgstr "Sort de la zone"
@@ -1519,13 +1519,13 @@ msgid "Higher/Lower"
 msgstr "Plus Haut/Plus Bas"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr ""
+msgstr "Supérieur/Inférieur - Prédisez si le marché affichera un cours supérieur ou inférieur au prix-cible à l'expiration de l'option"
 
 msgid "Higher/Lower trades"
 msgstr "Trades Plus Hautes/Plus Basses"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr ""
+msgstr "Supérieur/Inférieur  Prédisez si le marché affichera un cours supérieur ou inférieur au prix-cible à l'expiration de l'option"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Schéma Hikkake (CDLHIKKAKE)"
@@ -1558,7 +1558,7 @@ msgid "How to trade binaries?"
 msgstr "Comment trader des options binaires ?"
 
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
+msgstr "Comment trader les indices de volatilité?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Moyenne Mobile de Hull (MMH)"
