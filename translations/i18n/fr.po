@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-11 03:40-0400\n"
+"PO-Revision-Date: 2018-03-11 03:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -808,7 +808,7 @@ msgid "Browser upgrade required"
 msgstr "Mise à niveau du navigateur requise"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr ""
+msgstr "Les indices Bull Market et Bear Market commencent à 00h00 GMT chaque jour et répliquent respectivement des marchés haussiers et baissiers"
 
 msgid "Buy Price"
 msgstr "Prix d'achat"
@@ -883,16 +883,16 @@ msgid "Chart type"
 msgstr "Type de graphique"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr ""
+msgstr "Faites votre choix parmi cinq types de marchés et leurs actifs respectifs"
 
 msgid "Choose password"
 msgstr "Choisissez un mot de passe"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr ""
+msgstr "Sélectionnez l'option « Touche/Ne touche pas » lorsque vous souhaitez générer des profits en prédisant si le marché touchera ou non un prix-cible, à n'importe quel moment de la période d'activité de l'option"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr ""
+msgstr "Sélectionnez l'actif que vous souhaitez négocier, par exemple l'or, le pétrole, les actions ou les paires de devises. La valeur d'une option binaire dépend du cours de l'actif sous-jacent. Le trading d'options binaires n'implique pas l'achat ou la vente de l'actif en lui-même : il s'agit de l'atout principal de ce type d'option"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Sélectionnez l'agent de paiement souhaité"
@@ -910,7 +910,7 @@ msgid "Click to log in with your Binary.com account"
 msgstr "Cliquez pour vous connecter à votre compte Binary.com."
 
 msgid "Client funds"
-msgstr ""
+msgstr "Fonds du client"
 
 msgid "Close"
 msgstr "Clôture"
@@ -928,7 +928,7 @@ msgid "Commodities"
 msgstr "Matières premières"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr ""
+msgstr "Matières premières : matières premières majeures telles que l'or et le pétrole"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Les matières premières sont des ressources qui poussent ou sont extraites du sol, comme l'argent, l'or et le pétrole. Sur Binary.com, ils ont leurs prix fixés en dollars américains"
@@ -946,13 +946,13 @@ msgid "Comparisons"
 msgstr "Comparaisons"
 
 msgid "Competitive and transparent pricing"
-msgstr ""
+msgstr "Tarification compétitive et transparente"
 
 msgid "Computer system and method for speculating on a financial market"
-msgstr ""
+msgstr "Système informatique et méthode de spéculation sur un marché financier"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "Système de trading automatisé permettant une spéculation personnalisée sur un marché financier"
 
 msgid "Conditions"
 msgstr "Conditions"
@@ -973,7 +973,7 @@ msgid "Continue Trading"
 msgstr "Poursuivre les opérations de trading"
 
 msgid "Continuous Indices"
-msgstr ""
+msgstr "Indices continus"
 
 msgid "Contract"
 msgstr "Contrat"
@@ -985,13 +985,13 @@ msgid "Contracts"
 msgstr "Contrats"
 
 msgid "Copier"
-msgstr ""
+msgstr "Copieur"
 
 msgid "Coppock Curve (CC)"
 msgstr "La courbe de Coppock (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "Copiez le Trading"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Contre attaque (CDLCOUNTERATTACK)"
