@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-11 04:00-0400\n"
+"PO-Revision-Date: 2018-03-11 08:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1246,13 +1246,13 @@ msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr ""
+msgstr "Chaque contrat d'option binaire est actif pendant une période prédéfinie - avec Binary.com, vous pouvez sélectionner une période de 10 secondes à 365 jours"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Chaque option binaire est une prédiction du mouvement futur du marché sous-jacent"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr ""
+msgstr "Chaque transaction correspond à un montant de paiement prédéterminé qui s'affiche lorsque vous définissez chaque paramètre. Vous remportez le paiement si votre prédiction est correcte. Dans le cas contraire, vous perdez uniquement votre mise initiale"
 
 msgid "Edge"
 msgstr "Navigateur Internet Edge"
