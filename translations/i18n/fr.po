@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-11 01:50-0500\n"
+"PO-Revision-Date: 2018-03-11 03:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -784,7 +784,7 @@ msgid "Binary.com's Smart FX are smart markets that measure the value of a curre
 msgstr "Les FX Intelligents de Binary.com sont des marchés intelligents qui mesurent la valeur d'une devise par rapport à un ensemble de devises majeures"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Les indices de volatilité de Binary.com sont basés sur un générateur de nombres aléatoires cryptographié dont l'impartialité est contrôlée par une tierce partie indépendante"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Les systèmes Binary.com traitent maintenant plus de 1 million de transactions par jour (en incluant les comptes virtuels)"
