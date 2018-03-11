@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-11 09:00-0400\n"
+"PO-Revision-Date: 2018-03-11 09:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1579,10 +1579,10 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "CLAUSE DE NON-RESPONSABILITÉ IMPORTANTE / Binary.com n'est affiliée à aucun des agents de paiement listés ci-dessus. Chaque agent de paiement agit en tant que fournisseur de services indépendant et Binary.com ne peut en aucun cas recommander, garantir ou approuver les services concernés. LES CLIENTS FONT APPEL AUX AGENTS DE PAIEMENT À LEURS RISQUES ET PÉRILS. Nous conseillons aux clients de vérifier les références des agents de paiement avant de leur envoyer toute somme d'argent. Binary.com ne pourra en aucun cas être tenue responsable des transactions réalisées entre les clients et les agents de paiement."
 
 msgid "IPO on the blockchain"
-msgstr ""
+msgstr "Introduction en bourse sur le blockchain"
 
 msgid "Ideal for beginners and experienced traders"
-msgstr ""
+msgstr "Ideal pour les débutants et les traders expérimentés"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Trois Corbeaux Identiques (CDLIDENTICAL3CROWS)"
@@ -1639,10 +1639,10 @@ msgid "In/Out"
 msgstr "Dans/Hors De"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr ""
+msgstr "Zone In/Out (« Termine dans/hors de la zone » ou « Reste dans/Sort de la zone »)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
-msgstr ""
+msgstr "In/Out - Vous prédisez si le marché se maintiendra dans la zone ou hors de la zone délimitée par deux prix-cibles"
 
 msgid "In/Out trades"
 msgstr "Trades Dans/Hors De"
@@ -1660,7 +1660,7 @@ msgid "Indices"
 msgstr "Indices"
 
 msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
-msgstr ""
+msgstr "Indices - Tous les principaux indices boursiers internationaux issus du marché de gré à gré"
 
 msgid "Indices trading experience"
 msgstr "Expérience du trading sur indices"
@@ -1678,7 +1678,7 @@ msgid "Industry of Employment"
 msgstr "Secteur professionnel"
 
 msgid "Initial Coin Offering (ICO)"
-msgstr ""
+msgstr "Offre de Pièces Initiale (ICO)"
 
 msgid "Instant access"
 msgstr "Accès Instantané"
@@ -1762,7 +1762,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Échelle inférieure (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Derniers 12 mois de trades rentables"
 
 msgid "Last used"
 msgstr "Dernière utilisation"
@@ -1816,13 +1816,13 @@ msgid "Loading Asset Index"
 msgstr "Chargement Indice des actifs"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Chargement de copie de trade"
 
 msgid "Loading Download/View Data"
 msgstr "Chargement Télécharger/Afficher des données"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "Chargement de MAM"
 
 msgid "Loading Password dialog"
 msgstr "Chargement Boîte de dialogue mot de passe"
@@ -1948,13 +1948,13 @@ msgid "Matches"
 msgstr "Égal"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "Correspond/diffère - Predit que le dernier chiffre correspondra ou pas"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Les plus bas correspondants (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Max. Mise pour le Trade"
 
 msgid "Maximum (MAX)"
 msgstr "Maximum (MAX)"
@@ -1996,7 +1996,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Moyenne Mobile Adaptative Mesa (MMAM)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Min. Mise pour le Trade"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min : 10 Max : 2000"
