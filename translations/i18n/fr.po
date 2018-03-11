@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-11 01:40-0500\n"
+"PO-Revision-Date: 2018-03-11 01:50-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -751,13 +751,13 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com offre une gamme de méthode de dépôts et de retraits communs, des cartes de crédit et de débit aux virements bancaires, monnaie électronique et portefeuilles électroniques"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com vous propose un compte d’argent virtuel afin que vous vous familiarisez avec le trading d'options binaires. Pourquoi ne pas"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com offre de nouvelles façons de trader"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Binary.com propose quatre types d'option pour négocier l'actif de votre choix "
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com ouvre un bureau dans la tour de bureaux QSentral dans le centre de Kuala Lumpur pour développer davantage son équipe IT"
@@ -772,16 +772,16 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com reçoit le premier prix dans la catégorie Opérateur de Paris Financiers à la prestigieuse cérémonie de remise des prix des Opérateurs EGR en 2015, organisée à Londres"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Les indices continus de Binary.com sont les indices Volatility 10, Volatility 25, Volatility 50, Volatility 75 et Volatility 100. Ces indices correspondent à des simulations de marché basées sur des taux de volatilité constants de 10%, 25 %, 50 %, 75 % et 100 %"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Les indices et actions « OTC » (pour « over-the-counter ») de Binary.com sont issus du marché de gré à gré et offrent un moyen alternatif de négocier les actions et indices en ciblant des sources extérieures aux bourses centralisées"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Les indices et actions de gré à gré disponibles sur Binary.com offrent l'avantage d'une analyse graphique et d'une tarification en temps réel. Accédez à des possibilités de trading encore plus intéressantes en négociant les indices et actions du marché de gré à gré, disponibles en temps réel par le biais de notre plateforme"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Les FX Intelligents de Binary.com sont des marchés intelligents qui mesurent la valeur d'une devise par rapport à un ensemble de devises majeures"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
 msgstr ""
