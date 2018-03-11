@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-03-11 03:50-0400\n"
+"PO-Revision-Date: 2018-03-11 04:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1015,7 +1015,7 @@ msgid "Crosshair"
 msgstr "Curseur en croix"
 
 msgid "Currencies - All major Forex pairs"
-msgstr ""
+msgstr "Devises : toutes les paires de devises majeures sur le Forex"
 
 msgid "Current Level"
 msgstr "Niveau actuel"
@@ -1045,10 +1045,10 @@ msgid "Custom Theme"
 msgstr "Thème personnalisé"
 
 msgid "Daily Reset Indices"
-msgstr ""
+msgstr "Indices journaliers"
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
-msgstr ""
+msgstr "Les indices journaliers répliquent les tendances haussières et baissières du marché, avec une volatilité constante"
 
 msgid "Daily limit on losses"
 msgstr "Limite journalière des pertes"
@@ -1141,7 +1141,7 @@ msgid "Digits"
 msgstr "Chiffres"
 
 msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
-msgstr ""
+msgstr "L'option « Chiffres » vous permet de prédire la dernière décimale de votre prix spot. Il y a trois types d'option « Chiffres »"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "Le Mouvement Directionnel (IMD) est en fait une collection de trois indicateurs séparés combinés en un. Le Mouvement Directionnel consiste en l'Indice Moyen Directionnelle (IMD), l'Indicateur Directionnel Positif (ID+) et l'Indicateur Directionnel négatif (ID-)"
@@ -1159,7 +1159,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Souhaitez-vous installer l'extension Webtrader pour Chrome ?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "Souhaitez-vous installer l'extension Webtrader pour Chrome ?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1192,7 +1192,7 @@ msgid "Double click the object to remove"
 msgstr "Double-cliquez sur l'objet pour le supprimer"
 
 msgid "Down - Predict that the market will end lower than the average price"
-msgstr ""
+msgstr "Baisse : vous prédisez que le marché terminera à un cours inférieur au prix moyen"
 
 msgid "Download"
 msgstr "Télécharger"
