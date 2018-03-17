@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-17 18:41-0400\n"
+"PO-Revision-Date: 2018-03-17 19:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1816,7 +1816,7 @@ msgid "Loading Asset Index"
 msgstr "Ładowanie indeksu aktywów"
 
 msgid "Loading Copy Trade"
-msgstr "Ładowanie Kopiowania zakłdaów"
+msgstr "Ładowanie kopiowania zakładów"
 
 msgid "Loading Download/View Data"
 msgstr "Ładowanie danych pobierania/przeglądania"
@@ -1948,7 +1948,7 @@ msgid "Matches"
 msgstr "Zgadza się"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr "Zgadza się/Różni się – Przewidywanie, czy ostatnia cyfra będzie taka sama, czy nie"
+msgstr "Zgadza się/Różni się – Przewidywanie, czy ostatnia cyfra będzie taka sama"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Formacja Matching Low (CDLMATCHINGLOW)"
