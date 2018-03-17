@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-17 19:20-0400\n"
+"PO-Revision-Date: 2018-03-17 19:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1108,7 +1108,7 @@ msgid "Deposit funds"
 msgstr "Wpłać środki"
 
 msgid "Deposit of USD"
-msgstr "Wymagana jest wpłata w wysokości USD"
+msgstr "Wymagana jest wpłata w wysokości"
 
 msgid "Depositing and withdrawing funds"
 msgstr "Wpłacanie i wypłacanie środków"
@@ -1402,7 +1402,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "Najpierw musisz ustawić parametry transakcji. Oto, co warto wziąć pod uwagę"
 
 msgid "Flexible"
-msgstr "Elastyczność"
+msgstr "Elastyczne"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Po raz trzeci z kolei BetOnMarkets.com uzyskał tytuł „Najlepszego dostawcy zakładów o ustalonej stawce” od pisma Shares Magazine UK. Wygraliśmy po raz ostatni, ponieważ Shares Magazine nie przyznaje już nagród w tej kategorii"
@@ -1453,7 +1453,7 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT, czyli Greenwich Mean Time to oficjalny czas stosowany zimą w Wielkiej Brytanii. Latem Wielka Brytania zmienia czas na British Summer Time, czyli czas GMT + 1 godzina. Wszystkie godziny podawane są na portalu Binary.com według czasu GMT przez cały rok."
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr "Uzyskaj token APi od gracza/graczy i dodaj go do swojej listy"
+msgstr "Uzyskaj token API od gracza/graczy i dodaj go do swojej listy"
 
 msgid "Get your price"
 msgstr "Ustal swoją cenę"
@@ -3535,7 +3535,7 @@ msgid "What is pep?"
 msgstr "Czym jest pep?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr "Jeśli satysfakcjonuje Cię proponowana cena, zawrzyj zakład natychmiast. Dzięki naszej unikatowej platformie unikniesz „opóźnień rynkowych” lub luk cenowych, i co najważniejsze, nie poniesiesz żadnych ukrytych opłat. Możesz też w dowolnej chwili odsprzedać wybrany zakład długoterminowy przed jego wygaśnięciem, aby ochronić uzyskane zyski lub zminimalizować straty"
+msgstr "Jeśli satysfakcjonuje Cię proponowana cena, zawrzyj zakład natychmiast. Dzięki naszej unikatowej platformie unikniesz „opóźnień rynkowych” i luk cenowych, i co najważniejsze, nie poniesiesz żadnych ukrytych opłat. Możesz też w dowolnej chwili odsprzedać wybrany zakład długoterminowy przed jego wygaśnięciem, aby ochronić uzyskane zyski lub zminimalizować straty"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "Handlując z Binary.com, możesz mieć pewność, że Twoje środki są przechowywane na oddzielnych rachunkach powierniczych i nie są wykorzystywane w żadnych innych celach"
