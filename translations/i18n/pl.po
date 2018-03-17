@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-17 18:31-0400\n"
+"PO-Revision-Date: 2018-03-17 18:41-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -928,7 +928,7 @@ msgid "Commodities"
 msgstr "Towary"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr "Towary – Główne towary, takie jak złoto i ropa"
+msgstr "Towary – główne towary, takie jak złoto i ropa naftowa"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Towary to zasoby będące rezultatem upraw lub zasoby wydobyte z ziemi, takie jak srebro, złoto, ropa naftowa. Na portalu Binary.com ich ceny podawane są w dolarach amerykańskich"
@@ -1639,7 +1639,7 @@ msgid "In/Out"
 msgstr "W/poza"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr "W/poza (zakończy się pomiędzy/poza oraz pozostanie pomiędzy/przekroczy)"
+msgstr "W/poza (Zakończy się pomiędzy/poza oraz Pozostanie pomiędzy/przekroczy)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
 msgstr "W/poza – Prognozuj, czy cena rynkowa pozostanie pomiędzy cenami docelowymi, czy wyjdzie poza przedział tych cen"
