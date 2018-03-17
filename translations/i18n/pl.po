@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-17 19:00-0400\n"
+"PO-Revision-Date: 2018-03-17 19:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1519,13 +1519,13 @@ msgid "Higher/Lower"
 msgstr "Wyższy/niższy"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa niż cena docelowa"
+msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa od ceny docelowej"
 
 msgid "Higher/Lower trades"
 msgstr "Zakłady typu „wyższy/niższy”"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa niż cena docelowa"
+msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa od ceny docelowej"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern – formacja Hikkake (CDLHIKKAKE)"
@@ -2116,7 +2116,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Wskaźnik NATR służy do znormalizowania wartości ATR poszczególnych instrumentów finansowych przy użyciu poniższego wzoru"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "Uwaga: Możesz mieć konto z tylko jedną walutą fiducjarną i jedno konto dla każdej kryptowaluty"
+msgstr "Uwaga: Możesz mieć tylko jedno konto w walucie fiducjarnej i jedno konto dla każdej kryptowaluty"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Uwaga: Wypłaty poprzez pośredników płatności są dostępne tylko w przypadku dokonania wpłaty poprzez pośrednika płatności"
@@ -2254,7 +2254,7 @@ msgid "Over 3 years"
 msgstr "Ponad 3 lata"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr "Ponad/Poniżej – Przewidywanie, czy ostatnia cyfra będzie wyższa czy niższa niż dana wartość"
+msgstr "Ponad/Poniżej – Prognozuj, czy ostatnia cyfra będzie wyższa czy niższa od danej wartości"
 
 msgid "Overlap Studies"
 msgstr "Analiza techniczna „Overlap Studies”"
@@ -2656,10 +2656,10 @@ msgid "Session duration limit, in minutes"
 msgstr "Limit czasu sesji, w minutach"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr "Ustaw limity, aby określić swoją pozycję, która inicjuje Twoją wypłatę"
+msgstr "Ustaw limity, aby określić swoją pozycję inicjującą wypłatę"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr "Określ długość swojego zakładu od 10 sekund do 365 dni"
+msgstr "Określ długość swojego zakładu: od 10 sekund do 365 dni"
 
 msgid "Settles"
 msgstr "Rozliczenie"
@@ -2770,7 +2770,7 @@ msgid "Stays Between/Goes Outside trades"
 msgstr "Zakłady typu „pozostanie pomiędzy/przekroczy”"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr "Pozostanie pomiędzy/ Przekroczy  Prognozuj, czy cena rynkowa pozostanie w przedziale cen docelowych lub przekroczy ten przedział w dowolnym momencie w danym okresie trwania kontraktu"
+msgstr "Pozostanie pomiędzy/ Przekroczy  Prognozuj, czy cena rynkowa pozostanie w przedziale cen docelowych, czy przekroczy ten przedział w dowolnym momencie w danym okresie trwania kontraktu"
 
 msgid "Stays in"
 msgstr "Pozostanie w"
@@ -3019,7 +3019,7 @@ msgid "The USD Index is a weighted Index, measuring the US Dollar's value agains
 msgstr "Indeks USD to indeks ważony mierzący wartość dolara amerykańskiego w stosunku do koszyka 5 światowych walut (EUR, GBP, JPY, CAD, AUD), z których każda ma wagę 20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr "Indeks zmienności 100 jest dwa razy bardziej zmienny niż Indeks zmienności 50 i cztery razy bardziej zmienny niż Indeks zmienności 25"
+msgstr "Indeks zmienności 100 charakteryzuje się dwa razy większą zmiennością niż Indeks zmienności 50 i cztery razy większą zmiennością niż Indeks zmienności 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Wskaźnik ważonej ceny zamknięcia jest po prostu średnią cen poszczególnych dni. Zawiera informacje z całego dnia handlowego, dlatego stosuje się go w celu wygładzenia niektórych nieścisłości wykresu cen zamknięcia"
