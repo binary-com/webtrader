@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-04 17:30-0500\n"
+"PO-Revision-Date: 2018-03-17 18:31-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "Sierpień"
 
 msgid "Available 24/7"
-msgstr "Dostępność 24 godz. na dobę 7 dni w tygodniu"
+msgstr "Dostępność 24/7"
 
 msgid "Available Currencies"
 msgstr "Dostępne waluty"
@@ -664,7 +664,7 @@ msgid "Binary option"
 msgstr "Opcja binarna"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr "Nietrudno zrozumieć opcje binarne. Nazywane są „binarnymi”, ponieważ mogą dawać tylko dwa wyniki – wygraną lub przegraną. Jeśli Twoja prognoza się sprawdzi, otrzymasz wypłatę ustaloną przy zawieraniu zakładu. W przeciwnym razie tracisz tylko swoją początkową stawkę"
+msgstr "Opcje binarne nie są skomplikowane. Nazywane są „binarnymi”, ponieważ mogą dawać tylko dwa wyniki – wygraną lub przegraną. Jeśli Twoja prognoza się sprawdzi, otrzymasz wypłatę ustaloną przy zawieraniu zakładu. W przeciwnym razie tracisz tylko swoją początkową stawkę"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opcje binarne lub inne instrumenty pochodne"
@@ -709,7 +709,7 @@ msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com stawia na innowacyjność i rozwój"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr "Firma Binary.com stworzyła wskaźniki zmienności, którymi można handlować 24 godz. na dobę. Możesz nimi handlować w przypadku wszystkich rodzajów kontraktów"
+msgstr "Firma Binary.com stworzyła wskaźniki zmienności, którymi można handlować 24 godz. na dobę. 7 dni w tygodniu. Możesz nimi handlować w przypadku wszystkich rodzajów kontraktów"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Dzięki dbaniu o najwyższe standardy etyczne i jakość oferowanych usług firma Binary.com zyskała reputację, której może jej pozazdrościć konkurencja"
@@ -883,13 +883,13 @@ msgid "Chart type"
 msgstr "Rodzaj wykresu"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr "Wybieraj spośród pięciu rodzajów rynku i odpowiadających im aktywów"
+msgstr "Wybieraj spośród pięciu rodzajów rynków i odpowiadających im aktywów"
 
 msgid "Choose password"
 msgstr "Wybierz hasło"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr "Wybierz zakład typu \"osiągnie/nie osiągnie\", jeśli chcesz prognozować, czy rynek osiągnie czy nie osiągnie ceny docelowej w dowolnym momencie trwania kontraktu"
+msgstr "Wybierz zakład typu \"osiągnie/nie osiągnie\", jeśli chcesz prognozować, czy rynek osiągnie cenę docelową w dowolnym momencie trwania kontraktu"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
 msgstr "Wybierz aktywa, którymi chcesz handlować, np. złoto, ropę, akcje czy pary walutowe. Wartość opcji binarnej jest uzależniona od ceny instrumentu bazowego. Jedną z zalet handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz aktywów, jedynie kontrakty, które określają, jak dane aktywa zachowują się na rynku"
