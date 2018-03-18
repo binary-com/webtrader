@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-18 11:40-0400\n"
+"PO-Revision-Date: 2018-03-18 11:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -103,7 +103,7 @@ msgid "- Trade currencies, indices, commodities and more in rising, falling, sid
 msgstr "- Handluj walutami, wskaźnikami, towarami i innymi aktywami na rynkach o tendencji wzrostowej lub spadkowej, o trendzie bocznym bądź na rynkach spokojnych lub zmiennych"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr "- Handluj, kiedy chcesz. Platforma Binary.com jest dostępna 24 godz. 7 dni w tygodniu, również w weekendy"
+msgstr "- Handluj, kiedy chcesz. Platforma Binary.com jest dostępna 24 godz. na dobę 7 dni w tygodniu, również w weekendy"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
 msgstr "- Handluj z pionierem w branży posiadającym opatentowaną technologią wyceny"
@@ -709,7 +709,7 @@ msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com stawia na innowacyjność i rozwój"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr "Firma Binary.com stworzyła wskaźniki zmienności, którymi można handlować 24 godz. na dobę. 7 dni w tygodniu. Możesz nimi handlować w przypadku wszystkich rodzajów kontraktów"
+msgstr "Firma Binary.com stworzyła wskaźniki zmienności, którymi można handlować 24 godz. na dobę 7 dni w tygodniu. Możesz nimi handlować w przypadku wszystkich rodzajów kontraktów"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Dzięki dbaniu o najwyższe standardy etyczne i jakość oferowanych usług firma Binary.com zyskała reputację, której może jej pozazdrościć konkurencja"
@@ -892,7 +892,7 @@ msgid "Choose the Touch/No Touch trade if you want to predict the market touchin
 msgstr "Wybierz zakład typu \"osiągnie/nie osiągnie\", jeśli chcesz prognozować, czy rynek osiągnie cenę docelową w dowolnym momencie trwania kontraktu"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr "Wybierz aktywa, którymi chcesz handlować, np. złoto, ropę, akcje czy pary walutowe. Wartość opcji binarnej jest uzależniona od ceny instrumentu bazowego. Jedną z zalet handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz aktywów, jedynie kontrakty, które określają, jak dane aktywa zachowują się na rynku"
+msgstr "Wybierz aktywa, którymi chcesz handlować, np. złoto, ropę naftową, akcje czy pary walutowe. Wartość opcji binarnej jest uzależniona od ceny instrumentu bazowego. Jedną z zalet handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz aktywów, jedynie kontrakty, które określają, jak dane aktywa zachowują się na rynku"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Wybierz preferowanego pośrednika płatności"
@@ -2755,7 +2755,7 @@ msgid "State/province/region"
 msgstr "Region/województwo"
 
 msgid "Statement"
-msgstr "Stan konta"
+msgstr "Oświadczenie"
 
 msgid "Statistical Functions"
 msgstr "Funkcje statystyczne"
