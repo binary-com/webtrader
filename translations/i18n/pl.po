@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-04 17:30-0500\n"
+"PO-Revision-Date: 2018-03-18 12:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,7 +49,7 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr ") rozpoczyna działalność jako całodobowa usługa zawierania zakładów dla różnorodnych wskaźników finansowych. Biznes rozwija się prężnie i w krótkim czasie stajemy się liderem rynku w branży zakładów o ustalonej stawce"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr "- Korzystaj z takich samych stóp zwrotu, co inwestorzy na rynku międzybankowym. Nasze ceny są zestawiane z cenami na rynku opcji międzybankowych"
+msgstr "- Korzystaj z takich samych stóp zwrotu, jak inwestorzy na rynku międzybankowym. Nasze ceny są zestawiane codziennie z cenami na rynku opcji międzybankowych"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Firma Binary.com nie jest związana z żadnym z pośredników płatności wymienionych powyżej. Każdy pośrednik płatności działa jako niezależny usługodawca i nie jest w żaden sposób zatwierdzony ani popierany przez Binary.com. KLIENCI KORZYSTAJĄ Z USŁUG POŚREDNIKÓW NA WŁASNE RYZYKO. Zaleca się sprawdzenie danych pośredników płatności przed wysłaniem do nich pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za transakcje zawarte między klientami a pośrednikami płatności"
@@ -73,7 +73,7 @@ msgid "- Know how much you will win or lose before you purchase the contract"
 msgstr "- Poznaj wysokość potencjalnego zysku lub potencjalnej straty przed zakupem kontraktu"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr "- Otwórz konto w jedną minutę i zacznij handlować. Dokonywanie wpłat i wypłat jest możliwe 24 godz. na dobę"
+msgstr "- Otwórz konto w jedną minutę i zacznij handlować. Dokonywanie wpłat i wypłat jest możliwe 24 godz. na dobę 7 dni w tygodniu"
 
 msgid "- Predict the market ending higher or lower than a price target"
 msgstr "- Prognozuj, czy cena rynkowa będzie wyższa czy niższa od ceny docelowej"
@@ -103,7 +103,7 @@ msgid "- Trade currencies, indices, commodities and more in rising, falling, sid
 msgstr "- Handluj walutami, wskaźnikami, towarami i innymi aktywami na rynkach o tendencji wzrostowej lub spadkowej, o trendzie bocznym bądź na rynkach spokojnych lub zmiennych"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr "- Handluj, kiedy chcesz. Platforma Binary.com jest dostępna 24 godz. 7 dni w tygodniu, również w weekendy"
+msgstr "- Handluj, kiedy chcesz. Platforma Binary.com jest dostępna 24 godz. na dobę 7 dni w tygodniu, również w weekendy"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
 msgstr "- Handluj z pionierem w branży posiadającym opatentowaną technologią wyceny"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "Sierpień"
 
 msgid "Available 24/7"
-msgstr "Dostępność 24 godz. na dobę 7 dni w tygodniu"
+msgstr "Dostępność 24/7"
 
 msgid "Available Currencies"
 msgstr "Dostępne waluty"
@@ -664,7 +664,7 @@ msgid "Binary option"
 msgstr "Opcja binarna"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr "Nietrudno zrozumieć opcje binarne. Nazywane są „binarnymi”, ponieważ mogą dawać tylko dwa wyniki – wygraną lub przegraną. Jeśli Twoja prognoza się sprawdzi, otrzymasz wypłatę ustaloną przy zawieraniu zakładu. W przeciwnym razie tracisz tylko swoją początkową stawkę"
+msgstr "Opcje binarne nie są skomplikowane. Nazywane są „binarnymi”, ponieważ mogą dawać tylko dwa wyniki – wygraną lub przegraną. Jeśli Twoja prognoza się sprawdzi, otrzymasz wypłatę ustaloną przy zawieraniu zakładu. W przeciwnym razie tracisz tylko swoją początkową stawkę"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Opcje binarne lub inne instrumenty pochodne"
@@ -709,7 +709,7 @@ msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com stawia na innowacyjność i rozwój"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr "Firma Binary.com stworzyła wskaźniki zmienności, którymi można handlować 24 godz. na dobę. Możesz nimi handlować w przypadku wszystkich rodzajów kontraktów"
+msgstr "Firma Binary.com stworzyła wskaźniki zmienności, którymi można handlować 24 godz. na dobę 7 dni w tygodniu. Możesz nimi handlować w przypadku wszystkich rodzajów kontraktów"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Dzięki dbaniu o najwyższe standardy etyczne i jakość oferowanych usług firma Binary.com zyskała reputację, której może jej pozazdrościć konkurencja"
@@ -883,16 +883,16 @@ msgid "Chart type"
 msgstr "Rodzaj wykresu"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr "Wybieraj spośród pięciu rodzajów rynku i odpowiadających im aktywów"
+msgstr "Wybieraj spośród pięciu rodzajów rynków i odpowiadających im aktywów"
 
 msgid "Choose password"
 msgstr "Wybierz hasło"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr "Wybierz zakład typu \"osiągnie/nie osiągnie\", jeśli chcesz prognozować, czy rynek osiągnie czy nie osiągnie ceny docelowej w dowolnym momencie trwania kontraktu"
+msgstr "Wybierz zakład typu \"osiągnie/nie osiągnie\", jeśli chcesz prognozować, czy rynek osiągnie cenę docelową w dowolnym momencie trwania kontraktu"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr "Wybierz aktywa, którymi chcesz handlować, np. złoto, ropę, akcje czy pary walutowe. Wartość opcji binarnej jest uzależniona od ceny instrumentu bazowego. Jedną z zalet handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz aktywów, jedynie kontrakty, które określają, jak dane aktywa zachowują się na rynku"
+msgstr "Wybierz aktywa, którymi chcesz handlować, np. złoto, ropę naftową, akcje czy pary walutowe. Wartość opcji binarnej jest uzależniona od ceny instrumentu bazowego. Jedną z zalet handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz aktywów, jedynie kontrakty, które określają, jak dane aktywa zachowują się na rynku"
 
 msgid "Choose your pereferred payment agent"
 msgstr "Wybierz preferowanego pośrednika płatności"
@@ -928,7 +928,7 @@ msgid "Commodities"
 msgstr "Towary"
 
 msgid "Commodities - Major commodities such as gold and oil"
-msgstr "Towary – Główne towary, takie jak złoto i ropa"
+msgstr "Towary – główne towary, takie jak złoto i ropa naftowa"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Towary to zasoby będące rezultatem upraw lub zasoby wydobyte z ziemi, takie jak srebro, złoto, ropa naftowa. Na portalu Binary.com ich ceny podawane są w dolarach amerykańskich"
@@ -1108,7 +1108,7 @@ msgid "Deposit funds"
 msgstr "Wpłać środki"
 
 msgid "Deposit of USD"
-msgstr "Wymagana jest wpłata w wysokości USD"
+msgstr "Wymagana jest wpłata w wysokości"
 
 msgid "Depositing and withdrawing funds"
 msgstr "Wpłacanie i wypłacanie środków"
@@ -1402,7 +1402,7 @@ msgid "First, you need to set the parameters of your trade. Here's what you need
 msgstr "Najpierw musisz ustawić parametry transakcji. Oto, co warto wziąć pod uwagę"
 
 msgid "Flexible"
-msgstr "Elastyczność"
+msgstr "Elastyczne"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Po raz trzeci z kolei BetOnMarkets.com uzyskał tytuł „Najlepszego dostawcy zakładów o ustalonej stawce” od pisma Shares Magazine UK. Wygraliśmy po raz ostatni, ponieważ Shares Magazine nie przyznaje już nagród w tej kategorii"
@@ -1453,7 +1453,7 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT, czyli Greenwich Mean Time to oficjalny czas stosowany zimą w Wielkiej Brytanii. Latem Wielka Brytania zmienia czas na British Summer Time, czyli czas GMT + 1 godzina. Wszystkie godziny podawane są na portalu Binary.com według czasu GMT przez cały rok."
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr "Uzyskaj token APi od gracza/graczy i dodaj go do swojej listy"
+msgstr "Uzyskaj token API od gracza/graczy i dodaj go do swojej listy"
 
 msgid "Get your price"
 msgstr "Ustal swoją cenę"
@@ -1519,13 +1519,13 @@ msgid "Higher/Lower"
 msgstr "Wyższy/niższy"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa niż cena docelowa"
+msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa od ceny docelowej"
 
 msgid "Higher/Lower trades"
 msgstr "Zakłady typu „wyższy/niższy”"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
-msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa niż cena docelowa"
+msgstr "Wyższe/niższe – Prognozuj, czy cena rynkowa będzie wyższa czy niższa od ceny docelowej"
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern – formacja Hikkake (CDLHIKKAKE)"
@@ -1639,7 +1639,7 @@ msgid "In/Out"
 msgstr "W/poza"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr "W/poza (zakończy się pomiędzy/poza oraz pozostanie pomiędzy/przekroczy)"
+msgstr "W/poza (Zakończy się pomiędzy/poza oraz Pozostanie pomiędzy/przekroczy)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
 msgstr "W/poza – Prognozuj, czy cena rynkowa pozostanie pomiędzy cenami docelowymi, czy wyjdzie poza przedział tych cen"
@@ -1816,7 +1816,7 @@ msgid "Loading Asset Index"
 msgstr "Ładowanie indeksu aktywów"
 
 msgid "Loading Copy Trade"
-msgstr "Ładowanie Kopiowania zakłdaów"
+msgstr "Ładowanie kopiowania zakładów"
 
 msgid "Loading Download/View Data"
 msgstr "Ładowanie danych pobierania/przeglądania"
@@ -1948,7 +1948,7 @@ msgid "Matches"
 msgstr "Zgadza się"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr "Zgadza się/Różni się – Przewidywanie, czy ostatnia cyfra będzie taka sama, czy nie"
+msgstr "Zgadza się/Różni się – Przewidywanie, czy ostatnia cyfra będzie taka sama"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Formacja Matching Low (CDLMATCHINGLOW)"
@@ -2116,7 +2116,7 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr "Wskaźnik NATR służy do znormalizowania wartości ATR poszczególnych instrumentów finansowych przy użyciu poniższego wzoru"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "Uwaga: Możesz mieć konto z tylko jedną walutą fiducjarną i jedno konto dla każdej kryptowaluty"
+msgstr "Uwaga: Możesz mieć tylko jedno konto w walucie fiducjarnej i jedno konto dla każdej kryptowaluty"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Uwaga: Wypłaty poprzez pośredników płatności są dostępne tylko w przypadku dokonania wpłaty poprzez pośrednika płatności"
@@ -2170,7 +2170,7 @@ msgid "One last step left"
 msgstr "Został ostatni krok"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr "Handlowanie online może być uzależniające. Wypełnij poniższy formularz, aby ograniczyć swoją działalność na portalu lub wyślij podpisany list lub faks do naszego działu obsługi klienta. Po ustanowieniu limitów, możesz je tylko zwiększać. Limity zostaną usunięte lub zwiększone dopiero po 7 dniach, chyba że obowiązuje okres samodzielnego wyłączenia, który nie może zostać usunięty, ani zmieniony, jeśli został wcześniej potwierdzony. Aby znieść lub zwiększyć limity, proszę skontaktować się z"
+msgstr "Handlowanie online może być uzależniające. Wypełnij poniższy formularz, aby ograniczyć swoją działalność na portalu lub wyślij podpisany list lub faks do naszego działu obsługi klienta. Po ustanowieniu limitów, możesz je tylko zwiększać. Limity zostaną usunięte lub zmienione dopiero po 7 dniach, chyba że obowiązuje okres samodzielnego wyłączenia, który nie może zostać usunięty, ani zmieniony, jeśli został wcześniej potwierdzony. Aby znieść lub zwiększyć limity, proszę skontaktować się z"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "Zaledwie pięć lat od powstania zdobyliśmy tę ważną nagrodę za nasze usługi handlu online. Nagroda potwierdza, że BetOnMarkets.com to wiarygodny, szybki i bezpieczny portal zarówno dla początkujących, jak i profesjonalnych graczy. W tym okresie nasz portal obsłużył ponad 15 milionów zakładów"
@@ -2254,7 +2254,7 @@ msgid "Over 3 years"
 msgstr "Ponad 3 lata"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr "Ponad/Poniżej – Przewidywanie, czy ostatnia cyfra będzie wyższa czy niższa niż dana wartość"
+msgstr "Ponad/Poniżej – Prognozuj, czy ostatnia cyfra będzie wyższa czy niższa od danej wartości"
 
 msgid "Overlap Studies"
 msgstr "Analiza techniczna „Overlap Studies”"
@@ -2356,7 +2356,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Zainstaluj najnowszą wersję jednej z tych przeglądarek"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr "Pamiętaj, że cena wskaźników i akcji OTC będzie różnić się od cen odpowiadającym im wskaźnikom i cenom na oficjalnych giełdach, gdyż są one dostępne w obrocie pozagiełdowym"
+msgstr "Pamiętaj, że cena wskaźników i akcji OTC będzie różnić się od cen odpowiadającym ich wskaźnikom i cenom na oficjalnych giełdach, gdyż są one dostępne w obrocie pozagiełdowym"
 
 msgid "Please provide your tax information"
 msgstr "Proszę podać informacje podatkowe"
@@ -2656,10 +2656,10 @@ msgid "Session duration limit, in minutes"
 msgstr "Limit czasu sesji, w minutach"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr "Ustaw limity, aby określić swoją pozycję, która inicjuje Twoją wypłatę"
+msgstr "Ustaw limity, aby określić swoją pozycję inicjującą wypłatę"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr "Określ długość swojego zakładu od 10 sekund do 365 dni"
+msgstr "Określ długość swojego zakładu: od 10 sekund do 365 dni"
 
 msgid "Settles"
 msgstr "Rozliczenie"
@@ -2704,7 +2704,7 @@ msgid "Source of wealth"
 msgstr "Źródło majątku"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr "Określ kwotę wypłaty, która stanowi Twój potencjalny zysk, jeśli przewidywanie się sprawdzi. Nasz system obliczy stawkę, która jest całkowitym kosztem zakupu kontraktu. Binary.com oferuje wypłaty w wysokości od 1$ do 50000$."
+msgstr "Określ kwotę wypłaty, która będzie stanowić Twój potencjalny zysk, jeśli przewidywanie się sprawdzi. Nasz system obliczy stawkę, która jest całkowitym kosztem zakupu kontraktu. Binary.com oferuje wypłaty w wysokości od 1 $ do 50 000 $."
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -2755,7 +2755,7 @@ msgid "State/province/region"
 msgstr "Region/województwo"
 
 msgid "Statement"
-msgstr "Stan konta"
+msgstr "Oświadczenie"
 
 msgid "Statistical Functions"
 msgstr "Funkcje statystyczne"
@@ -2770,7 +2770,7 @@ msgid "Stays Between/Goes Outside trades"
 msgstr "Zakłady typu „pozostanie pomiędzy/przekroczy”"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr "Pozostanie pomiędzy/ Przekroczy  Prognozuj, czy cena rynkowa pozostanie w przedziale cen docelowych lub przekroczy ten przedział w dowolnym momencie w danym okresie trwania kontraktu"
+msgstr "Pozostanie pomiędzy/ Przekroczy  Prognozuj, czy cena rynkowa pozostanie w przedziale cen docelowych, czy przekroczy ten przedział w dowolnym momencie w danym okresie trwania kontraktu"
 
 msgid "Stays in"
 msgstr "Pozostanie w"
@@ -3019,7 +3019,7 @@ msgid "The USD Index is a weighted Index, measuring the US Dollar's value agains
 msgstr "Indeks USD to indeks ważony mierzący wartość dolara amerykańskiego w stosunku do koszyka 5 światowych walut (EUR, GBP, JPY, CAD, AUD), z których każda ma wagę 20%"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr "Indeks zmienności 100 jest dwa razy bardziej zmienny niż Indeks zmienności 50 i cztery razy bardziej zmienny niż Indeks zmienności 25"
+msgstr "Indeks zmienności 100 charakteryzuje się dwa razy większą zmiennością niż Indeks zmienności 50 i cztery razy większą zmiennością niż Indeks zmienności 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Wskaźnik ważonej ceny zamknięcia jest po prostu średnią cen poszczególnych dni. Zawiera informacje z całego dnia handlowego, dlatego stosuje się go w celu wygładzenia niektórych nieścisłości wykresu cen zamknięcia"
@@ -3061,7 +3061,7 @@ msgid "The first step is to open an account. You can"
 msgstr "Pierwszym krokiem jest otwarcie konta. Możesz"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr "Najpierw należy wybrać aktywa, którymi chcesz handlować, np. złoto, ropę, akcje czy kursy wymiany walut (wartość opcji binarnej jest pochodną instrumentu bazowego). Wielką zaletą handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz konkretnych aktywów"
+msgstr "Najpierw należy wybrać aktywa, którymi chcesz handlować, np. złoto, ropę naftową, akcje czy kursy wymiany walut (wartość opcji binarnej jest pochodną instrumentu bazowego). Wielką zaletą handlu opcjami jest to, że nie kupujesz ani nie sprzedajesz konkretnych aktywów"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Pierwsze trzy dni formacji dna drabiny o tendencji wzrostowej przybierają formę silnych czarnych świec z niższymi kolejnymi cenami otwarcia i zamknięcia. Czwarty dzień to czarna świeca o krótkim korpusie z wyższymi cenami otwarcia i cenami handlowymi i długim górnym cieniem, która następnie zamyka się nisko. Piąty dzień to silna biała świeca występująca po luce"
@@ -3403,7 +3403,7 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr "Dno trzech rzek to formacja świecowa o tendencji wzrostowej, składająca się z maksymalnie trzech świec: pierwsza świeca posiada długi korpus i jest świecą o tendencji spadkowej, druga ma postać młota i jej korpus znajduje się w obrębie korpusu pierwszej świecy, zaś trzecia świeca ma mały korpus, jest świecą o tendencji wzrostowej, a jej cena zamknięcia znajduje się poniżej korpusu świecy drugiej"
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr "Góra – Prognozuj, czy cena rynkowa będzie wyższa czy niższa od średniej ceny"
+msgstr "Góra – Prognozuj, czy cena rynkowa będzie wyższa od średniej ceny"
 
 msgid "Up/Down"
 msgstr "Góra/dół"
@@ -3535,7 +3535,7 @@ msgid "What is pep?"
 msgstr "Czym jest pep?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr "Jeśli satysfakcjonuje Cię proponowana cena, zawrzyj zakład natychmiast. Dzięki naszej unikatowej platformie unikniesz „opóźnień rynkowych” lub luk cenowych, i co najważniejsze, nie poniesiesz żadnych ukrytych opłat. Możesz też w dowolnej chwili odsprzedać wybrany zakład długoterminowy przed jego wygaśnięciem, aby ochronić uzyskane zyski lub zminimalizować straty"
+msgstr "Jeśli satysfakcjonuje Cię proponowana cena, zawrzyj zakład natychmiast. Dzięki naszej unikatowej platformie unikniesz „opóźnień rynkowych” i luk cenowych, i co najważniejsze, nie poniesiesz żadnych ukrytych opłat. Możesz też w dowolnej chwili odsprzedać wybrany zakład długoterminowy przed jego wygaśnięciem, aby ochronić uzyskane zyski lub zminimalizować straty"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "Handlując z Binary.com, możesz mieć pewność, że Twoje środki są przechowywane na oddzielnych rachunkach powierniczych i nie są wykorzystywane w żadnych innych celach"
@@ -3721,7 +3721,7 @@ msgid "hour"
 msgstr "godzina"
 
 msgid "hours"
-msgstr "godziny"
+msgstr "godzin(y)"
 
 msgid "if this is not your country of residence"
 msgstr "jeśli nie jest to Twój kraj zamieszkania"
@@ -3757,7 +3757,7 @@ msgid "is the selected time"
 msgstr "to wybrany czas"
 
 msgid "is the spot at the"
-msgstr "jest pozycją w"
+msgstr "jest pozycją"
 
 msgid "is when the contract is processed by our servers and the"
 msgstr "to moment przetworzenia kontraktu przez nasze serwery, a"
@@ -3772,7 +3772,7 @@ msgid "minute"
 msgstr "minuta"
 
 msgid "minutes"
-msgstr "minuty"
+msgstr "minut(y)"
 
 msgid "next tick"
 msgstr "następna najmniejsza zmiana ceny"
@@ -3799,7 +3799,7 @@ msgid "second"
 msgstr "sekunda"
 
 msgid "seconds"
-msgstr "sekundy"
+msgstr "sekund(y)"
 
 msgid "session overview"
 msgstr "omówienie sesji"
