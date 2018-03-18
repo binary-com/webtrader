@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-03-17 19:30-0400\n"
+"PO-Revision-Date: 2018-03-18 11:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -49,7 +49,7 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr ") rozpoczyna działalność jako całodobowa usługa zawierania zakładów dla różnorodnych wskaźników finansowych. Biznes rozwija się prężnie i w krótkim czasie stajemy się liderem rynku w branży zakładów o ustalonej stawce"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr "- Korzystaj z takich samych stóp zwrotu, co inwestorzy na rynku międzybankowym. Nasze ceny są zestawiane z cenami na rynku opcji międzybankowych"
+msgstr "- Korzystaj z takich samych stóp zwrotu, jak inwestorzy na rynku międzybankowym. Nasze ceny są zestawiane codziennie z cenami na rynku opcji międzybankowych"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Firma Binary.com nie jest związana z żadnym z pośredników płatności wymienionych powyżej. Każdy pośrednik płatności działa jako niezależny usługodawca i nie jest w żaden sposób zatwierdzony ani popierany przez Binary.com. KLIENCI KORZYSTAJĄ Z USŁUG POŚREDNIKÓW NA WŁASNE RYZYKO. Zaleca się sprawdzenie danych pośredników płatności przed wysłaniem do nich pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za transakcje zawarte między klientami a pośrednikami płatności"
@@ -73,7 +73,7 @@ msgid "- Know how much you will win or lose before you purchase the contract"
 msgstr "- Poznaj wysokość potencjalnego zysku lub potencjalnej straty przed zakupem kontraktu"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr "- Otwórz konto w jedną minutę i zacznij handlować. Dokonywanie wpłat i wypłat jest możliwe 24 godz. na dobę"
+msgstr "- Otwórz konto w jedną minutę i zacznij handlować. Dokonywanie wpłat i wypłat jest możliwe 24 godz. na dobę 7 dni w tygodniu"
 
 msgid "- Predict the market ending higher or lower than a price target"
 msgstr "- Prognozuj, czy cena rynkowa będzie wyższa czy niższa od ceny docelowej"
