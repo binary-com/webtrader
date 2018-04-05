@@ -86,7 +86,7 @@
   margin-left: 35px;
   font-weight: bold;
 }
-.view-transaction-dialog .content .table div span {
+.view-transaction-dialog .content .table div > span {
   margin-left: 35px;
 }
 
