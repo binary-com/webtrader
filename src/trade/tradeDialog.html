@@ -289,6 +289,9 @@
           <span>
             Payout: <span rv-html="proposal.payout_ | call proposal.payout proposal.ask_price proposal.multiplier category_displays.selected.contract_type"> </span>
           </span>
+          <span rv-show="proposal.return_ < ask_price payout">
+             | Return: <span rv-html="proposal.return_ < ask_price payout"> </span>
+          </span>
         </li>
     </ul>
 

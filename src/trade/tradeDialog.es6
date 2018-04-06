@@ -393,6 +393,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         } else {
           return formatPrice((+this.payout || 0), state.currency.value);
         }
+      },
+      return_: function () {
+        const {contract_type} = state.category_displays.selected;
+        if (Lookback.isLookback(contract_type) || !this.payout || ! this.ask_price) {
+          return false;
+        }
+        return `${((this.payout - this.ask_price)/this.ask_price * 100).toFixed(1)}%`;
       }
     },
     purchase: {
