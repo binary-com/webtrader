@@ -794,7 +794,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     if(state.categories.value.contract_category !== 'spreads') {
       // format amount
-      state.basis.amount = (state.basis.amount.toString()).replace(/^0+(\d\.)/, '$1');
+      state.basis.amount = ((state.basis.amount.toString()).match(/0*(\d+\.?\d*)/) || [])[1];
       request.amount = state.basis.amount*1; /* Proposed payout or stake value */
       request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
     } else {
@@ -950,6 +950,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .map('contract_category_display')
     .uniq()
     .value()
+    // TODO: Remove this filter after implementing lookbacks/reset options.
+    .filter(f => !/(reset)/.test(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
