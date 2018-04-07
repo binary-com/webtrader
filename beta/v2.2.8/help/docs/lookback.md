@@ -19,3 +19,5 @@ We offer three types lookbacks:
 For example, let’s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a ‘Close-Low’ lookback with a multiplier of $2 would have a payout of:
     
 `(6,000 – 5,200) * 2 = $1600`
+
+Lookbacks are currently only available for Volatility Indices.
