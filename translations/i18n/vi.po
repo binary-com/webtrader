@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-04-15 16:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -49,64 +49,64 @@ msgid ") goes live, establishing a round-the-clock financial betting service on 
 msgstr ") trở nên trực tiếp, thiết lập một dịch vụ cá cược tài chính suốt ngày đêm trên một loạt các chỉ số tài chính. Kinh doanh phát triển nhanh chóng, và chúng tôi sớm trở thành người dẫn đầu thị trường về tỉ lệ cá cược tài chính"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
-msgstr ""
+msgstr "- Hưởng lợi từ cùng một tỷ suất lợi nhuận như là thương nhân liên ngân hàng. Giá của chúng tôi được so sánh hàng ngày đối với các thị trường liên ngân hàng lựa chọn"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "-Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng và Đại Lý Thanh Toán"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr ""
+msgstr "- Chọn từ hơn một triệu các biến thể giao dịch khả thi tại bất kỳ lúc nào, và tùy chỉnh giao dịch của bạn theo chiến lược ưa thích của bạn"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr ""
+msgstr "- Chọn khung thời gian từ 10 giây đến 365 ngày"
 
 msgid "- Deposit as little as USD 5 to start trading"
-msgstr ""
+msgstr "- Tiền gửi ít nhất là 5 USD để bắt đầu kinh doanh"
 
 msgid "- Earn the same proportional return on stakes of all values"
-msgstr ""
+msgstr "- Dành lợi ích với cùng tỉ lệ lãi suất trong các cổ phần của tất cả các giá trị"
 
 msgid "- Enjoy a trading platform that s easy to navigate and use"
-msgstr ""
+msgstr "- Tận hưởng một sàn giao dịch dễ dàng để điều hướng và sử dụng"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr ""
+msgstr "- Biết bao nhiêu bạn sẽ giành chiến thắng hay mất trước khi bạn mua hợp đồng"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
-msgstr ""
+msgstr "- Mở một tài khoản và bắt đầu kinh doanh trong vài phút. Tiền gửi và rút tiền đều có 24/7"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr ""
+msgstr "- Dự đoán nếu thị trường kết thúc cao hơn hoặc thấp hơn giá nhắm đến"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr ""
+msgstr "- Dự đoán thị trường tăng hay giảm từ mức hiện tại"
 
 msgid "- Predict the market staying between or going outside two price targets"
-msgstr ""
+msgstr "- Dự đoán thị trường ở giữa hoặc ra ngoài hai giá mục tiêu"
 
 msgid "- Predict the market touching or not touching a price target"
-msgstr ""
+msgstr "- Dự đoán thị trường chạm vào hoặc không chạm vào giá tiêu"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr ""
+msgstr "- Nhận báo giá cho một thương mại và chống thương mại, do đó, bạn luôn luôn nhận được không thiên vị, minh bạch giá từ Binary.com"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr ""
+msgstr "- Bán các hợp đồng dài hạn trước khi hết thời hạn để bảo vệ bất kỳ lợi nhuận nào bạn có thể thực hiện hoặc để giảm thiểu thiệt hại của bạn"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
-msgstr ""
+msgstr "- Thương mại dựa trên \"cảm tính\" hoặc dựa trên phân tích kỹ thuật và cơ bản"
 
 msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
-msgstr ""
+msgstr "- Tự tin giao dịch, biết rằng dữ liệu cá nhân, giao dịch và tiền của bạn luôn luôn an toàn"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr ""
+msgstr "- Thương mại các loại tiền tệ, chỉ số, hàng hóa và nhiều hơn nữa trong thị trường tăng, giảm, nghiêng, yên tĩnh và dễ bay hơi"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr ""
+msgstr "- Thương mại khi bạn muốn. Binary.com có sẵn 24/7, ngay cả vào cuối tuần"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr ""
+msgstr "- Giá cả thương mại với các nhà tiên phong của ngành công nghiệp và chủ sở hữu của một cấp bằng sáng chế công nghệ"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- các loại tiền tệ, chỉ số chứng khoán và hàng hóa"
@@ -118,7 +118,7 @@ msgid "- from 10 seconds to 365 days"
 msgstr "- từ 10 giây đến 365 ngày"
 
 msgid "- up/down, touch/no-touch, stays between/goes outside"
-msgstr ""
+msgstr "- lên/xuống, chạm/không chạm, ở giữa/ra ngoài"
 
 msgid "0-1 year"
 msgstr "0-1 năm"
@@ -148,10 +148,10 @@ msgid "1-2 years"
 msgstr "1-2 năm"
 
 msgid "1. Choose the Underlying"
-msgstr ""
+msgstr "1. Chọn các gạch chân"
 
 msgid "1. Underlying market"
-msgstr ""
+msgstr "1. Thị trường tiềm ẩn"
 
 msgid "10"
 msgstr "10"
@@ -196,10 +196,10 @@ msgid "2 Minutes"
 msgstr "2 Phút"
 
 msgid "2. Choose the Duration of the Trade"
-msgstr ""
+msgstr "2. Chọn thời lượng của giao dịch"
 
 msgid "2. Trade type"
-msgstr ""
+msgstr "2. Loại giao dịch"
 
 msgid "2000"
 msgstr "năm 2000"
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "năm 2016"
 
 msgid "2017"
-msgstr ""
+msgstr "năm 2017"
 
 msgid "2h"
 msgstr "2 giờ"
@@ -250,10 +250,10 @@ msgid "3 Minutes"
 msgstr "3 Phút"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr ""
+msgstr "3. Chọn cách bạn muốn giao dịch thị trường"
 
 msgid "3. Duration"
-msgstr ""
+msgstr "3. Thời lượng"
 
 msgid "30"
 msgstr "30"
@@ -280,10 +280,10 @@ msgid "4 Hours"
 msgstr "4 Giờ"
 
 msgid "4. Barrier(s)"
-msgstr ""
+msgstr "4. Các rào cản"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr ""
+msgstr "4. Lựa chọn mức cược của bạn và lợi nhuận tiềm năng"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 giao dịch hoặc hơn trong 12 tháng qua"
@@ -298,7 +298,7 @@ msgid "5 Minutes"
 msgstr "5 Phút"
 
 msgid "5. Payout"
-msgstr ""
+msgstr "5. Thanh toán"
 
 msgid "5m"
 msgstr "5 tháng"
@@ -457,13 +457,13 @@ msgid "All market conditions"
 msgstr "Tất cả các điều kiện thị trường"
 
 msgid "All market conditions and durations"
-msgstr ""
+msgstr "Tất cả các điều kiện thị trường và thời hạn"
 
 msgid "All markets"
 msgstr "Tất cả các thị trường"
 
 msgid "All markets and conditions"
-msgstr ""
+msgstr "Tất cả các thị trường và điều kiện"
 
 msgid "All payouts"
 msgstr "Các khoản thanh toán"
@@ -556,7 +556,7 @@ msgid "August"
 msgstr "Tháng tám"
 
 msgid "Available 24/7"
-msgstr ""
+msgstr "Khả dụng 24/7"
 
 msgid "Available Currencies"
 msgstr "Các loại tiền tệ có sẵn"
@@ -583,7 +583,7 @@ msgid "Avg. Profit"
 msgstr "Lợi nhuận trung bình"
 
 msgid "Award-winning online trading platform"
-msgstr ""
+msgstr "Giải thưởng - chiến thắng nền tảng kinh doanh trực tuyến"
 
 msgid "Awesome Oscillator (AO)"
 msgstr "Dao động tuyệt vời (AO)"
@@ -637,7 +637,7 @@ msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
 msgid "Betting system and method"
-msgstr ""
+msgstr "Hệ thống và phương thức Cá cược"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
@@ -649,13 +649,13 @@ msgid "Binary KK granted Japan license"
 msgstr "Binary KK được cấp phép ở Nhật Bản"
 
 msgid "Binary Options Basics"
-msgstr ""
+msgstr "Cơ bản về Quyền chọn Nhị phân"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary được cấp giấy phép Dịch vụ đầu tư"
 
 msgid "Binary mobile applications and third party tools"
-msgstr ""
+msgstr "Ứng dụng di động nhị phân và các công cụ bên thứ ba"
 
 msgid "Binary opens Japan office"
 msgstr "Binary mở văn phòng tại Nhật Bản"
@@ -664,7 +664,7 @@ msgid "Binary option"
 msgstr "tùy chọn nhị phân"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr ""
+msgstr "Quyền chọn nhị phân rất dễ hiểu. Gọi là ‘nhị phân’ vì sẽ chỉ có 2 kết quả – thắng hoặc thua. Nếu bạn đoán đúng, bạn sẽ nhận được tiền thưởng thỏa thuận lúc bắt đầu giao dịch. Nếu không, bạn sẽ chỉ thua/mất phần đã cá cược"
 
 msgid "Binary options or other financial derivatives"
 msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"
@@ -691,7 +691,7 @@ msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a
 msgstr "Công ty con Binary tại Malta của Công ty đầu tư Binary (Châu Âu) được cấp phép dịch vụ đầu tư thể loại 3 bởi cơ quan dịch vụ tài chính Malta"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
-msgstr ""
+msgstr "Nền tảng giao dịch của Binary trung bình vào khoảng 20 giao dịch mỗi giây, 24/7"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -703,13 +703,13 @@ msgid "Binary.com Shop introduced"
 msgstr "giới thiệu cửa hàng Binary.com"
 
 msgid "Binary.com announces plans for an"
-msgstr ""
+msgstr "Binary.com thông báo các kế hoạch cho một"
 
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com tiếp tục đổi mới và phát triển"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr ""
+msgstr "Binary.com tạo các chỉ số Biến động cho phép bạn giao dịch 24/7. Bạn có thể giao dịch trên mọi loại hợp đồng"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com đã giành được một danh tiếng tuyệt vời cho cam kết của chúng tôi các tiêu chuẩn đạo đức cao và chất lượng của kinh nghiệm kinh doanh, chúng tôi cung cấp"
@@ -727,7 +727,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com giới thiệu một"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "Binary.com được trao tặng giải thưởng nhà môi giới tốt nhất tùy chọn nhị phân bởi giải thưởng cá nhân giàu có trực tuyến thuộc vương quốc Anh năm 2017, theo bình chọn của các nhà đầu tư trên toàn thế giới"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com là hoàn toàn dựa trên web và không cần phần mềm cài đặt"
@@ -736,13 +736,13 @@ msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at t
 msgstr "Binary.com được vinh danh như một nhà môi giới tùy chọn nhị phân tốt nhất thế giới trong lần thứ 16 hội nghị tài chính quốc tế MENA thường niên được tổ chức ở Dubai"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com thuộc sở hữu và vận hành bởi Công ty Tnhh Binary, một nhóm công ty. Để biết thêm chi tiết, hãy truy cập trang lịch sử của chúng tôi"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com ra mắt tài khoản Bitcoin (BTC) cho khách hàng ngoài EU"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com ra mắt tài khoản Bitcoin"
 
 msgid "Binary.com launches an"
 msgstr "Binary.com ra mắt một"
@@ -751,13 +751,13 @@ msgid "Binary.com offers a range of common deposit and withdrawal methods, from 
 msgstr "Binary.com cung cấp một loạt các phương pháp phổ biến tiền gửi và rút tiền, từ thẻ tín dụng và thẻ ghi nợ cho đến ngân hàng, tiền điện tử và ví điện tử"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com cung cấp một tài khoản tiền ảo để bạn có thể nhận được hang của giao dịch nhị phân. Tại sao không"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com cung cấp cách thức mới để kinh doanh"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Binary.com cung cấp 4 cách để giao dịch tài sản mà bạn đã chọn"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com mở một văn phòng trong tòa nhà ở trung tâm Kuala Lumpur tiếp tục mở rộng đội ngũ phát triển CNTT của văn phòng QSentral"
@@ -772,19 +772,19 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com giành giải thưởng đầu tiên trong thể loại điều hành tài chính cá cược tại lễ trao giải nhà điều hành EGR 2015 được tổ chức ở London"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "Các chỉ số liên tục của Binary.com là chỉ số Độ biến động 10, Độ bất ổn 25, Khả năng biến động 50, Khả năng biến động 75 và Chỉ số biến động 100. Các chỉ số này tương ứng với các thị trường mô phỏng với các biến động không đổi là 10%, 25%, 50%, 75% và 100%"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "Các chứng khoán và cổ phiếu phi tập trung của Binary.com bắt nguồn từ sàn chứng khoán phi tập trung và cung cấp cho bạn các phương thức có thể thay đổi lẫn nhau trong giao dịch các chứng khoán và cổ phiếu có sẵn từ thị trường tập trung bên ngoài"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "Các chứng khoán và cổ phiếu phi tập trung của Binary.com mang đến những lợi ích về mặt thời gian thực và việc định giá. Hãy trải nghiệm những cơ hội thú vị hơn thế khi giao dịch những mã chứng khoán và cổ phiếu trên thị trường nổi bật của chúng tôi thông qua sự cung cấp mới với thời gian thực này"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Smart FX của Binary.com là thị trường thông minh đo lường giá trị của một đồng tiền so với những đồng tiền lớn khác"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "Chỉ số biến động của Binary.com được dựa trên một máy phát các số bảo mật ngẫu nhiên được mã hoá để kiểm định tính công bằng bởi một bên thứ ba độc lập"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Binary.com của hệ thống đang xử lý bây giờ vượt quá 1 triệu giao dịch/ngày (bao gồm tài khoản ảo)"
@@ -2689,10 +2689,10 @@ msgid "Simple and intuitive"
 msgstr ""
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Thị trường ngoại hối Thông minh"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "Chỉ số Thông minh"
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "Đường biến thiên trung bình mượt (SMMA)"
