@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-04-15 16:40-0400\n"
+"PO-Revision-Date: 2018-04-15 16:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -2704,7 +2704,7 @@ msgid "Source of wealth"
 msgstr "Nguồn tài sản"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "Chỉ định thanh toán của bạn, mà là lợi nhuận tiềm năng của bạn nếu dự đoán của bạn là chính xác. Hệ thống của chúng tôi sẽ tiến hành để tính toán cổ phần của bạn, mà là tổng chi phí mua các hợp đồng. Binary.com cung cấp các thanh toán từ $1 đến $50,000"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Mô hình ngọn quay (CDLSPINNINGTOP)"
