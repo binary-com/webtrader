@@ -126,7 +126,7 @@ const init_state = (root, what_todo) => {
             'Brand of first car', 'Favourite artist'
          ],
          secret_answer: '',
-         place_of_birth: '-',
+         place_of_birth: '',
          country_array: [{ text: '-', value: '-' }],
          tax_residence: '',
          tax_identification_number: '',
@@ -197,6 +197,7 @@ const init_state = (root, what_todo) => {
          user.last_name !== '' &&
          !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.last_name) &&
          moment(user.date_of_birth, 'YYYY-MM-DD', true).isValid() &&
+         $.trim(state.user.place_of_birth) !== ''
          user.residence !== '-' &&
          user.address_line_1 !== '' &&
          !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_1) &&
@@ -206,7 +207,7 @@ const init_state = (root, what_todo) => {
          /^[^+]{0,20}$/.test(user.address_postcode) &&
          user.phone !== '' && /^\+?[0-9\s]{6,35}$/.test(user.phone) &&
          (state.input_disabled || /.{4,8}$/.test(user.secret_answer)) && // Check secret answer if mlt account
-         (state.what_todo != "upgrade-mf" || (state.user.place_of_birth &&
+         (state.what_todo != "upgrade-mf" || (
             state.user.tax_residence && state.user.tax_identification_number && /^[\w-]{0,20}$/.test(state.user.tax_identification_number)));
    };
 
@@ -233,6 +234,7 @@ const init_state = (root, what_todo) => {
          last_name: user.last_name,
          account_opening_reason: user.account_opening_reason,
          date_of_birth: user.date_of_birth,
+         place_of_birth: user.place_of_birth,
          residence: user.residence,
          address_line_1: user.address_line_1,
          address_line_2: user.address_line_2 || undefined, // optional field
@@ -511,7 +513,7 @@ const init_state = (root, what_todo) => {
                return;
             const currencies = data.landing_company_details.legal_allowed_currencies;
             const currencies_config = local_storage.get("currencies_config") || {};
-            const cr_accts = _.filter(Cookies.loginids(), { is_cr: true });
+            const cr_accts = _.filter(loginids(), { is_cr: true });
             const has_fiat = _.some(cr_accts, { type: 'fiat' });
             if (!has_fiat)
                state.user.available_currencies = currencies.filter((c) => {

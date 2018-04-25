@@ -2,12 +2,6 @@
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "" 
 
-msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr "" 
-
-msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
-msgstr "" 
-
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr "" 
 
@@ -23,13 +17,7 @@ msgstr ""
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr "" 
 
-msgid "'Differs' - You win when the last digit of the last tick does not match your prediction"
-msgstr "" 
-
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
-msgstr "" 
-
-msgid "'Matches' - You win when the last digit of the last tick matches your prediction"
 msgstr "" 
 
 msgid "'contract period'"
@@ -47,58 +35,67 @@ msgstr ""
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr "" 
 
-msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives markets"
-msgstr "" 
-
-msgid "- Binary.com ensures your personal data and transactions are always secure"
+msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "" 
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "" 
 
-msgid "- Binary.com is the industry pioneer and holds patented pricing technology"
+msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
 msgstr "" 
 
-msgid "- Binary.com offers many payment methods, such as credit/debit cards, bank wires, e-cash and e-wallets"
+msgid "- Choose timeframes from 10 seconds to 365 days"
 msgstr "" 
 
-msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
+msgid "- Deposit as little as USD 5 to start trading"
 msgstr "" 
 
-msgid "- binaries are licensed as a betting activity in the UK, so your winnings are tax-free"
+msgid "- Earn the same proportional return on stakes of all values"
 msgstr "" 
 
-msgid "- choose intraday trades from 1 minute to 24 hours"
+msgid "- Enjoy a trading platform that s easy to navigate and use"
 msgstr "" 
 
-msgid "- choose the falls trade, lower trade, one-touch trade with a low barrier, or no-touch trade with a high barrier"
+msgid "- Know how much you will win or lose before you purchase the contract"
 msgstr "" 
 
-msgid "- choose the no-touch trade, the stays-between trade, or the ends-between trade"
+msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
 msgstr "" 
 
-msgid "- choose the one-touch trade, the goes-outside trade, or the ends outside trade"
+msgid "- Predict the market ending higher or lower than a price target"
 msgstr "" 
 
-msgid "- choose the rise trade, higher trade, one-touch trade with a high barrier, or no-touch trade with a low barrier"
+msgid "- Predict the market rising or falling from its current level"
 msgstr "" 
 
-msgid "- choose timeframes from 10 seconds to 365 days"
+msgid "- Predict the market staying between or going outside two price targets"
 msgstr "" 
 
-msgid "- choose trades with durations of up to 365 days"
+msgid "- Predict the market touching or not touching a price target"
 msgstr "" 
 
-msgid "- choose trades with high returns and a low probability to win, or with low returns and a high probability to win"
+msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
+msgstr "" 
+
+msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
+msgstr "" 
+
+msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
+msgstr "" 
+
+msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
+msgstr "" 
+
+msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
+msgstr "" 
+
+msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
+msgstr "" 
+
+msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
 msgstr "" 
 
 msgid "- currencies, stock indices, and commodities"
-msgstr "" 
-
-msgid "- customize your trades to meet your needs"
-msgstr "" 
-
-msgid "- dip a toe in the water with $2 or go all out for $50,000"
 msgstr "" 
 
 msgid "- from $1 to $50,000"
@@ -107,76 +104,7 @@ msgstr ""
 msgid "- from 10 seconds to 365 days"
 msgstr "" 
 
-msgid "- get pricing that is normally reserved for big institutional players"
-msgstr "" 
-
-msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions"
-msgstr "" 
-
-msgid "- open an account in minutes"
-msgstr "" 
-
-msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr "" 
-
-msgid "- predict if the market will end higher or lower than a price target"
-msgstr "" 
-
-msgid "- predict if the market will rise or fall from its current level"
-msgstr "" 
-
-msgid "- predict if the market will stay inside two price targets, or end between or outside them"
-msgstr "" 
-
-msgid "- predict if the market will touch or not touch a price target"
-msgstr "" 
-
-msgid "- sell your long-term trades at market prices before they expire"
-msgstr "" 
-
-msgid "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr "" 
-
-msgid "- start trading with as little as $5"
-msgstr "" 
-
-msgid "- trade 24/7, even on weekends"
-msgstr "" 
-
-msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr "" 
-
-msgid "- trade Binary.com's proprietary volatility indices"
-msgstr "" 
-
-msgid "- trade all major FX pairs"
-msgstr "" 
-
-msgid "- trade all major FX pairs, around the clock"
-msgstr "" 
-
-msgid "- trade all major worldwide stock indices"
-msgstr "" 
-
-msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
-msgstr "" 
-
-msgid "- trade major commodities such as gold and oil"
-msgstr "" 
-
-msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr "" 
-
-msgid "- we challenge you to find better returns on any competing website"
-msgstr "" 
-
-msgid "- win the same proportional return on stakes of all values"
-msgstr "" 
-
-msgid "- you know from the start what you will win or lose"
-msgstr "" 
-
-msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees or commissions"
+msgid "- up/down, touch/no-touch, stays between/goes outside"
 msgstr "" 
 
 msgid "0-1 year"
@@ -204,6 +132,12 @@ msgid "1 million transactions/day"
 msgstr "" 
 
 msgid "1-2 years"
+msgstr "" 
+
+msgid "1. Choose the Underlying"
+msgstr "" 
+
+msgid "1. Underlying market"
 msgstr "" 
 
 msgid "10"
@@ -248,7 +182,10 @@ msgstr ""
 msgid "2 Minutes"
 msgstr "" 
 
-msgid "2-way pricing"
+msgid "2. Choose the Duration of the Trade"
+msgstr "" 
+
+msgid "2. Trade type"
 msgstr "" 
 
 msgid "2000"
@@ -284,6 +221,9 @@ msgstr ""
 msgid "2016"
 msgstr "" 
 
+msgid "2017"
+msgstr "" 
+
 msgid "2h"
 msgstr "" 
 
@@ -294,6 +234,12 @@ msgid "3"
 msgstr "" 
 
 msgid "3 Minutes"
+msgstr "" 
+
+msgid "3. Choose how you want to Trade the Market"
+msgstr "" 
+
+msgid "3. Duration"
 msgstr "" 
 
 msgid "30"
@@ -320,6 +266,12 @@ msgstr ""
 msgid "4 Hours"
 msgstr "" 
 
+msgid "4. Barrier(s)"
+msgstr "" 
+
+msgid "4. Choose your Stake and Potential Return"
+msgstr "" 
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "" 
 
@@ -330,6 +282,9 @@ msgid "5"
 msgstr "" 
 
 msgid "5 Minutes"
+msgstr "" 
+
+msgid "5. Payout"
 msgstr "" 
 
 msgid "5m"
@@ -488,10 +443,13 @@ msgstr ""
 msgid "All market conditions"
 msgstr "" 
 
+msgid "All market conditions and durations"
+msgstr "" 
+
 msgid "All markets"
 msgstr "" 
 
-msgid "All markets, all conditions"
+msgid "All markets and conditions"
 msgstr "" 
 
 msgid "All payouts"
@@ -584,6 +542,9 @@ msgstr ""
 msgid "August"
 msgstr "" 
 
+msgid "Available 24/7"
+msgstr "" 
+
 msgid "Available Currencies"
 msgstr "" 
 
@@ -606,6 +567,9 @@ msgid "Avg. Loss"
 msgstr "" 
 
 msgid "Avg. Profit"
+msgstr "" 
+
+msgid "Award-winning online trading platform"
 msgstr "" 
 
 msgid "Awesome Oscillator (AO)"
@@ -638,12 +602,6 @@ msgstr ""
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "" 
 
-msgid "Benchmarked prices"
-msgstr "" 
-
-msgid "Benefits of binary trading"
-msgstr "" 
-
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr "" 
 
@@ -665,6 +623,9 @@ msgstr ""
 msgid "Betonmarkets.com"
 msgstr "" 
 
+msgid "Betting system and method"
+msgstr "" 
+
 msgid "Bill Williams"
 msgstr "" 
 
@@ -674,16 +635,22 @@ msgstr ""
 msgid "Binary KK granted Japan license"
 msgstr "" 
 
-msgid "Binary Trading is simple to learn and to execute"
+msgid "Binary Options Basics"
 msgstr "" 
 
 msgid "Binary granted Investment Services license"
+msgstr "" 
+
+msgid "Binary mobile applications and third party tools"
 msgstr "" 
 
 msgid "Binary opens Japan office"
 msgstr "" 
 
 msgid "Binary option"
+msgstr "" 
+
+msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
 msgstr "" 
 
 msgid "Binary options or other financial derivatives"
@@ -701,9 +668,6 @@ msgstr ""
 msgid "Binary trading is ideal for both individuals and market professionals"
 msgstr "" 
 
-msgid "Binary trading is very simple"
-msgstr "" 
-
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
 msgstr "" 
 
@@ -713,7 +677,7 @@ msgstr ""
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
 msgstr "" 
 
-msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
+msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
 msgstr "" 
 
 msgid "Binary.com"
@@ -725,7 +689,13 @@ msgstr ""
 msgid "Binary.com Shop introduced"
 msgstr "" 
 
+msgid "Binary.com announces plans for an"
+msgstr "" 
+
 msgid "Binary.com continues to innovate and grow"
+msgstr "" 
+
+msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
 msgstr "" 
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
@@ -743,19 +713,22 @@ msgstr ""
 msgid "Binary.com introduces an"
 msgstr "" 
 
+msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
+msgstr "" 
+
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "" 
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
 msgstr "" 
 
-msgid "Binary.com is one of the oldest and most respected names in online binary trading"
+msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
 msgstr "" 
 
-msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. For more information, visit our history page"
+msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
 msgstr "" 
 
-msgid "Binary.com is tailored to traders of all levels"
+msgid "Binary.com launches Bitcoin accounts"
 msgstr "" 
 
 msgid "Binary.com launches an"
@@ -764,16 +737,16 @@ msgstr ""
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
 msgstr "" 
 
-msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
+msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
 msgstr "" 
 
 msgid "Binary.com offers new ways to trade"
 msgstr "" 
 
-msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
+msgid "Binary.com offers you four ways to trade a particular asset"
 msgstr "" 
 
-msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
+msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "" 
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
@@ -783,6 +756,21 @@ msgid "Binary.com reaches 1 million registered users"
 msgstr "" 
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
+msgstr "" 
+
+msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
+msgstr "" 
+
+msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
+msgstr "" 
+
+msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
+msgstr "" 
+
+msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
+msgstr "" 
+
+msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
 msgstr "" 
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
@@ -806,7 +794,7 @@ msgstr ""
 msgid "Browser upgrade required"
 msgstr "" 
 
-msgid "But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions"
+msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
 msgstr "" 
 
 msgid "Buy Price"
@@ -881,58 +869,16 @@ msgstr ""
 msgid "Chart type"
 msgstr "" 
 
-msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
-msgstr "" 
-
-msgid "Choose Ends In/Out to profit from the market stopping inside or outside two price targets at the end of the time period"
-msgstr "" 
-
-msgid "Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target"
-msgstr "" 
-
-msgid "Choose Rise/Fall when you want to profit from the market rising or falling from its current level"
-msgstr "" 
-
-msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period"
-msgstr "" 
-
-msgid "Choose Touch / No Touch when you want to profit from the market touching or not touching a target any time during the contract period"
-msgstr "" 
-
-msgid "Choose a trade type"
-msgstr "" 
-
-msgid "Choose digit if you want to profit from predicting the last decimal digit of the spot"
-msgstr "" 
-
-msgid "Choose from over 1 million trades"
-msgstr "" 
-
-msgid "Choose from over a million possible trades at any time"
+msgid "Choose from five types of markets and their respective assets"
 msgstr "" 
 
 msgid "Choose password"
 msgstr "" 
 
-msgid "Choose the barrier(s)"
+msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
 msgstr "" 
 
-msgid "Choose the duration"
-msgstr "" 
-
-msgid "Choose the market, the price target, the time period, and how much you wish to win"
-msgstr "" 
-
-msgid "Choose the market, the price targets, the time period, and how much you wish to win"
-msgstr "" 
-
-msgid "Choose the market, the time period, and how much you wish to win"
-msgstr "" 
-
-msgid "Choose the payout"
-msgstr "" 
-
-msgid "Choose the underlying market"
+msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
 msgstr "" 
 
 msgid "Choose your pereferred payment agent"
@@ -950,6 +896,9 @@ msgstr ""
 msgid "Click to log in with your Binary.com account"
 msgstr "" 
 
+msgid "Client funds"
+msgstr "" 
+
 msgid "Close"
 msgstr "" 
 
@@ -965,6 +914,9 @@ msgstr ""
 msgid "Commodities"
 msgstr "" 
 
+msgid "Commodities - Major commodities such as gold and oil"
+msgstr "" 
+
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "" 
 
@@ -978,6 +930,15 @@ msgid "Commodity Channel Index (CCI)"
 msgstr "" 
 
 msgid "Comparisons"
+msgstr "" 
+
+msgid "Competitive and transparent pricing"
+msgstr "" 
+
+msgid "Computer system and method for speculating on a financial market"
+msgstr "" 
+
+msgid "Computer trading system for offering custom financial market speculations"
 msgstr "" 
 
 msgid "Conditions"
@@ -996,6 +957,9 @@ msgid "Continue"
 msgstr "" 
 
 msgid "Continue Trading"
+msgstr "" 
+
+msgid "Continuous Indices"
 msgstr "" 
 
 msgid "Contract"
@@ -1037,7 +1001,7 @@ msgstr ""
 msgid "Crosshair"
 msgstr "" 
 
-msgid "Currencies"
+msgid "Currencies - All major Forex pairs"
 msgstr "" 
 
 msgid "Current Level"
@@ -1065,6 +1029,12 @@ msgid "Current time"
 msgstr "" 
 
 msgid "Custom Theme"
+msgstr "" 
+
+msgid "Daily Reset Indices"
+msgstr "" 
+
+msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
 msgstr "" 
 
 msgid "Daily limit on losses"
@@ -1157,6 +1127,9 @@ msgstr ""
 msgid "Digits"
 msgstr "" 
 
+msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
+msgstr "" 
+
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "" 
 
@@ -1164,9 +1137,6 @@ msgid "Directional Movement Index (DX)"
 msgstr "" 
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr "" 
-
-msgid "Do I need to send any documents?"
 msgstr "" 
 
 msgid "Do you offer virtual-money accounts?"
@@ -1206,6 +1176,9 @@ msgid "Double Exponential Moving Average (DEMA)"
 msgstr "" 
 
 msgid "Double click the object to remove"
+msgstr "" 
+
+msgid "Down - Predict that the market will end lower than the average price"
 msgstr "" 
 
 msgid "Download"
@@ -1259,10 +1232,13 @@ msgstr ""
 msgid "EURUSD"
 msgstr "" 
 
+msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
+msgstr "" 
+
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "" 
 
-msgid "Each binary trade is for a pre-determined payout amount. You win the payout if your prediction is correct"
+msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
 msgstr "" 
 
 msgid "Edge"
@@ -1283,7 +1259,10 @@ msgstr ""
 msgid "Ends Between/Ends Outside trades"
 msgstr "" 
 
-msgid "Ends In/Out"
+msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
+msgstr "" 
+
+msgid "Ends Between/Outside"
 msgstr "" 
 
 msgid "Ends in"
@@ -1325,6 +1304,9 @@ msgstr ""
 msgid "Even"
 msgstr "" 
 
+msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
+msgstr "" 
+
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "" 
 
@@ -1353,9 +1335,6 @@ msgid "Exponential Moving Average (EMA)"
 msgstr "" 
 
 msgid "Fall"
-msgstr "" 
-
-msgid "Falling markets"
 msgstr "" 
 
 msgid "Family name"
@@ -1394,13 +1373,7 @@ msgstr ""
 msgid "Financial Information"
 msgstr "" 
 
-msgid "Financial Security"
-msgstr "" 
-
 msgid "Financial information"
-msgstr "" 
-
-msgid "Financial rewards"
 msgstr "" 
 
 msgid "Firefox"
@@ -1415,7 +1388,7 @@ msgstr ""
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
 msgstr "" 
 
-msgid "Flexibility"
+msgid "Flexible"
 msgstr "" 
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
@@ -1431,6 +1404,9 @@ msgid "Forex trading frequency"
 msgstr "" 
 
 msgid "Founded October 1999"
+msgstr "" 
+
+msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
 msgstr "" 
 
 msgid "Fractal (FRACTAL)"
@@ -1469,7 +1445,7 @@ msgstr ""
 msgid "Get your price"
 msgstr "" 
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgid "Go to"
 msgstr "" 
 
 msgid "Goes out"
@@ -1520,9 +1496,6 @@ msgstr ""
 msgid "High barrier offset"
 msgstr "" 
 
-msgid "High returns"
-msgstr "" 
-
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr "" 
 
@@ -1532,7 +1505,13 @@ msgstr ""
 msgid "Higher/Lower"
 msgstr "" 
 
+msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
+msgstr "" 
+
 msgid "Higher/Lower trades"
+msgstr "" 
+
+msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
 msgstr "" 
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
@@ -1559,13 +1538,13 @@ msgstr ""
 msgid "How does Binary.com make money?"
 msgstr "" 
 
-msgid "How safe is my money with Binary.com?"
-msgstr "" 
-
 msgid "How soon can I start trading?"
 msgstr "" 
 
 msgid "How to trade binaries?"
+msgstr "" 
+
+msgid "How to trade the Volatility Indices markets?"
 msgstr "" 
 
 msgid "Hull Moving Average (HMA)"
@@ -1586,7 +1565,10 @@ msgstr ""
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr "" 
 
-msgid "Ideal for both pros and novices"
+msgid "IPO on the blockchain"
+msgstr "" 
+
+msgid "Ideal for beginners and experienced traders"
 msgstr "" 
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
@@ -1643,6 +1625,12 @@ msgstr ""
 msgid "In/Out"
 msgstr "" 
 
+msgid "In/Out (ends between/outside and stays between/goes outside)"
+msgstr "" 
+
+msgid "In/Out - Predict if the market will stay between or outside two target prices"
+msgstr "" 
+
 msgid "In/Out trades"
 msgstr "" 
 
@@ -1656,6 +1644,9 @@ msgid "Indicators"
 msgstr "" 
 
 msgid "Indices"
+msgstr "" 
+
+msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
 msgstr "" 
 
 msgid "Indices trading experience"
@@ -1673,10 +1664,10 @@ msgstr ""
 msgid "Industry of Employment"
 msgstr "" 
 
-msgid "Instant access"
+msgid "Initial Coin Offering (ICO)"
 msgstr "" 
 
-msgid "Instant funding"
+msgid "Instant access"
 msgstr "" 
 
 msgid "Instruments"
@@ -1749,9 +1740,6 @@ msgid "Kicking patterns on a candlestick chart are formed when there are two lon
 msgstr "" 
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "" 
-
-msgid "Known risks"
 msgstr "" 
 
 msgid "Kuala Lumpur Office"
@@ -1880,9 +1868,6 @@ msgstr ""
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 msgstr "" 
 
-msgid "Long-term action"
-msgstr "" 
-
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
 msgstr "" 
 
@@ -1947,6 +1932,9 @@ msgid "Mat Hold (CDLMATHOLD)"
 msgstr "" 
 
 msgid "Matches"
+msgstr "" 
+
+msgid "Matches/Differs - Predict that the last digit will match or not match"
 msgstr "" 
 
 msgid "Matching Low (CDLMATCHINGLOW)"
@@ -2105,12 +2093,6 @@ msgstr ""
 msgid "No Touch trades"
 msgstr "" 
 
-msgid "No matter the market - rising or falling, quiet or volatile - you'll find a trade to suit your outlook"
-msgstr "" 
-
-msgid "No surprises"
-msgstr "" 
-
 msgid "No touch"
 msgstr "" 
 
@@ -2141,6 +2123,9 @@ msgstr ""
 msgid "OK"
 msgstr "" 
 
+msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
+msgstr "" 
+
 msgid "Occupation"
 msgstr "" 
 
@@ -2169,6 +2154,9 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "" 
 
 msgid "One last step left"
+msgstr "" 
+
+msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "" 
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
@@ -2237,16 +2225,22 @@ msgstr ""
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
 msgstr "" 
 
+msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
+msgstr "" 
+
 msgid "Over"
 msgstr "" 
 
 msgid "Over 1 million registered accounts worldwide"
 msgstr "" 
 
+msgid "Over 130 staff and contractors worldwide"
+msgstr "" 
+
 msgid "Over 3 years"
 msgstr "" 
 
-msgid "Over 90 staff and contractors worldwide"
+msgid "Over/Under - Predict that the last digit is higher or lower"
 msgstr "" 
 
 msgid "Overlap Studies"
@@ -2273,9 +2267,6 @@ msgstr ""
 msgid "Payment agents"
 msgstr "" 
 
-msgid "Payment options"
-msgstr "" 
-
 msgid "Payments"
 msgstr "" 
 
@@ -2295,6 +2286,9 @@ msgid "Permissions"
 msgstr "" 
 
 msgid "Personal Details"
+msgstr "" 
+
+msgid "Personal Wealth Awards 2017"
 msgstr "" 
 
 msgid "Phone"
@@ -2346,6 +2340,9 @@ msgid "Please input correct token"
 msgstr "" 
 
 msgid "Please install the latest version of one of these browsers"
+msgstr "" 
+
+msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
 msgstr "" 
 
 msgid "Please provide your tax information"
@@ -2408,9 +2405,6 @@ msgstr ""
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr "" 
 
-msgid "Price the trade"
-msgstr "" 
-
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
 msgstr "" 
 
@@ -2432,6 +2426,9 @@ msgstr ""
 msgid "Profit/Loss (points)"
 msgstr "" 
 
+msgid "Protect your profits"
+msgstr "" 
+
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "" 
 
@@ -2442,9 +2439,6 @@ msgid "Purchase Date"
 msgstr "" 
 
 msgid "Purchase Price"
-msgstr "" 
-
-msgid "Quiet markets"
 msgstr "" 
 
 msgid "Rate Of Change (ROC)"
@@ -2460,9 +2454,6 @@ msgid "Read"
 msgstr "" 
 
 msgid "Read about"
-msgstr "" 
-
-msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
 msgstr "" 
 
 msgid "Ref"
@@ -2555,10 +2546,13 @@ msgstr ""
 msgid "Rise/Fall"
 msgstr "" 
 
+msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
+msgstr "" 
+
 msgid "Rise/Fall trades"
 msgstr "" 
 
-msgid "Rising markets"
+msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
 msgstr "" 
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
@@ -2600,7 +2594,7 @@ msgstr ""
 msgid "Saved"
 msgstr "" 
 
-msgid "Scalable trading"
+msgid "Scalable"
 msgstr "" 
 
 msgid "Second line of home address"
@@ -2610,6 +2604,9 @@ msgid "Secondary"
 msgstr "" 
 
 msgid "Security"
+msgstr "" 
+
+msgid "Security and privacy"
 msgstr "" 
 
 msgid "Security question"
@@ -2645,7 +2642,10 @@ msgstr ""
 msgid "Session duration limit, in minutes"
 msgstr "" 
 
-msgid "Set your probability of winning"
+msgid "Set barrier(s) to define your position and trigger the payout you will receive"
+msgstr "" 
+
+msgid "Set the length of your trade, from 10 seconds to 365 days"
 msgstr "" 
 
 msgid "Settles"
@@ -2657,13 +2657,13 @@ msgstr ""
 msgid "Share chart"
 msgstr "" 
 
+msgid "Sharp, benchmarked prices"
+msgstr "" 
+
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "" 
 
-msgid "Short to long-term"
-msgstr "" 
-
-msgid "Short-term action"
+msgid "Short to long-term durations"
 msgstr "" 
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
@@ -2672,7 +2672,13 @@ msgstr ""
 msgid "Simple Moving Average (SMA)"
 msgstr "" 
 
-msgid "Simplicity"
+msgid "Simple and intuitive"
+msgstr "" 
+
+msgid "Smart FX"
+msgstr "" 
+
+msgid "Smart Indices"
 msgstr "" 
 
 msgid "Smoothed Moving Average (SMMA)"
@@ -2682,6 +2688,9 @@ msgid "Sold"
 msgstr "" 
 
 msgid "Source of wealth"
+msgstr "" 
+
+msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
 msgstr "" 
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
@@ -2741,10 +2750,13 @@ msgstr ""
 msgid "Status"
 msgstr "" 
 
+msgid "Stays Between/Goes Outside"
+msgstr "" 
+
 msgid "Stays Between/Goes Outside trades"
 msgstr "" 
 
-msgid "Stays In/Goes Out"
+msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
 msgstr "" 
 
 msgid "Stays in"
@@ -2753,7 +2765,7 @@ msgstr ""
 msgid "Step 1: Define your position"
 msgstr "" 
 
-msgid "Step 2: Get your trade price"
+msgid "Step 2: Get your contract price"
 msgstr "" 
 
 msgid "Step 3: Make your trade"
@@ -2772,12 +2784,6 @@ msgid "Stochastic Relative Strength Index (STOCHRSI)"
 msgstr "" 
 
 msgid "Stochastic Slow (STOCHS)"
-msgstr "" 
-
-msgid "Stock Indices"
-msgstr "" 
-
-msgid "Stock indices"
 msgstr "" 
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
@@ -2828,9 +2834,6 @@ msgstr ""
 msgid "Table"
 msgstr "" 
 
-msgid "Take early profits"
-msgstr "" 
-
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr "" 
 
@@ -2844,9 +2847,6 @@ msgid "Tax information"
 msgstr "" 
 
 msgid "Tax residence"
-msgstr "" 
-
-msgid "Tax-free"
 msgstr "" 
 
 msgid "Tel"
@@ -2868,6 +2868,9 @@ msgid "Tertiary"
 msgstr "" 
 
 msgid "The"
+msgstr "" 
+
+msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
 msgstr "" 
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
@@ -2915,10 +2918,16 @@ msgstr ""
 msgid "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow"
 msgstr "" 
 
+msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
+msgstr "" 
+
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "" 
 
 msgid "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K"
+msgstr "" 
+
+msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
 msgstr "" 
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
@@ -2993,6 +3002,12 @@ msgstr ""
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
 msgstr "" 
 
+msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
+msgstr "" 
+
+msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
+msgstr "" 
+
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "" 
 
@@ -3000,9 +3015,6 @@ msgid "The balance of power (BOP) indicator measures the strength of the bulls v
 msgstr "" 
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
-msgstr "" 
-
-msgid "The barrier(s) you choose defines your position and triggers your payout"
 msgstr "" 
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
@@ -3032,7 +3044,10 @@ msgstr ""
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "" 
 
-msgid "The first step is to open an account. You can apply online in just a few minutes"
+msgid "The first step is to open an account. You can"
+msgstr "" 
+
+msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
 msgstr "" 
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
@@ -3084,6 +3099,18 @@ msgid "The variance and the closely-related standard deviation are measures of h
 msgstr "" 
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
+msgstr "" 
+
+msgid "There are four main trade types for you to choose from"
+msgstr "" 
+
+msgid "There are two types of In/Out trades"
+msgstr "" 
+
+msgid "There are two types of Up/Down trades"
+msgstr "" 
+
+msgid "There are two ways to trade Asians"
 msgstr "" 
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
@@ -3200,6 +3227,9 @@ msgstr ""
 msgid "Token"
 msgstr "" 
 
+msgid "Token Management"
+msgstr "" 
+
 msgid "Token management"
 msgstr "" 
 
@@ -3209,7 +3239,7 @@ msgstr ""
 msgid "Token permissions"
 msgstr "" 
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
+msgid "Tokens are special codes for accessing"
 msgstr "" 
 
 msgid "Tooltip background"
@@ -3236,6 +3266,9 @@ msgstr ""
 msgid "Touch/No Touch"
 msgstr "" 
 
+msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
+msgstr "" 
+
 msgid "Tourism"
 msgstr "" 
 
@@ -3251,25 +3284,10 @@ msgstr ""
 msgid "Trade Types"
 msgstr "" 
 
-msgid "Trade all market conditions"
-msgstr "" 
-
-msgid "Trade to your budget"
-msgstr "" 
-
-msgid "Trade to your strategy"
+msgid "Trade according to your preferred strategy"
 msgstr "" 
 
 msgid "Trade using"
-msgstr "" 
-
-msgid "Trade when you want to trade"
-msgstr "" 
-
-msgid "Trade with confidence"
-msgstr "" 
-
-msgid "Trade your way"
 msgstr "" 
 
 msgid "Trader"
@@ -3287,13 +3305,10 @@ msgstr ""
 msgid "Trading Times"
 msgstr "" 
 
-msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
+msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "" 
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr "" 
-
-msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "" 
 
 msgid "Tradingview for Binary.com"
@@ -3303,6 +3318,9 @@ msgid "Transfer"
 msgstr "" 
 
 msgid "Transfer to another Binary account"
+msgstr "" 
+
+msgid "Transparent risk and potential reward"
 msgstr "" 
 
 msgid "Triangular Moving Average (TRIMA)"
@@ -3335,7 +3353,13 @@ msgstr ""
 msgid "Two Crows (CDL2CROWS)"
 msgstr "" 
 
+msgid "Two-way pricing"
+msgstr "" 
+
 msgid "Typical Price (TYPPRICE)"
+msgstr "" 
+
+msgid "US Patents"
 msgstr "" 
 
 msgid "USD"
@@ -3365,7 +3389,7 @@ msgstr ""
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 msgstr "" 
 
-msgid "Up to 100% returns on rise/fall trades"
+msgid "Up - Predict that the market will end higher than the average price"
 msgstr "" 
 
 msgid "Up/Down"
@@ -3410,7 +3434,7 @@ msgstr ""
 msgid "Variance (VAR)"
 msgstr "" 
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr "" 
 
 msgid "Verification code has been sent to your email"
@@ -3431,7 +3455,7 @@ msgstr ""
 msgid "View Statement"
 msgstr "" 
 
-msgid "Volatile markets"
+msgid "Volatility Index Markets"
 msgstr "" 
 
 msgid "Volatility Indicators"
@@ -3440,7 +3464,10 @@ msgstr ""
 msgid "Volatility Indices"
 msgstr "" 
 
-msgid "Volatility indices"
+msgid "Volatility Indices are further categorized into two types"
+msgstr "" 
+
+msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
 msgstr "" 
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
@@ -3452,10 +3479,10 @@ msgstr ""
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "" 
 
-msgid "We don't usually require any documents as we can verify your identity online"
+msgid "We rebrand BetOnMarkets.com as"
 msgstr "" 
 
-msgid "We rebrand BetOnMarkets.com as"
+msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
 msgstr "" 
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
@@ -3488,13 +3515,19 @@ msgstr ""
 msgid "Welcome to Binary.com Webtrader"
 msgstr "" 
 
+msgid "What are OTC indices and stocks?"
+msgstr "" 
+
 msgid "What is pep?"
 msgstr "" 
 
-msgid "When you are satisfied with the trade price, instantly execute your trade"
+msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "" 
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
+msgstr "" 
+
+msgid "Where does Binary.com hold my funds?"
 msgstr "" 
 
 msgid "While on the go, you can"
@@ -3503,28 +3536,16 @@ msgstr ""
 msgid "Why Choose Binary Trading?"
 msgstr "" 
 
+msgid "Why trade with Binary.com"
+msgstr "" 
+
 msgid "Will I need to install any software?"
 msgstr "" 
 
 msgid "Williams' %R (WILLR)"
 msgstr "" 
 
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
-msgstr "" 
-
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a 'Touch' trade, with a price target farther away from the current price"
-msgstr "" 
-
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
-msgstr "" 
-
 msgid "With Binary.com you can trade"
-msgstr "" 
-
-msgid "With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees"
-msgstr "" 
-
-msgid "With Binary.com, the most you can lose is the amount you stake at the start of your trade"
 msgstr "" 
 
 msgid "Withdraw funds"
@@ -3563,31 +3584,10 @@ msgstr ""
 msgid "You are not copying any trade(s) yet"
 msgstr "" 
 
-msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
-msgstr "" 
-
-msgid "You can only allow other traders to copy your trade"
-msgstr "" 
-
-msgid "You can only copy other trader's trade"
-msgstr "" 
-
-msgid "You can open an account, deposit funds and begin trading within minutes"
-msgstr "" 
-
-msgid "You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr "" 
-
-msgid "You can set the length of your trade, from 10 seconds to 365 days"
-msgstr "" 
-
-msgid "You can trade a range of markets, timescales and indices - 24/7"
+msgid "You can"
 msgstr "" 
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
-msgstr "" 
-
-msgid "You get fair and transparent pricing, whatever your position"
 msgstr "" 
 
 msgid "You have sold the following contract"
@@ -3596,16 +3596,19 @@ msgstr ""
 msgid "You haven't saved any templates yet"
 msgstr "" 
 
-msgid "You pay"
+msgid "You only need to make four decisions to execute a binary contract"
 msgstr "" 
 
-msgid "You set the barrier(s) to define your position"
+msgid "You pay"
 msgstr "" 
 
 msgid "You will be automatically logged out after such time"
 msgstr "" 
 
-msgid "You'll be surprised by the returns you can make"
+msgid "You wish to allow other traders to copy your trades"
+msgstr "" 
+
+msgid "You wish to copy another trader's trades"
 msgstr "" 
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
@@ -3623,13 +3626,7 @@ msgstr ""
 msgid "Your email"
 msgstr "" 
 
-msgid "Your money is always safe with Binary.com"
-msgstr "" 
-
 msgid "Your new account balance is"
-msgstr "" 
-
-msgid "Your risks are known"
 msgstr "" 
 
 msgid "Your transaction reference is"
@@ -3647,7 +3644,13 @@ msgstr ""
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr "" 
 
+msgid "and start learning how to trade"
+msgstr "" 
+
 msgid "apostrophe (') are allowed"
+msgstr "" 
+
+msgid "apply online"
 msgstr "" 
 
 msgid "at a valuation of US$ 50.5 million"
@@ -3665,6 +3668,9 @@ msgstr ""
 msgid "contact support"
 msgstr "" 
 
+msgid "create a token, and share the token with copier(s)"
+msgstr "" 
+
 msgid "customer support"
 msgstr "" 
 
@@ -3672,6 +3678,9 @@ msgid "day"
 msgstr "" 
 
 msgid "days"
+msgstr "" 
+
+msgid "deposit funds and begin trading within minutes"
 msgstr "" 
 
 msgid "disposes of its stake"
@@ -3702,6 +3711,9 @@ msgid "hours"
 msgstr "" 
 
 msgid "if this is not your country of residence"
+msgstr "" 
+
+msgid "in just a few minutes"
 msgstr "" 
 
 msgid "in the future, the"
@@ -3753,6 +3765,12 @@ msgid "next tick"
 msgstr "" 
 
 msgid "of \"Now\", the"
+msgstr "" 
+
+msgid "open a free $10k fully-functional virtual-money account"
+msgstr "" 
+
+msgid "open an account"
 msgstr "" 
 
 msgid "our helpful support desk"

@@ -4,7 +4,7 @@ matrix:
   fast_finish: true
 language: node_js
 node_js:
-- '7'
+- '9'
 dist: trusty
 notifications:
   slack: binary-group:xEVrYY0QGz7fbwJqi4LMWbBS
