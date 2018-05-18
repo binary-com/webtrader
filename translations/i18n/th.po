@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-05-18 11:50-0400\n"
+"PO-Revision-Date: 2018-05-18 12:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2432,28 +2432,28 @@ msgid "Profit"
 msgstr "กำไร"
 
 msgid "Profit table"
-msgstr ""
+msgstr "ตารางผลกำไร"
 
 msgid "Profit/ Loss"
 msgstr "กำไร / ขาดทุน"
 
 msgid "Profit/Loss (points)"
-msgstr ""
+msgstr "กำไร/ขาดทุน (จุด)"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "ปกป้องผลกำไรของคุณ"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr ""
 
 msgid "Purchase"
-msgstr ""
+msgstr "ซื้อ"
 
 msgid "Purchase Date"
-msgstr ""
+msgstr "วันที่ซื้อ"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "ราคาซื้อ"
 
 msgid "Rate Of Change (ROC)"
 msgstr "Rate Of Change (ROC)"
@@ -2645,40 +2645,40 @@ msgid "Sep"
 msgstr ""
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
-msgstr ""
+msgstr "Separating Lines (CDLSEPARATINGLINES)"
 
 msgid "September"
-msgstr ""
+msgstr "กันยายน"
 
 msgid "Session"
-msgstr ""
+msgstr "เซสชัน"
 
 msgid "Session duration limit, in minutes"
-msgstr ""
+msgstr "รอบระยะเวลาการซื้อขาย ในหน่วยนาที"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "ตั้งค่า Barrier เพื่อกำหนดโพซิชั่นของท่านและสัมพันธ์กับเงินที่ท่านจะได้รับ"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "กำหนดระยะเวลาการซื้อขายของท่าน จาก 10 วินาที ถึง 365 วัน"
 
 msgid "Settles"
-msgstr ""
+msgstr "ชำระเงิน"
 
 msgid "Share"
-msgstr ""
+msgstr "หุ้น"
 
 msgid "Share chart"
-msgstr ""
+msgstr "แผนภูมิหุ้น"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "เฉียบคม ราคามาตรฐาน"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "ระยะเวลาสั้นถึงระยะยาว"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr ""
@@ -2687,22 +2687,22 @@ msgid "Simple Moving Average (SMA)"
 msgstr "Simple Moving Average (SMA)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "ใช้งานง่าย"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Smart FX"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "ดัชนีสมาร์ท"
 
 msgid "Smoothed Moving Average (SMMA)"
-msgstr ""
+msgstr "Smoothed Moving Average (SMMA)"
 
 msgid "Sold"
-msgstr ""
+msgstr "ขาย"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "แหล่งที่มาของรายได้"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
 msgstr ""
@@ -2714,10 +2714,10 @@ msgid "Spline"
 msgstr ""
 
 msgid "Spot price"
-msgstr ""
+msgstr "ราคาสปอต"
 
 msgid "Spreads"
-msgstr ""
+msgstr "สเปรด"
 
 msgid "Spreads down"
 msgstr ""
@@ -2741,34 +2741,34 @@ msgid "Standard methods"
 msgstr ""
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "การถอนเงินมาตรฐาน"
 
 msgid "Start Time"
-msgstr ""
+msgstr "เวลาเริ่มต้น"
 
 msgid "Start Trading"
 msgstr ""
 
 msgid "Start time"
-msgstr ""
+msgstr "เวลาเริ่มต้น"
 
 msgid "State/province/region"
 msgstr ""
 
 msgid "Statement"
-msgstr ""
+msgstr "รายงานทางการเงิน"
 
 msgid "Statistical Functions"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "สถานะ"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "อยู่ใน/นอกขอบเขต"
 
 msgid "Stays Between/Goes Outside trades"
-msgstr ""
+msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
 msgstr ""
@@ -2780,7 +2780,7 @@ msgid "Step 1: Define your position"
 msgstr "ขั้นตอนที่ 1: กำหนดโพซิชั่นของท่าน"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "ขั้นตอนที่ 2: ตั้งราคาซื้อขายของท่าน"
 
 msgid "Step 3: Make your trade"
 msgstr "ขั้นตอนที่ 3: ทำการซื้อขาย"
@@ -2810,19 +2810,19 @@ msgid "Stocks trading frequency"
 msgstr ""
 
 msgid "Stop Loss Level"
-msgstr ""
+msgstr "ระดับยุติการซื้อขาย"
 
 msgid "Stop Profit Level"
-msgstr ""
+msgstr "ระดับยุติกำไร"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "หยุดขาดทุน"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "หยุดกำไร"
 
 msgid "Stop-type"
-msgstr ""
+msgstr "ประเภทการยุติ"
 
 msgid "Stroke color"
 msgstr ""
