@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-05-18 11:40-0400\n"
+"PO-Revision-Date: 2018-05-18 11:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2225,28 +2225,28 @@ msgid "Other"
 msgstr "อื่นๆ"
 
 msgid "Other financial instruments trading experience"
-msgstr ""
+msgstr "ประสบการณ์ซื้อขายเครื่องมือทางการเงินอื่นๆ"
 
 msgid "Other financial instruments trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายเครื่องมือทางการเงินอื่นๆ"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr ""
+msgstr "บริษัทของเรามีการพัฒนาอย่างต่อเนื่องเพื่อขอใบอนุญาตบนเกาะ Isle of Man ในการให้บริการที่ดีขึ้นกับลูกค้าในประเทศสหราชอาณาจักร"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
-msgstr ""
+msgstr "เราเป็นที่นิยมชมชอบของลูกค้า ในกลางปี 2557 (ค.ศ. 2014) %1 มีธุรกรรมมากกว่า 100 ล้านระเบียน และมีธุรกรรมใหม่ที่เกิดขึ้นรายวันกว่า 130,000 ธุรกรรม"
 
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
-msgstr ""
+msgstr "หลักการเติบโตอย่างรวดเร็วของเรา คือ การผนวกกันโดยได้มาซึ่งฐานลูกค้าของ BetsForTraders ผู้เป็นหนึ่งในคู่แข่งหลักของเรา"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "ราคาต่างๆ ของพวกเรานั้น อ้างอิงตามเกณฑ์มาตรฐานของราคาออปชั่นในตลาด ดังนั้นท่านจะได้รับราคาที่ยุติธรรมและโปร่งใสเสมอในการซื้อขายของท่าน"
 
 msgid "Over"
 msgstr "มากกว่า"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "มากกว่าหนึ่งล้านบัญชีที่ลงทะเบียนทั่วโลก"
 
 msgid "Over 130 staff and contractors worldwide"
 msgstr "พนักงานมากกว่า 130 และผู้ปฏิบัติงานสัญญาจ้างทั่วโลก"
@@ -2342,52 +2342,52 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "โปรดป้อนวันที่ในรูปแบบ YYYY-MM-DD"
 
 msgid "Please enter time in the format HH:MM"
-msgstr ""
+msgstr "โปรดป้อนเวลาในรูปแบบ HH:MM"
 
 msgid "Please enter your current password"
-msgstr ""
+msgstr "โปรดป้อนรหัสผ่านปัจจุบันของท่าน"
 
 msgid "Please enter your email"
-msgstr ""
+msgstr "โปรดป้อนอีเมล์ของท่าน"
 
 msgid "Please input correct token"
-msgstr ""
+msgstr "โปรดป้อนโทเค่นที่ถูกต้อง"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr ""
+msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "โปรดพึงตระหนักว่า ตามหลักการของการซื้อขายด้วยตัวท่านเอง ราคาที่เกิดขึ้นจากดัชนีและหลักทรัพทย์จะต่างไปจากดัชนีและราคาหลักทรัพย์ของศูนย์กลางการแลกเปลี่ยน"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "โปรดให้ข้อมูลภาษีของท่าน"
 
 msgid "Please select"
-msgstr ""
+msgstr "โปรดระบุ"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "กรุณาระบุเหตุผลของการเปิดบัญชีก่อนดำเนินการต่อ"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "โปรดแจ้งโทเค่นเพื่อการตรวจสอบที่ถูกต้อง"
 
 msgid "Please try again after 1 minute"
-msgstr ""
+msgstr "โปรดทดลองใหม่อีกครั้ง หลังจาก 1 นาที"
 
 msgid "Plot"
-msgstr ""
+msgstr "วาด"
 
 msgid "Pofit/Loss"
-msgstr ""
+msgstr "กำไร/ขาดทุน"
 
 msgid "Points"
-msgstr ""
+msgstr "จุด"
 
 msgid "Polski"
 msgstr ""
 
 msgid "Portfolio"
-msgstr ""
+msgstr "พอร์ตโฟลิโอ"
 
 msgid "Portugu s"
 msgstr ""
@@ -2396,13 +2396,13 @@ msgid "Postal code/ZIP"
 msgstr "รหัสไปรษณีย์"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "ประมาณการจำนวนเงินที่ชำระ"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "ประมาณการกำไร"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "ประมาณการกำไร"
 
 msgid "Pre-Defined"
 msgstr ""
@@ -2414,7 +2414,7 @@ msgid "Press Create token button on the right to create your first token"
 msgstr ""
 
 msgid "Price Transformation"
-msgstr ""
+msgstr "การเปลี่ยนแปลงราคา"
 
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr ""
@@ -2423,13 +2423,13 @@ msgid "Price trends downward into the start of the pattern, a tall black candle.
 msgstr ""
 
 msgid "Primary"
-msgstr ""
+msgstr "หลัก"
 
 msgid "Print chart"
-msgstr ""
+msgstr "พิมพ์กราฟ"
 
 msgid "Profit"
-msgstr ""
+msgstr "กำไร"
 
 msgid "Profit table"
 msgstr ""
@@ -2513,46 +2513,46 @@ msgid "Regent Pacific transaction"
 msgstr ""
 
 msgid "Register free account"
-msgstr ""
+msgstr "ลงทะเบียนบัญชีใหม่ฟรี"
 
 msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgstr "Relative Strength Index (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "ลบ"
 
 msgid "Remove Selected"
-msgstr ""
+msgstr "ลบรายการที่เลือก"
 
 msgid "Rename"
-msgstr ""
+msgstr "เปลี่ยนชื่อ"
 
 msgid "Repeat password"
-msgstr ""
+msgstr "ป้อนรหัสผ่านอีกครั้ง"
 
 msgid "Resale price"
 msgstr "ราคาจำหน่ายต่อ"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "ตั้งค่าขยายเป็นค่าเดิม"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "ตั้งค่าขยายเป็นระดับ 1:1"
 
 msgid "Resources"
-msgstr ""
+msgstr "แหล่งข้อมูล"
 
 msgid "Responsible Trading"
-msgstr ""
+msgstr "การซื้อขายอย่างรับผิดชอบ"
 
 msgid "Results"
-msgstr ""
+msgstr "ผลลัพธ์"
 
 msgid "Return"
-msgstr ""
+msgstr "ผลตอบแทน"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr ""
