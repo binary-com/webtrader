@@ -950,8 +950,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .map('contract_category_display')
     .uniq()
     .value()
-    // TODO: Remove this filter after implementing lookbacks/reset options.
-    .filter(f => !/reset|high\/low/.test(f.toLowerCase()))
+    // TODO: Remove this filter after implementing high/low,reset,calle/pute options.
+    .filter(f => !/reset|high\/low|equal/.test(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
