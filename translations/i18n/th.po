@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-05-17 22:20-0400\n"
+"PO-Revision-Date: 2018-05-18 11:32-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2144,19 +2144,19 @@ msgid "Occupation"
 msgstr ""
 
 msgid "Oct"
-msgstr ""
+msgstr "ต.ค."
 
 msgid "October"
-msgstr ""
+msgstr "ตุลาคม"
 
 msgid "Odd"
-msgstr ""
+msgstr "คี่"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
 
 msgid "Ok"
-msgstr ""
+msgstr "ตกลง"
 
 msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
 msgstr ""
@@ -2177,34 +2177,34 @@ msgid "Only five years after inception, we pick up this major award for our onli
 msgstr ""
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "ตัวอักษร ตัวเลข และเครื่องหมายขีดกลางเท่านั้นที่อนุญาต"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "ตัวอักษร ช่องว่าง ขีดกลาง จุด เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค, - / @ ' ที่อนุญาตให้ใช้ได้"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr ""
+msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค ขีดกลาง"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "ตัวอักษร ช่องว่าง ขีดกลาง จุด เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "ตัวเลข และช่องว่างเท่านั้นที่อนุญาต"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "ตัวอักษร ตัวเลข และเครื่องหมายขีดกลางเท่านั้นที่อนุญาต"
 
 msgid "Open"
-msgstr ""
+msgstr "เปิด"
 
 msgid "Open Account"
 msgstr "เปิดบัญชี "
 
 msgid "Open a Financial Account"
-msgstr ""
+msgstr "เปิดบัญชีทางการเงิน 1 บัญชี"
 
 msgid "Open account"
 msgstr "เปิดบัญชี"
@@ -2222,7 +2222,7 @@ msgid "Option trading can become a real addiction, as can any other activity pus
 msgstr ""
 
 msgid "Other"
-msgstr ""
+msgstr "อื่นๆ"
 
 msgid "Other financial instruments trading experience"
 msgstr ""
@@ -2243,16 +2243,16 @@ msgid "Our prices are benchmarked against the interbank options market. You ll r
 msgstr ""
 
 msgid "Over"
-msgstr ""
+msgstr "มากกว่า"
 
 msgid "Over 1 million registered accounts worldwide"
 msgstr ""
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "พนักงานมากกว่า 130 และผู้ปฏิบัติงานสัญญาจ้างทั่วโลก"
 
 msgid "Over 3 years"
-msgstr ""
+msgstr "มากกว่า 3 ปี"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
 msgstr ""
@@ -2267,7 +2267,7 @@ msgid "Parabolic SAR (SAR)"
 msgstr "Parabolic SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
-msgstr ""
+msgstr "รหัสผ่านไม่ตรงกัน โปรดพิมพ์อีกครั้ง"
 
 msgid "Patented technology"
 msgstr "เทคโนโลยีที่จดสิทธิบัตร"
@@ -2285,7 +2285,7 @@ msgid "Payments"
 msgstr "การชำระเงิน"
 
 msgid "Payout"
-msgstr ""
+msgstr "การชำระเงิน"
 
 msgid "Pension"
 msgstr "บำนาญ"
