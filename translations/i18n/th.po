@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-05-17 22:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -644,7 +644,7 @@ msgid "Bill Williams"
 msgstr "Bill Williams"
 
 msgid "Binary Bot released"
-msgstr ""
+msgstr "เปิดตัว Binary Bot"
 
 msgid "Binary KK granted Japan license"
 msgstr "Binary KK ได้รับใบอนุญาตของประเทศญี่ปุ่น"
@@ -728,55 +728,55 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com แนะนำ"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "Binary.com ได้รับรางวัล Best Binary Options Broker โดย Online Personal Wealth Awards 2017 ของสหราชอาณาจักร ซึ่งได้มาจากการลงคะแนนของนักลงทุนทั่วโลก"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
-msgstr ""
+msgstr "Binary.com เป็นระบบเว็บไซต์ทั้งหมด โดยไม่ต้องติดตั้งซอฟต์แวร์ใดๆ"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
-msgstr ""
+msgstr "Binary.com ได้รับรางวัลระดับโลกในฐานะ “Best Binary Options Broker” จากนิทรรศการและการประชุมการเงินนานาชาติประจำปี MENA ครั้งที่ 16 ที่ประเทศดูไบ"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com เป็นเจ้าของและดำเนินการโดยกลุ่มบริษัท Binary Group Ltd สามารถหาข้อมูลเพิ่มเติมได้โดยเยี่ยมชมหน้าประวัติของเรา"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com เปิดบัญชีบิทคอยน์ (BTC) สำหรับลูกค้าที่ไม่อยู่ในสหภาพยุโรป"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com เปิดตัวบัญชีบิทคอยน์"
 
 msgid "Binary.com launches an"
-msgstr ""
+msgstr "Binary.com เปิดตัว"
 
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
-msgstr ""
+msgstr "Binary.com มีวิธีการฝากและถอนหลายวิธี ทั้งจากบัตรเครดิต บัตรเดบิต โอนเงินผ่านธนาคา เงินสดอิเล็กทรอนิกส์ และกระเป๋าเงินอิเล็กทรอนิกส์"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com ให้บริการบัญชีทดสอบเพื่อคุณจะได้ฝึกฝนการซื้อขายไบนารี่ ทำไมไม่"
 
 msgid "Binary.com offers new ways to trade"
-msgstr ""
+msgstr "Binary.com เสนอช่องทางใหม่ๆในการซื้อขาย"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Binary.com เสนอวิธีการซื้อขายสินทรัพย์หนึ่ง 4 วิธี"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
-msgstr ""
+msgstr "Binary.com เปิดสำนักงานที่ตึก QSentral ในใจกลางเมืองกัวลาลัมเปอร์เพื่อขยายทีมพัฒนา IT ต่อไป"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr ""
+msgstr "Binary.com มีมูลค่าซื้อขาย 2 พันล้านเหรียญสหรัฐตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr ""
+msgstr "Binary.com มีผู้ใช้งานที่ลงทะเบียนแล้วกว่า 1 ล้านบัญชี"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr ""
+msgstr "Binary.com ได้รับรางวัลชนะเลิศ ประเภท Financial Betting Operator ในงานเกียรติยศ EGR Operator Awards ปี 2015 จัดที่เมืองลอนดอน"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "ดัชนีต่อเนื่องของ Binary.com คือ ดัชนีผันผวน 10 ดัชนีผันผวน 25 ดัชนีผันผวน 50 ดัชนีผันผวน 75 และดัชนีผันผวน 100 ซึ่งดัชนีเหล่านี้สอดคล้องตลาดจำลองที่มีระดับความไม่แน่นอนที่ 10% 25% 50% 75% และ 100% ตามลำดับ"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "ดัชนีที่ซื้อขายเองของ Binary.com และหลักทรัพย์จากตลาดเจรจาต่อรองมีให้ท่านเป็นอีกทางเลือกหนึ่งในการซื้อขายดัชนีหุ้น และหุ้น ที่มีจากแหล่งอื่นนอกเหนือจากตลาดแลกเปลี่ยนกลาง"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
 msgstr ""
@@ -857,7 +857,7 @@ msgid "Cash Balance"
 msgstr "เงินสดคงเหลือ"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
 msgstr ""
