@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-05-18 13:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -644,7 +644,7 @@ msgid "Bill Williams"
 msgstr "Bill Williams"
 
 msgid "Binary Bot released"
-msgstr ""
+msgstr "เปิดตัว Binary Bot"
 
 msgid "Binary KK granted Japan license"
 msgstr "Binary KK ได้รับใบอนุญาตของประเทศญี่ปุ่น"
@@ -728,55 +728,55 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com แนะนำ"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
-msgstr ""
+msgstr "Binary.com ได้รับรางวัล Best Binary Options Broker โดย Online Personal Wealth Awards 2017 ของสหราชอาณาจักร ซึ่งได้มาจากการลงคะแนนของนักลงทุนทั่วโลก"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
-msgstr ""
+msgstr "Binary.com เป็นระบบเว็บไซต์ทั้งหมด โดยไม่ต้องติดตั้งซอฟต์แวร์ใดๆ"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
-msgstr ""
+msgstr "Binary.com ได้รับรางวัลระดับโลกในฐานะ “Best Binary Options Broker” จากนิทรรศการและการประชุมการเงินนานาชาติประจำปี MENA ครั้งที่ 16 ที่ประเทศดูไบ"
 
 msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
-msgstr ""
+msgstr "Binary.com เป็นเจ้าของและดำเนินการโดยกลุ่มบริษัท Binary Group Ltd สามารถหาข้อมูลเพิ่มเติมได้โดยเยี่ยมชมหน้าประวัติของเรา"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr ""
+msgstr "Binary.com เปิดบัญชีบิทคอยน์ (BTC) สำหรับลูกค้าที่ไม่อยู่ในสหภาพยุโรป"
 
 msgid "Binary.com launches Bitcoin accounts"
-msgstr ""
+msgstr "Binary.com เปิดตัวบัญชีบิทคอยน์"
 
 msgid "Binary.com launches an"
-msgstr ""
+msgstr "Binary.com เปิดตัว"
 
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
-msgstr ""
+msgstr "Binary.com มีวิธีการฝากและถอนหลายวิธี ทั้งจากบัตรเครดิต บัตรเดบิต โอนเงินผ่านธนาคา เงินสดอิเล็กทรอนิกส์ และกระเป๋าเงินอิเล็กทรอนิกส์"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr ""
+msgstr "Binary.com ให้บริการบัญชีทดสอบเพื่อคุณจะได้ฝึกฝนการซื้อขายไบนารี่ ทำไมไม่"
 
 msgid "Binary.com offers new ways to trade"
-msgstr ""
+msgstr "Binary.com เสนอช่องทางใหม่ๆในการซื้อขาย"
 
 msgid "Binary.com offers you four ways to trade a particular asset"
-msgstr ""
+msgstr "Binary.com เสนอวิธีการซื้อขายสินทรัพย์หนึ่ง 4 วิธี"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
-msgstr ""
+msgstr "Binary.com เปิดสำนักงานที่ตึก QSentral ในใจกลางเมืองกัวลาลัมเปอร์เพื่อขยายทีมพัฒนา IT ต่อไป"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr ""
+msgstr "Binary.com มีมูลค่าซื้อขาย 2 พันล้านเหรียญสหรัฐตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
 
 msgid "Binary.com reaches 1 million registered users"
-msgstr ""
+msgstr "Binary.com มีผู้ใช้งานที่ลงทะเบียนแล้วกว่า 1 ล้านบัญชี"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr ""
+msgstr "Binary.com ได้รับรางวัลชนะเลิศ ประเภท Financial Betting Operator ในงานเกียรติยศ EGR Operator Awards ปี 2015 จัดที่เมืองลอนดอน"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr ""
+msgstr "ดัชนีต่อเนื่องของ Binary.com คือ ดัชนีผันผวน 10 ดัชนีผันผวน 25 ดัชนีผันผวน 50 ดัชนีผันผวน 75 และดัชนีผันผวน 100 ซึ่งดัชนีเหล่านี้สอดคล้องตลาดจำลองที่มีระดับความไม่แน่นอนที่ 10% 25% 50% 75% และ 100% ตามลำดับ"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr ""
+msgstr "ดัชนีที่ซื้อขายเองของ Binary.com และหลักทรัพย์จากตลาดเจรจาต่อรองมีให้ท่านเป็นอีกทางเลือกหนึ่งในการซื้อขายดัชนีหุ้น และหุ้น ที่มีจากแหล่งอื่นนอกเหนือจากตลาดแลกเปลี่ยนกลาง"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
 msgstr ""
@@ -857,10 +857,10 @@ msgid "Cash Balance"
 msgstr "เงินสดคงเหลือ"
 
 msgid "Chande Kroll Stop (CKS)"
-msgstr ""
+msgstr "Chande Kroll Stop (CKS)"
 
 msgid "Chande Momentum Oscillator (CMO)"
-msgstr ""
+msgstr "Chande Momentum Oscillator (CMO)"
 
 msgid "Change password"
 msgstr "เปลี่ยนรหัสผ่าน"
@@ -995,7 +995,7 @@ msgid "Copy Trading"
 msgstr "คัดลอกการซื้อขาย"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
-msgstr ""
+msgstr "Counterattack (CDLCOUNTERATTACK)"
 
 msgid "Country of residence"
 msgstr "ประเทศที่พำนัก"
@@ -1061,7 +1061,7 @@ msgid "Dark Blue"
 msgstr "สีน้ำเงินเข้ม"
 
 msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
-msgstr ""
+msgstr "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
 msgstr ""
@@ -1148,13 +1148,13 @@ msgid "Directional Movement (DMI) is actually a collection of three separate ind
 msgstr ""
 
 msgid "Directional Movement Index (DX)"
-msgstr ""
+msgstr "Directional Movement Index (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
 msgstr ""
 
 msgid "Do you offer virtual-money accounts?"
-msgstr ""
+msgstr "ท่านได้รับการเสนอบัญชีเสมือนหรือไม่?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr ""
@@ -1163,10 +1163,10 @@ msgid "Do you want to install the Webtrader chrome extension?"
 msgstr ""
 
 msgid "Doji (CDLDOJI)"
-msgstr ""
+msgstr "Doji (CDLDOJI)"
 
 msgid "Doji Star (CDLDOJISTAR)"
-msgstr ""
+msgstr "Doji Star (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
 msgstr ""
@@ -1175,7 +1175,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr ""
 
 msgid "Donchian Channel (DC)"
-msgstr ""
+msgstr "Donchian Channel (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
@@ -1187,7 +1187,7 @@ msgid "Dot"
 msgstr ""
 
 msgid "Double Exponential Moving Average (DEMA)"
-msgstr ""
+msgstr "Double Exponential Moving Average (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr ""
@@ -1229,7 +1229,7 @@ msgid "Downloading template as"
 msgstr "ดาวน์โหลดแม่แบบเป็น"
 
 msgid "Dragonfly Doji (CDLDRAGONFLYDOJI)"
-msgstr ""
+msgstr "Dragonfly Doji (CDLDRAGONFLYDOJI)"
 
 msgid "Drawing tools"
 msgstr "เครื่องมือวาดภาพ"
@@ -1244,7 +1244,7 @@ msgid "EGR Operator Award"
 msgstr ""
 
 msgid "EURUSD"
-msgstr ""
+msgstr "EURUSD"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
 msgstr ""
@@ -1481,22 +1481,22 @@ msgid "Group History"
 msgstr "ประวัติของกลุ่ม"
 
 msgid "Hammer (CDLHAMMER)"
-msgstr ""
+msgstr "Hammer (CDLHAMMER)"
 
 msgid "Hanging Man (CDLHANGINGMAN)"
-msgstr ""
+msgstr "Hanging Man (CDLHANGINGMAN)"
 
 msgid "Harami Cross Pattern (CDLHARAMICROSS)"
-msgstr ""
+msgstr "Harami Cross Pattern (CDLHARAMICROSS)"
 
 msgid "Harami Pattern (CDLHARAMI)"
-msgstr ""
+msgstr "Harami Pattern (CDLHARAMI)"
 
 msgid "Health"
 msgstr "สุขภาพ"
 
 msgid "Help"
-msgstr ""
+msgstr "ตัวช่วย"
 
 msgid "High"
 msgstr ""
@@ -1511,7 +1511,7 @@ msgid "High barrier offset"
 msgstr ""
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
-msgstr ""
+msgstr "High-Wave Candle (CDLHIGHWAVE)"
 
 msgid "Higher"
 msgstr ""
@@ -1529,7 +1529,7 @@ msgid "Higher/Lower   Predict that the market will end higher or lower than a pr
 msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
-msgstr ""
+msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
 msgid "Historical Data"
 msgstr ""
@@ -1538,7 +1538,7 @@ msgid "Home Address"
 msgstr ""
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
-msgstr ""
+msgstr "Homing Pigeon (CDLHOMINGPIGEON)"
 
 msgid "Horizontal line"
 msgstr ""
@@ -2144,19 +2144,19 @@ msgid "Occupation"
 msgstr ""
 
 msgid "Oct"
-msgstr ""
+msgstr "ต.ค."
 
 msgid "October"
-msgstr ""
+msgstr "ตุลาคม"
 
 msgid "Odd"
-msgstr ""
+msgstr "คี่"
 
 msgid "Offices in Malta, Malaysia and Japan"
 msgstr ""
 
 msgid "Ok"
-msgstr ""
+msgstr "ตกลง"
 
 msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
 msgstr ""
@@ -2177,34 +2177,34 @@ msgid "Only five years after inception, we pick up this major award for our onli
 msgstr ""
 
 msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
+msgstr "ตัวอักษร ตัวเลข และเครื่องหมายขีดกลางเท่านั้นที่อนุญาต"
 
 msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "ตัวอักษร ช่องว่าง ขีดกลาง จุด เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr ""
+msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค, - / @ ' ที่อนุญาตให้ใช้ได้"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr ""
+msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค ขีดกลาง"
 
 msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
+msgstr "ตัวอักษร ช่องว่าง ขีดกลาง จุด เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
 
 msgid "Only numbers and space are allowed"
-msgstr ""
+msgstr "ตัวเลข และช่องว่างเท่านั้นที่อนุญาต"
 
 msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
+msgstr "ตัวอักษร ตัวเลข และเครื่องหมายขีดกลางเท่านั้นที่อนุญาต"
 
 msgid "Open"
-msgstr ""
+msgstr "เปิด"
 
 msgid "Open Account"
 msgstr "เปิดบัญชี "
 
 msgid "Open a Financial Account"
-msgstr ""
+msgstr "เปิดบัญชีทางการเงิน 1 บัญชี"
 
 msgid "Open account"
 msgstr "เปิดบัญชี"
@@ -2222,43 +2222,43 @@ msgid "Option trading can become a real addiction, as can any other activity pus
 msgstr ""
 
 msgid "Other"
-msgstr ""
+msgstr "อื่นๆ"
 
 msgid "Other financial instruments trading experience"
-msgstr ""
+msgstr "ประสบการณ์ซื้อขายเครื่องมือทางการเงินอื่นๆ"
 
 msgid "Other financial instruments trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายเครื่องมือทางการเงินอื่นๆ"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr ""
+msgstr "บริษัทของเรามีการพัฒนาอย่างต่อเนื่องเพื่อขอใบอนุญาตบนเกาะ Isle of Man ในการให้บริการที่ดีขึ้นกับลูกค้าในประเทศสหราชอาณาจักร"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
-msgstr ""
+msgstr "เราเป็นที่นิยมชมชอบของลูกค้า ในกลางปี 2557 (ค.ศ. 2014) %1 มีธุรกรรมมากกว่า 100 ล้านระเบียน และมีธุรกรรมใหม่ที่เกิดขึ้นรายวันกว่า 130,000 ธุรกรรม"
 
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
-msgstr ""
+msgstr "หลักการเติบโตอย่างรวดเร็วของเรา คือ การผนวกกันโดยได้มาซึ่งฐานลูกค้าของ BetsForTraders ผู้เป็นหนึ่งในคู่แข่งหลักของเรา"
 
 msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
-msgstr ""
+msgstr "ราคาต่างๆ ของพวกเรานั้น อ้างอิงตามเกณฑ์มาตรฐานของราคาออปชั่นในตลาด ดังนั้นท่านจะได้รับราคาที่ยุติธรรมและโปร่งใสเสมอในการซื้อขายของท่าน"
 
 msgid "Over"
-msgstr ""
+msgstr "มากกว่า"
 
 msgid "Over 1 million registered accounts worldwide"
-msgstr ""
+msgstr "มากกว่าหนึ่งล้านบัญชีที่ลงทะเบียนทั่วโลก"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr ""
+msgstr "พนักงานมากกว่า 130 และผู้ปฏิบัติงานสัญญาจ้างทั่วโลก"
 
 msgid "Over 3 years"
-msgstr ""
+msgstr "มากกว่า 3 ปี"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr ""
+msgstr "โอเวอร์/อันเดอร์ - พยากรณ์ว่า เลขหลักสุดท้ายจะสูงกว่า หรือ ต่ำกว่า"
 
 msgid "Overlap Studies"
-msgstr ""
+msgstr "การศึกษาการซ้อนทับกัน"
 
 msgid "PEP Declaration"
 msgstr "การแสดงเจตนารมณ์ไม่เกี่ยวข้องทางการเมือง (PEP Declaration)"
@@ -2267,7 +2267,7 @@ msgid "Parabolic SAR (SAR)"
 msgstr "Parabolic SAR (SAR)"
 
 msgid "Passwords didn't match. Please type them again"
-msgstr ""
+msgstr "รหัสผ่านไม่ตรงกัน โปรดพิมพ์อีกครั้ง"
 
 msgid "Patented technology"
 msgstr "เทคโนโลยีที่จดสิทธิบัตร"
@@ -2285,28 +2285,28 @@ msgid "Payments"
 msgstr "การชำระเงิน"
 
 msgid "Payout"
-msgstr ""
+msgstr "การชำระเงิน"
 
 msgid "Pension"
 msgstr "บำนาญ"
 
 msgid "Percentage Price Oscillator (PPO)"
-msgstr ""
+msgstr "Absolute Price Oscillator (APO)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "ความเป็นไปได้ของผลประกอบการ"
 
 msgid "Permissions"
-msgstr ""
+msgstr "สิทธิ์"
 
 msgid "Personal Details"
-msgstr ""
+msgstr "รายละเอียดส่วนบุคคล"
 
 msgid "Personal Wealth Awards 2017"
-msgstr ""
+msgstr "รางวัลผู้จัดการความมั่งคั่งส่วนบุคคล ปี 2017"
 
 msgid "Phone"
-msgstr ""
+msgstr "โทรศัพท์"
 
 msgid "Piercing Pattern (CDLPIERCING)"
 msgstr "Piercing Pattern (CDLPIERCING)"
@@ -2315,79 +2315,79 @@ msgid "Pip"
 msgstr "Pip"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)"
-msgstr ""
+msgstr "Pip ย่อมาจาก ‘Percentage in Point’ ซึ่งปกติจะเป็นทศนิยม 4 หลัก (เช่น 0.0001)"
 
 msgid "Place of birth"
-msgstr ""
+msgstr "สถานที่เกิด"
 
 msgid "Please"
-msgstr ""
+msgstr "กรุณา"
 
 msgid "Please choose which currency you would like to transact in"
-msgstr ""
+msgstr "โปรดระบุสกุลเงินที่ท่านต้องการ"
 
 msgid "Please confirm the following details in order to complete the transfer"
-msgstr ""
+msgstr "โปรดยืนยันรายละเอียดของธุรกรรมเพื่อดำเนินการโอนเงิน"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr ""
+msgstr "โปรดป้อนวันที่ในรูปแบบ yyyy-mm-dd "
 
 msgid "Please enter a value greater than 0"
-msgstr ""
+msgstr "โปรดป้อนค่าที่มากกว่าศูนย์"
 
 msgid "Please enter correct email"
-msgstr ""
+msgstr "โปรดป้อนอีเมล์ที่ถูกต้องของท่าน"
 
 msgid "Please enter date in the format YYYY-MM-DD"
-msgstr ""
+msgstr "โปรดป้อนวันที่ในรูปแบบ YYYY-MM-DD"
 
 msgid "Please enter time in the format HH:MM"
-msgstr ""
+msgstr "โปรดป้อนเวลาในรูปแบบ HH:MM"
 
 msgid "Please enter your current password"
-msgstr ""
+msgstr "โปรดป้อนรหัสผ่านปัจจุบันของท่าน"
 
 msgid "Please enter your email"
-msgstr ""
+msgstr "โปรดป้อนอีเมล์ของท่าน"
 
 msgid "Please input correct token"
-msgstr ""
+msgstr "โปรดป้อนโทเค่นที่ถูกต้อง"
 
 msgid "Please install the latest version of one of these browsers"
-msgstr ""
+msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr ""
+msgstr "โปรดพึงตระหนักว่า ตามหลักการของการซื้อขายด้วยตัวท่านเอง ราคาที่เกิดขึ้นจากดัชนีและหลักทรัพทย์จะต่างไปจากดัชนีและราคาหลักทรัพย์ของศูนย์กลางการแลกเปลี่ยน"
 
 msgid "Please provide your tax information"
-msgstr ""
+msgstr "โปรดให้ข้อมูลภาษีของท่าน"
 
 msgid "Please select"
-msgstr ""
+msgstr "โปรดระบุ"
 
 msgid "Please select an account opening reason before continuing"
-msgstr ""
+msgstr "กรุณาระบุเหตุผลของการเปิดบัญชีก่อนดำเนินการต่อ"
 
 msgid "Please submit a valid verification token"
-msgstr ""
+msgstr "โปรดแจ้งโทเค่นเพื่อการตรวจสอบที่ถูกต้อง"
 
 msgid "Please try again after 1 minute"
-msgstr ""
+msgstr "โปรดทดลองใหม่อีกครั้ง หลังจาก 1 นาที"
 
 msgid "Plot"
-msgstr ""
+msgstr "วาด"
 
 msgid "Pofit/Loss"
-msgstr ""
+msgstr "กำไร/ขาดทุน"
 
 msgid "Points"
-msgstr ""
+msgstr "จุด"
 
 msgid "Polski"
 msgstr ""
 
 msgid "Portfolio"
-msgstr ""
+msgstr "พอร์ตโฟลิโอ"
 
 msgid "Portugu s"
 msgstr ""
@@ -2396,13 +2396,13 @@ msgid "Postal code/ZIP"
 msgstr "รหัสไปรษณีย์"
 
 msgid "Potential Payout"
-msgstr ""
+msgstr "ประมาณการจำนวนเงินที่ชำระ"
 
 msgid "Potential Profit"
-msgstr ""
+msgstr "ประมาณการกำไร"
 
 msgid "Potential profit"
-msgstr ""
+msgstr "ประมาณการกำไร"
 
 msgid "Pre-Defined"
 msgstr ""
@@ -2414,7 +2414,7 @@ msgid "Press Create token button on the right to create your first token"
 msgstr ""
 
 msgid "Price Transformation"
-msgstr ""
+msgstr "การเปลี่ยนแปลงราคา"
 
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr ""
@@ -2423,37 +2423,37 @@ msgid "Price trends downward into the start of the pattern, a tall black candle.
 msgstr ""
 
 msgid "Primary"
-msgstr ""
+msgstr "หลัก"
 
 msgid "Print chart"
-msgstr ""
+msgstr "พิมพ์กราฟ"
 
 msgid "Profit"
-msgstr ""
+msgstr "กำไร"
 
 msgid "Profit table"
-msgstr ""
+msgstr "ตารางผลกำไร"
 
 msgid "Profit/ Loss"
 msgstr "กำไร / ขาดทุน"
 
 msgid "Profit/Loss (points)"
-msgstr ""
+msgstr "กำไร/ขาดทุน (จุด)"
 
 msgid "Protect your profits"
-msgstr ""
+msgstr "ปกป้องผลกำไรของคุณ"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr ""
 
 msgid "Purchase"
-msgstr ""
+msgstr "ซื้อ"
 
 msgid "Purchase Date"
-msgstr ""
+msgstr "วันที่ซื้อ"
 
 msgid "Purchase Price"
-msgstr ""
+msgstr "ราคาซื้อ"
 
 msgid "Rate Of Change (ROC)"
 msgstr "Rate Of Change (ROC)"
@@ -2465,37 +2465,37 @@ msgid "Rate Of Change Ratio (ROCR)"
 msgstr "Rate Of Change Ratio (ROCR)"
 
 msgid "Read"
-msgstr ""
+msgstr "อ่าน"
 
 msgid "Read about"
-msgstr ""
+msgstr "ศึกษาเกี่ยวกับ"
 
 msgid "Ref"
-msgstr ""
+msgstr "อ้างอิง"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd"
-msgstr ""
+msgstr "Regent Markets Group Ltd. ถูกเปลี่ยนชื่อเป็น Binary Ltd"
 
 msgid "Regent Markets Group Ltd. renames to Binary Ltd., harmonising company and website branding throughout the organisation"
-msgstr ""
+msgstr "Regent Markets Group Ltd. ถูกเปลี่ยนชื่อเป็น Binary Ltd. การผสานกันของกิจการและเครื่องหมายการค้าทางเว็บไซต์ขององค์กรให้เป็นหนึ่งเดียว"
 
 msgid "Regent Markets acquires BetsForTraders client base"
-msgstr ""
+msgstr "Regent Markets ได้ครอบครองฐานลูกค้าของ BetsForTraders"
 
 msgid "Regent Markets files for a patent in March 2000 on the basis of our unique position as the sole serious competitor in the business of fixed-odds financial betting. In May, we register the trading name BetOnMarkets and move to Malta to receive an internet betting licence"
-msgstr ""
+msgstr "Regent Markets ดำเนินการเพื่อขอสิทธิบัตรในเดือนมีนาคม ค.ศ. 2000 ในประเภท Fixed-Odds Financial Betting ในเดือนพฤษภาคม พวกเราขึ้นทะเบียนทำการซื้อขายในนาม BetOnMarkets และย้ายไปที่ประเทศมอลตาเพื่อรับใบอนุญาตการประกอบธุรกิจทางอินเทอร์เน็ต"
 
 msgid "Regent Markets files for patent, and registers BetOnMarkets trading name"
-msgstr ""
+msgstr "Regent Markets ได้รับสิทธิบัตร และขึ้นทะเบียนการซื้อขายในชื่อ BetOnMarkets"
 
 msgid "Regent Markets granted US patent for 'Betting system and method'"
-msgstr ""
+msgstr "Regent Markets ได้รับสิทธิบัตรของประเทศสหรัฐอเมริกาสำหรับ 'ระบบและวิธีการซื้อขาย'"
 
 msgid "Regent Markets granted two new US patents"
-msgstr ""
+msgstr "Regent Markets ได้รับสิทธิบัตรใหม่ 2 ฉบับของประเทศสหรัฐอเมริกา"
 
 msgid "Regent Markets is founded by Jean-Yves Sireau"
-msgstr ""
+msgstr "Regent Markets ก่อตั้งโดย Jean-Yves Sireau"
 
 msgid "Regent Markets obtains a licence in the Isle of Man"
 msgstr ""
@@ -2513,46 +2513,46 @@ msgid "Regent Pacific transaction"
 msgstr ""
 
 msgid "Register free account"
-msgstr ""
+msgstr "ลงทะเบียนบัญชีใหม่ฟรี"
 
 msgid "Relative Strength Index (RSI)"
-msgstr ""
+msgstr "Relative Strength Index (RSI)"
 
 msgid "Remove"
-msgstr ""
+msgstr "ลบ"
 
 msgid "Remove Selected"
-msgstr ""
+msgstr "ลบรายการที่เลือก"
 
 msgid "Rename"
-msgstr ""
+msgstr "เปลี่ยนชื่อ"
 
 msgid "Repeat password"
-msgstr ""
+msgstr "ป้อนรหัสผ่านอีกครั้ง"
 
 msgid "Resale price"
 msgstr "ราคาจำหน่ายต่อ"
 
 msgid "Reset zoom"
-msgstr ""
+msgstr "ตั้งค่าขยายเป็นค่าเดิม"
 
 msgid "Reset zoom level 1:1"
-msgstr ""
+msgstr "ตั้งค่าขยายเป็นระดับ 1:1"
 
 msgid "Resources"
-msgstr ""
+msgstr "แหล่งข้อมูล"
 
 msgid "Responsible Trading"
-msgstr ""
+msgstr "การซื้อขายอย่างรับผิดชอบ"
 
 msgid "Results"
-msgstr ""
+msgstr "ผลลัพธ์"
 
 msgid "Return"
-msgstr ""
+msgstr "ผลตอบแทน"
 
 msgid "Rickshaw Man (CDLRICKSHAWMAN)"
-msgstr ""
+msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
 msgstr ""
@@ -2645,40 +2645,40 @@ msgid "Sep"
 msgstr ""
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
-msgstr ""
+msgstr "Separating Lines (CDLSEPARATINGLINES)"
 
 msgid "September"
-msgstr ""
+msgstr "กันยายน"
 
 msgid "Session"
-msgstr ""
+msgstr "เซสชัน"
 
 msgid "Session duration limit, in minutes"
-msgstr ""
+msgstr "รอบระยะเวลาการซื้อขาย ในหน่วยนาที"
 
 msgid "Set barrier(s) to define your position and trigger the payout you will receive"
-msgstr ""
+msgstr "ตั้งค่า Barrier เพื่อกำหนดโพซิชั่นของท่านและสัมพันธ์กับเงินที่ท่านจะได้รับ"
 
 msgid "Set the length of your trade, from 10 seconds to 365 days"
-msgstr ""
+msgstr "กำหนดระยะเวลาการซื้อขายของท่าน จาก 10 วินาที ถึง 365 วัน"
 
 msgid "Settles"
-msgstr ""
+msgstr "ชำระเงิน"
 
 msgid "Share"
-msgstr ""
+msgstr "หุ้น"
 
 msgid "Share chart"
-msgstr ""
+msgstr "แผนภูมิหุ้น"
 
 msgid "Sharp, benchmarked prices"
-msgstr ""
+msgstr "เฉียบคม ราคามาตรฐาน"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star (CDLSHOOTINGSTAR)"
 
 msgid "Short to long-term durations"
-msgstr ""
+msgstr "ระยะเวลาสั้นถึงระยะยาว"
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr ""
@@ -2687,22 +2687,22 @@ msgid "Simple Moving Average (SMA)"
 msgstr "Simple Moving Average (SMA)"
 
 msgid "Simple and intuitive"
-msgstr ""
+msgstr "ใช้งานง่าย"
 
 msgid "Smart FX"
-msgstr ""
+msgstr "Smart FX"
 
 msgid "Smart Indices"
-msgstr ""
+msgstr "ดัชนีสมาร์ท"
 
 msgid "Smoothed Moving Average (SMMA)"
-msgstr ""
+msgstr "Smoothed Moving Average (SMMA)"
 
 msgid "Sold"
-msgstr ""
+msgstr "ขาย"
 
 msgid "Source of wealth"
-msgstr ""
+msgstr "แหล่งที่มาของรายได้"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
 msgstr ""
@@ -2714,10 +2714,10 @@ msgid "Spline"
 msgstr ""
 
 msgid "Spot price"
-msgstr ""
+msgstr "ราคาสปอต"
 
 msgid "Spreads"
-msgstr ""
+msgstr "สเปรด"
 
 msgid "Spreads down"
 msgstr ""
@@ -2741,34 +2741,34 @@ msgid "Standard methods"
 msgstr ""
 
 msgid "Standard withdrawal"
-msgstr ""
+msgstr "การถอนเงินมาตรฐาน"
 
 msgid "Start Time"
-msgstr ""
+msgstr "เวลาเริ่มต้น"
 
 msgid "Start Trading"
 msgstr ""
 
 msgid "Start time"
-msgstr ""
+msgstr "เวลาเริ่มต้น"
 
 msgid "State/province/region"
 msgstr ""
 
 msgid "Statement"
-msgstr ""
+msgstr "รายงานทางการเงิน"
 
 msgid "Statistical Functions"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "สถานะ"
 
 msgid "Stays Between/Goes Outside"
-msgstr ""
+msgstr "อยู่ใน/นอกขอบเขต"
 
 msgid "Stays Between/Goes Outside trades"
-msgstr ""
+msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
 msgstr ""
@@ -2780,7 +2780,7 @@ msgid "Step 1: Define your position"
 msgstr "ขั้นตอนที่ 1: กำหนดโพซิชั่นของท่าน"
 
 msgid "Step 2: Get your contract price"
-msgstr ""
+msgstr "ขั้นตอนที่ 2: ตั้งราคาซื้อขายของท่าน"
 
 msgid "Step 3: Make your trade"
 msgstr "ขั้นตอนที่ 3: ทำการซื้อขาย"
@@ -2810,19 +2810,19 @@ msgid "Stocks trading frequency"
 msgstr ""
 
 msgid "Stop Loss Level"
-msgstr ""
+msgstr "ระดับยุติการซื้อขาย"
 
 msgid "Stop Profit Level"
-msgstr ""
+msgstr "ระดับยุติกำไร"
 
 msgid "Stop-loss"
-msgstr ""
+msgstr "หยุดขาดทุน"
 
 msgid "Stop-profit"
-msgstr ""
+msgstr "หยุดกำไร"
 
 msgid "Stop-type"
-msgstr ""
+msgstr "ประเภทการยุติ"
 
 msgid "Stroke color"
 msgstr ""

@@ -66,6 +66,10 @@ body {
     display: flex;
     width: 100%;
 }
+
+.social-icons .social-network-icon {
+    max-width: 30px;;
+}
 .social-icons a {
     padding: 4px;
     min-width: 30px;
