@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-05-18 13:10-0400\n"
+"PO-Revision-Date: 2018-05-25 06:45-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1256,7 +1256,7 @@ msgid "Each trade comes with a pre-determined payout that you will see after adj
 msgstr ""
 
 msgid "Edge"
-msgstr ""
+msgstr "ขอบ"
 
 msgid "Education"
 msgstr ""
@@ -1460,7 +1460,7 @@ msgid "Get your price"
 msgstr ""
 
 msgid "Go to"
-msgstr ""
+msgstr "ไปที่"
 
 msgid "Goes out"
 msgstr "ออกนอก"
@@ -1469,7 +1469,7 @@ msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
 msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
 
 msgid "Gray"
-msgstr ""
+msgstr "สีเทา"
 
 msgid "Grid"
 msgstr ""
@@ -1637,7 +1637,7 @@ msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
 
 msgid "In/Out"
-msgstr ""
+msgstr "In/Out"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
 msgstr ""
@@ -1649,7 +1649,7 @@ msgid "In/Out trades"
 msgstr ""
 
 msgid "Income Source"
-msgstr ""
+msgstr "แหล่งที่มาของรายได้"
 
 msgid "Indicative Price"
 msgstr ""
@@ -1859,13 +1859,13 @@ msgid "Loading portfolio"
 msgstr ""
 
 msgid "Loading..."
-msgstr ""
+msgstr "กำลังโหลด..."
 
 msgid "Log in"
-msgstr ""
+msgstr "เข้าสู่ระบบ"
 
 msgid "Log in time"
-msgstr ""
+msgstr "เวลาเข้าสู่ระบบ"
 
 msgid "Login"
 msgstr ""
@@ -1892,13 +1892,13 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr ""
 
 msgid "Low"
-msgstr ""
+msgstr "ต่ำ"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Barrier ต่ำ"
 
 msgid "Low barrier"
-msgstr ""
+msgstr "Barrier ต่ำ"
 
 msgid "Low barrier offset"
 msgstr ""
@@ -2099,10 +2099,10 @@ msgid "Net Profit"
 msgstr "กำไรสุทธิ"
 
 msgid "New password"
-msgstr ""
+msgstr "รหัสผ่านใหม่"
 
 msgid "No"
-msgstr ""
+msgstr "ไม่ใช่"
 
 msgid "No Touch trades"
 msgstr ""
@@ -2123,25 +2123,25 @@ msgid "Note: withdrawal via payment agent is available only if you deposit exclu
 msgstr ""
 
 msgid "Nov"
-msgstr ""
+msgstr "พ.ย."
 
 msgid "November"
-msgstr ""
+msgstr "November"
 
 msgid "Now"
 msgstr ""
 
 msgid "OHLC"
-msgstr ""
+msgstr "OHLC"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
 msgstr ""
 
 msgid "Occupation"
-msgstr ""
+msgstr "อาชีพ"
 
 msgid "Oct"
 msgstr "ต.ค."
