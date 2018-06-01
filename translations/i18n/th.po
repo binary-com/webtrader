@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-01 12:30-0400\n"
+"PO-Revision-Date: 2018-06-01 12:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1577,7 +1577,7 @@ msgid "IMPORTANT DISCLAIMER"
 msgstr "ข้อสงวนสิทธิ์ที่สำคัญ"
 
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
-msgstr ""
+msgstr "ข้อสงวนสิทธิ์ที่สำคัญ - Binary.com ไม่ได้เข้าร่วมเป็นพันธมิตรกับตัวแทนรับชำระเงินที่แจกแจงข้างต้น ตัวแทนรับชำระเงินแต่ละรายดำเนินการในฐานะผู้ให้บริการอิสระ และไม่ได้รับการรับรอง รับประกัน หรืออนุมัติโดย Binary.com ลูกค้าที่ติดต่อกับตัวแทนรับชำระเงินจะต้องรับผิดชอบต่อความเสี่ยงต่างๆด้วยตัวเอง ขอแนะนำให้ลูกค้าตรวจสอบข้อมูลหลักฐานอ้างอิงของตัวแทนรับชำระเงินก่อนที่จะส่งเงินใดๆให้กับตัวแทน Binary.com ไม่ว่าในกรณีใดๆ ก็ตาม จะไม่รับผิดชอบต่อธุรกรรมที่กระทำขึ้นระหว่างลูกค้ากับตัวแทนรับชำระเงิน"
 
 msgid "IPO on the blockchain"
 msgstr ""
@@ -1772,10 +1772,10 @@ msgid "Learning to trade"
 msgstr ""
 
 msgid "Least Squares Moving Average (LSMA)"
-msgstr ""
+msgstr "Least Squares Moving Average (LSMA)"
 
 msgid "Less than"
-msgstr ""
+msgstr "น้อยกว่า  "
 
 msgid "Let's do it"
 msgstr ""
@@ -1790,13 +1790,13 @@ msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less
 msgstr ""
 
 msgid "Line"
-msgstr ""
+msgstr "เส้น"
 
 msgid "Line Dot"
-msgstr ""
+msgstr "เส้นจุด"
 
 msgid "Linearly Weighted Moving Average (LWMA)"
-msgstr ""
+msgstr "Linearly Weighted Moving Average (LWMA)"
 
 msgid "Link"
 msgstr ""
@@ -1811,7 +1811,7 @@ msgid "Load trade template"
 msgstr ""
 
 msgid "Loading"
-msgstr ""
+msgstr "กำลังโหลด..."
 
 msgid "Loading Asset Index"
 msgstr ""
@@ -1907,7 +1907,7 @@ msgid "Low minimum stakes"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "ต่ำกว่า"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
 msgstr ""
@@ -1922,22 +1922,22 @@ msgid "Make your trade"
 msgstr ""
 
 msgid "Manage"
-msgstr ""
+msgstr "จัดการ"
 
 msgid "Mar"
-msgstr ""
+msgstr "มี.ค."
 
 msgid "March"
-msgstr ""
+msgstr "มีนาคม"
 
 msgid "Market Professionals"
-msgstr ""
+msgstr "เจ้าหน้าที่ทางตลาด"
 
 msgid "Market exit price"
-msgstr ""
+msgstr "ราคาสิ้นสุดของตลาด"
 
 msgid "Marubozu (CDLMARUBOZU)"
-msgstr ""
+msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
 msgstr ""
@@ -2129,7 +2129,7 @@ msgid "November"
 msgstr "November"
 
 msgid "Now"
-msgstr ""
+msgstr "ขณะนี้"
 
 msgid "OHLC"
 msgstr "OHLC"
@@ -2138,7 +2138,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
-msgstr ""
+msgstr "หุ้น OTC - สัญญาหุ้นบลูชิพจากตลาดที่ซื้อขายได้เองโดยตรง"
 
 msgid "Occupation"
 msgstr "อาชีพ"
@@ -2510,7 +2510,7 @@ msgid "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of B
 msgstr ""
 
 msgid "Regent Pacific transaction"
-msgstr ""
+msgstr "ธุรกรรมของ Regent Pacific"
 
 msgid "Register free account"
 msgstr "ลงทะเบียนบัญชีใหม่ฟรี"
@@ -2555,7 +2555,7 @@ msgid "Rickshaw Man (CDLRICKSHAWMAN)"
 msgstr "Rickshaw Man (CDLRICKSHAWMAN)"
 
 msgid "Rise"
-msgstr ""
+msgstr "ขึ้น"
 
 msgid "Rise/Fall"
 msgstr ""
@@ -2591,58 +2591,58 @@ msgid "Sand Signika"
 msgstr ""
 
 msgid "Sat"
-msgstr ""
+msgstr "ส"
 
 msgid "Saturday"
-msgstr ""
+msgstr "วันเสาร์"
 
 msgid "Save"
-msgstr ""
+msgstr "บันทึก"
 
 msgid "Save as"
-msgstr ""
+msgstr "บันทึกเป็น"
 
 msgid "Save changes"
-msgstr ""
+msgstr "บันทึกการเปลี่ยนแปลง"
 
 msgid "Saved"
-msgstr ""
+msgstr "บันทึกแล้ว"
 
 msgid "Scalable"
-msgstr ""
+msgstr "ปรับขนาดได้"
 
 msgid "Second line of home address"
-msgstr ""
+msgstr "บรรทัดที่สองของที่อยู่"
 
 msgid "Secondary"
-msgstr ""
+msgstr "ลำดับที่สอง"
 
 msgid "Security"
-msgstr ""
+msgstr "หลักทรัพย์"
 
 msgid "Security and privacy"
-msgstr ""
+msgstr "ความปลอดภัยและความเป็นส่วนตัว"
 
 msgid "Security question"
-msgstr ""
+msgstr "คำถามลับ"
 
 msgid "Self-Employed"
-msgstr ""
+msgstr "อาชีพอิสระ"
 
 msgid "Self-Exclusion"
-msgstr ""
+msgstr "การพักตัวเอง"
 
 msgid "Sell At Market"
-msgstr ""
+msgstr "ขายที่ราคาตลาด"
 
 msgid "Sell option"
-msgstr ""
+msgstr "ขายออปชั่น"
 
 msgid "Sent to account"
 msgstr ""
 
 msgid "Sep"
-msgstr ""
+msgstr "ก.ย."
 
 msgid "Separating Lines (CDLSEPARATINGLINES)"
 msgstr "Separating Lines (CDLSEPARATINGLINES)"
@@ -2726,7 +2726,7 @@ msgid "Spreads up"
 msgstr ""
 
 msgid "Stake"
-msgstr ""
+msgstr "วางเงิน"
 
 msgid "Stalled Pattern (CDLSTALLEDPATTERN)"
 msgstr "Stalled Pattern (CDLSTALLEDPATTERN)"
@@ -2747,7 +2747,7 @@ msgid "Start Time"
 msgstr "เวลาเริ่มต้น"
 
 msgid "Start Trading"
-msgstr ""
+msgstr "เริ่มซื้อขาย"
 
 msgid "Start time"
 msgstr "เวลาเริ่มต้น"
@@ -2831,7 +2831,7 @@ msgid "Stroke width"
 msgstr ""
 
 msgid "Submit"
-msgstr ""
+msgstr "ส่ง"
 
 msgid "Successfully applied the template and saved it as"
 msgstr ""
@@ -2852,22 +2852,22 @@ msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr ""
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
-msgstr ""
+msgstr "Tasuki Gap (CDLTASUKIGAP)"
 
 msgid "Tax identification number"
-msgstr ""
+msgstr "เลขประจำตัวผู้เสียภาษี"
 
 msgid "Tax information"
-msgstr ""
+msgstr "ข้อมูลภาษี"
 
 msgid "Tax residence"
-msgstr ""
+msgstr "แหล่งรายได้สำหรับภาษี"
 
 msgid "Tel"
-msgstr ""
+msgstr "โทร"
 
 msgid "Template changes saved"
-msgstr ""
+msgstr "การเปลี่ยนแปลงแม่แบบได้ถูกบันทึกแล้ว"
 
 msgid "Template name"
 msgstr ""
@@ -3221,13 +3221,13 @@ msgid "Times are changing. We increase payouts so our clients can make the most 
 msgstr ""
 
 msgid "Title"
-msgstr ""
+msgstr "คำนำหน้าชื่อ"
 
 msgid "Ti ng Vi t"
-msgstr ""
+msgstr "Ti ng Vi t"
 
 msgid "To"
-msgstr ""
+msgstr "ถึง"
 
 msgid "To deposit money please contact the payment agent directly"
 msgstr ""
@@ -3239,7 +3239,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr ""
 
 msgid "Token"
-msgstr ""
+msgstr "โทเค่น"
 
 msgid "Token Management"
 msgstr ""
@@ -3275,13 +3275,13 @@ msgid "Total Trades"
 msgstr ""
 
 msgid "Touch"
-msgstr ""
+msgstr "แตะ"
 
 msgid "Touch/No Touch"
 msgstr "Touch/No Touch"
 
 msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
-msgstr ""
+msgstr "Touch/No Touch - พยากรณ์ว่า ตลาดสามารถทำราคาได้ตามเป้าหมาย หรือ ห่างจากราคาเป้าหมาย"
 
 msgid "Tourism"
 msgstr "การท่องเที่ยว"
@@ -3290,10 +3290,10 @@ msgid "Town/City"
 msgstr "เมือง"
 
 msgid "Trade"
-msgstr ""
+msgstr "ซื้อ-ขาย"
 
 msgid "Trade Confirmation"
-msgstr ""
+msgstr "การยืนยันซื้อขาย"
 
 msgid "Trade Types"
 msgstr "ประเภทการซื้อขาย"
@@ -3356,43 +3356,43 @@ msgid "Try"
 msgstr ""
 
 msgid "Tue"
-msgstr ""
+msgstr "อัง"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "วันอังคาร"
 
 msgid "Turnover"
-msgstr ""
+msgstr "การซื้อขาย"
 
 msgid "Two Crows (CDL2CROWS)"
 msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Two-way pricing"
-msgstr ""
+msgstr "ราคา 2 ทาง (2-Way Pricing)"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Typical Price (TYPPRICE)"
 
 msgid "US Patents"
-msgstr ""
+msgstr "สิทธิบัตร US"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "USDJPY"
-msgstr ""
+msgstr "USDJPY"
 
 msgid "Ultimate Oscillator (ULTOSC)"
 msgstr "Ultimate Oscillator (ULTOSC)"
 
 msgid "Under"
-msgstr ""
+msgstr "ต่ำกว่า"
 
 msgid "Underlying"
-msgstr ""
+msgstr "ผลิตภัณฑ์อ้างอิง"
 
 msgid "Unfortunately, no - funds initially deposited through one payment method must be withdrawn through the same system; funds cannot be transferred to an alternate system for withdrawal. We do offer a wide variety of payment methods, to suit your specific needs and preferences"
-msgstr ""
+msgstr "ขออภัย ที่ยังไม่มีการฝากเงินจากช่องทางหนึ่งจะถูกถอนผ่านระบบเดียวกัน เงินทุนไม่สามารถถูกถ่ายโอนไปที่ระบบอื่นในการถอน พวกเรามีช่องทางในการชำระเงินที่หลากหลายเพื่ออำนวยความสะดวกตามความปรารถนาของท่าน"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr ""
@@ -3404,49 +3404,49 @@ msgid "Unique Three River Bottom is a bullish candlestick pattern made up of thr
 msgstr ""
 
 msgid "Up - Predict that the market will end higher than the average price"
-msgstr ""
+msgstr "ขึ้น - พยากรณ์ว่า ตลาดจะสิ้นสุดด้วยค่าที่สูงกว่าราคาเฉลี่ย"
 
 msgid "Up/Down"
-msgstr ""
+msgstr "Up/Down"
 
 msgid "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
-msgstr ""
+msgstr "Up/Down-Gap Side-By-Side White Lines (CDLGAPSIDESIDEWHITE)"
 
 msgid "Upcoming Events"
-msgstr ""
+msgstr "กิจกรรมในอนาคต"
 
 msgid "Update"
-msgstr ""
+msgstr "การปรับปรุง"
 
 msgid "Update Settings"
-msgstr ""
+msgstr "การปรับปรุงการตั้งค่า"
 
 msgid "Upgrade to a Real Account"
-msgstr ""
+msgstr "อัพเกรดเป็นบัญชีจริง"
 
 msgid "Upload template"
-msgstr ""
+msgstr "อัปโหลดแม่แบบ"
 
 msgid "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
-msgstr ""
+msgstr "Upside/Downside Gap Three Methods (CDLXSIDEGAP3METHODS)"
 
 msgid "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
-msgstr ""
+msgstr "Upside/Downside Gap Two Crows (CDLUPSIDEGAP2CROWS)"
 
 msgid "Use"
 msgstr ""
 
 msgid "Use the \"Save as ...\" button to save the chart settings, type, time period, indicators and comparisons"
-msgstr ""
+msgstr "ใช้เมนู \"บันทึกเป็น...\" เพื่อบันทึกการตั้งค่าแผนภูมิ ชนิด ระยะเวลา ตัวชี้วัด และการเปรียบเทียบ"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr ""
 
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available"
-msgstr ""
+msgstr "การใช้เว็บไซต์ของเรา ลูกค้าสามารถซื้อขายสกุลเงินต่างๆ ดัชนีต่างๆ หลักทรัพย์ต่างๆ สินค้าโภคภัณฑ์ต่างๆ ได้ตลอด 24 ชั่วโมง 7 วัน พวกเรามีความยืดหยุ่นในราคามากที่สุด และผลิตภัณฑ์ที่หลากหลายมากที่สุด"
 
 msgid "Variance (VAR)"
-msgstr ""
+msgstr "Variance (VAR)"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr ""
@@ -3461,7 +3461,7 @@ msgid "Verify new password"
 msgstr "ตรวจสอบรหัสผ่านใหม่"
 
 msgid "Vertical line"
-msgstr ""
+msgstr "เส้นแนวตั้ง"
 
 msgid "View"
 msgstr "ดูรายการ"
@@ -3644,10 +3644,10 @@ msgid "Your new account balance is"
 msgstr ""
 
 msgid "Your transaction reference is"
-msgstr ""
+msgstr "หมายเลขอ้างอิงของธุรกรรมของท่าน คือ"
 
 msgid "Your transaction reference number is"
-msgstr ""
+msgstr "หมายเลขอ้างอิงของธุรกรรมของท่าน คือ"
 
 msgid "Zoom"
 msgstr "ขยาย"
@@ -3677,7 +3677,7 @@ msgid "below and proceeding with the Account Opening you should note that you ma
 msgstr ""
 
 msgid "commission"
-msgstr ""
+msgstr "คอมมิชชั่น"
 
 msgid "contact support"
 msgstr ""
@@ -3686,7 +3686,7 @@ msgid "create a token, and share the token with copier(s)"
 msgstr ""
 
 msgid "customer support"
-msgstr ""
+msgstr "ฝ่ายบริการลูกค้า"
 
 msgid "day"
 msgstr "วัน"
@@ -3704,19 +3704,19 @@ msgid "e-commerce site for branded merchandise"
 msgstr ""
 
 msgid "end time"
-msgstr ""
+msgstr "เวลาสิ้นสุด"
 
 msgid "entry spot"
-msgstr ""
+msgstr "สปอตเริ่มต้น"
 
 msgid "exit spot"
-msgstr ""
+msgstr "สปอตสิ้นสุด"
 
 msgid "for mobile charts"
 msgstr ""
 
 msgid "has updated its"
-msgstr ""
+msgstr "ได้ปรับปรุง"
 
 msgid "hour"
 msgstr "ชั่วโมง"
@@ -3770,10 +3770,10 @@ msgid "medium protection"
 msgstr ""
 
 msgid "minute"
-msgstr ""
+msgstr "นาที"
 
 msgid "minutes"
-msgstr ""
+msgstr "นาที"
 
 msgid "next tick"
 msgstr ""
@@ -3785,22 +3785,22 @@ msgid "open a free $10k fully-functional virtual-money account"
 msgstr ""
 
 msgid "open an account"
-msgstr ""
+msgstr "เปิดบัญชี "
 
 msgid "our helpful support desk"
 msgstr ""
 
 msgid "payment agent"
-msgstr ""
+msgstr "ตัวแทนรับชำระเงิน"
 
 msgid "points"
-msgstr ""
+msgstr "จุด"
 
 msgid "second"
-msgstr ""
+msgstr "วินาที"
 
 msgid "seconds"
-msgstr ""
+msgstr "วินาที"
 
 msgid "session overview"
 msgstr ""
