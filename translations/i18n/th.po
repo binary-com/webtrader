@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-05-25 06:45-0400\n"
+"PO-Revision-Date: 2018-06-01 12:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1043,7 +1043,7 @@ msgid "Current time"
 msgstr "เวลาปัจจุบัน"
 
 msgid "Custom Theme"
-msgstr ""
+msgstr "ชุดรูปแบบกำหนดเอง"
 
 msgid "Daily Reset Indices"
 msgstr ""
@@ -1055,7 +1055,7 @@ msgid "Daily limit on losses"
 msgstr ""
 
 msgid "Daily turnover limit"
-msgstr ""
+msgstr "วงเงินซื้อขายต่อวัน"
 
 msgid "Dark Blue"
 msgstr "สีน้ำเงินเข้ม"
@@ -1124,7 +1124,7 @@ msgid "Description"
 msgstr "รายละเอียด"
 
 msgid "Deutsch"
-msgstr ""
+msgstr "เยอรมัน"
 
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr ""
@@ -1184,13 +1184,13 @@ msgid "Done. The funds are transferred"
 msgstr ""
 
 msgid "Dot"
-msgstr ""
+msgstr "จุด"
 
 msgid "Double Exponential Moving Average (DEMA)"
 msgstr "Double Exponential Moving Average (DEMA)"
 
 msgid "Double click the object to remove"
-msgstr ""
+msgstr "ดับเบิ้ลคลิกเพื่อลบ"
 
 msgid "Down - Predict that the market will end lower than the average price"
 msgstr ""
@@ -1259,7 +1259,7 @@ msgid "Edge"
 msgstr "ขอบ"
 
 msgid "Education"
-msgstr ""
+msgstr "การศึกษา"
 
 msgid "Embed code"
 msgstr ""
@@ -1289,7 +1289,7 @@ msgid "English"
 msgstr "อังกฤษ"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
-msgstr ""
+msgstr "Engulfing Pattern (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
 msgstr ""
@@ -1298,13 +1298,13 @@ msgid "Enter your current password"
 msgstr "ป้อนรหัสผ่านปัจจุบันของคุณ"
 
 msgid "Entry Spot"
-msgstr ""
+msgstr "สปอตเริ่มต้น"
 
 msgid "Entry spot"
-msgstr ""
+msgstr "สปอตเริ่มต้น"
 
 msgid "Entry spot price"
-msgstr ""
+msgstr "ราคาสปอตเริ่มต้น"
 
 msgid "Error getting data for %1"
 msgstr ""
@@ -1373,7 +1373,7 @@ msgid "February"
 msgstr "กุมภาพันธ์"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public"
-msgstr ""
+msgstr "สิบห้าปีมาแล้วที่เรายืนหยัดอยู่ในตลาด และเรายังคงพัฒนานวัตกรรม เติบโต และทำงานโดยใช้แนวทางใหม่ๆ เพื่อบริการลูกค้าของเราให้ดีขึ้น ในเบื้องแรก เราขอแนะนำการเทรด Touch/No-Touch ระยะสั้น และแนะนำแอพพลิเคชันใหม่สำหรับการวิเคราะห์ข้อมูลโดยกราฟ พวกเราเชื่อว่า เราเป็นที่สุดและมีระบบการเทรดออปชั่นดิจิทัลที่เข้าใจง่ายที่มีอยู่ในตลาดขณะนี้"
 
 msgid "Final Price"
 msgstr "ราคาสุดท้าย"
@@ -1505,25 +1505,25 @@ msgid "High Barrier"
 msgstr ""
 
 msgid "High barrier"
-msgstr ""
+msgstr "Barrier สูง"
 
 msgid "High barrier offset"
-msgstr ""
+msgstr "Barrier สูง ที่หักกลบลบกัน"
 
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr "High-Wave Candle (CDLHIGHWAVE)"
 
 msgid "Higher"
-msgstr ""
+msgstr "สูงกว่า"
 
 msgid "Higher/Lower"
-msgstr ""
+msgstr "สูงกว่า/ต่ำกว่า"
 
 msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
-msgstr ""
+msgstr "สูงกว่า/ต่ำกว่า - พยากรณ์ว่า ตลาดจะสิ้นสุดด้วยค่าที่สูงกว่า หรือ ต่ำกว่า ราคาเป้าหมาย"
 
 msgid "Higher/Lower trades"
-msgstr ""
+msgstr "ซื้อขายสูงกว่า/ต่ำกว่า"
 
 msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
 msgstr ""
@@ -1532,16 +1532,16 @@ msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
 msgid "Historical Data"
-msgstr ""
+msgstr "ข้อมูลเก่า"
 
 msgid "Home Address"
-msgstr ""
+msgstr "ที่อยู่ (บ้าน)"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "Homing Pigeon (CDLHOMINGPIGEON)"
 
 msgid "Horizontal line"
-msgstr ""
+msgstr "เส้นแนวนอน"
 
 msgid "Hours"
 msgstr "ชั่วโมง"
@@ -1559,13 +1559,13 @@ msgid "How to trade binaries?"
 msgstr "ซื้อขายไบนารีอย่างไร?"
 
 msgid "How to trade the Volatility Indices markets?"
-msgstr ""
+msgstr "จะเทรดดัชนีผันผวนอย่างไร?"
 
 msgid "Hull Moving Average (HMA)"
 msgstr "Hull Moving Average (HMA)"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
+msgstr "ข้าพเจ้ารับรองว่า ข้าพเจ้าไม่ใช่บุคคลที่เกี่ยวข้องกับการเมือง (PEP)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "ฉันได้อ่าน และยอมรับกับ Binary.com"
