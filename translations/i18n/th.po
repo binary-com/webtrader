@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-01 13:11-0400\n"
+"PO-Revision-Date: 2018-06-01 13:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1824,7 +1824,7 @@ msgid "Loading Download/View Data"
 msgstr ""
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "กำลังโหลด MAM"
 
 msgid "Loading Password dialog"
 msgstr ""
@@ -1869,16 +1869,16 @@ msgid "Log in time"
 msgstr "เวลาเข้าสู่ระบบ"
 
 msgid "Login"
-msgstr ""
+msgstr "เข้าสู่ระบบ"
 
 msgid "Logout"
-msgstr ""
+msgstr "ออกจากระบบ"
 
 msgid "Long Legged Doji (CDLLONGLEGGEDDOJI)"
-msgstr ""
+msgstr "Long Legged Doji (CDLLONGLEGGEDDOJI)"
 
 msgid "Long Line Candle (CDLLONGLINE)"
-msgstr ""
+msgstr "Long Line Candle (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 msgstr ""
@@ -1902,10 +1902,10 @@ msgid "Low barrier"
 msgstr "Barrier ต่ำ"
 
 msgid "Low barrier offset"
-msgstr ""
+msgstr "Barrier ต่ำ ที่หักกลบลบกัน"
 
 msgid "Low minimum stakes"
-msgstr ""
+msgstr "เงินเดิมพันขั้นต่ำที่ต่ำ"
 
 msgid "Lower"
 msgstr "ต่ำกว่า"
@@ -2094,7 +2094,7 @@ msgid "Navigator series line"
 msgstr ""
 
 msgid "Net Annual Income"
-msgstr ""
+msgstr "รายได้สุทธิต่อปี"
 
 msgid "Net Profit"
 msgstr "กำไรสุทธิ"
