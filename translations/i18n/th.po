@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-01 12:40-0400\n"
+"PO-Revision-Date: 2018-06-01 12:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1478,7 +1478,7 @@ msgid "Grid Light"
 msgstr ""
 
 msgid "Group History"
-msgstr "ประวัติของกลุ่ม"
+msgstr "ประวัติของเครือ"
 
 msgid "Hammer (CDLHAMMER)"
 msgstr "Hammer (CDLHAMMER)"
@@ -1499,10 +1499,10 @@ msgid "Help"
 msgstr "ตัวช่วย"
 
 msgid "High"
-msgstr ""
+msgstr "สูง"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Barrier สูง"
 
 msgid "High barrier"
 msgstr "Barrier สูง"
@@ -1583,7 +1583,7 @@ msgid "IPO on the blockchain"
 msgstr ""
 
 msgid "Ideal for beginners and experienced traders"
-msgstr ""
+msgstr "ดีงามสำหรับนักลงทุนมือใหม่และนักลงทุนมืออาชีพ"
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Identical Three Crows (CDLIDENTICAL3CROWS)"
@@ -1595,7 +1595,7 @@ msgid "If you select a specific"
 msgstr ""
 
 msgid "If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access"
-msgstr ""
+msgstr "หากท่านเป็นนักลงทุนรายย่อย ท่านจะได้เห็นความเรียบง่าย ความยืดหยุ่น และความเสี่ยงที่ถูกจำกัดได้ของการซื้อขายไบนารี ด้วยการวางเงินขั้นต่ำของ  ท่านจะได้เรียนรู้ทักษะการซื้อขาย และความมั่นใจ และหากท่านมีคำถามเพิ่มเติม ท่านสามารถติดต่อเจ้าหน้าที่สนับสนุนและบริการลูกค้าของเราเพื่อคลายความสงสัยในทุกข้อซักถามของท่าน"
 
 msgid "In April"
 msgstr "ในเดือนเมษายน"
@@ -1607,7 +1607,7 @@ msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle re
 msgstr ""
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
-msgstr ""
+msgstr "เมื่อเดือนตุลาคม พ.ศ. 2542 (ค.ศ.1999) Regent Markets ได้รับเงินลงทุน 2 ล้านเหรียญสหรัฐ จากนายจิม เมลลอน ผ่านทาง Regent Pacific Group บริษัทจัดการกองทุนที่ฮ่องกง"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
 msgstr ""
@@ -1619,19 +1619,20 @@ msgid "In an uptrend three successive days opens at or near the previous day's c
 msgstr ""
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
-msgstr ""
+msgstr "รูปแบบคลาสสิกซิลิคอน วัลเลย์ ผู้จัดการกองทุนเฮดจ์ที่ประเทศฮ่องกง นาย Jean-Yves Sireau ก่อตั้ง Regent Markets จากห้องนอนของเขาในประเทศฮ่องกง\n"
+"เขาพัฒนาระบบต่างๆ วิธีการ และ อัลกอริธึ่มสำหรับระบบการซื้อขายผลิตภัณฑ์การเงินแบบ Fixed-Odds วิสัยทัศน์ของ Jean-Yves คือ การสร้างตลาดที่ง่ายที่สุดสำหรับสัญญาอนุพันธ์ที่เป็นแบบ Fixed-Odds Bet และเสนอให้กับนักลงทุนทั่วๆ ไป ในการซื้อขายเล็กๆ ในระยะแรก กระทั่งนวัตกรรมของเขาเป็นที่แพร่หลายสำหรับการซื้อขายไบนารีออปชั่นปริมาณมาก"
 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar"
-msgstr ""
+msgstr "ในตลาดแลกเปลี่ยนเงินตรา นักลงทุนสามารถกำหนดสัญญาเพื่อราคาที่เปลี่ยนแปลงของหนึ่งสกุลเงินที่สัมพันธ์กับอีกสกุลเงิน เช่น หากนักลงทุนกำหนด ค่าเงินสูงขึ้น ของตลาด EUR/USD คือ พวกเขากำลังทำนายว่า มูลค่าของเงินยูโร จะเพิ่มขึ้นที่สัมพันธ์กับมูลค่าของเงินดอลลาร์สหรัฐ"
 
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr ""
 
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr ""
+msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr ""
+msgstr "ในสหราชอาณาจักร และเกาะ Isle of Man ลูกค้าของเราซื้อขายผ่านบริษัท Binary (IOM) Ltd และประเทศญี่ปุ่น ดำเนินการซื้อขายผ่าน Binary KK ในสหพันธ์ยุโรป (ยกเว้นสหราชอาณาจักร) ลูกค้าซื้อขายผ่านบริษัท Binary (Europe) Ltd และ Binary Investments (Europe) Ltd และประเทศอื่นๆ ในภูมิภาคอื่น พวกเขาซื้อขายผ่านบริษัท Binary (C.R.) S.A"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
@@ -1640,19 +1641,19 @@ msgid "In/Out"
 msgstr "In/Out"
 
 msgid "In/Out (ends between/outside and stays between/goes outside)"
-msgstr ""
+msgstr "In/Out (ends between/outside และ stays between/goes outside)"
 
 msgid "In/Out - Predict if the market will stay between or outside two target prices"
-msgstr ""
+msgstr "In/Out - พยากรณ์ว่า ตลาดจะอยู่ระหว่างราคาเป้าหมายทั้งสอง หรือ เกินกว่าราคาเป้าหมาย"
 
 msgid "In/Out trades"
-msgstr ""
+msgstr "การซื้อขาย In/Out"
 
 msgid "Income Source"
 msgstr "แหล่งที่มาของรายได้"
 
 msgid "Indicative Price"
-msgstr ""
+msgstr "ราคาดัชนี"
 
 msgid "Indicators"
 msgstr "อินดิเคเตอร์"
@@ -1664,52 +1665,52 @@ msgid "Indices - All major worldwide stock indices sourced from the over-the-cou
 msgstr ""
 
 msgid "Indices trading experience"
-msgstr ""
+msgstr "ประสบการณ์ในการซื้อขายดัชนีต่างๆ"
 
 msgid "Indices trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายดัชนีต่างๆ"
 
 msgid "Individual Traders"
-msgstr ""
+msgstr "นักเทรดรายย่อย"
 
 msgid "Indonesia"
-msgstr ""
+msgstr "อินโดนีเซีย"
 
 msgid "Industry of Employment"
-msgstr ""
+msgstr "อุตสาหกรรมของการจ้างงาน"
 
 msgid "Initial Coin Offering (ICO)"
-msgstr ""
+msgstr "การเสนอขายเหรียญครั้งแรก หรือ Initial Coin Offering (ICO)"
 
 msgid "Instant access"
-msgstr ""
+msgstr "เข้าถึงได้ทันที"
 
 msgid "Instruments"
 msgstr ""
 
 msgid "Invalid JSON file"
-msgstr ""
+msgstr "ไฟล์ JSON ไม่ถูกต้อง"
 
 msgid "Invalid parameter(s)"
-msgstr ""
+msgstr "ตัวแปรไม่ถูกต้อง"
 
 msgid "Invalid template type"
-msgstr ""
+msgstr "ประเภทแม่แบบไม่ถูกต้อง"
 
 msgid "Inverted Hammer (CDLINVERTEDHAMMER)"
-msgstr ""
+msgstr "Inverted Hammer (CDLINVERTEDHAMMER)"
 
 msgid "Investments & Dividends"
-msgstr ""
+msgstr "การลงทุนและเงินปันผล"
 
 msgid "Is it possible to deposit the same funds through different payment methods?"
-msgstr ""
+msgstr "เป็นไปได้ไหมที่จะฝากเงินผ่านช่องทางรับชำระเงินที่ต่างกัน?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
 msgstr ""
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
-msgstr ""
+msgstr "ในบางครั้งการจำหน่ายออปชั่นก่อนวันหมดอายุเมื่อมีราคาที่เหมาะสมเป็นสิ่งที่เกิดขึ้นได้ และหากมีออปชั่นในสถานะดังกล่าว ท่านจะเห็นปุ่ม \"ขาย\" สีน้ำเงิน อยู่ถัดไปจากรายการซื้อขายในพอร์ตโฟลิโอ"
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr ""
@@ -1739,10 +1740,10 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr ""
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
-msgstr ""
+msgstr "Kaufman's Adaptive Moving Average (KAMA)"
 
 msgid "Key facts"
-msgstr ""
+msgstr "ข้อเท็จจริงหลัก"
 
 msgid "Kicking (CDLKICKING)"
 msgstr "Kicking (CDLKICKING)"
@@ -1757,7 +1758,7 @@ msgid "Kicking patterns on a candlestick chart are formed when there are two mar
 msgstr ""
 
 msgid "Kuala Lumpur Office"
-msgstr ""
+msgstr "สำนักงานกัวลาลัมเปอร์"
 
 msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
@@ -1766,10 +1767,10 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr ""
 
 msgid "Last used"
-msgstr ""
+msgstr "ใช้ครั้งสุดท้าย"
 
 msgid "Learning to trade"
-msgstr ""
+msgstr "เรียนรู้การเทรด"
 
 msgid "Least Squares Moving Average (LSMA)"
 msgstr "Least Squares Moving Average (LSMA)"
@@ -1781,7 +1782,7 @@ msgid "Let's do it"
 msgstr ""
 
 msgid "Level of Education"
-msgstr ""
+msgstr "ระดับการศึกษา"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
 msgstr ""
@@ -1913,13 +1914,13 @@ msgid "MACD is a trading indicator used in technical analysis of stock prices.It
 msgstr ""
 
 msgid "MENA FFXPO Award"
-msgstr ""
+msgstr "รางวัล MENA FFXPO"
 
 msgid "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
 msgstr ""
 
 msgid "Make your trade"
-msgstr ""
+msgstr "ซื้อขาย"
 
 msgid "Manage"
 msgstr "จัดการ"
@@ -1940,16 +1941,16 @@ msgid "Marubozu (CDLMARUBOZU)"
 msgstr "Marubozu (CDLMARUBOZU)"
 
 msgid "Mass Index (MASS)"
-msgstr ""
+msgstr "Mass Index (MASS)"
 
 msgid "Mat Hold (CDLMATHOLD)"
-msgstr ""
+msgstr "Mat Hold (CDLMATHOLD)"
 
 msgid "Matches"
-msgstr ""
+msgstr "จับคู่"
 
 msgid "Matches/Differs - Predict that the last digit will match or not match"
-msgstr ""
+msgstr "Matches/Differs - ทำนายว่า เลขหลักสุดท้ายจะถูกจับคู่ หรือไม่"
 
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
@@ -1961,7 +1962,7 @@ msgid "Maximum (MAX)"
 msgstr "Maximum (MAX)"
 
 msgid "Maximum account cash balance"
-msgstr ""
+msgstr "มูลค่าบัญชีเงินสดคงเหลือสูงสุด"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr ""
@@ -1988,10 +1989,10 @@ msgid "May"
 msgstr "พ.ค."
 
 msgid "Memorable date"
-msgstr ""
+msgstr "วันแห่งความทรงจำ"
 
 msgid "Memorable town/city"
-msgstr ""
+msgstr "เมืองแห่งความทรงจำ"
 
 msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa Adaptive Moving Average (MAMA)"
@@ -2000,7 +2001,7 @@ msgid "Min. Trade Stake"
 msgstr ""
 
 msgid "Min: 10 Max: 2000"
-msgstr ""
+msgstr "ต่ำสุด: 10 สูงสุด: 2000"
 
 msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
@@ -2033,7 +2034,7 @@ msgid "Momentum (MOM)"
 msgstr "Momentum (MOM)"
 
 msgid "Momentum Indicators"
-msgstr ""
+msgstr "ตัวชี้วัดโมเมนตัม"
 
 msgid "Mon"
 msgstr "จ."
