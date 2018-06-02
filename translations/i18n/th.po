@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 11:40-0400\n"
+"PO-Revision-Date: 2018-06-02 13:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -680,7 +680,7 @@ msgid "Binary trading is flexible"
 msgstr "การซื้อขายไบนารีมีความยืดหยุ่น"
 
 msgid "Binary trading is ideal for both individuals and market professionals"
-msgstr "การซื้อขายไบนารีเหมาะสมสำหรับทั้งบุคคลและผู้เชี่ยวชาญทางตลาด"
+msgstr "การซื้อขายไบนารีเหมาะสมสำหรับทั้งนักลงทุนรายย่อยและผู้เชี่ยวชาญทางตลาด"
 
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
 msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK ได้รับใบอนุญาตจาก KLFB เทียบเท่าธุรกิจด้านเครื่องมือทางการเงินประเภทที่ 1 ในประเทศญี่ปุ่น"
@@ -710,7 +710,7 @@ msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com สร้างสรรค์สิ่งใหม่ๆ และเติบโต อย่างต่อเนื่อง"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
-msgstr "Binary.com ได้สร้างดัชนีผันผวนที่คุณสามารถซื้อขายได้ ตลอด 24 ชั่วโมง 7 วัน คุณสามารถซื้อขายนี้ได้กับสัญญาทุกประเภท"
+msgstr "Binary.com ได้สร้างดัชนีผันผวนที่ท่านสามารถซื้อขายได้ ตลอด 24 ชั่วโมง 7 วัน ท่านสามารถซื้อขายนี้ได้กับสัญญาทุกประเภท"
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com ซึ่งมีชื่อเสียงอย่างกว้างขวางจากพันธสัญญาของเราต่อมาตรฐานระดับสูงทางจริยธรรมและคุณภาพจากประสบการณ์ความเชี่ยวชาญในการซื้อขายที่เรามี"
@@ -1983,7 +1983,7 @@ msgid "Maximum number of open positions"
 msgstr "จำนวนสูงสุดของโพซิชั่นที่เปิดอยู่"
 
 msgid "Maximum price over selected period"
-msgstr ""
+msgstr "ราคาสูงสุดในช่วงเวลาเลือก"
 
 msgid "May"
 msgstr "พ.ค."
