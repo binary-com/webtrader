@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 08:30-0400\n"
+"PO-Revision-Date: 2018-06-02 08:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2118,10 +2118,10 @@ msgid "Normalized Average True Range (NATR) attempts to normalize the average tr
 msgstr ""
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr ""
+msgstr "หมายเหตุ: ท่านสามารถมีได้เพียงบัญชีสกุลเงินกระดาษหนึ่งบัญชี และหนึ่งบัญชีของบัญชีเงินดิจิทัล"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
-msgstr ""
+msgstr "หมายเหตุ: การถอนเงินผ่านตัวแทนรับชำระเงินมีให้บริการท่าน เมื่อท่านฝากเงินผ่านตัวตัวแทนรับชำระเงิน"
 
 msgid "Nov"
 msgstr "พ.ย."
@@ -2154,28 +2154,28 @@ msgid "Odd"
 msgstr "คี่"
 
 msgid "Offices in Malta, Malaysia and Japan"
-msgstr ""
+msgstr "สำนักงานอื่นที่ประเทศมอลตา มาเลเซีย และญี่ปุ่น"
 
 msgid "Ok"
 msgstr "ตกลง"
 
 msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr ""
+msgstr "บนพื้นฐานของข้อมูลที่สัมพันธ์กับความรู้และประสบการณ์ของท่าน พวกเราพิจารณาว่า การลงทุนที่มีอยู่ทางเว็บไซต์แห่งนี้ไม่เหมาะสมกับท่าน"
 
 msgid "On-Neck Pattern (CDLONNECK)"
 msgstr "On-Neck Pattern (CDLONNECK)"
 
 msgid "Once this limit is reached, you may no longer deposit"
-msgstr ""
+msgstr "เมื่อวงเงินเต็ม ท่านไม่สามารถฝากเงินได้"
 
 msgid "One last step left"
 msgstr ""
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "การซื้อขายผลิตภัณฑ์ทางการเงินอาจทำให้ท่านเสพติดได้ โปรดกรอกข้อมูลในแบบฟอร์มด้านล่างเพื่อกำหนดระดับความต้องการในเว็บไซต์ หรือ ส่งจดหมายที่มีการลงนาม หรือ ส่งแฟกซ์มายังฝ่ายลูกค้าสัมพันธ์ เมื่อมีการตั้งค่าตามความประสงค์ของท่านแล้ว ท่านจะถูกจำกัดตามเงื่อนไขดังกล่าว วงเงินจะถูกปรับหรือผ่อนปรนหลังจาก 7 วันของวันที่กำหนดให้พัก แต่หากท่านต้องการลบหรือเพิ่มวงเงินของท่าน โปรดติดต่อ ฝ่ายลูกค้าสัมพันธ์"
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
-msgstr ""
+msgstr "เพียงระยะเวลา 5 ปี หลังจากเริ่มต้น พวกเราได้รับรางวัลสำหรับบริการซื้อขายออนไลน์ของพวกเรา รางวัลแสดงถึงความเชื่อถือได้ ความรวดเร็ว และความปลอดภัยในการซื้อขายออนไลน์ของ BetOnMarkets.com ทั้งสำหรับนักลงทุนมือใหม่ และ นักลงทุนผู้คร่ำหวอดในตลาด ในขณะนั้น เว็บไซต์ของเรามีมูลค่าการซื้อขายมากกว่า 15 ล้านเหรียญ"
 
 msgid "Only letters, numbers, hyphen are allowed"
 msgstr "ตัวอักษร ตัวเลข และเครื่องหมายขีดกลางเท่านั้นที่อนุญาต"
