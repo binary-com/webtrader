@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 07:20-0400\n"
+"PO-Revision-Date: 2018-06-02 07:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3681,10 +3681,10 @@ msgid "commission"
 msgstr "คอมมิชชั่น"
 
 msgid "contact support"
-msgstr ""
+msgstr "ติดต่อฝ่ายบริการลูกค้า"
 
 msgid "create a token, and share the token with copier(s)"
-msgstr ""
+msgstr "สร้างโทเค่น และแชร์โทเค่นกับท่านอื่น"
 
 msgid "customer support"
 msgstr "ฝ่ายบริการลูกค้า"
@@ -3726,13 +3726,13 @@ msgid "hours"
 msgstr "ชั่วโมง"
 
 msgid "if this is not your country of residence"
-msgstr ""
+msgstr "หากไม่ใช่ประเทศที่ท่านพำนักอยู่"
 
 msgid "in just a few minutes"
-msgstr ""
+msgstr "ในเวลาเพียงไม่กี่นาที"
 
 msgid "in the future, the"
-msgstr ""
+msgstr "ในอนาคต"
 
 msgid "information about your trading exprience and personal finance"
 msgstr ""
@@ -3747,16 +3747,16 @@ msgid "is that which is selected and the"
 msgstr ""
 
 msgid "is the"
-msgstr ""
+msgstr "คือ"
 
 msgid "is the price in effect at that time"
-msgstr ""
+msgstr "คือ ราคามีผลในเวลาดังกล่าว"
 
 msgid "is the selected number of minutes/hours after the"
 msgstr ""
 
 msgid "is the selected time"
-msgstr ""
+msgstr "คือ เวลาที่เลือก"
 
 msgid "is the spot at the"
 msgstr ""
