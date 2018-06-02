@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 07:40-0400\n"
+"PO-Revision-Date: 2018-06-02 07:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3630,7 +3630,7 @@ msgid "Your Binary.com account is created, but to start trading you need to allo
 msgstr "บัญชี Binary.com ของท่านได้ถูกสร้างขึ้นแล้ว ท่านสามารถเริ่มซื้อขายด้วย Webtrader "
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "บัญชีของท่าน (%) ถูกระงับการใช้งาน โปรดติดต่อฝ่ายบริการลูกค้าเพื่อดำเนินการ"
 
 msgid "Your browser is not supported"
 msgstr "เบราเซอร์ของท่านไม่รองรับการใช้งาน"
@@ -3663,19 +3663,19 @@ msgid "and start learning how to trade"
 msgstr ""
 
 msgid "apostrophe (') are allowed"
-msgstr ""
+msgstr "เครื่องหมายอัญประกาศ (') สามารถใช้ได้"
 
 msgid "apply online"
 msgstr "สมัครออนไลน์"
 
 msgid "at a valuation of US$ 50.5 million"
-msgstr ""
+msgstr "มีมูลค่า 50.5 ล้านเหรียญสหรัฐ"
 
 msgid "auto-trader programming tool"
 msgstr "เครื่องมือในการตั้งซื้อขายแบบอัตโนมัติ"
 
 msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr ""
+msgstr "<<โดยการคลิก ยอมรับ>> ด้านล่างนี้ เพื่อดำเนินการเปิดบัญชี ขอเรียนให้ท่านทราบว่า ท่านอาจะมีความเสี่ยง (ที่อาจจะมีนัยสำคัญ รวมถึงความเสี่ยงในการขาดทุนมูลค่าทั้งหมดที่ได้ลงทุน) ซึ่งท่านอาจจะไม่มีความรู้และประสบการณ์เพื่อประเมินและจัดการอย่างเหมาะสม"
 
 msgid "commission"
 msgstr "คอมมิชชั่น"
@@ -3744,7 +3744,7 @@ msgid "is required. Current spread"
 msgstr "เป็นสิ่งจำเป็น สเปรดปัจจุบัน"
 
 msgid "is that which is selected and the"
-msgstr ""
+msgstr "ซึ่งถูกเลือก"
 
 msgid "is the"
 msgstr "คือ"
@@ -3783,7 +3783,7 @@ msgid "of \"Now\", the"
 msgstr "ของ \"เวลาปัจจุบัน\""
 
 msgid "open a free $10k fully-functional virtual-money account"
-msgstr ""
+msgstr "เปิดบัญชีทดลองใช้ฟรี ที่มีฟังก์ชันใช้งานสมบูรณ์ พร้อมเงินลงทุนขั้นต้นมูลค่า 10,000 เหรียญสหรัฐ "
 
 msgid "open an account"
 msgstr "เปิดบัญชี "
