@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 07:50-0400\n"
+"PO-Revision-Date: 2018-06-02 08:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3789,7 +3789,7 @@ msgid "open an account"
 msgstr "เปิดบัญชี "
 
 msgid "our helpful support desk"
-msgstr ""
+msgstr "ฝ่ายดูแลลูกค้าของเราที่ช่วยเหลือท่านได้"
 
 msgid "payment agent"
 msgstr "ตัวแทนรับชำระเงิน"
@@ -3807,37 +3807,37 @@ msgid "session overview"
 msgstr ""
 
 msgid "start time"
-msgstr ""
+msgstr "เวลาเริ่มต้น"
 
 msgid "terms and conditions"
-msgstr ""
+msgstr "ข้อตกลงและเงื่อนไข"
 
 msgid "the"
-msgstr ""
+msgstr "-"
 
 msgid "thereafter"
-msgstr ""
+msgstr "หลังจากนั้น"
 
 msgid "tick"
-msgstr ""
+msgstr "ช่วงห่างของราคา"
 
 msgid "ticks"
-msgstr ""
+msgstr "ช่วงห่างของราคา"
 
 msgid "trading experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขาย"
 
 msgid "trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขาย"
 
 msgid "view license"
-msgstr ""
+msgstr "ดูใบอนุญาต"
 
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
 msgid "yes"
-msgstr ""
+msgstr "ใช่"
 
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
