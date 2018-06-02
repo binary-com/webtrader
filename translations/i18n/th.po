@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 07:30-0400\n"
+"PO-Revision-Date: 2018-06-02 07:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3567,7 +3567,7 @@ msgid "Withdraw funds"
 msgstr ""
 
 msgid "Withdrawal via payment agents"
-msgstr ""
+msgstr "การถอนเงินผ่านตัวแทนรับชำระเงิน"
 
 msgid "Workspace"
 msgstr "Workspace"
@@ -3597,37 +3597,37 @@ msgid "Yes"
 msgstr "ใช่"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "ท่านยังไม่ได้คัดลอกการซื้อขายใดๆ"
 
 msgid "You can"
 msgstr "ท่านสามารถ"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
-msgstr ""
+msgstr "ท่านไม่จำเป็นต้องฝากเงินเพื่อเปิดบัญชี แต่ท่านจะเป็นต้องฝากหลักประกันก่อนการเริ่มซื้อขาย"
 
 msgid "You have sold the following contract"
-msgstr ""
+msgstr "ท่านจำหน่ายสัญญาต่อไปนี้แล้ว"
 
 msgid "You haven't saved any templates yet"
 msgstr "ท่านยังไม่ได้บันทึกแม่แบบใด ๆ"
 
 msgid "You only need to make four decisions to execute a binary contract"
-msgstr ""
+msgstr "ท่านจำเป็นต้องตัดสินใจใน 4 เรื่อง เพื่อดำเนินการในสัญญาไบนารี"
 
 msgid "You pay"
-msgstr ""
+msgstr "ท่านชำระ"
 
 msgid "You will be automatically logged out after such time"
-msgstr ""
+msgstr "ท่านออกจากระบบโดยอัตโนมัติภายหลังเวลาดังกล่าว"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "ท่านยินยอมให้นักลงทุนท่านอื่นๆ คัดลอกการซื้อขายของท่าน"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "ท่านปรารถนาที่จะคัดลอกการซื้อขายของนักลงทุนท่านอื่นๆ"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr ""
+msgstr "บัญชี Binary.com ของท่านได้ถูกสร้างขึ้นแล้ว ท่านสามารถเริ่มซื้อขายด้วย Webtrader "
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr ""
@@ -3696,13 +3696,13 @@ msgid "days"
 msgstr "วัน"
 
 msgid "deposit funds and begin trading within minutes"
-msgstr ""
+msgstr "ฝากหลักประกันแล้วเริ่มซื้อขายในเวลาไม่กี่นาที"
 
 msgid "disposes of its stake"
 msgstr ""
 
 msgid "e-commerce site for branded merchandise"
-msgstr ""
+msgstr "อีคอมเมิร์ซสำหรับสินค้าแบรนด์"
 
 msgid "end time"
 msgstr "เวลาสิ้นสุด"
@@ -3714,7 +3714,7 @@ msgid "exit spot"
 msgstr "สปอตสิ้นสุด"
 
 msgid "for mobile charts"
-msgstr ""
+msgstr "สำหรับแผนภูมิ"
 
 msgid "has updated its"
 msgstr "ได้ปรับปรุง"
@@ -3741,7 +3741,7 @@ msgid "is Binary's advanced desktop trading platform. Its multi-window interface
 msgstr ""
 
 msgid "is required. Current spread"
-msgstr ""
+msgstr "เป็นสิ่งจำเป็น สเปรดปัจจุบัน"
 
 msgid "is that which is selected and the"
 msgstr ""
@@ -3759,13 +3759,13 @@ msgid "is the selected time"
 msgstr "คือ เวลาที่เลือก"
 
 msgid "is the spot at the"
-msgstr ""
+msgstr "คือ สปอต ที่"
 
 msgid "is when the contract is processed by our servers and the"
-msgstr ""
+msgstr "เมื่อสัญญาถูกประมวลผลโดยเครื่องแม่ข่ายของเราและ"
 
 msgid "main site"
-msgstr ""
+msgstr "เว็บไซต์หลัก"
 
 msgid "medium protection"
 msgstr ""
@@ -3777,10 +3777,10 @@ msgid "minutes"
 msgstr "นาที"
 
 msgid "next tick"
-msgstr ""
+msgstr "ช่วงราคาถัดไป"
 
 msgid "of \"Now\", the"
-msgstr ""
+msgstr "ของ \"เวลาปัจจุบัน\""
 
 msgid "open a free $10k fully-functional virtual-money account"
 msgstr ""
