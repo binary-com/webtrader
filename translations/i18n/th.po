@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-01 13:20-0400\n"
+"PO-Revision-Date: 2018-06-02 06:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1052,7 +1052,7 @@ msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, w
 msgstr ""
 
 msgid "Daily limit on losses"
-msgstr ""
+msgstr "วงเงินขาดทุนต่อวัน"
 
 msgid "Daily turnover limit"
 msgstr "วงเงินซื้อขายต่อวัน"
@@ -1136,13 +1136,13 @@ msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that det
 msgstr ""
 
 msgid "Differs"
-msgstr ""
+msgstr "แตกต่าง"
 
 msgid "Digits"
 msgstr "ตัวเลข"
 
 msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
-msgstr ""
+msgstr "ในการทำนายตัวเลขหลักสุดท้ายของราคาสปอต มีการซื้อขาย 3 ประเภท"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr ""
@@ -1151,7 +1151,7 @@ msgid "Directional Movement Index (DX)"
 msgstr "Directional Movement Index (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr ""
+msgstr "ฉันต้องฝากเงินเพื่อเปิดบัญชีหรือไม่?"
 
 msgid "Do you offer virtual-money accounts?"
 msgstr "ท่านได้รับการเสนอบัญชีเสมือนหรือไม่?"
@@ -1181,7 +1181,7 @@ msgid "Done. The funds are being transferred to the payment agent"
 msgstr ""
 
 msgid "Done. The funds are transferred"
-msgstr ""
+msgstr "เรียบร้อย หลักประกันได้ถูกโอนแล้ว"
 
 msgid "Dot"
 msgstr "จุด"
@@ -1193,7 +1193,7 @@ msgid "Double click the object to remove"
 msgstr "ดับเบิ้ลคลิกเพื่อลบ"
 
 msgid "Down - Predict that the market will end lower than the average price"
-msgstr ""
+msgstr "ลง - พยากรณ์ว่า ตลาดจะสิ้นสุด ต่ำกว่า ราคาเฉลี่ย"
 
 msgid "Download"
 msgstr "ดาวน์โหลด"
@@ -1241,7 +1241,7 @@ msgid "Duration"
 msgstr "ระยะเวลา"
 
 msgid "EGR Operator Award"
-msgstr ""
+msgstr "รางวัลผู้ประกอบการ EGR"
 
 msgid "EURUSD"
 msgstr "EURUSD"
@@ -1250,7 +1250,7 @@ msgid "Each binary option contract runs for a set time - with Binary.com you can
 msgstr ""
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
-msgstr ""
+msgstr "แต่ละไบนารีออปชั่นเป็นการพยากรณ์การเคลื่อนไหวในอนาคตของตลาดจำเพาะต่างๆ"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
 msgstr ""
@@ -1307,7 +1307,7 @@ msgid "Entry spot price"
 msgstr "ราคาสปอตเริ่มต้น"
 
 msgid "Error getting data for %1"
-msgstr ""
+msgstr "ข้อผิดพลาดในการรับข้อมูลสำหรับ %1"
 
 msgid "Espa ol"
 msgstr "ภาษาสเปน"
@@ -1406,7 +1406,7 @@ msgid "Flexible"
 msgstr "ยืดหยุ่น"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
-msgstr ""
+msgstr "สำหรับสามปีที่ต่อเนื่อง BetOnMarkets.com ได้รับคัดเลือกจากคะแนนนิยมกับตำแหน่ง 'Best Fixed-Odds Financial Trading Provider' โดย Shares Magazine UK ซึ่งเป็นครั้งสุดท้ายที่ชนะ เนื่องจาก Shares Magazine ยุติการให้รางวัลในหมวดนี้หลังจากนั้น"
 
 msgid "Forex"
 msgstr "ฟอเร็กซ์"
@@ -1779,13 +1779,13 @@ msgid "Less than"
 msgstr "น้อยกว่า  "
 
 msgid "Let's do it"
-msgstr ""
+msgstr "ลงมือเลย"
 
 msgid "Level of Education"
 msgstr "ระดับการศึกษา"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr ""
+msgstr "ได้รับอนุญาตและเป็นไปตามกฎหมายในการดำเนินธุรกิจในประเทศมอลตา สหราชอาณาจักร เกาะ Isle of Man ไอร์แลนด์ และญี่ปุ่น"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr ""
@@ -1800,7 +1800,7 @@ msgid "Linearly Weighted Moving Average (LWMA)"
 msgstr "Linearly Weighted Moving Average (LWMA)"
 
 msgid "Link"
-msgstr ""
+msgstr "ลิงค์"
 
 msgid "Load Workspace"
 msgstr ""
@@ -1965,22 +1965,22 @@ msgid "Maximum account cash balance"
 msgstr "มูลค่าบัญชีเงินสดคงเหลือสูงสุด"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
-msgstr ""
+msgstr "มูลค่าสัญญารวมสูงสุดที่ซื้อในระยะเวลา 30 วัน"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
-msgstr ""
+msgstr "มูลค่าสัญญารวมสูงสุดที่ซื้อในระยะเวลา 7 วัน"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr ""
+msgstr "มูลค่าสัญญารวมสูงสุดที่ซื้อต่อวัน"
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr ""
+msgstr "มูลค่ารวมที่ขาดทุนสูงสุดในระยะเวลา 30 วัน"
 
 msgid "Maximum aggregate loss per day"
-msgstr ""
+msgstr "มูลค่ารวมที่ขาดทุนสูงสุดต่อวัน"
 
 msgid "Maximum number of open positions"
-msgstr ""
+msgstr "จำนวนสูงสุดของโพซิชั่นที่เปิดอยู่"
 
 msgid "Maximum price over selected period"
 msgstr ""
@@ -2109,7 +2109,7 @@ msgid "No Touch trades"
 msgstr ""
 
 msgid "No touch"
-msgstr ""
+msgstr "ไม่แตะเส้น"
 
 msgid "Normalized Average True Range (NATR)"
 msgstr ""
@@ -2559,13 +2559,13 @@ msgid "Rise"
 msgstr "ขึ้น"
 
 msgid "Rise/Fall"
-msgstr ""
+msgstr "Rise/Fall"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
 msgstr ""
 
 msgid "Rise/Fall trades"
-msgstr ""
+msgstr "การซื้อขาย Rise/Fall"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
 msgstr ""
@@ -2577,10 +2577,10 @@ msgid "Robust and secure platform"
 msgstr ""
 
 msgid "Safari"
-msgstr ""
+msgstr "Safari"
 
 msgid "Salaried Employee"
-msgstr ""
+msgstr "พนักงานที่ได้รับเงินเดือน"
 
 msgid "Sale Date"
 msgstr ""
@@ -2589,7 +2589,7 @@ msgid "Sale Price"
 msgstr ""
 
 msgid "Sand Signika"
-msgstr ""
+msgstr "Sand Signika"
 
 msgid "Sat"
 msgstr "ส"
