@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 11:30-0400\n"
+"PO-Revision-Date: 2018-06-02 11:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -806,7 +806,7 @@ msgid "Breakaway (CDLBREAKAWAY)"
 msgstr "Breakaway (CDLBREAKAWAY)"
 
 msgid "Browser upgrade required"
-msgstr "จำเป็นต้องอัพเกรดเบราว์เซอร์"
+msgstr "จำเป็นต้องอัพเกรดเบราเซอร์"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
 msgstr "ดัชนีกระทิง และดัชนีหมี เริ่มที่ 00:00 GMT ในแต่ละวัน เพื่อจำลองสภาพตลาดกระทิงและตลาดหมีตามลำดับ"
@@ -821,7 +821,7 @@ msgid "By clicking"
 msgstr "โดยการคลิก"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
-msgstr "โดยการกดปุ่มตกลง (OK) คุณยืนยันว่าได้อ่านและยอมรับการปรับปรุง"
+msgstr "โดยการกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการปรับปรุง"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
