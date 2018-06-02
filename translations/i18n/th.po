@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 07:10-0400\n"
+"PO-Revision-Date: 2018-06-02 07:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2184,7 +2184,7 @@ msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
 msgstr "ตัวอักษร ช่องว่าง ขีดกลาง จุด เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
 
 msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค, - / @ ' ที่อนุญาตให้ใช้ได้"
+msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค - / @ ' ที่อนุญาตให้ใช้ได้"
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค ขีดกลาง"
@@ -2442,7 +2442,7 @@ msgid "Profit/Loss (points)"
 msgstr "กำไร/ขาดทุน (จุด)"
 
 msgid "Protect your profits"
-msgstr "ปกป้องผลกำไรของคุณ"
+msgstr "ปกป้องผลกำไรของท่าน"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr ""
@@ -3147,13 +3147,13 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr ""
 
 msgid "This field is required"
-msgstr ""
+msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
 
 msgid "This is another award we really savour. Trade2win is a portal for active traders seeking to profit from stocks, futures, options and forex, and these traders award us silver (we are just pipped for gold by Betfair). It means active traders worldwide rate our trading platform extremely highly"
-msgstr ""
+msgstr "นี้คืออีกรางวัลหนึ่งที่เราได้ดื่มด่ำอย่างมีความสุข Trade2win เป็นระบบสำหรับนักลงทุนเพื่อการแสวงหากำไรจากหลักทรัพย์ ฟิวเจอร์ ออปชั่น และฟอเร็กซ์ นักลงทุนเหล่านี้เองที่มอบรางวัลให้เรา สำหรับรางวัลซิลเวอร์ (ซึ่งเราเพิ่งได้ระดับโกลด์มา จาก Betfair) นั่นหมายความว่า นักลงทุนที่ใช้งานอยู่ทั่วโลกประกาศว่า เราคือระบบซื้อขายที่เยี่ยมยอดทีเดียว"
 
 msgid "This is big. We pick up a double award from the Financial Times and Investors Chronicle, reflecting our success in improving the quality and usability of our website and products"
-msgstr ""
+msgstr "นี้ก็ผลงานชิ้นใหญ่อีกอันหนึ่ง พวกเราได้รับสองรางวัลจาก The Financial Times และ Investors Chronicle เพื่อแสดงถึงความสำเร็จของเราในการพัฒนาเว็บไซต์และผลิตภัณฑ์ของเราอย่างมีคุณภาพและใช้งานง่าย"
 
 msgid "This is the current price at which an underlying can be bought or sold at a particular time"
 msgstr ""
@@ -3216,10 +3216,10 @@ msgid "Time interval"
 msgstr "ช่วงเวลา"
 
 msgid "Time out until"
-msgstr ""
+msgstr "หมดเวลากระทั่ง"
 
 msgid "Times are changing. We increase payouts so our clients can make the most of their winning trades"
-msgstr ""
+msgstr "เวลาเปลี่ยนแปรไป เราเพิ่มการจ่ายเงิน ดังนั้นลูกค้าของเราสามารถมีโอกาสมากขึ้นในการได้รับเงินเพิ่มจากการซื้อขาย"
 
 msgid "Title"
 msgstr "คำนำหน้าชื่อ"
@@ -3243,16 +3243,16 @@ msgid "Token"
 msgstr "โทเค่น"
 
 msgid "Token Management"
-msgstr ""
+msgstr "การจัดการโทเค่น"
 
 msgid "Token management"
-msgstr ""
+msgstr "การจัดการโทเค่น"
 
 msgid "Token name"
-msgstr ""
+msgstr "ชื่อโทเค่น"
 
 msgid "Token permissions"
-msgstr ""
+msgstr "สิทธิ์โทเค่น"
 
 msgid "Tokens are special codes for accessing"
 msgstr ""
@@ -3300,16 +3300,16 @@ msgid "Trade Types"
 msgstr "ประเภทการซื้อขาย"
 
 msgid "Trade according to your preferred strategy"
-msgstr ""
+msgstr "ซื้อขายตามกลยุทธ์ที่ท่านปรารถนา"
 
 msgid "Trade using"
 msgstr ""
 
 msgid "Trader"
-msgstr ""
+msgstr "นักลงทุน"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "สถิติของนักลงทุน"
 
 msgid "Trades Profitability"
 msgstr ""
@@ -3318,19 +3318,19 @@ msgid "Trades break down"
 msgstr ""
 
 msgid "Trading Times"
-msgstr ""
+msgstr "เวลาซื้อขาย"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr ""
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr ""
+msgstr "การซื้อขายไบนารีออปชั่นอาจจะไม่เหมาะสมกับทุกคน ดังนั้นโปรดแน่ใจว่า ท่านมีความเข้าใจอย่างครบถ้วนเกี่ยวกับความเสี่ยงที่เกี่ยวข้อง การขาดทุนของท่านสามารถเกินจำนวนเงินฝากเริ่มต้น และท่านจะไม่ได้รับผลตอบแทนใดๆ จากสินทรัพย์ที่อ้างถึงนั้น อนึ่ง ไบนารีออปชั่น เป็นผลิตภัณฑ์เพื่อการเสี่ยงโชค โปรดทราบว่า การเสี่ยงโชคอาจเป็นพฤติกรรมเสพติด โปรดใช้ความระมัดระวังในการซื้อขาย "
 
 msgid "Tradingview for Binary.com"
-msgstr ""
+msgstr "Tradingview สำหรับ Binary.com"
 
 msgid "Transfer"
-msgstr ""
+msgstr "โอน"
 
 msgid "Transfer to another Binary account"
 msgstr ""
@@ -3354,7 +3354,7 @@ msgid "True Range (TRANGE)"
 msgstr "True Range (TRANGE)"
 
 msgid "Try"
-msgstr ""
+msgstr "ลอง"
 
 msgid "Tue"
 msgstr "อัง"
@@ -3471,7 +3471,7 @@ msgid "View Statement"
 msgstr "ดูรายการเดินบัญชี"
 
 msgid "Volatility Index Markets"
-msgstr ""
+msgstr "ตลาดดัชนีความผันผวน"
 
 msgid "Volatility Indicators"
 msgstr "ดัชนีความผันผวน"
@@ -3480,10 +3480,10 @@ msgid "Volatility Indices"
 msgstr "ดัชนีความผันผวน"
 
 msgid "Volatility Indices are further categorized into two types"
-msgstr ""
+msgstr "ดัชนีความผันผวนถูกจำแนกเป็น 2 ประเภท"
 
 msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
-msgstr ""
+msgstr "ดัชนีผันผวน - ผลิตภัณฑ์ดัชนีลิขสิทธิ์ของ %1 ซึ่งกระตุ้นตลาด"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr ""
@@ -3570,7 +3570,7 @@ msgid "Withdrawal via payment agents"
 msgstr ""
 
 msgid "Workspace"
-msgstr ""
+msgstr "Workspace"
 
 msgid "X-axis labels"
 msgstr "ป้ายชื่อแกนเอ็กซ์ (แนวนอน)"
@@ -3600,7 +3600,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr ""
 
 msgid "You can"
-msgstr ""
+msgstr "ท่านสามารถ"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr ""
@@ -3609,7 +3609,7 @@ msgid "You have sold the following contract"
 msgstr ""
 
 msgid "You haven't saved any templates yet"
-msgstr ""
+msgstr "ท่านยังไม่ได้บันทึกแม่แบบใด ๆ"
 
 msgid "You only need to make four decisions to execute a binary contract"
 msgstr ""
@@ -3633,13 +3633,13 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr ""
 
 msgid "Your browser is not supported"
-msgstr ""
+msgstr "เบราเซอร์ของท่านไม่รองรับการใช้งาน"
 
 msgid "Your copying settings"
 msgstr ""
 
 msgid "Your email"
-msgstr ""
+msgstr "อีเมล์ของท่าน"
 
 msgid "Your new account balance is"
 msgstr ""
@@ -3666,13 +3666,13 @@ msgid "apostrophe (') are allowed"
 msgstr ""
 
 msgid "apply online"
-msgstr ""
+msgstr "สมัครออนไลน์"
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr ""
 
 msgid "auto-trader programming tool"
-msgstr ""
+msgstr "เครื่องมือในการตั้งซื้อขายแบบอัตโนมัติ"
 
 msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
 msgstr ""
