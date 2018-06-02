@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 07:00-0400\n"
+"PO-Revision-Date: 2018-06-02 07:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1328,7 +1328,7 @@ msgid "Evening Star (CDLEVENINGSTAR)"
 msgstr "Evening Star (CDLEVENINGSTAR)"
 
 msgid "Exclude me from the website until"
-msgstr "แยกฉันจากเว็บไซต์จนถึง"
+msgstr "พักการใช้งานของฉันจากเว็บไซต์จนถึง"
 
 msgid "Exit Spot"
 msgstr "สปอตสิ้นสุด"
@@ -1349,7 +1349,7 @@ msgid "Exponential Moving Average (EMA)"
 msgstr "Exponential Moving Average (EMA)"
 
 msgid "Fall"
-msgstr "ตก"
+msgstr "Fall"
 
 msgid "Family name"
 msgstr "นามสกุล"
@@ -1400,7 +1400,7 @@ msgid "First name"
 msgstr "ชื่อตัว"
 
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
-msgstr "ขั้นแรก คุณต้องกำหนดตัวแปรในการซื้อขาย เหล่านี้คือสิ่งที่คุณต้องพิจารณา"
+msgstr "ขั้นแรก ท่านต้องกำหนดตัวแปรในการซื้อขาย เหล่านี้คือ สิ่งที่ท่านต้องพิจารณา"
 
 msgid "Flexible"
 msgstr "ยืดหยุ่น"
@@ -1463,7 +1463,7 @@ msgid "Go to"
 msgstr "ไปที่"
 
 msgid "Goes out"
-msgstr "ออกนอก"
+msgstr "Goes out"
 
 msgid "Gravestone Doji (CDLGRAVESTONEDOJI)"
 msgstr "Gravestone Doji (CDLGRAVESTONEDOJI)"
