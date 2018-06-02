@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 08:40-0400\n"
+"PO-Revision-Date: 2018-06-02 11:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -464,7 +464,7 @@ msgid "All markets"
 msgstr "ตลาดทั้งหมด"
 
 msgid "All markets and conditions"
-msgstr "เงื่อนไขทั้งหมดในตลาด"
+msgstr "ทุกตลาดและทุกเงื่อนไข"
 
 msgid "All payouts"
 msgstr "การชำระเงินทั้งหมด"
@@ -656,7 +656,7 @@ msgid "Binary granted Investment Services license"
 msgstr "ไบนารีได้รับใบอนุญาตการให้บริการการลงทุน"
 
 msgid "Binary mobile applications and third party tools"
-msgstr ""
+msgstr "Binary แอพพลิเคชันบนอุปกรณ์พกพา และเครื่องมือของผู้พัฒนาอิสระอื่นๆ"
 
 msgid "Binary opens Japan office"
 msgstr "Binary เปิดสำนักงานที่ประเทศญี่ปุ่น"
@@ -779,16 +779,16 @@ msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter
 msgstr "ดัชนีที่ซื้อขายเองของ Binary.com และหลักทรัพย์จากตลาดเจรจาต่อรองมีให้ท่านเป็นอีกทางเลือกหนึ่งในการซื้อขายดัชนีหุ้น และหุ้น ที่มีจากแหล่งอื่นนอกเหนือจากตลาดแลกเปลี่ยนกลาง"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
-msgstr ""
+msgstr "ดัชนีที่ซื้อขายเองของ %1 และหลักทรัพย์จากตลาดเจรจาต่อรองนั้นมีข้อดีจากการมีกราฟและราคาที่เรียลไทม์ ทำให้ท่านเพิ่มโอกาสในการทำกำไรจากดัชนีและหลักทรัพย์ทีมีการเสนอราคาตามเวลาจริง"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
 msgstr ""
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
-msgstr ""
+msgstr "ดัชนีผันผวนของ %1 ใช้การเข้ารหัสเพื่อความปลอดภัยในการสุ่มจำนวนตัวเลขที่สามารถตรวจสอบความยุติธรรมได้โดยไม่ขึ้นกับหน่วยงานใดๆ"
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
-msgstr ""
+msgstr "ระบบต่างๆ ของ %1 ขณะนี้มีการประมวลผลมากกว่า 1 ล้านธุรกรรมต่อวัน (รวมประเภทบัญชีเสมือน หรือ บัญชีทดลองใช้)"
 
 msgid "Bollinger Bands (BBANDS)"
 msgstr "โบลินเจอร์ แบนด์ (BBANDS)"
@@ -953,7 +953,7 @@ msgid "Computer system and method for speculating on a financial market"
 msgstr "ระเบียบวิธีและระบบคอมพิวเตอร์สำหรับการเก็งกำไรในตลาดการเงิน"
 
 msgid "Computer trading system for offering custom financial market speculations"
-msgstr ""
+msgstr "ระบบคอมพิวเตอร์เพื่อการซื้อขายผลิตภัณฑ์การลงทุนเพื่อการเก็งกำไรในตลาดการเงิน"
 
 msgid "Conditions"
 msgstr "เงื่อนไข"
@@ -1049,7 +1049,7 @@ msgid "Daily Reset Indices"
 msgstr ""
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
-msgstr ""
+msgstr "ดัชนีถูกตั้งค่าใหม่รายวันจำลองสภาพของแนวโน้มความตื่นตัวและความซบเซาของตลาดด้วยความผันผวนที่คงที่"
 
 msgid "Daily limit on losses"
 msgstr "วงเงินขาดทุนต่อวัน"
@@ -1157,10 +1157,10 @@ msgid "Do you offer virtual-money accounts?"
 msgstr "ท่านได้รับการเสนอบัญชีทดลองใช้หรือไม่?"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr ""
+msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1178,7 +1178,7 @@ msgid "Donchian Channel (DC)"
 msgstr "Donchian Channel (DC)"
 
 msgid "Done. The funds are being transferred to the payment agent"
-msgstr ""
+msgstr "เสร็จแล้ว หลักประกันได้ถูกโอนไปยังตัวแทนรับชำระเงินแล้ว"
 
 msgid "Done. The funds are transferred"
 msgstr "เรียบร้อย หลักประกันได้ถูกโอนแล้ว"
@@ -1235,7 +1235,7 @@ msgid "Drawing tools"
 msgstr "เครื่องมือวาดภาพ"
 
 msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr ""
+msgstr "ตามที่มีการเปลี่ยนแปลงเกิดขึ้นในหลักเกณฑ์ พวกเราใคร่ขอให้ลูกค้าดำเนินการบันทึกการประเมินทางการเงินของท่านใหม่ ทางบริษัทฯ ขอเรียนให้ทราบว่า ท่านจะไม่สามารถซื้อขายต่อไปได้หากท่านยังไม่ได้ตอบแบบสำรวจดังกล่าว"
 
 msgid "Duration"
 msgstr "ระยะเวลา"
@@ -1247,13 +1247,13 @@ msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
-msgstr ""
+msgstr "แต่ละสัญญาของไบนารีออปชั่นจะมีอายุระยะเวลาหนึ่ง – กับ %1 ท่านสามารถกำหนดระยะเวลาสัญญาระหว่าง 10 วินาที ไปถึง 365 วัน"
 
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "แต่ละไบนารีออปชั่นเป็นการพยากรณ์การเคลื่อนไหวในอนาคตของตลาดจำเพาะต่างๆ"
 
 msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
-msgstr ""
+msgstr "แต่ละการซื้อขายเป็นการกำหนดจำนวนเงินที่ต้องถูกชำระไว้ก่อน ซึ่งท่านสามารถปรับตัวแปรในการคำนวณมูลค่า เมื่อท่านชนะจะได้รับการชำระเงิน หากการพยากรณ์ หรือ การทำนายของท่านถูกต้อง หรือท่านจะต้องชำระเงินที่ท่านวางหากผลไม่ถูกต้อง"
 
 msgid "Edge"
 msgstr "ขอบ"
@@ -1803,7 +1803,7 @@ msgid "Link"
 msgstr "ลิงค์"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "โหลด Workspace"
 
 msgid "Load chart template"
 msgstr "โหลดแผนภูมิแม่แบบ"
@@ -1815,22 +1815,22 @@ msgid "Loading"
 msgstr "กำลังโหลด..."
 
 msgid "Loading Asset Index"
-msgstr ""
+msgstr "กำลังโหลดดัชนีสินทรัพย์"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "กำลังโหลด Copy Trade"
 
 msgid "Loading Download/View Data"
-msgstr ""
+msgstr "กำลังโหลด Download/View Data"
 
 msgid "Loading MAM"
 msgstr "กำลังโหลด MAM"
 
 msgid "Loading Password dialog"
-msgstr ""
+msgstr "กำลังโหลด Password Dialog"
 
 msgid "Loading Profit Table"
-msgstr ""
+msgstr "กำลังโหลด Profit Table"
 
 msgid "Loading Real account opening"
 msgstr "กำลังโหลดการเปิดบัญชีจริง"
