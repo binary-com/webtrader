@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 06:40-0400\n"
+"PO-Revision-Date: 2018-06-02 06:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -89,10 +89,10 @@ msgid "- Predict the market touching or not touching a price target"
 msgstr "- คาดการณ์ตลาดจะแตะ หรือไม่แตะราคาเป้าหมาย"
 
 msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
-msgstr "- ได้รับใบเสนอราคาสำหรับการซื้อขาย และการซื้อขายเองจากตลาด คุณจะได้รับอัตราที่เป็นกลาง โปร่งใสราคาจาก Binary.com เสมอ"
+msgstr "- ได้รับใบเสนอราคาสำหรับการซื้อขาย และการซื้อขายเองจากตลาด ท่านจะได้รับอัตราที่เป็นกลาง โปร่งใสราคาจาก Binary.com เสมอ"
 
 msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
-msgstr "- ขายสัญญาระยะยาวของคุณก่อนหมดอายุเพื่อรักษากำไรของที่พึงได้ หรือเพื่อลดการขาดทุน"
+msgstr "- ขายสัญญาระยะยาวของท่านก่อนหมดอายุเพื่อรักษากำไรของที่พึงได้ หรือ เพื่อลดการขาดทุน"
 
 msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
 msgstr "- ซื้อขายตาม \"สัญชาตญาณ\" หรือดูจากการวิเคราะห์ทางด้านเทคนิค และพื้นฐาน"
@@ -251,7 +251,7 @@ msgid "3 Minutes"
 msgstr "3 นาที"
 
 msgid "3. Choose how you want to Trade the Market"
-msgstr "3. เลือกว่าท่านต้องการซื้อขายอย่างไร"
+msgstr "3. เลือกว่า ท่านต้องการซื้อขายอย่างไร"
 
 msgid "3. Duration"
 msgstr "3. ระยะเวลา"
@@ -281,7 +281,7 @@ msgid "4 Hours"
 msgstr "4 ชั่วโมง"
 
 msgid "4. Barrier(s)"
-msgstr "4. Barrier(s)"
+msgstr "4. Barrier"
 
 msgid "4. Choose your Stake and Potential Return"
 msgstr "4. เลือกจำนวนเงินเดิมพันและผลกำไร"
@@ -323,7 +323,7 @@ msgid "8h"
 msgstr "8 ชั่วโมง"
 
 msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji that has gapped above it, then a third bearish candle that closes well within the body of the first candle and in doing so confirming the reversal. It is considered a strong bearish price reversal candlestick pattern"
-msgstr "Evening Doji Star ประกอบด้วยแท่งเทียนยาวท่ี่แสดงความตื่นตัว ตามด้วย Doji ที่มีช่องว่างด้านบน จากนั้นเป็นแท่งเทียนที่สามที่แสดงความซบเซาที่ปิดอย่างดีภายในแท่งเทียนแรก และเช่นนี้เป็นการยืนยันถึงการพลิกกลับ ซึ่งถือว่าเป็นรูปแบบแท่งเทียนที่แสดงการพลิกกลับอย่างแข็งแกร่งของราคาที่ซบเซา"
+msgstr "Evening Doji Star ประกอบด้วยแท่งเทียนยาวที่แสดงความตื่นตัว ตามด้วย Doji ที่มีช่องว่างด้านบน จากนั้นเป็นแท่งเทียนที่สามที่แสดงความซบเซาที่ปิดอย่างดีภายในแท่งเทียนแรก และเช่นนี้เป็นการยืนยันถึงการพลิกกลับ ซึ่งถือว่า เป็นรูปแบบแท่งเทียนที่แสดงการพลิกกลับอย่างแข็งแกร่งของราคาที่ซบเซา"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
 msgstr "Smoothed Moving Average คือการผสมผสานระหว่าง Simple Moving Average และ Exponential Moving Average ใช้กับระยะเวลาที่ยาวกว่าเท่านั้น"
@@ -2754,13 +2754,13 @@ msgid "Start time"
 msgstr "เวลาเริ่มต้น"
 
 msgid "State/province/region"
-msgstr ""
+msgstr "รัฐ/จังหวัด/ภูมิภาค"
 
 msgid "Statement"
 msgstr "รายงานทางการเงิน"
 
 msgid "Statistical Functions"
-msgstr ""
+msgstr "ฟังก์ชันทางสถิติ"
 
 msgid "Status"
 msgstr "สถานะ"
@@ -2805,10 +2805,10 @@ msgid "Stock market indices measure the value of a selection of companies in the
 msgstr ""
 
 msgid "Stocks trading experience"
-msgstr ""
+msgstr "ประสบการณ์ในการซื้อขายหลักทรัพย์ต่างๆ"
 
 msgid "Stocks trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายหลักทรัพย์ต่างๆ"
 
 msgid "Stop Loss Level"
 msgstr "ระดับยุติการซื้อขาย"
@@ -2826,16 +2826,16 @@ msgid "Stop-type"
 msgstr "ประเภทการยุติ"
 
 msgid "Stroke color"
-msgstr ""
+msgstr "สีของเส้น"
 
 msgid "Stroke width"
-msgstr ""
+msgstr "ความกว้างของเส้น"
 
 msgid "Submit"
 msgstr "ส่ง"
 
 msgid "Successfully applied the template and saved it as"
-msgstr ""
+msgstr "เลือกใช้แม่แบบและบันทึกเรียบร้อยแล้ว"
 
 msgid "Summation (SUM)"
 msgstr "Summation (SUM)"
@@ -2850,7 +2850,7 @@ msgid "Table"
 msgstr "ตาราง"
 
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
-msgstr ""
+msgstr "Takuri (แมลงปอแท่งเทียนเงาล่างยาวมาก) (CDLTAKURI)"
 
 msgid "Tasuki Gap (CDLTASUKIGAP)"
 msgstr "Tasuki Gap (CDLTASUKIGAP)"
@@ -2871,22 +2871,22 @@ msgid "Template changes saved"
 msgstr "การเปลี่ยนแปลงแม่แบบได้ถูกบันทึกแล้ว"
 
 msgid "Template name"
-msgstr ""
+msgstr "ชื่อแม่แบบ"
 
 msgid "Template name already exists"
 msgstr ""
 
 msgid "Terms"
-msgstr ""
+msgstr "ข้อตกลง"
 
 msgid "Tertiary"
-msgstr ""
+msgstr "ลำดับที่สาม"
 
 msgid "The"
-msgstr ""
+msgstr "-"
 
 msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "AUD Index เป็นดัชนีถ่วงน้ำหนัก ที่ใช้แสดงมูลค่าของดอลลาร์ออสเตรเลียกับ 5 สกุลเงินหลักของโลก (USD, EUR, GBP, JPY, CAD) โดยมีนำ้หนักแต่ละสกุลเงินที่ 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr ""
@@ -3018,10 +3018,10 @@ msgid "The Typical Price function measures the average of the high, low, and clo
 msgstr ""
 
 msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
-msgstr ""
+msgstr "ดัชนี USD เป็นดัชนีถ่วงน้ำหนัก แสดงมูลค่าของค่าเงินดอลลาร์สหรัฐต่อ 5 สกุลเงินสากล (EUR, GBP, JPY, CAD, AUD) โดยใช้ร้อยละ 20 ในการถ่วงน้ำหนัก"
 
 msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
-msgstr ""
+msgstr "ดัชนีแปรปรวน 100 เป็นสองเท่าของความแปรปรวนของดัชนีแปรปรวน 50 และเป็นสี่เท่าของ ดัชนีแปรปรวน 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr ""
@@ -3030,7 +3030,7 @@ msgid "The balance of power (BOP) indicator measures the strength of the bulls v
 msgstr ""
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
-msgstr ""
+msgstr "ค่า Barrier ของการซื้อขายไบนารีออปชั่น คือ ราคาเป้าหมายที่ท่านกำหนดสำหรับตลาดอ้างอิง ท่านสามารถเลือกซื้อขายมูลค่าต่ำกว่า หรือ สูงกว่า ราคาเป้าหมาย หรือ อยู่ระหว่างค่าสองค่าใดๆ"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
 msgstr ""
@@ -3042,28 +3042,28 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr ""
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
-msgstr ""
+msgstr "ระยะเวลาของสัญญาในการซื้อขาย เรียกว่า ระยะเวลา"
 
 msgid "The duration is the length of a purchased trade (see"
 msgstr ""
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
-msgstr ""
+msgstr "ราคาสปอตเริ่มต้น คือ ราคาเริ่มต้นของการเริ่มซื้อขายโดยนักลงทุน"
 
 msgid "The expiry price is the price of the underlying when the contract expires"
-msgstr ""
+msgstr "ราคาที่หมดอายุ คือ ราคาของผลิตภัณฑ์อ้างอิงเมื่อสัญญาหมดอายุ"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr ""
+msgstr "บริการการซื้อขายทางการเงินในเว็บไซต์นี้เหมาะกับลูกค้าผู้ซึ่งพึงรับรู้ต่อภาวะขาดทุนต่อเงินทั้งหมดที่ได้ลงทุน และผู้ซึ่งเข้าใจและมีประสบการณ์ต่อความเสี่ยงที่เกี่ยวข้องกับการได้มาซึ่งสัญญาทางการเงินต่างๆ ธุรกรรมที่เกี่ยวข้องกับสัญญาทางการเงินมีความเสี่ยงระดับสูง หากสัญญาที่ซื้อหมดอายุ ท่านจะสูญเสียเงินลงทุนของท่านทั้งหมด ซึ่งรวมถึงค่าธรรมเนียมของสัญญาด้วย"
 
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr ""
+msgstr "บริการการซื้อขายทางการเงินในเว็บไซต์นี้เหมาะกับลูกค้าผู้ซึ่งพึงรับรู้ต่อภาวะขาดทุนต่อเงินทั้งหมดที่ได้ลงทุน และผู้ซึ่งเข้าใจและมีประสบการณ์ต่อความเสี่ยงที่เกี่ยวข้องกับการได้มาซึ่งสัญญาทางการเงินต่างๆ ธุรกรรมที่เกี่ยวข้องกับสัญญาทางการเงินมีความเสี่ยงระดับสูง หากสัญญาที่ซื้อหมดอายุ ท่านจะสูญเสียเงินลงทุนของท่านทั้งหมด ซึ่งรวมถึงค่าธรรมเนียมของสัญญาด้วย"
 
 msgid "The first step is to open an account. You can"
 msgstr ""
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
-msgstr ""
+msgstr "สิ่งแรกที่ต้องทำ คือ เลือกสินทรัพย์ที่ท่านปรารถนาจะซื้อขาย เช่น ทองคำ หรือ น้ำมัน หลักทรัพย์ หรือ อัตราแลกเปลี่ยน (มูลค่าของไบนารีออปชั่นจะถูกกำหนดจากราคาของผลิตภัณฑ์อ้างอิง) ประโยชน์ที่ยิ่งใหญ่ของการซื้อขายออปชั่น คือ ท่านไม่ได้กำลังซื้อ หรือ ดำเนินการขายสินทรัพย์จริง"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr ""
@@ -3075,22 +3075,22 @@ msgid "The indicator is designed for use on a monthly time scale. It is the sum 
 msgstr ""
 
 msgid "The market exit price is the price in effect at the end of the contract period"
-msgstr ""
+msgstr "ราคาสิ้นสุดของตลาด คือ ราคาที่มีผลในช่วงสุดท้ายของเวลาในสัญญา"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
 msgstr ""
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
-msgstr ""
+msgstr "สิทธิบัตร หมายถึง Regent Markets ได้รับการยอมรับให้เป็นผู้บุกเบิกการซื้อขายไบนารี สิทธิบัตรช่วยป้องกันนวัตกรรมที่พวกเราได้สร้างสรรค์ขึ้น"
 
 msgid "The payout is the amount paid to an options trader if their prediction is correct"
-msgstr ""
+msgstr "การชำระเงินเกิดขึ้นเมื่อผู้ซื้อขายออปชั่นพยากรณ์ได้ถูกต้อง"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
 msgstr ""
 
 msgid "The premier platform for trading binary options in the world's financial markets"
-msgstr ""
+msgstr "แพลตฟอร์มปฐมฤกษ์สำหรับการซื้อขายไบนารีออปชั่นในตลาดการเงินระดับโลก"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
 msgstr ""
