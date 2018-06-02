@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-02 06:50-0400\n"
+"PO-Revision-Date: 2018-06-02 07:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -473,7 +473,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "เวลาที่ใช้อ้างอิง คือ GMT (Greenwich Mean Time) เวลามาตรฐานเมืองกรีนิช"
 
 msgid "Allow others to copy your trades"
-msgstr "อนุญาตให้ผู้อื่นคัดลอกการซื้อขายของคุณ"
+msgstr "อนุญาตให้ผู้อื่นคัดลอกการซื้อขายของท่าน"
 
 msgid "Amount"
 msgstr "มูลค่า"
@@ -485,10 +485,10 @@ msgid "Amount per point"
 msgstr "จำนวนต่อจุด"
 
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target"
-msgstr "การซื้อขายแบบสิ้้นสุดระหว่าง จะให้ผลตอบแทน หากราคาปิดของตลาดมีค่าสูงกว่ามูลค่าราคาเป้าหมายต่ำ และ ต่ำกว่ามูลค่าราคาเป้าหมายสูง การซื้อขายแบบสิ้นสุดนอกขอบเขต จะให้ผลตอบแทน หากราคาปิดของตลาด สูงกว่ามูลค่าราคาเป้าหมายสูง หรือ ต่ำกว่ามูลค่าราคาเป้าหมายต่ำ"
+msgstr "การซื้อขายแบบสิ้นสุดระหว่าง จะให้ผลตอบแทน หากราคาปิดของตลาดมีค่าสูงกว่ามูลค่าราคาเป้าหมายต่ำ และ ต่ำกว่ามูลค่าราคาเป้าหมายสูง การซื้อขายแบบสิ้นสุดนอกขอบเขต จะให้ผลตอบแทน หากราคาปิดของตลาด สูงกว่ามูลค่าราคาเป้าหมายสูง หรือ ต่ำกว่ามูลค่าราคาเป้าหมายต่ำ"
 
 msgid "Another major award. This time we're nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge"
-msgstr "รางวัลใหญ่อีกรายการหนึ่ง ในครั้งนี่พวกเราได้รับการเสนอชื่อเข้าชิงโดยผู้อ่านออนไลน์ Global Banking and Finance Review และตัดสินโดยคณะผู้เชี่ยวชาญและนักวิเคราะห์ของอุตสาหกรรม ซึ่งเห็นว่า เรามีระบบที่เชื่อถือได้ มีการซื้อขายหลายระดับ นโยบายราคา มีการบริการลูกค้า และทักษะความรู้เชิงลึก มายาวนานกว่า 13 ปี"
+msgstr "รางวัลใหญ่อีกรายการหนึ่ง ในครั้งนี่พวกเราได้รับการเสนอชื่อเข้าชิงโดยผู้อ่านออนไลน์ Global Banking and Finance Review และตัดสินโดยคณะผู้เชี่ยวชาญและนักวิเคราะห์ของอุตสาหกรรม ซึ่งเห็นว่า เรามีระบบที่เชื่อถือได้ มีการซื้อขายหลายระดับ นโยบายราคา มีการบริการลูกค้า และทักษะความรู้เชิงลึกมายาวนานกว่า 13 ปี"
 
 msgid "Answer"
 msgstr "คำตอบ"
@@ -515,10 +515,10 @@ msgid "Are you sure you want to delete template?"
 msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการลบแม่แบบนี้?"
 
 msgid "Are you sure you want to delete this token?"
-msgstr "คุณแน่ใจหรือไม่ที่ต้องการลบโทเค่นนี้"
+msgstr "ท่านแน่ใจหรือไม่ที่ต้องการลบโทเค่นนี้"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr "คุณแน่ใจหรือไม่ว่า ต้องการเขียนทับแม่แบบปัจจุบัน"
+msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการเขียนทับแม่แบบปัจจุบัน"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Moving Average (ALMA)"
@@ -608,7 +608,7 @@ msgid "Barrier offset"
 msgstr "Barrier ออฟเซ็ท"
 
 msgid "Barrier(s)"
-msgstr "Barrier(s)"
+msgstr "Barrier"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
 msgstr ""
@@ -620,7 +620,7 @@ msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr "รางวัล ‘Best Fixed-Odds Financial Trading Provider’ ได้รับจาก Shares Magazine สหราชอาณาจักร"
 
 msgid "BetOnMarkets goes live"
-msgstr "BetOnMarkets ประกาศใช้งาน"
+msgstr "BetOnMarkets ประกาศใช้งานจริง"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
 msgstr "BetOnMarkets.com มีลูกค้าเกินกว่า 400,000 ราย ในฐานข้อมูลและเข้าสู่เป้าหมาย 1 พันล้านเหรียนสหรัฐในปีที่ 13 ของเรา ทำให้เราเป็นหนึ่งในผู้ให้บริการซื้อขาย แบบ Fixed-Odds"
@@ -686,7 +686,7 @@ msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 
 msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK ได้รับใบอนุญาตจาก KLFB เทียบเท่าธุรกิจด้านเครื่องมือทางการเงินประเภทที่ 1 ในประเทศญี่ปุ่น"
 
 msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and starts the process of applying for relevant licenses"
-msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK เปิดสำนักงานที่โตเกียว และเริ่มดำเนินการในการขอใบอนุญาตต่างๆที่เกี่ยวข้อง"
+msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK เปิดสำนักงานที่โตเกียว และเริ่มดำเนินการในการขอใบอนุญาตต่างๆ ที่เกี่ยวข้อง"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
 msgstr "สำนักงานสาขามอลเตสของ Binary คือ Binary Investments (Europe) Ltd. ได้รับอนุญาตในการให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority"
@@ -707,7 +707,7 @@ msgid "Binary.com announces plans for an"
 msgstr "Binary.com ประกาศแผนการสำหรับ"
 
 msgid "Binary.com continues to innovate and grow"
-msgstr "Binary.com สร้างสรรค์สิ่งใหม่ๆและเติบโต อย่างต่อเนื่อง"
+msgstr "Binary.com สร้างสรรค์สิ่งใหม่ๆ และเติบโต อย่างต่อเนื่อง"
 
 msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
 msgstr "Binary.com ได้สร้างดัชนีผันผวนที่คุณสามารถซื้อขายได้ ตลอด 24 ชั่วโมง 7 วัน คุณสามารถซื้อขายนี้ได้กับสัญญาทุกประเภท"
@@ -1154,7 +1154,7 @@ msgid "Do I need to deposit any funds to open an account?"
 msgstr "ฉันต้องฝากเงินเพื่อเปิดบัญชีหรือไม่?"
 
 msgid "Do you offer virtual-money accounts?"
-msgstr "ท่านได้รับการเสนอบัญชีเสมือนหรือไม่?"
+msgstr "ท่านได้รับการเสนอบัญชีทดลองใช้หรือไม่?"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr ""
