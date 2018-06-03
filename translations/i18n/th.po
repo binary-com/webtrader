@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-03 12:40-0400\n"
+"PO-Revision-Date: 2018-06-03 12:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -55,10 +55,10 @@ msgid "- Binary.com is not affiliated with any of the Payment Agents listed abov
 msgstr "- Binary.com ไม่ได้เข้าร่วมเป็นพันธมิตรกับตัวแทนรับชำระเงินที่แจกแจงข้างต้น ตัวแทนรับชำระเงินแต่ละรายดำเนินการในฐานะผู้ให้บริการอิสระ และไม่ได้รับการรับรอง รับประกัน หรืออนุมัติโดย Binary.com ลูกค้าที่ติดต่อกับตัวแทนรับชำระเงินจะต้องรับผิดชอบต่อความเสี่ยงต่างๆด้วยตัวเอง ขอแนะนำให้ลูกค้าตรวจสอบข้อมูลหลักฐานอ้างอิงของตัวแทนรับชำระเงินก่อนที่จะส่งเงินใดๆให้กับตัวแทน Binary.com ไม่ว่าในกรณีใดๆก็ตาม จะไม่รับผิดชอบต่อธุรกรรมที่กระทำขึ้นระหว่างลูกค้ากับตัวแทนรับชำระเงิน"
 
 msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
-msgstr "- เลือกจากการซื้อขายหลากหลายแบบที่มีมากกว่าหนึ่งล้านแบบเมื่อใดก็ได้ และปรับแต่งการซื้อขายของคุณตามกลยุทธ์ที่คุณต้องการ"
+msgstr "- เลือกจากการซื้อขายหลากหลายแบบที่มีมากกว่าหนึ่งล้านแบบเมื่อใดก็ได้ และปรับแต่งการซื้อขายของท่านตามกลยุทธ์ที่ท่านต้องการ"
 
 msgid "- Choose timeframes from 10 seconds to 365 days"
-msgstr "- เลือกระยะเวลา จาก 10 วินาที ถึง 365 วัน"
+msgstr "- กำหนดระยะเวลา จาก 10 วินาที ถึง 365 วัน"
 
 msgid "- Deposit as little as USD 5 to start trading"
 msgstr "- ฝากเงินแค่เพียง 5 เหรียญสหรัฐเพื่อเริ่มซื้อขาย"
@@ -70,7 +70,7 @@ msgid "- Enjoy a trading platform that s easy to navigate and use"
 msgstr "- เพลิดเพลินไปกับแพลตฟอร์มการซื้อขายที่ง่ายต่อการหาทางและใช้งาน"
 
 msgid "- Know how much you will win or lose before you purchase the contract"
-msgstr "- รู้ว่าจะได้เงิน หรือขาดทุนเท่าไหร่ก่อนจะซื้อสัญญา"
+msgstr "- ทราบว่า จะได้เงิน หรือ ขาดทุนเท่าไร ก่อนจะซื้อสัญญา"
 
 msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
 msgstr "- เปิดบัญชีและเริ่มซื้อขายภายในไม่กี่นาที การฝากและถอนเงินทำได้ตลอด 24 ชั่วโมง 7 วัน"
@@ -106,7 +106,7 @@ msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
 msgstr "- ซื้อขายเมื่อคุณต้องการ สามารถเข้า Binary.com ได้ตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
-msgstr "- ซื้อขายกับผู้บุกเบิกอุตสาหกรรมและเจ้าของเทคโนโลยีการกำหนดราคาที่ได้รับสิทธิบัตร"
+msgstr "- ซื้อขายกับผู้บุกเบิกอุตสาหกรรมและผู้ได้รับสิทธิบัตรในเทคโนโลยีการกำหนดราคา"
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- สกุลเงินต่างๆ หลักทรัพย์ต่างๆ ดัชนีต่างๆ และสินค้าโภคภัณฑ์ต่างๆ"
@@ -376,7 +376,7 @@ msgid "A chart pattern that consists of a small white candlestick with short sha
 msgstr "รูปแบบแผนภูมิที่ประกอบด้วยแท่งเทียนสีขาวสั้นที่มีเงาหรือหางสั้นตามด้วยแท่งเทียนสีดำขนาดใหญ่ซึ่งลดความสำคัญหรือ \"ปกคลุม\" แท่งสีขาวเล็ก"
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
-msgstr "อนุพันธ์คือเครื่องมือทางการเงินที่มูลค่าถูกกำหนดโดยอ้างอิงตลาดที่อ้างถึง มีการซื้อขายอนุพันธ์เป็นปกติในตลาดระหว่างธนาคาร และไบนารีถือเป็นหนึ่งในรูปแบบอนุพันธ์ที่ไม่ซับซ้อนที่สุด"
+msgstr "อนุพันธ์ คือ เครื่องมือทางการเงินประเภทหนึ่งซึ่งมูลค่าถูกกำหนดโดยการอ้างอิงของตลาด โดยทั่วไปการซื้อขายอนุพันธ์เกิดขึ้นในตลาดฟอเร็กซ์ และไบนารีเป็นรูปแบบที่ง่ายที่สุดของอนุพันธ์"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "สื่อกลางไปยังแท่งเทียนขนาดยาวของตลาดตื่นตัว หรือตลาดซบเซา โดยมีคุณสมบัติหลักๆคือไม่มีเงาหัวหรือหาง"
@@ -394,7 +394,7 @@ msgid "A technical trading pattern in which three candlesticks form what appears
 msgstr "รูปแบบการซื้อขายทางเทคนิคที่แท่งเทียนสามแท่งก่อเป็นรูปร่างที่ดูเหมือนกับแซนด์วิชบนหน้าจอของนักลงทุน แซนด์วิชแท่งจะมีแท่งเทียนตรงกลางที่มีสีตรงข้ามกับแท่งเทียนที่ขนาบทั้งสองข้าง ซึ่งแท่งเทียนทั้งคู่นั้นจะมีระยะการซื้อขายที่ใหญ่กว่าแท่งเทียนตรงกลาง รูปแบบแซนด์วิชแท่งสามารถเกิดขึ้นได้ทั้งในตัวบ่งชี้ตลาดซบเซา และตื่นตัว"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
-msgstr "ช่วงห่างราคา (Tick) คือ การเคลื่อนไหวของราคาในตลาดที่เล็กที่สุดในทิศทางขึ้น หรือ ลง"
+msgstr "ช่วงห่างของราคา (Tick) คือ การเคลื่อนไหวของราคาที่เล็กที่สุดในทิศทางขึ้น หรือ ลง ในตลาด"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
 msgstr "จะมีการบ่งชี้ถึงแนวโน้มโดยแท่งเทียนขนาดใหญ่ตามด้วย doji ซึ่งอยู่ภายในด้านบนและล่างของแท่งเทียน ซึ่งบ่งชี้ว่าแนวโน้มก่อนหน้านี้กำลังจะย้อนกลับ"
