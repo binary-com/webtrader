@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-04 14:20-0400\n"
+"PO-Revision-Date: 2018-06-04 14:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -103,7 +103,7 @@ msgid "- Trade currencies, indices, commodities and more in rising, falling, sid
 msgstr "- ซื้อขายสกุลเงิน ดัชนี สินค้าโภคภัณฑ์ และอื่นๆ ในตลาดที่ขาขึ้น ขาลง ไปด้านข้าง ซบเซา และผันผวน"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
-msgstr "- ซื้อขายเมื่อคุณต้องการ สามารถเข้า Binary.com ได้ตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
+msgstr "- ซื้อขายเมื่อท่านต้องการ สามารถเข้า Binary.com ได้ตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
 
 msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
 msgstr "- ซื้อขายกับผู้บุกเบิกอุตสาหกรรมและผู้ได้รับสิทธิบัตรในเทคโนโลยีการกำหนดราคา"
@@ -325,7 +325,7 @@ msgid "A Evening Doji Star consists of a long bullish candle, followed by a Doji
 msgstr "Evening Doji Star ประกอบด้วยแท่งเทียนยาวที่แสดงความตื่นตัว ตามด้วย Doji ที่มีช่องว่างด้านบน จากนั้นเป็นแท่งเทียนที่สามที่แสดงความซบเซาที่ปิดอย่างดีภายในแท่งเทียนแรก และเช่นนี้เป็นการยืนยันถึงการพลิกกลับ ซึ่งถือว่า เป็นรูปแบบแท่งเทียนที่แสดงการพลิกกลับอย่างแข็งแกร่งของราคาที่ซบเซา"
 
 msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Average and an Exponential Moving Average, only with a longer period applied"
-msgstr "Smoothed Moving Average คือการผสมผสานระหว่าง Simple Moving Average และ Exponential Moving Average ใช้กับระยะเวลาที่ยาวกว่าเท่านั้น"
+msgstr "Smoothed Moving Average คือ การผสมผสานระหว่าง Simple Moving Average และ Exponential Moving Average ใช้กับระยะเวลาที่ยาวกว่าเท่านั้น"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
 msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัวหรือตลาดซบเซาที่มีแท่งขนาดเล็ก ความยาวของหัวหรือหางแตกต่างกันไป อย่างแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันกับผู้ซื้อและผู้ขาย"
@@ -334,7 +334,7 @@ msgid "A Stays Between trade pays out if the market stays between (does not touc
 msgstr "การซื้อขาย Stays Between จะให้ผลตอบแทน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้ การซื้อขาย Goes Outside จะให้ผลตอบแทน หากตลาดแตะค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr "รูปแบบแท่งเทียนแบบซบเซาประกอบด้วยแท่งเทียนสามแท่งซึ่งแสดงลักษณะดังต่อไปนี้ แท่งแรกเป็นเทียนสีขาวขนาดใหญ่อยู่ภายในแนวโน้มขึ้น แท่งกลางเป็นแท่งเทียนขนาดเล็ก (แดงหรือขาว) ที่ปิดเหนือแท่งสีขาวแรก และแท่งสุดท้ายคือเทียนสีแดงขนาดใหญ่ที่เปิดใต้เทียนแท่งกลางและปิดใกล้กับตำแหน่งตรงกลางของแท่งเทียนแรก"
+msgstr "รูปแบบแท่งเทียนแบบซบเซาประกอบด้วยแท่งเทียนสามแท่งซึ่งแสดงลักษณะดังต่อไปนี้ แท่งแรกเป็นเทียนสีขาวขนาดใหญ่อยู่ภายในแนวโน้มขึ้น แท่งกลางเป็นแท่งเทียนขนาดเล็ก (แดง หรือ ขาว) ที่ปิดเหนือแท่งสีขาวแรก และแท่งสุดท้าย คือ เทียนสีแดงขนาดใหญ่ที่เปิดใต้เทียนแท่งกลาง และปิดใกล้กับตำแหน่งตรงกลางของแท่งเทียนแรก"
 
 msgid "A bearish candlestick pattern that is used to predict the reversal of the current uptrend. This pattern consists of three consecutive long-bodied candlesticks that have closed lower than the previous day with each session's open occurring within the body of the previous candle"
 msgstr "รูปแบบแท่งเทียนแบบซบเซาที่ถูกใช้เพื่อคาดการณ์การพลิกกลับของแนวโน้มขึ้นปัจจุบัน รูปแบบนี้ประกอบด้วยแท่งเทียนขนาดยาวสามแท่งต่อกันซึ่งได้ปิดที่ต่ำกว่าวันก่อนโดยการเปิดของแต่ละช่วงเกิดขึ้นภายในตัวของแท่งเทียนอันก่อน"
@@ -397,7 +397,7 @@ msgid "A tick is the minimum upward or downward movement in the price of a marke
 msgstr "ช่วงห่างของราคา (Tick) คือ การเคลื่อนไหวของราคาที่เล็กที่สุดในทิศทางขึ้น หรือ ลง ในตลาด"
 
 msgid "A trend indicated by a large candlestick followed by a doji that is located within the top and bottom of the candlestick's body. This indicates that the previous trend is about to reverse"
-msgstr "จะมีการบ่งชี้ถึงแนวโน้มโดยแท่งเทียนขนาดใหญ่ตามด้วย doji ซึ่งอยู่ภายในด้านบนและล่างของแท่งเทียน ซึ่งบ่งชี้ว่าแนวโน้มก่อนหน้านี้กำลังจะย้อนกลับ"
+msgstr "จะมีการบ่งชี้ถึงแนวโน้มโดยแท่งเทียนขนาดใหญ่ตามด้วย Doji ซึ่งอยู่ภายในด้านบนและล่างของแท่งเทียน ซึ่งบ่งชี้ว่าแนวโน้มก่อนหน้านี้กำลังจะย้อนกลับ"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
 msgstr "แท่งเทียนสีขาวในแนวโน้มราคาขาขึ้น ตามด้วย doji ซึ่งเงาด้านล่างยังคงอยู่เหนือส่วนที่สูงของแท่งเทียนก่อนหน้านี้ วันที่สามคือแท่งเทียนสีดำซึ่งเงาด้านบนอยู่ด้านล่างของส่วนล่างของ doji"
@@ -631,7 +631,7 @@ msgid "BetOnMarkets.com is successfully rebranded Binary.com"
 msgstr "BetOnMarkets.com ประสบความสำเร็จในการสร้างแบรนด์ใหม่ของ Binary.com"
 
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
-msgstr "BetOnMarkets.com มีมูลค่าซื้อขายรวม 1 พันล้านเหรียญสหรัฐ ตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
+msgstr "BetOnMarkets.com มีมูลค่าซื้อขายรวม 1 พันล้านเหรียญสหรัฐ ตั้งแต่เริ่มต้นในปี ค.ศ.1999 (พ.ศ. 2542)"
 
 msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
@@ -688,7 +688,7 @@ msgid "Binary's Japanese subsidiary Binary KK opens an office in Tokyo and start
 msgstr "สำนักงานสาขาญี่ปุ่นของ Binary คือ Binary KK เปิดสำนักงานที่โตเกียว และเริ่มดำเนินการในการขอใบอนุญาตต่างๆ ที่เกี่ยวข้อง"
 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
-msgstr "สำนักงานสาขามอลเตสของ Binary คือ Binary Investments (Europe) Ltd. ได้รับอนุญาตในการให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority"
+msgstr "สำนักงานสาขามอลตา ของ Binary คือ Binary Investments (Europe) Ltd. ได้รับอนุญาตในการให้บริการทางการลงทุนประเภทที่ 3 รับรองโดย Malta Financial Services Authority"
 
 msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
 msgstr "แพลตฟอร์มของ Binary ดำเนินธุรกรรมโดยเฉลี่ย 20 การซื้อขาย ต่อวินาที ตลอด 24 ชั่วโมง 7 วัน"
@@ -730,7 +730,7 @@ msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online P
 msgstr "Binary.com ได้รับรางวัล Best Binary Options Broker โดย Online Personal Wealth Awards 2017 ของสหราชอาณาจักร ซึ่งได้มาจากการลงคะแนนของนักลงทุนทั่วโลก"
 
 msgid "Binary.com is entirely web-based and requires no software installation"
-msgstr "Binary.com เป็นระบบเว็บไซต์ทั้งหมด โดยไม่ต้องติดตั้งซอฟต์แวร์ใดๆ"
+msgstr "Binary.com เป็นระบบเว็บไซต์ทั้งหมด โดยไม่ต้องติดตั้งซอฟท์แวร์ใดๆ"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
 msgstr "Binary.com ได้รับรางวัลระดับโลกในฐานะ “Best Binary Options Broker” จากนิทรรศการและการประชุมการเงินนานาชาติประจำปี MENA ครั้งที่ 16 ที่ประเทศดูไบ"
@@ -895,10 +895,10 @@ msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currenc
 msgstr "เลือกสินทรัพย์ที่คุณต้องการจะซื้อขาย เช่น ทองคำ น้ำมัน หุ้น หรือ คู่สกุลเงิน มูลค่าของไบนารีออปชั่นได้มาจากราคาของสินทรัพย์อ้างอิง ประโยชน์อย่างหนึ่งของการซื้อขายไบนารี ออปชั่น คือ คุณไม่ได้กำลังซื้อ หรือ ขายสินทรัพย์จริง คุณเพียงแต่ดำเนินการผ่านสัญญาที่กำหนดดูการเคลื่อนไหวของสินทรัพย์"
 
 msgid "Choose your pereferred payment agent"
-msgstr "เลือกตัวแทนชำระเงินที่คุณพอใจ"
+msgstr "เลือกตัวแทนชำระเงินที่ท่านพอใจ"
 
 msgid "Choose your pereferred withdrawal method"
-msgstr "เลือกวิธีการถอนเงินที่คุณพอใจ"
+msgstr "เลือกวิธีการถอนเงินที่ท่านพอใจ"
 
 msgid "Choppiness Index (CHOP)"
 msgstr "ดัชนี Choppiness (CHOP)"
@@ -907,10 +907,10 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Click to log in with your Binary.com account"
-msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของคุณ"
+msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของท่าน"
 
 msgid "Client funds"
-msgstr "เงินทุนของลูกค้า"
+msgstr "หลักประกันของลูกค้า"
 
 msgid "Close"
 msgstr "ปิด"
@@ -1670,7 +1670,7 @@ msgid "Indices trading frequency"
 msgstr "ความถี่ในการซื้อขายดัชนีต่างๆ"
 
 msgid "Individual Traders"
-msgstr "นักเทรดรายย่อย"
+msgstr "นักลงทุนรายย่อย"
 
 msgid "Indonesia"
 msgstr "อินโดนีเซีย"
