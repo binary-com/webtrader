@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-03 12:50-0400\n"
+"PO-Revision-Date: 2018-06-04 14:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -76,10 +76,10 @@ msgid "- Open an account and start trading in minutes. Deposits and withdrawals 
 msgstr "- เปิดบัญชีและเริ่มซื้อขายภายในไม่กี่นาที การฝากและถอนเงินทำได้ตลอด 24 ชั่วโมง 7 วัน"
 
 msgid "- Predict the market ending higher or lower than a price target"
-msgstr "- คาดการณ์ว่าตลาดจะปิดที่สูงกว่าหรือต่ำกว่าราคาเป้าหมาย"
+msgstr "- คาดการณ์ว่าตลาดจะปิดที่สูงกว่า หรือ ต่ำกว่า ราคาเป้าหมาย"
 
 msgid "- Predict the market rising or falling from its current level"
-msgstr "- คาดการณ์ตลาดเพิ่มขึ้น หรือลดลงจากระดับปัจจุบัน"
+msgstr "- คาดการณ์ตลาดเพิ่มขึ้น หรือ ลดลง จากระดับปัจจุบัน"
 
 msgid "- Predict the market staying between or going outside two price targets"
 msgstr "- คาดการณ์ตลาดจะอยู่ระหว่างหรือออกนอกราคาเป้าหมายทั้งสอง"
@@ -100,7 +100,7 @@ msgid "- Trade confidently, knowing that your personal data, transactions, and f
 msgstr "- ซื้อขายอย่างมั่นใจว่าข้อมูลส่วนบุคคล ธุรกรรม และเงินทุนนั้นปลอดภัยเสมอ"
 
 msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
-msgstr "- ซื้อขายสกุลเงิน ดัชนี สินค้าโภคภัณฑ์ และอื่นๆอีกมาก ในตลาดที่กำลังขึ้น ลง ไปด้านข้าง เงียบ และผันผวน"
+msgstr "- ซื้อขายสกุลเงิน ดัชนี สินค้าโภคภัณฑ์ และอื่นๆ ในตลาดที่ขาขึ้น ขาลง ไปด้านข้าง ซบเซา และผันผวน"
 
 msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
 msgstr "- ซื้อขายเมื่อคุณต้องการ สามารถเข้า Binary.com ได้ตลอด 24 ชั่วโมง 7 วัน แม้กระทั่งวันหยุดสุดสัปดาห์"
