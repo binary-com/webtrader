@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 09:02-0400\n"
+"PO-Revision-Date: 2018-06-06 09:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -781,7 +781,7 @@ msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts
 msgstr "ดัชนีที่ซื้อขายเองของ %1 และหลักทรัพย์จากตลาดเจรจาต่อรองนั้นมีข้อดีจากการมีกราฟและราคาที่เรียลไทม์ ทำให้ท่านเพิ่มโอกาสในการทำกำไรจากดัชนีและหลักทรัพย์ทีมีการเสนอราคาตามเวลาจริง"
 
 msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
-msgstr ""
+msgstr "Smart FX ของ Binary.com คือ ตลาดซื้อขายอัตราแลกเปลี่ยนอันชาญฉลาดที่ช่วยประเมินมูลค่าสกุลเงินที่พิจารณาจากกลุ่มสกุลเงินหลักๆ"
 
 msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
 msgstr "ดัชนีผันผวนของ %1 ใช้การเข้ารหัสเพื่อความปลอดภัยในการสุ่มจำนวนตัวเลขที่สามารถตรวจสอบความยุติธรรมได้โดยไม่ขึ้นกับหน่วยงานใดๆ"
@@ -1036,7 +1036,7 @@ msgid "Current password"
 msgstr "รหัสผ่านปัจจุบัน"
 
 msgid "Current regulations require that you provide us the following"
-msgstr ""
+msgstr "ด้วยหลักเกณฑ์ของการกำกับดูแลในปัจจุบัน ท่านต้องเตรียมเอกสารต่อไปนี้"
 
 msgid "Current time"
 msgstr "เวลาปัจจุบัน"
@@ -1453,7 +1453,7 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT คือตัวข่อของ Greenwich Mean Time เวลามาตรฐานที่ใช้ในฤดูหนาวของสหราชอาณาจักร ส่วนในฤดูร้อนจะเปลี่ยนเป็นเวลาที่เพิ่มขึ้นอีก 1 ชั่วโมง กล่าวคือ ใช้ GMT + 1 โดยเวลาที่ใช้ในระบบ %1 จะเป็น GMT ตลอดทั้งปี"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "ใช้ API โทเค่น จากนักลงทุน และเพิ่มเข้าในรายการของท่าน"
 
 msgid "Get your price"
 msgstr "ตั้งราคาของท่าน"
@@ -1625,7 +1625,7 @@ msgid "In foreign exchange markets, traders can enter contracts based on the cha
 msgstr "ในตลาดแลกเปลี่ยนเงินตรา นักลงทุนสามารถกำหนดสัญญาเพื่อราคาที่เปลี่ยนแปลงของหนึ่งสกุลเงินที่สัมพันธ์กับอีกสกุลเงิน เช่น หากนักลงทุนกำหนด ค่าเงินสูงขึ้น ของตลาด EUR/USD คือ พวกเขากำลังทำนายว่า มูลค่าของเงินยูโร จะเพิ่มขึ้นที่สัมพันธ์กับมูลค่าของเงินดอลลาร์สหรัฐ"
 
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
-msgstr ""
+msgstr "เพื่อการใช้งานธีมอย่างมีประสิทธิภาพ ต้องมีการรีเฟรชหน้าจอ ท่านต้องการดำเนินการหรือไม่?"
 
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
