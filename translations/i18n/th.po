@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 10:51-0400\n"
+"PO-Revision-Date: 2018-06-06 11:01-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2888,13 +2888,15 @@ msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's valu
 msgstr "AUD Index เป็นดัชนีถ่วงน้ำหนัก ที่ใช้แสดงมูลค่าของดอลลาร์ออสเตรเลียกับ 5 สกุลเงินหลักของโลก (USD, EUR, GBP, JPY, CAD) โดยมีนำ้หนักแต่ละสกุลเงินที่ 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
-msgstr ""
+msgstr "Absolute Price Oscillator (APO) แสดงค่าสัมบูรณ์ของความแตกต่างระหว่างค่าเฉลี่ยเคลื่อนที่ที่มีระยะต่างกัน ของการเคลื่อที่เร็วเฉลี่ย และการเคลื่อนที่ช้าเฉลี่ย\n"
+"\n"
+"is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 
 msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
 msgstr ""
 
 msgid "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength"
-msgstr ""
+msgstr "ดัชนีเฉลี่ยทิศทางการเคลื่อนไหวดัชนี (ADX) ถูกพัฒนาขึ้นในปี ค.ศ. 1978 โดย J. Welles Wilder เป็นตัวบ่งชี้ของความแข็งแรงของแนวโน้มในชุดของราคาของเครื่องมือทางการเงินที่ ADX จะมีช่วงอยู่ระหว่าง 0 ถึง 100 โดยทั่วไป ADX อ่านค่าต่ำกว่า 20 ดัชนีแสดงแนวโน้มอ่อนแอ และอ่านกว่า 40 ดัชนีที่แสดงความแข็งแกร่งของแนวโน้ม"
 
 msgid "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
 msgstr ""
@@ -3095,7 +3097,7 @@ msgid "The profit is the difference between the purchase price (the stake) and t
 msgstr "กำไร คือ ผลต่างของราคาซื้อ (ที่วางเงิน) และการชำระเงินเมื่อท่านชนะการซื้อขาย"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
-msgstr ""
+msgstr "การปรับปรุงภาพลักษณ์เป็นวิวัฒนาการตามธรรมชาติสำหรับแพลตฟอร์มเพื่อที่จะโตอย่างต่อเนื่องในตลาดการซื้อขายไบนารีที่มีการแข่งขันสูง ภาพลักษณ์ใหม่แสดงถึงธรรมชาติของธุรกิจ และคำนิยามใหม่ของเรา - ราคาเฉียบ การซื้อขายอันชาญฉลาด (Sharp Prices, Smart Trading) ที่สื่อความถึงปรัชญาและพันธกิจขององค์กรที่มีต่อลูกค้าของเรา"
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
 msgstr "ราคาจำหน่ายใหม่แสดงถึงราคาตลาดปัจจุบันของสัญญา ราคาจำหน่ายใหม่จะอยู่บนพื้นฐานปัจจัยที่ดีที่สุด ซึ่งอาจจะไม่ได้มีตลอดเวลาหลังจากการซื้อ พิจารณาข้อมูลจาก 'Sell Option' เพื่อทำการซื้อขายก่อนวันหมดอายุ"
@@ -3104,7 +3106,7 @@ msgid "The return is the money realized when the contract expires (see 'Payout')
 msgstr "ผลกำไร คือ เงินที่ถูกรับรู้เมื่อสัญญานั้นหมดอายุ (อ้างอิง 'Payout')"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
-msgstr ""
+msgstr "เงินเดิมพัน คือ จำนวนเงินที่ผู้ทำการซื้อขายต้องชำระเพื่อเริ่มการซื้อขาย"
 
 msgid "The sum of price over selected period"
 msgstr "ผลรวมของราคาในช่วงเวลาเลือก"
@@ -3182,7 +3184,7 @@ msgid "Three Stars In The South (CDL3STARSSOUTH)"
 msgstr "Three Stars In The South (CDL3STARSSOUTH)"
 
 msgid "Three tall white candles, each with higher closes, and bodies that overlap (an opening price within the prior candle's body)"
-msgstr ""
+msgstr "แท่งเทียนขาวสูงสามแท่ง แต่ละแท่งจะมีค่าปิดสูง และแท่งเทียนจะซ้อนทับ (ราคาเปิดของแท่งเทียนก่อนหน้า)"
 
 msgid "Three white days occur. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer"
 msgstr ""
@@ -3272,7 +3274,7 @@ msgid "Total Profit/Loss"
 msgstr "รวมกำไร/ขาดทุน"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "ซื้อขายทั้งหมด"
 
 msgid "Touch"
 msgstr "แตะ"
@@ -3302,7 +3304,7 @@ msgid "Trade according to your preferred strategy"
 msgstr "ซื้อขายตามกลยุทธ์ที่ท่านปรารถนา"
 
 msgid "Trade using"
-msgstr ""
+msgstr "ซื้อขายโดยใช้"
 
 msgid "Trader"
 msgstr "นักลงทุน"
