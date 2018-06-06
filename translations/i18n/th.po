@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 10:10-0400\n"
+"PO-Revision-Date: 2018-06-06 10:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -514,7 +514,7 @@ msgid "Are you sure you want to delete template?"
 msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการลบแม่แบบนี้?"
 
 msgid "Are you sure you want to delete this token?"
-msgstr "ท่านแน่ใจหรือไม่ที่ต้องการลบโทเค่นนี้"
+msgstr "ท่านแน่ใจหรือไม่ที่ต้องการลบโทเค่นนี้?"
 
 msgid "Are you sure you want to overwrite current template?"
 msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการเขียนทับแม่แบบปัจจุบัน"
@@ -1111,7 +1111,7 @@ msgid "Deposit of USD"
 msgstr "การฝากเงินดอลลาร์สหรัฐ"
 
 msgid "Depositing and withdrawing funds"
-msgstr "การฝากและถอนเงิน"
+msgstr "การฝากและถอนหลักประกัน"
 
 msgid "Derivative"
 msgstr "อนุพันธ์"
@@ -1171,7 +1171,7 @@ msgid "Doji form when a security's open and close are virtually equal. The lengt
 msgstr ""
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
-msgstr "คุณมีบัญชีหรือยัง สมัครและรับบัญชีทดลองพร้อมเงินทดลอง $10,000"
+msgstr "ท่านมีบัญชีหรือยัง? สมัครและรับบัญชีทดลองพร้อมเงินทดลอง 10,000 เหรียญสหรัฐ"
 
 msgid "Donchian Channel (DC)"
 msgstr "Donchian Channel (DC)"
@@ -1291,7 +1291,7 @@ msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Engulfing Pattern (CDLENGULFING)"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr "เพลิดเพลินไปกับการเชื่อมต่อในการซื้อขายที่ใช้ง่าย ด้วยฟังก์ชันขั้นสูงที่ให้คุณได้ตรวจสอบสินทรัพย์ที่คุณชอบทั้งหมดและตลาดในเวลาเดียวกัน เช่นเดียวกับแผนภูมิสำคัญ ดัชนีสินทรัพย์ เวลาการซื้อขาย และข้อมูลประวัติ ที่สำคัญที่สุด คุณเลือกได้ว่าต้องการเห็นอะไรในหน้าจอ"
+msgstr "เพลิดเพลินไปกับการเชื่อมต่อในการซื้อขายที่ใช้ง่าย ด้วยฟังก์ชันขั้นสูงที่ให้ท่านได้ตรวจสอบสินทรัพย์ที่ท่านโปรดปรานทั้งหมดและตลาดในเวลาเดียวกัน เช่นเดียวกับแผนภูมิสำคัญ ดัชนีสินทรัพย์ เวลาการซื้อขาย และข้อมูลประวัติ ที่สำคัญที่สุด ท่านเลือกได้ว่าต้องการเห็นอะไรในหน้าจอ"
 
 msgid "Enter your current password"
 msgstr "โปรดป้อนรหัสผ่านปัจจุบันของท่าน"
@@ -3038,13 +3038,13 @@ msgid "The closing black marubozu candlestick is a tall black candle with an upp
 msgstr ""
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr ""
+msgstr "บริษัทฯ ดูแลเงินทุนประกันของลูกค้าในบัญชีที่ถูกจัดสรรแยกเพื่อการปฏิบัติการ และการจัดการเพื่อให้แน่ใจว่า สินทรัพย์ของบัญชีลูกค้ามีการถูกจำหน่ายหากมีกรณีล้มละลาย ซึ่งเป็นไปตามข้อกำหนดของ Gambling Commission ในการแยกเงินทุนลูกค้าโดยเป็นมาตรการการป้องกันระดับ: "
 
 msgid "The contract period is the timeframe of a trade. It is also called the duration"
 msgstr "ระยะเวลาของสัญญาในการซื้อขาย เรียกว่า ระยะเวลา"
 
 msgid "The duration is the length of a purchased trade (see"
-msgstr ""
+msgstr "ระยะเวลา คือ ช่วงเวลาในการซื้อขาย (อ้างอิง"
 
 msgid "The entry spot price is the starting price of the trade purchased by a trader"
 msgstr "ราคาสปอตเริ่มต้น คือ ราคาเริ่มต้นของการเริ่มซื้อขายโดยนักลงทุน"
@@ -3092,16 +3092,16 @@ msgid "The premier platform for trading binary options in the world's financial 
 msgstr "แพลตฟอร์มปฐมฤกษ์สำหรับการซื้อขายไบนารีออปชั่นในตลาดการเงินระดับโลก"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
-msgstr ""
+msgstr "กำไร คือ ผลต่างของราคาซื้อ (ที่วางเงิน) และการชำระเงินเมื่อท่านชนะการซื้อขาย"
 
 msgid "The rebranding is a natural evolution for the platform as it continues to grow market share in the highly competitive field of binary trading. The new brand reflects the nature of the business, and our new tagline - Sharp Prices, Smart Trading - communicates our ethos and commitment to our clients"
 msgstr ""
 
 msgid "The resale price indicates a contract's current market price. Resale prices are on a best-efforts basis and may not be available at all times after purchase. See 'Sell option' for more details on selling contracts before expiry"
-msgstr ""
+msgstr "ราคาจำหน่ายใหม่แสดงถึงราคาตลาดปัจจุบันของสัญญา ราคาจำหน่ายใหม่จะอยู่บนพื้นฐานปัจจัยที่ดีที่สุด ซึ่งอาจจะไม่ได้มีตลอดเวลาหลังจากการซื้อ พิจารณาข้อมูลจาก 'Sell Option' เพื่อทำการซื้อขายก่อนวันหมดอายุ"
 
 msgid "The return is the money realized when the contract expires (see 'Payout')"
-msgstr ""
+msgstr "ผลกำไร คือ เงินที่ถูกรับรู้เมื่อสัญญานั้นหมดอายุ (อ้างอิง 'Payout')"
 
 msgid "The stake is the amount that a trader must pay to enter into a trade"
 msgstr ""
@@ -3767,7 +3767,7 @@ msgid "main site"
 msgstr "เว็บไซต์หลัก"
 
 msgid "medium protection"
-msgstr "การป้องกันสื่อ"
+msgstr "การป้องกันระดับกลาง"
 
 msgid "minute"
 msgstr "นาที"
