@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 09:50-0400\n"
+"PO-Revision-Date: 2018-06-06 10:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2705,7 +2705,7 @@ msgid "Source of wealth"
 msgstr "แหล่งที่มาของรายได้"
 
 msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
-msgstr ""
+msgstr "ระบุการชำระเงินของท่าน ซึ่งคือ ผลตอบแทนที่เป็นไปได้ถ้าการคาดการณ์ของท่านถูกต้อง ระบบของเราจะดำเนินการคำนวณเงินเดิมพันของท่าน ซึ่งคือ ต้นทุนทั้งหมดของการซื้อสัญญา Binary.com มีการจ่ายเงินให้ตั้งแต่ 1 เหรียญสหรัฐ ถึง 50,000 เหรียญสหรัฐ"
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
@@ -2720,10 +2720,10 @@ msgid "Spreads"
 msgstr "สเปรด"
 
 msgid "Spreads down"
-msgstr ""
+msgstr "สเปรดลง"
 
 msgid "Spreads up"
-msgstr ""
+msgstr "สเปรดขึ้น"
 
 msgid "Stake"
 msgstr "วางเงิน"
@@ -3335,7 +3335,7 @@ msgid "Transfer to another Binary account"
 msgstr ""
 
 msgid "Transparent risk and potential reward"
-msgstr ""
+msgstr "ความเสี่ยงที่โปร่งใสกับรางวัลที่จะได้รับ"
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "Triangular Moving Average (TRIMA)"
