@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 09:40-0400\n"
+"PO-Revision-Date: 2018-06-06 09:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1763,7 +1763,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Ladder Bottom (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "ตารางผลกำไร 12 รอบเดือนที่ผ่านมา"
 
 msgid "Last used"
 msgstr "ใช้ครั้งล่าสุด"
@@ -3113,34 +3113,34 @@ msgid "The variance and the closely-related standard deviation are measures of h
 msgstr ""
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
-msgstr ""
+msgstr "ดัชนีความผันผวนจำลองความหลากหลายของสถานการณ์ตลาดจริงและมีแพลตฟอร์มในอุดมคติสำหรับการซื้อขายและการทดสอบกลยุทธ์ภายใต้เงื่อนไขทางตลาดที่หลากหลาย ดัชนีเหล่านี้ขึ้นกับความผันผวน การเคลื่อนไหว และช่วยผู้ใช้งานให้ใช้รูปแบบต่างๆ เช่น ความผันผวนระดับสูง ความผันผวนระดับต่ำ แนวโน้มตลาดหมีและตลาดกระทิง"
 
 msgid "There are four main trade types for you to choose from"
-msgstr ""
+msgstr "มีการซื้อขายหลัก 4 ประเภท ที่นำเสนอให้ท่านพิจารณา"
 
 msgid "There are two types of In/Out trades"
-msgstr ""
+msgstr "มีการซื้อขาย In/Out 2 ประเภท"
 
 msgid "There are two types of Up/Down trades"
-msgstr ""
+msgstr "มีการซื้อขาย Up/Down 2 ประเภท"
 
 msgid "There are two ways to trade Asians"
-msgstr ""
+msgstr "มีการซื้อขาย Asians 2 ประเภท"
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
-msgstr ""
+msgstr "การซื้อขายเกิดขึ้นเมื่อนักลงทุนพยากรณ์ว่า ค่าดัชนีของตลาดเมื่อสิ้นสุดการซื้อขายจะมีค่าสูงกว่า หรือ ต่ำกว่าราคาเป้าหมายที่กำหนดไว้"
 
 msgid "These are trades where the trader predicts if a market will rise or fall at the end of a selected time period"
-msgstr ""
+msgstr "การซื้อขายเหล่านี้เกิดขึ้นเมื่อนักลงทุนขายพยากรณ์ว่า ตลาดจะขึ้น หรือ ลง ขณะสิ้นสุดช่วงเวลาที่ระบุไว้"
 
 msgid "These are trades where the trader selects a low and high barrier, and predicts if the market will stay within these barriers or go outside them (see also 'Stays Between/Goes Outside trades')"
-msgstr ""
+msgstr "การซื้อขายเหล่านี้ เมื่อนักลงทุนเลือก Barrier สูง หรือ ต่ำ และพยากรณ์หากตลาดจะคงอยู่ที่ค่า Barrier นี้ หรือ ออกไปนอกขอบเขต (ศึกษาเพิ่มจาก 'Stays Between/Goes Outside trades')"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will never touch the target before the expiry of the trade"
-msgstr ""
+msgstr "การซื้อขายเหล่านี้ดำเนินการโดยนักลงทุนเลือกราคาเป้าหมาย และพยากรณ์ว่า ตลาดจะไม่สิ้นสุดที่เป้าหมายก่อนการหมดอายุของการซื้อขาย"
 
 msgid "These are trades where the trader selects a price target, and predicts that the market will touch the target before the expiry of the trade"
-msgstr ""
+msgstr "การซื้อขายเหล่านี้ดำเนินการโดยนักลงทุนเลือกราคาเป้าหมาย และพยากรณ์ว่า ตลาดจะถึงเป้าหมายก่อนการหมดอายุของการซื้อขาย"
 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr ""
@@ -3155,7 +3155,7 @@ msgid "This is big. We pick up a double award from the Financial Times and Inves
 msgstr "นี้ก็ผลงานชิ้นใหญ่อีกอันหนึ่ง พวกเราได้รับสองรางวัลจาก The Financial Times และ Investors Chronicle เพื่อแสดงถึงความสำเร็จของเราในการพัฒนาเว็บไซต์และผลิตภัณฑ์ของเราอย่างมีคุณภาพและใช้งานง่าย"
 
 msgid "This is the current price at which an underlying can be bought or sold at a particular time"
-msgstr ""
+msgstr "นี้คือราคาปัจจุบันที่ผลิตภัณฑ์อ้างอิงสามารถถูกซื้อ หรือ ขาย ณ เวลาใดๆ"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr ""
@@ -3230,10 +3230,10 @@ msgid "To"
 msgstr "ถึง"
 
 msgid "To deposit money please contact the payment agent directly"
-msgstr ""
+msgstr "ในการฝากเงิน โปรดติดต่อตัวแทนรับชำระเงินโดยตรง"
 
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
-msgstr ""
+msgstr "เพื่อดำเนินฝากและถอนเงินสำหรับวิธีการชำระเงิน  หรือ สกุลเงินท้องถิ่นไม่รองรับ โดย Binary.com โปรดติดต่อตัวแทนรับชำระเงิน"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "ในการถอนหลักประกัน โปรดป้อนรหัสโทเค่นเพื่อการยืนยัน ซึ่งเราได้ส่งให้ท่านทางอีเมล์แล้ว"
@@ -3254,7 +3254,7 @@ msgid "Token permissions"
 msgstr "สิทธิ์โทเค่น"
 
 msgid "Tokens are special codes for accessing"
-msgstr ""
+msgstr "โทเค่นมีรหัสพิเศษเพื่อการเข้าถึง"
 
 msgid "Tooltip background"
 msgstr "พื้นหลังของป้ายคำแนะนำ"
@@ -3320,7 +3320,7 @@ msgid "Trading Times"
 msgstr "เวลาซื้อขาย"
 
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
-msgstr ""
+msgstr "การซื้อขายไบนารีออปชั่นทำได้อย่างง่ายดาย ด้วยเพียง 3 ขั้นตอน เพื่อเริ่มการซื้อขาย"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "การซื้อขายไบนารีออปชั่นอาจจะไม่เหมาะสมกับทุกคน ดังนั้นโปรดแน่ใจว่า ท่านมีความเข้าใจอย่างครบถ้วนเกี่ยวกับความเสี่ยงที่เกี่ยวข้อง การขาดทุนของท่านสามารถเกินจำนวนเงินฝากเริ่มต้น และท่านจะไม่ได้รับผลตอบแทนใดๆ จากสินทรัพย์ที่อ้างถึงนั้น อนึ่ง ไบนารีออปชั่น เป็นผลิตภัณฑ์เพื่อการเสี่ยงโชค โปรดทราบว่า การเสี่ยงโชคอาจเป็นพฤติกรรมเสพติด โปรดใช้ความระมัดระวังในการซื้อขาย "
