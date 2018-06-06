@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 08:50-0400\n"
+"PO-Revision-Date: 2018-06-06 09:02-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1102,7 +1102,7 @@ msgid "Delete"
 msgstr "ลบ"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr ""
+msgstr "สาธิตให้พันธมิตรเพื่อใช้งานแผนภูมิของ Webtrader"
 
 msgid "Deposit funds"
 msgstr "การฝากเงิน"
@@ -1441,7 +1441,7 @@ msgid "From"
 msgstr "จาก"
 
 msgid "Full-screen trading interface"
-msgstr ""
+msgstr "อินเทอร์เฟสของการซื้อขายแบบเต็มหน้าตอ"
 
 msgid "Further instructions"
 msgstr "คำแนะนำเพิ่มเติม"
@@ -3512,7 +3512,7 @@ msgid "Webtrader is an advanced trading platform that's fully-customisable accor
 msgstr ""
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
-msgstr ""
+msgstr "Webtrader ใช้เทคโนโลยีเว็บสมัยใหม่เพื่อให้ได้รับประสบการณ์การซื้อขายหลากหลาย และสนุกสนาน"
 
 msgid "Wed"
 msgstr "พ"
@@ -3539,10 +3539,10 @@ msgid "When you are satisfied with the price that you receive, execute your trad
 msgstr "เมื่อท่านพอใจกับราคาที่ท่านได้รับ ดำเนินการซื้อขายทันที ในแพลตฟอร์มที่เป็นเอกลักษณ์ของเรา ท่านจะไม่ต้องต่อสู้กับ 'Slippage' หรือ ช่องว่างในตลาด และที่สำคัญที่สุด ไม่มีค่าธรรมเนียมที่มองไม่เห็น mjkoสามารถขายคืนการซื้อขายระยะยาวเมื่อใดก็ได้ก่อนที่จะหมดอายุเพื่อปกป้องกำไรที่ท่านอาจจะได้รับหรือลดการขาดทุนให้น้อยที่สุด"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
-msgstr ""
+msgstr "เมื่อท่านซื้อขายกับ Binary.com ท่านสามารถเชื่อได้ว่า เงินฝากของท่านจะได้รับความไว้วางใจในการดูแลและไม่ถูกนำไปใช้เพื่อวัตถุประสงค์อื่น"
 
 msgid "Where does Binary.com hold my funds?"
-msgstr ""
+msgstr "Binary.com  ดูแลหลักประกันของฉัน โดยเก็บที่ใดบ้าง?"
 
 msgid "While on the go, you can"
 msgstr ""
@@ -3653,13 +3653,13 @@ msgid "Zoom"
 msgstr "ขยาย"
 
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
-msgstr ""
+msgstr "อนุญาตให้ลูกค้าพัฒนาเครื่องมื่อสำหรับซื้อขายอัตโนมัติของเขาโดยการลากและวางอย่างง่ายๆ"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "และสำหรับลูกค้าในประเทศไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (ใบอนุญาตของ Remote Bookmaker เลขที่ 1010285 ออกให้เมื่อวันที่ 29 กันยายน พ.ศ. 2558 หรือ ค.ศ. 2015) ไม่มีการให้บริการของเว็บไซต์นี้ในบางประเทศ เช่น สหรัฐอเมริกา คอสตาริกา ฮ่องกง หรือ สำหรับบุคคลที่อายุน้อยกว่า 18 ปี"
 
 msgid "and start learning how to trade"
-msgstr ""
+msgstr "และเริ่มเรียนรู้วิธีการซื้อขาย"
 
 msgid "apostrophe (') are allowed"
 msgstr "เครื่องหมายอัญประกาศ (') สามารถใช้ได้"
@@ -3734,7 +3734,7 @@ msgid "in the future, the"
 msgstr "ในอนาคต"
 
 msgid "information about your trading exprience and personal finance"
-msgstr ""
+msgstr "ข้อมูลเกี่ยวกับประสบการณ์การซื้อขายและการเงินส่วนบุคคลของท่าน"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
 msgstr ""
