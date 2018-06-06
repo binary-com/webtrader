@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 10:00-0400\n"
+"PO-Revision-Date: 2018-06-06 10:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2735,10 +2735,10 @@ msgid "Standard Deviation (STDDEV)"
 msgstr "Standard Deviation (STDDEV)"
 
 msgid "Standard Deviation is a statistical calculation used to measure the variability. In trading this value is known as volatility. A low standard deviation indicates that the data points tend to be very close to the mean, whereas high standard deviation indicates that the data points are spread out over a large range of values"
-msgstr ""
+msgstr "ค่าเบี่ยงเบนมาตรฐาน คือ การคำนวณทางสถิติเพื่อวัดความแปรปรวน ในการซื้อขายนั้น ค่าดังกล่าว เป็นที่รู้จักในนาม ความผันผวน ค่าเบี่ยงเบนมาตรฐานต่ำบ่งชี้ว่า ข้อมูลมีแนวโน้มใกล้กับค่าเฉลี่ยมากๆ ในขณะที่ค่าเบี่ยงเบนมาตรฐานสูงจะบ่งชี้ว่า ข้อมูลกระจายตัวออกไปจากช่วงของข้อมูล"
 
 msgid "Standard methods"
-msgstr ""
+msgstr "วิธีการมาตรฐาน"
 
 msgid "Standard withdrawal"
 msgstr "การถอนเงินมาตรฐาน"
@@ -2771,7 +2771,7 @@ msgid "Stays Between/Goes Outside trades"
 msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
 
 msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
-msgstr ""
+msgstr "อยู่ใน/นอกขอบเขต - พยากรณ์ว่า ราคาในตลาดจะอยู่ในกรอบราคาเป้าหมาย หรือ ออกนอกขอบเขตราคาเป้าหมาย ณ เวลาใดๆ ในระหว่างสัญญาดำเนินอยู่"
 
 msgid "Stays in"
 msgstr ""
@@ -2801,7 +2801,7 @@ msgid "Stochastic Slow (STOCHS)"
 msgstr "Stochastic Slow (STOCHS)"
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
-msgstr ""
+msgstr "ดัชนีหลักทรัพย์ของตลาดเป็นตัวบอกมูลค่าของกลุ่มบริษัท หรือ กิจการของตลาดหลักทรัพย์"
 
 msgid "Stocks trading experience"
 msgstr "ประสบการณ์ในการซื้อขายหลักทรัพย์ต่างๆ"
@@ -2933,7 +2933,7 @@ msgid "The Dragonfly Doji is created when the open, high, and close are the same
 msgstr ""
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "EUR Index เป็นดัชนีถ่วงน้ำหนัก ที่ใช้แสดงมูลค่าของเงินยูโรกับ 5 สกุลเงินหลักของโลก (USD, AUD, GBP, JPY, CAD) โดยมีนำ้หนักแต่ละสกุลเงินที่ 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr ""
@@ -2942,7 +2942,7 @@ msgid "The Fast Stochastic Oscillator is based on George Lane's original formula
 msgstr ""
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
-msgstr ""
+msgstr "ดัชนี GBP เป็นดัชนีถ่วงน้ำหนัก แสดงมูลค่าของค่าเงินปอนด์ต่อ 5 สกุลเงินสากล (USD, EUR, AUD, JPY, CAD) โดยใช้ร้อยละ 20 ในการถ่วงน้ำหนัก"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr ""
@@ -3107,7 +3107,7 @@ msgid "The stake is the amount that a trader must pay to enter into a trade"
 msgstr ""
 
 msgid "The sum of price over selected period"
-msgstr ""
+msgstr "ผลรวมของราคาในช่วงเวลาเลือก"
 
 msgid "The variance and the closely-related standard deviation are measures of how spread out a distribution is. In other words, they are measures of variability. The variance is computed as the average squared deviation of each number from its mean"
 msgstr ""
@@ -3311,7 +3311,7 @@ msgid "Trader's Statistics"
 msgstr "สถิติของนักลงทุน"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "ความสามารถในการทำกำไรของนักลงทุน"
 
 msgid "Trades break down"
 msgstr ""
@@ -3332,7 +3332,7 @@ msgid "Transfer"
 msgstr "โอน"
 
 msgid "Transfer to another Binary account"
-msgstr ""
+msgstr "โอนไปยังบัญชี Binary อีกอันหนึ่ง"
 
 msgid "Transparent risk and potential reward"
 msgstr "ความเสี่ยงที่โปร่งใสกับรางวัลที่จะได้รับ"
@@ -3509,7 +3509,7 @@ msgid "Webtrader"
 msgstr "เว็บเทรดเดอร์"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr ""
+msgstr "Webtrader เป็นแพลตฟอร์มการซื้อขายขั้นสูงที่ออกแบบเพื่อการซื้อขายส่วนบุคคลของท่าน"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader ใช้เทคโนโลยีเว็บสมัยใหม่เพื่อให้ได้รับประสบการณ์การซื้อขายหลากหลาย และสนุกสนาน"
@@ -3767,7 +3767,7 @@ msgid "main site"
 msgstr "เว็บไซต์หลัก"
 
 msgid "medium protection"
-msgstr ""
+msgstr "การป้องกันสื่อ"
 
 msgid "minute"
 msgstr "นาที"
@@ -3845,5 +3845,5 @@ msgid "| Payout"
 msgstr "| การชำระเงิน"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
-msgstr ""
+msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"
 
