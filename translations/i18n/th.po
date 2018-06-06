@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-04 23:50-0400\n"
+"PO-Revision-Date: 2018-06-06 08:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -46,7 +46,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือสิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
-msgstr ") ได้เปิดใช้งานจริง ให้บริการการพนันทางการเงินในดัชนีทางการเงินต่างๆที่หลากหลายทั้งวันทั้งคืน ธุรกิจเติบโตอย่างรวดเร็ว และในไม่ช้าพวกเราก้าวสู่การเป็นผู้นำตลาดการพนันทางการเงินแบบ Fixed-Odds"
+msgstr ") ได้เปิดใช้งานจริง ให้บริการการพนันทางการเงินในดัชนีทางการเงินต่างๆ ที่หลากหลายทั้งวันทั้งคืน ธุรกิจเติบโตอย่างรวดเร็ว และในไม่ช้าพวกเราก้าวสู่การเป็นผู้นำตลาดการพนันทางการเงินแบบ Fixed-Odds"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "- ประโยชน์จากการที่อัตราผลตอบแทนเท่ากับของนักลงทุนระหว่างธนาคาร ราคาของเราถูกเปรียบเทียบเป็นรายวันกับตลาดออปชั่นระหว่างธนาคาร"
