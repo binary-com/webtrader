@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 08:30-0400\n"
+"PO-Revision-Date: 2018-06-06 08:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -760,7 +760,7 @@ msgid "Binary.com offers you four ways to trade a particular asset"
 msgstr "Binary.com เสนอวิธีการซื้อขายสินทรัพย์หนึ่ง 4 วิธี"
 
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
-msgstr "Binary.com เปิดสำนักงานที่ตึก QSentral ในใจกลางเมืองกัวลาลัมเปอร์เพื่อขยายทีมพัฒนา IT ต่อไป"
+msgstr "Binary.com เปิดสำนักงานที่ QSentral ในเมืองกัวลาลัมเปอร์เพื่อรองรับการขยายตัวของทีมพัฒนาระบบสารสนเทศ"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
 msgstr "Binary.com มีมูลค่าซื้อขาย 2 พันล้านเหรียญสหรัฐตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
@@ -1189,7 +1189,7 @@ msgid "Double Exponential Moving Average (DEMA)"
 msgstr "Double Exponential Moving Average (DEMA)"
 
 msgid "Double click the object to remove"
-msgstr "ดับเบิ้ลคลิกเพื่อลบ"
+msgstr "ดับเบิ้ลคลิกเพื่อลบวัตถุ"
 
 msgid "Down - Predict that the market will end lower than the average price"
 msgstr "ลง - พยากรณ์ว่า ตลาดจะสิ้นสุด ต่ำกว่า ราคาเฉลี่ย"
@@ -1285,7 +1285,7 @@ msgid "Ends out"
 msgstr "สิ้นสุดนอก"
 
 msgid "English"
-msgstr "อังกฤษ"
+msgstr "ภาษาอังกฤษ"
 
 msgid "Engulfing Pattern (CDLENGULFING)"
 msgstr "Engulfing Pattern (CDLENGULFING)"
@@ -1294,7 +1294,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "เพลิดเพลินไปกับการเชื่อมต่อในการซื้อขายที่ใช้ง่าย ด้วยฟังก์ชันขั้นสูงที่ให้คุณได้ตรวจสอบสินทรัพย์ที่คุณชอบทั้งหมดและตลาดในเวลาเดียวกัน เช่นเดียวกับแผนภูมิสำคัญ ดัชนีสินทรัพย์ เวลาการซื้อขาย และข้อมูลประวัติ ที่สำคัญที่สุด คุณเลือกได้ว่าต้องการเห็นอะไรในหน้าจอ"
 
 msgid "Enter your current password"
-msgstr "ป้อนรหัสผ่านปัจจุบันของคุณ"
+msgstr "โปรดป้อนรหัสผ่านปัจจุบันของท่าน"
 
 msgid "Entry Spot"
 msgstr "สปอตเริ่มต้น"
@@ -1715,7 +1715,7 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr "ถึงเวลาที่จะขยายอาณาจักร พวกเราได้ตั้งศูนย์ของระบบที่ไซเบอร์จายา สถานที่หนึ่งประดุจซิลิคอนวัลเลย์ของกัวลาลัมเปอร์ เพื่อดูแลและปรับปรุง BetOnMarkets.com"
 
 msgid "Italiano"
-msgstr "Italiano"
+msgstr "ภาษาอิตาเลียน"
 
 msgid "Jan"
 msgstr "ม.ค."
@@ -1766,10 +1766,10 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr ""
 
 msgid "Last used"
-msgstr "ใช้ครั้งสุดท้าย"
+msgstr "ใช้ครั้งล่าสุด"
 
 msgid "Learning to trade"
-msgstr "เรียนรู้การเทรด"
+msgstr "ศึกษาการซื้อขาย"
 
 msgid "Least Squares Moving Average (LSMA)"
 msgstr "Least Squares Moving Average (LSMA)"
@@ -1955,7 +1955,7 @@ msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Matching Low (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "เดิมพันสูงสุด"
 
 msgid "Maximum (MAX)"
 msgstr "Maximum (MAX)"
@@ -1997,7 +1997,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "Mesa Adaptive Moving Average (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "เดิมพันต่ำสุด"
 
 msgid "Min: 10 Max: 2000"
 msgstr "ต่ำสุด: 10 สูงสุด: 2000"
@@ -2006,7 +2006,7 @@ msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
 
 msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr ""
+msgstr "อย่างน้อย 6 อักขระ และ ต้องมีตัวเลขอย่างน้อย 1 ตัว"
 
 msgid "Minimum of 2 characters required"
 msgstr ""
