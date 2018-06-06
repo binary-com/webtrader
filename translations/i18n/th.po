@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 11:20-0400\n"
+"PO-Revision-Date: 2018-06-06 11:31-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1426,7 +1426,7 @@ msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr ""
+msgstr "Fractals เป็นตัวชี้วัดในแผนภูมิเชิงเทียนที่ระบุจุดกลับในตลาด ผู้ลงทุนมักจะใช้ Fractals เพื่อแสดงทิศทางราคาที่จะเกิดชึ้น โดยจะออกเป็นรูปร่างของรูปแบบราคาที่เกิดขึ้นในแผนภูมิ"
 
 msgid "Fran ais"
 msgstr "Fran ais"
