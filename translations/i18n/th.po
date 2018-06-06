@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 10:20-0400\n"
+"PO-Revision-Date: 2018-06-06 10:31-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -517,7 +517,7 @@ msgid "Are you sure you want to delete this token?"
 msgstr "ท่านแน่ใจหรือไม่ที่ต้องการลบโทเค่นนี้?"
 
 msgid "Are you sure you want to overwrite current template?"
-msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการเขียนทับแม่แบบปัจจุบัน"
+msgstr "ท่านแน่ใจหรือไม่ว่า ต้องการเขียนทับแม่แบบปัจจุบัน?"
 
 msgid "Arnaud Legoux Moving Average (ALMA)"
 msgstr "Arnaud Legoux Moving Average (ALMA)"
@@ -622,7 +622,7 @@ msgid "BetOnMarkets goes live"
 msgstr "BetOnMarkets ประกาศใช้งานจริง"
 
 msgid "BetOnMarkets.com has over 400,000 clients in its database and reach the US$ 1 billion milestone in only our 13th year, making us one of the leading fixed-odds trading providers"
-msgstr "BetOnMarkets.com มีลูกค้าเกินกว่า 400,000 ราย ในฐานข้อมูลและเข้าสู่เป้าหมาย 1 พันล้านเหรียนสหรัฐในปีที่ 13 ของเรา ทำให้เราเป็นหนึ่งในผู้ให้บริการซื้อขาย แบบ Fixed-Odds"
+msgstr "BetOnMarkets.com มีลูกค้าเกินกว่า 400,000 ราย ในฐานข้อมูลและเข้าสู่เป้าหมาย 1 พันล้านเหรียญสหรัฐในปีที่ 13 ของเรา ทำให้เราเป็นหนึ่งในผู้ให้บริการซื้อขาย แบบ Fixed-Odds"
 
 msgid "BetOnMarkets.com increases payouts to 100,000 USD, EUR, GBP and AUD"
 msgstr "BetOnMarkets.com เพิ่มการชำระเงินหลากหลายสกุล เช่น 100,000 USD, EUR, GBP และ AUD"
@@ -739,7 +739,7 @@ msgid "Binary.com is owned and operated by the Binary Group Ltd. group of compan
 msgstr "Binary.com เป็นเจ้าของและดำเนินการโดยกลุ่มบริษัท Binary Group Ltd สามารถหาข้อมูลเพิ่มเติมได้โดยเยี่ยมชมหน้าประวัติของเรา"
 
 msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
-msgstr "Binary.com เปิดบัญชีบิทคอยน์ (BTC) สำหรับลูกค้าที่ไม่อยู่ในสหภาพยุโรป"
+msgstr "Binary.com เปิดบัญชีบิทคอยน์ (BTC) สำหรับลูกค้าที่ไม่ได้อยู่ในสหภาพยุโรป"
 
 msgid "Binary.com launches Bitcoin accounts"
 msgstr "Binary.com เปิดตัวบัญชีบิทคอยน์"
@@ -793,7 +793,7 @@ msgid "Bollinger Bands (BBANDS)"
 msgstr "โบลินเจอร์ แบนด์ (BBANDS)"
 
 msgid "Bollinger Bands can be used to measure the highness or lowness of the price relative to previous trades"
-msgstr "สามารถใช้โบลินเจอร์ แบนด์เพื่อวัดความสูงหรือต่ำของราคาเปรียบเทียบกับการซื้อขายก่อน"
+msgstr "สามารถใช้โบลินเจอร์แบนด์เพื่อวัดความสูงหรือต่ำของราคาเปรียบเทียบกับการซื้อขายก่อน"
 
 msgid "Bought"
 msgstr "ซื้อ"
@@ -922,7 +922,7 @@ msgid "Closes"
 msgstr "ปิด"
 
 msgid "Closing Marubozu (CDLCLOSINGMARUBOZU)"
-msgstr "ปิด Marubozu (CDLCLOSINGMARUBOZU)"
+msgstr "Closing Marubozu (CDLCLOSINGMARUBOZU)"
 
 msgid "Commodities"
 msgstr "สินค้าโภคภัณฑ์"
