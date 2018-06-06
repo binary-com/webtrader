@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 11:10-0400\n"
+"PO-Revision-Date: 2018-06-06 11:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1144,7 +1144,7 @@ msgid "Digits let you predict the last decimal digit of the spot price. There ar
 msgstr "ในการทำนายตัวเลขหลักสุดท้ายของราคาสปอต มีการซื้อขาย 3 ประเภท"
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
-msgstr ""
+msgstr "ทิศทางการเคลื่อนไหว (DMI) คือ ชุดของตัวชี้วัดแยกสามดัชนีรวมเป็นหนึ่งค่า ทิศทางการเคลื่อนไหวประกอบด้วย ทิศทางดัชนีเฉลี่ย (ADX), ทิศทางบวก (+DI) และทิศทางลบ (-DI)"
 
 msgid "Directional Movement Index (DX)"
 msgstr "Directional Movement Index (DX)"
@@ -2923,7 +2923,7 @@ msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be us
 msgstr ""
 
 msgid "The Donchian Channel is an indicator used in market trading developed by Richard Donchian. It is formed by taking the highest high and the lowest low of the last n periods. The area between the high and the low is the channel for the period chosen"
-msgstr ""
+msgstr "Donchian Channel เป็นดัชนีที่ใช้ในบอกแนวโน้มตลาดที่พัฒนาโดย Richard Donchian เป็นการแสดงรูปแบบโดยใช้จุดสูงที่สูงที่สุด และจุดต่ำที่ต่ำที่สุดของช่วงสุดท้าย พื้นที่ระหว่างค่าสูงและค่าต่ำเป็นช่องของช่วงที่ได้เลือก"
 
 msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
 msgstr ""
