@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 09:30-0400\n"
+"PO-Revision-Date: 2018-06-06 09:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2021,7 +2021,7 @@ msgid "Minimum price over selected period"
 msgstr "ราคาต่ำสุดในช่วงเวลาเลือก"
 
 msgid "Minus the agent's commission"
-msgstr ""
+msgstr "หักค่านายหน้าตัวแทน"
 
 msgid "Minutes"
 msgstr "นาที"
@@ -2105,7 +2105,7 @@ msgid "No"
 msgstr "ไม่ใช่"
 
 msgid "No Touch trades"
-msgstr ""
+msgstr "การซื้อขายแบบไม่แตะเส้น"
 
 msgid "No touch"
 msgstr "ไม่แตะเส้น"
@@ -2114,7 +2114,7 @@ msgid "Normalized Average True Range (NATR)"
 msgstr "Normalized Average True Range (NATR)"
 
 msgid "Normalized Average True Range (NATR) attempts to normalize the average true range values across instruments by using the formula below"
-msgstr ""
+msgstr "ค่ามาตรฐานเฉลี่ยจริงช่วง (NATR) พยายามปรับค่าเฉลี่ยจริง โดยใช้สูตรด้านล่าง"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "หมายเหตุ: ท่านสามารถมีได้เพียงบัญชีสกุลเงินกระดาษหนึ่งบัญชี และหนึ่งบัญชีของบัญชีเงินดิจิทัล"
@@ -2168,7 +2168,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "เมื่อวงเงินเต็ม ท่านไม่สามารถฝากเงินได้"
 
 msgid "One last step left"
-msgstr ""
+msgstr "เหลือขั้นตอนสุดท้ายแล้ว"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "การซื้อขายผลิตภัณฑ์ทางการเงินอาจทำให้ท่านเสพติดได้ โปรดกรอกข้อมูลในแบบฟอร์มด้านล่างเพื่อกำหนดระดับความต้องการในเว็บไซต์ หรือ ส่งจดหมายที่มีการลงนาม หรือ ส่งแฟกซ์มายังฝ่ายลูกค้าสัมพันธ์ เมื่อมีการตั้งค่าตามความประสงค์ของท่านแล้ว ท่านจะถูกจำกัดตามเงื่อนไขดังกล่าว วงเงินจะถูกปรับหรือผ่อนปรนหลังจาก 7 วันของวันที่กำหนดให้พัก แต่หากท่านต้องการลบหรือเพิ่มวงเงินของท่าน โปรดติดต่อ ฝ่ายลูกค้าสัมพันธ์"
@@ -2219,7 +2219,7 @@ msgid "Opera"
 msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
-msgstr ""
+msgstr "การซื้อขายออปชั่นสามารถทำให้ท่านเสพติดได้เฉกเช่นกับกิจกรรมอื่นที่มีการกำหนดขีดจำกัด เพื่อหลีกเลี่ยงความเสี่ยงต่างๆ ในการเสพติด พวกเรามีทางเลือกในการตรวจสอบเพื่อช่วยให้ท่านได้รับรายงานสรุปการซื้อขายของท่านในบัญชีต่างๆ ของท่านตามปกติ"
 
 msgid "Other"
 msgstr "อื่นๆ"
@@ -2384,13 +2384,13 @@ msgid "Points"
 msgstr "จุด"
 
 msgid "Polski"
-msgstr ""
+msgstr "Polski"
 
 msgid "Portfolio"
 msgstr "พอร์ตโฟลิโอ"
 
 msgid "Portugu s"
-msgstr ""
+msgstr "ภาษาโปรตุเกส"
 
 msgid "Postal code/ZIP"
 msgstr "รหัสไปรษณีย์"
@@ -2405,7 +2405,7 @@ msgid "Potential profit"
 msgstr "ประมาณการกำไร"
 
 msgid "Pre-Defined"
-msgstr ""
+msgstr "กำหนดไว้ล่วงหน้า"
 
 msgid "Preferred reality-check interval"
 msgstr ""
@@ -2444,7 +2444,7 @@ msgid "Protect your profits"
 msgstr "ปกป้องผลกำไรของท่าน"
 
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr ""
+msgstr "เผยแพร่ด้วยภาษาอังกฤษ ภาษาอินโดนีเซีย ภาษาญี่ปุ่น ภาษาจีน ภาษาโปแลนด์ ภาษาเยอรมัน ภาษาฝรั่งเศส ภาษาสเปน ภาษาโปรตุเกส ภาษาอิตาเลียน ภาษารัสเซีย และภาษาไทย"
 
 msgid "Purchase"
 msgstr "ซื้อ"
@@ -2498,16 +2498,16 @@ msgid "Regent Markets is founded by Jean-Yves Sireau"
 msgstr "Regent Markets ก่อตั้งโดย Jean-Yves Sireau"
 
 msgid "Regent Markets obtains a licence in the Isle of Man"
-msgstr ""
+msgstr "Regent Markets ได้รับใบอนุญาตในเกาะ Isle of Man"
 
 msgid "Regent Markets receives funding to provide on-line financial betting services"
-msgstr ""
+msgstr "Regent Markets ได้รับทุนในการพัฒนาบริการด้านระบบการเงินออนไลน์"
 
 msgid "Regent Markets sets up a programming centre in Cyberjaya, Malaysia"
-msgstr ""
+msgstr "Regent Markets ดำเนินการจัดตั้งศูนย์พัฒนาระบบที่ไซเบอร์จายา ประเทศมาเลเซีย"
 
 msgid "Regent Pacific Group Ltd., the Hong Kong-listed founding shareholder of Binary.com"
-msgstr ""
+msgstr "Regent Pacific Group Ltd ผู้ถือหุ้นที่เป็นผู้ก่อตั้งที่จดทะเบียนในตลาดฮ่องกงของ Binary.com"
 
 msgid "Regent Pacific transaction"
 msgstr "ธุรกรรมของ Regent Pacific"
@@ -2561,19 +2561,19 @@ msgid "Rise/Fall"
 msgstr "Rise/Fall"
 
 msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
-msgstr ""
+msgstr "Rise/Fall - พยากรณ์ว่า ตลาดจะขึ้น หรือ จะลดต่ำลงจากระดับปัจจุบัน"
 
 msgid "Rise/Fall trades"
 msgstr "การซื้อขาย Rise/Fall"
 
 msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
-msgstr ""
+msgstr "Rise/Fall - พยากรณ์ว่า ตลาดจะขึ้น หรือ จะลดต่ำลงจากระดับปัจจุบัน"
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
-msgstr ""
+msgstr "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 
 msgid "Robust and secure platform"
-msgstr ""
+msgstr "แพลตฟอร์มที่แข็งแกร่งและปลอดภัย"
 
 msgid "Safari"
 msgstr "Safari"
