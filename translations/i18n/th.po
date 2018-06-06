@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 08:40-0400\n"
+"PO-Revision-Date: 2018-06-06 08:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2009,16 +2009,16 @@ msgid "Minimum 6 characters and must contain at least 1 digit"
 msgstr "อย่างน้อย 6 อักขระ และ ต้องมีตัวเลขอย่างน้อย 1 ตัว"
 
 msgid "Minimum of 2 characters required"
-msgstr ""
+msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 2 อักขระ"
 
 msgid "Minimum of 4 characters required"
-msgstr ""
+msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 4 อักขระ"
 
 msgid "Minimum of 6 characters required"
-msgstr ""
+msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 6 อักขระ"
 
 msgid "Minimum price over selected period"
-msgstr ""
+msgstr "ราคาต่ำสุดในช่วงเวลาเลือก"
 
 msgid "Minus the agent's commission"
 msgstr ""
@@ -2042,7 +2042,7 @@ msgid "Monday"
 msgstr "วันจันทร์"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "ตารางผลกำไรรายเดือน"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Morning Doji Star (CDLMORNINGDOJISTAR)"
@@ -2582,10 +2582,10 @@ msgid "Salaried Employee"
 msgstr "พนักงานที่ได้รับเงินเดือน"
 
 msgid "Sale Date"
-msgstr ""
+msgstr "วันที่ขาย"
 
 msgid "Sale Price"
-msgstr ""
+msgstr "ราคาขาย"
 
 msgid "Sand Signika"
 msgstr "Sand Signika"
@@ -2639,7 +2639,7 @@ msgid "Sell option"
 msgstr "ขายออปชั่น"
 
 msgid "Sent to account"
-msgstr ""
+msgstr "ส่งไปยังบัญชี"
 
 msgid "Sep"
 msgstr "ก.ย."
@@ -2873,7 +2873,7 @@ msgid "Template name"
 msgstr "ชื่อแม่แบบ"
 
 msgid "Template name already exists"
-msgstr ""
+msgstr "มีชื่อแม่แบบนี้แล้ว"
 
 msgid "Terms"
 msgstr "ข้อตกลง"
@@ -3164,7 +3164,7 @@ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., 
 msgstr ""
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "เว็บไซต์นี้ได้พัฒนาเพื่อประเทศต่างๆ ในภูมิภาคยุโรปอื่นๆ สำหรับผลิตภัณฑ์การลงทุนโดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตเลขที่ IS/70156) และสำหรับผลิตภัณฑ์การพนัน โดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมาย โดย (1) Malta Gaming Authority in Malta ประเทศมอลตา (ใบอนุญาตเลขที่ MGA/CL2/118/2000) ออกให้เมื่อวันที่ 26 พฤษภาคม พ.ศ. 2558 หรือ ค.ศ. 2015) สำหรับลูกค้าสหราชอาณาจักรโดย (2) UK Gambling Commission -"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
@@ -3590,7 +3590,7 @@ msgid "Y-axis labels"
 msgstr "ป้ายชื่อแกนวาย (แนวตั้ง)"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "ตารางผลกำไรรายปี"
 
 msgid "Yes"
 msgstr "ใช่"
@@ -3635,13 +3635,13 @@ msgid "Your browser is not supported"
 msgstr "เบราเซอร์ของท่านไม่รองรับการใช้งาน"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "การตั้งค่าการคัดลอกของท่าน"
 
 msgid "Your email"
 msgstr "อีเมล์ของท่าน"
 
 msgid "Your new account balance is"
-msgstr ""
+msgstr "ยอดคงเหลือในบัญชีใหม่ของท่าน คือ"
 
 msgid "Your transaction reference is"
 msgstr "หมายเลขอ้างอิงของธุรกรรมของท่าน คือ"
