@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 11:31-0400\n"
+"PO-Revision-Date: 2018-06-06 11:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1736,7 +1736,7 @@ msgid "June"
 msgstr "มิถุนายน"
 
 msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr ""
+msgstr "เพีลงคลิกปุ่ม Grant ท่านจะ"
 
 msgid "Kaufman's Adaptive Moving Average (KAMA)"
 msgstr "Kaufman's Adaptive Moving Average (KAMA)"
