@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 10:10-0400\n"
+"PO-Revision-Date: 2018-06-07 10:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -820,7 +820,7 @@ msgid "By clicking"
 msgstr "โดยการคลิก"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
-msgstr "โดยการกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการปรับปรุง"
+msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
@@ -2834,7 +2834,7 @@ msgid "Submit"
 msgstr "ส่ง"
 
 msgid "Successfully applied the template and saved it as"
-msgstr "เลือกใช้แม่แบบและบันทึกเรียบร้อยแล้ว"
+msgstr "เลือกใช้แม่แบบแล้ว และบันทึกเป็น"
 
 msgid "Summation (SUM)"
 msgstr "Summation (SUM)"
@@ -3154,7 +3154,7 @@ msgid "This is another award we really savour. Trade2win is a portal for active 
 msgstr "นี้คืออีกรางวัลหนึ่งที่เราได้ดื่มด่ำอย่างมีความสุข Trade2win เป็นระบบสำหรับนักลงทุนเพื่อการแสวงหากำไรจากหลักทรัพย์ ฟิวเจอร์ ออปชั่น และฟอเร็กซ์ นักลงทุนเหล่านี้เองที่มอบรางวัลให้เรา สำหรับรางวัลซิลเวอร์ (ซึ่งเราเพิ่งได้ระดับโกลด์มา จาก Betfair) นั่นหมายความว่า นักลงทุนที่ใช้งานอยู่ทั่วโลกประกาศว่า เราคือระบบซื้อขายที่เยี่ยมยอดทีเดียว"
 
 msgid "This is big. We pick up a double award from the Financial Times and Investors Chronicle, reflecting our success in improving the quality and usability of our website and products"
-msgstr "นี้ก็ผลงานชิ้นใหญ่อีกอันหนึ่ง พวกเราได้รับสองรางวัลจาก The Financial Times และ Investors Chronicle เพื่อแสดงถึงความสำเร็จของเราในการพัฒนาเว็บไซต์และผลิตภัณฑ์ของเราอย่างมีคุณภาพและใช้งานง่าย"
+msgstr "นี้คือผลงานชิ้นใหญ่อีกอันหนึ่ง พวกเราได้รับสองรางวัลจาก The Financial Times และ Investors Chronicle เพื่อแสดงถึงความสำเร็จของเราในการพัฒนาเว็บไซต์และผลิตภัณฑ์ของเราอย่างมีคุณภาพและใช้งานง่าย"
 
 msgid "This is the current price at which an underlying can be bought or sold at a particular time"
 msgstr "นี้คือราคาปัจจุบันที่ผลิตภัณฑ์อ้างอิงสามารถถูกซื้อ หรือ ขาย ณ เวลาใดๆ"
