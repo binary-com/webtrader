@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 11:40-0400\n"
+"PO-Revision-Date: 2018-06-07 11:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -772,7 +772,7 @@ msgid "Binary.com takes home first prize in the Financial Betting Operator categ
 msgstr "Binary.com ได้รับรางวัลชนะเลิศ ประเภท Financial Betting Operator ในงานเกียรติยศ EGR Operator Awards ในปี ค.ศ. 2015 จัดที่เมืองลอนดอน"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
-msgstr "ดัชนีต่อเนื่องของ Binary.com คือ ดัชนีผันผวน 10 ดัชนีผันผวน 25 ดัชนีผันผวน 50 ดัชนีผันผวน 75 และดัชนีผันผวน 100 ซึ่งดัชนีเหล่านี้สอดคล้องตลาดจำลองที่มีระดับความไม่แน่นอนที่ 10% 25% 50% 75% และ 100% ตามลำดับ"
+msgstr "ดัชนีต่อเนื่องของ Binary.com คือ ดัชนีผันผวน 10 ดัชนีผันผวน 25 ดัชนีผันผวน 50 ดัชนีผันผวน 75 และดัชนีผันผวน 100 ซึ่งดัชนีเหล่านี้สอดคล้องกับสภาพตลาดจำลองที่มีระดับความไม่แน่นอนคงที่ที่ 10% 25% 50% 75% และ 100% ตามลำดับ"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
 msgstr "ดัชนีที่ซื้อขายเองของ Binary.com และหลักทรัพย์จากตลาดเจรจาต่อรองมีให้ท่านเป็นอีกทางเลือกหนึ่งในการซื้อขายดัชนีหุ้น และหุ้น ที่มีจากแหล่งอื่นนอกเหนือจากตลาดแลกเปลี่ยนกลาง"
@@ -853,7 +853,7 @@ msgid "Candlestick up-line"
 msgstr "แท่งเทียน เส้นขึ้น"
 
 msgid "Cash Balance"
-msgstr "เงินสดคงเหลือ"
+msgstr "แคชบาลานซ์"
 
 msgid "Chande Kroll Stop (CKS)"
 msgstr "Chande Kroll Stop (CKS)"
@@ -892,7 +892,7 @@ msgid "Choose the Touch/No Touch trade if you want to predict the market touchin
 msgstr "เลือกซื้อขายแบบ แตะ / ไม่แตะ เมื่อต้องการคาดการณ์ว่าตลาดจะแตะ หรือ ไม่แตะ ราคาเป้าหมาย เวลาใดก็ตามในระยะเวลาของสัญญา"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
-msgstr "เลือกสินทรัพย์ที่คุณต้องการจะซื้อขาย เช่น ทองคำ น้ำมัน หุ้น หรือ คู่สกุลเงิน มูลค่าของไบนารีออปชั่นได้มาจากราคาของสินทรัพย์อ้างอิง ประโยชน์อย่างหนึ่งของการซื้อขายไบนารี ออปชั่น คือ คุณไม่ได้กำลังซื้อ หรือ ขายสินทรัพย์จริง คุณเพียงแต่ดำเนินการผ่านสัญญาที่กำหนดดูการเคลื่อนไหวของสินทรัพย์"
+msgstr "เลือกสินทรัพย์ที่ท่านปรารถนาจะซื้อขาย เช่น ทองคำ น้ำมัน หลักทรัพย์ หรือ คู่สกุลเงิน มูลค่าของไบนารีออปชั่นได้มาจากราคาของผลิตภัณฑ์อ้างอิง ประโยชน์อย่างหนึ่งของการซื้อขายไบนารี ออปชั่น คือ ท่านไม่ได้กำลังซื้อ หรือ ขายสินทรัพย์จริง ท่านเพียงแต่ดำเนินการผ่านสัญญาที่กำหนดพฤติการณ์ของสินทรัพย์ดังกล่าว"
 
 msgid "Choose your pereferred payment agent"
 msgstr "เลือกตัวแทนชำระเงินที่ท่านพอใจ"
