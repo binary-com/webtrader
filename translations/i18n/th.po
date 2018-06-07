@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 11:40-0400\n"
+"PO-Revision-Date: 2018-06-06 21:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -610,7 +610,7 @@ msgid "Barrier(s)"
 msgstr "Barrier"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
+msgstr "ซบเซา: นี่คือรูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขึ้น แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้นและสร้างช่องว่างด้านบน ควรจะมีเงาการขายด้วย รูปแบบนี้แสดงถึงความอ่อนแอในการขึ้นที่มีความเสี่ยงในการรวมเข้าด้วยกัน และมีความเป็นไปได้ในการย้อนกลับ ตื่นตัว: นี่คือรูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขาลง แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้น รูปแบบนี้แสดงถึงความอ่อนแอในการรวมเข้าด้วยกันและความเป็นไปได้ในการย้อนกลับของแนวโน้ม"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -1045,7 +1045,7 @@ msgid "Custom Theme"
 msgstr "ชุดรูปแบบกำหนดเอง"
 
 msgid "Daily Reset Indices"
-msgstr ""
+msgstr "ดัชนีที่ปรับค่าใหม่ทุกวัน"
 
 msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
 msgstr "ดัชนีถูกตั้งค่าใหม่รายวันจำลองสภาพของแนวโน้มความตื่นตัวและความซบเซาของตลาดด้วยความผันผวนที่คงที่"
@@ -1063,13 +1063,13 @@ msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 msgstr "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
-msgstr ""
+msgstr "กราฟแท่งเทียนรูปแบบเมฆดำปกคลุม (Dark Cloud Cover) เป็นรูปแบบย้อนกลับของแท่งเทียนตลาดซบเซา ซึ่งเกิดขึ้นเมื่อแท่งเทียนตลาดซบเซาสีแดง (ราคาปิดต่ำกว่าราคาเปิด) ในวันที่ 2 ปิดต่ำกว่าช่วงกลางของแท่งเทียนตลาดตื่นตัวในวันที่ 1 (ราคาปิดเหนือราคาเปิด) เราจะต้องใช้แนวโน้มนี้ขายการฟื้นตัวในตลาดสกุลเงินที่ซบเซา"
 
 msgid "Dark Green"
 msgstr "สีเขียวเข้ม"
 
 msgid "Dark Unica"
-msgstr ""
+msgstr "Dark Unica"
 
 msgid "Date"
 msgstr "วันที่"
