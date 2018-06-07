@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 08:50-0400\n"
+"PO-Revision-Date: 2018-06-07 09:08-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -235,7 +235,7 @@ msgid "2016"
 msgstr "2016 (พ.ศ. 2559)"
 
 msgid "2017"
-msgstr "2017"
+msgstr "2017 (พ.ศ. 2560)"
 
 msgid "2h"
 msgstr "2 ชั่วโมง"
@@ -283,7 +283,7 @@ msgid "4. Barrier(s)"
 msgstr "4. Barrier"
 
 msgid "4. Choose your Stake and Potential Return"
-msgstr "4. เลือกจำนวนเงินเดิมพันและผลกำไร"
+msgstr "4. เลือกจำนวนเงินเดิมพันและประมาณการผลกำไร"
 
 msgid "40 transactions or more in the past 12 months"
 msgstr "มีมากกว่า 40 ธุรกรรม ภายใน 12 เดือนที่ผ่านมา"
@@ -454,7 +454,7 @@ msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
 
 msgid "All market conditions"
-msgstr "เงื่อนไขทั้งหมดในตลาด"
+msgstr "ทุกเงื่อนไขในตลาด"
 
 msgid "All market conditions and durations"
 msgstr "ทุกเงื่อนไขของตลาด และทุกช่วงเวลา"
@@ -1916,7 +1916,7 @@ msgid "MENA FFXPO Award"
 msgstr "รางวัล MENA FFXPO"
 
 msgid "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
-msgstr ""
+msgstr "โปรดแน่ใจว่า ท่านได้แสดงความยินยอมต่อตัวแทนรับชำระเงินในเงื่อนไขการชำระเงินก่อนส่งคำขอของท่าน เมื่อท่านคลิกปุ่ม \"ยืนยันการโอน\" หลักประกันจะถูกถอนจากบัญชีของท่านและจะถูกส่งไปยังตัวแทนรับชำระเงินที่ท่านเลือก ตัวแทนรับชำระเงินจะส่งจำนวนเงินที่ถอน (หักด้วยค่าธรรมเนียม) ให้ท่านตามช่องทางการรับเงินที่ท่านเลือก"
 
 msgid "Make your trade"
 msgstr "ซื้อขาย"
@@ -3025,7 +3025,7 @@ msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index,
 msgstr "ดัชนีแปรปรวน 100 เป็นสองเท่าของความแปรปรวนของดัชนีแปรปรวน 50 และเป็นสี่เท่าของ ดัชนีแปรปรวน 25"
 
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
-msgstr ""
+msgstr "ดัชนีค่าปิดถ่วงน้ำหนัก (Weighted Close) เป็นค่าเฉลี่ยอย่างง่ายของราคารายวัน ซึ่งสามารถใช้แก้ปัญหาราคาปิดที่เส้นแนวโน้มไม่คงเส้นคงวา เนื่องจากเป็นข้อมูลราคาที่มาจากราคาที่ซื้อขายตลอดทั้งวัน"
 
 msgid "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
 msgstr ""
