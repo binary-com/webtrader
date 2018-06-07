@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 11:30-0400\n"
+"PO-Revision-Date: 2018-06-07 11:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2255,7 +2255,7 @@ msgid "Over 3 years"
 msgstr "มากกว่า 3 ปี"
 
 msgid "Over/Under - Predict that the last digit is higher or lower"
-msgstr "โอเวอร์/อันเดอร์ - พยากรณ์ว่า เลขหลักสุดท้ายจะสูงกว่า หรือ ต่ำกว่า"
+msgstr "Over/Under - พยากรณ์ว่า เลขหลักสุดท้ายจะสูงกว่า หรือ ต่ำกว่า"
 
 msgid "Overlap Studies"
 msgstr "การศึกษาการซ้อนทับกัน"
@@ -2630,7 +2630,7 @@ msgid "Self-Employed"
 msgstr "อาชีพอิสระ"
 
 msgid "Self-Exclusion"
-msgstr "การพักตัวเอง"
+msgstr "การพักการใช้งาน"
 
 msgid "Sell At Market"
 msgstr "ขายที่ราคาตลาด"
@@ -3272,7 +3272,7 @@ msgid "Total Profit/Loss"
 msgstr "รวมกำไร/ขาดทุน"
 
 msgid "Total Trades"
-msgstr "ซื้อขายทั้งหมด"
+msgstr "การซื้อขายทั้งหมด"
 
 msgid "Touch"
 msgstr "แตะ"
