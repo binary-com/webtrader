@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 08:05-0400\n"
+"PO-Revision-Date: 2018-06-07 08:11-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1069,7 +1069,7 @@ msgid "Dark Green"
 msgstr "สีเขียวเข้ม"
 
 msgid "Dark Unica"
-msgstr "Dark Unica"
+msgstr "พื้นดำทึบ"
 
 msgid "Date"
 msgstr "วันที่"
@@ -1612,7 +1612,7 @@ msgid "In a downtrend, one small short body candlestick has a long lower shadow 
 msgstr "ในช่วงขาลง แท่งเทียนจะมีลำตัวสั้นหมีเงาต่ำกว่ายาวอย่างน้อยสามเท่าของลำตัวจริง และมีเงาที่สูงกว่าเล็กน้อยหรือไม่มีเลย ยืนยันจากราคาปิดที่สูงกว่าวันถัดไป"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
-msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ลำตัวก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของเทียนสามเส้นคือเทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
+msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ลำตัวแท่งเทียนก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของแท่งเทียนสามเส้น คือ เทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
 msgstr "ในสามวันที่เป็นขาขึ้นต่อเนื่องกันเปิดที่ หรือ ใกล้กับราคาปิดวันก่อน และปิดในวันนั้น รูปแบบนี้รุนแรงกว่ารูปแบบ Three Black Crows แต่มีความน่าเชื่อถือมากกว่าว่าเป็น รูปแบบการกลับตัวของราคา"
