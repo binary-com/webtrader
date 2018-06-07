@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 12:10-0400\n"
+"PO-Revision-Date: 2018-06-07 12:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -331,7 +331,7 @@ msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a sma
 msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัว หรือ ตลาดซบเซา ที่มีแท่งลำตัวขนาดเล็ก ความยาวเงาของหัว หรือ หางแตกต่างกันไป เช่นเดียวกับแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันทั้งผู้ซื้อและผู้ขาย"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
-msgstr "การซื้อขาย Stays Between จะให้ผลตอบแทน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้ การซื้อขาย Goes Outside จะให้ผลตอบแทน หากตลาดแตะค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้"
+msgstr "การซื้อขาย Stays Between จะให้ผลตอบแทน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่นักลงทุนได้เลือกไว้ การซื้อขาย Goes Outside จะให้ผลตอบแทน หากตลาดไปถึงค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่นักลงทุนได้เลือกไว้"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
 msgstr "รูปแบบแท่งเทียนแบบซบเซาประกอบด้วยแท่งเทียนสามแท่งซึ่งแสดงลักษณะดังต่อไปนี้ แท่งแรกเป็นเทียนสีขาวขนาดใหญ่อยู่ภายในแนวโน้มขึ้น แท่งกลางเป็นแท่งเทียนขนาดเล็ก (แดง หรือ ขาว) ที่ปิดเหนือแท่งสีขาวแรก และแท่งสุดท้าย คือ เทียนสีแดงขนาดใหญ่ที่เปิดใต้เทียนแท่งกลาง และปิดใกล้กับตำแหน่งตรงกลางของแท่งเทียนแรก"
@@ -343,7 +343,7 @@ msgid "A bearish counterattack is a long white candle in an uptrend, followed by
 msgstr "การโต้กลับของตลาดซบเซา คือ แท่งเทียนยาวสีขาวในแนวโน้มขึ้น ตามด้วยแท่งเทียนยาวสีดำ ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน การโต้กลับของตลาดตื่นตัวคือแท่งเทียนยาวสีดำในแนวโน้มลง ตามด้วยแท่งเทียนยาวสีขาว ราคาปิดของแท่งเทียนทั้งสองอยู่ที่ระดับราคาเดียวกัน"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
-msgstr "เส้นแยกของตลาดซบเซาคือรูปแบบความต่อเนื่องของตลาดซบเซา ซึ่งตรงกันข้ามกับเส้นแยกของตลาดตื่นตัว มีองค์ประกอบสองตัวของเส้นแยกตลาดซบเซา วันแรกคือแท่งเทียนสีเขียว และวันที่สองห่างลง เปิดที่ระดับเปิดของแท่งเทียนแรกและปิดแบบอ่อนตัว"
+msgstr "เส้นแยกของตลาดซบเซา คือ รูปแบบความต่อเนื่องของตลาดซบเซา ซึ่งตรงกันข้ามกับเส้นแยกของตลาดตื่นตัว มีองค์ประกอบสองประการของเส้นแยกตลาดซบเซา กล่าวคือ วันแรก คือ แท่งเทียนสีเขียว และวันที่สองมีช่วงห่างลงมา เปิดที่ระดับเปิดของแท่งเทียนแรกและปิดแบบอ่อนตัว"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
 msgstr "ไบนารีออปชั่นเป็นสัญญาซื้อขายประเภทหนึ่งที่ผู้ซื้อขายจะได้รับเงินตามจำนวนเงินที่กำหนดไว้ล่วงหน้า หากการคาดการณ์ถูกต้อง"
@@ -364,7 +364,7 @@ msgid "A bullish or bearish candle followed by a doji with with a downward or up
 msgstr "แท่งเทียนในตลาดตื่นตัว หรือ ตลาดซบเซา ตามด้วย Doji ที่มีช่องว่างลดต่ำลง หรือ ขาขึ้น"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
-msgstr "รูปแบบแผนภูมิแท่งเทียนซึ่งแท่งเทียนขนาดใหญ่จะตามด้วยแท่งเทียนขนาดเล็กซึ่งตัวแท่งเทียนนั้นอยู่ภายในช่วงแนวตั้งของแท่งที่ใหญ่กว่า สำหรับสีของแท่งเทียน harami ในตลาดตื่นตัวเป็นแนวโน้มขาลงของแท่งเทียนสีที่เป็นลบ (ดำ) ปกคลุมแท่งเทียนที่เป็นบวก (ขาว) ขนาดเล็ก ให้สัญญาณของการกลับตัวของแนวโน้มขาลง"
+msgstr "รูปแบบแผนภูมิแท่งเทียนซึ่งแท่งเทียนขนาดใหญ่จะตามด้วยแท่งเทียนขนาดเล็กกว่า ซึ่งตัวแท่งเทียนนั้นอยู่ภายในช่วงแนวตั้งของแท่งที่ใหญ่กว่า สำหรับสีของแท่งเทียน Harami ในตลาดตื่นตัวเป็นแนวโน้มขาลงของแท่งเทียนสีที่เป็นลบ (สีดำ) ปกคลุมแท่งเทียนที่เป็นบวก (สีขาว) ขนาดเล็ก กำลังให้สัญญาณของการกลับตัวของแนวโน้มขาลง"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
 msgstr "แท่งเทียนที่มีสีดำขนาดยาว (เส้นยาว) หมายถึงแรงผลักของตลาดซบเซา ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาสูงและปิดใกล้กับราคาต่ำของวัน อันที่มีเส้นสีขาวยาวหมายถึงแรงผลักของตลาดตื่นตัว ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาต่ำของวันและปิดใกล้กับราคาสูง"
@@ -388,7 +388,7 @@ msgid "A technical indicator invented by Larry Williams that uses the weighted a
 msgstr "ตัวบ่งชี้ทางเทคนิคที่คิดค้นโดย Larry Williams ที่ใช้ค่าเฉลี่ยถ่วงน้ำหนักของรอบระยะเวลาต่างๆกันสามรอบ เพื่อลดความผันผวนและสัญญาณธุรกรรมเท็จที่เกี่ยวข้องกับตัวชี้วัดอื่น ๆ หลายที่ส่วนใหญ่ใช้แค่รอบระยะเวลาหนึ่ง"
 
 msgid "A technical momentum indicator that compares a security's closing price to its price range over a given time period. The oscillator's sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result"
-msgstr "ตัวบ่งชี้แรงผลักดันทางเทคนิคที่เปรียบเทียบราคาปิดของหลักทรัพย์กับของเขตของราคาในช่วงเวลาหนึ่ง สามารถลดการตอบสนองของตัวแกว่งต่อการเคลื่อนไหวของตลาดได้โดยการปรับช่วงระยะเวลาหรือด้วยการใช้ค่าเฉลี่ยเคลื่อนที่เป็นผลลัพธ์"
+msgstr "ดัชนีโมเมนตัมเชิงเทคนิคที่เปรียบเทียบราคาปิดของหลักทรัพย์กับของเขตของราคาในช่วงเวลาหนึ่ง สามารถลดการตอบสนองของตัวแกว่งต่อการเคลื่อนไหวของตลาดได้โดยการปรับช่วงระยะเวลา หรือ ด้วยการใช้ผลลัพธ์ของค่าเฉลี่ยเคลื่อนที่"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
 msgstr "รูปแบบการซื้อขายทางเทคนิคที่แท่งเทียนสามแท่งก่อเป็นรูปร่างที่ดูเหมือนกับแซนวิชที่หน้าจอของนักลงทุน แซนวิชแท่งจะมีแท่งเทียนตรงกลางที่มีสีตรงข้ามกับแท่งเทียนที่ขนาบทั้งสองข้าง ซึ่งแท่งเทียนทั้งคู่นั้นจะมีระยะการซื้อขายที่ใหญ่กว่าแท่งเทียนตรงกลาง รูปแบบแซนวิชแท่งสามารถเกิดขึ้นได้ทั้งในตัวบ่งชี้ตลาดซบเซา และ ตลาดตื่นตัว"
@@ -601,7 +601,7 @@ msgid "Balance of Power (BOP)"
 msgstr "Balance of Power (BOP)"
 
 msgid "Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades"
-msgstr "ธนาคาร เฮดจ์ฟัน และนักลงทุนมืออาชีพทำการซื้อขายไบนารีออปชั่นเป็นกิจวัตรในตลาดอนุพันธ์ซื้อขายเอง ผู้เชี่ยวชาญตลาดหลายคนใช้และเชื่อมั่นในแพลตฟอร์มของ Binary.com สำหรับการซื้อขายปริมาณสูงที่ยืดหยุ่น"
+msgstr "ธนาคาร เฮดจ์ฟันด์ และนักลงทุนมืออาชีพทำการซื้อขายไบนารีออปชั่นเป็นกิจวัตรในตลาดอนุพันธ์ตราสารทุน ผู้เชี่ยวชาญตลาดหลายท่านใช้และเชื่อมั่นในแพลตฟอร์มของ Binary.com สำหรับการซื้อขายปริมาณสูงที่มีความยืดหยุ่น"
 
 msgid "Barrier"
 msgstr "Barrier"
