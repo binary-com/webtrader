@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 12:50-0400\n"
+"PO-Revision-Date: 2018-06-07 13:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -613,7 +613,8 @@ msgid "Barrier(s)"
 msgstr "Barrier"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "ซบเซา: นี่คือรูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขึ้น แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้นและสร้างช่องว่างด้านบน ควรจะมีเงาการขายด้วย รูปแบบนี้แสดงถึงความอ่อนแอในการขึ้นที่มีความเสี่ยงในการรวมเข้าด้วยกัน และมีความเป็นไปได้ในการย้อนกลับ ตื่นตัว: นี่คือรูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขาลง แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้น รูปแบบนี้แสดงถึงความอ่อนแอในการรวมเข้าด้วยกันและความเป็นไปได้ในการย้อนกลับของแนวโน้ม"
+msgstr "ซบเซา: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขึ้น แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้นและสร้างช่องว่างด้านบน ควรจะมีเงาการขายด้วย รูปแบบนี้แสดงถึงความอ่อนแอในการขึ้นอย่างมีความเสี่ยงในการรวมเข้าด้วยกัน และมีความเป็นไปได้ในการกลับตัว \n"
+"ตื่นตัว: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขาลง แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้น รูปแบบนี้แสดงถึงความอ่อนแอในการรวมเข้าด้วยกันและความเป็นไปได้ในการกลับตัวของแนวโน้ม"
 
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Belt-hold (CDLBELTHOLD)"
@@ -3080,7 +3081,7 @@ msgid "The market exit price is the price in effect at the end of the contract p
 msgstr "ราคาสิ้นสุดของตลาด คือ ราคาที่มีผลในช่วงสุดท้ายของเวลาในสัญญา"
 
 msgid "The parabolic SAR is calculated almost independently for each trend in the price. When the price is in an uptrend, the SAR emerges below the price and converges upwards towards it. Similarly, on a downtrend, the SAR emerges above the price and converges downwards. At each step within a trend, the SAR is calculated one period in advance"
-msgstr ""
+msgstr "พาราโบลิก SAR (Stop and Reversal) คำนวณจากค่าอิสระของแต่ละแนวโน้มของราคา เมื่อราคาเป็นแนวโน้มขาขึ้น และมี SAR เกิดขึ้นด้านล่างราคาแล้วกลับเป็นขาขึ้น ในทำนองเดียวกันในขาลง SAR เกิดขึ้นด้านบนเหนือราคาแล้วกลับตัวเป็นขาลง แต่ละขั้นของแนวโน้มถูกคำนวณจากช่วงเวลาหนึ่งในอนาคต"
 
 msgid "The patent means Regent Markets is the recognised pioneer of binary betting. The patent helps protect our innovations"
 msgstr "สิทธิบัตร หมายถึง Regent Markets ได้รับการยอมรับให้เป็นผู้บุกเบิกการซื้อขายไบนารี สิทธิบัตรช่วยป้องกันนวัตกรรมที่พวกเราได้สร้างสรรค์ขึ้น"
