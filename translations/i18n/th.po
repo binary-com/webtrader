@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 22:40-0400\n"
+"PO-Revision-Date: 2018-06-06 22:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1880,16 +1880,16 @@ msgid "Long Line Candle (CDLLONGLINE)"
 msgstr "Long Line Candle (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
-msgstr ""
+msgstr "Doji ขายาวมีเงาด้านบนและด้านล่างที่เกือบจะยาวเท่ากัน Doji เหล่านี้สะท้อนให้เห็นถึงการตัดสินใจไม่ได้อย่างมากของตลาด Doji ขายาวบ่งชี้ถึงราคาซื้อขายที่เหนือและต่ำกว่าระดับเปิด แต่ปิดเท่ากันกับเปิด สุดท้ายผลลัพธ์ที่เปิดแสดงให้เห็นการเปลี่ยนแปลงเล็กน้อยจากราคาเปิดเริ่มต้น"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
-msgstr ""
+msgstr "มองหาเทียนสีดำในแนวโน้มราคาขาลง ตามด้วยเทียนสีขาวที่เปิดต่ำกว่าราคาต่ำก่อนหน้า แต่ปิดใกล้หรือต่ำกว่าจุดกลางของลำตัวของแท่งเทียน"
 
 msgid "Look for a tall black candle with a long lower shadow to appear in a downward price trend. The second day should be similar to the first day, but smaller and with a higher low. The last day is a black marubozu that squeezes inside the high-low range of the prior day"
-msgstr ""
+msgstr "มองหาเทียนสีดำสูงที่มีเงาด้านล่างยาวที่ปรากฎในแนวโน้มราคาขาลง วันที่สองควรจะเหมือนกับวันแรก แต่เล็กกว่าและมีราคาต่ำที่สูงกว่า วันสุดท้ายคือ marubozu สีดำที่บีบอยู่ภายในระยะสูง-ต่ำของวันก่อนหน้านั้น"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
-msgstr ""
+msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่่งมีช่องว่างเหนือลำตัวของเทียนอันก่อน วันสุดท้ายคือ สีดำอีกอัน แต่อันนี้กลืนแท่งเทียนตลาดซบเซาอันก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
 
 msgid "Low"
 msgstr "ต่ำ"
@@ -1910,7 +1910,7 @@ msgid "Lower"
 msgstr "ต่ำกว่า"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr ""
+msgstr "MACD คือตัวชี้วัดที่ใช้ในการวิเคราะห์ทางเทคนิคของราคาหุ้น ซึ่งควรจะเปิดเผยการเปลี่ยนแปลงในความแข็งแรง ทิศทาง โมเมนตัม และระยะเวลาของแนวโน้มของราคาหุ้น"
 
 msgid "MENA FFXPO Award"
 msgstr "รางวัล MENA FFXPO"
