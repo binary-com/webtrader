@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 12:20-0400\n"
+"PO-Revision-Date: 2018-06-07 12:35-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3038,7 +3038,7 @@ msgid "The breakaway pattern begins with a long candle representing the current 
 msgstr "รูปแบบ Breakaway เริ่มจากแท่งเทียนยาวแสดงถึงแนวโน้มปัจจุบัน แท่งเทียนต่อไปเป็นสีเดียวกัน และมีช่องว่างห่างจากแท่งเทียนยาวแท่งแรก ในขณะที่แท่งเทียนในวันที่สาม หากเป็นสี คือ ไม่แสดงการเปลี่ยนแปลงของแนวโน้มปัจจุบัน วันที่สี่ยังคงเป็นแนวโน้มต่อเนื่อง ดังนั้นจึงยังเป็นแท่งเทียนสีเดียวกัน อย่างไรก็ตาม ในวันที่ห้า แสดงการกลับตัว โปรดทราบว่า เป็นเพียงการแสดงการเปิดในแนวตรงข้ามของแนวโน้มปัจจุบันเพียงเล็กน้อย และจะต่อเนื่องในทิศทางเดียวกันจนกระทั่งราคาปิดเกิดขึ้นในบริเวณช่องว่าง"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
-msgstr ""
+msgstr "แท่งเทียน Marubozu ปิดสีดำ เป็นแท่งเทียนสูงสีดำที่มีเงาด้านบนแต่ไม่มีเงาด้านล่าง ในขณะเดียวกัน แท่งเทียน Marubozu ปิดสีขาว เป็นแท่งเทียนสูงสีขาวที่มีเงาด้านล่างแต่ไม่มีเงาด้านบน "
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "บริษัทฯ ดูแลเงินทุนประกันของลูกค้าในบัญชีที่ถูกจัดสรรแยกเพื่อการปฏิบัติการ และการจัดการเพื่อให้แน่ใจว่า สินทรัพย์ของบัญชีลูกค้ามีการถูกจำหน่ายหากมีกรณีล้มละลาย ซึ่งเป็นไปตามข้อกำหนดของ Gambling Commission ในการแยกเงินทุนลูกค้าโดยเป็นมาตรการการป้องกันระดับ: "
@@ -3488,7 +3488,7 @@ msgid "Volatility indices - Binary.com's proprietary indices that simulate marke
 msgstr "ดัชนีผันผวน - ผลิตภัณฑ์ดัชนีลิขสิทธิ์ของ %1 ซึ่งกระตุ้นตลาด"
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
-msgstr ""
+msgstr "WMA ย่อมาจาก Weighted Moving Average ซึ่งช่วยในการปรับเส้นราคาให้แสดงรูปแบบแนวโน้มต่างๆ ซึ่งให้ความสำคัญกับข้อมูลล่าสุดมากกว่าที่ EMA ใช้คำนวณ"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "พวกเราถูกกำหนดโดยใบอนุญาตของพวกเราเพื่อเรียนให้ท่านทราบเกี่ยวกับสิ่งที่เกิดขึ้นกับเงินทุนที่พวกเราดูแลในบัญชีของท่าน และขอบเขตที่เงินทุนได้รับการปกป้องจากภาวะล้มละลาย "
@@ -3548,7 +3548,7 @@ msgid "Where does Binary.com hold my funds?"
 msgstr "Binary.com  ดูแลหลักประกันของฉัน โดยเก็บที่ใดบ้าง?"
 
 msgid "While on the go, you can"
-msgstr ""
+msgstr "ขณะตลาดดำเนินไป ท่านสามารถ"
 
 msgid "Why Choose Binary Trading?"
 msgstr "ทำไมต้องใช้ระบบ Binary ในการซื้อขาย?"
