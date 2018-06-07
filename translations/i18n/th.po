@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 11:00-0400\n"
+"PO-Revision-Date: 2018-06-07 11:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -664,7 +664,7 @@ msgid "Binary option"
 msgstr "ไบนารีออปชั่น"
 
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
-msgstr "ไบนารีออปชั่นเข้าใจง่าย เหตุที่ถูกเรียกว่า 'ไบนารี' เนื่องจากผลลัพธ์มีเพียง 2 อย่าง คือ ชนะ หรือ แพ้ หากคุณคาดการณ์ถูกต้อง คุณจะได้รับการชำระเงินตามที่กำหนดไว้ตั้งแต่เริ่มต้นของการซื้อขาย หากคุณแพ้ คุณจะเสียเพียงเงินที่วางเดิมพันครั้งแรกของคุณ"
+msgstr "ไบนารีออปชั่นเข้าใจง่าย เหตุที่ถูกเรียกว่า 'ไบนารี' เนื่องจากผลลัพธ์มีเพียง 2 อย่าง คือ ชนะ หรือ แพ้ หากท่านคาดการณ์ถูกต้อง ท่านจะได้รับการชำระเงินตามที่กำหนดไว้ตั้งแต่เริ่มต้นของการซื้อขาย หากท่านแพ้ ท่านจะเสียเพียงเงินที่วางเดิมพันครั้งแรกของท่าน"
 
 msgid "Binary options or other financial derivatives"
 msgstr "ไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
@@ -748,10 +748,10 @@ msgid "Binary.com launches an"
 msgstr "Binary.com เปิดตัว"
 
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
-msgstr "Binary.com มีวิธีการฝากและถอนหลายวิธี ทั้งจากบัตรเครดิต บัตรเดบิต โอนเงินผ่านธนาคา เงินสดอิเล็กทรอนิกส์ และกระเป๋าเงินอิเล็กทรอนิกส์"
+msgstr "Binary.com มีวิธีการฝากและถอนหลายวิธี ทั้งจากบัตรเครดิต บัตรเดบิต โอนเงินผ่านธนาคาร เงินสดอิเล็กทรอนิกส์ และกระเป๋าเงินอิเล็กทรอนิกส์"
 
 msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
-msgstr "Binary.com ให้บริการบัญชีทดสอบเพื่อคุณจะได้ฝึกฝนการซื้อขายไบนารี่ ทำไมไม่"
+msgstr "Binary.com ให้บริการบัญชีทดลองใช้พร้อมเงินตั้งต้น เพื่อให้ท่านจะได้ฝึกฝนการซื้อขายไบนารี ทำไมไม่"
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com เสนอช่องทางใหม่ๆ ในการซื้อขาย"
@@ -763,13 +763,13 @@ msgid "Binary.com opens an office in the QSentral office building in central Kua
 msgstr "Binary.com เปิดสำนักงานที่ QSentral ในเมืองกัวลาลัมเปอร์เพื่อรองรับการขยายตัวของทีมพัฒนาระบบสารสนเทศ"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
-msgstr "Binary.com มีมูลค่าซื้อขาย 2 พันล้านเหรียญสหรัฐตั้งแต่เริ่มต้นในปี 1999 (พ.ศ. 2542)"
+msgstr "ตั้งแต่เริ่มต้นในปี ค.ศ.1999 (พ.ศ. 2542) Binary.com มีมูลค่าซื้อขาย 2 พันล้านเหรียญสหรัฐ"
 
 msgid "Binary.com reaches 1 million registered users"
 msgstr "Binary.com มีผู้ใช้งานที่ลงทะเบียนแล้วกว่า 1 ล้านบัญชี"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr "Binary.com ได้รับรางวัลชนะเลิศ ประเภท Financial Betting Operator ในงานเกียรติยศ EGR Operator Awards ปี 2015 จัดที่เมืองลอนดอน"
+msgstr "Binary.com ได้รับรางวัลชนะเลิศ ประเภท Financial Betting Operator ในงานเกียรติยศ EGR Operator Awards ในปี ค.ศ. 2015 จัดที่เมืองลอนดอน"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
 msgstr "ดัชนีต่อเนื่องของ Binary.com คือ ดัชนีผันผวน 10 ดัชนีผันผวน 25 ดัชนีผันผวน 50 ดัชนีผันผวน 75 และดัชนีผันผวน 100 ซึ่งดัชนีเหล่านี้สอดคล้องตลาดจำลองที่มีระดับความไม่แน่นอนที่ 10% 25% 50% 75% และ 100% ตามลำดับ"
@@ -2081,16 +2081,16 @@ msgid "Navigator handles border"
 msgstr "เส้นขอบของ Navigator"
 
 msgid "Navigator mask-fill"
-msgstr ""
+msgstr "สีเติมหน้ากากของ Navigator"
 
 msgid "Navigator outline"
-msgstr ""
+msgstr "เส้นรอบนอกของ Navigator"
 
 msgid "Navigator series color"
-msgstr ""
+msgstr "แผงสีของ Navigator"
 
 msgid "Navigator series line"
-msgstr ""
+msgstr "แผงเส้นของ Navigator"
 
 msgid "Net Annual Income"
 msgstr "รายได้สุทธิต่อปี"
