@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 11:50-0400\n"
+"PO-Revision-Date: 2018-06-07 12:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -370,7 +370,7 @@ msgid "A candlestick with a long black body (long line) represents a bearish for
 msgstr "แท่งเทียนที่มีสีดำขนาดยาว (เส้นยาว) หมายถึงแรงผลักของตลาดซบเซา ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาสูงและปิดใกล้กับราคาต่ำของวัน อันที่มีเส้นสีขาวยาวหมายถึงแรงผลักของตลาดตื่นตัว ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาต่ำของวันและปิดใกล้กับราคาสูง"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr "แท่งเทียนที่มีเงายาวมากบนและล่างและมีขนาดแท่งเทียนจริงเล็กบนแผนภูมิแท่งเทียนญี่ปุ่น แสดงให้เห็นว่าตลาดกำลังเสียทิศทางของลักษณะโน้มเอียงที่เคยมีก่อนที่แท่งเทียนจะปรากฎขึ้น"
+msgstr "แท่งเทียนที่มีเงาบนและล่างยาวมาก มีขนาดลำตัวแท่งเทียนจริงเล็กบนแผนภูมิแท่งเทียนญี่ปุ่น ซึ่งแสดงให้เห็นว่า ตลาดกำลังเสียทิศทางของลักษณะโน้มเอียงที่เคยมีก่อนที่แท่งเทียนจะปรากฎขึ้น"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
 msgstr "รูปแบบแผนภูมิที่ประกอบด้วยแท่งเทียนสีขาวสั้นที่มีเงา หรือ หางสั้น ตามด้วยแท่งเทียนสีดำขนาดใหญ่ซึ่งลดความสำคัญหรือ \"ปกคลุม\" แท่งสีขาวเล็ก"
@@ -841,16 +841,16 @@ msgid "Candles"
 msgstr "เทียน"
 
 msgid "Candlestick down-color"
-msgstr "แท่งเทียน สีลง"
+msgstr "สีแท่งเทียน ลง"
 
 msgid "Candlestick down-line"
-msgstr "แท่งเทียน เส้นลง"
+msgstr "เส้นแท่งเทียน ลง"
 
 msgid "Candlestick up-color"
-msgstr "แท่งเทียน สีขึ้น"
+msgstr "สีแท่งเทียน ขึ้น"
 
 msgid "Candlestick up-line"
-msgstr "แท่งเทียน เส้นขึ้น"
+msgstr "เส้นแท่งเทียน ขึ้น"
 
 msgid "Cash Balance"
 msgstr "แคชบาลานซ์"
@@ -889,7 +889,7 @@ msgid "Choose password"
 msgstr "กำหนดรหัสผ่าน"
 
 msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
-msgstr "เลือกซื้อขายแบบ แตะ / ไม่แตะ เมื่อต้องการคาดการณ์ว่าตลาดจะแตะ หรือ ไม่แตะ ราคาเป้าหมาย เวลาใดก็ตามในระยะเวลาของสัญญา"
+msgstr "เลือกซื้อขายแบบ แตะ/ไม่แตะ เมื่อต้องการคาดการณ์ว่า ตลาดจะแตะ หรือ ไม่แตะ ราคาเป้าหมาย เวลาใดก็ตามในระยะเวลาของสัญญา"
 
 msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
 msgstr "เลือกสินทรัพย์ที่ท่านปรารถนาจะซื้อขาย เช่น ทองคำ น้ำมัน หลักทรัพย์ หรือ คู่สกุลเงิน มูลค่าของไบนารีออปชั่นได้มาจากราคาของผลิตภัณฑ์อ้างอิง ประโยชน์อย่างหนึ่งของการซื้อขายไบนารี ออปชั่น คือ ท่านไม่ได้กำลังซื้อ หรือ ขายสินทรัพย์จริง ท่านเพียงแต่ดำเนินการผ่านสัญญาที่กำหนดพฤติการณ์ของสินทรัพย์ดังกล่าว"
