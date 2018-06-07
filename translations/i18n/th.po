@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 22:30-0400\n"
+"PO-Revision-Date: 2018-06-06 22:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1706,7 +1706,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "เป็นไปได้ไหมที่จะฝากเงินผ่านช่องทางรับชำระเงินที่ต่างกัน?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr ""
+msgstr "มีเทียนสีขาวยาว และตามด้วยอีกอันที่เปิดเหนืออันแรก (ช่องว่างกระโดดขึ้น) ตามด้วยแท่งเทียนสีดำขาลงที่เปิดต่ำกว่าราคาปิดของวันที่สอง (ช่องว่างกระโดดลง) และมีราคาต่ำใต้ราคาปิดของวันแรก คาดว่าแนวโน้มขาขึ้นนี้จะยังดำเนินต่อไป"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "ในบางครั้งการจำหน่ายออปชั่นก่อนวันหมดอายุเมื่อมีราคาที่เหมาะสมเป็นสิ่งที่เกิดขึ้นได้ และหากมีออปชั่นในสถานะดังกล่าว ท่านจะเห็นปุ่ม \"ขาย\" สีน้ำเงิน อยู่ถัดไปจากรายการซื้อขายในพอร์ตโฟลิโอ"
@@ -1751,10 +1751,10 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "Kicking - ตื่นตัว/ซบเซา พิจารณาโดย marubozu ที่ยาวกว่า (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr ""
+msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี marubozu สองอันยาว อันหนึ่งขาว อีกอันดำ และมีช่องว่างระหว่างทั้งสอง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำหรือทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาวหรือโปร่งที่ไม่มีไส้เช่นกัน"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr ""
+msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี marubozu สองอัน อันหนึ่งขาว อีกอันดำ และมีช่องว่างระหว่างทั้งสอง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำหรือทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาวหรือโปร่งที่ไม่มีไส้เช่นกัน"
 
 msgid "Kuala Lumpur Office"
 msgstr "สำนักงานกัวลาลัมเปอร์"
@@ -1787,7 +1787,7 @@ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ire
 msgstr "ได้รับอนุญาตและเป็นไปตามกฎหมายในการดำเนินธุรกิจในประเทศมอลตา สหราชอาณาจักร เกาะ Isle of Man ไอร์แลนด์ และญี่ปุ่น"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
-msgstr ""
+msgstr "เช่นเดียวกับ EMA LWMA ให้ความหมายมากกว่ากับราคาล่าสุด และน้อยกว่ากับราคาปิดของช่วงเวลาเริ่มต้น ดังนั้นจะช่วยให้ค้นพบการย้อนกลับของแนวโน้มได้เร็วกว่า แต่ก็มีแนวโน้มที่ถูกกระทบด้วยคลื่นรบกวนในตลาดได้ง่ายกว่า"
 
 msgid "Line"
 msgstr "เส้น"
