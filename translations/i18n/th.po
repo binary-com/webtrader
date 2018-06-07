@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 21:40-0400\n"
+"PO-Revision-Date: 2018-06-06 21:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1129,7 +1129,7 @@ msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to ide
 msgstr "พัฒนา โดย Donald Dorsey ดัชนีมวลใช้ช่วงสูงต่ำเพื่อระบุแนวโน้มการกลับรายการตามช่วงขยาย ในแง่นี้ ดัชนีมวลเป็นตัวบ่งชี้ความผันผวนที่ไม่มีอคติเป็นทิศทาง แทน ดัชนีมวลบ่งชี้ส่วนนูนซึ่งเป็นช่วงที่สามารถแสดงแนวโน้มปัจจุบัน"
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr ""
+msgstr "Williams %R พัฒนาโดย Larry Williams เป็นตัวชี้วัดโมเมนตัมที่กลับกันของ Fast Stochastic Oscillator ซึ่งถูกอ้างถึงในชื่อ %R ด้วย Williams %R สะท้อนถึงระดับที่ปิดที่สัมพันธ์กับการปิดสูงสุดของช่วงเวลาของการมองย้อนกลับไป"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
 msgstr ""
