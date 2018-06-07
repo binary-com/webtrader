@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 22:20-0400\n"
+"PO-Revision-Date: 2018-06-06 22:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1600,10 +1600,10 @@ msgid "In April"
 msgstr "ในเดือนเมษายน"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
-msgstr ""
+msgstr "ในกราฟรูปแบบเข็มขัดกระทิง เกิดการเหยียดตัวของแท่งเทียนตลาดซบเซา แท่งเทียนตลาดตื่นตัวหรือสีขาวขึ้น ราคาเปิดซึ่งกลายเป็นราคาต่ำของวันจะต่ำกว่าราคาปิดมาก ซึ่งทำให้เกิดแท่งเทียนสีขาวยาวซึ่งมีเงาด้านด้านบนสั้นและไม่มีเงาด้านล่าง ในกราฟรูปแบบเข็มขัดหมี จะเกิดแท่งเทียนตลาดซบเซา หรือสีดำขึ้น ราคาเปิดซึ่งกลายเป็นราคาสูงของวันจะสูงกว่าราคาปิดของวันก่อน ทำให้เกิดแท่งเทียนสีดำยาวที่มีเงาด้านล่างสั้นกว่าและไม่มีเงาด้านบน"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
-msgstr ""
+msgstr "ในรูปแบบ Hikkake ตลาดตื่นตัว หลังจากการเคลื่อนย้ายขาลง แท่งเทียนตลาดตื่นตัวแตะที่เหนือระยะของแท่งเทียนสามแท่งก่อนหน้านั้น และเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การซื้อเพิ่มเติมนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาขึ้นที่ชัดเจนมากขึ้น ในรูปแบบ Hikkake ตลาดซบเซา หลังจากการเคลื่อนย้ายขาขึ้น แท่งเทียนตลาดซบเซาแตะที่ต่ำกว่าระยะของแท่งเทียนสามแท่งก่อนหน้านั้น ซึ่งเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การขายเพิ่มเติมนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาลงที่ชัดเจนมากขึ้น"
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
 msgstr "เมื่อเดือนตุลาคม พ.ศ. 2542 (ค.ศ.1999) Regent Markets ได้รับเงินลงทุน 2 ล้านเหรียญสหรัฐ จากนายจิม เมลลอน ผ่านทาง Regent Pacific Group บริษัทจัดการกองทุนที่ฮ่องกง"
@@ -1615,7 +1615,7 @@ msgid "In a downward price trend, a black candle appears followed by a white can
 msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ลำตัวก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของเทียนสามเส้นคือเทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
-msgstr ""
+msgstr "ในสามวันที่เป็นขาขึ้นต่อเนื่องกันเปิดที่หรือใกล้กับราคาปิดวันก่อน และปิดในวันนั้น รูปแบบนี้รุนแรงกว่ารูปแบบ Three Black Crows และมีความน่าเชื่อถือมากกว่าว่าเป็นรูปแบบย้อนกลับ"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
 msgstr "รูปแบบคลาสสิกซิลิคอน วัลเลย์ ผู้จัดการกองทุนเฮดจ์ที่ประเทศฮ่องกง นาย Jean-Yves Sireau ก่อตั้ง Regent Markets จากห้องนอนของเขาในประเทศฮ่องกง\n"
