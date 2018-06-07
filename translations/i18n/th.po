@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 09:30-0400\n"
+"PO-Revision-Date: 2018-06-07 09:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -328,7 +328,7 @@ msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Aver
 msgstr "Smoothed Moving Average คือ การผสมผสานระหว่าง Simple Moving Average และ Exponential Moving Average ใช้กับระยะเวลาที่ยาวกว่าเท่านั้น"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัวหรือตลาดซบเซาที่มีแท่งขนาดเล็ก ความยาวของหัวหรือหางแตกต่างกันไป อย่างแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันกับผู้ซื้อและผู้ขาย"
+msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัว หรือ ตลาดซบเซา ที่มีแท่งลำตัวขนาดเล็ก ความยาวเงาของหัว หรือ หางแตกต่างกันไป เช่นเดียวกับแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันทั้งผู้ซื้อและผู้ขาย"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
 msgstr "การซื้อขาย Stays Between จะให้ผลตอบแทน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้ การซื้อขาย Goes Outside จะให้ผลตอบแทน หากตลาดแตะค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่ผู้ทำการซื้อขายได้เลือกไว้"
@@ -2408,7 +2408,7 @@ msgid "Pre-Defined"
 msgstr "กำหนดไว้ล่วงหน้า"
 
 msgid "Preferred reality-check interval"
-msgstr ""
+msgstr "รอบการตรวจสอบที่ต้องการ"
 
 msgid "Press Create token button on the right to create your first token"
 msgstr "กดปุ่ม สร้างโทเค่น ทางด้านขวาเพื่อสร้างโทเค่นแรกของท่าน"
@@ -2711,7 +2711,7 @@ msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Spinning Top (CDLSPINNINGTOP)"
 
 msgid "Spline"
-msgstr ""
+msgstr "เส้นโค้ง"
 
 msgid "Spot price"
 msgstr "ราคาสปอต"
@@ -2774,7 +2774,7 @@ msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes
 msgstr "อยู่ใน/นอกขอบเขต - พยากรณ์ว่า ราคาในตลาดจะอยู่ในกรอบราคาเป้าหมาย หรือ ออกนอกขอบเขตราคาเป้าหมาย ณ เวลาใดๆ ในระหว่างสัญญาดำเนินอยู่"
 
 msgid "Stays in"
-msgstr ""
+msgstr "Stays in"
 
 msgid "Step 1: Define your position"
 msgstr "ขั้นตอนที่ 1: กำหนดโพซิชั่นของท่าน"
@@ -3451,7 +3451,7 @@ msgid "Variance (VAR)"
 msgstr "Variance (VAR)"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "มีเครื่องมือ และหน้าจอที่สามารถปรับแต่งใช้งานได้หลายรูปแบบ เช่น การแสดงและการจัดการผลิตภัณฑ์อ้างอิง การแสดงแผนภูมิ และเครื่องมืออื่นๆ "
 
 msgid "Verification code has been sent to your email"
 msgstr "รหัสยืนยันได้ถูกส่งให้ท่านแล้วทางอีเมล์"
@@ -3754,7 +3754,7 @@ msgid "is the price in effect at that time"
 msgstr "คือ ราคามีผลในเวลาดังกล่าว"
 
 msgid "is the selected number of minutes/hours after the"
-msgstr ""
+msgstr "คือ ตัวเลขชั่วโมง และ นาทีที่ระบุ หลังจาก"
 
 msgid "is the selected time"
 msgstr "คือ เวลาที่เลือก"
@@ -3805,7 +3805,7 @@ msgid "seconds"
 msgstr "วินาที"
 
 msgid "session overview"
-msgstr ""
+msgstr "ภาพรวม"
 
 msgid "start time"
 msgstr "เวลาเริ่มต้น"
