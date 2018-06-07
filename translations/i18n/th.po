@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 10:40-0400\n"
+"PO-Revision-Date: 2018-06-07 10:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2420,7 +2420,7 @@ msgid "Price forms three black candles, each with lower closes, in a downward pr
 msgstr "ราคาจากสามแท่งเทียนดำ จะมีค่าปิดต่ำสุด ที่เกิดขึ้แบบลดลง แท่งเทียนขาวสูงโอบล้อมราคาของวันก่อนหน้า 3 วัน แท่งเทียนเป็นเหมือนกระทิงกลับด้านเมื่อราคาขึ้นด้านบน และปิดเเหนือด้านบนสุดของรูปแบบแท่งเทียน"
 
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
-msgstr ""
+msgstr "แนวโน้มราคาที่เป็นขาลงเป็นการเริ่มต้นของรูปแบบ กล่าวคือ มีแท่งเทียนสูงสีดำ ตามด้วยแท่งเทียนสีขาวที่มีขนาดลำตัวเท่ากับแท่งเทียนก่อนหน้า ซึ่งแสดงลักษณะเชิงเทียนรูปแบบ Harami ขั้นสมบูรณ์ และยังมีแท่งเทียนวันสุดท้ายยืนยัน มีแท่งสีขาวปิดสูงกว่าแท่งเทียนที่ปิดก่อนหน้า ซึ่งแสดงแนวโน้มราคากลับตัว"
 
 msgid "Primary"
 msgstr "หลัก"
