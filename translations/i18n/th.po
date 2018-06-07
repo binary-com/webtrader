@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 07:10-0400\n"
+"PO-Revision-Date: 2018-06-07 07:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1012,10 +1012,10 @@ msgid "Credit/Debit"
 msgstr "เครดิต/เดบิต"
 
 msgid "Crosshair"
-msgstr "Crosshair"
+msgstr "เส้นตัดในกราฟ (Crosshair)"
 
 msgid "Currencies - All major Forex pairs"
-msgstr "สกุลเงินต่างๆ - คู่สกุลเงินหลักๆ"
+msgstr "สกุลเงินต่างๆ - ทุกคู่สกุลเงินหลัก"
 
 msgid "Current Level"
 msgstr "ระดับปัจจุบัน"
@@ -3061,7 +3061,7 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "บริการการซื้อขายทางการเงินในเว็บไซต์นี้เหมาะกับลูกค้าผู้ซึ่งพึงรับรู้ต่อภาวะขาดทุนต่อเงินทั้งหมดที่ได้ลงทุน และผู้ซึ่งเข้าใจและมีประสบการณ์ต่อความเสี่ยงที่เกี่ยวข้องกับการได้มาซึ่งสัญญาทางการเงินต่างๆ ธุรกรรมที่เกี่ยวข้องกับสัญญาทางการเงินมีความเสี่ยงระดับสูง หากสัญญาที่ซื้อหมดอายุ ท่านจะสูญเสียเงินลงทุนของท่านทั้งหมด ซึ่งรวมถึงค่าธรรมเนียมของสัญญาด้วย"
 
 msgid "The first step is to open an account. You can"
-msgstr ""
+msgstr "ขั้นตอนแรก คือ เปิดบัญชี ท่านสามารถ"
 
 msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
 msgstr "สิ่งแรกที่ต้องทำ คือ เลือกสินทรัพย์ที่ท่านปรารถนาจะซื้อขาย เช่น ทองคำ หรือ น้ำมัน หลักทรัพย์ หรือ อัตราแลกเปลี่ยน (มูลค่าของไบนารีออปชั่นจะถูกกำหนดจากราคาของผลิตภัณฑ์อ้างอิง) ประโยชน์ที่ยิ่งใหญ่ของการซื้อขายออปชั่น คือ ท่านไม่ได้กำลังซื้อ หรือ ดำเนินการขายสินทรัพย์จริง"
