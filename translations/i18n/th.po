@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 21:50-0400\n"
+"PO-Revision-Date: 2018-06-06 22:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1132,7 +1132,7 @@ msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is 
 msgstr "Williams %R พัฒนาโดย Larry Williams เป็นตัวชี้วัดโมเมนตัมที่กลับกันของ Fast Stochastic Oscillator ซึ่งถูกอ้างถึงในชื่อ %R ด้วย Williams %R สะท้อนถึงระดับที่ปิดที่สัมพันธ์กับการปิดสูงสุดของช่วงเวลาของการมองย้อนกลับไป"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
-msgstr ""
+msgstr "Aroon พัฒนาโดย Tushar Chande ในปี 1995 เป็นระบบตัวชี้วัดที่พิจารณาว่าหุ้นกำลังมีแนวโน้มหรือไม่ และแนวโน้มนั้นแข็งแกร่งเพียงใด มีตัวบ่งชี้ที่แยกต่างหากสองอันคือ Aroon ขึ้น และ Aroon ลง ตัว Aroon ขึ้น 25 วันจะวัดจำนวนวันตั้งแต่ที่ราคาสูง 25 วัน Aroon ลง 25 วัน จะวัด จำนวนวันตั้งแต่ที่ราคาต่ำ 25 วัน"
 
 msgid "Differs"
 msgstr "แตกต่าง"
@@ -1168,7 +1168,7 @@ msgid "Doji Star (CDLDOJISTAR)"
 msgstr "Doji Star (CDLDOJISTAR)"
 
 msgid "Doji form when a security's open and close are virtually equal. The length of the upper and lower shadows can vary and the resulting candlestick looks like a cross, inverted cross or plus sign"
-msgstr ""
+msgstr "มีการสร้าง Doji ขึ้นเมื่อราคาเปิดและปิดของสินทรัพย์หนึ่งเท่ากัน ความยาวของเงาขึ้นและลงสามารถปรวนแปร และแท่งเทียนที่เกิดขึ้นจะเหมือนกับกากบาท กากบาทคว่ำ หรือเครื่องหมายบวก"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "ท่านมีบัญชีหรือยัง? สมัครและรับบัญชีทดลองพร้อมเงินทดลอง 10,000 เหรียญสหรัฐ"
@@ -1609,10 +1609,10 @@ msgid "In October 1999, Regent Markets receives US$ 2 million investment funding
 msgstr "เมื่อเดือนตุลาคม พ.ศ. 2542 (ค.ศ.1999) Regent Markets ได้รับเงินลงทุน 2 ล้านเหรียญสหรัฐ จากนายจิม เมลลอน ผ่านทาง Regent Pacific Group บริษัทจัดการกองทุนที่ฮ่องกง"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
-msgstr ""
+msgstr "ในช่วงขาลง แท่งเทียนจะมีลำตัวสั้นหมีเงาต่ำกว่ายาวอย่างน้อยสามเท่าของลำตัวจริง และมีเงาที่สูงกว่าเล็กน้อยหรือไม่มีเลย ยืนยันจากราคาปิดที่สูงกว่าวันถัดไป"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
-msgstr ""
+msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ลำตัวก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของเทียนสามเส้นคือเทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
 msgstr ""
@@ -1748,7 +1748,7 @@ msgid "Kicking (CDLKICKING)"
 msgstr "Kicking (CDLKICKING)"
 
 msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
-msgstr ""
+msgstr "Kicking - ตื่นตัว/ซบเซา พิจารณาโดย marubozu ที่ยาวกว่า (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
 msgstr ""
