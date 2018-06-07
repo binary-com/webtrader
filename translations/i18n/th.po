@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 12:40-0400\n"
+"PO-Revision-Date: 2018-06-07 12:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -367,7 +367,7 @@ msgid "A candlestick chart pattern in which a large candlestick is followed by a
 msgstr "รูปแบบแผนภูมิแท่งเทียนซึ่งแท่งเทียนขนาดใหญ่จะตามด้วยแท่งเทียนขนาดเล็กกว่า ซึ่งตัวแท่งเทียนนั้นอยู่ภายในช่วงแนวตั้งของแท่งที่ใหญ่กว่า สำหรับสีของแท่งเทียน Harami ในตลาดตื่นตัวเป็นแนวโน้มขาลงของแท่งเทียนสีที่เป็นลบ (สีดำ) เขมือบแท่งเทียนที่เป็นบวก (สีขาว) ขนาดเล็ก กำลังให้สัญญาณของการกลับตัวของแนวโน้มขาลง"
 
 msgid "A candlestick with a long black body (long line) represents a bearish force in the market. The price of the stock was up and down in a wide range, opening near the high and closing near the low of the day. One with a long white line represents a bullish force in the market. The price of the stock was up and down in a wide range, opening near the low of the day and closing near the high"
-msgstr "แท่งเทียนที่มีสีดำขนาดยาว (เส้นยาว) หมายถึงแรงผลักของตลาดซบเซา ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาสูงและปิดใกล้กับราคาต่ำของวัน อันที่มีเส้นสีขาวยาวหมายถึงแรงผลักของตลาดตื่นตัว ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาต่ำของวันและปิดใกล้กับราคาสูง"
+msgstr "แท่งเทียนยาวสีดำ (เส้นยาว) หมายถึง แรงผลักของตลาดซบเซา ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาสูงและปิดใกล้กับราคาต่ำของวัน ส่วยเส้นสีขาวยาว หมายถึง แรงผลักของตลาดตื่นตัว ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาต่ำของวันและปิดใกล้กับราคาสูง"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
 msgstr "แท่งเทียนที่มีเงาบนและล่างยาวมาก มีขนาดลำตัวแท่งเทียนจริงเล็กบนแผนภูมิแท่งเทียนญี่ปุ่น ซึ่งแสดงให้เห็นว่า ตลาดกำลังเสียทิศทางของลักษณะโน้มเอียงที่เคยมีก่อนที่แท่งเทียนจะปรากฎขึ้น"
@@ -2906,10 +2906,10 @@ msgid "The Awesome Oscillator is an indicator used to measure market momentum. A
 msgstr ""
 
 msgid "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
-msgstr ""
+msgstr "รูปแบบ Bearish In-Neck นี้ เกิดหลังจากช่วงขาลง เมื่อวันแรกปรากฏแท่งเทียนยาวสีแดง และวันถัดมาเป็นสีน้ำเงิน ที่เปิดด้วยราคาที่ต่ำกว่าวันแรกและปิดเต็มแกนของลำตัวของแท่งวันแรก"
 
 msgid "The Bearish On-Neck Pattern occurs after a downtrend when a long black day is followed by a long white day that gaps down at the open and closes below the close of the black day"
-msgstr ""
+msgstr "รูปแบบ Bearish On-Neck นี้ เกิดหลังจากช่วงขาลง เมื่อมีแท่งเทียนสีดำยาวในวันก่อนหน้า ตามด้วยแท่งเทียนยาวสีขาวหนึ่งแท่ง ซึ่งมีช่องว่างทางด้านล่าง เมื่อราคาเปิดและราคาปิดต่ำกว่าราคาปิดของวันที่เป็นแท่งเทียนสีดำ"
 
 msgid "The Bullish Three Star appears after a downtrend and it consists of three consecutive Doji, in which the second Doji gaps below the other two Doji. The Bearish Three Star appears after a uptrend and it consists of three consecutive Doji, in which the second Doji gaps above the other two Doji"
 msgstr ""
