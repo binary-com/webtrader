@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 08:40-0400\n"
+"PO-Revision-Date: 2018-06-07 08:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2411,7 +2411,7 @@ msgid "Preferred reality-check interval"
 msgstr ""
 
 msgid "Press Create token button on the right to create your first token"
-msgstr ""
+msgstr "กดปุ่ม สร้างโทเค่น ทางด้านขวาเพื่อสร้างโทเค่นแรกของท่าน"
 
 msgid "Price Transformation"
 msgstr "การเปลี่ยนแปลงราคา"
