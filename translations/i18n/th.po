@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 09:40-0400\n"
+"PO-Revision-Date: 2018-06-07 09:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -355,13 +355,13 @@ msgid "A bullish candlestick pattern that consists of five candles, the first da
 msgstr "รูปแบบแท่งเทียนของตลาดที่ตื่นตัวประกอบด้วยเทียนห้าแท่ง วันแรก คือ วันขาวยาว วันที่สอง มีช่องว่างขึ้น และเป็นวันดำ วันที่สอง สาม และสี่ มีร่างจริงขนาดเล็ก และตามด้วยรูปแบบแนวโน้มขาลงสั้น ๆ แต่อยู่ในช่วงของวันแรก และวันที่ห้า คือ วันยาวสีขาวที่ปิดเหนือการปิดของวันแรก"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr "รูปแบบแท่งเทียนของตลาดที่ตื่นตัวประกอบด้วยเทียนสามแท่ง แท่งแรกเป็นเทียนขนาดใหญ่สีแดงที่อยู่ในแนวโน้มขาขึ้น แท่งที่สองเป็นเทียนขนาดเล็ก (แดงหรือขาว) ที่ปิดต่ำกว่าแท่งแรก และแท่งสุดท้ายคือเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลางและปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
+msgstr "รูปแบบแท่งเทียนของตลาดตื่นตัวประกอบด้วยแท่งเทียนสามแท่ง แท่งแรกเป็นเทียนสีแดงขนาดใหญ่ที่อยู่ในแนวโน้มขาลง แท่งที่สองเป็นแท่งเทียนลำตัวขนาดเล็ก (เป็นสีแดง หรือ สีขาว ก็ได้) ที่ปิดต่ำกว่าแท่งแดงแรก และแท่งสุดท้าย คือ แท่งเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลาง และมีราคาปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr "รูปแบบแท่งเทียนของตลาดที่ตื่นตัวประกอบด้วยเทียนสามแท่ง แท่งแรกเป็นเทียนขนาดใหญ่สีแดงที่อยู่ในแนวโน้มขาขึ้น แท่งที่สองเป็นเทียนขนาดเล็ก (แดงหรือขาว) ที่ปิดต่ำกว่าแท่งแรก และแท่งสุดท้ายคือเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลางและปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
+msgstr "รูปแบบแท่งเทียนของตลาดตื่นตัวประกอบด้วยแท่งเทียนสามแท่ง แท่งแรกเป็นเทียนสีแดงขนาดใหญ่ที่อยู่ในแนวโน้มขาลง แท่งที่สองเป็นแท่งเทียนลำตัวขนาดเล็ก (เป็นสีแดง หรือ สีขาว ก็ได้) ที่ปิดต่ำกว่าแท่งแดงแรก และแท่งสุดท้าย คือ แท่งเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลาง และมีราคาปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
 
 msgid "A bullish or bearish candle followed by a doji with with a downward or uptrend gap"
-msgstr "แท่งเทียนในตลาดตื่นตัวหรือซบเซานั้นตามด้วย doji ที่มีช่องว่างลดต่ำลงหรือขาขึ้น"
+msgstr "แท่งเทียนในตลาดตื่นตัว หรือ ตลาดซบเซา ตามด้วย Doji ที่มีช่องว่างลดต่ำลง หรือ ขาขึ้น"
 
 msgid "A candlestick chart pattern in which a large candlestick is followed by a smaller candlestick whose body is located within the vertical range of the larger body. In terms of candlestick colors, the bullish harami is a downtrend of negative-colored (black) candlesticks engulfing a small positive (white) candlestick, giving a sign of a reversal of the downward trend"
 msgstr "รูปแบบแผนภูมิแท่งเทียนซึ่งแท่งเทียนขนาดใหญ่จะตามด้วยแท่งเทียนขนาดเล็กซึ่งตัวแท่งเทียนนั้นอยู่ภายในช่วงแนวตั้งของแท่งที่ใหญ่กว่า สำหรับสีของแท่งเทียน harami ในตลาดตื่นตัวเป็นแนวโน้มขาลงของแท่งเทียนสีที่เป็นลบ (ดำ) ปกคลุมแท่งเทียนที่เป็นบวก (ขาว) ขนาดเล็ก ให้สัญญาณของการกลับตัวของแนวโน้มขาลง"
@@ -1063,7 +1063,7 @@ msgid "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 msgstr "Dark Cloud Cover (CDLDARKCLOUDCOVER)"
 
 msgid "Dark Cloud Cover is a bearish candlestick reversal pattern that occurs when a red bearish candlestick (close price below open price) on day 2 closes below the middle of day 1 bullish candlestick (close price above open price). We will be using this pattern to sell rallies in a bearish currency market"
-msgstr "กราฟแท่งเทียนรูปแบบเมฆดำปกคลุม (Dark Cloud Cover) เป็นรูปแบบย้อนกลับของแท่งเทียนตลาดซบเซา ซึ่งเกิดขึ้นเมื่อแท่งเทียนตลาดซบเซาสีแดง (ราคาปิดต่ำกว่าราคาเปิด) ในวันที่ 2 ปิดต่ำกว่าช่วงกลางของแท่งเทียนตลาดตื่นตัวในวันที่ 1 (ราคาปิดเหนือราคาเปิด) เราจะต้องใช้แนวโน้มนี้ขายการฟื้นตัวในตลาดสกุลเงินที่ซบเซา"
+msgstr "กราฟแท่งเทียนรูปแบบเมฆดำปกคลุม (Dark Cloud Cover) เป็นรูปแบบกลับตัวของแท่งเทียนตลาดซบเซา ซึ่งเกิดขึ้นเมื่อแท่งเทียนตลาดซบเซาสีแดง (ราคาปิดต่ำกว่าราคาเปิด) ในวันที่ 2 ปิดต่ำกว่าช่วงกลางของแท่งเทียนตลาดตื่นตัวในวันที่ 1 (ราคาปิดเหนือราคาเปิด) เราจะต้องใช้แนวโน้มนี้ขายการฟื้นตัวในตลาดสกุลเงินที่ซบเซา"
 
 msgid "Dark Green"
 msgstr "สีเขียวเข้ม"
@@ -1603,7 +1603,7 @@ msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish o
 msgstr "ในกราฟรูปแบบเข็มขัดกระทิง (Bullish Belt Hold) เกิดการเหยียดตัวของแท่งเทียนตลาดซบเซา แท่งเทียนตลาดตื่นตัวหรือ รูปแบบสีขาวขึ้น ราคาเปิดซึ่งกลายเป็นราคาต่ำของวันจะต่ำกว่าราคาปิดมาก ซึ่งทำให้เกิดแท่งเทียนสีขาวยาวซึ่งมีเงาด้านด้านบนสั้นและไม่มีเงาด้านล่าง ในกราฟรูปแบบเข็มขัดหมี (Berish Belt Hold) จะเกิดแท่งเทียนตลาดซบเซา หรือสีดำขึ้น ราคาเปิดซึ่งกลายเป็นราคาสูงของวันจะสูงกว่าราคาปิดของวันก่อน ทำให้เกิดแท่งเทียนสีดำยาวที่มีเงาด้านล่างสั้นกว่าและไม่มีเงาด้านบน"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
-msgstr "ในรูปแบบ Hikkake ตลาดตื่นตัว หลังจากการเคลื่อนย้ายขาลง แท่งเทียนตลาดตื่นตัวแตะที่เหนือระยะของแท่งเทียนสามแท่งก่อนหน้านั้น และเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การซื้อเพิ่มเติมนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาขึ้นที่ชัดเจนมากขึ้น ในรูปแบบ Hikkake ตลาดซบเซา หลังจากการเคลื่อนย้ายขาขึ้น แท่งเทียนตลาดซบเซาแตะที่ต่ำกว่าระยะของแท่งเทียนสามแท่งก่อนหน้านั้น ซึ่งเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การขายเพิ่มเติมนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาลงที่ชัดเจนมากขึ้น"
+msgstr "ในรูปแบบ Hikkake ตลาดตื่นตัว หลังจากการเคลื่อนย้ายขาลง แท่งเทียนตลาดตื่นตัวแตะที่เหนือระยะของแท่งเทียนสามแท่งก่อนหน้านั้น และเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การซื้อเพิ่มนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาขึ้นที่ชัดเจนมากขึ้น ในตลาดซบเซา Hikkake หลังจากการเคลื่อนย้ายขาขึ้น แท่งเทียนตลาดซบเซาแตะที่ต่ำกว่าระยะของแท่งเทียนสามแท่งก่อนหน้านั้น ซึ่งเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การขายเพิ่มนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาลงที่ชัดเจนมากขึ้น"
 
 msgid "In October 1999, Regent Markets receives US$ 2 million investment funding from Jim Mellon through his Regent Pacific Group, a Hong Kong based fund management company"
 msgstr "เมื่อเดือนตุลาคม พ.ศ. 2542 (ค.ศ.1999) Regent Markets ได้รับเงินลงทุน 2 ล้านเหรียญสหรัฐ จากนายจิม เมลลอน ผ่านทาง Regent Pacific Group บริษัทจัดการกองทุนที่ฮ่องกง"
@@ -2929,7 +2929,7 @@ msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to
 msgstr "Double Exponential Moving Average (CKS) พัฒนาโดย Patrick Mulloy โดยพยายามนำราคาทั่วๆ ไปที่ล้าหลังที่สัมพันธ์กับค่าเฉลี่ยเคลื่อนที่ออกและเพิ่มน้ำหนักให้กับราคาล่าสุด"
 
 msgid "The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr ""
+msgstr "Double Exponential Moving Average (DEMA) พัฒนาโดย Patrick Mulloy โดยพยายามนำราคาทั่วๆ ไปที่ล้าหลังที่สัมพันธ์กับค่าเฉลี่ยเคลื่อนที่ออกและเพิ่มน้ำหนักให้กับราคาล่าสุด"
 
 msgid "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow"
 msgstr ""
