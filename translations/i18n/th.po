@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 12:00-0400\n"
+"PO-Revision-Date: 2018-06-07 12:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -568,7 +568,10 @@ msgid "Average Directional Movement Index Rating (ADXR)"
 msgstr "Average Directional Movement Index Rating (ADXR)"
 
 msgid "Average Directional Movement Rating quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
-msgstr ""
+msgstr "Average Directional Movement Rating แสดงปริมาณโมเมนตัมที่เปลี่ยนแปลงของ ADX ซึ่งถูกคำนวณโดยใช้ค่าสองค่าของ ADX (ค่าปัจจุบัน และ ค่า n ช่วงย้อนหลัง) แล้วหารด้วยสอง\n"
+"\n"
+"\n"
+" quantifies momentum change in the ADX. It is calculated by adding two values of ADX (the current value and a value n periods back), then dividing by two"
 
 msgid "Average True Range (ATR)"
 msgstr "Average True Range (ATR)"
@@ -985,7 +988,7 @@ msgid "Contracts"
 msgstr "สัญญา"
 
 msgid "Copier"
-msgstr "เครื่องถ่ายเอกสาร"
+msgstr "ตัวช่วยคัดลอก"
 
 msgid "Coppock Curve (CC)"
 msgstr "Coppock Curve (CC)"
@@ -3161,7 +3164,7 @@ msgid "This pattern occurs when two black days appear with equal closes in a dow
 msgstr "รูปแบบนี้เกิดขึ้นเมื่อมีแท่งเทียนสีดำสองวันปรากฏขึ้นที่มีราคาปิดเท่ากันในแนวโน้มขาลง สัญญาณ Matching Low เป็นตัวบอกจุดต่ำสุดได้เกิดขึ้นแล้ว แม้ว่าเป็นการทดสอบราคาปิดต่ำสุดใหม่และไม่มีอะไรตามมาอีก เป็นการแสดงสัญญาณราคาที่ดี"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr ""
+msgstr "เว็บไซต์นี้ใช้สำหรับประเทศสหราชอาณาจักรและเกาะ  Isle of Man โดยบริษัท Binary (IOM) Ltd. ตั้งอยู่ที่ ชั้น 1 อาคาร Millennium House ถนน Victoria เขต Douglas IM2 4RW บนเกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและผ่านหลักเกณฑ์ต่อไปนี้ (1) Gambling Supervision Commission บนเกาะ Isle of Man ในบริติชไอลส์ ใบอนุญาตสำหรับผลิตภัณฑ์การเสี่ยงโชคออนไลน์ได้รับเมื่อ 31 สิงหาคม พ.ศ. 2555 (ค.ศ. 2012) และสำหรับลูกค้าในสหราชอาณาจักรได้รับใบอนุญาตจาก (2) UK Gambling Commission -"
 
 msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 msgstr "เว็บไซต์นี้ได้พัฒนาเพื่อประเทศต่างๆ ในภูมิภาคยุโรปอื่นๆ สำหรับผลิตภัณฑ์การลงทุนโดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตเลขที่ IS/70156) และสำหรับผลิตภัณฑ์การพนัน โดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมาย โดย (1) Malta Gaming Authority in Malta ประเทศมอลตา (ใบอนุญาตเลขที่ MGA/CL2/118/2000) ออกให้เมื่อวันที่ 26 พฤษภาคม พ.ศ. 2558 หรือ ค.ศ. 2015) สำหรับลูกค้าสหราชอาณาจักรโดย (2) UK Gambling Commission -"
