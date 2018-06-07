@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 11:20-0400\n"
+"PO-Revision-Date: 2018-06-07 11:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -931,7 +931,7 @@ msgid "Commodities - Major commodities such as gold and oil"
 msgstr "สินค้าโภคภัณฑ์ - สินค้าโภคภัณฑ์หลักๆ เช่น ทองคำ และ น้ำมัน"
 
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
-msgstr "สินค้าโภคภัณฑ์ คือ ทรัพยากรที่มีอยู่ หรือ สกัด จากพื้นผิวโลก อันได้แก่ เงิน ทอง และน้ำมัน บน Binary.com การตั้งราคาจะเป็นดอลล่าร์สหรัฐ"
+msgstr "สินค้าโภคภัณฑ์ คือ ทรัพยากรที่มีอยู่ หรือ สกัด จากพื้นผิวโลก อันได้แก่ เงิน ทอง และน้ำมัน ในเว็บ Binary.com การตั้งราคาจะอ้างอิงสกุลดอลลาร์สหรัฐ"
 
 msgid "Commodities trading experience"
 msgstr "ประสบการณ์ในการซื้อขายสินค้าโภคภัณฑ์"
@@ -2249,7 +2249,7 @@ msgid "Over 1 million registered accounts worldwide"
 msgstr "มากกว่าหนึ่งล้านบัญชีที่ลงทะเบียนทั่วโลก"
 
 msgid "Over 130 staff and contractors worldwide"
-msgstr "พนักงานมากกว่า 130 และผู้ปฏิบัติงานสัญญาจ้างทั่วโลก"
+msgstr "พนักงานมากกว่า 130 ท่าน และผู้ปฏิบัติงานสัญญาจ้างทั่วโลก"
 
 msgid "Over 3 years"
 msgstr "มากกว่า 3 ปี"
@@ -2303,7 +2303,7 @@ msgid "Personal Details"
 msgstr "รายละเอียดส่วนบุคคล"
 
 msgid "Personal Wealth Awards 2017"
-msgstr "รางวัลผู้จัดการความมั่งคั่งส่วนบุคคล ปี 2017"
+msgstr "รางวัลผู้จัดการความมั่งคั่งส่วนบุคคล ปี ค.ศ. 2017"
 
 msgid "Phone"
 msgstr "โทรศัพท์"
@@ -2321,7 +2321,7 @@ msgid "Place of birth"
 msgstr "สถานที่เกิด"
 
 msgid "Please"
-msgstr "กรุณา"
+msgstr "โปรด"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "โปรดระบุสกุลเงินที่ท่านต้องการ"
@@ -2669,7 +2669,7 @@ msgid "Share"
 msgstr "หุ้น"
 
 msgid "Share chart"
-msgstr "แผนภูมิหุ้น"
+msgstr "แบ่งปันแผนภูมิ"
 
 msgid "Sharp, benchmarked prices"
 msgstr "เฉียบคม ราคามาตรฐาน"
@@ -2756,7 +2756,7 @@ msgid "State/province/region"
 msgstr "รัฐ/จังหวัด/ภูมิภาค"
 
 msgid "Statement"
-msgstr "รายงานทางการเงิน"
+msgstr "รายการเดินบัญชี"
 
 msgid "Statistical Functions"
 msgstr "ฟังก์ชันทางสถิติ"
@@ -2810,7 +2810,7 @@ msgid "Stocks trading frequency"
 msgstr "ความถี่ในการซื้อขายหลักทรัพย์ต่างๆ"
 
 msgid "Stop Loss Level"
-msgstr "ระดับยุติการซื้อขาย"
+msgstr "ระดับยุติการขาดทุน"
 
 msgid "Stop Profit Level"
 msgstr "ระดับยุติกำไร"
