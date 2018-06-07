@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 10:20-0400\n"
+"PO-Revision-Date: 2018-06-07 10:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2888,9 +2888,7 @@ msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's valu
 msgstr "AUD Index เป็นดัชนีถ่วงน้ำหนัก ที่ใช้แสดงมูลค่าของดอลลาร์ออสเตรเลียกับ 5 สกุลเงินหลักของโลก (USD, EUR, GBP, JPY, CAD) โดยมีนำ้หนักแต่ละสกุลเงินที่ 20%"
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
-msgstr "Absolute Price Oscillator (APO) แสดงค่าสัมบูรณ์ของความแตกต่างระหว่างค่าเฉลี่ยเคลื่อนที่ที่มีระยะต่างกัน ของการเคลื่อที่เร็วเฉลี่ย และการเคลื่อนที่ช้าเฉลี่ย\n"
-"\n"
-"is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
+msgstr "Absolute Price Oscillator (APO) แสดงค่าสัมบูรณ์ของความแตกต่างระหว่างค่าเฉลี่ยเคลื่อนที่ที่มีระยะต่างกัน ของการเคลื่อนที่เร็วเฉลี่ย และการเคลื่อนที่ช้าเฉลี่ย"
 
 msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
 msgstr ""
