@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 13:00-0400\n"
+"PO-Revision-Date: 2018-06-07 13:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -328,7 +328,7 @@ msgid "A Smoothed Moving Average is sort of a blend between a Simple Moving Aver
 msgstr "Smoothed Moving Average คือ การผสมผสานระหว่าง Simple Moving Average และ Exponential Moving Average ใช้กับระยะเวลาที่ยาวกว่าเท่านั้น"
 
 msgid "A Spinning Top Candlestick is a bullish or bearish candlestick with a small body. The length of the head and tail shadows can vary. Like a Doji Candlestick it represents a point of indecision with buyers and seller matched"
-msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัว หรือ ตลาดซบเซา ที่มีแท่งลำตัวขนาดเล็ก ความยาวเงาของหัว หรือ หางแตกต่างกันไป เช่นเดียวกับแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันทั้งผู้ซื้อและผู้ขาย"
+msgstr "แท่งเทียน Spinning Top เป็นแท่งเทียนของตลาดตื่นตัว หรือ ตลาดซบเซา ที่มีตัวแท่งเทียนขนาดเล็ก ความยาวเงาของหัว หรือ หางแตกต่างกันไป เช่นเดียวกับแท่งเทียน Doji แสดงถึงจุดที่เกิดความลังเลที่ตรงกันทั้งผู้ซื้อและผู้ขาย"
 
 msgid "A Stays Between trade pays out if the market stays between (does not touch) BOTH the high barrier or the low barrier at any time during the period chosen by a trader. A Goes Outside trade pays out if the market touches EITHER the high barrier or the low barrier at any time during the period chosen by a trader"
 msgstr "การซื้อขาย Stays Between จะให้ผลตอบแทน หากตลาดมีค่าอยู่ระหว่าง (ไม่แตะเส้น) ทั้ง ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่นักลงทุนได้เลือกไว้ การซื้อขาย Goes Outside จะให้ผลตอบแทน หากตลาดไปถึงค่าใดค่าหนึ่ง ไม่ว่าจะเป็น ค่า Barrier สูง หรือ ค่า Barrier ต่ำ ณ เวลาใดๆ ระหว่างช่วงเวลาที่นักลงทุนได้เลือกไว้"
@@ -355,10 +355,10 @@ msgid "A bullish candlestick pattern that consists of five candles, the first da
 msgstr "รูปแบบแท่งเทียนของตลาดที่ตื่นตัวประกอบด้วยเทียนห้าแท่ง วันแรก คือ วันขาวยาว วันที่สอง มีช่องว่างขึ้น และเป็นวันดำ วันที่สอง สาม และสี่ มีร่างจริงขนาดเล็ก และตามด้วยรูปแบบแนวโน้มขาลงสั้น ๆ แต่อยู่ในช่วงของวันแรก และวันที่ห้า คือ วันยาวสีขาวที่ปิดเหนือการปิดของวันแรก"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr "รูปแบบแท่งเทียนของตลาดตื่นตัวประกอบด้วยแท่งเทียนสามแท่ง แท่งแรกเป็นเทียนสีแดงขนาดใหญ่ที่อยู่ในแนวโน้มขาลง แท่งที่สองเป็นแท่งเทียนลำตัวขนาดเล็ก (เป็นสีแดง หรือ สีขาว ก็ได้) ที่ปิดต่ำกว่าแท่งแดงแรก และแท่งสุดท้าย คือ แท่งเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลาง และมีราคาปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
+msgstr "รูปแบบแท่งเทียนของตลาดตื่นตัวประกอบด้วยแท่งเทียนสามแท่ง แท่งแรกเป็นเทียนสีแดงขนาดใหญ่ที่อยู่ในแนวโน้มขาลง แท่งที่สองเป็นตัวแท่งเทียนขนาดเล็ก (เป็นสีแดง หรือ สีขาว ก็ได้) ที่ปิดต่ำกว่าแท่งแดงแรก และแท่งสุดท้าย คือ แท่งเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลาง และมีราคาปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr "รูปแบบแท่งเทียนของตลาดตื่นตัวประกอบด้วยแท่งเทียนสามแท่ง แท่งแรกเป็นเทียนสีแดงขนาดใหญ่ที่อยู่ในแนวโน้มขาลง แท่งที่สองเป็นแท่งเทียนลำตัวขนาดเล็ก (เป็นสีแดง หรือ สีขาว ก็ได้) ที่ปิดต่ำกว่าแท่งแดงแรก และแท่งสุดท้าย คือ แท่งเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลาง และมีราคาปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
+msgstr "รูปแบบแท่งเทียนของตลาดตื่นตัวประกอบด้วยแท่งเทียนสามแท่ง แท่งแรกเป็นเทียนสีแดงขนาดใหญ่ที่อยู่ในแนวโน้มขาลง แท่งที่สองเป็นตัวแท่งเทียนขนาดเล็ก (เป็นสีแดง หรือ สีขาว ก็ได้) ที่ปิดต่ำกว่าแท่งแดงแรก และแท่งสุดท้าย คือ แท่งเทียนสีขาวขนาดใหญ่ที่เปิดเหนือเทียนแท่งกลาง และมีราคาปิดใกล้กับตำแหน่งตรงกลางของเทียนแท่งแรก"
 
 msgid "A bullish or bearish candle followed by a doji with with a downward or uptrend gap"
 msgstr "แท่งเทียนในตลาดตื่นตัว หรือ ตลาดซบเซา ตามด้วย Doji ที่มีช่องว่างลดต่ำลง หรือ ขาขึ้น"
@@ -370,7 +370,7 @@ msgid "A candlestick with a long black body (long line) represents a bearish for
 msgstr "แท่งเทียนยาวสีดำ (เส้นยาว) หมายถึง แรงผลักของตลาดซบเซา ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาสูงและปิดใกล้กับราคาต่ำของวัน ส่วยเส้นสีขาวยาว หมายถึง แรงผลักของตลาดตื่นตัว ราคาของหุ้นขึ้นและลงในช่วงกว้าง เปิดใกล้กับราคาต่ำของวันและปิดใกล้กับราคาสูง"
 
 msgid "A candlestick with very long upper and lower shadows and a small real body on a Japanese candlestick chart. It shows that the market is losing its direction bias that it had before this candle appeared"
-msgstr "แท่งเทียนที่มีเงาบนและล่างยาวมาก มีขนาดลำตัวแท่งเทียนจริงเล็กบนแผนภูมิแท่งเทียนญี่ปุ่น ซึ่งแสดงให้เห็นว่า ตลาดกำลังเสียทิศทางของลักษณะโน้มเอียงที่เคยมีก่อนที่แท่งเทียนจะปรากฎขึ้น"
+msgstr "แท่งเทียนที่มีเงาบนและล่างยาวมาก มีขนาดตัวแท่งเทียนจริงเล็กบนแผนภูมิแท่งเทียนญี่ปุ่น ซึ่งแสดงให้เห็นว่า ตลาดกำลังเสียทิศทางของลักษณะโน้มเอียงที่เคยมีก่อนที่แท่งเทียนจะปรากฎขึ้น"
 
 msgid "A chart pattern that consists of a small white candlestick with short shadows or tails followed by a large black candlestick that eclipses or 'engulfs' the small white one"
 msgstr "รูปแบบแผนภูมิที่ประกอบด้วยแท่งเทียนสีขาวสั้นที่มีเงา หรือ หางสั้น ตามด้วยแท่งเทียนสีดำขนาดใหญ่ซึ่งลดความสำคัญหรือ \"กลืนกิน หรือ ครอบคลุม\" แท่งสีขาวเล็ก"
@@ -1616,7 +1616,7 @@ msgid "In a downtrend, one small short body candlestick has a long lower shadow 
 msgstr "ในช่วงขาลง แท่งเทียนจะมีลำตัวสั้น มีเงาต่ำกว่ายาวอย่างน้อยสามเท่าของลำตัวจริง และมีเงาที่สูงกว่าเล็กน้อย หรือ ไม่มีเลย และมีการยืนยันจากราคาปิดที่สูงกว่าวันถัดไป"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
-msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ลำตัวแท่งเทียนก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของแท่งเทียนสามเส้น คือ เทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
+msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ตัวแท่งเทียนก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของแท่งเทียนสามเส้น คือ เทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
 msgstr "ในสามวันที่เป็นขาขึ้นต่อเนื่องกันเปิดที่ หรือ ใกล้กับราคาปิดวันก่อน และปิดในวันนั้น รูปแบบนี้รุนแรงกว่ารูปแบบ Three Black Crows แต่มีความน่าเชื่อถือมากกว่าว่าเป็น รูปแบบการกลับตัวของราคา"
@@ -1887,7 +1887,7 @@ msgid "Long-legged doji have long upper and lower shadows that are almost equal 
 msgstr "Doji ขายาวมีเงาด้านบนและด้านล่างที่เกือบจะยาวเท่ากัน Doji เหล่านี้สะท้อนให้เห็นถึงการตัดสินใจไม่ได้อย่างมากของตลาด Doji ขายาวบ่งชี้ถึงราคาซื้อขายที่เหนือและต่ำกว่าระดับราคาเปิด แต่ปิดเท่ากันกับราคาเปิด สุดท้ายผลลัพธ์ที่เปิดแสดงให้เห็นการเปลี่ยนแปลงเล็กน้อยจากราคาเมื่อเริ่มเปิดซื้อขาย"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
-msgstr "มองหาเทียนสีดำในแนวโน้มราคาขาลง ตามด้วยเทียนสีขาวที่เปิดต่ำกว่าราคาต่ำก่อนหน้า แต่ปิดใกล้ หรือ ต่ำกว่าจุดกลางของลำตัวของแท่งเทียน"
+msgstr "มองหาเทียนสีดำในแนวโน้มราคาขาลง ตามด้วยเทียนสีขาวที่เปิดต่ำกว่าราคาต่ำก่อนหน้า แต่ปิดใกล้ หรือ ต่ำกว่าจุดกลางของตัวของแท่งเทียน"
 
 msgid "Look for a tall black candle with a long lower shadow to appear in a downward price trend. The second day should be similar to the first day, but smaller and with a higher low. The last day is a black marubozu that squeezes inside the high-low range of the prior day"
 msgstr "มองหาเทียนสีดำสูงที่มีเงาด้านล่างยาวที่ปรากฎในแนวโน้มราคาขาลง วันที่สองควรจะเหมือนกับวันแรก แต่เล็กกว่าและมีราคาต่ำที่สูงกว่า วันสุดท้ายคือ marubozu สีดำที่บีบอยู่ภายในระยะสูง-ต่ำของวันก่อนหน้านั้น"
@@ -2907,7 +2907,7 @@ msgid "The Awesome Oscillator is an indicator used to measure market momentum. A
 msgstr ""
 
 msgid "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
-msgstr "รูปแบบ Bearish In-Neck นี้ เกิดหลังจากช่วงขาลง เมื่อวันแรกปรากฏแท่งเทียนยาวสีแดง และวันถัดมาเป็นสีน้ำเงิน ที่เปิดด้วยราคาที่ต่ำกว่าวันแรกและปิดเต็มแกนของลำตัวของแท่งวันแรก"
+msgstr "รูปแบบ Bearish In-Neck นี้ เกิดหลังจากช่วงขาลง เมื่อวันแรกปรากฏแท่งเทียนยาวสีแดง และวันถัดมาเป็นสีน้ำเงิน ที่เปิดด้วยราคาที่ต่ำกว่าวันแรกและปิดเต็มแกนของตัวแท่งเทียนวันแรก"
 
 msgid "The Bearish On-Neck Pattern occurs after a downtrend when a long black day is followed by a long white day that gaps down at the open and closes below the close of the black day"
 msgstr "รูปแบบ Bearish On-Neck นี้ เกิดหลังจากช่วงขาลง เมื่อมีแท่งเทียนสีดำยาวในวันก่อนหน้า ตามด้วยแท่งเทียนยาวสีขาวหนึ่งแท่ง ซึ่งมีช่องว่างทางด้านล่าง เมื่อราคาเปิดและราคาปิดต่ำกว่าราคาปิดของวันที่เป็นแท่งเทียนสีดำ"
@@ -3030,7 +3030,7 @@ msgid "The Weighted Close indicator is simply an average of each day's price. It
 msgstr "ดัชนีค่าปิดถ่วงน้ำหนัก (Weighted Close) เป็นค่าเฉลี่ยอย่างง่ายของราคารายวัน ซึ่งสามารถใช้แก้ปัญหาราคาปิดที่เส้นแนวโน้มไม่คงเส้นคงวา เนื่องจากเป็นข้อมูลราคาที่มาจากราคาที่ซื้อขายตลอดทั้งวัน"
 
 msgid "The balance of power (BOP) indicator measures the strength of the bulls vs. bears by assessing the ability of each to push price to an extreme level"
-msgstr ""
+msgstr "ดัชนี Balance of Power (BOP) วัดความแข็งแกร่งขแง กระทิง และ หมี โดยประเมินจากความสามารถของราคาที่แสดง ไปถึงระดับสูงสุด"
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
 msgstr "ค่า Barrier ของการซื้อขายไบนารีออปชั่น คือ ราคาเป้าหมายที่ท่านกำหนดสำหรับตลาดอ้างอิง ท่านสามารถเลือกซื้อขายมูลค่าต่ำกว่า หรือ สูงกว่า ราคาเป้าหมาย หรือ อยู่ระหว่างค่าสองค่าใดๆ"
