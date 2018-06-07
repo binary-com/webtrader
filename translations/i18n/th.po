@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 11:10-0400\n"
+"PO-Revision-Date: 2018-06-07 11:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -379,7 +379,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "อนุพันธ์ คือ เครื่องมือทางการเงินประเภทหนึ่งซึ่งมูลค่าถูกกำหนดโดยการอ้างอิงของตลาด โดยทั่วไปการซื้อขายอนุพันธ์เกิดขึ้นในตลาดฟอเร็กซ์ และไบนารีเป็นรูปแบบที่ง่ายที่สุดของอนุพันธ์"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
-msgstr "สื่อกลางไปยังแท่งเทียนขนาดยาวของตลาดตื่นตัว หรือตลาดซบเซา โดยมีคุณสมบัติหลักๆคือไม่มีเงาหัวหรือหาง"
+msgstr "แท่งเทียนขนาดกลางถึงยาวของตลาดตื่นตัว หรือ ตลาดซบเซา โดยมีคุณสมบัติหลักๆ คือ ไม่มีเงาทั้งหัว หรือ หาง"
 
 msgid "A panel featuring industry leaders awards BetOnMarkets.com 'Financial Betting Operator of the Year' over two other finalists. It's a major victory for our brand and further recognition of our world-beating service. Ten years on, and going from strength to strength"
 msgstr "เหล่าคณะผู้นำในอุตสาหกรรมมอบรางวัล ‘Financial Betting Operator of the Year’ ให้กับ BetOnMarkets.com จากผู้เข้ารอบสุดท้ายอีกสองคน มันเป็นชัยชนะหลักของแบรนด์ของพวกเราและการยอมรับของบริการระดับโลกของพวกเรา สิบปีที่ผ่านมาจากจุดแข็งสู่จุดแข็งที่ยั่งยืน"
@@ -391,7 +391,7 @@ msgid "A technical momentum indicator that compares a security's closing price t
 msgstr "ตัวบ่งชี้แรงผลักดันทางเทคนิคที่เปรียบเทียบราคาปิดของหลักทรัพย์กับของเขตของราคาในช่วงเวลาหนึ่ง สามารถลดการตอบสนองของตัวแกว่งต่อการเคลื่อนไหวของตลาดได้โดยการปรับช่วงระยะเวลาหรือด้วยการใช้ค่าเฉลี่ยเคลื่อนที่เป็นผลลัพธ์"
 
 msgid "A technical trading pattern in which three candlesticks form what appears to be a sandwich on the trader's screen. Stick sandwiches will have the middle candlestick oppositely colored of the candlesticks on either side of it, both of which will have a larger trading range than the middle candlestick. Stick sandwich patterns can occur in both bearish and bullish indications"
-msgstr "รูปแบบการซื้อขายทางเทคนิคที่แท่งเทียนสามแท่งก่อเป็นรูปร่างที่ดูเหมือนกับแซนด์วิชบนหน้าจอของนักลงทุน แซนด์วิชแท่งจะมีแท่งเทียนตรงกลางที่มีสีตรงข้ามกับแท่งเทียนที่ขนาบทั้งสองข้าง ซึ่งแท่งเทียนทั้งคู่นั้นจะมีระยะการซื้อขายที่ใหญ่กว่าแท่งเทียนตรงกลาง รูปแบบแซนด์วิชแท่งสามารถเกิดขึ้นได้ทั้งในตัวบ่งชี้ตลาดซบเซา และตื่นตัว"
+msgstr "รูปแบบการซื้อขายทางเทคนิคที่แท่งเทียนสามแท่งก่อเป็นรูปร่างที่ดูเหมือนกับแซนวิชที่หน้าจอของนักลงทุน แซนวิชแท่งจะมีแท่งเทียนตรงกลางที่มีสีตรงข้ามกับแท่งเทียนที่ขนาบทั้งสองข้าง ซึ่งแท่งเทียนทั้งคู่นั้นจะมีระยะการซื้อขายที่ใหญ่กว่าแท่งเทียนตรงกลาง รูปแบบแซนวิชแท่งสามารถเกิดขึ้นได้ทั้งในตัวบ่งชี้ตลาดซบเซา และ ตลาดตื่นตัว"
 
 msgid "A tick is the minimum upward or downward movement in the price of a market"
 msgstr "ช่วงห่างของราคา (Tick) คือ การเคลื่อนไหวของราคาที่เล็กที่สุดในทิศทางขึ้น หรือ ลง ในตลาด"
@@ -400,7 +400,7 @@ msgid "A trend indicated by a large candlestick followed by a doji that is locat
 msgstr "จะมีการบ่งชี้ถึงแนวโน้มโดยแท่งเทียนขนาดใหญ่ตามด้วย Doji ซึ่งอยู่ภายในด้านบนและล่างของแท่งเทียน ซึ่งบ่งชี้ว่าแนวโน้มก่อนหน้านี้กำลังจะย้อนกลับ"
 
 msgid "A white candle in an upward price trend followed by a doji whose lower shadow remains above the prior candle's high. The third day is a black candle with an upper shadow below the doji's low"
-msgstr "แท่งเทียนสีขาวในแนวโน้มราคาขาขึ้น ตามด้วย doji ซึ่งเงาด้านล่างยังคงอยู่เหนือส่วนที่สูงของแท่งเทียนก่อนหน้านี้ วันที่สามคือแท่งเทียนสีดำซึ่งเงาด้านบนอยู่ด้านล่างของส่วนล่างของ doji"
+msgstr "แท่งเทียนสีขาวในแนวโน้มราคาขาขึ้น ตามด้วย Doji ซึ่งเงาด้านล่างยังคงอยู่เหนือส่วนที่สูงของแท่งเทียนก่อนหน้านี้ วันที่สาม มีแท่งเทียนสีดำ ซึ่งเงาด้านบนอยู่ด้านล่างของส่วนล่างของ Doji"
 
 msgid "Abandoned Baby (CDLABANDONEDBABY)"
 msgstr "Abandoned Baby (CDLABANDONEDBABY)"
@@ -808,7 +808,7 @@ msgid "Browser upgrade required"
 msgstr "จำเป็นต้องอัพเกรดเบราเซอร์"
 
 msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
-msgstr "ดัชนีกระทิง และดัชนีหมี เริ่มที่ 00:00 GMT ในแต่ละวัน เพื่อจำลองสภาพตลาดกระทิงและตลาดหมีตามลำดับ"
+msgstr "ดัชนีตลาดกระทิง และดัชนีตลาดหมี เริ่มที่ 00:00 GMT ในแต่ละวัน เพื่อจำลองสภาพตลาดกระทิงและตลาดหมีตามลำดับ"
 
 msgid "Buy Price"
 msgstr "ราคาซื้อ"
@@ -883,7 +883,7 @@ msgid "Chart type"
 msgstr "ชนิดแผนภูมิ"
 
 msgid "Choose from five types of markets and their respective assets"
-msgstr "เลือกจากตลาด 5 ประเภท กลุ่มสินทรัพย์ของตลาดนั้นๆ"
+msgstr "เลือกจากตลาด 5 ประเภท และผลิตภัณฑ์อ้างอิงของตลาดนั้นๆ"
 
 msgid "Choose password"
 msgstr "กำหนดรหัสผ่าน"
@@ -1150,7 +1150,7 @@ msgid "Directional Movement Index (DX)"
 msgstr "Directional Movement Index (DX)"
 
 msgid "Do I need to deposit any funds to open an account?"
-msgstr "ฉันต้องฝากเงินเพื่อเปิดบัญชีหรือไม่?"
+msgstr "ฉันต้องฝากหลักประกันใดๆ เพื่อเปิดบัญชีหรือไม่?"
 
 msgid "Do you offer virtual-money accounts?"
 msgstr "ท่านได้รับการเสนอบัญชีทดลองใช้หรือไม่?"
