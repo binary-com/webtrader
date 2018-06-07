@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 07:53-0400\n"
+"PO-Revision-Date: 2018-06-07 08:05-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1600,7 +1600,7 @@ msgid "In April"
 msgstr "ในเดือนเมษายน"
 
 msgid "In Bullish Belt Hold After a stretch of bearish candlesticks, a bullish or white candlestick forms. The opening price, which becomes the low for the day, is significantly lower then the closing price. This results in a long white candlestick with a short upper shadow and no lower shadow. In Berish Belt Hold, a bearish or black candlestick occurs, the opening price, which becomes the high for the day, is higher than the close of the previous day, resulting in a long black candlestick with a short lower shadow and no upper shadow"
-msgstr "ในกราฟรูปแบบเข็มขัดกระทิง เกิดการเหยียดตัวของแท่งเทียนตลาดซบเซา แท่งเทียนตลาดตื่นตัวหรือสีขาวขึ้น ราคาเปิดซึ่งกลายเป็นราคาต่ำของวันจะต่ำกว่าราคาปิดมาก ซึ่งทำให้เกิดแท่งเทียนสีขาวยาวซึ่งมีเงาด้านด้านบนสั้นและไม่มีเงาด้านล่าง ในกราฟรูปแบบเข็มขัดหมี จะเกิดแท่งเทียนตลาดซบเซา หรือสีดำขึ้น ราคาเปิดซึ่งกลายเป็นราคาสูงของวันจะสูงกว่าราคาปิดของวันก่อน ทำให้เกิดแท่งเทียนสีดำยาวที่มีเงาด้านล่างสั้นกว่าและไม่มีเงาด้านบน"
+msgstr "ในกราฟรูปแบบเข็มขัดกระทิง (Bullish Belt Hold) เกิดการเหยียดตัวของแท่งเทียนตลาดซบเซา แท่งเทียนตลาดตื่นตัวหรือ รูปแบบสีขาวขึ้น ราคาเปิดซึ่งกลายเป็นราคาต่ำของวันจะต่ำกว่าราคาปิดมาก ซึ่งทำให้เกิดแท่งเทียนสีขาวยาวซึ่งมีเงาด้านด้านบนสั้นและไม่มีเงาด้านล่าง ในกราฟรูปแบบเข็มขัดหมี (Berish Belt Hold) จะเกิดแท่งเทียนตลาดซบเซา หรือสีดำขึ้น ราคาเปิดซึ่งกลายเป็นราคาสูงของวันจะสูงกว่าราคาปิดของวันก่อน ทำให้เกิดแท่งเทียนสีดำยาวที่มีเงาด้านล่างสั้นกว่าและไม่มีเงาด้านบน"
 
 msgid "In Bullish Hikkake Pattern After the downward move, the bullish candle reaches above the range of the three preceding candles and most likely triggers a number of stop loss orders. This additional buying leads to a more distinct upward movement. In Bearish Hikkake Pattern After an upward move, the bearish candle reaches below the range of the three preceding , which most likely triggers a number of stop loss orders. This additional selling leads to a more distinct downward move"
 msgstr "ในรูปแบบ Hikkake ตลาดตื่นตัว หลังจากการเคลื่อนย้ายขาลง แท่งเทียนตลาดตื่นตัวแตะที่เหนือระยะของแท่งเทียนสามแท่งก่อนหน้านั้น และเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การซื้อเพิ่มเติมนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาขึ้นที่ชัดเจนมากขึ้น ในรูปแบบ Hikkake ตลาดซบเซา หลังจากการเคลื่อนย้ายขาขึ้น แท่งเทียนตลาดซบเซาแตะที่ต่ำกว่าระยะของแท่งเทียนสามแท่งก่อนหน้านั้น ซึ่งเป็นไปได้มากที่จะกระตุ้นตัวเลขของคำสั่งซื้อหยุดการขาดทุน การขายเพิ่มเติมนี้นำไปสู่การเคลื่อนไหวในแนวโน้มขาลงที่ชัดเจนมากขึ้น"
@@ -1751,7 +1751,7 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "Kicking - ตื่นตัว/ซบเซา พิจารณาโดย Marubozu ที่ยาวกว่า (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี marubozu สองอันยาว อันหนึ่งขาว อีกอันดำ และมีช่องว่างระหว่างทั้งสอง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำหรือทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาวหรือโปร่งที่ไม่มีไส้เช่นกัน"
+msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี Marubozu สองอันยาว ซึ่งอันหนึ่งขาว อีกอันเป็นสีดำ และมีช่องว่างระหว่างทั้งสองแท่ง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำ หรือ แท่งเทียนทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาว หรือ แท่งเทียนโปร่งที่ไม่มีไส้เช่นกัน"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
 msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี marubozu สองอัน อันหนึ่งขาว อีกอันดำ และมีช่องว่างระหว่างทั้งสอง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำหรือทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาวหรือโปร่งที่ไม่มีไส้เช่นกัน"
@@ -3034,7 +3034,7 @@ msgid "The barrier of a binary option trade is the price target you set for the 
 msgstr "ค่า Barrier ของการซื้อขายไบนารีออปชั่น คือ ราคาเป้าหมายที่ท่านกำหนดสำหรับตลาดอ้างอิง ท่านสามารถเลือกซื้อขายมูลค่าต่ำกว่า หรือ สูงกว่า ราคาเป้าหมาย หรือ อยู่ระหว่างค่าสองค่าใดๆ"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
-msgstr ""
+msgstr "รูปแบบ Breakaway เริ่มจากแท่งเทียนยาวแสดงถึงแนวโน้มปัจจุบัน แท่งเทียนต่อไปเป็นสีเดียวกัน และมีช่องว่างห่างจากแท่งเทียนยาวแท่งแรก ในขณะที่แท่งเทียนในวันที่สาม หากเป็นสี คือ ไม่แสดงการเปลี่ยนแปลงของแนวโน้มปัจจุบัน วันที่สี่ยังคงเป็นแนวโน้มต่อเนื่อง ดังนั้นจึงยังเป็นแท่งเทียนสีเดียวกัน อย่างไรก็ตาม ในวันที่ห้า แสดงการกลับตัว โปรดทราบว่า เป็นเพียงการแสดงการเปิดในแนวตรงข้ามของแนวโน้มปัจจุบันเพียงเล็กน้อย และจะต่อเนื่องในทิศทางเดียวกันจนกระทั่งราคาปิดเกิดขึ้นในบริเวณช่องว่าง"
 
 msgid "The closing black marubozu candlestick is a tall black candle with an upper shadow but no lower one. The closing white marubozu candlestick is a tall white candle with an lower shadow but no upper shadow"
 msgstr ""
