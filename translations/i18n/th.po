@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 08:24-0400\n"
+"PO-Revision-Date: 2018-06-07 08:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2920,7 +2920,7 @@ msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the 
 msgstr ""
 
 msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions"
-msgstr ""
+msgstr "Commodity Channel Index (CCI) เป็นดัชนีอเนกประสงค์ที่สามารถใช้บอกแนวโน้มใหม่ หรือ การเตือนสภาวะรุนแรง"
 
 msgid "The Donchian Channel is an indicator used in market trading developed by Richard Donchian. It is formed by taking the highest high and the lowest low of the last n periods. The area between the high and the low is the channel for the period chosen"
 msgstr "Donchian Channel เป็นดัชนีที่ใช้ในบอกแนวโน้มตลาดที่พัฒนาโดย Richard Donchian เป็นการแสดงรูปแบบโดยใช้จุดสูงที่สูงที่สุด และจุดต่ำที่ต่ำที่สุดของช่วงสุดท้าย พื้นที่ระหว่างค่าสูงและค่าต่ำเป็นช่องของช่วงที่ได้เลือก"
@@ -3160,7 +3160,7 @@ msgid "This is the current price at which an underlying can be bought or sold at
 msgstr "นี้คือราคาปัจจุบันที่ผลิตภัณฑ์อ้างอิงสามารถถูกซื้อ หรือ ขาย ณ เวลาใดๆ"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
-msgstr ""
+msgstr "รูปแบบนี้เกิดขึ้นเมื่อมีแท่งเทียนสีดำสองวันปรากฏขึ้นที่มีราคาปิดเท่ากันในแนวโน้มขาลง สัญญาณ Matching Low เป็นตัวบอกจุดต่ำสุดได้เกิดขึ้นแล้ว แม้ว่าเป็นการทดสอบราคาปิดต่ำสุดใหม่และไม่มีอะไรตามมาอีก เป็นการแสดงสัญญาณราคาที่ดี"
 
 msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 msgstr ""
