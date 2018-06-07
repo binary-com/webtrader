@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-06 22:50-0400\n"
+"PO-Revision-Date: 2018-06-07 07:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1748,7 +1748,7 @@ msgid "Kicking (CDLKICKING)"
 msgstr "Kicking (CDLKICKING)"
 
 msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH)"
-msgstr "Kicking - ตื่นตัว/ซบเซา พิจารณาโดย marubozu ที่ยาวกว่า (CDLKICKINGBYLENGTH)"
+msgstr "Kicking - ตื่นตัว/ซบเซา พิจารณาโดย Marubozu ที่ยาวกว่า (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
 msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี marubozu สองอันยาว อันหนึ่งขาว อีกอันดำ และมีช่องว่างระหว่างทั้งสอง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำหรือทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาวหรือโปร่งที่ไม่มีไส้เช่นกัน"
@@ -1787,7 +1787,7 @@ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ire
 msgstr "ได้รับอนุญาตและเป็นไปตามกฎหมายในการดำเนินธุรกิจในประเทศมอลตา สหราชอาณาจักร เกาะ Isle of Man ไอร์แลนด์ และญี่ปุ่น"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
-msgstr "เช่นเดียวกับ EMA LWMA ให้ความหมายมากกว่ากับราคาล่าสุด และน้อยกว่ากับราคาปิดของช่วงเวลาเริ่มต้น ดังนั้นจะช่วยให้ค้นพบการย้อนกลับของแนวโน้มได้เร็วกว่า แต่ก็มีแนวโน้มที่ถูกกระทบด้วยคลื่นรบกวนในตลาดได้ง่ายกว่า"
+msgstr "เช่นเดียวกับ EMA LWMA ให้ความหมายมากกว่ากับราคาล่าสุด และน้อยกว่ากับราคาปิดของช่วงเวลาเริ่มต้น ดังนั้นจะช่วยให้ค้นพบการย้อนกลับของแนวโน้มได้เร็วกว่า แต่มีแนวโน้มที่ถูกกระทบด้วยคลื่นรบกวนในตลาดได้ง่ายกว่า"
 
 msgid "Line"
 msgstr "เส้น"
@@ -1883,13 +1883,13 @@ msgid "Long-legged doji have long upper and lower shadows that are almost equal 
 msgstr "Doji ขายาวมีเงาด้านบนและด้านล่างที่เกือบจะยาวเท่ากัน Doji เหล่านี้สะท้อนให้เห็นถึงการตัดสินใจไม่ได้อย่างมากของตลาด Doji ขายาวบ่งชี้ถึงราคาซื้อขายที่เหนือและต่ำกว่าระดับเปิด แต่ปิดเท่ากันกับเปิด สุดท้ายผลลัพธ์ที่เปิดแสดงให้เห็นการเปลี่ยนแปลงเล็กน้อยจากราคาเปิดเริ่มต้น"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
-msgstr "มองหาเทียนสีดำในแนวโน้มราคาขาลง ตามด้วยเทียนสีขาวที่เปิดต่ำกว่าราคาต่ำก่อนหน้า แต่ปิดใกล้หรือต่ำกว่าจุดกลางของลำตัวของแท่งเทียน"
+msgstr "มองหาเทียนสีดำในแนวโน้มราคาขาลง ตามด้วยเทียนสีขาวที่เปิดต่ำกว่าราคาต่ำก่อนหน้า แต่ปิดใกล้ หรือ ต่ำกว่าจุดกลางของลำตัวของแท่งเทียน"
 
 msgid "Look for a tall black candle with a long lower shadow to appear in a downward price trend. The second day should be similar to the first day, but smaller and with a higher low. The last day is a black marubozu that squeezes inside the high-low range of the prior day"
 msgstr "มองหาเทียนสีดำสูงที่มีเงาด้านล่างยาวที่ปรากฎในแนวโน้มราคาขาลง วันที่สองควรจะเหมือนกับวันแรก แต่เล็กกว่าและมีราคาต่ำที่สูงกว่า วันสุดท้ายคือ marubozu สีดำที่บีบอยู่ภายในระยะสูง-ต่ำของวันก่อนหน้านั้น"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
-msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่่งมีช่องว่างเหนือลำตัวของเทียนอันก่อน วันสุดท้ายคือ สีดำอีกอัน แต่อันนี้กลืนแท่งเทียนตลาดซบเซาอันก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
+msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่งมีช่องว่างเหนือลำตัวของเทียนอันก่อน วันสุดท้าย คือ แท่งเทียนสีดำอีกอัน แต่แท่งนี้กลืนแท่งเทียนตลาดซบเซาก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
 
 msgid "Low"
 msgstr "ต่ำ"
@@ -1910,7 +1910,7 @@ msgid "Lower"
 msgstr "ต่ำกว่า"
 
 msgid "MACD is a trading indicator used in technical analysis of stock prices.It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price"
-msgstr "MACD คือตัวชี้วัดที่ใช้ในการวิเคราะห์ทางเทคนิคของราคาหุ้น ซึ่งควรจะเปิดเผยการเปลี่ยนแปลงในความแข็งแรง ทิศทาง โมเมนตัม และระยะเวลาของแนวโน้มของราคาหุ้น"
+msgstr "MACD คือ ตัวชี้วัดที่ใช้ในการวิเคราะห์ทางเทคนิคของราคาหุ้น ซึ่งควรจะเปิดเผยการเปลี่ยนแปลงในความแข็งแกร่ง ทิศทาง โมเมนตัม และระยะเวลาของแนวโน้มของราคาหุ้น"
 
 msgid "MENA FFXPO Award"
 msgstr "รางวัล MENA FFXPO"
@@ -3073,7 +3073,7 @@ msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of 
 msgstr ""
 
 msgid "The indicator is designed for use on a monthly time scale. It is the sum of a 14-month rate of change and 11-month rate of change, smoothed by a 10-period weighted moving average"
-msgstr ""
+msgstr "ดัชนีถูกออกแบบเพื่อใช้ในระยะรายเดือน เป็นผลรวมของอัตราการเปลี่ยนแปลง 14 เดือน และ 11 เดือน และทำให้เห็นแนวโน้มโดยใช้ค่าเฉลี่ยเคลื่อนที่ถ่วงน้ำหนัก 10"
 
 msgid "The market exit price is the price in effect at the end of the contract period"
 msgstr "ราคาสิ้นสุดของตลาด คือ ราคาที่มีผลในช่วงสุดท้ายของเวลาในสัญญา"
