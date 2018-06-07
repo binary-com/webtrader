@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 09:20-0400\n"
+"PO-Revision-Date: 2018-06-07 09:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -721,7 +721,7 @@ msgid "Binary.com has thousands of clients taking a variety of positions on the 
 msgstr "Binary.com มีลูกค้าจำนวนมากมายที่เข้าสู่ตลาดการเงินต่างๆ และได้เข้ามาทำกำไรเล็กๆ ในการซื้อขาย"
 
 msgid "Binary.com hits 1 million users, reaching a historic milestone. The company continues to see exponential growth and this reconfirms its position as an industry leader"
-msgstr "Binary.com มีผู้ใช้งาน 1 ล้านคน ซึ่งเป็นเป้าหมายที่เป็นประวัติศาสตร์ บริษัทยังคงมองเห็นการเจริญเติบโตอย่างมีนัยสำคัญ และสิ่งนี้ได้ยืนยันอีกครั้งถึงการเป็นผู้นำตลาดของเรา"
+msgstr "Binary.com มีผู้ใช้งาน 1 ล้านคน ซึ่งเป็นเป้าหมายที่สำคัญเป็นประวัติการ บริษัทฯ ยังคงมองเห็นการเจริญเติบโตอย่างมีนัยสำคัญ และสิ่งนี้ได้ตอกย้ำถึงการเป็นผู้นำตลาดของเรา"
 
 msgid "Binary.com introduces an"
 msgstr "Binary.com แนะนำ"
@@ -1129,10 +1129,10 @@ msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to ide
 msgstr "พัฒนา โดย Donald Dorsey ดัชนีมวลใช้ช่วงสูงต่ำเพื่อระบุแนวโน้มการกลับรายการตามช่วงขยาย ในแง่นี้ ดัชนีมวลเป็นตัวบ่งชี้ความผันผวนที่ไม่มีอคติเป็นทิศทาง แทน ดัชนีมวลบ่งชี้ส่วนนูนซึ่งเป็นช่วงที่สามารถแสดงแนวโน้มปัจจุบัน"
 
 msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is the inverse of the Fast Stochastic Oscillator. Also referred to as %R, Williams %R reflects the level of the close relative to the highest high for the look-back period"
-msgstr "Williams %R พัฒนาโดย Larry Williams เป็นตัวชี้วัดโมเมนตัมที่กลับกันของ Fast Stochastic Oscillator ซึ่งอาจะถูกกล่าวถึงในชื่อ %R ด้วย Williams %R สะท้อนถึงระดับราคาปิดที่สัมพันธ์กับราคาปิดสูงสุดของช่วงเวลาของการมองย้อนกลับไป"
+msgstr "Williams %R พัฒนาโดย Larry Williams เป็นตัวชี้วัดโมเมนตัมที่กลับตัวของ Fast Stochastic Oscillator ซึ่งอาจะถูกกล่าวถึงในชื่อ %R ด้วย Williams %R สะท้อนถึงระดับราคาปิดที่สัมพันธ์กับราคาปิดสูงสุดของช่วงเวลาของการมองย้อนกลับไป"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
-msgstr "Aroon พัฒนาโดย Tushar Chande ในปี 1995 เป็นระบบตัวชี้วัดที่พิจารณาว่าหุ้นกำลังมีแนวโน้มหรือไม่ และแนวโน้มนั้นแข็งแกร่งเพียงใด มีตัวบ่งชี้ที่แยกต่างหากสองอันคือ Aroon ขึ้น และ Aroon ลง ตัว Aroon ขึ้น 25 วันจะวัดจำนวนวันตั้งแต่ที่ราคาสูง 25 วัน Aroon ลง 25 วัน จะวัด จำนวนวันตั้งแต่ที่ราคาต่ำ 25 วัน"
+msgstr "Aroon พัฒนาโดย Tushar Chande ในปี ค.ศ. 1995 เป็นระบบตัวชี้วัดที่พิจารณาว่า หุ้นกำลังมีแนวโน้มหรือไม่ และแนวโน้มนั้นแข็งแกร่งเพียงใด มีตัวบ่งชี้ที่แยกต่างหากสองอันคือ Aroon ขึ้น และ Aroon ลง ตัว Aroon ขึ้น 25 วัน จะวัดจำนวนวันตั้งแต่ที่ราคาสูง 25 วัน และ Aroon ลง 25 วัน จะวัด จำนวนวันตั้งแต่ที่ราคาต่ำ 25 วัน"
 
 msgid "Differs"
 msgstr "แตกต่าง"
@@ -1609,7 +1609,7 @@ msgid "In October 1999, Regent Markets receives US$ 2 million investment funding
 msgstr "เมื่อเดือนตุลาคม พ.ศ. 2542 (ค.ศ.1999) Regent Markets ได้รับเงินลงทุน 2 ล้านเหรียญสหรัฐ จากนายจิม เมลลอน ผ่านทาง Regent Pacific Group บริษัทจัดการกองทุนที่ฮ่องกง"
 
 msgid "In a downtrend, one small short body candlestick has a long lower shadow at least three times the real body, and little or no upper shadow. Confirmation from prices closing higher the next day"
-msgstr "ในช่วงขาลง แท่งเทียนจะมีลำตัวสั้นหมีเงาต่ำกว่ายาวอย่างน้อยสามเท่าของลำตัวจริง และมีเงาที่สูงกว่าเล็กน้อยหรือไม่มีเลย ยืนยันจากราคาปิดที่สูงกว่าวันถัดไป"
+msgstr "ในช่วงขาลง แท่งเทียนจะมีลำตัวสั้น มีเงาต่ำกว่ายาวอย่างน้อยสามเท่าของลำตัวจริง และมีเงาที่สูงกว่าเล็กน้อย หรือ ไม่มีเลย และมีการยืนยันจากราคาปิดที่สูงกว่าวันถัดไป"
 
 msgid "In a downward price trend, a black candle appears followed by a white candle that opens below the prior body, but it may be difficult to see that from the chart. The white candle closes above the body, too. The last day of the three line candle is another white candle in this example. It shows a higher close"
 msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ลำตัวแท่งเทียนก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของแท่งเทียนสามเส้น คือ เทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
@@ -1706,7 +1706,7 @@ msgid "Is it possible to deposit the same funds through different payment method
 msgstr "เป็นไปได้ไหมที่จะฝากเงินผ่านช่องทางรับชำระเงินที่ต่างกัน?"
 
 msgid "It has a long white candle, followed by another that opens above the first (gaps up), followed by a downward black candlestick that opens below the close of the second day (gaps down) and has a low below the close of the first day. The upward trend is expected to continue"
-msgstr "มีเทียนสีขาวยาว และตามด้วยอีกอันที่เปิดเหนืออันแรก (ช่องว่างกระโดดขึ้น) ตามด้วยแท่งเทียนสีดำขาลงที่เปิดต่ำกว่าราคาปิดของวันที่สอง (ช่องว่างกระโดดลง) และมีราคาต่ำใต้ราคาปิดของวันแรก คาดว่าแนวโน้มขาขึ้นนี้จะยังดำเนินต่อไป"
+msgstr "มีเทียนสีขาวยาว และตามด้วยอีกอันที่เปิดเหนืออันแรก (ช่องว่าง ด้านขึ้น) ตามด้วยแท่งเทียนสีดำขาลงที่เปิดต่ำกว่าราคาปิดของวันที่สอง (ช่องว่าง ด้านลง) และมีราคาต่ำใต้ราคาปิดของวันแรก คาดว่า แนวโน้มขาขึ้นนี้จะยังดำเนินต่อไป"
 
 msgid "It is sometimes possible to sell an option before the expiry of a trade, but only if a fair price can be determined. If this option is available, you will see a blue 'Sell' button next to your trade in the portfolio"
 msgstr "ในบางครั้งการจำหน่ายออปชั่นก่อนวันหมดอายุเมื่อมีราคาที่เหมาะสมเป็นสิ่งที่เกิดขึ้นได้ และหากมีออปชั่นในสถานะดังกล่าว ท่านจะเห็นปุ่ม \"ขาย\" สีน้ำเงิน อยู่ถัดไปจากรายการซื้อขายในพอร์ตโฟลิโอ"
@@ -2926,7 +2926,7 @@ msgid "The Donchian Channel is an indicator used in market trading developed by 
 msgstr "Donchian Channel เป็นดัชนีที่ใช้ในบอกแนวโน้มตลาดที่พัฒนาโดย Richard Donchian เป็นการแสดงรูปแบบโดยใช้จุดสูงที่สูงที่สุด และจุดต่ำที่ต่ำที่สุดของช่วงสุดท้าย พื้นที่ระหว่างค่าสูงและค่าต่ำเป็นช่องของช่วงที่ได้เลือก"
 
 msgid "The Double Exponential Moving Average (CKS) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
-msgstr ""
+msgstr "Double Exponential Moving Average (CKS) พัฒนาโดย Patrick Mulloy โดยพยายามนำราคาทั่วๆ ไปที่ล้าหลังที่สัมพันธ์กับค่าเฉลี่ยเคลื่อนที่ออกและเพิ่มน้ำหนักให้กับราคาล่าสุด"
 
 msgid "The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts to remove the inherent lag associated to Moving Averages by placing more weight on recent values"
 msgstr ""
