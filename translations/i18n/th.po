@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 07:30-0400\n"
+"PO-Revision-Date: 2018-06-07 07:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1615,7 +1615,7 @@ msgid "In a downward price trend, a black candle appears followed by a white can
 msgstr "ในแนวโน้มราคาขาลง แท่งเทียนสีดำเกิดขึ้นตามด้วยแท่งเทียนสีขาวซึ่งเปิดข้างใต้ลำตัวก่อนหน้า แต่อาจจะมองเห็นได้ยากจากแผนภูมิ แท่งเทียนสีขาวปิดเหนือลำตัวด้วย วันสุดท้ายของเทียนสามเส้นคือเทียนสีขาวอีกอันในตัวอย่างนี้ แสดงการปิดที่สูงกว่า"
 
 msgid "In an uptrend three successive days opens at or near the previous day's close and close down on the day. This pattern is more severe than the Three Black Crows pattern and thus has a higher reliability as a reversal pattern"
-msgstr "ในสามวันที่เป็นขาขึ้นต่อเนื่องกันเปิดที่หรือใกล้กับราคาปิดวันก่อน และปิดในวันนั้น รูปแบบนี้รุนแรงกว่ารูปแบบ Three Black Crows และมีความน่าเชื่อถือมากกว่าว่าเป็นรูปแบบย้อนกลับ"
+msgstr "ในสามวันที่เป็นขาขึ้นต่อเนื่องกันเปิดที่ หรือ ใกล้กับราคาปิดวันก่อน และปิดในวันนั้น รูปแบบนี้รุนแรงกว่ารูปแบบ Three Black Crows แต่มีความน่าเชื่อถือมากกว่าว่าเป็น รูปแบบการกลับตัวของราคา"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
 msgstr "รูปแบบคลาสสิกซิลิคอน วัลเลย์ ผู้จัดการกองทุนเฮดจ์ที่ประเทศฮ่องกง นาย Jean-Yves Sireau ก่อตั้ง Regent Markets จากห้องนอนของเขาในประเทศฮ่องกง\n"
