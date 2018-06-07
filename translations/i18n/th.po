@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 09:50-0400\n"
+"PO-Revision-Date: 2018-06-07 10:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1420,7 +1420,7 @@ msgid "Founded October 1999"
 msgstr "ก่อตั้งเมื่อ ตุลาคม พ.ศ. 2542 (ค.ศ. 1999)"
 
 msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr "ก่อตั้งขึ้นในปี 1999 (พ.ศ. 2542) Binary.com เป็นชื่อที่เก่าแก่ที่สุด และได้รับการยอมรับมากที่สุดในการซื้อขายไบนารีออนไลน์"
+msgstr "ก่อตั้งขึ้นในปี ค.ศ. 1999 (พ.ศ. 2542) Binary.com เป็นชื่อที่เก่าแก่ที่สุด และได้รับการยอมรับมากที่สุดในการซื้อขายไบนารีออนไลน์"
 
 msgid "Fractal (FRACTAL)"
 msgstr "Fractal (FRACTAL)"
