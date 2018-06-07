@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-07 13:10-0400\n"
+"PO-Revision-Date: 2018-06-07 13:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3090,7 +3090,7 @@ msgid "The payout is the amount paid to an options trader if their prediction is
 msgstr "การชำระเงินเกิดขึ้นเมื่อผู้ซื้อขายออปชั่นพยากรณ์ได้ถูกต้อง"
 
 msgid "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
-msgstr ""
+msgstr "รูปแบบ Piercing เกิดจากสองแท่งเทียน แท่งแรกสีดำ และแท่งที่สองสีขาว ทั้งสองแสดงตัวแท่งเทียนขนาดใหญ่ใกล้เคียงกัน และมีเงาตามปกติ โดยไม่จำเป็นต้องเล็ก หรือ ไม่มี แท่งเทียนขาวต้องเปิดต่ำกว่าราคาปิดก่อนหน้าและปิดสูงกว่าจุดกลางลำตัวของแท่งเทียนสีดำ หากมีราคาปิดต่ำกว่าจุดกึ่งกลางตัวแท่งเทียนจะเป็นสัญญาณกลับตัว แต่ไม่ถือว่าเป็นการตื่นตัวแบบกระทิง"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
 msgstr "แพลตฟอร์มปฐมฤกษ์สำหรับการซื้อขายไบนารีออปชั่นในตลาดการเงินระดับโลก"
