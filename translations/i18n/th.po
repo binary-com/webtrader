@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 12:30-0400\n"
+"PO-Revision-Date: 2018-06-09 12:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2331,7 +2331,7 @@ msgid "Please confirm the following details in order to complete the transfer"
 msgstr "โปรดยืนยันรายละเอียดของธุรกรรมเพื่อดำเนินการโอนเงิน"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "โปรดป้อนวันที่ในรูปแบบ yyyy-mm-dd "
+msgstr "โปรดป้อนวันที่ในรูปแบบ yyyy-mm-dd ให้ถูกต้อง"
 
 msgid "Please enter a value greater than 0"
 msgstr "โปรดป้อนค่าที่มากกว่าศูนย์"
@@ -2484,7 +2484,7 @@ msgid "Regent Markets acquires BetsForTraders client base"
 msgstr "Regent Markets ได้ครอบครองฐานลูกค้าของ BetsForTraders"
 
 msgid "Regent Markets files for a patent in March 2000 on the basis of our unique position as the sole serious competitor in the business of fixed-odds financial betting. In May, we register the trading name BetOnMarkets and move to Malta to receive an internet betting licence"
-msgstr "Regent Markets ดำเนินการเพื่อขอสิทธิบัตรในเดือนมีนาคม ค.ศ. 2000 ในประเภท Fixed-Odds Financial Betting ในเดือนพฤษภาคม พวกเราขึ้นทะเบียนทำการซื้อขายในนาม BetOnMarkets และย้ายไปที่ประเทศมอลตาเพื่อรับใบอนุญาตการประกอบธุรกิจทางอินเทอร์เน็ต"
+msgstr "Regent Markets ดำเนินการเพื่อขอสิทธิบัตรในเดือนมีนาคม ค.ศ. 2000 (พ.ศ. 2543)ในประเภท Fixed-Odds Financial Betting ในเดือนพฤษภาคม พวกเราขึ้นทะเบียนทำการซื้อขายในนาม BetOnMarkets และย้ายไปที่ประเทศมอลตาเพื่อรับใบอนุญาตการประกอบธุรกิจทางอินเทอร์เน็ต"
 
 msgid "Regent Markets files for patent, and registers BetOnMarkets trading name"
 msgstr "Regent Markets ได้รับสิทธิบัตร และขึ้นทะเบียนการซื้อขายในชื่อ BetOnMarkets"
@@ -2673,7 +2673,7 @@ msgid "Share chart"
 msgstr "แบ่งปันแผนภูมิ"
 
 msgid "Sharp, benchmarked prices"
-msgstr "เฉียบคม ราคามาตรฐาน"
+msgstr "เฉียบคม ราคาได้มาตรฐาน"
 
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Shooting Star (CDLSHOOTINGSTAR)"
@@ -3492,7 +3492,7 @@ msgid "We are required by our license to inform you about what happens to funds 
 msgstr "พวกเราถูกกำหนดโดยใบอนุญาตของพวกเราเพื่อเรียนให้ท่านทราบเกี่ยวกับสิ่งที่เกิดขึ้นกับเงินทุนที่พวกเราดูแลในบัญชีของท่าน และขอบเขตที่เงินทุนได้รับการปกป้องจากภาวะล้มละลาย "
 
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
-msgstr "เราทำได้อีกครั้ง BetOnMarkets.com จากรางวัลในปี ค.ศ. 2007 โดยได้รับคะแนนลงมติให้เป็น 'Best Fixed-Odds Financial Trading Provider' ในปี ค.ศ. 2008"
+msgstr "เราทำได้อีกแล้ว BetOnMarkets.com จากรางวัลในปี พ.ศ. 2550 (ค.ศ. 2007) โดยได้รับคะแนนลงมติให้เป็น 'Best Fixed-Odds Financial Trading Provider' ในปี พ.ศ. 2551 (ค.ศ. 2008)"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "เราได้เปลี่ยนชื่อ BetOnMarkets.com เป็น"
