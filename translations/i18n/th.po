@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 09:00-0400\n"
+"PO-Revision-Date: 2018-06-09 09:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2895,7 +2895,7 @@ msgid "The Absolute Price Oscillator (APO) is based on the absolute differences 
 msgstr "Absolute Price Oscillator (APO) แสดงค่าสัมบูรณ์ของความแตกต่างระหว่างค่าเฉลี่ยเคลื่อนที่ที่มีระยะต่างกัน ของการเคลื่อนที่เร็วเฉลี่ย และการเคลื่อนที่ช้าเฉลี่ย"
 
 msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. These two indicators are usually plotted together for easy comparison, but chartists can also view the difference of these two indicators with the Aroon Oscillator. This indicator fluctuates between -100 and +100 with zero as the middle line"
-msgstr ""
+msgstr "Aroon Oscillator มีความแตกต่างระหว่า Aroon-Up และ Aroon-Down ดัชนีสองประเภทนี้เป็นดัชนีทั่วๆ ไป ที่ใช้แสดงการเปรียบเทียบอย่างง่าย แต่ผู้เชี่ยวชาญในตลาดหลักทรัพย์แนะนำว่ายังสามารถใช้ดัชนีนี้แสดงความแตกต่างระหว่างสองดัชนี Aroon Oscillator ดัชนีชนิดนี้มีความแปรปรวนอยู่ระหว่าง -100 และ +100 กับศูนย์ ที่เป็นเส้นกลาง"
 
 msgid "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength"
 msgstr "ดัชนีเฉลี่ยทิศทางการเคลื่อนไหวดัชนี (ADX) ถูกพัฒนาขึ้นในปี ค.ศ. 1978 โดย J. Welles Wilder เป็นตัวบ่งชี้ของความแข็งแรงของแนวโน้มในชุดของราคาของเครื่องมือทางการเงินที่ ADX จะมีช่วงอยู่ระหว่าง 0 ถึง 100 โดยทั่วไป ADX อ่านค่าต่ำกว่า 20 ดัชนีแสดงแนวโน้มอ่อนแอ และอ่านกว่า 40 ดัชนีที่แสดงความแข็งแกร่งของแนวโน้ม"
