@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 12:40-0400\n"
+"PO-Revision-Date: 2018-06-09 12:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3150,7 +3150,7 @@ msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
 
 msgid "This is another award we really savour. Trade2win is a portal for active traders seeking to profit from stocks, futures, options and forex, and these traders award us silver (we are just pipped for gold by Betfair). It means active traders worldwide rate our trading platform extremely highly"
-msgstr "นี้คืออีกรางวัลหนึ่งที่เราได้ดื่มด่ำอย่างมีความสุข Trade2win เป็นระบบสำหรับนักลงทุนเพื่อการแสวงหากำไรจากหลักทรัพย์ ฟิวเจอร์ ออปชั่น และฟอเร็กซ์ นักลงทุนเหล่านี้เองที่มอบรางวัลให้เรา สำหรับรางวัลซิลเวอร์ (ซึ่งเราเพิ่งได้ระดับโกลด์มา จาก Betfair) นั่นหมายความว่า นักลงทุนที่ใช้งานอยู่ทั่วโลกประกาศว่า เราคือระบบซื้อขายที่เยี่ยมยอดทีเดียว"
+msgstr "นี้คืออีกรางวัลหนึ่งที่เราได้ดื่มด่ำอย่างมีความสุข Trade2win เป็นระบบสำหรับนักลงทุนเพื่อการแสวงหากำไรจากหลักทรัพย์ ฟิวเจอร์ ออปชั่น และฟอเร็กซ์ นักลงทุนเหล่านี้เองที่มอบรางวัลให้เรา สำหรับรางวัลเหรียญเงิน (ซึ่งเราเพิ่งได้ระดับเหรียญทองมา จาก Betfair) นั่นหมายความว่า นักลงทุนที่ใช้งานอยู่ทั่วโลกประกาศว่า เราคือระบบซื้อขายที่เยี่ยมยอดทีเดียว"
 
 msgid "This is big. We pick up a double award from the Financial Times and Investors Chronicle, reflecting our success in improving the quality and usability of our website and products"
 msgstr "นี้คือผลงานชิ้นใหญ่อีกอันหนึ่ง พวกเราได้รับสองรางวัลจาก The Financial Times และ Investors Chronicle เพื่อแสดงถึงความสำเร็จของเราในการพัฒนาเว็บไซต์และผลิตภัณฑ์ของเราอย่างมีคุณภาพและใช้งานง่าย"
