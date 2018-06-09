@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 12:50-0400\n"
+"PO-Revision-Date: 2018-06-09 13:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3492,7 +3492,7 @@ msgid "We are required by our license to inform you about what happens to funds 
 msgstr "พวกเราถูกกำหนดโดยใบอนุญาตของพวกเราเพื่อเรียนให้ท่านทราบเกี่ยวกับสิ่งที่เกิดขึ้นกับเงินทุนที่พวกเราดูแลในบัญชีของท่าน และขอบเขตที่เงินทุนได้รับการปกป้องจากภาวะล้มละลาย "
 
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
-msgstr "เราทำได้อีกแล้ว BetOnMarkets.com จากรางวัลในปี พ.ศ. 2550 (ค.ศ. 2007) โดยได้รับคะแนนลงมติให้เป็น 'Best Fixed-Odds Financial Trading Provider' ในปี พ.ศ. 2551 (ค.ศ. 2008)"
+msgstr "เราทำได้อีกแล้ว เราคว้ารางวัลจาก BetOnMarkets.com ในปี พ.ศ. 2550 (ค.ศ. 2007) โดยได้รับคะแนนลงมติให้เป็น 'Best Fixed-Odds Financial Trading Provider' ในปี พ.ศ. 2551 (ค.ศ. 2008)"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "เราได้เปลี่ยนชื่อ BetOnMarkets.com เป็น"
@@ -3507,7 +3507,7 @@ msgid "We're really proud of this award. We're strongly committed to offering an
 msgstr "พวกเรามีความภูมิใจในรางวัลนี้อย่างมาก พวกเราให้คำสัญญาอย่างแน่วแน่ในการทำให้ท่านมีประสบการณ์การซื้อขายอย่างมีจริยธรรม รางวัลนี้แสดงว่า BetOnMarkets เป็นแบรนด์ที่ได้รับความไว้วางใจ รับฟังและดูแลลูกค้า ผู้ซึ่งมีประสบการณ์ในการลงทุนมาแล้ว หรือ นักลงทุนมือใหม่ พวกเรามีทีมงานลูกค้าสัมพันธ์ที่สามารถสื่อสารกับท่านได้ด้วยภาษาอังกฤษ ภาษาอินโดนีเซีย ภาษารัสเซีย ภาษาจีน และภาษาสเปน"
 
 msgid "Webtrader"
-msgstr "เว็บเทรดเดอร์"
+msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
 msgstr "Webtrader เป็นแพลตฟอร์มการซื้อขายขั้นสูงที่ออกแบบเพื่อการซื้อขายส่วนบุคคลของท่าน"
@@ -3528,7 +3528,7 @@ msgid "Weighted Moving Average (WMA)"
 msgstr "Weighted Moving Average (WMA)"
 
 msgid "Welcome to Binary.com Webtrader"
-msgstr "ยินดีต้อนรับสู่ Binary.com เว็บเทรดเดอร์"
+msgstr "ยินดีต้อนรับสู่ Binary.com Webtrader"
 
 msgid "What are OTC indices and stocks?"
 msgstr "ดัชนี OTC และหลักทรัพย์ OTC คืออะไร?"
@@ -3537,7 +3537,7 @@ msgid "What is pep?"
 msgstr "PEP คืออะไร?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
-msgstr "เมื่อท่านพอใจกับราคาที่ท่านได้รับ ดำเนินการซื้อขายทันที ในแพลตฟอร์มที่เป็นเอกลักษณ์ของเรา ท่านจะไม่ต้องต่อสู้กับ 'Slippage' หรือ ช่องว่างในตลาด และที่สำคัญที่สุด ไม่มีค่าธรรมเนียมที่มองไม่เห็น mjkoสามารถขายคืนการซื้อขายระยะยาวเมื่อใดก็ได้ก่อนที่จะหมดอายุเพื่อปกป้องกำไรที่ท่านอาจจะได้รับหรือลดการขาดทุนให้น้อยที่สุด"
+msgstr "เมื่อท่านพอใจกับราคาที่ท่านได้รับ ดำเนินการซื้อขายทันที ในแพลตฟอร์มที่เป็นเอกลักษณ์ของเรา ท่านจะไม่ต้องต่อสู้กับ 'Slippage' หรือ ช่องว่างในตลาด และที่สำคัญที่สุด ไม่มีค่าธรรมเนียมที่มองไม่เห็น ท่านสามารถขายคืนการซื้อขายระยะยาวเมื่อใดก็ได้ก่อนที่จะหมดอายุเพื่อปกป้องกำไรที่ท่านอาจจะได้รับหรือลดการขาดทุนให้น้อยที่สุด"
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "เมื่อท่านซื้อขายกับ Binary.com ท่านสามารถเชื่อได้ว่า เงินฝากของท่านจะได้รับความไว้วางใจในการดูแลและไม่ถูกนำไปใช้เพื่อวัตถุประสงค์อื่น"
@@ -3585,7 +3585,7 @@ msgid "Xodds.com"
 msgstr "Xodds.com"
 
 msgid "Y-axis gridline"
-msgstr "เส้นกริดแกนวาย (แนวตั้ง)"
+msgstr "เส้นตาราง แกนวาย (แนวตั้ง)"
 
 msgid "Y-axis labels"
 msgstr "ป้ายชื่อแกนวาย (แนวตั้ง)"
