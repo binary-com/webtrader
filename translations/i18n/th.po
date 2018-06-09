@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 10:10-0400\n"
+"PO-Revision-Date: 2018-06-09 10:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2967,10 +2967,10 @@ msgid "The Kaufman's Adaptive Moving Average (KAMA) Developed by Perry Kaufman, 
 msgstr "Kaufman's Adaptive Moving Average (KAMA) เป็นดัชนีที่พัฒนาโดย Perry Kaufman คือ ค่าเฉลี่ยเคลื่อนที่ที่ถูกออกแบบเพื่ออธิบายความผันผวนในตลาด ดัชนีนี้ใช้เพื่อบอกแนวโน้มทั้งหมดของตลาด เวลาที่มีจุดเปลี่ยนแปลง และการเคลื่อนที่ของราคา"
 
 msgid "The Least Squares Moving Average first calculates a least squares regression line over the preceding time periods, then projects it forward to the current period. In essence, it calculates what the value would be if the regression line continued"
-msgstr ""
+msgstr "Least Squares Moving Average คำนวณ เส้นถดถอยกำลังสองน้อยสุดในช่วงเวลงก่อนหน้า แล้วพยากรณ์ไปข้างหน้าจนถึงรอบปัจจุบัน เครื่องมือนี้ใช้สำหรับคำนวณเมื่อมีเส้นถดถอยต่อเนื่อง"
 
 msgid "The MESA Adaptive Moving Average is developed by John Ehlers of Mesa Software. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
-msgstr ""
+msgstr "MESA Adaptive Moving Average (KAMA) เป็นดัชนีที่พัฒนาโดย John Ehlers จากบริษัท Mesa Software ดัชนีนี้ใช้เพื่อบอกแนวโน้มทั้งหมดของตลาด เวลาที่มีจุดเปลี่ยนแปลง และการเคลื่อนที่ของราคา"
 
 msgid "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
 msgstr ""
