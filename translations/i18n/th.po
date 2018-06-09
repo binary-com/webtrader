@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 10:40-0400\n"
+"PO-Revision-Date: 2018-06-09 10:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2934,7 +2934,7 @@ msgid "The Double Exponential Moving Average (DEMA) by Patrick Mulloy attempts t
 msgstr "Double Exponential Moving Average (DEMA) พัฒนาโดย Patrick Mulloy โดยพยายามนำราคาทั่วๆ ไปที่ล้าหลังที่สัมพันธ์กับค่าเฉลี่ยเคลื่อนที่ออกและเพิ่มน้ำหนักให้กับราคาล่าสุด"
 
 msgid "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow"
-msgstr ""
+msgstr "Dragonfly Doji เกิดขึ้นเมื่อ ราคาเปิด ราคาสูงสุด และราคาปิด เป็นค่าเดียวกัน หรือ เกือบจะเป็นค่าเดียวกัน (กรณีราคาเปิด ราคาต่ำสุด และราคาปิด เป็นราคาเดียวกันจะเกิดขึ้นได้ยากมาก) ส่วนสำคัญที่สุดของ Dragonfly Doji คือ มีเงาทางด้านล่างค่อนข้างยาว"
 
 msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
 msgstr "EUR Index เป็นดัชนีถ่วงน้ำหนัก ที่ใช้แสดงมูลค่าของเงินยูโรกับ 5 สกุลเงินหลักของโลก (USD, AUD, GBP, JPY, CAD) โดยมีนำ้หนักแต่ละสกุลเงินที่ 20%"
@@ -2973,7 +2973,7 @@ msgid "The MESA Adaptive Moving Average is developed by John Ehlers of Mesa Soft
 msgstr "MESA Adaptive Moving Average (KAMA) เป็นดัชนีที่พัฒนาโดย John Ehlers จากบริษัท Mesa Software ดัชนีนี้ใช้เพื่อบอกแนวโน้มทั้งหมดของตลาด เวลาที่มีจุดเปลี่ยนแปลง และการเคลื่อนที่ของราคา"
 
 msgid "The Momentum indicator compares where the current price is in relation to where the price was in the past. How far in the past the comparison is made is up to the technical analysis trader. The calculation of Momentum is quite simple (n is the number of periods the technical trader selects): The current price minus the price n-periods ago"
-msgstr ""
+msgstr "ดัชนี Momentum เปรียบเทียบราคาปัจจุบันที่สัมพันธ์ กับราคาในอดีต นักวิเคราะห์ทางเทคนิคแสดงการเปรียบเทียบความห่างของราคา การคำนวณโมเมนตัมทำไ้อย่างง่ายๆ (มี n เป็นจำนวนของช่วงเวลาที่นักลงทุนเชิงเทคนิคเลือก): ราคาปัจจุบัน - ราคา n"
 
 msgid "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average"
 msgstr "Percentage Price Oscillator (PPO) เป็นตัวบอกสัญญาณโมเมนตัมที่วัดความแตกต่างระหว่างค่าเฉลี่ยเคลื่อนที่สองค่าแล้วแสดงเป็นร้อยละของค่าเฉลี่ยเคลื่อนที่ที่ใหญ่กว่า"
@@ -3006,7 +3006,7 @@ msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is
 msgstr "รูปแบบ Tasuki Gap เกิดจาก 3 แท่งเทียน แท่งแรกสีแดงที่บ่งบอกลักษณะแนวโน้มขาลง แท่งเทียนที่สองเป็นแท่งสีแดงอีกแท่งหนึ่งที่มีช่วงห่างในทิศทางด้านล่างราคาปิดของแท่งแรก และแท่งเทียนสุดท้ายเป็นสีขาวซึ่งราคาปิดอยู่ระหว่างช่องว่างของแท่งที่หนึ่งและแท่งที่สอง"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
-msgstr ""
+msgstr "รูปแบบ Three Methods เป็นรูปแบบของแนวโน้มที่ต่อเนื่องซึ่งสามารถปรากฏในทั้งขาขึ้นและขาลง ในแนวโน้มขาขึ้นจะเรียกว่า รูปแบบ Rising Three Methods และหากเป็นขาลงจะเรียกว่า รูปแบบ Falling Three Methods รูปแบบนี้จะประกอบด้วยอย่างน้อย 5 แท่งเทียน"
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
 msgstr "Triangular Moving Average (TRIMA) แสดงค่าเฉลี่ยของราคา โดยให้น้ำหนักที่ราคาตรงกลางของรอบระยะเวลาดังกล่าว การคำนวณที่ปรับค่าให้เห็นคู่แนวโน้มแนะนำให้ใช้ความกว้างของหน้าต่างที่มีความยาวครึ่งหนึ่งของชุดข้อมูล"
