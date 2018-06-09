@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 12:00-0400\n"
+"PO-Revision-Date: 2018-06-09 12:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1656,7 +1656,7 @@ msgid "Indicative Price"
 msgstr "ราคาดัชนี"
 
 msgid "Indicators"
-msgstr "อินดิเคเตอร์"
+msgstr "ดัชนีต่างๆ"
 
 msgid "Indices"
 msgstr "ดัชนี"
@@ -1752,10 +1752,10 @@ msgid "Kicking - bull/bear determined by the longer marubozu (CDLKICKINGBYLENGTH
 msgstr "Kicking - ตื่นตัว/ซบเซา พิจารณาโดย Marubozu ที่ยาวกว่า (CDLKICKINGBYLENGTH)"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two long marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี Marubozu สองอันยาว ซึ่งอันหนึ่งขาว อีกอันเป็นสีดำ และมีช่องว่างระหว่างทั้งสองแท่ง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำ หรือ แท่งเทียนทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาว หรือ แท่งเทียนโปร่งที่ไม่มีไส้เช่นกัน"
+msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี Marubozu สองอันยาว ซึ่งอันหนึ่งสีขาว อีกอันเป็นสีดำ และมีช่องว่างระหว่างทั้งสองแท่ง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำ หรือ แท่งเทียนทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาว หรือ แท่งเทียนโปร่งที่ไม่มีไส้เช่นกัน"
 
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
-msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนถูกทำให้เป็นรูปร่างเมื่อมี marubozu สองอัน อันหนึ่งขาว อีกอันดำ และมีช่องว่างระหว่างทั้งสอง รูปแบบ Kicking ตลาดตื่นตัวจะแสดงออกเป็นแท่งเทียนสีดำหรือทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างสูงกว่า กับแท่งเทียนสีขาวหรือโปร่งที่ไม่มีไส้เช่นกัน"
+msgstr "รูปแบบ Kicking บนแผนภูมิแท่งเทียนก่อตัวเป็นรูปร่างเมื่อมี Marubozu สองอัน อันหนึ่งสีขาว อีกแท่งหนึ่งสีดำ และมีช่องว่างระหว่างทั้งสอง รูปแบบ Kicking ตลาดขาขึ้นจะแสดงเป็นแท่งเทียนสีดำ หรือ ทึบที่ไม่มีไส้ (เงา) ตามด้วยช่องว่างด้านบน กับแท่งเทียนสีขาว หรือ โปร่งที่ไม่มีไส้เช่นกัน"
 
 msgid "Kuala Lumpur Office"
 msgstr "สำนักงานกัวลาลัมเปอร์"
@@ -1887,7 +1887,7 @@ msgid "Look for a black candle in a downward price trend followed by a white can
 msgstr "มองหาเทียนสีดำในแนวโน้มราคาขาลง ตามด้วยเทียนสีขาวที่เปิดต่ำกว่าราคาต่ำก่อนหน้า แต่ปิดใกล้ หรือ ต่ำกว่าจุดกลางของตัวของแท่งเทียน"
 
 msgid "Look for a tall black candle with a long lower shadow to appear in a downward price trend. The second day should be similar to the first day, but smaller and with a higher low. The last day is a black marubozu that squeezes inside the high-low range of the prior day"
-msgstr "มองหาเทียนสีดำสูงที่มีเงาด้านล่างยาวที่ปรากฎในแนวโน้มราคาขาลง วันที่สองควรจะเหมือนกับวันแรก แต่เล็กกว่าและมีราคาต่ำที่สูงกว่า วันสุดท้ายคือ marubozu สีดำที่บีบอยู่ภายในระยะสูง-ต่ำของวันก่อนหน้านั้น"
+msgstr "มองหาเทียนสีดำสูงที่มีเงาด้านล่างยาวที่ปรากฎในแนวโน้มราคาขาลง วันที่สองควรจะเหมือนกับวันแรก แต่เล็กกว่าและมีราคาต่ำที่สูงกว่า วันสุดท้ายคือ Marubozu สีดำที่บีบอยู่ภายในระยะสูง-ต่ำของวันก่อนหน้านั้น"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่งมีช่องว่างเหนือลำตัวของเทียนอันก่อน วันสุดท้าย คือ แท่งเทียนสีดำอีกอัน แต่แท่งนี้กลืนแท่งเทียนตลาดซบเซาก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
