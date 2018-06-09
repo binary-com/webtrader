@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 11:40-0400\n"
+"PO-Revision-Date: 2018-06-09 11:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3267,7 +3267,7 @@ msgid "Tooltip text"
 msgstr "ข้อความในป้ายคำแนะนำ"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "เครื่องมือการคัดลอกทั้งหมด"
 
 msgid "Total Cost"
 msgstr "ต้นทุนรวม"
@@ -3318,7 +3318,7 @@ msgid "Trades Profitability"
 msgstr "ความสามารถในการทำกำไรของนักลงทุน"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "ไม่สามารถซื้อขายได้"
 
 msgid "Trading Times"
 msgstr "เวลาซื้อขาย"
@@ -3702,7 +3702,7 @@ msgid "deposit funds and begin trading within minutes"
 msgstr "ฝากหลักประกันแล้วเริ่มซื้อขายในเวลาไม่กี่นาที"
 
 msgid "disposes of its stake"
-msgstr ""
+msgstr "ออกจากการวางเดิมพัน"
 
 msgid "e-commerce site for branded merchandise"
 msgstr "อีคอมเมิร์ซสำหรับสินค้าแบรนด์"
