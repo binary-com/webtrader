@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 10:30-0400\n"
+"PO-Revision-Date: 2018-06-09 10:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2913,7 +2913,7 @@ msgid "The Bearish On-Neck Pattern occurs after a downtrend when a long black da
 msgstr "รูปแบบ Bearish On-Neck นี้ เกิดหลังจากช่วงขาลง เมื่อมีแท่งเทียนสีดำยาวในวันก่อนหน้า ตามด้วยแท่งเทียนยาวสีขาวหนึ่งแท่ง ซึ่งมีช่องว่างทางด้านล่าง เมื่อราคาเปิดและราคาปิดต่ำกว่าราคาปิดของวันที่เป็นแท่งเทียนสีดำ"
 
 msgid "The Bullish Three Star appears after a downtrend and it consists of three consecutive Doji, in which the second Doji gaps below the other two Doji. The Bearish Three Star appears after a uptrend and it consists of three consecutive Doji, in which the second Doji gaps above the other two Doji"
-msgstr ""
+msgstr "Bullish Three Star ปรากฏเมื่อเป็นแนวโน้มขาลง และประกอบด้วย Doji 3 อันต่อเนื่อง โดย Doji อันที่สองมีช่องว่างด้านล่างของอีกสองอัน รูปแบบ Bearish Three Star ที่ปรากฏในแนวโน้มขาขึ้น ประกอบด้วย Doji 3 อันต่อเนื่อง โดย Doji อันที่สองมีช่องว่างด้านบนของอีกสองอัน"
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
 msgstr "ดัชนี CMO ถูกพัฒนาเพื่อนำมาคำนวณความแตกต่างระหว่างผลรวมของราคาปิดที่เป็นราคาที่สูงกว่าที่เกิดขึ้นล่าสุด และผลรวมของราคาปิดที่เป็นราคาที่ต่ำกว่าที่เกิดขึ้นล่าสุด แล้วหารด้วยช่วงเวลา นำผลรวมมาคูณด้วย 100 จะให้ค่าในช่วง -100 ถึง +100"
@@ -2958,7 +2958,7 @@ msgid "The Hanging Man formation, just like the Hammer, is created when the open
 msgstr "การก่อตัวรูปแบบคนแขวนคอ (Hanging Man) หรือ รูปร่างของค้อน (Hammer) เกิดเมื่อมีราคาเปิด และราคาปิด กลับมาที่ราคาสูงสุดเหมือนกัน และยังมีเงาด้านล่างที่ค่อนข้างยาว ซึ่งจะมีความยาวอย่างน้อยสองเท่าของลำตัวของแท่งเทียน"
 
 msgid "The Hull Moving Average solves the age old dilemma of making a moving average more responsive to current price activity whilst maintaining curve smoothness. In fact the HMA almost eliminates lag altogether and manages to improve smoothing at the same time"
-msgstr ""
+msgstr "Hull Moving Average แก้ปัญหาสภาวะวิกฤตของการทำให้ค่าเฉลี่ยเคลื่อนที่มีการตอบสนองต่อราคาปัจจุบันที่ดีขึ้น และมีการแสดงความต่อเนื่องของเส้นแนวโน้ม จริงๆ แล้ว HMA ช่วยลดความล่าช้าและช่วยปรับเส้นแนวโน้มในขณะเดียวกัน"
 
 msgid "The Inverted Hammer occurs mainly at the bottom of downtrends when the open, low, and close are roughly the same price. Also, there is a long upper shadow, which should be at least twice the length of the real body"
 msgstr "โดยมากการก่อตัวรูปแบบค้อนกลับหัว (Inverted Hammer) เกิดเมื่อเป็นจุดต่ำสุดของขาลง โดยมีราคาเปิด และราคาปิด กลับมาที่ราคาต่ำสุดเหมือนกัน และยังมีเงาด้านบนที่ค่อนข้างยาว ซึ่งจะมีความยาวอย่างน้อยสองเท่าของลำตัวของแท่งเทียน"
