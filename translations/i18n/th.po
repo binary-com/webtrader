@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 09:30-0400\n"
+"PO-Revision-Date: 2018-06-09 09:40-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2940,10 +2940,10 @@ msgid "The EUR Index is a weighted Index, measuring the Euro's value against a b
 msgstr "EUR Index เป็นดัชนีถ่วงน้ำหนัก ที่ใช้แสดงมูลค่าของเงินยูโรกับ 5 สกุลเงินหลักของโลก (USD, AUD, GBP, JPY, CAD) โดยมีนำ้หนักแต่ละสกุลเงินที่ 20%"
 
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
-msgstr ""
+msgstr "Exponential Moving Average (EMA) แสดงค่าเฉลี่ของราคา แต่ให้ความสำคัญกับราคาที่เกิดขึ้นใหม่ๆ น้ำหนักที่ใช้กับราคาปิดใหม่ขึ้นกับช่วงเวลาที่ระบุของค่าเฉลี่ยเคลื่อนที่ รอบ EMA ที่สั้นกว่า ให้น้ำหนักมากกว่า และจะใช้กับราคาล่าสุด"
 
 msgid "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K"
-msgstr ""
+msgstr "Fast Stochastic Oscillator พัฒนาโดย George Lane โดยมีสูตรดั้งเดิมสำหรับ %K และ %D โดย %K ในเวอร์ชันเร็วแสดงความไม่แน่นอน %D คือ ค่า 3-day SMA ของ %K"
 
 msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
 msgstr "ดัชนี GBP เป็นดัชนีถ่วงน้ำหนัก แสดงมูลค่าของค่าเงินปอนด์ต่อ 5 สกุลเงินสากล (USD, EUR, AUD, JPY, CAD) โดยใช้ร้อยละ 20 ในการถ่วงน้ำหนัก"
@@ -3009,7 +3009,7 @@ msgid "The Three Methods pattern is a trend continuation pattern that can appear
 msgstr ""
 
 msgid "The Triangular Moving Average (TRIMA) represents an average of prices, but places weight on the middle prices of the time period. The calculations double-smooth the data using a window width that is one-half the length of the series"
-msgstr ""
+msgstr "Triangular Moving Average (TRIMA) แสดงค่าเฉลี่ยของราคา โดยให้น้ำหนักที่ราคาตรงกลางของรอบระยะเวลาดังกล่าว การคำนวณที่ปรับค่าให้เห็นคู่แนวโน้มแนะนำให้ใช้ความกว้างของหน้าต่างที่มีความยาวครึ่งหนึ่งของชุดข้อมูล"
 
 msgid "The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers a moving average with better smoothing then traditional exponential moving average"
 msgstr ""
