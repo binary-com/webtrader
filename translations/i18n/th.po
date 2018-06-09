@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 09:20-0400\n"
+"PO-Revision-Date: 2018-06-09 09:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2916,7 +2916,7 @@ msgid "The Bullish Three Star appears after a downtrend and it consists of three
 msgstr ""
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
-msgstr "ดัชนี CMO ถูกพัฒนาเพื่อนำมาคำนวณความแตกต่างระหว่างผลรวมของราคาปิดที่เป็นราคาที่สูงกว่า และผลรวมของราคาปิดที่เป็นราคาที่ต่ำกว่า แล้วหารด้วยช่วงเวลา นำผลรวมมาคูณด้วย 100 จะให้ค่า -100 ถึง +100"
+msgstr "ดัชนี CMO ถูกพัฒนาเพื่อนำมาคำนวณความแตกต่างระหว่างผลรวมของราคาปิดที่เป็นราคาที่สูงกว่าที่เกิดขึ้นล่าสุด และผลรวมของราคาปิดที่เป็นราคาที่ต่ำกว่าที่เกิดขึ้นล่าสุด แล้วหารด้วยช่วงเวลา นำผลรวมมาคูณด้วย 100 จะให้ค่าในช่วง -100 ถึง +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
 msgstr ""
