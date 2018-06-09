@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 11:10-0400\n"
+"PO-Revision-Date: 2018-06-09 11:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3069,10 +3069,10 @@ msgid "The first thing to do is choose the asset you wish to trade, such as gold
 msgstr "สิ่งแรกที่ต้องทำ คือ เลือกสินทรัพย์ที่ท่านปรารถนาจะซื้อขาย เช่น ทองคำ หรือ น้ำมัน หลักทรัพย์ หรือ อัตราแลกเปลี่ยน (มูลค่าของไบนารีออปชั่นจะถูกกำหนดจากราคาของผลิตภัณฑ์อ้างอิง) ประโยชน์ที่ยิ่งใหญ่ของการซื้อขายออปชั่น คือ ท่านไม่ได้กำลังซื้อ หรือ ดำเนินการขายสินทรัพย์จริง"
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
-msgstr ""
+msgstr "สามวันแรกของ Bullish Ladder Bottom มีแท่งเทียนสีดำที่ดูแข็งแกร่งที่มีราคาเปิดต่ำกว่าและราคาปิดต่ำกว่าต่อเนื่องกัน ในวันที่สี่มีแท่งเทียนสีดำสั้นๆ แต่มีราคาเปิดสูงกว่า รวมถึงเงายาวทางด้านบน แล้วปิดโดยราคาต่ำสุดที่เป็นค่าใหม่ หรือ นิวโลว์ ต่อมาในวันที่ห้ามีแท่งเทียนสีขาวที่ดูแข็งแกร่งและทำให้เกิดช่องว่างช่วงตัวของแทนเทียนในวันที่สี่"
 
 msgid "The homing pigeon is a bullish candlestick reversal pattern comprised of two red candlesticks. The first candle is a tall black one that appears in a downward price trend. The second day is also a black candle, but it is smaller and fits inside the body of the first black candle"
-msgstr ""
+msgstr "Homing Pigeon เป็นรูปแบบการกลับตัวของแท่งเทียนตื่นตัว ประกอบด้วยแท่งเทียนสีแดงสองแท่ง โดยแท่งแรกเป็นสีดำสูงในแนวโน้มขาลง ในวันที่สองก็จะยังเป็นแท่งเทียนสีดำ แต่มีขนาดเล็กกว่า และมีสัดส่วนอยู่ในลำตัวของแท่งเทียนดำแท่งแรก"
 
 msgid "The indicator is designed for use on a monthly time scale. It is the sum of a 14-month rate of change and 11-month rate of change, smoothed by a 10-period weighted moving average"
 msgstr "ดัชนีถูกออกแบบเพื่อใช้ในระยะรายเดือน เป็นผลรวมของอัตราการเปลี่ยนแปลง 14 เดือน และ 11 เดือน และทำให้เห็นแนวโน้มโดยใช้ค่าเฉลี่ยเคลื่อนที่ถ่วงน้ำหนัก 10"
