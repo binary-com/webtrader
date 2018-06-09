@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 10:20-0400\n"
+"PO-Revision-Date: 2018-06-09 10:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2976,7 +2976,7 @@ msgid "The Momentum indicator compares where the current price is in relation to
 msgstr ""
 
 msgid "The Percentage Price Oscillator (PPO) is a momentum oscillator that measures the difference between two moving averages as a percentage of the larger moving average"
-msgstr ""
+msgstr "Percentage Price Oscillator (PPO) เป็นตัวบอกสัญญาณโมเมนตัมที่วัดความแตกต่างระหว่างค่าเฉลี่ยเคลื่อนที่สองค่าแล้วแสดงเป็นร้อยละของค่าเฉลี่ยเคลื่อนที่ที่ใหญ่กว่า"
 
 msgid "The Price Rate-of-Change (ROC) indicator displays the difference between the current price and the price x-time periods ago. The difference can be displayed in either points or as a percentage"
 msgstr "ดัชนี Price Rate-of-Change (ROC) แสดงความแตกต่างระหว่างราคาปัจจุบันและราคา ณ เวลา ใดเวลาหนึ่งในช่วงที่ผ่านมา ซึ่งแสดงผลในรูปของจุด หรือ ร้อยละ"
@@ -2997,7 +2997,7 @@ msgid "The Shooting formation is created when the open, low, and close are rough
 msgstr "การก่อตัวรูปแบบ Shooting เกิดเมื่อมีราคาเปิด ราคาที่ต่ำสุด และราคาปิด เป็นราคาเดียวกัน และยังมีเงาด้านบนที่ค่อนข้างยาว ซึ่งจะมีความยาวอย่างน้อยสองเท่าของตัวของแท่งเทียน"
 
 msgid "The Simple Moving Average (SMA) is calculated by adding the price of an instrument over a number of time periods and then dividing the sum by the number of time periods. The SMA is basically the average price of the given time period, with equal weighting given to the price of each period"
-msgstr ""
+msgstr "Simple Moving Average (SMA) เป็นการคำนวณโดยเพิ่มเครื่องมือของราคาในรอบเวลา แล้วหารด้วยผลรวมของรอบระยะเวลา ปกติแล้ว ดัชนี SMA เป็นราคาเฉลี่ยในช่วงเวลาใดๆ ที่มีการให้น้ำหนักของราคาในช่วงเวลาที่พิจารณา"
 
 msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar Chande and Stanley Kroll, StochRSI is an oscillator that measures the level of RSI relative to its high-low range over a set time period. StochRSI applies the Stochastics formula to RSI values, instead of price values. This makes it an indicator of an indicator. The result is an oscillator that fluctuates between 0 and 1"
 msgstr ""
