@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 09:10-0400\n"
+"PO-Revision-Date: 2018-06-09 09:20-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2904,7 +2904,7 @@ msgid "The Average True Range (TRANGE) study measures the size of the period s r
 msgstr "Average True Range (TRANGE) ศึกษาการวัดผลของขนาดของช่วงเวลา และพิจารณาช่วงห่างใดๆ จากราคาปิดของช่วงก่อนหน้า"
 
 msgid "The Awesome Oscillator is an indicator used to measure market momentum. AO calculates the difference of a 34 Period and 5 Period Simple Moving Averages. The Simple Moving Averages that are used are not calculated using closing price but rather each bar's midpoints. AO is generally used to affirm trends or to anticipate possible reversals"
-msgstr ""
+msgstr "Awesome Oscillator (AO) เป็นดัชนีที่ใช้เพื่อบอกสภาวะแนวโน้มโมเมนตัมของตลาด ดัชนี AO คำนวณความแตกต่างของ 34 ช่วง และ 5 ช่วงเส้นค่าเฉลี่ยเคลื่อนที่อย่างง่าย เส้นค่าเฉลี่ยเคลื่อนที่อย่างง่ายที่ใช้จะไม่คำนวณโดยใช้ราคาปิด แต่จะเป็นค่ากลางของวันดังกล่าว โดยทั่วไปแล้ว ดัชนี AO ใช้เพื่อยืนยันแนวโน้ม หรือ บอกแนวโน้มและแรงส่งของตลาดในส่วนความเป็นไปได้ที่ราคาจะกลับตัว"
 
 msgid "The Bearish I-Neck Pattern occurs after a downtrend when first day is a long red candle and the second day is a blue day, opening below the low of the first day and closing barely into the body of the first day"
 msgstr "รูปแบบ Bearish In-Neck นี้ เกิดหลังจากช่วงขาลง เมื่อวันแรกปรากฏแท่งเทียนยาวสีแดง และวันถัดมาเป็นสีน้ำเงิน ที่เปิดด้วยราคาที่ต่ำกว่าวันแรกและปิดเต็มแกนของตัวแท่งเทียนวันแรก"
@@ -2916,7 +2916,7 @@ msgid "The Bullish Three Star appears after a downtrend and it consists of three
 msgstr ""
 
 msgid "The CMO indicator is created by calculating the difference between the sum of all recent higher closes and the sum of all recent lower closes and then dividing the result by the sum of all price movement over a given time period. The result is multiplied by 100 to give the -100 to +100 range"
-msgstr ""
+msgstr "ดัชนี CMO ถูกพัฒนาเพื่อนำมาคำนวณความแตกต่างระหว่างผลรวมของราคาปิดที่เป็นราคาที่สูงกว่า และผลรวมของราคาปิดที่เป็นราคาที่ต่ำกว่า แล้วหารด้วยช่วงเวลา นำผลรวมมาคูณด้วย 100 จะให้ค่า -100 ถึง +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
 msgstr ""
