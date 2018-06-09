@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 09:50-0400\n"
+"PO-Revision-Date: 2018-06-09 10:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2919,7 +2919,7 @@ msgid "The CMO indicator is created by calculating the difference between the su
 msgstr "ดัชนี CMO ถูกพัฒนาเพื่อนำมาคำนวณความแตกต่างระหว่างผลรวมของราคาปิดที่เป็นราคาที่สูงกว่าที่เกิดขึ้นล่าสุด และผลรวมของราคาปิดที่เป็นราคาที่ต่ำกว่าที่เกิดขึ้นล่าสุด แล้วหารด้วยช่วงเวลา นำผลรวมมาคูณด้วย 100 จะให้ค่าในช่วง -100 ถึง +100"
 
 msgid "The Choppiness Index (CHOP) is an indicator designed to determine if the market is choppy (trading sideways) or not choppy (trading within a trend in either direction). CHOP is not meant to predict future market direction, it is a metric to be used to for defining the market's trendiness only"
-msgstr ""
+msgstr "Choppiness Index (CHOP) เป็นดัชนีที่ออกแบบเพื่อบ่งชี้หากว่าตลาดมีสภาพไม่แน่นอน (ราคาเป็นแนวขึ้นลงด้านข้าง หรือ ไซด์เวย์) หรือ ตลาดมีทิศทาง (การซื้อขายมีราคาที่บอกทิศทางได้) ดัชนี CHOP ไม่ได้ใช้ทำนายทิศทางตลาดในอนาคต แต่เป็นตัวชี้วัดที่ใช้บอกแนวโน้มตลาดเท่านั้น"
 
 msgid "The Commodity Channel Index (CCI) is a versatile indicator that can be used to identify a new trend or warn of extreme conditions"
 msgstr "Commodity Channel Index (CCI) เป็นดัชนีอเนกประสงค์ที่สามารถใช้บอกแนวโน้มใหม่ หรือ การเตือนสภาวะรุนแรง"
@@ -2985,7 +2985,7 @@ msgid "The Rate of Change Percentage (ROCP) indicator compares the current price
 msgstr "ดัชนี Rate of Change Percentage (ROCP) แสดงการเปรียบเทียบระหว่างราคาปัจจุบันและราคาในอดีต ณ เวลา ใดเวลาหนึ่งในช่วงที่ผ่านมาโดยการระบุช่วงเวลา ราคาในปัจจุบันถูกหารด้วยราคาก่อนหน้า ดัชนี ROCP ไม่ได้แสดงผลในรูปร้อยละ ดัชนีนี้เป็นดัชนีที่รู้จักในอีกชื่อหนึ่งว่า ดัชนีโมเมนตัม"
 
 msgid "The Rate of Change Rate (ROCR) indicator compares the current price with the previous price from a selected number of periods ago. The current price is divided by the previous price. This indicator is also commonly known as a momentum indicator"
-msgstr ""
+msgstr "ดัชนี Rate of Change Rate (ROCR) แสดงการเปรียบเทียบระหว่างราคาปัจจุบันและราคาในอดีต ณ เวลา ใดเวลาหนึ่งในช่วงที่ผ่านมาโดยการระบุช่วงเวลา ราคาในปัจจุบันถูกหารด้วยราคาก่อนหน้า ดัชนีนี้เป็นดัชนีที่รู้จักในอีกชื่อหนึ่งว่า ดัชนีโมเมนตัม"
 
 msgid "The Relative Strength Index (RSI) was published by J. Welles Wilder. The current price is normalized as a percentage between 0 and 100. The name of this oscillator is misleading because it does not compare the instrument relative to another instrument or set of instruments, but rather represents the current price relative to other recent pieces within the selected lookback window length"
 msgstr ""
