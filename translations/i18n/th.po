@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 09:40-0400\n"
+"PO-Revision-Date: 2018-06-09 09:50-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2949,7 +2949,7 @@ msgid "The GBP Index is a weighted Index, measuring the British Pound's value ag
 msgstr "ดัชนี GBP เป็นดัชนีถ่วงน้ำหนัก แสดงมูลค่าของค่าเงินปอนด์ต่อ 5 สกุลเงินสากล (USD, EUR, AUD, JPY, CAD) โดยใช้ร้อยละ 20 ในการถ่วงน้ำหนัก"
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
-msgstr ""
+msgstr "Gravestone Doji เกิดขึ้นเมื่อ ราคาเปิด ราคาต่ำสุด และราคาปิด เป็นค่าเดียวกัน หรือ เกือบจะเป็นค่าเดียวกัน (กรณีราคาเปิด ราคาต่ำสุด และราคาปิด เป็นราคาเดียวกันจะเกิดขึ้นได้ยากมาก) ส่วนสำคัญที่สุดของ Graveston Doji คือ มีเงาทางด้านบนค่อนข้างยาว"
 
 msgid "The Hammer formation is created when the open, high, and close are roughly the same price.Also, there is a long lower shadow, twice the length as the real body"
 msgstr "การก่อตัวรูปแบบค้อน (Hammer) เกิดเมื่อมีราคาเปิด และราคาปิด กลับมาที่ราคาสูงสุดเหมือนกัน และยังมีเงาด้านล่างที่ค่อนข้างยาว ซึ่งจะมีความยาวอย่างน้อยสองเท่าของลำตัวของแท่งเทียน"
@@ -2994,7 +2994,7 @@ msgid "The Rickshaw Man has unusually tall upper and lower shadows, a body in wh
 msgstr ""
 
 msgid "The Shooting formation is created when the open, low, and close are roughly the same price. There is a long upper shadow, generally defined as at least twice the length of the real body"
-msgstr ""
+msgstr "การก่อตัวรูปแบบ Shooting เกิดเมื่อมีราคาเปิด ราคาที่ต่ำสุด และราคาปิด เป็นราคาเดียวกัน และยังมีเงาด้านบนที่ค่อนข้างยาว ซึ่งจะมีความยาวอย่างน้อยสองเท่าของตัวของแท่งเทียน"
 
 msgid "The Simple Moving Average (SMA) is calculated by adding the price of an instrument over a number of time periods and then dividing the sum by the number of time periods. The SMA is basically the average price of the given time period, with equal weighting given to the price of each period"
 msgstr ""
