@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 10:50-0400\n"
+"PO-Revision-Date: 2018-06-09 11:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3000,7 +3000,7 @@ msgid "The Simple Moving Average (SMA) is calculated by adding the price of an i
 msgstr "Simple Moving Average (SMA) เป็นการคำนวณโดยเพิ่มเครื่องมือของราคาในรอบเวลา แล้วหารด้วยผลรวมของรอบระยะเวลา ปกติแล้ว ดัชนี SMA เป็นราคาเฉลี่ยในช่วงเวลาใดๆ ที่มีการให้น้ำหนักของราคาในช่วงเวลาที่พิจารณา"
 
 msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar Chande and Stanley Kroll, StochRSI is an oscillator that measures the level of RSI relative to its high-low range over a set time period. StochRSI applies the Stochastics formula to RSI values, instead of price values. This makes it an indicator of an indicator. The result is an oscillator that fluctuates between 0 and 1"
-msgstr ""
+msgstr "Stochastic Relative Strength Index (STOCHRSI) ถูกพัฒนาโดย Tushar Chande และ Stanley Kroll, ดัชนี StochRSI เป็นดัชนีของสัญญาณซึ่งแสดงเป็นระดับของ RSI ที่สัมพันธ์กับช่วยสูง-ต่ำ ในเวลาช่วงหนึ่ง StochRSI ใช้สูตร Stochastics และใช้ค่า RSI แทนราคา จึงเป็นดัชนีของดัชนี และผลลัพธ์ของดัชนีนี้จะผันผวนระหว่าง 0 ถึง 1"
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
 msgstr "รูปแบบ Tasuki Gap เกิดจาก 3 แท่งเทียน แท่งแรกสีแดงที่บ่งบอกลักษณะแนวโน้มขาลง แท่งเทียนที่สองเป็นแท่งสีแดงอีกแท่งหนึ่งที่มีช่วงห่างในทิศทางด้านล่างราคาปิดของแท่งแรก และแท่งเทียนสุดท้ายเป็นสีขาวซึ่งราคาปิดอยู่ระหว่างช่องว่างของแท่งที่หนึ่งและแท่งที่สอง"
@@ -3012,10 +3012,10 @@ msgid "The Triangular Moving Average (TRIMA) represents an average of prices, bu
 msgstr "Triangular Moving Average (TRIMA) แสดงค่าเฉลี่ยของราคา โดยให้น้ำหนักที่ราคาตรงกลางของรอบระยะเวลาดังกล่าว การคำนวณที่ปรับค่าให้เห็นคู่แนวโน้มแนะนำให้ใช้ความกว้างของหน้าต่างที่มีความยาวครึ่งหนึ่งของชุดข้อมูล"
 
 msgid "The Triple Exponential Moving Average (T3) by Tim Tillson attempts to offers a moving average with better smoothing then traditional exponential moving average"
-msgstr ""
+msgstr "Triple Exponential Moving Average (T3) พัฒนาโดย Tim Tillson แสดงค่าเฉลี่ยเคลื่อนที่ที่ปรับค่าแนวโน้มดีกว่า EMA เดิม"
 
 msgid "The Triple Exponential Moving Average (TEMA) by Patrick Mulloy offers a moving average with less lag then traditional exponential moving average"
-msgstr ""
+msgstr "Triple Exponential Moving Average (TEMA) พัฒนาโดย Patrick Mulloy แสดงค่าเฉลี่ยเคลื่อนที่ที่ลดความล่าช้าของ EMA เดิม"
 
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
 msgstr "ฟังก์ชันราคาปกติ (Typical Price) วัดค่าเฉลี่ยราคาสูง ราคาต่ำ และราคาปิด ในระดับวัน โดยใช้เส้นวาดแนวโน้มอย่างง่าย ราคาปกติจะให้มุมมองราคาซื้อขายในแต่ละวันเช่นเดียวกับฟังก์ชันราคาอื่นๆ ท่านสามานถใช้ฟังก์ชันนี้เพื่อปรับแนวโน้มของเส้นกราฟที่มีราคาปิดไม่คงเส้นคงวา เนื่องจากข้อมูลราคาในแต่ละวันและไม่ได้เป็นการแสดงผลของราคา ณ สิ้นวัน ดัชนีราคาปกติ (Typical Price) นี้ ใช้วัดราคาสูง ราคาต่ำ และราคาปิด โดยรวมมูลค่าเข้าด้วยกันแล้วหารด้วยสาม"
