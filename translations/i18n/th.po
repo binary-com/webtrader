@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 11:20-0400\n"
+"PO-Revision-Date: 2018-06-09 11:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3405,7 +3405,7 @@ msgid "Unique 3 River (CDLUNIQUE3RIVER)"
 msgstr "Unique 3 River (CDLUNIQUE3RIVER)"
 
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
-msgstr ""
+msgstr "Unique Three River Bottom เป็นรูปแบบแท่งเทียนขาขึ้นที่ประกอบด้วยแท่งเทียนสามแท่ง โดยแท่งแรกมีความยาวและลำตัวที่เป็นขาลงลบ แท่งที่สองเป็นค้อน และลำตัวจะอยู่ในลำตัวของแท่งเทียนวันแรก ส่วนในวันที่สามจะเป็นแท่งเทียนเล็กและเป็นขาขึ้นบวก และมีราคาปิดต่ำกว่าแท่งเทียนในวันที่สอง"
 
 msgid "Up - Predict that the market will end higher than the average price"
 msgstr "ขึ้น - พยากรณ์ว่า ตลาดจะสิ้นสุดด้วยค่าที่สูงกว่าราคาเฉลี่ย"
