@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 10:00-0400\n"
+"PO-Revision-Date: 2018-06-09 10:10-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2964,7 +2964,7 @@ msgid "The Inverted Hammer occurs mainly at the bottom of downtrends when the op
 msgstr "โดยมากการก่อตัวรูปแบบค้อนกลับหัว (Inverted Hammer) เกิดเมื่อเป็นจุดต่ำสุดของขาลง โดยมีราคาเปิด และราคาปิด กลับมาที่ราคาต่ำสุดเหมือนกัน และยังมีเงาด้านบนที่ค่อนข้างยาว ซึ่งจะมีความยาวอย่างน้อยสองเท่าของลำตัวของแท่งเทียน"
 
 msgid "The Kaufman's Adaptive Moving Average (KAMA) Developed by Perry Kaufman, is a moving average designed to account for market noise or volatility. This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements"
-msgstr ""
+msgstr "Kaufman's Adaptive Moving Average (KAMA) เป็นดัชนีที่พัฒนาโดย Perry Kaufman คือ ค่าเฉลี่ยเคลื่อนที่ที่ถูกออกแบบเพื่ออธิบายความผันผวนในตลาด ดัชนีนี้ใช้เพื่อบอกแนวโน้มทั้งหมดของตลาด เวลาที่มีจุดเปลี่ยนแปลง และการเคลื่อนที่ของราคา"
 
 msgid "The Least Squares Moving Average first calculates a least squares regression line over the preceding time periods, then projects it forward to the current period. In essence, it calculates what the value would be if the regression line continued"
 msgstr ""
@@ -2988,10 +2988,10 @@ msgid "The Rate of Change Rate (ROCR) indicator compares the current price with 
 msgstr "ดัชนี Rate of Change Rate (ROCR) แสดงการเปรียบเทียบระหว่างราคาปัจจุบันและราคาในอดีต ณ เวลา ใดเวลาหนึ่งในช่วงที่ผ่านมาโดยการระบุช่วงเวลา ราคาในปัจจุบันถูกหารด้วยราคาก่อนหน้า ดัชนีนี้เป็นดัชนีที่รู้จักในอีกชื่อหนึ่งว่า ดัชนีโมเมนตัม"
 
 msgid "The Relative Strength Index (RSI) was published by J. Welles Wilder. The current price is normalized as a percentage between 0 and 100. The name of this oscillator is misleading because it does not compare the instrument relative to another instrument or set of instruments, but rather represents the current price relative to other recent pieces within the selected lookback window length"
-msgstr ""
+msgstr "Relative Strength Index (RSI) ถูกแผยแพร่โดย J. Welles Wilder ราคาปัจจุบันถูกปรับให้เป็นร้อยละที่มีค่าระหว่าง 0 ถึง 100 ชื่อนี้ทำให้เข้าใจผิด เพราะไม่ได้เป็นการเปรียบเทียบเครื่องมือหนึ่งกับอีกเครื่องมือหนึ่ง หรือ กลุ่มของเครื่องมือที่ใช้ แต่เป็นการแสดงราคาปัจจุบันสัมพันธ์กับราคาอื่นๆ ในช่วงเวลาที่เลือกไว้เปรียบเทียบ"
 
 msgid "The Rickshaw Man has unusually tall upper and lower shadows, a body in which the opening and closing prices are about the same, and the body is near the middle of the candlestick"
-msgstr ""
+msgstr "Rickshaw Man มีความสูงของเงาด้านบนและเงาด้านล่างที่ผิดปกติ ลำตัวของแท่งเทียนมีราคาเปิดและราคาปิดเป็นราคาเดียวกัน และตัวของแท่งเทียนใกล้กับจุดกลางของแท่งเทียน"
 
 msgid "The Shooting formation is created when the open, low, and close are roughly the same price. There is a long upper shadow, generally defined as at least twice the length of the real body"
 msgstr "การก่อตัวรูปแบบ Shooting เกิดเมื่อมีราคาเปิด ราคาที่ต่ำสุด และราคาปิด เป็นราคาเดียวกัน และยังมีเงาด้านบนที่ค่อนข้างยาว ซึ่งจะมีความยาวอย่างน้อยสองเท่าของตัวของแท่งเทียน"
