@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 12:20-0400\n"
+"PO-Revision-Date: 2018-06-09 12:30-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -770,7 +770,7 @@ msgid "Binary.com reaches 1 million registered users"
 msgstr "Binary.com มีผู้ใช้งานที่ลงทะเบียนแล้วกว่า 1 ล้านบัญชี"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
-msgstr "Binary.com ได้รับรางวัลชนะเลิศ ประเภท Financial Betting Operator ในงานเกียรติยศ EGR Operator Awards ในปี ค.ศ. 2015 จัดที่เมืองลอนดอน"
+msgstr "Binary.com ได้รับรางวัลชนะเลิศ ประเภท Financial Betting Operator ในงานเกียรติยศ EGR Operator Awards ในปี พ.ศ. 2558 (ค.ศ. 2015) จัดที่เมืองลอนดอน"
 
 msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
 msgstr "ดัชนีต่อเนื่องของ Binary.com คือ ดัชนีผันผวน 10 ดัชนีผันผวน 25 ดัชนีผันผวน 50 ดัชนีผันผวน 75 และดัชนีผันผวน 100 ซึ่งดัชนีเหล่านี้สอดคล้องกับสภาพตลาดจำลองที่มีระดับความไม่แน่นอนคงที่ที่ 10% 25% 50% 75% และ 100% ตามลำดับ"
@@ -1133,7 +1133,7 @@ msgid "Developed by Larry Williams, Williams %R is a momentum indicator that is 
 msgstr "Williams %R พัฒนาโดย Larry Williams เป็นตัวชี้วัดโมเมนตัมที่กลับตัวของ Fast Stochastic Oscillator ซึ่งอาจะถูกกล่าวถึงในชื่อ %R ด้วย Williams %R สะท้อนถึงระดับราคาปิดที่สัมพันธ์กับราคาปิดสูงสุดของช่วงเวลาของการมองย้อนกลับไป"
 
 msgid "Developed by Tushar Chande in 1995, Aroon is an indicator system that determines whether a stock is trending or not and how strong the trend is. There are two separate indicators: Aroon-Up and Aroon-Down. A 25-day Aroon-Up measures the number of days since a 25-day high. A 25-day Aroon-Down measures the number of days since a 25-day low"
-msgstr "Aroon พัฒนาโดย Tushar Chande ในปี ค.ศ. 1995 เป็นระบบตัวชี้วัดที่พิจารณาว่า หุ้นกำลังมีแนวโน้มหรือไม่ และแนวโน้มนั้นแข็งแกร่งเพียงใด มีตัวบ่งชี้ที่แยกต่างหากสองอันคือ Aroon ขึ้น และ Aroon ลง ตัว Aroon ขึ้น 25 วัน จะวัดจำนวนวันตั้งแต่ที่ราคาสูง 25 วัน และ Aroon ลง 25 วัน จะวัด จำนวนวันตั้งแต่ที่ราคาต่ำ 25 วัน"
+msgstr "Aroon พัฒนาโดย Tushar Chande ในปี พ.ศ. 2538 (ค.ศ. 1995) เป็นระบบตัวชี้วัดที่พิจารณาว่า หุ้นกำลังมีแนวโน้มหรือไม่ และแนวโน้มนั้นแข็งแกร่งเพียงใด มีตัวบ่งชี้ที่แยกต่างหากสองอันคือ Aroon ขึ้น และ Aroon ลง ตัว Aroon ขึ้น 25 วัน จะวัดจำนวนวันตั้งแต่ที่ราคาสูง 25 วัน และ Aroon ลง 25 วัน จะวัด จำนวนวันตั้งแต่ที่ราคาต่ำ 25 วัน"
 
 msgid "Differs"
 msgstr "แตกต่าง"
@@ -1451,7 +1451,7 @@ msgid "GMT"
 msgstr "GMT"
 
 msgid "GMT stands for Greenwich Mean Time, the official time used in the UK during winter. In summer, the UK changes to British Summer Time, which is GMT + 1 hour. All times on the Binary.com site use GMT all year round"
-msgstr "GMT คือตัวข่อของ Greenwich Mean Time เวลามาตรฐานที่ใช้ในฤดูหนาวของสหราชอาณาจักร ส่วนในฤดูร้อนจะเปลี่ยนเป็นเวลาที่เพิ่มขึ้นอีก 1 ชั่วโมง กล่าวคือ ใช้ GMT + 1 โดยเวลาที่ใช้ในระบบ %1 จะเป็น GMT ตลอดทั้งปี"
+msgstr "GMT คือ ตัวข่อของ Greenwich Mean Time เวลามาตรฐานที่ใช้ในฤดูหนาวของสหราชอาณาจักร ส่วนในฤดูร้อนจะเปลี่ยนเป็นเวลาที่เพิ่มขึ้นอีก 1 ชั่วโมง กล่าวคือ ใช้ GMT + 1 โดยเวลาที่ใช้ในระบบ %1 จะเป็น GMT ตลอดทั้งปี"
 
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "ใช้ API โทเค่น จากนักลงทุน และเพิ่มเข้าในรายการของท่าน"
@@ -1890,7 +1890,7 @@ msgid "Look for a tall black candle with a long lower shadow to appear in a down
 msgstr "มองหาเทียนสีดำสูงที่มีเงาด้านล่างยาวที่ปรากฎในแนวโน้มราคาขาลง วันที่สองควรจะเหมือนกับวันแรก แต่เล็กกว่าและมีราคาต่ำที่สูงกว่า วันสุดท้ายคือ Marubozu สีดำที่บีบอยู่ภายในระยะสูง-ต่ำของวันก่อนหน้านั้น"
 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
-msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่งมีช่องว่างเหนือลำตัวของเทียนอันก่อน วันสุดท้าย คือ แท่งเทียนสีดำอีกอัน แต่แท่งนี้กลืนแท่งเทียนตลาดซบเซาก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
+msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่งมีช่องว่างเหนือลำตัวของเทียนแท่งก่อนหน้า วันสุดท้าย คือ แท่งเทียนสีดำอีกแท่งหนึ่ง แต่แท่งนี้กลืนแท่งเทียนตลาดซบเซาก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
 
 msgid "Low"
 msgstr "ต่ำ"
@@ -2232,10 +2232,10 @@ msgid "Other financial instruments trading frequency"
 msgstr "ความถี่ในการซื้อขายเครื่องมือทางการเงินอื่นๆ"
 
 msgid "Our company continues to thrive and obtains a license in the Isle of Man to better service our UK clients"
-msgstr "บริษัทของเรามีการพัฒนาอย่างต่อเนื่องเพื่อขอใบอนุญาตบนเกาะ Isle of Man ในการให้บริการที่ดีขึ้นกับลูกค้าในประเทศสหราชอาณาจักร"
+msgstr "บริษัทของเรามีการพัฒนาอย่างต่อเนื่องเพื่อขอใบอนุญาตดำเนินธุรกิจบนเกาะ Isle of Man ในการให้บริการที่ดีขึ้นกับลูกค้าในประเทศสหราชอาณาจักร"
 
 msgid "Our customers clearly like us. In mid-2014, Binary.com has over 100 million historical transactions and over 130,000 new daily transactions"
-msgstr "เราเป็นที่นิยมชมชอบของลูกค้า ในกลางปี 2557 (ค.ศ. 2014) %1 มีธุรกรรมมากกว่า 100 ล้านระเบียน และมีธุรกรรมใหม่ที่เกิดขึ้นรายวันกว่า 130,000 ธุรกรรม"
+msgstr "เราเป็นที่นิยมชมชอบของลูกค้า ในกลางปี พ.ศ. 2557 (ค.ศ. 2014) %1 มีธุรกรรมมากกว่า 100 ล้านระเบียน และมีธุรกรรมใหม่ที่เกิดขึ้นรายวันกว่า 130,000 ธุรกรรม"
 
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
 msgstr "หลักการเติบโตอย่างรวดเร็วของเรา คือ การผนวกกันโดยได้มาซึ่งฐานลูกค้าของ BetsForTraders ผู้เป็นหนึ่งในคู่แข่งหลักของเรา"
@@ -2304,7 +2304,7 @@ msgid "Personal Details"
 msgstr "รายละเอียดส่วนบุคคล"
 
 msgid "Personal Wealth Awards 2017"
-msgstr "รางวัลผู้จัดการความมั่งคั่งส่วนบุคคล ปี ค.ศ. 2017"
+msgstr "รางวัลผู้จัดการความมั่งคั่งส่วนบุคคล ปี พ.ศ. 2560 (ค.ศ. 2017)"
 
 msgid "Phone"
 msgstr "โทรศัพท์"
@@ -2895,7 +2895,7 @@ msgid "The Aroon Oscillator is the difference between Aroon-Up and Aroon-Down. T
 msgstr "Aroon Oscillator มีความแตกต่างระหว่า Aroon-Up และ Aroon-Down ดัชนีสองประเภทนี้เป็นดัชนีทั่วๆ ไป ที่ใช้แสดงการเปรียบเทียบอย่างง่าย แต่ผู้เชี่ยวชาญในตลาดหลักทรัพย์แนะนำว่ายังสามารถใช้ดัชนีนี้แสดงความแตกต่างระหว่างสองดัชนี Aroon Oscillator ดัชนีชนิดนี้มีความแปรปรวนอยู่ระหว่าง -100 และ +100 กับศูนย์ ที่เป็นเส้นกลาง"
 
 msgid "The Average Directional Movement Index index (ADX) was developed in 1978 by J. Welles Wilder as an indicator of trend strength in a series of prices of a financial instrument ADX will range between 0 and 100. Generally, ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength"
-msgstr "ดัชนีเฉลี่ยทิศทางการเคลื่อนไหวดัชนี (ADX) ถูกพัฒนาขึ้นในปี ค.ศ. 1978 โดย J. Welles Wilder เป็นตัวบ่งชี้ของความแข็งแรงของแนวโน้มในชุดของราคาของเครื่องมือทางการเงินที่ ADX จะมีช่วงอยู่ระหว่าง 0 ถึง 100 โดยทั่วไป ADX อ่านค่าต่ำกว่า 20 ดัชนีแสดงแนวโน้มอ่อนแอ และอ่านกว่า 40 ดัชนีที่แสดงความแข็งแกร่งของแนวโน้ม"
+msgstr "ดัชนีเฉลี่ยทิศทางการเคลื่อนไหวดัชนี (ADX) ถูกพัฒนาขึ้นในปี พ.ศ. 2521 (ค.ศ. 1978) โดย J. Welles Wilder เป็นตัวบ่งชี้ของความแข็งแรงของแนวโน้มในชุดของราคาของเครื่องมือทางการเงินที่ ADX จะมีช่วงอยู่ระหว่าง 0 ถึง 100 โดยทั่วไป ADX อ่านค่าต่ำกว่า 20 ดัชนีแสดงแนวโน้มอ่อนแอ และอ่านกว่า 40 ดัชนีที่แสดงความแข็งแกร่งของแนวโน้ม"
 
 msgid "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
 msgstr "Average True Range (TRANGE) ศึกษาการวัดผลของขนาดของช่วงเวลา และพิจารณาช่วงห่างใดๆ จากราคาปิดของช่วงก่อนหน้า"
