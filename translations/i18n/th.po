@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-06-09 08:50-0400\n"
+"PO-Revision-Date: 2018-06-09 09:00-0400\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2901,7 +2901,7 @@ msgid "The Average Directional Movement Index index (ADX) was developed in 1978 
 msgstr "ดัชนีเฉลี่ยทิศทางการเคลื่อนไหวดัชนี (ADX) ถูกพัฒนาขึ้นในปี ค.ศ. 1978 โดย J. Welles Wilder เป็นตัวบ่งชี้ของความแข็งแรงของแนวโน้มในชุดของราคาของเครื่องมือทางการเงินที่ ADX จะมีช่วงอยู่ระหว่าง 0 ถึง 100 โดยทั่วไป ADX อ่านค่าต่ำกว่า 20 ดัชนีแสดงแนวโน้มอ่อนแอ และอ่านกว่า 40 ดัชนีที่แสดงความแข็งแกร่งของแนวโน้ม"
 
 msgid "The Average True Range (TRANGE) study measures the size of the period s range, and takes into account any gap from the close of the previous period"
-msgstr "Average True Range (TRANGE) ศึกษาการวัดผลของขนาดของช่วงเวลา และพิจารณาช่วงใดๆ จากค่าปิดของช่วงก่อนหน้า"
+msgstr "Average True Range (TRANGE) ศึกษาการวัดผลของขนาดของช่วงเวลา และพิจารณาช่วงห่างใดๆ จากราคาปิดของช่วงก่อนหน้า"
 
 msgid "The Awesome Oscillator is an indicator used to measure market momentum. AO calculates the difference of a 34 Period and 5 Period Simple Moving Averages. The Simple Moving Averages that are used are not calculated using closing price but rather each bar's midpoints. AO is generally used to affirm trends or to anticipate possible reversals"
 msgstr ""
@@ -3003,7 +3003,7 @@ msgid "The Stochastic Relative Strength Index (STOCHRSI) was developed by Tushar
 msgstr ""
 
 msgid "The Tasuki Gap pattern is made up of three candlesticks, the first bar is a red candlestick within a defined downtrend, the second bar is another red candlestick that has gapped below the close of the previous bar and the last bar is a white candlestick that closes within the gap of the first two bars"
-msgstr ""
+msgstr "รูปแบบ Tasuki Gap เกิดจาก 3 แท่งเทียน แท่งแรกสีแดงที่บ่งบอกลักษณะแนวโน้มขาลง แท่งเทียนที่สองเป็นแท่งสีแดงอีกแท่งหนึ่งที่มีช่วงห่างในทิศทางด้านล่างราคาปิดของแท่งแรก และแท่งเทียนสุดท้ายเป็นสีขาวซึ่งราคาปิดอยู่ระหว่างช่องว่างของแท่งที่หนึ่งและแท่งที่สอง"
 
 msgid "The Three Methods pattern is a trend continuation pattern that can appear in an uptrend or a down trend. In an uptrend it is called the rising three methods pattern and in a downtrend it is called the falling three methods pattern. The three methods pattern consists of at least five candlesticks"
 msgstr ""
