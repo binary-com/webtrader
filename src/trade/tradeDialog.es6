@@ -1057,7 +1057,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
     require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
       tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
     });
-    document.getElementById('duration-input').addEventListener('keypress', (evt) => {
+    $('#duration-input').keypress((evt) => {
       if (evt.which < 48 || evt.which > 57) {
           evt.preventDefault();
       }
