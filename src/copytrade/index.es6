@@ -40,11 +40,11 @@ const TRADE_TYPES = [{
   },
   {
     code: 'EXPIRYMISS',
-    name: 'Ends Out',
+    name: 'Ends Outside',
   },
   {
     code: 'EXPIRYRANGE',
-    name: 'Ends In',
+    name: 'Ends Between',
   },
   {
     code: 'DIGITDIFF',
@@ -77,7 +77,15 @@ const TRADE_TYPES = [{
   {
     code: 'ASIAND',
     name: 'Asians Down',
-}];
+  },
+  {
+    code: 'RANGE',
+    name: 'Stays Between',
+  },
+  {
+    code: 'UPORDOWN',
+    name: 'Goes Outside',
+  }];
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
@@ -406,6 +414,7 @@ const state = {
    }
    */
   traderTokens: [],
+  openTokenMgmt: () => $('li.account ul a.token-management').click(),
 };
 
 const initConfigWindow = () => {

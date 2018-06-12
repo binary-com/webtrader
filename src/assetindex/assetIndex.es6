@@ -11,6 +11,10 @@ import "jquery-growl";
 
 let table = null;
 let assetWin = null;
+let market_names = null;
+let submarket_names = null;
+let assets = [];
+let markets = {};
 
 export const init = (li) => {
     li.click(() => {
@@ -33,11 +37,20 @@ export const init = (li) => {
     });
 }
 
-const processMarketSubmarkets = (markets) => {
+const processMarketSubmarkets = (markets, activeSymbols) => {
     markets = menu.extractChartableMarkets(markets);
 
     const ret = {};
-    markets.forEach((market) => {
+    markets
+      .filter(eMarket => {
+        let allInstruments = [];
+        eMarket.submarkets.forEach(f => allInstruments = allInstruments.concat(f.instruments));
+        return _.some(allInstruments, eInstrument => {
+          const found = (activeSymbols.find(f => f.symbol === eInstrument.symbol) || {});
+          return !found.is_trading_suspended && found.exchange_is_open;
+        });
+      })
+      .forEach((market) => {
         const smarkets = ret[market.display_name] = {};
         market.submarkets.forEach((smarket) => {
             smarkets[smarket.display_name] = smarket.instruments.map((symbol) => {
@@ -48,8 +61,6 @@ const processMarketSubmarkets = (markets) => {
 }
 
 const refreshTable = () => {
-    let assets = [];
-    let markets = {};
     const updateTable = (market_name, submarket_name) => {
         const symbols = markets[market_name][submarket_name];
         const rows = assets
@@ -66,8 +77,7 @@ const refreshTable = () => {
                     ]
                 */
                 const props = asset[2] /* asset.props */
-                    .map((prop) => {
-                        return prop[2] + ' - ' + prop[3]; }); /* for each property extract a string */
+                    .map(prop => prop[2] + ' - ' + prop[3]); /* for each property extract a string */
                 props.unshift(asset[1]); /* add asset.name to the beginning of array */
 
                 return props;
@@ -81,30 +91,39 @@ const refreshTable = () => {
     Promise.all(
             [
                 liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
-                liveapi.cached.send({ asset_index: 1 })
+                liveapi.cached.send({ asset_index: 1 }),
+                liveapi.send({ active_symbols: 'brief' }),
             ])
         .then((results) => {
             try {
-                assets = results[1].asset_index;
-                markets = processMarketSubmarkets(results[0]);
+                assets = results[1].asset_index.filter(f => {
+                  const active_symbols = results[2].active_symbols;
+                  return _.find(active_symbols, ff => _.head(f) === ff.symbol);
+                });
+                markets = processMarketSubmarkets(results[0], results[2].active_symbols);
                 const header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 const dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
 
-                const market_names = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                        list: Object.keys(markets), //Keys are the display_name
-                        inx: 1, //Index to select the item in drop down
-                        changed: (val) => {
-                            const list = Object.keys(markets[val]); /* get list of sub_markets */
-                            submarket_names.update_list(list);
-                            updateTable(market_names.val(), submarket_names.val());
-                        },
-                        width: '180px'
-                    });
-                market_names.selectmenu('widget').addClass('asset-index-selectmenu');
+                if (!market_names) {
+                  market_names = windows
+                      .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
+                          list: Object.keys(markets), //Keys are the display_name
+                          inx: 0, //Index to select the item in drop down
+                          changed: (val) => {
+                              const list = Object.keys(markets[val]); /* get list of sub_markets */
+                              submarket_names.update_list(list);
+                              updateTable(market_names.val(), submarket_names.val());
+                          },
+                          width: '180px'
+                      });
+                  market_names.selectmenu('widget').addClass('asset-index-selectmenu');
+                } else {
+                  market_names.update_list(Object.keys(markets));
+                }
 
                 const is_rtl_language = local_storage.get('i18n') && local_storage.get('i18n').value === 'ar';
-                const submarket_names = windows
+                if (!submarket_names) {
+                  submarket_names = windows
                     .makeSelectmenu($('<select />').insertBefore(is_rtl_language ? market_names : dialog_buttons), {
                         list: Object.keys(markets[market_names.val()]),
                         inx: 0,
@@ -113,7 +132,10 @@ const refreshTable = () => {
                         },
                         width: '200px'
                     });
-                submarket_names.selectmenu('widget').addClass('asset-index-selectmenu');
+                  submarket_names.selectmenu('widget').addClass('asset-index-selectmenu');
+                } else {
+                  submarket_names.update_list(Object.keys(markets[market_names.val()]));
+                }
 
                 updateTable(market_names.val(), submarket_names.val());
                 processing_msg.hide();
@@ -153,6 +175,10 @@ const initAssetWin = ($html) => {
     });
 
     refreshTable();
+    require(['websockets/binary_websockets'], (liveapi) => {
+      liveapi.events.on('login', refreshTable);
+      liveapi.events.on('logout', refreshTable);
+   });
 }
 
 export default {
