@@ -10,16 +10,10 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-01-02 23:00-0500\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
-
-msgid "'Asian Fall' - You win when the last tick is lower than the average of the ticks during the trade"
-msgstr "'Asian Fall' - Bạn giành được lợi ích khi điểm đánh cuối cùng thấp hơn mức trung bình của các điểm đánh trong quá trình giao dịch"
-
-msgid "'Asian Rise' - You win when the last tick is higher than the average of the ticks during the trade"
-msgstr "'Asian Rise' - Bạn giành được lợi ích khi điểm đánh cuối cùng cao hơn mức trung bình của các điểm đánh trong quá trình giao dịch"
 
 msgid "'Best Customer Communication Firm' award by Investors Chronicle"
 msgstr "'Khách hàng liên lạc chắc chắn nhất' Giải thưởng của Hiệp hội các nhà đầu tư"
@@ -36,14 +30,8 @@ msgstr "'Nhà cung cấp giao dịch tài chính với tỉ lệ cược tốt n
 msgid "'Best Fixed-Odds Firm 2012' award by Global Banking and Finance Review"
 msgstr "'Công ty với tỉ lệ cược tốt nhất năm 2012' Giải thưởng bởi ngân hàng toàn cầu và hội đánh giá tài chính"
 
-msgid "'Differs' - You win when the last digit of the last tick does not match your prediction"
-msgstr "'Các chênh lệch' - Bạn giành được lợi ích khi số cuối cùng của điểm đánh cuối không trùng khớp với dự đoán của bạn"
-
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "'Nhà điều hành cá cược tài chính của năm' Giải thưởng bởi eGaming Review"
-
-msgid "'Matches' - You win when the last digit of the last tick matches your prediction"
-msgstr "'Trùng khớp' - Bạn giành được lợi ích khi số cuối của điểm đánh cuối của bạn trùng khớp với dự đoán của bạn"
 
 msgid "'contract period'"
 msgstr "'Thời hạn hợp đồng'"
@@ -60,59 +48,68 @@ msgstr "(nếu thời hạn ít hơn một ngày), hoặc vào cuối ngày giao
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") trở nên trực tiếp, thiết lập một dịch vụ cá cược tài chính suốt ngày đêm trên một loạt các chỉ số tài chính. Kinh doanh phát triển nhanh chóng, và chúng tôi sớm trở thành người dẫn đầu thị trường về tỉ lệ cá cược tài chính"
 
-msgid "- Binary.com benchmarks its prices daily against inter-bank derivatives markets"
-msgstr "- Binary.com xác đinh điểm chuẩn về giá cả hàng ngày trước thị trường phát sinh liên ngân hàng"
-
-msgid "- Binary.com ensures your personal data and transactions are always secure"
-msgstr "- Binary.com đảm bảo dữ liệu cá nhân và các giao dịch của bạn luôn an toàn"
+msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
+msgstr ""
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "-Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng và Đại Lý Thanh Toán"
 
-msgid "- Binary.com is the industry pioneer and holds patented pricing technology"
-msgstr "- Binary.com là nhà tiên phong trong ngành công nghiệp và nắm giữ công nghệ về định giá"
+msgid "- Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy"
+msgstr ""
 
-msgid "- Binary.com offers many payment methods, such as credit/debit cards, bank wires, e-cash and e-wallets"
-msgstr "- Binary.com đưa ra rất nhiều các giải pháp thanh toán, ví dụ như thẻ tín dụng/ghi nợ, liên kết ngân hàng, tiền điện tử và ví điện tử"
+msgid "- Choose timeframes from 10 seconds to 365 days"
+msgstr ""
 
-msgid "- Binary.com quotes a trade and the counter-trade, so you always get unbiased, transparent prices"
-msgstr "- Binary.com trích dẫn một giao dịch và đối giao dịch nên bạn luôn có được sự minh bạch về giá cả"
+msgid "- Deposit as little as USD 5 to start trading"
+msgstr ""
 
-msgid "- binaries are licensed as a betting activity in the UK, so your winnings are tax-free"
-msgstr "- các chương trình được đăng ký cấp phép như một hoạt động cá cược ở Anh, cho nên các lợi ích mà bạn kiếm được là miễn thuế"
+msgid "- Earn the same proportional return on stakes of all values"
+msgstr ""
 
-msgid "- choose intraday trades from 1 minute to 24 hours"
-msgstr "- Lựa chọn các giao dịch trong ngày từ 1 phút đến 24 giờ"
+msgid "- Enjoy a trading platform that s easy to navigate and use"
+msgstr ""
 
-msgid "- choose the falls trade, lower trade, one-touch trade with a low barrier, or no-touch trade with a high barrier"
-msgstr "lựa chọn các giao dịch ngã giá, giao dịch thấp hơn, giao dịch một chạm với rào cản thấp hoặc giao dịch không chạm với rào cản cao"
+msgid "- Know how much you will win or lose before you purchase the contract"
+msgstr ""
 
-msgid "- choose the no-touch trade, the stays-between trade, or the ends-between trade"
-msgstr "- Lựa chọn giao dịch không chạm, giao dịch giữ giá hoặc giao dịch kết thúc giữ giá"
+msgid "- Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7"
+msgstr ""
 
-msgid "- choose the one-touch trade, the goes-outside trade, or the ends outside trade"
-msgstr "- Lựa chọn giao dịch một chạm, giao dịch đến ngưỡng ngoài hoặc giao dịch kết thúc ngưỡng ngoài"
+msgid "- Predict the market ending higher or lower than a price target"
+msgstr ""
 
-msgid "- choose the rise trade, higher trade, one-touch trade with a high barrier, or no-touch trade with a low barrier"
-msgstr "- lựa chọn giao dịch tăng, giao dịch cao hơn, giao dịch một chạm với rào cản cao hoặc giao dịch không chạm với rào cản thấp"
+msgid "- Predict the market rising or falling from its current level"
+msgstr ""
 
-msgid "- choose timeframes from 10 seconds to 365 days"
-msgstr "- lựa chọn khung thời gian tử 10 giây đến 365 ngày"
+msgid "- Predict the market staying between or going outside two price targets"
+msgstr ""
 
-msgid "- choose trades with durations of up to 365 days"
-msgstr "- lựa chọn các giao dịch với thời hạn lên đến 365 ngày"
+msgid "- Predict the market touching or not touching a price target"
+msgstr ""
 
-msgid "- choose trades with high returns and a low probability to win, or with low returns and a high probability to win"
-msgstr "- lựa chọn các giao dịch với mức lợi nhuận cao và xác suất thấp để dành được lợi ích hoặc với mức lợi nhuận thấp và xác suất cao để dành được lợi ích"
+msgid "- Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com"
+msgstr ""
+
+msgid "- Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses"
+msgstr ""
+
+msgid "- Trade based on \"gut feel\" or rely on technical and fundamental analysis"
+msgstr ""
+
+msgid "- Trade confidently, knowing that your personal data, transactions, and funds are always secure"
+msgstr ""
+
+msgid "- Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets"
+msgstr ""
+
+msgid "- Trade when you want. Binary.com is available 24/7, even on weekends"
+msgstr ""
+
+msgid "- Trade with the industry pioneer and holder of a patented pricing technology"
+msgstr ""
 
 msgid "- currencies, stock indices, and commodities"
 msgstr "- các loại tiền tệ, chỉ số chứng khoán và hàng hóa"
-
-msgid "- customize your trades to meet your needs"
-msgstr "- tùy biến các giao dịch của bạn để đáp ứng nhu cầu của bạn"
-
-msgid "- dip a toe in the water with $2 or go all out for $50,000"
-msgstr "- nhúng một ngón chân vào nước với 2 đô hoặc đẩy tất cả ra cho 50000 đô"
 
 msgid "- from $1 to $50,000"
 msgstr "- từ 1 đô đến 50000 đô"
@@ -120,77 +117,8 @@ msgstr "- từ 1 đô đến 50000 đô"
 msgid "- from 10 seconds to 365 days"
 msgstr "- từ 10 giây đến 365 ngày"
 
-msgid "- get pricing that is normally reserved for big institutional players"
-msgstr "- nhận giá cả mà thường được giữ lại cho các nhà đầu tư lớn"
-
-msgid "- no 'slippage', no 'margin calls', no getting 'stopped out', and no hidden fees or commissions"
-msgstr "- không trượt giá, không gọi ký quỹ, không phải nhận mức dừng và không có phí ẩn hay hoa hồng"
-
-msgid "- open an account in minutes"
-msgstr "- mở một tài khoản trong vài phút"
-
-msgid "- open, fund, or withdraw from your account within minutes, 24 hours a day"
-msgstr "- mở, tài trợ hoặc rút tiền từ tài khoản của bạn trong vòng vài phút, 24 giờ một ngày"
-
-msgid "- predict if the market will end higher or lower than a price target"
-msgstr "-dự đoán nếu thị trường sẽ kết thúc cao hơn hoặc thấp hơn giá nhắm đến"
-
-msgid "- predict if the market will rise or fall from its current level"
-msgstr "-dự đoán nếu thị trường sẽ tăng hay giảm từ mức hiện tại"
-
-msgid "- predict if the market will stay inside two price targets, or end between or outside them"
-msgstr "-dự đoán nếu thị trường sẽ ở bên trong 2 giá mục tiêu, hoặc kết thúc giữa hay bên ngoài họ"
-
-msgid "- predict if the market will touch or not touch a price target"
-msgstr "-dự đoán nếu thị trường sẽ liên lạc hoặc không liên lạc một giá mục tiêu"
-
-msgid "- sell your long-term trades at market prices before they expire"
-msgstr "- bán các giao dịch dài hạn của bạn tại thị trường diao dịch trước khi chúng hết hạn"
-
-msgid "- set your trades on 'gut feel', or use technical or fundamental analysis"
-msgstr "- đặt các giao dịch của bạn vào một trạng thái tốt, hoặc dùng kỹ thuật phân tích hay phân tích cơ bản"
-
-msgid "- start trading with as little as $5"
-msgstr "- bắt đầu giao dịch với ít nhất 5 đô"
-
-msgid "- trade 24/7, even on weekends"
-msgstr "- giao dịch 24/7, kể cả ngày cuối tuần"
-
-msgid "- trade Binary.com's own volatility indices, 24/7"
-msgstr "- giao dịch mà Binary.com kiểm soát các chỉ số biến động 24/7"
-
-msgid "- trade Binary.com's proprietary volatility indices"
-msgstr "- giao dịch mà Binary.com độc quyền về chỉ số biến động"
-
-msgid "- trade all major FX pairs"
-msgstr "- Giao dịch tất cả các cặp FX lớn"
-
-msgid "- trade all major FX pairs, around the clock"
-msgstr "- giao dịch tất cả các cặp ngoại hối lớn suốt ngày"
-
-msgid "- trade all major worldwide stock indices"
-msgstr "- giao dịch tất cả các chỉ số chứng khoán toàn cầu"
-
-msgid "- trade currencies, indices and commodities in rising, falling, sideways, quiet and volatile markets"
-msgstr "- giao dịch các loại tiền tệ, chỉ số và hàng hóa trong các thị trường tăng, giảm, nghiêng, yên tĩnh và dễ bốc hơi"
-
-msgid "- trade major commodities such as gold and oil"
-msgstr "- giao dịch tất cả các hàng hóa lớn như vàng và dầu mỏ"
-
-msgid "- up/down, touch/no-touch, stays in/goes out"
-msgstr "- lên/xuống, chạm/không chạm, giữ trong/đẩy ra"
-
-msgid "- we challenge you to find better returns on any competing website"
-msgstr "- chúng tối thách thức bạn tìm được một website nào khác có lợi nhuận tốt hơn"
-
-msgid "- win the same proportional return on stakes of all values"
-msgstr "- dành lợi ích với cùng tỉ lệ lãi suất trong các cổ phần của tất cả các giá trị"
-
-msgid "- you know from the start what you will win or lose"
-msgstr "- Bạn biết từ lúc bắt đầu rằng bạn sẽ thắng hay thua"
-
-msgid "- you will never have margin calls, gap risk, slippage costs, hidden fees or commissions"
-msgstr "- bạn sẽ không bao giờ phải thực hiện các cuộc gọi ký quỹ, rủi ro thiếu hụt, trượt giá, phí ẩn hay hoa hồng"
+msgid "- up/down, touch/no-touch, stays between/goes outside"
+msgstr ""
 
 msgid "0-1 year"
 msgstr "0-1 năm"
@@ -218,6 +146,12 @@ msgstr "1 triệu giao dịch/ ngày"
 
 msgid "1-2 years"
 msgstr "1-2 năm"
+
+msgid "1. Choose the Underlying"
+msgstr ""
+
+msgid "1. Underlying market"
+msgstr ""
 
 msgid "10"
 msgstr "10"
@@ -261,8 +195,11 @@ msgstr "2 Giờ"
 msgid "2 Minutes"
 msgstr "2 Phút"
 
-msgid "2-way pricing"
-msgstr "giá cả 2 chiều"
+msgid "2. Choose the Duration of the Trade"
+msgstr ""
+
+msgid "2. Trade type"
+msgstr ""
 
 msgid "2000"
 msgstr "năm 2000"
@@ -297,6 +234,9 @@ msgstr "năm 2015"
 msgid "2016"
 msgstr "năm 2016"
 
+msgid "2017"
+msgstr ""
+
 msgid "2h"
 msgstr "2 giờ"
 
@@ -308,6 +248,12 @@ msgstr "3"
 
 msgid "3 Minutes"
 msgstr "3 Phút"
+
+msgid "3. Choose how you want to Trade the Market"
+msgstr ""
+
+msgid "3. Duration"
+msgstr ""
 
 msgid "30"
 msgstr "30"
@@ -333,6 +279,12 @@ msgstr "4"
 msgid "4 Hours"
 msgstr "4 Giờ"
 
+msgid "4. Barrier(s)"
+msgstr ""
+
+msgid "4. Choose your Stake and Potential Return"
+msgstr ""
+
 msgid "40 transactions or more in the past 12 months"
 msgstr "40 giao dịch hoặc hơn trong 12 tháng qua"
 
@@ -344,6 +296,9 @@ msgstr "5"
 
 msgid "5 Minutes"
 msgstr "5 Phút"
+
+msgid "5. Payout"
+msgstr ""
 
 msgid "5m"
 msgstr "5 tháng"
@@ -472,7 +427,7 @@ msgid "Active"
 msgstr "Còn hoạt động"
 
 msgid "Active Since"
-msgstr ""
+msgstr "Hoạt động từ"
 
 msgid "Add comparisons"
 msgstr "Thêm các so sánh"
@@ -501,11 +456,14 @@ msgstr "Tất cả thời gian"
 msgid "All market conditions"
 msgstr "Tất cả các điều kiện thị trường"
 
+msgid "All market conditions and durations"
+msgstr ""
+
 msgid "All markets"
 msgstr "Tất cả các thị trường"
 
-msgid "All markets, all conditions"
-msgstr "Tất cả các thị trường, tất cả điều kiện"
+msgid "All markets and conditions"
+msgstr ""
 
 msgid "All payouts"
 msgstr "Các khoản thanh toán"
@@ -514,7 +472,7 @@ msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tất cả thời gian ở GMT (Thời gian trung bình Greenwich )"
 
 msgid "Allow others to copy your trades"
-msgstr ""
+msgstr "Cho phép người khác để sao chép các giao dịch của bạn"
 
 msgid "Amount"
 msgstr "Tổng"
@@ -589,13 +547,16 @@ msgid "Asset Index"
 msgstr "Chỉ số Tài sản"
 
 msgid "Assets"
-msgstr ""
+msgstr "Tài sản"
 
 msgid "Aug"
 msgstr "Tháng tám"
 
 msgid "August"
 msgstr "Tháng tám"
+
+msgid "Available 24/7"
+msgstr ""
 
 msgid "Available Currencies"
 msgstr "Các loại tiền tệ có sẵn"
@@ -613,12 +574,15 @@ msgid "Average True Range (ATR)"
 msgstr "Khoảng trung bình thực (ATR)"
 
 msgid "Avg. Duration"
-msgstr ""
+msgstr "Thời lượng trung bình"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "Lỗ trung bình"
 
 msgid "Avg. Profit"
+msgstr "Lợi nhuận trung bình"
+
+msgid "Award-winning online trading platform"
 msgstr ""
 
 msgid "Awesome Oscillator (AO)"
@@ -651,12 +615,6 @@ msgstr "Hướng giảm: Đây là một mô hình kết thúc xu hướng bao g
 msgid "Belt-hold (CDLBELTHOLD)"
 msgstr "Vành đai giữ (CDLBELTHOLD)"
 
-msgid "Benchmarked prices"
-msgstr "Giá được đánh giá chuẩn"
-
-msgid "Benefits of binary trading"
-msgstr "Các lợi ích kinh doanh nhị phân"
-
 msgid "Best Fixed-Odds Financial Trading Provider' award by Shares Magazine UK"
 msgstr "Giải thưởng Nhà cung cấp kinh doanh tài chính với tỷ lệ cược tốt nhất được trao bởi Tạp chí chia sẻ Anh Quốc"
 
@@ -678,6 +636,9 @@ msgstr "BetOnMarkets.com đạt 1 tỷ USD doanh thu kể từ khi bắt đầu 
 msgid "Betonmarkets.com"
 msgstr "Betonmarkets.com"
 
+msgid "Betting system and method"
+msgstr ""
+
 msgid "Bill Williams"
 msgstr "Bill Williams"
 
@@ -687,17 +648,23 @@ msgstr "Bot phát hành nhị phân"
 msgid "Binary KK granted Japan license"
 msgstr "Binary KK được cấp phép ở Nhật Bản"
 
-msgid "Binary Trading is simple to learn and to execute"
-msgstr "Giao dịch nhị phân là cách đơn giản để học và thực hiện"
+msgid "Binary Options Basics"
+msgstr ""
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary được cấp giấy phép Dịch vụ đầu tư"
+
+msgid "Binary mobile applications and third party tools"
+msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "Binary mở văn phòng tại Nhật Bản"
 
 msgid "Binary option"
 msgstr "tùy chọn nhị phân"
+
+msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
+msgstr ""
 
 msgid "Binary options or other financial derivatives"
 msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"
@@ -714,9 +681,6 @@ msgstr "Giao dịch nhị phân là linh hoạt"
 msgid "Binary trading is ideal for both individuals and market professionals"
 msgstr "Giao dịch nhị phân là ý tưởng cho cả cá nhân và thị trường chuyên nghiệp"
 
-msgid "Binary trading is very simple"
-msgstr "Giao dịch nhị phân là rất đơn giản"
-
 msgid "Binary's Japanese subsidiary Binary KK is licensed by the KLFB as a Type 1 Financial Instruments Business in Japan"
 msgstr "Binary Nhật Bản công ty con của Binary KK được cấp phép bởi KLFB như là một công cụ doanh nghiệp tài chính loại 1 ở Nhật Bản"
 
@@ -726,8 +690,8 @@ msgstr "Binary Nhật bản công ty con của Binary KK mở một văn phòng 
 msgid "Binary's Maltese subsidiary Binary Investments (Europe) Ltd. is granted a Category 3 Investment Services license by the Malta Financial Services Authority"
 msgstr "Công ty con Binary tại Malta của Công ty đầu tư Binary (Châu Âu) được cấp phép dịch vụ đầu tư thể loại 3 bởi cơ quan dịch vụ tài chính Malta"
 
-msgid "Binary's platform transacts on average 15 transactions per second, 24/7"
-msgstr "Nền tảng giao dịch của Binary trung bình vào khoảng 15 giao dịch mỗi giây, 24/7"
+msgid "Binary's platform transacts on average 20 transactions per second, 24/7"
+msgstr ""
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -738,8 +702,14 @@ msgstr "Binary.com: Webtrader"
 msgid "Binary.com Shop introduced"
 msgstr "giới thiệu cửa hàng Binary.com"
 
+msgid "Binary.com announces plans for an"
+msgstr ""
+
 msgid "Binary.com continues to innovate and grow"
 msgstr "Binary.com tiếp tục đổi mới và phát triển"
+
+msgid "Binary.com has created Volatility Indices that you can trade 24/7. You can trade these on all types of contract"
+msgstr ""
 
 msgid "Binary.com has earned an enviable reputation for our commitment to high ethical standards and the quality of the trading experience we provide"
 msgstr "Binary.com đã giành được một danh tiếng tuyệt vời cho cam kết của chúng tôi các tiêu chuẩn đạo đức cao và chất lượng của kinh nghiệm kinh doanh, chúng tôi cung cấp"
@@ -756,20 +726,23 @@ msgstr "Binary.com đạt mốc 1 triệu người dùng, đến một mốc l�
 msgid "Binary.com introduces an"
 msgstr "Binary.com giới thiệu một"
 
+msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
+msgstr ""
+
 msgid "Binary.com is entirely web-based and requires no software installation"
 msgstr "Binary.com là hoàn toàn dựa trên web và không cần phần mềm cài đặt"
 
 msgid "Binary.com is honoured as the world's \"Best Binary Options Broker\" at the 16th annual MENA International Financial Conference and Exhibition, hosted in Dubai"
 msgstr "Binary.com được vinh danh như một nhà môi giới tùy chọn nhị phân tốt nhất thế giới trong lần thứ 16 hội nghị tài chính quốc tế MENA thường niên được tổ chức ở Dubai"
 
-msgid "Binary.com is one of the oldest and most respected names in online binary trading"
-msgstr "Binary.com là một trong những cái tên lâu đời nhất và được kính trọng nhất trong kinh doanh trực tuyến của nhị phân"
+msgid "Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page"
+msgstr ""
 
-msgid "Binary.com is owned and operated by the Binary Ltd. group of companies. For more information, visit our history page"
-msgstr "Binary.com thuộc sở hữu và vận hành bởi Công ty TNHH Binary, một nhóm công ty. Để biết thêm chi tiết, hãy truy cập trang lịch sử của chúng tôi"
+msgid "Binary.com launches Bitcoin (BTC) accounts for non-EU customers"
+msgstr ""
 
-msgid "Binary.com is tailored to traders of all levels"
-msgstr "Binary.com được thiết kế cho các thương nhân của tất cả các cấp"
+msgid "Binary.com launches Bitcoin accounts"
+msgstr ""
 
 msgid "Binary.com launches an"
 msgstr "Binary.com ra mắt một"
@@ -777,17 +750,17 @@ msgstr "Binary.com ra mắt một"
 msgid "Binary.com offers a range of common deposit and withdrawal methods, from credit and debit cards to bank wires, e-cash and e-wallets"
 msgstr "Binary.com cung cấp một loạt các phương pháp phổ biến tiền gửi và rút tiền, từ thẻ tín dụng và thẻ ghi nợ cho đến ngân hàng, tiền điện tử và ví điện tử"
 
-msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not open a free $10k fully-functional virtual-money account, and start learning how to trade"
-msgstr "Binary.com cung cấp một tài khoản tiền ảo để bạn có thể nhận được treo các giao dịch nhị phân. Tại sao không mở tài khoản miễn phí $10k đầy đủ chức năng tiền ảo, và bắt đầu học làm thế nào để kinh doanh"
+msgid "Binary.com offers a virtual-money account so you can get the hang of trading binaries. Why not"
+msgstr ""
 
 msgid "Binary.com offers new ways to trade"
 msgstr "Binary.com cung cấp cách thức mới để kinh doanh"
 
+msgid "Binary.com offers you four ways to trade a particular asset"
+msgstr ""
+
 msgid "Binary.com opens an office in the QSentral office building in central Kuala Lumpur to further expand its IT development team"
 msgstr "Binary.com mở một văn phòng trong tòa nhà ở trung tâm Kuala Lumpur tiếp tục mở rộng đội ngũ phát triển CNTT của văn phòng QSentral"
-
-msgid "Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades"
-msgstr "giá cả trên Binary.com được đánh giá đối với thị trường liên ngân hàng tùy chọn, vì vậy bạn luôn luôn có giá tốt nhất trong lớp học cho các giao dịch của bạn"
 
 msgid "Binary.com reaches $2 billion turnover since starting in 1999"
 msgstr "Binary.com đạt đến 2 tỉ đô la doanh thu kể từ khi bắt đầu vào năm 1999"
@@ -797,6 +770,21 @@ msgstr "Binary.com đạt đến 1 triệu người dùng đăng ký"
 
 msgid "Binary.com takes home first prize in the Financial Betting Operator category at the prestigious 2015 EGR Operator Awards ceremony, hosted in London"
 msgstr "Binary.com giành giải thưởng đầu tiên trong thể loại điều hành tài chính cá cược tại lễ trao giải nhà điều hành EGR 2015 được tổ chức ở London"
+
+msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75% and 100%"
+msgstr ""
+
+msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
+msgstr ""
+
+msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
+msgstr ""
+
+msgid "Binary.com's Smart FX are smart markets that measure the value of a currency against a basket of major currencies"
+msgstr ""
+
+msgid "Binary.com's Volatility Indices are based on a cryptographically secure random number generator audited for fairness by an independent third party"
+msgstr ""
 
 msgid "Binary.com's systems are now processing in excess of 1 million transactions/day (including virtual accounts)"
 msgstr "Binary.com của hệ thống đang xử lý bây giờ vượt quá 1 triệu giao dịch/ngày (bao gồm tài khoản ảo)"
@@ -819,8 +807,8 @@ msgstr "Phá vỡ (CDLBREAKAWAY)"
 msgid "Browser upgrade required"
 msgstr "Yêu cầu nâng cấp trình duyệt"
 
-msgid "But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr "Nhưng không cần phải chờ đợi cho đến khi hết hạn. Bạn có thể bán lại giao dịch dài hạn tại bất kỳ thời điểm nào để hưởng lợi nhuận từ việc thay đổi điều kiện thị trường"
+msgid "Bull Market and Bear Market Indices start at 00:00 GMT each day, replicating a bullish and bearish market respectively"
+msgstr ""
 
 msgid "Buy Price"
 msgstr "Giá mua"
@@ -894,59 +882,17 @@ msgstr "Mẫu biểu đồ"
 msgid "Chart type"
 msgstr "Loại biểu đồ"
 
-msgid "Choose Asian Rise/Fall when you want to profit from the market ending higher or lower than the average price"
-msgstr "Chọn Châu á tăng/giảm khi bạn muốn lợi nhuận từ thị trường kết thúc cao hơn hoặc thấp hơn so với giá trung bình"
-
-msgid "Choose Ends In/Out to profit from the market stopping inside or outside two price targets at the end of the time period"
-msgstr "Lựa chọn kết thúc Trong/Ngoài để lợi nhuận từ thị trường dừng lại bên trong hay bên ngoài hai giá mục tiêu vào cuối khoảng thời gian"
-
-msgid "Choose Higher/Lower when you want to profit from the market ending higher or lower than a price target"
-msgstr "Chọn cao hơn/thấp hơn khi bạn muốn lợi nhuận từ thị trường kết thúc cao hơn hoặc thấp hơn giá mục tiêu"
-
-msgid "Choose Rise/Fall when you want to profit from the market rising or falling from its current level"
-msgstr "Chọn tăng/giảm khi bạn muốn lợi nhuận từ các thị trường tăng hoặc giảm từ mức hiện nay"
-
-msgid "Choose Stays In/Out to profit from the market staying inside or going outside two price targets any time during the contract period"
-msgstr "Chọn giữ ở trong/ngoài để hưởng lợi nhuận từ thị trường đang ở trong hoặc đang đi ra ngoài hai mức giá mục tiêu vào thời điểm bất kỳ của hợp đồng"
-
-msgid "Choose Touch / No Touch when you want to profit from the market touching or not touching a target any time during the contract period"
-msgstr "Chọn Chạm/ Không chạm khi bạn muốn hưởng lợi nhuận từ thị trường cham hoặc không chạm vào mục tiêu ở bất kỳ thời điểm nào của hợp đồng"
-
-msgid "Choose a trade type"
-msgstr "Chọn một loại hình thương mại"
-
-msgid "Choose digit if you want to profit from predicting the last decimal digit of the spot"
-msgstr "Chọn chữ số nếu bạn muốn hưởng lợi nhuận từ dự đoán chữ số cuối của số thập phân tại chỗ"
-
-msgid "Choose from over 1 million trades"
-msgstr "Chọn từ hơn 1 triệu giao dịch"
-
-msgid "Choose from over a million possible trades at any time"
-msgstr "Chọn từ hơn một triệu giao dịch khả thi ở bất kỳ thời điểm nào"
+msgid "Choose from five types of markets and their respective assets"
+msgstr ""
 
 msgid "Choose password"
 msgstr "Lựa chọn mật khẩu"
 
-msgid "Choose the barrier(s)"
-msgstr "Chọn rào cản"
+msgid "Choose the Touch/No Touch trade if you want to predict the market touching or not touching a target any time during the contract period"
+msgstr ""
 
-msgid "Choose the duration"
-msgstr "Chọn thời lượng"
-
-msgid "Choose the market, the price target, the time period, and how much you wish to win"
-msgstr "Chọn thị trường, giá mục tiêu, thời gian và bao nhiêu bạn muốn giành được"
-
-msgid "Choose the market, the price targets, the time period, and how much you wish to win"
-msgstr "Chọn thị trường, các mục tiêu giá, khoảng thời gian và bao nhiêu bạn muốn giành được"
-
-msgid "Choose the market, the time period, and how much you wish to win"
-msgstr "Chọn thị trường, thời gian, và bao nhiêu bạn muốn giành được"
-
-msgid "Choose the payout"
-msgstr "Chọn thanh toán"
-
-msgid "Choose the underlying market"
-msgstr "Chọn thị trường tiềm ẩn"
+msgid "Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs"
+msgstr ""
 
 msgid "Choose your pereferred payment agent"
 msgstr "Chọn đại lý thanh toán ưa thích của bạn"
@@ -963,6 +909,9 @@ msgstr "Chrome"
 msgid "Click to log in with your Binary.com account"
 msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com của bạn"
 
+msgid "Client funds"
+msgstr ""
+
 msgid "Close"
 msgstr "Đóng"
 
@@ -978,6 +927,9 @@ msgstr "Đóng cửa Marubozu (CDLCLOSINGMARUBOZU)"
 msgid "Commodities"
 msgstr "Hàng hóa"
 
+msgid "Commodities - Major commodities such as gold and oil"
+msgstr ""
+
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On Binary.com, they are priced in US dollars"
 msgstr "Hàng hóa là tài nguyên được trồng hoặc chiết xuất từ mặt đất, chẳng hạn như bạc, vàng và dầu. Tại Binary.com, nó được định giá bằng đô la Mỹ"
 
@@ -992,6 +944,15 @@ msgstr "Chỉ số kênh hàng hóa (CCI)"
 
 msgid "Comparisons"
 msgstr "So sánh"
+
+msgid "Competitive and transparent pricing"
+msgstr ""
+
+msgid "Computer system and method for speculating on a financial market"
+msgstr ""
+
+msgid "Computer trading system for offering custom financial market speculations"
+msgstr ""
 
 msgid "Conditions"
 msgstr "Điều kiện"
@@ -1011,6 +972,9 @@ msgstr "Tiếp tục"
 msgid "Continue Trading"
 msgstr "Tiếp tục giao dịch"
 
+msgid "Continuous Indices"
+msgstr ""
+
 msgid "Contract"
 msgstr "Hợp đồng"
 
@@ -1021,13 +985,13 @@ msgid "Contracts"
 msgstr "Hợp đồng"
 
 msgid "Copier"
-msgstr ""
+msgstr "Máy Photocopy"
 
 msgid "Coppock Curve (CC)"
 msgstr "Đường cong Coppock (CC)"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "Kinh doanh sao chép"
 
 msgid "Counterattack (CDLCOUNTERATTACK)"
 msgstr "Phản công (CDLCOUNTERATTACK)"
@@ -1050,8 +1014,8 @@ msgstr "Tín dụng/Ghi nợ"
 msgid "Crosshair"
 msgstr "Chữ thập"
 
-msgid "Currencies"
-msgstr "Đơn vị tiền tệ"
+msgid "Currencies - All major Forex pairs"
+msgstr ""
 
 msgid "Current Level"
 msgstr "Cấp độ hiện tại"
@@ -1079,6 +1043,12 @@ msgstr "Thời gian hiện tại"
 
 msgid "Custom Theme"
 msgstr "Chủ đề tùy chỉnh"
+
+msgid "Daily Reset Indices"
+msgstr ""
+
+msgid "Daily Reset Indices replicate markets with a bullish and bearish trend, with a constant volatility"
+msgstr ""
 
 msgid "Daily limit on losses"
 msgstr "Giới hạn hàng ngày cho thua"
@@ -1170,6 +1140,9 @@ msgstr "Khác với"
 msgid "Digits"
 msgstr "Chữ số"
 
+msgid "Digits let you predict the last decimal digit of the spot price. There are three types of Digits trades"
+msgstr ""
+
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
 msgstr "Hướng di chuyển (DMI) là thực sự là một tập hợp của ba chỉ tiêu riêng biệt kết hợp thành một. Hướng di chuyển bao gồm trung bình Chỉ số hướng (ADX), chỉ số cộng hướng (+ DI) và Chỉ thị trừ hướng(-DI)"
 
@@ -1179,9 +1152,6 @@ msgstr "Chỉ số hướng di chuyển (DX)"
 msgid "Do I need to deposit any funds to open an account?"
 msgstr "Tôi có cần phải đặt cọc bất kỳ khoản tiền để mở một tài khoản?"
 
-msgid "Do I need to send any documents?"
-msgstr "Tôi có cần gửi bất kỳ tài liệu nào không?"
-
 msgid "Do you offer virtual-money accounts?"
 msgstr "Bạn có cung cấp các tài khoản tiền ảo?"
 
@@ -1189,7 +1159,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
 
 msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
+msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
 
 msgid "Doji (CDLDOJI)"
 msgstr "Doji (CDLDOJI)"
@@ -1220,6 +1190,9 @@ msgstr "Trung bình di chuyển gấp đôi (DEMA)"
 
 msgid "Double click the object to remove"
 msgstr "Nhấp đúp chuột vào đối tượng để loại bỏ"
+
+msgid "Down - Predict that the market will end lower than the average price"
+msgstr ""
 
 msgid "Download"
 msgstr "Tải xuống"
@@ -1272,11 +1245,14 @@ msgstr "Giải thưởng Nhà điều hành EGR"
 msgid "EURUSD"
 msgstr "EURUSD"
 
+msgid "Each binary option contract runs for a set time - with Binary.com you can choose a contract that runs between 10 seconds and 365 days"
+msgstr ""
+
 msgid "Each binary option is a prediction on the future movement of an underlying market"
 msgstr "Mỗi lựa chọn nhị phân là một dự đoán về chuyển động tương lai của một thị trường tiềm ẩn"
 
-msgid "Each binary trade is for a pre-determined payout amount. You win the payout if your prediction is correct"
-msgstr "Mỗi giao dịch nhị phân là dành cho một số tiền thanh toán được xác định trước. Bạn giành chiến thắng các thanh toán nếu dự đoán của bạn là chính xác"
+msgid "Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You ll win the payout if your prediction is correct. If not, you will only lose your initial stake"
+msgstr ""
 
 msgid "Edge"
 msgstr "Mép"
@@ -1296,8 +1272,11 @@ msgstr "Thời gian kết thúc"
 msgid "Ends Between/Ends Outside trades"
 msgstr "Kết thúc giữa / kết thúc bên ngoài giao dịch"
 
-msgid "Ends In/Out"
-msgstr "Kết thúc Trong/Ngoài"
+msgid "Ends Between/Ends Outside   Predict that the market stops inside or outside two price targets at the end of the time period"
+msgstr ""
+
+msgid "Ends Between/Outside"
+msgstr ""
 
 msgid "Ends in"
 msgstr "Kết thúc trong"
@@ -1338,6 +1317,9 @@ msgstr "Ước tính giá trị ròng"
 msgid "Even"
 msgstr "Chẵn"
 
+msgid "Even/Odd - Predict that the last digit is even or odd after the last tick"
+msgstr ""
+
 msgid "Evening Doji Star (CDLEVENINGDOJISTAR)"
 msgstr "Sao Doji buổi tối (CDLEVENINGDOJISTAR)"
 
@@ -1367,9 +1349,6 @@ msgstr "Trung bình vận chuyển mũ (EMA)"
 
 msgid "Fall"
 msgstr "Giảm"
-
-msgid "Falling markets"
-msgstr "Thị trường giảm"
 
 msgid "Family name"
 msgstr "Họ"
@@ -1407,14 +1386,8 @@ msgstr "Tài chính"
 msgid "Financial Information"
 msgstr "Thông tin tài chính"
 
-msgid "Financial Security"
-msgstr "An ning tài chính"
-
 msgid "Financial information"
 msgstr "Thông tin tài chính"
-
-msgid "Financial rewards"
-msgstr "Phần thưởng tài chính"
 
 msgid "Firefox"
 msgstr "Firefox"
@@ -1428,8 +1401,8 @@ msgstr "Họ"
 msgid "First, you need to set the parameters of your trade. Here's what you need to consider"
 msgstr "Trước tiên, bạn cần thiết lập các thông số giao dịch của bạn. Đây là những gì bạn cần phải xem xét"
 
-msgid "Flexibility"
-msgstr "Tính linh hoạt"
+msgid "Flexible"
+msgstr ""
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Ba năm liên tiếp, BetOnMarkets.com được tạp chí Shares Magazine Anh bầu chọn là \" Nhà cung cấp Giao dịch Tài chính Theo Tỷ Lệ Cố Định Tốt nhất\". Đó là lần cuối chúng tôi chiến thắng vì Shares Magazine đã dừng trao giải trong lĩnh vực này"
@@ -1445,6 +1418,9 @@ msgstr "Tần suất giao dịch ngoại hối"
 
 msgid "Founded October 1999"
 msgstr "Được thành lập vào tháng 10 năm 1999"
+
+msgid "Founded in 1999, Binary.com is one of the oldest and most respected names in online binary trading"
+msgstr ""
 
 msgid "Fractal (FRACTAL)"
 msgstr "Phân dạng"
@@ -1477,12 +1453,12 @@ msgid "GMT stands for Greenwich Mean Time, the official time used in the UK duri
 msgstr "GMT là viết tắt của Greenwich Mean Time, thời gian chính thức được sử dụng ở vương quốc Anh trong suốt mùa đông. Vào mùa hè,  vương quốc Anh thay đổi thành thời gian mùa hè ở Anh, tức là GMT + 1 giờ. Tất cả thời gian trên trang web Binary.com sử dụng GMT quanh năm"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Lấy API token từ (các) nhà giao dịch và thêm nó vào danh sách của bạn"
 
 msgid "Get your price"
 msgstr "Nhận giá của bạn"
 
-msgid "Go to Token Management, create a token, and share the token with copier(s)"
+msgid "Go to"
 msgstr ""
 
 msgid "Goes out"
@@ -1533,9 +1509,6 @@ msgstr "Hàng rào cao"
 msgid "High barrier offset"
 msgstr "Offset barie cao"
 
-msgid "High returns"
-msgstr "Lợi nhuận cao"
-
 msgid "High-Wave Candle (CDLHIGHWAVE)"
 msgstr "Nến sóng cao (CDLHIGHWAVE)"
 
@@ -1545,8 +1518,14 @@ msgstr "Cao hơn"
 msgid "Higher/Lower"
 msgstr "Cao hơn/Thấp hơn"
 
+msgid "Higher/Lower - Predict if the market will end higher or lower than a target price"
+msgstr ""
+
 msgid "Higher/Lower trades"
 msgstr "Các giao dịch cao hơn/thấp hơn"
+
+msgid "Higher/Lower   Predict that the market will end higher or lower than a price target"
+msgstr ""
 
 msgid "Hikkake Pattern (CDLHIKKAKE)"
 msgstr "Mẫu Hikkake (CDLHIKKAKE)"
@@ -1572,14 +1551,14 @@ msgstr "Làm thế nào để tăng quỹ cho tài khoản của tôi?"
 msgid "How does Binary.com make money?"
 msgstr "Binary.com kiếm tiền như thế nào?"
 
-msgid "How safe is my money with Binary.com?"
-msgstr "Tiền của tôi an toàn với Binary.com như thế nào?"
-
 msgid "How soon can I start trading?"
 msgstr "Tôi có thể bắt đầu giao dịch trong bao lâu?"
 
 msgid "How to trade binaries?"
 msgstr "Làm thế nào để giao dịch nhị phân?"
+
+msgid "How to trade the Volatility Indices markets?"
+msgstr ""
 
 msgid "Hull Moving Average (HMA)"
 msgstr "phương pháp Moving Average của Hull"
@@ -1599,8 +1578,11 @@ msgstr "KHUYẾN CÁO QUAN TRỌNG"
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr "KHUYẾN CÁO QUAN TRỌNG - Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng và Đại Lý Thanh Toán"
 
-msgid "Ideal for both pros and novices"
-msgstr "Lý tưởng cho cả các chuyên gia và người mới"
+msgid "IPO on the blockchain"
+msgstr ""
+
+msgid "Ideal for beginners and experienced traders"
+msgstr ""
 
 msgid "Identical Three Crows (CDLIDENTICAL3CROWS)"
 msgstr "Mô hình Ba quạ trùng khớp (CDLIDENTICAL3CROWS)"
@@ -1656,6 +1638,12 @@ msgstr "Mô hình In-Neck (CDLINNECK)"
 msgid "In/Out"
 msgstr "Vào/Ra"
 
+msgid "In/Out (ends between/outside and stays between/goes outside)"
+msgstr ""
+
+msgid "In/Out - Predict if the market will stay between or outside two target prices"
+msgstr ""
+
 msgid "In/Out trades"
 msgstr "Trong/Ngoài giao dịch"
 
@@ -1670,6 +1658,9 @@ msgstr "Chỉ số"
 
 msgid "Indices"
 msgstr "Chỉ số"
+
+msgid "Indices - All major worldwide stock indices sourced from the over-the-counter market"
+msgstr ""
 
 msgid "Indices trading experience"
 msgstr "Chỉ số kinh nghiệm giao dịch"
@@ -1686,11 +1677,11 @@ msgstr "Ở Indonesia:"
 msgid "Industry of Employment"
 msgstr "Ngành công nghiệp việc làm"
 
+msgid "Initial Coin Offering (ICO)"
+msgstr ""
+
 msgid "Instant access"
 msgstr "Truy cập tức thì"
-
-msgid "Instant funding"
-msgstr "Tài trợ tức thì"
 
 msgid "Instruments"
 msgstr "Công cụ"
@@ -1764,9 +1755,6 @@ msgstr "Các mô hình đá trên một biểu đồ nến được hình thành
 msgid "Kicking patterns on a candlestick chart are formed when there are two marubozu - one white and one black - with a gap between them. Bullish kicking patterns would present as a black or filled candlestick without any wicks (shadows) followed by a gap higher with a white or hollow candlestick that is also without wicks"
 msgstr "Các mô hình đá trên một biểu đồ nến được hình thành khi có hai marubozu dài - một cái màu trắng và một màu đen - cùng với một khoảng cách giữa chúng. Mẫu đá bullish sẽ trình bày như là một màu đen hoặc một candlestick đầy mà không có bất kỳ bấc (bóng tối), theo sau là một khoảng cách cao với một màu trắng hoặc rỗng nến là cũng không có bấc"
 
-msgid "Known risks"
-msgstr "những rủi ro đã biết"
-
 msgid "Kuala Lumpur Office"
 msgstr "văn phòng Kuala Lumpur"
 
@@ -1774,7 +1762,7 @@ msgid "Ladder Bottom (CDLLADDERBOTTOM)"
 msgstr "Mô hình bậc thang dưới (CDLLADDERBOTTOM)"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Các giao dịch kéo dài 12 phút có lợi nhuận"
 
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
@@ -1828,13 +1816,13 @@ msgid "Loading Asset Index"
 msgstr "Đang tải chỉ số tài sản"
 
 msgid "Loading Copy Trade"
-msgstr ""
+msgstr "Tải bản sao thương mại"
 
 msgid "Loading Download/View Data"
 msgstr "Đang tải dữ liệu tải về/xem dữ liệu"
 
 msgid "Loading MAM"
-msgstr ""
+msgstr "Tải MAM"
 
 msgid "Loading Password dialog"
 msgstr "Đang tải Mật Khẩu hội thoại"
@@ -1892,9 +1880,6 @@ msgstr "Mô hình đường nến dài (CDLLONGLINE)"
 
 msgid "Long-legged doji have long upper and lower shadows that are almost equal in length. These doji reflect a great amount of indecision in the market. Long-legged doji indicate that prices traded well above and below the session's opening level, but closed virtually even with the open. After a whole lot of yelling and screaming, the end result showed little change from the initial open"
 msgstr "Doji chân dài đã lâu trên và dưới bóng tối gần như dài bằng nhau. Những Doji này phản ánh một lượng thiếu quyết đoán lớn trên thị trường. Doji chân dài chỉ ra rằng giá buôn bán cũng ở trên và dưới của phiên họp khai mạc, nhưng đóng cửa hầu như ngay cả với mở. Sau rất nhiều toàn bộ của la hét và la hét, kết quả cuối cùng cho thấy ít thay đổi từ mở đầu"
-
-msgid "Long-term action"
-msgstr "Hành động dài hạn"
 
 msgid "Look for a black candle in a downward price trend followed by a white candle that opens below the prior low but closes near but below the midpoint of the black candle's body"
 msgstr "Hãy để ý một ngọn nến màu đen trong một xu hướng xuống giá, theo sau là một ngọn nến trắng mà mở ra bên dưới thấp trước nhưng đóng gần nhưng bên dưới các trung điểm của cơ thể ngọn nến đen"
@@ -1962,11 +1947,14 @@ msgstr "Mô hình Mat Hold (CDLMATHOLD)"
 msgid "Matches"
 msgstr "Trận đấu"
 
+msgid "Matches/Differs - Predict that the last digit will match or not match"
+msgstr ""
+
 msgid "Matching Low (CDLMATCHINGLOW)"
 msgstr "Mô hình Matching Low (CDLMATCHINGLOW)"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Cổ phần thương mại tối đa"
 
 msgid "Maximum (MAX)"
 msgstr "Chỉ số Maximum (MAX)"
@@ -2008,7 +1996,7 @@ msgid "Mesa Adaptive Moving Average (MAMA)"
 msgstr "công thức Mesa Adaptive Moving Average (MAMA)"
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Thương mại cổ phần tối thiểu"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
@@ -2053,7 +2041,7 @@ msgid "Monday"
 msgstr "Thứ hai"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Các giao dịch có lợi nhuận hàng tháng"
 
 msgid "Morning Doji Star (CDLMORNINGDOJISTAR)"
 msgstr "Mô hình Sao Doji buổi sáng (CDLMORNINGDOJISTAR)"
@@ -2118,12 +2106,6 @@ msgstr "Không"
 msgid "No Touch trades"
 msgstr "giao dịch không chạm"
 
-msgid "No matter the market - rising or falling, quiet or volatile - you'll find a trade to suit your outlook"
-msgstr "Không bất kể thị trường nào - tăng hoặc giảm, lắng hay dễ biến động - bạn sẽ tìm thấy một giao dịch cho phù hợp với triển vọng của bạn"
-
-msgid "No surprises"
-msgstr "Không bất ngờ"
-
 msgid "No touch"
 msgstr "Không chạm"
 
@@ -2154,6 +2136,9 @@ msgstr "OHLC"
 msgid "OK"
 msgstr "Ok"
 
+msgid "OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market"
+msgstr ""
+
 msgid "Occupation"
 msgstr "Nghề nghiệp"
 
@@ -2183,6 +2168,9 @@ msgstr "Một khi đã đạt đến giới hạn này, bạn sẽ không thể 
 
 msgid "One last step left"
 msgstr "Còn một bước cuối"
+
+msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgstr ""
 
 msgid "Only five years after inception, we pick up this major award for our online trading services. The award recognises BetOnMarkets.com's reliable, fast and secure online trading for novice and expert traders. At this time, our website has received over 15 million trades"
 msgstr "Chỉ năm năm sau khi thành lập, chúng tôi nhận giải thưởng lớn này cho các dịch vụ giao dịch trực tuyến của chúng tôi. Các giải thưởng công nhận BetOnMarkets.com đáng tin cậy, nhanh chóng và an toàn giao dịch trực tuyến cho các người mới và chuyên gia. Tại thời điểm này, trang web của chúng tôi đã nhận được hơn 15 triệu giao dịch"
@@ -2250,17 +2238,23 @@ msgstr "Khách hàng của chúng tôi rõ ràng ưa chúng tôi. Vào giữa n
 msgid "Our fast organic growth is supplemented by the acquisition of the client base of BetsForTraders, one of our main competitors"
 msgstr "Chúng tôi phát triển nhanh có tổ chức được bổ sung bằng sự mua lại cơ sở khách hàng của BetsForTraders, một trong những đối thủ cạnh tranh chính của chúng tôi"
 
+msgid "Our prices are benchmarked against the interbank options market. You ll receive fair and transparent pricing, whatever your position"
+msgstr ""
+
 msgid "Over"
 msgstr "Qua"
 
 msgid "Over 1 million registered accounts worldwide"
 msgstr "Hơn 1 triệu tài khoản đã được đăng ký trên toàn cầu"
 
+msgid "Over 130 staff and contractors worldwide"
+msgstr ""
+
 msgid "Over 3 years"
 msgstr "Hơn 3 năm"
 
-msgid "Over 90 staff and contractors worldwide"
-msgstr "Hơn 90 nhân viên và các nhà thầu trên toàn cầu"
+msgid "Over/Under - Predict that the last digit is higher or lower"
+msgstr ""
 
 msgid "Overlap Studies"
 msgstr "nghiên cứu chồng chéo"
@@ -2286,9 +2280,6 @@ msgstr "Đại lý thanh toán"
 msgid "Payment agents"
 msgstr "Đại lý thanh toán"
 
-msgid "Payment options"
-msgstr "Tùy chọn thanh toán"
-
 msgid "Payments"
 msgstr "Các khoản chi trả"
 
@@ -2302,13 +2293,16 @@ msgid "Percentage Price Oscillator (PPO)"
 msgstr "Công cụ dao động giá theo tỷ lệ phần trăm (PPO)"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Xác suất hiệu suất"
 
 msgid "Permissions"
 msgstr "Cấp phép"
 
 msgid "Personal Details"
 msgstr "Chi tiết cá nhân"
+
+msgid "Personal Wealth Awards 2017"
+msgstr ""
 
 msgid "Phone"
 msgstr "Điện thoại"
@@ -2360,6 +2354,9 @@ msgstr "Xin vui lòng nhập chính xác mã thông báo"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
+
+msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
+msgstr ""
 
 msgid "Please provide your tax information"
 msgstr "Vui lòng cung cấp thông tin thuế của bạn"
@@ -2421,9 +2418,6 @@ msgstr "Sự chuyển đổi giá"
 msgid "Price forms three black candles, each with lower closes, in a downward price trend. A tall white candle engulfs the price action of the prior three days. The candle acts as a bullish reversal when price breaks out upward, and closes above the top of the candle pattern"
 msgstr "Giá hình thành ba ngọn nến đen, mỗi chiếc với thấp hơn đóng, một xu hướng xuống giá. Một ngọn nến trắng cao thổi giá hành động của ba ngày trước. Ngọn nến có vai trò như một sự đảo ngược bullish khi giá bùng lên trên, và đóng cửa trên đầu trang của các mô hình nến"
 
-msgid "Price the trade"
-msgstr "ra giá cho giao dịch"
-
 msgid "Price trends downward into the start of the pattern, a tall black candle. Following that, a white candle appears that fits inside the body of the prior candle. This completes the bullish harami candlestick. The final day of the pattern is the confirming candle, a white one that closes above the prior close, which it does. The combination suggests price has reversed trend"
 msgstr "Giá tạo xu hướng xuống vào đầu của các mô hình, một ngọn nến đen cao. Sau đó, một ngọn nến trắng xuất hiện phù hợp với bên trong cơ thể của ngọn nến trước. Điều này đã hoàn tất các nến bullish harami. Ngày cuối cùng của các mô hình là ngọn nến xác nhận, một trong những màu trắng mà đóng cửa ở trên trước khi gần gũi, mà nó. Sự kết hợp cho thấy giá đã đảo ngược xu hướng"
 
@@ -2445,6 +2439,9 @@ msgstr "Lợi nhuận/Thua lỗ"
 msgid "Profit/Loss (points)"
 msgstr "Lợi nhuận/thua lỗ (điểm)"
 
+msgid "Protect your profits"
+msgstr ""
+
 msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "Xuất bản dưới các ngôn ngữ: tiếng Anh, Indonesia, Nhật bản, Trung Quốc, Ba Lan, Đức, Pháp, tiếng Tây Ban Nha, tiếng Bồ Đào Nha, ý, Nga, và Thái Lan"
 
@@ -2456,9 +2453,6 @@ msgstr "Ngày mua"
 
 msgid "Purchase Price"
 msgstr "Giá mua"
-
-msgid "Quiet markets"
-msgstr "Thị trường yên lắng"
 
 msgid "Rate Of Change (ROC)"
 msgstr "tỉ giá hối đoái (ROC)"
@@ -2474,9 +2468,6 @@ msgstr "Đọc"
 
 msgid "Read about"
 msgstr "Đọc về"
-
-msgid "Reap the rewards of trading binaries, knowing your funds are always safe"
-msgstr "Gặt hái những phần thưởng của giao dịch nhị phân, biết rằng khoản tiền của bạn luôn được an toàn"
 
 msgid "Ref"
 msgstr "REF"
@@ -2568,11 +2559,14 @@ msgstr "Tăng"
 msgid "Rise/Fall"
 msgstr "Tăng/rớt"
 
+msgid "Rise/Fall - Predict if the market will rise or fall from its current level"
+msgstr ""
+
 msgid "Rise/Fall trades"
 msgstr "giao dịch tăng/giảm"
 
-msgid "Rising markets"
-msgstr "các thị trường đang phát triển"
+msgid "Rise/Fall   Predict that the market will rise or fall from its current level"
+msgstr ""
 
 msgid "Rising/Falling Three Methods (CDLRISEFALL3METHODS)"
 msgstr "phương pháp tăng/giảm 3 (CDLRISEFALL3METHODS)"
@@ -2613,8 +2607,8 @@ msgstr "Lưu các thay đổi"
 msgid "Saved"
 msgstr "Đã lưu lại"
 
-msgid "Scalable trading"
-msgstr "giao dịch có thể mở rộng"
+msgid "Scalable"
+msgstr ""
 
 msgid "Second line of home address"
 msgstr "Dòng thứ hai của địa chỉ nhà"
@@ -2624,6 +2618,9 @@ msgstr "Thứ cấp"
 
 msgid "Security"
 msgstr "Bảo mật"
+
+msgid "Security and privacy"
+msgstr ""
 
 msgid "Security question"
 msgstr "Câu hỏi bảo mật"
@@ -2658,8 +2655,11 @@ msgstr "Phiên"
 msgid "Session duration limit, in minutes"
 msgstr "Giới hạn thời lượng phiên, bằng phút"
 
-msgid "Set your probability of winning"
-msgstr "Thiết lập xác suất chiến thắng của bạn"
+msgid "Set barrier(s) to define your position and trigger the payout you will receive"
+msgstr ""
+
+msgid "Set the length of your trade, from 10 seconds to 365 days"
+msgstr ""
 
 msgid "Settles"
 msgstr "Cài đặt"
@@ -2670,14 +2670,14 @@ msgstr "Chia sẻ"
 msgid "Share chart"
 msgstr "Chia sẻ biểu đồ"
 
+msgid "Sharp, benchmarked prices"
+msgstr ""
+
 msgid "Shooting Star (CDLSHOOTINGSTAR)"
 msgstr "Mô hình sao băng (CDLSHOOTINGSTAR)"
 
-msgid "Short to long-term"
-msgstr "Ngắn đến dài hạn"
-
-msgid "Short-term action"
-msgstr "Giải pháp ngắn hạn"
+msgid "Short to long-term durations"
+msgstr ""
 
 msgid "Side by side white lines candlestick pattern is a triple pattern. Bullish pattern: In an upward trend, the first candlestick is followed by another upward that opens above the close of the first (gap up), that is followed by a third upward candlestick that opens below the close of the second (gap down). Bearish pattern: During a downtrend, the first candlestick is downward, followed by an upward candlestick that opens below the close of the first one (gap down), followed by an upward candlestick that opens below the close of the second one. This pattern indicates the continuation of a downtrend"
 msgstr "Bên cạnh mô hình nến trắng dòng là một mô hình ba. Mẫu Bullish: một xu hướng trở lên, nến đầu tiên tiếp theo là khác lên trên đó sẽ mở ra trên đóng đầu tiên (khoảng cách lên), đó là theo một nến lên thứ ba mở dưới đóng thứ hai (khoảng cách xuống). Hướng giảm Hoa văn: trong một xu hướng, nến đầu tiên là xuống, theo sau là một nến lên mở ra dưới đây đóng một trong những đầu tiên (gap xuống), theo sau là một nến trở lên mở ra bên dưới kết thúc thứ hai. Mô hình này cho thấy việc tiếp tục một xu hướng"
@@ -2685,8 +2685,14 @@ msgstr "Bên cạnh mô hình nến trắng dòng là một mô hình ba. Mẫu 
 msgid "Simple Moving Average (SMA)"
 msgstr "Đường biến thiên trung bình đơn giản (SMA)"
 
-msgid "Simplicity"
-msgstr "Tính đơn giản"
+msgid "Simple and intuitive"
+msgstr ""
+
+msgid "Smart FX"
+msgstr ""
+
+msgid "Smart Indices"
+msgstr ""
 
 msgid "Smoothed Moving Average (SMMA)"
 msgstr "Đường biến thiên trung bình mượt (SMMA)"
@@ -2696,6 +2702,9 @@ msgstr "Đã bán"
 
 msgid "Source of wealth"
 msgstr "Nguồn tài sản"
+
+msgid "Specify your payout, which is your potential return if your prediction is correct. Our system will proceed to calculate your stake, which is the total cost of purchasing the contract. Binary.com offers payouts from $1 to $50,000"
+msgstr ""
 
 msgid "Spinning Top (CDLSPINNINGTOP)"
 msgstr "Mô hình ngọn quay (CDLSPINNINGTOP)"
@@ -2754,11 +2763,14 @@ msgstr "Chức năng thống kê"
 msgid "Status"
 msgstr "Trạng thái"
 
+msgid "Stays Between/Goes Outside"
+msgstr ""
+
 msgid "Stays Between/Goes Outside trades"
 msgstr "Các giao dịch ở yên giữa/ra bên ngoài"
 
-msgid "Stays In/Goes Out"
-msgstr "Ở trong/Ra ngoài"
+msgid "Stays Between/Goes Outside   Predict that the market stays inside or goes outside two price targets any time during the contract period"
+msgstr ""
 
 msgid "Stays in"
 msgstr "Ở lại trong"
@@ -2766,8 +2778,8 @@ msgstr "Ở lại trong"
 msgid "Step 1: Define your position"
 msgstr "Bước 1: Xác định vị thế của bạn"
 
-msgid "Step 2: Get your trade price"
-msgstr "Bước 2: Làm giá giao dịch của bạn"
+msgid "Step 2: Get your contract price"
+msgstr ""
 
 msgid "Step 3: Make your trade"
 msgstr "Bước 3: Thực hiện giao dịch của bạn"
@@ -2786,12 +2798,6 @@ msgstr "Chỉ số sức mạnh tương đối ngẫu nhiên (STOCHRSI)"
 
 msgid "Stochastic Slow (STOCHS)"
 msgstr "Ngẫu nhiên chậm (STOCHS)"
-
-msgid "Stock Indices"
-msgstr "Chỉ số chứng khoán"
-
-msgid "Stock indices"
-msgstr "Chỉ số chứng khoán"
 
 msgid "Stock market indices measure the value of a selection of companies in the stock market"
 msgstr "Chỉ số thị trường chứng khoán đo lường giá trị của một sự lựa chọn các công ty trên thị trường chứng khoán"
@@ -2841,9 +2847,6 @@ msgstr "Chủ Nhật"
 msgid "Table"
 msgstr "Bảng biểu"
 
-msgid "Take early profits"
-msgstr "Có lợi nhuận ban đầu"
-
 msgid "Takuri (Dragonfly Doji with very long lower shadow) (CDLTAKURI)"
 msgstr "Mô hình Takuri (Dragonfly Doji với bóng dưới rất dài) (CDLTAKURI)"
 
@@ -2858,9 +2861,6 @@ msgstr "Thông tin thuế"
 
 msgid "Tax residence"
 msgstr "Thuế nơi cư trú"
-
-msgid "Tax-free"
-msgstr "Miễn thuế"
 
 msgid "Tel"
 msgstr "Điện thoại"
@@ -2882,6 +2882,9 @@ msgstr "Cấp 3"
 
 msgid "The"
 msgstr "Các"
+
+msgid "The AUD Index is a weighted Index, measuring the Australian Dollar's value against a basket of 5 global currencies (USD, EUR, GBP, JPY, CAD), each weighted by 20%"
+msgstr ""
 
 msgid "The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a  Fast  and a  Slow  moving average"
 msgstr "Công cụ dao động giá tuyệt đối (APO) dựa trên sự khác biệt tuyệt đối giữa hai biến thiên trung bình của những độ dài khác nhau, một biến thiên trung bình nhanh và một chậm"
@@ -2928,11 +2931,17 @@ msgstr "Công thức biến thiên trung bình gấp đôi theo hàm mũ (D
 msgid "The Dragonfly Doji is created when the open, high, and close are the same or about the same price (Where the open, high, and close are exactly the same price is quite rare).The most important part of the Dragonfly Doji is the long lower shadow"
 msgstr "Dragonfly Doji được tạo ra khi mở, cao, và gần giống nhau hoặc về cùng một mức giá (nơi mở, cao, và thân là chính xác cùng một mức giá là khá hiếm). Phần quan trọng nhất của Dragonfly Doji là bóng tối lâu hạ"
 
+msgid "The EUR Index is a weighted Index, measuring the Euro's value against a basket of 5 global currencies (USD, AUD, GBP, JPY, CAD), each weighted by 20%"
+msgstr ""
+
 msgid "The Exponential Moving Average (EMA) represents an average of prices, but places more weight on recent prices. The weighting applied to the most recent price depends on the selected period of the moving average. The shorter the period for the EMA, the more weight that will be applied to the most recent price"
 msgstr "biến thiên trung bình theo hàm mũ (EMA) đại diện cho giá cả bình quân, nhưng đặt trọng lượng hơn về giá cả tại. Cân được áp dụng để đặt giá phụ thuộc vào thời kì đã chọn di chuyển trung bình. EMA có thời kì càng ngắn, trọng lượng hơn mà sẽ được áp dụng để đặt giá"
 
 msgid "The Fast Stochastic Oscillator is based on George Lane's original formulas for %K and %D. %K in the fast version that appears rather choppy. %D is the 3-day SMA of %K"
 msgstr "Oscillator Stochastic nhanh dựa trên công thức gốc của George Lane cho %K và %D. %K trong phiên bản nhanh chóng xuất hiện khá vội vàng. %D là SMA 3 ngày của %K"
+
+msgid "The GBP Index is a weighted Index, measuring the British Pound's value against a basket of 5 global currencies (USD, EUR, AUD, JPY, CAD), each weighted by 20%"
+msgstr ""
 
 msgid "The Gravestone Doji is created when the open, low, and close are the same or about the same price (Where the open, low, and close are exactly the same price is quite rare). The most important part of the Graveston Doji is the long upper shadow"
 msgstr "Bia mộ Doji được tạo ra khi mở, thấp, và gần như nhau, hoặc về cùng một mức giá (nơi mở, thấp, và gần gũi chính xác cùng một mức giá là khá hiếm). Phần quan trọng nhất của bia mộ Doji là bóng trên dài"
@@ -3006,6 +3015,12 @@ msgstr "Các Triple mũ di chuyển trung bình (TEMA) bởi Patrick Mulloy cung
 msgid "The Typical Price function measures the average of the high, low, and closing prices for the day using a simple, single-line plot. The ordinary price gives a simplified view of the day trading prices for as well as it happens with other price-adjustment functions. You can use it for smoothing out some of the inconstancy of the closing price because it comprises information for the whole trading day and not only the result of the day's end. The Typical Price indicator is measured by adding the high, low, and closing prices together, and then dividing by three"
 msgstr "Các chức năng điển hình giá các biện pháp trung bình cao, thấp và giá đóng cửa trong ngày bằng cách sử dụng một cốt truyện đơn giản, dòng đơn. Giá bình thường cho một cái nhìn đơn giản của ngày giao dịch giá nhất và cũng là nó sẽ xảy ra với các chức năng điều chỉnh giá. Bạn có thể sử dụng nó làm mịn ra một số inconstancy mức giá đóng cửa vì nó bao gồm các thông tin cho toàn bộ giao dịch ngày và không chỉ là kết quả của những ngày cuối cùng. Điển hình giá chỉ được đo bằng cách thêm cao, thấp, và giá đóng cửa với nhau, và sau đó chia ba"
 
+msgid "The USD Index is a weighted Index, measuring the US Dollar's value against a basket of 5 global currencies (EUR, GBP, JPY, CAD, AUD), each weighted by 20%"
+msgstr ""
+
+msgid "The Volatility 100 Index is twice as volatile as the Volatility 50 Index, and four times as volatile as the Volatility 25 Index"
+msgstr ""
+
 msgid "The Weighted Close indicator is simply an average of each day's price. It can be used to smooth out some of the inconstancy of a chart of closing prices, as it comprises information for the whole trading day"
 msgstr "Các chỉ số trọng đóng là chỉ đơn giản là trung bình mỗi ngày giá. Nó có thể được sử dụng để mịn ra một số inconstancy biểu đồ của giá đóng cửa, vì nó bao gồm các thông tin cho toàn bộ kinh doanh ngày"
 
@@ -3014,9 +3029,6 @@ msgstr "Chỉ số cân bằng sức mạnh cho (BOP) đo sức mạnh của bò
 
 msgid "The barrier of a binary option trade is the price target you set for the underlying. You can choose trades that stay below or go above a price target, or stay between two targets"
 msgstr "Rào cản của một giao dịch quyền chọn nhị phân là các mức giá mục tiêu bạn đặt ra cho các cơ sở. Bạn có thể lựa chọn giao dịch ở dưới hoặc vượt trên giá mục tiêu, hoặc ở giữa hai mục tiêu"
-
-msgid "The barrier(s) you choose defines your position and triggers your payout"
-msgstr "Barrier(s) bạn chọn xác định vị trí của bạn và kích hoạt thanh toán của bạn"
 
 msgid "The breakaway pattern begins with a long candle representing the current trend. The following candle is the same color and it gaps away from that first long candle. While the third day s candle can be either color, it will not show a change in the current trend. The fourth day continues the trend and therefore continues to produce the same color candles. The fifth day however, reverses the trend. Please note that it only opens slightly the opposite of the current trend and it continues in the same direction to where it then closes in the gap area"
 msgstr "Các mô hình ly khai bắt đầu với một ngọn nến lâu đại diện cho xu hướng hiện nay. Ngọn nến sau là cùng một màu sắc và nó khoảng trống từ đó ngọn nến lâu dài đầu tiên. Trong khi nến s ngày thứ ba có thể là một trong hai màu, nó sẽ không hiển thị một sự thay đổi trong xu hướng hiện nay. Ngày thứ tư tiếp tục xu hướng và do đó tiếp tục sản xuất những cây nến cùng một màu sắc. Ngày thứ năm Tuy nhiên, đảo ngược xu hướng. Xin lưu ý rằng nó chỉ mở ra một chút đối lập với xu hướng hiện tại và nó vẫn tiếp tục trong cùng một hướng đến nơi nó sau đó đóng cửa trong khu vực khoảng cách"
@@ -3045,8 +3057,11 @@ msgstr "Các dịch vụ kinh doanh tài chính có trên trang web này chỉ t
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 msgstr "Những dịch vụ giao dịch tài chính ở trên trang web này chỉ thích hợp cho những khách hàng là những người có thể chịu sự tổn thất của tất cả số tiền họ đầu tư vào và là những người có kiến thức và có kinh nghiệm với rủi ro liên quan đến hợp đồng tài chính. Giao dịch trong các hợp đồng tài chính chứa đựng một mức độ rủi ro cao. Nếu hợp đồng được mua bị hết thời hạn và trở nên vô giá trị, bạn sẽ bị mất toàn bộ khoản đầu tư cùng với lợi nhuận của hợp đồng"
 
-msgid "The first step is to open an account. You can apply online in just a few minutes"
-msgstr "Bước đầu tiên là mở một tài khoản. Bạn có thể đăng kí trực tuyến trong vài phút"
+msgid "The first step is to open an account. You can"
+msgstr ""
+
+msgid "The first thing to do is choose the asset you wish to trade, such as gold or oil, stocks or FX rates (The value of a binary option is derived from the price of the underlying asset). A big advantage of trading options is that you are not buying or selling the actual asset"
+msgstr ""
 
 msgid "The first three days of the Bullish Ladder Bottom are strong black candlesticks with consecutive lower opens and lower closes. The fourth day is a short black candlestick, but it opens higher and trades higher, leaving a long upper shadow, then closes making a new low. The fifth day is a strong white candlestick that makes a body gap with the fourth day"
 msgstr "Ba ngày đầu tiên của bậc thang dưới Bullish là chân đế nến bằng màu đen mạnh mẽ với liên tục thấp hơn mở và đóng cửa thấp hơn. Ngày thứ tư là một nến đen ngắn, nhưng nó sẽ mở ra cao hơn và giao dịch cao, để lại một bóng lâu thượng, sau đó đóng cửa làm thấp mới. Ngày thứ năm là một nến trắng mạnh mẽ mà làm cho một cơ thể khoảng cách với các ngày thứ tư"
@@ -3098,6 +3113,18 @@ msgstr "Phương sai và độ lệch tiêu chuẩn liên quan chặt chẽ là 
 
 msgid "The volatility indices simulate various real market situations and provide an ideal platform for getting used to trading and testing strategies under various market conditions. These indices depend on volatility and drift, and help users to try out scenarios like - high volatility, low volatility, bullish and bearish trends"
 msgstr "Chỉ số biến động mô phỏng các tình huống thực tế thị trường khác nhau và cung cấp một nền tảng lý tưởng cho việc sử dụng để kinh doanh và thử nghiệm các chiến lược theo các điều kiện thị trường. Những chỉ số phụ thuộc vào biến động và trôi dạt, và giúp người sử dụng để thử ra các tình huống như - biến động cao, bay hơi thấp, xu hướng bullish và hướng giảm"
+
+msgid "There are four main trade types for you to choose from"
+msgstr ""
+
+msgid "There are two types of In/Out trades"
+msgstr ""
+
+msgid "There are two types of Up/Down trades"
+msgstr ""
+
+msgid "There are two ways to trade Asians"
+msgstr ""
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target"
 msgstr "Đây là những giao dịch mà nhà giao dịch dự đoán thị trường kết thúc cao hơn hoặc thấp hơn với giá mục tiêu đặt ra"
@@ -3213,6 +3240,9 @@ msgstr "Để rút tiền xin vui lòng nhập mã xác minh token đặc biệt
 msgid "Token"
 msgstr "Token"
 
+msgid "Token Management"
+msgstr ""
+
 msgid "Token management"
 msgstr "Quản lý Token"
 
@@ -3222,8 +3252,8 @@ msgstr "Tên Token"
 msgid "Token permissions"
 msgstr "Cấp phép Token"
 
-msgid "Tokens are special codes for accessing Binary mobile applications and third party tools"
-msgstr "Token là những mã đặc biệt để truy cập ứng dụng Nhị phân trên điện thoại và các công cụ của bên thứ ba"
+msgid "Tokens are special codes for accessing"
+msgstr ""
 
 msgid "Tooltip background"
 msgstr "Công cụ chú thích nền"
@@ -3232,7 +3262,7 @@ msgid "Tooltip text"
 msgstr "Chữ chú thích"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Tất cả các bot sao chép"
 
 msgid "Total Cost"
 msgstr "Tổng chi phí"
@@ -3241,13 +3271,16 @@ msgid "Total Profit/Loss"
 msgstr "Tổng lợi nhuận/tổn thất"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Tất cả các giao dịch"
 
 msgid "Touch"
 msgstr "Chạm"
 
 msgid "Touch/No Touch"
 msgstr "Chạm/Không chạm"
+
+msgid "Touch/No Touch - Predict if the market will touch or not touch a target price"
+msgstr ""
 
 msgid "Tourism"
 msgstr "Du lịch"
@@ -3262,52 +3295,34 @@ msgid "Trade Confirmation"
 msgstr "Xác nhận giao dịch"
 
 msgid "Trade Types"
+msgstr "Kiểu Giao dịch"
+
+msgid "Trade according to your preferred strategy"
 msgstr ""
-
-msgid "Trade all market conditions"
-msgstr "Tất cả các điều kiện thị trường thương mại"
-
-msgid "Trade to your budget"
-msgstr "Giao dịch với ngân sách của bạn"
-
-msgid "Trade to your strategy"
-msgstr "Giao dịch với chiến lược của bạn"
 
 msgid "Trade using"
 msgstr "Giao dịch đang sử dụng"
 
-msgid "Trade when you want to trade"
-msgstr "Giao dịch khi bạn muốn giao dịch"
-
-msgid "Trade with confidence"
-msgstr "Giao dịch với sự tự tin"
-
-msgid "Trade your way"
-msgstr "Giao dịch theo cách của bạn"
-
 msgid "Trader"
-msgstr ""
+msgstr "Nhà giao dịch"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Số liệu thống kê của nhà giao dịch"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Tính lợi nhuận của giao dịch"
 
 msgid "Trades break down"
-msgstr ""
+msgstr "Phân tích các giao dịch"
 
 msgid "Trading Times"
 msgstr "Thời Gian Giao Dịch"
 
-msgid "Trading binaries is remarkably easy, and requires only 3 simple steps"
-msgstr "Giao dịch nhị phân dễ dàng một cách đáng kể, và yêu cầu chỉ 3 bước đơn giản"
+msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
+msgstr ""
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
 msgstr "Giao dịch quyền chọn nhị phân có thể không thích hợp cho tất cả mọi người, vì vậy vui lòng bảo đảo rằng bạn đã hiểu hoàn toàn về rủi ro có liên quan. Thất thoát của bạn có thể vượt quá số tiền gửi ban đầu và bạn sẽ không được sở hữu hay có bất kì tiền lãi nào trong tài sản cơ sở. Liên quan tới quyền chọn nhị phân, là sản phẩm cá cược, hãy nhớ rằng chơi cá cược có thể bị nghiện - vui lòng chơi một cách có trách nhiệm"
-
-msgid "Trading the financial markets can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr "Việc giao dịch trên thị trường tài chính có thể trở thành nghiện. Hãy điền vào mẫu dưới đây để hạn chế sự tham gia của bạn trên các trang web hoặc gửi một bức thư đã ký hoặc fax cho nhóm hỗ trợ khách hàng của chúng tôi. Sau khi cài đặt, bạn chỉ có thể thắt chặt giới hạn của bạn. Giới hạn chỉ sẽ được gỡ bỏ hoặc nới lỏng sau 7 ngày cùng với ngoại lệ cho ngày Tự Loại Trừ, là thời gian mà không thể gỡ bỏ hoặc thay đổi một khi bạn đã xác nhận nó. Để loại bỏ hoặc tăng giới hạn của bạn, vui lòng liên hệ"
 
 msgid "Tradingview for Binary.com"
 msgstr "Xem giao dịch cho Binary.com"
@@ -3317,6 +3332,9 @@ msgstr "Chuyển giao"
 
 msgid "Transfer to another Binary account"
 msgstr "Chuyển khoản sang tài khoản nhị phân khác"
+
+msgid "Transparent risk and potential reward"
+msgstr ""
 
 msgid "Triangular Moving Average (TRIMA)"
 msgstr "Tam giác di chuyển trung bình (TRIMA)"
@@ -3348,8 +3366,14 @@ msgstr "Doanh số"
 msgid "Two Crows (CDL2CROWS)"
 msgstr "Hai quạ (CDL2CROWS)"
 
+msgid "Two-way pricing"
+msgstr ""
+
 msgid "Typical Price (TYPPRICE)"
 msgstr "Giá đặc trưng (TYPPRICE)"
+
+msgid "US Patents"
+msgstr ""
 
 msgid "USD"
 msgstr "USD"
@@ -3378,8 +3402,8 @@ msgstr "Độc đáo 3 River (CDLUNIQUE3RIVER)"
 msgid "Unique Three River Bottom is a bullish candlestick pattern made up of three candles: The 1st candle has a long and bearish body, the 2nd candle is a hammer, and its body is inside the 1st bar's body, the 3rd candle is small and bullish, its Close price is lower than 2nd bar's"
 msgstr "Duy nhất ba sông đáy là một mô hình nến bullish gôm 3 nến: nến 1 có một cơ thể dài và hướng giảm, ngọn nến thứ 2 là một cái búa, và cơ thể của nó là bên trong cơ thể của quầy bar 1, ngọn nến thứ 3 là nhỏ và tăng, giá gần gũi của nó là thấp hơn 2 thanh"
 
-msgid "Up to 100% returns on rise/fall trades"
-msgstr "Lên đến 100% hoàn vốn về các giao dịch tăng/giảm"
+msgid "Up - Predict that the market will end higher than the average price"
+msgstr ""
 
 msgid "Up/Down"
 msgstr "Lên/xuống"
@@ -3423,8 +3447,8 @@ msgstr "Sử dụng trang web của chúng tôi, khách hàng có thể gi
 msgid "Variance (VAR)"
 msgstr "Phương sai (VAR)"
 
-msgid "Various customisable features   load and arrange assets, charts, and other resources however you see fit"
-msgstr "Các tính năng tuỳ chỉnh tải và sắp xếp các tài sản, bảng xếp hạng và các tài nguyên khác tùy theo cách mà bạn thấy phù hợp"
+msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
+msgstr ""
 
 msgid "Verification code has been sent to your email"
 msgstr "Mã xác minh đã được gửi đến email của bạn"
@@ -3444,8 +3468,8 @@ msgstr "Xem"
 msgid "View Statement"
 msgstr "Xem tuyên bố"
 
-msgid "Volatile markets"
-msgstr "Thị trường biến động"
+msgid "Volatility Index Markets"
+msgstr ""
 
 msgid "Volatility Indicators"
 msgstr "Chỉ số biến động"
@@ -3453,8 +3477,11 @@ msgstr "Chỉ số biến động"
 msgid "Volatility Indices"
 msgstr "Chỉ số biến động"
 
-msgid "Volatility indices"
-msgstr "Chỉ số biến động"
+msgid "Volatility Indices are further categorized into two types"
+msgstr ""
+
+msgid "Volatility indices - Binary.com's proprietary indices that simulate market forces"
+msgstr ""
 
 msgid "WMA stands for weighted moving average. It helps to smooth the price curve for better trend identification. It places even greater importance on recent data than the EMA does"
 msgstr "WMA là viết tắt của trọng di chuyển trung bình. Nó giúp mịn đường cong giá để xác định xu hướng tốt hơn. Nó nơi thậm chí cao hơn tầm quan trọng về dữ liệu gần đây hơn EMA"
@@ -3465,11 +3492,11 @@ msgstr "Chúng tôi bắt buộc phải thông báo cho bạn về những
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "Chúng tôi thực hiện lại. BetOnMarkets.com được trao Giải thưởng năm 2007 được bầu chọn là \" Nhà cung cấp Giao dịch Tài chính Cá cước tỉ lệ Cố định Tốt nhất\" năm 2008"
 
-msgid "We don't usually require any documents as we can verify your identity online"
-msgstr "Chúng tôi không yêu cầu bất kì hồ sơ nào vì chúng tôi có thể xác minh nhận dạng của bạn trực tuyến"
-
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Chúng tôi đặt lại tên thương hiệu BetOnMarkets.com là"
+
+msgid "We segregate all client funds and hold them in secure and licensed financial institutions, according to the conditions of our trading licenses"
+msgstr ""
 
 msgid "We're granted patents for 'Computer trading system and method for speculating on a financial market' and 'Computer trading system for offering custom financial market speculations'. The patents show our ability to innovate and stay ahead of the pack"
 msgstr "Chúng tôi được cấp bằng sáng chế cho 'Hệ thống kinh doanh máy tính và phương pháp suy đoán trên thị trường tài chính' và 'Hệ thống giao dịch máy tính để cung cấp hoạt động suy đoán thị trường tài chính tùy chỉnh'. Các bằng sáng chế cho thấy khả năng của chúng tôi trong việc đổi mới và luôn hướng về phía trước"
@@ -3501,14 +3528,20 @@ msgstr "Đường biến thiên trung bình có trọng lượng (WMA)"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Chào mừng đến với Binary.com Webtrader"
 
+msgid "What are OTC indices and stocks?"
+msgstr ""
+
 msgid "What is pep?"
 msgstr "Pep là gì?"
 
-msgid "When you are satisfied with the trade price, instantly execute your trade"
-msgstr "Khi bạn đang hài lòng với giá giao dịch, ngay lập tức thực hiện giao dịch của bạn"
+msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
+msgstr ""
 
 msgid "When you trade with Binary.com, you can be assured that your deposits are held in a separate trust account and are not used for any other purpose"
 msgstr "Khi bạn giao dịch với Binary.com, bạn được bảo đảm rằng tiền gửi của bạn được cất giữ trong một tài khoản tin cậy riêng biệt và không được sử dụng cho bất kì mục đích nào"
+
+msgid "Where does Binary.com hold my funds?"
+msgstr ""
 
 msgid "While on the go, you can"
 msgstr "Khi đang tiến hành, bạn có thể"
@@ -3516,29 +3549,17 @@ msgstr "Khi đang tiến hành, bạn có thể"
 msgid "Why Choose Binary Trading?"
 msgstr "Tài sao lại chọn Giao dịch Nhị phân?"
 
+msgid "Why trade with Binary.com"
+msgstr ""
+
 msgid "Will I need to install any software?"
 msgstr "Tôi có cần thiết lập phần mền nào nữa không?"
 
 msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing 'Stays In' with a narrow price target"
-msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng lượng hoàn lại khi thắng của bạn bằng cách chọn 'Ở lại trong' với một mục tiêu giá hẹp"
-
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a 'Touch' trade, with a price target farther away from the current price"
-msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng lượng hoàn lại khi thắng của bạn bằng cách chọn 'Chạm' với một mức giá mục tiêu xa hơn khỏi giá hiện tại"
-
-msgid "Win 10-1000% on your stake if you are correct. Increase your winning return by choosing a price target farther away from the current price"
-msgstr "Giành lấy 10-1000% cổ phần của bạn nếu bạn đúng. Tăng lượng hoàn lại khi thắng của bạn bằng cách chọn một mức giá mục tiêu xa hơn khỏi giá hiện tại"
-
 msgid "With Binary.com you can trade"
 msgstr "Với Binary.com bạn có thể giao dịch"
-
-msgid "With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees"
-msgstr "Với nền tảng độc nhất của Binary.com, không có nguy cơ 'trượt giá' hoặc đuổi theo thị trường. Và không có lệ phí ẩn"
-
-msgid "With Binary.com, the most you can lose is the amount you stake at the start of your trade"
-msgstr "Với Binary.com, bạn có thể mất tối đa là số tiền bạn đánh cược ở thời điểm bắt đầu giao dịch của bạn"
 
 msgid "Withdraw funds"
 msgstr "Rút tiền tài khoản"
@@ -3568,40 +3589,19 @@ msgid "Y-axis labels"
 msgstr "Nhãn Y-axis"
 
 msgid "Yearly Profitable Trades"
-msgstr ""
+msgstr "Các giao dịch có lợi nhuận hàng năm"
 
 msgid "Yes"
 msgstr "Có"
 
 msgid "You are not copying any trade(s) yet"
+msgstr "Bạn chưa sao chép bất kỳ (những) giao dịch nào"
+
+msgid "You can"
 msgstr ""
-
-msgid "You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders"
-msgstr "Bạn có thể chọn thanh toán từ $1 đến $50,000. Phạm vi thanh toán rộng này là lý tưởng cho các nhà giao dịch lớn và nhỏ"
-
-msgid "You can only allow other traders to copy your trade"
-msgstr ""
-
-msgid "You can only copy other trader's trade"
-msgstr ""
-
-msgid "You can open an account, deposit funds and begin trading within minutes"
-msgstr "Bạn có thể mở một tài khoản, gửi tiền và bắt đầu giao dịch trong vòng vài phút"
-
-msgid "You can sell back long-term trades at any time to profit from changing market conditions"
-msgstr "Bạn có thể bán lại giao dịch dài hạn tại bất kỳ thời điểm nào để hưởng lợi nhuận từ việc thay đổi điều kiện thị trường"
-
-msgid "You can set the length of your trade, from 10 seconds to 365 days"
-msgstr "Bạn có thể thiết lập thời lượng giao dịch của bạn, từ 10 giây đến 365 ngày"
-
-msgid "You can trade a range of markets, timescales and indices - 24/7"
-msgstr "Bạn có thể giao dịch hàng loạt thị trường, thời lượng và chỉ số - 24/7"
 
 msgid "You don't need to deposit any money to open an account, but you need to deposit funds before you can start trading"
 msgstr "Bạn không cần gửi tiền để mở tài khoản, nhưng bạn cần gửi tiền trước khi bạn bắt đầu giao dịch"
-
-msgid "You get fair and transparent pricing, whatever your position"
-msgstr "Bạn có được công bằng và minh bạch giá cả, không quan trọng về vị trí của bạn"
 
 msgid "You have sold the following contract"
 msgstr "Bạn đã bán hợp đồng sau"
@@ -3609,41 +3609,38 @@ msgstr "Bạn đã bán hợp đồng sau"
 msgid "You haven't saved any templates yet"
 msgstr "Bạn chưa lưu lại bất kỳ mẫu nào"
 
+msgid "You only need to make four decisions to execute a binary contract"
+msgstr ""
+
 msgid "You pay"
 msgstr "Bạn trả"
-
-msgid "You set the barrier(s) to define your position"
-msgstr "Bạn thiết lập rào cản để xác định vị trí của bạn"
 
 msgid "You will be automatically logged out after such time"
 msgstr "Bạn sẽ được tự động đăng xuất sau thời gian như vậy"
 
-msgid "You'll be surprised by the returns you can make"
-msgstr "Bạn sẽ ngạc nhiên bởi lãi suất mà bạn có thể kiếm được"
+msgid "You wish to allow other traders to copy your trades"
+msgstr ""
+
+msgid "You wish to copy another trader's trades"
+msgstr ""
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Tài khoản Binary.com của bạn đã được tạo, nhưng để bắt đầu giao dịch bạn cần cho phép Webtrader truy cập nó"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Tài khoản của bạn (%) bị khóa, xin vui lòng liên hệ với hỗ trợ khách hàng để xem thêm thông tin."
 
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Cài đặt sao chép của bạn"
 
 msgid "Your email"
 msgstr "Email của bạn"
 
-msgid "Your money is always safe with Binary.com"
-msgstr ""
-
 msgid "Your new account balance is"
 msgstr "Số dư tài khoản mới của bạn là"
-
-msgid "Your risks are known"
-msgstr "Rủi ro của bạn được biết đến"
 
 msgid "Your transaction reference is"
 msgstr "Tham chiếu của giao dịch của bạn là"
@@ -3660,8 +3657,14 @@ msgstr "cho phép khách hàng phát triển rô bốt tự động giao dịch 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr "và cho các khách hàng Ailen (3) ủy viên doanh thu ở Ai-Len, các vấn đề về giấy phép đặt hàng từ xa hiện tại vào 29 tháng 9 năm 2015 (giấy phép số 1010285). Dịch vụ của trang web này không được thực hiện có sẵn ở một số quốc gia như Mỹ, Costa Rica, Hồng Kông, hoặc cho những người dưới 18 tuổi"
 
+msgid "and start learning how to trade"
+msgstr ""
+
 msgid "apostrophe (') are allowed"
 msgstr "dấu nháy (') là được cho phép"
+
+msgid "apply online"
+msgstr ""
 
 msgid "at a valuation of US$ 50.5 million"
 msgstr "tại mức định giá 50.5 triệu đô là Mỹ"
@@ -3678,6 +3681,9 @@ msgstr "Hoa hồng"
 msgid "contact support"
 msgstr "liên hệ hỗ trợ"
 
+msgid "create a token, and share the token with copier(s)"
+msgstr ""
+
 msgid "customer support"
 msgstr "hỗ trợ khách hàng"
 
@@ -3686,6 +3692,9 @@ msgstr "ngày"
 
 msgid "days"
 msgstr "ngày"
+
+msgid "deposit funds and begin trading within minutes"
+msgstr ""
 
 msgid "disposes of its stake"
 msgstr "loại bỏ cổ phần của mình"
@@ -3716,6 +3725,9 @@ msgstr "giờ"
 
 msgid "if this is not your country of residence"
 msgstr "nếu như đây không phải quốc gia bạn cư trú"
+
+msgid "in just a few minutes"
+msgstr ""
 
 msgid "in the future, the"
 msgstr "trong tương lai,"
@@ -3767,6 +3779,12 @@ msgstr "đánh dấu tiếp theo"
 
 msgid "of \"Now\", the"
 msgstr "của \"bây giờ\","
+
+msgid "open a free $10k fully-functional virtual-money account"
+msgstr ""
+
+msgid "open an account"
+msgstr ""
 
 msgid "our helpful support desk"
 msgstr "bàn hỗ trợ hữu ích của chúng tôi"

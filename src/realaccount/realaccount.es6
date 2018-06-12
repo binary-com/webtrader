@@ -511,7 +511,7 @@ const init_state = (root, what_todo) => {
                return;
             const currencies = data.landing_company_details.legal_allowed_currencies;
             const currencies_config = local_storage.get("currencies_config") || {};
-            const cr_accts = _.filter(Cookies.loginids(), { is_cr: true });
+            const cr_accts = _.filter(loginids(), { is_cr: true });
             const has_fiat = _.some(cr_accts, { type: 'fiat' });
             if (!has_fiat)
                state.user.available_currencies = currencies.filter((c) => {

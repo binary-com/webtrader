@@ -14,7 +14,7 @@
             </div>
             <div class="cell">
               <span>Copier</span>
-              <span class="font-s">You can only copy other trader's trade</span>
+              <span class="font-s">You wish to copy another trader's trades.</span>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="cell">
               <span>Trader</span>
-              <span class="font-s">You can only allow other traders to copy your trade.</span>
+              <span class="font-s">You wish to allow other traders to copy your trades.</span>
             </div>
           </div>
         </div>
@@ -241,6 +241,6 @@
     </div>
   </div>
   <div rv-show="allowCopy.allow_copiers | trim | eq '1'" class="copytrade-tradermsg">
-    Go to Token Management, create a token, and share the token with copier(s).
+    Go to <a rv-on-click="openTokenMgmt" class="openTokenMgmt">Token Management</a>, create a token, and share the token with copier(s).
   </div>
 </div>

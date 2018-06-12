@@ -30,7 +30,7 @@
     }
     /* .trae-conf comes from tradeConf.js module */
     .trade-conf {
-        left:-350px;
+        left:-400px;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -43,6 +43,7 @@
 }
 
 .trade-fields {
+  justify-content: center;
   .error { background: #fef1cf; }
   ul.categories-row li select.contract-category-display + .ui-selectmenu-button { max-width: 145px; }
   .ui-selectmenu-text { margin-top: -4px; }

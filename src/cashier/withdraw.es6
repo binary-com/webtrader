@@ -153,7 +153,7 @@ class Withdraw {
                     }
                 }
             },
-            login_details: Cookies.loginids().reduce(function(a, b) {
+            login_details: loginids().reduce(function(a, b) {
                 if (a.id === local_storage.get("authorize").loginid) return a;
                 else return b
             })
@@ -319,7 +319,7 @@ class Withdraw {
         transfer.isAvailable = () => {
             if (state.login_details.is_mlt || state.login_details.is_mf) {
                 let is_upgradable = true;
-                Cookies.loginids().forEach((id) => {
+                loginids().forEach((id) => {
                     if (id.id !== state.login_details.id && (id.is_mf || id.is_mlt)) {
                         is_upgradable = false;
                         transfer.value = [{

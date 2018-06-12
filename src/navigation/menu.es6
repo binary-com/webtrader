@@ -59,8 +59,8 @@ export const sortMenu = (markets) => {
    //Sort market
    if($.isArray(markets)) {
 
-      const rank = { "forex": 1, "indices": 2, "stocks": 3, "commodities": 4, "volidx": 5 };
-      markets = _.sortBy( markets, (o) => rank[o.name.toLowerCase()]);
+      const rank = { "forex": 1, "indices": 2, "otc stocks": 3, "commodities": 4, "volatility indices": 5 };
+      markets = _.sortBy( markets, (o) => rank[o.display_name.toLowerCase()]);
       markets.forEach((market) => {
          if($.isArray(market.submarkets)) {
             // Sort sub-markets
@@ -93,7 +93,8 @@ export const refreshMenu = (root, markets, callback) => {
       const $li = $(e.target).closest('li');
       const symbol = $li.attr('symbol');
       const pip = $li.attr('pip');
-      $menu.detach(); root.append($menu);
+      $menu.detach();
+      root.append($menu);
       callback(symbol, display_name, pip);
    });
    $menu.menu({ position: { collision: 'fit' } });
