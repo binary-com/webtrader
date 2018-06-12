@@ -1,28 +1,24 @@
 ## Why trade with Binary.com
 
-###Award-winning online trading platform
+### Why Choose Binary Trading?
 
-**Simple and intuitive** - Enjoy a trading platform that’s easy to navigate and use
-**Instant access** - Open an account and start trading in minutes. Deposits and withdrawals are also available 24/7
-**Available 24/7** - Trade when you want. Binary.com is available 24/7, even on weekends
-**Patented technology** - Trade with the industry pioneer and holder of a patented pricing technology
-**Security and privacy** - Trade confidently, knowing that your personal data, transactions, and funds are always secure
+A binary option is an option with a fixed payout that is determined at the start of the trade. If your prediction is correct, you receive an agreed payout. If not, you lose your initial stake, and no more. The options are called 'binary' because there can be only two outcomes - win or lose.
 
-###All market conditions and durations
+### Binary trading is flexible.
 
-**All markets and conditions** - Trade currencies, indices, commodities and more in rising, falling, sideways, quiet, and volatile markets
-**Short to long-term durations** - Choose timeframes from 10 seconds to 365 days
+With Binary.com you can trade:
 
-###Competitive and transparent pricing
+- **All markets** - currencies, stock indices, and commodities.
+- **All market conditions** - up/down, touch/no-touch, stays between/goes outside.
+- **All durations** - from 10 seconds to 365 days.
+- **All payouts** - from $1 to $50,000.
 
-**Sharp, benchmarked prices** - Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets.
-**Transparent risk and potential reward** - Know how much you will win or lose before you purchase the contract
-**Protect your profits** - Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses
-**Two-way pricing** - Receive quotes for a trade and counter-trade, so you always get unbiased, transparent rates from Binary.com
+### Binary trading is ideal for both individuals and market professionals.
 
-###Ideal for beginners and experienced traders
+#### Individual Traders
 
-**Low minimum stakes** - Deposit as little as USD 5 to start trading
-**Trade according to your preferred strategy** - Trade based on "gut feel" or rely on technical and fundamental analysis
-**Flexible** - Choose from over one million possible trade variations at any time, and customise your trades according to your preferred strategy
-**Scalable** - Earn the same proportional return on stakes of all values
+If you're an individual trader, you'll appreciate the simplicity, flexibility, and limited risk of binary trading. With Binary.com's low minimum stakes, you'll soon learn how to trade with skill and confidence. And if you have any questions, you're free to access [our helpful support desk](https://www.binary.com/en/contact.html).
+
+#### Market Professionals
+
+Banks, hedge funds and professional investors routinely trade binary options in over-the-counter derivatives markets. Many market professionals use and trust the Binary.com platform for high-volume flexible trades.

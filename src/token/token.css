@@ -123,3 +123,7 @@
   margin-left: 115px;
   width: 275px;
 }
+
+.token-dialog .binaryShop {
+  cursor: pointer;
+}

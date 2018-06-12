@@ -1,5 +1,16 @@
 ##Group History
 
+### 2017
+
+#### Binary.com launches Bitcoin accounts
+Binary.com launches Bitcoin (BTC) accounts for non-EU customers.
+
+#### Initial Coin Offering (ICO)
+Binary.com announces plans for an [IPO on the blockchain.](https://www.binary.com/en/ico.html)
+
+#### Personal Wealth Awards 2017
+Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide.
+
 ### 2016
 
 #### Binary KK granted Japan license
