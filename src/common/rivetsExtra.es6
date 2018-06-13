@@ -152,9 +152,12 @@ rv.formatters['bold-last-character'] = (str) => {
 }
 /* formatter to calcualte the percent of a value of another value */
 rv.formatters['percent-of'] = (changed, original) => {
-   if(changed === undefined || !original)
-      return undefined;
-   return (100*(changed - original)/original).toFixed(2)+'%';
+   if(!changed || !original) return undefined;
+   const percentage_of_amount = (100*(changed - original)/original).toFixed(2);
+   if (percentage_of_amount > 0) {
+     return `+${percentage_of_amount}%`;
+   }
+   return `${percentage_of_amount}%`;
 }
 
 rv.formatters['is-valid-email'] = (email) => email === '' || validateEmail(email);
