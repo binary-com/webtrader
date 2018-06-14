@@ -1096,6 +1096,11 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
     require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
       tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
     });
+    $('#duration-input').keypress((evt) => {
+      if (evt.which < 48 || evt.which > 57) {
+          evt.preventDefault();
+      }
+    });
     // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
     return dialog; // used in tracker to set position.
 }

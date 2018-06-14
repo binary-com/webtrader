@@ -82,7 +82,7 @@
            </select>
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
-            <input class="duration-count" type="number" step="1" min="1" max="100000000"
+            <input class="duration-count" id="duration-input" type="number" step="1" min="1" max="100000000"
                    rv-value="duration_count.value | debounce proposal.onchange" />
         </li>
         <li rv-show="duration.value | eq 'Duration' ">
