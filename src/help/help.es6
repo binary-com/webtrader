@@ -117,6 +117,9 @@ const init = () => {
             }, {
                 text: "Digits".i18n(),
                 id: "digits"
+            }, {
+                text: "Lookbacks".i18n(),
+                id: "lookback"
             }],
             indicators: [{
                 "text": "Volatility Indicators".i18n(),

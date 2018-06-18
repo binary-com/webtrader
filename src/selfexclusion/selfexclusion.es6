@@ -10,6 +10,7 @@ import moment from "moment";
 import html from "text!selfexclusion/selfexclusion.html";
 import "jquery-growl";
 import "common/util";
+import accountstatus from 'accountstatus/accountstatus';
 
 
 let win = null,
@@ -208,19 +209,24 @@ const init_win = function() {
 };
 
 function logoutBasedOnExcludeDateAndTimeOut() {
+    const authorize = local_storage.get('authorize');
     if (settingsData.exclude_until) {
         if (moment.utc(settingsData.exclude_until, 'YYYY-MM-DD').isAfter(moment.utc().startOf('day'))) {
+            local_storage.set('excluded', true);
+            accountstatus.recheckStatus(authorize);
             _.defer(function() {
                 $.growl.error({ message: 'You have excluded yourself until '.i18n() + settingsData.exclude_until });
-                liveapi.invalidate();
             });
         }
-    }
-    if (settingsData.timeout_until) {
-        if (moment(settingsData.timeout_until).isAfter(moment().unix().valueOf())) {
+    } else if (settingsData.timeout_until) {
+        if (moment.unix(settingsData.timeout_until).isAfter(moment().unix().valueOf())) {
+            local_storage.set('excluded', true);
+            accountstatus.recheckStatus(authorize);
             $.growl.error({ message: 'You have excluded yourself until '.i18n() + moment.unix(settingsData.timeout_until).utc().format("YYYY-MM-DD HH:mm") + "GMT" });
-            liveapi.invalidate();
         }
+    } else {
+        local_storage.set('excluded', false);
+        accountstatus.recheckStatus(authorize);
     }
 }
 

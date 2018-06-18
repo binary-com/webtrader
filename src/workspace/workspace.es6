@@ -366,7 +366,8 @@ export const tileDialogs = () => {
    let best = null,
       best_free_space = 1000*1000;
    for (var i = 0; i < 100; ++i) {
-      shuffle(dialogs); // shuffle dialogs
+     // https://trello.com/c/NUzJ7nRn/947-chart-auto-scroll
+      // shuffle(dialogs); // shuffle dialogs
       var total_free_space = arrange(dialogs, false);
       if (total_free_space < best_free_space) {
          best = dialogs.slice(); // clone the array

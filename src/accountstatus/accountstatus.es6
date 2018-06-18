@@ -20,48 +20,47 @@ let is_shown = false;
 
 class AccountStatus {
 
-  constructor() {
-    const _this = this;
+  constructor(addEventListeners) {
     // Initiating account check on login.
-    const onLogin = async (response) => {
-      const $ele = $("#msg-notification");
-      if (+response.authorize.is_virtual === 1) {
-        $ele.is(":visible") && $ele.slideUp(500);
-        is_shown = false;
-        reposition_dialogs(115);
-        return;
-      }
+        liveapi.events.on("login", this.onLogin.bind(this));
+        // liveapi.events.on("switch_account", onLogin);
 
-      const [account_status, website_status, get_settings,
-        financial_assessment, mt5_account] = await _this.getStatus(response.authorize);
-      _this.tc_accepted = false;
-      _this.financial_assessment_submitted = true;
-      _this.is_mlt = /^malta$/gi.test(response.authorize.landing_company_name);
-      _this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
-      _this.is_cr = /^costarica$/gi.test(response.authorize.landing_company_name);
-      _this.has_mt5_account = mt5_account.mt5_login_list.length > 0;
-      _this.is_authenticated = !account_status.get_account_status.prompt_client_to_authenticate;
-      // Check whether the user has accepted the T&C.
-      if (website_status && website_status.website_status && get_settings && get_settings.get_settings) {
-        _this.tc_accepted = website_status.website_status.terms_conditions_version === get_settings.get_settings.client_tnc_status;
-      }
+        // Hide msg bar on logout.
+         liveapi.events.on('reset_accountstatus', _ => {
+             const $ele = $("#msg-notification");
+             $ele.is(":visible") && $ele.slideUp(500);
+             is_shown = false;
+         });
+  }
+  async onLogin (response) {
+    const $ele = $("#msg-notification");
+    if (+response.authorize.is_virtual === 1) {
+      $ele.is(":visible") && $ele.slideUp(500);
+      is_shown = false;
+      reposition_dialogs(115);
+      return;
+    }
 
-      // Check whether the high risk clients have submitted the financial_assessment form.
-      if (account_status.get_account_status.risk_classification === "high" || _this.is_mf) {
-        _this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") == -1;
-      }
+    const [account_status, website_status, get_settings,
+      financial_assessment, mt5_account] = await this.getStatus(response.authorize);
+    this.tc_accepted = false;
+    this.financial_assessment_submitted = true;
+    this.is_mlt = /^malta$/gi.test(response.authorize.landing_company_name);
+    this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
+    this.is_cr = /^costarica$/gi.test(response.authorize.landing_company_name);
+    this.has_mt5_account = mt5_account.mt5_login_list.length > 0;
+    this.is_authenticated = !account_status.get_account_status.prompt_client_to_authenticate;
+    // Check whether the user has accepted the T&C.
+    if (website_status && website_status.website_status && get_settings && get_settings.get_settings) {
+      this.tc_accepted = website_status.website_status.terms_conditions_version === get_settings.get_settings.client_tnc_status;
+    }
 
-      _this.checkStatus(response.authorize, account_status.get_account_status.status);
-    };
-    liveapi.events.on("login", onLogin);
-    // liveapi.events.on("switch_account", onLogin);
+    // Check whether the high risk clients have submitted the financial_assessment form.
+    if (account_status.get_account_status.risk_classification === "high" || this.is_mf) {
+      this.financial_assessment_submitted = account_status.get_account_status.status.indexOf("financial_assessment_not_complete") == -1;
+    }
 
-    // Hide msg bar on logout.
-     liveapi.events.on('reset_accountstatus', _ => {
-         const $ele = $("#msg-notification");
-         $ele.is(":visible") && $ele.slideUp(500);
-         is_shown = false;
-     });
+    this.checkStatus(response.authorize, account_status.get_account_status.status);
   }
 
   getStatus() {
@@ -82,6 +81,16 @@ class AccountStatus {
     // Contains validations, messages, onclick callbacks.
     // Maintaining the order of priority.
     const model = {
+      excluded_until: {
+        message: "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
+        .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
+        is_valid: _ => local_storage.get("excluded") == false,
+        callback: () => {
+          const lang = local_storage.get("i18n").value ? local_storage.get("i18n").value : "en";
+          const win = window.open("http://www.binary.com/" + lang + "/contact.html");
+          win.focus();
+        }
+      },
       tc: {
         message: "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
@@ -123,7 +132,6 @@ class AccountStatus {
         }
       }
     }
-
     // Getting the invalid account status.
     const invalid_obj = _.find(model, obj => !obj.is_valid());
     if (invalid_obj) {
@@ -146,5 +154,6 @@ export const init = new AccountStatus();
 
 export default {
   init,
+  recheckStatus: (auth) => init.onLogin({authorize: auth}),
   is_shown: () => is_shown
 }

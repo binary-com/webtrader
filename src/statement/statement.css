@@ -45,3 +45,7 @@ table.statement-dialog img.arrow {
 table.statement-dialog button {
   padding: 10px 12px;
 }
+
+.statement .webtrader-dialog {
+  width: auto !important;
+}
