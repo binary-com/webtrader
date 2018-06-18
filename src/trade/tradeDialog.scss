@@ -411,7 +411,10 @@
   text-align: center;
   width:auto;
 }
-.trade-fields ul.message-row li span { display: inline; }
+.trade-fields ul.message-row li span { 
+  display: inline; 
+  font-size: 12px;
+}
 
 .trade-fields .spread-deposit {
     background: #c2c1c1;

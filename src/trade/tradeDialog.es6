@@ -47,6 +47,7 @@ import 'timepicker';
 import 'jquery-ui';
 import 'common/util';
 import help from 'help/help';
+import Lookback from './lookback';
 
 require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
 var replacer = function (field_name, value) { return function (obj) { obj[field_name] = value; return obj; }; };
@@ -62,7 +63,7 @@ function apply_fixes(available){
     }).each(replacer('contract_display', 'rise'));
 
     _(available).filter({
-      'contract_category': 'callput',      
+      'contract_category': 'callput',
       'barrier_category': 'euro_atm',
       'barriers': 0,
       'sentiment': 'down'
@@ -158,7 +159,7 @@ function set_current_template(state, tpl) {
   }
   state.categories.selected = tpl.categories_value.contract_category;
   _.defer(function() {
-    if(!_.find(state.category_displays.array, 
+    if(!_.find(state.category_displays.array,
       type => type.name===tpl.categoriy_displays_selected.name && type.sentiment===tpl.categoriy_displays_selected.sentiment)) {
       warn();
       return;
@@ -292,7 +293,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       array: [],
       value: '',
       paddingTop: function(){
-        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "spreads":'5px' };
+        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "lookback":'26px' };
         return paddings[state.categories.value.contract_category] || '3px';
       }
     },
@@ -324,7 +325,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
-      decimal: currencyFractionalDigits()
+      decimals: 0,
     },
     basis: {
       array: ['Payout', 'Stake'],
@@ -373,15 +374,32 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       payout: 0,
       spot: "0.0",
       spot_time: "0",
+      multiplier: "0",
       error: '',
       loading: true, /* the proposal request state */
 
       /* computed properties */
       netprofit_: function () {
+        const {contract_type} = state.category_displays.selected;
+        if (Lookback.isLookback(contract_type)) {
+          return false;
+        }
         return formatPrice(((this.payout - this.ask_price) || 0), state.currency.value);
       },
       payout_: function () {
-        return formatPrice((+this.payout || 0), state.currency.value);
+        const {contract_type} = state.category_displays.selected;
+        if (Lookback.isLookback(contract_type)) {
+          return Lookback.formula(contract_type, formatPrice((+state.basis.amount || 0), state.currency.value, 3));
+        } else {
+          return formatPrice((+this.payout || 0), state.currency.value);
+        }
+      },
+      return_: function () {
+        const {contract_type} = state.category_displays.selected;
+        if (Lookback.isLookback(contract_type) || !this.payout || ! this.ask_price) {
+          return false;
+        }
+        return `${((this.payout - this.ask_price)/this.ask_price * 100).toFixed(1)}%`;
       }
     },
     purchase: {
@@ -445,17 +463,33 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     var category = state.categories.value.contract_category;
     var isInOut = v => ['staysinout', 'endsinout'].indexOf(v) !== -1;
     const check = isInOut(category) ? el => isInOut(el.contract_category) : el => el.contract_category == category;
+    const isLookback = v => /^lookback$/.test(v.toLowerCase());
     state.category_displays.array = [];
     _(available).filter(check).map('contract_display').uniq().value().forEach(
       x => {
         let y = {};
         y.name = x;
         let category_object = _.find(available, {contract_display:x});
-        if (category_object)
+        if (category_object){
           y.sentiment = category_object.sentiment;
+          y.contract_type = category_object.contract_type;
+        }
 
         state.category_displays.array.push(y);
     });
+    if (isLookback(category)) {
+      state.basis.array = ['Multiplier'];
+      state.basis.value = 'multiplier';
+      _.defer(()=> {
+        state.currency.decimals = 3;
+      })
+    } else {
+      state.basis.array = ['Payout', 'Stake'];
+      state.basis.value = 'payout';
+      _.defer(()=> {
+        state.currency.decimals = currencyFractionalDigits();
+      })
+    }
     state.category_displays.selected = _.head(state.category_displays.array);
   };
 
@@ -463,6 +497,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     state.category_displays.selected = {};
     state.category_displays.selected.name = $(e.target).attr('data-name');
     state.category_displays.selected.sentiment = $(e.target).attr('data-sentiment');
+    state.category_displays.selected.contract_type = $(e.target).attr('data-contract_type');
   };
 
   state.date_start.update = function () {
@@ -535,7 +570,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   state.duration.update = function () {
     var category = state.categories.value.contract_category;
-    if (_(["callput", "endsinout", "staysinout", "touchnotouch"]).includes(category)) {
+    if (_(["callput", "endsinout", "staysinout", "touchnotouch", "lookback"]).includes(category)) {
       if(state.duration.array.length !== 2)
         state.duration.array = ['Duration', 'End Time'];
     }
@@ -758,6 +793,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       symbol: state.proposal.symbol, /* Symbol code */
     };
     if(state.categories.value.contract_category !== 'spreads') {
+      // format amount
+      state.basis.amount = ((state.basis.amount.toString()).match(/0*(\d+\.?\d*)/) || [])[1];
       request.amount = state.basis.amount*1; /* Proposed payout or stake value */
       request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
     } else {
@@ -846,9 +883,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       /* trigger a new proposal stream */
       state.proposal.onchange();
     }
-    
+
     /* workaround for api not providing this fields */
     var extra = {
+        amount: state.basis.amount,
         currency: state.currency.value,
         symbol: state.proposal.symbol,
         symbol_name: state.proposal.symbol_name,
@@ -912,11 +950,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .map('contract_category_display')
     .uniq()
     .value()
-    // TODO temp filter until https://trello.com/c/Rj2a7K8e/558-shahrizal-lbuiminoradjustment is released
-    .filter(f => f !== 'Lookback Options')
+    // TODO: Remove this filter after implementing high/low,reset,calle/pute options.
+    .filter(f => !/reset|high\/low|equal|spread/.test(f.toLowerCase()))
     .forEach(x => {
-      let y = {}; 
-      y.contract_category_display = x; 
+      let y = {};
+      y.contract_category_display = x;
       let contract_object = _.find(available, {contract_category_display: x});
       if(contract_object){
         y.contract_category = contract_object.contract_category;
@@ -961,6 +999,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           var proposal = data.proposal;
           state.proposal.ask_price = proposal.ask_price;
           state.proposal.date_start = proposal.date_start;
+          state.proposal.multiplier = proposal.multiplier || '0';
           state.proposal.display_value = proposal.display_value;
           state.proposal.message = proposal.longcode;
           state.proposal.payout = proposal.payout;
@@ -1056,6 +1095,11 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
     dialog.hide_template_menu = () => { state.template.visible = false; };
     require(['trade/tradeTemplateManager'], function(tradeTemplateManager) {
       tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
+    });
+    $('#duration-input').keypress((evt) => {
+      if (evt.which < 48 || evt.which > 57) {
+          evt.preventDefault();
+      }
     });
     // window.state = state; window.av = available; window.moment = moment; window.dialog = dialog; window.times_for = trading_times_for;
     return dialog; // used in tracker to set position.

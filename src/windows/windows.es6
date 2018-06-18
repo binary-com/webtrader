@@ -470,7 +470,7 @@ export const makeSelectmenu = function (select, options) {
    select.on('selectmenuchange', function () {
       var val = $(this).val();
       options.changed(val);
-   })
+   });
 
    select.update_list = (new_list) => {
       update_select(new_list);

@@ -47,7 +47,13 @@
                 <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false | and empty_fields.validate' class='validation'>Please enter a valid date in yyyy-mm-dd format.</span>
             </div>
         </div>
-        <div class='row'>
+      <div class="row">
+          <span class="title">Place of birth</span>
+          <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="user.place_of_birth" rv-selectrefresh="user.country_array">
+            <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
+          </select>
+      </div>
+      <div class='row'>
             <span class='title'>Country of residence</span>
             <span class='residence' rv-text='user.residence_name'></span>
             <div class='validations'>
@@ -137,12 +143,6 @@
         </div>
         <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
             <span class="title-big">Tax information</span>
-        </div>
-        <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
-            <span class="title">Place of birth</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="user.place_of_birth" rv-selectrefresh="user.country_array">
-                <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
-            </select>
         </div>
         <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
             <span class="title">Tax residence</span>
