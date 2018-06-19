@@ -820,10 +820,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     /* set value for duration or date_expiry */
     if (state.duration.value === 'Duration') {
       request.duration_unit = _(state.duration_unit.value).head(); //  (d|h|m|s|t), Duration unit is s(seconds), m(minutes), h(hours), d(days), t(ticks)
-      if(state.duration_count.value < 1) {
-        state.duration_count.value = 1;
-        return;
-      }
       request.duration = state.duration_count.value * 1;
     }
     else {
