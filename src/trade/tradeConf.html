@@ -19,9 +19,9 @@
   <div rv-if="buy.show_result | not-eq true">
       <ul class='payout-row'
           rv-if="ticks.category.contract_category | not-eq 'Spreads'">
-        <li> <span>Potential Payout</span> <span rv-text='buy.payout' /> </li>
-        <li> <span>Total Cost</span> <span rv-text='buy.buy_price' /> </li>
-        <li rv-if='buy.potential_profit'> <span>Potential Profit</span> <span rv-text='buy.potential_profit' /> </li>
+        <li> <span>Potential Payout</span> <span rv-html='buy.payout | format-price buy.currency' /> </li>
+        <li> <span>Total Cost</span> <span rv-html='buy.buy_price | format-price buy.currency' /> </li>
+        <li rv-if='buy.potential_profit'> <span>Potential Profit</span> <span rv-html='buy.potential_profit | format-price buy.currency' /> </li>
       </ul>
 
       <ul class='payout-row spreads-result'
@@ -34,9 +34,9 @@
 
   <ul class='payout-row'
       rv-if="buy.show_result">
-    <li> <span>Buy price</span> <span rv-text='buy.buy_price' /> </li>
-    <li> <span>Final price</span> <span rv-text='buy.payout' /> </li>
-    <li> <span rv-text="buy.potential_profit_text"></span> <span rv-text='buy.potential_profit' /> </li>
+    <li> <span>Buy price</span> <span rv-html='buy.buy_price | format-price buy.currency' /> </li>
+    <li> <span>Final price</span> <span rv-html='buy.payout | format-price buy.currency' /> </li>
+    <li> <span rv-text="buy.potential_profit_text"></span> <span rv-html='buy.potential_profit | format-price buy.currency' /> </li>
   </ul>
 
   <ul class='barrier-row' rv-show='buy.barrier'>
