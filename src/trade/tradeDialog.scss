@@ -357,6 +357,7 @@
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
+        overflow: hidden;
         justify-content: center;
         padding: 9px 0;
         margin-bottom: 2px;
