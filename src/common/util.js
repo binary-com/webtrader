@@ -98,6 +98,9 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
 function formatPrice(float,currency) {
+    if (!!Number(float) === false && Number(float) !== 0) {
+        return float;
+    }
     var sign = float < 0 ? '-': '';
 
     float = float && Math.abs(float);
