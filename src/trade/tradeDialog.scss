@@ -246,6 +246,7 @@
     padding: 2px 3px 2px 3px;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: inherit;
 }
 
@@ -382,6 +383,7 @@
         font-weight:normal;
     }
     .trade-fields ul.contract-displays li:first-child:before { content: none; }
+    .trade-fields ul.contract-displays li:nth-child(6):before { content: none; }
 /*#endregion*/
 
 .trade-fields ul li input.date-expiry-date { width: 100px; }
