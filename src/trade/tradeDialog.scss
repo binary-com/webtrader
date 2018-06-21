@@ -367,9 +367,7 @@
     .trade-fields ul.contract-displays li {
         opacity: .5;
         cursor: pointer;
-        width: auto;
         padding: 0 5px;
-        white-space: nowrap;
     }
 
     .trade-fields ul.contract-displays li.active {
@@ -383,7 +381,7 @@
         font-weight:normal;
     }
     .trade-fields ul.contract-displays li:first-child:before { content: none; }
-    .trade-fields ul.contract-displays li:nth-child(6):before { content: none; }
+    .trade-fields ul.contract-displays li:nth-child(6n):before { content: none; }
 /*#endregion*/
 
 .trade-fields ul li input.date-expiry-date { width: 100px; }
