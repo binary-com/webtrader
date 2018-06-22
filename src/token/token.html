@@ -51,14 +51,22 @@
 
       <span> Token permissions</span>
       <div class='token-scopes'>
-        <input type='checkbox' rv-checked='token.scopes.read' />
-        <label data-balloon="Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more." data-balloon-length="xlarge">Read</label>
-        <input type='checkbox' rv-checked='token.scopes.trade'/>
-        <label data-balloon="Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts." data-balloon-length="xlarge">Trade</label>
-        <input type='checkbox' rv-checked='token.scopes.payments'/>
-        <label data-balloon="Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords." data-balloon-length="xlarge">Payments</label>
-        <input type='checkbox' rv-checked='token.scopes.admin'/>
-        <label data-balloon="Can be used to open accounts, set settings, manage token usage, and more." data-balloon-length="xlarge">Admin</label>
+        <input type='checkbox' id='read_checkbox' rv-checked='token.scopes.read' />
+        <label for="read_checkbox">
+          <span data-balloon="Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more." data-balloon-length="xlarge">Read</span>
+        </label>
+        <input type='checkbox' id='trade_checkbox' rv-checked='token.scopes.trade'/>
+        <label for='trade_checkbox' >
+          <span data-balloon="Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts." data-balloon-length="xlarge">Trade</span>
+        </label>
+        <input type='checkbox' id='payment_checkbox' rv-checked='token.scopes.payments'/>
+        <label for='payment_checkbox'>
+          <span data-balloon="Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords." data-balloon-length="xlarge">Payments</span>
+        </label>
+        <input type='checkbox' id='admin_checkbox' rv-checked='token.scopes.admin'/>
+        <label for='admin_checkbox'>
+          <span data-balloon="Can be used to open accounts, set settings, manage token usage, and more." data-balloon-length="xlarge">Admin</span>
+        </label>
       </div>
 
       <button
