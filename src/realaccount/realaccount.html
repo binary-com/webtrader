@@ -136,8 +136,8 @@
         </div>
         <div class='row'>
             <br>
-            <label>
-                <input type='checkbox' rv-checked='user.pep' />I acknowledge that I am not a politically exposed person (PEP). 
+            <input type='checkbox' id="pep_checkbox" rv-checked='user.pep' />
+            <label for="pep_checkbox" > I acknowledge that I am not a politically exposed person (PEP).
                 <span class="pep" rv-on-click="user.pep_window">What is pep?</span>
             </label>
         </div>
@@ -163,10 +163,12 @@
         </div>
         <br>
         <div class='row'>
-            <label rv-if='what_todo | eq "upgrade-mlt"'>
-                <input type='checkbox' rv-checked='user.accepted' /> I have read and agree to Binary.com
-                <a href="https://www.binary.com/en/terms-and-conditions.html" target="_blank">terms and conditions</a>.
-            </label>
+            <div rv-if='what_todo | eq "upgrade-mlt"'>
+                <input type='checkbox' id="tac_checkbox" rv-checked='user.accepted' /> 
+                <label for="tac_checkbox">I have read and agree to Binary.com
+                    <a href="https://www.binary.com/en/terms-and-conditions.html" target="_blank">terms and conditions</a>.
+                </label>
+            </div>
         </div>
         <div class='row'>
             <button rv-on-click='user.click' rv-disabled='user.disabled | or-not user.accepted | or-not user.pep' rv-css-opacity='user.disabled | or-not user.accepted | or-not user.pep | ternary 0.5 1'>
