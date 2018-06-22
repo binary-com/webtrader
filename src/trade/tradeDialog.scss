@@ -246,6 +246,7 @@
     padding: 2px 3px 2px 3px;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: inherit;
 }
 
@@ -357,6 +358,7 @@
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
+        overflow: hidden;
         justify-content: center;
         padding: 9px 0;
         margin-bottom: 2px;
@@ -365,9 +367,7 @@
     .trade-fields ul.contract-displays li {
         opacity: .5;
         cursor: pointer;
-        width: auto;
         padding: 0 5px;
-        white-space: nowrap;
     }
 
     .trade-fields ul.contract-displays li.active {
@@ -381,6 +381,7 @@
         font-weight:normal;
     }
     .trade-fields ul.contract-displays li:first-child:before { content: none; }
+    .trade-fields ul.contract-displays li:nth-child(6n):before { content: none; }
 /*#endregion*/
 
 .trade-fields ul li input.date-expiry-date { width: 100px; }
