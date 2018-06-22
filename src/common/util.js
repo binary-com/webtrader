@@ -101,7 +101,7 @@ function formatPrice(float, currency) {
     currency = (currency || '').toLowerCase().trim();
 
     if (!!Number(float) === false && Number(float) !== 0) {
-        return currency ? `<span class="symbols ${currency}">${float}</span>` : float;
+        return currency ? "<span class='symbols " +  currency + "'>" + float + "</span>" : float;
     }
     var sign = float < 0 ? '-': '';
     float = float && Math.abs(float);
