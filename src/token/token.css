@@ -74,14 +74,14 @@
   margin-top: 3px;
 }
 
-.token-dialog .create-token-pane .token-scopes { margin: 10px 0px; }
+.token-dialog .create-token-pane .token-scopes { margin-top: 10px; }
 .token-dialog .create-token-pane .question-mark {
   color: #aaa;
   font-size: 12px;
   cursor: pointer;
 }
 
-.token-dialog .create-token-pane .token-scopes > span {
+.token-dialog .create-token-pane .token-scopes label > span {
   width: auto;
   display: inline-block;
   margin-bottom: 20px;
