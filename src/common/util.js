@@ -97,14 +97,14 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 }
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
-function formatPrice(float,currency) {
+function formatPrice(float, currency) {
+    currency = (currency || '').toLowerCase().trim();
+
     if (!!Number(float) === false && Number(float) !== 0) {
-        return float;
+        return currency ? `<span class="symbols ${currency}">${float}</span>` : float;
     }
     var sign = float < 0 ? '-': '';
-
     float = float && Math.abs(float);
-    currency = (currency || '').toLowerCase().trim();
     var currencies_config = (local_storage.get('currencies_config') || {});
     var minimumFractionDigits = (currencies_config[(currency|| '').toUpperCase()] || {}).fractional_digits || 2;
     var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
@@ -112,12 +112,12 @@ function formatPrice(float,currency) {
 						style: "decimal",
 						minimumFractionDigits: minimumFractionDigits,
                     }).format(float);
-	if(currency){
+	if (currency) {
 		float = sign + $('<span>', {
             class: 'symbols ' + currency,
             text: float
         })[0].outerHTML;
-	}
+    }
 	return float;
 }
 
