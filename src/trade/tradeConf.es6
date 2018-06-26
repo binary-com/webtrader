@@ -171,7 +171,6 @@ const register_ticks = (state, extra) => {
       // DONT TRUST BACKEND! I'm really angry right now :/
       // Try everything before calculating expiry.
       expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
-      console.log(contract, expiry);
       if(!tracking_timeout_set && entry && expiry)
          track_ticks();
       return;
