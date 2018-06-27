@@ -794,11 +794,9 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     if(state.categories.value.contract_category !== 'spreads') {
       // format amount
-      if (!_.isNil(state.basis.amount)) {
-        state.basis.amount = (state.basis.amount.toString().match(/0*(\d+\.?\d*)/) || [])[1];
-        request.amount = state.basis.amount*1; /* Proposed payout or stake value */
-        request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
-      }
+      state.basis.amount = !_.isNil(state.basis.amount) ? (state.basis.amount.toString().match(/0*(\d+\.?\d*)/) || [])[1] : state.basis.amount;
+      request.amount = state.basis.amount; /* Proposed payout or stake value */
+      request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
     } else {
       request.amount_per_point = state.spreads.amount_per_point;
       request.stop_type = state.spreads.stop_type;
@@ -848,7 +846,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         return data;
       })
       .catch(function (err) {
-        console.error(err);
         state.proposal.error = err.message;
         state.proposal.message = '';
         state.proposal.loading = false;
