@@ -794,7 +794,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     if(state.categories.value.contract_category !== 'spreads') {
       // format amount
-      if (state.basis.amount) {
+      if (!_.isNil(state.basis.amount)) {
         state.basis.amount = (state.basis.amount.toString().match(/0*(\d+\.?\d*)/) || [])[1];
         request.amount = state.basis.amount*1; /* Proposed payout or stake value */
         request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
