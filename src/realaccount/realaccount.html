@@ -162,6 +162,13 @@
             </div>
         </div>
         <br>
+        <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
+            <input type='checkbox' id='tax_checkbox' rv-checked='user.chk_tax_id' />
+            <label for='tax_checkbox'>
+                    I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information.
+            </label>
+        </div>
+        <br>
         <div class='row'>
             <div rv-if='what_todo | eq "upgrade-mlt"'>
                 <input type='checkbox' id='tac_checkbox' rv-checked='user.accepted' />
