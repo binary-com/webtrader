@@ -221,11 +221,9 @@ const update_indicative = (data, state) => {
          state.sell.bid_prices.shift();
       }
       state.sell.bid_prices.push(contract.bid_price)
-
-      if(contract.bid_price !== undefined) {
+      if(!_.isNil(contract.bid_price)) {
          state.sell.bid_price.value = contract.bid_price;
-         state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
-         state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+         [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
       }
       state.sell.is_valid_to_sell = contract.is_valid_to_sell;
       state.chart.manual_reflow();

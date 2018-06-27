@@ -81,7 +81,7 @@
   cursor: pointer;
 }
 
-.token-dialog .create-token-pane .token-scopes > label {
+.token-dialog .create-token-pane .token-scopes label > span {
   width: auto;
   display: inline-block;
   margin-bottom: 20px;
@@ -119,7 +119,7 @@
   display: block;
   margin-bottom: 5px;
 }
-.token-dialog label[data-balloon]:before {
+.token-dialog span[data-balloon]:before {
   margin-left: 115px;
   width: 275px;
 }
