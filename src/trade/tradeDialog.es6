@@ -835,7 +835,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       });
     }
     // TODO: add forget first functionality
-    async function subscribeProposalHandler(request, times_retry) {
+    async function subscribeProposalHandler(request, times_retry, err_code) {
       let response;
       for (let i = 0; i < times_retry; i++) {
         console.log('retry: ', i, times_retry);
@@ -851,11 +851,14 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           state.proposal.error = err.message;
           state.proposal.message = '';
           state.proposal.loading = false;
+          if (err_code && err_code !== err.code) {
+            break;
+          }
         }
       }
       return response;
     }
-    const new_proposal_promise = subscribeProposalHandler(request, 2);
+    const new_proposal_promise = subscribeProposalHandler(request, 2, 'AlreadySubscribed');
     /* update last_promise to invalidate previous requests */
     state.proposal.last_promise = new_proposal_promise;
     state.proposal.id = ''; /* invalidate last proposal.id */
