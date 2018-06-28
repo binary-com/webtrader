@@ -834,41 +834,28 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         id && liveapi.send({forget: id});
       });
     }
-
-    var new_proposal_promise = liveapi.send(request)
-      .then(function (data) {
-        /* OK, this is the last sent request */
-        if(new_proposal_promise === state.proposal.last_promise) {
-          var id = data.proposal && data.proposal.id;
-          state.proposal.error = '';
-          state.proposal.id = id;
-        }
-        return data;
-      })
-      .catch(function (err) {
-        console.error(err);
-        state.proposal.error = err.message;
-        state.proposal.message = '';
-        state.proposal.loading = false;
-        // retry once
-        liveapi.send(request)
-          .then(function (data) {
-            /* OK, this is the last sent request */
-            if(new_proposal_promise === state.proposal.last_promise) {
-              var id = data.proposal && data.proposal.id;
+    // TODO: add forget first functionality
+    async function subscribeProposalHandler(request, times_retry) {
+      let response;
+      for (let i = 0; i < times_retry; i++) {
+        console.log('retry: ', i, times_retry);
+        try {
+          response = await liveapi.send(request);
+          if (new_proposal_promise === state.proposal.last_promise) {
               state.proposal.error = '';
-              state.proposal.id = id;
-            }
-            return data;
-          })
-          .catch(function (err) {
-            console.error(err);
-            state.proposal.error = err.message;
-            state.proposal.message = '';
-            state.proposal.loading = false;
-            return err;
-          });
-      });
+              state.proposal.id = response.proposal && response.proposal.id;
+          }
+          break;
+        } catch (err) {
+          console.error(err);
+          state.proposal.error = err.message;
+          state.proposal.message = '';
+          state.proposal.loading = false;
+        }
+      }
+      return response;
+    }
+    const new_proposal_promise = subscribeProposalHandler(request, 2);
     /* update last_promise to invalidate previous requests */
     state.proposal.last_promise = new_proposal_promise;
     state.proposal.id = ''; /* invalidate last proposal.id */
