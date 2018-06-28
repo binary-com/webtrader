@@ -845,7 +845,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     async function subscribeProposalHandler(request_obj, times_retry, required_err_code) {
       let response;
       for (let i = 0; i < times_retry; i++) {
-        console.log('retry: ', i, times_retry);
         try {
           response = await liveapi.send(request_obj);
           if (new_proposal_promise === state.proposal.last_promise) {
@@ -854,17 +853,15 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           }
           break;
         } catch (err) {
-          console.error(err);
           state.proposal.error = err.message;
           state.proposal.message = '';
           state.proposal.loading = false;
-          if (required_err_code && required_err_code !== err.code) {
-            break;
-          }
+          if (required_err_code && required_err_code !== err.code) { break; }
         }
       }
       return response;
     }
+
     const new_proposal_promise = subscribeProposalHandler(request, 2, 'AlreadySubscribed');
     /* update last_promise to invalidate previous requests */
     state.proposal.last_promise = new_proposal_promise;
