@@ -850,7 +850,24 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         state.proposal.error = err.message;
         state.proposal.message = '';
         state.proposal.loading = false;
-        return err;
+        // retry once
+        liveapi.send(request)
+          .then(function (data) {
+            /* OK, this is the last sent request */
+            if(new_proposal_promise === state.proposal.last_promise) {
+              var id = data.proposal && data.proposal.id;
+              state.proposal.error = '';
+              state.proposal.id = id;
+            }
+            return data;
+          })
+          .catch(function (err) {
+            console.error(err);
+            state.proposal.error = err.message;
+            state.proposal.message = '';
+            state.proposal.loading = false;
+            return err;
+          });
       });
     /* update last_promise to invalidate previous requests */
     state.proposal.last_promise = new_proposal_promise;
@@ -1036,7 +1053,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
           /* forget last proposal stream on close */
           if(state.proposal.last_promise) {
             state.proposal.last_promise.then(function(data){
-              var id = data.proposal && data.proposal.id;
+              var id = data && data.proposal && data.proposal.id;
               id && liveapi.send({forget: id});
             });
           }
