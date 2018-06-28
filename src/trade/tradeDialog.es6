@@ -834,13 +834,20 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         id && liveapi.send({forget: id});
       });
     }
-    // TODO: add forget first functionality
-    async function subscribeProposalHandler(request, times_retry, err_code) {
+
+    /**
+     * To retry proposal subscription
+     *
+     * @param {Object}   request_obj          Object of the request to be made
+     * @param {Number}   times_retry          Times to retry the request if the request fails
+     * @param {String}   required_err_code     Optional - only retry if the response error code matches this error code
+     */
+    async function subscribeProposalHandler(request_obj, times_retry, required_err_code) {
       let response;
       for (let i = 0; i < times_retry; i++) {
         console.log('retry: ', i, times_retry);
         try {
-          response = await liveapi.send(request);
+          response = await liveapi.send(request_obj);
           if (new_proposal_promise === state.proposal.last_promise) {
               state.proposal.error = '';
               state.proposal.id = response.proposal && response.proposal.id;
@@ -851,7 +858,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           state.proposal.error = err.message;
           state.proposal.message = '';
           state.proposal.loading = false;
-          if (err_code && err_code !== err.code) {
+          if (required_err_code && required_err_code !== err.code) {
             break;
           }
         }
