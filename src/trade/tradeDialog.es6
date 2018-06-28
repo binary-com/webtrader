@@ -836,7 +836,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     }
 
     /**
-     * To retry proposal subscription
+     * Adds retry to proposal subscription request
      *
      * @param {Object}   request_obj          Object of the request to be made
      * @param {Number}   times_retry          Times to retry the request if the request fails
