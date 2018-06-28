@@ -840,17 +840,15 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
      *
      * @param {Object}   request_obj          Object of the request to be made
      * @param {Number}   times_retry          Times to retry the request if the request fails
-     * @param {String}   required_err_code     Optional - only retry if the response error code matches this error code
+     * @param {String}   required_err_code    Optional - only retry if the response error code matches this error code
      */
     async function subscribeProposalHandler(request_obj, times_retry, required_err_code) {
       let response;
       for (let i = 0; i < times_retry; i++) {
         try {
           response = await liveapi.send(request_obj);
-          if (new_proposal_promise === state.proposal.last_promise) {
-              state.proposal.error = '';
-              state.proposal.id = response.proposal && response.proposal.id;
-          }
+          state.proposal.error = '';
+          state.proposal.id = response.proposal && response.proposal.id;
           break;
         } catch (err) {
           state.proposal.error = err.message;
