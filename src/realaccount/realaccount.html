@@ -187,14 +187,8 @@
         <span class='ui-icon ui-icon-triangle-1-w'></span> Back
             </span>
         </div>
-        <div class='row'>
-            <span class='title-big'>Financial information</span>
-            <div class='validations'>
-                <span class='explanation'>
-          Current regulations require that you provide us the following<br/>
-          information about your trading exprience and personal finance.
-        </span>
-            </div>
+        <div class="row">
+            <span class="title-big">Trading Experience</span>
         </div>
         <div class='row'>
             <span class='title'>Forex trading experience</span>
@@ -211,6 +205,15 @@
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
+        </div>
+        <div class='row'>
+            <span class='title-big'>Financial information</span>
+            <div class='validations'>
+                <span class='explanation'>
+                    Current regulations require that you provide us the following<br/>
+                    information about your trading exprience and personal finance.
+                </span>
+            </div>
         </div>
         <div class='row'>
             <span class='title'>Indices trading experience</span>
