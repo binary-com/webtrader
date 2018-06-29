@@ -139,6 +139,10 @@ const init_state = (root, what_todo) => {
 
          forex_trading_experience: '',
          forex_trading_frequency: '',
+         binary_options_trading_experience: '',
+         binary_options_trading_frequency: '',
+         cfd_trading_experience: '',
+         cfd_trading_frequency: '',
          other_instruments_trading_experience: '',
          other_instruments_trading_frequency: '',
 
@@ -264,6 +268,8 @@ const init_state = (root, what_todo) => {
    state.financial.empty_fields = () => {
       return state.financial.forex_trading_experience === '' ||
          state.financial.forex_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
+         state.financial.binary_options_trading_experience === '' || state.financial.binary_options_trading_frequency === '' ||
+         state.financial.cfd_trading_experience === '' || state.financial.cfd_trading_experience === '' || 
          state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
          state.financial.occupation === '' || state.financial.education_level === '' ||
          state.financial.income_source === '' || state.financial.net_income === '' ||
@@ -327,6 +333,10 @@ const init_state = (root, what_todo) => {
          affiliate_token: '',
          forex_trading_experience: financial.forex_trading_experience,
          forex_trading_frequency: financial.forex_trading_frequency,
+         binary_options_trading_experience: financial.binary_options_trading_experience,
+         binary_options_trading_frequency: financial.binary_options_trading_frequency,
+         cfd_trading_experience: financial.cfd_trading_experience,
+         cfd_trading_frequency: financial.cfd_trading_frequency,
          other_instruments_trading_experience: financial.other_instruments_trading_experience,
          other_instruments_trading_frequency: financial.other_instruments_trading_frequency,
          employment_industry: financial.employment_industry,
@@ -512,16 +522,3 @@ const init_state = (root, what_todo) => {
 }
 
 export default { init }
-// req.salutation = state.user.salutation;
-// req.first_name = state.user.first_name;
-// req.last_name = state.user.last_name;
-// req.account_opening_reason = state.user.account_opening_reason;
-// req.date_of_birth = state.user.date_of_birth;
-// req.address_line_1 = state.user.address_line_1;
-// req.address_line_2 = state.user.address_line_1;
-// req.city_address = state.user.city_address;
-// req.state_address = state.user.state_address;
-// req.address_postcode = state.user.address_postcode;
-// req.phone = state.user.phone;
-// req.residence = state.user.residence;
-// req.residence_name = state.user.residence_name;

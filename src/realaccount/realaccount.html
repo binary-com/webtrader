@@ -220,33 +220,33 @@
         <div class='row'>
             <span class='title'>Binary options trading experience</span>
             <span class="please-select" rv-show="financial.binary_options_trading_experience | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.binary_options_trading_experience" rv-selectrefresh="financial.binary_experience_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.binary_options_trading_experience" rv-selectrefresh="financial.experience_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
-                <option rv-each-row="financial.binary_experience_array" rv-value="row">{row | i18n}</option>
+                <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>
             <span class='title'>Binary options trading frequency</span>
             <span class="please-select" rv-show="financial.binary_options_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.binary_options_trading_frequency" rv-selectrefresh="financial.binary_frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.binary_options_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
-                <option rv-each-row="financial.binary_frequency_array" rv-value="row">{row | i18n}</option>
+                <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>
             <span class='title'>CFD trading experience</span>
             <span class="please-select" rv-show="financial.cfd_trading_experience | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.cfd_trading_experience" rv-selectrefresh="financial.cfd_experience_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.cfd_trading_experience" rv-selectrefresh="financial.experience_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
-                <option rv-each-row="financial.cfd_experience_array" rv-value="row">{row | i18n}</option>
+                <option rv-each-row="financial.experience_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>
             <span class='title'>CFD trading frequency</span>
             <span class="please-select" rv-show="financial.cfd_trading_frequency | eq '' | and empty_fields.validate">*</span>
-            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.cfd_trading_frequency" rv-selectrefresh="financial.cfd_frequency_array">
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.cfd_trading_frequency" rv-selectrefresh="financial.frequency_array">
                 <option value="" selected="selected" disabled="disabled">Please select</option>
-                <option rv-each-row="financial.cfd_frequency_array" rv-value="row">{row | i18n}</option>
+                <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
         </div>
         <div class='row'>
