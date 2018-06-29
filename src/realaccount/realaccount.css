@@ -208,7 +208,7 @@
     background: #1e90ff;
 }
 
-.real-dialog .pep {
+.real-dialog .popup-open-text {
     border-bottom: 1px dotted #000;
     cursor: pointer;
 }
