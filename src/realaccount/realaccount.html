@@ -55,7 +55,7 @@
       </div>
       <div class='row'>
             <span class='title'>Country of residence</span>
-            <span class='residence' rv-text='user.residence_name'></span>
+            <span class='u-span-text-normal u-margin-left-small' rv-text='user.residence_name'></span>
             <div class='validations'>
                 <span class='explanation'>
                     Please <a href="https://www.binary.com/en/contact" target="_blank">contact support</a>
@@ -188,6 +188,16 @@
             </span>
         </div>
         <div class="row">
+            <span class="title-big">Professional Client</span>
+        </div>
+        <div class='row'>
+            <span class="u-span-text-normal">By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?</span>
+            <input type='checkbox' id='professional_trader_checkbox' rv-checked='financial.chk_professional' />
+            <label for='professional_trader_checkbox'>
+                I want to be treated as a professional client. What is this?
+            </label>
+        </div>
+        <div class="row">
             <span class="title-big">Trading Experience</span>
         </div>
         <div class='row'>
@@ -256,12 +266,6 @@
         </div>
         <div class='row'>
             <span class='title-big'>Financial information</span>
-            <div class='validations'>
-                <span class='explanation'>
-                    Current regulations require that you provide us the following<br/>
-                    information about your trading exprience and personal finance.
-                </span>
-            </div>
         </div>
         <!-- TODO: Remove from JS -->
         <!-- <div class='row'>

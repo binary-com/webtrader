@@ -55,9 +55,12 @@
     margin: 8px 0 3px 0;
 }
 
-.real-dialog span.residence {
-    margin-left: 10px;
+.real-dialog .u-span-text-normal {
     font-size: 14px;
+}
+
+.real-dialog .u-margin-left-small {
+    margin-left: 10px;
 }
 
 .real-dialog span.residence + .validations {
