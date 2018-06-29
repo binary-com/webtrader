@@ -207,6 +207,22 @@
             </select>
         </div>
         <div class='row'>
+            <span class='title'>Binary options trading experience</span>
+            <span class="please-select" rv-show="financial.binary_options_trading_experience | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.binary_options_trading_experience" rv-selectrefresh="financial.binary_experience_array">
+                <option value="" selected="selected" disabled="disabled">Please select</option>
+                <option rv-each-row="financial.binary_experience_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
+        <div class='row'>
+            <span class='title'>Binary options trading frequency</span>
+            <span class="please-select" rv-show="financial.binary_options_trading_frequency | eq '' | and empty_fields.validate">*</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.binary_options_trading_frequency" rv-selectrefresh="financial.binary_frequency_array">
+                <option value="" selected="selected" disabled="disabled">Please select</option>
+                <option rv-each-row="financial.binary_frequency_array" rv-value="row">{row | i18n}</option>
+            </select>
+        </div>
+        <div class='row'>
             <span class='title-big'>Financial information</span>
             <div class='validations'>
                 <span class='explanation'>
@@ -215,7 +231,7 @@
                 </span>
             </div>
         </div>
-        <div class='row'>
+        <!-- <div class='row'>
             <span class='title'>Indices trading experience</span>
             <span class="please-select" rv-show="financial.indices_trading_experience | eq '' | and empty_fields.validate">*</span>
             <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu-width='300' rv-selectmenu="financial.indices_trading_experience" rv-selectrefresh="financial.experience_array">
@@ -230,7 +246,7 @@
                 <option value="" selected="selected" disabled="disabled">Please select</option>
                 <option rv-each-row="financial.frequency_array" rv-value="row">{row | i18n}</option>
             </select>
-        </div>
+        </div> -->
         <div class='row'>
             <span class='title'>Commodities trading experience</span>
             <span class="please-select" rv-show="financial.commodities_trading_experience | eq '' | and empty_fields.validate">*</span>
