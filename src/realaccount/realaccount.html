@@ -58,13 +58,39 @@
             <span class='residence' rv-text='user.residence_name'></span>
             <div class='validations'>
                 <span class='explanation'>
-        Please <a href="https://www.binary.com/en/contact" target="_blank">contact support</a>
-        if this is not your country of residence.
-      </span>
+                    Please <a href="https://www.binary.com/en/contact" target="_blank">contact support</a>
+                    if this is not your country of residence.
+                </span>
             </div>
         </div>
+        <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
+            <span class="title-big">Tax information</span>
+        </div>
+        <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
+            <span class="title">Tax residence</span>
+            <select multiple style="width: 330px" data-placeholder="Please select a country" rv-chosen="user.tax_residence" rv-chosenrefresh="user.country_array">
+                <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
+            </select>
+            <div class='validations'>
+                <span rv-show='user.tax_residence | negate | and empty_fields.validate' class='validation error-msg'>This field is required.</span>
+            </div>
+        </div>
+        <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
+            <span class="title">Tax identification number</span>
+            <input type="text" maxlength="20" rv-value="user.tax_identification_number">
+            <div class='validations'>
+                <span class='validation error-msg ' rv-show='user.tax_identification_number | negate | and empty_fields.validate'> This field is required.</span>
+                <span rv-show='user.tax_identification_number | is-valid-regex "^[\w-]{0,20}$" | eq false' class='validation error-msg '>Only numbers, letters, hyphens are allowed.</span>
+            </div>
+        </div>
+        <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
+            <input type='checkbox' id='tax_checkbox' rv-checked='user.chk_tax_id' />
+            <label for='tax_checkbox'>
+                    I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information.
+            </label>
+        </div>
         <div class='row'>
-            <span class="title-big">Home Address</span>
+            <span class="title-big">Address</span>
         </div>
         <div class='row'>
             <span class='title'>First line of home address</span>
@@ -138,32 +164,6 @@
             <input type='checkbox' id='pep_checkbox' rv-checked='user.pep' />
             <label for='pep_checkbox' > I acknowledge that I am not a politically exposed person (PEP).
                 <span class="pep" rv-on-click="user.pep_window">What is pep?</span>
-            </label>
-        </div>
-        <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
-            <span class="title-big">Tax information</span>
-        </div>
-        <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
-            <span class="title">Tax residence</span>
-            <select multiple style="width: 330px" data-placeholder="Please select a country" rv-chosen="user.tax_residence" rv-chosenrefresh="user.country_array">
-                <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
-            </select>
-            <div class='validations'>
-                <span rv-show='user.tax_residence | negate | and empty_fields.validate' class='validation error-msg'>This field is required.</span>
-            </div>
-        </div>
-        <div class="row" rv-show="what_todo | eq 'upgrade-mf'">
-            <span class="title">Tax identification number</span>
-            <input type="text" maxlength="20" rv-value="user.tax_identification_number">
-            <div class='validations'>
-                <span class='validation error-msg ' rv-show='user.tax_identification_number | negate | and empty_fields.validate'> This field is required.</span>
-                <span rv-show='user.tax_identification_number | is-valid-regex "^[\w-]{0,20}$" | eq false' class='validation error-msg '>Only numbers, letters, hyphens are allowed.</span>
-            </div>
-        </div>
-        <div class='row' rv-show="what_todo | eq 'upgrade-mf'">
-            <input type='checkbox' id='tax_checkbox' rv-checked='user.chk_tax_id' />
-            <label for='tax_checkbox'>
-                    I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information.
             </label>
         </div>
         <div class='row'>
