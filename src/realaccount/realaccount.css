@@ -57,6 +57,7 @@
 
 .real-dialog span.residence {
     margin-left: 10px;
+    font-size: 14px;
 }
 
 .real-dialog span.residence + .validations {
