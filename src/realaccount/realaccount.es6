@@ -139,14 +139,6 @@ const init_state = (root, what_todo) => {
 
          forex_trading_experience: '',
          forex_trading_frequency: '',
-         indices_trading_experience: '',
-         indices_trading_frequency: '',
-         commodities_trading_experience: '',
-         commodities_trading_frequency: '',
-         stocks_trading_experience: '',
-         stocks_trading_frequency: '',
-         other_derivatives_trading_experience: '',
-         other_derivatives_trading_frequency: '',
          other_instruments_trading_experience: '',
          other_instruments_trading_frequency: '',
 
@@ -271,11 +263,7 @@ const init_state = (root, what_todo) => {
 
    state.financial.empty_fields = () => {
       return state.financial.forex_trading_experience === '' ||
-         state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
-         state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
-         state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
-         state.financial.stocks_trading_frequency === '' || state.financial.other_derivatives_trading_experience === '' ||
-         state.financial.other_derivatives_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
+         state.financial.forex_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
          state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
          state.financial.occupation === '' || state.financial.education_level === '' ||
          state.financial.income_source === '' || state.financial.net_income === '' ||
@@ -339,14 +327,6 @@ const init_state = (root, what_todo) => {
          affiliate_token: '',
          forex_trading_experience: financial.forex_trading_experience,
          forex_trading_frequency: financial.forex_trading_frequency,
-         indices_trading_experience: financial.indices_trading_experience,
-         indices_trading_frequency: financial.indices_trading_frequency,
-         commodities_trading_experience: financial.commodities_trading_experience,
-         commodities_trading_frequency: financial.commodities_trading_frequency,
-         stocks_trading_experience: financial.stocks_trading_experience,
-         stocks_trading_frequency: financial.stocks_trading_frequency,
-         other_derivatives_trading_experience: financial.other_derivatives_trading_experience,
-         other_derivatives_trading_frequency: financial.other_derivatives_trading_frequency,
          other_instruments_trading_experience: financial.other_instruments_trading_experience,
          other_instruments_trading_frequency: financial.other_instruments_trading_frequency,
          employment_industry: financial.employment_industry,
