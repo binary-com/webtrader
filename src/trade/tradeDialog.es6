@@ -1092,7 +1092,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
       tradeTemplateManager.init(root.find('.trade-template-manager-root'), dialog);
     });
     $('#duration-input').keypress((evt) => {
-      if (evt.which < 48 || evt.which > 57) {
+      if ((evt.which < 48 || evt.which > 57) && evt.which !== 8) {
           evt.preventDefault();
       }
     });
