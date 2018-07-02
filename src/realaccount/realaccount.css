@@ -21,16 +21,20 @@
 }
 
 .real-dialog select + .ui-selectmenu-button {
-    margin-bottom: 10px;
-    font-size: 14px;
+    /* override jq-ui css */
+    font-size: 14px !important;
     z-index: 100;
 }
 
+.real-dialog .row {
+    padding: 5px 0;
+}
 
 /* for jq select menu */
 
 .real-dialog-ul {
-    font-size: 14px;
+    /* override binary-style css */
+    font-size: 14px !important;
     max-height: 100px;
 }
 
@@ -53,6 +57,7 @@
 
 .real-dialog span.residence {
     margin-left: 10px;
+    font-size: 14px;
 }
 
 .real-dialog span.residence + .validations {
