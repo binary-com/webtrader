@@ -134,6 +134,7 @@ const init_state = (root, what_todo) => {
 
       },
       financial: {
+         chk_professional: false,
          experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
          frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
 
@@ -331,6 +332,7 @@ const init_state = (root, what_todo) => {
          tax_identification_number: state.user.tax_identification_number,
 
          affiliate_token: '',
+         chk_professional: financial.chk_professional,
          forex_trading_experience: financial.forex_trading_experience,
          forex_trading_frequency: financial.forex_trading_frequency,
          binary_options_trading_experience: financial.binary_options_trading_experience,
