@@ -13,7 +13,6 @@ import 'css!./portfolio.css';
 let portfolioWin = null;
 let table = null;
 let balance_span = null;
-let currency = 'USD';
 let subscribed_contracts = [];
 
 export const init = (li) => {
@@ -126,6 +125,7 @@ const on_arrow_click =(e) => {
 
 const initPortfolioWin = () => {
     /* refresh blance on blance change */
+    let currency = '';
     const on_balance = liveapi.events.on('balance',(data) => {
         if(data.balance !== undefined && data.balance.currency !== undefined) {
            currency = data.balance.currency;
@@ -162,6 +162,7 @@ const initPortfolioWin = () => {
 
     liveapi.send({ balance: 1 })
         .then((data) => {
+            currency = data.balance.currency;
             portfolioWin = windows.createBlankWindow($('<div/>'), {
                 title: 'Portfolio'.i18n(),
                 dialogClass: 'portfolio',
@@ -197,7 +198,6 @@ const initPortfolioWin = () => {
                 balance_span.html('Account balance: <strong>'.i18n() +  formatPrice(balance, currency) + '</strong>');
             };
 
-            const currency = data.balance.currency;
             table = $("<table width='100%' class='portfolio-dialog hover'/>");
             table.appendTo(portfolioWin);
             table = table.dataTable({
