@@ -297,6 +297,39 @@ const init_state = (root, what_todo) => {
       }).dialog("open");
    }
 
+   state.user.professional_window = (e) => {
+      e.preventDefault();
+      const first_paragraph = `Clients need to satisfy at least two of the following criteria in order to receive Professional Client status:`;
+      const first_ul = [`You’ve carried out significant transactions on markets similar to the ones we offer, averaging 10 transactions per quarter for the previous four quarters`,
+      `The size of your instrument portfolio exceeds EUR 500,000 or its equivalent`, `You’ve worked in the financial sector for at least one year in a role that requires knowledge of your intended transactions on our platform`];
+      const second_paragraph = `If you choose to be treated as a Professional Client, we’ll regard you as having the required market knowledge and experience. As such, we’ll take steps to ensure that your request for Professional Client status meets the above criteria, including a request for the following:`;
+      const second_ul = [`Statements that reflect your transactions from the previous four quarters`, `Proof of your portfolio held elsewhere`, `Proof of your employment`];
+      windows.createBlankWindow(`<div style="padding:15px;">
+      <div>${first_paragraph}</div>
+      <ul class="checked">
+            <li>${first_ul[0]}</li>
+            <li>${first_ul[1]}</li>
+            <li>${first_ul[2]}</li>
+      </ul>
+      <div>${second_paragraph}</div>
+      <ul class="bullet">
+            <li>${second_ul[0]}</li>
+            <li>${second_ul[1]}</li>
+            <li>${second_ul[2]}</li>
+      </ul>
+      </div>`, {
+         title: "Professional Client",
+         modal: true,
+         resizable: false,
+         collapsable: false,
+         minimizable: false,
+         maximizable: false,
+         closeOnEscape: true,
+         width: 600,
+         height: 'auto'
+      }).dialog("open");
+   }
+
    state.financial.click = () => {
       if (state.financial.empty_fields()) {
          state.empty_fields.show();
