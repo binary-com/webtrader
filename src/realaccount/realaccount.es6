@@ -427,7 +427,8 @@ const init_state = (root, what_todo) => {
 
    state.route.update = (route) => {
       state.route.value = route;
-      //real_win.dialog('option', 'height', routes[route]);
+      // scroll to top for second page of form
+      if (route === 'financial') { document.getElementById('a').scrollIntoView() }
       real_win.dialog('widget').trigger('dialogresizestop');
    };
 
