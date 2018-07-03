@@ -49,12 +49,15 @@ const check_currency_async = () => new Promise((resolve, reject) => {
           win.dialog('close');
         })
         .catch((err) => {
-          console.log(err);
+          reject();
+          win.dialog('close');
+          $.growl.error({ message: err.message });
         });
     },
     cancel: () => {
+      reject();
       win.dialog('close');
-      reject({ message: 'Please set currency.'.i18n() });
+      $.growl.notice({ message: 'Please set currency.'.i18n() });
     }
   };
 
@@ -83,9 +86,8 @@ const check_currency_async = () => new Promise((resolve, reject) => {
 
 export const check_currency = () => {
   if (check_promise) { return check_promise; }
-  check_promise = check_currency_async().then(() => check_promise = null).catch(up => {
+  check_promise = check_currency_async().then(() => check_promise = null).catch((err) => {
     check_promise = null;
-    throw up;
   });
   return check_promise;
 }
