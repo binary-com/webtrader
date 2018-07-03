@@ -2,16 +2,16 @@
 
 **Define your position**  
 
-![](https://www.binary.com/images/pages/home/step-1.svg =150x150)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/easy-step-1.svg =150x150)
 
 
 **Get your price**   
 
-![](https://www.binary.com/images/pages/home/step-2.svg =150x150)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/easy-step-2.svg =150x150)
 
 **Make your trade**   
 
-![](https://www.binary.com/images/pages/home/step-3.svg =150x150)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/easy-step-3.svg =150x150)
 
 ---
 
@@ -21,7 +21,7 @@ Trading binary options is relatively easy, and you can purchase a trade in only 
 
 First, you need to set the parameters of your trade. Here's what you need to consider.
 
-![](https://www.binary.com/images/pages/get-started/define-your-position.svg =350x350)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/define-position.svg =350x350)
 
 #### 1. Underlying market
 
