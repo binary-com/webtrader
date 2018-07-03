@@ -222,3 +222,11 @@
 .real-dialog .new_account table tbody tr td:first-of-type {
     line-height: 50px;
 }
+
+.real-dialog input[type="text"]:disabled {
+    color: #aeaeae;
+}
+
+.real-dialog input[type="text"]:disabled:hover {
+    border: 1px solid #f2f2f2;
+}
