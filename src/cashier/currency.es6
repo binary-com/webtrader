@@ -38,7 +38,6 @@ const check_currency_async = () => new Promise((resolve, reject) => {
     continue: () => {
       state.disabled = true;
       liveapi.send({ set_account_currency: state.value })
-        .then(resolve, reject)
         .then(() => {
           // This doesn't work because on emitting the login event currency is reset.
           // local_storage.set("currency", state.value);
@@ -48,6 +47,9 @@ const check_currency_async = () => new Promise((resolve, reject) => {
           //Re-authorize
           liveapi.cached.authorize(true)
           win.dialog('close');
+        })
+        .catch((err) => {
+          console.log(err);
         });
     },
     cancel: () => {
