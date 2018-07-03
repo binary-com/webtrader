@@ -365,7 +365,7 @@ const init_state = (root, what_todo) => {
          tax_identification_number: state.user.tax_identification_number,
 
          affiliate_token: '',
-         chk_professional: financial.chk_professional,
+         client_type: financial.chk_professional ? 'professional' : 'retail',
          forex_trading_experience: financial.forex_trading_experience,
          forex_trading_frequency: financial.forex_trading_frequency,
          binary_options_trading_experience: financial.binary_options_trading_experience,
