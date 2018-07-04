@@ -794,7 +794,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     if(state.categories.value.contract_category !== 'spreads') {
       // format amount
-      state.basis.amount = !_.isNil(state.basis.amount) ? (state.basis.amount.toString().match(/0*(\d+\.?\d*)/) || [])[1] : state.basis.amount;
+      const format_amount = _.isNil(state.basis.amount) ? false : state.basis.amount.toString().match(/0*(\d+\.?\d*)/);
+      if (format_amount && format_amount.input.length > format_amount[1].length) {
+        state.basis.amount = format_amount[1];
+      }
       request.amount = state.basis.amount; /* Proposed payout or stake value */
       request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
     } else {
