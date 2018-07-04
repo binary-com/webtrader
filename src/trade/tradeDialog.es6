@@ -795,6 +795,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if(state.categories.value.contract_category !== 'spreads') {
       // format amount
       const format_amount = _.isNil(state.basis.amount) ? false : state.basis.amount.toString().match(/0*(\d+\.?\d*)/);
+      //  update state only if invalid input
       if (format_amount && format_amount.input.length > format_amount[1].length) {
         state.basis.amount = format_amount[1];
       }
