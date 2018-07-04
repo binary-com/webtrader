@@ -55,9 +55,12 @@
     margin: 8px 0 3px 0;
 }
 
-.real-dialog span.residence {
-    margin-left: 10px;
+.real-dialog .u-span-text-normal {
     font-size: 14px;
+}
+
+.real-dialog .u-margin-left-small {
+    margin-left: 10px;
 }
 
 .real-dialog span.residence + .validations {
@@ -205,7 +208,7 @@
     background: #1e90ff;
 }
 
-.real-dialog .pep {
+.real-dialog .popup-open-text {
     border-bottom: 1px dotted #000;
     cursor: pointer;
 }
@@ -218,4 +221,12 @@
 
 .real-dialog .new_account table tbody tr td:first-of-type {
     line-height: 50px;
+}
+
+.real-dialog input[type="text"]:disabled {
+    color: #aeaeae;
+}
+
+.real-dialog input[type="text"]:disabled:hover {
+    border: 1px solid #f2f2f2;
 }

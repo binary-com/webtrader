@@ -134,19 +134,16 @@ const init_state = (root, what_todo) => {
 
       },
       financial: {
+         chk_professional: false,
          experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
          frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
 
          forex_trading_experience: '',
          forex_trading_frequency: '',
-         indices_trading_experience: '',
-         indices_trading_frequency: '',
-         commodities_trading_experience: '',
-         commodities_trading_frequency: '',
-         stocks_trading_experience: '',
-         stocks_trading_frequency: '',
-         other_derivatives_trading_experience: '',
-         other_derivatives_trading_frequency: '',
+         binary_options_trading_experience: '',
+         binary_options_trading_frequency: '',
+         cfd_trading_experience: '',
+         cfd_trading_frequency: '',
          other_instruments_trading_experience: '',
          other_instruments_trading_frequency: '',
 
@@ -271,11 +268,9 @@ const init_state = (root, what_todo) => {
 
    state.financial.empty_fields = () => {
       return state.financial.forex_trading_experience === '' ||
-         state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
-         state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
-         state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
-         state.financial.stocks_trading_frequency === '' || state.financial.other_derivatives_trading_experience === '' ||
-         state.financial.other_derivatives_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
+         state.financial.forex_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
+         state.financial.binary_options_trading_experience === '' || state.financial.binary_options_trading_frequency === '' ||
+         state.financial.cfd_trading_experience === '' || state.financial.cfd_trading_experience === '' || 
          state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
          state.financial.occupation === '' || state.financial.education_level === '' ||
          state.financial.income_source === '' || state.financial.net_income === '' ||
@@ -298,6 +293,39 @@ const init_state = (root, what_todo) => {
          maximizable: false,
          closeOnEscape: true,
          width: 500,
+         height: 'auto'
+      }).dialog("open");
+   }
+
+   state.user.professional_window = (e) => {
+      e.preventDefault();
+      const first_paragraph = `Clients need to satisfy at least two of the following criteria in order to receive Professional Client status:`;
+      const first_ul = [`You’ve carried out significant transactions on markets similar to the ones we offer, averaging 10 transactions per quarter for the previous four quarters`,
+      `The size of your instrument portfolio exceeds EUR 500,000 or its equivalent`, `You’ve worked in the financial sector for at least one year in a role that requires knowledge of your intended transactions on our platform`];
+      const second_paragraph = `If you choose to be treated as a Professional Client, we’ll regard you as having the required market knowledge and experience. As such, we’ll take steps to ensure that your request for Professional Client status meets the above criteria, including a request for the following:`;
+      const second_ul = [`Statements that reflect your transactions from the previous four quarters`, `Proof of your portfolio held elsewhere`, `Proof of your employment`];
+      windows.createBlankWindow(`<div style="padding:15px;">
+      <div>${first_paragraph}</div>
+      <ul class="checked">
+            <li>${first_ul[0]}</li>
+            <li>${first_ul[1]}</li>
+            <li>${first_ul[2]}</li>
+      </ul>
+      <div>${second_paragraph}</div>
+      <ul class="bullet">
+            <li>${second_ul[0]}</li>
+            <li>${second_ul[1]}</li>
+            <li>${second_ul[2]}</li>
+      </ul>
+      </div>`, {
+         title: "Professional Client",
+         modal: true,
+         resizable: false,
+         collapsable: false,
+         minimizable: false,
+         maximizable: false,
+         closeOnEscape: true,
+         width: 600,
          height: 'auto'
       }).dialog("open");
    }
@@ -337,16 +365,13 @@ const init_state = (root, what_todo) => {
          tax_identification_number: state.user.tax_identification_number,
 
          affiliate_token: '',
+         client_type: financial.chk_professional ? 'professional' : 'retail',
          forex_trading_experience: financial.forex_trading_experience,
          forex_trading_frequency: financial.forex_trading_frequency,
-         indices_trading_experience: financial.indices_trading_experience,
-         indices_trading_frequency: financial.indices_trading_frequency,
-         commodities_trading_experience: financial.commodities_trading_experience,
-         commodities_trading_frequency: financial.commodities_trading_frequency,
-         stocks_trading_experience: financial.stocks_trading_experience,
-         stocks_trading_frequency: financial.stocks_trading_frequency,
-         other_derivatives_trading_experience: financial.other_derivatives_trading_experience,
-         other_derivatives_trading_frequency: financial.other_derivatives_trading_frequency,
+         binary_options_trading_experience: financial.binary_options_trading_experience,
+         binary_options_trading_frequency: financial.binary_options_trading_frequency,
+         cfd_trading_experience: financial.cfd_trading_experience,
+         cfd_trading_frequency: financial.cfd_trading_frequency,
          other_instruments_trading_experience: financial.other_instruments_trading_experience,
          other_instruments_trading_frequency: financial.other_instruments_trading_frequency,
          employment_industry: financial.employment_industry,
@@ -402,7 +427,8 @@ const init_state = (root, what_todo) => {
 
    state.route.update = (route) => {
       state.route.value = route;
-      //real_win.dialog('option', 'height', routes[route]);
+      // scroll to top for second page of form
+      if (route === 'financial') { document.getElementById('financial_second_page').scrollIntoView() }
       real_win.dialog('widget').trigger('dialogresizestop');
    };
 
@@ -532,16 +558,3 @@ const init_state = (root, what_todo) => {
 }
 
 export default { init }
-// req.salutation = state.user.salutation;
-// req.first_name = state.user.first_name;
-// req.last_name = state.user.last_name;
-// req.account_opening_reason = state.user.account_opening_reason;
-// req.date_of_birth = state.user.date_of_birth;
-// req.address_line_1 = state.user.address_line_1;
-// req.address_line_2 = state.user.address_line_1;
-// req.city_address = state.user.city_address;
-// req.state_address = state.user.state_address;
-// req.address_postcode = state.user.address_postcode;
-// req.phone = state.user.phone;
-// req.residence = state.user.residence;
-// req.residence_name = state.user.residence_name;
