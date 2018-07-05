@@ -38,14 +38,6 @@
          background: #2A3052;
          color: white;
       }
-      .ui-icon-caret-1-e {
-         background-image: url('../images/double-angle-pointing-to-right.svg') !important;
-         background-size: 12px 12px !important;
-         background-position: 2px 5px !important;
-         margin: 0;
-         top: calc(50% - 12px);
-         right: 2px;
-      }
       .title {
          background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
          padding-left: 20px;
@@ -54,6 +46,7 @@
          background-position: 2px 50% !important;
          background-repeat: no-repeat;
          margin: 0;
+         white-space: nowrap;
       }
       .ui-state-active {
          margin: 0 !important;
@@ -73,7 +66,6 @@
       left: 340px;
       top: 0;
       color: white;
-      z-index: +1;
       input {
          color: white;
          position: relative;

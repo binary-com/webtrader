@@ -30,7 +30,7 @@
     }
     /* .trae-conf comes from tradeConf.js module */
     .trade-conf {
-        left:-350px;
+        left:-400px;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -43,6 +43,7 @@
 }
 
 .trade-fields {
+  justify-content: center;
   .error { background: #fef1cf; }
   ul.categories-row li select.contract-category-display + .ui-selectmenu-button { max-width: 145px; }
   .ui-selectmenu-text { margin-top: -4px; }
@@ -209,7 +210,10 @@
     }
   }
 }
-
+.ui-dialog li div.ui-menu-item-wrapper {
+    padding: 0px 1em 0px .4em;
+    margin: 3px 0px;
+}
 /* style elments in the drop down*/
 .trade-dialog-date-start-ul li .ui-menu-item-wrapper{
     padding: 0;
@@ -224,7 +228,7 @@
 .trade-dialog-digits-select-ul:hover { margin-top: -20px; }
 .trade-dialog-digits-select-ul { transition: margin-top 0.5s ease; }
 .trade-dialog-digits-select-ul li {
-    overflow-y:hidden;
+    overflow:hidden;
     /*height:10px;*/
     line-height: 8px;
     font-size:13px;
@@ -242,6 +246,7 @@
     padding: 2px 3px 2px 3px;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: inherit;
 }
 
@@ -353,6 +358,7 @@
 
 /*#region ul.contract-displays */
     .trade-fields ul.contract-displays {
+        overflow: hidden;
         justify-content: center;
         padding: 9px 0;
         margin-bottom: 2px;
@@ -361,9 +367,7 @@
     .trade-fields ul.contract-displays li {
         opacity: .5;
         cursor: pointer;
-        width: auto;
         padding: 0 5px;
-        white-space: nowrap;
     }
 
     .trade-fields ul.contract-displays li.active {
@@ -377,6 +381,7 @@
         font-weight:normal;
     }
     .trade-fields ul.contract-displays li:first-child:before { content: none; }
+    .trade-fields ul.contract-displays li:nth-child(6n):before { content: none; }
 /*#endregion*/
 
 .trade-fields ul li input.date-expiry-date { width: 100px; }
@@ -410,7 +415,10 @@
   text-align: center;
   width:auto;
 }
-.trade-fields ul.message-row li span { display: inline; }
+.trade-fields ul.message-row li span { 
+  display: inline; 
+  font-size: 12px;
+}
 
 .trade-fields .spread-deposit {
     background: #c2c1c1;

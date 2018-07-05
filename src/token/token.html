@@ -9,7 +9,7 @@
           rv-on-click='change_route | bind "create-token"'>Create token</button>
 
   <div rv-show='route | eq "token-list" | and tokens | prop "length" | eq 0' class='empty-pane'>
-    <span>Tokens are special codes for accessing Binary mobile applications and third party tools.</span>
+    <span>Tokens are special codes for accessing <a target="__blank" href="https://shop.binary.com" class="binaryShop">Binary mobile applications and third party tools</a>.</span>
     <span>Press Create token button on the right to create your first token.</span>
   </div>
 
@@ -51,10 +51,22 @@
 
       <span> Token permissions</span>
       <div class='token-scopes'>
-        <label data-balloon="Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.read' /> Read </label>
-        <label data-balloon="Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.trade'/> Trade </label>
-        <label data-balloon="Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.payments'/> Payments </label>
-        <label data-balloon="Can be used to open accounts, set settings, manage token usage, and more." data-balloon-length="xlarge"> <input type='checkbox' rv-checked='token.scopes.admin'/> Admin </label>
+        <input type='checkbox' id='read_checkbox' rv-checked='token.scopes.read' />
+        <label for='read_checkbox'>
+          <span data-balloon="Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more." data-balloon-length="xlarge">Read</span>
+        </label>
+        <input type='checkbox' id='trade_checkbox' rv-checked='token.scopes.trade'/>
+        <label for='trade_checkbox' >
+          <span data-balloon="Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts." data-balloon-length="xlarge">Trade</span>
+        </label>
+        <input type='checkbox' id='payment_checkbox' rv-checked='token.scopes.payments'/>
+        <label for='payment_checkbox'>
+          <span data-balloon="Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords." data-balloon-length="xlarge">Payments</span>
+        </label>
+        <input type='checkbox' id='admin_checkbox' rv-checked='token.scopes.admin'/>
+        <label for='admin_checkbox'>
+          <span data-balloon="Can be used to open accounts, set settings, manage token usage, and more." data-balloon-length="xlarge">Admin</span>
+        </label>
       </div>
 
       <button

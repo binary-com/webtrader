@@ -66,9 +66,13 @@ body {
     display: flex;
     width: 100%;
 }
+
+.social-icons .social-network-icon {
+    max-width: 30px;;
+}
 .social-icons a {
     padding: 4px;
-    min-width: 25px;
+    min-width: 30px;
 }
 #footer a {
     display: inline-block;
@@ -99,7 +103,7 @@ body {
     margin: 40px 0 10px 10px;
 }
 #doorbell-button  {
-    right: -37px;
+    right: -67px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -109,4 +113,8 @@ body {
     background-color: #2E8836;
     bottom: 100px;
     z-index: +1000;
+    &:hover {
+        right: -40px;
+        transition: right 100ms linear;
+    }
 }

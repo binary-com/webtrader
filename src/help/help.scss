@@ -38,10 +38,7 @@
         width: 180px;
     }
     .sublist {
-        width: 285px;
-        .items {
-            padding-top: 42px;
-        }
+        min-width: 285px;
     }
     .content {
         height: 100%;
@@ -75,6 +72,16 @@
             img {
                 display: block;
                 margin: auto;
+            }
+            code {
+                width: 100%;
+                display: block;
+                padding: 5px 0;
+                text-align: center;
+                background: #f2f2f2;
+                border-radius: 4px;
+                color: #394171;
+                font-weight: 700;
             }
             #binary-benefits h3 {
                 color: #E98024;

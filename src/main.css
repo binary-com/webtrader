@@ -383,7 +383,7 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
 select + .ui-selectmenu-button { border-radius: 3px;}
 
 #doorbell-button  {
-    right: -37px;
+    right: -67px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -393,6 +393,10 @@ select + .ui-selectmenu-button { border-radius: 3px;}
     background-color: #2E8836;
     bottom: 100px;
     z-index: +1000;
+}
+#doorbell-button:hover {
+    right: -40px;
+    transition: right 100ms linear;
 }
 
 #doorbell-error { color: red; }
@@ -480,4 +484,14 @@ label.checkbox input:checked ~ span.check {
     height: 29px;
     position: absolute;
     z-index: +1;
+}
+
+.ui-icon-caret-1-e {
+    background-image: url('./images/single-angle-pointing-to-right.svg') !important;
+    background-size: 12px 10px !important;
+    background-position: 2px 5px !important;
+    margin: 0 !important;
+    top: calc(50% - 10px) !important;
+    right: 2px !important;
+    left: auto;
 }

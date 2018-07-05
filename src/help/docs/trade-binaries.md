@@ -1,86 +1,69 @@
 ## How to trade binaries?
 
-Trading binaries is remarkably easy, and requires only 3 simple steps:
-
 **Define your position**  
 
-![](https://www.binary.com/images/pages/home/step-1.svg =150x150)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/easy-step-1.svg =150x150)
 
 
 **Get your price**   
 
-![](https://www.binary.com/images/pages/home/step-2.svg =150x150)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/easy-step-2.svg =150x150)
 
 **Make your trade**   
 
-![](https://www.binary.com/images/pages/home/step-3.svg =150x150)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/easy-step-3.svg =150x150)
 
 ---
 
 ###Step 1: Define your position
 
+Trading binary options is relatively easy, and you can purchase a trade in only three simple steps.
+
 First, you need to set the parameters of your trade. Here's what you need to consider.
 
-![](https://www.binary.com/images/pages/get-started/define-your-position.svg)
+![](https://www.binary.com/images/pages/get-started/binary-options/how-to-trade-binary/define-position.svg =350x350)
 
-#### Choose a trade type
+#### 1. Underlying market
 
-**Rise/Fall** - predict if the market will rise or fall from its current level.
+Choose the asset you wish to trade, such as gold, oil, stocks, or currency pairs. The value of a binary option is derived from the price of the underlying asset. One advantage of trading binary options is that you are not buying or selling the actual asset, only a contract that determines how that asset performs.
 
-**Higher/Lower** - predict if the market will end higher or lower than a price target.
+Choose from five types of markets and their respective assets:
 
-**Touch/No Touch** - predict if the market will touch or not touch a price target.
+* Currencies - All major Forex pairs
+* Indices - All major worldwide stock indices sourced from the over-the-counter market
+* Commodities - Major commodities such as gold and oil
+* OTC stocks - Blue-chip stock contracts sourced from the over-the-counter market
+* Volatility indices - Binary.com's proprietary indices that simulate market forces
 
-**In/Out** - predict if the market will stay inside two price targets, or end between or outside them.
+#### 2. Trade type
 
-#### Choose the underlying market
+There are four main trade types for you to choose from:
+  
+* Rise/Fall - Predict if the market will rise or fall from its current level
+* Higher/Lower - Predict if the market will end higher or lower than a target price
+* Touch/No Touch - Predict if the market will touch or not touch a target price
+* In/Out - Predict if the market will stay between or outside two target prices
 
-**Currencies** - trade all major FX pairs.
+#### 3. Duration
 
-**Stock Indices** - trade all major worldwide stock indices.
+Set the length of your trade, from 10 seconds to 365 days.
 
-**Commodities** - trade major commodities such as gold and oil.
+#### 4. Barrier(s)
 
-**Volatility Indices** - trade Binary.com's proprietary volatility indices.
+Set barrier(s) to define your position and trigger the payout you will receive.
 
-#### Choose the duration
+#### 5. Payout
 
-![](https://www.binary.com/images/pages/get-started/duration.svg =150x150)
-
-You can set the length of your trade, from 10 seconds to 365 days.
-
-But there's no need to wait until expiry. You can sell back long-term trades at any time to profit from changing market conditions.
-
-#### Choose the barrier(s)
-
-![](https://www.binary.com/images/pages/get-started/barriers.svg =150x150)
-
-The barrier(s) you choose defines your position and triggers your payout.
-
-You set the barrier(s) to define your position.
-
-#### Choose the payout
-
-![](https://www.binary.com/images/pages/get-started/payout.svg =150x150)
-
-Each binary trade is for a pre-determined payout amount. You win the payout if your prediction is correct.
-
-You can choose payouts from $1 to $50,000. This wide payout range is ideal for both small and large traders.
+Each trade comes with a pre-determined payout that you will see after adjusting each parameter. You’ll win the payout if your prediction is correct. If not, you will only lose your initial stake.
 
 ---
 
-### Step 2: Get your trade price
+### Step 2: Get your contract price
 
-Binary.com prices are benchmarked against the interbank options market, so you always get best-in-class prices for your trades.
-
-You get fair and transparent pricing, whatever your position.
+Our prices are benchmarked against the interbank options market. You’ll receive fair and transparent pricing, whatever your position.
 
 ---
 
 ### Step 3: Make your trade
 
-When you are satisfied with the trade price, instantly execute your trade.
-
-With Binary.com's unique platform, there's no risk of 'slippage' or gapping markets. And no hidden fees.
-
-You can sell back long-term trades at any time to profit from changing market conditions.
+When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won’t have to contend with ‘slippages’ or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses.

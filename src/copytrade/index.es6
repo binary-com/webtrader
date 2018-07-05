@@ -12,13 +12,23 @@ import liveapi from 'websockets/binary_websockets';
 import validateToken from 'websockets/validateToken';
 import { init as instrumentPromise } from '../instruments/instruments';
 
+// While using copy trader, this cannot be NULL
+const getLoggedInUserId = () => local_storage.get("oauth")[0].id;
+
 const TRADE_TYPES = [{
     code: 'CALL',
-    name: 'Rise/Higher',
+    name: 'Rise',
+  }, {
+    code: 'CALL',
+    name: 'Higher',
   },
   {
     code: 'PUT',
-    name: 'Fall/Lower',
+    name: 'Fall',
+  },
+  {
+    code: 'PUT',
+    name: 'Lower',
   },
   {
     code: 'ONETOUCH',
@@ -30,11 +40,11 @@ const TRADE_TYPES = [{
   },
   {
     code: 'EXPIRYMISS',
-    name: 'Ends Out',
+    name: 'Ends Outside',
   },
   {
     code: 'EXPIRYRANGE',
-    name: 'Ends In',
+    name: 'Ends Between',
   },
   {
     code: 'DIGITDIFF',
@@ -67,9 +77,20 @@ const TRADE_TYPES = [{
   {
     code: 'ASIAND',
     name: 'Asians Down',
-}];
-const COPY_TRADE_LOCAL_STORE_NAME = "copyTrade";
+  },
+  {
+    code: 'RANGE',
+    name: 'Stays Between',
+  },
+  {
+    code: 'UPORDOWN',
+    name: 'Goes Outside',
+  }];
+
+const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
+
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
+
 const defaultCopySettings = (traderApiToken) => ({
   copy_start: traderApiToken,
   min_trade_stake: 10,
@@ -77,6 +98,7 @@ const defaultCopySettings = (traderApiToken) => ({
   assets: _.cloneDeep(DEFAULT_ASSETS),
   trade_types: _.cloneDeep(DEFAULT_TRADE_TYPES),
 });
+
 const defaultTraderDetails = (traderApiToken, loginid) => ({
   open: false,
   started: false,
@@ -88,27 +110,25 @@ const validateYourCopySettingsData = yourCopySettingsData => {
   let valid = false;
   let errorMessage = '';
   if (yourCopySettingsData) {
-    if (yourCopySettingsData.assets && yourCopySettingsData.assets.length > 0) {
-      if (yourCopySettingsData.trade_types && yourCopySettingsData.trade_types.length > 0) {
-        if (yourCopySettingsData.min_trade_stake >= 1 && yourCopySettingsData.min_trade_stake <= 50000) {
-          if (yourCopySettingsData.max_trade_stake >= 1 && yourCopySettingsData.max_trade_stake <= 50000) {
-            if (yourCopySettingsData.min_trade_stake < yourCopySettingsData.max_trade_stake) {
-              valid = true;
-            } else {
-              errorMessage = 'Min Trade Stake cannot be more than or equal to Max Trader stake';
-            }
+        if (!yourCopySettingsData.min_trade_stake ||
+          (yourCopySettingsData.min_trade_stake >= 1 && yourCopySettingsData.min_trade_stake <= 50000)) {
+          if (!yourCopySettingsData.max_trade_stake ||
+            (yourCopySettingsData.max_trade_stake >= 1 && yourCopySettingsData.max_trade_stake <= 50000)) {
+              if (yourCopySettingsData.min_trade_stake && yourCopySettingsData.max_trade_stake) {
+                if (yourCopySettingsData.min_trade_stake > yourCopySettingsData.max_trade_stake) {
+                  errorMessage = 'Min Trade Stake should be less than Max Trade Stake';
+                } else {
+                  valid = true;
+                }
+              } else {
+                valid = true;
+              }
           } else {
             errorMessage = 'Max Trade Stake should between 1 and 50000';
           }
         } else {
           errorMessage = 'Min Trade Stake should between 1 and 50000';
         }
-      } else {
-        errorMessage = 'Trade types required';
-      }
-    } else {
-      errorMessage = 'Assets required';
-    }
   } else {
     errorMessage = 'Enter valid values for copy settings';
   }
@@ -120,7 +140,7 @@ const validateYourCopySettingsData = yourCopySettingsData => {
 const updateLocalStorage = _.debounce(scope => {
   const clonedScope = _.cloneDeep(scope);
   delete clonedScope.searchToken.disable;
-  local_storage.set(COPY_TRADE_LOCAL_STORE_NAME, clonedScope);
+  local_storage.set(getStorageName(), clonedScope);
 }, 50);
 
 let GROUPED_INTRUMENTS = null; // For nice display purpose only
@@ -176,6 +196,20 @@ const refreshTraderStats = (loginid, token, scope) => liveapi
 
 let win = null, win_view = null;
 
+const onChangeCopytradeSettings = _.debounce((newOption) => {
+  state.allowCopy.allow_copiers = newOption;
+  liveapi
+    .send({
+      set_settings: 1,
+      allow_copiers: newOption,
+    })
+    .catch(e => {
+      $.growl.error({ message: e.message });
+      //revert
+      state.allowCopy.allow_copiers = (newOption == 1 ? 0 : 1);
+    });
+}, 250);
+
 const state = {
   //[{ code: , name: }]
   masterAssetList: [],
@@ -183,19 +217,9 @@ const state = {
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
   groupedAssets: [],
   allowCopy: {
-    allow_copiers: false,
-    onAllowCopyChange: _.debounce((event, scope) => {
-      liveapi
-        .send({
-          set_settings: 1,
-          allow_copiers: +scope.allowCopy.allow_copiers,
-        })
-        .catch(e => {
-          $.growl.error({ message: e.message });
-          //revert
-          scope.allowCopy.allow_copiers = !scope.allowCopy.allow_copiers;
-        });
-    }, 250),
+    allow_copiers: 0,
+    onAllowCopyChangeCopierCellClick: () => onChangeCopytradeSettings(0),
+    onAllowCopyChangeTraderCellClick: () => onChangeCopytradeSettings(1),
   },
   onOpenChange: (index) => {
     state.traderTokens[index].open = !state.traderTokens[index].open;
@@ -206,7 +230,7 @@ const state = {
     if (newStarted) {
       //Start copying
       //if started, revert back to last saved changes(in case user changed anything)
-      const fromLocalStorage = local_storage.get(COPY_TRADE_LOCAL_STORE_NAME);
+      const fromLocalStorage = local_storage.get(getStorageName());
       if (fromLocalStorage) {
         const currentTraderTokenDetails_localSto = fromLocalStorage.traderTokens[index];
         if (currentTraderTokenDetails_localSto) {
@@ -216,8 +240,13 @@ const state = {
           //Have to apply this trick in order to trigger update of UI using rivetsjs.
           _.defer(() => {
             state.traderTokens.splice(index, 0, newObj);
+            const settingsToSend = _.cloneDeep(newObj.yourCopySettings);
+            if (!settingsToSend.min_trade_stake) delete settingsToSend.min_trade_stake;
+            if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
+            if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
+            if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
             liveapi
-              .send(newObj.yourCopySettings)
+              .send(settingsToSend)
               .then(() => {
                 newObj.disableStart = false;
                 newObj.started = true;
@@ -293,8 +322,12 @@ const state = {
       /**
        * Make sure min_trade_stake & max_trade_stack are numeric
        */
-      state.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.min_trade_stake);
-      state.traderTokens[index].yourCopySettings.max_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.max_trade_stake);
+      if(state.traderTokens[index].yourCopySettings.min_trade_stake)
+        state.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.min_trade_stake);
+
+      if (state.traderTokens[index].yourCopySettings.max_trade_stake)
+        state.traderTokens[index].yourCopySettings.max_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.max_trade_stake);
+
       updateLocalStorage(state);
       $.growl.notice({
         message: 'Updated successfully',
@@ -319,10 +352,17 @@ const state = {
         return;
       }
 
+      //If already added, throw error
+      if (_.some(state.traderTokens, f => f.yourCopySettings.copy_start === scope.searchToken.token)) {
+        $.growl.error({ message: 'Token already added' });
+        return;
+      }
+
       scope.searchToken.disable = true;
 
       validateToken(scope.searchToken.token)
         .then(tokenUserData => {
+          if (!tokenUserData) throw new Error('Invalid token');
           refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope)
             .then(() => {
               scope.searchToken.token = '';
@@ -374,6 +414,7 @@ const state = {
    }
    */
   traderTokens: [],
+  openTokenMgmt: () => $('li.account ul a.token-management').click(),
 };
 
 const initConfigWindow = () => {
@@ -381,23 +422,26 @@ const initConfigWindow = () => {
   win_view = rv.bind(root[0], state);
 
   win = windows.createBlankWindow(root, {
-    title: 'Copy Trade'.i18n(),
-    resizable: true,
+    title: 'Copy Trading'.i18n(),
+    resizable: false,
     collapsable: true,
     minimizable: true,
-    maximizable: true,
+    maximizable: false,
     modal: false,
     width: 600,
     open: () => {
       //Refresh all token details
-      const copyTrade = local_storage.get(COPY_TRADE_LOCAL_STORE_NAME);
+      const copyTrade = local_storage.get(getStorageName());
       if (copyTrade) {
         _.merge(state, copyTrade);
         state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
       }
+
       //Get the copy settings
-      liveapi.send({ get_settings: 1 }).then(({get_settings = {}}) =>
-        state.allowCopy.allow_copiers = (get_settings.allow_copiers === 1));
+      liveapi
+        .send({ get_settings: 1 })
+        .then(({ get_settings = {} }) => state.allowCopy.allow_copiers = get_settings.allow_copiers);
+
       //Refresh locally stored trader statistics
       if (copyTrade) {
         (async function () {
@@ -417,6 +461,8 @@ const initConfigWindow = () => {
       win_view && win_view.unbind();
       win && win.dialog('destroy').remove();
       win_view = win = null;
+      // Clear tokens
+      state.traderTokens = [];
     },
     'data-authorized' :'true',
   });

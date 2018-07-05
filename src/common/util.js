@@ -97,11 +97,14 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 }
 
 /* format the number (1,234,567.89), source: http://stackoverflow.com/questions/2254185 */
-function formatPrice(float,currency) {
-    var sign = float < 0 ? '-': '';
-
-    float = float && Math.abs(float);
+function formatPrice(float, currency) {
     currency = (currency || '').toLowerCase().trim();
+
+    if (!!Number(float) === false && Number(float) !== 0) {
+        return currency ? "<span class='symbols " +  currency + "'>" + float + "</span>" : float;
+    }
+    var sign = float < 0 ? '-': '';
+    float = float && Math.abs(float);
     var currencies_config = (local_storage.get('currencies_config') || {});
     var minimumFractionDigits = (currencies_config[(currency|| '').toUpperCase()] || {}).fractional_digits || 2;
     var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
@@ -109,12 +112,12 @@ function formatPrice(float,currency) {
 						style: "decimal",
 						minimumFractionDigits: minimumFractionDigits,
                     }).format(float);
-	if(currency){
+	if (currency) {
 		float = sign + $('<span>', {
             class: 'symbols ' + currency,
             text: float
         })[0].outerHTML;
-	}
+    }
 	return float;
 }
 
@@ -292,51 +295,38 @@ function isLangSupported(lang) {
             || lang === "ach"//Crowdin in context language;
 }
 
-var Cookies = {
-  get_by_name: function(name) {
-    var cookie = document.cookie;
-    var res = cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
-    return res ? res.pop() : "";
-  },
-  loginids: function () {
-    var loginids = Cookies.get_by_name("loginid_list");
-    loginids = decodeURIComponent(loginids).split("+");
-    loginids = loginids.map(function(id){
-      var parts = id.split(":");
-      return {
-        id: parts[0],
-        is_real: parts[1] === "R",
-        is_disabled: parts[2] === "D",
-        is_mf: /MF/gi.test(parts[0]),
-        is_mlt: /MLT/gi.test(parts[0]),
-        is_mx: /MX/gi.test(parts[0]),
-        is_cr: /CR/gi.test(parts[0])
-      };
-    });
-   /* when new accounts are created document.cookie doesn"t change,
-    * use local_storage to return the full list of loginids. */
-    var currencies_config = local_storage.get("currencies_config") || {};
-    var oauth_loginids = (local_storage.get("oauth") || []).map(function(id){
-      return {
-        id: id.id,
-        is_real: !id.is_virtual,
-        is_disabled: false,
-        is_mf: /MF/gi.test(id.id),
-        is_mlt: /MLT/gi.test(id.id),
-        is_mx: /MX/gi.test(id.id),
-        is_cr: /CR/gi.test(id.id),
-        currency: id.currency,
-        type: currencies_config[id.currency] ? currencies_config[id.currency].type : ''
-      }
-    }).filter(function(id) {
-      return loginids.map(function(_id) { return _id.id }).indexOf(id.id) === -1;
-    });
+/**
+ * This includes all loginIds, including the disabled accounts too
+*/
+function loginids() {
+  return local_storage.get('authorize').account_list.map(function(parts){
+    return {
+      id: parts.loginid,
+      is_real: parts.is_virtual == 0,
+      is_disabled: parts.is_disabled == 1,
+      is_mf: /MF/gi.test(parts.loginid),
+      is_mlt: /MLT/gi.test(parts.loginid),
+      is_mx: /MX/gi.test(parts.loginid),
+      is_cr: /CR/gi.test(parts.loginid),
+    };
+  });
+}
 
-    return oauth_loginids && oauth_loginids.length > 0 ? oauth_loginids : loginids;
-  },
-  residence: function() {
-    return Cookies.get_by_name("residence");
-  }
+function oAuthLoginIds() {
+  var currencies_config = local_storage.get("currencies_config") || {};
+  return (local_storage.get("oauth") || []).map(function(id){
+    return {
+      id: id.id,
+      is_real: !id.is_virtual,
+      is_disabled: false,
+      is_mf: /MF/gi.test(id.id),
+      is_mlt: /MLT/gi.test(id.id),
+      is_mx: /MX/gi.test(id.id),
+      is_cr: /CR/gi.test(id.id),
+      currency: id.currency,
+      type: currencies_config[id.currency] ? currencies_config[id.currency].type : ''
+    }
+  })
 }
 
 /* setup translating string literals */

@@ -148,18 +148,20 @@ const initLoginButton = (root) => {
       getLandingCompany().then((what_todo) => {
          state.show_financial_link = (what_todo === 'upgrade-mf');
          state.show_realaccount_link = (what_todo === 'upgrade-mlt');
-         const loginids = Cookies.loginids();
-         state.has_real_account = _.some(loginids, {is_real: true});
-         state.has_mf_or_mlt = _.some(loginids, {is_mf: true}) || _.some(loginids, {is_mlt: true});
+         const loginIds = loginids();
+         state.has_real_account = _.some(loginIds, {is_real: true});
+         state.has_mf_or_mlt = _.some(loginIds, {is_mf: true}) || _.some(loginIds, {is_mlt: true});
          state.show_new_account_link = what_todo === 'new-account';
-         state.has_disabled_account =  _.some(loginids, {is_disabled: true});
+         state.has_disabled_account =  _.some(loginIds, {is_disabled: true});
 
-         if(_.some(loginids, {is_disabled: true})) {
-            const lockedIds = _.filter(loginids, {is_disabled:true}).map(acc => acc.id).join(',');
+         // https://trello.com/c/9PCHncnx/5146-8-raunak-accountlistordering
+         // https://trello.com/c/fNZ1Zkbb/2529-negar-accountlistauthorize
+         if(_.some(oAuthLoginIds(), {is_disabled: true})) {
+            const lockedIds = _.filter(loginIds, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
                message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
-               + "Your account(%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
+               + "Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
                + "</a>"
             });
          }
@@ -288,27 +290,27 @@ export const getLandingCompany = () => {
               results[1].landing_company_details || {};
             const financial = data.landing_company.financial_company;
             const gaming = data.landing_company.gaming_company;
-            const loginids = Cookies.loginids();
+            const loginIds = loginids();
             const curr_login = local_storage.get("oauth")[0];
             curr_login.is_mlt = /MLT/.test(curr_login.id);
             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-               if (_.some(loginids, {is_mlt: true}) && (_.some(loginids, {is_mf: true}) || !curr_login.is_mlt)) // 1-c
+               if (_.some(loginIds, {is_mlt: true}) && (_.some(loginIds, {is_mf: true}) || !curr_login.is_mlt)) // 1-c
                   return 'do-nothing';
-               if (_.some(loginids, {is_mlt: true})) // 1-b
+               if (_.some(loginIds, {is_mlt: true})) // 1-b
                   return 'upgrade-mf';
                return 'upgrade-mlt'; // 1-a
             }
             if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
-               if (_.some(loginids, {is_mf: true})) // 2-b
+               if (_.some(loginIds, {is_mf: true})) // 2-b
                   return 'do-nothing';
                return 'upgrade-mf'; // 2-a
             }
             // 3:
-            if (_.some(loginids, {is_mlt: true}) || _.some(loginids, {is_mx: true}))
+            if (_.some(loginIds, {is_mlt: true}) || _.some(loginIds, {is_mx: true}))
                return 'do-nothing'; // 3-b
             // 4: never happens, japan accounts are not able to log into webtrader.
             // 5:
-            const cr_accts = _.filter(loginids, {is_cr: true});
+            const cr_accts = _.filter(loginIds, {is_cr: true});
             if( cr_accts.length && landing_company_details.legal_allowed_currencies) {
                const currencies_config = local_storage.get("currencies_config") || {};
                const has_fiat = _.some(cr_accts, {type: 'fiat'});

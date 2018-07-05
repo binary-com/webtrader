@@ -10,6 +10,7 @@ import rv from '../common/rivetsExtra';
 import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
+import Lookback from './lookback';
 
 /* rv binder to show tick chart for this confirmation dialog */
 rv.binders['tick-chart'] = {
@@ -23,7 +24,7 @@ rv.binders['tick-chart'] = {
             type: 'line',
             renderTo: el,
             backgroundColor: null, /* make background transparent */
-            width: (el.getAttribute('width') || 350)*1,
+            width: (el.getAttribute('width') || 400)*1,
             height: (el.getAttribute('height') || 120)*1,
          },
          tooltip: {
@@ -58,7 +59,7 @@ rv.binders['tick-chart'] = {
          exporting: {enabled: false, enableImages: false},
          legend: {enabled: false},
       });
-   }, 
+   },
    routine: function(el, ticks){
       const model = this.model;
       const addPlotLineX = (chart, options) => {
@@ -170,7 +171,6 @@ const register_ticks = (state, extra) => {
       // DONT TRUST BACKEND! I'm really angry right now :/
       // Try everything before calculating expiry.
       expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
-      console.log(contract, expiry);
       if(!tracking_timeout_set && entry && expiry)
          track_ticks();
       return;
@@ -272,6 +272,11 @@ export const init = (data, extra, show_callback, hide_callback) => {
       },
       back: { visible: false }, /* back buttom */
    };
+
+   if (Lookback.isLookback(extra.category_display.contract_type)) {
+     state.buy.payout = Lookback.formula(extra.category_display.contract_type, extra.amount);
+     state.buy.potential_profit = undefined;
+   }
 
    state.buy.update = () => {
       const status = state.ticks.status;

@@ -11,6 +11,7 @@ import moment from 'moment';
 import _ from 'lodash';
 import 'jquery-growl';
 import 'common/util';
+import Lookback from 'trade/lookback';
 
 const open_dialogs = {};
 
@@ -193,12 +194,12 @@ const update_indicative = (data, state) => {
    const id = contract.contract_id || data.echo_req.contract_id,
       bid_price = contract.bid_price;
    if(contract.is_sold && !contract.exit_tick && !contract.exit_level && !state.table.user_sold && !contract.sell_spot) {
-      
+
       liveapi.send({contract_id: id, proposal_open_contract: 1});
       return;
    }
-   
-   state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry
+
+   state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
 
    if(id != state.contract_id) { return; }
    if(contract.validation_error)
@@ -220,38 +221,20 @@ const update_indicative = (data, state) => {
          state.sell.bid_prices.shift();
       }
       state.sell.bid_prices.push(contract.bid_price)
-
-      if(contract.bid_price !== undefined) {
+      if(!_.isNil(contract.bid_price)) {
          state.sell.bid_price.value = contract.bid_price;
-         state.sell.bid_price.unit = contract.bid_price.split(/[\.,]+/)[0];
-         state.sell.bid_price.cent = contract.bid_price.split(/[\.,]+/)[1];
+         [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
       }
-      state.sell.is_valid_to_sell = false;
       state.sell.is_valid_to_sell = contract.is_valid_to_sell;
       state.chart.manual_reflow();
    } else {
       /*Just change the current_spot_time to date_expiry*/
       state.table.current_spot_time = state.table.date_expiry;
    }
-   /*Required for spreads only*/
-   if(state.table.contract_type === "SPREAD"){
-      state.table.profit = contract.current_value_in_dollar;
-      state.table.profit_point = contract.current_value_in_point;
-      state.table.entry_tick = contract.entry_level + '';
-      if(state.table.entry_tick)
-         state.table.current_spot = contract.current_level;
-      if(contract.is_sold){
-         state.table.status = "Closed";
-         state.table.is_sold = contract.is_sold;
-         state.table.exit_tick = contract.exit_level;
-         state.table.exit_tick_time = contract.sell_time;
-      }
-      return;
-   }
 
    // Some times backend doesn't send the entry-spot in the beginning. Setting it here to avoid any errors.
    state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
-   state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;   
+   state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
 
    if(contract.is_sold){
       state.table.is_sold = contract.is_sold;
@@ -266,17 +249,10 @@ const update_indicative = (data, state) => {
       state.table.user_sold && state.table.sell_price && state.chart.chart.addPlotLineX({ value: contract.sell_time*1000, label: 'Sell Time'.i18n()});
    }
 
-   if(!state.chart.barrier && contract.barrier) {
-      state.chart.barrier = contract.barrier;
-      state.chart.barrier && state.chart.chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
-   }
-   if(!state.chart.high_barrier && contract.high_barrier) {
-      state.chart.high_barrier = contract.high_barrier;
-      state.chart.high_barrier && state.chart.chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier ('.i18n() + state.chart.high_barrier + ')'});
-   }
-   if(!state.chart.low_barrier && contract.low_barrier) {
-      state.chart.low_barrier = contract.low_barrier;
-      state.chart.low_barrier && state.chart.chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier ('.i18n() + state.chart.low_barrier + ')', color: 'red'});
+   if(+state.chart.barrier !== +contract.barrier ||
+      +state.chart.high_barrier !== +contract.high_barrier ||
+      +state.chart.low_barrier !== +contract.low_barrier ) {
+        update_barrier(true, state, contract);
    }
 }
 
@@ -352,7 +328,7 @@ const sell_at_market = (state, root) => {
       });
 }
 
-const init_state = (proposal, root) =>{   
+const init_state = (proposal, root) =>{
    const state = {
       route: {
          value: 'table',
@@ -382,6 +358,7 @@ const init_state = (proposal, root) =>{
          low_barrier: proposal.low_barrier,
          high_barrier: proposal.high_barrier,
 
+         multiplier: proposal.multiplier,
          buy_price: proposal.buy_price,
          bid_price: undefined,
          final_price: proposal.is_sold ? proposal.sell_price && formatPrice(proposal.sell_price, proposal.currency ||  'USD') : undefined,
@@ -394,6 +371,8 @@ const init_state = (proposal, root) =>{
          sell_price: proposal.is_sold ? proposal.sell_price : undefined,
          purchase_time: proposal.purchase_time,
          is_sold_at_market: false,
+         isLookback: Lookback.isLookback(proposal.contract_type),
+         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
       chart: {
          chart: null, /* highchart object */
@@ -417,42 +396,9 @@ const init_state = (proposal, root) =>{
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
-   // This values are required for SPREADS type contract.
-   if(proposal.contract_type.indexOf("SPREAD") === 0){
-      const shortcode = proposal.shortcode.toUpperCase();
-      const details   = shortcode.replace(proposal.underlying.toUpperCase() + '_', '').split('_');
-      state.table.contract_type = "SPREAD";
-      state.table.status = proposal.is_sold? "Closed": "Open";
-      state.table.per_point = details[1];
-      state.table.stop_loss = details[3];
-      state.table.stop_profit = details[4];
-      state.table.is_point = details[5] === 'POINT';
-      state.table.is_up = proposal.shortcode['spread'.length] === 'U';
-      state.table.direction = state.table.is_up ? 1 : -1;
-      state.table.amount_per_point = state.table.is_up? "+" + state.table.per_point : "-" + state.table.per_point;
-      state.table.is_sold = proposal.is_sold || proposal.is_expired;
-      state.table.exit_tick = proposal.exit_level
-      state.table.exit_tick_time = state.table.is_sold ? proposal.sell_time : undefined;
-      state.table.profit = parseFloat(proposal.current_value_in_dollar);
-      state.table.profit_point = parseFloat(proposal.current_value_in_point);
-      state.table.pro_los = "Profit/Loss (" + state.table.currency.replace(" ","") + ")";
-      state.table.entry_tick = proposal.entry_level;
-      state.table.entry_tick_time = proposal.purchase_time;
-      state.table.current_spot = proposal.current_level;
-      state.table.current_spot_time = proposal.current_spot_time;
-      state.table.stop_loss_level = proposal.stop_loss_level;
-      state.table.stop_profit_level = proposal.stop_profit_level;
 
-      state.table.request ={
-         "proposal"        : 1,
-         "symbol"          : proposal.underlying,
-         "currency"        : proposal.currency,
-         "contract_type"   : details[0],
-         "amount_per_point": state.table.per_point,
-         "stop_loss"       : state.table.stop_loss,
-         "stop_profit"     : state.table.stop_profit,
-         "stop_type"       : details[5].toLowerCase()
-      };
+   if(Lookback.isLookback(proposal.contract_type)) {
+     [state.table.barrier_label, state.table.low_barrier_label] = Lookback.barrierLabels(proposal.contract_type);
    }
 
    state.sell.sell = () => sell_at_market(state, root);
@@ -559,6 +505,44 @@ const update_live_chart = (state, granularity) => {
    state.onclose.push(clean_up); /* clean up */
 }
 
+const update_barrier = (isUpdate, state, contract = {}) => {
+  const {chart} = state.chart;
+  if (!chart) return;
+  const addPlotlines = () => {
+    state.chart.barrier && chart.addPlotLineY({
+      id: 'barrier',
+      value: state.chart.barrier*1,
+      label: `${state.table.barrier_label || 'Barrier'.i18n()} ( ${state.chart.barrier} )`
+    });
+    state.chart.high_barrier && chart.addPlotLineY({
+      id: 'high_barrier',
+      value: state.chart.high_barrier*1,
+      label: `${state.table.barrier_label || 'High Barrier'.i18n()} ( ${state.chart.high_barrier} )`
+    });
+    state.chart.low_barrier && chart.addPlotLineY({
+      id: 'low_barrier',
+      value: state.chart.low_barrier*1,
+      label: `${state.table.low_barrier_label || 'Low Barrier'.i18n()} ( ${state.chart.low_barrier} )`,
+      color: 'red'
+    });
+  };
+
+  const removePlotlines = () => {
+    state.chart.barrier && chart.yAxis[0].removePlotLine('barrier');
+    state.chart.high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
+    state.chart.low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
+  }
+  if (isUpdate) {
+    removePlotlines();
+    state.chart.barrier = state.table.barrier = contract.barrier;
+    state.chart.high_barrier = state.table.high_barrier = contract.high_barrier;
+    state.chart.low_barrier = state.table.low_barrier = contract.low_barrier;
+    addPlotlines();
+  } else {
+    addPlotlines();
+  }
+}
+
 const get_chart_data = (state, root) => {
    const table = state.table;
    const duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
@@ -595,7 +579,7 @@ const get_chart_data = (state, root) => {
       if(data.history) options.history = data.history;
       if(data.candles) options.candles = data.candles;
       const chart = init_chart(root, state, options);
-      
+
       state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
 
       (!state.table.user_sold || state.table.contract_type === "SPREAD") && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
@@ -606,9 +590,7 @@ const get_chart_data = (state, root) => {
       !state.table.user_sold && state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
       state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
 
-      state.chart.barrier && chart.addPlotLineY({value: state.chart.barrier*1, label: 'Barrier ('.i18n() + state.chart.barrier + ')'});
-      state.chart.high_barrier && chart.addPlotLineY({value: state.chart.high_barrier*1, label: 'High Barrier ('.i18n() + state.chart.high_barrier + ')'});
-      state.chart.low_barrier && chart.addPlotLineY({value: state.chart.low_barrier*1, label: 'Low Barrier ('.i18n() + state.chart.low_barrier + ')', color: 'red'});
+      update_barrier(false, state);
 
       state.table.stop_loss_level && chart.addPlotLineY({value: state.table.stop_loss_level*1, label: 'Stop Loss ('.i18n() + state.table.stop_loss_level + ')', color: 'red'});
       state.table.stop_profit_level && chart.addPlotLineY({value: state.table.stop_profit_level*1, label: 'Stop Profit ('.i18n() + state.table.stop_profit_level + ')'});

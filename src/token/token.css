@@ -81,10 +81,13 @@
   cursor: pointer;
 }
 
-.token-dialog .create-token-pane .token-scopes > label {
+.token-dialog .create-token-pane .token-scopes label > span {
   width: auto;
   display: inline-block;
   margin-bottom: 20px;
+  margin-right: 15px;
+  position: relative;
+  top: 2px;
 }
 
 .token-dialog .create-token-pane > button {
@@ -116,10 +119,11 @@
   display: block;
   margin-bottom: 5px;
 }
-.token-dialog label[data-balloon]:before {
+.token-dialog span[data-balloon]:before {
   margin-left: 115px;
   width: 275px;
 }
-[data-balloon] {
-  border-bottom: 3px solid #F2F2F2;
+
+.token-dialog .binaryShop {
+  cursor: pointer;
 }
