@@ -24,6 +24,9 @@
     /* override jq-ui css */
     font-size: 14px !important;
     z-index: 100;
+    padding-left: 8px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .real-dialog .row {
