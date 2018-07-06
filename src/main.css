@@ -57,8 +57,7 @@ body > .footer .addiction-warning a:hover {
 
 
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
-  width: 14px;
-  height: 14px;
+    height: 18px !important;
 }
 
 .ui-dialog {
