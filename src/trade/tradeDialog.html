@@ -312,11 +312,19 @@
 
     <ul class="purchase-row stick-to-bottom ltr-direction"
         rv-css-opacity="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error | ternary 0.5 1">
-      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-html="proposal.ask_price | format-price currency.value"> </span> </span> </li>
-      <li> <button
-              rv-on-click="purchase.onclick"
-              rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">Purchase</button>
-      </li>
+        <div class="purchase-row-wrapper">
+            <li>
+                <span class="u-width-280"> You pay: <span rv-html="proposal.ask_price | format-price currency.value" />
+                </span>
+            </li>
+            <li class="purchase-row-wrapper__btn-container">
+                <button
+                    rv-on-click="purchase.onclick"
+                    rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">
+                    Purchase
+                </button>
+            </li>
+        </div>  
     </ul>
   </div>
 </div>

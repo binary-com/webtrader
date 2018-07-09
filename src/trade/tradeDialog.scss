@@ -432,3 +432,15 @@
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip;}
+
+.purchase-row-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  .u-width-280 {
+    width: 280px !important;
+  }
+  &__btn-container {
+    margin-left: 0px !important;
+  }
+}
