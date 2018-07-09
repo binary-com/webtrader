@@ -233,3 +233,7 @@
 .real-dialog input[type="text"]:disabled:hover {
     border: 1px solid #f2f2f2;
 }
+
+.real-dialog .ui-selectmenu-text {
+    padding: 0px;
+}
