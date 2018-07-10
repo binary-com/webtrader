@@ -1,12 +1,10 @@
-/**
- * Created by Arnab Karmakar on 10/1/17.
- */
 import $ from 'jquery';
 import windows from '../windows/windows';
 import rv from '../common/rivetsExtra';
 import _ from 'lodash';
 import html from 'text!./index.html';
 import 'css!./index.css';
+import { trade_types } from '../common/common';
 import '../common/util';
 import liveapi from 'websockets/binary_websockets';
 import validateToken from 'websockets/validateToken';
@@ -15,77 +13,11 @@ import { init as instrumentPromise } from '../instruments/instruments';
 // While using copy trader, this cannot be NULL
 const getLoggedInUserId = () => local_storage.get("oauth")[0].id;
 
-const TRADE_TYPES = [{
-    code: 'CALL',
-    name: 'Rise',
-  }, {
-    code: 'CALL',
-    name: 'Higher',
-  },
-  {
-    code: 'PUT',
-    name: 'Fall',
-  },
-  {
-    code: 'PUT',
-    name: 'Lower',
-  },
-  {
-    code: 'ONETOUCH',
-    name: 'Touch',
-  },
-  {
-    code: 'NOTOUCH',
-    name: 'NoTouch',
-  },
-  {
-    code: 'EXPIRYMISS',
-    name: 'Ends Outside',
-  },
-  {
-    code: 'EXPIRYRANGE',
-    name: 'Ends Between',
-  },
-  {
-    code: 'DIGITDIFF',
-    name: 'Digits Differ',
-  },
-  {
-    code: 'DIGITMATCH',
-    name: 'Digits Match',
-  },
-  {
-    code: 'DIGITOVER',
-    name: 'Digits Over',
-  },
-  {
-    code: 'DIGITUNDER',
-    name: 'Digits Under',
-  },
-  {
-    code: 'DIGITODD',
-    name: 'Digits Odd',
-  },
-  {
-    code: 'DIGITEVEN',
-    name: 'Digits Even',
-  },
-  {
-    code: 'ASIANU',
-    name: 'Asians Up',
-  },
-  {
-    code: 'ASIAND',
-    name: 'Asians Down',
-  },
-  {
-    code: 'RANGE',
-    name: 'Stays Between',
-  },
-  {
-    code: 'UPORDOWN',
-    name: 'Goes Outside',
-  }];
+const TRADE_TYPES = trade_types;
+
+const error_messages = {
+    invalid_stake_limit: 'Min trade stake should be lower than max trade stake.',
+};
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
@@ -106,37 +38,15 @@ const defaultTraderDetails = (traderApiToken, loginid) => ({
   loginid,
   yourCopySettings: defaultCopySettings(traderApiToken),
 });
-const validateYourCopySettingsData = yourCopySettingsData => {
-  let valid = false;
-  let errorMessage = '';
-  if (yourCopySettingsData) {
-        if (!yourCopySettingsData.min_trade_stake ||
-          (yourCopySettingsData.min_trade_stake >= 1 && yourCopySettingsData.min_trade_stake <= 50000)) {
-          if (!yourCopySettingsData.max_trade_stake ||
-            (yourCopySettingsData.max_trade_stake >= 1 && yourCopySettingsData.max_trade_stake <= 50000)) {
-              if (yourCopySettingsData.min_trade_stake && yourCopySettingsData.max_trade_stake) {
-                if (yourCopySettingsData.min_trade_stake > yourCopySettingsData.max_trade_stake) {
-                  errorMessage = 'Min Trade Stake should be less than Max Trade Stake';
-                } else {
-                  valid = true;
-                }
-              } else {
-                valid = true;
-              }
-          } else {
-            errorMessage = 'Max Trade Stake should between 1 and 50000';
-          }
-        } else {
-          errorMessage = 'Min Trade Stake should between 1 and 50000';
-        }
-  } else {
-    errorMessage = 'Enter valid values for copy settings';
+
+const validate_min_max_stake = (yourCopySettingsData) => {
+  const { min_trade_stake, max_trade_stake } = yourCopySettingsData;
+  if (min_trade_stake > max_trade_stake) {
+    return false;
   }
-  if (errorMessage) {
-    $.growl.error({ message: errorMessage });
-  }
-  return valid;
+  return true;
 };
+
 const updateLocalStorage = _.debounce(scope => {
   const clonedScope = _.cloneDeep(scope);
   delete clonedScope.searchToken.disable;
@@ -325,22 +235,14 @@ const state = {
   },
 
   onUpdateYourSettings: (index) => {
-    if (validateYourCopySettingsData(state.traderTokens[index].yourCopySettings)) {
-      /**
-       * Make sure min_trade_stake & max_trade_stack are numeric
-       */
-      if(state.traderTokens[index].yourCopySettings.min_trade_stake)
-        state.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.min_trade_stake);
-
-      if (state.traderTokens[index].yourCopySettings.max_trade_stake)
-        state.traderTokens[index].yourCopySettings.max_trade_stake = parseInt(state.traderTokens[index].yourCopySettings.max_trade_stake);
-
+    if (!validate_min_max_stake(state.traderTokens[index].yourCopySettings)) {
+      $.growl.error({ message: error_messages.invalid_stake_limit });
+    } else {
       updateLocalStorage(state);
-      $.growl.notice({
-        message: 'Updated successfully',
-      });
+      $.growl.notice({ message: 'Updated successfully' });
     }
   },
+
   searchToken: {
     token: '',
     onTokenChange: (event, scope) => scope.searchToken.token = event.target.value,
@@ -390,36 +292,6 @@ const state = {
         });
     },
   },
-  /*
-   {
-     //We get this object from server - that's why the variables are named as per what server sends
-     traderStatistics: {
-       active_since:,
-       monthly_profitable_trades:,
-       yearly_profitable_trades:,
-       last_12months_profitable_trades:,
-       total_trades:,
-       trades_profitable:,
-       avg_duration:,
-       avg_profit:,
-       avg_loss:,
-       trades_breakdown:,
-       performance_probability:,
-       copiers:,
-     },
-     yourCopySettings: {
-       copy_start: <trader's API token>,
-       min_trade_stake:,
-       max_trade_stake:,
-       assets: [], // <- This should be list of instrument code(s) e.g, frxEURUSD, R_100, etc
-       trade_types: [],
-     },
-     open: false, // if this section is open
-     started: false, // If this is currently being used for copying
-     disableRefresh: false, // If refresh button clicked
-     loginid: , // login ID of trader
-   }
-   */
   traderTokens: [],
   openTokenMgmt: () => $('li.account ul a.token-management').click(),
 };
