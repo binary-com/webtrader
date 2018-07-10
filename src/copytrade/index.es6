@@ -315,10 +315,13 @@ const state = {
     state.formatAndSetTradeStake(event, scope, 'max_trade_stake')
   },
 
-  formatAndSetTradeStake: (event, scope, type) => {
+  formatAndSetTradeStake: (event, scope, type_trade_stake) => {
     const index = $(event.target).data('index');
     const value = event.target.value;
-    // TODO: Format value here
+    const format_amount = _.isNil(value) ? false : value.match(/0*(\d+\.?\d{0,2})/);
+    if (format_amount) {
+      scope.traderTokens[index].yourCopySettings[type_trade_stake] = format_amount[1];	
+    }
   },
 
   onUpdateYourSettings: (index) => {
