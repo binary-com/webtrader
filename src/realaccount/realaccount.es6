@@ -62,7 +62,8 @@ const init_real_win = (root, what_todo) => {
       destroy: () => {
          real_win_view && real_win_view.unbind();
          real_win_view = null;
-      }
+      },
+      'data-authorized' :'true'
    });
 
    init_state(root, what_todo);
