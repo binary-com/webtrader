@@ -1,4 +1,12 @@
 .copytrade-dialog {
+  input {
+    &:disabled {
+      color: #aeaeae;
+      &:hover {
+        border: 1px solid #f2f2f2;
+      }
+    }
+  }
   padding: 15px 0px !important;
   span.text {
     white-space: nowrap;
