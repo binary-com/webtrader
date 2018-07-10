@@ -306,17 +306,21 @@ const state = {
         });
     }
   },
+
   onMinTradeChange: (event, scope) => {
-    const index = $(event.target).data('index');
-    const value = event.target.value;
-    if (!isNaN(parseInt(value)))
-      scope.traderTokens[index].yourCopySettings.min_trade_stake = parseInt(value);
+    state.formatAndSetTradeStake(event, scope, 'min_trade_stake')
   },
+
   onMaxTradeChange: (event, scope) => {
+    state.formatAndSetTradeStake(event, scope, 'max_trade_stake')
+  },
+
+  formatAndSetTradeStake: (event, scope, type) => {
     const index = $(event.target).data('index');
     const value = event.target.value;
-    scope.traderTokens[index].yourCopySettings.max_trade_stake = value;
+    // TODO: Format value here
   },
+
   onUpdateYourSettings: (index) => {
     if (validateYourCopySettingsData(state.traderTokens[index].yourCopySettings)) {
       /**
