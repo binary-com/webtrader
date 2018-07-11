@@ -71,3 +71,4 @@ const trade_types = [{
   }];
 
   export { trade_types }
+  

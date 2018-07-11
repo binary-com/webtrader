@@ -15,7 +15,7 @@ const getLoggedInUserId = () => local_storage.get("oauth")[0].id;
 
 const TRADE_TYPES = trade_types;
 
-const error_messages = {
+const form_error_messages = {
     invalid_stake_limit: 'Min trade stake should be lower than max trade stake.',
 };
 
@@ -236,7 +236,7 @@ const state = {
 
   onUpdateYourSettings: (index) => {
     if (!validate_min_max_stake(state.traderTokens[index].yourCopySettings)) {
-      $.growl.error({ message: error_messages.invalid_stake_limit });
+      $.growl.error({ message: form_error_messages.invalid_stake_limit });
     } else {
       updateLocalStorage(state);
       $.growl.notice({ message: 'Updated successfully' });
@@ -350,15 +350,29 @@ const initConfigWindow = () => {
     is_unique: true,
     data: null,
   });
-
   win.dialog( 'open' );
+};
+
+const disableKeypressChars = (...input_el_ids) => {
+  if (input_el_ids.length > 0) {
+    const comma_separated_ids = input_el_ids.join(', ');
+    $(comma_separated_ids).keypress((evt) => {
+      if ((evt.which < 48 || evt.which > 57) && evt.which !== 8) {
+          evt.preventDefault();
+      }
+    });
+  }
 };
 
 export const init = ($menuLink) => {
   $menuLink.click(() => {
-    if (!win) initConfigWindow();
-    else win.moveToTop();
+    if (!win) {
+      initConfigWindow();
+      disableKeypressChars('#max_trade_stake', '#min_trade_stake');
+    }
+    else { win.moveToTop(); }
   });
 };
 
 export default { init }
+
