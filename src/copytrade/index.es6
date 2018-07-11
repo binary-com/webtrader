@@ -357,7 +357,7 @@ const disableKeypressChars = (...input_el_ids) => {
   if (input_el_ids.length > 0) {
     const comma_separated_ids = input_el_ids.join(', ');
     $(comma_separated_ids).keypress((evt) => {
-      if ((evt.which < 48 || evt.which > 57) && evt.which !== 8) {
+      if ((evt.which < 48 || evt.which > 57) && evt.which !== 8 && evt.which !== 46) {
           evt.preventDefault();
       }
     });

@@ -114,6 +114,7 @@
                               rv-on-keyup="onMinTradeChange"
                               rv-disabled="item.started"
                             />
+                            <p class="hint u-align-left">Optional field</p>
                           </div>
                         </div>
                         <div class="row">
@@ -127,6 +128,7 @@
                               rv-on-keyup="onMaxTradeChange"
                               rv-disabled="item.started"
                             />
+                            <p class="hint u-align-left">Optional field</p>
                           </div>
                         </div>
                         <div class="row">
@@ -145,6 +147,7 @@
                                 <option rv-each-instrument="row.instruments" rv-value="instrument.symbol">{instrument.display_name}</option>
                               </optgroup>
                             </select>
+                            <p class="hint u-align-left">Optional field</p>
                           </div>
                         </div>
                         <div class="row">
@@ -161,6 +164,7 @@
                             >
                               <option rv-each-row="masterTradeTypeList" rv-value="row.code">{row.name}</option>
                             </select>
+                            <p class="hint u-align-left">Optional field</p>
                           </div>
                         </div>
                         <div class="row">
