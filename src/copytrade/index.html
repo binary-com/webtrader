@@ -175,7 +175,7 @@
                           </div>
                         </div>
                       </div>
-                      <p class="hint no-margin"> * The fields are optional. If you wish to copy all assets or trade types please leave the field(s) empty. </p>
+                      <p class="hint no-margin"> * All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty </p>
                     </div>
                     <div rv-show="item.open" class="details-section">
                       <div class="tag">
@@ -184,7 +184,7 @@
                       <div class="table traderStats">
                         <div class="row">
                           <div class="cell">Active Since</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.active_since"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.active_since | moment"></span></div>
                         </div>
                         <div class="row">
                           <div class="cell">Avg. Duration</div>
@@ -192,11 +192,11 @@
                         </div>
                         <div class="row">
                           <div class="cell">Avg. Loss</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.avg_loss"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.avg_loss"></span> <span>%</span></div>
                         </div>
                         <div class="row">
                           <div class="cell">Avg. Profit</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.avg_profit"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.avg_profit"></span> <span>%</span></div>
                         </div>
                         <div class="row">
                           <div class="cell">Total Copiers</div>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="row">
                           <div class="cell">Last 12 mnts Profitable Trades</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.last_12months_profitable_trades"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.last_12months_profitable_trades"></span> <span>%</span></div>
                         </div>
                         <!-- <div class="row">
                           <div class="cell">Monthly Profitable Trades</div>
@@ -228,7 +228,7 @@
                         </div> -->
                         <div class="row">
                           <div class="cell">Trades Profitability</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.trades_profitable"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.trades_profitable"></span> <span>%</span></div>
                         </div>
                       </div>
                     </div>
