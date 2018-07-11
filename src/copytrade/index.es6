@@ -17,6 +17,8 @@ const TRADE_TYPES = trade_types;
 
 const form_error_messages = {
     invalid_stake_limit: 'Min trade stake should be lower than max trade stake.',
+    token_already_added: 'Token already added',
+    enter_valid_token: 'Enter a valid trader token',
 };
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
@@ -235,11 +237,11 @@ const state = {
   },
 
   onUpdateYourSettings: (index) => {
-    if (!validate_min_max_stake(state.traderTokens[index].yourCopySettings)) {
-      $.growl.error({ message: form_error_messages.invalid_stake_limit });
-    } else {
+    if (validate_min_max_stake(state.traderTokens[index].yourCopySettings)) {
       updateLocalStorage(state);
       $.growl.notice({ message: 'Updated successfully' });
+    } else {
+      $.growl.error({ message: form_error_messages.invalid_stake_limit });
     }
   },
 
@@ -255,15 +257,13 @@ const state = {
     addToken: (event, scope) => {
       //If searchToken.token is empty, do nothing
       if (!scope.searchToken.token) {
-        $.growl.error({
-          message: 'Enter a valid trader token',
-        });
+        $.growl.error({ message: form_error_messages.enter_valid_token });
         return;
       }
 
       //If already added, throw error
       if (_.some(state.traderTokens, f => f.yourCopySettings.copy_start === scope.searchToken.token)) {
-        $.growl.error({ message: 'Token already added' });
+        $.growl.error({ message: form_error_messages.token_already_added });
         return;
       }
 
