@@ -72,14 +72,14 @@
           <div class="cell cell-borders">
             <div class="table">
               <div class="row">
-                  <div class="cell section-toggle">
-                    <span class="pointer-cursor ui-icon ui-icon-carat-d" rv-show="item.open | negate" rv-on-click="onOpenChange | bind index"></span>
-                    <span class="pointer-cursor ui-icon ui-icon-carat-u" rv-show="item.open" rv-on-click="onOpenChange | bind index"></span>
-                  </div>
                   <div class="cell">
-                    <div class="sectionHeader">
-                      <div class="pointer-cursor token-header-text" rv-on-click="onOpenChange | bind index">{item.yourCopySettings.copy_start}</div>
-                      <div class="token-header-controls">
+                    <div class="section-header">
+                      <div class="section-header__toggle">
+                        <span class="pointer-cursor ui-icon ui-icon-carat-d" rv-show="item.open | negate" rv-on-click="onOpenChange | bind index"></span>
+                        <span class="pointer-cursor ui-icon ui-icon-carat-u" rv-show="item.open" rv-on-click="onOpenChange | bind index"></span>
+                      </div>
+                      <div class="pointer-cursor section-header__text" rv-on-click="onOpenChange | bind index">{item.yourCopySettings.copy_start}</div>
+                      <div class="section-header__controls">
                         <button rv-on-click="onRefresh | bind index" rv-disabled="item.disableRefresh" class="button-secondary" title="Refresh">
                           <span class="ui-icon-refresh ui-icon"></span>
                         </button>
