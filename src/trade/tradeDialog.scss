@@ -379,43 +379,32 @@
         font-weight:normal;
     }
     .trade-fields ul.contract-displays li:first-child:before { content: none; }
-    .trade-fields ul.contract-displays li:nth-child(6n):before { content: none; }
 /*#endregion*/
 
 .trade-fields ul li input.date-expiry-date { width: 100px; }
 .trade-fields ul li input.date-expiry-hour { width: 100px; }
 
-/* for elements that should stick to the buttom of dialog */
-.trade-fields .stick-to-bottom {
-  position: absolute;
-  width: 100%;
-  padding: 0;
-}
-
 .trade-fields .proposal-message {
+    margin: 8px 0;
     padding-top: 4px;
     border-top: 1px solid #c2c1c1;
-    bottom: 80px;
+    text-align: center;
     li {
-        box-sizing: border-box;
         padding: 0 5px;
         line-height: 1.1em;
     }
 }
 
-.trade-fields ul.message-row {
+.trade-fields .message-row-wrapper {
   justify-content: center;
-  bottom: 45px;
   padding: 2px 0;
-}
-.trade-fields ul.proposal-message li,
-.trade-fields ul.message-row li {
-  text-align: center;
-  width:auto;
-}
-.trade-fields ul.message-row li span { 
-  display: inline; 
   font-size: 12px;
+  &__container {
+    text-align: center;
+    span {
+      display: inline !important; 
+    }
+  }
 }
 
 .trade-fields .spread-deposit {
@@ -424,7 +413,6 @@
     font-size: 85%;
 }
 
-.trade-fields .purchase-row { bottom: 5px;}
 .trade-fields .purchase-row li:nth-child(1) { left: 20px; width: 200px; line-height: 34px;margin-right:5px;}
 .ui-dialog .ui-dialog-content.trade-dialog .trade-fields .purchase-row li:nth-child(2) { margin-left:10px; right:5px; position: relative;}
 .trade-fields .purchase-row li span { font-weight: bolder; font-size: 18px; text-overflow: ellipsis; overflow: hidden; width: 205px;}
