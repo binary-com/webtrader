@@ -1,5 +1,41 @@
 .copytrade-dialog {
   padding: 15px 0px !important;
+
+  input {
+    &:disabled {
+      color: #aeaeae;
+      &:hover {
+        border: 1px solid #f2f2f2;
+      }
+    }
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    padding: 8px 8px;
+    &__toggle {
+      margin-right: 8px;
+      span {
+        font-size: 20px;
+      }
+    }
+    &__text {
+      margin-right: auto;
+    }
+    &__controls {
+      span {
+        pointer-events: none;
+        background: none;
+      }
+    }
+  }
+
+  .hint {
+    margin: 0;
+    padding: 0px 32px;
+  }
+
   span.text {
     white-space: nowrap;
   }
@@ -86,16 +122,6 @@
     }
     .table {
       .row {
-        .section-toggle {
-          width: 35px;
-          white-space: nowrap;
-          span {
-            font-size: 20px;
-            position: relative;
-            top: 8px;
-            margin: auto;
-          }
-        }
         .cell {
           .pointer-cursor {
             cursor: pointer;
@@ -114,7 +140,6 @@
           .details-section {
             margin-bottom: 10px;
             .tag {
-              margin-top: 5px;
               background-color: #F2F2F2;
               white-space: nowrap;
               padding-top: 10px;
@@ -166,23 +191,9 @@
                 }
                 .cell {
                   padding: 10px;
+                  white-space: normal;
+                  word-break: break-word;
                 }
-              }
-            }
-          }
-          .sectionHeader {
-            display: inline-flex;
-            width: 100%;
-            .token-header-text {
-              width: 100%;
-              position: relative;
-              top: 4px;
-            }
-            .token-header-controls {
-              width: 150px;
-              span {
-                pointer-events: none;
-                background: none;
               }
             }
           }

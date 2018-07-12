@@ -72,14 +72,14 @@
           <div class="cell cell-borders">
             <div class="table">
               <div class="row">
-                  <div class="cell section-toggle">
-                    <span class="pointer-cursor ui-icon ui-icon-carat-d" rv-show="item.open | negate" rv-on-click="onOpenChange | bind index"></span>
-                    <span class="pointer-cursor ui-icon ui-icon-carat-u" rv-show="item.open" rv-on-click="onOpenChange | bind index"></span>
-                  </div>
                   <div class="cell">
-                    <div class="sectionHeader">
-                      <div class="pointer-cursor token-header-text" rv-on-click="onOpenChange | bind index">{item.yourCopySettings.copy_start}</div>
-                      <div class="token-header-controls">
+                    <div class="section-header">
+                      <div class="section-header__toggle">
+                        <span class="pointer-cursor ui-icon ui-icon-carat-d" rv-show="item.open | negate" rv-on-click="onOpenChange | bind index"></span>
+                        <span class="pointer-cursor ui-icon ui-icon-carat-u" rv-show="item.open" rv-on-click="onOpenChange | bind index"></span>
+                      </div>
+                      <div class="pointer-cursor section-header__text" rv-on-click="onOpenChange | bind index">{item.yourCopySettings.copy_start}</div>
+                      <div class="section-header__controls">
                         <button rv-on-click="onRefresh | bind index" rv-disabled="item.disableRefresh" class="button-secondary" title="Refresh">
                           <span class="ui-icon-refresh ui-icon"></span>
                         </button>
@@ -107,8 +107,8 @@
                           <div class="cell ignore-bottom-border">Min. Trade Stake</div>
                           <div class="cell ignore-bottom-border">
                             <input
-                              type="number"
-                              min="0" max="1000"
+                              type="text"
+                              id="min_trade_stake"
                               rv-value="item.yourCopySettings.min_trade_stake"
                               rv-data-index="index"
                               rv-on-keyup="onMinTradeChange"
@@ -120,9 +120,8 @@
                           <div class="cell ignore-bottom-border">Max. Trade Stake</div>
                           <div class="cell ignore-bottom-border">
                             <input
-                              type="number"
-                              min="100"
-                              max="10000000"
+                              type="text"
+                              id="max_trade_stake"
                               rv-value="item.yourCopySettings.max_trade_stake"
                               rv-data-index="index"
                               rv-on-keyup="onMaxTradeChange"
@@ -176,6 +175,7 @@
                           </div>
                         </div>
                       </div>
+                      <p class="hint no-margin"> * All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty </p>
                     </div>
                     <div rv-show="item.open" class="details-section">
                       <div class="tag">
@@ -184,19 +184,19 @@
                       <div class="table traderStats">
                         <div class="row">
                           <div class="cell">Active Since</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.active_since"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.active_since | moment"></span></div>
                         </div>
                         <div class="row">
-                          <div class="cell">Avg. Duration</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.avg_duration"></span></div>
+                          <div class="cell">Avg. Duration of Open Positions</div>
+                          <div class="cell"><span rv-text="item.traderStatistics.avg_duration"></span> <span>sec</span></div>
                         </div>
                         <div class="row">
                           <div class="cell">Avg. Loss</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.avg_loss"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.avg_loss"></span> <span>%</span></div>
                         </div>
                         <div class="row">
                           <div class="cell">Avg. Profit</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.avg_profit"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.avg_profit"></span> <span>%</span></div>
                         </div>
                         <div class="row">
                           <div class="cell">Total Copiers</div>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="row">
                           <div class="cell">Last 12 mnts Profitable Trades</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.last_12months_profitable_trades"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.last_12months_profitable_trades"></span> <span>%</span></div>
                         </div>
                         <!-- <div class="row">
                           <div class="cell">Monthly Profitable Trades</div>
@@ -228,7 +228,7 @@
                         </div> -->
                         <div class="row">
                           <div class="cell">Trades Profitability</div>
-                          <div class="cell"><span rv-text="item.traderStatistics.trades_profitable"></span></div>
+                          <div class="cell"><span rv-text="item.traderStatistics.trades_profitable"></span> <span>%</span></div>
                         </div>
                       </div>
                     </div>
