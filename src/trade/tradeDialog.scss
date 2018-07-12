@@ -388,28 +388,6 @@
 .trade-fields ul li input.date-expiry-date { width: 100px; }
 .trade-fields ul li input.date-expiry-hour { width: 100px; }
 
-.trade-fields .proposal-message {
-    margin: 8px 0;
-    border-top: 1px solid #c2c1c1;
-    text-align: center;
-    li {
-        padding: 0 5px;
-        line-height: 1.1em;
-    }
-}
-
-.trade-fields .message-row-wrapper {
-  justify-content: center;
-  padding: 2px 0;
-  font-size: 12px;
-  &__container {
-    text-align: center;
-    span {
-      display: inline !important; 
-    }
-  }
-}
-
 .trade-fields .spread-deposit {
     background: #c2c1c1;
     white-space: nowrap;
@@ -420,18 +398,42 @@
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip;}
 
-.purchase-row-wrapper {
-  display: flex;
-  justify-content: space-between !important;
-  padding: 8px 10px !important;
-  font-weight: bold;
-  font-size: 18px;
-
-  &__btn-container {
-    margin-left: 0px !important;
+.trade-fields {
+  .proposal-message {
+    margin: 8px 0;
+    border-top: 1px solid #c2c1c1;
+    text-align: center;
+    li {
+        padding: 0 5px;
+        line-height: 1.1em;
+    }
   }
-  &__text-container {
+
+  .message-row-wrapper {
+    justify-content: center;
+    padding: 2px 0;
+    font-size: 12px;
+    &__container {
+      text-align: center;
+      span {
+        display: inline !important;
+      }
+    }
+  }
+
+  .purchase-row-wrapper {
     display: flex;
-    align-items: center;
+    justify-content: space-between !important;
+    padding: 4px 10px !important;
+    font-weight: bold;
+    font-size: 18px;
+
+    &__btn-container {
+      margin-left: 0px !important;
+    }
+    &__text-container {
+      display: flex;
+      align-items: center;
+    }
   }
 }
