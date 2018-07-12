@@ -494,3 +494,8 @@ label.checkbox input:checked ~ span.check {
     right: 2px !important;
     left: auto;
 }
+
+.ui-dialog-titlebar {
+    display: flex;
+    align-items: center;
+}

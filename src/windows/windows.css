@@ -11,12 +11,10 @@
 .ui-dialog-titlebar .ui-dialog-title.with-content {
     min-width:200px;
     width: 20%;
-    padding-bottom: 5px;
 }
 
 .ui-dialog-titlebar .ui-selectmenu-button {
     padding: 0;
-    margin-top: -.3em;
     height: 28px;
     margin-right: 5px;
     vertical-align: top;
@@ -25,11 +23,6 @@
 .ui-dialog-titlebar .title {
     margin-top: .1em;
     float:left;
-}
-
-.ui-dialog-titlebar .ui-datepicker-trigger {
-  position: absolute;
-  top: 11px;
 }
 
 /* use a maximum height for jq-ui dropdowns */
@@ -87,7 +80,6 @@ img.reload {
     right: 3px;
 }
 .ui-datepicker-trigger.ui-button {
-    margin-top: -30px;
     margin-left: -10px;
     position: relative;
     border: none;
@@ -100,5 +92,4 @@ img.reload {
 .windows-dateInput {
   width: initial !important;
   position: relative;
-  top: -3px;
 }
