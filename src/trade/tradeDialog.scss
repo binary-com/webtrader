@@ -423,16 +423,18 @@
   .purchase-row-wrapper {
     display: flex;
     justify-content: space-between !important;
-    padding: 4px 10px !important;
+    padding: 4px 0 !important;
     font-weight: bold;
     font-size: 18px;
 
     &__btn-container {
-      margin-left: 0px !important;
+      margin-right: auto !important;
+      padding-left: 10px !important;
     }
     &__text-container {
       display: flex;
       align-items: center;
+      margin-left: auto !important;
     }
   }
 }
