@@ -1,4 +1,8 @@
-﻿.ui-dialog .ui-dialog-content.trade-dialog {
+﻿.trade-dialog {
+  height: auto !important;
+}
+
+.ui-dialog .ui-dialog-content.trade-dialog {
     line-height: 1em;
     padding: 0;
     position: relative;
@@ -386,7 +390,6 @@
 
 .trade-fields .proposal-message {
     margin: 8px 0;
-    padding-top: 4px;
     border-top: 1px solid #c2c1c1;
     text-align: center;
     li {
@@ -413,22 +416,22 @@
     font-size: 85%;
 }
 
-.trade-fields .purchase-row li:nth-child(1) { left: 20px; width: 200px; line-height: 34px;margin-right:5px;}
-.ui-dialog .ui-dialog-content.trade-dialog .trade-fields .purchase-row li:nth-child(2) { margin-left:10px; right:5px; position: relative;}
-.trade-fields .purchase-row li span { font-weight: bolder; font-size: 18px; text-overflow: ellipsis; overflow: hidden; width: 205px;}
-
 .trade-fields ul li select.digits-select + .ui-selectmenu-button { width: 40px; }
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-icon { right: 3px;}
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip;}
 
 .purchase-row-wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 92%;
-  .u-width-280 {
-    width: 280px !important;
-  }
+  justify-content: space-between !important;
+  padding: 8px 10px !important;
+  font-weight: bold;
+  font-size: 18px;
+
   &__btn-container {
     margin-left: 0px !important;
+  }
+  &__text-container {
+    display: flex;
+    align-items: center;
   }
 }

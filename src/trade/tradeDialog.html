@@ -310,21 +310,20 @@
         <li class="message-row-wrapper__container" >{proposal.error}</li>
     </ul>
 
-    <ul class="purchase-row"
+    <ul class="purchase-row-wrapper"
         rv-css-opacity="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error | ternary 0.5 1">
-        <div class="purchase-row-wrapper">
-            <li>
-                <span class="u-width-280"> You pay: <span rv-html="proposal.ask_price | format-price currency.value" />
-                </span>
-            </li>
-            <li class="purchase-row-wrapper__btn-container">
-                <button
-                    rv-on-click="purchase.onclick"
-                    rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">
-                    Purchase
-                </button>
-            </li>
-        </div>
+        <li class="purchase-row-wrapper__text-container">
+            <span>
+                You pay: <span rv-html="proposal.ask_price | format-price currency.value" />
+            </span>
+        </li>
+        <li class="purchase-row-wrapper__btn-container">
+            <button
+                rv-on-click="purchase.onclick"
+                rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">
+                Purchase
+            </button>
+        </li>
     </ul>
   </div>
 </div>
