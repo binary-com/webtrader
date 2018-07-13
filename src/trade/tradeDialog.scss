@@ -1,8 +1,4 @@
-﻿.trade-dialog {
-  height: auto !important;
-}
-
-.ui-dialog .ui-dialog-content.trade-dialog {
+﻿.ui-dialog .ui-dialog-content.trade-dialog {
     line-height: 1em;
     padding: 0;
     position: relative;
@@ -398,8 +394,11 @@
 .trade-fields ul li select.digits-select + .ui-selectmenu-button .ui-selectmenu-text { padding-left: 10px; text-overflow: clip;}
 
 .trade-fields {
+  display: flex;
+  flex-direction: column;
+
   .proposal-message {
-    margin-top: 10px;
+    margin-top: auto;
     border-top: 1px solid #c2c1c1;
     text-align: center;
     li {
