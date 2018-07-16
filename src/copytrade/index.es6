@@ -162,11 +162,13 @@ const state = {
               .then(() => {
                 newObj.disableStart = false;
                 newObj.started = true;
+                disableKeypressChars('#max_trade_stake', '#min_trade_stake');
                 updateLocalStorage(state);
               })
               .catch(e => {
                 $.growl.error({ message: e.message });
                 newObj.disableStart = false;
+                disableKeypressChars('#max_trade_stake', '#min_trade_stake');
                 updateLocalStorage(state);
               });
           });
@@ -232,7 +234,9 @@ const state = {
     const value = event.target.value;
     const format_amount = _.isNil(value) ? false : value.match(/0*(\d+\.?\d{0,2})/);
     if (format_amount) {
-      scope.traderTokens[index].yourCopySettings[type_trade_stake] = format_amount[1];	
+      scope.traderTokens[index].yourCopySettings[type_trade_stake] = format_amount[1];
+    } else {
+      scope.traderTokens[index].yourCopySettings[type_trade_stake] = '';
     }
   },
 
@@ -358,7 +362,7 @@ const disableKeypressChars = (...input_el_ids) => {
     const comma_separated_ids = input_el_ids.join(', ');
     $(comma_separated_ids).keypress((evt) => {
       if ((evt.which < 48 || evt.which > 57) && evt.which !== 8 && evt.which !== 46) {
-          evt.preventDefault();
+        evt.preventDefault();
       }
     });
   }
