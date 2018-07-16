@@ -22,6 +22,10 @@ const error_handler = (err) => {
    $.growl.error({ message: err.message });
 };
 
+const object_has_empty_value = (obj) => {
+      return Object.values(obj).some((value) => value === '');
+};
+
 export const init = (li) => {
    real_win_li = li;
    li.click(() => {
@@ -253,14 +257,6 @@ const init_state = (root, what_todo) => {
          });
    };
 
-   state.financial.empty_financial_fields = () => {
-      return false;
-   };
-
-   state.financial.empty_trading_fields = () => {
-      return false;
-   }
-
    state.user.pep_window = (e) => {
       e.preventDefault();
       const text = `A Politically Exposed Person (PEP) is an individual who is or has been entrusted with a prominent public function including his/her immediate family members or persons known to be close associates of such persons, but does not include middle ranking or more junior officials.<br><br>
@@ -314,11 +310,19 @@ const init_state = (root, what_todo) => {
    }
 
    state.financial.click = () => {
-      if (state.financial.empty_financial_fields()) {
+      console.log(state.financial.trading_experience);
+      if (object_has_empty_value(state.financial.trading_experience)) {
+            state.empty_fields.show();
+            $.growl.error({ message: 'Not all trading experiences are completed' });
+            return;
+      }
+
+      if (object_has_empty_value(state.financial.financial_information)) {
          state.empty_fields.show();
          $.growl.error({ message: 'Not all financial information are completed' });
          return;
       }
+
       if (!state.financial.accepted) {
          $.growl.error({ message: 'Binary.com terms and conditions unchecked.' });
          return;
@@ -326,6 +330,7 @@ const init_state = (root, what_todo) => {
 
       state.risk.visible = true;
    };
+
    state.financial.create_request = () => {
       const user = state.user;
       const request = {
