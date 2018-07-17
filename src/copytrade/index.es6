@@ -108,26 +108,28 @@ const refreshTraderStats = (loginid, token, scope) => liveapi
 
 let win = null, win_view = null;
 
-const onChangeCopytradeSettings = _.debounce((newOption) => {
-  state.allowCopy.allow_copiers = newOption;
+const onChangeCopytradeSettings = _.debounce((allow_copiers) => {
+  state.is_loading = true;
   liveapi
     .send({
       set_settings: 1,
-      allow_copiers: newOption,
+      allow_copiers,
+    })
+    .then((settings) => {
+      state.is_loading = false;
+      // settings req does not return updated settings
+      state.allowCopy.allow_copiers = allow_copiers;
     })
     .catch(e => {
       $.growl.error({ message: e.message });
-      //revert
-      state.allowCopy.allow_copiers = (newOption == 1 ? 0 : 1);
     });
 }, 250);
 
 const state = {
-  //[{ code: , name: }]
   masterAssetList: [],
-  //[{ code: , name: }]
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
   groupedAssets: [],
+  is_loading: true,
   allowCopy: {
     allow_copiers: 0,
     onAllowCopyChangeCopierCellClick: () => onChangeCopytradeSettings(0),
@@ -195,7 +197,6 @@ const state = {
     const toBeRemovedItem = state.traderTokens[index];
     state.traderTokens.splice(index, 1);
     updateLocalStorage(state);
-    // Gracefully delete it.
     liveapi.send({
       copy_stop: toBeRemovedItem.yourCopySettings.copy_start
     })
@@ -319,11 +320,18 @@ const initConfigWindow = () => {
         _.merge(state, copyTrade);
         state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
       }
-
+      state.is_loading = true;
       //Get the copy settings
       liveapi
         .send({ get_settings: 1 })
-        .then(({ get_settings = {} }) => state.allowCopy.allow_copiers = get_settings.allow_copiers);
+        .then((settings) => {
+          state.is_loading = false;
+          state.allowCopy.allow_copiers = settings.get_settings.allow_copiers
+        })
+        .catch((e) => {
+          // TODO: handle error here
+          $.growl.error({ message: e.message });
+        });
 
       //Refresh locally stored trader statistics
       if (copyTrade) {
