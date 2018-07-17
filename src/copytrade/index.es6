@@ -19,6 +19,7 @@ const form_error_messages = {
     invalid_stake_limit: 'Min trade stake should be lower than max trade stake.',
     token_already_added: 'Token already added',
     enter_valid_token: 'Enter a valid trader token',
+    refresh_failed: 'Refresh failed',
 };
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
@@ -213,9 +214,8 @@ const state = {
           trader.disableRefresh = false;
           updateLocalStorage(state);
         })
-        .catch(e => {
-          $.growl.error({ message: 'Refresh failed'});
-          console.error(e);
+        .catch((e) => {
+          $.growl.error({ message: form_error_messages.refresh_failed });
           trader.disableRefresh = false;
           updateLocalStorage(scope);
         });
