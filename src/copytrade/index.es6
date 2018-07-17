@@ -108,23 +108,6 @@ const refreshTraderStats = (loginid, token, scope) => liveapi
 
 let win = null, win_view = null;
 
-const onChangeCopytradeSettings = _.debounce((allow_copiers) => {
-  state.is_loading = true;
-  liveapi
-    .send({
-      set_settings: 1,
-      allow_copiers,
-    })
-    .then((settings) => {
-      state.is_loading = false;
-      // settings req does not return updated settings
-      state.allowCopy.allow_copiers = allow_copiers;
-    })
-    .catch(e => {
-      $.growl.error({ message: e.message });
-    });
-}, 250);
-
 const state = {
   masterAssetList: [],
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
@@ -132,9 +115,26 @@ const state = {
   is_loading: true,
   allowCopy: {
     allow_copiers: 0,
-    onAllowCopyChangeCopierCellClick: () => onChangeCopytradeSettings(0),
-    onAllowCopyChangeTraderCellClick: () => onChangeCopytradeSettings(1),
+    onAllowCopyChangeCopierCellClick: () => state.onChangeCopytradeSettings(0),
+    onAllowCopyChangeTraderCellClick: () => state.onChangeCopytradeSettings(1),
   },
+  onChangeCopytradeSettings: _.debounce((allow_copiers) => {
+    state.is_loading = true;
+    liveapi
+      .send({
+        set_settings: 1,
+        allow_copiers,
+      })
+      .then((settings) => {
+        state.is_loading = false;
+        // settings req does not return updated settings
+        state.allowCopy.allow_copiers = allow_copiers;
+      })
+      .catch(e => {
+        state.is_loading = false;
+        $.growl.error({ message: e.message });
+      });
+  }, 250),
   onOpenChange: (index) => {
     state.traderTokens[index].open = !state.traderTokens[index].open;
   },
@@ -221,15 +221,12 @@ const state = {
         });
     }
   },
-
   onMinTradeChange: (event, scope) => {
     state.formatAndSetTradeStake(event, scope, 'min_trade_stake')
   },
-
   onMaxTradeChange: (event, scope) => {
     state.formatAndSetTradeStake(event, scope, 'max_trade_stake')
   },
-
   formatAndSetTradeStake: (event, scope, type_trade_stake) => {
     const index = $(event.target).data('index');
     const value = event.target.value;
@@ -240,7 +237,6 @@ const state = {
       scope.traderTokens[index].yourCopySettings[type_trade_stake] = '';
     }
   },
-
   onUpdateYourSettings: (index) => {
     if (validate_min_max_stake(state.traderTokens[index].yourCopySettings)) {
       updateLocalStorage(state);
@@ -249,7 +245,6 @@ const state = {
       $.growl.error({ message: form_error_messages.invalid_stake_limit });
     }
   },
-
   searchToken: {
     token: '',
     onTokenChange: (event, scope) => scope.searchToken.token = event.target.value,
@@ -329,7 +324,7 @@ const initConfigWindow = () => {
           state.allowCopy.allow_copiers = settings.get_settings.allow_copiers
         })
         .catch((e) => {
-          // TODO: handle error here
+          state.is_loading = false;
           $.growl.error({ message: e.message });
         });
 
