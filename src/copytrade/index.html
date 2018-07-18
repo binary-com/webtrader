@@ -1,6 +1,6 @@
 <div class="copytrade-dialog">
   <div class="copytrade-tradermsg" rv-show="is_virtual">
-      Copytrading is limited to real accounts
+      <p>This feature is not relevant to virtual-money accounts.</p>
   </div>
   <div rv-show="is_virtual | eq false">
     <div rv-show="is_loading">
@@ -259,7 +259,7 @@
         </div>
       </div>
       <div rv-show="allowCopy.allow_copiers | trim | eq '1'" class="copytrade-tradermsg">
-        <span class="copytrade-tradermsg--lightgray">Go to <a rv-on-click="openTokenMgmt" class="openTokenMgmt">Token Management</a>, create a token, and share the token with copier(s).</span>
+        <p class="copytrade-tradermsg--lightgray">Go to <a rv-on-click="openTokenMgmt" class="openTokenMgmt">Token Management</a>, create a token, and share the token with copier(s).</p>
       </div>
     </div>
   </div>
