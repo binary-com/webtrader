@@ -114,6 +114,7 @@ const state = {
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
   groupedAssets: [],
   is_loading: true,
+  is_virtual: false,
   allowCopy: {
     allow_copiers: 0,
     onAllowCopyChangeCopierCellClick: () => state.onChangeCopytradeSettings(0),
@@ -299,7 +300,6 @@ const state = {
 const initConfigWindow = () => {
   const root = $(html).i18n();
   win_view = rv.bind(root[0], state);
-
   win = windows.createBlankWindow(root, {
     title: 'Copy Trading'.i18n(),
     resizable: false,
@@ -309,38 +309,41 @@ const initConfigWindow = () => {
     modal: false,
     width: 600,
     open: () => {
-      //Refresh all token details
-      const copyTrade = local_storage.get(getStorageName());
-      if (copyTrade) {
-        _.merge(state, copyTrade);
-        state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
-      }
-      state.is_loading = true;
-      //Get the copy settings
-      liveapi
-        .send({ get_settings: 1 })
-        .then((settings) => {
-          state.is_loading = false;
-          state.allowCopy.allow_copiers = settings.get_settings.allow_copiers
-        })
-        .catch((e) => {
-          state.is_loading = false;
-          $.growl.error({ message: e.message });
-        });
+      state.is_virtual = isVirtual();
+      if (!state.is_virtual) {
+        //Refresh all token details
+        const copyTrade = local_storage.get(getStorageName());
+        if (copyTrade) {
+          _.merge(state, copyTrade);
+          state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
+        }
+        state.is_loading = true;
+        //Get the copy settings
+        liveapi
+          .send({ get_settings: 1 })
+          .then((settings) => {
+            state.is_loading = false;
+            state.allowCopy.allow_copiers = settings.get_settings.allow_copiers
+          })
+          .catch((e) => {
+            state.is_loading = false;
+            $.growl.error({ message: e.message });
+          });
 
-      //Refresh locally stored trader statistics
-      if (copyTrade) {
-        (async function () {
-          for (let traderToken of copyTrade.traderTokens) {
-            try {
-              const loginid = traderToken.loginid;
-              const token = traderToken.yourCopySettings.copy_start;
-              await refreshTraderStats(loginid, token, state);
-            } catch (e) {
-              console.error(e);
+        //Refresh locally stored trader statistics
+        if (copyTrade) {
+          (async function () {
+            for (let traderToken of copyTrade.traderTokens) {
+              try {
+                const loginid = traderToken.loginid;
+                const token = traderToken.yourCopySettings.copy_start;
+                await refreshTraderStats(loginid, token, state);
+              } catch (e) {
+                console.error(e);
+              }
             }
-          }
-        })();
+          })();
+        }
       }
     },
     close: () => {

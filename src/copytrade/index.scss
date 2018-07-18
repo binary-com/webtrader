@@ -205,8 +205,10 @@
     padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    color: lightgray;
     text-align: center;
+    &--lightgray {
+      color: lightgray;
+    }
   }
   .chosen-choices {
     box-shadow: none;
