@@ -4,13 +4,7 @@
   </div>
   <div rv-show="is_virtual | eq false">
     <div rv-show="is_loading">
-      <div class="barspinner dark">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
+      <loader />
     </div>
     <div rv-show="is_loading | eq false">
       <div class="copytrade-settings table">

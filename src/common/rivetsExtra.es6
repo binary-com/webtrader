@@ -718,6 +718,18 @@ rivets.components['price-spinner'] = {
    },
 };
 
+rivets.components['loader'] = {
+  template: () =>
+    `<div class="barspinner dark">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>`,
+  initialize: function(el, attributes) {}
+};
+
 export const bind = (view, state) => rv.bind(view, state);
 export const formatters = rv.formatters;
 export const binders = rv.binders;
