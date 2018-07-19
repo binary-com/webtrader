@@ -292,8 +292,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     categories: {
       array: [],
       value: '',
-      paddingTop: function(){
-        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "lookback":'26px' };
+      paddingTop: function() {
+        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "lookback":'26px', "callputequal" : '8px'};
         return paddings[state.categories.value.contract_category] || '3px';
       }
     },
