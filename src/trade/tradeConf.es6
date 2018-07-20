@@ -63,10 +63,12 @@ rv.binders['tick-chart'] = {
    routine: function(el, ticks){
       const model = this.model;
       const addPlotLineX = (chart, options) => {
+         const label_left_or_right = options.label === 'Entry Spot' ? -15 : 5;
+
          chart.xAxis[0].addPlotLine({
             value: options.value,
             id: options.id || options.value,
-            label: {text: options.label || 'label'},
+            label: {text: options.label || 'label', x:  label_left_or_right },
             color: options.color || '#e98024',
             width: options.width || 2,
          });
