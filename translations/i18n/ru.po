@@ -468,6 +468,9 @@ msgstr "Отбитое наступление (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "С любой длительностью"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "При любых условиях рынка"
 
@@ -591,6 +594,9 @@ msgstr "Средний истинный диапазон (ATR)"
 msgid "Avg. Duration"
 msgstr "Средн. длительность"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Средн. убыток"
 
@@ -668,9 +674,6 @@ msgstr "Основы бинарных опционов"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary получает лицензию на оказание инвестиционных услуг"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Мобильные приложения и продукты сторонних компаний"
 
 msgid "Binary opens Japan office"
 msgstr "Binary открыл офис в Японии"
@@ -2040,9 +2043,6 @@ msgstr "Мин: 10; Макс: 2000"
 msgid "Minimum (MIN)"
 msgstr "Минимум (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Минимум 6 символов и минимум 1 цифра"
-
 msgid "Minimum of 2 characters required"
 msgstr "Необходимо минимум 2 символа"
 
@@ -2051,6 +2051,9 @@ msgstr "Необходимо минимум 4 символа"
 
 msgid "Minimum of 6 characters required"
 msgstr "Необходимо минимум 6 символов"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Минимальная цена за выбранный период"
@@ -3192,6 +3195,9 @@ msgstr "Контракты, где трейдер выбирает ценово�
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Скользящая средняя использует кривую нормального распределения (распределения Гаусса), которая измеряется значением от 0 до 1. Данный параметр позволяет регулировать гладкость и высокую чувствительность скользящей средней. Сигма – ещё один параметр, отвечающий за форму коэффициентов кривой"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Данное поле является обязательным"
 
@@ -3293,9 +3299,6 @@ msgstr "Название ключа"
 
 msgid "Token permissions"
 msgstr "Право доступа ключа"
-
-msgid "Tokens are special codes for accessing"
-msgstr "Ключи – это специальные коды доступа"
 
 msgid "Tooltip background"
 msgstr "Фон подсказки"
@@ -3857,6 +3860,9 @@ msgstr "платёжный агент"
 
 msgid "points"
 msgstr "пункт."
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "сек."

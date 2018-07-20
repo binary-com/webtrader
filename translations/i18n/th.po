@@ -468,6 +468,9 @@ msgstr "Advance Block (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "ทุกเงื่อนไขในตลาด"
 
@@ -591,6 +594,9 @@ msgstr "Average True Range (ATR)"
 msgid "Avg. Duration"
 msgstr "เวลาเฉลี่ย"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "ขาดทุนเฉลี่ย"
 
@@ -670,9 +676,6 @@ msgstr "พื้นฐานไบนารีออปชั่น"
 
 msgid "Binary granted Investment Services license"
 msgstr "ไบนารีได้รับใบอนุญาตการให้บริการการลงทุน"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Binary แอพพลิเคชันบนอุปกรณ์พกพา และเครื่องมือของผู้พัฒนาอิสระอื่นๆ"
 
 msgid "Binary opens Japan office"
 msgstr "Binary เปิดสำนักงานที่ประเทศญี่ปุ่น"
@@ -2044,9 +2047,6 @@ msgstr "ต่ำสุด: 10 สูงสุด: 2000"
 msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "อย่างน้อย 6 อักขระ และ ต้องมีตัวเลขอย่างน้อย 1 ตัว"
-
 msgid "Minimum of 2 characters required"
 msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 2 อักขระ"
 
@@ -2055,6 +2055,9 @@ msgstr "จำนวนตัวอักขระน้อยที่สุด
 
 msgid "Minimum of 6 characters required"
 msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 6 อักขระ"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "ราคาต่ำสุดในช่วงเวลาเลือก"
@@ -3196,6 +3199,9 @@ msgstr "การซื้อขายเหล่านี้ดำเนิน
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "ค่าเฉลี่ยเคลื่อนที่นี้ใช้เส้นโค้งของการแจกแจงปกติ (Gauss) ซึ่งสามารถกำหนดโดยตัวแปรออฟเซ็ตจาก 0 ถึง 1 ตัวแปรนี้ควบคุมความเรียบของแนวโน้มและความไวสูงของค่าเฉลี่ยเคลื่อนที่ Sigma มีอีกตัวแปรหนึ่งที่ใช้จัดการรูปร่างของสัมประสิทธิ์เส้นโค้ง"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
 
@@ -3297,9 +3303,6 @@ msgstr "ชื่อโทเค่น"
 
 msgid "Token permissions"
 msgstr "สิทธิ์โทเค่น"
-
-msgid "Tokens are special codes for accessing"
-msgstr "โทเค่นมีรหัสพิเศษเพื่อการเข้าถึง"
 
 msgid "Tooltip background"
 msgstr "พื้นหลังของป้ายคำแนะนำ"
@@ -3861,6 +3864,9 @@ msgstr "ตัวแทนรับชำระเงิน"
 
 msgid "points"
 msgstr "จุด"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "วินาที"

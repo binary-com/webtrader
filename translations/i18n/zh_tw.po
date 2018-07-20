@@ -468,6 +468,9 @@ msgstr "高級阻滯 (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "所有合約期限"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "所有市場條件"
 
@@ -591,6 +594,9 @@ msgstr "平均真實波動範圍 (ATR)"
 msgid "Avg. Duration"
 msgstr "平均持續時間"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "平均損失"
 
@@ -668,9 +674,6 @@ msgstr "二元期權基本知識"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary 被授予投資服務執照"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Binary移動應用程式和第三方工具"
 
 msgid "Binary opens Japan office"
 msgstr "Binary 開設日本辦公室"
@@ -2040,9 +2043,6 @@ msgstr "最小: 10 最大: 2000"
 msgid "Minimum (MIN)"
 msgstr "最低價 (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "需至少6個字元和1個數字"
-
 msgid "Minimum of 2 characters required"
 msgstr "需要至少2個字元"
 
@@ -2051,6 +2051,9 @@ msgstr "需要至少4個字元"
 
 msgid "Minimum of 6 characters required"
 msgstr "需要至少6個字元"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "選定期內最低價"
@@ -3192,6 +3195,9 @@ msgstr "交易者選擇一個目標價並預測市場在合約到期前將會觸
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "移動平均指標使用正態（高斯）分佈，以0到1兩個偏移參數進行操作。此參數允許移動平均指標的平滑度和高敏感度受調節。Sigma標準差是另一個控製曲線係數形狀的參數"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "此為必填欄位"
 
@@ -3293,9 +3299,6 @@ msgstr "權杖名稱"
 
 msgid "Token permissions"
 msgstr "權杖權限"
-
-msgid "Tokens are special codes for accessing"
-msgstr "權杖是存取的特殊代碼"
 
 msgid "Tooltip background"
 msgstr "工具提示背景"
@@ -3857,6 +3860,9 @@ msgstr "支付代理"
 
 msgid "points"
 msgstr "點"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "秒"

@@ -468,6 +468,9 @@ msgstr "Advance Block (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "Semua durasi"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "Semua kondisi pasar"
 
@@ -591,6 +594,9 @@ msgstr "Average True Range (ATR)"
 msgid "Avg. Duration"
 msgstr "Rata-rata Durasi"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Rata-rata Kerugian"
 
@@ -668,9 +674,6 @@ msgstr "Opsi Binary Dasar"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary telah diberikan lisensi Layanan Investasi"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Aplikasi mobile Binary. com dan peralatan pihak ketiga"
 
 msgid "Binary opens Japan office"
 msgstr "Binary membuka kantor di Jepang"
@@ -2040,9 +2043,6 @@ msgstr "Min: 10 Mak: 2000"
 msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
-
 msgid "Minimum of 2 characters required"
 msgstr "Minimal 2 karakter yang dibutuhkan"
 
@@ -2051,6 +2051,9 @@ msgstr "Minimal 4 karakter diperlukan"
 
 msgid "Minimum of 6 characters required"
 msgstr "Minimal 6 karakter diperlukan"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Harga minimum selama periode yang dipilih"
@@ -3192,6 +3195,9 @@ msgstr "Ini adalah kontrak dimana trader memilih target harga, dan menganalisa p
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Moving Average ini menggunakan kurva distribusi Normal (Gauss) yang dapat ditempatkan dengan parameter Offset dari 0 sampai 1. Parameter ini memungkinkan pengaturan kehalusan dan kepekaan tinggi Moving Average. Sigma adalah parameter lain yang bertanggung jawab atas bentuk koefisien kurva"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Bagian ini diperlukan"
 
@@ -3293,9 +3299,6 @@ msgstr "Nama token"
 
 msgid "Token permissions"
 msgstr "Izin token"
-
-msgid "Tokens are special codes for accessing"
-msgstr "Token adalah kode khusus untuk mengakses"
 
 msgid "Tooltip background"
 msgstr "Latar belakang tooltip"
@@ -3857,6 +3860,9 @@ msgstr "agen pembayaran"
 
 msgid "points"
 msgstr "poin"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "detik"

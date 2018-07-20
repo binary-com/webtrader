@@ -455,6 +455,9 @@ msgstr ""
 msgid "All durations"
 msgstr "" 
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr "" 
+
 msgid "All market conditions"
 msgstr "" 
 
@@ -578,6 +581,9 @@ msgstr ""
 msgid "Avg. Duration"
 msgstr "" 
 
+msgid "Avg. Duration of Open Positions"
+msgstr "" 
+
 msgid "Avg. Loss"
 msgstr "" 
 
@@ -654,9 +660,6 @@ msgid "Binary Options Basics"
 msgstr "" 
 
 msgid "Binary granted Investment Services license"
-msgstr "" 
-
-msgid "Binary mobile applications and third party tools"
 msgstr "" 
 
 msgid "Binary opens Japan office"
@@ -2027,9 +2030,6 @@ msgstr ""
 msgid "Minimum (MIN)"
 msgstr "" 
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "" 
-
 msgid "Minimum of 2 characters required"
 msgstr "" 
 
@@ -2037,6 +2037,9 @@ msgid "Minimum of 4 characters required"
 msgstr "" 
 
 msgid "Minimum of 6 characters required"
+msgstr "" 
+
+msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "" 
 
 msgid "Minimum price over selected period"
@@ -3179,6 +3182,9 @@ msgstr ""
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "" 
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr "" 
+
 msgid "This field is required"
 msgstr "" 
 
@@ -3279,9 +3285,6 @@ msgid "Token name"
 msgstr "" 
 
 msgid "Token permissions"
-msgstr "" 
-
-msgid "Tokens are special codes for accessing"
 msgstr "" 
 
 msgid "Tooltip background"
@@ -3843,6 +3846,9 @@ msgid "payment agent"
 msgstr "" 
 
 msgid "points"
+msgstr "" 
+
+msgid "sec"
 msgstr "" 
 
 msgid "second"

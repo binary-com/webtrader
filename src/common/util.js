@@ -423,3 +423,8 @@ var isCryptoCurrency = function (curr) {
     var is_crypto = getCurrencyDetail('type', curr) === 'crypto';
     return is_crypto;
 }
+
+function isVirtual() {
+    var is_virtual = (local_storage.get('authorize') || '').is_virtual;
+    return !!is_virtual;
+}

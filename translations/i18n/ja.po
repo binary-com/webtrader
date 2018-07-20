@@ -486,6 +486,9 @@ msgstr "アドバンス・ブロック（CDLADVANCEBLOCK）"
 msgid "All durations"
 msgstr "全ての期間"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "全ての市場状況"
 
@@ -609,6 +612,9 @@ msgstr "アベレージ・トゥルー・レンジ（ATR）"
 msgid "Avg. Duration"
 msgstr ""
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr ""
 
@@ -686,9 +692,6 @@ msgstr ""
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary (Europe) Ltd.は、投資サービスライセンスを付与されています。"
-
-msgid "Binary mobile applications and third party tools"
-msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "日本オフィスを開設"
@@ -2065,9 +2068,6 @@ msgstr "Min: 10 Max: 2000"
 msgid "Minimum (MIN)"
 msgstr "特定期間の最安値（MIN）"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "数字を含む6文字以上でご入力ください"
-
 msgid "Minimum of 2 characters required"
 msgstr "2文字以上でご入力ください"
 
@@ -2076,6 +2076,9 @@ msgstr "4文字以上でご入力ください"
 
 msgid "Minimum of 6 characters required"
 msgstr "6文字以上でご入力ください"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "特定期間の最安値"
@@ -3219,6 +3222,9 @@ msgstr "ターゲット価格を設定し、取引対象の価格が取引終了
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "この項目は必須です"
 
@@ -3320,9 +3326,6 @@ msgstr "トークン名"
 
 msgid "Token permissions"
 msgstr "トークンのアクセス許可"
-
-msgid "Tokens are special codes for accessing"
-msgstr ""
 
 msgid "Tooltip background"
 msgstr "ツールチップ背景"
@@ -3884,6 +3887,9 @@ msgstr "決済サービス"
 
 msgid "points"
 msgstr "ポイント"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "秒"

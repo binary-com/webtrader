@@ -468,6 +468,9 @@ msgstr "Bloc avancé (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "Toutes durées"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "Toutes conditions de marché"
 
@@ -591,6 +594,9 @@ msgstr "Gamme Réelle Moyenne (GRM)"
 msgid "Avg. Duration"
 msgstr "Durée moyenne"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Perte moyenne"
 
@@ -668,9 +674,6 @@ msgstr "Les bases des options binaires"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary obtient une licence de Services d'Investissement"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Applications mobiles Binary et outils de tierce partie"
 
 msgid "Binary opens Japan office"
 msgstr "Binary ouvre un bureau au Japon"
@@ -2040,9 +2043,6 @@ msgstr "Min : 10 Max : 2000"
 msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Au moins 6 caractères et au moins 1 chiffre"
-
 msgid "Minimum of 2 characters required"
 msgstr "Minimum de 2 caractères requis"
 
@@ -2051,6 +2051,9 @@ msgstr "Minimum de 4 caractères requis"
 
 msgid "Minimum of 6 characters required"
 msgstr "Minimum de 6 caractères requis"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Prix minimum sur la période sélectionnée"
@@ -3192,6 +3195,9 @@ msgstr "Ce sont les trades où le trader sélectionne un prix cible, et prédit 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Cette Moyenne Mobile utilise la courbe de distribution (Gauss) Normale qui peut être placée par le paramètre de compensation allant de 0 à 1. Le paramètre permet de réguler le lissage et la haute sensibilité de la Moyenne Mobile. Sigma est un autre paramètre qui est responsable de la forme des coefficients de la courbe"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Ce champ est requis"
 
@@ -3293,9 +3299,6 @@ msgstr "Nom du jeton"
 
 msgid "Token permissions"
 msgstr "Permissions du jeton"
-
-msgid "Tokens are special codes for accessing"
-msgstr "Les jetons sont des codes spéciaux pour accéder à"
 
 msgid "Tooltip background"
 msgstr "Arrière-plan infobulle"
@@ -3857,6 +3860,9 @@ msgstr "agent de paiement"
 
 msgid "points"
 msgstr "points"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "seconde"

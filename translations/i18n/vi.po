@@ -468,6 +468,9 @@ msgstr "Khối ưu tiên (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "Tất cả thời gian"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "Tất cả các điều kiện thị trường"
 
@@ -591,6 +594,9 @@ msgstr "Khoảng trung bình thực (ATR)"
 msgid "Avg. Duration"
 msgstr "Thời lượng trung bình"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Lỗ trung bình"
 
@@ -668,9 +674,6 @@ msgstr "Cơ bản về Quyền chọn Nhị phân"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary được cấp giấy phép Dịch vụ đầu tư"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Ứng dụng di động nhị phân và các công cụ bên thứ ba"
 
 msgid "Binary opens Japan office"
 msgstr "Binary mở văn phòng tại Nhật Bản"
@@ -2040,9 +2043,6 @@ msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
 msgid "Minimum (MIN)"
 msgstr "tối thiểu (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Tối thiểu 6 ký tự và phải có ít nhất 1 chữ số"
-
 msgid "Minimum of 2 characters required"
 msgstr "Tối thiểu 2 ký tự bắt buộc"
 
@@ -2051,6 +2051,9 @@ msgstr "Tối thiểu 4 ký tự cần thiết"
 
 msgid "Minimum of 6 characters required"
 msgstr "Tối thiểu 6 ký tự bắt buộc"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Giá tối thiểu trong khoảng thời kì đã chọn"
@@ -3192,6 +3195,9 @@ msgstr "Những giao dịch này là chỗ nhà giao dịch đã chọn mô
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Này di chuyển trung bình là sử dụng các đường cong của phân phối chuẩn (Gauss) có thể được đặt bằng tham số bù đắp từ 0 đến 1. Tham số này cho phép điều chỉnh êm ái và độ nhạy cảm cao của các di chuyển trung bình. Sigma là một tham số đó là chịu trách nhiệm về hình dạng của hệ số đường cong"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Trường này là bắt buộc"
 
@@ -3293,9 +3299,6 @@ msgstr "Tên Token"
 
 msgid "Token permissions"
 msgstr "Cấp phép Token"
-
-msgid "Tokens are special codes for accessing"
-msgstr "Token là mã đặc biệt để truy cập"
 
 msgid "Tooltip background"
 msgstr "Công cụ chú thích nền"
@@ -3857,6 +3860,9 @@ msgstr "Đại lý thanh toán"
 
 msgid "points"
 msgstr "điểm số"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "giây"

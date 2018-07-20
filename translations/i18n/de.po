@@ -468,6 +468,9 @@ msgstr "Advance Block (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "Alle Zeiträume"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "Alle Marktbedingungen"
 
@@ -591,6 +594,9 @@ msgstr "Average True Range (ATR)"
 msgid "Avg. Duration"
 msgstr "Durchschnittliche Dauer"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Durchschnittlicher Verlust"
 
@@ -668,9 +674,6 @@ msgstr "Grundlagen der Binären Optionen"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary wurde eine Lizenz für Investmentdienstleistungen erteilt"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Binary mobile Anwendungen und Tools von Drittanbietern"
 
 msgid "Binary opens Japan office"
 msgstr "Binary eröffnet eine Zweigstelle in Japan"
@@ -2040,9 +2043,6 @@ msgstr "Min: 10 Max: 2000"
 msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Mindestens 6 Zeichen und muss zumindest 1 Ziffer beinhalten"
-
 msgid "Minimum of 2 characters required"
 msgstr "Mindestens 2 Zeichen sind erforderlich"
 
@@ -2051,6 +2051,9 @@ msgstr "Mindestens 4 Zeichen sind erforderlich"
 
 msgid "Minimum of 6 characters required"
 msgstr "Mindestens 6 Zeichen sind erforderlich"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Minimaler Kurs über den ausgewählten Zeitraum"
@@ -3192,6 +3195,9 @@ msgstr "Dies sind Kontrakte, bei denen der Händler ein Kursziel wählt und vora
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Dieser gleitende Durchschnitt verwendet die Kurve der Normalen (Gauss) Verteilung, die durch den Offset Parameter von 0 bis 100 gesetzt werden kann. Dieser Parameter erlaubt es, die Glättung und hohe Sensibilität des gleitenden Durchschnitts zu regulieren. Sigma ist ein anderer Parameter, der für die Form der Kurven-Koeffizienten verantwortlich ist"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Dieses Feld ist erforderlich"
 
@@ -3293,9 +3299,6 @@ msgstr "Tokenname"
 
 msgid "Token permissions"
 msgstr "Tokengenehmigungen"
-
-msgid "Tokens are special codes for accessing"
-msgstr "Token sind spezielle Codes für den Zugriff auf"
 
 msgid "Tooltip background"
 msgstr "Tooltip Hintergrund"
@@ -3857,6 +3860,9 @@ msgstr "Zahlungsagent"
 
 msgid "points"
 msgstr "Punkte"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "Sekunde"

@@ -468,6 +468,9 @@ msgstr "Avance en bloque (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "Todas las duraciones"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "Todas las condiciones de mercado"
 
@@ -591,6 +594,9 @@ msgstr "Rango verdadero medio (ATR)"
 msgid "Avg. Duration"
 msgstr ""
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr ""
 
@@ -668,9 +674,6 @@ msgstr ""
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary recibe la licencia de servicios de inversión"
-
-msgid "Binary mobile applications and third party tools"
-msgstr ""
 
 msgid "Binary opens Japan office"
 msgstr "Binary abre una oficina en Japón"
@@ -2040,9 +2043,6 @@ msgstr "Mín: 10 máx: 2000"
 msgid "Minimum (MIN)"
 msgstr "Mínimo (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Mínimo de 6 caracteres y debe contener al menos 1 dígito"
-
 msgid "Minimum of 2 characters required"
 msgstr "Mínimo de 2 caracteres requeridos"
 
@@ -2051,6 +2051,9 @@ msgstr "Mínimo de 4 caracteres requeridos"
 
 msgid "Minimum of 6 characters required"
 msgstr "Mínimo de 6 caracteres requeridos"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Precio mínimo durante periodo seleccionado"
@@ -3192,6 +3195,9 @@ msgstr "Estos son los contratos en los que que el comerciante selecciona un prec
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Esta media móvil utiliza la curva de distribución normal (Gaussiana), la que se puede posicionar mediante el parámetro Offset de 0 a 1. Este parámetro permite regular la suavidad y alta sensibilidad de la media móvil. Sigma es otro parámetro que es responsable de la forma de los coeficientes de la curva"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Este campo es requerido"
 
@@ -3293,9 +3299,6 @@ msgstr "Nombre de token"
 
 msgid "Token permissions"
 msgstr "Permisos del tokens"
-
-msgid "Tokens are special codes for accessing"
-msgstr ""
 
 msgid "Tooltip background"
 msgstr "Fondo del Tooltip"
@@ -3857,6 +3860,9 @@ msgstr "agente de pago"
 
 msgid "points"
 msgstr "puntos"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "segundo"

@@ -24,6 +24,9 @@
     /* override jq-ui css */
     font-size: 14px !important;
     z-index: 100;
+    padding-left: 8px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .real-dialog .row {
@@ -229,4 +232,9 @@
 
 .real-dialog input[type="text"]:disabled:hover {
     border: 1px solid #f2f2f2;
+}
+
+.real-dialog .ui-selectmenu-text {
+    /* override main.css default for select */
+    padding: 0px !important;
 }

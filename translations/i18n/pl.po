@@ -468,6 +468,9 @@ msgstr "Advance Block – blok (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "Wszystkie okresy"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "Wszystkie warunki rynkowe"
 
@@ -591,6 +594,9 @@ msgstr "Wskaźnik ATR (Average True Range)"
 msgid "Avg. Duration"
 msgstr "Średni czas trwania"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Średnia strata"
 
@@ -668,9 +674,6 @@ msgstr "Podstawowe informacje o opcjach binarnych"
 
 msgid "Binary granted Investment Services license"
 msgstr "Binary uzyskuje licencję na świadczenie usług inwestycyjnych"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Mobilne aplikacje Binary i narzędzia stron trzecich"
 
 msgid "Binary opens Japan office"
 msgstr "Binary otwiera biuro w Japonii"
@@ -2040,9 +2043,6 @@ msgstr "Min.: 10 Maks.: 2000"
 msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Minimum 6 znaków i przynajmniej jedna cyfra"
-
 msgid "Minimum of 2 characters required"
 msgstr "Wymagane są minimum 2 znaki"
 
@@ -2051,6 +2051,9 @@ msgstr "Wymagane są minimum 4 znaki"
 
 msgid "Minimum of 6 characters required"
 msgstr "Wymaganych jest minimum 6 znaków"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Minimalna cena w wybranym okresie"
@@ -3192,6 +3195,9 @@ msgstr "Są to zakłady, w których gracz wybiera cenę docelową oraz prognozuj
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Średnia krocząca wykorzystuje rozłożenie zgodne z krzywą Gaussa, czyli od 0 do 1. Pozwala to regulować wygładzenie i wrażliwość średniej kroczącej. Sigma to kolejny wskaźnik odpowiedzialny za kształt współczynników krzywej"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "To pole jest wymagane"
 
@@ -3293,9 +3299,6 @@ msgstr "Nazwa tokenu"
 
 msgid "Token permissions"
 msgstr "Pozwolenia dla tokenu"
-
-msgid "Tokens are special codes for accessing"
-msgstr "Tokeny to specjalne kody dostępu do"
 
 msgid "Tooltip background"
 msgstr "Tło tooltipa"
@@ -3857,6 +3860,9 @@ msgstr "pośrednik płatności"
 
 msgid "points"
 msgstr "punkty"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "sekunda"

@@ -16,7 +16,6 @@
 .token-dialog .empty-pane > span {
   display:  block;
   width: 440px;
-  margin-bottom: 40px;
 }
 
 /* token list pane */
@@ -124,6 +123,6 @@
   width: 275px;
 }
 
-.token-dialog .binaryShop {
-  cursor: pointer;
+.token-dialog {
+  height: 100% !important;
 }

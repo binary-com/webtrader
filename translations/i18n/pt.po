@@ -468,6 +468,9 @@ msgstr "Bloco de avanço (CDLADVANCEBLOCK)"
 msgid "All durations"
 msgstr "Todas as durações"
 
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
+
 msgid "All market conditions"
 msgstr "Todas as condições de mercad"
 
@@ -591,6 +594,9 @@ msgstr "Average True Range (ATR)"
 msgid "Avg. Duration"
 msgstr "Duração média"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Perda média"
 
@@ -668,9 +674,6 @@ msgstr "Princípios de opções binárias"
 
 msgid "Binary granted Investment Services license"
 msgstr "A Binary é concedida uma licença de serviços de investimento"
-
-msgid "Binary mobile applications and third party tools"
-msgstr "Aplicativos móveis da Binary e ferramentas de terceiros"
 
 msgid "Binary opens Japan office"
 msgstr "A Binary abre escritório no Japão"
@@ -2040,9 +2043,6 @@ msgstr "Mín: {1} Máx: 2000"
 msgid "Minimum (MIN)"
 msgstr "Mínimo (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Mínimo de 6 caracteres, devendo conter pelo menos 1 dígito"
-
 msgid "Minimum of 2 characters required"
 msgstr "Um mínimo de 2 caracteres é necessário"
 
@@ -2051,6 +2051,9 @@ msgstr "Um mínimo de 4 caracteres é necessário"
 
 msgid "Minimum of 6 characters required"
 msgstr "Um mínimo de 6 caracteres é necessário"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Preço mínimo durante período selecionado"
@@ -3192,6 +3195,9 @@ msgstr "Estas são negociações em que o negociador seleciona um preço-alvo e 
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Esta média móvel usa a curva da distribuição Normal (Gauss) que pode ser colocada ao ajustar o parâmetro de Compensação entre 0 e 1. Este parâmetro permite regular a suavidade e alta sensibilidade da média móvel. Sigma é outro parâmetro que é responsável pela forma dos coeficientes da curva"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Este campo é obrigatório"
 
@@ -3293,9 +3299,6 @@ msgstr "Nome do token"
 
 msgid "Token permissions"
 msgstr "Permissões do token"
-
-msgid "Tokens are special codes for accessing"
-msgstr "Tokens são códigos especiais para o acesso a"
 
 msgid "Tooltip background"
 msgstr "Plano de fundo da dica de ferramenta"
@@ -3857,6 +3860,9 @@ msgstr "agente de pagamentos"
 
 msgid "points"
 msgstr "pontos"
+
+msgid "sec"
+msgstr ""
 
 msgid "second"
 msgstr "segundo"
