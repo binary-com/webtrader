@@ -318,6 +318,10 @@ export const init = (data, extra, show_callback, hide_callback) => {
             up: last_quote*1 > barrier*1,
             down: last_quote*1 < barrier*1,
          },
+         callputequal: {
+            up: last_quote*1 > barrier*1,
+            down: last_quote*1 < barrier*1,
+         },
          asian: {
             up: average < last_quote*1,
             down: average > last_quote*1,
