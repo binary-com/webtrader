@@ -718,7 +718,7 @@ rivets.components['price-spinner'] = {
    },
 };
 
-rivets.components['loader'] = {
+rivets.components['loader-dark'] = {
   template: () =>
     `<div class="barspinner dark">
       <div class="rect1"></div>
