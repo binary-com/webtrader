@@ -3906,9 +3906,6 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
-#~ msgid "Binary mobile applications and third party tools"
-#~ msgstr "Ứng dụng di động nhị phân và các công cụ bên thứ ba"
-
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"
 
@@ -3924,17 +3921,11 @@ msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát t
 #~ msgid "Low Barrier"
 #~ msgstr "Barie thấp"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "Tối thiểu 6 ký tự và phải có ít nhất 1 chữ số"
-
 #~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Trang web này được bán trên thị trường tại Vương Quốc Anh và đảo Man bởi nhị phân (IOM) Ltd., tầng trệt, Thiên niên kỷ House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, chế và quy định của Ủy ban giám sát cờ bạc (1) ở Isle of Man, British Isles, hiện tại giấy phép cờ bạc trực tuyến phát hành vào ngày 31 tháng 8 năm 2012, và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
 
 #~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Trang web này trên thị trường trong phần còn lại của châu Âu, cho sản phẩm đầu tư bởi nhị phân đầu tư (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định như là một nhà cung cấp dịch vụ đầu tư thể loại 3 bởi cơ quan dịch vụ tài chính Malta (giấy phép. LÀ / 70156), và cho các sản phẩm chơi game bởi nhị phân (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định của (1) các cơ quan Nhan Malta ở Malta, giấy phép không có thanh/CL2/118/2000, ngày 26 tháng 5 năm 2015 và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
-
-#~ msgid "Tokens are special codes for accessing"
-#~ msgstr "Token là mã đặc biệt để truy cập"
 
 #~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 #~ msgstr "và cho các khách hàng Ailen (3) ủy viên doanh thu ở Ai-Len, các vấn đề về giấy phép đặt hàng từ xa hiện tại vào 29 tháng 9 năm 2015 (giấy phép số 1010285). Dịch vụ của trang web này không được thực hiện có sẵn ở một số quốc gia như Mỹ, Costa Rica, Hồng Kông, hoặc cho những người dưới 18 tuổi"

@@ -3906,9 +3906,6 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "позволяющий клиентам, партнёрам и разработчикам покупать и продавать продукты Binary.com"
 
-#~ msgid "Binary mobile applications and third party tools"
-#~ msgstr "Мобильные приложения и продукты сторонних компаний"
-
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Бинарные опционы и другие деривативы"
 
@@ -3924,17 +3921,11 @@ msgstr "позволяющий клиентам, партнёрам и разр�
 #~ msgid "Low Barrier"
 #~ msgstr "Нижний барьер"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "Минимум 6 символов и минимум 1 цифра"
-
 #~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Данный сайт действует в Великобритании, на Острове Мэн и находится под управлением компании Binary (IOM) Ltd., расположенной по адресу First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, лицензируемой и контролируемой (1) Комиссией по надзору за азартными играми Острова Мэн, Британские острова; текущая лицензия для ведения игорной деятельности выдана 31 августа 2012; для британских клиентов – (2) Комиссией по азартным играм Великобритании –"
 
 #~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Также данный сайт действует в остальной части Европы, а его инвестиционные продукты находятся под управлением компании Binary Investments (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, лицензированной и контролируемой в качестве поставщика инвестиционных услуг категории 3 Управлением по азартным играм Мальты (лицензия номер IS/70156). Игорные продукты сайта находятся под управлением компании Binary (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Мальта, лицензированной и контролируемой (1) Управлением по азартным играм Мальты, лицензия MGA/CL2/118/2000 от 26 мая 2015 года; для британских клиентов – (2) Комиссией по азартным играм Великобритании –"
-
-#~ msgid "Tokens are special codes for accessing"
-#~ msgstr "Ключи – это специальные коды доступа"
 
 #~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 #~ msgstr "для ирландских клиентов – (3) Государственной налоговой инспекцией Ирландии; текущая лицензия удаленного букмекера выдана 29 сентября 2015 г. (лицензия номер 1010285). Услуги данного сайта не доступны в ряде стран: в США, Коста-Рике и Гонконге, а также лицам младше 18 лет"

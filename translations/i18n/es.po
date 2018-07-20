@@ -3921,9 +3921,6 @@ msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan p
 #~ msgid "Low Barrier"
 #~ msgstr "Límite Inferior"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "Mínimo de 6 caracteres y debe contener al menos 1 dígito"
-
 #~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Este sitio es comercializado en el Reino Unido y la Isla de Man por Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Además, posee una licencia otorgada y regulada por (1) la Comisión Supervisora de Apuestas de la Isla de Man, Islas Británicas, la cual se emitió el 31 de agosto de 2012, y por (2) la Comisión de Apuestas del Reino Unido"
 

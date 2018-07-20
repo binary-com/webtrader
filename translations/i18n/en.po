@@ -677,6 +677,9 @@ msgstr ""
 msgid "Binary granted Investment Services license"
 msgstr ""
 
+msgid "Binary mobile applications and third party tools"
+msgstr ""
+
 msgid "Binary opens Japan office"
 msgstr ""
 
@@ -3304,6 +3307,9 @@ msgstr "Token name"
 msgid "Token permissions"
 msgstr "Token permissions"
 
+msgid "Tokens are special codes for accessing"
+msgstr ""
+
 msgid "Tooltip background"
 msgstr "Tooltip background"
 
@@ -3934,9 +3940,6 @@ msgstr ""
 
 #~ msgid "Low Barrier"
 #~ msgstr "Low Barrier"
-
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "Minimum 6 characters and must contain at least 1 digit"
 
 #~ msgid "OAuth App ID (Optional)"
 #~ msgstr "OAuth App ID (Optional)"

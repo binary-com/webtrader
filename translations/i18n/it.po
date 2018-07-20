@@ -3921,9 +3921,6 @@ msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare 
 #~ msgid "Low Barrier"
 #~ msgstr "Barriera inferiore"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "Minimo 6 caratteri e deve contenere almeno 1 cifra"
-
 #~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 #~ msgstr "e per i clienti irlandesi dai (3) Revenue Commissioners dell'Irlanda, una licenza attuale di bookmaker a distanza emessa il 29 Settembre 2015 (licenza n. 1010285). I servizi di questo sito web non sono disponibili in alcuni paesi come gli Stati Uniti, la Costa Rica, Hong Kong o per le persone minorenni"
 

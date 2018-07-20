@@ -3906,9 +3906,6 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
 
-#~ msgid "Binary mobile applications and third party tools"
-#~ msgstr "Binary移動應用程式和第三方工具"
-
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "二元期權或其他金融衍生品"
 
@@ -3924,17 +3921,11 @@ msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
 #~ msgid "Low Barrier"
 #~ msgstr "低障礙"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "需至少6個字元和1個數字"
-
 #~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "本網站由Binary (IOM) Ltd.在英國和曼島經營，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1)由不列顛群島曼島投資監管委員會授予執照和監管，目前線上博彩執照於2012 年8 月31 日頒發；而英國客戶(2)由英國博彩委員會授予執照和監管-"
 
 #~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "此網站市場在歐盟其他地區，投資產品由Binary Investments (Europe) Ltd.經營，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商（執照號碼為IS/70156)），而博彩產品由Binary (Europe) Ltd.,經營，地址為：Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，(1)由位於馬爾他的馬爾他博彩管理局授予執照和監管，執照號碼為MGA/CL2/118/2000（2015年5 月26 日），而英國客戶(2)由英國博彩委員會授予執照和監管-"
-
-#~ msgid "Tokens are special codes for accessing"
-#~ msgstr "權杖是存取的特殊代碼"
 
 #~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 #~ msgstr "而愛爾蘭客戶由(3)愛爾蘭稅務專員辦事處授予執照和監管，執照號碼為1010285 (2015年9 月29 日）。本網站的服務不向一些國家如美國、哥斯大黎加及香港或對年齡不到18歲的使用者提供"

@@ -3906,9 +3906,6 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kaufen und zu verkaufen"
 
-#~ msgid "Binary mobile applications and third party tools"
-#~ msgstr "Binary mobile Anwendungen und Tools von Drittanbietern"
-
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Binäre Optionen oder andere Finanzderivate"
 
@@ -3924,17 +3921,11 @@ msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kau
 #~ msgid "Low Barrier"
 #~ msgstr "Untere Schwelle"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "Mindestens 6 Zeichen und muss zumindest 1 Ziffer beinhalten"
-
 #~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Diese Website wird in Großbritannien und auf der Isle of Man von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, Britische Inseln vermarktet und wird von (1) der Gambling Supervision Commission (Glücksspielbehörde) der Isle of Man, Britische Inseln zugelassen und überwacht, die aktuelle Glücksspiellizenz wurde am 31. August 2012 ausgestellt, und für Kunden aus Großbritannien von der (2) UK Gambling Commission -"
 
 #~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Diese Website wird in den anderen Ländern der EU für von Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, angebotene Investmentprodukte vermarktet, zugelassen und überwacht als ein Kategorie 3 Investitionsdienstleistung Anbieter von der Malta Financial Services Authority (Lizenznummer IS/70156), und für Glücksspielprodukte von Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, die (1) von der Malta Gaming Authority auf Malta zugelassen sind und überwacht werden. Die Lizenznummer lautet MGA/CL2/118/2000, 26. Mai 2015 und für Kunden aus Großbritannien (2) die UK Gambling Commission -"
-
-#~ msgid "Tokens are special codes for accessing"
-#~ msgstr "Token sind spezielle Codes für den Zugriff auf"
 
 #~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 #~ msgstr "und für Irische Kunden von der (3) Revenue Commissioners in Ireland, aktuelle entfernte Buchmacherlizenz ausgestellt am 29. September 2015 (Lizenznummer 1010285). Die Dienstleistungen dieser Website stehen in manchen Ländern wie den USA, Costa Rica, Hongkong oder Personen unter 18 Jahren nicht zur Verfügung"

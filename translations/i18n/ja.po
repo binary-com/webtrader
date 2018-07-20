@@ -3948,9 +3948,6 @@ msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブ
 #~ msgid "Low Barrier"
 #~ msgstr "下限バリア"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "数字を含む6文字以上でご入力ください"
-
 #~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 

@@ -3906,9 +3906,6 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
 
-#~ msgid "Binary mobile applications and third party tools"
-#~ msgstr "Aplikasi mobile Binary. com dan peralatan pihak ketiga"
-
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Opsi Binary atau derivatif keuangan lainnya"
 
@@ -3924,17 +3921,11 @@ msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual p
 #~ msgid "Low Barrier"
 #~ msgstr "Batas Rendah"
 
-#~ msgid "Minimum 6 characters and must contain at least 1 digit"
-#~ msgstr "Minimal 6 karakter dan setidaknya berisi 1 angka"
-
 #~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Website ini dipasarkan di negara Inggris dan Isle of Man melalui Binary (IOM) Ltd. Untuk Uni Eropa (kecuali Inggris) melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sedangkan untuk negara lain di seluruh dunia melalui Binary (C.R.) S.A. Layanan website ini tidak tersedia untuk di bawah usia 18"
 
 #~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 #~ msgstr "Website ini dipasarkan di negara Inggris dan Isle of Man melalui Binary (IOM) Ltd. Untuk Uni Eropa (kecuali Inggris) melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sedangkan untuk negara lain di seluruh dunia melalui Binary (C.R.) S.A. Layanan website ini tidak tersedia untuk di bawah usia 18"
-
-#~ msgid "Tokens are special codes for accessing"
-#~ msgstr "Token adalah kode khusus untuk mengakses"
 
 #~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
 #~ msgstr "Dan untuk klien Irlandia dikeluarkan oleh (3) Komisaris Pendapatan di Irlandia pada tanggal 29 September 2015 (lisensi no. 1010285). Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Costa Rica, Hong Kong, atau orang-orang di bawah usia 18 tahun"
