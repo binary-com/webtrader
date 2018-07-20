@@ -246,7 +246,10 @@ export const init = (data, extra, show_callback, hide_callback) => {
             const ticks = state.ticks;
             const inx = ticks.array.length;
             const tick = ticks.array[inx-1];
-            if(ticks.category.contract_category === 'callput' && inx === 1) {
+            const categories_with_barrier = ['callput', 'callputequal'];
+            const should_add_barrier = inx === 1 && _(categories_with_barrier).includes(ticks.category.contract_category);
+
+            if(should_add_barrier) {
                const barrier = extra.getbarrier(tick);
                state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
                return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
