@@ -872,20 +872,17 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.purchase.onclick = async function() {
+    const categories_with_tick_chart = ['digits','callput', 'callputequal', 'asian'];
     state.purchase.loading = true;
     var show = function(div){
       div.appendTo(root);
 
       root.find('.trade-fields').css({ left : '400px'});
       root.find('.trade-conf').css({ left : '0'});
-      // root.find('.trade-fields').animate({ left : '+=400'}, 1000, 'linear');
-      // root.find('.trade-conf').animate({ left : '+=400'}, 1000, 'linear');
     };
     var hide = function(div){
       root.find('.trade-fields').css({ left : '0'});
       root.find('.trade-conf').css({ left : '-400px'});
-      // root.find('.trade-fields').animate({ left : '-=400'}, 500, 'linear');
-      // root.find('.trade-conf').animate({ left : '-=400'}, 500, 'linear', function(){ ... });
       state.purchase.loading = false;
       div.remove();
       /* trigger a new proposal stream */
@@ -905,7 +902,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     /* pass data which is needed to show live tick purchase results */
     extra.show_tick_chart = false;
-    if(_(['digits','callput', 'callputequal', 'asian']).includes(extra.category.contract_category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
+    if(_(categories_with_tick_chart).includes(extra.category.contract_category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
         extra.digits_value = state.digits.value;
         extra.tick_count = state.duration_count.value*1;
         if(extra.category.contract_category !== 'digits') {
