@@ -251,7 +251,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
             }
 
             if(ticks.category.contract_category === 'asian') {
-               //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
                const avg = ticks.average().toFixed(decimal_digits + 1);
                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
             }
@@ -293,33 +292,54 @@ export const init = (data, extra, show_callback, hide_callback) => {
       }
       state.buy.show_result = true;
    }
+
    state.ticks.update_status = (status) => {
+      const category = state.ticks.category.contract_category;
+
+      if (category === 'digits') {
+            state.ticks.status = digit_won_or_lost();
+            return;
+      }
+      if (category === 'asian') {
+            state.ticks.status = asian_won_or_lost();
+            return;
+      }
+       else {
+            state.ticks.status = status;
+      }
+   }
+
+   const digit_won_or_lost = () => {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+      const display = state.ticks.category_display.sentiment;
 
       const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         digits_value = state.ticks.value + '',
-         average = state.ticks.average().toFixed(5);
-      const category = state.ticks.category,
-         display = state.ticks.category_display.sentiment;
+         digits_value = state.ticks.value + '';
+
       const css = {
-         digits: {
             match:  _.last(last_quote) === digits_value,
             differ:  _.last(last_quote) !== digits_value,
             over: _.last(last_quote)*1 > digits_value*1,
             under: _.last(last_quote)*1 < digits_value*1,
             odd: (_.last(last_quote)*1)%2 === 1,
             even: (_.last(last_quote)*1)%2 === 0
-         },
-         asian: {
+      };
+      const won_or_lost = css[display] ? 'won' : 'lost';
+      return won_or_lost;
+   };
+
+   const asian_won_or_lost = () => {
+      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+      const display = state.ticks.category_display.sentiment;
+
+      const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
+         average = state.ticks.average().toFixed(5);
+      const css = {
             up: average < last_quote*1,
             down: average > last_quote*1,
-         },
       };
-      if (category.contract_category === 'digits' || category.contract_category === 'asian') {
-            state.ticks.status = css[category.contract_category][display] ? 'won' : 'lost';
-      } else {
-            state.ticks.status = status;
-      }
+      const won_or_lost = css[display] ? 'won' : 'lost';
+      return won_or_lost;
    }
 
    state.back.onclick = () => hide_callback(root);
