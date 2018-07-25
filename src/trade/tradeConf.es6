@@ -114,6 +114,7 @@ const register_ticks = (state, extra) => {
    let tick_count = extra.tick_count * 1,
       symbol = extra.symbol,
       purchase_epoch = state.buy.purchase_time * 1,
+      contract,
       fn = null;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
@@ -130,7 +131,7 @@ const register_ticks = (state, extra) => {
          });
          --tick_count;
          if (tick_count === 0) {
-            state.ticks.update_status();
+            state.ticks.update_status(contract.status);
             state.buy.update();
             /* show buy-price final and profit & update title */
             state.back.visible = true;
@@ -139,9 +140,6 @@ const register_ticks = (state, extra) => {
             liveapi.proposal_open_contract.forget(extra.contract_id);
             /* unregister from proposal_open_contract stream */
          }
-         /* update state for each new tick in Up/Down && Asians contracts */
-         if (state.ticks.category.contract_category !== 'digits')
-            state.ticks.update_status();
       }
    }
 
@@ -165,7 +163,7 @@ const register_ticks = (state, extra) => {
             liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
             return;
       }
-      const contract = data.proposal_open_contract;
+      contract = data.proposal_open_contract;
       if(contract.contract_id !== extra.contract_id) return;
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
       // DONT TRUST BACKEND! I'm really angry right now :/
@@ -295,12 +293,10 @@ export const init = (data, extra, show_callback, hide_callback) => {
       }
       state.buy.show_result = true;
    }
-   state.ticks.update_status = () => {
+   state.ticks.update_status = (status) => {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
 
-      const first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         barrier = extra.getbarrier(_.head(state.ticks.array)) + '',
+      const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
          digits_value = state.ticks.value + '',
          average = state.ticks.average().toFixed(5);
       const category = state.ticks.category,
@@ -314,21 +310,16 @@ export const init = (data, extra, show_callback, hide_callback) => {
             odd: (_.last(last_quote)*1)%2 === 1,
             even: (_.last(last_quote)*1)%2 === 0
          },
-         callput: {
-            up: last_quote*1 > barrier*1,
-            down: last_quote*1 < barrier*1,
-         },
          asian: {
             up: average < last_quote*1,
             down: average > last_quote*1,
          },
-         touchnotouch: {
-            high_vol: '',
-         }
       };
-      console.log(category.contract_category, display);
-      /* set the css class */
-      state.ticks.status = css[category.contract_category][display] ? 'won' : 'lost';
+      if (category.contract_category === 'digits' || category.contract_category === 'asian') {
+            state.ticks.status = css[category.contract_category][display] ? 'won' : 'lost';
+      } else {
+            state.ticks.status = status;
+      }
    }
 
    state.back.onclick = () => hide_callback(root);
