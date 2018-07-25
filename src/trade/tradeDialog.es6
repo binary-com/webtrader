@@ -905,7 +905,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     /* pass data which is needed to show live tick purchase results */
     extra.show_tick_chart = false;
-    if(_(['digits','callput','asian']).includes(extra.category.contract_category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
+    if(_(['digits','callput','asian', 'touchnotouch']).includes(extra.category.contract_category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
         extra.digits_value = state.digits.value;
         extra.tick_count = state.duration_count.value*1;
         if(extra.category.contract_category !== 'digits') {
