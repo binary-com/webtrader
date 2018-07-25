@@ -321,8 +321,12 @@ export const init = (data, extra, show_callback, hide_callback) => {
          asian: {
             up: average < last_quote*1,
             down: average > last_quote*1,
+         },
+         touchnotouch: {
+            high_vol: '',
          }
       };
+      console.log(category.contract_category, display);
       /* set the css class */
       state.ticks.status = css[category.contract_category][display] ? 'won' : 'lost';
    }
