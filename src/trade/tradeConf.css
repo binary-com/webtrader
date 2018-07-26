@@ -65,7 +65,6 @@
 }
 
 .ui-dialog .ui-dialog-content.trade-dialog .trade-conf .view-row {
-  margin-top: 40px;
   height: 40px;
 }
 .ui-dialog .ui-dialog-content.trade-dialog .trade-conf .view-row .view {
@@ -81,8 +80,6 @@
 }
 
 .trade-conf .balance-row {
-  bottom: 0;
-  position: absolute;
   width: 100%;
 }
 .trade-conf .balance-row .bold {

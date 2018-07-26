@@ -65,7 +65,7 @@
     <input type='password' rv-value='account.password' type="text" maxlength="25"/>
     <div class='error-msg'>
       <span rv-show='account.password_error_message < password empty_fields.validate | eq ""'
-            class='explanation'>Minimum 6 characters and must contain at least 1 digit</span>
+            class='explanation'>Minimum of six lower and uppercase letters with numbers</span>
       <span rv-show='account.password_error_message < password empty_fields.validate'
             rv-text='account.password_error_message < password empty_fields.validate'
             class='validation'></span>

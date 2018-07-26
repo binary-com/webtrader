@@ -2,8 +2,6 @@
 
 Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake.
 
-![Binary options basics](https://www.binary.com/images/pages/get-started/binary-option-basics.svg)
-
 You only need to make four decisions to execute a binary contract.
 
 ### 1. Choose the Underlying

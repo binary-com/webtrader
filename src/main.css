@@ -57,8 +57,7 @@ body > .footer .addiction-warning a:hover {
 
 
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
-  width: 14px;
-  height: 14px;
+    height: 18px !important;
 }
 
 .ui-dialog {
@@ -494,4 +493,9 @@ label.checkbox input:checked ~ span.check {
     top: calc(50% - 10px) !important;
     right: 2px !important;
     left: auto;
+}
+
+.ui-dialog-titlebar {
+    display: flex;
+    align-items: center;
 }

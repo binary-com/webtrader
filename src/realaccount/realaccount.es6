@@ -11,6 +11,7 @@ import moment from 'moment';
 import { getLandingCompany } from 'navigation/navigation';
 import html from 'text!realaccount/realaccount.html';
 import 'css!realaccount/realaccount.css';
+import { financial_account_opening } from '../common/common';
 
 let real_win = null;
 let real_win_view = null; // rivets view
@@ -19,6 +20,10 @@ let real_win_li = null;
 const error_handler = (err) => {
    console.error(err);
    $.growl.error({ message: err.message });
+};
+
+const object_has_empty_string_value = (obj) => {
+      return Object.values(obj).some((value) => value === '');
 };
 
 export const init = (li) => {
@@ -62,7 +67,8 @@ const init_real_win = (root, what_todo) => {
       destroy: () => {
          real_win_view && real_win_view.unbind();
          real_win_view = null;
-      }
+      },
+      'data-authorized' :'true'
    });
 
    init_state(root, what_todo);
@@ -131,58 +137,40 @@ const init_state = (root, what_todo) => {
          tax_residence: '',
          tax_identification_number: '',
          available_currencies: []
-
       },
       financial: {
-         experience_array: ['0-1 year', '1-2 years', 'Over 3 years'],
-         frequency_array: ['0-5 transactions in the past 12 months', '6-10 transactions in the past 12 months', '40 transactions or more in the past 12 months'],
-
-         forex_trading_experience: '',
-         forex_trading_frequency: '',
-         indices_trading_experience: '',
-         indices_trading_frequency: '',
-         commodities_trading_experience: '',
-         commodities_trading_frequency: '',
-         stocks_trading_experience: '',
-         stocks_trading_frequency: '',
-         other_derivatives_trading_experience: '',
-         other_derivatives_trading_frequency: '',
-         other_instruments_trading_experience: '',
-         other_instruments_trading_frequency: '',
-
-         employment_industry_array: ['Construction', 'Education', 'Finance', 'Health', 'Tourism', 'Other'],
-         employment_industry: '',
-         education_level_array: ['Primary', 'Secondary', 'Tertiary'],
-         education_level: '',
-
-         income_source_array: ['Salaried Employee', 'Self-Employed', 'Investments & Dividends', 'Pension', 'Other'],
-         income_source: '',
-
-         net_income_array: ['Less than $25,000', '$25,000 - $50,000', '$50,001 - $100,000', '$100,001 - $500,000', 'Over $500,000'],
-         net_income: '',
-
-         estimated_worth_array: ['Less than $100,000', '$100,000 - $250,000', '$250,001 - $500,000', '$500,001 - $1,000,000', 'Over $1,000,000'],
-         estimated_worth: '',
-
-         account_turnover_array: ['Less than $25,000', '$25,000 - $50,000', '$50,001 - $100,000', '$100,001 - $500,000', 'Over $500,000'],
-         account_turnover: '',
-
-         occupation_array: ["Chief Executives, Senior Officials and Legislators", "Managers", "Professionals", "Clerks",
-            "Personal Care, Sales and Service Workers", "Agricultural, Forestry and Fishery Workers",
-            "Craft, Metal, Electrical and Electronics Workers", "Plant and Machine Operators and Assemblers",
-            "Mining, Construction, Manufacturing and Transport Workers", "Armed Forces", "Government Officers",
-            "Others"
-         ],
-         occupation: '',
-
-         employment_status: '',
-         employment_status_array: ["Employed", "Pensioner", "Self-Employed", "Student", "Unemployed"],
-
-         source_of_wealth: '',
-         source_of_wealth_array: ["Accumulation of Income/Savings", "Cash Business", "Company Ownership", "Divorce Settlement", "Inheritance", "Investment Income", "Sale of Property", "Other"],
-
          accepted: false,
-         disabled: false
+         disabled: false,
+         professional_client: {
+            chk_professional: false,
+         },
+         trading_experience: {
+            forex_trading_experience: '',
+            forex_trading_frequency: '',
+            binary_options_trading_experience: '',
+            binary_options_trading_frequency: '',
+            cfd_trading_experience: '',
+            cfd_trading_frequency: '',
+            other_instruments_trading_experience: '',
+            other_instruments_trading_frequency: '',
+         },
+         financial_information: {
+            income_source: '',
+            employment_status: '',
+            employment_industry: '',
+            occupation: '',
+            source_of_wealth: '',
+            education_level: '',
+            net_income: '',
+            estimated_worth: '',
+            account_turnover: '',
+         },
+         trading_experience_select_data: {
+            ...financial_account_opening.trading_experience_select_data
+         },
+         financial_information_select_data: {
+            ...financial_account_opening.financial_information_select_data,
+         },
       }
    };
 
@@ -269,20 +257,6 @@ const init_state = (root, what_todo) => {
          });
    };
 
-   state.financial.empty_fields = () => {
-      return state.financial.forex_trading_experience === '' ||
-         state.financial.forex_trading_frequency === '' || state.financial.indices_trading_experience === '' ||
-         state.financial.indices_trading_frequency === '' || state.financial.commodities_trading_experience === '' ||
-         state.financial.commodities_trading_frequency === '' || state.financial.stocks_trading_experience === '' ||
-         state.financial.stocks_trading_frequency === '' || state.financial.other_derivatives_trading_experience === '' ||
-         state.financial.other_derivatives_trading_frequency === '' || state.financial.other_instruments_trading_experience === '' ||
-         state.financial.other_instruments_trading_frequency === '' || state.financial.employment_industry === '' ||
-         state.financial.occupation === '' || state.financial.education_level === '' ||
-         state.financial.income_source === '' || state.financial.net_income === '' ||
-         state.financial.account_turnover === '' || state.financial.estimated_worth === '' ||
-         state.financial.employment_status === '' || state.financial.source_of_wealth === '';;
-   };
-
    state.user.pep_window = (e) => {
       e.preventDefault();
       const text = `A Politically Exposed Person (PEP) is an individual who is or has been entrusted with a prominent public function including his/her immediate family members or persons known to be close associates of such persons, but does not include middle ranking or more junior officials.<br><br>
@@ -302,12 +276,52 @@ const init_state = (root, what_todo) => {
       }).dialog("open");
    }
 
+   state.user.professional_window = (e) => {
+      e.preventDefault();
+      const first_paragraph = `Clients need to satisfy at least two of the following criteria in order to receive Professional Client status:`;
+      const first_ul = [`You’ve carried out significant transactions on markets similar to the ones we offer, averaging 10 transactions per quarter for the previous four quarters`,
+      `The size of your instrument portfolio exceeds EUR 500,000 or its equivalent`, `You’ve worked in the financial sector for at least one year in a role that requires knowledge of your intended transactions on our platform`];
+      const second_paragraph = `If you choose to be treated as a Professional Client, we’ll regard you as having the required market knowledge and experience. As such, we’ll take steps to ensure that your request for Professional Client status meets the above criteria, including a request for the following:`;
+      const second_ul = [`Statements that reflect your transactions from the previous four quarters`, `Proof of your portfolio held elsewhere`, `Proof of your employment`];
+      windows.createBlankWindow(`<div style="padding:15px;">
+      <div>${first_paragraph}</div>
+      <ul class="checked">
+            <li>${first_ul[0]}</li>
+            <li>${first_ul[1]}</li>
+            <li>${first_ul[2]}</li>
+      </ul>
+      <div>${second_paragraph}</div>
+      <ul class="bullet">
+            <li>${second_ul[0]}</li>
+            <li>${second_ul[1]}</li>
+            <li>${second_ul[2]}</li>
+      </ul>
+      </div>`, {
+         title: "Professional Client",
+         modal: true,
+         resizable: false,
+         collapsable: false,
+         minimizable: false,
+         maximizable: false,
+         closeOnEscape: true,
+         width: 600,
+         height: 'auto'
+      }).dialog("open");
+   }
+
    state.financial.click = () => {
-      if (state.financial.empty_fields()) {
+      if (object_has_empty_string_value(state.financial.trading_experience)) {
+            state.empty_fields.show();
+            $.growl.error({ message: 'Not all trading experiences are completed' });
+            return;
+      }
+
+      if (object_has_empty_string_value(state.financial.financial_information)) {
          state.empty_fields.show();
          $.growl.error({ message: 'Not all financial information are completed' });
          return;
       }
+
       if (!state.financial.accepted) {
          $.growl.error({ message: 'Binary.com terms and conditions unchecked.' });
          return;
@@ -315,9 +329,9 @@ const init_state = (root, what_todo) => {
 
       state.risk.visible = true;
    };
+
    state.financial.create_request = () => {
       const user = state.user;
-      const financial = state.financial;
       const request = {
          new_account_maltainvest: 1,
          salutation: user.salutation,
@@ -337,27 +351,9 @@ const init_state = (root, what_todo) => {
          tax_identification_number: state.user.tax_identification_number,
 
          affiliate_token: '',
-         forex_trading_experience: financial.forex_trading_experience,
-         forex_trading_frequency: financial.forex_trading_frequency,
-         indices_trading_experience: financial.indices_trading_experience,
-         indices_trading_frequency: financial.indices_trading_frequency,
-         commodities_trading_experience: financial.commodities_trading_experience,
-         commodities_trading_frequency: financial.commodities_trading_frequency,
-         stocks_trading_experience: financial.stocks_trading_experience,
-         stocks_trading_frequency: financial.stocks_trading_frequency,
-         other_derivatives_trading_experience: financial.other_derivatives_trading_experience,
-         other_derivatives_trading_frequency: financial.other_derivatives_trading_frequency,
-         other_instruments_trading_experience: financial.other_instruments_trading_experience,
-         other_instruments_trading_frequency: financial.other_instruments_trading_frequency,
-         employment_industry: financial.employment_industry,
-         occupation: financial.occupation,
-         education_level: financial.education_level,
-         income_source: financial.income_source,
-         net_income: financial.net_income,
-         estimated_worth: financial.estimated_worth,
-         employment_status: financial.employment_status,
-         source_of_wealth: financial.source_of_wealth,
-         account_turnover: financial.account_turnover,
+         client_type: state.financial.professional_client.chk_professional ? 'professional' : 'retail',
+         ...state.financial.financial_information,
+         ...state.financial.trading_experience,
          accept_risk: 1,
       };
       return request;
@@ -402,7 +398,8 @@ const init_state = (root, what_todo) => {
 
    state.route.update = (route) => {
       state.route.value = route;
-      //real_win.dialog('option', 'height', routes[route]);
+      // scroll to top for second page of form
+      if (route === 'financial') { document.getElementById('financial_second_page').scrollIntoView() }
       real_win.dialog('widget').trigger('dialogresizestop');
    };
 
@@ -532,16 +529,3 @@ const init_state = (root, what_todo) => {
 }
 
 export default { init }
-// req.salutation = state.user.salutation;
-// req.first_name = state.user.first_name;
-// req.last_name = state.user.last_name;
-// req.account_opening_reason = state.user.account_opening_reason;
-// req.date_of_birth = state.user.date_of_birth;
-// req.address_line_1 = state.user.address_line_1;
-// req.address_line_2 = state.user.address_line_1;
-// req.city_address = state.user.city_address;
-// req.state_address = state.user.state_address;
-// req.address_postcode = state.user.address_postcode;
-// req.phone = state.user.phone;
-// req.residence = state.user.residence;
-// req.residence_name = state.user.residence_name;

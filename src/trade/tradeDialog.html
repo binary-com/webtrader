@@ -273,16 +273,15 @@
       </li>
       <li></li>
     </ul>
-
-    <ul class="proposal-message stick-to-bottom"
+    <ul class="proposal-message"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li>{proposal.message}</li>
     </ul>
 
-    <ul class="message-row stick-to-bottom netprofit fill-bg-color"
+    <ul class="message-row-wrapper netprofit fill-bg-color"
         rv-if="categories.value.contract_category | not-eq 'spreads' | and proposal.error | eq ''"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
-        <li>
+        <li class="message-row-wrapper__container">
           <span rv-show='proposal.netprofit_ < ask_price payout'>
             Net Profit: <span rv-html="proposal.netprofit_ < ask_price payout"> </span> |
           </span>
@@ -295,28 +294,35 @@
         </li>
     </ul>
 
-    <ul class="message-row stick-to-bottom spread-deposit"
+    <ul class="message-row-wrapper spread-deposit"
         rv-if="categories.value.contract_category | eq 'spreads' | and proposal.error | eq ''"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
-      <li rv-if="categories.value.contract_category | eq 'spreads'">
+      <li class="message-row-wrapper__container" rv-if="categories.value.contract_category | eq 'spreads'">
         Deposit of USD <span rv-text="spreads.deposit_ < amount_per_point stop_loss stop_type | to-fixed 2 "> </span>
         is required. Current spread: <span rv-text="spreads.spread" > </span> points
       </li>
     </ul>
 
-    <ul class="message-row stick-to-bottom error"
+    <ul class="message-row-wrapper error"
         rv-if="proposal.error | not-eq ''"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
-        <li>{proposal.error}</li>
+        <li class="message-row-wrapper__container" >{proposal.error}</li>
     </ul>
 
-    <ul class="purchase-row stick-to-bottom ltr-direction"
+    <ul class="purchase-row-wrapper"
         rv-css-opacity="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error | ternary 0.5 1">
-      <li class="text-vertical-align"> <span class="no-wrap"> You pay: <span rv-html="proposal.ask_price | format-price currency.value"> </span> </span> </li>
-      <li> <button
-              rv-on-click="purchase.onclick"
-              rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">Purchase</button>
-      </li>
+        <li class="purchase-row-wrapper__text-container">
+            <span>
+                You pay: <span rv-html="proposal.ask_price | format-price currency.value" />
+            </span>
+        </li>
+        <li class="purchase-row-wrapper__btn-container">
+            <button
+                rv-on-click="purchase.onclick"
+                rv-disabled="proposal.loading | or purchase.loading | or ticks.loading | or proposal.error">
+                Purchase
+            </button>
+        </li>
     </ul>
   </div>
 </div>

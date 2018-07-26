@@ -38,7 +38,6 @@ const check_currency_async = () => new Promise((resolve, reject) => {
     continue: () => {
       state.disabled = true;
       liveapi.send({ set_account_currency: state.value })
-        .then(resolve, reject)
         .then(() => {
           // This doesn't work because on emitting the login event currency is reset.
           // local_storage.set("currency", state.value);
@@ -48,11 +47,17 @@ const check_currency_async = () => new Promise((resolve, reject) => {
           //Re-authorize
           liveapi.cached.authorize(true)
           win.dialog('close');
+        })
+        .catch((err) => {
+          reject();
+          win.dialog('close');
+          $.growl.error({ message: err.message });
         });
     },
     cancel: () => {
+      reject();
       win.dialog('close');
-      reject({ message: 'Please set currency.'.i18n() });
+      $.growl.notice({ message: 'Please set currency.'.i18n() });
     }
   };
 
@@ -81,9 +86,8 @@ const check_currency_async = () => new Promise((resolve, reject) => {
 
 export const check_currency = () => {
   if (check_promise) { return check_promise; }
-  check_promise = check_currency_async().then(() => check_promise = null).catch(up => {
+  check_promise = check_currency_async().then(() => check_promise = null).catch((err) => {
     check_promise = null;
-    throw up;
   });
   return check_promise;
 }

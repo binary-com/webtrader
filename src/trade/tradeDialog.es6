@@ -793,9 +793,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       symbol: state.proposal.symbol, /* Symbol code */
     };
     if(state.categories.value.contract_category !== 'spreads') {
-      // format amount
-      state.basis.amount = ((state.basis.amount.toString()).match(/0*(\d+\.?\d*)/) || [])[1];
-      request.amount = state.basis.amount*1; /* Proposed payout or stake value */
+      const format_amount = _.isNil(state.basis.amount) ? false : state.basis.amount.toString().match(/0*(\d+\.?\d*)/);
+      //  format the amount only if the invalid input is invalid
+      if (format_amount && format_amount.input !== format_amount[1]) {
+        state.basis.amount = format_amount[1];
+      }
+      request.amount = state.basis.amount; /* Proposed payout or stake value */
       request.basis = state.basis.value; /* Indicate whether amount is 'payout' or 'stake */
     } else {
       request.amount_per_point = state.spreads.amount_per_point;
@@ -835,23 +838,32 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       });
     }
 
-    var new_proposal_promise = liveapi.send(request)
-      .then(function (data) {
-        /* OK, this is the last sent request */
-        if(new_proposal_promise === state.proposal.last_promise) {
-          var id = data.proposal && data.proposal.id;
+    /**
+     * Adds retry to proposal subscription request
+     *
+     * @param {Object}   request_obj          Object of the request to be made
+     * @param {Number}   times_retry          Times to retry the request if the request fails
+     * @param {String}   required_err_code    Optional - only retry if the response error code matches this error code
+     */
+    async function subscribeProposalHandler(request_obj, times_retry, required_err_code) {
+      let response;
+      for (let i = 0; i < times_retry; i++) {
+        try {
+          response = await liveapi.send(request_obj);
           state.proposal.error = '';
-          state.proposal.id = id;
+          state.proposal.id = response.proposal && response.proposal.id;
+          break;
+        } catch (err) {
+          state.proposal.error = err.message;
+          state.proposal.message = '';
+          state.proposal.loading = false;
+          if (required_err_code && required_err_code !== err.code) { break; }
         }
-        return data;
-      })
-      .catch(function (err) {
-        console.error(err);
-        state.proposal.error = err.message;
-        state.proposal.message = '';
-        state.proposal.loading = false;
-        return err;
-      });
+      }
+      return response;
+    }
+
+    const new_proposal_promise = subscribeProposalHandler(request, 2, 'AlreadySubscribed');
     /* update last_promise to invalidate previous requests */
     state.proposal.last_promise = new_proposal_promise;
     state.proposal.id = ''; /* invalidate last proposal.id */
@@ -1036,7 +1048,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
           /* forget last proposal stream on close */
           if(state.proposal.last_promise) {
             state.proposal.last_promise.then(function(data){
-              var id = data.proposal && data.proposal.id;
+              var id = data && data.proposal && data.proposal.id;
               id && liveapi.send({forget: id});
             });
           }

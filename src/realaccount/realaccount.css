@@ -21,16 +21,23 @@
 }
 
 .real-dialog select + .ui-selectmenu-button {
-    margin-bottom: 10px;
-    font-size: 14px;
+    /* override jq-ui css */
+    font-size: 14px !important;
     z-index: 100;
+    padding-left: 8px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+.real-dialog .row {
+    padding: 5px 0;
+}
 
 /* for jq select menu */
 
 .real-dialog-ul {
-    font-size: 14px;
+    /* override binary-style css */
+    font-size: 14px !important;
     max-height: 100px;
 }
 
@@ -51,7 +58,11 @@
     margin: 8px 0 3px 0;
 }
 
-.real-dialog span.residence {
+.real-dialog .u-span-text-normal {
+    font-size: 14px;
+}
+
+.real-dialog .u-margin-left-small {
     margin-left: 10px;
 }
 
@@ -200,7 +211,7 @@
     background: #1e90ff;
 }
 
-.real-dialog .pep {
+.real-dialog .popup-open-text {
     border-bottom: 1px dotted #000;
     cursor: pointer;
 }
@@ -213,4 +224,17 @@
 
 .real-dialog .new_account table tbody tr td:first-of-type {
     line-height: 50px;
+}
+
+.real-dialog input[type="text"]:disabled {
+    color: #aeaeae;
+}
+
+.real-dialog input[type="text"]:disabled:hover {
+    border: 1px solid #f2f2f2;
+}
+
+.real-dialog .ui-selectmenu-text {
+    /* override main.css default for select */
+    padding: 0px !important;
 }
