@@ -295,29 +295,34 @@ export const init = (data, extra, show_callback, hide_callback) => {
       state.buy.show_result = true;
    }
 
-   state.ticks.update_status = (status) => {
+   state.ticks.update_status = (response_status) => {
       const category = state.ticks.category.contract_category;
+      // BE does not return correct status at end of ticks
+      const categories_without_response_status = ['digits', 'asian'];
+      const should_make_status = categories_without_status.includes(category);
+
+      if (should_make_status) {
+            state.ticks.status = make_status(category);
+      } else {
+            state.ticks.status = response_status;
+      }
+   };
+
+   const make_status = (category) => {
+      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+      const contract_type = state.ticks.category_display.sentiment;
+      const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '';
 
       if (category === 'digits') {
-            state.ticks.status = digit_won_or_lost();
-            return;
+            return digit_status(contract_type, last_quote);
       }
       if (category === 'asian') {
-            state.ticks.status = asian_won_or_lost();
-            return;
+            return asian_status(contract_type, last_quote);
       }
-       else {
-            state.ticks.status = status;
-      }
-   }
+   };
 
-   const digit_won_or_lost = () => {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-      const display = state.ticks.category_display.sentiment;
-
-      const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         digits_value = state.ticks.value + '';
-
+   const digit_status = (contract_type, last_quote) => {
+      const digits_value = state.ticks.value + '';
       const css = {
             match:  _.last(last_quote) === digits_value,
             differ:  _.last(last_quote) !== digits_value,
@@ -326,21 +331,17 @@ export const init = (data, extra, show_callback, hide_callback) => {
             odd: (_.last(last_quote)*1)%2 === 1,
             even: (_.last(last_quote)*1)%2 === 0
       };
-      const won_or_lost = css[display] ? 'won' : 'lost';
+      const won_or_lost = css[contract_type] ? 'won' : 'lost';
       return won_or_lost;
    };
 
-   const asian_won_or_lost = () => {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-      const display = state.ticks.category_display.sentiment;
-
-      const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         average = state.ticks.average().toFixed(5);
+   const asian_status = (contract_type, last_quote) => {
+      const average = state.ticks.average().toFixed(5);
       const css = {
             up: average < last_quote*1,
             down: average > last_quote*1,
       };
-      const won_or_lost = css[display] ? 'won' : 'lost';
+      const won_or_lost = css[contract_type] ? 'won' : 'lost';
       return won_or_lost;
    }
 
