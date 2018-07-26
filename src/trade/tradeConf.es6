@@ -121,8 +121,8 @@ const register_ticks = (state, extra) => {
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick = (tick) => {
-      const tick_exists = state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
-      const should_add_tick_to_chart = (tick_count > 0 ) && !tick_exists;
+      const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
+      const should_add_tick_to_chart = tick_count > 0 && is_new_tick;
       if (should_add_tick_to_chart) {
          const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
          state.ticks.array.push({
@@ -158,25 +158,32 @@ const register_ticks = (state, extra) => {
    }
 
    fn = liveapi.events.on('proposal_open_contract', (data) => {
-      if(data.error) {
-            $.growl.error({message: data.error.message});
-            liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
-            liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
-            return;
-      }
-      contract = data.proposal_open_contract;
-      if (contract.contract_id !== extra.contract_id) { 
+      const is_different_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
+      if (is_different_contract_stream) {
             return;
       };
+
+      if(data.error) {
+            handle_error(data);
+            return;
+      }
+
+      contract = data.proposal_open_contract;
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
       expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
-
       const should_track_ticks = !tracking_timeout_set && entry && expiry;
+
       if (should_track_ticks) {
             track_ticks();
       }
       return;
    });
+
+   const handle_error = (data) => {
+      $.growl.error({message: data.error.message});
+      liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+      liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+   };
 }
 
 /** @param data
