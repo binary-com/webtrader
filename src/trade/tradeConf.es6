@@ -116,34 +116,40 @@ const register_ticks = (state, extra) => {
    let tick_count = extra.tick_count * 1,
       symbol = extra.symbol,
       purchase_epoch = state.buy.purchase_time * 1,
-      contract,
-      fn = null;
+      contract;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick = (tick) => {
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
       const should_add_tick_to_chart = tick_count > 0 && is_new_tick;
       if (should_add_tick_to_chart) {
-         const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
-         state.ticks.array.push({
-            quote: tick.quote,
-            epoch: tick.epoch,
-            number: state.ticks.array.length + 1,
-            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
-            extra.symbol_name + " " + tick.quote.toFixed(decimal_digits),
-            decimal_digits,
-         });
-         --tick_count;
+            add_new_tick_to_state(tick);
+            --tick_count;
       }
 
       const contract_has_finished = contract.status !== 'open';
       if (contract_has_finished) {
-            state.ticks.status = contract.status;
-            state.buy.update();
-            /* show buy-price final and profit & update title */
-            state.back.visible = true;
+            contract_finished(contract.status);
       }
    }
+
+   const add_new_tick_to_state = (tick) => {
+      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
+      state.ticks.array.push({
+         quote: tick.quote,
+         epoch: tick.epoch,
+         number: state.ticks.array.length + 1,
+         tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
+         extra.symbol_name + " " + tick.quote.toFixed(decimal_digits),
+         decimal_digits,
+      });
+   };
+
+   const contract_finished = (status) => {
+      state.ticks.status = status;
+      state.buy.update();
+      state.back.visible = true;
+   };
 
    let entry = null, expiry = null;
    let tracking_timeout_set = false;
@@ -158,32 +164,34 @@ const register_ticks = (state, extra) => {
       }
    }
 
-   fn = liveapi.events.on('proposal_open_contract', (data) => {
+   liveapi.events.on('proposal_open_contract', (data) => {
       const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
       if (is_different_open_contract_stream) {
             return;
       };
 
       if(data.error) {
-            handle_error(data);
+            on_open_contract_error(data);
             return;
       }
+      on_open_proposal_success(data);
+   });
 
+   const on_open_contract_error = (data) => {
+      $.growl.error({message: data.error.message});
+      liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+      liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+   };
+
+   const on_open_proposal_success = (data) => {
       contract = data.proposal_open_contract;
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
       expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
       const should_track_ticks = !tracking_timeout_set && entry && expiry;
-
       if (should_track_ticks) {
             track_ticks();
       }
       return;
-   });
-
-   const handle_error = (data) => {
-      $.growl.error({message: data.error.message});
-      liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
-      liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
    };
 }
 
