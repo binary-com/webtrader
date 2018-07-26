@@ -123,17 +123,17 @@ const register_ticks = (state, extra) => {
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
       const should_add_tick_to_chart = tick_count > 0 && is_new_tick;
       if (should_add_tick_to_chart) {
-            add_new_tick_to_state(tick);
+            on_add_new_tick_to_state(tick);
             --tick_count;
       }
 
       const contract_has_finished = contract.status !== 'open';
       if (contract_has_finished) {
-            contract_finished(contract.status);
+            on_contract_finished(contract.status);
       }
    }
 
-   const add_new_tick_to_state = (tick) => {
+   const on_add_new_tick_to_state = (tick) => {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
       state.ticks.array.push({
          quote: tick.quote,
@@ -145,7 +145,7 @@ const register_ticks = (state, extra) => {
       });
    };
 
-   const contract_finished = (status) => {
+   const on_contract_finished = (status) => {
       state.ticks.status = status;
       state.buy.update();
       state.back.visible = true;
