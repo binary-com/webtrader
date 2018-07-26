@@ -170,7 +170,7 @@ const register_ticks = (state, extra) => {
             return;
       };
 
-      if(data.error) {
+      if (data.error) {
             on_open_contract_error(data);
             return;
       }
@@ -191,7 +191,6 @@ const register_ticks = (state, extra) => {
       if (should_track_ticks) {
             track_ticks();
       }
-      return;
    };
 }
 
