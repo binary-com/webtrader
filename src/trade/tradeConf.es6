@@ -159,8 +159,8 @@ const register_ticks = (state, extra) => {
    }
 
    fn = liveapi.events.on('proposal_open_contract', (data) => {
-      const is_different_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
-      if (is_different_contract_stream) {
+      const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
+      if (is_different_open_contract_stream) {
             return;
       };
 
