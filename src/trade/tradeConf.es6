@@ -297,11 +297,9 @@ export const init = (data, extra, show_callback, hide_callback) => {
 
    state.ticks.update_status = (response_status) => {
       const category = state.ticks.category.contract_category;
-      // BE does not return correct status at end of ticks
-      const categories_without_response_status = ['digits', 'asian'];
-      const should_make_status = categories_without_response_status.includes(category) || response_status === 'open';
-
-      if (should_make_status) {
+      // sometimes BE does not return correct status at end of ticks
+      const no_response_status = response_status === 'open';
+      if (no_response_status) {
             state.ticks.status = make_status(category);
       } else {
             state.ticks.status = response_status;
