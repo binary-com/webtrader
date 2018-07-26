@@ -120,8 +120,10 @@ const register_ticks = (state, extra) => {
       fn = null;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const add_tick = (tick) =>{
-      if (_.findIndex(state.ticks.array, (t) => (t.epoch*1 === tick.epoch*1)) === -1 && tick_count > 0) {
+   const add_tick = (tick) => {
+      const tick_exists = state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
+      const should_add_tick_to_chart = (tick_count > 0 ) && !tick_exists;
+      if (should_add_tick_to_chart) {
          const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
          state.ticks.array.push({
             quote: tick.quote,
@@ -132,16 +134,13 @@ const register_ticks = (state, extra) => {
             decimal_digits : decimal_digits
          });
          --tick_count;
-         if (tick_count === 0) {
-            state.ticks.update_status(contract.status);
+      }
+      const contract_has_finished = contract.status !== 'open';
+      if (contract_has_finished) {
+            state.ticks.status = contract.status;
             state.buy.update();
             /* show buy-price final and profit & update title */
             state.back.visible = true;
-            /* show back button */
-            liveapi.events.off('proposal_open_contract', fn);
-            liveapi.proposal_open_contract.forget(extra.contract_id);
-            /* unregister from proposal_open_contract stream */
-         }
       }
    }
 
@@ -166,13 +165,16 @@ const register_ticks = (state, extra) => {
             return;
       }
       contract = data.proposal_open_contract;
-      if(contract.contract_id !== extra.contract_id) return;
+      if (contract.contract_id !== extra.contract_id) { 
+            return;
+      };
       entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
-      // DONT TRUST BACKEND! I'm really angry right now :/
-      // Try everything before calculating expiry.
       expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
-      if(!tracking_timeout_set && entry && expiry)
-         track_ticks();
+
+      const should_track_ticks = !tracking_timeout_set && entry && expiry;
+      if (should_track_ticks) {
+            track_ticks();
+      }
       return;
    });
 }
@@ -297,71 +299,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
       }
       state.buy.show_result = true;
    }
-
-   state.ticks.update_status = (response_status) => {
-      const category = state.ticks.category.contract_category;
-      // sometimes BE does not return correct status at end of ticks
-      const no_response_status = response_status === 'open';
-      if (no_response_status) {
-            state.ticks.status = make_status(category);
-      } else {
-            state.ticks.status = response_status;
-      }
-   };
-
-   const make_status = (category) => {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-      const contract_type = state.ticks.category_display.sentiment;
-      const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '';
-      switch (category) {
-            case 'digits':
-                  return digit_status(contract_type, last_quote);
-            case 'asian':
-                  return asian_status(contract_type, last_quote);
-            case 'callput':
-                  return callput_status(contract_type, last_quote);
-            default:
-                  throw new Error('Contract does not have status: ', contract_type);
-      };
-   };
-
-   const asian_status = (contract_type, last_quote) => {
-      const average = state.ticks.average().toFixed(5);
-      const contract_type_status = {
-            up: average < last_quote*1,
-            down: average > last_quote*1,
-      };
-      const won_or_lost = contract_type_status[contract_type] ? 'won' : 'lost';
-      return won_or_lost;
-   };
-
-   const digit_status = (contract_type, last_quote) => {
-      const digits_value = state.ticks.value + '';
-      const contract_type_status = {
-            match:  _.last(last_quote) === digits_value,
-            differ:  _.last(last_quote) !== digits_value,
-            over: _.last(last_quote)*1 > digits_value*1,
-            under: _.last(last_quote)*1 < digits_value*1,
-            odd: (_.last(last_quote)*1)%2 === 1,
-            even: (_.last(last_quote)*1)%2 === 0
-      };
-      const won_or_lost = contract_type_status[contract_type] ? 'won' : 'lost';
-      return won_or_lost;
-   };
-
-   const callput_status = (contract_type, last_quote) => {
-      const barrier = extra.getbarrier(_.head(state.ticks.array)) + '';
-      const contract_type_status = {
-            up: last_quote*1 > barrier*1,
-            down: last_quote*1 < barrier*1,
-      }
-      const won_or_lost = contract_type_status[contract_type] ? 'won' : 'lost';
-      return won_or_lost;
-   };
-//    callputequal: {
-//       up: last_quote*1 >= barrier*1,
-//       down: last_quote*1 =< barrier*1,
-//    },
 
    state.back.onclick = () => hide_callback(root);
    state.arrow.onclick = (e) => {
