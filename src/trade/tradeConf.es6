@@ -1,8 +1,4 @@
-﻿/*
- * Created by amin on December 4, 2015.
- */
-
-import _ from 'lodash';
+﻿import _ from 'lodash';
 import $ from 'jquery';
 import moment from 'moment';
 import liveapi from '../websockets/binary_websockets';
