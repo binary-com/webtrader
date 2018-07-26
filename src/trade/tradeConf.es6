@@ -299,7 +299,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
       const category = state.ticks.category.contract_category;
       // BE does not return correct status at end of ticks
       const categories_without_response_status = ['digits', 'asian'];
-      const should_make_status = categories_without_status.includes(category);
+      const should_make_status = categories_without_response_status.includes(category) || response_status === 'open';
 
       if (should_make_status) {
             state.ticks.status = make_status(category);
@@ -312,18 +312,31 @@ export const init = (data, extra, show_callback, hide_callback) => {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       const contract_type = state.ticks.category_display.sentiment;
       const last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '';
+      switch (category) {
+            case 'digits':
+                  return digit_status(contract_type, last_quote);
+            case 'asian':
+                  return asian_status(contract_type, last_quote);
+            case 'callput':
+                  return callput_status(contract_type, last_quote);
+            default:
+                  throw new Error('Contract does not have status: ', contract_type);
+      };
+   };
 
-      if (category === 'digits') {
-            return digit_status(contract_type, last_quote);
-      }
-      if (category === 'asian') {
-            return asian_status(contract_type, last_quote);
-      }
+   const asian_status = (contract_type, last_quote) => {
+      const average = state.ticks.average().toFixed(5);
+      const contract_type_status = {
+            up: average < last_quote*1,
+            down: average > last_quote*1,
+      };
+      const won_or_lost = contract_type_status[contract_type] ? 'won' : 'lost';
+      return won_or_lost;
    };
 
    const digit_status = (contract_type, last_quote) => {
       const digits_value = state.ticks.value + '';
-      const css = {
+      const contract_type_status = {
             match:  _.last(last_quote) === digits_value,
             differ:  _.last(last_quote) !== digits_value,
             over: _.last(last_quote)*1 > digits_value*1,
@@ -331,19 +344,19 @@ export const init = (data, extra, show_callback, hide_callback) => {
             odd: (_.last(last_quote)*1)%2 === 1,
             even: (_.last(last_quote)*1)%2 === 0
       };
-      const won_or_lost = css[contract_type] ? 'won' : 'lost';
+      const won_or_lost = contract_type_status[contract_type] ? 'won' : 'lost';
       return won_or_lost;
    };
 
-   const asian_status = (contract_type, last_quote) => {
-      const average = state.ticks.average().toFixed(5);
-      const css = {
-            up: average < last_quote*1,
-            down: average > last_quote*1,
+   const callput_status = (contract_type, last_quote) => {
+      const barrier = extra.getbarrier(_.head(state.ticks.array)) + '';
+      const contract_type_status = {
+            up: last_quote*1 > barrier*1,
+            down: last_quote*1 < barrier*1,
       };
-      const won_or_lost = css[contract_type] ? 'won' : 'lost';
+      const won_or_lost = contract_type_status[contract_type] ? 'won' : 'lost';
       return won_or_lost;
-   }
+   };
 
    state.back.onclick = () => hide_callback(root);
    state.arrow.onclick = (e) => {
