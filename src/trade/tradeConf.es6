@@ -131,10 +131,11 @@ const register_ticks = (state, extra) => {
             number: state.ticks.array.length + 1,
             tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
             extra.symbol_name + " " + tick.quote.toFixed(decimal_digits),
-            decimal_digits : decimal_digits
+            decimal_digits,
          });
          --tick_count;
       }
+
       const contract_has_finished = contract.status !== 'open';
       if (contract_has_finished) {
             state.ticks.status = contract.status;
