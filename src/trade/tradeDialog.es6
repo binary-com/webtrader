@@ -649,6 +649,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     else {
       state.duration_count.update(true);
     }
+    // disable other durations besides minutes for lookbacks
+    if (state.categories.selected === 'lookback') {
+      array = array.filter((duration) => duration === 'minutes')
+    }
 
     state.duration_unit.array = array;
 
