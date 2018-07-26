@@ -292,8 +292,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     categories: {
       array: [],
       value: '',
-      paddingTop: function(){
-        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "lookback":'26px' };
+      paddingTop: function() {
+        var paddings = { "asian" : '26px', "callput" : '8px', "digits" : '14px', "endsinout" : '4px', "staysinout" : '4px', "touchnotouch" : '12px' , "lookback":'26px', "callputequal" : '8px'};
         return paddings[state.categories.value.contract_category] || '3px';
       }
     },
@@ -876,20 +876,17 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.purchase.onclick = async function() {
+    const categories_with_tick_chart = ['digits', 'callput', 'callputequal', 'asian', 'touchnotouch'];
     state.purchase.loading = true;
     var show = function(div){
       div.appendTo(root);
 
       root.find('.trade-fields').css({ left : '400px'});
       root.find('.trade-conf').css({ left : '0'});
-      // root.find('.trade-fields').animate({ left : '+=400'}, 1000, 'linear');
-      // root.find('.trade-conf').animate({ left : '+=400'}, 1000, 'linear');
     };
     var hide = function(div){
       root.find('.trade-fields').css({ left : '0'});
       root.find('.trade-conf').css({ left : '-400px'});
-      // root.find('.trade-fields').animate({ left : '-=400'}, 500, 'linear');
-      // root.find('.trade-conf').animate({ left : '-=400'}, 500, 'linear', function(){ ... });
       state.purchase.loading = false;
       div.remove();
       /* trigger a new proposal stream */
@@ -909,7 +906,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
     /* pass data which is needed to show live tick purchase results */
     extra.show_tick_chart = false;
-    if(_(['digits','callput','asian', 'touchnotouch']).includes(extra.category.contract_category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
+    if(_(categories_with_tick_chart).includes(extra.category.contract_category) && state.duration.value === 'Duration' && extra.duration_unit === 'ticks') {
         extra.digits_value = state.digits.value;
         extra.tick_count = state.duration_count.value*1;
         if(extra.category.contract_category !== 'digits') {
@@ -923,7 +920,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           extra.show_tick_chart = true;
         }
     }
-
     // manually check to see if the user is authenticated or not,
     // we should update state.currency from user profile first (not everyone is using USD)
     if(!liveapi.is_authenticated()) {
@@ -963,7 +959,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .uniq()
     .value()
     // TODO: Remove this filter after implementing high/low,reset,calle/pute options.
-    .filter(f => !/reset|high\/low|equal|spread/.test(f.toLowerCase()))
+    .filter(f => !/reset|high\/low|spread/.test(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;

@@ -246,7 +246,10 @@ export const init = (data, extra, show_callback, hide_callback) => {
             const ticks = state.ticks;
             const inx = ticks.array.length;
             const tick = ticks.array[inx-1];
-            if(ticks.category.contract_category === 'callput' && inx === 1) {
+            const categories_with_barrier = ['callput', 'callputequal'];
+            const should_add_barrier = (inx === 1 && _(categories_with_barrier).includes(ticks.category.contract_category));
+
+            if (should_add_barrier) {
                const barrier = extra.getbarrier(tick);
                state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
                return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
@@ -351,10 +354,14 @@ export const init = (data, extra, show_callback, hide_callback) => {
       const contract_type_status = {
             up: last_quote*1 > barrier*1,
             down: last_quote*1 < barrier*1,
-      };
+      }
       const won_or_lost = contract_type_status[contract_type] ? 'won' : 'lost';
       return won_or_lost;
    };
+//    callputequal: {
+//       up: last_quote*1 >= barrier*1,
+//       down: last_quote*1 =< barrier*1,
+//    },
 
    state.back.onclick = () => hide_callback(root);
    state.arrow.onclick = (e) => {
