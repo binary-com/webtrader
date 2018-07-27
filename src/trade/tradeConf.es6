@@ -1,8 +1,4 @@
-﻿/*
- * Created by amin on December 4, 2015.
- */
-
-import _ from 'lodash';
+﻿import _ from 'lodash';
 import $ from 'jquery';
 import moment from 'moment';
 import liveapi from '../websockets/binary_websockets';
@@ -117,36 +113,40 @@ const register_ticks = (state, extra) => {
    let tick_count = extra.tick_count * 1,
       symbol = extra.symbol,
       purchase_epoch = state.buy.purchase_time * 1,
-      fn = null;
+      contract;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const add_tick = (tick) =>{
-      if (_.findIndex(state.ticks.array, (t) => (t.epoch*1 === tick.epoch*1)) === -1 && tick_count > 0) {
-         const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
-         state.ticks.array.push({
-            quote: tick.quote,
-            epoch: tick.epoch,
-            number: state.ticks.array.length + 1,
-            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
-            extra.symbol_name + " " + tick.quote.toFixed(decimal_digits),
-            decimal_digits : decimal_digits
-         });
-         --tick_count;
-         if (tick_count === 0) {
-            state.ticks.update_status();
-            state.buy.update();
-            /* show buy-price final and profit & update title */
-            state.back.visible = true;
-            /* show back button */
-            liveapi.events.off('proposal_open_contract', fn);
-            liveapi.proposal_open_contract.forget(extra.contract_id);
-            /* unregister from proposal_open_contract stream */
-         }
-         /* update state for each new tick in Up/Down && Asians contracts */
-         if (state.ticks.category.contract_category !== 'digits')
-            state.ticks.update_status();
+   const add_tick = (tick) => {
+      const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
+      const should_add_tick_to_chart = tick_count > 0 && is_new_tick;
+      if (should_add_tick_to_chart) {
+            on_add_new_tick(tick);
+            --tick_count;
+      }
+
+      const contract_has_finished = contract.status !== 'open';
+      if (contract_has_finished) {
+            on_contract_finished(contract.status);
       }
    }
+
+   const on_add_new_tick = (tick) => {
+      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
+      state.ticks.array.push({
+         quote: tick.quote,
+         epoch: tick.epoch,
+         number: state.ticks.array.length + 1,
+         tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
+         extra.symbol_name + " " + tick.quote.toFixed(decimal_digits),
+         decimal_digits,
+      });
+   };
+
+   const on_contract_finished = (status) => {
+      state.ticks.status = status;
+      state.buy.update();
+      state.back.visible = true;
+   };
 
    let entry = null, expiry = null;
    let tracking_timeout_set = false;
@@ -161,23 +161,34 @@ const register_ticks = (state, extra) => {
       }
    }
 
-   fn = liveapi.events.on('proposal_open_contract', (data) => {
-      if(data.error) {
-            $.growl.error({message: data.error.message});
-            liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
-            liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+   liveapi.events.on('proposal_open_contract', (data) => {
+      const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
+      if (is_different_open_contract_stream) {
+            return;
+      };
+
+      if (data.error) {
+            on_open_proposal_error(data);
             return;
       }
-      const contract = data.proposal_open_contract;
-      if(contract.contract_id !== extra.contract_id) return;
-      entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
-      // DONT TRUST BACKEND! I'm really angry right now :/
-      // Try everything before calculating expiry.
-      expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
-      if(!tracking_timeout_set && entry && expiry)
-         track_ticks();
-      return;
+      on_open_proposal_success(data);
    });
+
+   const on_open_proposal_error = (data) => {
+      $.growl.error({message: data.error.message});
+      liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+      liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+   };
+
+   const on_open_proposal_success = (data) => {
+      contract = data.proposal_open_contract;
+      entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
+      expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
+      const should_track_ticks = !tracking_timeout_set && entry && expiry;
+      if (should_track_ticks) {
+            track_ticks();
+      }
+   };
 }
 
 /** @param data
@@ -259,7 +270,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
             }
 
             if(ticks.category.contract_category === 'asian') {
-               //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
                const avg = ticks.average().toFixed(decimal_digits + 1);
                return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
             }
@@ -300,41 +310,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
          liveapi.sell_expired(); // to update balance immediately
       }
       state.buy.show_result = true;
-   }
-   state.ticks.update_status = () => {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-
-      const first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         barrier = extra.getbarrier(_.head(state.ticks.array)) + '',
-         digits_value = state.ticks.value + '',
-         average = state.ticks.average().toFixed(5);
-      const category = state.ticks.category,
-         display = state.ticks.category_display.sentiment;
-      const css = {
-         digits: {
-            match:  _.last(last_quote) === digits_value,
-            differ:  _.last(last_quote) !== digits_value,
-            over: _.last(last_quote)*1 > digits_value*1,
-            under: _.last(last_quote)*1 < digits_value*1,
-            odd: (_.last(last_quote)*1)%2 === 1,
-            even: (_.last(last_quote)*1)%2 === 0
-         },
-         callput: {
-            up: last_quote*1 > barrier*1,
-            down: last_quote*1 < barrier*1,
-         },
-         callputequal: {
-            up: last_quote*1 > barrier*1,
-            down: last_quote*1 < barrier*1,
-         },
-         asian: {
-            up: average < last_quote*1,
-            down: average > last_quote*1,
-         }
-      };
-      /* set the css class */
-      state.ticks.status = css[category.contract_category][display] ? 'won' : 'lost';
    }
 
    state.back.onclick = () => hide_callback(root);

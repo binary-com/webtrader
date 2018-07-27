@@ -876,7 +876,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.purchase.onclick = async function() {
-    const categories_with_tick_chart = ['digits','callput', 'callputequal', 'asian'];
+    const categories_with_tick_chart = ['digits', 'callput', 'callputequal', 'asian', 'touchnotouch'];
     state.purchase.loading = true;
     var show = function(div){
       div.appendTo(root);
