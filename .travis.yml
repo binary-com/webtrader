@@ -15,8 +15,8 @@ before_install:
 install:
 - yarn build
 after_success:
-- git config --global user.email "arnab@binary.com"
-- git config --global user.name "Arnab Karmakar"
+- git config --global user.email "oskar@binary.com"
+- git config --global user.name "OskarAhl"
 - yarn deploy-gh-pages
 env:
   global:
