@@ -119,7 +119,7 @@ const register_ticks = (state, extra) => {
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
       const should_add_tick_to_chart = tick_count > 0 && is_new_tick;
       if (should_add_tick_to_chart) {
-            on_add_new_tick_to_state(tick);
+            on_add_new_tick(tick);
             --tick_count;
       }
 
@@ -129,7 +129,7 @@ const register_ticks = (state, extra) => {
       }
    }
 
-   const on_add_new_tick_to_state = (tick) => {
+   const on_add_new_tick = (tick) => {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
       state.ticks.array.push({
          quote: tick.quote,
@@ -167,13 +167,13 @@ const register_ticks = (state, extra) => {
       };
 
       if (data.error) {
-            on_open_contract_error(data);
+            on_open_proposal_error(data);
             return;
       }
       on_open_proposal_success(data);
    });
 
-   const on_open_contract_error = (data) => {
+   const on_open_proposal_error = (data) => {
       $.growl.error({message: data.error.message});
       liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
       liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
