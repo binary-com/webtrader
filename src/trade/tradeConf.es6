@@ -22,6 +22,7 @@ rv.binders['tick-chart'] = {
             backgroundColor: null, /* make background transparent */
             width: (el.getAttribute('width') || 400)*1,
             height: (el.getAttribute('height') || 120)*1,
+            marginLeft: 20,
          },
          tooltip: {
             formatter: function () {
