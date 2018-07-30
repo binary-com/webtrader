@@ -329,7 +329,6 @@ const sell_at_market = (state, root) => {
 }
 
 const init_state = (proposal, root) =>{
-  console.log('proposal: ', proposal);
    const state = {
       route: {
          value: 'table',
