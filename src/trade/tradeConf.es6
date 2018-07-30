@@ -102,8 +102,7 @@ rv.binders['tick-chart'] = {
       const plot_y = model.getPlotY(); // could return null
       plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
       plot_y && addPlotLineY(el.chart, plot_y);
-      console.log(el.chart.series[0].data);
-   } /* end of routine() */
+   }
 };
 
 const last_1000_ticks = []; /* record the last 1k ticks returned */
@@ -212,7 +211,7 @@ const register_ticks = (state, extra) => {
 * @param hide_callback
 **/
 export const init = (data, extra, show_callback, hide_callback) => {
-   display_decimals = data.display_decimals || 2;
+   display_decimals = data.display_decimals || 3;
    const root = $(html).i18n();
    const buy = data.buy;
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
