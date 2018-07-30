@@ -7,8 +7,10 @@ import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
 import Lookback from './lookback';
+import '../common/util';
 
 /* rv binder to show tick chart for this confirmation dialog */
+let display_decimals;
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
    bind: function(el) {
@@ -37,7 +39,13 @@ rv.binders['tick-chart'] = {
             labels: { enabled: false, }
          },
          yAxis: {
-            labels: { align: 'left', x: 0, },
+            labels: {
+                  align: 'left',
+                  x: 0,
+                  formatter() {
+                        return addComma(this.value.toFixed(display_decimals));
+                  },
+            },
             title: '',
             gridLineWidth: 0,
          },
@@ -79,7 +87,6 @@ rv.binders['tick-chart'] = {
             color: 'green',
             width: 2,
          });
-
          /* Add plotline value to invisible seri to make the plotline always visible. */
          chart.series[1].addPoint([1, options.value*1]);
       };
@@ -88,14 +95,14 @@ rv.binders['tick-chart'] = {
       if(index == 0) return;
 
       const tick = _.last(ticks);
-      el.chart.series[0].addPoint([index, tick.quote*1]);
+      el.chart.series[0].addPoint([index, tick.quote]);
 
       const plot_x = model.getPlotX(); // could return null
       plot_x && addPlotLineX(el.chart,plot_x);
       const plot_y = model.getPlotY(); // could return null
       plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
       plot_y && addPlotLineY(el.chart, plot_y);
-
+      console.log(el.chart.series[0].data);
    } /* end of routine() */
 };
 
@@ -205,6 +212,7 @@ const register_ticks = (state, extra) => {
 * @param hide_callback
 **/
 export const init = (data, extra, show_callback, hide_callback) => {
+   display_decimals = data.display_decimals || 2;
    const root = $(html).i18n();
    const buy = data.buy;
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);

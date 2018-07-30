@@ -118,7 +118,7 @@ function formatPrice(float, currency) {
 }
 
 function addComma(num, decimal_points, is_crypto) {
-    let number = String(num || 0).replace(/,/g, '');
+    var number = String(num || 0).replace(/,/g, '');
     if (typeof decimal_points !== 'undefined') {
         number = (+number).toFixed(decimal_points);
     }
@@ -126,9 +126,9 @@ function addComma(num, decimal_points, is_crypto) {
         number = parseFloat(+number);
     }
 
-    return number.toString().replace(/(^|[^\w.])(\d{4,})/g, ($0, $1, $2) => (
-        $1 + $2.replace(/\d(?=(?:\d\d\d)+(?!\d))/g, '$&,')
-    ));
+    return number.toString().replace(/(^|[^\w.])(\d{4,})/g, function($0, $1, $2) {
+        return $1 + $2.replace(/\d(?=(?:\d\d\d)+(?!\d))/g, '$&,')
+    });
 };
 
 function sortAlphaNum(property) {
