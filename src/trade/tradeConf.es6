@@ -119,24 +119,29 @@ const register_ticks = (state, extra) => {
    let tick_count = extra.tick_count * 1,
       symbol = extra.symbol,
       purchase_epoch = state.buy.purchase_time * 1,
-      contract;
+      contract,
+      open_contract_cb;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick = (tick) => {
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
-      const should_add_tick_to_chart = tick_count > 0 && is_new_tick;
-      if (should_add_tick_to_chart) {
-            on_add_new_tick(tick);
-            --tick_count;
-      }
+      if (is_new_tick) {
+            const contract_has_finished = contract.status !== 'open';
+            if (tick_count > 0) {
+                  on_add_new_tick_to_chart(tick);
+                  --tick_count;
+            }
 
-      const contract_has_finished = contract.status !== 'open';
-      if (contract_has_finished) {
-            on_contract_finished(contract.status);
+            if (contract_has_finished) {
+                  state.ticks.status = contract.status;
+                  liveapi.events.off('proposal_open_contract', open_contract_cb);
+                  liveapi.proposal_open_contract.forget(extra.contract_id);
+                  on_contract_finished();
+            }
       }
    }
 
-   const on_add_new_tick = (tick) => {
+   const on_add_new_tick_to_chart = (tick) => {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
       state.ticks.array.push({
          quote: tick.quote,
@@ -148,8 +153,7 @@ const register_ticks = (state, extra) => {
       });
    };
 
-   const on_contract_finished = (status) => {
-      state.ticks.status = status;
+   const on_contract_finished = () => {
       state.buy.update();
       state.back.visible = true;
    };
@@ -167,7 +171,7 @@ const register_ticks = (state, extra) => {
       }
    }
 
-   liveapi.events.on('proposal_open_contract', (data) => {
+   open_contract_cb = liveapi.events.on('proposal_open_contract', (data) => {
       const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
       if (is_different_open_contract_stream) {
             return;
@@ -260,7 +264,10 @@ export const init = (data, extra, show_callback, hide_callback) => {
             const ticks = state.ticks;
             const inx = ticks.array.length;
             if(inx === 1) return {value: inx, label: 'Entry Spot'.i18n()};
-            if(inx === ticks.tick_count) return {value:inx, label: 'Exit Spot'.i18n()}
+            // TODO: fix this to accomodate for automatic selling
+            if(inx === ticks.tick_count) {
+                  return {value:inx, label: 'Exit Spot'.i18n()}
+            }
             return null;
          },
          getPlotY: () => {
@@ -302,7 +309,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
    }
 
    state.buy.update = () => {
-      const status = state.ticks.status;
+      const { status } = state.ticks.status;
       state.title.text = { waiting: 'Contract Confirmation'.i18n(),
          won : 'This contract won'.i18n(),
          lost: 'This contract lost'.i18n()
