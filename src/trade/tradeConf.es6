@@ -66,8 +66,7 @@ rv.binders['tick-chart'] = {
       });
    },
    routine: function(el, ticks){
-      // TODO: when is this called? "when observed attribute on the model changes"
-      // state updates => routine fires
+      // state.ticks.array updates => routine fires
       const model = this.model;
       console.log('routine(): ', model.status);
       console.log('model: ', model);
@@ -94,31 +93,40 @@ rv.binders['tick-chart'] = {
          /* Add plotline value to invisible seri to make the plotline always visible. */
          chart.series[1].addPoint([1, options.value*1]);
       };
-      console.log(ticks.length);
       // TODO: clean this up
-
-      const current_tick_index = ticks.length;
+      const tick_idx = ticks.length;
       const tick = _.last(ticks);
-      if (current_tick_index === 0) return;
+      const { contract_category } = model.category.contract_category;
+      const { contract_is_finished } = model;
 
-      // 3. add tick to chart
-      el.chart.series[0].addPoint([current_tick_index, tick.quote]);
+      if (tick_idx === 0) return;
 
-      // 1. Add Entry spot to Chart
-      if (current_tick_index === 1) {
-            const entry_spot = model.getEntrySpot(current_tick_index);
-            addPlotLineX(el.chart, entry_spot);
+      if (contract_is_finished) {
+            const exit_spot = model.getExitSpot(tick_idx - 1);
+            addPlotLineX(el.chart, exit_spot);
+            return;
       }
 
-      // Barrier
-      const plot_y = model.getBarrier(); // could return null
-      plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
-      plot_y && addPlotLineY(el.chart, plot_y);
+      el.chart.series[0].addPoint([tick_idx, tick.quote]);
 
+      // 1. Add Entry spot to Chart
+      if (tick_idx === 1) {
+            const entry_spot = model.getEntrySpot(tick_idx);
+            addPlotLineX(el.chart, entry_spot);
+            // add barrier
+            const barrier = model.getBarrier();
+            addPlotLineY(el.chart, barrier);
+      }
+      // asian barrier
+      if (contract_category === 'asian') {
+            const barrier = model.getBarrier();
+            el.chart.yAxis[0].removePlotLine(barrier.id);
+            addPlotLineY(el.chart, barrier);
+      }
       // 2. Exit spot
-      const is_finished = model.status !== 'open';
+      const is_finished = model.status !== 'waiting';
       if (is_finished) {
-            const exit_spot = model.getExitSpot(current_tick_index);
+            const exit_spot = model.getExitSpot(tick_idx);
             addPlotLineX(el.chart, exit_spot);
             return;
       }
@@ -146,24 +154,24 @@ const register_ticks = (state, extra) => {
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick = (tick) => {
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
+      const contract_has_finished = contract.status !== 'open' && !state.ticks.contract_is_finished;
+
+      if (contract_has_finished) {
+            console.log('contract has finished');
+            state.ticks.contract_is_finished = true;
+            state.ticks.exit_tick = contract.exit_tick ? contract.exit_tick : null;
+            state.ticks.status = contract.status;
+            liveapi.events.off('proposal_open_contract', open_contract_cb);
+            liveapi.proposal_open_contract.forget(extra.contract_id);
+            state.ticks.array.push({});
+            on_contract_finished();
+      }
+
       if (is_new_tick) {
-            const contract_has_finished = contract.status !== 'open';
+            state.buy.barrier = contract.barrier;
             if (tick_count > 0) {
-                  console.log('before model?');
-                  console.log(contract.status);
-                  state.ticks.status = contract.status;
-                  state.buy.barrier = contract.barrier;
                   on_add_new_tick_to_chart(tick);
                   --tick_count;
-            }
-
-            if (contract_has_finished) {
-                  console.log('add_tick - finished', contract);
-                  console.log('add_tick - finished', contract.exit_tick);
-                  state.ticks.exit_tick = contract.exit_tick;
-                  liveapi.events.off('proposal_open_contract', open_contract_cb);
-                  liveapi.proposal_open_contract.forget(extra.contract_id);
-                  on_contract_finished();
             }
       }
    }
@@ -181,7 +189,6 @@ const register_ticks = (state, extra) => {
    };
 
    const on_contract_finished = () => {
-      state.ticks.status = contract.status;
       state.buy.update();
       state.back.visible = true;
    };
@@ -209,6 +216,7 @@ const register_ticks = (state, extra) => {
             on_open_proposal_error(data);
             return;
       }
+      console.log(data);
       on_open_proposal_success(data);
    });
 
@@ -272,11 +280,12 @@ export const init = (data, extra, show_callback, hide_callback) => {
       },
       ticks: {
          array: [],
+         contract_is_finished: false,
+         exit_tick: null,
          getExitSpot: (inx) => ({value: inx, label: 'Exit Spot'.i18n()}),
          getEntrySpot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
          getBarrier: () => {
-            const { barrier } = state.buy.barrier;
-            console.log('barrier: ', barrier);
+            const { barrier } = state.buy;
             return { value: +barrier, label: 'Barrier ('.i18n() + barrier + ')', id: 'plot-barrier-y'};
          },
          tick_count: extra.tick_count,
