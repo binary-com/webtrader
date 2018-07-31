@@ -66,7 +66,11 @@ rv.binders['tick-chart'] = {
       });
    },
    routine: function(el, ticks){
+      // TODO: when is this called? "when observed attribute on the model changes"
+      // state updates => routine fires
       const model = this.model;
+      console.log('routine(): ', model.status);
+      console.log('model: ', model);
       const addPlotLineX = (chart, options) => {
          const label_left_or_right = options.label === 'Entry Spot' ? -15 : 5;
 
@@ -90,18 +94,35 @@ rv.binders['tick-chart'] = {
          /* Add plotline value to invisible seri to make the plotline always visible. */
          chart.series[1].addPoint([1, options.value*1]);
       };
+      console.log(ticks.length);
+      // TODO: clean this up
 
-      const index = ticks.length;
-      if(index == 0) return;
-
+      const current_tick_index = ticks.length;
       const tick = _.last(ticks);
-      el.chart.series[0].addPoint([index, tick.quote]);
+      if (current_tick_index === 0) return;
 
-      const plot_x = model.getPlotX(); // could return null
-      plot_x && addPlotLineX(el.chart,plot_x);
-      const plot_y = model.getPlotY(); // could return null
+      // 3. add tick to chart
+      el.chart.series[0].addPoint([current_tick_index, tick.quote]);
+
+      // 1. Add Entry spot to Chart
+      if (current_tick_index === 1) {
+            const entry_spot = model.getEntrySpot(current_tick_index);
+            addPlotLineX(el.chart, entry_spot);
+      }
+
+      // Barrier
+      const plot_y = model.getBarrier(); // could return null
       plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
       plot_y && addPlotLineY(el.chart, plot_y);
+
+      // 2. Exit spot
+      const is_finished = model.status !== 'open';
+      if (is_finished) {
+            const exit_spot = model.getExitSpot(current_tick_index);
+            addPlotLineX(el.chart, exit_spot);
+            return;
+      }
+
    }
 };
 
@@ -128,12 +149,18 @@ const register_ticks = (state, extra) => {
       if (is_new_tick) {
             const contract_has_finished = contract.status !== 'open';
             if (tick_count > 0) {
+                  console.log('before model?');
+                  console.log(contract.status);
+                  state.ticks.status = contract.status;
+                  state.buy.barrier = contract.barrier;
                   on_add_new_tick_to_chart(tick);
                   --tick_count;
             }
 
             if (contract_has_finished) {
-                  state.ticks.status = contract.status;
+                  console.log('add_tick - finished', contract);
+                  console.log('add_tick - finished', contract.exit_tick);
+                  state.ticks.exit_tick = contract.exit_tick;
                   liveapi.events.off('proposal_open_contract', open_contract_cb);
                   liveapi.proposal_open_contract.forget(extra.contract_id);
                   on_contract_finished();
@@ -154,6 +181,7 @@ const register_ticks = (state, extra) => {
    };
 
    const on_contract_finished = () => {
+      state.ticks.status = contract.status;
       state.buy.update();
       state.back.visible = true;
    };
@@ -219,13 +247,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
    const root = $(html).i18n();
    const buy = data.buy;
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-   extra.getbarrier = (tick) => {
-      let barrier = tick.quote*1;
-      if(extra.barrier && !_(['rise','fall']).includes(extra.category_display.name)) {
-         barrier += extra.barrier*1;
-      }
-      return barrier.toFixed(decimal_digits);
-   }
    const state = {
       title: {
          text: 'Contract Confirmation'.i18n(),
@@ -251,43 +272,12 @@ export const init = (data, extra, show_callback, hide_callback) => {
       },
       ticks: {
          array: [],
-         average: () => {
-            const ticks = state.ticks;
-            const array = ticks.array;
-            let sum = 0;
-            for(let i = 0; i < array.length; ++i)
-               sum += array[i].quote*1;
-            const avg = sum / (array.length || 1);
-            return avg;
-         },
-         getPlotX: () => {
-            const ticks = state.ticks;
-            const inx = ticks.array.length;
-            if(inx === 1) return {value: inx, label: 'Entry Spot'.i18n()};
-            // TODO: fix this to accomodate for automatic selling
-            if(inx === ticks.tick_count) {
-                  return {value:inx, label: 'Exit Spot'.i18n()}
-            }
-            return null;
-         },
-         getPlotY: () => {
-            const ticks = state.ticks;
-            const inx = ticks.array.length;
-            const tick = ticks.array[inx-1];
-            const categories_with_barrier = ['callput', 'callputequal'];
-            const should_add_barrier = (inx === 1 && _(categories_with_barrier).includes(ticks.category.contract_category));
-
-            if (should_add_barrier) {
-               const barrier = extra.getbarrier(tick);
-               state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
-               return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
-            }
-
-            if(ticks.category.contract_category === 'asian') {
-               const avg = ticks.average().toFixed(decimal_digits + 1);
-               return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
-            }
-            return null;
+         getExitSpot: (inx) => ({value: inx, label: 'Exit Spot'.i18n()}),
+         getEntrySpot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
+         getBarrier: () => {
+            const { barrier } = state.buy.barrier;
+            console.log('barrier: ', barrier);
+            return { value: +barrier, label: 'Barrier ('.i18n() + barrier + ')', id: 'plot-barrier-y'};
          },
          tick_count: extra.tick_count,
          value: (extra.digits_value || '0') + '', // last digit value selected by the user
@@ -309,7 +299,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
    }
 
    state.buy.update = () => {
-      const { status } = state.ticks.status;
+      const { status } = state.ticks;
       state.title.text = { waiting: 'Contract Confirmation'.i18n(),
          won : 'This contract won'.i18n(),
          lost: 'This contract lost'.i18n()
