@@ -68,7 +68,7 @@ rv.binders['tick-chart'] = {
       // Handles updating chart: state.ticks.array updates => routine fires
       const model = this.model;
       const tick_idx = ticks.length;
-      const barrier = model.getBarrier();
+      const barrier = model.make_barrier();
       const { contract_is_finished } = model;
 
       if (tick_idx === 0) return;
@@ -196,7 +196,8 @@ const register_ticks = (state, extra) => {
             on_open_proposal_error(data);
             return;
       }
-      on_open_proposal_success(data);
+
+      contract = data.proposal_open_contract;
    });
 
    liveapi.events.on('tick', (data) => {
@@ -210,10 +211,6 @@ const register_ticks = (state, extra) => {
       $.growl.error({message: data.error.message});
       liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
       liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
-   };
-
-   const on_open_proposal_success = (data) => {
-      contract = data.proposal_open_contract;
    };
 }
 
@@ -264,7 +261,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          exit_tick: null,
          make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
          make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
-         getBarrier: () => {
+         make_barrier: () => {
             const { barrier } = state.buy;
             return { value: +barrier, label: 'Barrier ('.i18n() + barrier + ')', id: 'plot-barrier-y'};
          },
