@@ -1,5 +1,4 @@
-﻿import _ from 'lodash';
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import moment from 'moment';
 import liveapi from '../websockets/binary_websockets';
 import rv from '../common/rivetsExtra';
@@ -66,63 +65,76 @@ rv.binders['tick-chart'] = {
       });
    },
    routine: function(el, ticks){
-      // state.ticks.array updates => routine fires
+      // Handles updating chart: state.ticks.array updates => routine fires
       const model = this.model;
-      console.log('model: ', model.status);
-      const draw_x_line_chart = (chart, options, align_label_left) => {
-         const label_left_or_right = align_label_left ? -15 : 5;
-
-         chart.xAxis[0].addPlotLine({
-            value: options.value,
-            id: options.id || options.value,
-            label: {text: options.label || 'label', x:  label_left_or_right },
-            color: options.color || '#e98024',
-            width: options.width || 2,
-         });
-      };
-
-      const draw_y_line_chart = (chart,options) => {
-         chart.yAxis[0].addPlotLine({
-            id: options.id || options.label,
-            value: options.value,
-            label: {text: options.label, align: 'center'},
-            color: 'green',
-            width: 2,
-         });
-         /* Add plotline value to invisible seri to make the plotline always visible. */
-         chart.series[1].addPoint([1, options.value*1]);
-      };
-
-      // TODO: clean this up
       const tick_idx = ticks.length;
-      const tick = _.last(ticks);
+      const barrier = model.getBarrier();
       const { contract_is_finished } = model;
 
       if (tick_idx === 0) return;
 
       if (contract_is_finished) {
-            console.log(model.getBarrier());
-            const exit_tick_idx = model.exit_tick ? (ticks.findIndex((tick) => tick.quote === +model.exit_tick)) + 1: 0;
-            const exit_spot_idx = exit_tick_idx ? exit_tick_idx : tick_idx;
-            const exit_spot = model.getExitSpot(exit_spot_idx);
-            draw_x_line_chart(el.chart, exit_spot);
+            draw_exit_spot(model, ticks);
             return;
       }
 
-      el.chart.series[0].addPoint([tick_idx, tick.quote]);
+      draw_tick(tick_idx);
 
-      // 1. Add Entry spot to Chart
       if (tick_idx === 1) {
-            const entry_spot = model.getEntrySpot(tick_idx);
-            draw_x_line_chart(el.chart, entry_spot, true);
+            draw_entry_spot(tick_idx);
       }
 
-      // barrier
-      if (model.getBarrier()) {
-            const barrier = model.getBarrier();
+      if (barrier) {
+            draw_barrier(barrier);
+      }
+
+      function draw_exit_spot(model, ticks) {
+            const exit_tick_idx = model.exit_tick ? (ticks.findIndex((tick) => tick.quote === +model.exit_tick)) + 1: 0;
+            const exit_spot_idx = exit_tick_idx ? exit_tick_idx : tick_idx;
+            const exit_spot = model.make_exit_spot(exit_spot_idx);
+            draw_x_line_chart(el.chart, exit_spot);
+      };
+
+      function draw_tick(tick_idx) {
+            const tick = ticks[tick_idx -1];
+            el.chart.series[0].addPoint([tick_idx, tick.quote]);
+      };
+
+      function draw_entry_spot(tick_idx) {
+            const is_label_left = true;
+            const entry_spot = model.make_entry_spot(tick_idx);
+            draw_x_line_chart(el.chart, entry_spot, is_label_left);
+      };
+
+      function draw_barrier(barrier) {
             el.chart.yAxis[0].removePlotLine(barrier.id);
             draw_y_line_chart(el.chart, barrier);
-      }
+      };
+
+      function draw_x_line_chart(chart, options, align_label_left) {
+            const label_x_position = align_label_left ? -15 : 5;
+   
+            chart.xAxis[0].addPlotLine({
+               value: options.value,
+               id: options.id || options.value,
+               label: {text: options.label || 'label', x:  label_x_position },
+               color: options.color || '#e98024',
+               width: options.width || 2,
+               dashStyle: options.dashStyle || false,
+            });
+      };
+
+      function draw_y_line_chart(chart,options) {
+            chart.yAxis[0].addPlotLine({
+               id: options.id || options.label,
+               value: options.value,
+               label: {text: options.label, align: 'center'},
+               color: 'green',
+               width: 2,
+            });
+            /* Add plotline value to invisible seri to make the plotline always visible. */
+            chart.series[1].addPoint([1, options.value*1]);
+      };
    }
 };
 
@@ -250,8 +262,8 @@ export const init = (data, extra, show_callback, hide_callback) => {
          array: [],
          contract_is_finished: false,
          exit_tick: null,
-         getExitSpot: (inx) => ({value: inx, label: 'Exit Spot'.i18n()}),
-         getEntrySpot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
+         make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
+         make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
          getBarrier: () => {
             const { barrier } = state.buy;
             return { value: +barrier, label: 'Barrier ('.i18n() + barrier + ')', id: 'plot-barrier-y'};
