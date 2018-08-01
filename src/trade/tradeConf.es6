@@ -152,17 +152,19 @@ const register_ticks = (state, extra) => {
             if (contract_is_finished) {
                   on_contract_finished(proposal_open_contract);
             }
-            on_add_new_tick_to_chart(tick);
+            add_tick_to_state(tick);
       }
    }
 
-   const on_add_new_tick_to_chart = (tick) => {
+   const add_tick_to_state = (tick) => {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+      const tooltip = make_tooltip(tick);
+
       state.ticks.array.push({
          quote: (+tick.quote),
          epoch: (+tick.epoch),
          number: state.ticks.array.length + 1,
-         tooltip: make_tooltip(tick),
+         tooltip,
          decimal_digits,
       });
 
