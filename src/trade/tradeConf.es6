@@ -140,6 +140,7 @@ rv.binders['tick-chart'] = {
 
 const register_ticks = (state, extra) => {
    let proposal_open_contract;
+   let on_proposal_open_contract;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick = (tick) => {
@@ -148,7 +149,7 @@ const register_ticks = (state, extra) => {
       const contract_is_finished = proposal_open_contract && proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
 
       if (should_add_new_tick) {
-            state.buy.barrier = proposal_open_contract && (+proposal_open_contract.barrier);
+            state.buy.barrier = proposal_open_contract && proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
             if (contract_is_finished) {
                   on_contract_finished(proposal_open_contract);
             }
@@ -169,20 +170,30 @@ const register_ticks = (state, extra) => {
       });
 
       function make_tooltip(tick) {
-            return `${moment.utc(tick.epoch*1000).format('dddd, MMM D, HH:mm:ss')}<br/>
-            ${extra.symbol_name + ' ' + (+tick.quote).toFixed(decimal_digits)}`;
-      }
+            const tick_time = moment.utc(tick.epoch*1000).format('dddd, MMM D, HH:mm:ss');
+            const { symbol_name } = extra;
+            const tick_quote_formatted = (+tick.quote).toFixed(decimal_digits);
+            return `${tick_time}<br/>${symbol_name} ${(+tick.quote).toFixed(decimal_digits)}`;
+      };
    };
 
    const on_contract_finished = (proposal_open_contract) => {
+      forget_stream_and_cb(on_proposal_open_contract);
+
       state.ticks.contract_is_finished = true;
       state.ticks.exit_tick = proposal_open_contract.exit_tick ? proposal_open_contract.exit_tick : null;
       state.ticks.status = proposal_open_contract.status;
       state.buy.update();
       state.back.visible = true;
+
+      function forget_stream_and_cb(proposal_open_contract_cb) {
+            const { contract_id } = extra;
+            liveapi.events.off('proposal_open_contract', proposal_open_contract_cb);
+            liveapi.proposal_open_contract.forget(contract_id);
+      };
    };
 
-   liveapi.events.on('proposal_open_contract', (data) => {
+   on_proposal_open_contract = liveapi.events.on('proposal_open_contract', (data) => {
       const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
       if (is_different_open_contract_stream) return;
 
@@ -211,7 +222,7 @@ const register_ticks = (state, extra) => {
 export const init = (data, extra, show_callback, hide_callback) => {
    display_decimals = data.display_decimals || 3;
    const root = $(html).i18n();
-   const buy = data.buy;
+   const { buy } = data;
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    const state = {
       title: {
