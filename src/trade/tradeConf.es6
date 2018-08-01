@@ -140,17 +140,16 @@ rv.binders['tick-chart'] = {
 
 const register_ticks = (state, extra) => {
    let proposal_open_contract;
-   let open_contract_cb;
 
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick = (tick) => {
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
       const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished;
-      const contract_has_finished = proposal_open_contract && proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
+      const contract_is_finished = proposal_open_contract && proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
 
       if (should_add_new_tick) {
             state.buy.barrier = proposal_open_contract && (+proposal_open_contract.barrier);
-            if (contract_has_finished) {
+            if (contract_is_finished) {
                   on_contract_finished(proposal_open_contract);
             }
             on_add_new_tick_to_chart(tick);
@@ -181,11 +180,9 @@ const register_ticks = (state, extra) => {
       state.back.visible = true;
    };
 
-   open_contract_cb = liveapi.events.on('proposal_open_contract', (data) => {
+   liveapi.events.on('proposal_open_contract', (data) => {
       const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
-      if (is_different_open_contract_stream) {
-            return;
-      };
+      if (is_different_open_contract_stream) return;
 
       if (data.error) {
             on_open_proposal_error(data);
@@ -196,10 +193,10 @@ const register_ticks = (state, extra) => {
    });
 
    liveapi.events.on('tick', (data) => {
-      const is_contract_stream = extra.symbol === data.tick.symbol;
-      if (is_contract_stream) {
-            add_tick(data.tick);
-      }
+      const is_different_symbol_stream = extra.symbol !== data.tick.symbol;
+      if (is_different_symbol_stream) return;
+
+      add_tick(data.tick);
     });
 
    const on_open_proposal_error = (data) => {
@@ -209,19 +206,6 @@ const register_ticks = (state, extra) => {
    };
 }
 
-/** @param data
-*  @param extra = {
-*    currency: ,
-*    symbol: "frxXAUUSD",
-*    symbol_name: "Gold/USD",
-*    category: {},
-*    category_display: ,
-*    duration_unit: ,
-*      pip: "0.001",
-*   }
-* @param show_callback
-* @param hide_callback
-**/
 export const init = (data, extra, show_callback, hide_callback) => {
    display_decimals = data.display_decimals || 3;
    const root = $(html).i18n();
