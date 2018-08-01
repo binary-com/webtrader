@@ -92,7 +92,7 @@ rv.binders['tick-chart'] = {
             const exit_tick_idx = model.exit_tick && (ticks.findIndex((tick) => tick.quote === +model.exit_tick)) + 1;
             const exit_spot_idx = exit_tick_idx ? exit_tick_idx : (tick_idx - 1);
             const exit_spot = model.make_exit_spot(exit_spot_idx);
-            draw_x_line_chart(el.chart, exit_spot);
+            draw_x_line(el.chart, exit_spot);
       };
 
       function draw_tick(tick_idx) {
@@ -103,15 +103,15 @@ rv.binders['tick-chart'] = {
       function draw_entry_spot(tick_idx) {
             const is_label_left = true;
             const entry_spot = model.make_entry_spot(tick_idx);
-            draw_x_line_chart(el.chart, entry_spot, is_label_left);
+            draw_x_line(el.chart, entry_spot, is_label_left);
       };
 
       function draw_barrier(barrier) {
             el.chart.yAxis[0].removePlotLine(barrier.id);
-            draw_y_line_chart(el.chart, barrier);
+            draw_y_line(el.chart, barrier);
       };
 
-      function draw_x_line_chart(chart, options, align_label_left) {
+      function draw_x_line(chart, options, align_label_left) {
             const label_x_position = align_label_left ? -15 : 5;
    
             chart.xAxis[0].addPlotLine({
@@ -124,7 +124,7 @@ rv.binders['tick-chart'] = {
             });
       };
 
-      function draw_y_line_chart(chart,options) {
+      function draw_y_line(chart,options) {
             chart.yAxis[0].addPlotLine({
                id: options.id || options.label,
                value: options.value,
@@ -173,6 +173,7 @@ const register_ticks = (state, extra) => {
             const tick_time = moment.utc(tick.epoch*1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
             const tick_quote_formatted = (+tick.quote).toFixed(decimal_digits);
+
             return `${tick_time}<br/>${symbol_name} ${(+tick.quote).toFixed(decimal_digits)}`;
       };
    };
