@@ -89,10 +89,10 @@ rv.binders['tick-chart'] = {
       }
 
       function draw_exit_spot(model, ticks) {
-            const has_exit_spot_time = model.exit_spot_time;
+            const is_path_dependent_contract = !!model.is_path_dependent;
             let exit_tick_idx = ticks.findIndex((tick) => {
-                  if (has_exit_spot_time) {
-                        return tick.epoch === (+model.exit_spot_time);
+                  if (is_path_dependent_contract) {
+                        return tick.epoch === (+model.sell_spot_time);
                   }
                   return tick.epoch === (+model.exit_tick_time);
             });
@@ -148,13 +148,11 @@ rv.binders['tick-chart'] = {
 const register_ticks = (state, extra) => {
    let proposal_open_contract;
    let on_proposal_open_contract;
+   let on_tick;
    let { tick_count } = extra;
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick  = (tick) => {
-      console.log('add_tick', tick);
-      console.log('proposal_open_contract.entry_tick_time: ', proposal_open_contract.entry_tick_time, 'tick.epoch', Number(tick.epoch));
       const is_or_after_contract_entry = (Number(tick.epoch)) >= proposal_open_contract.entry_tick_time;
-      console.log('is_or_after_contract_entry: ', is_or_after_contract_entry);
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
       const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
       const contract_is_finished = proposal_open_contract && proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
@@ -201,19 +199,20 @@ const register_ticks = (state, extra) => {
     }
 
    const on_contract_finished = (proposal_open_contract) => {
-      forget_stream_and_cb(on_proposal_open_contract);
+      forget_stream_and_cb();
 
       state.ticks.contract_is_finished = true;
-      state.ticks.exit_tick = proposal_open_contract.exit_tick ? proposal_open_contract.exit_tick : null;
+      state.ticks.is_path_dependent = proposal_open_contract.is_path_dependent ? proposal_open_contract.is_path_dependent : null;
       state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
-      state.ticks.exit_spot_time = proposal_open_contract.exit_spot_time ? proposal_open_contract.exit_spot_time : null;
+      state.ticks.sell_spot_time = proposal_open_contract.sell_spot_time ? proposal_open_contract.sell_spot_time : null;
       state.ticks.status = proposal_open_contract.status;
       state.buy.update();
       state.back.visible = true;
 
-      function forget_stream_and_cb(proposal_open_contract_cb) {
+      function forget_stream_and_cb() {
             const { contract_id } = extra;
-            liveapi.events.off('proposal_open_contract', proposal_open_contract_cb);
+            liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+            liveapi.events.off('tick', on_tick);
             liveapi.proposal_open_contract.forget(contract_id);
       };
    };
@@ -221,15 +220,15 @@ const register_ticks = (state, extra) => {
    on_proposal_open_contract = liveapi.events.on('proposal_open_contract', (data) => {
             const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
             if (is_different_open_contract_stream) return;
-
             if (data.error) {
+                  on_open_proposal_error(data);
                   return;
             }
             ({ proposal_open_contract } = data);
       });
    
   let temp_ticks = [];
-   liveapi.events.on('tick', (data) => {
+  on_tick = liveapi.events.on('tick', (data) => {
       const is_different_stream = extra.symbol !== data.tick.symbol;
       if (is_different_stream) return;
       if (!proposal_open_contract || !proposal_open_contract.entry_tick_time) {
@@ -282,8 +281,8 @@ export const init = (data, extra, show_callback, hide_callback) => {
          array: [],
          contract_is_finished: false,
          exit_tick_time: null,
-         exit_spot_time: null,
-         exit_tick: null,
+         sell_spot_time: null,
+         is_path_dependent: null,
          make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
          make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
          make_barrier: () => {
