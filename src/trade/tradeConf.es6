@@ -96,9 +96,7 @@ rv.binders['tick-chart'] = {
                   }
                   return tick.epoch === (+model.exit_tick_time);
             });
-            exit_tick_idx += 1;
-            const exit_spot_idx = exit_tick_idx ? exit_tick_idx : (tick_idx - 1);
-            const exit_spot = model.make_exit_spot(exit_spot_idx);
+            const exit_spot = model.make_exit_spot(exit_tick_idx + 1);
             draw_x_line(el.chart, exit_spot);
       };
 
@@ -155,14 +153,14 @@ const register_ticks = (state, extra) => {
       const is_or_after_contract_entry = (Number(tick.epoch)) >= proposal_open_contract.entry_tick_time;
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
       const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
-      const contract_is_finished = proposal_open_contract && proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
 
       if (should_add_new_tick) {
+            const contract_is_finished = proposal_open_contract && proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
             state.buy.barrier = proposal_open_contract && proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
+
             if (contract_is_finished) {
-                  console.log('contract finished ', proposal_open_contract);
                   on_contract_finished(proposal_open_contract);
-                  update_state_no_new_tick(tick);
+                  update_chart();
             }
             tick_count--;
             if (tick_count > -1) {
@@ -192,9 +190,8 @@ const register_ticks = (state, extra) => {
       };
    };
 
-   function update_state_no_new_tick() {
+   function update_chart() {
             const tick_arr_copy = state.ticks.array.slice();
-            console.log('update_state_no_new_tick');
             state.ticks.array = [...tick_arr_copy];
     }
 
@@ -206,6 +203,7 @@ const register_ticks = (state, extra) => {
       state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
       state.ticks.sell_spot_time = proposal_open_contract.sell_spot_time ? proposal_open_contract.sell_spot_time : null;
       state.ticks.status = proposal_open_contract.status;
+
       state.buy.update();
       state.back.visible = true;
 
@@ -220,10 +218,12 @@ const register_ticks = (state, extra) => {
    on_proposal_open_contract = liveapi.events.on('proposal_open_contract', (data) => {
             const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
             if (is_different_open_contract_stream) return;
+
             if (data.error) {
                   on_open_proposal_error(data);
                   return;
             }
+
             ({ proposal_open_contract } = data);
       });
    
@@ -231,14 +231,18 @@ const register_ticks = (state, extra) => {
   on_tick = liveapi.events.on('tick', (data) => {
       const is_different_stream = extra.symbol !== data.tick.symbol;
       if (is_different_stream) return;
-      if (!proposal_open_contract || !proposal_open_contract.entry_tick_time) {
+
+      const waiting_for_contract_entry_tick = !proposal_open_contract || !proposal_open_contract.entry_tick_time;
+      if (waiting_for_contract_entry_tick) {
             temp_ticks.push(data.tick);
             return;
       }
+
       if (temp_ticks.length > 0) {
-            temp_ticks.forEach((x) => add_tick(x)); 
+            temp_ticks.forEach((x) => add_tick(x));
+            temp_ticks = [];
       }
-      temp_ticks = [];
+
       add_tick(data.tick);
     });
 
