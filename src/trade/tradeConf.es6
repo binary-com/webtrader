@@ -225,7 +225,7 @@ const register_ticks = (state, extra) => {
             }
 
             ({ proposal_open_contract } = data);
-      });
+   });
    
   let temp_ticks = [];
   on_tick = liveapi.events.on('tick', (data) => {
@@ -239,7 +239,7 @@ const register_ticks = (state, extra) => {
       }
 
       if (temp_ticks.length > 0) {
-            temp_ticks.forEach((x) => add_tick(x));
+            temp_ticks.forEach((stored_tick) => add_tick(stored_tick));
             temp_ticks = [];
       }
 
