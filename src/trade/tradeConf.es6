@@ -150,9 +150,13 @@ const register_ticks = (state, extra) => {
    let on_proposal_open_contract;
    let { tick_count } = extra;
    /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const add_tick = (tick) => {
+   const add_tick  = (tick) => {
+      console.log('add_tick', tick);
+      console.log('proposal_open_contract.entry_tick_time: ', proposal_open_contract.entry_tick_time, 'tick.epoch', Number(tick.epoch));
+      const is_or_after_contract_entry = (Number(tick.epoch)) >= proposal_open_contract.entry_tick_time;
+      console.log('is_or_after_contract_entry: ', is_or_after_contract_entry);
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
-      const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished;
+      const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
       const contract_is_finished = proposal_open_contract && proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
 
       if (should_add_new_tick) {
@@ -160,16 +164,16 @@ const register_ticks = (state, extra) => {
             if (contract_is_finished) {
                   console.log('contract finished ', proposal_open_contract);
                   on_contract_finished(proposal_open_contract);
-                  add_tick_to_state(tick);
-                  return;
+                  update_state_no_new_tick(tick);
             }
             tick_count--;
-            console.log(tick_count);
-            add_tick_to_state(tick);
+            if (tick_count > -1) {
+                  add_tick_to_state(tick);
+            }
       }
    }
 
-   const add_tick_to_state = (tick) => {
+   function add_tick_to_state(tick) {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       const tooltip = make_tooltip(tick);
 
@@ -190,6 +194,12 @@ const register_ticks = (state, extra) => {
       };
    };
 
+   function update_state_no_new_tick() {
+            const tick_arr_copy = state.ticks.array.slice();
+            console.log('update_state_no_new_tick');
+            state.ticks.array = [...tick_arr_copy];
+    }
+
    const on_contract_finished = (proposal_open_contract) => {
       forget_stream_and_cb(on_proposal_open_contract);
 
@@ -209,21 +219,27 @@ const register_ticks = (state, extra) => {
    };
 
    on_proposal_open_contract = liveapi.events.on('proposal_open_contract', (data) => {
-      const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
-      if (is_different_open_contract_stream) return;
+            const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
+            if (is_different_open_contract_stream) return;
 
-      if (data.error) {
-            on_open_proposal_error(data);
+            if (data.error) {
+                  return;
+            }
+            ({ proposal_open_contract } = data);
+      });
+   
+  let temp_ticks = [];
+   liveapi.events.on('tick', (data) => {
+      const is_different_stream = extra.symbol !== data.tick.symbol;
+      if (is_different_stream) return;
+      if (!proposal_open_contract || !proposal_open_contract.entry_tick_time) {
+            temp_ticks.push(data.tick);
             return;
       }
-
-      ({ proposal_open_contract } = data);
-   });
-
-   liveapi.events.on('tick', (data) => {
-      const is_different_symbol_stream = extra.symbol !== data.tick.symbol;
-      if (is_different_symbol_stream) return;
-
+      if (temp_ticks.length > 0) {
+            temp_ticks.forEach((x) => add_tick(x)); 
+      }
+      temp_ticks = [];
       add_tick(data.tick);
     });
 
