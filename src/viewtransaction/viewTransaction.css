@@ -60,6 +60,7 @@
     flex-direction: column;
     justify-content: center;
     background: #ddd;
+    height: 50%;
 }
 .view-transaction-dialog .content .table {
   flex: 1 1 auto;
@@ -129,6 +130,7 @@
   flex-flow: row;
 }
 .view-transaction-dialog .content .explanation div {
+    overflow: scroll;
     flex: 1 1 50%;
     border-right: 2px solid #ddd;
     padding-left: 5px;
