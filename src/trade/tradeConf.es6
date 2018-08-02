@@ -71,12 +71,12 @@ rv.binders['tick-chart'] = {
       const barrier = model.make_barrier();
       const { contract_is_finished } = model;
 
-      if (tick_idx === 0) return;
-
       if (contract_is_finished) {
             draw_exit_spot(model, ticks);
             return;
       }
+
+      if (tick_idx === 0) return;
 
       draw_tick(tick_idx);
 
@@ -89,7 +89,14 @@ rv.binders['tick-chart'] = {
       }
 
       function draw_exit_spot(model, ticks) {
-            const exit_tick_idx = model.exit_tick && (ticks.findIndex((tick) => tick.quote === +model.exit_tick)) + 1;
+            const has_exit_spot_time = model.exit_spot_time;
+            let exit_tick_idx = ticks.findIndex((tick) => {
+                  if (has_exit_spot_time) {
+                        return tick.epoch === (+model.exit_spot_time);
+                  }
+                  return tick.epoch === (+model.exit_tick_time);
+            });
+            exit_tick_idx += 1;
             const exit_spot_idx = exit_tick_idx ? exit_tick_idx : (tick_idx - 1);
             const exit_spot = model.make_exit_spot(exit_spot_idx);
             draw_x_line(el.chart, exit_spot);
@@ -141,7 +148,7 @@ rv.binders['tick-chart'] = {
 const register_ticks = (state, extra) => {
    let proposal_open_contract;
    let on_proposal_open_contract;
-
+   let { tick_count } = extra;
    /* No need to worry about WS connection getting closed, because the user will be logged out */
    const add_tick = (tick) => {
       const is_new_tick = !state.ticks.array.some((t) => t.epoch * 1 === tick.epoch * 1);
@@ -151,8 +158,13 @@ const register_ticks = (state, extra) => {
       if (should_add_new_tick) {
             state.buy.barrier = proposal_open_contract && proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
             if (contract_is_finished) {
+                  console.log('contract finished ', proposal_open_contract);
                   on_contract_finished(proposal_open_contract);
+                  add_tick_to_state(tick);
+                  return;
             }
+            tick_count--;
+            console.log(tick_count);
             add_tick_to_state(tick);
       }
    }
@@ -183,6 +195,8 @@ const register_ticks = (state, extra) => {
 
       state.ticks.contract_is_finished = true;
       state.ticks.exit_tick = proposal_open_contract.exit_tick ? proposal_open_contract.exit_tick : null;
+      state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
+      state.ticks.exit_spot_time = proposal_open_contract.exit_spot_time ? proposal_open_contract.exit_spot_time : null;
       state.ticks.status = proposal_open_contract.status;
       state.buy.update();
       state.back.visible = true;
@@ -251,6 +265,8 @@ export const init = (data, extra, show_callback, hide_callback) => {
       ticks: {
          array: [],
          contract_is_finished: false,
+         exit_tick_time: null,
+         exit_spot_time: null,
          exit_tick: null,
          make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
          make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
