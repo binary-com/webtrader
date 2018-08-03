@@ -44,7 +44,6 @@ const init = () => {
     const state = {
         current: {
             list: null,
-            loading: false,
             sublist: null,
             content_page: null,
             content: null,

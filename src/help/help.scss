@@ -38,19 +38,6 @@ $MAIN_ORANGE: #E98024;
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
-        .loading {
-            display: flex;
-            width: 395px;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
-            font-size: 34px;
-            color: #b3b3b3;
-            z-index: +1;
-            opacity: 0.9;
-            background: #fafafa;
-            position: absolute;
-        }
         .items {
             padding: 0 5px 0 10px;
             ul {
