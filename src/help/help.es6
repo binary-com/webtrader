@@ -289,7 +289,9 @@ const init = () => {
                         return false;
                     };
                 });
-        } 
+        } else {
+            $('.highlight').removeClass('highlight');
+        }
     }
 
     state.openSublist = (sublist_name, subsection) => {
