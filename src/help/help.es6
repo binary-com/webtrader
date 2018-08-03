@@ -48,7 +48,6 @@ const init = () => {
             sublist: null,
             content_page: null,
             content: null,
-            show_clear: false
         },
         list: [{
             text: "About Binary.com".i18n(),
@@ -269,7 +268,6 @@ const init = () => {
     state.search = (e) => {
         const query = $(e.target).val().toLowerCase();
         if (query.length > 0) {
-            state.current.show_clear = true;
             state.current.list = null;
             state.current.content_page = null;
             state.current.sublist = sublist_items.filter((item) => {
@@ -294,9 +292,7 @@ const init = () => {
                         return false;
                     };
                 });
-        } else {
-            state.current.show_clear = false;
-        }
+        } 
     }
 
     state.openSublist = (sublist_name, subsection) => {
@@ -313,11 +309,6 @@ const init = () => {
             const offset = $(".content " + subsection).offset().top - 50;
             $(".content").animate({ scrollTop: offset }, 500);
         }
-    }
-
-    state.clearSearch = () => {
-        $(".help-dialog .help-search").val("");
-        state.current.show_clear = false;
     }
 
     //Concat all the sublist items into one array so that we can later use it for searching.
