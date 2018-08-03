@@ -1,7 +1,3 @@
-/**
- * Created by arnab on 2/12/15.
- */
-
 function isTick(ohlc) {
     return ohlc.indexOf("t") !== -1;
 }
@@ -120,6 +116,20 @@ function formatPrice(float, currency) {
     }
 	return float;
 }
+
+function addComma(num, decimal_points, is_crypto) {
+    var number = String(num || 0).replace(/,/g, '');
+    if (typeof decimal_points !== 'undefined') {
+        number = (+number).toFixed(decimal_points);
+    }
+    if (is_crypto) {
+        number = parseFloat(+number);
+    }
+
+    return number.toString().replace(/(^|[^\w.])(\d{4,})/g, function($0, $1, $2) {
+        return $1 + $2.replace(/\d(?=(?:\d\d\d)+(?!\d))/g, '$&,')
+    });
+};
 
 function sortAlphaNum(property) {
     "use strict";
