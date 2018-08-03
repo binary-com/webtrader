@@ -5,8 +5,6 @@ import html from 'text!help/help.html';
 import content from 'text!help/content.html'
 import 'css!help/help.css';
 
-"use strict";
-
 let win = null,
     sublist_items = [];
 
@@ -333,7 +331,7 @@ const init = () => {
                 title_s = "";
             } else if (walker.currentNode.nodeName == "H3") {
                 title_s = walker.currentNode.innerText;
-                if (title_s.toLowerCase().indexOf(q) != -1) {
+                if (title_s.toLowerCase().indexOf(q) !== -1) {
                     const matchingText = title_s.substr(title_s.toLowerCase().indexOf(q), q.length);
                     const title_s_copy = title_s.replace(matchingText, "<span class='highlight'>" + matchingText + "</span>");
                     while (walker.nextNode()) {
@@ -357,7 +355,7 @@ const init = () => {
                     continue;
                 }
             } else if (walker.currentNode.nodeName !== "DIV" && walker.currentNode.nodeName !== "H2" &&
-                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) != -1 &&
+                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) !== -1 &&
                 walker.currentNode.nodeName !== "LI" && walker.currentNode.nodeName !== "STRONG" &&
                 walker.currentNode.nodeName !== "H4") {
                 let index = walker.currentNode.innerText.toLowerCase().indexOf(q);
