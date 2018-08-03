@@ -1,4 +1,5 @@
-$help-list-item-height: 40px;
+$HELP_LIST_ITEM_HEIGHT: 40px;
+$MAIN_ORANGE: #E98024;
 
 .ui-dialog .ui-dialog-content.help-dialog {
     padding: 0px;
@@ -9,25 +10,19 @@ $help-list-item-height: 40px;
         border-right: 1px solid #dedede;
         overflow: auto;
         .help-search {
-            padding: 0px 10px;
-            height: $help-list-item-height;
+            padding: 0 10px;
+            height: $HELP_LIST_ITEM_HEIGHT;
             display: flex;
             align-items: center;
-        }
-        .ui-icon-circle-close {
-            display: inline;
-            left: -15px;
-            width: 10px;
-            cursor: pointer;
         }
         .items {
             .selected {
                 background: #dedede;
             }
             span {
-                display: block;
-                height: $help-list-item-height;
-                line-height: 2.5em;
+                display: flex;
+                align-items: center;
+                height: $HELP_LIST_ITEM_HEIGHT;
                 padding-left: 10px;
                 cursor: pointer;
             }
@@ -83,13 +78,13 @@ $help-list-item-height: 40px;
                 font-weight: 700;
             }
             #binary-benefits h3 {
-                color: #E98024;
+                color: $MAIN_ORANGE;
             }
             .search-text {
                 margin-top: 30px;
                 margin-bottom: 20px;
                 span.highlight {
-                    color: #E98024;
+                    color: $MAIN_ORANGE;
                 }
             }
         }
