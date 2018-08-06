@@ -47,6 +47,12 @@
                 <span rv-show='user.date_of_birth | is-valid-date "YYYY-MM-DD" | eq false | and empty_fields.validate' class='validation'>Please enter a valid date in yyyy-mm-dd format.</span>
             </div>
         </div>
+        <div class="row">
+            <span class="title">Citizenship</span>
+            <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu="user.citizenship" rv-selectrefresh="user.country_array">
+                <option rv-each-row="user.country_array" rv-value="row.value">{row.text}</option>
+            </select>
+        </div>
       <div class="row">
           <span class="title">Place of birth</span>
           <select rv-jq-class='"real-dialog-ul"' rv-selectmenu-appendto='".real-dialog"' rv-selectmenu="user.place_of_birth" rv-selectrefresh="user.country_array">
