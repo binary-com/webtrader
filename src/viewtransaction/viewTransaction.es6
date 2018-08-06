@@ -181,91 +181,109 @@ export const init = (contract_id, transaction_id) => {
             reject();
          });
    });
-}
+};
+
 const handle_error = (message) => {
   $.growl.error({ message });
   liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
   liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
-}
+};
+
 const update_indicative = (data, state) => {
-  // called with on_open_proposal
+  // TODO: handle barrier update
+  // TODO: handle finished contract
 
-  // TODO: move one step up in abstraction hierarchy
-  if(data.error) {
-    handle_error(data.error.message);
-    return;
+  const contract = data.proposal_open_contract;
+
+  // Sell at market button?
+  state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
+
+  // validation text
+  // TODO: separate to function. Is necessary?
+  if (contract.validation_error) {
+    state.validation = contract.validation_error;
+  } else if (contract.is_expired) {
+    state.validation = 'This contract has expired'.i18n();
+  } else if (contract.is_valid_to_sell) {
+    state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
   }
-   const contract = data.proposal_open_contract;
-   const id = contract.contract_id || data.echo_req.contract_id,
-      bid_price = contract.bid_price;
-   if(contract.is_sold && !contract.exit_tick && !contract.exit_level && !state.table.user_sold && !contract.sell_spot) {
 
-      liveapi.send({contract_id: id, proposal_open_contract: 1});
-      return;
-   }
+  // forward starting contract
+  if (contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1) {
+    state.fwd_starting = '* Contract is not yet started.'.i18n();
+  } else {
+    state.fwd_starting = '';
+  }
 
-   state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
-
-   if(id != state.contract_id) { return; }
-   if(contract.validation_error)
-      state.validation = contract.validation_error;
-   else if(contract.is_expired)
-      state.validation = 'This contract has expired'.i18n();
-   else if(contract.is_valid_to_sell)
-      state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
-   if(contract.is_forward_starting && contract.date_start*1 > contract.current_spot_time*1)
-      state.fwd_starting = '* Contract is not yet started.'.i18n();
-   else
-      state.fwd_starting = '';
+  // Handles expired contract
    /*Do not update the current_spot and current_spot_time if the contract has expired*/
-   if(state.table.date_expiry*1 >= contract.current_spot_time*1) {
+   if (state.table.date_expiry * 1 >= contract.current_spot_time * 1) {
       state.table.current_spot = contract.current_spot;
       state.table.current_spot_time = contract.current_spot_time;
       state.table.bid_price = contract.bid_price;
-      if(state.sell.bid_prices.length > 40) {
-         state.sell.bid_prices.shift();
-      }
-      state.sell.bid_prices.push(contract.bid_price)
-      if(!_.isNil(contract.bid_price)) {
-         state.sell.bid_price.value = contract.bid_price;
-         [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
-      }
-      state.sell.is_valid_to_sell = contract.is_valid_to_sell;
-      state.chart.manual_reflow();
+
+    if (state.sell.bid_prices.length > 40) {
+      state.sell.bid_prices.shift();
+    }
+
+    state.sell.bid_prices.push(contract.bid_price);
+
+    if (!_.isNil(contract.bid_price)) {
+      state.sell.bid_price.value = contract.bid_price;
+      [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
+    }
+    state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+    state.chart.manual_reflow();
    } else {
       /*Just change the current_spot_time to date_expiry*/
       state.table.current_spot_time = state.table.date_expiry;
    }
 
+   // TODO: move one step up in abstraction hierarchy - wait for entry tick until starting to add ticks to chart
    // Some times backend doesn't send the entry-spot in the beginning. Setting it here to avoid any errors.
    state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
    state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
 
-   if(contract.is_sold){
-      state.table.is_sold = contract.is_sold;
-      state.table.exit_tick = contract.exit_tick;
-      state.table.exit_tick_time = contract.exit_tick_time;
-      state.table.date_expiry = contract.date_expiry;
-      state.table.current_spot_time = contract.exit_tick_time;
-      state.table.sell_price = contract.sell_price;
-      state.table.final_price = contract.sell_price;
-      !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-      !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
-      state.table.user_sold && state.table.sell_price && state.chart.chart.addPlotLineX({ value: contract.sell_time*1000, label: 'Sell Time'.i18n()});
-   }
+  //  1. update state if contract is sold
+  //  2. Add Exit spot / End Time / Sell time
+  if (contract.is_sold) {
+    state.table.is_sold = contract.is_sold;
+    state.table.exit_tick = contract.exit_tick;
+    state.table.exit_tick_time = contract.exit_tick_time;
+    state.table.date_expiry = contract.date_expiry;
+    state.table.current_spot_time = contract.exit_tick_time;
+    state.table.sell_price = contract.sell_price;
+    state.table.final_price = contract.sell_price;
+    !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+    !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
+    state.table.user_sold && state.table.sell_price && state.chart.chart.addPlotLineX({ value: contract.sell_time*1000, label: 'Sell Time'.i18n()});
+  }
 
-   if(+state.chart.barrier !== +contract.barrier ||
-      +state.chart.high_barrier !== +contract.high_barrier ||
-      +state.chart.low_barrier !== +contract.low_barrier ) {
-        update_barrier(true, state, contract);
-   }
+  // update barrier
+  if(+state.chart.barrier !== +contract.barrier ||
+    +state.chart.high_barrier !== +contract.high_barrier ||
+    +state.chart.low_barrier !== +contract.low_barrier ) {
+      update_barrier(true, state, contract);
+  }
 }
 
 const init_dialog = (proposal) => {
    require(['text!viewtransaction/viewTransaction.html'],(html) => {
       const root = $(html).i18n();
       const state = init_state(proposal, root);
-      const on_proposal_open_contract = (data) => update_indicative(data, state);
+
+      const on_proposal_open_contract = (data) => {
+        const is_different_stream = data.proposal_open_contract.contract_id !== state.contract_id;
+
+        if (is_different_stream) return;
+
+        if (data.error) {
+          handle_error(data.error.message);
+          return;
+        }
+
+        update_indicative(data, state)
+      };
 
       const transWin = windows.createBlankWindow(root, {
          title: proposal.display_name + ' (' + proposal.transaction_id + ')',
@@ -334,7 +352,6 @@ const sell_at_market = (state, root) => {
 }
 
 const init_state = (proposal, root) =>{
-  console.log(proposal);
    const state = {
       route: {
          value: 'table',
@@ -427,7 +444,7 @@ const init_state = (proposal, root) =>{
 
    get_chart_data(state, root);
    return state;
-}
+};
 
 const update_live_chart = (state, granularity) => {
    const key = chartingRequestMap.keyFor(state.chart.symbol, granularity);
@@ -508,7 +525,7 @@ const update_live_chart = (state, granularity) => {
       on_candles && liveapi.events.off('candles', on_candles);
    };
    state.onclose.push(clean_up); /* clean up */
-}
+};
 
 const update_barrier = (isUpdate, state, contract = {}) => {
   const {chart} = state.chart;
@@ -536,7 +553,8 @@ const update_barrier = (isUpdate, state, contract = {}) => {
     state.chart.barrier && chart.yAxis[0].removePlotLine('barrier');
     state.chart.high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
     state.chart.low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
-  }
+  };
+
   if (isUpdate) {
     removePlotlines();
     state.chart.barrier = state.table.barrier = contract.barrier;
@@ -609,6 +627,6 @@ const get_chart_data = (state, root) => {
          state.chart.loading = err.message;
          console.error(err);
       });
-}
+};
 
 export default  { init };
