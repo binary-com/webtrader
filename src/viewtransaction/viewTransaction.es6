@@ -187,19 +187,26 @@ const handle_error = (message) => {
 
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
-
+  const { chart } = state.chart;
   // 1. Ongoing 3. Finished
   console.log('state: ', state);
   console.log('open contract', contract);
-  
+
+  // draw entry tick
+  contract.entry_tick_time && chart.addPlotLineX({ value: contract.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
+  // Draw exit spot
+  (contract.sell_spot_time || contract.exit_tick_time) && chart.addPlotLineX({ value: (contract.sell_spot_time || contract.exit_tick_time), label: 'Exit Spot'.i18n(), text_left: true});
+  // Draw end time
+  !contract.sell_spot_time && contract.date_expiry && chart.addPlotLineX({ value: contract.date_expiry * 1000, label: 'End Time'.i18n()});
+  // Draw start time
+  // TODO: not for tick contracts
+  contract.date_start && chart.addPlotLineX({ value: contract.date_start * 1000, label: 'Start Time'.i18n(), text_left: true });
+  // Draw sell spot
+  contract.sell_time && chart.addPlotLineX({ value: contract.sell_time * 1000, label: 'Sell Spot'.i18n(), text_left: true});
+
   make_note(contract, state);
 
-  const should_update_barrier = +state.chart.barrier !== +contract.barrier || 
-    +state.chart.high_barrier !== +contract.high_barrier ||
-    +state.chart.low_barrier !== +contract.low_barrier;
-  if (should_update_barrier) {
-    update_barrier(true, state, contract);
-  }
+  make_barrier(contract, state);
 
   // 3. Finished
   const contract_has_finished = contract.status !== 'open';
@@ -238,7 +245,6 @@ const update_indicative = (data, state) => {
 };
 
 const on_contract_finished = (contract, state) => {
-  // TODO: fix path dependent contract exit spot
   state.table.is_sold = contract.is_sold;
   state.table.exit_tick = contract.exit_tick;
   state.table.exit_tick_time = contract.exit_tick_time;
@@ -246,10 +252,6 @@ const on_contract_finished = (contract, state) => {
   state.table.current_spot_time = contract.exit_tick_time;
   state.table.sell_price = contract.sell_price;
   state.table.final_price = contract.sell_price;
-
-  !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-  !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
-  state.table.user_sold && state.table.sell_price && state.chart.chart.addPlotLineX({ value: contract.sell_time*1000, label: 'Sell Time'.i18n()});
 };
 
 const make_note = (contract, state) => {
@@ -261,6 +263,16 @@ const make_note = (contract, state) => {
     state.note = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
   }
 };
+
+const make_barrier = (contract, state) => {
+  const should_update_barrier = +state.chart.barrier !== +contract.barrier ||
+  +state.chart.high_barrier !== +contract.high_barrier ||
+  +state.chart.low_barrier !== +contract.low_barrier;
+
+  if (should_update_barrier) {
+    update_barrier(state, contract);
+  }
+}
 
 const make_sparkline = (contract, state) => {
   if (state.sell.bid_prices.length > 40) {
@@ -530,19 +542,15 @@ const update_live_chart = (state, granularity) => {
    state.onclose.push(clean_up); /* clean up */
 };
 
-const update_barrier = (isUpdate, state, contract = {}) => {
+const update_barrier = (state, contract = {}) => {
   const { chart } = state.chart;
   if (!chart) return;
 
-  if (isUpdate) {
-    removePlotlines();
-    state.chart.barrier = state.table.barrier = contract.barrier;
-    state.chart.high_barrier = state.table.high_barrier = contract.high_barrier;
-    state.chart.low_barrier = state.table.low_barrier = contract.low_barrier;
-    addPlotlines();
-  } else {
-    addPlotlines();
-  }
+  removePlotlines();
+  state.chart.barrier = state.table.barrier = contract.barrier;
+  state.chart.high_barrier = state.table.high_barrier = contract.high_barrier;
+  state.chart.low_barrier = state.table.low_barrier = contract.low_barrier;
+  addPlotlines();
 
   function addPlotlines() {
     state.chart.barrier && chart.addPlotLineY({
@@ -571,41 +579,21 @@ const update_barrier = (isUpdate, state, contract = {}) => {
 }
 
 const get_chart_data = (state, root) => {
-  const { table } = state;
   const duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
 
-  let granularity = make_granularity(duration);
-  let margin = make_margin(duration, granularity);
-
-  const tick_history_request = make_tick_history_request(granularity);
+  const granularity = make_granularity(duration);
+  const margin = make_margin(duration, granularity);
+  const tick_history_request = make_tick_history_request(granularity, margin);
 
    if (!state.table.is_ended) {
       update_live_chart(state, granularity);
    }
 
   return liveapi.send(tick_history_request).then((data) => {
-    make_chart(data, state);
-
-    // Draw entry spot
-    state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
-
-    // Draw exit spot
-    (!state.table.user_sold || state.table.contract_type === "SPREAD") && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-    !state.table.user_sold && state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-
-    // Draw end time / start time
-    !state.table.user_sold && state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
-    state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
-
-    update_barrier(false, state);
-
-    // draw stop loss / stop profit
-    state.table.stop_loss_level && chart.addPlotLineY({value: state.table.stop_loss_level*1, label: 'Stop Loss ('.i18n() + state.table.stop_loss_level + ')', color: 'red'});
-    state.table.stop_profit_level && chart.addPlotLineY({value: state.table.stop_profit_level*1, label: 'Stop Profit ('.i18n() + state.table.stop_profit_level + ')'});
-
-    // Draw sell spot
-    state.table.user_sold && chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Spot'.i18n(), text_left: true});
-
+    state.chart.loading = '';
+    const chart_options = make_chart_options(data, state.chart.display_name);
+    const chart = init_chart(root, state, chart_options);
+    state.chart.chart = chart;
     state.chart.manual_reflow();
   })
   .catch((err) => {
@@ -631,7 +619,8 @@ const get_chart_data = (state, root) => {
     return margin;
   };
 
-  function make_tick_history_request(granularity) {
+  function make_tick_history_request(granularity, margin) {
+    console.log('make_tick_history_request: ', state);
     const request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
@@ -645,20 +634,16 @@ const get_chart_data = (state, root) => {
       request.style = 'candles';
       state.chart.type = 'candles';
     }
-
+    console.log(request);
     return request;
   };
 
-  function make_chart(data, state) {
-    state.chart.loading = '';
-
-    const options = { 
-      title: state.chart.display_name,
+  function make_chart_options(data, title) {
+    return ({
+      title,
       history: data.history ? data.history : null,
       candles: data.candles ? data.candles : null,
-    };
-    const chart = init_chart(root, state, options);
-    state.chart.chart = chart;
+    });
   };
 };
 
