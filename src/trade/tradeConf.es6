@@ -71,6 +71,10 @@ rv.binders['tick-chart'] = {
       const barrier = model.make_barrier();
       const { contract_is_finished } = model;
 
+      if (barrier) {
+            draw_barrier(barrier);
+      }
+
       if (contract_is_finished) {
             draw_exit_spot(model, ticks);
             return;
@@ -82,10 +86,6 @@ rv.binders['tick-chart'] = {
 
       if (tick_idx === 1) {
             draw_entry_spot(tick_idx);
-      }
-
-      if (barrier) {
-            draw_barrier(barrier);
       }
 
       function draw_exit_spot(model, ticks) {

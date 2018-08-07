@@ -158,10 +158,8 @@
   <div class="footer">
     <div class="sell-at-market" rv-if="sell.is_valid_to_sell | and-not table.is_ended">
 
-      <span>
-        <span class="bid-price" rv-indicative-color="sell.bid_price.value">
-          <span class="unit" rv-html="sell.bid_price.value | format-price table.currency"></span>
-        </span>
+      <span class="bid-price" rv-indicative-color="sell.bid_price.value">
+        <span class="unit" rv-html="sell.bid_price.value | format-price table.currency"></span>
       </span>
 
       <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
