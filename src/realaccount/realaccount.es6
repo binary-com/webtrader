@@ -133,6 +133,7 @@ const init_state = (root, what_todo) => {
          ],
          secret_answer: '',
          place_of_birth: '',
+         citizen: '',
          country_array: [{ text: '-', value: '-' }],
          tax_residence: '',
          tax_identification_number: '',
@@ -185,7 +186,8 @@ const init_state = (root, what_todo) => {
          user.last_name !== '' &&
          !/[~`!@#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\",<>?/\d]/.test(user.last_name) &&
          moment(user.date_of_birth, 'YYYY-MM-DD', true).isValid() &&
-         $.trim(state.user.place_of_birth) !== ''
+         $.trim(state.user.place_of_birth) !== '' &&
+         $.trim(state.user.citizen) !== '' &&
          user.residence !== '-' &&
          user.address_line_1 !== '' &&
          !/[~`!#\$%\^\&\*\(\)\+=\{\}\[\]\\|:;\"<>?]/.test(user.address_line_1) &&
@@ -223,6 +225,7 @@ const init_state = (root, what_todo) => {
          account_opening_reason: user.account_opening_reason,
          date_of_birth: user.date_of_birth,
          place_of_birth: user.place_of_birth,
+         citizen: user.citizen,
          residence: user.residence,
          address_line_1: user.address_line_1,
          address_line_2: user.address_line_2 || undefined, // optional field
@@ -347,6 +350,7 @@ const init_state = (root, what_todo) => {
          address_postcode: user.address_postcode || undefined,
          phone: user.phone,
          place_of_birth: state.user.place_of_birth,
+         citizen: state.user.citizen,
          tax_residence: state.user.tax_residence.join(","),
          tax_identification_number: state.user.tax_identification_number,
 
@@ -484,8 +488,10 @@ const init_state = (root, what_todo) => {
       () => liveapi.cached.send({ residence_list: 1 })
       )
       .then((data) => {
+         const residence_country_idx = data.residence_list.findIndex((country) => country.text === state.user.residence_name);
          state.user.country_array = data.residence_list;
-         state.user.place_of_birth = data.residence_list[0].value;
+         state.user.place_of_birth = data.residence_list[residence_country_idx].value;
+         state.user.citizen = data.residence_list[residence_country_idx].value;
          const residence = _.find(data.residence_list, { value: state.user.residence });
          state.user.phone = state.user.phone ? state.user.phone : residence.phone_idd ? '+' + residence.phone_idd : '';
       })
