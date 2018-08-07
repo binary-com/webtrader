@@ -571,67 +571,95 @@ const update_barrier = (isUpdate, state, contract = {}) => {
 }
 
 const get_chart_data = (state, root) => {
-  console.log('get_chart_data');
-   const table = state.table;
-   const duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
-   let granularity = 0;
-   let margin = 0; // time margin
-   if(duration <= 60*60) { granularity = 0; } // 1 hour
-   else if(duration <= 2*60*60) { granularity = 60; } // 2 hours
-   else if(duration <= 6*60*60) { granularity = 120; } // 6 hours
-   else if(duration <= 24*60*60) { granularity = 300; } // 1 day
-   else { granularity = 3600 } // more than 1 day
-   margin = granularity === 0 ? Math.max(3, 30*duration/(60*60) | 0) : 3*granularity;
-   const request = {
+  const { table } = state;
+  const duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
+
+  let granularity = make_granularity(duration);
+  let margin = make_margin(duration, granularity);
+
+  const tick_history_request = make_tick_history_request(granularity);
+
+   if (!state.table.is_ended) {
+      update_live_chart(state, granularity);
+   }
+
+  return liveapi.send(tick_history_request).then((data) => {
+    make_chart(data, state);
+
+    // Draw entry spot
+    state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
+
+    // Draw exit spot
+    (!state.table.user_sold || state.table.contract_type === "SPREAD") && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+    !state.table.user_sold && state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+
+    // Draw end time / start time
+    !state.table.user_sold && state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
+    state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
+
+    update_barrier(false, state);
+
+    // draw stop loss / stop profit
+    state.table.stop_loss_level && chart.addPlotLineY({value: state.table.stop_loss_level*1, label: 'Stop Loss ('.i18n() + state.table.stop_loss_level + ')', color: 'red'});
+    state.table.stop_profit_level && chart.addPlotLineY({value: state.table.stop_profit_level*1, label: 'Stop Profit ('.i18n() + state.table.stop_profit_level + ')'});
+
+    // Draw sell spot
+    state.table.user_sold && chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Spot'.i18n(), text_left: true});
+
+    state.chart.manual_reflow();
+  })
+  .catch((err) => {
+      state.chart.loading = err.message;
+      console.error(err);
+  });
+
+  function make_granularity(duration) {
+    let granularity = 0;
+
+    if (duration <= 60 * 60) { granularity = 0; } // 1 hour
+    else if (duration <= 2 * 60 * 60) { granularity = 60; } // 2 hours
+    else if (duration <= 6 * 60 * 60) { granularity = 120; } // 6 hours
+    else if (duration <= 24 * 60 * 60) { granularity = 300; } // 1 day
+    else { granularity = 3600 } // more than 1 day
+
+    return granularity;
+  };
+
+  function make_margin(duration, granularity) {
+    let margin = 0; // time margin
+    margin = granularity === 0 ? Math.max(3, 30 * duration / (60 * 60) | 0) : 3 * granularity;
+    return margin;
+  };
+
+  function make_tick_history_request(granularity) {
+    const request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
       end: state.table.sell_time ? state.table.sell_time*1 + margin : state.table.exit_tick_time ? state.table.exit_tick_time*1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
-   };
-   if(granularity !== 0) {
+    };
+  
+    if (granularity !== 0) {
       request.granularity = granularity;
       request.style = 'candles';
       state.chart.type = 'candles';
-   }
+    }
 
-   if(!state.table.is_ended) {
-      update_live_chart(state, granularity);
-   }
+    return request;
+  };
 
-   return liveapi.send(request).then((data) => {
+  function make_chart(data, state) {
+    state.chart.loading = '';
 
-      state.chart.loading = '';
-
-      const options = { title: state.chart.display_name };
-      if(data.history) options.history = data.history;
-      if(data.candles) options.candles = data.candles;
-      const chart = init_chart(root, state, options);
-
-      state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
-
-      (!state.table.user_sold || state.table.contract_type === "SPREAD") && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-
-      state.table.entry_tick_time && chart.addPlotLineX({ value: state.table.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
-      !state.table.user_sold && state.table.exit_tick_time && chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-
-      !state.table.user_sold && state.table.date_expiry && chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
-      state.table.date_start && chart.addPlotLineX({ value: state.table.date_start*1000, label: 'Start Time'.i18n() ,text_left: true });
-
-      update_barrier(false, state);
-
-      state.table.stop_loss_level && chart.addPlotLineY({value: state.table.stop_loss_level*1, label: 'Stop Loss ('.i18n() + state.table.stop_loss_level + ')', color: 'red'});
-      state.table.stop_profit_level && chart.addPlotLineY({value: state.table.stop_profit_level*1, label: 'Stop Profit ('.i18n() + state.table.stop_profit_level + ')'});
-
-      state.table.user_sold && chart.addPlotLineX({ value: state.table.sell_time*1000, label: 'Sell Spot'.i18n(), text_left: true});
-
-      state.chart.chart = chart;
-      state.chart.manual_reflow();
-   })
-      .catch((err) => {
-         state.chart.loading = err.message;
-         console.error(err);
-      });
+    const options = { 
+      title: state.chart.display_name,
+      history: data.history ? data.history : null,
+      candles: data.candles ? data.candles : null,
+    };
+    const chart = init_chart(root, state, options);
+    state.chart.chart = chart;
+  };
 };
 
 export default  { init };
