@@ -187,26 +187,15 @@ const handle_error = (message) => {
 
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
-  const { chart } = state.chart;
   // 1. Ongoing 3. Finished
   console.log('state: ', state);
   console.log('open contract', contract);
 
-  // draw entry tick
-  contract.entry_tick_time && chart.addPlotLineX({ value: contract.entry_tick_time*1000, label: 'Entry Spot'.i18n()});
-  // Draw exit spot
-  (contract.sell_spot_time || contract.exit_tick_time) && chart.addPlotLineX({ value: (contract.sell_spot_time || contract.exit_tick_time), label: 'Exit Spot'.i18n(), text_left: true});
-  // Draw end time
-  !contract.sell_spot_time && contract.date_expiry && chart.addPlotLineX({ value: contract.date_expiry * 1000, label: 'End Time'.i18n()});
-  // Draw start time
-  // TODO: not for tick contracts
-  contract.date_start && chart.addPlotLineX({ value: contract.date_start * 1000, label: 'Start Time'.i18n(), text_left: true });
-  // Draw sell spot
-  contract.sell_time && chart.addPlotLineX({ value: contract.sell_time * 1000, label: 'Sell Spot'.i18n(), text_left: true});
+  draw_vertical_lines(contract, state);
 
   make_note(contract, state);
 
-  make_barrier(contract, state);
+  draw_barrier(contract, state);
 
   // 3. Finished
   const contract_has_finished = contract.status !== 'open';
@@ -244,6 +233,58 @@ const update_indicative = (data, state) => {
   state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
 };
 
+const draw_vertical_lines = (contract, state) => {
+  const { chart } = state.chart;
+  const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
+  const text_left = true;
+
+  draw_entry_spot(entry_tick_time);
+
+  draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
+
+  draw_end_time(date_expiry);
+
+  draw_start_time(date_start, text_left);
+
+  draw_sell_spot(sell_time, text_left);
+
+  function draw_entry_spot(entry_tick_time) {
+    if (!entry_tick_time) return;
+    chart.addPlotLineX({ value: entry_tick_time * 1000, label: 'Entry Spot'.i18n()});
+  };
+
+  function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
+    const contract_has_no_exit_spot = !sell_spot_time || !exit_tick_time;
+    if (contract_has_no_exit_spot) return;
+
+    const is_path_dependent = !!contract.is_path_dependent;
+    const label = 'Exit Spot'.i18n();
+
+    if (is_path_dependent) {
+      chart.addPlotLineX({ value: sell_spot_time * 1000, label, text_left});
+    } else {
+      chart.addPlotLineX({ value: exit_tick_time * 1000, label, text_left});
+    }
+  };
+
+  function draw_end_time() {
+    const has_end_time = !sell_spot_time && date_expiry;
+    if (!has_end_time) return false;
+    chart.addPlotLineX({ value: date_expiry * 1000, label: 'End Time'.i18n()});
+  };
+
+  function draw_start_time(date_start, text_left) {
+    // TODO: not for tick contracts?
+    if (!date_start) return;
+    chart.addPlotLineX({ value: date_start * 1000, label: 'Start Time'.i18n(), text_left });
+  };
+
+  function draw_sell_spot(sell_time, text_left) {
+    if (!sell_time) return;
+    chart.addPlotLineX({ value: sell_time * 1000, label: 'Sell Spot'.i18n(), text_left});
+  }
+}
+
 const on_contract_finished = (contract, state) => {
   state.table.is_sold = contract.is_sold;
   state.table.exit_tick = contract.exit_tick;
@@ -264,7 +305,7 @@ const make_note = (contract, state) => {
   }
 };
 
-const make_barrier = (contract, state) => {
+const draw_barrier = (contract, state) => {
   const should_update_barrier = +state.chart.barrier !== +contract.barrier ||
   +state.chart.high_barrier !== +contract.high_barrier ||
   +state.chart.low_barrier !== +contract.low_barrier;
