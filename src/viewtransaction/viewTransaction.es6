@@ -1,8 +1,4 @@
-﻿/**
- * Created by amin on January 14, 2016.
- */
-
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import windows from 'windows/windows';
 import liveapi from 'websockets/binary_websockets';
 import chartingRequestMap from 'charts/chartingRequestMap';
@@ -162,7 +158,7 @@ export const init = (contract_id, transaction_id) => {
          resolve();
          return;
       }
-      liveapi.send({proposal_open_contract: 1, contract_id: contract_id})
+      liveapi.send({proposal_open_contract: 1, contract_id})
             .then((data) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */
@@ -190,100 +186,95 @@ const handle_error = (message) => {
 };
 
 const update_indicative = (data, state) => {
-  // TODO: handle barrier update
-  // TODO: handle finished contract
-
   const contract = data.proposal_open_contract;
 
-  // Sell at market button?
-  state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
+  // 1. Ongoing 2. Future will start 3. Finished
 
-  // validation text
-  // TODO: separate to function. Is necessary?
-  if (contract.validation_error) {
-    state.validation = contract.validation_error;
-  } else if (contract.is_expired) {
-    state.validation = 'This contract has expired'.i18n();
-  } else if (contract.is_valid_to_sell) {
-    state.validation = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
+  console.log('state: ', state);
+  console.log('open contract', contract);
+  
+  make_note(contract, state);
+
+  const should_update_barrier = +state.chart.barrier !== +contract.barrier || 
+    +state.chart.high_barrier !== +contract.high_barrier ||
+    +state.chart.low_barrier !== +contract.low_barrier;
+  if (should_update_barrier) {
+    update_barrier(true, state, contract);
   }
 
-  // forward starting contract
-  if (contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1) {
-    state.fwd_starting = '* Contract is not yet started.'.i18n();
+  // 3. Finished
+  const contract_has_finished = contract.status !== 'open';
+  if (contract_has_finished) {
+    on_contract_finished(contract, state);
+    return;
+  }
+
+  // 2. Future will start
+  const constract_is_forward_starting = contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1;
+  if (constract_is_forward_starting) {
+    state.fwd_starting = '* Contract has not started yet'.i18n();
   } else {
     state.fwd_starting = '';
   }
 
-  // Handles expired contract
-   /*Do not update the current_spot and current_spot_time if the contract has expired*/
-   if (state.table.date_expiry * 1 >= contract.current_spot_time * 1) {
-      state.table.current_spot = contract.current_spot;
-      state.table.current_spot_time = contract.current_spot_time;
-      state.table.bid_price = contract.bid_price;
+  // 1. Ongoing
+  state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
 
-    if (state.sell.bid_prices.length > 40) {
-      state.sell.bid_prices.shift();
-    }
+  make_sparkline(contract, state)
 
-    state.sell.bid_prices.push(contract.bid_price);
+  state.table.current_spot = contract.current_spot;
+  state.table.current_spot_time = contract.current_spot_time;
+  state.table.bid_price = contract.bid_price;
 
-    if (!_.isNil(contract.bid_price)) {
-      state.sell.bid_price.value = contract.bid_price;
-      [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
-    }
-    state.sell.is_valid_to_sell = contract.is_valid_to_sell;
-    state.chart.manual_reflow();
-   } else {
-      /*Just change the current_spot_time to date_expiry*/
-      state.table.current_spot_time = state.table.date_expiry;
-   }
-
-   // TODO: move one step up in abstraction hierarchy - wait for entry tick until starting to add ticks to chart
-   // Some times backend doesn't send the entry-spot in the beginning. Setting it here to avoid any errors.
-   state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
-   state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
-
-  //  1. update state if contract is sold
-  //  2. Add Exit spot / End Time / Sell time
-  if (contract.is_sold) {
-    state.table.is_sold = contract.is_sold;
-    state.table.exit_tick = contract.exit_tick;
-    state.table.exit_tick_time = contract.exit_tick_time;
-    state.table.date_expiry = contract.date_expiry;
-    state.table.current_spot_time = contract.exit_tick_time;
-    state.table.sell_price = contract.sell_price;
-    state.table.final_price = contract.sell_price;
-    !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
-    !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
-    state.table.user_sold && state.table.sell_price && state.chart.chart.addPlotLineX({ value: contract.sell_time*1000, label: 'Sell Time'.i18n()});
+  if (!_.isNil(contract.bid_price)) {
+    state.sell.bid_price.value = contract.bid_price;
+    [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
   }
 
-  // update barrier
-  if(+state.chart.barrier !== +contract.barrier ||
-    +state.chart.high_barrier !== +contract.high_barrier ||
-    +state.chart.low_barrier !== +contract.low_barrier ) {
-      update_barrier(true, state, contract);
+  state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+  console.log('state.chart.manual_reflow');
+  state.chart.manual_reflow();
+
+  // TODO: move one step up in abstraction hierarchy - wait for entry tick until starting to add ticks to chart
+  // Some times backend doesn't send the entry-spot in the beginning. Setting it here to avoid any errors.
+  state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
+  state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
+};
+
+const on_contract_finished = (contract, state) => {
+  state.table.is_sold = contract.is_sold;
+  state.table.exit_tick = contract.exit_tick;
+  state.table.exit_tick_time = contract.exit_tick_time;
+  state.table.date_expiry = contract.date_expiry;
+  state.table.current_spot_time = contract.exit_tick_time;
+  state.table.sell_price = contract.sell_price;
+  state.table.final_price = contract.sell_price;
+  !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
+  !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
+  state.table.user_sold && state.table.sell_price && state.chart.chart.addPlotLineX({ value: contract.sell_time*1000, label: 'Sell Time'.i18n()});
+};
+
+const make_note = (contract, state) => {
+  if (contract.validation_error) {
+    state.note = contract.validation_error;
+  } else if (contract.is_expired) {
+    state.note = 'This contract has expired'.i18n();
+  } else if (contract.is_valid_to_sell) {
+    state.note = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
   }
-}
+};
+
+const make_sparkline = (contract, state) => {
+  if (state.sell.bid_prices.length > 40) {
+    state.sell.bid_prices.shift();
+  }
+  state.sell.bid_prices.push(contract.bid_price);
+};
 
 const init_dialog = (proposal) => {
-   require(['text!viewtransaction/viewTransaction.html'],(html) => {
+   require(['text!viewtransaction/viewTransaction.html'], (html) => {
       const root = $(html).i18n();
       const state = init_state(proposal, root);
-
-      const on_proposal_open_contract = (data) => {
-        const is_different_stream = data.proposal_open_contract.contract_id !== state.contract_id;
-
-        if (is_different_stream) return;
-
-        if (data.error) {
-          handle_error(data.error.message);
-          return;
-        }
-
-        update_indicative(data, state)
-      };
 
       const transWin = windows.createBlankWindow(root, {
          title: proposal.display_name + ' (' + proposal.transaction_id + ')',
@@ -315,6 +306,18 @@ const init_dialog = (proposal) => {
       transWin.dialog('open');
       const view = rv.bind(root[0],state)
       open_dialogs[proposal.transaction_id] = transWin;
+
+      function on_proposal_open_contract(data) {
+        const is_different_stream = +data.proposal_open_contract.contract_id !== +state.contract_id;
+        if (is_different_stream) return;
+
+        if (data.error) {
+          handle_error(data.error.message);
+          return;
+        }
+
+        update_indicative(data, state)
+      };
    });
 }
 
@@ -359,10 +362,12 @@ const init_state = (proposal, root) =>{
       },
       contract_id: proposal.contract_id,
       longcode: proposal.longcode,
-      validation: proposal.validation_error
+      note: proposal.validation_error
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
+        status: proposal.status,
+
          is_ended: proposal.is_settleable || proposal.is_sold,
          currency: (proposal.currency ||  'USD') + ' ',
          current_spot_time: proposal.current_spot_time,
@@ -480,7 +485,7 @@ const update_live_chart = (state, granularity) => {
             if(perv_tick && state.table.contract_type !== 'SPREAD') {
                state.table.exit_tick = perv_tick.quote;
                state.table.exit_tick_time = perv_tick.epoch*1;
-               state.validation = 'This contract has expired'.i18n();
+               state.note = 'This contract has expired'.i18n();
                state.table.is_ended = true;
             }
             clean_up();
