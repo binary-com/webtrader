@@ -188,8 +188,7 @@ const handle_error = (message) => {
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
 
-  // 1. Ongoing 2. Future will start 3. Finished
-
+  // 1. Ongoing 3. Finished
   console.log('state: ', state);
   console.log('open contract', contract);
   
@@ -205,11 +204,14 @@ const update_indicative = (data, state) => {
   // 3. Finished
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
+    console.log('===== Contract has finished: =====', contract.status, contract);
     on_contract_finished(contract, state);
     return;
   }
 
-  // 2. Future will start
+  make_sparkline(contract, state);
+  state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+
   const constract_is_forward_starting = contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1;
   if (constract_is_forward_starting) {
     state.fwd_starting = '* Contract has not started yet'.i18n();
@@ -219,9 +221,6 @@ const update_indicative = (data, state) => {
 
   // 1. Ongoing
   state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
-
-  make_sparkline(contract, state)
-
   state.table.current_spot = contract.current_spot;
   state.table.current_spot_time = contract.current_spot_time;
   state.table.bid_price = contract.bid_price;
@@ -231,17 +230,15 @@ const update_indicative = (data, state) => {
     [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
   }
 
-  state.sell.is_valid_to_sell = contract.is_valid_to_sell;
-  console.log('state.chart.manual_reflow');
   state.chart.manual_reflow();
 
   // TODO: move one step up in abstraction hierarchy - wait for entry tick until starting to add ticks to chart
-  // Some times backend doesn't send the entry-spot in the beginning. Setting it here to avoid any errors.
   state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
   state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
 };
 
 const on_contract_finished = (contract, state) => {
+  // TODO: fix path dependent contract exit spot
   state.table.is_sold = contract.is_sold;
   state.table.exit_tick = contract.exit_tick;
   state.table.exit_tick_time = contract.exit_tick_time;
@@ -249,6 +246,7 @@ const on_contract_finished = (contract, state) => {
   state.table.current_spot_time = contract.exit_tick_time;
   state.table.sell_price = contract.sell_price;
   state.table.final_price = contract.sell_price;
+
   !state.table.user_sold && state.table.exit_tick_time && state.chart.chart.addPlotLineX({ value: state.table.exit_tick_time*1000, label: 'Exit Spot'.i18n(), text_left: true});
   !state.table.user_sold && state.table.date_expiry && state.chart.chart.addPlotLineX({ value: state.table.date_expiry*1000, label: 'End Time'.i18n()});
   state.table.user_sold && state.table.sell_price && state.chart.chart.addPlotLineX({ value: contract.sell_time*1000, label: 'Sell Time'.i18n()});
@@ -411,6 +409,23 @@ const init_state = (proposal, root) =>{
          low_barrier: proposal.low_barrier,
          loading: 'Loading ' + proposal.display_name + ' ...',
          type: 'ticks', // could be 'tick' or 'ohlc'
+         manual_reflow: () => {
+          /* TODO: find a better solution for resizing the chart  :/ */
+          const h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
+          if(!state.chart.chart) return;
+          const container = root;
+          const transactionChart = container.find(".transaction-chart");
+          const width = container.width() - 10;
+          const height = container.height();
+
+          state.chart.chart.setSize(width, height + h , false);
+          state.chart.chart.hasUserSize = null;
+          if (state.chart.chart.series[0] && state.chart.chart.series[0].data.length === 0) {
+            state.chart.chart.showLoading();
+          } else {
+            state.chart.chart.hideLoading();
+          }
+       },
       },
       sell: {
          bid_prices: [],
@@ -419,6 +434,7 @@ const init_state = (proposal, root) =>{
             cent: undefined,
             value: undefined,
          },
+         sell: () => sell_at_market(state, root),
          sell_at_market_enabled: true,
          is_valid_to_sell: false,
       },
@@ -428,24 +444,6 @@ const init_state = (proposal, root) =>{
    if(Lookback.isLookback(proposal.contract_type)) {
      [state.table.barrier_label, state.table.low_barrier_label] = Lookback.barrierLabels(proposal.contract_type);
    }
-
-   state.sell.sell = () => sell_at_market(state, root);
-
-   state.chart.manual_reflow = () => {
-      /* TODO: find a better solution for resizing the chart  :/ */
-      const h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
-      if(!state.chart.chart) return;
-      const container = root;// root.find('.chart-container');
-      const transactionChart = container.find(".transaction-chart");
-      const width = container.width() - 10,
-         height = container.height();
-      state.chart.chart.setSize(width, height + h , false);
-      state.chart.chart.hasUserSize = null;
-      if (state.chart.chart.series[0] && state.chart.chart.series[0].data.length === 0)
-         state.chart.chart.showLoading();
-      else
-         state.chart.chart.hideLoading();
-   };
 
    get_chart_data(state, root);
    return state;
@@ -533,9 +531,20 @@ const update_live_chart = (state, granularity) => {
 };
 
 const update_barrier = (isUpdate, state, contract = {}) => {
-  const {chart} = state.chart;
+  const { chart } = state.chart;
   if (!chart) return;
-  const addPlotlines = () => {
+
+  if (isUpdate) {
+    removePlotlines();
+    state.chart.barrier = state.table.barrier = contract.barrier;
+    state.chart.high_barrier = state.table.high_barrier = contract.high_barrier;
+    state.chart.low_barrier = state.table.low_barrier = contract.low_barrier;
+    addPlotlines();
+  } else {
+    addPlotlines();
+  }
+
+  function addPlotlines() {
     state.chart.barrier && chart.addPlotLineY({
       id: 'barrier',
       value: state.chart.barrier*1,
@@ -554,24 +563,15 @@ const update_barrier = (isUpdate, state, contract = {}) => {
     });
   };
 
-  const removePlotlines = () => {
+  function removePlotlines() {
     state.chart.barrier && chart.yAxis[0].removePlotLine('barrier');
     state.chart.high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
     state.chart.low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
   };
-
-  if (isUpdate) {
-    removePlotlines();
-    state.chart.barrier = state.table.barrier = contract.barrier;
-    state.chart.high_barrier = state.table.high_barrier = contract.high_barrier;
-    state.chart.low_barrier = state.table.low_barrier = contract.low_barrier;
-    addPlotlines();
-  } else {
-    addPlotlines();
-  }
 }
 
 const get_chart_data = (state, root) => {
+  console.log('get_chart_data');
    const table = state.table;
    const duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
    let granularity = 0;
