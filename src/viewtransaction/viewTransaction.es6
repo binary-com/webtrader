@@ -192,12 +192,11 @@ const update_indicative = (data, state) => {
   console.log('open contract', contract);
 
   draw_vertical_lines(contract, state);
+  draw_barrier(contract, state);
+  draw_sparkline(contract, state);
 
   make_note(contract, state);
 
-  draw_barrier(contract, state);
-
-  // 3. Finished
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
     console.log('===== Contract has finished: =====', contract.status, contract);
@@ -205,7 +204,6 @@ const update_indicative = (data, state) => {
     return;
   }
 
-  make_sparkline(contract, state);
   state.sell.is_valid_to_sell = contract.is_valid_to_sell;
 
   const constract_is_forward_starting = contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1;
@@ -215,7 +213,6 @@ const update_indicative = (data, state) => {
     state.fwd_starting = '';
   }
 
-  // 1. Ongoing
   state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
   state.table.current_spot = contract.current_spot;
   state.table.current_spot_time = contract.current_spot_time;
@@ -256,11 +253,9 @@ const draw_vertical_lines = (contract, state) => {
   function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
     const contract_has_no_exit_spot = !sell_spot_time || !exit_tick_time;
     if (contract_has_no_exit_spot) return;
-
-    const is_path_dependent = !!contract.is_path_dependent;
     const label = 'Exit Spot'.i18n();
 
-    if (is_path_dependent) {
+    if (!!contract.is_path_dependent) {
       chart.addPlotLineX({ value: sell_spot_time * 1000, label, text_left});
     } else {
       chart.addPlotLineX({ value: exit_tick_time * 1000, label, text_left});
@@ -315,7 +310,7 @@ const draw_barrier = (contract, state) => {
   }
 }
 
-const make_sparkline = (contract, state) => {
+const draw_sparkline = (contract, state) => {
   if (state.sell.bid_prices.length > 40) {
     state.sell.bid_prices.shift();
   }
