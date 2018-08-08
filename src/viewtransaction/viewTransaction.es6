@@ -129,6 +129,7 @@ const init_chart = (root, state, options) => {
          color: options.color || '#e98024',
          zIndex: 4,
          width: options.width || 2,
+         dashStyle: options.dashStyle,
       });
    };
 
@@ -245,14 +246,11 @@ const draw_vertical_lines = (contract, state) => {
   const text_left = true;
 
   draw_entry_spot(entry_tick_time);
-
-  draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
-
-  draw_end_time(date_expiry);
-
   draw_start_time(date_start, text_left);
 
-  draw_sell_spot(sell_time, text_left);
+  draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
+  draw_end_time(date_expiry);
+  // draw_sell_spot(sell_time, text_left);
 
   function draw_entry_spot(entry_tick_time) {
     if (!entry_tick_time) return;
@@ -262,19 +260,21 @@ const draw_vertical_lines = (contract, state) => {
   function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
     const contract_has_no_exit_spot = !sell_spot_time || !exit_tick_time;
     if (contract_has_no_exit_spot) return;
-    const label = 'Exit Spot'.i18n();
 
+    let value;
     if (!!contract.is_path_dependent) {
-      chart.addPlotLineX({ value: sell_spot_time * 1000, label, text_left});
+      value = sell_spot_time * 1000;
     } else {
-      chart.addPlotLineX({ value: exit_tick_time * 1000, label, text_left});
+      value = exit_tick_time * 1000;
     }
+
+    chart.addPlotLineX({ value, label: 'Exit Spot'.i18n(), text_left, dashStyle: 'Dash' });
   };
 
-  function draw_end_time() {
-    const has_end_time = !sell_spot_time && date_expiry;
-    if (!has_end_time) return false;
-    chart.addPlotLineX({ value: date_expiry * 1000, label: 'End Time'.i18n()});
+  function draw_end_time(date_expiry) {
+    // should always be drawn - except for ticks?
+    if (!date_expiry) return false;
+    chart.addPlotLineX({ value: date_expiry * 1000, label: 'End Time'.i18n(), dashStyle: 'Dash' });
   };
 
   function draw_start_time(date_start, text_left) {
@@ -284,8 +284,9 @@ const draw_vertical_lines = (contract, state) => {
   };
 
   function draw_sell_spot(sell_time, text_left) {
+    // TODO: when should sell spot be drawn?
     if (!sell_time) return;
-    chart.addPlotLineX({ value: sell_time * 1000, label: 'Sell Spot'.i18n(), text_left});
+    chart.addPlotLineX({ value: sell_time * 1000, label: 'Sell Spot'.i18n(), text_left });
   }
 }
 
@@ -407,7 +408,7 @@ const sell_at_market = (state, root) => {
          $.growl.error({ message: err.message });
          console.error(err);
       });
-}
+};
 
 const init_state = (proposal, root) =>{
    const state = {
@@ -686,6 +687,7 @@ const get_chart_data = (state, root) => {
 
   function on_tick_history_success(data) {
     state.chart.loading = '';
+
     const chart_options = make_chart_options(data, state.chart.display_name);
     const chart = init_chart(root, state, chart_options);
     state.chart.chart = chart;
