@@ -203,31 +203,40 @@ const update_indicative = (data, state) => {
     on_contract_finished(contract, state);
     return;
   }
-
-  state.sell.is_valid_to_sell = contract.is_valid_to_sell;
-
-  const constract_is_forward_starting = contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1;
-  if (constract_is_forward_starting) {
-    state.fwd_starting = '* Contract has not started yet'.i18n();
-  } else {
-    state.fwd_starting = '';
-  }
-
-  state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
-  state.table.current_spot = contract.current_spot;
-  state.table.current_spot_time = contract.current_spot_time;
-  state.table.bid_price = contract.bid_price;
-
-  if (!_.isNil(contract.bid_price)) {
-    state.sell.bid_price.value = contract.bid_price;
-    [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
-  }
+  // Ongoing contract - update state
+  update_state_table();
+  update_state_sell();
+  handle_forward_starting();
 
   state.chart.manual_reflow();
 
-  // TODO: move one step up in abstraction hierarchy - wait for entry tick until starting to add ticks to chart
-  state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
-  state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
+  function update_state_table() {
+    state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
+    state.table.current_spot = contract.current_spot;
+    state.table.current_spot_time = contract.current_spot_time;
+    state.table.bid_price = contract.bid_price;
+
+    state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
+    state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
+  };
+
+  function update_state_sell() {
+    state.sell.is_valid_to_sell = contract.is_valid_to_sell;
+
+    if (!_.isNil(contract.bid_price)) {
+      state.sell.bid_price.value = contract.bid_price;
+      [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
+    }
+  }
+
+  function handle_forward_starting() {
+    const constract_is_forward_starting = contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1;
+    if (constract_is_forward_starting) {
+      state.fwd_starting = '* Contract has not started yet'.i18n();
+    } else {
+      state.fwd_starting = '';
+    }
+  }
 };
 
 const draw_vertical_lines = (contract, state) => {
@@ -626,16 +635,11 @@ const get_chart_data = (state, root) => {
    }
 
   return liveapi.send(tick_history_request).then((data) => {
-    state.chart.loading = '';
-    const chart_options = make_chart_options(data, state.chart.display_name);
-    const chart = init_chart(root, state, chart_options);
-    state.chart.chart = chart;
-    state.chart.manual_reflow();
-  })
-  .catch((err) => {
-      state.chart.loading = err.message;
-      console.error(err);
-  });
+      on_tick_history_success(data);
+    })
+    .catch((err) => {
+      on_tick_history_error(err);
+    });
 
   function make_granularity(duration) {
     let granularity = 0;
@@ -656,7 +660,6 @@ const get_chart_data = (state, root) => {
   };
 
   function make_tick_history_request(granularity, margin) {
-    console.log('make_tick_history_request: ', state);
     const request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
@@ -664,13 +667,12 @@ const get_chart_data = (state, root) => {
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
-  
+
     if (granularity !== 0) {
       request.granularity = granularity;
       request.style = 'candles';
       state.chart.type = 'candles';
     }
-    console.log(request);
     return request;
   };
 
@@ -680,6 +682,19 @@ const get_chart_data = (state, root) => {
       history: data.history ? data.history : null,
       candles: data.candles ? data.candles : null,
     });
+  };
+
+  function on_tick_history_success(data) {
+    state.chart.loading = '';
+    const chart_options = make_chart_options(data, state.chart.display_name);
+    const chart = init_chart(root, state, chart_options);
+    state.chart.chart = chart;
+    state.chart.manual_reflow();
+  };
+
+  function on_tick_history_error(err) {
+    state.chart.loading = err.message;
+    console.error(err);
   };
 };
 
