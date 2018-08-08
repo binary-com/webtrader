@@ -221,7 +221,6 @@ const update_indicative = (data, state) => {
       const text_left = true;
       // TODO: separate ticks and other durations
       // TODO: add time logic
-      // validate chart
       draw_entry_spot(entry_tick_time);
       draw_start_time(date_start, text_left);
 
@@ -230,6 +229,7 @@ const update_indicative = (data, state) => {
       // draw_sell_spot(sell_time, text_left);
 
       function draw_entry_spot(entry_tick_time) {
+        executed = false
         if (!entry_tick_time) return;
         chart.addPlotLineX({ value: entry_tick_time * 1000, label: 'Entry Spot'.i18n()});
       };
