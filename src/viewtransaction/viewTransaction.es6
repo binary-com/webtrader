@@ -192,10 +192,7 @@ const update_indicative = (data, state) => {
   console.log('state: ', state);
   console.log('open contract', contract);
 
-  draw_vertical_lines(contract, state);
-  draw_barrier(contract, state);
-  draw_sparkline(contract, state);
-
+  draw_chart(contract, state)
   make_note(contract, state);
 
   const contract_has_finished = contract.status !== 'open';
@@ -210,6 +207,66 @@ const update_indicative = (data, state) => {
   handle_forward_starting();
 
   state.chart.manual_reflow();
+
+  function draw_chart(contract, state) {
+    draw_sparkline(contract, state);
+
+    const { chart } = state.chart;
+    if (!chart) return;
+    draw_vertical_lines(contract, state);
+    draw_barrier(contract, state);
+
+    function draw_vertical_lines(contract, state) {
+      const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
+      const text_left = true;
+      // TODO: separate ticks and other durations
+      // TODO: add time logic
+      // validate chart
+      draw_entry_spot(entry_tick_time);
+      draw_start_time(date_start, text_left);
+
+      draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
+      draw_end_time(date_expiry);
+      // draw_sell_spot(sell_time, text_left);
+
+      function draw_entry_spot(entry_tick_time) {
+        if (!entry_tick_time) return;
+        chart.addPlotLineX({ value: entry_tick_time * 1000, label: 'Entry Spot'.i18n()});
+      };
+
+      function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
+        const contract_has_no_exit_spot = !sell_spot_time && !exit_tick_time;
+        if (contract_has_no_exit_spot) return;
+
+        let value;
+        if (!!contract.is_path_dependent) {
+          value = sell_spot_time * 1000;
+        } else {
+          value = exit_tick_time * 1000;
+        }
+
+        chart.addPlotLineX({ value, label: 'Exit Spot'.i18n(), text_left, dashStyle: 'Dash' });
+      };
+
+      function draw_end_time(date_expiry) {
+        // should always be drawn - except for ticks?
+        if (!date_expiry) return false;
+        chart.addPlotLineX({ value: date_expiry * 1000, label: 'End Time'.i18n(), dashStyle: 'Dash' });
+      };
+
+      function draw_start_time(date_start, text_left) {
+        // TODO: not for tick contracts?
+        if (!date_start) return;
+        chart.addPlotLineX({ value: date_start * 1000, label: 'Start Time'.i18n(), text_left });
+      };
+
+      function draw_sell_spot(sell_time, text_left) {
+        // TODO: when should sell spot be drawn?
+        if (!sell_time) return;
+        chart.addPlotLineX({ value: sell_time * 1000, label: 'Sell Spot'.i18n(), text_left });
+      }
+    };
+  };
 
   function update_state_table() {
     state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
@@ -239,57 +296,6 @@ const update_indicative = (data, state) => {
     }
   }
 };
-
-const draw_vertical_lines = (contract, state) => {
-  const { chart } = state.chart;
-  const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
-  const text_left = true;
-  // TODO: separate ticks and other durations
-  // TODO: add time logic 
-  draw_entry_spot(entry_tick_time);
-  draw_start_time(date_start, text_left);
-
-  draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
-  draw_end_time(date_expiry);
-  // draw_sell_spot(sell_time, text_left);
-
-  function draw_entry_spot(entry_tick_time) {
-    if (!entry_tick_time) return;
-    chart.addPlotLineX({ value: entry_tick_time * 1000, label: 'Entry Spot'.i18n()});
-  };
-
-  function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
-    const contract_has_no_exit_spot = !sell_spot_time && !exit_tick_time;
-    if (contract_has_no_exit_spot) return;
-
-    let value;
-    if (!!contract.is_path_dependent) {
-      value = sell_spot_time * 1000;
-    } else {
-      value = exit_tick_time * 1000;
-    }
-
-    chart.addPlotLineX({ value, label: 'Exit Spot'.i18n(), text_left, dashStyle: 'Dash' });
-  };
-
-  function draw_end_time(date_expiry) {
-    // should always be drawn - except for ticks?
-    if (!date_expiry) return false;
-    chart.addPlotLineX({ value: date_expiry * 1000, label: 'End Time'.i18n(), dashStyle: 'Dash' });
-  };
-
-  function draw_start_time(date_start, text_left) {
-    // TODO: not for tick contracts?
-    if (!date_start) return;
-    chart.addPlotLineX({ value: date_start * 1000, label: 'Start Time'.i18n(), text_left });
-  };
-
-  function draw_sell_spot(sell_time, text_left) {
-    // TODO: when should sell spot be drawn?
-    if (!sell_time) return;
-    chart.addPlotLineX({ value: sell_time * 1000, label: 'Sell Spot'.i18n(), text_left });
-  }
-}
 
 const on_contract_finished = (contract, state) => {
   state.table.is_sold = contract.is_sold;
@@ -515,7 +521,6 @@ const update_live_chart = (state, granularity) => {
   let on_tick_cb = undefined;
   let on_candles_cb = undefined;
   let clean_up_done = false;
-
   state.onclose.push(clean_up);
 
   if (granularity === 0) {
@@ -550,10 +555,11 @@ const update_live_chart = (state, granularity) => {
   function handle_tick() {
     let perv_tick = null;
     on_tick_cb = liveapi.events.on('tick', (data) => {
-        if (!data.tick || data.tick.symbol !== state.chart.symbol) return;
         const { chart } = state.chart;
+        if (!data.tick || data.tick.symbol !== state.chart.symbol) return;
+
         const { tick } = data;
-        add_tick_to_chart(tick);
+        add_tick_to_chart(chart, tick);
 
         const contract_has_finished = tick.epoch * 1 > state.table.date_expiry * 1 || state.table.is_sold;
         if (contract_has_finished) {
@@ -604,8 +610,8 @@ const update_live_chart = (state, granularity) => {
     clean_up_done = true;
 
     chartingRequestMap.unregister(key);
-    on_tick && liveapi.events.off('tick', on_tick);
-    on_candles && liveapi.events.off('candles', on_candles);
+    on_tick_cb && liveapi.events.off('tick', on_tick_cb);
+    on_candles_cb && liveapi.events.off('candles', on_candles_cb);
   };
 };
 
@@ -649,7 +655,7 @@ const get_chart_data = (state, root) => {
   const duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
 
   const granularity = make_granularity(duration);
-  const margin = make_margin(duration, granularity);
+  const margin = make_time_margin(duration, granularity);
   const tick_history_request = make_tick_history_request(granularity, margin);
 
    if (!state.table.is_ended) {
@@ -675,8 +681,8 @@ const get_chart_data = (state, root) => {
     return granularity;
   };
 
-  function make_margin(duration, granularity) {
-    let margin = 0; // time margin
+  function make_time_margin(duration, granularity) {
+    let margin = 0;
     margin = granularity === 0 ? Math.max(3, 30 * duration / (60 * 60) | 0) : 3 * granularity;
     return margin;
   };
