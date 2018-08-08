@@ -244,7 +244,8 @@ const draw_vertical_lines = (contract, state) => {
   const { chart } = state.chart;
   const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
   const text_left = true;
-
+  // TODO: separate ticks and other durations
+  // TODO: add time logic 
   draw_entry_spot(entry_tick_time);
   draw_start_time(date_start, text_left);
 
@@ -258,7 +259,7 @@ const draw_vertical_lines = (contract, state) => {
   };
 
   function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
-    const contract_has_no_exit_spot = !sell_spot_time || !exit_tick_time;
+    const contract_has_no_exit_spot = !sell_spot_time && !exit_tick_time;
     if (contract_has_no_exit_spot) return;
 
     let value;
@@ -508,84 +509,104 @@ const init_state = (proposal, root) =>{
 };
 
 const update_live_chart = (state, granularity) => {
-   const key = chartingRequestMap.keyFor(state.chart.symbol, granularity);
-   if(!chartingRequestMap[key]){
-      const req = {
-         symbol: state.chart.symbol,
-         subscribe: 1,
-         granularity: granularity,
-         style: granularity === 0 ? 'ticks' : 'candles',
-      };
+  const key = chartingRequestMap.keyFor(state.chart.symbol, granularity);
+  handle_chartingRequestMap(key);
+
+  let on_tick_cb = undefined;
+  let on_candles_cb = undefined;
+  let clean_up_done = false;
+
+  state.onclose.push(clean_up);
+
+  if (granularity === 0) {
+    handle_tick();
+    return;
+  }
+  handle_candle();
+
+  /* don't register if already someone else has registered for this symbol */
+  function handle_chartingRequestMap() {
+    if(!chartingRequestMap[key]){
+      const req = make_chartingRequestMap_request(granularity, state.chart.symbol);
       chartingRequestMap.register(req)
-         .catch((err) => {
+          .catch((err) => {
             $.growl.error({ message: err.message });
             console.error(err);
-         });
-   }
-   /* don't register if already someone else has registered for this symbol */
-   else { chartingRequestMap.subscribe(key); }
+          });
+    } else {
+      chartingRequestMap.subscribe(key);
+    }
+  };
 
-   let on_tick = undefined;
-   let on_candles = undefined;
+  function make_chartingRequestMap_request(granularity, symbol) {
+    return ({
+      symbol,
+      subscribe: 1,
+      granularity,
+      style: granularity === 0 ? 'ticks' : 'candles',
+    });
+  };
 
-   if(granularity === 0) {
-      let perv_tick = null;
-      on_tick = liveapi.events.on('tick', (data) => {
-         if (!data.tick || data.tick.symbol !== state.chart.symbol)
-            return;
-         const chart = state.chart.chart;
-         const tick = data.tick;
-         chart && chart.series[0].addPoint([tick.epoch*1000, tick.quote*1]);
-         /* stop updating when contract is expired */
-         if(tick.epoch*1 > state.table.date_expiry*1 || state.table.is_sold) {
-            if(perv_tick && state.table.contract_type !== 'SPREAD') {
-               state.table.exit_tick = perv_tick.quote;
-               state.table.exit_tick_time = perv_tick.epoch*1;
-               state.note = 'This contract has expired'.i18n();
-               state.table.is_ended = true;
-            }
-            clean_up();
-         }
-         perv_tick = tick;
-      });
-   }
-   else {
-      on_candles = liveapi.events.on('ohlc', (data) => {
-         const data_key = chartingRequestMap.keyFor(data.ohlc.symbol, data.ohlc.granularity);
-         if(key != data_key)
-            return;
-         const chart = state.chart.chart;
-         if(!chart)
-            return;
+  function handle_tick() {
+    let perv_tick = null;
+    on_tick_cb = liveapi.events.on('tick', (data) => {
+        if (!data.tick || data.tick.symbol !== state.chart.symbol) return;
+        const { chart } = state.chart;
+        const { tick } = data;
+        add_tick_to_chart(tick);
 
-         const series = chart.series[0];
-         const last = series.data[series.data.length - 1];
+        const contract_has_finished = tick.epoch * 1 > state.table.date_expiry * 1 || state.table.is_sold;
+        if (contract_has_finished) {
+          if(perv_tick && state.table.contract_type !== 'SPREAD') {
+              state.table.exit_tick = perv_tick.quote;
+              state.table.exit_tick_time = perv_tick.epoch*1;
+              state.note = 'This contract has expired'.i18n();
+              state.table.is_ended = true;
+          }
+          clean_up();
+        }
+        perv_tick = tick;
+    });
 
-         const c = data.ohlc;
-         const ohlc = [c.open_time*1000, c.open*1, c.high*1, c.low*1, c.close*1];
+    function add_tick_to_chart(chart, tick) {
+      if (!chart) return;
+      chart.series[0].addPoint([tick.epoch * 1000, tick.quote * 1]);
+    }
+  };
 
-         if(last.x != ohlc[0]) {
-            series.addPoint(ohlc, true, true);
-         }
-         else {
-            last.update(ohlc,true);
-         }
-         /* stop updating when contract is expired */
-         if(c.epoch*1 > state.table.date_expiry*1) {
-            clean_up();
-         }
-      });
-   }
+  function handle_candle() {
+    on_candles_cb = liveapi.events.on('ohlc', (data) => {
+      const data_key = chartingRequestMap.keyFor(data.ohlc.symbol, data.ohlc.granularity);
+      if (key !== data_key) return;
 
-   let clean_up_done = false;
-   const clean_up = () => {
-      if(clean_up_done) return;
-      clean_up_done = true;
-      chartingRequestMap.unregister(key);
-      on_tick && liveapi.events.off('tick', on_tick);
-      on_candles && liveapi.events.off('candles', on_candles);
-   };
-   state.onclose.push(clean_up); /* clean up */
+      const { chart } = state.chart;
+      if (!chart) return;
+
+      const series = chart.series[0];
+      const last = series.data[series.data.length - 1];
+
+      const c = data.ohlc;
+      const ohlc = [c.open_time * 1000, c.open * 1, c.high * 1, c.low * 1, c.close * 1];
+
+      if (last.x !== ohlc[0]) {
+          series.addPoint(ohlc, true, true);
+      } else {
+        last.update(ohlc,true);
+      }
+
+      contract_has_finished = c.epoch*1 > state.table.date_expiry*1;
+      if (contract_has_finished) clean_up();
+    });
+  };
+
+  function clean_up() {
+    if (clean_up_done) return;
+    clean_up_done = true;
+
+    chartingRequestMap.unregister(key);
+    on_tick && liveapi.events.off('tick', on_tick);
+    on_candles && liveapi.events.off('candles', on_candles);
+  };
 };
 
 const update_barrier = (state, contract = {}) => {
