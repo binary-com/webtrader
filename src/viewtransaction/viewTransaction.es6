@@ -676,7 +676,6 @@ const get_chart_data = (state, root) => {
     else if (duration <= 6 * 60 * 60) { granularity = 120; } // 6 hours
     else if (duration <= 24 * 60 * 60) { granularity = 300; } // 1 day
     else { granularity = 3600 } // more than 1 day
-
     return granularity;
   };
 
@@ -703,13 +702,6 @@ const get_chart_data = (state, root) => {
     return request;
   };
 
-  function make_chart_options(data, title) {
-    return ({
-      title,
-      history: data.history ? data.history : null,
-      candles: data.candles ? data.candles : null,
-    });
-  };
 
   function on_tick_history_success(data) {
     state.chart.loading = '';
@@ -718,6 +710,14 @@ const get_chart_data = (state, root) => {
     const chart = init_chart(root, state, chart_options);
     state.chart.chart = chart;
     state.chart.manual_reflow();
+
+    function make_chart_options(data, title) {
+      return ({
+        title,
+          history: data.history ? data.history : null,
+          candles: data.candles ? data.candles : null,
+      });
+    };
   };
 
   function on_tick_history_error(err) {
