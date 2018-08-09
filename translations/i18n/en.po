@@ -677,9 +677,6 @@ msgstr ""
 msgid "Binary granted Investment Services license"
 msgstr ""
 
-msgid "Binary mobile applications and third party tools"
-msgstr ""
-
 msgid "Binary opens Japan office"
 msgstr ""
 
@@ -940,6 +937,9 @@ msgstr ""
 
 msgid "Chrome"
 msgstr "Chrome"
+
+msgid "Citizenship"
+msgstr ""
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Click to log in with your Binary.com account"
@@ -1850,9 +1850,6 @@ msgstr "Load chart template"
 
 msgid "Load trade template"
 msgstr ""
-
-msgid "Loading"
-msgstr "Loading"
 
 msgid "Loading Asset Index"
 msgstr "Loading Asset Index"
@@ -3307,9 +3304,6 @@ msgstr "Token name"
 msgid "Token permissions"
 msgstr "Token permissions"
 
-msgid "Tokens are special codes for accessing"
-msgstr ""
-
 msgid "Tooltip background"
 msgstr "Tooltip background"
 
@@ -3761,7 +3755,7 @@ msgstr "commission"
 msgid "contact support"
 msgstr "contact support"
 
-msgid "create a token, and share the token with copier(s)"
+msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr ""
 
 msgid "customer support"
@@ -3916,6 +3910,9 @@ msgstr "| Return"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr ""
+
+#~ msgid "Loading"
+#~ msgstr "Loading"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Binary options or other financial derivatives"

@@ -936,6 +936,9 @@ msgstr "Indice de Choppiness (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "Haga clic para iniciar sesión con su cuenta de Binary.com"
 
@@ -1844,9 +1847,6 @@ msgstr "Cargar plantilla del gráfico"
 
 msgid "Load trade template"
 msgstr "Cargar plantilla del contrato"
-
-msgid "Loading"
-msgstr "Cargando"
 
 msgid "Loading Asset Index"
 msgstr "Carga Índice de Activos"
@@ -3750,7 +3750,7 @@ msgstr "comisión"
 msgid "contact support"
 msgstr "contactar con ayuda al cliente"
 
-msgid "create a token, and share the token with copier(s)"
+msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr ""
 
 msgid "customer support"
@@ -3905,6 +3905,9 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"
+
+#~ msgid "Loading"
+#~ msgstr "Cargando"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Opciones binarias u otros derivados financieros"

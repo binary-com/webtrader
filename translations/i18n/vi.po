@@ -936,6 +936,9 @@ msgstr "Chỉ số độ dồi dào (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com của bạn"
 
@@ -1844,9 +1847,6 @@ msgstr "Tải mẫu biểu đồ"
 
 msgid "Load trade template"
 msgstr "Tải mẫu giao dịch"
-
-msgid "Loading"
-msgstr "Đang tải"
 
 msgid "Loading Asset Index"
 msgstr "Đang tải chỉ số tài sản"
@@ -3750,8 +3750,8 @@ msgstr "Hoa hồng"
 msgid "contact support"
 msgstr "liên hệ hỗ trợ"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "tạo ra một token, và chia sẻ token với người sao chép"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "hỗ trợ khách hàng"
@@ -3905,6 +3905,12 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
+
+#~ msgid "Loading"
+#~ msgstr "Đang tải"
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "tạo ra một token, và chia sẻ token với người sao chép"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"

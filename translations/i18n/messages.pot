@@ -923,6 +923,9 @@ msgstr ""
 msgid "Chrome"
 msgstr "" 
 
+msgid "Citizenship"
+msgstr "" 
+
 msgid "Click to log in with your Binary.com account"
 msgstr "" 
 
@@ -1830,9 +1833,6 @@ msgid "Load chart template"
 msgstr "" 
 
 msgid "Load trade template"
-msgstr "" 
-
-msgid "Loading"
 msgstr "" 
 
 msgid "Loading Asset Index"
@@ -3737,7 +3737,7 @@ msgstr ""
 msgid "contact support"
 msgstr "" 
 
-msgid "create a token, and share the token with copier(s)"
+msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr "" 
 
 msgid "customer support"

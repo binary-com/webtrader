@@ -954,6 +954,9 @@ msgstr "チョピネス・インデックス（CHOP）"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
@@ -1869,9 +1872,6 @@ msgstr "チャートテンプレートを読み込む"
 
 msgid "Load trade template"
 msgstr "取引テンプレートを読み込む"
-
-msgid "Loading"
-msgstr "読み込み中"
 
 msgid "Loading Asset Index"
 msgstr "資産インデックスの読み込み"
@@ -3777,7 +3777,7 @@ msgstr "手数料"
 msgid "contact support"
 msgstr "サポートへのお問い合わせ"
 
-msgid "create a token, and share the token with copier(s)"
+msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr ""
 
 msgid "customer support"
@@ -3932,6 +3932,9 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
+
+#~ msgid "Loading"
+#~ msgstr "読み込み中"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "バイナリーオプション または その他金融派生商品"

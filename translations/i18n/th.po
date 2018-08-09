@@ -938,6 +938,9 @@ msgstr "ดัชนี Choppiness (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของท่าน"
 
@@ -1848,9 +1851,6 @@ msgstr "โหลดแผนภูมิแม่แบบ"
 
 msgid "Load trade template"
 msgstr "โหลดแม่แบบสำหรับซื้อขาย"
-
-msgid "Loading"
-msgstr "กำลังโหลด..."
 
 msgid "Loading Asset Index"
 msgstr "กำลังโหลดดัชนีสินทรัพย์"
@@ -3754,8 +3754,8 @@ msgstr "คอมมิชชั่น"
 msgid "contact support"
 msgstr "ติดต่อฝ่ายบริการลูกค้า"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "สร้างโทเค่น และแชร์โทเค่นกับท่านอื่น"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "ฝ่ายบริการลูกค้า"
@@ -3909,6 +3909,12 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"
+
+#~ msgid "Loading"
+#~ msgstr "กำลังโหลด..."
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "สร้างโทเค่น และแชร์โทเค่นกับท่านอื่น"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "ไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"

@@ -936,6 +936,9 @@ msgstr "波動指數 (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "點選登入Binary.com帳戶"
 
@@ -1844,9 +1847,6 @@ msgstr "載入圖表範本"
 
 msgid "Load trade template"
 msgstr "載入交易範本"
-
-msgid "Loading"
-msgstr "載入"
 
 msgid "Loading Asset Index"
 msgstr "載入資產指數"
@@ -3750,8 +3750,8 @@ msgstr "佣金"
 msgid "contact support"
 msgstr "聯繫客服部"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "建立權杖並與複製者共用"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "客服部"
@@ -3905,6 +3905,12 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
+
+#~ msgid "Loading"
+#~ msgstr "載入"
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "建立權杖並與複製者共用"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "二元期權或其他金融衍生品"

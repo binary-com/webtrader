@@ -936,6 +936,9 @@ msgstr "Индекс переменчивости (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "Нажмите, чтобы войти через счёт на Binary.com"
 
@@ -1844,9 +1847,6 @@ msgstr "Загрузить шаблон графика"
 
 msgid "Load trade template"
 msgstr "Загрузить шаблон контракта"
-
-msgid "Loading"
-msgstr "Идёт загрузка"
 
 msgid "Loading Asset Index"
 msgstr "Загрузка индекса активов"
@@ -3750,8 +3750,8 @@ msgstr "комиссия"
 msgid "contact support"
 msgstr "связаться со службой поддержки"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "создать ключ и разделить его с последователями"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "служба поддержки"
@@ -3905,6 +3905,12 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "позволяющий клиентам, партнёрам и разработчикам покупать и продавать продукты Binary.com"
+
+#~ msgid "Loading"
+#~ msgstr "Идёт загрузка"
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "создать ключ и разделить его с последователями"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Бинарные опционы и другие деривативы"
