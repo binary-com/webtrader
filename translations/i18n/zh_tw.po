@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-02-25 20:20-0500\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Chinese Traditional\n"
-"Language: zh_TW\n"
-"PO-Revision-Date: 2018-02-25 20:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -36,6 +36,9 @@ msgstr "《 eGaming Review》頒發的「年度最佳金融投注運作商」獎
 msgid "'contract period'"
 msgstr "「合約期間」"
 
+msgid "(6,000   5,200) * 2 = $1600"
+msgstr ""
+
 msgid "(One) Touch trades"
 msgstr "一觸即付交易"
 
@@ -44,6 +47,12 @@ msgstr "(原名"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(如期限不到一天)，或於交易日結束時(如期限為一日或更長時間)"
+
+msgid "(license reference no: 39172)"
+msgstr ""
+
+msgid "(license reference no: 39495)"
+msgstr ""
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr "正式上線，提供基於各種金融指數的全天侯金融投注服務。公司業務快速增長，我們很快即成為固定賠率金融投注的市場領導者"
@@ -378,6 +387,9 @@ msgstr "圖表形式包括一個擁有短小暗影或尾巴的小型白色K 線�
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr "衍生品是一種通過參照基礎市場來定價的金融工具，通常在銀行間市場交易，而二元期權是衍生工具中最為普通的一種產品形式"
 
+msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
+msgstr ""
+
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "長形看漲或看跌K 線圖媒介，其主要特性是頭部或尾部無暗影"
 
@@ -444,6 +456,9 @@ msgstr "新增/刪除指標"
 msgid "Add/remove indicators"
 msgstr "新增/刪除指標"
 
+msgid "Address"
+msgstr ""
+
 msgid "Admin"
 msgstr "管理中心"
 
@@ -452,6 +467,9 @@ msgstr "高級阻滯 (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "所有合約期限"
+
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
 
 msgid "All market conditions"
 msgstr "所有市場條件"
@@ -576,6 +594,9 @@ msgstr "平均真實波動範圍 (ATR)"
 msgid "Avg. Duration"
 msgstr "平均持續時間"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "平均損失"
 
@@ -654,9 +675,6 @@ msgstr "二元期權基本知識"
 msgid "Binary granted Investment Services license"
 msgstr "Binary 被授予投資服務執照"
 
-msgid "Binary mobile applications and third party tools"
-msgstr "Binary移動應用程式和第三方工具"
-
 msgid "Binary opens Japan office"
 msgstr "Binary 開設日本辦公室"
 
@@ -666,14 +684,17 @@ msgstr "二元期權"
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
 msgstr "二元期權很容易了解。它被稱為「二元」是因為只能有2種結果：贏或輸。如果預測正確，您會獲得交易開始時設定的賠付額。不然，您將損失起始資金。"
 
-msgid "Binary options or other financial derivatives"
-msgstr "二元期權或其他金融衍生品"
-
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "二元期權或其他金融衍生品交易經驗"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "二元期權或其它金融衍生品交易頻率"
+
+msgid "Binary options trading experience"
+msgstr ""
+
+msgid "Binary options trading frequency"
+msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr "二元期權交易富有彈性"
@@ -822,6 +843,15 @@ msgstr "通過點選"
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "通過點選OK按鈕，您確定已經閱讀和接受此更新"
 
+msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
+msgstr ""
+
+msgid "CFD trading experience"
+msgstr ""
+
+msgid "CFD trading frequency"
+msgstr ""
+
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用於合同購入與售出、給到期的購入合同延期、及給虛擬金錢帳戶存入資金。"
 
@@ -905,6 +935,9 @@ msgstr "波動指數 (CHOP)"
 
 msgid "Chrome"
 msgstr "Chrome"
+
+msgid "Citizenship"
+msgstr ""
 
 msgid "Click to log in with your Binary.com account"
 msgstr "點選登入Binary.com帳戶"
@@ -1034,9 +1067,6 @@ msgstr "目前指標"
 
 msgid "Current password"
 msgstr "目前密碼"
-
-msgid "Current regulations require that you provide us the following"
-msgstr "目前法規需要您向我們提供以下"
 
 msgid "Current time"
 msgstr "目前時間"
@@ -1404,6 +1434,9 @@ msgstr "您需首先設定交易參數。您需要考慮以下因素"
 msgid "Flexible"
 msgstr "靈活"
 
+msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
+msgstr ""
+
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "BetOnMarkets.com 連續三年被英國股票雜誌《Shares Magazine》選為「最佳固定賠率金融交易提供商」。這是我們最後一次獲獎，因為該雜誌已停止頒發這一類獎項"
 
@@ -1500,9 +1533,6 @@ msgstr "幫助"
 msgid "High"
 msgstr "高"
 
-msgid "High Barrier"
-msgstr "高障礙"
-
 msgid "High barrier"
 msgstr "高障礙"
 
@@ -1532,9 +1562,6 @@ msgstr "圈套形態 (CDLHIKKAKE)"
 
 msgid "Historical Data"
 msgstr "歷史資料"
-
-msgid "Home Address"
-msgstr "家庭地址"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "信鴿 (CDLHOMINGPIGEON)"
@@ -1568,6 +1595,12 @@ msgstr "我確認本人不是政治公眾人士(PEP)"
 
 msgid "I have read and agree to Binary.com"
 msgstr "本人已經閱讀並同意Binary.com的"
+
+msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
+msgstr ""
+
+msgid "I want to be treated as a professional client"
+msgstr ""
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "我是新手，該如何開始呢？"
@@ -1629,8 +1662,14 @@ msgstr "必須完全重新整理頁面才能正確啟用主題。確定要繼續
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
 
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgstr ""
+
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "在英國和曼島，我們的客戶通過 Binary (IOM) Ltd. 進行交易。在日本通過Binary KK進行交易。在歐盟（除了英國），他們通過 Binary (Europe) Ltd 和 Binary Investments (Europe) Ltd. 進行交易。在全世界其他地區，他們通過 Binary (C.R.) S.A. 進行交易"
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "頸內形態 (CDLINNECK)"
@@ -1809,9 +1848,6 @@ msgstr "載入圖表範本"
 msgid "Load trade template"
 msgstr "載入交易範本"
 
-msgid "Loading"
-msgstr "載入"
-
 msgid "Loading Asset Index"
 msgstr "載入資產指數"
 
@@ -1890,11 +1926,14 @@ msgstr "尋求在下跌價格走勢中出現、擁有長形低位暗影的高身
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr "尋求上漲價格走勢中的高身白色燭形線。緊隨的是在前一支燭形線體上有缺口的黑色燭形線。最後一天也是黑色燭形線，但這一支完全包圍住前一支看跌燭形線， 且收盤價高於第一支燭形線的開盤價"
 
+msgid "Lookbacks"
+msgstr ""
+
+msgid "Lookbacks are currently only available for Volatility Indices"
+msgstr ""
+
 msgid "Low"
 msgstr "低"
-
-msgid "Low Barrier"
-msgstr "低障礙"
 
 msgid "Low barrier"
 msgstr "低障礙"
@@ -2004,9 +2043,6 @@ msgstr "最小: 10 最大: 2000"
 msgid "Minimum (MIN)"
 msgstr "最低價 (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "需至少6個字元和1個數字"
-
 msgid "Minimum of 2 characters required"
 msgstr "需要至少2個字元"
 
@@ -2015,6 +2051,9 @@ msgstr "需要至少4個字元"
 
 msgid "Minimum of 6 characters required"
 msgstr "需要至少6個字元"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "選定期內最低價"
@@ -2063,6 +2102,9 @@ msgstr "太太"
 
 msgid "Ms"
 msgstr "女士"
+
+msgid "Multiplier"
+msgstr ""
 
 msgid "Name"
 msgstr "名字"
@@ -2427,6 +2469,9 @@ msgstr "主要"
 msgid "Print chart"
 msgstr "列印圖表"
 
+msgid "Professional Client"
+msgstr ""
+
 msgid "Profit"
 msgstr "利潤"
 
@@ -2513,6 +2558,9 @@ msgstr "Regent Pacific 交易"
 
 msgid "Register free account"
 msgstr "註冊免費帳戶"
+
+msgid "Regulatory Information"
+msgstr ""
 
 msgid "Relative Strength Index (RSI)"
 msgstr "相對強弱指標 (RSI)"
@@ -2699,6 +2747,9 @@ msgstr "平滑移動平均線 (SMMA)"
 
 msgid "Sold"
 msgstr "已賣出"
+
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
 
 msgid "Source of wealth"
 msgstr "財富來源"
@@ -3144,6 +3195,9 @@ msgstr "交易者選擇一個目標價並預測市場在合約到期前將會觸
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "移動平均指標使用正態（高斯）分佈，以0到1兩個偏移參數進行操作。此參數允許移動平均指標的平滑度和高敏感度受調節。Sigma標準差是另一個控製曲線係數形狀的參數"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "此為必填欄位"
 
@@ -3158,12 +3212,6 @@ msgstr "這是標的資產在特定時間可以買入或賣出的目前價格"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr "此形態發生時兩個黑色交易日以相同收盤價出現在下降趨勢中。相符最低價顯示已達到谷底，雖然測試了新的最低價，但沒有加速現象，表示價格強勁"
-
-msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr "本網站由Binary (IOM) Ltd.在英國和曼島經營，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1)由不列顛群島曼島投資監管委員會授予執照和監管，目前線上博彩執照於2012 年8 月31 日頒發；而英國客戶(2)由英國博彩委員會授予執照和監管-"
-
-msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr "此網站市場在歐盟其他地區，投資產品由Binary Investments (Europe) Ltd.經營，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商（執照號碼為IS/70156)），而博彩產品由Binary (Europe) Ltd.,經營，地址為：Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，(1)由位於馬爾他的馬爾他博彩管理局授予執照和監管，執照號碼為MGA/CL2/118/2000（2015年5 月26 日），而英國客戶(2)由英國博彩委員會授予執照和監管-"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "上升三白兵 (CDL3WHITESOLDIERS)"
@@ -3252,9 +3300,6 @@ msgstr "權杖名稱"
 msgid "Token permissions"
 msgstr "權杖權限"
 
-msgid "Tokens are special codes for accessing"
-msgstr "權杖是存取的特殊代碼"
-
 msgid "Tooltip background"
 msgstr "工具提示背景"
 
@@ -3315,6 +3360,9 @@ msgstr "交易獲利率"
 msgid "Trades break down"
 msgstr "交易明細"
 
+msgid "Trading Experience"
+msgstr ""
+
 msgid "Trading Times"
 msgstr "交易時間"
 
@@ -3368,6 +3416,9 @@ msgstr "二鴉 (CDL2CROWS)"
 
 msgid "Two-way pricing"
 msgstr "雙向報價"
+
+msgid "Types of lookbacks"
+msgstr ""
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "典型價格 (TYPPRICE)"
@@ -3492,6 +3543,9 @@ msgstr "根據執照要求，我們通知您：在公司失去償付能力的情
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "我們再次得獎。 2007年獲獎之後，BetOnMarkets.com 又一次被《Shares Magazine》雜誌選為2008年度「最佳固定賠率金融交易提供商」"
 
+msgid "We offer three types lookbacks"
+msgstr ""
+
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "我們把 BetOnMarkets.com 更名為"
 
@@ -3531,8 +3585,14 @@ msgstr "歡迎來到Binary.com Webtrader"
 msgid "What are OTC indices and stocks?"
 msgstr "場外交易指數和股票是什麼？"
 
+msgid "What are lookbacks"
+msgstr ""
+
 msgid "What is pep?"
 msgstr "Pep 是什麼？"
+
+msgid "What is this?"
+msgstr ""
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "當您對收到的價格感到滿意時請立刻執行交易。通過我們的獨特平台，您不會遇到滑價或跳空市場。更重要的是，不會有任何未顯示費用。您也可在任何長期合約到期前隨時售出，以保護您的賺取利潤或將虧損降至最低額"
@@ -3557,6 +3617,15 @@ msgstr "我需要安裝任何軟體嗎？"
 
 msgid "Williams' %R (WILLR)"
 msgstr "威廉指標 (WILLR)"
+
+msgid "Win the multiplier times the close minus low"
+msgstr ""
+
+msgid "Win the multiplier times the high minus close"
+msgstr ""
+
+msgid "Win the multiplier times the high minus low"
+msgstr ""
 
 msgid "With Binary.com you can trade"
 msgstr "通過Binary.com，您可以交易"
@@ -3654,8 +3723,8 @@ msgstr "縮放"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "讓客戶輕鬆採用「拖放」功能開發自己的自動化交易機器人"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "而愛爾蘭客戶由(3)愛爾蘭稅務專員辦事處授予執照和監管，執照號碼為1010285 (2015年9 月29 日）。本網站的服務不向一些國家如美國、哥斯大黎加及香港或對年齡不到18歲的使用者提供"
+msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "and start learning how to trade"
 msgstr "並開始學習如何交易"
@@ -3681,8 +3750,8 @@ msgstr "佣金"
 msgid "contact support"
 msgstr "聯繫客服部"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "建立權杖並與複製者共用"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "客服部"
@@ -3731,9 +3800,6 @@ msgstr "於數分鐘內"
 
 msgid "in the future, the"
 msgstr "未來的"
-
-msgid "information about your trading exprience and personal finance"
-msgstr "您的交易經驗與個人財務資訊"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
 msgstr "是Binary的先進桌面交易平台。其多視窗式介面提供了最大的彈性，以符合活躍員通過桌面電腦交易的需求"
@@ -3795,6 +3861,9 @@ msgstr "支付代理"
 msgid "points"
 msgstr "點"
 
+msgid "sec"
+msgstr ""
+
 msgid "second"
 msgstr "秒"
 
@@ -3822,15 +3891,6 @@ msgstr "跳動點"
 msgid "ticks"
 msgstr "跳動點"
 
-msgid "trading experience"
-msgstr "交易經驗"
-
-msgid "trading frequency"
-msgstr "交易頻率"
-
-msgid "view license"
-msgstr "檢視執照"
-
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
@@ -3840,9 +3900,62 @@ msgstr "是"
 msgid "{agent.commission}%"
 msgstr "{代理.佣金}%"
 
-msgid "| Payout"
-msgstr "| 賠付"
+msgid "| Return"
+msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
 
+#~ msgid "Binary mobile applications and third party tools"
+#~ msgstr "Binary移動應用程式和第三方工具"
+
+#~ msgid "Binary options or other financial derivatives"
+#~ msgstr "二元期權或其他金融衍生品"
+
+#~ msgid "Current regulations require that you provide us the following"
+#~ msgstr "目前法規需要您向我們提供以下"
+
+#~ msgid "High Barrier"
+#~ msgstr "高障礙"
+
+#~ msgid "Home Address"
+#~ msgstr "家庭地址"
+
+#~ msgid "Loading"
+#~ msgstr "載入"
+
+#~ msgid "Low Barrier"
+#~ msgstr "低障礙"
+
+#~ msgid "Minimum 6 characters and must contain at least 1 digit"
+#~ msgstr "需至少6個字元和1個數字"
+
+#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
+#~ msgstr "本網站由Binary (IOM) Ltd.在英國和曼島經營，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1)由不列顛群島曼島投資監管委員會授予執照和監管，目前線上博彩執照於2012 年8 月31 日頒發；而英國客戶(2)由英國博彩委員會授予執照和監管-"
+
+#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+#~ msgstr "此網站市場在歐盟其他地區，投資產品由Binary Investments (Europe) Ltd.經營，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商（執照號碼為IS/70156)），而博彩產品由Binary (Europe) Ltd.,經營，地址為：Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，(1)由位於馬爾他的馬爾他博彩管理局授予執照和監管，執照號碼為MGA/CL2/118/2000（2015年5 月26 日），而英國客戶(2)由英國博彩委員會授予執照和監管-"
+
+#~ msgid "Tokens are special codes for accessing"
+#~ msgstr "權杖是存取的特殊代碼"
+
+#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+#~ msgstr "而愛爾蘭客戶由(3)愛爾蘭稅務專員辦事處授予執照和監管，執照號碼為1010285 (2015年9 月29 日）。本網站的服務不向一些國家如美國、哥斯大黎加及香港或對年齡不到18歲的使用者提供"
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "建立權杖並與複製者共用"
+
+#~ msgid "information about your trading exprience and personal finance"
+#~ msgstr "您的交易經驗與個人財務資訊"
+
+#~ msgid "trading experience"
+#~ msgstr "交易經驗"
+
+#~ msgid "trading frequency"
+#~ msgstr "交易頻率"
+
+#~ msgid "view license"
+#~ msgstr "檢視執照"
+
+#~ msgid "| Payout"
+#~ msgstr "| 賠付"
