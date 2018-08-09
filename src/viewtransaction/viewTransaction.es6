@@ -21,7 +21,6 @@ const show_market_data_disruption_win = (proposal) => {
       return;
    }
    const msg = 'There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.'.i18n();
-   // const msg = proposal.validation_error;
    const root = $('<div class="data-disruption-dialog">' + msg + '</div>');
 
    market_data_disruption_win = windows.createBlankWindow(root, {
@@ -188,7 +187,6 @@ const handle_error = (message) => {
 
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
-  // 1. Ongoing 3. Finished
   console.log('state: ', state);
   console.log('open contract', contract);
 
@@ -249,28 +247,26 @@ function draw_chart(contract, state) {
 function draw_vertical_lines(contract, state, chart) {
   const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
   const text_left = true;
-  // TODO: separate ticks and other durations
-  draw_entry_spot(entry_tick_time, chart);
-  draw_start_time(date_start, text_left, chart);
+  draw_entry_spot(entry_tick_time);
+  draw_start_time(date_start, text_left);
 
-  draw_exit_spot(sell_spot_time, exit_tick_time, text_left, chart);
-  draw_end_time(date_expiry, chart);
-  // draw_sell_spot(sell_time, text_left);
+  draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
+  draw_end_time(date_expiry);
 
   function draw_entry_spot(entry_tick_time) {
     const label = 'Entry Spot'.i18n();
-    if (!entry_tick_time || has_label(label)) return;
+    if (!entry_tick_time || chart_has_label(label)) return;
 
     chart.addPlotLineX({ value: entry_tick_time * 1000, label });
   };
 
   function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
     const label = 'Exit Spot'.i18n();
-    const contract_has_no_exit_spot = !sell_spot_time && !exit_tick_time;
-    if (contract_has_no_exit_spot || has_label(label)) return;
+    const contract_has_no_exit_time = !sell_spot_time && !exit_tick_time;
+    if (contract_has_no_exit_time || chart_has_label(label)) return;
 
     let value;
-    if (!!contract.is_path_dependent) {
+    if (!!contract.is_path_dependent || contract.status === 'sold') {
       value = sell_spot_time * 1000;
     } else {
       value = exit_tick_time * 1000;
@@ -280,28 +276,19 @@ function draw_vertical_lines(contract, state, chart) {
   };
 
   function draw_end_time(date_expiry) {
-    // should always be drawn - except for ticks?
     const label = 'End Time'.i18n();
-    if (!date_expiry || has_label(label)) return false;
+    if (!date_expiry || chart_has_label(label)) return false;
 
     chart.addPlotLineX({ value: date_expiry * 1000, label, dashStyle: 'Dash' });
   };
 
   function draw_start_time(date_start, text_left) {
-    // TODO: not for tick contracts?
     const label = 'Start Time'.i18n();
-    if (!date_start || has_label(label)) return;
+    if (!date_start || chart_has_label(label)) return;
     chart.addPlotLineX({ value: date_start * 1000, label, text_left });
   };
 
-  function draw_sell_spot(sell_time, text_left) {
-    // TODO: when should sell spot be drawn?
-    const label = 'Sell Spot'.i18n();
-    if (!sell_time || has_label(label)) return;
-    chart.addPlotLineX({ value: sell_time * 1000, label, text_left });
-  };
-
-  function has_label(label) {
+  function chart_has_label(label) {
     if (state.chart.added_labels.includes(label)) return true;
 
     state.chart.added_labels.push(label);
@@ -373,7 +360,6 @@ const init_dialog = (proposal) => {
          },
          resize: () => {
             state.chart.manual_reflow();
-            // state.chart.chart && state.chart.chart.reflow();
          },
          'data-authorized': 'true'
       });
@@ -397,11 +383,11 @@ const init_dialog = (proposal) => {
 }
 
 const sell_at_market = (state, root) => {
-   state.sell.sell_at_market_enabled = false; /* disable button */
+   state.sell.sell_at_market_enabled = false;
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
    liveapi.send({sell: state.contract_id, price: 0 /* to sell at market */})
       .then((data) => {
-         state.table.user_sold = true; //User successfully sold the contract
+         state.table.user_sold = true;
          const sell = data.sell;
          require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'],
             (html) => {
@@ -633,34 +619,34 @@ const update_barrier = (state, contract = {}) => {
   if (!chart) return;
 
   removePlotlines();
-  state.chart.barrier = state.table.barrier = contract.barrier;
-  state.chart.high_barrier = state.table.high_barrier = contract.high_barrier;
-  state.chart.low_barrier = state.table.low_barrier = contract.low_barrier;
+  chart.barrier = state.table.barrier = contract.barrier;
+  chart.high_barrier = state.table.high_barrier = contract.high_barrier;
+  chart.low_barrier = state.table.low_barrier = contract.low_barrier;
   addPlotlines();
 
   function addPlotlines() {
-    state.chart.barrier && chart.addPlotLineY({
+    chart.barrier && chart.addPlotLineY({
       id: 'barrier',
-      value: state.chart.barrier*1,
-      label: `${state.table.barrier_label || 'Barrier'.i18n()} ( ${state.chart.barrier} )`
+      value: chart.barrier*1,
+      label: `${state.table.barrier_label || 'Barrier'.i18n()} ( ${chart.barrier} )`
     });
-    state.chart.high_barrier && chart.addPlotLineY({
+    chart.high_barrier && chart.addPlotLineY({
       id: 'high_barrier',
-      value: state.chart.high_barrier*1,
-      label: `${state.table.barrier_label || 'High Barrier'.i18n()} ( ${state.chart.high_barrier} )`
+      value: chart.high_barrier*1,
+      label: `${state.table.barrier_label || 'High Barrier'.i18n()} ( ${chart.high_barrier} )`
     });
     state.chart.low_barrier && chart.addPlotLineY({
       id: 'low_barrier',
-      value: state.chart.low_barrier*1,
-      label: `${state.table.low_barrier_label || 'Low Barrier'.i18n()} ( ${state.chart.low_barrier} )`,
+      value: chart.low_barrier*1,
+      label: `${state.table.low_barrier_label || 'Low Barrier'.i18n()} ( ${chart.low_barrier} )`,
       color: 'red'
     });
   };
 
   function removePlotlines() {
-    state.chart.barrier && chart.yAxis[0].removePlotLine('barrier');
-    state.chart.high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
-    state.chart.low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
+    chart.barrier && chart.yAxis[0].removePlotLine('barrier');
+    chart.high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
+    chart.low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
   };
 }
 
