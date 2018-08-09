@@ -61,7 +61,7 @@
 
 .trade-conf .transaction-row {
   margin-top: 2px;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
 }
 
 .ui-dialog .ui-dialog-content.trade-dialog .trade-conf .view-row {
@@ -93,9 +93,7 @@
   background: rgba(46, 136, 54, 0.196);
 }
 .trade-conf .digits-row {
-  margin-top: 15px;
-  max-height: 100px;
-  padding:0 0 5px 0;
+  max-height: 107px;
   overflow-y: hidden;
   display: block;
 }
