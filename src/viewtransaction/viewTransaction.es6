@@ -242,63 +242,70 @@ function draw_chart(contract, state) {
 
   const { chart } = state.chart;
   if (!chart) return;
-  draw_vertical_lines(contract, state);
+  draw_vertical_lines(contract, state, chart);
   draw_barrier(contract, state);
+};
 
-  function draw_vertical_lines(contract, state) {
-    const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
-    const text_left = true;
-    // TODO: separate ticks and other durations
-    // TODO: refactor away from scope
-    // TODO: add time logic
-    draw_entry_spot(entry_tick_time);
-    draw_start_time(date_start, text_left);
+function draw_vertical_lines(contract, state, chart) {
+  const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
+  const text_left = true;
+  // TODO: separate ticks and other durations
+  draw_entry_spot(entry_tick_time, chart);
+  draw_start_time(date_start, text_left, chart);
 
-    draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
-    draw_end_time(date_expiry);
-    // draw_sell_spot(sell_time, text_left);
+  draw_exit_spot(sell_spot_time, exit_tick_time, text_left, chart);
+  draw_end_time(date_expiry, chart);
+  // draw_sell_spot(sell_time, text_left);
 
-    function draw_entry_spot(entry_tick_time) {
-      if (!entry_tick_time) return;
+  function draw_entry_spot(entry_tick_time) {
+    const label = 'Entry Spot'.i18n();
+    if (!entry_tick_time || has_label(label)) return;
 
-      var test = call_function_once(function(){
-        console.log('add entry spot');
-        chart.addPlotLineX({ value: entry_tick_time * 1000, label: 'Entry Spot'.i18n()});
-      });
-      test();
-    };
+    chart.addPlotLineX({ value: entry_tick_time * 1000, label });
+  };
 
-    function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
-      const contract_has_no_exit_spot = !sell_spot_time && !exit_tick_time;
-      if (contract_has_no_exit_spot) return;
+  function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
+    const label = 'Exit Spot'.i18n();
+    const contract_has_no_exit_spot = !sell_spot_time && !exit_tick_time;
+    if (contract_has_no_exit_spot || has_label(label)) return;
 
-      let value;
-      if (!!contract.is_path_dependent) {
-        value = sell_spot_time * 1000;
-      } else {
-        value = exit_tick_time * 1000;
-      }
-
-      chart.addPlotLineX({ value, label: 'Exit Spot'.i18n(), text_left, dashStyle: 'Dash' });
-    };
-
-    function draw_end_time(date_expiry) {
-      // should always be drawn - except for ticks?
-      if (!date_expiry) return false;
-      chart.addPlotLineX({ value: date_expiry * 1000, label: 'End Time'.i18n(), dashStyle: 'Dash' });
-    };
-
-    function draw_start_time(date_start, text_left) {
-      // TODO: not for tick contracts?
-      if (!date_start) return;
-      chart.addPlotLineX({ value: date_start * 1000, label: 'Start Time'.i18n(), text_left });
-    };
-
-    function draw_sell_spot(sell_time, text_left) {
-      // TODO: when should sell spot be drawn?
-      if (!sell_time) return;
-      chart.addPlotLineX({ value: sell_time * 1000, label: 'Sell Spot'.i18n(), text_left });
+    let value;
+    if (!!contract.is_path_dependent) {
+      value = sell_spot_time * 1000;
+    } else {
+      value = exit_tick_time * 1000;
     }
+
+    chart.addPlotLineX({ value, label, text_left, dashStyle: 'Dash' });
+  };
+
+  function draw_end_time(date_expiry) {
+    // should always be drawn - except for ticks?
+    const label = 'End Time'.i18n();
+    if (!date_expiry || has_label(label)) return false;
+
+    chart.addPlotLineX({ value: date_expiry * 1000, label, dashStyle: 'Dash' });
+  };
+
+  function draw_start_time(date_start, text_left) {
+    // TODO: not for tick contracts?
+    const label = 'Start Time'.i18n();
+    if (!date_start || has_label(label)) return;
+    chart.addPlotLineX({ value: date_start * 1000, label, text_left });
+  };
+
+  function draw_sell_spot(sell_time, text_left) {
+    // TODO: when should sell spot be drawn?
+    const label = 'Sell Spot'.i18n();
+    if (!sell_time || has_label(label)) return;
+    chart.addPlotLineX({ value: sell_time * 1000, label, text_left });
+  };
+
+  function has_label(label) {
+    if (state.chart.added_labels.includes(label)) return true;
+
+    state.chart.added_labels.push(label);
+    return false
   };
 };
 
@@ -478,6 +485,7 @@ const init_state = (proposal, root) =>{
          high_barrier: proposal.high_barrier,
          low_barrier: proposal.low_barrier,
          loading: 'Loading ' + proposal.display_name + ' ...',
+         added_labels: [],
          type: 'ticks', // could be 'tick' or 'ohlc'
          manual_reflow: () => {
           /* TODO: find a better solution for resizing the chart  :/ */
