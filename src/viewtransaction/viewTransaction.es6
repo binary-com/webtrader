@@ -297,6 +297,9 @@ function draw_vertical_lines(contract, state, chart) {
 };
 
 const on_contract_finished = (contract, state) => {
+  state.note = 'This contract has expired'.i18n();
+  state.table.is_ended = true;
+  state.table.status = contract.status;
   state.table.is_sold = contract.is_sold;
   state.table.exit_tick = contract.exit_tick;
   state.table.exit_tick_time = contract.exit_tick_time;
@@ -552,25 +555,19 @@ const update_live_chart = (state, granularity) => {
   };
 
   function handle_tick() {
-    let perv_tick = null;
     on_tick_cb = liveapi.events.on('tick', (data) => {
-        const { chart } = state.chart;
         if (!data.tick || data.tick.symbol !== state.chart.symbol) return;
 
+        const { chart } = state.chart;
+        const { status } = state.table;
         const { tick } = data;
-        add_tick_to_chart(chart, tick);
-
-        const contract_has_finished = tick.epoch * 1 > state.table.date_expiry * 1 || state.table.is_sold;
+        const contract_has_finished = !!state.table.is_sold || status !== 'open';
         if (contract_has_finished) {
-          if(perv_tick && state.table.contract_type !== 'SPREAD') {
-              state.table.exit_tick = perv_tick.quote;
-              state.table.exit_tick_time = perv_tick.epoch*1;
-              state.note = 'This contract has expired'.i18n();
-              state.table.is_ended = true;
-          }
           clean_up();
-        }
-        perv_tick = tick;
+          return;
+        };
+
+        add_tick_to_chart(chart, tick);
     });
 
     function add_tick_to_chart(chart, tick) {
