@@ -9,6 +9,7 @@ import 'common/util';
 import Lookback from 'trade/lookback';
 
 const open_dialogs = {};
+const display_decimals = 3;
 
 require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
@@ -44,23 +45,27 @@ const init_chart = (root, state, options) => {
    let data = [];
    let type = '';
    let decimal_digits = 0;
-   if(options.history){
+
+   if (options.history) {
       type = 'line';
-      const history = options.history;
-      const times = history.times;
-      const prices = history.prices;
-      for(let i = 0; i < times.length; ++i) {
-         data.push([times[i]*1000, prices[i]*1]);
+      const { history } = options;
+      const { times } = history;
+      const { prices } = history;
+
+      for (let i = 0; i < times.length; ++i) {
+         data.push([times[i] * 1000, prices[i] * 1]);
          decimal_digits = Math.max(decimal_digits, prices[i].substring(prices[i].indexOf('.') + 1).length);
       }
    }
-   if(options.candles) {
+
+   if (options.candles) {
       type = 'candlestick';
       data = options.candles.map(
          (c) => [c.epoch*1000, c.open*1, c.high*1, c.low*1, c.close*1]
       )
    }
-   const title = options.title;
+
+   const { title } = options;
    const el = root.find('.transaction-chart')[0];
    const chart_options = {
       credits: { href: '#', text: '' },
@@ -73,10 +78,8 @@ const init_chart = (root, state, options) => {
          marginLeft:20,
          marginRight:20
       },
-      title:{
-         text: '' // Removing the title because it is redundant.
-      },
-      tooltip:{
+      title: { text: '' },
+      tooltip: {
          xDateFormat:'%A, %b %e, %H:%M:%S GMT',
          valueDecimals: decimal_digits || undefined,
       },
@@ -95,7 +98,7 @@ const init_chart = (root, state, options) => {
           x: 0,
           y: -2,
           formatter() {
-            return addComma(this.value.toFixed(3));
+            return addComma(this.value.toFixed(display_decimals));
           },
         },
          title: '',
@@ -105,8 +108,8 @@ const init_chart = (root, state, options) => {
          data: data,
          type: type
       }],
-      exporting: {enabled: false, enableImages: false},
-      legend: {enabled: false},
+      exporting: { enabled: false, enableImages: false},
+      legend: { enabled: false},
       navigator: { enabled: true },
       plotOptions: {
          line: {
@@ -128,7 +131,7 @@ const init_chart = (root, state, options) => {
       chart.xAxis[0].addPlotLine({
          value: options.value,
          id: options.id || options.value,
-         label: {text: options.label || 'label', x: options.text_left ? -15 : 5},
+         label: { text: options.label || 'label', x: options.text_left ? -15 : 5},
          color: options.color || '#e98024',
          zIndex: 4,
          width: options.width || 2,
@@ -140,7 +143,7 @@ const init_chart = (root, state, options) => {
       chart.yAxis[0].addPlotLine({
          id: options.id || options.label,
          value: options.value,
-         label: {text: options.label, align: 'center'},
+         label: { text: options.label, align: 'center'},
          color: options.color || 'green',
          zIndex: 4,
          width: 2,
@@ -151,7 +154,7 @@ const init_chart = (root, state, options) => {
 
 /* get the tick value for a given epoch */
 const get_tick_value = (symbol, epoch) => {
-   return liveapi.send({ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end:epoch+2, count: 1})
+   return liveapi.send({ ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end: epoch + 2, count: 1 })
       .catch((err) => console.error(err));
 }
 
@@ -244,8 +247,9 @@ function draw_chart(contract, state) {
 
   const { chart } = state.chart;
   if (!chart) return;
+
   draw_vertical_lines(contract, state, chart);
-  draw_barrier(contract, state);
+  handle_barrier(contract, state);
 };
 
 function draw_vertical_lines(contract, state, chart) {
@@ -323,13 +327,16 @@ const make_note = (contract, state) => {
   }
 };
 
-const draw_barrier = (contract, state) => {
+const handle_barrier = (contract, state) => {
   const should_update_barrier = +state.chart.barrier !== +contract.barrier ||
     +state.chart.high_barrier !== +contract.high_barrier ||
     +state.chart.low_barrier !== +contract.low_barrier;
 
   if (should_update_barrier) {
-    update_barrier(state, contract);
+    state.chart.barrier = contract.barrier;
+    state.chart.high_barrier = contract.high_barrier;
+    state.chart.low_barrier = contract.low_barrier;
+    draw_barrier(state, contract);
   }
 };
 
@@ -493,9 +500,9 @@ const init_state = (proposal, root) =>{
           state.chart.chart.hasUserSize = null;
           if (state.chart.chart.series[0] && state.chart.chart.series[0].data.length === 0) {
             state.chart.chart.showLoading();
-          } else {
-            state.chart.chart.hideLoading();
+            return;
           }
+          state.chart.chart.hideLoading();
        },
       },
       sell: {
@@ -601,7 +608,7 @@ const update_live_chart = (state, granularity) => {
         last.update(ohlc,true);
       }
 
-      const contract_has_finished = c.epoch*1 > state.table.date_expiry*1;
+      const contract_has_finished = c.epoch * 1 > state.table.date_expiry * 1;
       if (contract_has_finished) clean_up();
     });
   };
@@ -616,44 +623,44 @@ const update_live_chart = (state, granularity) => {
   };
 };
 
-const update_barrier = (state, contract = {}) => {
+const draw_barrier = (state, contract = {}) => {
   const { chart } = state.chart;
   if (!chart) return;
 
-  removePlotlines();
-  chart.barrier = state.table.barrier = contract.barrier;
-  chart.high_barrier = state.table.high_barrier = contract.high_barrier;
-  chart.low_barrier = state.table.low_barrier = contract.low_barrier;
-  addPlotlines();
+  add_barriers_to_chart();
 
-  function addPlotlines() {
-    chart.barrier && chart.addPlotLineY({
-      id: 'barrier',
-      value: chart.barrier*1,
-      label: `${state.table.barrier_label || 'Barrier'.i18n()} ( ${chart.barrier} )`
-    });
-    chart.high_barrier && chart.addPlotLineY({
-      id: 'high_barrier',
-      value: chart.high_barrier*1,
-      label: `${state.table.barrier_label || 'High Barrier'.i18n()} ( ${chart.high_barrier} )`
-    });
-    state.chart.low_barrier && chart.addPlotLineY({
-      id: 'low_barrier',
-      value: chart.low_barrier*1,
-      label: `${state.table.low_barrier_label || 'Low Barrier'.i18n()} ( ${chart.low_barrier} )`,
-      color: 'red'
-    });
+  function add_barriers_to_chart() {
+    const { barrier, high_barrier, low_barrier } = state.chart;
+
+    remove_barriers(barrier, high_barrier, low_barrier);
+
+    if (barrier) {
+      const barrier_label = `${state.table.barrier_label || 'Barrier'.i18n()} ( ${addComma((+barrier).toFixed(display_decimals))} )`;
+      add_plot_line_y('barrier', barrier, barrier_label);
+    }
+    if (high_barrier) {
+      const high_barrier_label = `${state.table.barrier_label || 'High Barrier'.i18n()} ( ${addComma((+high_barrier).toFixed(display_decimals))} )`;
+      add_plot_line_y('high_barrier', high_barrier, high_barrier_label);
+    }
+    if (low_barrier){
+      const low_barrier_label = `${state.table.low_barrier_label || 'Low Barrier'.i18n()} ( ${addComma((+low_barrier).toFixed(display_decimals))} )`;
+      add_plot_line_y('low_barrier', low_barrier, low_barrier_label, 'red');
+    }
+
+    function add_plot_line_y(id, value, label, color) {
+      chart.addPlotLineY({ id, value, label, color });
+    };
   };
 
-  function removePlotlines() {
-    chart.barrier && chart.yAxis[0].removePlotLine('barrier');
-    chart.high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
-    chart.low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
+  function remove_barriers(barrier, high_barrier, low_barrier) {
+    barrier && chart.yAxis[0].removePlotLine('barrier');
+    high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
+    low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
   };
 }
 
 const get_chart_data = (state, root) => {
-  const duration = Math.min(state.table.date_expiry*1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
+  const duration = Math.min(state.table.date_expiry * 1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
 
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
@@ -706,6 +713,7 @@ const get_chart_data = (state, root) => {
 
 
   function on_tick_history_success(data) {
+    console.log(data);
     state.chart.loading = '';
 
     const chart_options = make_chart_options(data, state.chart.display_name);
