@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-06-09 13:00-0400\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Thai\n"
-"Language: th_TH\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"PO-Revision-Date: 2018-08-09 18:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -36,9 +36,6 @@ msgstr "รางวัล ‘Financial Betting Operator of the Year’ ได�
 msgid "'contract period'"
 msgstr "'ระยะเวลาสัญญา'"
 
-msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
-
 msgid "(One) Touch trades"
 msgstr "(One) Touch Trades"
 
@@ -47,12 +44,6 @@ msgstr "(เดิมชื่อ"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือ สิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
-
-msgid "(license reference no: 39172)"
-msgstr ""
-
-msgid "(license reference no: 39495)"
-msgstr ""
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") ได้เปิดใช้งานจริง ให้บริการการพนันทางการเงินในดัชนีทางการเงินต่างๆ ที่หลากหลายทั้งวันทั้งคืน ธุรกิจเติบโตอย่างรวดเร็ว และในไม่ช้าพวกเราก้าวสู่การเป็นผู้นำตลาดการพนันทางการเงินแบบ Fixed-Odds"
@@ -387,9 +378,6 @@ msgstr "รูปแบบแผนภูมิที่ประกอบด้
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr "อนุพันธ์ คือ เครื่องมือทางการเงินประเภทหนึ่งซึ่งมูลค่าถูกกำหนดโดยการอ้างอิงของตลาด โดยทั่วไปการซื้อขายอนุพันธ์เกิดขึ้นในตลาดฟอเร็กซ์ และไบนารีเป็นรูปแบบที่ง่ายที่สุดของอนุพันธ์"
 
-msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
-
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "แท่งเทียนขนาดกลางถึงยาวของตลาดตื่นตัว หรือ ตลาดซบเซา โดยมีคุณสมบัติหลักๆ คือ ไม่มีเงาทั้งหัว หรือ หาง"
 
@@ -456,9 +444,6 @@ msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 msgid "Add/remove indicators"
 msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 
-msgid "Address"
-msgstr ""
-
 msgid "Admin"
 msgstr "ผู้ดูแลระบบ"
 
@@ -467,9 +452,6 @@ msgstr "Advance Block (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
-
-msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
 
 msgid "All market conditions"
 msgstr "ทุกเงื่อนไขในตลาด"
@@ -594,9 +576,6 @@ msgstr "Average True Range (ATR)"
 msgid "Avg. Duration"
 msgstr "เวลาเฉลี่ย"
 
-msgid "Avg. Duration of Open Positions"
-msgstr ""
-
 msgid "Avg. Loss"
 msgstr "ขาดทุนเฉลี่ย"
 
@@ -631,8 +610,7 @@ msgid "Barrier(s)"
 msgstr "Barrier"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr ""
-"ซบเซา: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขึ้น แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้นและสร้างช่องว่างด้านบน ควรจะมีเงาการขายด้วย รูปแบบนี้แสดงถึงความอ่อนแอในการขึ้นอย่างมีความเสี่ยงในการรวมเข้าด้วยกัน และมีความเป็นไปได้ในการกลับตัว \n"
+msgstr "ซบเซา: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขึ้น แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้นและสร้างช่องว่างด้านบน ควรจะมีเงาการขายด้วย รูปแบบนี้แสดงถึงความอ่อนแอในการขึ้นอย่างมีความเสี่ยงในการรวมเข้าด้วยกัน และมีความเป็นไปได้ในการกลับตัว \n"
 "ตื่นตัว: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขาลง แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้น รูปแบบนี้แสดงถึงความอ่อนแอในการรวมเข้าด้วยกันและความเป็นไปได้ในการกลับตัวของแนวโน้ม"
 
 msgid "Belt-hold (CDLBELTHOLD)"
@@ -677,6 +655,9 @@ msgstr "พื้นฐานไบนารีออปชั่น"
 msgid "Binary granted Investment Services license"
 msgstr "ไบนารีได้รับใบอนุญาตการให้บริการการลงทุน"
 
+msgid "Binary mobile applications and third party tools"
+msgstr "Binary แอพพลิเคชันบนอุปกรณ์พกพา และเครื่องมือของผู้พัฒนาอิสระอื่นๆ"
+
 msgid "Binary opens Japan office"
 msgstr "Binary เปิดสำนักงานที่ประเทศญี่ปุ่น"
 
@@ -686,17 +667,14 @@ msgstr "ไบนารีออปชั่น"
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
 msgstr "ไบนารีออปชั่นเข้าใจง่าย เหตุที่ถูกเรียกว่า 'ไบนารี' เนื่องจากผลลัพธ์มีเพียง 2 อย่าง คือ ชนะ หรือ แพ้ หากท่านคาดการณ์ถูกต้อง ท่านจะได้รับการชำระเงินตามที่กำหนดไว้ตั้งแต่เริ่มต้นของการซื้อขาย หากท่านแพ้ ท่านจะเสียเพียงเงินที่วางเดิมพันครั้งแรกของท่าน"
 
+msgid "Binary options or other financial derivatives"
+msgstr "ไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
+
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "ประสบการณ์การซื้อขายไบนารีออปชั่น หรือ อนุพันธ์ต่างๆ"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "ความถี่ในการซื้อขายไบนารีออปชั่น หรือ อนุพันธ์ต่างๆ"
-
-msgid "Binary options trading experience"
-msgstr ""
-
-msgid "Binary options trading frequency"
-msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr "การซื้อขายไบนารีมีความยืดหยุ่น"
@@ -844,15 +822,6 @@ msgstr "โดยการคลิก"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
-
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
-
-msgid "CFD trading experience"
-msgstr ""
-
-msgid "CFD trading frequency"
-msgstr ""
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
@@ -1069,6 +1038,9 @@ msgstr "ตัวชี้วัดปัจจุบัน"
 
 msgid "Current password"
 msgstr "รหัสผ่านปัจจุบัน"
+
+msgid "Current regulations require that you provide us the following"
+msgstr "ด้วยหลักเกณฑ์ของการกำกับดูแลในปัจจุบัน ท่านต้องเตรียมเอกสารต่อไปนี้"
 
 msgid "Current time"
 msgstr "เวลาปัจจุบัน"
@@ -1436,9 +1408,6 @@ msgstr "ขั้นแรก ท่านต้องกำหนดตัว�
 msgid "Flexible"
 msgstr "ยืดหยุ่น"
 
-msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
-
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "สำหรับสามปีที่ต่อเนื่อง BetOnMarkets.com ได้รับคัดเลือกจากคะแนนนิยมกับตำแหน่ง 'Best Fixed-Odds Financial Trading Provider' โดย Shares Magazine UK ซึ่งเป็นครั้งสุดท้ายที่ชนะ เนื่องจาก Shares Magazine ยุติการให้รางวัลในหมวดนี้หลังจากนั้น"
 
@@ -1535,6 +1504,9 @@ msgstr "ตัวช่วย"
 msgid "High"
 msgstr "สูง"
 
+msgid "High Barrier"
+msgstr "Barrier สูง"
+
 msgid "High barrier"
 msgstr "Barrier สูง"
 
@@ -1564,6 +1536,9 @@ msgstr "Hikkake Pattern (CDLHIKKAKE)"
 
 msgid "Historical Data"
 msgstr "ข้อมูลเก่า"
+
+msgid "Home Address"
+msgstr "ที่อยู่ (บ้าน)"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "Homing Pigeon (CDLHOMINGPIGEON)"
@@ -1597,12 +1572,6 @@ msgstr "ข้าพเจ้ารับรองว่า ข้าพเจ�
 
 msgid "I have read and agree to Binary.com"
 msgstr "ฉันได้อ่าน และยอมรับกับ Binary.com"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
-
-msgid "I want to be treated as a professional client"
-msgstr ""
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "ฉันเป็นมือใหม่สำหรับไบนารี ฉันจะเริ่มอย่างไร?"
@@ -1653,8 +1622,7 @@ msgid "In an uptrend three successive days opens at or near the previous day's c
 msgstr "ในสามวันที่เป็นขาขึ้นต่อเนื่องกันเปิดที่ หรือ ใกล้กับราคาปิดวันก่อน และปิดในวันนั้น รูปแบบนี้รุนแรงกว่ารูปแบบ Three Black Crows แต่มีความน่าเชื่อถือมากกว่าว่าเป็น รูปแบบการกลับตัวของราคา"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
-msgstr ""
-"รูปแบบคลาสสิกซิลิคอน วัลเลย์ ผู้จัดการกองทุนเฮดจ์ที่ประเทศฮ่องกง นาย Jean-Yves Sireau ก่อตั้ง Regent Markets จากห้องนอนของเขาในประเทศฮ่องกง\n"
+msgstr "รูปแบบคลาสสิกซิลิคอน วัลเลย์ ผู้จัดการกองทุนเฮดจ์ที่ประเทศฮ่องกง นาย Jean-Yves Sireau ก่อตั้ง Regent Markets จากห้องนอนของเขาในประเทศฮ่องกง\n"
 "เขาพัฒนาระบบต่างๆ วิธีการ และ อัลกอริธึ่มสำหรับระบบการซื้อขายผลิตภัณฑ์การเงินแบบ Fixed-Odds วิสัยทัศน์ของ Jean-Yves คือ การสร้างตลาดที่ง่ายที่สุดสำหรับสัญญาอนุพันธ์ที่เป็นแบบ Fixed-Odds Bet และเสนอให้กับนักลงทุนทั่วๆ ไป ในการซื้อขายเล็กๆ ในระยะแรก กระทั่งนวัตกรรมของเขาเป็นที่แพร่หลายสำหรับการซื้อขายไบนารีออปชั่นปริมาณมาก"
 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar"
@@ -1666,14 +1634,8 @@ msgstr "เพื่อการใช้งานธีมอย่างมี
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
-
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "ในสหราชอาณาจักร และเกาะ Isle of Man ลูกค้าของเราซื้อขายผ่านบริษัท Binary (IOM) Ltd และประเทศญี่ปุ่น ดำเนินการซื้อขายผ่าน Binary KK ในสหพันธ์ยุโรป (ยกเว้นสหราชอาณาจักร) ลูกค้าซื้อขายผ่านบริษัท Binary (Europe) Ltd และ Binary Investments (Europe) Ltd และประเทศอื่นๆ ในภูมิภาคอื่น พวกเขาซื้อขายผ่านบริษัท Binary (C.R.) S.A"
-
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
@@ -1930,14 +1892,11 @@ msgstr "มองหาเทียนสีดำสูงที่มีเง
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่งมีช่องว่างเหนือลำตัวของเทียนแท่งก่อนหน้า วันสุดท้าย คือ แท่งเทียนสีดำอีกแท่งหนึ่ง แต่แท่งนี้กลืนแท่งเทียนตลาดซบเซาก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
 
-msgid "Lookbacks"
-msgstr ""
-
-msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
-
 msgid "Low"
 msgstr "ต่ำ"
+
+msgid "Low Barrier"
+msgstr "Barrier ต่ำ"
 
 msgid "Low barrier"
 msgstr "Barrier ต่ำ"
@@ -2047,6 +2006,9 @@ msgstr "ต่ำสุด: 10 สูงสุด: 2000"
 msgid "Minimum (MIN)"
 msgstr "Minimum (MIN)"
 
+msgid "Minimum 6 characters and must contain at least 1 digit"
+msgstr "อย่างน้อย 6 อักขระ และ ต้องมีตัวเลขอย่างน้อย 1 ตัว"
+
 msgid "Minimum of 2 characters required"
 msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 2 อักขระ"
 
@@ -2055,9 +2017,6 @@ msgstr "จำนวนตัวอักขระน้อยที่สุด
 
 msgid "Minimum of 6 characters required"
 msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 6 อักขระ"
-
-msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "ราคาต่ำสุดในช่วงเวลาเลือก"
@@ -2106,9 +2065,6 @@ msgstr "นาง"
 
 msgid "Ms"
 msgstr "นางสาว"
-
-msgid "Multiplier"
-msgstr ""
 
 msgid "Name"
 msgstr "ชื่อ"
@@ -2473,9 +2429,6 @@ msgstr "หลัก"
 msgid "Print chart"
 msgstr "พิมพ์แผนภูมิ"
 
-msgid "Professional Client"
-msgstr ""
-
 msgid "Profit"
 msgstr "กำไร"
 
@@ -2562,9 +2515,6 @@ msgstr "ธุรกรรมของ Regent Pacific"
 
 msgid "Register free account"
 msgstr "ลงทะเบียนบัญชีใหม่ฟรี"
-
-msgid "Regulatory Information"
-msgstr ""
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Relative Strength Index (RSI)"
@@ -2751,9 +2701,6 @@ msgstr "Smoothed Moving Average (SMMA)"
 
 msgid "Sold"
 msgstr "ขาย"
-
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
 
 msgid "Source of wealth"
 msgstr "แหล่งที่มาของรายได้"
@@ -3199,9 +3146,6 @@ msgstr "การซื้อขายเหล่านี้ดำเนิน
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "ค่าเฉลี่ยเคลื่อนที่นี้ใช้เส้นโค้งของการแจกแจงปกติ (Gauss) ซึ่งสามารถกำหนดโดยตัวแปรออฟเซ็ตจาก 0 ถึง 1 ตัวแปรนี้ควบคุมความเรียบของแนวโน้มและความไวสูงของค่าเฉลี่ยเคลื่อนที่ Sigma มีอีกตัวแปรหนึ่งที่ใช้จัดการรูปร่างของสัมประสิทธิ์เส้นโค้ง"
 
-msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
-
 msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
 
@@ -3216,6 +3160,12 @@ msgstr "นี้คือราคาปัจจุบันที่ผลิ
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr "รูปแบบนี้เกิดขึ้นเมื่อมีแท่งเทียนสีดำสองวันปรากฏขึ้นที่มีราคาปิดเท่ากันในแนวโน้มขาลง สัญญาณ Matching Low เป็นตัวบอกจุดต่ำสุดได้เกิดขึ้นแล้ว แม้ว่าเป็นการทดสอบราคาปิดต่ำสุดใหม่และไม่มีอะไรตามมาอีก เป็นการแสดงสัญญาณราคาที่ดี"
+
+msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
+msgstr "เว็บไซต์นี้ใช้สำหรับประเทศสหราชอาณาจักรและเกาะ  Isle of Man โดยบริษัท Binary (IOM) Ltd. ตั้งอยู่ที่ ชั้น 1 อาคาร Millennium House ถนน Victoria เขต Douglas IM2 4RW บนเกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและผ่านหลักเกณฑ์ต่อไปนี้ (1) Gambling Supervision Commission บนเกาะ Isle of Man ในบริติชไอลส์ ใบอนุญาตสำหรับผลิตภัณฑ์การเสี่ยงโชคออนไลน์ได้รับเมื่อ 31 สิงหาคม พ.ศ. 2555 (ค.ศ. 2012) และสำหรับลูกค้าในสหราชอาณาจักรได้รับใบอนุญาตจาก (2) UK Gambling Commission -"
+
+msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+msgstr "เว็บไซต์นี้ได้พัฒนาเพื่อประเทศต่างๆ ในภูมิภาคยุโรปอื่นๆ สำหรับผลิตภัณฑ์การลงทุนโดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตเลขที่ IS/70156) และสำหรับผลิตภัณฑ์การพนัน โดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมาย โดย (1) Malta Gaming Authority in Malta ประเทศมอลตา (ใบอนุญาตเลขที่ MGA/CL2/118/2000) ออกให้เมื่อวันที่ 26 พฤษภาคม พ.ศ. 2558 หรือ ค.ศ. 2015) สำหรับลูกค้าสหราชอาณาจักรโดย (2) UK Gambling Commission -"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
@@ -3304,6 +3254,9 @@ msgstr "ชื่อโทเค่น"
 msgid "Token permissions"
 msgstr "สิทธิ์โทเค่น"
 
+msgid "Tokens are special codes for accessing"
+msgstr "โทเค่นมีรหัสพิเศษเพื่อการเข้าถึง"
+
 msgid "Tooltip background"
 msgstr "พื้นหลังของป้ายคำแนะนำ"
 
@@ -3364,9 +3317,6 @@ msgstr "ความสามารถในการทำกำไรของ
 msgid "Trades break down"
 msgstr "ไม่สามารถซื้อขายได้"
 
-msgid "Trading Experience"
-msgstr ""
-
 msgid "Trading Times"
 msgstr "เวลาซื้อขาย"
 
@@ -3420,9 +3370,6 @@ msgstr "Two Crows (CDL2CROWS)"
 
 msgid "Two-way pricing"
 msgstr "ราคา 2 ทาง (2-Way Pricing)"
-
-msgid "Types of lookbacks"
-msgstr ""
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Typical Price (TYPPRICE)"
@@ -3547,9 +3494,6 @@ msgstr "พวกเราถูกกำหนดโดยใบอนุญา
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "เราทำได้อีกแล้ว เราคว้ารางวัลจาก BetOnMarkets.com ในปี พ.ศ. 2550 (ค.ศ. 2007) โดยได้รับคะแนนลงมติให้เป็น 'Best Fixed-Odds Financial Trading Provider' ในปี พ.ศ. 2551 (ค.ศ. 2008)"
 
-msgid "We offer three types lookbacks"
-msgstr ""
-
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "เราได้เปลี่ยนชื่อ BetOnMarkets.com เป็น"
 
@@ -3589,14 +3533,8 @@ msgstr "ยินดีต้อนรับสู่ Binary.com Webtrader"
 msgid "What are OTC indices and stocks?"
 msgstr "ดัชนี OTC และหลักทรัพย์ OTC คืออะไร?"
 
-msgid "What are lookbacks"
-msgstr ""
-
 msgid "What is pep?"
 msgstr "PEP คืออะไร?"
-
-msgid "What is this?"
-msgstr ""
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "เมื่อท่านพอใจกับราคาที่ท่านได้รับ ดำเนินการซื้อขายทันที ในแพลตฟอร์มที่เป็นเอกลักษณ์ของเรา ท่านจะไม่ต้องต่อสู้กับ 'Slippage' หรือ ช่องว่างในตลาด และที่สำคัญที่สุด ไม่มีค่าธรรมเนียมที่มองไม่เห็น ท่านสามารถขายคืนการซื้อขายระยะยาวเมื่อใดก็ได้ก่อนที่จะหมดอายุเพื่อปกป้องกำไรที่ท่านอาจจะได้รับหรือลดการขาดทุนให้น้อยที่สุด"
@@ -3621,15 +3559,6 @@ msgstr "ต้องติดตั้งซอฟท์แวร์ใดๆ �
 
 msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
-
-msgid "Win the multiplier times the close minus low"
-msgstr ""
-
-msgid "Win the multiplier times the high minus close"
-msgstr ""
-
-msgid "Win the multiplier times the high minus low"
-msgstr ""
 
 msgid "With Binary.com you can trade"
 msgstr "เมื่อท่านเลือก Binary.com ท่านสามารถใช้งาน"
@@ -3727,8 +3656,8 @@ msgstr "ขยาย"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "อนุญาตให้ลูกค้าพัฒนาเครื่องมื่อสำหรับซื้อขายอัตโนมัติของเขาโดยการลากและวางอย่างง่ายๆ"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
+msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr "และสำหรับลูกค้าในประเทศไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (ใบอนุญาตของ Remote Bookmaker เลขที่ 1010285 ออกให้เมื่อวันที่ 29 กันยายน พ.ศ. 2558 หรือ ค.ศ. 2015) ไม่มีการให้บริการของเว็บไซต์นี้ในบางประเทศ เช่น สหรัฐอเมริกา คอสตาริกา ฮ่องกง หรือ สำหรับบุคคลที่อายุน้อยกว่า 18 ปี"
 
 msgid "and start learning how to trade"
 msgstr "และเริ่มเรียนรู้วิธีการซื้อขาย"
@@ -3746,7 +3675,7 @@ msgid "auto-trader programming tool"
 msgstr "เครื่องมือในการตั้งซื้อขายแบบอัตโนมัติ"
 
 msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "<<โดยการคลิก ยอมรับ>> ด้านล่างนี้ เพื่อดำเนินการเปิดบัญชี ขอเรียนให้ท่านทราบว่า ท่านอาจะมีความเสี่ยง (ที่อาจจะมีนัยสำคัญ รวมถึงความเสี่ยงในการขาดทุนมูลค่าทั้งหมดที่ได้ลงทุน) ซึ่งท่านอาจจะไม่มีความรู้และประสบการณ์เพื่อประเมินและจัดการอย่างเหมาะสม"
+msgstr "ด้านล่างนี้ เพื่อดำเนินการเปิดบัญชี ขอเรียนให้ท่านทราบว่า ท่านอาจะมีความเสี่ยง (ที่อาจจะมีนัยสำคัญ รวมถึงความเสี่ยงในการขาดทุนมูลค่าทั้งหมดที่ได้ลงทุน) ซึ่งท่านอาจจะไม่มีความรู้และประสบการณ์เพื่อประเมินและจัดการอย่างเหมาะสม"
 
 msgid "commission"
 msgstr "คอมมิชชั่น"
@@ -3804,6 +3733,9 @@ msgstr "ในเวลาเพียงไม่กี่นาที"
 
 msgid "in the future, the"
 msgstr "ในอนาคต"
+
+msgid "information about your trading exprience and personal finance"
+msgstr "ข้อมูลเกี่ยวกับประสบการณ์การซื้อขายและการเงินส่วนบุคคลของท่าน"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
 msgstr "คือ ระบบซื้อขายของ Binary ขั้นสูง บนเดสก์ทอป ลักษณะหน้าจอที่มีความยืดหยุ่นโดยสามารถเปิดได้หลายหน้าต่างพร้อมๆ กัน และเหมาะอย่างยิ่งสำหรับผู้ใช้งานที่ต้องทำงานของเขาไปด้วยบนคอมพิวเตอร์ส่วนบุคคลแบบเดสก์ทอป"
@@ -3865,9 +3797,6 @@ msgstr "ตัวแทนรับชำระเงิน"
 msgid "points"
 msgstr "จุด"
 
-msgid "sec"
-msgstr ""
-
 msgid "second"
 msgstr "วินาที"
 
@@ -3895,6 +3824,15 @@ msgstr "ช่วงห่างของราคา"
 msgid "ticks"
 msgstr "ช่วงห่างของราคา"
 
+msgid "trading experience"
+msgstr "ประสบการณ์การซื้อขาย"
+
+msgid "trading frequency"
+msgstr "ความถี่ในการซื้อขาย"
+
+msgid "view license"
+msgstr "ดูใบอนุญาต"
+
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
@@ -3904,8 +3842,8 @@ msgstr "ใช่"
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
-msgid "| Return"
-msgstr ""
+msgid "| Payout"
+msgstr "| การชำระเงิน"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"
