@@ -90,9 +90,15 @@ const init_chart = (root, state, options) => {
          labels: { overflow:"justify", format:"{value:%H:%M:%S}" },
       },
       yAxis: {
-         labels: { align: 'left', x: 0, y: -2 },
+        labels: {
+          align: 'left',
+          x: 0,
+          y: -2,
+          formatter() {
+            return addComma(this.value.toFixed(3));
+          },
+        },
          title: '',
-         // gridLineWidth: 0,
       },
       series: [{
          name: title,
@@ -319,13 +325,13 @@ const make_note = (contract, state) => {
 
 const draw_barrier = (contract, state) => {
   const should_update_barrier = +state.chart.barrier !== +contract.barrier ||
-  +state.chart.high_barrier !== +contract.high_barrier ||
-  +state.chart.low_barrier !== +contract.low_barrier;
+    +state.chart.high_barrier !== +contract.high_barrier ||
+    +state.chart.low_barrier !== +contract.low_barrier;
 
   if (should_update_barrier) {
     update_barrier(state, contract);
   }
-}
+};
 
 const draw_sparkline = (contract, state) => {
   if (state.sell.bid_prices.length > 40) {
@@ -559,6 +565,7 @@ const update_live_chart = (state, granularity) => {
         const { chart } = state.chart;
         const { status } = state.table;
         const { tick } = data;
+
         const contract_has_finished = !!state.table.is_sold || status !== 'open';
         if (contract_has_finished) {
           clean_up();
@@ -707,11 +714,7 @@ const get_chart_data = (state, root) => {
     state.chart.manual_reflow();
 
     function make_chart_options(data, title) {
-      return ({
-        title,
-          history: data.history ? data.history : null,
-          candles: data.candles ? data.candles : null,
-      });
+      return ({ title, ...data });
     };
   };
 
