@@ -4,13 +4,7 @@
   </div>
   <div rv-show="is_virtual | eq false">
     <div rv-show="is_loading">
-      <div class="barspinner dark">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
+      <loader-dark />
     </div>
     <div rv-show="is_loading | eq false">
       <div class="copytrade-settings table">
@@ -259,7 +253,7 @@
         </div>
       </div>
       <div rv-show="allowCopy.allow_copiers | trim | eq '1'" class="copytrade-tradermsg">
-        <p class="copytrade-tradermsg--lightgray">Go to <a rv-on-click="openTokenMgmt" class="openTokenMgmt">Token Management</a>, create a token, and share the token with copier(s).</p>
+        <p class="copytrade-tradermsg--lightgray">Go to <a rv-on-click="openTokenMgmt" class="openTokenMgmt">Token Management</a>, create a Read-only token, and share the token with your copier(s).</p>
       </div>
     </div>
   </div>

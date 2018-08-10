@@ -936,6 +936,9 @@ msgstr "Indeks Choppiness (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "Klik untuk masuk pada akun Binary.com Anda"
 
@@ -1844,9 +1847,6 @@ msgstr "Memuat template grafik"
 
 msgid "Load trade template"
 msgstr "Muat template trading"
-
-msgid "Loading"
-msgstr "Loading"
 
 msgid "Loading Asset Index"
 msgstr "Loading Indeks Aset"
@@ -3750,8 +3750,8 @@ msgstr "komisi"
 msgid "contact support"
 msgstr "hubungi support"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "buat token dan bagikan token pada penduplikasi"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "customer support"
@@ -3905,6 +3905,12 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
+
+#~ msgid "Loading"
+#~ msgstr "Loading"
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "buat token dan bagikan token pada penduplikasi"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Opsi Binary atau derivatif keuangan lainnya"

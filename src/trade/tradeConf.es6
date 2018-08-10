@@ -1,9 +1,4 @@
-﻿/*
- * Created by amin on December 4, 2015.
- */
-
-import _ from 'lodash';
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import moment from 'moment';
 import liveapi from '../websockets/binary_websockets';
 import rv from '../common/rivetsExtra';
@@ -11,8 +6,10 @@ import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
 import Lookback from './lookback';
+import '../common/util';
 
 /* rv binder to show tick chart for this confirmation dialog */
+let display_decimals;
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
    bind: function(el) {
@@ -26,6 +23,7 @@ rv.binders['tick-chart'] = {
             backgroundColor: null, /* make background transparent */
             width: (el.getAttribute('width') || 400)*1,
             height: (el.getAttribute('height') || 120)*1,
+            marginLeft: 20,
          },
          tooltip: {
             formatter: function () {
@@ -40,7 +38,13 @@ rv.binders['tick-chart'] = {
             labels: { enabled: false, }
          },
          yAxis: {
-            labels: { align: 'left', x: 0, },
+            labels: {
+                  align: 'left',
+                  x: 0,
+                  formatter() {
+                        return addComma(this.value.toFixed(display_decimals));
+                  },
+            },
             title: '',
             gridLineWidth: 0,
          },
@@ -61,146 +65,199 @@ rv.binders['tick-chart'] = {
       });
    },
    routine: function(el, ticks){
+      // Handles updating chart: state.ticks.array updates => routine fires
       const model = this.model;
-      const addPlotLineX = (chart, options) => {
-         chart.xAxis[0].addPlotLine({
-            value: options.value,
-            id: options.id || options.value,
-            label: {text: options.label || 'label'},
-            color: options.color || '#e98024',
-            width: options.width || 2,
-         });
-      };
+      const tick_idx = ticks.length;
+      const barrier = model.make_barrier();
+      const { contract_is_finished } = model;
 
-      const addPlotLineY = (chart,options) => {
-         chart.yAxis[0].addPlotLine({
-            id: options.id || options.label,
-            value: options.value,
-            label: {text: options.label, align: 'center'},
-            color: 'green',
-            width: 2,
-         });
-
-         /* Add plotline value to invisible seri to make the plotline always visible. */
-         chart.series[1].addPoint([1, options.value*1]);
-      };
-
-      const index = ticks.length;
-      if(index == 0) return;
-
-      const tick = _.last(ticks);
-      el.chart.series[0].addPoint([index, tick.quote*1]);
-
-      const plot_x = model.getPlotX(); // could return null
-      plot_x && addPlotLineX(el.chart,plot_x);
-      const plot_y = model.getPlotY(); // could return null
-      plot_y && el.chart.yAxis[0].removePlotLine(plot_y.id);
-      plot_y && addPlotLineY(el.chart, plot_y);
-
-   } /* end of routine() */
-};
-
-const last_1000_ticks = []; /* record the last 1k ticks returned */
-liveapi.events.on('tick', (data) => {
-   const tick = data.tick;
-   tick.quote *= 1;
-   tick.epoch *= 1;
-   last_1000_ticks.push(tick);
-   if(last_1000_ticks.length > 1000)
-      last_1000_ticks.shift();
-});
-
-const register_ticks = (state, extra) => {
-   let tick_count = extra.tick_count * 1,
-      symbol = extra.symbol,
-      purchase_epoch = state.buy.purchase_time * 1,
-      fn = null;
-
-   /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const add_tick = (tick) =>{
-      if (_.findIndex(state.ticks.array, (t) => (t.epoch*1 === tick.epoch*1)) === -1 && tick_count > 0) {
-         const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, symbol);
-         state.ticks.array.push({
-            quote: tick.quote,
-            epoch: tick.epoch,
-            number: state.ticks.array.length + 1,
-            tooltip: moment.utc(tick.epoch*1000).format("dddd, MMM D, HH:mm:ss") + "<br/>" +
-            extra.symbol_name + " " + tick.quote.toFixed(decimal_digits),
-            decimal_digits : decimal_digits
-         });
-         --tick_count;
-         if (tick_count === 0) {
-            state.ticks.update_status();
-            state.buy.update();
-            /* show buy-price final and profit & update title */
-            state.back.visible = true;
-            /* show back button */
-            liveapi.events.off('proposal_open_contract', fn);
-            liveapi.proposal_open_contract.forget(extra.contract_id);
-            /* unregister from proposal_open_contract stream */
-         }
-         /* update state for each new tick in Up/Down && Asians contracts */
-         if (state.ticks.category.contract_category !== 'digits')
-            state.ticks.update_status();
+      if (barrier) {
+            draw_barrier(barrier);
       }
-   }
 
-   let entry = null, expiry = null;
-   let tracking_timeout_set = false;
-   const track_ticks = () => {
-      tracking_timeout_set = false;
-      last_1000_ticks.filter(
-         (tick) => (tick.symbol === extra.symbol && tick.epoch*1 >= entry && tick.epoch*1 <= expiry)
-      ).forEach(add_tick);
-      if(tick_count > 0) {
-         tracking_timeout_set = true;
-         setTimeout(track_ticks, 300);
-      }
-   }
-
-   fn = liveapi.events.on('proposal_open_contract', (data) => {
-      if(data.error) {
-            $.growl.error({message: data.error.message});
-            liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
-            liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+      if (contract_is_finished) {
+            draw_exit_spot(model, ticks);
             return;
       }
-      const contract = data.proposal_open_contract;
-      if(contract.contract_id !== extra.contract_id) return;
-      entry = contract.entry_tick_time ? contract.entry_tick_time * 1 : entry;
-      // DONT TRUST BACKEND! I'm really angry right now :/
-      // Try everything before calculating expiry.
-      expiry = contract.exit_tick_time ? contract.exit_tick_time * 1 : contract.date_expiry ? contract.date_expiry * 1: expiry;
-      if(!tracking_timeout_set && entry && expiry)
-         track_ticks();
-      return;
+
+      if (tick_idx === 0) return;
+
+      draw_tick(tick_idx);
+
+      if (tick_idx === 1) {
+            draw_entry_spot(tick_idx);
+      }
+
+      function draw_exit_spot(model, ticks) {
+            const is_path_dependent_contract = !!model.is_path_dependent;
+            let exit_tick_idx = ticks.findIndex((tick) => {
+                  if (is_path_dependent_contract) {
+                        return tick.epoch === (+model.sell_spot_time);
+                  }
+                  return tick.epoch === (+model.exit_tick_time);
+            });
+            const exit_spot = model.make_exit_spot(exit_tick_idx + 1);
+            draw_x_line(el.chart, exit_spot);
+      };
+
+      function draw_tick(tick_idx) {
+            const tick = ticks[tick_idx -1];
+            el.chart.series[0].addPoint([tick_idx, tick.quote]);
+      };
+
+      function draw_entry_spot(tick_idx) {
+            const is_label_left = true;
+            const entry_spot = model.make_entry_spot(tick_idx);
+            draw_x_line(el.chart, entry_spot, is_label_left);
+      };
+
+      function draw_barrier(barrier) {
+            el.chart.yAxis[0].removePlotLine(barrier.id);
+            draw_y_line(el.chart, barrier);
+      };
+
+      function draw_x_line(chart, options, align_label_left) {
+            const label_x_position = align_label_left ? -15 : 5;
+   
+            chart.xAxis[0].addPlotLine({
+               value: options.value,
+               id: options.id || options.value,
+               label: {text: options.label || 'label', x:  label_x_position },
+               color: options.color || '#e98024',
+               width: options.width || 2,
+               dashStyle: options.dashStyle || false,
+            });
+      };
+
+      function draw_y_line(chart,options) {
+            chart.yAxis[0].addPlotLine({
+               id: options.id || options.label,
+               value: options.value,
+               label: {text: options.label, align: 'center'},
+               color: 'green',
+               width: 2,
+            });
+            /* Add plotline value to invisible seri to make the plotline always visible. */
+            chart.series[1].addPoint([1, options.value*1]);
+      };
+   }
+};
+
+const register_ticks = (state, extra) => {
+   let proposal_open_contract;
+   let on_proposal_open_contract;
+   let on_tick;
+   let { tick_count } = extra;
+   /* No need to worry about WS connection getting closed, because the user will be logged out */
+   const add_tick  = (tick) => {
+      const is_or_after_contract_entry = (+tick.epoch) >= (+proposal_open_contract.entry_tick_time);
+      const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch * 1 === tick.epoch * 1);
+      const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
+
+      if (should_add_new_tick) {
+            const contract_is_finished = proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
+            state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
+
+            if (contract_is_finished) {
+                  on_contract_finished(proposal_open_contract);
+                  update_chart();
+            }
+            tick_count--;
+            if (tick_count > -1) {
+                  add_tick_to_state(tick);
+            }
+      }
+   }
+
+   function add_tick_to_state(tick) {
+      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+      const tooltip = make_tooltip(tick);
+
+      state.ticks.array.push({
+         quote: (+tick.quote),
+         epoch: (+tick.epoch),
+         number: state.ticks.array.length + 1,
+         tooltip,
+         decimal_digits,
+      });
+
+      function make_tooltip(tick) {
+            const tick_time = moment.utc(tick.epoch*1000).format('dddd, MMM D, HH:mm:ss');
+            const { symbol_name } = extra;
+            const tick_quote_formatted = (+tick.quote).toFixed(decimal_digits);
+
+            return `${tick_time}<br/>${symbol_name} ${(+tick.quote).toFixed(decimal_digits)}`;
+      };
+   };
+
+   function update_chart() {
+            const tick_arr_copy = state.ticks.array.slice();
+            state.ticks.array = [...tick_arr_copy];
+    }
+
+   const on_contract_finished = (proposal_open_contract) => {
+      forget_stream_and_cb();
+
+      state.ticks.contract_is_finished = true;
+      state.ticks.is_path_dependent = proposal_open_contract.is_path_dependent ? proposal_open_contract.is_path_dependent : null;
+      state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
+      state.ticks.sell_spot_time = proposal_open_contract.sell_spot_time ? proposal_open_contract.sell_spot_time : null;
+      state.ticks.status = proposal_open_contract.status;
+
+      state.buy.update();
+      state.back.visible = true;
+
+      function forget_stream_and_cb() {
+            const { contract_id } = extra;
+            liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+            liveapi.events.off('tick', on_tick);
+            liveapi.proposal_open_contract.forget(contract_id);
+      };
+   };
+
+   on_proposal_open_contract = liveapi.events.on('proposal_open_contract', (data) => {
+            const is_different_open_contract_stream = data.proposal_open_contract.contract_id !== extra.contract_id;
+            if (is_different_open_contract_stream) return;
+
+            if (data.error) {
+                  on_open_proposal_error(data);
+                  return;
+            }
+
+            ({ proposal_open_contract } = data);
    });
+   
+  let temp_ticks = [];
+  on_tick = liveapi.events.on('tick', (data) => {
+      const is_different_stream = extra.symbol !== data.tick.symbol;
+      if (is_different_stream) return;
+
+      const waiting_for_contract_entry_tick = !proposal_open_contract || !proposal_open_contract.entry_tick_time;
+      if (waiting_for_contract_entry_tick) {
+            temp_ticks.push(data.tick);
+            return;
+      }
+
+      if (temp_ticks.length > 0) {
+            temp_ticks.forEach((stored_tick) => add_tick(stored_tick));
+            temp_ticks = [];
+      }
+
+      add_tick(data.tick);
+    });
+
+   const on_open_proposal_error = (data) => {
+      $.growl.error({message: data.error.message});
+      liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
+      liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
+   };
 }
 
-/** @param data
-*  @param extra = {
-*    currency: ,
-*    symbol: "frxXAUUSD",
-*    symbol_name: "Gold/USD",
-*    category: {},
-*    category_display: ,
-*    duration_unit: ,
-*      pip: "0.001",
-*   }
-* @param show_callback
-* @param hide_callback
-**/
 export const init = (data, extra, show_callback, hide_callback) => {
+   display_decimals = data.display_decimals || 3;
    const root = $(html).i18n();
-   const buy = data.buy;
+   const { buy } = data;
    const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-   extra.getbarrier = (tick) => {
-      let barrier = tick.quote*1;
-      if(extra.barrier && !_(['rise','fall']).includes(extra.category_display.name)) {
-         barrier += extra.barrier*1;
-      }
-      return barrier.toFixed(decimal_digits);
-   }
    const state = {
       title: {
          text: 'Contract Confirmation'.i18n(),
@@ -226,36 +283,16 @@ export const init = (data, extra, show_callback, hide_callback) => {
       },
       ticks: {
          array: [],
-         average: () => {
-            const ticks = state.ticks;
-            const array = ticks.array;
-            let sum = 0;
-            for(let i = 0; i < array.length; ++i)
-               sum += array[i].quote*1;
-            const avg = sum / (array.length || 1);
-            return avg;
-         },
-         getPlotX: () => {
-            const ticks = state.ticks;
-            const inx = ticks.array.length;
-            if(inx === 1) return {value: inx, label: 'Entry Spot'.i18n()};
-            if(inx === ticks.tick_count) return {value:inx, label: 'Exit Spot'.i18n()}
-            return null;
-         },
-         getPlotY: () => {
-            const ticks = state.ticks;
-            const inx = ticks.array.length;
-            const tick = ticks.array[inx-1];
-            if(ticks.category.contract_category === 'callput' && inx === 1) {
-               const barrier = extra.getbarrier(tick);
-               state.buy.barrier = barrier; /* update barrier value to show in confirm dialog */
-               return {value: barrier*1, label:'Barrier ('.i18n() +barrier+')', id: 'plot-barrier-y'};
-            }
-
-            if(ticks.category.contract_category === 'asian') {
-               //https://trello.com/c/ticslmb4/518-incorrect-decimal-points-for-asian-average
-               const avg = ticks.average().toFixed(decimal_digits + 1);
-               return {value: avg, label:'Average ('.i18n() + avg + ')', id: 'plot-barrier-y'};
+         contract_is_finished: false,
+         exit_tick_time: null,
+         sell_spot_time: null,
+         is_path_dependent: null,
+         make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
+         make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
+         make_barrier: () => {
+            const { barrier } = state.buy;
+            if (barrier) {
+                  return { value: +barrier, label: 'Barrier ('.i18n() + addComma(barrier.toFixed(display_decimals)) + ')', id: 'plot-barrier-y'};
             }
             return null;
          },
@@ -279,7 +316,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
    }
 
    state.buy.update = () => {
-      const status = state.ticks.status;
+      const { status } = state.ticks;
       state.title.text = { waiting: 'Contract Confirmation'.i18n(),
          won : 'This contract won'.i18n(),
          lost: 'This contract lost'.i18n()
@@ -294,37 +331,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
          liveapi.sell_expired(); // to update balance immediately
       }
       state.buy.show_result = true;
-   }
-   state.ticks.update_status = () => {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-
-      const first_quote = _.head(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         last_quote = _.last(state.ticks.array).quote.toFixed(decimal_digits) + '',
-         barrier = extra.getbarrier(_.head(state.ticks.array)) + '',
-         digits_value = state.ticks.value + '',
-         average = state.ticks.average().toFixed(5);
-      const category = state.ticks.category,
-         display = state.ticks.category_display.sentiment;
-      const css = {
-         digits: {
-            match:  _.last(last_quote) === digits_value,
-            differ:  _.last(last_quote) !== digits_value,
-            over: _.last(last_quote)*1 > digits_value*1,
-            under: _.last(last_quote)*1 < digits_value*1,
-            odd: (_.last(last_quote)*1)%2 === 1,
-            even: (_.last(last_quote)*1)%2 === 0
-         },
-         callput: {
-            up: last_quote*1 > barrier*1,
-            down: last_quote*1 < barrier*1,
-         },
-         asian: {
-            up: average < last_quote*1,
-            down: average > last_quote*1,
-         }
-      };
-      /* set the css class */
-      state.ticks.status = css[category.contract_category][display] ? 'won' : 'lost';
    }
 
    state.back.onclick = () => hide_callback(root);

@@ -936,6 +936,9 @@ msgstr "Indice de volatilité (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "Cliquez pour vous connecter à votre compte Binary.com."
 
@@ -1844,9 +1847,6 @@ msgstr "Charger le modèle graphique"
 
 msgid "Load trade template"
 msgstr "Charger le modèle de trading"
-
-msgid "Loading"
-msgstr "Chargement"
 
 msgid "Loading Asset Index"
 msgstr "Chargement Indice des actifs"
@@ -3750,8 +3750,8 @@ msgstr "commission"
 msgid "contact support"
 msgstr "contacter le service clientèle"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "créer un jeton et partager le jeton avec un(des) copieur(s)"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "service clientèle"
@@ -3905,6 +3905,12 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permettant aux clients, affiliés, et développeurs d'acheter et vendre des produits Binary.com"
+
+#~ msgid "Loading"
+#~ msgstr "Chargement"
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "créer un jeton et partager le jeton avec un(des) copieur(s)"
 
 #~ msgid "Binary options or other financial derivatives"
 #~ msgstr "Options binaires ou autres produits financiers dérivés"

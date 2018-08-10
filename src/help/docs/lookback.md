@@ -7,13 +7,13 @@ A lookback contract has a payout that depends on the optimum high or low achieve
 We offer three types lookbacks:
 
 - Win the multiplier times the high minus close.
-![High-Close](https://www.binary.com/images/pages/trade-explanation/close-high-image.svg)
+![High-Close](https://www.binary.com/images/pages/trade-explanation/en/high-close.svg)
 
 - Win the multiplier times the close minus low.
-![Close-Low](https://www.binary.com/images/pages/trade-explanation/close-low-image.svg)
+![Close-Low](https://www.binary.com/images/pages/trade-explanation/en/close-low.svg)
 
 - Win the multiplier times the high minus low.
-![High-Low](https://www.binary.com/images/pages/trade-explanation/high-low-image.svg)
+![High-Low](https://www.binary.com/images/pages/trade-explanation/en/high-low.svg)
 
 
 For example, let’s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a ‘Close-Low’ lookback with a multiplier of $2 would have a payout of:

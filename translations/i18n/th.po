@@ -907,6 +907,9 @@ msgstr "ดัชนี Choppiness (CHOP)"
 msgid "Chrome"
 msgstr "Chrome"
 
+msgid "Citizenship"
+msgstr ""
+
 msgid "Click to log in with your Binary.com account"
 msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของท่าน"
 
@@ -1810,9 +1813,6 @@ msgstr "โหลดแผนภูมิแม่แบบ"
 
 msgid "Load trade template"
 msgstr "โหลดแม่แบบสำหรับซื้อขาย"
-
-msgid "Loading"
-msgstr "กำลังโหลด..."
 
 msgid "Loading Asset Index"
 msgstr "กำลังโหลดดัชนีสินทรัพย์"
@@ -3683,8 +3683,8 @@ msgstr "คอมมิชชั่น"
 msgid "contact support"
 msgstr "ติดต่อฝ่ายบริการลูกค้า"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "สร้างโทเค่น และแชร์โทเค่นกับท่านอื่น"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "ฝ่ายบริการลูกค้า"
@@ -3848,3 +3848,47 @@ msgstr "| การชำระเงิน"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"
 
+#~ msgid "Loading"
+#~ msgstr "กำลังโหลด..."
+
+#~ msgid "create a token, and share the token with copier(s)"
+#~ msgstr "สร้างโทเค่น และแชร์โทเค่นกับท่านอื่น"
+
+#~ msgid "Binary options or other financial derivatives"
+#~ msgstr "ไบนารีออปชั่น หรือ อนุพันธ์อื่นๆ"
+
+#~ msgid "Current regulations require that you provide us the following"
+#~ msgstr "ด้วยหลักเกณฑ์ของการกำกับดูแลในปัจจุบัน ท่านต้องเตรียมเอกสารต่อไปนี้"
+
+#~ msgid "High Barrier"
+#~ msgstr "Barrier สูง"
+
+#~ msgid "Home Address"
+#~ msgstr "ที่อยู่ (บ้าน)"
+
+#~ msgid "Low Barrier"
+#~ msgstr "Barrier ต่ำ"
+
+#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
+#~ msgstr "เว็บไซต์นี้ใช้สำหรับประเทศสหราชอาณาจักรและเกาะ  Isle of Man โดยบริษัท Binary (IOM) Ltd. ตั้งอยู่ที่ ชั้น 1 อาคาร Millennium House ถนน Victoria เขต Douglas IM2 4RW บนเกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและผ่านหลักเกณฑ์ต่อไปนี้ (1) Gambling Supervision Commission บนเกาะ Isle of Man ในบริติชไอลส์ ใบอนุญาตสำหรับผลิตภัณฑ์การเสี่ยงโชคออนไลน์ได้รับเมื่อ 31 สิงหาคม พ.ศ. 2555 (ค.ศ. 2012) และสำหรับลูกค้าในสหราชอาณาจักรได้รับใบอนุญาตจาก (2) UK Gambling Commission -"
+
+#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+#~ msgstr "เว็บไซต์นี้ได้พัฒนาเพื่อประเทศต่างๆ ในภูมิภาคยุโรปอื่นๆ สำหรับผลิตภัณฑ์การลงทุนโดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตเลขที่ IS/70156) และสำหรับผลิตภัณฑ์การพนัน โดย Binary (Europe) Limited ตั้งอยู่ที่อาคาร Mompalao Suite 2 ถนน Tower เขต Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลทางกฎหมาย โดย (1) Malta Gaming Authority in Malta ประเทศมอลตา (ใบอนุญาตเลขที่ MGA/CL2/118/2000) ออกให้เมื่อวันที่ 26 พฤษภาคม พ.ศ. 2558 หรือ ค.ศ. 2015) สำหรับลูกค้าสหราชอาณาจักรโดย (2) UK Gambling Commission -"
+
+#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+#~ msgstr "และสำหรับลูกค้าในประเทศไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (ใบอนุญาตของ Remote Bookmaker เลขที่ 1010285 ออกให้เมื่อวันที่ 29 กันยายน พ.ศ. 2558 หรือ ค.ศ. 2015) ไม่มีการให้บริการของเว็บไซต์นี้ในบางประเทศ เช่น สหรัฐอเมริกา คอสตาริกา ฮ่องกง หรือ สำหรับบุคคลที่อายุน้อยกว่า 18 ปี"
+
+#~ msgid "information about your trading exprience and personal finance"
+#~ msgstr "ข้อมูลเกี่ยวกับประสบการณ์การซื้อขายและการเงินส่วนบุคคลของท่าน"
+
+#~ msgid "trading experience"
+#~ msgstr "ประสบการณ์การซื้อขาย"
+
+#~ msgid "trading frequency"
+#~ msgstr "ความถี่ในการซื้อขาย"
+
+#~ msgid "view license"
+#~ msgstr "ดูใบอนุญาต"
+
+#~ msgid "| Payout"
+#~ msgstr "| การชำระเงิน"
