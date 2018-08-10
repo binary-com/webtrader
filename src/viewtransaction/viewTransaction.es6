@@ -4,7 +4,6 @@ import liveapi from 'websockets/binary_websockets';
 import chartingRequestMap from 'charts/chartingRequestMap';
 import rv from 'common/rivetsExtra';
 import moment from 'moment';
-import _ from 'lodash';
 import 'jquery-growl';
 import 'common/util';
 import Lookback from 'trade/lookback';
@@ -63,7 +62,6 @@ const init_chart = (root, state, options) => {
    }
    const title = options.title;
    const el = root.find('.transaction-chart')[0];
-
    const chart_options = {
       credits: { href: '#', text: '' },
       chart: {
@@ -87,8 +85,8 @@ const init_chart = (root, state, options) => {
          categories:null,
          startOnTick: false,
          endOnTick: false,
-         min: data.length ? _.first(data)[0] : null,
-         max: data.length ? _.last(data)[0] : null,
+         min: data.length ? data[0][0] : null,
+         max: data.length ? data[data.length - 1][0] : null,
          labels: { overflow:"justify", format:"{value:%H:%M:%S}" },
       },
       yAxis: {
@@ -219,7 +217,7 @@ const update_indicative = (data, state) => {
   function update_state_sell() {
     state.sell.is_valid_to_sell = contract.is_valid_to_sell;
 
-    if (!_.isNil(contract.bid_price)) {
+    if (contract.bid_price) {
       state.sell.bid_price.value = contract.bid_price;
       [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
     }
