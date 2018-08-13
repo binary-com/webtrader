@@ -214,7 +214,7 @@ const update_indicative = (data, state) => {
   state.chart.manual_reflow();
 
   function update_state_table() {
-    state.proposal_open_contract.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
+    state.proposal_open_contract.user_sold = contract.sell_spot_time && contract.sell_spot_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.proposal_open_contract.bid_price = contract.bid_price;
@@ -253,7 +253,7 @@ function draw_chart(contract, state) {
 };
 
 function draw_vertical_lines(contract, state, chart) {
-  const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start, sell_time } = contract;
+  const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start } = contract;
   const text_left = true;
   draw_entry_spot(entry_tick_time);
   draw_start_time(date_start, text_left);
@@ -439,8 +439,6 @@ const init_state = (proposal, root) => {
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
-        tick_count: proposal.tick_count,
-        sell_time: proposal.sell_spot_time * 1 || undefined,
         sell_spot: proposal.sell_spot,
         sell_price: proposal.is_sold ? proposal.sell_price : undefined,
         purchase_time: proposal.purchase_time,
@@ -479,7 +477,7 @@ const init_state = (proposal, root) => {
         currency: (proposal.currency ||  'USD') + ' ',
         is_ended: proposal.is_settleable || proposal.is_sold,
         is_sold_at_market: false,
-        user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
+        user_sold: proposal.sell_spot_time && proposal.sell_spot_time < proposal.date_expiry,
         isLookback: Lookback.isLookback(proposal.contract_type),
         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
@@ -674,10 +672,11 @@ const get_chart_data = (state, root) => {
   };
 
   function make_tick_history_request(granularity, margin) {
+    // TODO: fix this
     const request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.proposal_open_contract.date_start) * 1 - margin, /* load around 2 more thicks before start */
-      end: state.table.sell_time ? state.table.sell_time * 1 + margin : state.proposal_open_contract.exit_tick_time ? state.proposal_open_contract.exit_tick_time * 1 + margin : 'latest',
+      end: state.proposal_open_contract.sell_spot_time ? state.proposal_open_contract.sell_spot_time * 1 + margin : state.proposal_open_contract.exit_tick_time ? state.proposal_open_contract.exit_tick_time * 1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };

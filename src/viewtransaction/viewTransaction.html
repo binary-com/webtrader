@@ -99,7 +99,7 @@
           <span rv-html="proposal_open_contract.sell_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
           <span rv-html="proposal_open_contract.sell_price | percent-of proposal_open_contract.buy_price"
-                rv-data-balloon='table.sell_time | moment | or "return"'
+                rv-data-balloon='proposal_open_contract.sell_spot_time | moment | or "return"'
                 class="dotted-underline smaller"></span>
       </div>
     </div>
