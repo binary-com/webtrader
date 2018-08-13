@@ -26,7 +26,7 @@
       <div> <p>Start Time</p>
           <span rv-text="proposal_open_contract.date_start | moment | or '-'"></span>
       </div>
-      <div rv-if="table.user_sold | not-eq true | and table.exit_tick_time | eq undefined"> <p>Current Spot Time</p>
+      <div rv-if="proposal_open_contract.user_sold | not-eq true | and table.exit_tick_time | eq undefined"> <p>Current Spot Time</p>
           <span rv-text="proposal_open_contract.current_spot_time | moment | or '-'"></span>
           <br />
           <span rv-if="proposal_open_contract.current_spot_time"
@@ -34,15 +34,15 @@
                 rv-data-balloon='"running"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-if="table.user_sold | not-eq true | and table.exit_tick_time "> <p>Exit Spot Time</p>
+      <div rv-if="proposal_open_contract.user_sold | not-eq true | and table.exit_tick_time "> <p>Exit Spot Time</p>
           <span rv-text="table.exit_tick_time | moment | or '-'"></span>
       </div>
       <div> <p>End Time</p>
-          <span rv-text="table.date_expiry | moment | or '-'"></span>
+          <span rv-text="proposal_open_contract.date_expiry | moment | or '-'"></span>
           <br />
           <span rv-if="proposal_open_contract.current_spot_time"
                 rv-show="table.is_sold | not-eq 1"
-                rv-text="proposal_open_contract.current_spot_time | moment-humanize table.date_expiry"
+                rv-text="proposal_open_contract.current_spot_time | moment-humanize proposal_open_contract.date_expiry"
                 rv-data-balloon='"remaining"'
                 class="dotted-underline smaller"></span>
       </div>
@@ -54,10 +54,10 @@
                 rv-text="table.entry_tick | or '-'"
                 class="dotted-underline entry-spot"></span>
       </div>
-      <div rv-if="table.user_sold | not-eq true | and table.exit_tick | eq undefined"> <p>Current Spot</p>
+      <div rv-if="proposal_open_contract.user_sold | not-eq true | and table.exit_tick | eq undefined"> <p>Current Spot</p>
           <span rv-text="proposal_open_contract.current_spot | or '-'" rv-indicative-color="proposal_open_contract.current_spot"></span>
       </div>
-      <div rv-if="table.user_sold | not-eq true | and table.exit_tick | and table.isLookback | eq false"> <p>Exit Spot</p>
+      <div rv-if="proposal_open_contract.user_sold | not-eq true | and table.exit_tick | and table.isLookback | eq false"> <p>Exit Spot</p>
           <span rv-text="table.exit_tick | or '-'"></span>
       </div>
       <div rv-if="table.isLookback">
@@ -95,7 +95,7 @@
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-class-center="table.user_sold | or table.barrier_count | eq 2"> <p>Final Price</p>
+      <div rv-class-center="proposal_open_contract.user_sold | or table.barrier_count | eq 2"> <p>Final Price</p>
           <span rv-html="table.final_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
           <span rv-html="table.final_price | percent-of table.buy_price"

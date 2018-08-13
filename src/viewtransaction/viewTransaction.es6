@@ -214,7 +214,7 @@ const update_indicative = (data, state) => {
   state.chart.manual_reflow();
 
   function update_state_table() {
-    state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
+    state.proposal_open_contract.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.table.bid_price = contract.bid_price;
@@ -311,7 +311,7 @@ const on_contract_finished = (contract, state) => {
   state.table.is_sold = contract.is_sold;
   state.table.exit_tick = contract.exit_tick;
   state.table.exit_tick_time = contract.exit_tick_time;
-  state.table.date_expiry = contract.date_expiry;
+  state.proposal_open_contract.date_expiry = contract.date_expiry;
   state.table.sell_price = contract.sell_price;
   state.table.final_price = contract.sell_price;
 };
@@ -399,7 +399,7 @@ const sell_at_market = (state, root) => {
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
    liveapi.send({sell: state.proposal_open_contract.contract_id, price: 0 /* to sell at market */})
       .then((data) => {
-         state.table.user_sold = true;
+         state.proposal_open_contract.user_sold = true;
          const sell = data.sell;
          require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'],
             (html) => {
@@ -438,9 +438,6 @@ const init_state = (proposal, root) => {
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
-        date_expiry: proposal.date_expiry,
-        user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
-
         entry_tick: proposal.entry_tick || proposal.entry_spot,
         entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
         exit_tick: proposal.exit_tick,
@@ -497,6 +494,7 @@ const init_state = (proposal, root) => {
         final_price: proposal.is_sold ? proposal.sell_price : undefined,
         is_ended: proposal.is_settleable || proposal.is_sold,
         is_sold_at_market: false,
+        user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
         isLookback: Lookback.isLookback(proposal.contract_type),
         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
@@ -603,7 +601,7 @@ const update_live_chart = (state, granularity) => {
         last.update(ohlc,true);
       }
 
-      const contract_has_finished = c.epoch * 1 > state.table.date_expiry * 1;
+      const contract_has_finished = c.epoch * 1 > state.proposal_open_contract.date_expiry * 1;
       if (contract_has_finished) clean_up();
     });
   };
@@ -655,7 +653,7 @@ const draw_barrier = (state, contract = {}) => {
 }
 
 const get_chart_data = (state, root) => {
-  const duration = Math.min(state.table.date_expiry * 1, moment.utc().unix()) - (state.table.purchase_time || state.proposal_open_contract.date_start);
+  const duration = Math.min(state.proposal_open_contract.date_expiry * 1, moment.utc().unix()) - (state.table.purchase_time || state.proposal_open_contract.date_start);
 
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
