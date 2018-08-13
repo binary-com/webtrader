@@ -328,12 +328,13 @@ const make_note = (contract, state) => {
 
 const handle_barrier = (contract, state) => {
   const { barrier, high_barrier, low_barrier } = contract;
-  const should_update_barrier = +state.chart.barrier !== +barrier ||
-    +state.chart.high_barrier !== +high_barrier ||
-    +state.chart.low_barrier !== +low_barrier;
+  const should_update_barrier = +state.proposal_open_contract.barrier !== +barrier ||
+    +state.proposal_open_contract.high_barrier !== +high_barrier ||
+    +state.proposal_open_contract.low_barrier !== +low_barrier;
 
   if (should_update_barrier) {
-    state.chart = { ...state.chart, barrier, high_barrier, low_barrier };
+    // TODO: move state update one step up
+    state.proposal_open_contract = { ...state.proposal_open_contract, barrier, high_barrier, low_barrier };
     draw_barrier(state, contract);
   }
 };
@@ -438,10 +439,6 @@ const init_state = (proposal, root) => {
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
-        barrier_count: proposal.barrier_count,
-        low_barrier: proposal.low_barrier,
-        high_barrier: proposal.high_barrier,
-
         multiplier: proposal.multiplier,
         buy_price: proposal.buy_price,
         bid_price: undefined,
@@ -459,9 +456,6 @@ const init_state = (proposal, root) => {
          chart: null, /* highchart object */
          symbol: proposal.symbol,
          display_name: proposal.display_name,
-         barrier: proposal.barrier,
-         high_barrier: proposal.high_barrier,
-         low_barrier: proposal.low_barrier,
          loading: 'Loading ' + proposal.display_name + ' ...',
          added_labels: [],
          type: 'ticks', // could be 'tick' or 'ohlc'
@@ -614,13 +608,14 @@ const update_live_chart = (state, granularity) => {
 };
 
 const draw_barrier = (state, contract = {}) => {
+  // TODO: move chart check one step up, pass down barrriers
   const { chart } = state.chart;
   if (!chart) return;
 
   add_barriers_to_chart();
 
   function add_barriers_to_chart() {
-    const { barrier, high_barrier, low_barrier } = state.chart;
+    const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
 
     remove_barriers(barrier, high_barrier, low_barrier);
 

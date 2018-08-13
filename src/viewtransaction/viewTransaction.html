@@ -72,17 +72,17 @@
         <p>Potential Payout</p>
         <span rv-html="table.lb_formula"></span>
       </div>
-      <div rv-if="table.barrier_count | not-eq 2">
+      <div rv-if="proposal_open_contract.barrier_count | not-eq 2">
           <p rv-text="table.barrier_label | or 'Barrier' | i18n"></p>
-          <span rv-text="chart.barrier | or '-'"></span>
+          <span rv-text="proposal_open_contract.barrier | or '-'"></span>
       </div>
-      <div rv-if="table.barrier_count | eq 2">
+      <div rv-if="proposal_open_contract.barrier_count | eq 2">
           <p rv-text="table.barrier_label | or 'High Barrier' | i18n"></p>
-          <span rv-text="table.high_barrier | or '-'"></span>
+          <span rv-text="proposal_open_contract.high_barrier | or '-'"></span>
       </div>
-      <div rv-if="table.barrier_count | eq 2">
+      <div rv-if="proposal_open_contract.barrier_count | eq 2">
           <p rv-text="table.low_barrier_label | or 'Low Barrier' | i18n"></p>
-          <span rv-text="table.low_barrier | or '-'"></span>
+          <span rv-text="proposal_open_contract.low_barrier | or '-'"></span>
       </div>
 
       <div> <p>Purchase Price</p>
@@ -95,7 +95,7 @@
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-class-center="proposal_open_contract.user_sold | or table.barrier_count | eq 2"> <p>Final Price</p>
+      <div rv-class-center="proposal_open_contract.user_sold | or proposal_open_contract.barrier_count | eq 2"> <p>Final Price</p>
           <span rv-html="table.final_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
           <span rv-html="table.final_price | percent-of table.buy_price"
