@@ -264,7 +264,6 @@ function draw_vertical_lines(contract, state, chart) {
   function draw_entry_spot(entry_tick_time) {
     const label = 'Entry Spot'.i18n();
     if (!entry_tick_time || chart_has_label(label)) return;
-
     chart.addPlotLineX({ value: entry_tick_time * 1000, label });
   };
 
@@ -306,6 +305,7 @@ function draw_vertical_lines(contract, state, chart) {
 
 const on_contract_finished = (contract, state) => {
   state.note = 'This contract has expired'.i18n();
+  state.table = {...state.table, ...contract, is_ended: true };
   state.table.is_ended = true;
   state.table.status = contract.status;
   state.table.is_sold = contract.is_sold;
@@ -328,14 +328,13 @@ const make_note = (contract, state) => {
 };
 
 const handle_barrier = (contract, state) => {
-  const should_update_barrier = +state.chart.barrier !== +contract.barrier ||
-    +state.chart.high_barrier !== +contract.high_barrier ||
-    +state.chart.low_barrier !== +contract.low_barrier;
+  const { barrier, high_barrier, low_barrier } = contract;
+  const should_update_barrier = +state.chart.barrier !== +barrier ||
+    +state.chart.high_barrier !== +high_barrier ||
+    +state.chart.low_barrier !== +low_barrier;
 
   if (should_update_barrier) {
-    state.chart.barrier = contract.barrier;
-    state.chart.high_barrier = contract.high_barrier;
-    state.chart.low_barrier = contract.low_barrier;
+    state.chart = { ...state.chart, barrier, high_barrier, low_barrier };
     draw_barrier(state, contract);
   }
 };
@@ -383,7 +382,7 @@ const init_dialog = (proposal) => {
       open_dialogs[proposal.transaction_id] = transWin;
 
       function on_proposal_open_contract(data) {
-        const is_different_stream = +data.proposal_open_contract.contract_id !== +state.contract_id;
+        const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
         if (is_different_stream) return;
 
         if (data.error) {
@@ -399,7 +398,7 @@ const init_dialog = (proposal) => {
 const sell_at_market = (state, root) => {
    state.sell.sell_at_market_enabled = false;
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
-   liveapi.send({sell: state.contract_id, price: 0 /* to sell at market */})
+   liveapi.send({sell: state.proposal_open_contract.contract_id, price: 0 /* to sell at market */})
       .then((data) => {
          state.table.user_sold = true;
          const sell = data.sell;
@@ -407,7 +406,7 @@ const sell_at_market = (state, root) => {
             (html) => {
                const buy_price = state.table.buy_price;
                const state_confirm = {
-                  longcode: state.longcode,
+                  longcode: state.proposal_open_contract.longcode,
                   buy_price: buy_price,
                   sell_price: sell.sold_for,
                   return_percent: (100*(sell.sold_for - buy_price)/buy_price).toFixed(2)+'%',
@@ -429,14 +428,13 @@ const sell_at_market = (state, root) => {
       });
 };
 
-const init_state = (proposal, root) =>{
+const init_state = (proposal, root) => {
+  console.log('proposal: ', proposal);
    const state = {
       route: {
          value: 'table',
          update:(value) => { state.route.value = value; }
       },
-      contract_id: proposal.contract_id,
-      longcode: proposal.longcode,
       note: proposal.validation_error
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
@@ -467,13 +465,10 @@ const init_state = (proposal, root) =>{
          final_price: proposal.is_sold ? proposal.sell_price : undefined,
 
          tick_count: proposal.tick_count,
-         prediction: proposal.prediction,
-
          sell_time: proposal.sell_spot_time * 1 || undefined,
          sell_spot: proposal.sell_spot,
          sell_price: proposal.is_sold ? proposal.sell_price : undefined,
          purchase_time: proposal.purchase_time,
-         is_sold_at_market: false,
          isLookback: Lookback.isLookback(proposal.contract_type),
          lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
@@ -504,6 +499,15 @@ const init_state = (proposal, root) =>{
           }
           state.chart.chart.hideLoading();
        },
+      },
+      proposal_open_contract: {
+        ...proposal,
+        currency: (proposal.currency ||  'USD') + ' ',
+        final_price: proposal.is_sold ? proposal.sell_price : undefined,
+        is_ended: proposal.is_settleable || proposal.is_sold,
+        is_sold_at_market: false,
+        isLookback: Lookback.isLookback(proposal.contract_type),
+        lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
       sell: {
          bid_prices: [],
