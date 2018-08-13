@@ -4,7 +4,6 @@ import liveapi from 'websockets/binary_websockets';
 import chartingRequestMap from 'charts/chartingRequestMap';
 import rv from 'common/rivetsExtra';
 import moment from 'moment';
-import 'jquery-growl';
 import 'common/util';
 import Lookback from 'trade/lookback';
 
@@ -196,10 +195,9 @@ const update_indicative = (data, state) => {
   console.log('state: ', state);
   console.log('open contract', contract);
 
+  update_state(contract, state);
   draw_chart(contract, state)
-  make_note(contract, state);
 
-  update_state(contract);
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
     console.log('===== Contract has finished: =====', contract.status, contract);
@@ -212,25 +210,28 @@ const update_indicative = (data, state) => {
 
   state.chart.manual_reflow();
 
-  function update_state(contract) {
+  function update_state(contract, state) {
     // note: rivets.js 2-way data-binding breaks with spread operator assignment
     state.proposal_open_contract.user_sold = contract.sell_spot_time && contract.sell_spot_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.proposal_open_contract.bid_price = contract.bid_price;
-    state.proposal_open_contract.entry_tick = contract.entry_tick ? contract.entry_tick : state.proposal_open_contract.entry_tick;
-    state.proposal_open_contract.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.proposal_open_contract.entry_tick_time;
+    state.proposal_open_contract.entry_tick = contract.entry_tick;
+    state.proposal_open_contract.entry_tick_time = contract.entry_tick_time;
     state.proposal_open_contract.status = contract.status;
     state.proposal_open_contract.is_sold = contract.is_sold;
     state.proposal_open_contract.exit_tick = contract.exit_tick;
     state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
     state.proposal_open_contract.date_expiry = contract.date_expiry;
     state.proposal_open_contract.sell_price = contract.sell_price;
+    state.proposal_open_contract.is_valid_to_sell = contract.is_valid_to_sell;
+    state.proposal_open_contract.barrier = contract.barrier;
+    state.proposal_open_contract.high_barrier = contract.high_barrier;
+    state.proposal_open_contract.low_barrier = contract.low_barrier;
+    make_note(contract, state);
   };
 
   function update_state_sell() {
-    state.sell.is_valid_to_sell = contract.is_valid_to_sell;
-
     if (contract.bid_price) {
       state.sell.bid_price.value = contract.bid_price;
       [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
@@ -238,13 +239,13 @@ const update_indicative = (data, state) => {
   }
 
   function handle_forward_starting() {
-    const constract_is_forward_starting = contract.is_forward_starting && contract.date_start * 1 > contract.current_spot_time * 1;
+    const constract_is_forward_starting = contract.is_forward_starting && +contract.date_start > +contract.current_spot_time;
     if (constract_is_forward_starting) {
       state.fwd_starting = '* Contract has not started yet'.i18n();
-    } else {
-      state.fwd_starting = '';
+      return;
     }
-  }
+    state.fwd_starting = '';
+  };
 };
 
 function draw_chart(contract, state) {
@@ -324,14 +325,7 @@ const make_note = (contract, state) => {
 };
 
 const handle_barrier = (contract, state) => {
-  const { barrier, high_barrier, low_barrier } = contract;
-  const should_update_barrier = +state.proposal_open_contract.barrier !== +barrier ||
-    +state.proposal_open_contract.high_barrier !== +high_barrier ||
-    +state.proposal_open_contract.low_barrier !== +low_barrier;
-
-  if (should_update_barrier) {
-    draw_barrier(state, contract);
-  }
+  draw_barrier(state, contract);
 };
 
 const draw_sparkline = (contract, state) => {
@@ -458,10 +452,8 @@ const init_state = (proposal, root) => {
       },
       proposal_open_contract: {
         ...proposal,
-        entry_tick: proposal.entry_tick || proposal.entry_spot,
-        entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
         currency: (proposal.currency ||  'USD') + ' ',
-        is_ended: proposal.is_settleable || proposal.is_sold,
+        is_ended: proposal.is_settleable || proposal.is_sold || proposal.status !== 'open',
         is_sold_at_market: false,
         user_sold: proposal.sell_spot_time && proposal.sell_spot_time < proposal.date_expiry,
         isLookback: Lookback.isLookback(proposal.contract_type),
@@ -476,7 +468,6 @@ const init_state = (proposal, root) => {
          },
          sell: () => sell_at_market(state, root),
          sell_at_market_enabled: true,
-         is_valid_to_sell: false,
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
@@ -586,13 +577,10 @@ const update_live_chart = (state, granularity) => {
 };
 
 const draw_barrier = (state, contract = {}) => {
-  // TODO: move chart check one step up, pass down barrriers
   const { chart } = state.chart;
-  if (!chart) return;
+  add_barriers_to_chart(chart);
 
-  add_barriers_to_chart();
-
-  function add_barriers_to_chart() {
+  function add_barriers_to_chart(chart) {
     const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
 
     remove_barriers(barrier, high_barrier, low_barrier);
@@ -623,7 +611,7 @@ const draw_barrier = (state, contract = {}) => {
 }
 
 const get_chart_data = (state, root) => {
-  const duration = Math.min(state.proposal_open_contract.date_expiry * 1, moment.utc().unix()) - (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start);
+  const duration = Math.min(+state.proposal_open_contract.date_expiry, moment.utc().unix()) - (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start);
 
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);

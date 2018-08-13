@@ -108,10 +108,16 @@
           <span rv-text="proposal_open_contract.status" rv-class-green="proposal_open_contract.is_sold | eq 0" rv-class-red="proposal_open_contract.is_sold | eq 1"></span>
       </div>
       <div> <p>Entry Spot</p>
-          <span rv-data-balloon="proposal_open_contract.entry_tick_time | moment | or '-'"
+        <span rv-data-balloon="proposal_open_contract.entry_tick_time | moment | or '-'"
                 rv-if="proposal_open_contract.entry_tick_time"
                 rv-text="proposal_open_contract.entry_tick | or '-'"
-                class="dotted-underline"></span>
+                class="dotted-underline">
+        </span>
+        <span rv-data-balloon="proposal_open_contract.purchase_time | moment | or '-'"
+                rv-if="proposal_open_contract.purchase_time"
+                rv-text="proposal_open_contract.entry_spot | or '-'"
+                class="dotted-underline">
+        </span>
       </div>
       <div rv-if="proposal_open_contract.is_sold | eq 1"> <p>Exit Spot</p>
           <span rv-data-balloon="proposal_open_contract.exit_tick_time | moment | or '-'"
@@ -137,7 +143,7 @@
 
   </div>
   <div class="footer">
-    <div class="sell-at-market" rv-if="sell.is_valid_to_sell | and-not proposal_open_contract.is_ended">
+    <div class="sell-at-market" rv-if="proposal_open_contract.is_valid_to_sell | and-not proposal_open_contract.is_ended">
 
       <span class="bid-price" rv-indicative-color="proposal_open_contract.bid_price.value">
         <span class="unit" rv-html="proposal_open_contract.bid_price.value | format-price proposal_open_contract.currency"></span>
