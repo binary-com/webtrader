@@ -215,8 +215,8 @@ const update_indicative = (data, state) => {
 
   function update_state_table() {
     state.table.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
-    state.table.current_spot = contract.current_spot;
-    state.table.current_spot_time = contract.current_spot_time;
+    state.proposal_open_contract.current_spot = contract.current_spot;
+    state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.table.bid_price = contract.bid_price;
 
     state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
@@ -312,7 +312,6 @@ const on_contract_finished = (contract, state) => {
   state.table.exit_tick = contract.exit_tick;
   state.table.exit_tick_time = contract.exit_tick_time;
   state.table.date_expiry = contract.date_expiry;
-  state.table.current_spot_time = contract.exit_tick_time;
   state.table.sell_price = contract.sell_price;
   state.table.final_price = contract.sell_price;
 };
@@ -412,7 +411,7 @@ const sell_at_market = (state, root) => {
                   return_percent: (100*(sell.sold_for - buy_price)/buy_price).toFixed(2)+'%',
                   transaction_id: sell.transaction_id,
                   balance: sell.balance_after,
-                  currency: state.table.currency,
+                  currency: state.proposal_open_contract.currency,
                };
                const $html = $(html).i18n();
                root.after($html);
@@ -439,11 +438,6 @@ const init_state = (proposal, root) => {
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
-        currency: (proposal.currency ||  'USD') + ' ',
-        current_spot_time: proposal.current_spot_time,
-        current_spot: proposal.current_spot,
-        contract_type: proposal.contract_type,
-        date_start: proposal.date_start,
         date_expiry: proposal.date_expiry,
         user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
 
@@ -661,7 +655,7 @@ const draw_barrier = (state, contract = {}) => {
 }
 
 const get_chart_data = (state, root) => {
-  const duration = Math.min(state.table.date_expiry * 1, moment.utc().unix()) - (state.table.purchase_time || state.table.date_start);
+  const duration = Math.min(state.table.date_expiry * 1, moment.utc().unix()) - (state.table.purchase_time || state.proposal_open_contract.date_start);
 
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
@@ -698,8 +692,8 @@ const get_chart_data = (state, root) => {
   function make_tick_history_request(granularity, margin) {
     const request = {
       ticks_history: state.chart.symbol,
-      start: (state.table.purchase_time || state.table.date_start)*1 - margin, /* load around 2 more thicks before start */
-      end: state.table.sell_time ? state.table.sell_time*1 + margin : state.table.exit_tick_time ? state.table.exit_tick_time*1 + margin : 'latest',
+      start: (state.table.purchase_time || state.proposal_open_contract.date_start) * 1 - margin, /* load around 2 more thicks before start */
+      end: state.table.sell_time ? state.table.sell_time * 1 + margin : state.table.exit_tick_time ? state.table.exit_tick_time*1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };

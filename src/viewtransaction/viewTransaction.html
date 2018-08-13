@@ -2,7 +2,7 @@
   <p class='longcode' rv-text='proposal_open_contract.longcode'></p>
   <ul class='tabs'>
       <li rv-class-active="route.value | eq 'table'" rv-on-click="route.update | bind 'table'"> Table </li>
-      <li rv-if="table.contract_type | not-eq 'SPREAD'" rv-class-active="route.value | eq 'chart'" rv-on-click="route.update | bind 'chart'"> Chart </li>
+      <li rv-if="proposal_open_contract.contract_type | not-eq 'SPREAD'" rv-class-active="route.value | eq 'chart'" rv-on-click="route.update | bind 'chart'"> Chart </li>
       <li rv-class-active="route.value | eq 'explanation'" rv-on-click="route.update | bind 'explanation'"> Explanation </li>
   </ul>
   <div class="content">
@@ -22,15 +22,15 @@
       </div>
     </div>
 
-    <div class="table" rv-unless="table.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
+    <div class="table" rv-unless="proposal_open_contract.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
       <div> <p>Start Time</p>
-          <span rv-text="table.date_start | moment | or '-'"></span>
+          <span rv-text="proposal_open_contract.date_start | moment | or '-'"></span>
       </div>
       <div rv-if="table.user_sold | not-eq true | and table.exit_tick_time | eq undefined"> <p>Current Spot Time</p>
-          <span rv-text="table.current_spot_time | moment | or '-'"></span>
+          <span rv-text="proposal_open_contract.current_spot_time | moment | or '-'"></span>
           <br />
-          <span rv-if="table.current_spot_time"
-                rv-text="table.date_start | moment-humanize table.current_spot_time"
+          <span rv-if="proposal_open_contract.current_spot_time"
+                rv-text="proposal_open_contract.date_start | moment-humanize proposal_open_contract.current_spot_time"
                 rv-data-balloon='"running"'
                 class="dotted-underline smaller"></span>
       </div>
@@ -40,9 +40,9 @@
       <div> <p>End Time</p>
           <span rv-text="table.date_expiry | moment | or '-'"></span>
           <br />
-          <span rv-if="table.current_spot_time"
+          <span rv-if="proposal_open_contract.current_spot_time"
                 rv-show="table.is_sold | not-eq 1"
-                rv-text="table.current_spot_time | moment-humanize table.date_expiry"
+                rv-text="proposal_open_contract.current_spot_time | moment-humanize table.date_expiry"
                 rv-data-balloon='"remaining"'
                 class="dotted-underline smaller"></span>
       </div>
@@ -55,7 +55,7 @@
                 class="dotted-underline entry-spot"></span>
       </div>
       <div rv-if="table.user_sold | not-eq true | and table.exit_tick | eq undefined"> <p>Current Spot</p>
-          <span rv-text="table.current_spot | or '-'" rv-indicative-color="table.current_spot"></span>
+          <span rv-text="proposal_open_contract.current_spot | or '-'" rv-indicative-color="proposal_open_contract.current_spot"></span>
       </div>
       <div rv-if="table.user_sold | not-eq true | and table.exit_tick | and table.isLookback | eq false"> <p>Exit Spot</p>
           <span rv-text="table.exit_tick | or '-'"></span>
@@ -66,7 +66,7 @@
       </div>
       <div rv-if="table.multiplier">
         <p>Multiplier</p>
-        <span rv-html="table.multiplier | format-price table.currency | or '-'"></span>
+        <span rv-html="table.multiplier | format-price proposal_open_contract.currency | or '-'"></span>
       </div>
       <div rv-if="table.isLookback">
         <p>Potential Payout</p>
@@ -86,24 +86,24 @@
       </div>
 
       <div> <p>Purchase Price</p>
-          <span rv-html="table.buy_price | format-price table.currency | or '-'"></span>
+          <span rv-html="table.buy_price | format-price proposal_open_contract.currency | or '-'"></span>
       </div>
       <div rv-if="table.sell_price | eq undefined"> <p>Indicative Price</p>
-          <span rv-html="table.bid_price | format-price table.currency | or '-'" rv-indicative-color="sell.bid_price.value"></span>
+          <span rv-html="table.bid_price | format-price proposal_open_contract.currency | or '-'" rv-indicative-color="sell.bid_price.value"></span>
           <br />
           <span rv-text="table.bid_price | percent-of table.buy_price"
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
       <div rv-class-center="table.user_sold | or table.barrier_count | eq 2"> <p>Final Price</p>
-          <span rv-html="table.final_price | format-price table.currency | or '-'"></span>
+          <span rv-html="table.final_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
           <span rv-html="table.final_price | percent-of table.buy_price"
                 rv-data-balloon='table.sell_time | moment | or "return"'
                 class="dotted-underline smaller"></span>
       </div>
     </div>
-    <div class="table" rv-if="table.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
+    <div class="table" rv-if="proposal_open_contract.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
       <div> <p>Status</p>
           <span rv-text="proposal_open_contract.status" rv-class-green="table.is_sold | eq 0" rv-class-red="table.is_sold | eq 1"></span>
       </div>
@@ -119,9 +119,9 @@
                 rv-class-dotted-underline="table.exit_tick"></span>
       </div>
       <div rv-if="table.is_sold | eq 0"> <p>Current Level</p>
-          <span rv-data-balloon="table.current_spot_time | moment | or '-'"
-                rv-text="table.current_spot | or '-'"
-                rv-class-dotted-underline="table.current_spot"></span>
+          <span rv-data-balloon="proposal_open_contract.current_spot_time | moment | or '-'"
+                rv-text="proposal_open_contract.current_spot | or '-'"
+                rv-class-dotted-underline="proposal_open_contract.current_spot"></span>
       </div>
       <div> <p>Stop Loss Level</p>
           <span rv-text="table.stop_loss_level"></span>
@@ -152,7 +152,7 @@
     <div class="sell-at-market" rv-if="sell.is_valid_to_sell | and-not table.is_ended">
 
       <span class="bid-price" rv-indicative-color="sell.bid_price.value">
-        <span class="unit" rv-html="sell.bid_price.value | format-price table.currency"></span>
+        <span class="unit" rv-html="sell.bid_price.value | format-price proposal_open_contract.currency"></span>
       </span>
 
       <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
