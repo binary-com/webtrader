@@ -217,7 +217,7 @@ const update_indicative = (data, state) => {
     state.proposal_open_contract.user_sold = contract.sell_time && contract.sell_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
-    state.table.bid_price = contract.bid_price;
+    state.proposal_open_contract.bid_price = contract.bid_price;
 
     state.proposal_open_contract.entry_tick = contract.entry_tick ? contract.entry_tick : state.proposal_open_contract.entry_tick;
     state.proposal_open_contract.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.proposal_open_contract.entry_tick_time;
@@ -313,7 +313,7 @@ const on_contract_finished = (contract, state) => {
   state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
   state.proposal_open_contract.date_expiry = contract.date_expiry;
   state.table.sell_price = contract.sell_price;
-  state.table.final_price = contract.sell_price;
+  state.proposal_open_contract.sell_price = contract.sell_price;
 };
 
 const make_note = (contract, state) => {
@@ -404,10 +404,10 @@ const sell_at_market = (state, root) => {
          const sell = data.sell;
          require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'],
             (html) => {
-               const buy_price = state.table.buy_price;
+               const buy_price = state.proposal_open_contract.buy_price;
                const state_confirm = {
                   longcode: state.proposal_open_contract.longcode,
-                  buy_price: buy_price,
+                  buy_price,
                   sell_price: sell.sold_for,
                   return_percent: (100*(sell.sold_for - buy_price)/buy_price).toFixed(2)+'%',
                   transaction_id: sell.transaction_id,
@@ -433,17 +433,12 @@ const init_state = (proposal, root) => {
    const state = {
       route: {
          value: 'table',
-         update:(value) => { state.route.value = value; }
+         update: (value) => { state.route.value = value; },
       },
       note: proposal.validation_error
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
-        multiplier: proposal.multiplier,
-        buy_price: proposal.buy_price,
-        bid_price: undefined,
-        final_price: proposal.is_sold ? proposal.sell_price : undefined,
-
         tick_count: proposal.tick_count,
         sell_time: proposal.sell_spot_time * 1 || undefined,
         sell_spot: proposal.sell_spot,
@@ -482,7 +477,6 @@ const init_state = (proposal, root) => {
         entry_tick: proposal.entry_tick || proposal.entry_spot,
         entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
         currency: (proposal.currency ||  'USD') + ' ',
-        final_price: proposal.is_sold ? proposal.sell_price : undefined,
         is_ended: proposal.is_settleable || proposal.is_sold,
         is_sold_at_market: false,
         user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
@@ -698,7 +692,6 @@ const get_chart_data = (state, root) => {
 
 
   function on_tick_history_success(data) {
-    console.log(data);
     state.chart.loading = '';
 
     const chart_options = make_chart_options(data, state.chart.display_name);

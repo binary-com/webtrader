@@ -64,9 +64,9 @@
         <p>Close</p>
         <span rv-text="proposal_open_contract.exit_tick | or '-'"></span>
       </div>
-      <div rv-if="table.multiplier">
+      <div rv-if="proposal_open_contract.multiplier">
         <p>Multiplier</p>
-        <span rv-html="table.multiplier | format-price proposal_open_contract.currency | or '-'"></span>
+        <span rv-html="proposal_open_contract.multiplier | format-price proposal_open_contract.currency | or '-'"></span>
       </div>
       <div rv-if="table.isLookback">
         <p>Potential Payout</p>
@@ -86,19 +86,19 @@
       </div>
 
       <div> <p>Purchase Price</p>
-          <span rv-html="table.buy_price | format-price proposal_open_contract.currency | or '-'"></span>
+          <span rv-html="proposal_open_contract.buy_price | format-price proposal_open_contract.currency | or '-'"></span>
       </div>
-      <div rv-if="table.sell_price | eq undefined"> <p>Indicative Price</p>
-          <span rv-html="table.bid_price | format-price proposal_open_contract.currency | or '-'" rv-indicative-color="sell.bid_price.value"></span>
+      <div rv-if="proposal_open_contract.sell_price | eq undefined"> <p>Indicative Price</p>
+          <span rv-html="proposal_open_contract.bid_price | format-price proposal_open_contract.currency | or '-'" rv-indicative-color="proposal_open_contract.bid_price.value"></span>
           <br />
-          <span rv-text="table.bid_price | percent-of table.buy_price"
+          <span rv-text="proposal_open_contract.bid_price | percent-of proposal_open_contract.buy_price"
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
       <div rv-class-center="proposal_open_contract.user_sold | or proposal_open_contract.barrier_count | eq 2"> <p>Final Price</p>
-          <span rv-html="table.final_price | format-price proposal_open_contract.currency | or '-'"></span>
+          <span rv-html="proposal_open_contract.sell_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
-          <span rv-html="table.final_price | percent-of table.buy_price"
+          <span rv-html="proposal_open_contract.sell_price | percent-of proposal_open_contract.buy_price"
                 rv-data-balloon='table.sell_time | moment | or "return"'
                 class="dotted-underline smaller"></span>
       </div>
@@ -151,11 +151,11 @@
   <div class="footer">
     <div class="sell-at-market" rv-if="sell.is_valid_to_sell | and-not table.is_ended">
 
-      <span class="bid-price" rv-indicative-color="sell.bid_price.value">
-        <span class="unit" rv-html="sell.bid_price.value | format-price proposal_open_contract.currency"></span>
+      <span class="bid-price" rv-indicative-color="proposal_open_contract.bid_price.value">
+        <span class="unit" rv-html="proposal_open_contract.bid_price.value | format-price proposal_open_contract.currency"></span>
       </span>
 
-      <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
+      <span class="sparkline" rv-sparkline="proposal_open_contract.bid_prices">.</span>
 
       <span>
         <button rv-on-click="sell.sell"
