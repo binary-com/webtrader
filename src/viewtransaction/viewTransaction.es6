@@ -305,9 +305,9 @@ function draw_vertical_lines(contract, state, chart) {
 
 const on_contract_finished = (contract, state) => {
   state.note = 'This contract has expired'.i18n();
-  state.table = {...state.table, ...contract, is_ended: true };
-  state.table.is_ended = true;
-  state.table.status = contract.status;
+  state.table = {...state.table, ...contract};
+  state.proposal_open_contract.is_ended = true;
+  state.proposal_open_contract.status = contract.status;
   state.table.is_sold = contract.is_sold;
   state.table.exit_tick = contract.exit_tick;
   state.table.exit_tick_time = contract.exit_tick_time;
@@ -439,38 +439,35 @@ const init_state = (proposal, root) => {
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
-        status: proposal.status,
+        currency: (proposal.currency ||  'USD') + ' ',
+        current_spot_time: proposal.current_spot_time,
+        current_spot: proposal.current_spot,
+        contract_type: proposal.contract_type,
+        date_start: proposal.date_start,
+        date_expiry: proposal.date_expiry,
+        user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
 
-         is_ended: proposal.is_settleable || proposal.is_sold,
-         currency: (proposal.currency ||  'USD') + ' ',
-         current_spot_time: proposal.current_spot_time,
-         current_spot: proposal.current_spot,
-         contract_type: proposal.contract_type,
-         date_start: proposal.date_start,
-         date_expiry: proposal.date_expiry,
-         user_sold: proposal.sell_time && proposal.sell_time < proposal.date_expiry,
+        entry_tick: proposal.entry_tick || proposal.entry_spot,
+        entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
+        exit_tick: proposal.exit_tick,
+        exit_tick_time: proposal.exit_tick_time,
 
-         entry_tick: proposal.entry_tick || proposal.entry_spot,
-         entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
-         exit_tick: proposal.exit_tick,
-         exit_tick_time: proposal.exit_tick_time,
+        barrier_count: proposal.barrier_count,
+        low_barrier: proposal.low_barrier,
+        high_barrier: proposal.high_barrier,
 
-         barrier_count: proposal.barrier_count,
-         low_barrier: proposal.low_barrier,
-         high_barrier: proposal.high_barrier,
+        multiplier: proposal.multiplier,
+        buy_price: proposal.buy_price,
+        bid_price: undefined,
+        final_price: proposal.is_sold ? proposal.sell_price : undefined,
 
-         multiplier: proposal.multiplier,
-         buy_price: proposal.buy_price,
-         bid_price: undefined,
-         final_price: proposal.is_sold ? proposal.sell_price : undefined,
-
-         tick_count: proposal.tick_count,
-         sell_time: proposal.sell_spot_time * 1 || undefined,
-         sell_spot: proposal.sell_spot,
-         sell_price: proposal.is_sold ? proposal.sell_price : undefined,
-         purchase_time: proposal.purchase_time,
-         isLookback: Lookback.isLookback(proposal.contract_type),
-         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
+        tick_count: proposal.tick_count,
+        sell_time: proposal.sell_spot_time * 1 || undefined,
+        sell_spot: proposal.sell_spot,
+        sell_price: proposal.is_sold ? proposal.sell_price : undefined,
+        purchase_time: proposal.purchase_time,
+        isLookback: Lookback.isLookback(proposal.contract_type),
+        lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
       chart: {
          chart: null, /* highchart object */
@@ -574,7 +571,7 @@ const update_live_chart = (state, granularity) => {
         if (!data.tick || data.tick.symbol !== state.chart.symbol) return;
 
         const { chart } = state.chart;
-        const { status } = state.table;
+        const { status } = state.proposal_open_contract;
         const { tick } = data;
 
         const contract_has_finished = !!state.table.is_sold || status !== 'open';
@@ -670,7 +667,7 @@ const get_chart_data = (state, root) => {
   const margin = make_time_margin(duration, granularity);
   const tick_history_request = make_tick_history_request(granularity, margin);
 
-   if (!state.table.is_ended) {
+   if (!state.proposal_open_contract.is_ended) {
       update_live_chart(state, granularity);
    }
 

@@ -105,7 +105,7 @@
     </div>
     <div class="table" rv-if="table.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
       <div> <p>Status</p>
-          <span rv-text="table.status" rv-class-green="table.is_sold | eq 0" rv-class-red="table.is_sold | eq 1"></span>
+          <span rv-text="proposal_open_contract.status" rv-class-green="table.is_sold | eq 0" rv-class-red="table.is_sold | eq 1"></span>
       </div>
       <div> <p>Entry Spot</p>
           <span rv-data-balloon="table.entry_tick_time | moment | or '-'"
