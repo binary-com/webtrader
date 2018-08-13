@@ -292,7 +292,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          make_barrier: () => {
             const { barrier } = state.buy;
             if (barrier) {
-                  return { value: +barrier, label: 'Barrier ('.i18n() + addComma(barrier.toFixed(decimal_digits)) + ')', id: 'plot-barrier-y'};
+                  return { value: +barrier, label: 'Barrier ('.i18n() + addComma(barrier.toFixed(display_decimals)) + ')', id: 'plot-barrier-y'};
             }
             return null;
          },
