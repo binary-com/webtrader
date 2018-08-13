@@ -219,8 +219,8 @@ const update_indicative = (data, state) => {
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.table.bid_price = contract.bid_price;
 
-    state.table.entry_tick = contract.entry_tick ? contract.entry_tick : state.table.entry_tick;
-    state.table.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.table.entry_tick_time;
+    state.proposal_open_contract.entry_tick = contract.entry_tick ? contract.entry_tick : state.proposal_open_contract.entry_tick;
+    state.proposal_open_contract.entry_tick_time = contract.entry_tick_time ? contract.entry_tick_time : state.proposal_open_contract.entry_tick_time;
   };
 
   function update_state_sell() {
@@ -309,8 +309,8 @@ const on_contract_finished = (contract, state) => {
   state.proposal_open_contract.is_ended = true;
   state.proposal_open_contract.status = contract.status;
   state.table.is_sold = contract.is_sold;
-  state.table.exit_tick = contract.exit_tick;
-  state.table.exit_tick_time = contract.exit_tick_time;
+  state.proposal_open_contract.exit_tick = contract.exit_tick;
+  state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
   state.proposal_open_contract.date_expiry = contract.date_expiry;
   state.table.sell_price = contract.sell_price;
   state.table.final_price = contract.sell_price;
@@ -438,11 +438,6 @@ const init_state = (proposal, root) => {
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
       table: {
-        entry_tick: proposal.entry_tick || proposal.entry_spot,
-        entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
-        exit_tick: proposal.exit_tick,
-        exit_tick_time: proposal.exit_tick_time,
-
         barrier_count: proposal.barrier_count,
         low_barrier: proposal.low_barrier,
         high_barrier: proposal.high_barrier,
@@ -490,6 +485,8 @@ const init_state = (proposal, root) => {
       },
       proposal_open_contract: {
         ...proposal,
+        entry_tick: proposal.entry_tick || proposal.entry_spot,
+        entry_tick_time: proposal.entry_tick_time ? proposal.entry_tick_time * 1 : proposal.date_start * 1,
         currency: (proposal.currency ||  'USD') + ' ',
         final_price: proposal.is_sold ? proposal.sell_price : undefined,
         is_ended: proposal.is_settleable || proposal.is_sold,
@@ -691,7 +688,7 @@ const get_chart_data = (state, root) => {
     const request = {
       ticks_history: state.chart.symbol,
       start: (state.table.purchase_time || state.proposal_open_contract.date_start) * 1 - margin, /* load around 2 more thicks before start */
-      end: state.table.sell_time ? state.table.sell_time * 1 + margin : state.table.exit_tick_time ? state.table.exit_tick_time*1 + margin : 'latest',
+      end: state.table.sell_time ? state.table.sell_time * 1 + margin : state.proposal_open_contract.exit_tick_time ? state.proposal_open_contract.exit_tick_time * 1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
