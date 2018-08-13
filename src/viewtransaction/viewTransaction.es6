@@ -305,14 +305,12 @@ function draw_vertical_lines(contract, state, chart) {
 
 const on_contract_finished = (contract, state) => {
   state.note = 'This contract has expired'.i18n();
-  state.table = {...state.table, ...contract};
   state.proposal_open_contract.is_ended = true;
   state.proposal_open_contract.status = contract.status;
-  state.table.is_sold = contract.is_sold;
+  state.proposal_open_contract.is_sold = contract.is_sold;
   state.proposal_open_contract.exit_tick = contract.exit_tick;
   state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
   state.proposal_open_contract.date_expiry = contract.date_expiry;
-  state.table.sell_price = contract.sell_price;
   state.proposal_open_contract.sell_price = contract.sell_price;
 };
 
@@ -438,13 +436,6 @@ const init_state = (proposal, root) => {
       note: proposal.validation_error
       || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
       || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
-      table: {
-        sell_spot: proposal.sell_spot,
-        sell_price: proposal.is_sold ? proposal.sell_price : undefined,
-        purchase_time: proposal.purchase_time,
-        isLookback: Lookback.isLookback(proposal.contract_type),
-        lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
-      },
       chart: {
          chart: null, /* highchart object */
          symbol: proposal.symbol,
@@ -549,7 +540,7 @@ const update_live_chart = (state, granularity) => {
         const { status } = state.proposal_open_contract;
         const { tick } = data;
 
-        const contract_has_finished = !!state.table.is_sold || status !== 'open';
+        const contract_has_finished = !!state.proposal_open_contract.is_sold || status !== 'open';
         if (contract_has_finished) {
           clean_up();
           return;
@@ -637,7 +628,7 @@ const draw_barrier = (state, contract = {}) => {
 }
 
 const get_chart_data = (state, root) => {
-  const duration = Math.min(state.proposal_open_contract.date_expiry * 1, moment.utc().unix()) - (state.table.purchase_time || state.proposal_open_contract.date_start);
+  const duration = Math.min(state.proposal_open_contract.date_expiry * 1, moment.utc().unix()) - (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start);
 
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
@@ -675,7 +666,7 @@ const get_chart_data = (state, root) => {
     // TODO: fix this
     const request = {
       ticks_history: state.chart.symbol,
-      start: (state.table.purchase_time || state.proposal_open_contract.date_start) * 1 - margin, /* load around 2 more thicks before start */
+      start: (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start) * 1 - margin, /* load around 2 more thicks before start */
       end: state.proposal_open_contract.sell_spot_time ? state.proposal_open_contract.sell_spot_time * 1 + margin : state.proposal_open_contract.exit_tick_time ? state.proposal_open_contract.exit_tick_time * 1 + margin : 'latest',
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
