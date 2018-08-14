@@ -8,7 +8,7 @@ import 'common/util';
 import Lookback from 'trade/lookback';
 
 const open_dialogs = {};
-const display_decimals = 3;
+const DISPLAY_DECIMALS = 3;
 
 require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
@@ -48,8 +48,7 @@ const init_chart = (root, state, options) => {
    if (options.history) {
       type = 'line';
       const { history } = options;
-      const { times } = history;
-      const { prices } = history;
+      const { times, prices } = history;
 
       for (let i = 0; i < times.length; ++i) {
          data.push([times[i] * 1000, prices[i] * 1]);
@@ -97,7 +96,7 @@ const init_chart = (root, state, options) => {
           x: 0,
           y: -2,
           formatter() {
-            return addComma(this.value.toFixed(display_decimals));
+            return addComma(this.value.toFixed(DISPLAY_DECIMALS));
           },
         },
          title: '',
@@ -151,7 +150,6 @@ const init_chart = (root, state, options) => {
    return el.chart = chart;
 };
 
-/* get the tick value for a given epoch */
 const get_tick_value = (symbol, epoch) => {
    return liveapi.send({ ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end: epoch + 2, count: 1 })
       .catch((err) => console.error(err));
@@ -159,7 +157,7 @@ const get_tick_value = (symbol, epoch) => {
 
 export const init = (contract_id, transaction_id) => {
    return new Promise((resolve, reject) => {
-      if(open_dialogs[transaction_id]) {
+      if (open_dialogs[transaction_id]) {
          open_dialogs[transaction_id].moveToTop();
          resolve();
          return;
@@ -168,7 +166,7 @@ export const init = (contract_id, transaction_id) => {
         .then((data) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */
-            if(proposal.underlying === undefined && proposal.shortcode === undefined) {
+            if (proposal.underlying === undefined && proposal.shortcode === undefined) {
                show_market_data_disruption_win(proposal);
                return;
             }
@@ -204,7 +202,6 @@ const update_indicative = (data, state) => {
     on_contract_finished(state);
     return;
   }
-  // Ongoing contract - update state
   update_state_sell();
   handle_forward_starting();
 
@@ -228,7 +225,8 @@ const update_indicative = (data, state) => {
     state.proposal_open_contract.barrier = contract.barrier;
     state.proposal_open_contract.high_barrier = contract.high_barrier;
     state.proposal_open_contract.low_barrier = contract.low_barrier;
-    make_note(contract, state);
+
+    state.note = make_note(contract);
   };
 
   function update_state_sell() {
@@ -255,12 +253,13 @@ function draw_chart(contract, state) {
   if (!chart) return;
 
   draw_vertical_lines(contract, state, chart);
-  handle_barrier(contract, state);
+  draw_barrier(contract, state);
 };
 
 function draw_vertical_lines(contract, state, chart) {
   const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start } = contract;
   const text_left = true;
+
   draw_entry_spot(entry_tick_time);
   draw_start_time(date_start, text_left);
 
@@ -314,18 +313,16 @@ const on_contract_finished = (state) => {
   state.proposal_open_contract.is_ended = true;
 };
 
-const make_note = (contract, state) => {
+const make_note = (contract) => {
   if (contract.validation_error) {
-    state.note = contract.validation_error;
-  } else if (contract.is_expired) {
-    state.note = 'This contract has expired'.i18n();
+    return contract.validation_error;
+  } else if (contract.is_expired || contract.is_sold) {
+    return 'This contract has expired'.i18n();
   } else if (contract.is_valid_to_sell) {
-    state.note = 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
+    return 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
+  } else if (!contract.is_valid_to_sell) {
+    return 'Resale of this contract is not offered'.i18n()
   }
-};
-
-const handle_barrier = (contract, state) => {
-  draw_barrier(state, contract);
 };
 
 const draw_sparkline = (contract, state) => {
@@ -393,15 +390,15 @@ const sell_at_market = (state, root) => {
          const sell = data.sell;
          require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'],
             (html) => {
-               const buy_price = state.proposal_open_contract.buy_price;
+               const { buy_price, longcode, currency } = state.proposal_open_contract;
                const state_confirm = {
-                  longcode: state.proposal_open_contract.longcode,
+                  longcode,
                   buy_price,
                   sell_price: sell.sold_for,
-                  return_percent: (100*(sell.sold_for - buy_price)/buy_price).toFixed(2)+'%',
+                  return_percent: (100 * (sell.sold_for - buy_price) / buy_price).toFixed(2) + '%',
                   transaction_id: sell.transaction_id,
                   balance: sell.balance_after,
-                  currency: state.proposal_open_contract.currency,
+                  currency,
                };
                const $html = $(html).i18n();
                root.after($html);
@@ -424,18 +421,16 @@ const init_state = (proposal, root) => {
          value: 'table',
          update: (value) => { state.route.value = value; },
       },
-      note: proposal.validation_error
-      || (!proposal.is_valid_to_sell && 'Resale of this contract is not offered'.i18n())
-      || ((proposal.is_settleable || proposal.is_sold) && 'This contract has expired'.i18n()) || '-',
+      note: make_note(proposal),
       chart: {
          chart: null, /* highchart object */
          loading: 'Loading ' + proposal.display_name + ' ...',
          added_labels: [],
          type: 'ticks', // could be 'tick' or 'ohlc'
          manual_reflow: () => {
-          /* TODO: find a better solution for resizing the chart  :/ */
+          if (!state.chart.chart) return;
+
           const h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
-          if(!state.chart.chart) return;
           const container = root;
           const transactionChart = container.find(".transaction-chart");
           const width = container.width() - 10;
@@ -471,11 +466,6 @@ const init_state = (proposal, root) => {
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
-
-   if(Lookback.isLookback(proposal.contract_type)) {
-     [state.table.barrier_label, state.table.low_barrier_label] = Lookback.barrierLabels(proposal.contract_type);
-   }
-
    get_chart_data(state, root);
    return state;
 };
@@ -576,7 +566,7 @@ const update_live_chart = (state, granularity) => {
   };
 };
 
-const draw_barrier = (state, contract = {}) => {
+const draw_barrier = (contract, state) => {
   const { chart } = state.chart;
   add_barriers_to_chart(chart);
 
@@ -586,15 +576,15 @@ const draw_barrier = (state, contract = {}) => {
     remove_barriers(barrier, high_barrier, low_barrier);
 
     if (barrier) {
-      const barrier_label = `${ 'Barrier'.i18n()} ( ${addComma((+barrier).toFixed(display_decimals))} )`;
+      const barrier_label = `${ 'Barrier'.i18n()} ( ${addComma((+barrier).toFixed(DISPLAY_DECIMALS))} )`;
       add_plot_line_y('barrier', barrier, barrier_label);
     }
     if (high_barrier) {
-      const high_barrier_label = `${state.table.barrier_label || 'High Barrier'.i18n()} ( ${addComma((+high_barrier).toFixed(display_decimals))} )`;
+      const high_barrier_label = `${'High Barrier'.i18n()} ( ${addComma((+high_barrier).toFixed(DISPLAY_DECIMALS))} )`;
       add_plot_line_y('high_barrier', high_barrier, high_barrier_label);
     }
-    if (low_barrier){
-      const low_barrier_label = `${state.table.low_barrier_label || 'Low Barrier'.i18n()} ( ${addComma((+low_barrier).toFixed(display_decimals))} )`;
+    if (low_barrier) {
+      const low_barrier_label = `${'Low Barrier'.i18n()} ( ${addComma((+low_barrier).toFixed(DISPLAY_DECIMALS))} )`;
       add_plot_line_y('low_barrier', low_barrier, low_barrier_label, 'red');
     }
 
