@@ -64,9 +64,7 @@ const init_chart = (root, state, options) => {
 
    if (options.candles) {
       type = 'candlestick';
-      data = options.candles.map(
-         (c) => [c.epoch*1000, c.open*1, c.high*1, c.low*1, c.close*1]
-      )
+      data = options.candles.map((c) => [c.epoch * 1000, c.open * 1, c.high * 1, c.low * 1, c.close * 1]);
    }
 
    const { title } = options;
@@ -319,18 +317,11 @@ const on_contract_finished = (state) => {
 };
 
 const make_note = (contract) => {
-  switch(contract) {
-    case contract.validation_error:
-      return contract.validation_error;
-    case (contract.status !== 'open'):
-      return NOTE_TEXT.FINISHED;
-    case (contract.is_expired || contract.is_sold):
-      return NOTE_TEXT.EXPIRED;
-    case contract.is_valid_to_sell:
-      return NOTE_TEXT.MARKET_RATE;
-    case !contract.is_valid_to_sell:
-      return NOTE_TEXT.NO_RESALE;
-  }
+    if (contract.validation_error) return contract.validation_error;
+    if (contract.status !== 'open') return NOTE_TEXT.FINISHED;
+    if (contract.is_expired || contract.is_sold) return NOTE_TEXT.EXPIRED;
+    if (contract.is_valid_to_sell) return NOTE_TEXT.MARKET_RATE;
+    if (!contract.is_valid_to_sell) return NOTE_TEXT.NO_RESALE;
 };
 
 const draw_sparkline = (contract, state) => {
@@ -638,16 +629,16 @@ const get_chart_data = (state, root) => {
 
   function make_time_margin(duration, granularity) {
     let margin = 0;
-    margin = granularity === 0 ? Math.max(3, 30 * duration / (60 * 60) | 0) : 3 * granularity;
+    margin = (granularity === 0) ? Math.max(3, 30 * duration / (60 * 60) | 0) : 3 * granularity;
     return margin;
   };
 
   function make_tick_history_request(granularity, margin) {
-    // TODO: fix this
+    const end = make_end(margin);
     const request = {
       ticks_history: state.proposal_open_contract.underlying,
       start: (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start) * 1 - margin, /* load around 2 more thicks before start */
-      end: state.proposal_open_contract.sell_spot_time ? state.proposal_open_contract.sell_spot_time * 1 + margin : state.proposal_open_contract.exit_tick_time ? state.proposal_open_contract.exit_tick_time * 1 + margin : 'latest',
+      end,
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
     };
@@ -658,6 +649,14 @@ const get_chart_data = (state, root) => {
       state.chart.type = 'candles';
     }
     return request;
+
+    function make_end(margin) {
+      const { sell_spot_time, exit_tick_time } = state.proposal_open_contract;
+
+      if (sell_spot_time) return (+sell_spot_time + margin);
+      if (exit_tick_time) return (+exit_tick_time + margin);
+      return 'latest';
+    }
   };
 
 
