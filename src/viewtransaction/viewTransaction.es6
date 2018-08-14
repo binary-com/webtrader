@@ -133,7 +133,7 @@ const init_chart = (root, state, options) => {
       chart.xAxis[0].addPlotLine({
          value: options.value,
          id: options.id || options.value,
-         label: { text: options.label || 'label', x: options.text_left ? -15 : 5},
+         label: { text: (options.label || 'label'), x: options.text_left ? -15 : 5},
          color: options.color || '#e98024',
          zIndex: 4,
          width: options.width || 2,
@@ -142,10 +142,11 @@ const init_chart = (root, state, options) => {
    };
 
    chart.addPlotLineY = (options) => {
+      console.log(options);
       chart.yAxis[0].addPlotLine({
          id: options.id || options.label,
          value: options.value,
-         label: { text: options.label, align: 'center'},
+         label: { text: options.label, align: 'center', y: options.text_under ? 15 : -5 },
          color: options.color || 'green',
          zIndex: 4,
          width: 2,
@@ -579,11 +580,11 @@ const draw_barrier = (contract, state) => {
     }
     if (low_barrier) {
       const low_barrier_label = `${'Low Barrier'.i18n()} ( ${addComma((+low_barrier).toFixed(DISPLAY_DECIMALS))} )`;
-      add_plot_line_y('low_barrier', low_barrier, low_barrier_label, 'red');
+      add_plot_line_y('low_barrier', low_barrier, low_barrier_label, 'red', true );
     }
 
-    function add_plot_line_y(id, value, label, color) {
-      chart.addPlotLineY({ id, value, label, color });
+    function add_plot_line_y(id, value, label, color, text_under) {
+      chart.addPlotLineY({ id, value, label, color, text_under });
     };
   };
 
