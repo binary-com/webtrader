@@ -9,6 +9,12 @@ import Lookback from 'trade/lookback';
 
 const open_dialogs = {};
 const DISPLAY_DECIMALS = 3;
+const NOTE_TEXT = {
+  EXPIRED: 'This contract has expired'.i18n(),
+  MARKET_RATE: 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n(),
+  NO_RESALE: 'Resale of this contract is not offered'.i18n(),
+  FINISHED: 'This contract has expired'.i18n(),
+};
 
 require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
@@ -309,19 +315,21 @@ function draw_vertical_lines(contract, state, chart) {
 };
 
 const on_contract_finished = (state) => {
-  state.note = 'This contract has expired'.i18n();
   state.proposal_open_contract.is_ended = true;
 };
 
 const make_note = (contract) => {
-  if (contract.validation_error) {
-    return contract.validation_error;
-  } else if (contract.is_expired || contract.is_sold) {
-    return 'This contract has expired'.i18n();
-  } else if (contract.is_valid_to_sell) {
-    return 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n();
-  } else if (!contract.is_valid_to_sell) {
-    return 'Resale of this contract is not offered'.i18n()
+  switch(contract) {
+    case contract.validation_error:
+      return contract.validation_error;
+    case (contract.status !== 'open'):
+      return NOTE_TEXT.FINISHED;
+    case (contract.is_expired || contract.is_sold):
+      return NOTE_TEXT.EXPIRED;
+    case contract.is_valid_to_sell:
+      return NOTE_TEXT.MARKET_RATE;
+    case !contract.is_valid_to_sell:
+      return NOTE_TEXT.NO_RESALE;
   }
 };
 
@@ -568,13 +576,12 @@ const update_live_chart = (state, granularity) => {
 
 const draw_barrier = (contract, state) => {
   const { chart } = state.chart;
-  add_barriers_to_chart(chart);
+  const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
 
-  function add_barriers_to_chart(chart) {
-    const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
+  remove_barriers(barrier, high_barrier, low_barrier);
+  add_barriers_to_chart(barrier, high_barrier, low_barrier);
 
-    remove_barriers(barrier, high_barrier, low_barrier);
-
+  function add_barriers_to_chart(barrier, high_barrier, low_barrier ) {
     if (barrier) {
       const barrier_label = `${ 'Barrier'.i18n()} ( ${addComma((+barrier).toFixed(DISPLAY_DECIMALS))} )`;
       add_plot_line_y('barrier', barrier, barrier_label);
