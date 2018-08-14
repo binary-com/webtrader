@@ -89,7 +89,7 @@
           <span rv-html="proposal_open_contract.buy_price | format-price proposal_open_contract.currency | or '-'"></span>
       </div>
       <div rv-if="proposal_open_contract.sell_price | eq undefined"> <p>Indicative Price</p>
-          <span rv-html="proposal_open_contract.bid_price | format-price proposal_open_contract.currency | or '-'" rv-indicative-color="proposal_open_contract.bid_price.value"></span>
+          <span rv-html="proposal_open_contract.bid_price | format-price proposal_open_contract.currency | or '-'" rv-indicative-color="proposal_open_contract.bid_price"></span>
           <br />
           <span rv-text="proposal_open_contract.bid_price | percent-of proposal_open_contract.buy_price"
                 rv-data-balloon='"return"'
@@ -149,7 +149,7 @@
         <span class="unit" rv-html="proposal_open_contract.bid_price.value | format-price proposal_open_contract.currency"></span>
       </span>
 
-      <span class="sparkline" rv-sparkline="proposal_open_contract.bid_prices">.</span>
+      <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
 
       <span>
         <button rv-on-click="sell.sell"
