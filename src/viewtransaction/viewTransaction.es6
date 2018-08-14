@@ -25,8 +25,8 @@ const show_market_data_disruption_win = (proposal) => {
       market_data_disruption_win.moveToTop();
       return;
    }
-   const msg = 'There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.'.i18n();
-   const root = $('<div class="data-disruption-dialog">' + msg + '</div>');
+   const market_disrupt_msg = 'There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded.'.i18n();
+   const root = $('<div class="data-disruption-dialog">' + market_disrupt_msg + '</div>');
 
    market_data_disruption_win = windows.createBlankWindow(root, {
       title: ' There was an error '.i18n(),
@@ -194,21 +194,18 @@ const handle_error = (message) => {
 
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
-  console.log('state: ', state);
-  console.log('open contract', contract);
 
   update_state(contract, state);
   draw_chart(contract, state)
 
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
-    console.log('===== Contract has finished: =====', contract.status, contract);
     on_contract_finished(state);
     return;
   }
+
   update_state_sell();
   handle_forward_starting();
-
   state.chart.manual_reflow();
 
   function update_state(contract, state) {
@@ -414,7 +411,6 @@ const sell_at_market = (state, root) => {
 };
 
 const init_state = (proposal, root) => {
-  console.log('proposal: ', proposal);
    const state = {
       route: {
          value: 'table',
@@ -600,11 +596,10 @@ const draw_barrier = (contract, state) => {
 
 const get_chart_data = (state, root) => {
   const duration = Math.min(+state.proposal_open_contract.date_expiry, moment.utc().unix()) - (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start);
-
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
   const tick_history_request = make_tick_history_request(granularity, margin);
-  console.log('tick_history_request: ', tick_history_request);
+
    if (!state.proposal_open_contract.is_ended) {
       update_live_chart(state, granularity);
    }
