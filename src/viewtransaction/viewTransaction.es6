@@ -142,7 +142,6 @@ const init_chart = (root, state, options) => {
    };
 
    chart.addPlotLineY = (options) => {
-      console.log(options);
       chart.yAxis[0].addPlotLine({
          id: options.id || options.label,
          value: options.value,
