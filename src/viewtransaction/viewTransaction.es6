@@ -340,8 +340,8 @@ const init_dialog = (proposal) => {
          title: proposal.display_name + ' (' + proposal.transaction_id + ')',
          width: 700,
          minWidth: 490,
-         minHeight:480,
-         height:480,
+         minHeight: 480,
+         height: 480,
          destroy: () => { },
          close: function() {
             view && view.unbind();
@@ -383,10 +383,10 @@ const init_dialog = (proposal) => {
 const sell_at_market = (state, root) => {
    state.sell.sell_at_market_enabled = false;
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
-   liveapi.send({sell: state.proposal_open_contract.contract_id, price: 0 /* to sell at market */})
+   liveapi.send({ sell: state.proposal_open_contract.contract_id, price: 0 })
       .then((data) => {
          state.proposal_open_contract.user_sold = true;
-         const sell = data.sell;
+         const { sell } = data;
          require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'],
             (html) => {
                const { buy_price, longcode, currency } = state.proposal_open_contract;
@@ -604,7 +604,7 @@ const get_chart_data = (state, root) => {
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
   const tick_history_request = make_tick_history_request(granularity, margin);
-
+  console.log('tick_history_request: ', tick_history_request);
    if (!state.proposal_open_contract.is_ended) {
       update_live_chart(state, granularity);
    }
@@ -637,7 +637,7 @@ const get_chart_data = (state, root) => {
     const end = make_end(margin);
     const request = {
       ticks_history: state.proposal_open_contract.underlying,
-      start: (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start) * 1 - margin, /* load around 2 more thicks before start */
+      start: (+state.proposal_open_contract.date_start || +state.proposal_open_contract.purchase_time) - margin, /* load around 2 more thicks before start */
       end,
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
