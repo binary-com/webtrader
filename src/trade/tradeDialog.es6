@@ -775,20 +775,9 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       request.stop_loss = state.spreads.stop_loss;
       request.stop_profit = state.spreads.stop_profit;
     }
-    /* set the value for barrier(s) */
-    if (state.barriers.barrier_count == 1) {
-      request.barrier = state.barriers.barrier;
-      if (state.barriers.barrier && (state.barriers.barrier[0] === '+' || state.barriers.barrier[0] === '-')) {
-        state.barriers.is_offset_barrier = true;
-      } else {
-        state.barriers.is_offset_barrier = false;
-      }
-      console.log('Barrier_count == 1', state.barriers.barrier, state.barriers);
-    }
-    if (state.barriers.barrier_count == 2) {
-      request.barrier = state.barriers.high_barrier;
-      request.barrier2 = state.barriers.low_barrier + '';
-    }
+
+    add_barriers_to_request(state, request);    
+
     if (state.categories.value.contract_category === 'digits') {
       request.barrier = state.digits.value + '';
     }
@@ -837,6 +826,21 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     state.proposal.id = ''; /* invalidate last proposal.id */
 
     dialog.update_track(dialog.get_template());
+  };
+
+  function add_barriers_to_request(state, request) {
+    const { barrier, high_barrier, low_barrier, barrier_count } = state.barriers;
+    if (+barrier_count === 2) {
+      request.barrier = high_barrier;
+      request.barrier2 = low_barrier + '';
+      return;
+    }
+    request.barrier = barrier;
+    if (state.barriers.barrier && (state.barriers.barrier[0] === '+' || state.barriers.barrier[0] === '-')) {
+      state.barriers.is_offset_barrier = true;
+    } else {
+      state.barriers.is_offset_barrier = false;
+    }
   };
 
   state.purchase.onclick = async function() {
