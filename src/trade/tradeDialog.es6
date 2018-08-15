@@ -806,18 +806,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       });
     }
 
-    /**
-     * Adds retry to proposal subscription request
-     *
-     * @param {Object}   request_obj          Object of the request to be made
-     * @param {Number}   times_retry          Times to retry the request if the request fails
-     * @param {String}   required_err_code    Optional - only retry if the response error code matches this error code
-     */
-    async function subscribeProposalHandler(request_obj, times_retry, required_err_code) {
+    async function subscribeProposalHandler(request, times_to_retry, required_err_code_for_retry) {
       let response;
-      for (let i = 0; i < times_retry; i++) {
+      for (let i = 0; i < times_to_retry; i++) {
         try {
-          response = await liveapi.send(request_obj);
+          response = await liveapi.send(request);
           state.proposal.error = '';
           state.proposal.id = response.proposal && response.proposal.id;
           break;
@@ -825,7 +818,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           state.proposal.error = err.message;
           state.proposal.message = '';
           state.proposal.loading = false;
-          if (required_err_code && required_err_code !== err.code) { break; }
+          if (required_err_code_for_retry && required_err_code_for_retry !== err.code) { break; }
         }
       }
       return response;

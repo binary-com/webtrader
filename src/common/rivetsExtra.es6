@@ -612,12 +612,15 @@ rv.binders['decimal-round'] = {
          if(val === '') return;
          if(val === '-' || val === '+' && !no_symbol) return;
          const dps = decimalPlaces(val);
-         if(last_value == val ) return;
+         if (+last_value === +val) {
+           return;
+          };
          if(dps && dps <= places ) {
            last_value = val;
            $input.trigger('change');
            return;
          };
+         last_value = val;
          const dot = val.endsWith('.') ? '.' : '';
          let symbol = val[0];
          symbol = (symbol === '+' || symbol === '-') ? symbol : '';
@@ -628,7 +631,6 @@ rv.binders['decimal-round'] = {
             if(prefered_sign && symbol === '') symbol = prefered_sign;
             if(no_symbol) symbol = '';
             $input.val(symbol + val + dot);
-            last_value = val;
             $input.trigger('input');
          }
       }
