@@ -862,7 +862,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   function is_offset(barrier) {
-    return barrier && (barrier[0] === '+' || barrier[0] === '-') ? true : false;
+    return barrier && (barrier.startsWith('+') || barrier.startsWith('-')) ? true : false;
   };
 
   state.purchase.onclick = async function() {
