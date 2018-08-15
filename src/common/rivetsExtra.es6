@@ -598,10 +598,15 @@ const decimalPlaces = (num) => {
    }
    return ret;
 }
-/* rviets formatter for decimal round */
+
 rv.binders['decimal-round'] = {
    priority: 3001,
    routine: (input, places, ...rest) => {
+      // TODO:
+      // Only Number
+      // Limit to specific number of decimals
+      // Limit total number
+
       let last_value = null;
       const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000, '8': 100000000}[places];
       const $input = $(input);
@@ -609,28 +614,35 @@ rv.binders['decimal-round'] = {
          const prefered_sign = $input.attr('prefered-sign') || '';
          const no_symbol = $input.attr('no-symbol');
          let val = $input.val();
-         if(val === '') return;
-         if(val === '-' || val === '+' && !no_symbol) return;
+
+         if (val === '') return;
+         if (val === '-' || val === '+' && !no_symbol) return;
+         if (+last_value === +val) return;
+
          const dps = decimalPlaces(val);
-         if (+last_value === +val) {
-           return;
-          };
-         if(dps && dps <= places ) {
+         if (dps && dps <= places ) {
            last_value = val;
+           console.log('One: ', val);
            $input.trigger('change');
            return;
          };
+
          last_value = val;
          const dot = val.endsWith('.') ? '.' : '';
+
          let symbol = val[0];
          symbol = (symbol === '+' || symbol === '-') ? symbol : '';
+
          val = val.replace(/[^\d.-]/g,'');
          val = (Math.round(val * mul) / mul);
          val = Math.abs(val);
-         if(!isNaN(val)) {
+
+         if (!isNaN(val)) {
             if(prefered_sign && symbol === '') symbol = prefered_sign;
             if(no_symbol) symbol = '';
-            $input.val(symbol + val + dot);
+
+            console.log('Two: ', val);
+            $input.val(val);
             $input.trigger('input');
          }
       }

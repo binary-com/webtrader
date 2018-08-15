@@ -266,6 +266,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       selected: ''
     },
     barriers: {
+      is_offset_barrier: false,
       barrier_count: 0,
       barrier : '',
       perv_barrier: '', // previous barrier value for intraday and tick contracts.
@@ -777,6 +778,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     /* set the value for barrier(s) */
     if (state.barriers.barrier_count == 1) {
       request.barrier = state.barriers.barrier;
+      if (state.barriers.barrier && (state.barriers.barrier[0] === '+' || state.barriers.barrier[0] === '-')) {
+        state.barriers.is_offset_barrier = true;
+      } else {
+        state.barriers.is_offset_barrier = false;
+      }
+      console.log('Barrier_count == 1', state.barriers.barrier, state.barriers);
     }
     if (state.barriers.barrier_count == 2) {
       request.barrier = state.barriers.high_barrier;
