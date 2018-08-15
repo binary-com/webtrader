@@ -267,6 +267,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     },
     barriers: {
       is_offset_barrier: false,
+      is_offset_low_barrier: false,
+      is_offset_high_barrier: false,
       barrier_count: 0,
       barrier : '',
       perv_barrier: '', // previous barrier value for intraday and tick contracts.
@@ -776,7 +778,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       request.stop_profit = state.spreads.stop_profit;
     }
 
-    add_barriers_to_request(state, request);    
+    add_barriers_to_request(state, request);
+    set_is_barrier_offset(state);
 
     if (state.categories.value.contract_category === 'digits') {
       request.barrier = state.digits.value + '';
@@ -836,11 +839,30 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       return;
     }
     request.barrier = barrier;
-    if (state.barriers.barrier && (state.barriers.barrier[0] === '+' || state.barriers.barrier[0] === '-')) {
+  };
+
+  function set_is_barrier_offset(state) {
+    if (is_offset(state.barriers.barrier)) {
       state.barriers.is_offset_barrier = true;
     } else {
       state.barriers.is_offset_barrier = false;
     }
+
+    if (is_offset(state.barriers.low_barrier)) {
+      state.barriers.is_offset_low_barrier = true;
+    } else {
+      state.barriers.is_offset_low_barrier = false;
+    }
+
+    if (is_offset(state.barriers.high_barrier)) {
+      state.barriers.is_offset_high_barrier = true;
+    } else {
+      state.barriers.is_offset_high_barrier = false;
+    }
+  };
+
+  function is_offset(barrier) {
+    return barrier && (barrier[0] === '+' || barrier[0] === '-') ? true : false;
   };
 
   state.purchase.onclick = async function() {
