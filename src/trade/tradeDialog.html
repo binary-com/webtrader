@@ -141,12 +141,16 @@
     <ul class="barriers-high-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <span class="dotted-underline align-text text-vertical-align" rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+        <li rv-show="barriers.is_offset_high_barrier">
+            <span class="dotted-underline align-text text-vertical-align" rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 data-balloon-pos="down"
                 data-balloon-length='large'
                 rv-scale-font-size="130"
                 rv-show="barriers.was_perv_high_barrier_daily | eq false">High barrier offset</span>
-             <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
+            <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
+        </li>
+        <li rv-hide="barriers.is_offset_high_barrier">
+            <span class="align-text text-vertical-align">High Barrier</span>
         </li>
         <li>
             <input class="barriers-barrier" type="text" rv-barrier-format
@@ -167,13 +171,17 @@
     <ul class="barriers-low-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <span class="dotted-underline align-text text-vertical-align"
+        <li rv-show="barriers.is_offset_low_barrier">
+            <span class="dotted-underline align-text text-vertical-align"
                 rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 data-balloon-length='large'
                 data-balloon-pos="down"
                 rv-scale-font-size="130"
                 rv-show="barriers.was_perv_low_barrier_daily | eq false">Low barrier offset</span>
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_low_barrier_daily">Low barrier</span>
+        </li>
+        <li rv-hide="barriers.is_offset_low_barrier">
+            <span class="align-text text-vertical-align">Low barrier</span>
         </li>
         <li>
             <input class="barriers-barrier" type="text" rv-barrier-format
