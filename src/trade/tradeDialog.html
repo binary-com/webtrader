@@ -123,7 +123,7 @@
             <span class="align-text text-vertical-align">Barrier</span>
         </li>
         <li>
-            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_barrier_daily | negate | ternary '+' ''" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" rv-barrier-format
                    rv-value="barriers.barrier | debounce proposal.onchange" />
         </li>
         <li rv-show="barriers.is_offset_barrier">
@@ -149,7 +149,7 @@
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
         </li>
         <li>
-            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_high_barrier_daily | negate | ternary '+' ''" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" rv-barrier-format
                    rv-value="barriers.high_barrier | debounce proposal.onchange" />
         </li>
         <li rv-show="barriers.is_offset_barrier">
@@ -176,7 +176,7 @@
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_low_barrier_daily">Low barrier</span>
         </li>
         <li>
-            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_low_barrier_daily | negate | ternary '-' ''" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" rv-barrier-format
                    rv-value="barriers.low_barrier | debounce proposal.onchange" />
         </li>
         <li rv-show="barriers.is_offset_barrier">
@@ -211,7 +211,7 @@
            </select>
         </li>
         <li rv-attr-dummy="basis.amount | debounce proposal.onchange">
-             <input class="basis-amount" type="text" rv-decimal-round="currency.decimals | or 5" rv-value="basis.amount" no-symbol="no-symbol" />
+             <input class="basis-amount" type="text" rv-barrier-format rv-value="basis.amount" no-symbol="no-symbol" />
         </li>
     </ul>
 

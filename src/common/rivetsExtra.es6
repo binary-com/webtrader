@@ -589,26 +589,27 @@ rv.binders['auto-scroll-bottom'] = {
    }
 }
 
-rv.binders['decimal-round'] = {
+function remove_all_matches_except_first(string, regex) {
+  let count = 0;
+  const replaceWith = '';
+  return string.replace(regex, (match) => {
+    count++;
+    return count === 1 ? match : replaceWith;
+  })
+};
+
+rv.binders['barrier-format'] = {
    priority: 3001,
-   routine: (input, places, ...rest) => {
+   routine: (input) => {
       const $input = $(input);
       const listener = () => {
-        // TODO: Regex
-        // - Only Digit except first char which can be +(-)?
-        // - Only one .
         let val = $input.val();
         let symbol = '';
-        if (val.startsWith('+') || val.startsWith('-')) {
-          symbol = val[0];
-        }
-        val = val.shift() + '.' + val.join('');
+
+        if (val.startsWith('+') || val.startsWith('-')) symbol = val[0];
+        val = remove_all_matches_except_first(val, /\./g);
         val = val.replace(/[^\d.]/g,'');
         val = symbol + val;
-        console.log('post: ', val);
-
-        // TODO: is this necessary?
-        const prefered_sign = $input.attr('prefered-sign') || '';
 
         $input.val(val);
         $input.trigger('change');
@@ -622,7 +623,7 @@ rv.binders['decimal-round'] = {
      console.warn('getValue');
      return el.value;
    }
-}
+};
 
 /* binder with high priority to apply attributes first */
 rv.binders['attr-*'] = {
