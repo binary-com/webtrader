@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-02-19 21:20-0500\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Indonesian\n"
-"Language: id_ID\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: id\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3906,47 +3906,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
 
-#~ msgid "Loading"
-#~ msgstr "Loading"
-
-#~ msgid "create a token, and share the token with copier(s)"
-#~ msgstr "buat token dan bagikan token pada penduplikasi"
-
-#~ msgid "Binary options or other financial derivatives"
-#~ msgstr "Opsi Binary atau derivatif keuangan lainnya"
-
-#~ msgid "Current regulations require that you provide us the following"
-#~ msgstr "Peraturan saat ini mengharuskan Anda menyediakan sebagai berikut"
-
-#~ msgid "High Barrier"
-#~ msgstr "Batas Tinggi"
-
-#~ msgid "Home Address"
-#~ msgstr "Alamat Rumah"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Batas Rendah"
-
-#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Website ini dipasarkan di negara Inggris dan Isle of Man melalui Binary (IOM) Ltd. Untuk Uni Eropa (kecuali Inggris) melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sedangkan untuk negara lain di seluruh dunia melalui Binary (C.R.) S.A. Layanan website ini tidak tersedia untuk di bawah usia 18"
-
-#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Website ini dipasarkan di negara Inggris dan Isle of Man melalui Binary (IOM) Ltd. Untuk Uni Eropa (kecuali Inggris) melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sedangkan untuk negara lain di seluruh dunia melalui Binary (C.R.) S.A. Layanan website ini tidak tersedia untuk di bawah usia 18"
-
-#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-#~ msgstr "Dan untuk klien Irlandia dikeluarkan oleh (3) Komisaris Pendapatan di Irlandia pada tanggal 29 September 2015 (lisensi no. 1010285). Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Costa Rica, Hong Kong, atau orang-orang di bawah usia 18 tahun"
-
-#~ msgid "information about your trading exprience and personal finance"
-#~ msgstr "informasi tentang pengalaman trading Anda dan keuangan pribadi"
-
-#~ msgid "trading experience"
-#~ msgstr "pengalaman trading"
-
-#~ msgid "trading frequency"
-#~ msgstr "frekuensi trading"
-
-#~ msgid "view license"
-#~ msgstr "lihat lisensi"
-
-#~ msgid "| Payout"
-#~ msgstr "| Hasil"
