@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Japanese\n"
-"Language: ja_JP\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -36,6 +36,9 @@ msgstr "eGaming Reviewによる「ベッティング金融業者オブザイヤ�
 msgid "'contract period'"
 msgstr "「取引期間」"
 
+msgid "(6,000   5,200) * 2 = $1600"
+msgstr ""
+
 msgid "(One) Touch trades"
 msgstr "（ワン）タッチ取引"
 
@@ -44,6 +47,12 @@ msgstr "(旧サービス名："
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "（取引期間が1日未満の場合）、または取引最終日（取引期間が1日以上の場合）"
+
+msgid "(license reference no: 39172)"
+msgstr ""
+
+msgid "(license reference no: 39495)"
+msgstr ""
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ")のサービスの提供を開始し、24時間のオンライトレードで様々な金融商品を展開したところ瞬く間に成長。固定オッズ方式の金融オンライントレード業界のリーダーとなりました。"
@@ -334,7 +343,8 @@ msgid "A Stays Between trade pays out if the market stays between (does not touc
 msgstr "レンジトレードにおける「STAY-IN」トレードは、取引期間中常に上限バリア、及び下限バリアの間に価格が留まれば条件が満たされたと判定され、上下どちらかのバリア値にタッチした瞬間に条件が満たされないと判定されます。「BREAK-OUT」では取引期間以内に一度でも上限バリア、または下限バリアにタッチすれば条件が満たされたと判定されます。"
 
 msgid "A bearish candlestick pattern consisting of three candles that have demonstrated the following characteristics, the first bar is a large white candlestick located within an uptrend, the middle bar is a small-bodied candle (red or white) that closes above the first white bar, the last bar is a large red candle that opens below the middle candle and closes near the center of the first bar's body"
-msgstr "ベアリッシュローソク足パターンは次の特徴を実証した3つのローソク足から成り立っています。\n"
+msgstr ""
+"ベアリッシュローソク足パターンは次の特徴を実証した3つのローソク足から成り立っています。\n"
 "- 最初のバーは上昇トレンドにある大きな白いローソク足\n"
 "- 中央のバーは最初の白いバーよりも上値で終了する短いローソク（赤または白）\n"
 "- 最後のバーは中央のバーよりも下値で始まり最初のバーのローソク中央値近くで終了する大きなローソク足"
@@ -346,7 +356,8 @@ msgid "A bearish counterattack is a long white candle in an uptrend, followed by
 msgstr "ベアリッシュ・カウンターアタックは、上昇トレンドにある長い白ローソクの後に長い黒ローソクがくることをいいます。白ローソクの終値と始値は同じ価格レベルです。ブリッシュカウンターアタックは、下降トレンドにある長い黒ローソクの後に長い白ローソクが続くことをいい、黒ローソクの終値と白ローソクの始値は同じレベルとなります。"
 
 msgid "A bearish separating line is a bearish continuation pattern. It is the exact opposite of the bullish separating line. There are two components to the bearish separating line: The first day is a green candlestick and the second day gaps down, opens at the first candlestick's open and closes weakly"
-msgstr "ベアリッシュ・セパレーティングラインは陰線が続くパターンをいいます。ブリッシュ・セパレーティングラインと真逆です。ベアリッシュ・セパレーティングラインは2つの要素から成り立ちます。\n"
+msgstr ""
+"ベアリッシュ・セパレーティングラインは陰線が続くパターンをいいます。ブリッシュ・セパレーティングラインと真逆です。ベアリッシュ・セパレーティングラインは2つの要素から成り立ちます。\n"
 "- 初日のローソク足が緑で2日目の始値が初日の終値で、陰線で終了した場合"
 
 msgid "A binary option is a contract purchased by a trader, which pays a pre-determined amount if their prediction is correct"
@@ -356,19 +367,22 @@ msgid "A binary option is an option with a fixed payout that is determined at th
 msgstr "バイナリーオプションは、取引開始時に予め決められた固定ペイアウトを用いたオプション取引です。条件が満たされた場合、そのペイアウトをお受け取りいただけます。条件が満たされなかった場合は、ペイアウトは支払われず購入金額を失うことになります。条件が満たされるか・満たされないか - の2つだけの結果からなることから、「バイナリーオプション」と呼ばれています。"
 
 msgid "A bullish candlestick pattern that consists of five candles, the first day is a long white day, the second day gaps up and is a black day, the second, third, and fourth days have small real bodies and follow a brief downtrend pattern, but stay within the range of the first day and the fifth day is a long white day that closes above the close of the first day"
-msgstr "ブリッシュローソク足パターンは5つのローソクから成り立ちます。\n"
+msgstr ""
+"ブリッシュローソク足パターンは5つのローソクから成り立ちます。\n"
 "- 初日は長い白ローソク\n"
 "- 2日目は差のある黒ローソク\n"
 "- 2日目、3日目、4日目のローソク足は短く、下降トレンド少し続きます。しかし、初日の範囲内に留まり、5日目は初日の終値よりも高値で終了する長い白ローソクがきます"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar and the last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr "ブリッシュローソク足パターンは3つのローソク足から成ります。\n"
+msgstr ""
+"ブリッシュローソク足パターンは3つのローソク足から成ります。\n"
 "- 下降トレンドにある初日は長い赤ローソク\n"
 "- 2日目は初日のローソクよりも低値で終了する短いローソク（赤または白）\n"
 "- 最終日は2日目のローソク足よりも高値で始まり、初日のローソクの中央あたりで終了します"
 
 msgid "A bullish candlestick pattern that consists of three candles, the first bar is a large red candlestick located within a defined downtrend, the second bar is a small-bodied candle (either red or white) that closes below the first red bar., he last bar is a large white candle that opens above the middle candle and closes near the center of the first bar's body"
-msgstr "ブリッシュローソク足パターンは3つのローソク足から成ります。\n"
+msgstr ""
+"ブリッシュローソク足パターンは3つのローソク足から成ります。\n"
 "- 下降トレンドにある初日は長い赤ローソク\n"
 "- 2日目は初日のローソクよりも低値で終了する短いローソク（赤または白）\n"
 "- 最終日は2日目のローソク足よりも高値で始まり、初日のローソクの中央あたりで終了します"
@@ -390,6 +404,9 @@ msgstr "小さく白いローソクを覆うまたは包む長く黒いローソ
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr "デリバティブとは金融市場で任意の取引対象にて予測される価値のことです。デリバティブはインターバンク市場にて盛んに取引されており、バイナリーはシンプルなデリバティブの一形態です。"
+
+msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
+msgstr ""
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "上ヒゲまたは下ヒゲのない中〜大の陰線または陽線のローソク足"
@@ -457,6 +474,9 @@ msgstr "指標の追加/削除"
 msgid "Add/remove indicators"
 msgstr "指標を追加/削除（英語表示のみ）"
 
+msgid "Address"
+msgstr ""
+
 msgid "Admin"
 msgstr "管理者"
 
@@ -465,6 +485,9 @@ msgstr "アドバンス・ブロック（CDLADVANCEBLOCK）"
 
 msgid "All durations"
 msgstr "全ての期間"
+
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
 
 msgid "All market conditions"
 msgstr "全ての市場状況"
@@ -589,6 +612,9 @@ msgstr "アベレージ・トゥルー・レンジ（ATR）"
 msgid "Avg. Duration"
 msgstr ""
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr ""
 
@@ -667,9 +693,6 @@ msgstr ""
 msgid "Binary granted Investment Services license"
 msgstr "Binary (Europe) Ltd.は、投資サービスライセンスを付与されています。"
 
-msgid "Binary mobile applications and third party tools"
-msgstr ""
-
 msgid "Binary opens Japan office"
 msgstr "日本オフィスを開設"
 
@@ -679,14 +702,17 @@ msgstr "バイナリーオプション"
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
 msgstr ""
 
-msgid "Binary options or other financial derivatives"
-msgstr "バイナリーオプション または その他金融派生商品"
-
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "バイナリーオプションの取引経験"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "バイナリーオプションの取引頻度"
+
+msgid "Binary options trading experience"
+msgstr ""
+
+msgid "Binary options trading frequency"
+msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr "柔軟な取引"
@@ -835,6 +861,15 @@ msgstr "クリックすると"
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "当社でお取引なさっているお客さまにおいて、改定内容を必ずご確認いただく必要がございます。原則、改定後の書面の内容をご確認いただきOKボタンを押して頂くまで、お取引できなくなりますので、お取引の際ご注意ください。"
 
+msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
+msgstr ""
+
+msgid "CFD trading experience"
+msgstr ""
+
+msgid "CFD trading frequency"
+msgstr ""
+
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "トレードの売買、期限切れトレードの更新、デモ口座の補充にご利用いただけます。"
 
@@ -918,6 +953,9 @@ msgstr "チョピネス・インデックス（CHOP）"
 
 msgid "Chrome"
 msgstr "Chrome"
+
+msgid "Citizenship"
+msgstr ""
 
 msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
@@ -1048,9 +1086,6 @@ msgstr "現在使用中の指標"
 msgid "Current password"
 msgstr "現在のパスワード"
 
-msgid "Current regulations require that you provide us the following"
-msgstr "現在の規定により、以下の書類を提出いただく必要があります"
-
 msgid "Current time"
 msgstr "現在時刻："
 
@@ -1157,7 +1192,8 @@ msgid "Digits let you predict the last decimal digit of the spot price. There ar
 msgstr ""
 
 msgid "Directional Movement (DMI) is actually a collection of three separate indicators combined into one. Directional Movement consists of the Average Directional Index (ADX), Plus Directional Indicator (+DI) and Minus Directional Indicator (-DI)"
-msgstr "シャンデのダイナミック・モメンタム・インデックス（DMI）は下記3つのインジケーターを1つに集約したものです。\n"
+msgstr ""
+"シャンデのダイナミック・モメンタム・インデックス（DMI）は下記3つのインジケーターを1つに集約したものです。\n"
 "- アベレージ・ダイレクショナル・ムーブメント・インデックス（ADX）のダイレクショナル・ムーブメント\n"
 "- プラス・ディレクショナル・インジケーター（+DI）\n"
 "- マイナス・ディレクショナル・インジケーター（-DI）"
@@ -1420,6 +1456,9 @@ msgstr "まず初めにお取引のパラメータを設定します。設定す
 msgid "Flexible"
 msgstr ""
 
+msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
+msgstr ""
+
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "３年連続でBetOnMarkets.comは、Shares Magazine UKから「最優秀な固定オッズ金融取引業者」を認定されてきましたが、同誌がこの分野への授与を中止したため、これが当社が同賞を受賞する最後の年になります。"
 
@@ -1516,9 +1555,6 @@ msgstr "ヘルプ"
 msgid "High"
 msgstr "高値"
 
-msgid "High Barrier"
-msgstr "高限バリア"
-
 msgid "High barrier"
 msgstr "上限バリア"
 
@@ -1548,9 +1584,6 @@ msgstr "ひっかけパターン（CDLHIKKAKE）"
 
 msgid "Historical Data"
 msgstr ""
-
-msgid "Home Address"
-msgstr "現住所"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "伝書鳩（CDLHOMINGPIGEON）"
@@ -1584,6 +1617,12 @@ msgstr "私は、犯罪収益移動防止法に規定されている外国人PEP
 
 msgid "I have read and agree to Binary.com"
 msgstr "よく読んだうえで、Binary.comに同意します"
+
+msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
+msgstr ""
+
+msgid "I want to be treated as a professional client"
+msgstr ""
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "バイナリー取引未経験者です。どうしたら取引を開始できますか？"
@@ -1645,8 +1684,14 @@ msgstr "テーマを適用するためには、ページの更新をする必要
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "当サービスでは、どの所定の製品またはサービスがお客様に適しているか評価するためにお客さまの情報を必要とします。（関連するリスクを理解する経験や知識があるかどうかがわかります。）"
 
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgstr ""
+
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "英国とマン島の居住者は、Binary (IOM) Ltd.の下に口座開設されます。日本の方はBinary株式会社 (和文名称 バイナリー株式会社)を通してのお取引となり、英国をのぞく欧州連合では、Binary (Europe) Ltd.とBinary Investments (Europe) Ltd.を介します。英国を除く欧州連合の居住者は、Binary (Europe) LtdとBinary Investments (Europe) Ltd.の下に口座を開設されます。その他以外の国は、Binary Investments (Europe) Ltd.の下に口座開設されます。"
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "入り首線（CDLINNECK）"
@@ -1802,7 +1847,8 @@ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ire
 msgstr "マルタ、英国、マン島、アイルランド、日本では、監督機関による監査を受けながら発行ライセンスを保持。"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
-msgstr "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise\n"
+msgstr ""
+"Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise\n"
 " \n"
 "Context | Edit Context"
 
@@ -1826,9 +1872,6 @@ msgstr "チャートテンプレートを読み込む"
 
 msgid "Load trade template"
 msgstr "取引テンプレートを読み込む"
-
-msgid "Loading"
-msgstr "読み込み中"
 
 msgid "Loading Asset Index"
 msgstr "資産インデックスの読み込み"
@@ -1908,11 +1951,14 @@ msgstr "Look for a tall black candle with a long lower shadow to appear in a dow
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 
+msgid "Lookbacks"
+msgstr ""
+
+msgid "Lookbacks are currently only available for Volatility Indices"
+msgstr ""
+
 msgid "Low"
 msgstr "安値"
-
-msgid "Low Barrier"
-msgstr "下限バリア"
 
 msgid "Low barrier"
 msgstr "下限バリア"
@@ -2022,9 +2068,6 @@ msgstr "Min: 10 Max: 2000"
 msgid "Minimum (MIN)"
 msgstr "特定期間の最安値（MIN）"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "数字を含む6文字以上でご入力ください"
-
 msgid "Minimum of 2 characters required"
 msgstr "2文字以上でご入力ください"
 
@@ -2033,6 +2076,9 @@ msgstr "4文字以上でご入力ください"
 
 msgid "Minimum of 6 characters required"
 msgstr "6文字以上でご入力ください"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "特定期間の最安値"
@@ -2081,6 +2127,9 @@ msgstr "Mrs"
 
 msgid "Ms"
 msgstr "Ms"
+
+msgid "Multiplier"
+msgstr ""
 
 msgid "Name"
 msgstr "お名前"
@@ -2445,6 +2494,9 @@ msgstr "主要"
 msgid "Print chart"
 msgstr "チャートを印刷"
 
+msgid "Professional Client"
+msgstr ""
+
 msgid "Profit"
 msgstr "利益"
 
@@ -2531,6 +2583,9 @@ msgstr "Regent Pacific株式売却"
 
 msgid "Register free account"
 msgstr "無料口座に登録"
+
+msgid "Regulatory Information"
+msgstr ""
 
 msgid "Relative Strength Index (RSI)"
 msgstr "相対力指数（RSI）"
@@ -2717,6 +2772,9 @@ msgstr "平滑移動平均（SMMA）"
 
 msgid "Sold"
 msgstr "売却"
+
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
 
 msgid "Source of wealth"
 msgstr ""
@@ -3106,7 +3164,8 @@ msgid "The piercing pattern is made up of two candlesticks, the first black and 
 msgstr "The piercing pattern is made up of two candlesticks, the first black and the second white.Both candlesticks should have fairly large bodies and the shadows are usually, but not necessarily, small or nonexistent. The white candlestick must open below the previous close and close above the midpoint of the black candlestick's body. A close below the midpoint might qualify as a reversal, but would not be considered as bullish"
 
 msgid "The premier platform for trading binary options in the world's financial markets"
-msgstr "世界の金融市場において\n"
+msgstr ""
+"世界の金融市場において\n"
 "最高水準のFXバイナリーオプション取引プラットフォーム"
 
 msgid "The profit is the difference between the purchase price (the stake) and the payout on a winning trade"
@@ -3163,6 +3222,9 @@ msgstr "ターゲット価格を設定し、取引対象の価格が取引終了
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "この項目は必須です"
 
@@ -3177,12 +3239,6 @@ msgstr "特定の時間にて、とある取引対象を売買できる現在の
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
-
-msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-
-msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "三前進ホワイトソルジャー（CDL3WHITESOLDIERS）"
@@ -3271,9 +3327,6 @@ msgstr "トークン名"
 msgid "Token permissions"
 msgstr "トークンのアクセス許可"
 
-msgid "Tokens are special codes for accessing"
-msgstr ""
-
 msgid "Tooltip background"
 msgstr "ツールチップ背景"
 
@@ -3334,6 +3387,9 @@ msgstr ""
 msgid "Trades break down"
 msgstr ""
 
+msgid "Trading Experience"
+msgstr ""
+
 msgid "Trading Times"
 msgstr "取引時間"
 
@@ -3386,6 +3442,9 @@ msgid "Two Crows (CDL2CROWS)"
 msgstr "2羽カラス（CDL2CROWS）"
 
 msgid "Two-way pricing"
+msgstr ""
+
+msgid "Types of lookbacks"
 msgstr ""
 
 msgid "Typical Price (TYPPRICE)"
@@ -3511,6 +3570,9 @@ msgstr "当社はライセンスにより、当社が保持しているお客さ
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "BetOnMarkets.comは2007年度に引き続き、「最優秀固定オッズ金融取引業者」を受賞。"
 
+msgid "We offer three types lookbacks"
+msgstr ""
+
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "BetOnMarkets.comをwww.binary.comに変更してリニューアル。"
 
@@ -3550,7 +3612,13 @@ msgstr " Binary.com Webtrader へようこそ"
 msgid "What are OTC indices and stocks?"
 msgstr ""
 
+msgid "What are lookbacks"
+msgstr ""
+
 msgid "What is pep?"
+msgstr ""
+
+msgid "What is this?"
 msgstr ""
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
@@ -3576,6 +3644,15 @@ msgstr "ソフトウェアをインストールする必要はありますか？
 
 msgid "Williams' %R (WILLR)"
 msgstr "ウィリアムズ・パーセントアール（WILLR）"
+
+msgid "Win the multiplier times the close minus low"
+msgstr ""
+
+msgid "Win the multiplier times the high minus close"
+msgstr ""
+
+msgid "Win the multiplier times the high minus low"
+msgstr ""
 
 msgid "With Binary.com you can trade"
 msgstr "当社では下記のお取引が可能です。"
@@ -3673,8 +3750,8 @@ msgstr "ズーム"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "「ドラッグ&ドロップ」操作で簡単に自動売買ロボットを作成することができます"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "and start learning how to trade"
 msgstr ""
@@ -3700,7 +3777,7 @@ msgstr "手数料"
 msgid "contact support"
 msgstr "サポートへのお問い合わせ"
 
-msgid "create a token, and share the token with copier(s)"
+msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr ""
 
 msgid "customer support"
@@ -3750,9 +3827,6 @@ msgstr ""
 
 msgid "in the future, the"
 msgstr "将来"
-
-msgid "information about your trading exprience and personal finance"
-msgstr "取引経験及び個人的な財政に関する情報"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
 msgstr "Binaryの高度なデスクトップ用取引プラットフォームです。マルチウィンドウインターフェースでは可能な限りの柔軟性を提供し、デスクトップPCでご利用いただける、トレーダーのニーズに適しています。"
@@ -3814,6 +3888,9 @@ msgstr "決済サービス"
 msgid "points"
 msgstr "ポイント"
 
+msgid "sec"
+msgstr ""
+
 msgid "second"
 msgstr "秒"
 
@@ -3841,15 +3918,6 @@ msgstr "ティック"
 msgid "ticks"
 msgstr "ティック"
 
-msgid "trading experience"
-msgstr "取引のご経験"
-
-msgid "trading frequency"
-msgstr "取引の頻度"
-
-msgid "view license"
-msgstr "ライセンスを表示する"
-
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
@@ -3859,9 +3927,50 @@ msgstr "はい"
 msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
-msgid "| Payout"
-msgstr "| ペイアウト"
+msgid "| Return"
+msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
 
+#~ msgid "Loading"
+#~ msgstr "読み込み中"
+
+#~ msgid "Binary options or other financial derivatives"
+#~ msgstr "バイナリーオプション または その他金融派生商品"
+
+#~ msgid "Current regulations require that you provide us the following"
+#~ msgstr "現在の規定により、以下の書類を提出いただく必要があります"
+
+#~ msgid "High Barrier"
+#~ msgstr "高限バリア"
+
+#~ msgid "Home Address"
+#~ msgstr "現住所"
+
+#~ msgid "Low Barrier"
+#~ msgstr "下限バリア"
+
+#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
+#~ msgstr "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
+
+#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+#~ msgstr "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
+
+#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+#~ msgstr "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+
+#~ msgid "information about your trading exprience and personal finance"
+#~ msgstr "取引経験及び個人的な財政に関する情報"
+
+#~ msgid "trading experience"
+#~ msgstr "取引のご経験"
+
+#~ msgid "trading frequency"
+#~ msgstr "取引の頻度"
+
+#~ msgid "view license"
+#~ msgstr "ライセンスを表示する"
+
+#~ msgid "| Payout"
+#~ msgstr "| ペイアウト"
