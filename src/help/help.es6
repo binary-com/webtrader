@@ -5,8 +5,6 @@ import html from 'text!help/help.html';
 import content from 'text!help/content.html'
 import 'css!help/help.css';
 
-"use strict";
-
 let win = null,
     sublist_items = [];
 
@@ -44,11 +42,9 @@ const init = () => {
     const state = {
         current: {
             list: null,
-            loading: false,
             sublist: null,
             content_page: null,
             content: null,
-            show_clear: false
         },
         list: [{
             text: "About Binary.com".i18n(),
@@ -269,7 +265,6 @@ const init = () => {
     state.search = (e) => {
         const query = $(e.target).val().toLowerCase();
         if (query.length > 0) {
-            state.current.show_clear = true;
             state.current.list = null;
             state.current.content_page = null;
             state.current.sublist = sublist_items.filter((item) => {
@@ -295,7 +290,7 @@ const init = () => {
                     };
                 });
         } else {
-            state.current.show_clear = false;
+            $('.highlight').removeClass('highlight');
         }
     }
 
@@ -313,11 +308,6 @@ const init = () => {
             const offset = $(".content " + subsection).offset().top - 50;
             $(".content").animate({ scrollTop: offset }, 500);
         }
-    }
-
-    state.clearSearch = () => {
-        $(".help-dialog .help-search").val("");
-        state.current.show_clear = false;
     }
 
     //Concat all the sublist items into one array so that we can later use it for searching.
@@ -343,7 +333,7 @@ const init = () => {
                 title_s = "";
             } else if (walker.currentNode.nodeName == "H3") {
                 title_s = walker.currentNode.innerText;
-                if (title_s.toLowerCase().indexOf(q) != -1) {
+                if (title_s.toLowerCase().indexOf(q) !== -1) {
                     const matchingText = title_s.substr(title_s.toLowerCase().indexOf(q), q.length);
                     const title_s_copy = title_s.replace(matchingText, "<span class='highlight'>" + matchingText + "</span>");
                     while (walker.nextNode()) {
@@ -367,7 +357,7 @@ const init = () => {
                     continue;
                 }
             } else if (walker.currentNode.nodeName !== "DIV" && walker.currentNode.nodeName !== "H2" &&
-                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) != -1 &&
+                walker.currentNode.nodeName !== "H3" && walker.currentNode.innerText.toLowerCase().indexOf(q) !== -1 &&
                 walker.currentNode.nodeName !== "LI" && walker.currentNode.nodeName !== "STRONG" &&
                 walker.currentNode.nodeName !== "H4") {
                 let index = walker.currentNode.innerText.toLowerCase().indexOf(q);

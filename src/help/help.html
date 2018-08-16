@@ -1,6 +1,7 @@
 <div class="list">
-    <input class="help-search" rv-on-input="search" placeholder=' &#x1F50E; Search'>
-    <span class='ui-icon ui-icon-circle-close' rv-show="current.show_clear" rv-on-click="clearSearch"></span>
+    <div class="help-search">
+        <input rv-on-input="search" placeholder=' &#x1F50E; Search'>
+    </div>
     <div class="items">
         <span rv-each-elem="list" rv-on-click="updateSublist | bind elem" rv-class-selected="current.list.text | eq elem.text">{elem.text}</span>
     </div>
@@ -11,6 +12,5 @@
     </div>
 </div>
 <div class="content">
-    <div class="loading" rv-if="current.loading | eq true">Loading...</div>
     <div class="items" rv-html="current.content"></div>
 </div>
