@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3906,38 +3906,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitiendo que clientes, afiliados y desarrolladores compren y vendan productos Binary.com"
 
-#~ msgid "Loading"
-#~ msgstr "Cargando"
-
-#~ msgid "Binary options or other financial derivatives"
-#~ msgstr "Opciones binarias u otros derivados financieros"
-
-#~ msgid "Current regulations require that you provide us the following"
-#~ msgstr "La regulación vigente requiere que nos proporcione lo siguiente"
-
-#~ msgid "High Barrier"
-#~ msgstr "Barrera Alta"
-
-#~ msgid "Home Address"
-#~ msgstr "Domicilio"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Límite Inferior"
-
-#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Este sitio es comercializado en el Reino Unido y la Isla de Man por Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Además, posee una licencia otorgada y regulada por (1) la Comisión Supervisora de Apuestas de la Isla de Man, Islas Británicas, la cual se emitió el 31 de agosto de 2012, y por (2) la Comisión de Apuestas del Reino Unido"
-
-#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Este sitio web es comercializado en el resto de la UE, para productos de inversión, por Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, la cual posee una licencia de proveedor de Servicios de Inversión de categoría 3 regulada por la Autoridad de Servicios Financieros de Malta (licencia n° IS/70156). Además, posee una licencia para productos de juego otorgada a Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, por (1) la Autoridad de Apuestas de Malta (licencia n° MGA/CL2/118/2000) el 26 de mayo de 2015; y otra licencia para clientes del Reino Unido otorgada por (2) la Comisión de Apuestas del Reino Unido"
-
-#~ msgid "information about your trading exprience and personal finance"
-#~ msgstr "información sobre su experiencia de comerciar y finanzas personales"
-
-#~ msgid "trading experience"
-#~ msgstr "experiencia comercial"
-
-#~ msgid "trading frequency"
-#~ msgstr "frecuencia de comercio"
-
-#~ msgid "view license"
-#~ msgstr "ver licencia"

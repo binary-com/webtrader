@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-03-11 09:10-0400\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: French\n"
-"Language: fr_FR\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3906,47 +3906,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permettant aux clients, affiliés, et développeurs d'acheter et vendre des produits Binary.com"
 
-#~ msgid "Loading"
-#~ msgstr "Chargement"
-
-#~ msgid "create a token, and share the token with copier(s)"
-#~ msgstr "créer un jeton et partager le jeton avec un(des) copieur(s)"
-
-#~ msgid "Binary options or other financial derivatives"
-#~ msgstr "Options binaires ou autres produits financiers dérivés"
-
-#~ msgid "Current regulations require that you provide us the following"
-#~ msgstr "Conformément aux réglementations actuelles, vous devez nous fournir les éléments suivants"
-
-#~ msgid "High Barrier"
-#~ msgstr "Barrière Supérieure"
-
-#~ msgid "Home Address"
-#~ msgstr "Adresse du domicile"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Barrière inférieure"
-
-#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Le site internet est commercialisé au Royaume-Uni et en île de Man par Binary (IOM Ltd., 1er étage, Millennium House, Victoria Road, Douglas, IM2 4RW, île de Man, les îles Britanniques, autorisé et régulé par (1) la Commission de Supervision des Jeux dans l'île de Man, les îles Britanniques, la licence de jeux en ligne actuelle émise le 31 Août 2012, et pour les clients du Royaume-Uni par (2) la Commission des Jeux du Royaume-Uni -"
-
-#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Le site internet est commercialisé dans le reste de l'Union Européenne, pour les produits d'investissement par Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorisé et régulé comme un fournisseur de Services d'Investissement de Catégorie 3 par l'Autorité des Services Financiers de Malte (license no. IS/70156), et pour les produits de jeux par Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorisé et régulé par (1) l'Autorité des Jeux de Malte à Malte, licence no MGA/CL2/118/2000, 26 Mai 2015 et pour les clients du Royaume-Uni par (2) la Commission des Jeux du Royaume-Uni"
-
-#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-#~ msgstr "et pour les clients Irlandais par (3) les Commissionnaires de Revenu en Irlande, la licence actuelle de bookmaker à distance a été émise le 29 septembre 2015 (licence no 1010285). Les services du site internet ne sont pas disponibles dans certains pays comme les États-Unis, le Costa Rica, Hong Kong, ou pour les personnes en dessous de 18 ans"
-
-#~ msgid "information about your trading exprience and personal finance"
-#~ msgstr "informations sur votre expérience du trading et votre situation financière personnelle"
-
-#~ msgid "trading experience"
-#~ msgstr "expérience du trading"
-
-#~ msgid "trading frequency"
-#~ msgstr "fréquence de trading"
-
-#~ msgid "view license"
-#~ msgstr "regarder la licence"
-
-#~ msgid "| Payout"
-#~ msgstr "| Versement"

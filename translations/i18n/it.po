@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Italian\n"
-"Language: it_IT\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3906,38 +3906,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
 
-#~ msgid "Loading"
-#~ msgstr "Caricamento"
-
-#~ msgid "Binary options or other financial derivatives"
-#~ msgstr "Opzioni binarie o altri derivati finanziari"
-
-#~ msgid "Current regulations require that you provide us the following"
-#~ msgstr "Le attuali disposizioni richiedono che tu ci fornisca"
-
-#~ msgid "High Barrier"
-#~ msgstr "Barriera superiore"
-
-#~ msgid "Home Address"
-#~ msgstr "Indirizzo di casa"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Barriera inferiore"
-
-#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-#~ msgstr "e per i clienti irlandesi dai (3) Revenue Commissioners dell'Irlanda, una licenza attuale di bookmaker a distanza emessa il 29 Settembre 2015 (licenza n. 1010285). I servizi di questo sito web non sono disponibili in alcuni paesi come gli Stati Uniti, la Costa Rica, Hong Kong o per le persone minorenni"
-
-#~ msgid "information about your trading exprience and personal finance"
-#~ msgstr "informazioni sull'esperienza di trading e sulla situazione finanziaria personale"
-
-#~ msgid "trading experience"
-#~ msgstr "esperienza di trading"
-
-#~ msgid "trading frequency"
-#~ msgstr "frequenza del trading"
-
-#~ msgid "view license"
-#~ msgstr "visualizza la licenza"
-
-#~ msgid "| Payout"
-#~ msgstr "| Payout"

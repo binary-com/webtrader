@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-04-15 17:50-0400\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi_VN\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -3906,47 +3906,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
-#~ msgid "Loading"
-#~ msgstr "Đang tải"
-
-#~ msgid "create a token, and share the token with copier(s)"
-#~ msgstr "tạo ra một token, và chia sẻ token với người sao chép"
-
-#~ msgid "Binary options or other financial derivatives"
-#~ msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"
-
-#~ msgid "Current regulations require that you provide us the following"
-#~ msgstr "Quy định hiện tại yêu cầu bạn cung cấp cho chúng tôi những điều sau đây"
-
-#~ msgid "High Barrier"
-#~ msgstr "Barie cao"
-
-#~ msgid "Home Address"
-#~ msgstr "Địa chỉ nhà"
-
-#~ msgid "Low Barrier"
-#~ msgstr "Barie thấp"
-
-#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Trang web này được bán trên thị trường tại Vương Quốc Anh và đảo Man bởi nhị phân (IOM) Ltd., tầng trệt, Thiên niên kỷ House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, chế và quy định của Ủy ban giám sát cờ bạc (1) ở Isle of Man, British Isles, hiện tại giấy phép cờ bạc trực tuyến phát hành vào ngày 31 tháng 8 năm 2012, và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
-
-#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "Trang web này trên thị trường trong phần còn lại của châu Âu, cho sản phẩm đầu tư bởi nhị phân đầu tư (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định như là một nhà cung cấp dịch vụ đầu tư thể loại 3 bởi cơ quan dịch vụ tài chính Malta (giấy phép. LÀ / 70156), và cho các sản phẩm chơi game bởi nhị phân (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định của (1) các cơ quan Nhan Malta ở Malta, giấy phép không có thanh/CL2/118/2000, ngày 26 tháng 5 năm 2015 và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
-
-#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-#~ msgstr "và cho các khách hàng Ailen (3) ủy viên doanh thu ở Ai-Len, các vấn đề về giấy phép đặt hàng từ xa hiện tại vào 29 tháng 9 năm 2015 (giấy phép số 1010285). Dịch vụ của trang web này không được thực hiện có sẵn ở một số quốc gia như Mỹ, Costa Rica, Hồng Kông, hoặc cho những người dưới 18 tuổi"
-
-#~ msgid "information about your trading exprience and personal finance"
-#~ msgstr "thông tin về kinh nghiệm giao dịch và tài chính cá nhân của bạn"
-
-#~ msgid "trading experience"
-#~ msgstr "kinh nghiệm giao dịch"
-
-#~ msgid "trading frequency"
-#~ msgstr "tần xuất giao dịch"
-
-#~ msgid "view license"
-#~ msgstr "xem giấy phép"
-
-#~ msgid "| Payout"
-#~ msgstr "| Thanh toán"

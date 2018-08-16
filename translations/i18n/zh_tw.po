@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-02-25 20:20-0500\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Chinese Traditional\n"
-"Language: zh_TW\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3906,47 +3906,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
 
-#~ msgid "Loading"
-#~ msgstr "載入"
-
-#~ msgid "create a token, and share the token with copier(s)"
-#~ msgstr "建立權杖並與複製者共用"
-
-#~ msgid "Binary options or other financial derivatives"
-#~ msgstr "二元期權或其他金融衍生品"
-
-#~ msgid "Current regulations require that you provide us the following"
-#~ msgstr "目前法規需要您向我們提供以下"
-
-#~ msgid "High Barrier"
-#~ msgstr "高障礙"
-
-#~ msgid "Home Address"
-#~ msgstr "家庭地址"
-
-#~ msgid "Low Barrier"
-#~ msgstr "低障礙"
-
-#~ msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "本網站由Binary (IOM) Ltd.在英國和曼島經營，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1)由不列顛群島曼島投資監管委員會授予執照和監管，目前線上博彩執照於2012 年8 月31 日頒發；而英國客戶(2)由英國博彩委員會授予執照和監管-"
-
-#~ msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-#~ msgstr "此網站市場在歐盟其他地區，投資產品由Binary Investments (Europe) Ltd.經營，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商（執照號碼為IS/70156)），而博彩產品由Binary (Europe) Ltd.,經營，地址為：Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，(1)由位於馬爾他的馬爾他博彩管理局授予執照和監管，執照號碼為MGA/CL2/118/2000（2015年5 月26 日），而英國客戶(2)由英國博彩委員會授予執照和監管-"
-
-#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-#~ msgstr "而愛爾蘭客戶由(3)愛爾蘭稅務專員辦事處授予執照和監管，執照號碼為1010285 (2015年9 月29 日）。本網站的服務不向一些國家如美國、哥斯大黎加及香港或對年齡不到18歲的使用者提供"
-
-#~ msgid "information about your trading exprience and personal finance"
-#~ msgstr "您的交易經驗與個人財務資訊"
-
-#~ msgid "trading experience"
-#~ msgstr "交易經驗"
-
-#~ msgid "trading frequency"
-#~ msgstr "交易頻率"
-
-#~ msgid "view license"
-#~ msgstr "檢視執照"
-
-#~ msgid "| Payout"
-#~ msgstr "| 賠付"
