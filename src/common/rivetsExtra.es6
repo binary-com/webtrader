@@ -625,6 +625,24 @@ rv.binders['barrier-format'] = {
    }
 };
 
+rv.binders['number-format'] = {
+  routine: (input, decimals) => {
+    const $input = $(input);
+    const listener = () => {
+      let val = $input.val();
+      val = remove_all_matches_except_first(val, /\./g);
+      val = val.replace(/[^\d.]/g,'');
+      // if decimals - max 2
+      $input.val(val);
+      $input.trigger('change');
+      return;
+    }
+    input._listener && $input.off('input', input._listener);
+    input._listener = listener;
+    $input.on('input', listener)
+  }
+};
+
 /* binder with high priority to apply attributes first */
 rv.binders['attr-*'] = {
    priority: 10*1000,
