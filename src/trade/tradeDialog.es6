@@ -833,32 +833,19 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   function add_barriers_to_request(state, request) {
     const { barrier, high_barrier, low_barrier, barrier_count } = state.barriers;
+
     if (+barrier_count === 2) {
       request.barrier = high_barrier;
-      request.barrier2 = low_barrier + '';
+      request.barrier2 = low_barrier;
       return;
     }
-    request.barrier = barrier;
+    if (barrier) request.barrier = barrier;
   };
 
   function set_is_barrier_offset(state) {
-    if (is_offset(state.barriers.barrier)) {
-      state.barriers.is_offset_barrier = true;
-    } else {
-      state.barriers.is_offset_barrier = false;
-    }
-
-    if (is_offset(state.barriers.low_barrier)) {
-      state.barriers.is_offset_low_barrier = true;
-    } else {
-      state.barriers.is_offset_low_barrier = false;
-    }
-
-    if (is_offset(state.barriers.high_barrier)) {
-      state.barriers.is_offset_high_barrier = true;
-    } else {
-      state.barriers.is_offset_high_barrier = false;
-    }
+    state.barriers.is_offset_barrier = is_offset(state.barriers.barrier);
+    state.barriers.is_offset_low_barrier = is_offset(state.barriers.low_barrier);
+    state.barriers.is_offset_high_barrier = is_offset(state.barriers.high_barrier);
   };
 
   function is_offset(barrier) {
