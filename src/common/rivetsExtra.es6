@@ -625,14 +625,26 @@ rv.binders['barrier-format'] = {
    }
 };
 
+function decimalPlaces(num) {
+  const match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+  let ret = 0;
+  if (match) {
+    ret = Math.max( 0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
+  }
+  return ret;
+};
+
 rv.binders['number-format'] = {
-  routine: (input, decimals) => {
+  priority: 3002,
+  routine: (input, max_nr_of_decimals) => {
     const $input = $(input);
     const listener = () => {
       let val = $input.val();
       val = remove_all_matches_except_first(val, /\./g);
       val = val.replace(/[^\d.]/g,'');
-      // if decimals - max 2
+
+      if (decimalPlaces(val) > max_nr_of_decimals) val = (+val).toFixed(max_nr_of_decimals);
+
       $input.val(val);
       $input.trigger('change');
       return;
