@@ -598,8 +598,13 @@ rv.binders['decimal-round'] = {
         // - Only Digit except first char which can be +(-)?
         // - Only one .
         let val = $input.val();
-        console.log('pre: ', val);
-        val = val.replace(/[^\d.-]/g,'');
+        let symbol = '';
+        if (val.startsWith('+') || val.startsWith('-')) {
+          symbol = val[0];
+        }
+        val = val.shift() + '.' + val.join('');
+        val = val.replace(/[^\d.]/g,'');
+        val = symbol + val;
         console.log('post: ', val);
 
         // TODO: is this necessary?
