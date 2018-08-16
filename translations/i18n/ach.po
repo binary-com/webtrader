@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Acholi\n"
 "Language: ach_UG\n"
-"PO-Revision-Date: 2018-02-15 12:20-0500\n"
+"PO-Revision-Date: 2018-08-16 05:21\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "crwdns19787:0crwdne19787:0"
@@ -36,6 +36,9 @@ msgstr "crwdns19796:0crwdne19796:0"
 msgid "'contract period'"
 msgstr "crwdns19798:0crwdne19798:0"
 
+msgid "(6,000   5,200) * 2 = $1600"
+msgstr "crwdns46335:0crwdne46335:0"
+
 msgid "(One) Touch trades"
 msgstr "crwdns19799:0crwdne19799:0"
 
@@ -44,6 +47,12 @@ msgstr "crwdns19800:0crwdne19800:0"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "crwdns15420:0crwdne15420:0"
+
+msgid "(license reference no: 39172)"
+msgstr "crwdns46336:0crwdne46336:0"
+
+msgid "(license reference no: 39495)"
+msgstr "crwdns46337:0crwdne46337:0"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr "crwdns19801:0crwdne19801:0"
@@ -378,6 +387,9 @@ msgstr "crwdns19877:0crwdne19877:0"
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr "crwdns19878:0crwdne19878:0"
 
+msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
+msgstr "crwdns46338:0crwdne46338:0"
+
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "crwdns19879:0crwdne19879:0"
 
@@ -444,6 +456,9 @@ msgstr "crwdns24279:0crwdne24279:0"
 msgid "Add/remove indicators"
 msgstr "crwdns15483:0crwdne15483:0"
 
+msgid "Address"
+msgstr "crwdns46339:0crwdne46339:0"
+
 msgid "Admin"
 msgstr "crwdns15485:0crwdne15485:0"
 
@@ -452,6 +467,9 @@ msgstr "crwdns19890:0crwdne19890:0"
 
 msgid "All durations"
 msgstr "crwdns19891:0crwdne19891:0"
+
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr "crwdns46340:0crwdne46340:0"
 
 msgid "All market conditions"
 msgstr "crwdns19892:0crwdne19892:0"
@@ -576,6 +594,9 @@ msgstr "crwdns19906:0crwdne19906:0"
 msgid "Avg. Duration"
 msgstr "crwdns41526:0crwdne41526:0"
 
+msgid "Avg. Duration of Open Positions"
+msgstr "crwdns46341:0crwdne46341:0"
+
 msgid "Avg. Loss"
 msgstr "crwdns41527:0crwdne41527:0"
 
@@ -654,9 +675,6 @@ msgstr "crwdns43310:0crwdne43310:0"
 msgid "Binary granted Investment Services license"
 msgstr "crwdns19926:0crwdne19926:0"
 
-msgid "Binary mobile applications and third party tools"
-msgstr "crwdns43481:0crwdne43481:0"
-
 msgid "Binary opens Japan office"
 msgstr "crwdns19927:0crwdne19927:0"
 
@@ -666,14 +684,17 @@ msgstr "crwdns19928:0crwdne19928:0"
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
 msgstr "crwdns43311:0crwdne43311:0"
 
-msgid "Binary options or other financial derivatives"
-msgstr "crwdns15511:0crwdne15511:0"
-
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "crwdns19929:0crwdne19929:0"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "crwdns19930:0crwdne19930:0"
+
+msgid "Binary options trading experience"
+msgstr "crwdns46342:0crwdne46342:0"
+
+msgid "Binary options trading frequency"
+msgstr "crwdns46343:0crwdne46343:0"
 
 msgid "Binary trading is flexible"
 msgstr "crwdns19931:0crwdne19931:0"
@@ -822,6 +843,15 @@ msgstr "crwdns15520:0crwdne15520:0"
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "crwdns15521:0crwdne15521:0"
 
+msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
+msgstr "crwdns46344:0crwdne46344:0"
+
+msgid "CFD trading experience"
+msgstr "crwdns46345:0crwdne46345:0"
+
+msgid "CFD trading frequency"
+msgstr "crwdns46346:0crwdne46346:0"
+
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "crwdns19964:0crwdne19964:0"
 
@@ -905,6 +935,9 @@ msgstr "crwdns19987:0crwdne19987:0"
 
 msgid "Chrome"
 msgstr "crwdns15542:0crwdne15542:0"
+
+msgid "Citizenship"
+msgstr "crwdns46347:0crwdne46347:0"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "crwdns15544:0crwdne15544:0"
@@ -1034,9 +1067,6 @@ msgstr "crwdns15573:0crwdne15573:0"
 
 msgid "Current password"
 msgstr "crwdns15574:0crwdne15574:0"
-
-msgid "Current regulations require that you provide us the following"
-msgstr "crwdns15575:0crwdne15575:0"
 
 msgid "Current time"
 msgstr "crwdns15576:0crwdne15576:0"
@@ -1404,6 +1434,9 @@ msgstr "crwdns20046:0crwdne20046:0"
 msgid "Flexible"
 msgstr "crwdns43346:0crwdne43346:0"
 
+msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
+msgstr "crwdns46348:0crwdne46348:0"
+
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "crwdns20048:0crwdne20048:0"
 
@@ -1500,9 +1533,6 @@ msgstr "crwdns20064:0crwdne20064:0"
 msgid "High"
 msgstr "crwdns20065:0crwdne20065:0"
 
-msgid "High Barrier"
-msgstr "crwdns15674:0crwdne15674:0"
-
 msgid "High barrier"
 msgstr "crwdns20066:0crwdne20066:0"
 
@@ -1532,9 +1562,6 @@ msgstr "crwdns20071:0crwdne20071:0"
 
 msgid "Historical Data"
 msgstr "crwdns33368:0crwdne33368:0"
-
-msgid "Home Address"
-msgstr "crwdns15682:0crwdne15682:0"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "crwdns20072:0crwdne20072:0"
@@ -1568,6 +1595,12 @@ msgstr "crwdns20079:0crwdne20079:0"
 
 msgid "I have read and agree to Binary.com"
 msgstr "crwdns15686:0crwdne15686:0"
+
+msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
+msgstr "crwdns46349:0crwdne46349:0"
+
+msgid "I want to be treated as a professional client"
+msgstr "crwdns46350:0crwdne46350:0"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "crwdns20080:0crwdne20080:0"
@@ -1629,8 +1662,14 @@ msgstr "crwdns15692:0crwdne15692:0"
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "crwdns15693:0crwdne15693:0"
 
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgstr "crwdns46351:0crwdne46351:0"
+
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "crwdns20093:0crwdne20093:0"
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgstr "crwdns46352:0crwdne46352:0"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "crwdns20094:0crwdne20094:0"
@@ -1809,9 +1848,6 @@ msgstr "crwdns15730:0crwdne15730:0"
 msgid "Load trade template"
 msgstr "crwdns20123:0crwdne20123:0"
 
-msgid "Loading"
-msgstr "crwdns15731:0crwdne15731:0"
-
 msgid "Loading Asset Index"
 msgstr "crwdns15732:0crwdne15732:0"
 
@@ -1890,11 +1926,14 @@ msgstr "crwdns20130:0crwdne20130:0"
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr "crwdns20131:0crwdne20131:0"
 
+msgid "Lookbacks"
+msgstr "crwdns46353:0crwdne46353:0"
+
+msgid "Lookbacks are currently only available for Volatility Indices"
+msgstr "crwdns46354:0crwdne46354:0"
+
 msgid "Low"
 msgstr "crwdns20132:0crwdne20132:0"
-
-msgid "Low Barrier"
-msgstr "crwdns15756:0crwdne15756:0"
 
 msgid "Low barrier"
 msgstr "crwdns20133:0crwdne20133:0"
@@ -2004,9 +2043,6 @@ msgstr "crwdns15781:0crwdne15781:0"
 msgid "Minimum (MIN)"
 msgstr "crwdns20148:0crwdne20148:0"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "crwdns15782:0crwdne15782:0"
-
 msgid "Minimum of 2 characters required"
 msgstr "crwdns20149:0crwdne20149:0"
 
@@ -2015,6 +2051,9 @@ msgstr "crwdns20150:0crwdne20150:0"
 
 msgid "Minimum of 6 characters required"
 msgstr "crwdns20151:0crwdne20151:0"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr "crwdns46355:0crwdne46355:0"
 
 msgid "Minimum price over selected period"
 msgstr "crwdns20152:0crwdne20152:0"
@@ -2063,6 +2102,9 @@ msgstr "crwdns15790:0crwdne15790:0"
 
 msgid "Ms"
 msgstr "crwdns15791:0crwdne15791:0"
+
+msgid "Multiplier"
+msgstr "crwdns46356:0crwdne46356:0"
 
 msgid "Name"
 msgstr "crwdns15795:0crwdne15795:0"
@@ -2427,6 +2469,9 @@ msgstr "crwdns15902:0crwdne15902:0"
 msgid "Print chart"
 msgstr "crwdns15903:0crwdne15903:0"
 
+msgid "Professional Client"
+msgstr "crwdns46357:0crwdne46357:0"
+
 msgid "Profit"
 msgstr "crwdns15904:0crwdne15904:0"
 
@@ -2513,6 +2558,9 @@ msgstr "crwdns20223:0crwdne20223:0"
 
 msgid "Register free account"
 msgstr "crwdns15918:0crwdne15918:0"
+
+msgid "Regulatory Information"
+msgstr "crwdns46358:0crwdne46358:0"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "crwdns20224:0crwdne20224:0"
@@ -2699,6 +2747,9 @@ msgstr "crwdns20243:0crwdne20243:0"
 
 msgid "Sold"
 msgstr "crwdns15985:0crwdne15985:0"
+
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr "crwdns46359:0crwdne46359:0"
 
 msgid "Source of wealth"
 msgstr "crwdns33369:0crwdne33369:0"
@@ -3144,6 +3195,9 @@ msgstr "crwdns20349:0crwdne20349:0"
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "crwdns20350:0crwdne20350:0"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr "crwdns46360:0crwdne46360:0"
+
 msgid "This field is required"
 msgstr "crwdns16029:0crwdne16029:0"
 
@@ -3158,12 +3212,6 @@ msgstr "crwdns20353:0crwdne20353:0"
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr "crwdns20354:0crwdne20354:0"
-
-msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr "crwdns20355:0crwdne20355:0"
-
-msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr "crwdns20356:0crwdne20356:0"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "crwdns20357:0crwdne20357:0"
@@ -3252,9 +3300,6 @@ msgstr "crwdns16047:0crwdne16047:0"
 msgid "Token permissions"
 msgstr "crwdns16048:0crwdne16048:0"
 
-msgid "Tokens are special codes for accessing"
-msgstr "crwdns43484:0crwdne43484:0"
-
 msgid "Tooltip background"
 msgstr "crwdns16050:0crwdne16050:0"
 
@@ -3315,6 +3360,9 @@ msgstr "crwdns41539:0crwdne41539:0"
 msgid "Trades break down"
 msgstr "crwdns41540:0crwdne41540:0"
 
+msgid "Trading Experience"
+msgstr "crwdns46361:0crwdne46361:0"
+
 msgid "Trading Times"
 msgstr "crwdns16060:0crwdne16060:0"
 
@@ -3368,6 +3416,9 @@ msgstr "crwdns20385:0crwdne20385:0"
 
 msgid "Two-way pricing"
 msgstr "crwdns43396:0crwdne43396:0"
+
+msgid "Types of lookbacks"
+msgstr "crwdns46362:0crwdne46362:0"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "crwdns20386:0crwdne20386:0"
@@ -3492,6 +3543,9 @@ msgstr "crwdns20408:0crwdne20408:0"
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "crwdns20409:0crwdne20409:0"
 
+msgid "We offer three types lookbacks"
+msgstr "crwdns46363:0crwdne46363:0"
+
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "crwdns20411:0crwdne20411:0"
 
@@ -3531,8 +3585,14 @@ msgstr "crwdns24300:0crwdne24300:0"
 msgid "What are OTC indices and stocks?"
 msgstr "crwdns43403:0crwdne43403:0"
 
+msgid "What are lookbacks"
+msgstr "crwdns46364:0crwdne46364:0"
+
 msgid "What is pep?"
 msgstr "crwdns33370:0crwdne33370:0"
+
+msgid "What is this?"
+msgstr "crwdns46365:0crwdne46365:0"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "crwdns43404:0crwdne43404:0"
@@ -3557,6 +3617,15 @@ msgstr "crwdns20421:0crwdne20421:0"
 
 msgid "Williams' %R (WILLR)"
 msgstr "crwdns20422:0%Rcrwdne20422:0"
+
+msgid "Win the multiplier times the close minus low"
+msgstr "crwdns46366:0crwdne46366:0"
+
+msgid "Win the multiplier times the high minus close"
+msgstr "crwdns46367:0crwdne46367:0"
+
+msgid "Win the multiplier times the high minus low"
+msgstr "crwdns46368:0crwdne46368:0"
 
 msgid "With Binary.com you can trade"
 msgstr "crwdns20426:0crwdne20426:0"
@@ -3654,8 +3723,8 @@ msgstr "crwdns16121:0crwdne16121:0"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "crwdns20441:0crwdne20441:0"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "crwdns20442:0crwdne20442:0"
+msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr "crwdns46369:0crwdne46369:0"
 
 msgid "and start learning how to trade"
 msgstr "crwdns43409:0crwdne43409:0"
@@ -3681,8 +3750,8 @@ msgstr "crwdns16126:0crwdne16126:0"
 msgid "contact support"
 msgstr "crwdns16127:0crwdne16127:0"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "crwdns43488:0crwdne43488:0"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr "crwdns46370:0crwdne46370:0"
 
 msgid "customer support"
 msgstr "crwdns16128:0crwdne16128:0"
@@ -3731,9 +3800,6 @@ msgstr "crwdns43412:0crwdne43412:0"
 
 msgid "in the future, the"
 msgstr "crwdns16148:0crwdne16148:0"
-
-msgid "information about your trading exprience and personal finance"
-msgstr "crwdns16149:0crwdne16149:0"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
 msgstr "crwdns16150:0crwdne16150:0"
@@ -3795,6 +3861,9 @@ msgstr "crwdns16166:0crwdne16166:0"
 msgid "points"
 msgstr "crwdns16169:0crwdne16169:0"
 
+msgid "sec"
+msgstr "crwdns46371:0crwdne46371:0"
+
 msgid "second"
 msgstr "crwdns16171:0crwdne16171:0"
 
@@ -3822,15 +3891,6 @@ msgstr "crwdns16178:0crwdne16178:0"
 msgid "ticks"
 msgstr "crwdns16179:0crwdne16179:0"
 
-msgid "trading experience"
-msgstr "crwdns16181:0crwdne16181:0"
-
-msgid "trading frequency"
-msgstr "crwdns16182:0crwdne16182:0"
-
-msgid "view license"
-msgstr "crwdns20450:0crwdne20450:0"
-
 msgid "www.Binary.com"
 msgstr "crwdns20451:0crwdne20451:0"
 
@@ -3840,8 +3900,8 @@ msgstr "crwdns16184:0crwdne16184:0"
 msgid "{agent.commission}%"
 msgstr "crwdns16185:0{agent.commission}crwdne16185:0"
 
-msgid "| Payout"
-msgstr "crwdns20452:0crwdne20452:0"
+msgid "| Return"
+msgstr "crwdns46372:0crwdne46372:0"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "crwdns20453:0crwdne20453:0"
