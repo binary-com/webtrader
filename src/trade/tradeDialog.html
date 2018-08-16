@@ -156,8 +156,8 @@
             <input class="barriers-barrier" type="text" rv-barrier-format
                    rv-value="barriers.high_barrier | debounce proposal.onchange" />
         </li>
-        <li rv-show="barriers.is_offset_barrier">
-            <span class="dotted-underline align-text"
+        <li rv-show="barriers.is_offset_high_barrier">
+            <span class="dotted-underline align-text text-vertical-align"
                 rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3 | or '-'"
                 rv-data-balloon="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                 data-balloon-pos="down"
@@ -187,8 +187,8 @@
             <input class="barriers-barrier" type="text" rv-barrier-format
                    rv-value="barriers.low_barrier | debounce proposal.onchange" />
         </li>
-        <li rv-show="barriers.is_offset_barrier">
-            <span class="dotted-underline align-text"
+        <li rv-show="barriers.is_offset_low_barrier">
+            <span class="dotted-underline align-text text-vertical-align"
                   rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-data-balloon="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   data-balloon-pos="down"
