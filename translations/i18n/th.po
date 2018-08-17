@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-08-17 00:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "'ระยะเวลาสัญญา'"
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6,000   5,200) * 2 = $1600"
 
 msgid "(One) Touch trades"
 msgstr "(One) Touch Trades"
@@ -49,10 +49,10 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือ สิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
 
 msgid "(license reference no: 39172)"
-msgstr ""
+msgstr "(ใบอนุญาตเลขที่: 39172)"
 
 msgid "(license reference no: 39495)"
-msgstr ""
+msgstr "(ใบอนุญาตเลขที่: 39495)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") ได้เปิดใช้งานจริง ให้บริการการพนันทางการเงินในดัชนีทางการเงินต่างๆ ที่หลากหลายทั้งวันทั้งคืน ธุรกิจเติบโตอย่างรวดเร็ว และในไม่ช้าพวกเราก้าวสู่การเป็นผู้นำตลาดการพนันทางการเงินแบบ Fixed-Odds"
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "อนุพันธ์ คือ เครื่องมือทางการเงินประเภทหนึ่งซึ่งมูลค่าถูกกำหนดโดยการอ้างอิงของตลาด โดยทั่วไปการซื้อขายอนุพันธ์เกิดขึ้นในตลาดฟอเร็กซ์ และไบนารีเป็นรูปแบบที่ง่ายที่สุดของอนุพันธ์"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "สัญญา lookback มีการชำระเงินที่ขึ้นอยู่กับค่าสูงที่สุดและต่ำสุดที่ตลาดทำเอาไว้ ซึ่งให้ผู้ถือสัญญานี้ \"มองกลับไป\" เพื่อพิจารณาถึงการชำระเงินในช่วงเวลาที่ผ่านมา"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "แท่งเทียนขนาดกลางถึงยาวของตลาดตื่นตัว หรือ ตลาดซบเซา โดยมีคุณสมบัติหลักๆ คือ ไม่มีเงาทั้งหัว หรือ หาง"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 
 msgid "Address"
-msgstr ""
+msgstr "ที่อยู่"
 
 msgid "Admin"
 msgstr "ผู้ดูแลระบบ"
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "ฟิลด์ข้อมูลเหล่านี้เป็นแบบให้เลือก ถ้าคุณต้องการคัดลอกสินทรัพย์และประเภทการซื้อขายทั้งหมด กรุณาปล่อยฟิลด์เหล่านี้ว่าง"
 
 msgid "All market conditions"
 msgstr "ทุกเงื่อนไขในตลาด"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "เวลาเฉลี่ย"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "ระยะเวลาเฉลี่ยของตำแหน่งที่เปิด"
 
 msgid "Avg. Loss"
 msgstr "ขาดทุนเฉลี่ย"
@@ -692,10 +692,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "ความถี่ในการซื้อขายไบนารีออปชั่น หรือ อนุพันธ์ต่างๆ"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขายไบนารีออปชัน"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขายไบนารีออปชัน"
 
 msgid "Binary trading is flexible"
 msgstr "การซื้อขายไบนารีมีความยืดหยุ่น"
