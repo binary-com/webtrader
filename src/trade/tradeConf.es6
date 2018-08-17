@@ -228,15 +228,27 @@ const register_ticks = (state, extra) => {
    });
    
   let temp_ticks = [];
+  let first_tick;
+  let is_getting_history = false;
   on_tick = liveapi.events.on('tick', (data) => {
       const is_different_stream = extra.symbol !== data.tick.symbol;
       if (is_different_stream) return;
+      if (!first_tick) first_tick = data.tick;
 
       const waiting_for_contract_entry_tick = !proposal_open_contract || !proposal_open_contract.entry_tick_time;
       if (waiting_for_contract_entry_tick) {
             temp_ticks.push(data.tick);
             return;
       }
+
+      const has_missing_ticks = (first_tick.epoch > proposal_open_contract.entry_tick_time);
+      if (has_missing_ticks) {
+            is_getting_history = true;
+            first_tick.epoch = proposal_open_contract.entry_tick_time;
+            get_tick_history(proposal_open_contract.entry_tick_time, extra.symbol);
+      }
+
+      if (is_getting_history) return;
 
       if (temp_ticks.length > 0) {
             temp_ticks.forEach((stored_tick) => add_tick(stored_tick));
@@ -245,6 +257,23 @@ const register_ticks = (state, extra) => {
 
       add_tick(data.tick);
     });
+
+    function get_tick_history(start, ticks_history) {
+      liveapi.send({ ticks_history, end: 'latest', start,
+                  style: 'ticks',
+                  count: 5000
+      }).then((data) => {
+            is_getting_history = false;
+            temp_ticks = [];
+            data.history.prices.forEach((price, idx) => {
+                  temp_ticks.push({
+                        epoch: data.history.times[idx],
+                        quote: price,
+                        symbol: extra.symbol,
+                  });
+            });
+      });
+    };
 
    const on_open_proposal_error = (data) => {
       $.growl.error({message: data.error.message});
