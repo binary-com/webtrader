@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-08-17 00:40\n"
+"PO-Revision-Date: 2018-08-17 00:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -845,13 +845,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "โดยเริ่มต้นลูกค้าทั้งหมดจะถือเป็นลูกค้ารายย่อย คุณต้องการเปลี่ยนสถานะเป็นลูกค้าที่มีความเชี่ยวชาญหรือไม่หากคุณมีคุณสมบัติจำเป็นที่ตรงกับเงื่อนไขที่กำหนดไว้"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขาย CFD"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขาย CFD"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
@@ -938,7 +938,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "สัญชาติ"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของท่าน"
@@ -1436,7 +1436,7 @@ msgid "Flexible"
 msgstr "ยืดหยุ่น"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "ตัวอย่างเช่น สมมติว่า ตลาดมีระดับต่ำที่ 5,200 และปิดที่ 6,000 ในช่วงเวลาของสัญญา ดังนั้นสัญญา lookback แบบ'ปิด-ต่ำ' ที่มีตัวคูณ $2 จะมีการชำระเงินเป็นมูลค่า"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "สำหรับสามปีที่ต่อเนื่อง BetOnMarkets.com ได้รับคัดเลือกจากคะแนนนิยมกับตำแหน่ง 'Best Fixed-Odds Financial Trading Provider' โดย Shares Magazine UK ซึ่งเป็นครั้งสุดท้ายที่ชนะ เนื่องจาก Shares Magazine ยุติการให้รางวัลในหมวดนี้หลังจากนั้น"
@@ -1598,10 +1598,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "ฉันได้อ่าน และยอมรับกับ Binary.com"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "ข้าพเจ้าขอยืนยันในที่นี้ว่าข้อมูลภาษีที่ให้ไว้นั้นถูกต้องและสมบูรณ์ ข้าพเจ้าจะแจ้งแก่ Binary Investments (Europe) Ltd. หากมีการเปลี่ยนแปลงของข้อมูลนี้"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "ฉันต้องการได้รับการปฏิบัติเสมือนเป็นลูกค้าผู้มีความเชี่ยวชาญคนหนึ่ง"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "ฉันเป็นมือใหม่สำหรับไบนารี ฉันจะเริ่มอย่างไร?"
@@ -1665,7 +1665,7 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินถูกนำเสนอโดย Binary Investments (Europe) Ltd. อาคาร Mompalao Suite 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการการลงทุนประเภท 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156) ใน Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกนำเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย Douglas IM2 4RW Isle of Man, British Isles ได้รับอนุญาตและกำกับดูแลทางกฎหมายตามลำดับโดย (1) Gambling Supervision Commission แห่ง Isle of Man (ใบอนุญาตปัจจุบันออกให้วันที่ 31 สิงหาคม 2560) และโดย (2) Gambling Commission แห่งสหราชอาณาจักร"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "ในสหราชอาณาจักร และเกาะ Isle of Man ลูกค้าของเราซื้อขายผ่านบริษัท Binary (IOM) Ltd และประเทศญี่ปุ่น ดำเนินการซื้อขายผ่าน Binary KK ในสหพันธ์ยุโรป (ยกเว้นสหราชอาณาจักร) ลูกค้าซื้อขายผ่านบริษัท Binary (Europe) Ltd และ Binary Investments (Europe) Ltd และประเทศอื่นๆ ในภูมิภาคอื่น พวกเขาซื้อขายผ่านบริษัท Binary (C.R.) S.A"
