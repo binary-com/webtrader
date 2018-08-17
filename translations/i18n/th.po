@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-08-17 01:00\n"
+"PO-Revision-Date: 2018-08-17 01:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr "ฟิลด์ข้อมูลเหล่านี้เป็นแบบให้เลือก ถ้าคุณต้องการคัดลอกสินทรัพย์และประเภทการซื้อขายทั้งหมด กรุณาปล่อยฟิลด์เหล่านี้ว่าง"
+msgstr "ฟิลด์ข้อมูลทั้งหมดเป็นแบบให้เลือก ถ้าคุณต้องการคัดลอกสินทรัพย์และประเภทการซื้อขายทั้งหมด กรุณาปล่อยฟิลด์เหล่านี้ว่าง"
 
 msgid "All market conditions"
 msgstr "ทุกเงื่อนไขในตลาด"
@@ -845,7 +845,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr "โดยเริ่มต้นลูกค้าทั้งหมดจะถือเป็นลูกค้ารายย่อย คุณต้องการเปลี่ยนสถานะเป็นลูกค้าที่มีความเชี่ยวชาญหรือไม่หากคุณมีคุณสมบัติจำเป็นที่ตรงกับเงื่อนไขที่กำหนดไว้"
+msgstr "โดยเริ่มต้นลูกค้าทั้งหมดจะถือเป็นลูกค้ารายย่อย คุณต้องการเปลี่ยนสถานะเป็นลูกค้าที่มีความเชี่ยวชาญหรือไม่หากคุณมีคุณสมบัติที่จำเป็นตรงกับเงื่อนไขที่กำหนดไว้"
 
 msgid "CFD trading experience"
 msgstr "ประสบการณ์การซื้อขาย CFD"
@@ -1601,7 +1601,7 @@ msgid "I hereby confirm that the tax information I provided is true and complete
 msgstr "ข้าพเจ้าขอยืนยันในที่นี้ว่าข้อมูลภาษีที่ให้ไว้นั้นถูกต้องและสมบูรณ์ ข้าพเจ้าจะแจ้งแก่ Binary Investments (Europe) Ltd. หากมีการเปลี่ยนแปลงของข้อมูลนี้"
 
 msgid "I want to be treated as a professional client"
-msgstr "ฉันต้องการได้รับการปฏิบัติเสมือนเป็นลูกค้าผู้มีความเชี่ยวชาญคนหนึ่ง"
+msgstr "ข้าพเจ้าต้องการได้รับการปฏิบัติเสมือนเป็นลูกค้าผู้มีความเชี่ยวชาญคนหนึ่ง"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "ฉันเป็นมือใหม่สำหรับไบนารี ฉันจะเริ่มอย่างไร?"
@@ -3594,7 +3594,7 @@ msgid "What is pep?"
 msgstr "PEP คืออะไร?"
 
 msgid "What is this?"
-msgstr "นี้คืออะไร?"
+msgstr "นี้คืออะไร"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "เมื่อท่านพอใจกับราคาที่ท่านได้รับ ดำเนินการซื้อขายทันที ในแพลตฟอร์มที่เป็นเอกลักษณ์ของเรา ท่านจะไม่ต้องต่อสู้กับ 'Slippage' หรือ ช่องว่างในตลาด และที่สำคัญที่สุด ไม่มีค่าธรรมเนียมที่มองไม่เห็น ท่านสามารถขายคืนการซื้อขายระยะยาวเมื่อใดก็ได้ก่อนที่จะหมดอายุเพื่อปกป้องกำไรที่ท่านอาจจะได้รับหรือลดการขาดทุนให้น้อยที่สุด"
@@ -3903,7 +3903,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| ผลตอบแทน"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"
