@@ -259,18 +259,16 @@ const register_ticks = (state, extra) => {
     });
 
     function get_tick_history(start, ticks_history) {
-      liveapi.send({ ticks_history, end: 'latest', start,
-                  style: 'ticks',
-                  count: 5000
-      }).then((data) => {
-            is_getting_history = false;
-            temp_ticks = [];
-            data.history.prices.forEach((price, idx) => {
-                  temp_ticks.push({
-                        epoch: data.history.times[idx],
-                        quote: price,
-                        symbol: extra.symbol,
-                  });
+      liveapi.send({ ticks_history, end: 'latest', start, style: 'ticks', count: 5000})
+            .then((data) => {
+                  is_getting_history = false;
+                  temp_ticks = [];
+                  data.history.prices.forEach((price, idx) => {
+                        temp_ticks.push({
+                              epoch: data.history.times[idx],
+                              quote: price,
+                              symbol: extra.symbol,
+                        });
             });
       });
     };
