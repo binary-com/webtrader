@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-08-19 07:50\n"
+"PO-Revision-Date: 2018-08-19 08:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -844,13 +844,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "En cliquant sur OK, vous confirmez que vous avez lu et accepté la version à jour des"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "Par défaut, tous les clients sont traités comme particulier. Préférez-vous être traité comme un client professionnel si vous correspondez aux critères nécessaires ?"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "Expérience de trading CFD"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "Fréquence de trading CFD"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Peut être utilisé pour acheter et vendre des contrats, renouveler des achats expirés, et abonder des comptes en monnaie virtuelle."
@@ -937,7 +937,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "Nationalité"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Cliquez pour vous connecter à votre compte Binary.com."
@@ -1435,7 +1435,7 @@ msgid "Flexible"
 msgstr "Flexible"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "Par exemple, disons que le marché a un minimum de 5200 et une clôture de 6000 sur la durée du contrat, puis un lookback « Close-Low » avec un multiplicateur de 2 $ aurait un gain de "
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Pour la troisième année consécutive, BetOnMarkets.com est désigné 'Meilleur Fournisseur Financier de Trading à Cotes Fixes' par Shares Magazine UK. C'est la dernière fois que nous gagnons car Share Magazine arrête la récompense de cette catégorie"
@@ -1597,10 +1597,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "J'ai lu et j'accepte les Conditions Générales de Binary.com"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "Je confirme par la présente que les renseignements fiscaux fournis sont véridiques et complets. J’informerai également Binary Investments (Europe) Ltd. de tout changement à ces renseignements"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "Je veux être traité comme un client professionnel"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Je suis un débutant en options binaires, où dois je commencer ?"
