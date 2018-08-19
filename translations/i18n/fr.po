@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-08-19 07:40\n"
+"PO-Revision-Date: 2018-08-19 07:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Un dérivé est un instrument financier dont la valeur est déterminée par référence à un marché sous-jacent. Les dérivés sont communément échangés sur le marché interbancaire, et les binaires sont l'une des plus simples formes de dérivés"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "Un contrat loockback a un taux de redistribution qui dépend de l'optimum haut ou bas atteint par le marché. L’option permet au détenteur de « revenir » au fil du temps afin de déterminer le gain"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "Un chandelier moyen ou long haussier ou baissier avec le trait définissant clé étant l'absence d'ombre de tête ou queue"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "Ajouter/supprimer des indicateurs"
 
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 msgid "Admin"
 msgstr "Administration"
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "Toutes durées"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Tous les champs sont facultatifs. Si vous souhaitez copier tous les actifs et les types de trade, veuillez laisser tous les champs vides"
 
 msgid "All market conditions"
 msgstr "Toutes conditions de marché"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "Durée moyenne"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Durée Moyenne des Positions Ouvertes"
 
 msgid "Avg. Loss"
 msgstr "Perte moyenne"
@@ -691,10 +691,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Fréquence de trading des options binaires ou autre dérivés financiers"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "Expérience de trading d’options binaires"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "Fréquence de trading d’options binaires"
 
 msgid "Binary trading is flexible"
 msgstr "Le trading d'options binaires est flexible"
