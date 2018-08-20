@@ -273,7 +273,6 @@ const register_ticks = (state, extra) => {
                         });
                   });
                   temp_ticks.sort((a, b) => (+a.epoch) - (+b.epoch));
-                  console.log('history done: ', temp_ticks);
             }).catch((err) => $.growl.error({ message: data.error.message }));
     };
 
