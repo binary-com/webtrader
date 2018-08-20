@@ -1,8 +1,3 @@
-
-/**
- * Created by arnab on 2/18/15.
- */
-
 import $ from 'jquery';
 import _ from 'lodash';
 import navigation from 'navigation/navigation';
@@ -446,11 +441,13 @@ export const createBlankWindow = function($html,options) {
    TODO: move this to a utility file
 */
 export const makeSelectmenu = function (select, options) {
+    console.log('select: ', select, ' options: ', options);
    options = $.extend({
       list: ['empty'],
       inx: 0,
       changed:  () => { }
    }, options);
+   options.changed = () => { };
 
    var inx = options.inx, list = options.list;
    var update_select = (list) => {
@@ -469,10 +466,13 @@ export const makeSelectmenu = function (select, options) {
       });
    select.on('selectmenuchange', function () {
       var val = $(this).val();
+      console.log(val);
+      console.log(options);
       options.changed(val);
    });
 
    select.update_list = (new_list) => {
+      console.log('update_list: ', new_list);
       update_select(new_list);
       select.val(new_list[0]);
       select.selectmenu('refresh');

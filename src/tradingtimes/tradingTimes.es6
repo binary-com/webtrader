@@ -62,7 +62,7 @@ const processData = (markets) => {
       // TODO: comeback and use lodash once 'trade module' changes got merged.
       const market = markets.filter((m) => (m.display_name == marketname))[0];
       const symbols = market && market.submarkets.filter((s) => (s.display_name == submarket_name))[0].instruments;
-
+      console.log('symbols: ', symbols);
       const rows = (symbols || []).map((sym) => {
         return [
           sym.display_name,
@@ -140,6 +140,7 @@ const initTradingWin = ($html) => {
 
       /* update the table with the given marketname and submarketname */
       const updateTable =(result, market_name,submarket_name) => {
+         console.log('updateTable');
          const rows = result.getRowsFor(market_name, submarket_name);
          table.api().rows().remove();
          table.api().rows.add(rows);
@@ -148,11 +149,10 @@ const initTradingWin = ($html) => {
 
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
       const refresh = (data) => {
-
         const result = processData(menu.extractFilteredMarkets(data));
         function changed() {
           const val = $(this).val();
-          submarket_names.update_list(result.submarket_names[val]);
+          if (result.submarket_names[val]) submarket_names.update_list(result.submarket_names[val]);
           updateTable(result, market_names.val(), submarket_names.val());
         };
 
