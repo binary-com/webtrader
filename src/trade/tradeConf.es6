@@ -193,7 +193,7 @@ const register_ticks = (state, extra) => {
    function update_chart() {
             const tick_arr_copy = state.ticks.array.slice();
             state.ticks.array = [...tick_arr_copy];
-    }
+    };
 
    const on_contract_finished = (proposal_open_contract) => {
       forget_stream_and_cb();
@@ -278,7 +278,7 @@ const register_ticks = (state, extra) => {
       liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
       liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
    };
-}
+};
 
 export const init = (data, extra, show_callback, hide_callback) => {
    display_decimals = data.display_decimals || 3;
