@@ -1,7 +1,4 @@
-﻿/**
- * Created by amin on 10/5/15.
- */
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import windows from 'windows/windows';
 import liveapi from 'websockets/binary_websockets';
 import menu from 'navigation/menu';
@@ -150,7 +147,9 @@ const initTradingWin = ($html) => {
         const result = processData(menu.extractFilteredMarkets(data));
         function changed() {
           const val = $(this).val();
+
           if (result.submarket_names[val]) submarket_names.update_list(result.submarket_names[val]);
+
           updateTable(result, market_names.val(), submarket_names.val());
         };
 
