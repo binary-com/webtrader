@@ -182,7 +182,7 @@ const register_ticks = (state, extra) => {
       });
 
       function make_tooltip(tick) {
-            const tick_time = moment.utc(tick.epoch*1000).format('dddd, MMM D, HH:mm:ss');
+            const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
             const tick_quote_formatted = (+tick.quote).toFixed(decimal_digits);
 
@@ -228,27 +228,30 @@ const register_ticks = (state, extra) => {
    });
    
   let temp_ticks = [];
-  let first_tick;
+  let first_tick_epoch;
   let is_getting_history = false;
   on_tick = liveapi.events.on('tick', (data) => {
       const is_different_stream = extra.symbol !== data.tick.symbol;
       if (is_different_stream) return;
-      if (!first_tick) first_tick = data.tick;
+      if (!first_tick_epoch) first_tick_epoch = data.tick.epoch;
 
-      const waiting_for_contract_entry_tick = !proposal_open_contract || !proposal_open_contract.entry_tick_time;
-      if (waiting_for_contract_entry_tick) {
+      const entry_tick_time = proposal_open_contract && proposal_open_contract.entry_tick_time;
+      if (!entry_tick_time) {
             temp_ticks.push(data.tick);
             return;
       }
 
-      const has_missing_ticks = (first_tick.epoch > proposal_open_contract.entry_tick_time);
+      const has_missing_ticks = (first_tick_epoch > entry_tick_time);
       if (has_missing_ticks) {
             is_getting_history = true;
-            first_tick.epoch = proposal_open_contract.entry_tick_time;
-            get_tick_history(proposal_open_contract.entry_tick_time, extra.symbol);
+            first_tick_epoch = entry_tick_time;
+            get_tick_history(entry_tick_time, extra.symbol);
       }
 
-      if (is_getting_history) return;
+      if (is_getting_history) {
+            temp_ticks.push(data.tick);
+            return;
+      };
 
       if (temp_ticks.length > 0) {
             temp_ticks.forEach((stored_tick) => add_tick(stored_tick));
@@ -262,15 +265,16 @@ const register_ticks = (state, extra) => {
       liveapi.send({ ticks_history, end: 'latest', start, style: 'ticks', count: 5000})
             .then((data) => {
                   is_getting_history = false;
-                  temp_ticks = [];
                   data.history.prices.forEach((price, idx) => {
                         temp_ticks.push({
                               epoch: data.history.times[idx],
                               quote: price,
                               symbol: extra.symbol,
                         });
-            });
-      });
+                  });
+                  temp_ticks.sort((a, b) => (+a.epoch) - (+b.epoch));
+                  console.log('history done: ', temp_ticks);
+            }).catch((err) => $.growl.error({ message: data.error.message }));
     };
 
    const on_open_proposal_error = (data) => {
