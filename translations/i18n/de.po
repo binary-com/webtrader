@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-08-21 00:50\n"
+"PO-Revision-Date: 2018-08-21 22:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1663,13 +1663,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Damit wir Ihnen unsere Dienstleistungen zur Verfügung stellen können, müssen wir einige Informationen von Ihnen erhalten, um festzustellen, ob ein Produkt oder Service für Sie geeignet ist (ob Sie die Erfahrung und das Wissen besitzen, die damit verbundenen Risiken zu erkennen)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "In der EU werden Finanzprodukte von Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten; lizensiert und reguliert als Kategorie 3 Investment Services Anbieter von der Malta Financial Services Authority (Lizenznr. IS / 70156). In der Isle Of Man und dem Vereinigten Königreich werden Volatilitätsindizes von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle Of Man, britische Inseln angeboten; lizensiert und reguliert durch (1) die Gambling Supervision Commission auf der Isle Of Man (aktuelle Lizenz ausgestellt am 31. August 2017) und (2) von der Glücksspiel Kommission im Vereinigten Königreich"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "In Großbritannien und auf der Isle of Man handeln unsere Kunden über Binary (IOM) Ltd. In Japan, handeln sie mittels Binary KK. In der Europäischen Union (ausgenommen Großbritannien) handeln sie über Binary (Europe) Ltd. und Binary Investments (Europe) Ltd. Im Rest der Welt über Binary (C.R.) S.A"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "Im Rest der EU werden Volatilität Indizes von Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; lizensiert und reguliert (1) von der Malta Gaming Authority in Malta (Lizenznummer MGA/CL2/118/2000 am 26. Mai 2015 ausgestellt) und für Kunden aus Großbritannien (2) von der UK Gambling Commission"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
