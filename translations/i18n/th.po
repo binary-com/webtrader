@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-08-17 00:40\n"
+"PO-Revision-Date: 2018-08-17 01:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "ระยะเวลาทั้งหมด"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr "ฟิลด์ข้อมูลเหล่านี้เป็นแบบให้เลือก ถ้าคุณต้องการคัดลอกสินทรัพย์และประเภทการซื้อขายทั้งหมด กรุณาปล่อยฟิลด์เหล่านี้ว่าง"
+msgstr "ฟิลด์ข้อมูลทั้งหมดเป็นแบบให้เลือก ถ้าคุณต้องการคัดลอกสินทรัพย์และประเภทการซื้อขายทั้งหมด กรุณาปล่อยฟิลด์เหล่านี้ว่าง"
 
 msgid "All market conditions"
 msgstr "ทุกเงื่อนไขในตลาด"
@@ -845,13 +845,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "โดยเริ่มต้นลูกค้าทั้งหมดจะถือเป็นลูกค้ารายย่อย คุณต้องการเปลี่ยนสถานะเป็นลูกค้าที่มีความเชี่ยวชาญหรือไม่หากคุณมีคุณสมบัติที่จำเป็นตรงกับเงื่อนไขที่กำหนดไว้"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขาย CFD"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "ความถี่ในการซื้อขาย CFD"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
@@ -938,7 +938,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "สัญชาติ"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของท่าน"
@@ -1436,7 +1436,7 @@ msgid "Flexible"
 msgstr "ยืดหยุ่น"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "ตัวอย่างเช่น สมมติว่า ตลาดมีระดับต่ำที่ 5,200 และปิดที่ 6,000 ในช่วงเวลาของสัญญา ดังนั้นสัญญา lookback แบบ'ปิด-ต่ำ' ที่มีตัวคูณ $2 จะมีการชำระเงินเป็นมูลค่า"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "สำหรับสามปีที่ต่อเนื่อง BetOnMarkets.com ได้รับคัดเลือกจากคะแนนนิยมกับตำแหน่ง 'Best Fixed-Odds Financial Trading Provider' โดย Shares Magazine UK ซึ่งเป็นครั้งสุดท้ายที่ชนะ เนื่องจาก Shares Magazine ยุติการให้รางวัลในหมวดนี้หลังจากนั้น"
@@ -1598,10 +1598,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "ฉันได้อ่าน และยอมรับกับ Binary.com"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "ข้าพเจ้าขอยืนยันในที่นี้ว่าข้อมูลภาษีที่ให้ไว้นั้นถูกต้องและสมบูรณ์ ข้าพเจ้าจะแจ้งแก่ Binary Investments (Europe) Ltd. หากมีการเปลี่ยนแปลงของข้อมูลนี้"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "ข้าพเจ้าต้องการได้รับการปฏิบัติเสมือนเป็นลูกค้าผู้มีความเชี่ยวชาญคนหนึ่ง"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "ฉันเป็นมือใหม่สำหรับไบนารี ฉันจะเริ่มอย่างไร?"
@@ -1665,13 +1665,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินถูกนำเสนอโดย Binary Investments (Europe) Ltd. อาคาร Mompalao Suite 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการการลงทุนประเภท 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156) ใน Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกนำเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย Douglas IM2 4RW Isle of Man, British Isles ได้รับอนุญาตและกำกับดูแลทางกฎหมายตามลำดับโดย (1) Gambling Supervision Commission แห่ง Isle of Man (ใบอนุญาตปัจจุบันออกให้วันที่ 31 สิงหาคม 2560) และโดย (2) Gambling Commission แห่งสหราชอาณาจักร"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "ในสหราชอาณาจักร และเกาะ Isle of Man ลูกค้าของเราซื้อขายผ่านบริษัท Binary (IOM) Ltd และประเทศญี่ปุ่น ดำเนินการซื้อขายผ่าน Binary KK ในสหพันธ์ยุโรป (ยกเว้นสหราชอาณาจักร) ลูกค้าซื้อขายผ่านบริษัท Binary (Europe) Ltd และ Binary Investments (Europe) Ltd และประเทศอื่นๆ ในภูมิภาคอื่น พวกเขาซื้อขายผ่านบริษัท Binary (C.R.) S.A"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "สำหรับประเทศอื่นๆในสหภาพยุโรป ดัชนีผันผวนถูกนำเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao Suite 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับอนุญาตและกำกับดูแลทางกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (ใบอนุญาตหมายเลข MGA/CL2/118/2000 ออกให้วันที่ 26 พฤษภาคม 2558) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
@@ -1929,10 +1929,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "มองหาเทียนสีขาวสูงในแนวโน้มราคาขาขึ้น ตามด้วยเทียนสีดำที่มีลำตัว ซึ่งมีช่องว่างเหนือลำตัวของเทียนแท่งก่อนหน้า วันสุดท้าย คือ แท่งเทียนสีดำอีกแท่งหนึ่ง แต่แท่งนี้กลืนแท่งเทียนตลาดซบเซาก่อนหน้านี้แต่ปิดเหนือราคาเปิดของแท่งแรก"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "ขณะนี้ Lookbacks มีให้สำหรับดัชนีผันผวนเท่านั้น"
 
 msgid "Low"
 msgstr "ต่ำ"
@@ -2055,7 +2055,7 @@ msgid "Minimum of 6 characters required"
 msgstr "จำนวนตัวอักขระน้อยที่สุดที่ต้องการ คือ 6 อักขระ"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "จำนวนตัวอักขระอย่างน้อย 6 อักขระ ซึ่งเป็นอักษรตัวเล็ก ตัวใหญ่ และตัวเลข"
 
 msgid "Minimum price over selected period"
 msgstr "ราคาต่ำสุดในช่วงเวลาเลือก"
@@ -2106,7 +2106,7 @@ msgid "Ms"
 msgstr "นางสาว"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "ตัวคูณ"
 
 msgid "Name"
 msgstr "ชื่อ"
@@ -2472,7 +2472,7 @@ msgid "Print chart"
 msgstr "พิมพ์แผนภูมิ"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "ลูกค้าที่มีความเชี่ยวชาญ"
 
 msgid "Profit"
 msgstr "กำไร"
@@ -2562,7 +2562,7 @@ msgid "Register free account"
 msgstr "ลงทะเบียนบัญชีใหม่ฟรี"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "ข้อมูลเกี่ยวกับกฎระเบียบ"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Relative Strength Index (RSI)"
@@ -2751,7 +2751,7 @@ msgid "Sold"
 msgstr "ขาย"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "บางผลิตภัณฑ์ยังไม่มีในทุกประเทศ บริการของเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา คอสตาริกา ฮ่องกง หรือให้แก่บุคคลที่อายุต่ำกว่า 18 ปี"
 
 msgid "Source of wealth"
 msgstr "แหล่งที่มาของรายได้"
@@ -3198,7 +3198,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "ค่าเฉลี่ยเคลื่อนที่นี้ใช้เส้นโค้งของการแจกแจงปกติ (Gauss) ซึ่งสามารถกำหนดโดยตัวแปรออฟเซ็ตจาก 0 ถึง 1 ตัวแปรนี้ควบคุมความเรียบของแนวโน้มและความไวสูงของค่าเฉลี่ยเคลื่อนที่ Sigma มีอีกตัวแปรหนึ่งที่ใช้จัดการรูปร่างของสัมประสิทธิ์เส้นโค้ง"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "ฟังก์ชันนี้ไม่สัมพันธ์กับบัญชีเงินทดลอง"
 
 msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
@@ -3363,7 +3363,7 @@ msgid "Trades break down"
 msgstr "ไม่สามารถซื้อขายได้"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "ประสบการณ์การซื้อขาย"
 
 msgid "Trading Times"
 msgstr "เวลาซื้อขาย"
@@ -3420,7 +3420,7 @@ msgid "Two-way pricing"
 msgstr "ราคา 2 ทาง (2-Way Pricing)"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "ประเภทของ lookbacks"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Typical Price (TYPPRICE)"
@@ -3546,7 +3546,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "เราทำได้อีกแล้ว เราคว้ารางวัลจาก BetOnMarkets.com ในปี พ.ศ. 2550 (ค.ศ. 2007) โดยได้รับคะแนนลงมติให้เป็น 'Best Fixed-Odds Financial Trading Provider' ในปี พ.ศ. 2551 (ค.ศ. 2008)"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "เรานำเสนอ lookbacks สามประเภท"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "เราได้เปลี่ยนชื่อ BetOnMarkets.com เป็น"
@@ -3588,13 +3588,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "ดัชนี OTC และหลักทรัพย์ OTC คืออะไร?"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "Lookbacks คืออะไร"
 
 msgid "What is pep?"
 msgstr "PEP คืออะไร?"
 
 msgid "What is this?"
-msgstr ""
+msgstr "นี้คืออะไร"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "เมื่อท่านพอใจกับราคาที่ท่านได้รับ ดำเนินการซื้อขายทันที ในแพลตฟอร์มที่เป็นเอกลักษณ์ของเรา ท่านจะไม่ต้องต่อสู้กับ 'Slippage' หรือ ช่องว่างในตลาด และที่สำคัญที่สุด ไม่มีค่าธรรมเนียมที่มองไม่เห็น ท่านสามารถขายคืนการซื้อขายระยะยาวเมื่อใดก็ได้ก่อนที่จะหมดอายุเพื่อปกป้องกำไรที่ท่านอาจจะได้รับหรือลดการขาดทุนให้น้อยที่สุด"
@@ -3621,13 +3621,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "ชนะด้วย ตัวคูณคูณตัวปิดลบจุดต่ำ"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "ชนะด้วย ตัวคูณคูณตัวสูงลบจุดปิด"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "ชนะด้วย ตัวคูณคูณตัวสูงลบจุดต่ำ"
 
 msgid "With Binary.com you can trade"
 msgstr "เมื่อท่านเลือก Binary.com ท่านสามารถใช้งาน"
@@ -3726,7 +3726,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "อนุญาตให้ลูกค้าพัฒนาเครื่องมื่อสำหรับซื้อขายอัตโนมัติของเขาโดยการลากและวางอย่างง่ายๆ"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
+msgstr "และสำหรับลูกค้าไอร์แลนด์โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (ใบอนุญาตของ Remote Bookmaker หมายเลข 1010285 ออกให้วันที่ 1 กรกฎาคม 2560) ดูทั้งหมด"
 
 msgid "and start learning how to trade"
 msgstr "และเริ่มเรียนรู้วิธีการซื้อขาย"
@@ -3753,7 +3753,7 @@ msgid "contact support"
 msgstr "ติดต่อฝ่ายบริการลูกค้า"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "สร้างโทเค่นแบบอ่านอย่างเดียว และแชร์โทเค่นกับท่านอื่น"
 
 msgid "customer support"
 msgstr "ฝ่ายบริการลูกค้า"
@@ -3864,7 +3864,7 @@ msgid "points"
 msgstr "จุด"
 
 msgid "sec"
-msgstr ""
+msgstr "วินาที"
 
 msgid "second"
 msgstr "วินาที"
@@ -3903,7 +3903,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| ผลตอบแทน"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"

@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-08-19 08:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "'période contractuelle'"
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6000 - 5200) * 2 = 1600 $"
 
 msgid "(One) Touch trades"
 msgstr "Trade (Une) Touche"
@@ -49,10 +49,10 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(si la durée est de moins d'un jour), ou à la fin de la séance boursière (si la durée est d'un jour ou plus)"
 
 msgid "(license reference no: 39172)"
-msgstr ""
+msgstr "(référence de licence no : 39172)"
 
 msgid "(license reference no: 39495)"
-msgstr ""
+msgstr "(référence de licence no : 39495)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") devient opérationnel, établissant un service financier de paris 24 heures sur 24 sur différents indices financiers. Les affaires croissent rapidement, et nous devenons bientôt le leader du marché sur les paris financiers à cotes fixes"
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Un dérivé est un instrument financier dont la valeur est déterminée par référence à un marché sous-jacent. Les dérivés sont communément échangés sur le marché interbancaire, et les binaires sont l'une des plus simples formes de dérivés"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "Un contrat loockback a un taux de redistribution qui dépend de l'optimum haut ou bas atteint par le marché. L’option permet au détenteur de « revenir » au fil du temps afin de déterminer le gain"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "Un chandelier moyen ou long haussier ou baissier avec le trait définissant clé étant l'absence d'ombre de tête ou queue"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "Ajouter/supprimer des indicateurs"
 
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 msgid "Admin"
 msgstr "Administration"
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "Toutes durées"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Tous les champs sont facultatifs. Si vous souhaitez copier tous les actifs et les types de trade, veuillez laisser tous les champs vides"
 
 msgid "All market conditions"
 msgstr "Toutes conditions de marché"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "Durée moyenne"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Durée Moyenne des Positions Ouvertes"
 
 msgid "Avg. Loss"
 msgstr "Perte moyenne"
@@ -691,10 +691,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Fréquence de trading des options binaires ou autre dérivés financiers"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "Expérience de trading d’options binaires"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "Fréquence de trading d’options binaires"
 
 msgid "Binary trading is flexible"
 msgstr "Le trading d'options binaires est flexible"
@@ -844,13 +844,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "En cliquant sur OK, vous confirmez que vous avez lu et accepté la version à jour des"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "Par défaut, tous les clients sont traités comme particulier. Préférez-vous être traité comme un client professionnel si vous correspondez aux critères nécessaires ?"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "Expérience de trading CFD"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "Fréquence de trading CFD"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Peut être utilisé pour acheter et vendre des contrats, renouveler des achats expirés, et abonder des comptes en monnaie virtuelle."
@@ -937,7 +937,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "Nationalité"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Cliquez pour vous connecter à votre compte Binary.com."
@@ -1435,7 +1435,7 @@ msgid "Flexible"
 msgstr "Flexible"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "Par exemple, disons que le marché a un minimum de 5200 et une clôture de 6000 sur la durée du contrat, puis un lookback « Close-Low » avec un multiplicateur de 2 $ aurait un gain de "
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Pour la troisième année consécutive, BetOnMarkets.com est désigné 'Meilleur Fournisseur Financier de Trading à Cotes Fixes' par Shares Magazine UK. C'est la dernière fois que nous gagnons car Share Magazine arrête la récompense de cette catégorie"
@@ -1597,10 +1597,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "J'ai lu et j'accepte les Conditions Générales de Binary.com"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "Je confirme par la présente que les renseignements fiscaux fournis sont véridiques et complets. J’informerai également Binary Investments (Europe) Ltd. de tout changement à ces renseignements"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "Je veux être traité comme un client professionnel"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Je suis un débutant en options binaires, où dois je commencer ?"
@@ -1663,7 +1663,7 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Dans le cadre des services que nous vous fournissons, nous sommes dans l'obligation d'obtenir des informations de votre part afin de déterminer si un produit ou service donné est pertinent dans votre cas (c'est-à-dire si vous possédez l'expérience et les connaissances nécessaires pour comprendre les risques impliqués)."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "Dans l’UE, les produits financiers sont offerts par Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte, agréé et réglementé comme un fournisseur de Services d’investissement de catégorie 3 par l'Autorité des Services Financiers de Malte (n° de licence. EST / 70156). Dans l’île de Man et le Royaume-Uni, les Indices de volatilité sont offerts par Binary (IOM) Ltd., premier étage, Millennium House, Victoria Road, Douglas, IM2 4RW, île de Man, British Isles ; agréé et régulé respectivement par (1) la Commission de Supervision des Jeux dans l’île de Man (la licence actuelle émise le 31 août 2017) et (2) la Commission des Jeux,, au Royaume-Uni"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "Dans le Royaume-Uni et l’île de Man, nos clients tradent à travers Binary (IOM) Ltd. au Japon, ils tradent à travers Binary KK. Dans l'Union Européenne (sauf le Royaume-Uni), ils tradent à travers Binary (Europe) Ltd et Binary Investment (Europe) Ltd. Dans le reste du monde, ils tradent à travers Binary (C.R.) S.A"
