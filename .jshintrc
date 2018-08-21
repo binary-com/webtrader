@@ -46,7 +46,7 @@
 
     "validthis": false, // true: Tolerate using this in a non-constructor function
     "strict": false, // true: Requires all functions run in ES5 Strict Mode
-    "unused": false, // true: Require all defined variables be used
+    "unused": true, // true: Require all defined variables be used
 
 
     "globals": {
