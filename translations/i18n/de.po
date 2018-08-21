@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-08-21 00:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "„Kontraktzeitraum”"
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6.000 – 5.200) * 2 = 1600 $"
 
 msgid "(One) Touch trades"
 msgstr "(Einmalige) Zielkontrakte"
@@ -49,10 +49,10 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(wenn weniger als die Dauer eines Tages), oder am Ende eines Handelstages (wenn die Dauer ein oder mehrere Tag(e) ist/sind)"
 
 msgid "(license reference no: 39172)"
-msgstr ""
+msgstr "(Lizenznummer: 39172)"
 
 msgid "(license reference no: 39495)"
-msgstr ""
+msgstr "(Lizenznummer: 39495)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") geht, einen rund-um-die-Uhr Finanzwettendienst auf einer Vielzahl von Finanzindizes aufbauend, live. Das Geschäft wächst schnell, und wir werden bald der Marktführer für Fixed-Odds Finanzwetten"
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Ein Derivat ist ein finanzielles Instrument, dessen Wert unter Bezugnahme auf einen zugrundeliegenden Markt bestimmt ist. Derivate werden normalerweise im Inter-Bank Markt gehandelt, und binäre Optionen sind eine der einfachsten Formen von Derivaten"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "Ein Lookback-Kontrakt verfügt über eine Auszahlung, die von einem optimalen Hoch oder Tief, das durch den Markt erreicht wird, abhängt. Die Option erlaubt dem Inhaber auf einen Zeitablauf \"zurückzublicken\" (\"look back\"), um die Auszahlung zu bestimmen"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "Eine mittelgroße bis lange, bullische oder bärische Kerze mit dem definierten Schlüsselmerkmal von keinem Kopf- oder Schweifschatten"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "Indikator hinzufügen/entfernen"
 
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 msgid "Admin"
 msgstr "Admin"
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "Alle Zeiträume"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Alle Felder sind optional. Wenn Sie alle Vermögenswerte und Handelsarten kopieren möchten, lassen Sie bitte alle Felder leer"
 
 msgid "All market conditions"
 msgstr "Alle Marktbedingungen"
