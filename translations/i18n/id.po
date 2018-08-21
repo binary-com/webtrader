@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-08-21 08:00\n"
+"PO-Revision-Date: 2018-08-21 08:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "Semua durasi"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Semua kolom bersifat pilihan. Jika Anda ingin menyalin semua aset dan jenis trading, kosongkan semua kolom"
 
 msgid "All market conditions"
 msgstr "Semua kondisi pasar"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "Rata-rata Durasi"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Rata-rata Durasi dari Open Position"
 
 msgid "Avg. Loss"
 msgstr "Rata-rata Kerugian"
@@ -1435,7 +1435,7 @@ msgid "Flexible"
 msgstr "Fleksibel"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "Sebagai contoh, misalkan nilai low pasar adalah 5,200 dan close pada 6,000 selama durasi kontrak, maka lookback ‘Close-Low’ dengan multiplier $2 akan memiliki hasil"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Tiga kali berturut-turut, BetOnMarkets.com dinobatkan sebagai 'Penyedia Trading Financial Fixed-Odds Terbaik' oleh Shares Magazine UK"
@@ -1663,13 +1663,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk memahami risiko yang terlibat)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "Di Uni Eropa, produk finansial ditawarkan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai penyedia Layanan Investasi Kategori 3 oleh Otoritas Layanan Keuangan Malta (lisensi no. IS/70156). Di Isle of Man dan Inggris, Indeks Volatilitas ditawarkan oleh Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "Di Inggris dan Isle of Man, klien kami bertrading melalui Binary (IOM) Ltd. Di Jepang, mereka bertrading melalui Binary KK. Di Uni Eropa (kecuali Inggris), mereka bertrading melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sisa bagian dunia lainnya, mereka bertrading melalui Binary (C.R.) S.A"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "Di seluruh Uni Eropa, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
@@ -2749,7 +2749,7 @@ msgid "Sold"
 msgstr "Terjual"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "Beberapa produk tidak tersedia di semua negara. Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Costa Rica, Hong Kong, atau bagi siapapun di bawah umur 18 tahun"
 
 msgid "Source of wealth"
 msgstr "Sumber kekayaan"
@@ -3724,7 +3724,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "memungkinkan klien untuk mengembangkan robot trading mereka sendiri secara otomatis dengan konsep sederhana “drag-and-drop”"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
+msgstr "dan untuk klien Irlandia oleh (3) Komisaris Pendapatan di Irlandia (Lisensi Remote Bookmaker no. 1010285 dikeluarkan pada 1 Juli 2017). Lihat"
 
 msgid "and start learning how to trade"
 msgstr "dan mulai belajar cara bertrading"
@@ -3901,7 +3901,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Laba"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
