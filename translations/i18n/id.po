@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-08-21 08:10\n"
+"PO-Revision-Date: 2018-08-21 08:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3751,7 +3751,7 @@ msgid "contact support"
 msgstr "hubungi support"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "buat token Baca-saja, dan bagikan token kepada copier Anda"
 
 msgid "customer support"
 msgstr "customer support"
@@ -3862,7 +3862,7 @@ msgid "points"
 msgstr "poin"
 
 msgid "sec"
-msgstr ""
+msgstr "detik"
 
 msgid "second"
 msgstr "detik"
