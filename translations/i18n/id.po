@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-08-21 08:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "'periode kontrak'"
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6,000 – 5,200) * 2 = $1600"
 
 msgid "(One) Touch trades"
 msgstr "Kontrak (One) Touch"
@@ -49,10 +49,10 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(jika durasi kurang dari satu hari), atau pada akhir hari trading (jika durasi satu hari atau lebih)"
 
 msgid "(license reference no: 39172)"
-msgstr ""
+msgstr "(nomor referensi lisensi: 39172)"
 
 msgid "(license reference no: 39495)"
-msgstr ""
+msgstr "(nomor referensi lisensi: 39495)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") ditayangkan secara langsung, menyediakan layanan trading financial pada berbagai pilihan bursa saham. Bisnis ini berkembang sangat cepat dan kami menjadi pemimpin dalam menyediakan trading financial fixed-odds"
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Derivatif adalah sebuah instrumen keuangan dimana nilainya ditentukan oleh berdasarkan pasar. Derivatif pada umumnya diperdagangkan pada pasar antar-bank dan binary adalah salah satu bentuk yang paling sederhana dari derivatif"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "Kontrak lookback memiliki hasil yang tergantung pada jumlah maksimum high atau low yang dicapai oleh pasar. Opsi ini memberi kesempatan untuk \"melihat kembali\" dari waktu ke waktu untuk menentukan hasil"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "Grafik candlestick bullish atau bearish sedang hingga panjang dengan sifat utama tanpa kepala atau ekor bayangan"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "Tambah/hapus indikator"
 
 msgid "Address"
-msgstr ""
+msgstr "Alamat"
 
 msgid "Admin"
 msgstr "Admin"
@@ -691,10 +691,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Opsi Binary atau frekuensi trading keuangan derivatif lainnya"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "Pengalaman trading opsi Binary"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "Trading opsi binary frekuensi"
 
 msgid "Binary trading is flexible"
 msgstr "Trading binary fleksibel"
@@ -844,13 +844,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Dengan mengklik OK, maka Anda telah membaca dan menerima pembaruan"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "Secara otomatis, klien akan di layani sebagai retail. Apakah Anda ingin dilayani sebagai klien profesional jika Anda lulus pada kreteria yang di wajibkan?"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "Pengalaman trading CFD"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "Trading frekuensi CFD"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Dapat digunakan untuk membeli dan menjual kontrak, memperbaharui kontrak yang telah berakhir, dan mengisi ulang akun virtual."
@@ -937,7 +937,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "Kewarganegaraan"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Klik untuk masuk pada akun Binary.com Anda"
@@ -1597,10 +1597,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "Saya telah membaca dan menyetujui Binary.com"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "Dengan ini saya mengkonfirmasikan bahwa informasi pajak yang saya berikan adalah benar dan lengkap. Saya juga akan menginformasikan kepada Binary Investments (Europe) Ltd. jika terdapat perubahan pada informasi ini"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "Saya ingin diperlakukan sebagai klien profesional"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Saya baru di binary, di mana saya mulai?"
@@ -1927,10 +1927,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "Carilah candle putih tinggi pada tren harga naik. Setelah itu, candle hitam memiliki tubuh yang berada di atas tubuh candle sebelumnya. Hari terakhir adalah candle hitam lainnya, tapi yang satu ini menelan candle bearish sebelumnya tapi menutup di atas bar pertama yang terbuka"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "Lookbacks hanya tersedia pada Indeks Volatilitas"
 
 msgid "Low"
 msgstr "Rendah"
@@ -2053,7 +2053,7 @@ msgid "Minimum of 6 characters required"
 msgstr "Minimal 6 karakter diperlukan"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Minimal enam huruf kecil dan huruf besar dengan angka"
 
 msgid "Minimum price over selected period"
 msgstr "Harga minimum selama periode yang dipilih"
@@ -2104,7 +2104,7 @@ msgid "Ms"
 msgstr "Nona"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplier"
 
 msgid "Name"
 msgstr "Nama"
@@ -2470,7 +2470,7 @@ msgid "Print chart"
 msgstr "Cetak grafik"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "Klien Profesional"
 
 msgid "Profit"
 msgstr "Untung"
@@ -2560,7 +2560,7 @@ msgid "Register free account"
 msgstr "Daftar akun gratis"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "Informasi Peraturan"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Relative Strength Index (RSI)"
@@ -3196,7 +3196,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "Moving Average ini menggunakan kurva distribusi Normal (Gauss) yang dapat ditempatkan dengan parameter Offset dari 0 sampai 1. Parameter ini memungkinkan pengaturan kehalusan dan kepekaan tinggi Moving Average. Sigma adalah parameter lain yang bertanggung jawab atas bentuk koefisien kurva"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "Fasilitas ini tidak tersedia untuk akun uang virtual"
 
 msgid "This field is required"
 msgstr "Bagian ini diperlukan"
@@ -3361,7 +3361,7 @@ msgid "Trades break down"
 msgstr "Penjelasan kontrak"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "Pengalaman Trading"
 
 msgid "Trading Times"
 msgstr "Waktu Trading"
@@ -3418,7 +3418,7 @@ msgid "Two-way pricing"
 msgstr "Harga dua-arah"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "Jenis lookback"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Typical Price (TYPPRICE)"
@@ -3544,7 +3544,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "Kami melakukannya lagi. BetOnMarkets.com mempertahankan penghargaan 2007 dengan terpilih kembali sebagai \"Penyedia Trading Financial Fixed-Odds Terbaik' untuk 2008"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "Kami menawarkan tiga jenis lookbacks"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Kami merebrending BetOnMarkets.com sebagai"
@@ -3586,13 +3586,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "Apa itu indeks dan saham OTC?"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "Apa itu lookbacks"
 
 msgid "What is pep?"
 msgstr "Apa itu pep?"
 
 msgid "What is this?"
-msgstr ""
+msgstr "Apa ini?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "Bila Anda puas dengan harga yang Anda terima, eksekusi trading Anda segera. Dengan platform kami yang unik, Anda tidak akan harus bersaing dengan 'slippages' atau gaping pasar. Dan yang terpenting, tanpa biaya tersembunyi. Anda juga dapat menjual kembali setiap kontrak jangka panjang setiap saat sebelum kontrak tersebut berakhir untuk melindungi keuntungan yang telah Anda dapatkan atau untuk mengurangi risiko kerugian Anda"
@@ -3619,13 +3619,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "Hasil multiplier dikali close dikurangi low"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "Hasil multiplier dikali high dikurangi close"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "Hasil multiplier dikali high dikurangi low"
 
 msgid "With Binary.com you can trade"
 msgstr "Di Binary.com Anda dapat bertrading"
