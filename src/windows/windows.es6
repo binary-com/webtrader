@@ -171,7 +171,7 @@ export const init = function($parentObj) {
       return original.apply(this, arguments);
    }
 
-   require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], (chartWindowObj,liveapi, menu) => {
+   require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu", "trade/tradeDialog"], (chartWindowObj,liveapi, menu, tradeDialog) => {
       if(!tracker.is_empty()) {
          tracker.reopen();
          return;
@@ -180,26 +180,24 @@ export const init = function($parentObj) {
          .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
          .then((markets) => {
             markets = menu.extractChartableMarkets(markets);
-            const random_item_from_arr = (arr) => arr[Math.floor(Math.random() * arr.length)];
-            const timePeriods = ['1t', '4h', '8h', '1d'];
-            const chartTypes = ['candlestick', 'line', 'ohlc', 'spline']; //This is not the complete chart type list, however its good enough to randomly select one from this subset
             for (let i = 0; i < TRADING_CHART_COUNT; ++i) {
                // TODO: check if account can trade volatility indices
                const forex_or_volatility = i == 0 ? 0 : 3;
                const submarkets = markets[forex_or_volatility].submarkets;
-               const symbols = submarkets[0].instruments;
+               const symbols = submarkets[i].instruments;
                const sym = symbols[0];
                const timePeriod = '1t';
                const type = 'line';
-               chartWindowObj.addNewWindow({
-                  instrumentCode: sym.symbol,
-                  instrumentName: sym.display_name,
-                  timePeriod,
-                  type,
-                  delayAmount: sym.delay_amount
-               });
+               liveapi
+               .send({ contracts_for: sym.symbol })
+               .then((res) => {
+                    chartWindowObj.addNewWindow({ instrumentCode: sym.symbol, instrumentName: sym.display_name, timePeriod, type, delayAmount: sym.delay_amount });
+                    tradeDialog.init({ symbol: sym.symbol, display_name: sym.display_name, pip: '0.001' }, res.contracts_for);
+                    if (i === 1) workspace.tileDialogs(); // Trigger tile action
+               }).catch((err) => {
+                    console.log('error');
+              });
             }
-            workspace.tileDialogs(); // Trigger tile action
          });
    });
 

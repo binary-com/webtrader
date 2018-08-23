@@ -78,12 +78,10 @@ const reopen_dialogs = (symbols, saved_states) => {
          data.data.tracker_id = ++counter;
          require(['charts/chartWindow'],(chartWindow) => {
             data.data.isTrackerInitiated = true;
-            console.log('tracker: ', chartWindow);
             chartWindow.addNewWindow(data.data);
          });
       }
-      else if(module_id === 'tradeDialog') {
-         when_authenticated().then(() => {
+      else if (module_id === 'tradeDialog') {
             data.data.tracker_id = ++counter;
             liveapi
                .send({contracts_for: data.data.symbol.symbol})
@@ -104,7 +102,6 @@ const reopen_dialogs = (symbols, saved_states) => {
                   });
                }).catch(console.error.bind(console));
             return true; // unsubscribe from login event
-         });
       }
       else {
          console.error('unknown module_id ' + module_id);
