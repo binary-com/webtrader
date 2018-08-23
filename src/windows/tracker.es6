@@ -51,6 +51,7 @@ const reopen_dialogs = (symbols, saved_states) => {
 
    let counter = 0;
    const reopen = (data, module_id) => {
+      console.log('reopen: ', data, module_id);
       if(data.position.mode === 'closed') return;
 
       if(data.is_unique) {
@@ -77,6 +78,7 @@ const reopen_dialogs = (symbols, saved_states) => {
          data.data.tracker_id = ++counter;
          require(['charts/chartWindow'],(chartWindow) => {
             data.data.isTrackerInitiated = true;
+            console.log('tracker: ', chartWindow);
             chartWindow.addNewWindow(data.data);
          });
       }
