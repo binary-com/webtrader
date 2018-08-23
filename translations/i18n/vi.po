@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2018-04-15 17:50-0400\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -36,6 +36,9 @@ msgstr "'Nhà điều hành cá cược tài chính của năm' Giải thưởng
 msgid "'contract period'"
 msgstr "'Thời hạn hợp đồng'"
 
+msgid "(6,000   5,200) * 2 = $1600"
+msgstr ""
+
 msgid "(One) Touch trades"
 msgstr "(Một) Các giao dịch một chạm"
 
@@ -44,6 +47,12 @@ msgstr "(còn được biết đến như"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(nếu thời hạn ít hơn một ngày), hoặc vào cuối ngày giao dịch (nếu thời hạn một ngày hoặc nhiều hơn)"
+
+msgid "(license reference no: 39172)"
+msgstr ""
+
+msgid "(license reference no: 39495)"
+msgstr ""
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") trở nên trực tiếp, thiết lập một dịch vụ cá cược tài chính suốt ngày đêm trên một loạt các chỉ số tài chính. Kinh doanh phát triển nhanh chóng, và chúng tôi sớm trở thành người dẫn đầu thị trường về tỉ lệ cá cược tài chính"
@@ -378,6 +387,9 @@ msgstr "Một mô hình biểu đồ bao gồm một nến trắng nhỏ với b
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives"
 msgstr "Một biến thể là một công cụ tài chính có giá trị được xác định bởi tham chiếu đến một thị trường tiềm ẩn. Dẫn xuất thường được giao dịch trên thị trường liên ngân hàng và những chương trình là một trong những hình thức đơn giản nhất của dẫn xuất"
 
+msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
+msgstr ""
+
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "một nến lạc quan hoặc hướng giảm cỡ vừa đến cỡ dài với chìa khóa xác định đặc điểm là không có bóng đầu hoặc đuôi"
 
@@ -444,6 +456,9 @@ msgstr "Thêm/loại bỏ các chỉ số"
 msgid "Add/remove indicators"
 msgstr "Thêm/loại bỏ các chỉ số"
 
+msgid "Address"
+msgstr ""
+
 msgid "Admin"
 msgstr "Quản trị viên"
 
@@ -452,6 +467,9 @@ msgstr "Khối ưu tiên (CDLADVANCEBLOCK)"
 
 msgid "All durations"
 msgstr "Tất cả thời gian"
+
+msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
+msgstr ""
 
 msgid "All market conditions"
 msgstr "Tất cả các điều kiện thị trường"
@@ -576,6 +594,9 @@ msgstr "Khoảng trung bình thực (ATR)"
 msgid "Avg. Duration"
 msgstr "Thời lượng trung bình"
 
+msgid "Avg. Duration of Open Positions"
+msgstr ""
+
 msgid "Avg. Loss"
 msgstr "Lỗ trung bình"
 
@@ -654,9 +675,6 @@ msgstr "Cơ bản về Quyền chọn Nhị phân"
 msgid "Binary granted Investment Services license"
 msgstr "Binary được cấp giấy phép Dịch vụ đầu tư"
 
-msgid "Binary mobile applications and third party tools"
-msgstr "Ứng dụng di động nhị phân và các công cụ bên thứ ba"
-
 msgid "Binary opens Japan office"
 msgstr "Binary mở văn phòng tại Nhật Bản"
 
@@ -666,14 +684,17 @@ msgstr "tùy chọn nhị phân"
 msgid "Binary options are easy to understand. They're called 'binary' because there can be only two outcomes - win or lose. If your prediction is correct, you receive a payout that is determined at the start of the trade. If not, you just lose your initial stake"
 msgstr "Quyền chọn nhị phân rất dễ hiểu. Gọi là ‘nhị phân’ vì sẽ chỉ có 2 kết quả – thắng hoặc thua. Nếu bạn đoán đúng, bạn sẽ nhận được tiền thưởng thỏa thuận lúc bắt đầu giao dịch. Nếu không, bạn sẽ chỉ thua/mất phần đã cá cược"
 
-msgid "Binary options or other financial derivatives"
-msgstr "Quyền chọn nhị phân hoặc tài chính phái sinh khác"
-
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Các tùy chọn nhị phân hoặc các dẫn xuất kinh nghiệm kinh doanh tài chính khác"
 
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Các tùy chọn nhị phân hoặc các dẫn xuất tần suất kinh doanh tài chính khác"
+
+msgid "Binary options trading experience"
+msgstr ""
+
+msgid "Binary options trading frequency"
+msgstr ""
 
 msgid "Binary trading is flexible"
 msgstr "Giao dịch nhị phân là linh hoạt"
@@ -822,6 +843,15 @@ msgstr "Bằng cách nhấp vào"
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Bằng cách nhấn OK, bạn xác nhận rằng bạn đã đọc và chấp nhận phần đã cập nhật"
 
+msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
+msgstr ""
+
+msgid "CFD trading experience"
+msgstr ""
+
+msgid "CFD trading frequency"
+msgstr ""
+
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Có thể được sử dụng để mua và bán hợp đồng, làm mới mua đã hết hạn, và các tài khoản tiền ảo top-up."
 
@@ -905,6 +935,9 @@ msgstr "Chỉ số độ dồi dào (CHOP)"
 
 msgid "Chrome"
 msgstr "Chrome"
+
+msgid "Citizenship"
+msgstr ""
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com của bạn"
@@ -1034,9 +1067,6 @@ msgstr "Chỉ số hiện tại"
 
 msgid "Current password"
 msgstr "Mật khẩu hiện tại"
-
-msgid "Current regulations require that you provide us the following"
-msgstr "Quy định hiện tại yêu cầu bạn cung cấp cho chúng tôi những điều sau đây"
 
 msgid "Current time"
 msgstr "Thời gian hiện tại"
@@ -1404,6 +1434,9 @@ msgstr "Trước tiên, bạn cần thiết lập các thông số giao di
 msgid "Flexible"
 msgstr "Linh hoạt"
 
+msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
+msgstr ""
+
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Ba năm liên tiếp, BetOnMarkets.com được tạp chí Shares Magazine Anh bầu chọn là \" Nhà cung cấp Giao dịch Tài chính Theo Tỷ Lệ Cố Định Tốt nhất\". Đó là lần cuối chúng tôi chiến thắng vì Shares Magazine đã dừng trao giải trong lĩnh vực này"
 
@@ -1500,9 +1533,6 @@ msgstr "Trợ giúp"
 msgid "High"
 msgstr "Cao"
 
-msgid "High Barrier"
-msgstr "Barie cao"
-
 msgid "High barrier"
 msgstr "Hàng rào cao"
 
@@ -1532,9 +1562,6 @@ msgstr "Mẫu Hikkake (CDLHIKKAKE)"
 
 msgid "Historical Data"
 msgstr "Dữ liệu lịch sử"
-
-msgid "Home Address"
-msgstr "Địa chỉ nhà"
 
 msgid "Homing Pigeon (CDLHOMINGPIGEON)"
 msgstr "Bồ câu trở về (CDLHOMINGPIGEON)"
@@ -1568,6 +1595,12 @@ msgstr "Tôi thừa nhận rằng tôi không phải là một người tiếp x
 
 msgid "I have read and agree to Binary.com"
 msgstr "Tôi đã đọc và đồng ý với Binary.com"
+
+msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
+msgstr ""
+
+msgid "I want to be treated as a professional client"
+msgstr ""
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Tôi mới vào chương trình nhị phân, tôi bắt đầu từ đâu?"
@@ -1629,8 +1662,14 @@ msgstr "Để áp dụng đúng chủ đề, việc làm mới lại trang là c
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "Trong quá trình cung cấp dịch vụ tới bạn, chúng tôi cần thu thập thông tin từ bạn để đánh giá xem một sản phẩm hoặc dịch vụ nhất định có thích hợp cho bạn hay không (đó là, cho dù bạn có kinh nghiệm và kiến thức để hiểu các rủi ro liên quan)"
 
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgstr ""
+
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "Ở Vương Quốc Anh và đảo Man, khách hàng của chúng tôi giao dịch qua Binary (IOM) Ltd Tại Nhật bản, họ thương mại thông qua Binary KK. Trong liên minh châu Âu (ngoại trừ Anh), họ thương mại qua Binary (Châu Âu) công ty TNHH và đầu tư Binary (Châu Âu) Ltd. Ở phần còn lại của thế giới, họ thương mại thông qua Binary (C.R.) S.A"
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "Mô hình In-Neck (CDLINNECK)"
@@ -1809,9 +1848,6 @@ msgstr "Tải mẫu biểu đồ"
 msgid "Load trade template"
 msgstr "Tải mẫu giao dịch"
 
-msgid "Loading"
-msgstr "Đang tải"
-
 msgid "Loading Asset Index"
 msgstr "Đang tải chỉ số tài sản"
 
@@ -1890,11 +1926,14 @@ msgstr "Hãy để ý một ngọn nến cao màu đen với một bóng lâu 
 msgid "Look for a tall white candle in an upward price trend. Following that, a black candle has a body that gaps above the prior candle's body. The last day is another black candle, but this one engulfs the previous bearish candle but closes above first bar's open"
 msgstr "Hãy để ý một ngọn nến trắng cao trong một xu hướng lên giá. Sau đó, một ngọn nến đen có một cơ thể khoảng trống ở trên ngọn nến trước của cơ thể. Ngày cuối cùng lại là một nến đen, nhưng điều này lạ kích nến hướng giảm trước nhưng đóng ở trên đầu tiên bar mở"
 
+msgid "Lookbacks"
+msgstr ""
+
+msgid "Lookbacks are currently only available for Volatility Indices"
+msgstr ""
+
 msgid "Low"
 msgstr "thấp"
-
-msgid "Low Barrier"
-msgstr "Barie thấp"
 
 msgid "Low barrier"
 msgstr "Hàng rào thấp"
@@ -2004,9 +2043,6 @@ msgstr "Nhỏ nhất: 10 Lớn nhất: 2000"
 msgid "Minimum (MIN)"
 msgstr "tối thiểu (MIN)"
 
-msgid "Minimum 6 characters and must contain at least 1 digit"
-msgstr "Tối thiểu 6 ký tự và phải có ít nhất 1 chữ số"
-
 msgid "Minimum of 2 characters required"
 msgstr "Tối thiểu 2 ký tự bắt buộc"
 
@@ -2015,6 +2051,9 @@ msgstr "Tối thiểu 4 ký tự cần thiết"
 
 msgid "Minimum of 6 characters required"
 msgstr "Tối thiểu 6 ký tự bắt buộc"
+
+msgid "Minimum of six lower and uppercase letters with numbers"
+msgstr ""
 
 msgid "Minimum price over selected period"
 msgstr "Giá tối thiểu trong khoảng thời kì đã chọn"
@@ -2063,6 +2102,9 @@ msgstr "Bà"
 
 msgid "Ms"
 msgstr "Cô"
+
+msgid "Multiplier"
+msgstr ""
 
 msgid "Name"
 msgstr "Tên"
@@ -2427,6 +2469,9 @@ msgstr "Chính"
 msgid "Print chart"
 msgstr "In biểu đồ"
 
+msgid "Professional Client"
+msgstr ""
+
 msgid "Profit"
 msgstr "Lợi nhuận"
 
@@ -2513,6 +2558,9 @@ msgstr "giao dịch Regent Pacific"
 
 msgid "Register free account"
 msgstr "Đăng ký tài khoản miễn phí"
+
+msgid "Regulatory Information"
+msgstr ""
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Chỉ số sức mạnh tương đối (RSI)"
@@ -2699,6 +2747,9 @@ msgstr "Đường biến thiên trung bình mượt (SMMA)"
 
 msgid "Sold"
 msgstr "Đã bán"
+
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
 
 msgid "Source of wealth"
 msgstr "Nguồn tài sản"
@@ -3144,6 +3195,9 @@ msgstr "Những giao dịch này là chỗ nhà giao dịch đã chọn mô
 msgid "This Moving Average uses curve of the Normal (Gauss) distribution which can be placed by Offset parameter from 0 to 1. This parameter allows regulating the smoothness and high sensitivity of the Moving Average. Sigma is another parameter that is responsible for the shape of the curve coefficients"
 msgstr "Này di chuyển trung bình là sử dụng các đường cong của phân phối chuẩn (Gauss) có thể được đặt bằng tham số bù đắp từ 0 đến 1. Tham số này cho phép điều chỉnh êm ái và độ nhạy cảm cao của các di chuyển trung bình. Sigma là một tham số đó là chịu trách nhiệm về hình dạng của hệ số đường cong"
 
+msgid "This feature is not relevant to virtual-money accounts"
+msgstr ""
+
 msgid "This field is required"
 msgstr "Trường này là bắt buộc"
 
@@ -3158,12 +3212,6 @@ msgstr "Đây là giá hiện tại tại đó mà tài sản cơ sở co�
 
 msgid "This pattern occurs when two black days appear with equal closes in a downtrend. Matching Low indicates a bottom has been made, even though the new low was tested and there was no follow through, which is indicative of a good support price"
 msgstr "Mô hình này xảy ra khi hai ngày đen xuất hiện với đóng bình đẳng trong một xu hướng. Kết hợp thấp chỉ ra một đáy đã được thực hiện, mặc dù thấp mới đã được thử nghiệm và đã có không làm theo thông qua, đó là chỉ của một mức giá tốt hỗ trợ"
-
-msgid "This website is marketed in the UK and Isle of Man by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, licenced and regulated by (1) the Gambling Supervision Commission in the Isle of Man, British Isles, current online gambling licence issued on 31 August 2012, and for UK clients by (2) the UK Gambling Commission -"
-msgstr "Trang web này được bán trên thị trường tại Vương Quốc Anh và đảo Man bởi nhị phân (IOM) Ltd., tầng trệt, Thiên niên kỷ House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles, chế và quy định của Ủy ban giám sát cờ bạc (1) ở Isle of Man, British Isles, hiện tại giấy phép cờ bạc trực tuyến phát hành vào ngày 31 tháng 8 năm 2012, và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
-
-msgid "This website is marketed in the rest of the EU, for investment products by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156), and for gaming products by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenced and regulated by (1) the Malta Gaming Authority in Malta, licence no MGA/CL2/118/2000, 26th May 2015 and for UK clients by (2) the UK Gambling Commission -"
-msgstr "Trang web này trên thị trường trong phần còn lại của châu Âu, cho sản phẩm đầu tư bởi nhị phân đầu tư (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định như là một nhà cung cấp dịch vụ đầu tư thể loại 3 bởi cơ quan dịch vụ tài chính Malta (giấy phép. LÀ / 70156), và cho các sản phẩm chơi game bởi nhị phân (Châu Âu) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Man-ta, chế và quy định của (1) các cơ quan Nhan Malta ở Malta, giấy phép không có thanh/CL2/118/2000, ngày 26 tháng 5 năm 2015 và cho các khách hàng UK (2) anh cờ bạc Ủy ban -"
 
 msgid "Three Advancing White Soldiers (CDL3WHITESOLDIERS)"
 msgstr "Ba binh sĩ trắng thăng trận(CDL3WHITESOLDIERS)"
@@ -3252,9 +3300,6 @@ msgstr "Tên Token"
 msgid "Token permissions"
 msgstr "Cấp phép Token"
 
-msgid "Tokens are special codes for accessing"
-msgstr "Token là mã đặc biệt để truy cập"
-
 msgid "Tooltip background"
 msgstr "Công cụ chú thích nền"
 
@@ -3315,6 +3360,9 @@ msgstr "Tính lợi nhuận của giao dịch"
 msgid "Trades break down"
 msgstr "Phân tích các giao dịch"
 
+msgid "Trading Experience"
+msgstr ""
+
 msgid "Trading Times"
 msgstr "Thời Gian Giao Dịch"
 
@@ -3368,6 +3416,9 @@ msgstr "Hai quạ (CDL2CROWS)"
 
 msgid "Two-way pricing"
 msgstr "Giá 2 chiều"
+
+msgid "Types of lookbacks"
+msgstr ""
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Giá đặc trưng (TYPPRICE)"
@@ -3492,6 +3543,9 @@ msgstr "Chúng tôi bắt buộc phải thông báo cho bạn về những
 msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted 'Best Fixed-Odds Financial Trading Provider' for 2008"
 msgstr "Chúng tôi thực hiện lại. BetOnMarkets.com được trao Giải thưởng năm 2007 được bầu chọn là \" Nhà cung cấp Giao dịch Tài chính Cá cước tỉ lệ Cố định Tốt nhất\" năm 2008"
 
+msgid "We offer three types lookbacks"
+msgstr ""
+
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Chúng tôi đặt lại tên thương hiệu BetOnMarkets.com là"
 
@@ -3531,8 +3585,14 @@ msgstr "Chào mừng đến với Binary.com Webtrader"
 msgid "What are OTC indices and stocks?"
 msgstr "Mã chứng khoán và cổ phiếu phi tập trung là gì?"
 
+msgid "What are lookbacks"
+msgstr ""
+
 msgid "What is pep?"
 msgstr "Pep là gì?"
+
+msgid "What is this?"
+msgstr ""
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "Khi bạn đang hài lòng với mức giá mà bạn nhận được, thực hiện giao dịch của bạn ngay lập tức. Với nền tảng duy nhất của chúng tôi, bạn sẽ không phải chiến đấu với thị trường 'trượt' hoặc rộng mở. Và quan trọng nhất, không có phí ẩn. Bạn cũng có thể bán lại bất kỳ ngành nghề dài hạn tại bất kỳ thời điểm nào trước khi hết hạn để bảo vệ lợi nhuận bạn kiếm được hoặc giảm thiểu thiệt hại của bạn"
@@ -3557,6 +3617,15 @@ msgstr "Tôi có cần thiết lập phần mền nào nữa không?"
 
 msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
+
+msgid "Win the multiplier times the close minus low"
+msgstr ""
+
+msgid "Win the multiplier times the high minus close"
+msgstr ""
+
+msgid "Win the multiplier times the high minus low"
+msgstr ""
 
 msgid "With Binary.com you can trade"
 msgstr "Với Binary.com bạn có thể giao dịch"
@@ -3654,8 +3723,8 @@ msgstr "Phóng to"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "cho phép khách hàng phát triển rô bốt tự động giao dịch của họ với tính năng kéo thả đơn giản"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland, current remote bookmaker's licence issued on 29 September 2015 (licence no 1010285). This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "và cho các khách hàng Ailen (3) ủy viên doanh thu ở Ai-Len, các vấn đề về giấy phép đặt hàng từ xa hiện tại vào 29 tháng 9 năm 2015 (giấy phép số 1010285). Dịch vụ của trang web này không được thực hiện có sẵn ở một số quốc gia như Mỹ, Costa Rica, Hồng Kông, hoặc cho những người dưới 18 tuổi"
+msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "and start learning how to trade"
 msgstr "và bắt đầu học làm thế nào để thương mại"
@@ -3681,8 +3750,8 @@ msgstr "Hoa hồng"
 msgid "contact support"
 msgstr "liên hệ hỗ trợ"
 
-msgid "create a token, and share the token with copier(s)"
-msgstr "tạo ra một token, và chia sẻ token với người sao chép"
+msgid "create a Read-only token, and share the token with your copier(s)"
+msgstr ""
 
 msgid "customer support"
 msgstr "hỗ trợ khách hàng"
@@ -3731,9 +3800,6 @@ msgstr "chỉ trong một vài phút"
 
 msgid "in the future, the"
 msgstr "trong tương lai,"
-
-msgid "information about your trading exprience and personal finance"
-msgstr "thông tin về kinh nghiệm giao dịch và tài chính cá nhân của bạn"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
 msgstr "là nền tảng giao dịch cao cấp dành cho máy tính để bàn cao của Binary. Giao diện đa cửa sổ cung cấp sự linh hoạt tối đa và phù hợp với nhu cầu hoạt động của người giao dịch làm việc trên máy tính để bàn của họ"
@@ -3795,6 +3861,9 @@ msgstr "Đại lý thanh toán"
 msgid "points"
 msgstr "điểm số"
 
+msgid "sec"
+msgstr ""
+
 msgid "second"
 msgstr "giây"
 
@@ -3822,15 +3891,6 @@ msgstr "đánh dấu"
 msgid "ticks"
 msgstr "đánh dấu"
 
-msgid "trading experience"
-msgstr "kinh nghiệm giao dịch"
-
-msgid "trading frequency"
-msgstr "tần xuất giao dịch"
-
-msgid "view license"
-msgstr "xem giấy phép"
-
 msgid "www.Binary.com"
 msgstr "www.Binary.com"
 
@@ -3840,8 +3900,8 @@ msgstr "Có"
 msgid "{agent.commission}%"
 msgstr "{hoa hồng cho đại lý}%"
 
-msgid "| Payout"
-msgstr "| Thanh toán"
+msgid "| Return"
+msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
