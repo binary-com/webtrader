@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-08-21 00:50\n"
+"PO-Revision-Date: 2018-08-21 22:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1663,13 +1663,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Damit wir Ihnen unsere Dienstleistungen zur Verfügung stellen können, müssen wir einige Informationen von Ihnen erhalten, um festzustellen, ob ein Produkt oder Service für Sie geeignet ist (ob Sie die Erfahrung und das Wissen besitzen, die damit verbundenen Risiken zu erkennen)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "In der EU werden Finanzprodukte von Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten; lizensiert und reguliert als Kategorie 3 Investment Services Anbieter von der Malta Financial Services Authority (Lizenznr. IS / 70156). Auf der Isle Of Man und in Großbritannien werden Volatilitätsindizes von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle Of Man, britische Inseln angeboten; lizensiert und reguliert durch (1) die Gambling Supervision Commission auf der Isle Of Man (aktuelle Lizenz ausgestellt am 31. August 2017) und (2) von der UK Gambling Commission"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "In Großbritannien und auf der Isle of Man handeln unsere Kunden über Binary (IOM) Ltd. In Japan, handeln sie mittels Binary KK. In der Europäischen Union (ausgenommen Großbritannien) handeln sie über Binary (Europe) Ltd. und Binary Investments (Europe) Ltd. Im Rest der Welt über Binary (C.R.) S.A"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "Im Rest der EU werden Volatilität Indizes von Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten; lizensiert und reguliert (1) von der Malta Gaming Authority in Malta (Lizenznummer MGA/CL2/118/2000 am 26. Mai 2015 ausgestellt) und für Kunden aus Großbritannien (2) von der UK Gambling Commission"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
@@ -2749,7 +2749,7 @@ msgid "Sold"
 msgstr "Verkauft"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "Manche Produkte sind nicht in allen Ländern erhältlich. Die Dienstleistungen dieser Website sind in manchen Ländern wie den USA, Costa Rica, Hong Kong, oder für Personen unter 18 Jahren nicht erhältlich"
 
 msgid "Source of wealth"
 msgstr "Quelle des Vermögens"
@@ -3361,7 +3361,7 @@ msgid "Trades break down"
 msgstr "Trade Break-Down"
 
 msgid "Trading Experience"
-msgstr "Trading Experience"
+msgstr "Handelserfahrung"
 
 msgid "Trading Times"
 msgstr "Handelszeiten"
@@ -3544,7 +3544,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "Wir haben es wieder geschafft. BetOnMarkets.com wiederholt seine Auszeichnung aus 2007 und wird in 2008 wieder zum 'Besten Finanzdienstleister für den Handel mit festen Gewinnquoten' gewählt"
 
 msgid "We offer three types lookbacks"
-msgstr "Wir bieten drei Arten von Lookbacks"
+msgstr "Wir bieten drei Arten von Lockbacks an"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Wir benennen BetOnMarkets.com in"
@@ -3619,13 +3619,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr "Gewinnen Sie den Multiplikator mal dem Schluss minus des Tiefs"
+msgstr "Gewinnen Sie den Multiplikator mal dem Schluss minus dem Tief"
 
 msgid "Win the multiplier times the high minus close"
-msgstr "Gewinnen Sie den Multiplikator mal des Hochs minus des Schlusses"
+msgstr "Gewinnen Sie den Multiplikator mal dem Hoch minus dem Schluss"
 
 msgid "Win the multiplier times the high minus low"
-msgstr "Gewinnen Sie den Multiplikator mal des Hochs minus des Tiefs"
+msgstr "Gewinnen Sie den Multiplikator mal dem Hoch minus des Tiefs"
 
 msgid "With Binary.com you can trade"
 msgstr "Mit Binary.com können Sie handeln"
@@ -3724,7 +3724,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "erlaubt Kunden, ihre eigenen automatischen Handelsroboter mit   drag-and-drop  simplicity zu erstellen"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
+msgstr "und für Kunden aus Irland von den (3) Revenue Commissioners in Irland (entfernte Buchmacherlizenznr.: 1010285, ausgestellt am 1. Juli, 2017). Komplett ansehen"
 
 msgid "and start learning how to trade"
 msgstr "und beginnen Sie zu lernen, wie man handelt"
