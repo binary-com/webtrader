@@ -595,8 +595,8 @@ function remove_all_matches_except_first(string, regex) {
   return string.replace(regex, (match) => {
     count++;
     return count === 1 ? match : replaceWith;
-  })
-};
+  });
+}
 
 rv.binders['barrier-format'] = {
    priority: 3001,
@@ -632,7 +632,7 @@ function decimalPlaces(num) {
     ret = Math.max( 0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
   }
   return ret;
-};
+}
 
 rv.binders['number-format'] = {
   priority: 3002,

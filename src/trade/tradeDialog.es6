@@ -840,17 +840,17 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       return;
     }
     if (barrier) request.barrier = barrier;
-  };
+  }
 
   function set_is_barrier_offset(state) {
     state.barriers.is_offset_barrier = is_offset(state.barriers.barrier);
     state.barriers.is_offset_low_barrier = is_offset(state.barriers.low_barrier);
     state.barriers.is_offset_high_barrier = is_offset(state.barriers.high_barrier);
-  };
+  }
 
   function is_offset(barrier) {
     return barrier && (barrier.startsWith('+') || barrier.startsWith('-')) ? true : false;
-  };
+  }
 
   state.purchase.onclick = async function() {
     const categories_with_tick_chart = ['digits', 'callput', 'callputequal', 'asian', 'touchnotouch'];
