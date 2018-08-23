@@ -228,7 +228,7 @@ const update_indicative = (data, state) => {
     state.proposal_open_contract.low_barrier = contract.low_barrier;
 
     state.note = make_note(contract);
-  };
+  }
 
   function update_state_sell() {
     if (contract.bid_price) {
@@ -244,7 +244,7 @@ const update_indicative = (data, state) => {
       return;
     }
     state.fwd_starting = '';
-  };
+  }
 };
 
 function draw_chart(contract, state) {
@@ -255,7 +255,7 @@ function draw_chart(contract, state) {
 
   draw_vertical_lines(contract, state, chart);
   draw_barrier(contract, state);
-};
+}
 
 function draw_vertical_lines(contract, state, chart) {
   const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start } = contract;
@@ -271,7 +271,7 @@ function draw_vertical_lines(contract, state, chart) {
     const label = 'Entry Spot'.i18n();
     if (!entry_tick_time || chart_has_label(label)) return;
     chart.addPlotLineX({ value: entry_tick_time * 1000, label });
-  };
+  }
 
   function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
     const label = 'Exit Spot'.i18n();
@@ -286,28 +286,28 @@ function draw_vertical_lines(contract, state, chart) {
     }
 
     chart.addPlotLineX({ value, label, text_left, dashStyle: 'Dash' });
-  };
+  }
 
   function draw_end_time(date_expiry) {
     const label = 'End Time'.i18n();
     if (!date_expiry || chart_has_label(label)) return false;
 
     chart.addPlotLineX({ value: date_expiry * 1000, label, dashStyle: 'Dash' });
-  };
+  }
 
   function draw_start_time(date_start, text_left) {
     const label = 'Start Time'.i18n();
     if (!date_start || chart_has_label(label)) return;
     chart.addPlotLineX({ value: date_start * 1000, label, text_left });
-  };
+  }
 
   function chart_has_label(label) {
     if (state.chart.added_labels.includes(label)) return true;
 
     state.chart.added_labels.push(label);
-    return false
-  };
-};
+    return false;
+  }
+}
 
 const on_contract_finished = (state) => {
   state.proposal_open_contract.is_ended = true;
@@ -373,9 +373,9 @@ const init_dialog = (proposal) => {
         }
 
         update_indicative(data, state)
-      };
+      }
    });
-}
+};
 
 const sell_at_market = (state, root) => {
    state.sell.sell_at_market_enabled = false;
@@ -492,7 +492,7 @@ const update_live_chart = (state, granularity) => {
     } else {
       chartingRequestMap.subscribe(key);
     }
-  };
+  }
 
   function make_chartingRequestMap_request(granularity, symbol) {
     return ({
@@ -501,7 +501,7 @@ const update_live_chart = (state, granularity) => {
       granularity,
       style: granularity === 0 ? 'ticks' : 'candles',
     });
-  };
+  }
 
   function handle_tick() {
     on_tick_cb = liveapi.events.on('tick', (data) => {
@@ -524,7 +524,7 @@ const update_live_chart = (state, granularity) => {
       if (!chart) return;
       chart.series[0].addPoint([tick.epoch * 1000, tick.quote * 1]);
     }
-  };
+  }
 
   function handle_candle() {
     on_candles_cb = liveapi.events.on('ohlc', (data) => {
@@ -549,7 +549,7 @@ const update_live_chart = (state, granularity) => {
       const contract_has_finished = c.epoch * 1 > state.proposal_open_contract.date_expiry * 1;
       if (contract_has_finished) clean_up();
     });
-  };
+  }
 
   function clean_up() {
     if (clean_up_done) return;
@@ -558,7 +558,7 @@ const update_live_chart = (state, granularity) => {
     chartingRequestMap.unregister(key);
     on_tick_cb && liveapi.events.off('tick', on_tick_cb);
     on_candles_cb && liveapi.events.off('candles', on_candles_cb);
-  };
+  }
 };
 
 const draw_barrier = (contract, state) => {
@@ -585,13 +585,13 @@ const draw_barrier = (contract, state) => {
     function add_plot_line_y(id, value, label, color, text_under) {
       chart.addPlotLineY({ id, value, label, color, text_under });
     };
-  };
+  }
 
   function remove_barriers(barrier, high_barrier, low_barrier) {
     barrier && chart.yAxis[0].removePlotLine('barrier');
     high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
     low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
-  };
+  }
 }
 
 const get_chart_data = (state, root) => {
@@ -620,13 +620,13 @@ const get_chart_data = (state, root) => {
     else if (duration <= 24 * 60 * 60) { granularity = 300; } // 1 day
     else { granularity = 3600 } // more than 1 day
     return granularity;
-  };
+  }
 
   function make_time_margin(duration, granularity) {
     let margin = 0;
     margin = (granularity === 0) ? Math.max(3, 30 * duration / (60 * 60) | 0) : 3 * granularity;
     return margin;
-  };
+  }
 
   function make_tick_history_request(granularity, margin) {
     const end = make_end(margin);
@@ -652,7 +652,7 @@ const get_chart_data = (state, root) => {
       if (exit_tick_time) return (+exit_tick_time + margin);
       return 'latest';
     }
-  };
+  }
 
 
   function on_tick_history_success(data) {
@@ -665,13 +665,13 @@ const get_chart_data = (state, root) => {
 
     function make_chart_options(data, title) {
       return ({ title, ...data });
-    };
-  };
+    }
+  }
 
   function on_tick_history_error(err) {
     state.chart.loading = err.message;
     console.error(err);
-  };
+  }
 };
 
 export default  { init };
