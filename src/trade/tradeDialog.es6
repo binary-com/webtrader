@@ -1018,7 +1018,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         minimizable: true,
         maximizable: false,
         width:  400,
-        'data-authorized': 'true',
+        'data-authorized': 'false',
         isTrackerInitiated: isTrackerInitiated,
         relativePosition: true,
         close: function() {

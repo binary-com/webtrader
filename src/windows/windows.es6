@@ -1,8 +1,3 @@
-
-/**
- * Created by arnab on 2/18/15.
- */
-
 import $ from 'jquery';
 import _ from 'lodash';
 import navigation from 'navigation/navigation';
@@ -15,26 +10,6 @@ import moment from 'moment';
 import workspace from  '../workspace/workspace.js';
 
 let dialogCounter = 0;
-
-/* options: { width: 350, height: 400 } */
-const calculateChartCount = (options) => {
-   options = $.extend({ width: 350, height: 400 }, options);
-   let rows = Math.floor($(window).height() / options.height) || 1,
-      cols = Math.floor($(window).width() / options.width) || 1;
-
-   if (isSmallView()) //For small size screens
-      rows = cols = 1;
-   /**** limi the number of charts to 4 ****/
-   if(rows * cols > 4) {
-      rows = 1;
-      cols = 4;
-   };
-   return {
-      rows: rows,
-      cols: cols,
-      total: rows * cols
-   };
-}
 
 let callbacks = {};
 /* fire a custom event and call registered callbacks(api.events.on(name)) */
@@ -195,36 +170,29 @@ export const init = function($parentObj) {
       return original.apply(this, arguments);
    }
 
-   require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu"], (chartWindowObj,liveapi, menu) => {
+   require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu", "trade/tradeDialog"], (chartWindowObj,liveapi, menu, tradeDialog) => {
       if(!tracker.is_empty()) {
          tracker.reopen();
          return;
       }
-      const counts = calculateChartCount();
       liveapi
          .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
          .then((markets) => {
             markets = menu.extractChartableMarkets(markets);
-            /* return a random element of an array */
-            const rand = (arr) => arr[Math.floor(Math.random() * arr.length)];
-            const timePeriods = ['2h', '4h', '8h', '1d'];
-            const chartTypes = ['candlestick', 'line', 'ohlc', 'spline']; //This is not the complete chart type list, however its good enough to randomly select one from this subset
-            for (let inx = 0; inx < counts.total; ++inx) {
-               const submarkets = rand(markets).submarkets;
-               const symbols = rand(submarkets).instruments;
-               const sym = rand(symbols);
-               const timePeriod = rand(timePeriods);
-               const chart_type = rand(chartTypes);
+            const sym = markets[0].submarkets[0].instruments[0];
+            const timePeriod = '1t';
+            const type = 'line';
+            const pip = '0.001';
 
-               chartWindowObj.addNewWindow({
-                  instrumentCode: sym.symbol,
-                  instrumentName: sym.display_name,
-                  timePeriod: timePeriod,
-                  type: chart_type,
-                  delayAmount: sym.delay_amount
-               });
-            }
-            workspace.tileDialogs(); // Trigger tile action
+            liveapi
+              .send({ contracts_for: sym.symbol })
+              .then((res) => {
+                  // open chart window and tradeDialog
+                  chartWindowObj.addNewWindow({ instrumentCode: sym.symbol, instrumentName: sym.display_name, timePeriod, type, delayAmount: sym.delay_amount });
+                  tradeDialog.init({ symbol: sym.symbol, display_name: sym.display_name, pip }, res.contracts_for);
+                  workspace.tileDialogs();
+              })
+              .catch((err) => console.error(err));
          });
    });
 
