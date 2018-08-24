@@ -679,7 +679,7 @@ rv.binders['sparkline'] = (el, spots) => {
    };
    setTimeout(() => {
       chart.sparkline(spots, config);
-      spots.length ? chart.show() : chart.hide();
+      spots && spots.length ? chart.show() : chart.hide();
    }, 0);
 }
 
