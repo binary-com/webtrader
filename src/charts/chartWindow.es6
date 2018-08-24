@@ -17,7 +17,6 @@ WebtraderCharts.init({
 });
 
 export const addNewWindow = function(options) {
-    console.log('addNewWindow');
     const options_copy = options;
     const $parent = $('<div/>');
     options = $.extend({

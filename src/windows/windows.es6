@@ -10,7 +10,6 @@ import moment from 'moment';
 import workspace from  '../workspace/workspace.js';
 
 let dialogCounter = 0;
-const TRADING_CHART_COUNT = 2;
 
 let callbacks = {};
 /* fire a custom event and call registered callbacks(api.events.on(name)) */
@@ -180,24 +179,20 @@ export const init = function($parentObj) {
          .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
          .then((markets) => {
             markets = menu.extractChartableMarkets(markets);
-            for (let i = 0; i < TRADING_CHART_COUNT; ++i) {
-               // TODO: check if account can trade volatility indices
-               const forex_or_volatility = i == 0 ? 0 : 3;
-               const submarkets = markets[forex_or_volatility].submarkets;
-               const symbols = submarkets[i].instruments;
-               const sym = symbols[0];
-               const timePeriod = '1t';
-               const type = 'line';
-               liveapi
-               .send({ contracts_for: sym.symbol })
-               .then((res) => {
-                    chartWindowObj.addNewWindow({ instrumentCode: sym.symbol, instrumentName: sym.display_name, timePeriod, type, delayAmount: sym.delay_amount });
-                    tradeDialog.init({ symbol: sym.symbol, display_name: sym.display_name, pip: '0.001' }, res.contracts_for);
-                    if (i === 1) workspace.tileDialogs(); // Trigger tile action
-               }).catch((err) => {
-                    console.log('error');
-              });
-            }
+            const sym = markets[0].submarkets[0].instruments[0];
+            const timePeriod = '1t';
+            const type = 'line';
+            const pip = '0.001';
+
+            liveapi
+              .send({ contracts_for: sym.symbol })
+              .then((res) => {
+                  // open chart window and tradeDialog
+                  chartWindowObj.addNewWindow({ instrumentCode: sym.symbol, instrumentName: sym.display_name, timePeriod, type, delayAmount: sym.delay_amount });
+                  tradeDialog.init({ symbol: sym.symbol, display_name: sym.display_name, pip }, res.contracts_for);
+                  workspace.tileDialogs();
+              })
+              .catch((err) => console.error(err));
          });
    });
 
