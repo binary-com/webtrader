@@ -923,6 +923,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     // manually check to see if the user is authenticated or not,
     // we should update state.currency from user profile first (not everyone is using USD)
     if(!liveapi.is_authenticated()) {
+        console.log(liveapi.is_authenticated());
         $.growl.warning({ message: 'Please log in'.i18n() });
         state.purchase.loading = false;
         return;
@@ -1041,7 +1042,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         minimizable: true,
         maximizable: false,
         width:  400,
-        'data-authorized': 'true',
+        'data-authorized': 'false',
         isTrackerInitiated: isTrackerInitiated,
         relativePosition: true,
         close: function() {
