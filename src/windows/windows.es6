@@ -419,6 +419,7 @@ export const makeSelectmenu = function (select, options) {
       inx: 0,
       changed:  () => { }
    }, options);
+   options.changed = options.changed ? options.changed : () => { };
 
    var inx = options.inx, list = options.list;
    var update_select = (list) => {
