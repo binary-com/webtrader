@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-08-19 08:10\n"
+"PO-Revision-Date: 2018-08-26 13:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1669,7 +1669,7 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr "Dans le Royaume-Uni et l’île de Man, nos clients tradent à travers Binary (IOM) Ltd. au Japon, ils tradent à travers Binary KK. Dans l'Union Européenne (sauf le Royaume-Uni), ils tradent à travers Binary (Europe) Ltd et Binary Investment (Europe) Ltd. Dans le reste du monde, ils tradent à travers Binary (C.R.) S.A"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "Dans le reste de l’UE, les Indices de volatilité sont offerts par Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte ; agréée et régulée par (1) l'autorité des Jeux de Malte à Malte (licence no. MGA/Cl2/118/2000 délivrée le 26 mai 2015), pour les clients Britanniques de (2) la Commission des Jeux du Royaume-Uni"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "Schéma Dans le Col (CDLINNECK)"
@@ -1927,10 +1927,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "Recherchez une grande bougie blanche dans une tendance de prix à la hausse. Suite à cela, une bougie noire a un corps qui crée un fossé au-dessus du corps de la précédente bougie. Le dernier jour est une autre bougie noire, mais celle-ci engloutit la bougie baissière précédente mais se ferme au-dessus de l'ouverture de la première barre"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "Les loockbacks sont actuellement seulement disponibles pour les Indices de volatilité"
 
 msgid "Low"
 msgstr "Bas"
@@ -2053,7 +2053,7 @@ msgid "Minimum of 6 characters required"
 msgstr "Minimum de 6 caractères requis"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Minimum de six lettres minuscules et majuscules avec des chiffres"
 
 msgid "Minimum price over selected period"
 msgstr "Prix minimum sur la période sélectionnée"
@@ -2104,7 +2104,7 @@ msgid "Ms"
 msgstr "Mlle"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplicateur"
 
 msgid "Name"
 msgstr "Nom"
@@ -2470,7 +2470,7 @@ msgid "Print chart"
 msgstr "Imprimer le graphique"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "Client professionnel"
 
 msgid "Profit"
 msgstr "Profits"
@@ -2560,7 +2560,7 @@ msgid "Register free account"
 msgstr "Ouvrez un compte gratuit"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "Informations réglementaires"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Indice de Force Relative (IFR)"
