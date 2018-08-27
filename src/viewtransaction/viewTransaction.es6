@@ -193,6 +193,7 @@ const handle_error = (message) => {
 };
 
 const update_indicative = (data, state) => {
+  console.log('update_indicative ', state);
   const contract = data.proposal_open_contract;
   update_state(contract, state);
   draw_chart(contract, state);
@@ -248,8 +249,9 @@ const update_indicative = (data, state) => {
 
 function draw_chart(contract, state) {
   draw_sparkline(contract, state);
-
+  console.log(state.chart);
   const { chart } = state.chart;
+  console.log('draw_chart: ', chart);
   if (!chart) return;
 
   draw_vertical_lines(contract, state, chart);
@@ -267,8 +269,10 @@ function draw_vertical_lines(contract, state, chart) {
   draw_end_time(date_expiry);
 
   function draw_entry_spot(entry_tick_time) {
+    console.log('draw_entry_spot', chart);
     const label = 'Entry Spot'.i18n();
     if (!entry_tick_time || chart_has_label(label)) return;
+    console.log('draw_entry_spot', chart);
     chart.addPlotLineX({ value: entry_tick_time * 1000, label });
   }
 
@@ -342,15 +346,15 @@ const init_dialog = (proposal) => {
          close: function() {
             view && view.unbind();
             liveapi.proposal_open_contract.forget(proposal.contract_id);
-            liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+            // TODO: forget tick and open contract cbs
+            // liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
             for(let i = 0; i < state.onclose.length; ++i)
                state.onclose[i]();
             $(this).dialog('destroy').remove();
             open_dialogs[proposal.transaction_id] = undefined;
          },
          open: () => {
-            liveapi.proposal_open_contract.subscribe(proposal.contract_id);
-            liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
+
          },
          resize: () => {
             state.chart.manual_reflow();
@@ -359,20 +363,8 @@ const init_dialog = (proposal) => {
       });
 
       transWin.dialog('open');
-      const view = rv.bind(root[0],state)
+      const view = rv.bind(root[0], state);
       open_dialogs[proposal.transaction_id] = transWin;
-
-      function on_proposal_open_contract(data) {
-        const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
-        if (is_different_stream) return;
-
-        if (data.error) {
-          handle_error(data.error.message);
-          return;
-        }
-
-        update_indicative(data, state)
-      }
    });
 };
 
@@ -463,6 +455,24 @@ const init_state = (proposal, root) => {
    get_chart_data(state, root);
    return state;
 };
+
+function get_contract_data(state, proposal) {
+  const on_proposal_open_contract = (data) => {
+    const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
+    if (is_different_stream) return;
+
+    if (data.error) {
+      handle_error(data.error.message);
+      return;
+    }
+    update_indicative(data, state);
+  };
+
+  liveapi.proposal_open_contract.subscribe(proposal.contract_id).then((data) => {
+    on_proposal_open_contract(data);
+  });
+  if (proposal.status === 'open') liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
+}
 
 const update_live_chart = (state, granularity) => {
   const key = chartingRequestMap.keyFor(state.proposal_open_contract.underlying, granularity);
@@ -661,6 +671,8 @@ const get_chart_data = (state, root) => {
     const chart = init_chart(root, state, chart_options);
     state.chart.chart = chart;
     state.chart.manual_reflow();
+
+    get_contract_data(state, state.proposal_open_contract);
 
     function make_chart_options(data, title) {
       return ({ title, ...data });
