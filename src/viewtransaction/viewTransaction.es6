@@ -20,7 +20,7 @@ require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
 
 let market_data_disruption_win = null;
-const show_market_data_disruption_win = (proposal) => {
+const show_market_data_disruption_win = () => {
    if (market_data_disruption_win) {
       market_data_disruption_win.moveToTop();
       return;

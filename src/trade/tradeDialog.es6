@@ -461,6 +461,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.category_displays.onclick = function (e) {
+    state.barriers.barrier = '';
     state.category_displays.selected = {};
     state.category_displays.selected.name = $(e.target).attr('data-name');
     state.category_displays.selected.sentiment = $(e.target).attr('data-sentiment');

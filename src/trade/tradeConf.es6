@@ -361,7 +361,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          liveapi.sell_expired(); // to update balance immediately
       }
       state.buy.show_result = true;
-   }
+   };
 
    state.back.onclick = () => hide_callback(root);
    state.arrow.onclick = (e) => {
@@ -375,7 +375,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
       }
    };
 
-   const view = rv.bind(root[0], state)
+   const view = rv.bind(root[0], state);
 
    if(!state.arrow.visible) { register_ticks(state, extra); }
    else { state.back.visible = true; }
