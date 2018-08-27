@@ -194,9 +194,8 @@ const handle_error = (message) => {
 
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
-
   update_state(contract, state);
-  draw_chart(contract, state)
+  draw_chart(contract, state);
 
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
