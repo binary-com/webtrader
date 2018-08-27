@@ -93,3 +93,5 @@ img.reload {
   width: initial !important;
   position: relative;
 }
+
+.span-in-dialog-header { padding-right: 15px }
