@@ -348,7 +348,9 @@ const init_dialog = (proposal) => {
             $(this).dialog('destroy').remove();
             open_dialogs[proposal.transaction_id] = undefined;
          },
-         open: () => {},
+         open: () => {
+          liveapi.proposal_open_contract.forget(proposal.contract_id);
+         },
          resize: () => {
             state.chart.manual_reflow();
          },
@@ -451,11 +453,9 @@ const init_state = (proposal, root) => {
 let on_proposal_open_contract_cb;
 function get_contract_data(state, proposal) {
   on_proposal_open_contract_cb = on_proposal_open_contract;
-  liveapi.proposal_open_contract.subscribe(proposal.contract_id).then((data) => {
-    on_proposal_open_contract_cb(data, state);
-  });
 
-  if (proposal.status === 'open') liveapi.events.on('proposal_open_contract', on_proposal_open_contract_cb);
+  liveapi.proposal_open_contract.subscribe(proposal.contract_id)
+  liveapi.events.on('proposal_open_contract', on_proposal_open_contract_cb);
 
   function on_proposal_open_contract(data) {
     const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
