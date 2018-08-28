@@ -154,11 +154,6 @@ const init_chart = (root, state, options) => {
    return el.chart = chart;
 };
 
-const get_tick_value = (symbol, epoch) => {
-   return liveapi.send({ ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end: epoch + 2, count: 1 })
-      .catch((err) => console.error(err));
-};
-
 export const init = (contract_id, transaction_id) => {
    return new Promise((resolve, reject) => {
       if (open_dialogs[transaction_id]) {
