@@ -276,7 +276,7 @@ function draw_vertical_lines(contract, state, chart) {
     if (contract.is_path_dependent) {
       value = (+sell_spot_time || +exit_tick_time) * 1000;
     } else {
-      value =(+exit_tick_time) * 1000;
+      value = (+exit_tick_time) * 1000;
     }
     chart.addPlotLineX({ value, label, text_left, dashStyle: 'Dash' });
   }
@@ -303,6 +303,7 @@ function draw_vertical_lines(contract, state, chart) {
 }
 
 const on_contract_finished = (state) => {
+  liveapi.events.off('proposal_open_contract', on_proposal_open_contract_cb);
   state.proposal_open_contract.is_ended = true;
 };
 
@@ -505,10 +506,10 @@ const update_live_chart = (state, granularity) => {
         if (!data.tick || data.tick.symbol !== state.proposal_open_contract.underlying) return;
 
         const { chart } = state.chart;
-        const { status } = state.proposal_open_contract;
+        const { status, is_sold, exit_tick, exit_tick_time } = state.proposal_open_contract;
         const { tick } = data;
 
-        const contract_has_finished = !!state.proposal_open_contract.is_sold || status !== 'open';
+        const contract_has_finished = is_sold || status !== 'open' || exit_tick || exit_tick_time;
         if (contract_has_finished) {
           clean_up();
           return;
@@ -542,8 +543,9 @@ const update_live_chart = (state, granularity) => {
       } else {
         last.update(ohlc,true);
       }
+      const { status, is_sold, exit_tick, exit_tick_time, date_expiry} = state.proposal_open_contract;
+      const contract_has_finished = (c.epoch * 1 > date_expiry * 1) || status !== 'open' || exit_tick || exit_tick_time;
 
-      const contract_has_finished = c.epoch * 1 > state.proposal_open_contract.date_expiry * 1;
       if (contract_has_finished) clean_up();
     });
   }
