@@ -193,7 +193,6 @@ const handle_error = (message) => {
 };
 
 const update_indicative = (data, state) => {
-  console.log('update_indicative ', state);
   const contract = data.proposal_open_contract;
   update_state(contract, state);
   draw_chart(contract, state);
@@ -279,12 +278,11 @@ function draw_vertical_lines(contract, state, chart) {
     if (contract_has_no_exit_time || chart_has_label(label)) return;
 
     let value;
-    if (!!contract.is_path_dependent || contract.status === 'sold') {
-      value = sell_spot_time * 1000;
+    if (contract.is_path_dependent) {
+      value = (+sell_spot_time || +exit_tick_time) * 1000;
     } else {
-      value = exit_tick_time * 1000;
+      value =(+exit_tick_time) * 1000;
     }
-
     chart.addPlotLineX({ value, label, text_left, dashStyle: 'Dash' });
   }
 
@@ -604,9 +602,8 @@ const setup_chart = (state, root) => {
   const margin = make_time_margin(duration, granularity);
   const tick_history_request = make_tick_history_request(granularity, margin);
 
-  if (!state.proposal_open_contract.is_ended) {
-    update_live_chart(state, granularity);
-  }
+  // setup tick/candle stream for chart
+  if (!state.proposal_open_contract.is_ended) update_live_chart(state, granularity);
 
   liveapi.send(tick_history_request)
     .then((data) => {
@@ -634,10 +631,14 @@ const setup_chart = (state, root) => {
   }
 
   function make_tick_history_request(granularity, margin) {
+    const { is_forward_starting, date_start, current_spot_time, purchase_time } = state.proposal_open_contract;
+    const constract_is_forward_starting = is_forward_starting && +date_start > +current_spot_time;
+    const start = constract_is_forward_starting ? +purchase_time : (+date_start || +purchase_time);
     const end = make_end(margin);
+
     const request = {
       ticks_history: state.proposal_open_contract.underlying,
-      start: (+state.proposal_open_contract.date_start || +state.proposal_open_contract.purchase_time) - margin, /* load around 2 more thicks before start */
+      start: start - margin, /* load around 2 more ticks before start */
       end,
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
