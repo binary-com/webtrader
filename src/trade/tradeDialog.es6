@@ -461,7 +461,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.category_displays.onclick = function (e) {
-    state.barriers.barrier = '';
     state.category_displays.selected = {};
     state.category_displays.selected.name = $(e.target).attr('data-name');
     state.category_displays.selected.sentiment = $(e.target).attr('data-sentiment');
@@ -834,13 +833,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   function add_barriers_to_request(state, request) {
     const { barrier, high_barrier, low_barrier, barrier_count } = state.barriers;
-
     if (+barrier_count === 2) {
       request.barrier = high_barrier;
       request.barrier2 = low_barrier;
       return;
     }
-    if (barrier) request.barrier = barrier;
+    if (+barrier_count === 1) request.barrier = barrier;
   }
 
   function set_is_barrier_offset(state) {
