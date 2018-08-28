@@ -209,7 +209,7 @@ const update_indicative = (data, state) => {
   state.chart.manual_reflow();
 
   function update_state(contract, state) {
-    // note: rivets.js 2-way data-binding breaks with spread operator assignment
+    // note: rivets.js 2-way data-binding breaks if new object
     state.proposal_open_contract.user_sold = contract.sell_spot_time && contract.sell_spot_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
@@ -249,9 +249,8 @@ const update_indicative = (data, state) => {
 
 function draw_chart(contract, state) {
   draw_sparkline(contract, state);
-  console.log(state.chart);
+
   const { chart } = state.chart;
-  console.log('draw_chart: ', chart);
   if (!chart) return;
 
   draw_vertical_lines(contract, state, chart);
@@ -269,10 +268,8 @@ function draw_vertical_lines(contract, state, chart) {
   draw_end_time(date_expiry);
 
   function draw_entry_spot(entry_tick_time) {
-    console.log('draw_entry_spot', chart);
     const label = 'Entry Spot'.i18n();
     if (!entry_tick_time || chart_has_label(label)) return;
-    console.log('draw_entry_spot', chart);
     chart.addPlotLineX({ value: entry_tick_time * 1000, label });
   }
 
@@ -325,9 +322,8 @@ const make_note = (contract) => {
 };
 
 const draw_sparkline = (contract, state) => {
-  if (state.sell.bid_prices.length > 40) {
-    state.sell.bid_prices.shift();
-  }
+  if (state.sell.bid_prices.length > 40) state.sell.bid_prices.shift();
+
   state.sell.bid_prices.push(contract.bid_price);
 };
 
@@ -342,20 +338,17 @@ const init_dialog = (proposal) => {
          minWidth: 490,
          minHeight: 480,
          height: 480,
-         destroy: () => { },
+         destroy: () => {},
          close: function() {
             view && view.unbind();
             liveapi.proposal_open_contract.forget(proposal.contract_id);
-            // TODO: forget tick and open contract cbs
-            // liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+            liveapi.events.off('proposal_open_contract', on_proposal_open_contract_cb);
             for(let i = 0; i < state.onclose.length; ++i)
                state.onclose[i]();
             $(this).dialog('destroy').remove();
             open_dialogs[proposal.transaction_id] = undefined;
          },
-         open: () => {
-
-         },
+         open: () => {},
          resize: () => {
             state.chart.manual_reflow();
          },
@@ -418,7 +411,6 @@ const init_state = (proposal, root) => {
 
           const h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
           const container = root;
-          const transactionChart = container.find(".transaction-chart");
           const width = container.width() - 10;
           const height = container.height();
 
@@ -452,12 +444,20 @@ const init_state = (proposal, root) => {
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
-   get_chart_data(state, root);
+   setup_chart(state, root);
    return state;
 };
 
+let on_proposal_open_contract_cb;
 function get_contract_data(state, proposal) {
-  const on_proposal_open_contract = (data) => {
+  on_proposal_open_contract_cb = on_proposal_open_contract;
+  liveapi.proposal_open_contract.subscribe(proposal.contract_id).then((data) => {
+    on_proposal_open_contract_cb(data, state);
+  });
+
+  if (proposal.status === 'open') liveapi.events.on('proposal_open_contract', on_proposal_open_contract_cb);
+
+  function on_proposal_open_contract(data) {
     const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
     if (is_different_stream) return;
 
@@ -466,12 +466,7 @@ function get_contract_data(state, proposal) {
       return;
     }
     update_indicative(data, state);
-  };
-
-  liveapi.proposal_open_contract.subscribe(proposal.contract_id).then((data) => {
-    on_proposal_open_contract(data);
-  });
-  if (proposal.status === 'open') liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
+  }
 }
 
 const update_live_chart = (state, granularity) => {
@@ -603,22 +598,23 @@ const draw_barrier = (contract, state) => {
   }
 }
 
-const get_chart_data = (state, root) => {
+const setup_chart = (state, root) => {
   const duration = Math.min(+state.proposal_open_contract.date_expiry, moment.utc().unix()) - (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start);
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
   const tick_history_request = make_tick_history_request(granularity, margin);
 
-   if (!state.proposal_open_contract.is_ended) {
-      update_live_chart(state, granularity);
-   }
+  if (!state.proposal_open_contract.is_ended) {
+    update_live_chart(state, granularity);
+  }
 
-  return liveapi.send(tick_history_request).then((data) => {
+  liveapi.send(tick_history_request)
+    .then((data) => {
       on_tick_history_success(data);
-    })
-    .catch((err) => {
+      get_contract_data(state, state.proposal_open_contract);
+    }).catch((err) => {
       on_tick_history_error(err);
-    });
+  });
 
   function make_granularity(duration) {
     let granularity = 0;
@@ -666,13 +662,10 @@ const get_chart_data = (state, root) => {
 
   function on_tick_history_success(data) {
     state.chart.loading = '';
-
     const chart_options = make_chart_options(data, state.proposal_open_contract.display_name);
     const chart = init_chart(root, state, chart_options);
     state.chart.chart = chart;
     state.chart.manual_reflow();
-
-    get_contract_data(state, state.proposal_open_contract);
 
     function make_chart_options(data, title) {
       return ({ title, ...data });
