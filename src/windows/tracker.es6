@@ -26,13 +26,9 @@ const symbols_promise = liveapi.cached
 const when_authenticated = () => {
    return new Promise((res) => {
       if (liveapi.is_authenticated()) {
-            console.log('is_authenticated');
-            return res();
-      } else {
-            console.log('not_authenticated');
+         return res();
       }
       liveapi.events.on_till('login',() => {
-         console.log('login');
          res();
          return true;
       });
