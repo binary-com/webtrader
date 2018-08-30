@@ -194,7 +194,6 @@ const register_ticks = (state, extra) => {
 
       state.ticks.contract_is_finished = true;
       state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
-      state.ticks.sell_spot_time = proposal_open_contract.sell_spot_time ? proposal_open_contract.sell_spot_time : null;
       state.ticks.status = proposal_open_contract.status;
 
       state.buy.update();
@@ -308,7 +307,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
          array: [],
          contract_is_finished: false,
          exit_tick_time: null,
-         sell_spot_time: null,
          is_path_dependent: null,
          make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
          make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
