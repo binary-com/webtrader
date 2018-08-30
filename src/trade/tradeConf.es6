@@ -89,13 +89,7 @@ rv.binders['tick-chart'] = {
       }
 
       function draw_exit_spot(model, ticks) {
-            const is_path_dependent_contract = !!model.is_path_dependent;
-            let exit_tick_idx = ticks.findIndex((tick) => {
-                  if (is_path_dependent_contract) {
-                        return tick.epoch === (+model.sell_spot_time);
-                  }
-                  return tick.epoch === (+model.exit_tick_time);
-            });
+            let exit_tick_idx = ticks.findIndex((tick) => tick.epoch === (+model.exit_tick_time));
             const exit_spot = model.make_exit_spot(exit_tick_idx + 1);
             draw_x_line(el.chart, exit_spot);
       };
@@ -199,7 +193,6 @@ const register_ticks = (state, extra) => {
       forget_stream_and_cb();
 
       state.ticks.contract_is_finished = true;
-      state.ticks.is_path_dependent = proposal_open_contract.is_path_dependent ? proposal_open_contract.is_path_dependent : null;
       state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
       state.ticks.sell_spot_time = proposal_open_contract.sell_spot_time ? proposal_open_contract.sell_spot_time : null;
       state.ticks.status = proposal_open_contract.status;
