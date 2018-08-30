@@ -20,7 +20,7 @@ require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
 
 let market_data_disruption_win = null;
-const show_market_data_disruption_win = (proposal) => {
+const show_market_data_disruption_win = () => {
    if (market_data_disruption_win) {
       market_data_disruption_win.moveToTop();
       return;
@@ -154,11 +154,6 @@ const init_chart = (root, state, options) => {
    return el.chart = chart;
 };
 
-const get_tick_value = (symbol, epoch) => {
-   return liveapi.send({ ticks_history: symbol, granularity: 0, style:'ticks', start: epoch, end: epoch + 2, count: 1 })
-      .catch((err) => console.error(err));
-};
-
 export const init = (contract_id, transaction_id) => {
    return new Promise((resolve, reject) => {
       if (open_dialogs[transaction_id]) {
@@ -194,9 +189,8 @@ const handle_error = (message) => {
 
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
-
   update_state(contract, state);
-  draw_chart(contract, state)
+  draw_chart(contract, state);
 
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
@@ -209,7 +203,7 @@ const update_indicative = (data, state) => {
   state.chart.manual_reflow();
 
   function update_state(contract, state) {
-    // note: rivets.js 2-way data-binding breaks with spread operator assignment
+    // note: rivets.js 2-way data-binding breaks if new object
     state.proposal_open_contract.user_sold = contract.sell_spot_time && contract.sell_spot_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
@@ -279,12 +273,11 @@ function draw_vertical_lines(contract, state, chart) {
     if (contract_has_no_exit_time || chart_has_label(label)) return;
 
     let value;
-    if (!!contract.is_path_dependent || contract.status === 'sold') {
-      value = sell_spot_time * 1000;
+    if (contract.is_path_dependent) {
+      value = (+sell_spot_time || +exit_tick_time) * 1000;
     } else {
-      value = exit_tick_time * 1000;
+      value = (+exit_tick_time) * 1000;
     }
-
     chart.addPlotLineX({ value, label, text_left, dashStyle: 'Dash' });
   }
 
@@ -310,6 +303,7 @@ function draw_vertical_lines(contract, state, chart) {
 }
 
 const on_contract_finished = (state) => {
+  liveapi.events.off('proposal_open_contract', on_proposal_open_contract_cb);
   state.proposal_open_contract.is_ended = true;
 };
 
@@ -322,9 +316,8 @@ const make_note = (contract) => {
 };
 
 const draw_sparkline = (contract, state) => {
-  if (state.sell.bid_prices.length > 40) {
-    state.sell.bid_prices.shift();
-  }
+  if (state.sell.bid_prices.length > 40) state.sell.bid_prices.shift();
+
   state.sell.bid_prices.push(contract.bid_price);
 };
 
@@ -339,19 +332,18 @@ const init_dialog = (proposal) => {
          minWidth: 490,
          minHeight: 480,
          height: 480,
-         destroy: () => { },
+         destroy: () => {},
          close: function() {
             view && view.unbind();
             liveapi.proposal_open_contract.forget(proposal.contract_id);
-            liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
+            liveapi.events.off('proposal_open_contract', on_proposal_open_contract_cb);
             for(let i = 0; i < state.onclose.length; ++i)
                state.onclose[i]();
             $(this).dialog('destroy').remove();
             open_dialogs[proposal.transaction_id] = undefined;
          },
          open: () => {
-            liveapi.proposal_open_contract.subscribe(proposal.contract_id);
-            liveapi.events.on('proposal_open_contract', on_proposal_open_contract);
+          liveapi.proposal_open_contract.forget(proposal.contract_id);
          },
          resize: () => {
             state.chart.manual_reflow();
@@ -360,20 +352,8 @@ const init_dialog = (proposal) => {
       });
 
       transWin.dialog('open');
-      const view = rv.bind(root[0],state)
+      const view = rv.bind(root[0], state);
       open_dialogs[proposal.transaction_id] = transWin;
-
-      function on_proposal_open_contract(data) {
-        const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
-        if (is_different_stream) return;
-
-        if (data.error) {
-          handle_error(data.error.message);
-          return;
-        }
-
-        update_indicative(data, state)
-      }
    });
 };
 
@@ -427,7 +407,6 @@ const init_state = (proposal, root) => {
 
           const h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
           const container = root;
-          const transactionChart = container.find(".transaction-chart");
           const width = container.width() - 10;
           const height = container.height();
 
@@ -461,9 +440,28 @@ const init_state = (proposal, root) => {
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
-   get_chart_data(state, root);
+   setup_chart(state, root);
    return state;
 };
+
+let on_proposal_open_contract_cb;
+function get_contract_data(state, proposal) {
+  on_proposal_open_contract_cb = on_proposal_open_contract;
+
+  liveapi.proposal_open_contract.subscribe(proposal.contract_id)
+  liveapi.events.on('proposal_open_contract', on_proposal_open_contract_cb);
+
+  function on_proposal_open_contract(data) {
+    const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
+    if (is_different_stream) return;
+
+    if (data.error) {
+      handle_error(data.error.message);
+      return;
+    }
+    update_indicative(data, state);
+  }
+}
 
 const update_live_chart = (state, granularity) => {
   const key = chartingRequestMap.keyFor(state.proposal_open_contract.underlying, granularity);
@@ -508,10 +506,10 @@ const update_live_chart = (state, granularity) => {
         if (!data.tick || data.tick.symbol !== state.proposal_open_contract.underlying) return;
 
         const { chart } = state.chart;
-        const { status } = state.proposal_open_contract;
+        const { status, is_sold, exit_tick, exit_tick_time } = state.proposal_open_contract;
         const { tick } = data;
 
-        const contract_has_finished = !!state.proposal_open_contract.is_sold || status !== 'open';
+        const contract_has_finished = is_sold || status !== 'open' || exit_tick || exit_tick_time;
         if (contract_has_finished) {
           clean_up();
           return;
@@ -545,8 +543,9 @@ const update_live_chart = (state, granularity) => {
       } else {
         last.update(ohlc,true);
       }
+      const { status, is_sold, exit_tick, exit_tick_time, date_expiry} = state.proposal_open_contract;
+      const contract_has_finished = (c.epoch * 1 > date_expiry * 1) || status !== 'open' || exit_tick || exit_tick_time;
 
-      const contract_has_finished = c.epoch * 1 > state.proposal_open_contract.date_expiry * 1;
       if (contract_has_finished) clean_up();
     });
   }
@@ -594,22 +593,22 @@ const draw_barrier = (contract, state) => {
   }
 }
 
-const get_chart_data = (state, root) => {
+const setup_chart = (state, root) => {
   const duration = Math.min(+state.proposal_open_contract.date_expiry, moment.utc().unix()) - (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start);
   const granularity = make_granularity(duration);
   const margin = make_time_margin(duration, granularity);
   const tick_history_request = make_tick_history_request(granularity, margin);
 
-   if (!state.proposal_open_contract.is_ended) {
-      update_live_chart(state, granularity);
-   }
+  // setup tick/candle stream for chart
+  if (!state.proposal_open_contract.is_ended) update_live_chart(state, granularity);
 
-  return liveapi.send(tick_history_request).then((data) => {
+  liveapi.send(tick_history_request)
+    .then((data) => {
       on_tick_history_success(data);
-    })
-    .catch((err) => {
+      get_contract_data(state, state.proposal_open_contract);
+    }).catch((err) => {
       on_tick_history_error(err);
-    });
+  });
 
   function make_granularity(duration) {
     let granularity = 0;
@@ -629,10 +628,14 @@ const get_chart_data = (state, root) => {
   }
 
   function make_tick_history_request(granularity, margin) {
+    const { is_forward_starting, date_start, current_spot_time, purchase_time } = state.proposal_open_contract;
+    const constract_is_forward_starting = is_forward_starting && +date_start > +current_spot_time;
+    const start = constract_is_forward_starting ? +purchase_time : (+date_start || +purchase_time);
     const end = make_end(margin);
+
     const request = {
       ticks_history: state.proposal_open_contract.underlying,
-      start: (+state.proposal_open_contract.date_start || +state.proposal_open_contract.purchase_time) - margin, /* load around 2 more thicks before start */
+      start: start - margin, /* load around 2 more ticks before start */
       end,
       style: 'ticks',
       count: 4999, /* maximum number of ticks possible */
@@ -657,7 +660,6 @@ const get_chart_data = (state, root) => {
 
   function on_tick_history_success(data) {
     state.chart.loading = '';
-
     const chart_options = make_chart_options(data, state.proposal_open_contract.display_name);
     const chart = init_chart(root, state, chart_options);
     state.chart.chart = chart;
