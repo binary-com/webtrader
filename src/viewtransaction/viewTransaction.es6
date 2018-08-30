@@ -204,7 +204,7 @@ const update_indicative = (data, state) => {
 
   function update_state(contract, state) {
     // note: rivets.js 2-way data-binding breaks if new object
-    state.proposal_open_contract.user_sold = contract.sell_spot_time && contract.sell_spot_time < contract.date_expiry;
+    state.proposal_open_contract.user_sold = contract.exit_tick_time && contract.exit_tick_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.proposal_open_contract.bid_price = contract.bid_price;
@@ -252,13 +252,13 @@ function draw_chart(contract, state) {
 }
 
 function draw_vertical_lines(contract, state, chart) {
-  const { entry_tick_time, sell_spot_time, exit_tick_time, date_expiry, date_start } = contract;
+  const { entry_tick_time, exit_tick_time, date_expiry, date_start } = contract;
   const text_left = true;
 
   draw_entry_spot(entry_tick_time);
   draw_start_time(date_start, text_left);
 
-  draw_exit_spot(sell_spot_time, exit_tick_time, text_left);
+  draw_exit_spot(exit_tick_time, text_left);
   draw_end_time(date_expiry);
 
   function draw_entry_spot(entry_tick_time) {
@@ -267,18 +267,11 @@ function draw_vertical_lines(contract, state, chart) {
     chart.addPlotLineX({ value: entry_tick_time * 1000, label });
   }
 
-  function draw_exit_spot(sell_spot_time, exit_tick_time, text_left) {
+  function draw_exit_spot(exit_tick_time, text_left) {
     const label = 'Exit Spot'.i18n();
-    const contract_has_no_exit_time = !sell_spot_time && !exit_tick_time;
-    if (contract_has_no_exit_time || chart_has_label(label)) return;
+    if (!exit_tick_time || chart_has_label(label)) return;
 
-    let value;
-    if (contract.is_path_dependent) {
-      value = (+sell_spot_time || +exit_tick_time) * 1000;
-    } else {
-      value = (+exit_tick_time) * 1000;
-    }
-    chart.addPlotLineX({ value, label, text_left, dashStyle: 'Dash' });
+    chart.addPlotLineX({ value: (+exit_tick_time) * 1000, label, text_left, dashStyle: 'Dash' });
   }
 
   function draw_end_time(date_expiry) {
@@ -424,7 +417,7 @@ const init_state = (proposal, root) => {
         currency: (proposal.currency ||  'USD') + ' ',
         is_ended: proposal.is_settleable || proposal.is_sold || proposal.status !== 'open',
         is_sold_at_market: false,
-        user_sold: proposal.sell_spot_time && proposal.sell_spot_time < proposal.date_expiry,
+        user_sold: proposal.exit_tick_time && proposal.exit_tick_time < proposal.date_expiry,
         isLookback: Lookback.isLookback(proposal.contract_type),
         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
@@ -649,9 +642,8 @@ const setup_chart = (state, root) => {
     return request;
 
     function make_end(margin) {
-      const { sell_spot_time, exit_tick_time } = state.proposal_open_contract;
+      const {exit_tick_time } = state.proposal_open_contract;
 
-      if (sell_spot_time) return (+sell_spot_time + margin);
       if (exit_tick_time) return (+exit_tick_time + margin);
       return 'latest';
     }
