@@ -298,6 +298,7 @@ function draw_vertical_lines(contract, state, chart) {
 const on_contract_finished = (state) => {
   liveapi.events.off('proposal_open_contract', on_proposal_open_contract_cb);
   state.proposal_open_contract.is_ended = true;
+  state.sell.sell_at_market_enabled = false;
 };
 
 const make_note = (contract) => {
