@@ -37,10 +37,6 @@ body {
     margin: 10px 0 10px;
     width: 100%;
 }
-#footer a {
-    display: inline-block;
-    text-decoration: underline;
-}
 #content {
     width: 90%;
     margin: auto;
@@ -60,8 +56,10 @@ body {
 }
 
 .footer {
-    padding: 20px 10px;
+    padding: 20px 10px 30px 10px;
     color: #a8a8a8;
+    font-size: 13px;
+    font-weight: 100;
 
     &__image-container {
         display: flex;
@@ -102,6 +100,19 @@ body {
         img {
             height: 35px;
             width: 35px;
+        }
+    }
+
+    &__text-container {
+        text-decoration: none;
+        text-align: justify;
+
+        .risk-warning {
+            font-size: 16px;
+        }
+        .about-binary {
+            border-top: 1px solid #44484c;
+            border-bottom: 1px solid #44484c;
         }
     }
 }
