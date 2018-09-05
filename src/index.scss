@@ -60,31 +60,40 @@ body {
 }
 
 .footer {
-    padding-top: 20px;
+    padding: 20px 10px;
     color: #a8a8a8;
 
     &__image-container {
         display: flex;
-        padding: 0 10px;
     }
 
     &__regulatory-icons {
         display: flex;
 
+        .gamstop-lga-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .iom_icon {
+            max-width: 90px;
+            margin-right: 20px;
+        }
         .lga_icon {
+            align-self: flex-start;
             max-width: 70px;
         }
         .gamstop_icon {
             max-width: 120px;
-        }
-        .iom_icon {
-            max-width: 90px;
         }
     }
 
     &__social-icons {
         margin-left: auto;
         display: flex;
+        align-items: center;
 
         > *:not(:first-child) {
             margin-left: 10px;
