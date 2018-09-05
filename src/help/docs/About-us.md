@@ -15,10 +15,10 @@ When you trade with Binary.com, you can be assured that your deposits are held i
 - Over 130 staff and contractors worldwide
 - Over 1 million registered accounts worldwide
 - Binary's platform transacts on average 20 transactions per second, 24/7
-- Offices in Malta, Malaysia and Japan
-- Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan
-- Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai
+- Offices in Malta and Malaysia
+- Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland
+- Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai
 
 Binary.com is owned and operated by the Binary Group Ltd. group of companies. For more information, visit our history page.
 
-In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A.
+In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A.
