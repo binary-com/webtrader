@@ -107,7 +107,11 @@ body {
         text-decoration: none;
         text-align: justify;
 
+        .u-margin-bottom-small {
+            margin-bottom: 7px
+        }
         .risk-warning {
+            margin-top: 7px;
             font-size: 16px;
         }
         .about-binary {
