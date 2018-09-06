@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-08-17 01:10\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Thai\n"
-"Language: th_TH\n"
-"PO-Revision-Date: 2018-08-17 01:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -33,6 +33,9 @@ msgstr "รางวัล ‘Best Fixed-Odds Firm 2012’ ได้รับจ
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "รางวัล ‘Financial Betting Operator of the Year’ ได้รับจาก eGaming Review"
 
+msgid "'In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
+msgstr ""
+
 msgid "'contract period'"
 msgstr "'ระยะเวลาสัญญา'"
 
@@ -48,14 +51,11 @@ msgstr "(เดิมชื่อ"
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือ สิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
 
-msgid "(license reference no: 39172)"
-msgstr "(ใบอนุญาตเลขที่: 39172)"
-
-msgid "(license reference no: 39495)"
-msgstr "(ใบอนุญาตเลขที่: 39495)"
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") ได้เปิดใช้งานจริง ให้บริการการพนันทางการเงินในดัชนีทางการเงินต่างๆ ที่หลากหลายทั้งวันทั้งคืน ธุรกิจเติบโตอย่างรวดเร็ว และในไม่ช้าพวกเราก้าวสู่การเป็นผู้นำตลาดการพนันทางการเงินแบบ Fixed-Odds"
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "- ประโยชน์จากการที่อัตราผลตอบแทนเท่ากับของนักลงทุนระหว่างธนาคาร ราคาของเราถูกเปรียบเทียบเป็นรายวันกับตลาดออปชั่นระหว่างธนาคาร"
@@ -423,8 +423,8 @@ msgstr "Absolute Price Oscillator (APO)"
 msgid "Accept"
 msgstr "ยอมรับ"
 
-msgid "Accessible from any web browser in 13 languages"
-msgstr "เข้าถึงได้จากเว็บเบราว์เซอร์ใดๆ 13 ภาษา"
+msgid "Accessible from any web browser in 12 languages"
+msgstr ""
 
 msgid "Account balance"
 msgstr "ยอดคงเหลือในบัญชี"
@@ -494,9 +494,6 @@ msgstr "อนุญาตให้ผู้อื่นคัดลอกกา
 
 msgid "Amount"
 msgstr "มูลค่า"
-
-msgid "Amount Per Point"
-msgstr "จำนวนต่อจุด"
 
 msgid "Amount per point"
 msgstr "จำนวนต่อจุด"
@@ -631,7 +628,8 @@ msgid "Barrier(s)"
 msgstr "Barrier"
 
 msgid "Bearish: This is an end-of-trend pattern composed of three candlesticks in an uptrend. The second candlestick must open close to the close of the previous day. The last candlestick should be short and can form an upside gap. There could also be a selling shadow.The pattern represents a weakness in a rise with a risk of consolidation and possible reversal. Bullish: This is an end-of-trend pattern composed of three candlesticks in a downtrend. The second candlestick must open close to the close of the previous day. the last candlestick must be short. The pattern represents a weakness and consolidation and a possible reversal in trend"
-msgstr "ซบเซา: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขึ้น แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้นและสร้างช่องว่างด้านบน ควรจะมีเงาการขายด้วย รูปแบบนี้แสดงถึงความอ่อนแอในการขึ้นอย่างมีความเสี่ยงในการรวมเข้าด้วยกัน และมีความเป็นไปได้ในการกลับตัว \n"
+msgstr ""
+"ซบเซา: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขึ้น แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้นและสร้างช่องว่างด้านบน ควรจะมีเงาการขายด้วย รูปแบบนี้แสดงถึงความอ่อนแอในการขึ้นอย่างมีความเสี่ยงในการรวมเข้าด้วยกัน และมีความเป็นไปได้ในการกลับตัว \n"
 "ตื่นตัว: คือ รูปแบบสิ้นสุดของแนวโน้มประกอบด้วยแท่งเทียนสามแท่งในแนวโน้มขาลง แท่งเทียนที่สองจะต้องเปิดใกล้กับเวลาสิ้นสุดของวันก่อนหน้า แท่งเทียนสุดท้ายควรจะสั้น รูปแบบนี้แสดงถึงความอ่อนแอในการรวมเข้าด้วยกันและความเป็นไปได้ในการกลับตัวของแนวโน้ม"
 
 msgid "Belt-hold (CDLBELTHOLD)"
@@ -747,6 +745,9 @@ msgstr "Binary.com มีผู้ใช้งาน 1 ล้านคน ซึ
 
 msgid "Binary.com introduces an"
 msgstr "Binary.com แนะนำ"
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
+msgstr ""
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "Binary.com ได้รับรางวัล Best Binary Options Broker โดย Online Personal Wealth Awards 2017 ของสหราชอาณาจักร ซึ่งได้มาจากการลงคะแนนของนักลงทุนทั่วโลก"
@@ -1534,6 +1535,9 @@ msgstr "ตัวช่วย"
 msgid "High"
 msgstr "สูง"
 
+msgid "High Barrier"
+msgstr ""
+
 msgid "High barrier"
 msgstr "Barrier สูง"
 
@@ -1652,7 +1656,8 @@ msgid "In an uptrend three successive days opens at or near the previous day's c
 msgstr "ในสามวันที่เป็นขาขึ้นต่อเนื่องกันเปิดที่ หรือ ใกล้กับราคาปิดวันก่อน และปิดในวันนั้น รูปแบบนี้รุนแรงกว่ารูปแบบ Three Black Crows แต่มีความน่าเชื่อถือมากกว่าว่าเป็น รูปแบบการกลับตัวของราคา"
 
 msgid "In classic Silicon Valley style, Hong Kong based hedge fund manager and entrepreneur, Jean-Yves Sireau, starts Regent Markets in his Hong Kong bedroom. He develops the systems, methods and algorithms for implementing a fixed-odds financial betting system. Jean-Yves's vision is to create a market in the simplest of all derivatives contracts - the fixed-odds bet - and to offer ordinary investors the chance to make small bets. Until his innovation, binary options are normally only traded in large quantities"
-msgstr "รูปแบบคลาสสิกซิลิคอน วัลเลย์ ผู้จัดการกองทุนเฮดจ์ที่ประเทศฮ่องกง นาย Jean-Yves Sireau ก่อตั้ง Regent Markets จากห้องนอนของเขาในประเทศฮ่องกง\n"
+msgstr ""
+"รูปแบบคลาสสิกซิลิคอน วัลเลย์ ผู้จัดการกองทุนเฮดจ์ที่ประเทศฮ่องกง นาย Jean-Yves Sireau ก่อตั้ง Regent Markets จากห้องนอนของเขาในประเทศฮ่องกง\n"
 "เขาพัฒนาระบบต่างๆ วิธีการ และ อัลกอริธึ่มสำหรับระบบการซื้อขายผลิตภัณฑ์การเงินแบบ Fixed-Odds วิสัยทัศน์ของ Jean-Yves คือ การสร้างตลาดที่ง่ายที่สุดสำหรับสัญญาอนุพันธ์ที่เป็นแบบ Fixed-Odds Bet และเสนอให้กับนักลงทุนทั่วๆ ไป ในการซื้อขายเล็กๆ ในระยะแรก กระทั่งนวัตกรรมของเขาเป็นที่แพร่หลายสำหรับการซื้อขายไบนารีออปชั่นปริมาณมาก"
 
 msgid "In foreign exchange markets, traders can enter contracts based on the change in price of one currency as it relates to another currency. For example if a trader selects Rise in the EUR/USD market, they are predicting that the value of the Euro will rise in relation to the value of the US dollar"
@@ -1664,14 +1669,14 @@ msgstr "เพื่อการใช้งานธีมอย่างมี
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินถูกนำเสนอโดย Binary Investments (Europe) Ltd. อาคาร Mompalao Suite 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการการลงทุนประเภท 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156) ใน Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกนำเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย Douglas IM2 4RW Isle of Man, British Isles ได้รับอนุญาตและกำกับดูแลทางกฎหมายตามลำดับโดย (1) Gambling Supervision Commission แห่ง Isle of Man (ใบอนุญาตปัจจุบันออกให้วันที่ 31 สิงหาคม 2560) และโดย (2) Gambling Commission แห่งสหราชอาณาจักร"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
+msgstr ""
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr "ในสหราชอาณาจักร และเกาะ Isle of Man ลูกค้าของเราซื้อขายผ่านบริษัท Binary (IOM) Ltd และประเทศญี่ปุ่น ดำเนินการซื้อขายผ่าน Binary KK ในสหพันธ์ยุโรป (ยกเว้นสหราชอาณาจักร) ลูกค้าซื้อขายผ่านบริษัท Binary (Europe) Ltd และ Binary Investments (Europe) Ltd และประเทศอื่นๆ ในภูมิภาคอื่น พวกเขาซื้อขายผ่านบริษัท Binary (C.R.) S.A"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr "สำหรับประเทศอื่นๆในสหภาพยุโรป ดัชนีผันผวนถูกนำเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao Suite 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับอนุญาตและกำกับดูแลทางกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (ใบอนุญาตหมายเลข MGA/CL2/118/2000 ออกให้วันที่ 26 พฤษภาคม 2558) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
+msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
@@ -1823,8 +1828,8 @@ msgstr "ลงมือเลย"
 msgid "Level of Education"
 msgstr "ระดับการศึกษา"
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "ได้รับอนุญาตและเป็นไปตามกฎหมายในการดำเนินธุรกิจในประเทศมอลตา สหราชอาณาจักร เกาะ Isle of Man ไอร์แลนด์ และญี่ปุ่น"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
+msgstr ""
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "เช่นเดียวกับ EMA LWMA ให้ความหมายมากกว่ากับราคาล่าสุด และน้อยกว่ากับราคาปิดของช่วงเวลาเริ่มต้น ดังนั้นจะช่วยให้ค้นพบการย้อนกลับของแนวโน้มได้เร็วกว่า แต่มีแนวโน้มที่ถูกกระทบด้วยคลื่นรบกวนในตลาดได้ง่ายกว่า"
@@ -2195,8 +2200,8 @@ msgstr "ตุลาคม"
 msgid "Odd"
 msgstr "คี่"
 
-msgid "Offices in Malta, Malaysia and Japan"
-msgstr "สำนักงานอื่นที่ประเทศมอลตา มาเลเซีย และญี่ปุ่น"
+msgid "Offices in Malta and Malaysia"
+msgstr ""
 
 msgid "Ok"
 msgstr "ตกลง"
@@ -2483,14 +2488,11 @@ msgstr "ตารางผลกำไร"
 msgid "Profit/ Loss"
 msgstr "กำไร / ขาดทุน"
 
-msgid "Profit/Loss (points)"
-msgstr "กำไร/ขาดทุน (จุด)"
-
 msgid "Protect your profits"
 msgstr "ปกป้องผลกำไรของท่าน"
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "เผยแพร่ด้วยภาษาอังกฤษ ภาษาอินโดนีเซีย ภาษาญี่ปุ่น ภาษาจีน ภาษาโปแลนด์ ภาษาเยอรมัน ภาษาฝรั่งเศส ภาษาสเปน ภาษาโปรตุเกส ภาษาอิตาเลียน ภาษารัสเซีย และภาษาไทย"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgstr ""
 
 msgid "Purchase"
 msgstr "ซื้อ"
@@ -2512,9 +2514,6 @@ msgstr "Rate Of Change Ratio (ROCR)"
 
 msgid "Read"
 msgstr "อ่าน"
-
-msgid "Read about"
-msgstr "ศึกษาเกี่ยวกับ"
 
 msgid "Ref"
 msgstr "อ้างอิง"
@@ -2750,8 +2749,8 @@ msgstr "Smoothed Moving Average (SMMA)"
 msgid "Sold"
 msgstr "ขาย"
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "บางผลิตภัณฑ์ยังไม่มีในทุกประเทศ บริการของเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา คอสตาริกา ฮ่องกง หรือให้แก่บุคคลที่อายุต่ำกว่า 18 ปี"
+msgid "Some products are not available in all countries. This website s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
 
 msgid "Source of wealth"
 msgstr "แหล่งที่มาของรายได้"
@@ -2860,12 +2859,6 @@ msgstr "ประสบการณ์ในการซื้อขายหล
 
 msgid "Stocks trading frequency"
 msgstr "ความถี่ในการซื้อขายหลักทรัพย์ต่างๆ"
-
-msgid "Stop Loss Level"
-msgstr "ระดับยุติการขาดทุน"
-
-msgid "Stop Profit Level"
-msgstr "ระดับยุติกำไร"
 
 msgid "Stop-loss"
 msgstr "หยุดขาดทุน"
@@ -3371,8 +3364,8 @@ msgstr "เวลาซื้อขาย"
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "การซื้อขายไบนารีออปชั่นทำได้อย่างง่ายดาย ด้วยเพียง 3 ขั้นตอน เพื่อเริ่มการซื้อขาย"
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr "การซื้อขายไบนารีออปชั่นอาจจะไม่เหมาะสมกับทุกคน ดังนั้นโปรดแน่ใจว่า ท่านมีความเข้าใจอย่างครบถ้วนเกี่ยวกับความเสี่ยงที่เกี่ยวข้อง การขาดทุนของท่านสามารถเกินจำนวนเงินฝากเริ่มต้น และท่านจะไม่ได้รับผลตอบแทนใดๆ จากสินทรัพย์ที่อ้างถึงนั้น อนึ่ง ไบนารีออปชั่น เป็นผลิตภัณฑ์เพื่อการเสี่ยงโชค โปรดทราบว่า การเสี่ยงโชคอาจเป็นพฤติกรรมเสพติด โปรดใช้ความระมัดระวังในการซื้อขาย "
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr ""
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview สำหรับ Binary.com"
@@ -3725,9 +3718,6 @@ msgstr "ขยาย"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "อนุญาตให้ลูกค้าพัฒนาเครื่องมื่อสำหรับซื้อขายอัตโนมัติของเขาโดยการลากและวางอย่างง่ายๆ"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr "และสำหรับลูกค้าไอร์แลนด์โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (ใบอนุญาตของ Remote Bookmaker หมายเลข 1010285 ออกให้วันที่ 1 กรกฎาคม 2560) ดูทั้งหมด"
-
 msgid "and start learning how to trade"
 msgstr "และเริ่มเรียนรู้วิธีการซื้อขาย"
 
@@ -3863,6 +3853,12 @@ msgstr "ตัวแทนรับชำระเงิน"
 msgid "points"
 msgstr "จุด"
 
+msgid "reference no: 39172"
+msgstr ""
+
+msgid "reference no: 39495"
+msgstr ""
+
 msgid "sec"
 msgstr "วินาที"
 
@@ -3908,3 +3904,53 @@ msgstr "| ผลตอบแทน"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"
 
+#~ msgid "(license reference no: 39172)"
+#~ msgstr "(ใบอนุญาตเลขที่: 39172)"
+
+#~ msgid "(license reference no: 39495)"
+#~ msgstr "(ใบอนุญาตเลขที่: 39495)"
+
+#~ msgid "Accessible from any web browser in 13 languages"
+#~ msgstr "เข้าถึงได้จากเว็บเบราว์เซอร์ใดๆ 13 ภาษา"
+
+#~ msgid "Amount Per Point"
+#~ msgstr "จำนวนต่อจุด"
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+#~ msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินถูกนำเสนอโดย Binary Investments (Europe) Ltd. อาคาร Mompalao Suite 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับอนุญาตและกำกับดูแลทางกฎหมายในฐานะผู้ให้บริการการลงทุนประเภท 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156) ใน Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกนำเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย Douglas IM2 4RW Isle of Man, British Isles ได้รับอนุญาตและกำกับดูแลทางกฎหมายตามลำดับโดย (1) Gambling Supervision Commission แห่ง Isle of Man (ใบอนุญาตปัจจุบันออกให้วันที่ 31 สิงหาคม 2560) และโดย (2) Gambling Commission แห่งสหราชอาณาจักร"
+
+#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+#~ msgstr "ในสหราชอาณาจักร และเกาะ Isle of Man ลูกค้าของเราซื้อขายผ่านบริษัท Binary (IOM) Ltd และประเทศญี่ปุ่น ดำเนินการซื้อขายผ่าน Binary KK ในสหพันธ์ยุโรป (ยกเว้นสหราชอาณาจักร) ลูกค้าซื้อขายผ่านบริษัท Binary (Europe) Ltd และ Binary Investments (Europe) Ltd และประเทศอื่นๆ ในภูมิภาคอื่น พวกเขาซื้อขายผ่านบริษัท Binary (C.R.) S.A"
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+#~ msgstr "สำหรับประเทศอื่นๆในสหภาพยุโรป ดัชนีผันผวนถูกนำเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao Suite 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับอนุญาตและกำกับดูแลทางกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (ใบอนุญาตหมายเลข MGA/CL2/118/2000 ออกให้วันที่ 26 พฤษภาคม 2558) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission"
+
+#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
+#~ msgstr "ได้รับอนุญาตและเป็นไปตามกฎหมายในการดำเนินธุรกิจในประเทศมอลตา สหราชอาณาจักร เกาะ Isle of Man ไอร์แลนด์ และญี่ปุ่น"
+
+#~ msgid "Offices in Malta, Malaysia and Japan"
+#~ msgstr "สำนักงานอื่นที่ประเทศมอลตา มาเลเซีย และญี่ปุ่น"
+
+#~ msgid "Profit/Loss (points)"
+#~ msgstr "กำไร/ขาดทุน (จุด)"
+
+#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+#~ msgstr "เผยแพร่ด้วยภาษาอังกฤษ ภาษาอินโดนีเซีย ภาษาญี่ปุ่น ภาษาจีน ภาษาโปแลนด์ ภาษาเยอรมัน ภาษาฝรั่งเศส ภาษาสเปน ภาษาโปรตุเกส ภาษาอิตาเลียน ภาษารัสเซีย และภาษาไทย"
+
+#~ msgid "Read about"
+#~ msgstr "ศึกษาเกี่ยวกับ"
+
+#~ msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+#~ msgstr "บางผลิตภัณฑ์ยังไม่มีในทุกประเทศ บริการของเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา คอสตาริกา ฮ่องกง หรือให้แก่บุคคลที่อายุต่ำกว่า 18 ปี"
+
+#~ msgid "Stop Loss Level"
+#~ msgstr "ระดับยุติการขาดทุน"
+
+#~ msgid "Stop Profit Level"
+#~ msgstr "ระดับยุติกำไร"
+
+#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
+#~ msgstr "การซื้อขายไบนารีออปชั่นอาจจะไม่เหมาะสมกับทุกคน ดังนั้นโปรดแน่ใจว่า ท่านมีความเข้าใจอย่างครบถ้วนเกี่ยวกับความเสี่ยงที่เกี่ยวข้อง การขาดทุนของท่านสามารถเกินจำนวนเงินฝากเริ่มต้น และท่านจะไม่ได้รับผลตอบแทนใดๆ จากสินทรัพย์ที่อ้างถึงนั้น อนึ่ง ไบนารีออปชั่น เป็นผลิตภัณฑ์เพื่อการเสี่ยงโชค โปรดทราบว่า การเสี่ยงโชคอาจเป็นพฤติกรรมเสพติด โปรดใช้ความระมัดระวังในการซื้อขาย "
+
+#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+#~ msgstr "และสำหรับลูกค้าไอร์แลนด์โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (ใบอนุญาตของ Remote Bookmaker หมายเลข 1010285 ออกให้วันที่ 1 กรกฎาคม 2560) ดูทั้งหมด"
