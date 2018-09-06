@@ -52,17 +52,30 @@ body {
 }
 
 .footer {
-    padding: 20px 10px 30px 10px;
+    padding: 20px 20px;
     color: #a8a8a8;
     font-size: 13px;
     font-weight: 100;
+    flex-wrap: wrap;
+
     a {
         color: #FFF;
         font-weight: 400;
     }
 
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0px 40px;
+    }
+
     &__image-container {
         display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 609px)  {
+            justify-content: center;
+        }
     }
 
     &__regulatory-icons {
@@ -70,6 +83,7 @@ body {
 
         .gamstop-lga-container {
             height: 100%;
+            min-width: 100px;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -77,14 +91,17 @@ body {
         }
         .iom_icon {
             max-width: 90px;
+            min-width: 76px;
             margin-right: 20px;
         }
         .lga_icon {
             align-self: flex-start;
             max-width: 70px;
+            width: 100%;
         }
         .gamstop_icon {
             max-width: 120px;
+            width: 100%;
         }
     }
 
@@ -100,6 +117,11 @@ body {
         img {
             height: 35px;
             width: 35px;
+        }
+
+        @media screen and (max-width: 609px)  {
+            margin: 20px 0;
+            justify-content: center;
         }
     }
 
