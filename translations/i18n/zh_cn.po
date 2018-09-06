@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-09-06 03:10\n"
+"PO-Revision-Date: 2018-09-06 03:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "所有合约期限"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "所有字段为可选项。如果想要复制所有资产和交易类型，所有字段请保留空白"
 
 msgid "All market conditions"
 msgstr "所有市场条件"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "平均持续时间"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "持仓头寸的平均持续期"
 
 msgid "Avg. Loss"
 msgstr "平均损失"
@@ -691,10 +691,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "二元期权或其他金融衍生品交易频率"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "二元期权交易经验"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "二元期权交易频率"
 
 msgid "Binary trading is flexible"
 msgstr "二元期权交易很灵活"
@@ -844,13 +844,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "通过点击OK键，您确认已经阅读并接受更新的"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "默认情况下, 所有客户都被视为零售。如果您符合必要的标准, 您同意被视为专业客户吗？"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "差价合约交易经验"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "差价合约交易频率"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用于合同购入与售出，给到期的购入合同延期，以及给虚拟金钱账户存入资金。"
@@ -937,7 +937,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "公民身份"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "点击登录Binary.com账户"
@@ -1435,7 +1435,7 @@ msgid "Flexible"
 msgstr "灵活"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "例如, 假设市场在合约持续时间内的最低值为5200和收盘时为6000, 那么倍数值为2美元的\"收盘-最低值\" 回望回报为"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "连续第三年，BetOnMarkets.com被英国财经杂志《Shares Magazine》评为“最佳固定赔率金融交易提供商”。这是我们最后一次获奖，因为该杂志已停止颁发这一类奖项"
@@ -1597,10 +1597,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "本人已经阅读并同意Binary.com的"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "我特此确认, 我提供的税务信息是真实和完整的。将来如果此信息有任何更改，我将会通知Binary投资 (欧洲) 有限公司"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "我要被视为专业客户"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "我是新手，该如何开始呢？"
@@ -1663,7 +1663,7 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "为了给您提供服务，我们必须向您获取信息，以便确定产品或服务是否适合您（也就是说，看您是否拥有足够经验和知识，以了解相关的风险）"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由马耳他金融服务机构授予牌照及监管为3级投资服务提供商，(牌照号码为 IS/70156)。英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛投资监管委员会授予牌照和监管，当前在线博彩牌照于2012 年8 月31 日颁发；及(2) 英国博采委员会授予牌照和监管"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "在英国和马恩岛，我们的客户通过 Binary (IOM) Ltd. 进行交易。在日本通过 Binary KK 进行交易。在欧盟（除了英国），则通过 Binary (Europe) Ltd 和 Binary Investments (Europe) Ltd. 进行交易。在全世界其他地区，客户通过 Binary (C.R.) S.A.进行交易"
