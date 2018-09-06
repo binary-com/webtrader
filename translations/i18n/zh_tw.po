@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-09-06 03:20\n"
+"PO-Revision-Date: 2018-09-06 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1663,13 +1663,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr ""
+msgstr "歐盟國家的金融產品交易由Binary Investments (Europe) Ltd提供，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商，(執照號碼為IS/70156)。英國和曼島的波動率指數交易由Binary (IOM) Ltd. 提供，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1) 由不列顛群島曼島投資監管委員會授予執照和監管，目前線上博彩執照於2012 年8 月31 日頒發；及(2) 由英國博彩委員會授予執照和監管"
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "在英國和曼島，我們的客戶通過 Binary (IOM) Ltd. 進行交易。在日本通過Binary KK進行交易。在歐盟（除了英國），他們通過 Binary (Europe) Ltd 和 Binary Investments (Europe) Ltd. 進行交易。在全世界其他地區，他們通過 Binary (C.R.) S.A. 進行交易"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "歐盟其它國家的波動率指數交易由Binary (Europe) Ltd提供，地址為 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 馬爾他的馬爾他博彩局授予執照並受其監管（執照號MGA/B2C/102/2000, 發照日期為2018年8月01日）。英國客戶由(2) 英國博彩委員會授予執照和監管"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "頸內形態 (CDLINNECK)"
@@ -1927,10 +1927,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "尋求上漲價格走勢中的高身白色燭形線。緊隨的是在前一支燭形線體上有缺口的黑色燭形線。最後一天也是黑色燭形線，但這一支完全包圍住前一支看跌燭形線， 且收盤價高於第一支燭形線的開盤價"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "回顧"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "回顧功能目前僅適用于 波動指數"
 
 msgid "Low"
 msgstr "低"
@@ -2053,7 +2053,7 @@ msgid "Minimum of 6 characters required"
 msgstr "需要至少6個字元"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "至少六個大小寫字母和數字"
 
 msgid "Minimum price over selected period"
 msgstr "選定期內最低價"
@@ -2104,7 +2104,7 @@ msgid "Ms"
 msgstr "女士"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "倍數值"
 
 msgid "Name"
 msgstr "名字"
@@ -2470,7 +2470,7 @@ msgid "Print chart"
 msgstr "列印圖表"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "專業客戶"
 
 msgid "Profit"
 msgstr "利潤"
@@ -2560,7 +2560,7 @@ msgid "Register free account"
 msgstr "註冊免費帳戶"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "監管資訊"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "相對強弱指標 (RSI)"
@@ -2749,7 +2749,7 @@ msgid "Sold"
 msgstr "已賣出"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "一些產品在所有國家都不可用。本網站不向一些國家如美國、哥斯達黎加、香港、或18歲以下的使用者提供服務"
 
 msgid "Source of wealth"
 msgstr "財富來源"
@@ -3196,7 +3196,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "移動平均指標使用正態（高斯）分佈，以0到1兩個偏移參數進行操作。此參數允許移動平均指標的平滑度和高敏感度受調節。Sigma標準差是另一個控製曲線係數形狀的參數"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "此功能與虛擬資金帳戶沒有關聯"
 
 msgid "This field is required"
 msgstr "此為必填欄位"
@@ -3361,7 +3361,7 @@ msgid "Trades break down"
 msgstr "交易明細"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "交易經驗"
 
 msgid "Trading Times"
 msgstr "交易時間"
@@ -3418,7 +3418,7 @@ msgid "Two-way pricing"
 msgstr "雙向報價"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "回顧類型"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "典型價格 (TYPPRICE)"
@@ -3544,7 +3544,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "我們再次得獎。 2007年獲獎之後，BetOnMarkets.com 又一次被《Shares Magazine》雜誌選為2008年度「最佳固定賠率金融交易提供商」"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "我們提供三種回顧類型"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "我們把 BetOnMarkets.com 更名為"
@@ -3586,13 +3586,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "場外交易指數和股票是什麼？"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "什麼是回顧合約"
 
 msgid "What is pep?"
 msgstr "Pep 是什麼？"
 
 msgid "What is this?"
-msgstr ""
+msgstr "這是甚麽？"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "當您對收到的價格感到滿意時請立刻執行交易。通過我們的獨特平台，您不會遇到滑價或跳空市場。更重要的是，不會有任何未顯示費用。您也可在任何長期合約到期前隨時售出，以保護您的賺取利潤或將虧損降至最低額"
@@ -3619,13 +3619,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "威廉指標 (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "贏取倍數值乘以收盤值減去最低值"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "贏取倍數值乘以最高值減去收盤值"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "贏取倍數值乘以最高值減去最低值"
 
 msgid "With Binary.com you can trade"
 msgstr "通過Binary.com，您可以交易"
