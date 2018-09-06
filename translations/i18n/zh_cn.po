@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-09-06 03:20\n"
+"PO-Revision-Date: 2018-09-06 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1669,7 +1669,7 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr "在英国和马恩岛，我们的客户通过 Binary (IOM) Ltd. 进行交易。在日本通过 Binary KK 进行交易。在欧盟（除了英国），则通过 Binary (Europe) Ltd 和 Binary Investments (Europe) Ltd. 进行交易。在全世界其他地区，客户通过 Binary (C.R.) S.A.进行交易"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2018年8月01日）。英国客户由(2) 英国博彩委员会授予牌照和监管"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "颈内形态 (CDLINNECK)"
@@ -1927,10 +1927,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "寻求上涨价格走势中的高身白色烛形线。紧随的是在前一支烛形线体上有缺口的黑色烛形线。 最后一天也是黑色烛形线，但这一支完全包围住前一支看跌烛形线， 且收盘价高于第一支烛形线的开盘价"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "回顾"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "回顾功能目前仅适用于 波动指数"
 
 msgid "Low"
 msgstr "低"
@@ -2053,7 +2053,7 @@ msgid "Minimum of 6 characters required"
 msgstr "需要至少6个字符"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "至少六个大小写字母和数字"
 
 msgid "Minimum price over selected period"
 msgstr "选定期内最低价"
@@ -2104,7 +2104,7 @@ msgid "Ms"
 msgstr "女士"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "倍数值"
 
 msgid "Name"
 msgstr "名字"
@@ -2470,7 +2470,7 @@ msgid "Print chart"
 msgstr "打印图表"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "专业客户"
 
 msgid "Profit"
 msgstr "利润"
@@ -2560,7 +2560,7 @@ msgid "Register free account"
 msgstr "注册免费账户"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "监管信息"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "相对强弱指标 (RSI)"
@@ -2749,7 +2749,7 @@ msgid "Sold"
 msgstr "已卖出"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "一些产品在所有国家都不可用。本网站不向一些国家如美国、哥斯达黎加、香港、或18岁以下的用户提供服务"
 
 msgid "Source of wealth"
 msgstr "财富来源"
@@ -3196,7 +3196,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "移动平均指标使用正态（高斯）分布，以0到1两个偏移参数进行操作。此参数允许移动平均指标的平滑度和高敏感度受调节。西格马是另一个控制曲线系数形状的参数"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "此功能与虚拟资金账户没有关联"
 
 msgid "This field is required"
 msgstr "此为必填项"
@@ -3361,7 +3361,7 @@ msgid "Trades break down"
 msgstr "交易明细"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "交易经验"
 
 msgid "Trading Times"
 msgstr "交易时间"
@@ -3418,7 +3418,7 @@ msgid "Two-way pricing"
 msgstr "双边报价"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "回顾类型"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "典型价格 (TYPPRICE)"
@@ -3544,7 +3544,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "我们再次获奖。在2007年获奖之后，BetOnMarkets.com 又一次被《Shares Magazine》杂志选为2008年度“最佳固定赔率金融交易提供商”"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "我们提供三种回顾类型"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "我们把 BetOnMarkets.com 更名为"
@@ -3586,13 +3586,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "场外交易指数和股票是什么？"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "什么是回顾合约"
 
 msgid "What is pep?"
 msgstr "Pep是什么？"
 
 msgid "What is this?"
-msgstr ""
+msgstr "这是什么？"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "当您对收到的价格感到满意时请立刻执行交易。通过我们的独特平台，您不会遇到滑价或跳空市场。更重要的是，不会有任何未显示的费用。您也可在任何长期合约到期前随时售出，以保护您的赚取利润或将亏损降至最低额"
@@ -3619,13 +3619,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "威廉指标 (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "赢取倍数值乘以收盘值减去最低值"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "赢取倍数值乘以最高值减去最低值"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "赢取倍数值乘以最高值减去最低值"
 
 msgid "With Binary.com you can trade"
 msgstr "通过Binary.com，您可以交易"
