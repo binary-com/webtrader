@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-09-06 03:30\n"
+"PO-Revision-Date: 2018-09-06 03:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3724,7 +3724,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "允许客户轻松使用“拖放”操作开发自己的自动化交易机器人"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
+msgstr "及爱尔兰客户由(3) 爱尔兰的税务局授予牌照和监管 (远程博彩公司牌照号: 1010285，发照日期为2017年7月1日)。查阅完整的"
 
 msgid "and start learning how to trade"
 msgstr "并开始学习如何交易"
@@ -3751,7 +3751,7 @@ msgid "contact support"
 msgstr "联系客服部"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "创建只读令牌并与您的复制者共享"
 
 msgid "customer support"
 msgstr "客服部"
@@ -3862,7 +3862,7 @@ msgid "points"
 msgstr "点"
 
 msgid "sec"
-msgstr ""
+msgstr "秒钟"
 
 msgid "second"
 msgstr "秒"
@@ -3901,7 +3901,7 @@ msgid "{agent.commission}%"
 msgstr "{代理.佣金}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| 回报"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "让客户、联盟会员和程序开发员买卖Binary.com的产品"
