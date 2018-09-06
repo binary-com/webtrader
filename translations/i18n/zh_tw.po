@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-09-06 03:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "「合約期間」"
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6,000   5,200) * 2 = $1600"
 
 msgid "(One) Touch trades"
 msgstr "一觸即付交易"
@@ -49,10 +49,10 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(如期限不到一天)，或於交易日結束時(如期限為一日或更長時間)"
 
 msgid "(license reference no: 39172)"
-msgstr ""
+msgstr "(執照號碼: 39172)"
 
 msgid "(license reference no: 39495)"
-msgstr ""
+msgstr "(執照號碼: 39495)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr "正式上線，提供基於各種金融指數的全天侯金融投注服務。公司業務快速增長，我們很快即成為固定賠率金融投注的市場領導者"
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "衍生品是一種通過參照基礎市場來定價的金融工具，通常在銀行間市場交易，而二元期權是衍生工具中最為普通的一種產品形式"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "回望合約的回報取決於市場達到的最高或最低值。該選項允許持有者「回顧」過去歷史, 以確定回報"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "長形看漲或看跌K 線圖媒介，其主要特性是頭部或尾部無暗影"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "新增/刪除指標"
 
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 msgid "Admin"
 msgstr "管理中心"
