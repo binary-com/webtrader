@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-09-06 03:10\n"
+"PO-Revision-Date: 2018-09-06 03:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "所有合約期限"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "所有欄位為可選項。如果想要複製所有資產和交易類型，請將所有欄位保留空白"
 
 msgid "All market conditions"
 msgstr "所有市場條件"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "平均持續時間"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "持倉頭寸的平均持續期"
 
 msgid "Avg. Loss"
 msgstr "平均損失"
@@ -691,10 +691,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "二元期權或其它金融衍生品交易頻率"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "二元期權交易經驗"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "二元期權交易頻率"
 
 msgid "Binary trading is flexible"
 msgstr "二元期權交易富有彈性"
@@ -844,13 +844,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "通過點選OK按鈕，您確定已經閱讀和接受此更新"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "預設情況下, 所有客戶都被視為零售。如果您符合必要的標準, 您同意被視為專業客戶嗎？"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "差價合約交易經驗"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "差價合約交易頻率"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用於合同購入與售出、給到期的購入合同延期、及給虛擬金錢帳戶存入資金。"
@@ -937,7 +937,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "公民身份"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "點選登入Binary.com帳戶"
@@ -1435,7 +1435,7 @@ msgid "Flexible"
 msgstr "靈活"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "例如, 假設市場在合約持續時間內的最低值為5200和收盤時為 6000, 那麼倍數值為2美元的「收盤-最低值」回望回報為"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "BetOnMarkets.com 連續三年被英國股票雜誌《Shares Magazine》選為「最佳固定賠率金融交易提供商」。這是我們最後一次獲獎，因為該雜誌已停止頒發這一類獎項"
@@ -1597,10 +1597,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "本人已經閱讀並同意Binary.com的"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "我特此確認, 我提供的稅務資訊是真實和完整的。將來如果此資訊有任何更改，我將會通知Binary投資 (歐洲) 有限公司"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "我要被視為專業客戶"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "我是新手，該如何開始呢？"
