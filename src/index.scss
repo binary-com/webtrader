@@ -33,10 +33,6 @@ body {
     width: 90%;
     margin: auto;
 }
-#regulatory-text {
-    margin: 10px 0 10px;
-    width: 100%;
-}
 #content {
     width: 90%;
     margin: auto;
@@ -60,6 +56,10 @@ body {
     color: #a8a8a8;
     font-size: 13px;
     font-weight: 100;
+    a {
+        color: #FFF;
+        font-weight: 400;
+    }
 
     &__image-container {
         display: flex;
