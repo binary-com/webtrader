@@ -20,6 +20,9 @@ msgstr ""
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "" 
 
+msgid "'In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
+msgstr "" 
+
 msgid "'contract period'"
 msgstr "" 
 
@@ -35,13 +38,10 @@ msgstr ""
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "" 
 
-msgid "(license reference no: 39172)"
-msgstr "" 
-
-msgid "(license reference no: 39495)"
-msgstr "" 
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
+msgstr "" 
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
 msgstr "" 
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
@@ -410,7 +410,7 @@ msgstr ""
 msgid "Accept"
 msgstr "" 
 
-msgid "Accessible from any web browser in 13 languages"
+msgid "Accessible from any web browser in 12 languages"
 msgstr "" 
 
 msgid "Account balance"
@@ -480,9 +480,6 @@ msgid "Allow others to copy your trades"
 msgstr "" 
 
 msgid "Amount"
-msgstr "" 
-
-msgid "Amount Per Point"
 msgstr "" 
 
 msgid "Amount per point"
@@ -732,6 +729,9 @@ msgid "Binary.com hits 1 million users, reaching a historic milestone. The compa
 msgstr "" 
 
 msgid "Binary.com introduces an"
+msgstr "" 
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
 msgstr "" 
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
@@ -1520,6 +1520,9 @@ msgstr ""
 msgid "High"
 msgstr "" 
 
+msgid "High Barrier"
+msgstr "" 
+
 msgid "High barrier"
 msgstr "" 
 
@@ -1649,13 +1652,13 @@ msgstr ""
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "" 
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
 msgstr "" 
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
 msgstr "" 
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
 msgstr "" 
 
 msgid "In-Neck Pattern (CDLINNECK)"
@@ -1808,7 +1811,7 @@ msgstr ""
 msgid "Level of Education"
 msgstr "" 
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
 msgstr "" 
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
@@ -2180,7 +2183,7 @@ msgstr ""
 msgid "Odd"
 msgstr "" 
 
-msgid "Offices in Malta, Malaysia and Japan"
+msgid "Offices in Malta and Malaysia"
 msgstr "" 
 
 msgid "Ok"
@@ -2468,13 +2471,10 @@ msgstr ""
 msgid "Profit/ Loss"
 msgstr "" 
 
-msgid "Profit/Loss (points)"
-msgstr "" 
-
 msgid "Protect your profits"
 msgstr "" 
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr "" 
 
 msgid "Purchase"
@@ -2496,9 +2496,6 @@ msgid "Rate Of Change Ratio (ROCR)"
 msgstr "" 
 
 msgid "Read"
-msgstr "" 
-
-msgid "Read about"
 msgstr "" 
 
 msgid "Ref"
@@ -2735,7 +2732,7 @@ msgstr ""
 msgid "Sold"
 msgstr "" 
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgid "Some products are not available in all countries. This website s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr "" 
 
 msgid "Source of wealth"
@@ -2844,12 +2841,6 @@ msgid "Stocks trading experience"
 msgstr "" 
 
 msgid "Stocks trading frequency"
-msgstr "" 
-
-msgid "Stop Loss Level"
-msgstr "" 
-
-msgid "Stop Profit Level"
 msgstr "" 
 
 msgid "Stop-loss"
@@ -3356,7 +3347,7 @@ msgstr ""
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "" 
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
 msgstr "" 
 
 msgid "Tradingview for Binary.com"
@@ -3710,9 +3701,6 @@ msgstr ""
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "" 
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr "" 
-
 msgid "and start learning how to trade"
 msgstr "" 
 
@@ -3846,6 +3834,12 @@ msgid "payment agent"
 msgstr "" 
 
 msgid "points"
+msgstr "" 
+
+msgid "reference no: 39172"
+msgstr "" 
+
+msgid "reference no: 39495"
 msgstr "" 
 
 msgid "sec"

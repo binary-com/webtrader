@@ -110,7 +110,8 @@
     <ul class="barriers-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 1">
-        <li> <span class="dotted-underline align-text text-vertical-align"
+        <li rv-show="barriers.is_offset_barrier">
+            <span class="dotted-underline align-text text-vertical-align"
                    rv-data-balloon="'Enter the barrier in terms of the difference from the spot price.  If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot.  The entry spot will be the next tick after your order has been received'"
                    data-balloon-length='large'
                    data-balloon-pos="down"
@@ -118,11 +119,14 @@
                    rv-show="barriers.was_perv_barrier_daily | eq false">Barrier offset</span>
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_barrier_daily">Barrier</span>
         </li>
-        <li>
-            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_barrier_daily | negate | ternary '+' ''" rv-decimal-round="5"
-                   rv-value="barriers.barrier | debounce proposal.onchange" />
+        <li rv-hide="barriers.is_offset_barrier">
+            <span class="align-text text-vertical-align">Barrier</span>
         </li>
         <li>
+            <input class="barriers-barrier" type="text" rv-barrier-format
+                   rv-value="barriers.barrier | debounce proposal.onchange" />
+        </li>
+        <li rv-show="barriers.is_offset_barrier">
             <span class="dotted-underline align-text text-vertical-align"
                   rv-text="barriers.barrier_live < barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-data-balloon='"This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset."'
@@ -137,25 +141,29 @@
     <ul class="barriers-high-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <span class="dotted-underline align-text text-vertical-align" rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
+        <li rv-show="barriers.is_offset_high_barrier">
+            <span class="dotted-underline align-text text-vertical-align" rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 data-balloon-pos="down"
                 data-balloon-length='large'
                 rv-scale-font-size="130"
                 rv-show="barriers.was_perv_high_barrier_daily | eq false">High barrier offset</span>
-             <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
+            <span class="align-text text-vertical-align" rv-show="barriers.was_perv_high_barrier_daily">High barrier</span>
+        </li>
+        <li rv-hide="barriers.is_offset_high_barrier">
+            <span class="align-text text-vertical-align">High Barrier</span>
         </li>
         <li>
-            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_high_barrier_daily | negate | ternary '+' ''" rv-decimal-round="5"
+            <input class="barriers-barrier" type="text" rv-barrier-format
                    rv-value="barriers.high_barrier | debounce proposal.onchange" />
         </li>
-        <li>
-            <span class="dotted-underline align-text"
-                  rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3 | or '-'"
-                  rv-data-balloon="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
-                  data-balloon-pos="down"
-                  data-balloon-length='large'
-                  rv-show="barriers.was_perv_high_barrier_daily | eq false"
-                  />
+        <li rv-show="barriers.is_offset_high_barrier">
+            <span class="dotted-underline align-text text-vertical-align"
+                rv-text="barriers.high_barrier_live < high_barrier root.tick.quote | to-fixed 3 | or '-'"
+                rv-data-balloon="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
+                data-balloon-pos="down"
+                data-balloon-length='large'
+                rv-show="barriers.was_perv_high_barrier_daily | eq false"
+                />
             <span rv-show="barriers.was_perv_high_barrier_daily"></span>
         </li>
     </ul>
@@ -163,7 +171,8 @@
     <ul class="barriers-low-barrier-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="barriers.barrier_count | eq 2">
-        <li> <span class="dotted-underline align-text text-vertical-align"
+        <li rv-show="barriers.is_offset_low_barrier">
+            <span class="dotted-underline align-text text-vertical-align"
                 rv-data-balloon="'Enter the barrier in terms of the difference from the spot price. If you enter +0.005, then you will be purchasing a contract with a barrier 0.005 higher than the entry spot. The entry spot will be the next tick after your order has been received'"
                 data-balloon-length='large'
                 data-balloon-pos="down"
@@ -171,12 +180,15 @@
                 rv-show="barriers.was_perv_low_barrier_daily | eq false">Low barrier offset</span>
              <span class="align-text text-vertical-align" rv-show="barriers.was_perv_low_barrier_daily">Low barrier</span>
         </li>
-        <li>
-            <input class="barriers-barrier" type="text" rv-prefered-sign="barriers.was_perv_low_barrier_daily | negate | ternary '-' ''" rv-decimal-round="5"
-                   rv-value="barriers.low_barrier | debounce proposal.onchange" />
+        <li rv-hide="barriers.is_offset_low_barrier">
+            <span class="align-text text-vertical-align">Low barrier</span>
         </li>
         <li>
-            <span class="dotted-underline align-text"
+            <input class="barriers-barrier" type="text" rv-barrier-format
+                   rv-value="barriers.low_barrier | debounce proposal.onchange" />
+        </li>
+        <li rv-show="barriers.is_offset_low_barrier">
+            <span class="dotted-underline align-text text-vertical-align"
                   rv-text="barriers.low_barrier_live < low_barrier root.tick.quote | to-fixed 3 | or '-'"
                   rv-data-balloon="'This is an indicative barrier. Actual barrier will be the entry spot plus the barrier offset.'"
                   data-balloon-pos="down"
@@ -207,7 +219,7 @@
            </select>
         </li>
         <li rv-attr-dummy="basis.amount | debounce proposal.onchange">
-             <input class="basis-amount" type="text" rv-decimal-round="currency.decimals | or 5" rv-value="basis.amount" no-symbol="no-symbol" />
+             <input class="basis-amount" type="text" rv-number-format="2" rv-value="basis.amount" />
         </li>
     </ul>
 

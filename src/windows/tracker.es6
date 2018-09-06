@@ -33,7 +33,8 @@ const when_authenticated = () => {
          return true;
       });
    });
-}
+};
+
 const reopen_dialogs = (symbols, saved_states) => {
 
    const unique_modules = {
@@ -80,29 +81,29 @@ const reopen_dialogs = (symbols, saved_states) => {
             chartWindow.addNewWindow(data.data);
          });
       }
-      else if(module_id === 'tradeDialog') {
-         when_authenticated().then(() => {
-            data.data.tracker_id = ++counter;
-            liveapi
-               .send({contracts_for: data.data.symbol.symbol})
-               .then((res) => {
-                  require(['trade/tradeDialog'], (tradeDialog) => {
-                     const dialog = tradeDialog.init(data.data.symbol, res.contracts_for, data.data.template, true/*isTrackerInitiated*/);
-                     if(data.position.offset) {
-                        const x = data.position.offset.left;
-                        const y = data.position.offset.top;
-                        dialog.dialog('widget').css({
-                           left: x + 'px',
-                           top: y + 'px'
+      else if (module_id === 'tradeDialog') {
+            when_authenticated().then(() => {
+                  data.data.tracker_id = ++counter;
+                  liveapi
+                  .send({contracts_for: data.data.symbol.symbol})
+                  .then((res) => {
+                        require(['trade/tradeDialog'], (tradeDialog) => {
+                        const dialog = tradeDialog.init(data.data.symbol, res.contracts_for, data.data.template, true/*isTrackerInitiated*/);
+                        if(data.position.offset) {
+                              const x = data.position.offset.left;
+                              const y = data.position.offset.top;
+                              dialog.dialog('widget').css({
+                              left: x + 'px',
+                              top: y + 'px'
+                              });
+                              dialog.trigger('animated');
+                              /* update dialog option.position */
+                              dialog.dialog("option", "position", { my: x, at: y });
+                        }
                         });
-                        dialog.trigger('animated');
-                        /* update dialog option.position */
-                        dialog.dialog("option", "position", { my: x, at: y });
-                     }
-                  });
-               }).catch(console.error.bind(console));
-            return true; // unsubscribe from login event
-         });
+                  }).catch(console.error.bind(console));
+                  return true; // unsubscribe from login event
+            });
       }
       else {
          console.error('unknown module_id ' + module_id);
@@ -118,9 +119,11 @@ const reopen_dialogs = (symbols, saved_states) => {
 
 // /* avoid too many writes to local storage */
 const save_states = _.debounce(() => {
-   const perv_states = local_storage.get('states');
-   states.name = (perv_states && perv_states.name) || states.name;
-   local_storage.set('states', states)
+   if (liveapi.is_authenticated()) {
+      const perv_states = local_storage.get('states');
+      states.name = (perv_states && perv_states.name) || states.name;
+      local_storage.set('states', states)
+   }
 }, 50);
 
 const apply_saved_state = (dialog, blankWindow, state, saved_state) => {
