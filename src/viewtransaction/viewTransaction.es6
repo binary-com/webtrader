@@ -622,8 +622,8 @@ const setup_chart = (state, root) => {
 
   function make_tick_history_request(granularity, margin) {
     const { is_forward_starting, date_start, current_spot_time, purchase_time, exit_tick_time } = state.proposal_open_contract;
-    const constract_has_not_started = (is_forward_starting && +date_start > +current_spot_time) || +exit_tick_time < +date_start;
-    const start = constract_has_not_started ? +purchase_time : (+date_start || +purchase_time);
+    const contract_has_not_started = (is_forward_starting && +date_start > +current_spot_time) || +exit_tick_time < +date_start;
+    const start = contract_has_not_started ? +purchase_time : (+date_start || +purchase_time);
     const end = ((start > exit_tick_time) || !exit_tick_time) ? 'latest' : +exit_tick_time + margin;
 
     const request = {
