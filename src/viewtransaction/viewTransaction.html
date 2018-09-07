@@ -149,9 +149,11 @@
         <span class="unit" rv-html="proposal_open_contract.bid_price | format-price proposal_open_contract.currency"></span>
       </span>
 
-      <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
-
       <span>
+          <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
+      </span>
+
+      <span class="u-flex-end">
         <button rv-on-click="sell.sell"
                 rv-disabled="sell.sell_at_market_enabled | eq false"
                 class="sell-button">Sell At Market</button>
