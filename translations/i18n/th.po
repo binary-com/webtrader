@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-08-17 01:10\n"
+"PO-Revision-Date: 2018-09-10 17:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -797,7 +797,7 @@ msgid "Binary.com's Continuous Indices are the Volatility 10 Index, Volatility 2
 msgstr "ดัชนีต่อเนื่องของ Binary.com คือ ดัชนีผันผวน 10 ดัชนีผันผวน 25 ดัชนีผันผวน 50 ดัชนีผันผวน 75 และดัชนีผันผวน 100 ซึ่งดัชนีเหล่านี้สอดคล้องกับสภาพตลาดจำลองที่มีระดับความไม่แน่นอนคงที่ที่ 10% 25% 50% 75% และ 100% ตามลำดับ"
 
 msgid "Binary.com's OTC Indices and stocks are sourced from the over-the-counter market and provide you with an alternative means of trading stock indices and stocks - available from sources outside of the centralised exchanges"
-msgstr "ดัชนีที่ซื้อขายเองของ Binary.com และหลักทรัพย์จากตลาดเจรจาต่อรองมีให้ท่านเป็นอีกทางเลือกหนึ่งในการซื้อขายดัชนีหุ้น และหุ้น ที่มีจากแหล่งอื่นนอกเหนือจากตลาดแลกเปลี่ยนกลาง"
+msgstr "ดัชนีที่ซื้อขายเองของ Binary.com และหลักทรัพย์จากตลาดเจรจาต่อรอง (OTC) มีให้ท่านเป็นอีกทางเลือกหนึ่งในการซื้อขายดัชนีหุ้น และหุ้น ที่มีจากแหล่งอื่นนอกเหนือจากตลาดแลกเปลี่ยนกลาง"
 
 msgid "Binary.com's OTC Indices and stocks offer the benefit of real-time charts and pricing. Enjoy even more exciting opportunities to trade our featured market indices and stocks through this new real-time offering"
 msgstr "ดัชนีที่ซื้อขายเองของ %1 และหลักทรัพย์จากตลาดเจรจาต่อรองนั้นมีข้อดีจากการมีกราฟและราคาที่เรียลไทม์ ทำให้ท่านเพิ่มโอกาสในการทำกำไรจากดัชนีและหลักทรัพย์ทีมีการเสนอราคาตามเวลาจริง"
@@ -1932,7 +1932,7 @@ msgid "Lookbacks"
 msgstr "Lookbacks"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr "ขณะนี้ Lookbacks มีให้สำหรับดัชนีผันผวนเท่านั้น"
+msgstr "ขณะนี้ Lookbacks มีในดัชนีผันผวนเท่านั้น"
 
 msgid "Low"
 msgstr "ต่ำ"
@@ -2400,7 +2400,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please note that due to their over-the-counter nature, the prices of the OTC Indices and stocks will differ from the prices of the corresponding indices and stocks on centralised exchanges"
-msgstr "โปรดพึงตระหนักว่า ตามหลักการของการซื้อขายด้วยตัวท่านเอง ราคาที่เกิดขึ้นจากดัชนีและหลักทรัพทย์จะต่างไปจากดัชนีและราคาหลักทรัพย์ของศูนย์กลางการแลกเปลี่ยน"
+msgstr "โปรดพึงตระหนักว่า ตามหลักการของการซื้อขายด้วยตัวท่านเอง ราคาที่เกิดขึ้นจากดัชนีและหลักทรัพย์จะต่างไปจากดัชนีและราคาหลักทรัพย์ของศูนย์กลางการแลกเปลี่ยน"
 
 msgid "Please provide your tax information"
 msgstr "โปรดให้ข้อมูลภาษีของท่าน"
@@ -3546,7 +3546,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "เราทำได้อีกแล้ว เราคว้ารางวัลจาก BetOnMarkets.com ในปี พ.ศ. 2550 (ค.ศ. 2007) โดยได้รับคะแนนลงมติให้เป็น 'Best Fixed-Odds Financial Trading Provider' ในปี พ.ศ. 2551 (ค.ศ. 2008)"
 
 msgid "We offer three types lookbacks"
-msgstr "เรานำเสนอ lookbacks สามประเภท"
+msgstr "เรานำเสนอ Lookbacks สามประเภท"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "เราได้เปลี่ยนชื่อ BetOnMarkets.com เป็น"
