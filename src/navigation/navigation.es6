@@ -181,7 +181,7 @@ const initLoginButton = (root) => {
    }, 1000);
 }
 
-const initLangButton = (root) => {
+const initLang = (root) => {
    root = root.find('#topbar').addBack('#topbar');
    const state = {
       lang: {
@@ -224,6 +224,9 @@ const initLangButton = (root) => {
 
    const value = (local_storage.get('i18n') || {value: 'en'}).value;
    state.lang = _.find(state.languages, {value: value}); // set the initial state.
+
+   const contact_us_el = document.getElementById('contact-us');
+   contact_us_el.href = `https://www.binary.com/${value}/contact.html`;
 
    rv.bind(root[0], state);
 
@@ -332,7 +335,7 @@ export const init = (callback) => {
    $("body").prepend(root);
 
    initLoginButton(root);
-   initLangButton(root);
+   initLang(root);
 
    //Load theme settings ...
    require(['themes/themes']);
