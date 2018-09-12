@@ -218,13 +218,6 @@ const initLangButton = (root) => {
       window.location.reload();
    };
 
-   // Open contact us page.
-   state.openContactUs = () => {
-      const url = 'https://www.binary.com/' + (local_storage.get('i18n') || { value: 'en' }).value + '/contact.html'
-      const win = window.open(url, '_blank');
-      win.focus();
-   }
-
    state.toggleVisibility = (visible) => {
       state.confirm.visible = visible;
    }
