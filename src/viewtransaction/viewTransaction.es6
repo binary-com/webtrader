@@ -621,12 +621,13 @@ const setup_chart = (state, root) => {
   }
 
   function make_tick_history_request(granularity, margin) {
-    const { is_forward_starting, date_start, current_spot_time, purchase_time } = state.proposal_open_contract;
-    const constract_is_forward_starting = is_forward_starting && +date_start > +current_spot_time;
-    const start = constract_is_forward_starting ? +purchase_time : (+date_start || +purchase_time);
-    const end = make_end(margin);
+    const { is_forward_starting, date_start, current_spot_time, purchase_time, exit_tick_time } = state.proposal_open_contract;
+    const contract_has_not_started = (is_forward_starting && +date_start > +current_spot_time) || +exit_tick_time < +date_start;
+    const start = contract_has_not_started ? +purchase_time : (+date_start || +purchase_time);
+    const end = ((start > exit_tick_time) || !exit_tick_time) ? 'latest' : +exit_tick_time + margin;
 
     const request = {
+      adjust_start_time: 1,
       ticks_history: state.proposal_open_contract.underlying,
       start: start - margin, /* load around 2 more ticks before start */
       end,
@@ -640,13 +641,6 @@ const setup_chart = (state, root) => {
       state.chart.type = 'candles';
     }
     return request;
-
-    function make_end(margin) {
-      const {exit_tick_time } = state.proposal_open_contract;
-
-      if (exit_tick_time) return (+exit_tick_time + margin);
-      return 'latest';
-    }
   }
 
 
