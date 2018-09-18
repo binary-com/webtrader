@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-09-18 04:20\n"
+"PO-Revision-Date: 2018-09-18 04:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "Todas as durações"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Todos os campos são opcionais. Caso deseje copiar todos os tipos de ativos e negociações, deixe todos os campos em branco"
 
 msgid "All market conditions"
 msgstr "Todas as condições de mercad"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "Duração média"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Duração média das posições abertas"
 
 msgid "Avg. Loss"
 msgstr "Perda média"
@@ -691,10 +691,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Frequência da negociação de opções binárias ou outros derivados financeiros"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "Experiência na negociação de opções binárias"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "Frequência de negociação de opções binárias"
 
 msgid "Binary trading is flexible"
 msgstr "A negociação de opções binárias é flexível"
@@ -844,13 +844,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Ao clicar OK, você confirma que você leu e aceitou"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "Por padrão, todos os clientes são tratados como clientes particulares. Prefere ser tratado como cliente profissional no caso de corresponder aos critérios necessários?"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "Experiência na negociação de CFDs"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "Frequência de negociação de CFDs"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Pode ser usado para comprar e vender contratos, renovar aquisições expiradas e financiar contas de dinheiro virtual"
@@ -937,7 +937,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "Nacionalidade"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Clique para conectar-se com a sua conta Binary.com"
