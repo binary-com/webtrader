@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-09-18 04:16\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "\"período do contrato\""
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6.000 – 5.200) * 2 = $1.600"
 
 msgid "(One) Touch trades"
 msgstr "Negociações de toque (único)"
@@ -49,10 +49,10 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(se menos de um dia de duração) ou no fim do dia de negociação (se um dia ou mais de duração)"
 
 msgid "(license reference no: 39172)"
-msgstr ""
+msgstr "(referência de licença n.º: 39172)"
 
 msgid "(license reference no: 39495)"
-msgstr ""
+msgstr "(referência de licença n.º: 39495)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") entra em operação, estabelecendo um serviço de apostas 24 horas por dia numa variedade de índices financeiros. O negócio cresce rapidamente e em pouco tempo tornamo-nos o líder de mercado em apostas financeiras de probabilidades fixas"
