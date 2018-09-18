@@ -4,7 +4,7 @@
 import $ from 'jquery';
 import windows from '../windows/windows';
 import '../common/util';
-import 'highstock-release/highstock';
+import Highcharts from 'highcharts/highstock';
 import 'jquery-growl';
 
 let win = null;
@@ -14,7 +14,7 @@ let themeName = local_storage.get("theme");
 const custom_theme = local_storage.get("custom_theme");
 themeName = themeName && themeName.name;
 if (themeName) {
-   require(['lib/highstock-release/themes/' + themeName]);
+   require(['lib/highcharts/themes/' + themeName]);
 }
 else if(custom_theme) {
    Highcharts.setOptions(custom_theme);

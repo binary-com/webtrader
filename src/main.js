@@ -27,7 +27,7 @@ window.requirejs.config({
         "babel-runtime/regenerator": "lib/regenerator-runtime/runtime",
         "webtrader-charts" : "lib/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",
-        "highstock-release": "lib/highstock-release",
+        "highcharts": "lib/highcharts",
     },
     map: {
         "*": {
@@ -44,7 +44,7 @@ window.requirejs.config({
             deps: [
               'moment',
               'jquery',
-              'highstock-release/highstock',
+              'highcharts/highstock',
             ]
         },
         "babel-runtime/regenerator": {
@@ -59,15 +59,15 @@ window.requirejs.config({
         "jquery-ui": {
             deps: ["jquery"]
         },
-        "highstock-release/highstock": {
+        "highcharts/highstock": {
             deps: ["jquery"],
             exports: "Highcharts"
         },
-        "highstock-release/modules/exporting": {
-            deps: ["highstock-release/highstock"]
+        "highcharts/modules/exporting": {
+            deps: ["highcharts/highstock"]
         },
-        "highstock-release/modules/offline-exporting": {
-            deps: ["highstock-release/modules/exporting"]
+        "highcharts/modules/offline-exporting": {
+            deps: ["highcharts/modules/exporting"]
         },
         "jquery-growl": {
             deps: ["jquery"]
@@ -79,7 +79,7 @@ window.requirejs.config({
             deps: ["datatables"]
         },
         "currentPriceIndicator": {
-            deps: ["highstock-release/highstock"]
+            deps: ["highcharts/highstock"]
         },
         sightglass: { //fix for rivets not playing nice with requriejs (https://github.com/mikeric/rivets/issues/427)
             exports: "sightglass"
@@ -88,8 +88,8 @@ window.requirejs.config({
             deps: ["sightglass"],
             exports: "rivets"
         },
-        "highstock-release/highcharts-more": {
-            deps: ["highstock-release/highstock"]
+        "highcharts/highcharts-more": {
+            deps: ["highcharts/highstock"]
         },
         "color-picker": {
             deps: ["jquery", "jquery-ui"] //This should fix the widget not found error
@@ -154,7 +154,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
-    require(["jquery-ui", "highstock-release/highstock"]);
+    require(["jquery-ui", "highcharts/highstock"]);
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(["css!lib/jquery-ui-dist/jquery-ui.min.css",
