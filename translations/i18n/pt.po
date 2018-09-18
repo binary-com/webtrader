@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-09-18 04:30\n"
+"PO-Revision-Date: 2018-09-18 04:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1435,7 +1435,7 @@ msgid "Flexible"
 msgstr "Flexível"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "Por exemplo, digamos que o mercado alcance uma baixa de 5.200 e um fechamento de 6.000 ao longo da duração do contrato, então um contrato retrospectivo \"Fechar-Baixo\" com um multiplicador de $2 pagaria um prêmio de"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Pelo terceiro ano seguido, a BetOnMarkets.com é votada o \"Melhor Fornecedor de Negociação Financeira de Probabilidades Fixas\" pela Shares Magazine UK. Foi a última vez que ganhamos este prêmio porque a Shares Magazine para de atribuir prêmios nesta categoria."
@@ -1597,10 +1597,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "Eu li e concordo com os"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "Confirmo, pela presente, que as informações fiscais que forneci são verdadeiras e completas. Também irei informar a Binary Investments (Europe) Ltd. sobre quaisquer alterações a estas informações"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "Quero ser tratado como um cliente profissional"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Sou principiante com opções binárias, onde começo?"
