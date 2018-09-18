@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-09-18 04:16\n"
+"PO-Revision-Date: 2018-09-18 04:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Um derivado é um instrumento financeiro cujo valor é determinado por referência a um mercado subjacente. Derivados são frequentemente negociados no mercado interbancário e opções binárias são uma das formas mais simples de derivados"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "Os prêmios de contratos retrospectivos dependem da alta ou baixa ótima alcançada pelo mercado. A opção permite que o detentor analise o contrato em retrospectiva, ao longo do tempo, para escolher o prêmio"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "Uma vela baixista ou altista de comprimento médio a longo com o traço chave que o define sendo a falta de nenhuma sobre superior ou inferior"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "Adicionar/remover indicadores"
 
 msgid "Address"
-msgstr ""
+msgstr "Endereço"
 
 msgid "Admin"
 msgstr "Administração"
