@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-09-18 05:20\n"
+"PO-Revision-Date: 2018-09-18 05:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3862,7 +3862,7 @@ msgid "points"
 msgstr "pontos"
 
 msgid "sec"
-msgstr ""
+msgstr "seg"
 
 msgid "second"
 msgstr "segundo"
@@ -3901,7 +3901,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Voltar"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitindo que clientes, afiliados e desenvolvedores possam comprar e vender produtos da Binary.com"
