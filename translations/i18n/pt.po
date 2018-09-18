@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-09-18 05:10\n"
+"PO-Revision-Date: 2018-09-18 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2749,7 +2749,7 @@ msgid "Sold"
 msgstr "Vendido"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "Alguns produtos não estão disponíveis em todos os países. Os serviços deste site não são disponibilizados em determinados países como os EUA, a Costa Rica, Hong Kong ou a pessoas com idade inferior a 18 anos"
 
 msgid "Source of wealth"
 msgstr "Fonte de riqueza"
@@ -3196,7 +3196,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "Esta média móvel usa a curva da distribuição Normal (Gauss) que pode ser colocada ao ajustar o parâmetro de Compensação entre 0 e 1. Este parâmetro permite regular a suavidade e alta sensibilidade da média móvel. Sigma é outro parâmetro que é responsável pela forma dos coeficientes da curva"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "Este recurso não é relevante em contas de dinheiro virtual"
 
 msgid "This field is required"
 msgstr "Este campo é obrigatório"
@@ -3361,7 +3361,7 @@ msgid "Trades break down"
 msgstr "Decomposição das negociações"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "Experiência com negociões"
 
 msgid "Trading Times"
 msgstr "Horas de negociação"
@@ -3418,7 +3418,7 @@ msgid "Two-way pricing"
 msgstr "Determinação de preços bidirecional"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "Tipos de retrospectivos"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Preço Típico (TYPPRICE)"
@@ -3544,7 +3544,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "Voltamos a ganhar. A BetOnMarkets.com repete o sucesso de 2007 e é novamente votada a \"Melhor fornecedora de negociações financeiras de probabilidades fixas\" de 2008"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "Disponibilizamos três tipos de contratos retrospectivos"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Alteramos a marca BetOnMarkets.com para"
@@ -3586,13 +3586,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "O que são os índices e as ações OTC?"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "O que são contratos retrospectivos"
 
 msgid "What is pep?"
 msgstr "O que uma PPE?"
 
 msgid "What is this?"
-msgstr ""
+msgstr "O que é isto?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "Quando você estiver satisfeito com o preço recebido, execute a sua negociação imediatamente. Com a nossa plataforma única, você não terá que lidar com desvios nem mercados com disparidades. E, sobretudo, não há taxas invisíveis. É também possível vender quaisquer contratos de longo prazo em qualquer momento, antes de expiração, para proteger os lucros que possa ter ganho ou para minimizar as suas perdas"
@@ -3619,13 +3619,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "Ganhe o multiplicador vezes o fechamento menos a baixa"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "Ganhe o multiplicador vezes a alta menos o fechamento"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "Ganhe o multiplicador vezes a alta menos a baixa"
 
 msgid "With Binary.com you can trade"
 msgstr "Com a Binary.com é possível negociar"
@@ -3724,7 +3724,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "permitindo que clientes desenvolvam os seus próprios robôs de negociação automatizados com a simplicidade do tipo \"arrastar e soltar\""
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
+msgstr "e para clientes irlandeses pelo (3) Departamento de Impostos da Irlanda (licença de casa de apostas remota n.º 1010285 emitida a 1 de julho de 2017). Ver tudo"
 
 msgid "and start learning how to trade"
 msgstr "e comece a aprender a negociar"
@@ -3751,7 +3751,7 @@ msgid "contact support"
 msgstr "contatar o apoio ao cliente"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "crie um token de somente leitura e compartilhe o token com os seus copiadores"
 
 msgid "customer support"
 msgstr "apoio ao cliente"
