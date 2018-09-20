@@ -2,7 +2,7 @@
 
 Chosen is a library for making long, unwieldy select boxes more user friendly.
 
-- jQuery support: 1.4+
+- jQuery support: 1.7+
 - Prototype support: 1.7+
 
 For **documentation**, usage, and examples, see:
@@ -11,12 +11,29 @@ http://harvesthq.github.io/chosen/
 For **downloads**, see:
 https://github.com/harvesthq/chosen/releases/
 
-### Bower Installation
+### Package managers
 
-Chosen is available for Bower installation:
-`bower install chosen`
+Chosen is available through [Bower](https://bower.io/), [npm](https://www.npmjs.com), and [Composer](https://getcomposer.org/), _however, the package names are not the same_.
 
-The compiled files for the Bower package are automatically generated and stored in a [2nd Chosen repository](https://github.com/harvesthq/bower-chosen). No pull requests will be accepted to that repository.
+To install with Bower:
+
+```
+bower install chosen
+```
+
+To install with npm:
+
+```
+npm install chosen-js
+```
+
+To install with Composer:
+
+```
+composer require harvesthq/chosen
+```
+
+The compiled files for these packages are automatically generated and stored in a [2nd Chosen repository](https://github.com/harvesthq/chosen-package). No pull requests will be accepted to that repository.
 
 ### Contributing to this project
 
