@@ -362,6 +362,8 @@ function setup_i18n_translation(dict) {
       }
 
       function localize(node) {
+          if (node.className.includes('no-translation')) return;
+
           var c = node.childNodes ? node.childNodes : node, l = c.length, i;
           for( i=0; i<l; i++) {
               if( c[i].nodeType == 3) {
