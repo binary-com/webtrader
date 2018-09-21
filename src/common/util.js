@@ -99,21 +99,24 @@ function formatPrice(float, currency) {
     if (!!Number(float) === false && Number(float) !== 0) {
         return currency ? "<span class='symbols " +  currency + "'>" + float + "</span>" : float;
     }
+
     var sign = float < 0 ? '-': '';
     float = float && Math.abs(float);
     var currencies_config = (local_storage.get('currencies_config') || {});
     var minimumFractionDigits = (currencies_config[(currency|| '').toUpperCase()] || {}).fractional_digits || 2;
     var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
-	float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
-						style: "decimal",
-						minimumFractionDigits: minimumFractionDigits,
-                    }).format(float);
-	if (currency) {
-		float = sign + $('<span>', {
+
+    float = new Intl.NumberFormat(i18n_name.replace("_","-"), {
+                    style: "decimal",
+                    minimumFractionDigits: minimumFractionDigits,
+                }).format(float);
+    if (currency) {
+        float = sign + $('<span>', {
             class: 'symbols ' + currency,
             text: float
         })[0].outerHTML;
     }
+
 	return float;
 }
 
