@@ -96,7 +96,7 @@ function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
 function formatPrice(float, currency) {
     currency = (currency || '').toLowerCase().trim();
 
-    if (!!Number(float) === false && Number(float) !== 0 || typeof Intl !== 'undefined') {
+    if (!!Number(float) === false && Number(float) !== 0) {
         return currency ? "<span class='symbols " +  currency + "'>" + float + "</span>" : float;
     }
 
