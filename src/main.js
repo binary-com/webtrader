@@ -141,7 +141,7 @@ function load_ondemand(element, event_name, msg, module_name, callback) {
 }
 
 // required for webtrader-charts
-var Highcharts, HighchartsExporting;
+var Highcharts, HighchartsExporting, HighcartsOfflineExporting, HighchartsMore;
 var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
@@ -156,9 +156,16 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
-    require(["highcharts/highstock", "highcharts/modules/exporting"], function(highcharts_loaded, highcharts_exporting_loaded) {
-        Highcharts = highcharts_loaded;
-        HighchartsExporting = highcharts_exporting_loaded;
+    require([
+        "highcharts/highstock",
+        "highcharts/modules/exporting",
+        "highcharts/modules/offline-exporting",
+        "highcharts/highcharts-more"
+    ], function(highcharts, exporting, offline_exporting, more) {
+        Highcharts = highcharts;
+        HighchartsExporting = exporting;
+        HighcartsOfflineExporting = offline_exporting;
+        HighchartsMore = more;
     });
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
