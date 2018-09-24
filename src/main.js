@@ -156,9 +156,9 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
        When X loads it will trigger loading Y, which results in loading A and B Sequentially,
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
-    require(["highcharts/highstock", "highcharts/modules/exporting"], function(highcharts_loaded, highcharts_exporting) {
+    require(["highcharts/highstock", "highcharts/modules/exporting"], function(highcharts_loaded, highcharts_exporting_loaded) {
         Highcharts = highcharts_loaded;
-        HighchartsExporting = highcharts_exporting;
+        HighchartsExporting = highcharts_exporting_loaded;
     });
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
