@@ -141,8 +141,7 @@ function load_ondemand(element, event_name, msg, module_name, callback) {
 }
 
 // required for webtrader-charts
-var Highcharts;
-var HighchartsExporting;
+var Highcharts, HighchartsExporting;
 var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
