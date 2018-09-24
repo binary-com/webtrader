@@ -3,7 +3,7 @@
  */
 import $ from "jquery";
 import windows from "../windows/windows";
-import r from 'highcharts/modules/offline-exporting';
+import 'highcharts/modules/offline-exporting';
 import 'highcharts/highcharts-more';
 import liveapi from '../websockets/binary_websockets';
 import 'common/util';
