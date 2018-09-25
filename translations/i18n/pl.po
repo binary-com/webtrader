@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-09-25 20:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "„okres kontraktu”"
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6000   5200) * 2 = 1600 $"
 
 msgid "(One) Touch trades"
 msgstr "Zakłady z (jednokrotnym) osiągnięciem ceny"
@@ -49,10 +49,10 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(jeśli okres trwania jest krótszy niż jeden dzień) lub na koniec dnia handlowego (jeśli okres trwania wynosi co najmniej jeden dzień)"
 
 msgid "(license reference no: 39172)"
-msgstr ""
+msgstr "(nr licencji: 39172)"
 
 msgid "(license reference no: 39495)"
-msgstr ""
+msgstr "(nr licencji 39495)"
 
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") rozpoczyna działalność jako całodobowa usługa zawierania zakładów dla różnorodnych wskaźników finansowych. Biznes rozwija się prężnie i w krótkim czasie stajemy się liderem rynku w branży zakładów o ustalonej stawce"
@@ -388,7 +388,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Instrument pochodny to instrument finansowy, którego wartość określana jest przez odniesienie do rynku podstawowego. Instrumenty pochodne są zazwyczaj sprzedawane na rynku międzybankowym, a opcje binarne są jedną z najprostszych form instrumentów pochodnych"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "Wypłata w przypadku kontraktu wstecznego zależy od optymalnej wysokiej lub niskiej ceny osiągniętej na rynku. Opcja pozwala jej właścicielowi „cofnąć się wstecz”, aby ustalić wypłatę"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "Świeca bessy lub hossy o korpusie od średniego do długiego, ale bez cienia górnego i dolnego"
@@ -457,7 +457,7 @@ msgid "Add/remove indicators"
 msgstr "Dodaj/usuń wskaźniki"
 
 msgid "Address"
-msgstr ""
+msgstr "Adres"
 
 msgid "Admin"
 msgstr "Admin"
@@ -469,7 +469,7 @@ msgid "All durations"
 msgstr "Wszystkie okresy"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Wszystkie pola są opcjonalne. Jeśli chcesz skopiować wszystkie aktywa i rodzaju zakładów, zostaw wszystkie pola puste"
 
 msgid "All market conditions"
 msgstr "Wszystkie warunki rynkowe"
@@ -595,7 +595,7 @@ msgid "Avg. Duration"
 msgstr "Średni czas trwania"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Średni czas utrzymywania pozycji otwartej"
 
 msgid "Avg. Loss"
 msgstr "Średnia strata"
@@ -691,10 +691,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Częstotliwość handlowania opcjami binarnymi lub innymi instrumentami pochodnymi"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "Doświadczenie w handlowaniu opcjami binarnymi"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "Częstotliwość handlowania opcjami binarnymi"
 
 msgid "Binary trading is flexible"
 msgstr "Handel opcjami binarnymi charakteryzuje się elastycznością"
@@ -844,13 +844,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Kliknięcie przycisku OK oznacza przeczytanie i akceptację zaktualizowanych"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "Domyślnie wszyscy klienci są traktowani jako klienci detaliczni. Wolisz być traktowany/traktowana jako klient profesjonalny, jeśli spełniasz niezbędne wymogi?"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "Doświadczenie w handlowaniu kontraktami na różnice kursowe"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "Częstotliwość handlowania kontraktami na różnice kursowe"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Może być stosowany do zakupu i sprzedaży kontraktów, odnawiania wygasłych zakupów oraz doładowywania kont z wirtualnymi pieniędzmi."
@@ -937,7 +937,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "Obywatelstwo"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Kliknij, aby zalogować się przy użyciu konta na Binary.com"
@@ -1435,7 +1435,7 @@ msgid "Flexible"
 msgstr "Elastyczne"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "Na przykład, załóżmy, że w czasie trwania kontraktu cena niska na rynku to 5 200, a cena zamknięcia to 6 000, wówczas opcja wsteczna „Zamknięcia-Niska” z mnożnikiem w wysokości 2$ przyniesie wypłatę"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Po raz trzeci z kolei BetOnMarkets.com uzyskał tytuł „Najlepszego dostawcy zakładów o ustalonej stawce” od pisma Shares Magazine UK. Wygraliśmy po raz ostatni, ponieważ Shares Magazine nie przyznaje już nagród w tej kategorii"
@@ -1597,10 +1597,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "Przeczytałem/am i akceptuję"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "Niniejszym potwierdzam, że podane informacje podatkowe są prawdziwe i kompletne. Ponadto poinformuję Binary Investments (Europe) Ltd. o wszelkich zmianach tych informacji"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "Chcę być traktowany/-a jako klient profesjonalny"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Nie znam jeszcze opcji binarnych, od czego zacząć?"
@@ -1927,10 +1927,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "Szukaj białej świecy o długim korpusie w trendzie wzrostowym, powyżej której występuje luka i czarna świeca. Ostatni dzień to kolejna czarna świeca, która obejmuje poprzednią świecę bessy, ale zamyka się powyżej ceny otwarcia pierwszej świecy"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Opcje wsteczne"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "Opcje wsteczne są obecnie dostępne wyłącznie dla wskaźników zmienności"
 
 msgid "Low"
 msgstr "Niski"
@@ -2053,7 +2053,7 @@ msgid "Minimum of 6 characters required"
 msgstr "Wymaganych jest minimum 6 znaków"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Co najmniej sześć znaków, w tym małych i wielkich liter oraz cyfr"
 
 msgid "Minimum price over selected period"
 msgstr "Minimalna cena w wybranym okresie"
@@ -2104,7 +2104,7 @@ msgid "Ms"
 msgstr "Pani"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Mnożnik"
 
 msgid "Name"
 msgstr "Imię"
@@ -2470,7 +2470,7 @@ msgid "Print chart"
 msgstr "Drukuj wykres"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "Klient profesjonalny"
 
 msgid "Profit"
 msgstr "Zysk"
@@ -2560,7 +2560,7 @@ msgid "Register free account"
 msgstr "Zarejestruj darmowe konto"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "Informacje o przepisach prawnych"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Wskaźnik względnej siły (RSI – Relative Strength Index)"
@@ -3196,7 +3196,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "Średnia krocząca wykorzystuje rozłożenie zgodne z krzywą Gaussa, czyli od 0 do 1. Pozwala to regulować wygładzenie i wrażliwość średniej kroczącej. Sigma to kolejny wskaźnik odpowiedzialny za kształt współczynników krzywej"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "Ta funkcja nie jest dostępna dla kont z wirtualnymi pieniędzmi"
 
 msgid "This field is required"
 msgstr "To pole jest wymagane"
@@ -3361,7 +3361,7 @@ msgid "Trades break down"
 msgstr "Podział zakładów"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "Doświadczenie w handlowaniu"
 
 msgid "Trading Times"
 msgstr "Godziny handlowania"
@@ -3418,7 +3418,7 @@ msgid "Two-way pricing"
 msgstr "Wycena dwustronna"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "Rodzaje opcji wstecznych"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Typowa cena (TYPPRICE)"
@@ -3544,7 +3544,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "Znowu nam się udało. W 2008 r. BetOnMarkets.com zdobywa tę samą nagrodę co w 2007 r.:„Najlepszy dostawca zakładów o ustalonej stawce”"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "Oferujemy trzy rodzaje opcji wstecznych"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Zmieniamy nazwę BetOnMarkets.com na"
@@ -3586,13 +3586,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "Czym są wskaźniki i akcje OTC?"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "Czym są opcje wsteczne"
 
 msgid "What is pep?"
 msgstr "Czym jest pep?"
 
 msgid "What is this?"
-msgstr ""
+msgstr "Co to jest?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "Jeśli satysfakcjonuje Cię proponowana cena, zawrzyj zakład natychmiast. Dzięki naszej unikatowej platformie unikniesz „opóźnień rynkowych” i luk cenowych, i co najważniejsze, nie poniesiesz żadnych ukrytych opłat. Możesz też w dowolnej chwili odsprzedać wybrany zakład długoterminowy przed jego wygaśnięciem, aby ochronić uzyskane zyski lub zminimalizować straty"
@@ -3619,13 +3619,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "Zyskaj wypłatę odpowiadającą mnożnikowi pomnożonemu przez cenę zamknięcia minus niską cenę"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "Zyskaj wypłatę odpowiadającą mnożnikowi pomnożonemu przez wysoką cenę minus cenę zamknięcia"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "Zyskaj wypłatę odpowiadającą mnożnikowi pomnożonemu przez wysoką cenę minus niską cenę"
 
 msgid "With Binary.com you can trade"
 msgstr "Z Binary.com możesz handlować w następujących warunkach:"
@@ -3751,7 +3751,7 @@ msgid "contact support"
 msgstr "skontaktuj się z działem pomocy"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "stwórz token „tylko do odczytu” i udostępnij go Twoim kopiującym"
 
 msgid "customer support"
 msgstr "dział obsługi klienta"
@@ -3862,7 +3862,7 @@ msgid "points"
 msgstr "punkty"
 
 msgid "sec"
-msgstr ""
+msgstr "s"
 
 msgid "second"
 msgstr "sekunda"
@@ -3901,7 +3901,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Zwrot"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "umożliwiając klientom, partnerom i programistom zakup i sprzedaż produktów firmy Binary.com"
