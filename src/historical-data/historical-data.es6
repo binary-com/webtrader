@@ -3,7 +3,7 @@ import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import moment from 'moment';
 import 'timepicker';
-import 'highcharts/modules/offline-exporting';
+import 'highstock-release/modules/offline-exporting';
 import 'common/util';
 import 'webtrader-charts';
 import html from 'text!./historical-data.html';

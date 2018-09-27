@@ -3,8 +3,8 @@
  */
 import $ from "jquery";
 import windows from "../windows/windows";
-import 'highcharts/modules/offline-exporting';
-import 'highcharts/highcharts-more';
+import 'highstock-release/modules/offline-exporting';
+import 'highstock-release/highcharts-more';
 import liveapi from '../websockets/binary_websockets';
 import 'common/util';
 import 'webtrader-charts';

@@ -3,7 +3,7 @@
  */
 import $ from 'jquery';
 import windows from '../../windows/windows';
-import 'highcharts/highstock';
+import 'highstock-release/highstock';
 import 'color-picker';
 import html from 'text!./custom_theme.html';
 import 'css!./custom_theme.css';
