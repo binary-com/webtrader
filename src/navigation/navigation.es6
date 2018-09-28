@@ -126,7 +126,6 @@ const destroy_windows = (data_attribute) => {
 
    liveapi.events.on('login', (data) => {
       destroy_windows('data-authorized=true');
-      destroy_windows('data-account-specific=true');
       /* destroy all authorized dialogs */
       state.show_login = false;
       state.account.show = true;
