@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: pl\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Polish\n"
-"Language: pl_PL\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -48,14 +48,11 @@ msgstr "(wcześniej znane pod nazwą"
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(jeśli okres trwania jest krótszy niż jeden dzień) lub na koniec dnia handlowego (jeśli okres trwania wynosi co najmniej jeden dzień)"
 
-msgid "(license reference no: 39172)"
-msgstr ""
-
-msgid "(license reference no: 39495)"
-msgstr ""
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") rozpoczyna działalność jako całodobowa usługa zawierania zakładów dla różnorodnych wskaźników finansowych. Biznes rozwija się prężnie i w krótkim czasie stajemy się liderem rynku w branży zakładów o ustalonej stawce"
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "- Korzystaj z takich samych stóp zwrotu, jak inwestorzy na rynku międzybankowym. Nasze ceny są zestawiane codziennie z cenami na rynku opcji międzybankowych"
@@ -423,8 +420,8 @@ msgstr "Oscylator APO (Absolute Price Oscillator)"
 msgid "Accept"
 msgstr "Akceptuj"
 
-msgid "Accessible from any web browser in 13 languages"
-msgstr "Dostępność w 13 językach z dowolnej przeglądarki"
+msgid "Accessible from any web browser in 12 languages"
+msgstr ""
 
 msgid "Account balance"
 msgstr "Saldo konta"
@@ -494,9 +491,6 @@ msgstr "Pozwól innym kopiować Twoje zakłady"
 
 msgid "Amount"
 msgstr "Kwota"
-
-msgid "Amount Per Point"
-msgstr "Kwota na punkt"
 
 msgid "Amount per point"
 msgstr "Kwota na punkt"
@@ -746,6 +740,9 @@ msgstr "Binary.com ma już milion użytkowników, co jest rekordem w historii na
 
 msgid "Binary.com introduces an"
 msgstr "Binary.com przedstawia"
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
+msgstr ""
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "Firma Binary.com zostaje nagrodzona brytyjską nagrodą Online Personal Wealth Awards 2017, zdobywając tytuł „najlepszego brokera opcji binarnych” w oparciu o głosy oddane przez inwestorów z całego świata"
@@ -1152,9 +1149,6 @@ msgstr "Opisz zastosowanie tokenu, aby później z łatwością go odnaleźć"
 msgid "Description"
 msgstr "Opis"
 
-msgid "Deutsch"
-msgstr "Deutsch"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Indeks Masy (Mass Index) stworzony przez Donalda Dorseya bierze pod uwagę zakresy cenowe: cenę niską i wysoką. Stosowany jest do sygnalizowania zmian trendów na rynku w oparciu o zakresy cenowe. Można go postrzegać jako wskaźnik zmienności, który nie wskazuje kierunku zmian, ale wykrywając zmiany w zakresach cenowych, sygnalizuje zmianę bieżącego trendu"
 
@@ -1338,9 +1332,6 @@ msgstr "Cena wejściowa"
 msgid "Error getting data for %1"
 msgstr "Błąd podczas pozyskiwania danych dla %1"
 
-msgid "Espa ol"
-msgstr "Español"
-
 msgid "Estimated Net Worth"
 msgstr "Szacowana wartość netto"
 
@@ -1461,9 +1452,6 @@ msgstr "Fractal (FRACTAL)"
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fraktale, czyli wskaźniki Fractal na wykresach świecowych, wskazują punkty zwrotne na rynku. Gracze często posługują się fraktalami, aby zorientować się w którym kierunku będzie kształtować się cena. Fraktale tworzą się, gdy na wykresie występuje określona formacja cenowa"
 
-msgid "Fran ais"
-msgstr "Français"
-
 msgid "Fri"
 msgstr "Pt."
 
@@ -1532,6 +1520,9 @@ msgstr "Pomoc"
 
 msgid "High"
 msgstr "Wysoki"
+
+msgid "High Barrier"
+msgstr ""
 
 msgid "High barrier"
 msgstr "Górny limit"
@@ -1662,13 +1653,16 @@ msgstr "W celu poprawnego zastosowania motywu niezbędne jest pełne odświeżen
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "Świadcząc nasze usługi, jesteśmy zobligowani do uzyskania od Ciebie informacji w celu przeprowadzenia oceny, czy dany produkt lub usługa jest odpowiednia dla Ciebie (tzn. czy posiadasz odpowiednie doświadczenie i wiedzę potrzebne do zrozumienia ryzyka związanego z danym produktem)"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
 msgstr ""
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr "W Zjednoczonym Królestwie i na Wyspie Man nasi klienci handlują za pośrednictwem Binary (IOM) Ltd. W Japonii handel odbywa się za pośrednictwem Binary KK. W Unii Europejskiej (za wyjątkiem Zjednoczonego Królestwa), handlują za pośrednictwem Binary (Europa) Ltd oraz Binary Investments (Europa) Ltd. W pozostałych krajach handel odbywa się za pośrednictwem Binary (C.R.) S.A."
+msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
+msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr ""
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
 msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
@@ -1710,9 +1704,6 @@ msgstr "Częstość handlowania wskaźnikami"
 msgid "Individual Traders"
 msgstr "Gracze indywidualni"
 
-msgid "Indonesia"
-msgstr "Indonezja"
-
 msgid "Industry of Employment"
 msgstr "Sektor zatrudnienia"
 
@@ -1751,9 +1742,6 @@ msgstr "Czasami istnieje możliwość sprzedaży opcji przed upływem terminu wa
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "Czas się rozwijać. Tworzymy centrum programistyczne w Cyberjaya – Dolinie Krzemowej w pobliżu Kuala Lumpur – aby utrzymywać i usprawniać BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "Italiano"
 
 msgid "Jan"
 msgstr "Sty"
@@ -1821,8 +1809,8 @@ msgstr "Zróbmy to"
 msgid "Level of Education"
 msgstr "Poziom wykształcenia"
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "Licencje i regulacje na Malcie, Wyspie Man, w Zjednoczonym Królestwie, Irlandii i Japonii"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
+msgstr ""
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "Podobnie jak wykładnicza średnia krocząca (EMA) liniowa ważona średnia krocząca (LWMA) skupia się bardziej na cenach z ostatniego okresu, a mniej na cenach zamknięcia z początku badanego okresu. Z tego powodu szybciej wykrywa zmiany trendu, ale jest bardziej podatna na zakłócenia na rynku"
@@ -2193,8 +2181,8 @@ msgstr "Październik"
 msgid "Odd"
 msgstr "Nieparzysta"
 
-msgid "Offices in Malta, Malaysia and Japan"
-msgstr "Biura na Malcie, w Malezji i Japonii"
+msgid "Offices in Malta and Malaysia"
+msgstr ""
 
 msgid "Ok"
 msgstr "OK"
@@ -2424,14 +2412,8 @@ msgstr "Zysk/strata"
 msgid "Points"
 msgstr "Punkty"
 
-msgid "Polski"
-msgstr "Polski"
-
 msgid "Portfolio"
 msgstr "Portfolio"
-
-msgid "Portugu s"
-msgstr "Portugués"
 
 msgid "Postal code/ZIP"
 msgstr "Kod pocztowy"
@@ -2481,14 +2463,11 @@ msgstr "Tabela zysków"
 msgid "Profit/ Loss"
 msgstr "Zysk/strata"
 
-msgid "Profit/Loss (points)"
-msgstr "Zysk/strata (punkty)"
-
 msgid "Protect your profits"
 msgstr "Chroń swoje zyski"
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "Dostępność w języku angielskim, indonezyjskim, japońskim, chińskim, polskim, niemieckim, francuskim, hiszpańskim, portugalskim, włoskim, rosyjskim i tajskim"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgstr ""
 
 msgid "Purchase"
 msgstr "Zakup"
@@ -2510,9 +2489,6 @@ msgstr "Współczynnik zmiany ceny (ROCR)"
 
 msgid "Read"
 msgstr "Przeczytaj"
-
-msgid "Read about"
-msgstr "Przeczytaj o"
 
 msgid "Ref"
 msgstr "Ref"
@@ -2748,7 +2724,7 @@ msgstr "Wygładzona średnia krocząca (SMMA – Smoothed Moving Average)"
 msgid "Sold"
 msgstr "Sprzedane"
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
 
 msgid "Source of wealth"
@@ -2858,12 +2834,6 @@ msgstr "Doświadczenie w handlowaniu akcjami"
 
 msgid "Stocks trading frequency"
 msgstr "Częstotliwość handlowania akcjami"
-
-msgid "Stop Loss Level"
-msgstr "Poziom Stop stratom"
-
-msgid "Stop Profit Level"
-msgstr "Poziom Stop zyskom"
 
 msgid "Stop-loss"
 msgstr "Stop stratom"
@@ -3270,9 +3240,6 @@ msgstr "Czasy się zmieniają. Zwiększamy wypłaty, dzięki czemu nasi klienci 
 msgid "Title"
 msgstr "Tytuł"
 
-msgid "Ti ng Vi t"
-msgstr "Tiếng Việt"
-
 msgid "To"
 msgstr "Do"
 
@@ -3369,8 +3336,8 @@ msgstr "Godziny handlowania"
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "Handel opcjami binarnymi jest stosunkowo prosty, a zakup zakładu wymaga jedynie trzech prostych kroków"
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr "Handlowanie opcjami binarnymi może nie być odpowiednie dla każdego, więc prosimy o upewnienie się, że w pełni rozumiesz związane z nim ryzyko. Twoje straty mogą przewyższyć Twój wkład początkowy, dodatkowo nie posiadasz żadnego interesu w odniesieniu do aktywów bazowych. W przypadku opcji binarnych, które stanowią produkt hazardowy, należy pamiętać, że hazard może uzależniać – prosimy o rozsądną grę"
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr ""
 
 msgid "Tradingview for Binary.com"
 msgstr "Widok handlowy Binary.com"
@@ -3723,9 +3690,6 @@ msgstr "Powiększ"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "pozwalające klientom na tworzenie swoich własnych robotów do automatycznego handlowania, korzystając z prostych narzędzi i funkcji, takich jak „przeciągnij i upuść”"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
-
 msgid "and start learning how to trade"
 msgstr "i zacznij uczyć się, jak handlować"
 
@@ -3861,6 +3825,12 @@ msgstr "pośrednik płatności"
 msgid "points"
 msgstr "punkty"
 
+msgid "reference no: 39172"
+msgstr ""
+
+msgid "reference no: 39495"
+msgstr ""
+
 msgid "sec"
 msgstr ""
 
@@ -3906,3 +3876,59 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "umożliwiając klientom, partnerom i programistom zakup i sprzedaż produktów firmy Binary.com"
 
+#~ msgid "Accessible from any web browser in 13 languages"
+#~ msgstr "Dostępność w 13 językach z dowolnej przeglądarki"
+
+#~ msgid "Amount Per Point"
+#~ msgstr "Kwota na punkt"
+
+#~ msgid "Deutsch"
+#~ msgstr "Deutsch"
+
+#~ msgid "Espa ol"
+#~ msgstr "Español"
+
+#~ msgid "Fran ais"
+#~ msgstr "Français"
+
+#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+#~ msgstr "W Zjednoczonym Królestwie i na Wyspie Man nasi klienci handlują za pośrednictwem Binary (IOM) Ltd. W Japonii handel odbywa się za pośrednictwem Binary KK. W Unii Europejskiej (za wyjątkiem Zjednoczonego Królestwa), handlują za pośrednictwem Binary (Europa) Ltd oraz Binary Investments (Europa) Ltd. W pozostałych krajach handel odbywa się za pośrednictwem Binary (C.R.) S.A."
+
+#~ msgid "Indonesia"
+#~ msgstr "Indonezja"
+
+#~ msgid "Italiano"
+#~ msgstr "Italiano"
+
+#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
+#~ msgstr "Licencje i regulacje na Malcie, Wyspie Man, w Zjednoczonym Królestwie, Irlandii i Japonii"
+
+#~ msgid "Offices in Malta, Malaysia and Japan"
+#~ msgstr "Biura na Malcie, w Malezji i Japonii"
+
+#~ msgid "Polski"
+#~ msgstr "Polski"
+
+#~ msgid "Portugu s"
+#~ msgstr "Portugués"
+
+#~ msgid "Profit/Loss (points)"
+#~ msgstr "Zysk/strata (punkty)"
+
+#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+#~ msgstr "Dostępność w języku angielskim, indonezyjskim, japońskim, chińskim, polskim, niemieckim, francuskim, hiszpańskim, portugalskim, włoskim, rosyjskim i tajskim"
+
+#~ msgid "Read about"
+#~ msgstr "Przeczytaj o"
+
+#~ msgid "Stop Loss Level"
+#~ msgstr "Poziom Stop stratom"
+
+#~ msgid "Stop Profit Level"
+#~ msgstr "Poziom Stop zyskom"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Tiếng Việt"
+
+#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
+#~ msgstr "Handlowanie opcjami binarnymi może nie być odpowiednie dla każdego, więc prosimy o upewnienie się, że w pełni rozumiesz związane z nim ryzyko. Twoje straty mogą przewyższyć Twój wkład początkowy, dodatkowo nie posiadasz żadnego interesu w odniesieniu do aktywów bazowych. W przypadku opcji binarnych, które stanowią produkt hazardowy, należy pamiętać, że hazard może uzależniać – prosimy o rozsądną grę"
