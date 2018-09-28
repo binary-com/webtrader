@@ -11,7 +11,6 @@
 
     <title>Binary.com : Webtrader</title>
 
-    <script src="v<version>/lib/intl/dist/Intl.complete.js"></script>
     <script src="v<version>/common/util.js"></script>
     <script src="v<version>/lib/jquery/dist/jquery.min.js"></script>
     <script src="v<version>/lib/moment/min/moment.min.js"></script>
@@ -41,10 +40,10 @@
     <div id="topbar" class="topbar primary-bg-color-dark">
         <div class="fr ln29">
             <span class="time"></span>
-            <a target="_blank" href="#" onclick="openContactUs()">
+            <a target="_blank" id="contact-us" href="#">
                 <b>Contact Us</b>
             </a>
-            <div class="languages">
+            <div class="languages no-translation">
                 <ul id="display_language">
                     <li class="EN">
                         <span class="world world-white"></span>
@@ -57,42 +56,6 @@
                         <span class="world world-black"></span>
                         <span class="language">English</span>
                         <span class="nav-caret"></span>
-                    </li>
-                    <li class="ID">
-                        <a href="/" data-lang="id">Indonesia</a>
-                    </li>
-                    <li class="DE">
-                        <a href="/" data-lang="de">Deutsch</a>
-                    </li>
-                    <li class="EN invisible">
-                        <a href="/" data-lang="en">English</a>
-                    </li>
-                    <li class="ES">
-                        <a href="/" data-lang="es">Español</a>
-                    </li>
-                    <li class="FR">
-                        <a href="/" data-lang="fr">Français</a>
-                    </li>
-                    <li class="IT">
-                        <a href="/" data-lang="it">Italiano</a>
-                    </li>
-                    <li class="PL">
-                        <a href="/" data-lang="pl">Polski</a>
-                    </li>
-                    <li class="PT">
-                        <a href="/" data-lang="pt">Português</a>
-                    </li>
-                    <li class="RU">
-                        <a href="/" data-lang="ru">Русский</a>
-                    </li>
-                    <li class="VI">
-                        <a href="/" data-lang="vi">Tiếng Việt</a>
-                    </li>
-                    <li class="ZH_CN">
-                        <a href="/" data-lang="zh_cn">简体中文</a>
-                    </li>
-                    <li class="ZH_TW">
-                        <a href="/" data-lang="zh_tw">繁體中文</a>
                     </li>
                 </ul>
             </div>
@@ -207,6 +170,21 @@
         </div>
     </footer>
     <script>
+        var SUPPORTED_LANGUAGES = [
+            { value: 'en', name: 'English'},
+            { value: 'de', name: 'Deutsch'},
+            { value: 'es', name: 'Español'},
+            { value: 'fr', name: 'Français'},
+            { value: 'id', name: 'Indonesia'},
+            { value: 'it', name: 'Italiano'},
+            { value: 'pl', name: 'Polish'},
+            { value: 'pt', name: 'Português'},
+            { value: 'ru', name: 'Русский'},
+            { value: 'th', name: 'Thai'},
+            { value: 'vi', name: 'Tiếng Việt'},
+            { value: 'zh_cn', name: '简体中文'},
+            { value: 'zh_tw', name: '繁體中文'}
+        ];
         /* oauth login ? */
         var href = window.location.href;
         //Remove the '#' check later once the backend changes are released TODO
@@ -234,6 +212,11 @@
             local_storage.set('i18n', { value: 'en' });
         }
 
+        populate_language_dropdown(SUPPORTED_LANGUAGES);
+
+        var contact_us_el = document.getElementById('contact-us');
+        contact_us_el.href = 'https://www.binary.com/' + lang + '/contact.html';
+
         if (local_storage.get("oauth") !== null) {
             window.location.href = 'v<version>/main.html';
         } else {
@@ -248,7 +231,7 @@
                     });
                     // Show hidden languages
                     $('#select_language').find('.invisible').removeClass('invisible');
-                    var selected_lang = $('#select_language').find('.' + lang.toUpperCase());
+                    var selected_lang = $('#select_language').find('.' + lang);
                     var curr_ele = $('#select_language .current .language');
                     var disp_lang = $("#display_language .language");
                     disp_lang.text(selected_lang.text());
@@ -279,10 +262,15 @@
             window.location.href = 'v<version>/main.html';
         }
 
-        function openContactUs() {
-            var url = 'https://www.binary.com/' + (local_storage.get('i18n') || { value: 'en' }).value + '/contact.html'
-            var win = window.open(url, '_blank');
-            win.focus();
+        function populate_language_dropdown(language_arr) {
+            var ul_el = document.getElementById('select_language');
+            language_arr.map((language) => {
+                var li = document.createElement('li');
+                li.className = language.value;
+                if (li.value === 'en') li.className = 'invisible';
+                li.innerHTML = '<a href="/" data-lang=' + language.value + '>' + language.name + '</a>';
+                ul_el.appendChild(li);
+            });
         }
 
         //For crowdin in-context translation.

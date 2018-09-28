@@ -95,12 +95,15 @@
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-class-center="proposal_open_contract.user_sold | or proposal_open_contract.barrier_count | eq 2"> <p>Final Price</p>
+      <div rv-if="proposal_open_contract.sell_price">
+        <div rv-class-center="proposal_open_contract.user_sold | or proposal_open_contract.barrier_count | eq 2"> <p>Final Price</p>
           <span rv-html="proposal_open_contract.sell_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
           <span rv-html="proposal_open_contract.sell_price | percent-of proposal_open_contract.buy_price"
                 rv-data-balloon='proposal_open_contract.exit_tick_time | moment | or "return"'
+                data-balloon-pos="right"
                 class="dotted-underline smaller"></span>
+        </div>
       </div>
     </div>
     <div class="table" rv-if="proposal_open_contract.contract_type | eq 'SPREAD'" rv-show="route.value | eq 'table'">
@@ -143,15 +146,17 @@
 
   </div>
   <div class="footer">
-    <div class="sell-at-market" rv-if="proposal_open_contract.is_valid_to_sell | and-not proposal_open_contract.is_ended">
+    <div class="sell-at-market" rv-if="proposal_open_contract.is_valid_to_sell | and-not proposal_open_contract.exit_tick_time">
 
       <span class="bid-price" rv-indicative-color="proposal_open_contract.bid_price">
         <span class="unit" rv-html="proposal_open_contract.bid_price | format-price proposal_open_contract.currency"></span>
       </span>
 
-      <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
-
       <span>
+          <span class="sparkline" rv-sparkline="sell.bid_prices">.</span>
+      </span>
+
+      <span class="u-flex-end">
         <button rv-on-click="sell.sell"
                 rv-disabled="sell.sell_at_market_enabled | eq false"
                 class="sell-button">Sell At Market</button>
