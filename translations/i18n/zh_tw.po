@@ -1152,9 +1152,6 @@ msgstr "權杖用途說明，以備稍後找尋"
 msgid "Description"
 msgstr "說明"
 
-msgid "Deutsch"
-msgstr "德文"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "梅斯線由Donald Dorsey所創，可基於高低範圍的波動性來判斷市場走勢是否反轉。就此定義來說，梅斯線是不包含方向性偏差的波動率指標。相反的，梅斯線可利用特定波動率範圍的穿越與跌破來預測當前價格走勢的可能逆轉"
 
@@ -1338,9 +1335,6 @@ msgstr "入市現價"
 msgid "Error getting data for %1"
 msgstr "獲取%1資料時出錯"
 
-msgid "Espa ol"
-msgstr "西班牙文"
-
 msgid "Estimated Net Worth"
 msgstr "估計淨值"
 
@@ -1460,9 +1454,6 @@ msgstr "分形 (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "分形是K線圖圖表上用於識別市場價格反轉點的指標。交易員一般通過使用分形來判斷價格的走勢方向。當圖表出現某一價格形態時即會形成分形"
-
-msgid "Fran ais"
-msgstr "法文"
 
 msgid "Fri"
 msgstr "星期五"
@@ -1713,9 +1704,6 @@ msgstr "指數交易頻率"
 msgid "Individual Traders"
 msgstr "個人交易者"
 
-msgid "Indonesia"
-msgstr "印度尼西亚"
-
 msgid "Industry of Employment"
 msgstr "職業領域"
 
@@ -1754,9 +1742,6 @@ msgstr "有時候您能在交易到期前賣出合約，但僅在可確定公平
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "擴大規模的時機到了。我們在有「吉隆坡矽谷」美譽的 Cyberjaya 成立了一個編程中心，旨在維持和提高 BetOnMarkets.com 的效率"
-
-msgid "Italiano"
-msgstr "意大利文"
 
 msgid "Jan"
 msgstr "一月"
@@ -2427,14 +2412,8 @@ msgstr "利潤/虧損"
 msgid "Points"
 msgstr "點"
 
-msgid "Polski"
-msgstr "波蘭文"
-
 msgid "Portfolio"
 msgstr "投資組合"
-
-msgid "Portugu s"
-msgstr "葡萄牙文"
 
 msgid "Postal code/ZIP"
 msgstr "郵區編號"
@@ -3261,9 +3240,6 @@ msgstr "時代在變。我們增加了賠付金額，以便我們的客戶從盈
 msgid "Title"
 msgstr "職稱"
 
-msgid "Ti ng Vi t"
-msgstr "越南語"
-
 msgid "To"
 msgstr "到"
 
@@ -3899,6 +3875,30 @@ msgstr "| 回報"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "讓客戶、聯盟會員和程式開發員買賣 Binary.com 的產品"
+
+#~ msgid "Deutsch"
+#~ msgstr "德文"
+
+#~ msgid "Espa ol"
+#~ msgstr "西班牙文"
+
+#~ msgid "Fran ais"
+#~ msgstr "法文"
+
+#~ msgid "Indonesia"
+#~ msgstr "印度尼西亚"
+
+#~ msgid "Italiano"
+#~ msgstr "意大利文"
+
+#~ msgid "Polski"
+#~ msgstr "波蘭文"
+
+#~ msgid "Portugu s"
+#~ msgstr "葡萄牙文"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "越南語"
 
 #~ msgid "(license reference no: 39172)"
 #~ msgstr "(執照號碼: 39172)"

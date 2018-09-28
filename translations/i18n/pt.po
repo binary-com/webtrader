@@ -1152,9 +1152,6 @@ msgstr "Descreva para o que serve este token para encontrá-lo mais tarde"
 msgid "Description"
 msgstr "Descrição"
 
-msgid "Deutsch"
-msgstr "Alemão"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Desenvolvido por Donaldo Dorsey, o Índice de Massa usa um intervalo alto-baixo para identificar inversões de tendência baseadas em expansões de intervalo. Neste sentido, o Índice de Massa é um indicador de volatilidade que não possui parcialidade direcional. Em vez disso, o Índice de Massa identifica aumentos no intervalo que podem indicar uma inversão da tendência atual"
 
@@ -1338,9 +1335,6 @@ msgstr "Preço à vista de entrada"
 msgid "Error getting data for %1"
 msgstr "Erro ao obter dados para %1"
 
-msgid "Espa ol"
-msgstr "Espanhol"
-
 msgid "Estimated Net Worth"
 msgstr "Patrimônio líquido estimado"
 
@@ -1460,9 +1454,6 @@ msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fractais são indicadores em gráficos de velas que identificam pontos de inversão no mercado. Os negociadores usam muitas vezes fractais a fim de ter uma ideia sobre a direção em que o preço irá se desenvolver. Um fractal irá se formar quando um determinado padrão de preço ocorrer num gráfico"
-
-msgid "Fran ais"
-msgstr "Francês"
 
 msgid "Fri"
 msgstr "Sex"
@@ -1713,9 +1704,6 @@ msgstr "Frequência das negociações de índices"
 msgid "Individual Traders"
 msgstr "Negociadores individuais"
 
-msgid "Indonesia"
-msgstr "Indonésia"
-
 msgid "Industry of Employment"
 msgstr "Área profissional"
 
@@ -1754,9 +1742,6 @@ msgstr "É possível às vezes vender uma opção antes da expiração da negoci
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "Está na altura de expandir. Criamos um centro de programação em Cyberjaya - o Vale do Silício de Kuala Lumpur - para manter e melhorar a BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "Italiano"
 
 msgid "Jan"
 msgstr "Jan"
@@ -2427,14 +2412,8 @@ msgstr "Lucro/Perda"
 msgid "Points"
 msgstr "Pontos"
 
-msgid "Polski"
-msgstr "Polonês"
-
 msgid "Portfolio"
 msgstr "Portfólio"
-
-msgid "Portugu s"
-msgstr "Português"
 
 msgid "Postal code/ZIP"
 msgstr "Código postal/CEP"
@@ -3261,9 +3240,6 @@ msgstr "Os tempos estão mudando. Aumentamos os pagamentos de prêmios para que 
 msgid "Title"
 msgstr "Título"
 
-msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
-
 msgid "To"
 msgstr "Para"
 
@@ -3899,6 +3875,30 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitindo que clientes, afiliados e desenvolvedores possam comprar e vender produtos da Binary.com"
+
+#~ msgid "Deutsch"
+#~ msgstr "Alemão"
+
+#~ msgid "Espa ol"
+#~ msgstr "Espanhol"
+
+#~ msgid "Fran ais"
+#~ msgstr "Francês"
+
+#~ msgid "Indonesia"
+#~ msgstr "Indonésia"
+
+#~ msgid "Italiano"
+#~ msgstr "Italiano"
+
+#~ msgid "Polski"
+#~ msgstr "Polonês"
+
+#~ msgid "Portugu s"
+#~ msgstr "Português"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Ti ng Vi t"
 
 #~ msgid "Accessible from any web browser in 13 languages"
 #~ msgstr "Acessível a partir de qualquer navegador web em 13 línguas"

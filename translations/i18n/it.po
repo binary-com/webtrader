@@ -1152,9 +1152,6 @@ msgstr "Descrivi a cosa serve questo token per trovarlo più tardi"
 msgid "Description"
 msgstr "Descrizione"
 
-msgid "Deutsch"
-msgstr "Tedesco"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr ""
 
@@ -1338,9 +1335,6 @@ msgstr "Prezzo d'ingresso"
 msgid "Error getting data for %1"
 msgstr "Errore durante il recupero dei dati per %1"
 
-msgid "Espa ol"
-msgstr "Spagnolo"
-
 msgid "Estimated Net Worth"
 msgstr "Valore netto stimato"
 
@@ -1460,9 +1454,6 @@ msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "I frattali sono degli indicatori sui grafici a candele che individuano i punti di inversione nel mercato. I trader spesso utilizzano i frattali per avere un'idea della direzione in cui andrà il prezzo. Un frattale ti dirà quando un dato modello di prezzi si verificherà su un grafico"
-
-msgid "Fran ais"
-msgstr "Francese"
 
 msgid "Fri"
 msgstr "Ven"
@@ -1713,9 +1704,6 @@ msgstr "Frequenza di trading sugli indici"
 msgid "Individual Traders"
 msgstr "Trader individuali"
 
-msgid "Indonesia"
-msgstr "Indonesia"
-
 msgid "Industry of Employment"
 msgstr "Settore lavorativo"
 
@@ -1754,9 +1742,6 @@ msgstr "A volte è possibile vendere un'opzione prima della scadenza di un trade
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "È il momento di espandersi. Abbiamo istituito un centro di programmazione a Cyberjaya, la Silicon Valley di Kuala Lumpur, per mantenere e migliorare BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "Italiano"
 
 msgid "Jan"
 msgstr "Gen"
@@ -2427,14 +2412,8 @@ msgstr "Profitto/Perdita"
 msgid "Points"
 msgstr "Punti"
 
-msgid "Polski"
-msgstr "Polski"
-
 msgid "Portfolio"
 msgstr "Portafoglio"
-
-msgid "Portugu s"
-msgstr "Portoghese"
 
 msgid "Postal code/ZIP"
 msgstr "Codice postale/CAP"
@@ -3261,9 +3240,6 @@ msgstr "I tempi stanno cambiando. Aumentiamo i payout in modo che i nostri clien
 msgid "Title"
 msgstr "Titolo"
 
-msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
-
 msgid "To"
 msgstr "A"
 
@@ -3899,6 +3875,30 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "consentire ai clienti, agli affiliati e agli sviluppatori di acquistare e vendere prodotti di Binary.com"
+
+#~ msgid "Deutsch"
+#~ msgstr "Tedesco"
+
+#~ msgid "Espa ol"
+#~ msgstr "Spagnolo"
+
+#~ msgid "Fran ais"
+#~ msgstr "Francese"
+
+#~ msgid "Indonesia"
+#~ msgstr "Indonesia"
+
+#~ msgid "Italiano"
+#~ msgstr "Italiano"
+
+#~ msgid "Polski"
+#~ msgstr "Polski"
+
+#~ msgid "Portugu s"
+#~ msgstr "Portoghese"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Ti ng Vi t"
 
 #~ msgid "Accessible from any web browser in 13 languages"
 #~ msgstr "Accessibile da qualsiasi browser web in 13 lingue"

@@ -1152,9 +1152,6 @@ msgstr "Beschreiben Sie, wofür dieser Token verwendet wird, um ihn später wied
 msgid "Description"
 msgstr "Beschreibung"
 
-msgid "Deutsch"
-msgstr "Deutsch"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Von Donald Dorsey erfunden, verwendet der Massen Index die hoch-tief Reichweite, um auf Angebotserweiterungen basierende Trendumkehrungen zu identifizieren. In diesem Sinne, ist der Massen Index ein Volatilität Indikator, der keine gerichtete Verzerrung hat. Stattdessen, identifiziert der Massen Index Angebots-Wölbungen, die eine Umkehrung des aktuellen Trends andeuten können"
 
@@ -1338,9 +1335,6 @@ msgstr "Einstiegskurs"
 msgid "Error getting data for %1"
 msgstr "Fehler beim Abrufen von Daten für %1"
 
-msgid "Espa ol"
-msgstr "Spanisch"
-
 msgid "Estimated Net Worth"
 msgstr "Geschätztes Nettovermögen"
 
@@ -1460,9 +1454,6 @@ msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fraktale sind Indikatoren auf Candlestick-Charts, die Umkehrungspunkte im Markt identifizieren. Händler verwenden Fraktale oft, um eine Idee davon zu erhalten, in welche Richtung sich ein Kurs entwickeln wird. Ein Fraktal entsteht dann, wenn sich ein bestimmtes Kursmuster auf einem Chart bildet"
-
-msgid "Fran ais"
-msgstr "Französisch"
 
 msgid "Fri"
 msgstr "Fr"
@@ -1713,9 +1704,6 @@ msgstr "Indexhandel Häufigkeit"
 msgid "Individual Traders"
 msgstr "Individuelle Händler"
 
-msgid "Indonesia"
-msgstr "Indonesien"
-
 msgid "Industry of Employment"
 msgstr "Beschäftigungsbranche"
 
@@ -1754,9 +1742,6 @@ msgstr "Es ist manchmal möglich, eine Option vor Ablauf eines Kontrakts zu verk
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "Es ist Zeit, sich zu vergrößern. Wir planen ein Programmierzentrum in Cyberjaya - das Silicon Valley von Kuala Lumpur - um BetOnMarkets.com zu pflegen und zu verbessern"
-
-msgid "Italiano"
-msgstr "Italienisch"
 
 msgid "Jan"
 msgstr "Jan"
@@ -2427,14 +2412,8 @@ msgstr "Gewinn/Verlust"
 msgid "Points"
 msgstr "Punkte"
 
-msgid "Polski"
-msgstr "Polnisch"
-
 msgid "Portfolio"
 msgstr "Portfolio"
-
-msgid "Portugu s"
-msgstr "Portugiesisch"
 
 msgid "Postal code/ZIP"
 msgstr "Postleitzahl/PLZ"
@@ -3261,9 +3240,6 @@ msgstr "Die Zeiten ändern sich. Wir erhöhen unsere Auszahlungen, damit unsere 
 msgid "Title"
 msgstr "Titel"
 
-msgid "Ti ng Vi t"
-msgstr "Vietnamesisch"
-
 msgid "To"
 msgstr "Zu"
 
@@ -3899,6 +3875,30 @@ msgstr "| Rendite"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kaufen und zu verkaufen"
+
+#~ msgid "Deutsch"
+#~ msgstr "Deutsch"
+
+#~ msgid "Espa ol"
+#~ msgstr "Spanisch"
+
+#~ msgid "Fran ais"
+#~ msgstr "Französisch"
+
+#~ msgid "Indonesia"
+#~ msgstr "Indonesien"
+
+#~ msgid "Italiano"
+#~ msgstr "Italienisch"
+
+#~ msgid "Polski"
+#~ msgstr "Polnisch"
+
+#~ msgid "Portugu s"
+#~ msgstr "Portugiesisch"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Vietnamesisch"
 
 #~ msgid "(license reference no: 39172)"
 #~ msgstr "(Lizenznummer: 39172)"

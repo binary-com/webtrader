@@ -1170,9 +1170,6 @@ msgstr "後で認識できるよう、このトークンの説明を記入して
 msgid "Description"
 msgstr "取引内容"
 
-msgid "Deutsch"
-msgstr "ドイツ語"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Donald Dorseyによって開発されたマスインデックスは、範囲拡張に基づくトレンドの反転を識別するためにその高低域を使用します。そのため、マスインデックスは方向バイアスがないボラティリティ指標です。その代わり、マスインデックスは現在のトレンドの反転の前兆となりうる膨らみ範囲を識別します。"
 
@@ -1360,9 +1357,6 @@ msgstr "取引時レート"
 msgid "Error getting data for %1"
 msgstr "%1のデータ取得中にエラーが発生しました"
 
-msgid "Espa ol"
-msgstr "スペイン語"
-
 msgid "Estimated Net Worth"
 msgstr "推定純資産"
 
@@ -1482,9 +1476,6 @@ msgstr "フラクタル（FRACTAL）"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "フラクタルは市場での反転ポイントを表示する、ローソク足チャートのインジケーターです。価格が変動する方向を判断するのによく用いられます。フラクタルはチャートで起こる特定のパターンを形にします。"
-
-msgid "Fran ais"
-msgstr "フランス語"
 
 msgid "Fri"
 msgstr "金曜日"
@@ -1735,9 +1726,6 @@ msgstr "インデックス取引の頻度"
 msgid "Individual Traders"
 msgstr "個人投資家"
 
-msgid "Indonesia"
-msgstr "インドネシア語"
-
 msgid "Industry of Employment"
 msgstr "雇用産業"
 
@@ -1776,9 +1764,6 @@ msgstr "お客さまは保有しているポジションを公正な価格でい
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "BetOnMarkets.comの機能性強化とサービス向上を目的とし、マレーシアのシリコンバレーと称されるサイバージャヤに開発センターを開設。"
-
-msgid "Italiano"
-msgstr "イタリア語"
 
 msgid "Jan"
 msgstr "1月"
@@ -2452,14 +2437,8 @@ msgstr "損益"
 msgid "Points"
 msgstr "ポイント"
 
-msgid "Polski"
-msgstr "ポーランド語"
-
 msgid "Portfolio"
 msgstr "ポジション一覧"
-
-msgid "Portugu s"
-msgstr "ポルトガル語"
 
 msgid "Postal code/ZIP"
 msgstr "郵便番号"
@@ -3288,9 +3267,6 @@ msgstr "時代のニーズを汲み、ペイアウト金額を増大させるこ
 msgid "Title"
 msgstr "敬称"
 
-msgid "Ti ng Vi t"
-msgstr "ベトナム語"
-
 msgid "To"
 msgstr "宛先"
 
@@ -3926,6 +3902,30 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "お客様、アフィリエイト会員、開発者の方々が自社ブランドの売買がご利用いただけます"
+
+#~ msgid "Deutsch"
+#~ msgstr "ドイツ語"
+
+#~ msgid "Espa ol"
+#~ msgstr "スペイン語"
+
+#~ msgid "Fran ais"
+#~ msgstr "フランス語"
+
+#~ msgid "Indonesia"
+#~ msgstr "インドネシア語"
+
+#~ msgid "Italiano"
+#~ msgstr "イタリア語"
+
+#~ msgid "Polski"
+#~ msgstr "ポーランド語"
+
+#~ msgid "Portugu s"
+#~ msgstr "ポルトガル語"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "ベトナム語"
 
 #~ msgid "Accessible from any web browser in 13 languages"
 #~ msgstr "どのブラウザからでも13ヶ国語でアクセスが可能"

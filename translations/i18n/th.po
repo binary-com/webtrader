@@ -1154,9 +1154,6 @@ msgstr "อธิบายว่า โทเค่นนี้มีไว้�
 msgid "Description"
 msgstr "รายละเอียด"
 
-msgid "Deutsch"
-msgstr "เยอรมัน"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "พัฒนา โดย Donald Dorsey ดัชนีมวลใช้ช่วงสูงต่ำเพื่อระบุแนวโน้มการกลับรายการตามช่วงขยาย ในแง่นี้ ดัชนีมวลเป็นตัวบ่งชี้ความผันผวนที่ไม่มีอคติเป็นทิศทาง แทน ดัชนีมวลบ่งชี้ส่วนนูนซึ่งเป็นช่วงที่สามารถแสดงแนวโน้มปัจจุบัน"
 
@@ -1340,9 +1337,6 @@ msgstr "ราคาสปอตเริ่มต้น"
 msgid "Error getting data for %1"
 msgstr "ข้อผิดพลาดในการรับข้อมูลสำหรับ %1"
 
-msgid "Espa ol"
-msgstr "ภาษาสเปน"
-
 msgid "Estimated Net Worth"
 msgstr "ประมาณการมูลค่าสุทธิ"
 
@@ -1462,9 +1456,6 @@ msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fractals เป็นตัวชี้วัดในแผนภูมิเชิงเทียนที่ระบุจุดกลับในตลาด ผู้ลงทุนมักจะใช้ Fractals เพื่อแสดงทิศทางราคาที่จะเกิดชึ้น โดยจะออกเป็นรูปร่างของรูปแบบราคาที่เกิดขึ้นในแผนภูมิ"
-
-msgid "Fran ais"
-msgstr "Fran ais"
 
 msgid "Fri"
 msgstr "ศ"
@@ -1717,9 +1708,6 @@ msgstr "ความถี่ในการซื้อขายดัชนี
 msgid "Individual Traders"
 msgstr "นักลงทุนรายย่อย"
 
-msgid "Indonesia"
-msgstr "อินโดนีเซีย"
-
 msgid "Industry of Employment"
 msgstr "อุตสาหกรรมของการจ้างงาน"
 
@@ -1758,9 +1746,6 @@ msgstr "ในบางครั้งการจำหน่ายออปช
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "ถึงเวลาที่จะขยายอาณาจักร พวกเราได้ตั้งศูนย์ของระบบที่ไซเบอร์จายา สถานที่หนึ่งประดุจซิลิคอนวัลเลย์ของกัวลาลัมเปอร์ เพื่อดูแลและปรับปรุง BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "ภาษาอิตาเลียน"
 
 msgid "Jan"
 msgstr "ม.ค."
@@ -2431,14 +2416,8 @@ msgstr "กำไร/ขาดทุน"
 msgid "Points"
 msgstr "จุด"
 
-msgid "Polski"
-msgstr "Polski"
-
 msgid "Portfolio"
 msgstr "พอร์ตโฟลิโอ"
-
-msgid "Portugu s"
-msgstr "ภาษาโปรตุเกส"
 
 msgid "Postal code/ZIP"
 msgstr "รหัสไปรษณีย์"
@@ -3265,9 +3244,6 @@ msgstr "เวลาเปลี่ยนแปรไป เราเพิ่�
 msgid "Title"
 msgstr "คำนำหน้าชื่อ"
 
-msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
-
 msgid "To"
 msgstr "ถึง"
 
@@ -3903,6 +3879,30 @@ msgstr "| ผลตอบแทน"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ส่งเสริมให้ลูกค้า พันธมิตร และผู้พัฒนาระบบ ซื้อ และ ขายผลิตภัณฑ์ Binary.com"
+
+#~ msgid "Deutsch"
+#~ msgstr "เยอรมัน"
+
+#~ msgid "Espa ol"
+#~ msgstr "ภาษาสเปน"
+
+#~ msgid "Fran ais"
+#~ msgstr "Fran ais"
+
+#~ msgid "Indonesia"
+#~ msgstr "อินโดนีเซีย"
+
+#~ msgid "Italiano"
+#~ msgstr "ภาษาอิตาเลียน"
+
+#~ msgid "Polski"
+#~ msgstr "Polski"
+
+#~ msgid "Portugu s"
+#~ msgstr "ภาษาโปรตุเกส"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Ti ng Vi t"
 
 #~ msgid "(license reference no: 39172)"
 #~ msgstr "(ใบอนุญาตเลขที่: 39172)"

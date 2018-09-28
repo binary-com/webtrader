@@ -1139,9 +1139,6 @@ msgstr ""
 msgid "Description"
 msgstr "" 
 
-msgid "Deutsch"
-msgstr "" 
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "" 
 
@@ -1325,9 +1322,6 @@ msgstr ""
 msgid "Error getting data for %1"
 msgstr "" 
 
-msgid "Espa ol"
-msgstr "" 
-
 msgid "Estimated Net Worth"
 msgstr "" 
 
@@ -1446,9 +1440,6 @@ msgid "Fractal (FRACTAL)"
 msgstr "" 
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
-msgstr "" 
-
-msgid "Fran ais"
 msgstr "" 
 
 msgid "Fri"
@@ -1700,9 +1691,6 @@ msgstr ""
 msgid "Individual Traders"
 msgstr "" 
 
-msgid "Indonesia"
-msgstr "" 
-
 msgid "Industry of Employment"
 msgstr "" 
 
@@ -1740,9 +1728,6 @@ msgid "It is sometimes possible to sell an option before the expiry of a trade, 
 msgstr "" 
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
-msgstr "" 
-
-msgid "Italiano"
 msgstr "" 
 
 msgid "Jan"
@@ -2414,13 +2399,7 @@ msgstr ""
 msgid "Points"
 msgstr "" 
 
-msgid "Polski"
-msgstr "" 
-
 msgid "Portfolio"
-msgstr "" 
-
-msgid "Portugu s"
 msgstr "" 
 
 msgid "Postal code/ZIP"
@@ -3246,9 +3225,6 @@ msgid "Times are changing. We increase payouts so our clients can make the most 
 msgstr "" 
 
 msgid "Title"
-msgstr "" 
-
-msgid "Ti ng Vi t"
 msgstr "" 
 
 msgid "To"

@@ -1152,9 +1152,6 @@ msgstr "Mô tả token này để tìm nó về sau"
 msgid "Description"
 msgstr "Mô tả"
 
-msgid "Deutsch"
-msgstr "Tiếng Đức"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Phát triển bởi Donald Dorsey, chỉ số khối lượng sử dụng phạm vi cao thấp để xác định các đảo ngược xu hướng dựa trên phạm vi rộng. Trong ý nghĩa này, các chỉ số khối lượng là một chỉ số biến động mà không có một xu hướng định hướng. Thay vào đó, các chỉ số khối lượng xác định chỗ phình ra phạm vi có thể báo trước của một sự đảo ngược của xu hướng hiện nay"
 
@@ -1338,9 +1335,6 @@ msgstr "Giá nhập điểm"
 msgid "Error getting data for %1"
 msgstr "Lỗi lấy dữ liệu cho %1"
 
-msgid "Espa ol"
-msgstr "Espa già"
-
 msgid "Estimated Net Worth"
 msgstr "Ước tính giá trị ròng"
 
@@ -1460,9 +1454,6 @@ msgstr "Phân dạng"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fractals là các chỉ số trên biểu đồ nến mà xác định đảo ngược điểm trên thị trường. Thương nhân thường sử dụng fractals để có được một ý tưởng về hướng đi mà giá cả sẽ phát triển. Fractal một sẽ hình thành khi một chiều hướng thay đổi giá cụ thể xảy ra trên một biểu đồ"
-
-msgid "Fran ais"
-msgstr "Fran ais"
 
 msgid "Fri"
 msgstr "Thứ sáu"
@@ -1713,9 +1704,6 @@ msgstr "Chỉ số tần số giao dịch"
 msgid "Individual Traders"
 msgstr "Các nhà giao dịch đơn lẻ"
 
-msgid "Indonesia"
-msgstr "Ở Indonesia:"
-
 msgid "Industry of Employment"
 msgstr "Ngành công nghiệp việc làm"
 
@@ -1754,9 +1742,6 @@ msgstr "Đôi khi có thể bán một tùy chọn trước thời hạn của 
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "Đó là thời điểm để mở rộng. Chúng tôi thiết lập một trung tâm lập trình ở Cyberjaya - Thung lũng Silicon của Kuala Lumpur – để duy trì và cải thiện BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "Tiếng Italia"
 
 msgid "Jan"
 msgstr "Tháng một"
@@ -2427,14 +2412,8 @@ msgstr "Lợi nhận/thiệt hại"
 msgid "Points"
 msgstr "Điểm"
 
-msgid "Polski"
-msgstr "polski"
-
 msgid "Portfolio"
 msgstr "Danh mục đầu tư"
-
-msgid "Portugu s"
-msgstr "portugu s"
 
 msgid "Postal code/ZIP"
 msgstr "Mã bưu chính/ZIP"
@@ -3261,9 +3240,6 @@ msgstr "Thời gian đang thay đổi. Chúng tôi tăng tiền thưởng v
 msgid "Title"
 msgstr "Tiêu đề"
 
-msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
-
 msgid "To"
 msgstr "Tới"
 
@@ -3899,6 +3875,30 @@ msgstr ""
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
+
+#~ msgid "Deutsch"
+#~ msgstr "Tiếng Đức"
+
+#~ msgid "Espa ol"
+#~ msgstr "Espa già"
+
+#~ msgid "Fran ais"
+#~ msgstr "Fran ais"
+
+#~ msgid "Indonesia"
+#~ msgstr "Ở Indonesia:"
+
+#~ msgid "Italiano"
+#~ msgstr "Tiếng Italia"
+
+#~ msgid "Polski"
+#~ msgstr "polski"
+
+#~ msgid "Portugu s"
+#~ msgstr "portugu s"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Ti ng Vi t"
 
 #~ msgid "Accessible from any web browser in 13 languages"
 #~ msgstr "Có thể truy cập từ bất kỳ trình duyệt web nào với 13 ngôn ngữ"
