@@ -181,7 +181,7 @@ function set_current_template(state, tpl) {
       if(state.categories.value.contract_category !== 'spreads') {
         _.defer(function() {
           state.basis.value = tpl.basis_value;
-          state.currency.value = tpl.currency_value;
+          state.currency.value = state.currency.value ? state.currency.value : tpl.currency_value;
           state.basis.amount = tpl.basis_amount;
         });
       } /* <----- basis, currency */
@@ -1001,6 +1001,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   });
 
   liveapi.events.on('set_account_currency', update_currency);
+  liveapi.events.on('login', update_currency);
 
   update_currency();
 
@@ -1018,6 +1019,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         maximizable: false,
         width:  400,
         'data-authorized': 'false',
+        'data-account-specific': 'true',
         isTrackerInitiated: isTrackerInitiated,
         relativePosition: true,
         close: function() {
