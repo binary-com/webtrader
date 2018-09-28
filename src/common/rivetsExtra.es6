@@ -589,48 +589,31 @@ rv.binders['auto-scroll-bottom'] = {
    }
 }
 
-/* http://stackoverflow.com/questions/10454518 */
-const decimalPlaces = (num) => {
-   const match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
-   let ret = 0;
-   if (match) {
-      ret = Math.max( 0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
-   }
-   return ret;
+function remove_all_matches_except_first(string, regex) {
+  let count = 0;
+  const replaceWith = '';
+  return string.replace(regex, (match) => {
+    count++;
+    return count === 1 ? match : replaceWith;
+  });
 }
-/* rviets formatter for decimal round */
-rv.binders['decimal-round'] = {
+
+rv.binders['barrier-format'] = {
    priority: 3001,
-   routine: (input, places, ...rest) => {
-      let last_value = null;
-      const mul = {'0': 1, '1': 10, '2': 100, '3': 1000, '4': 10000, '5': 100000, '8': 100000000}[places];
+   routine: (input) => {
       const $input = $(input);
       const listener = () => {
-         const prefered_sign = $input.attr('prefered-sign') || '';
-         const no_symbol = $input.attr('no-symbol');
-         let val = $input.val();
-         if(val === '') return;
-         if(val === '-' || val === '+' && !no_symbol) return;
-         const dps = decimalPlaces(val);
-         if(last_value == val ) return;
-         if(dps && dps <= places ) {
-           last_value = val;
-           $input.trigger('change');
-           return;
-         };
-         const dot = val.endsWith('.') ? '.' : '';
-         let symbol = val[0];
-         symbol = (symbol === '+' || symbol === '-') ? symbol : '';
-         val = val.replace(/[^\d.-]/g,'');
-         val = (Math.round(val * mul) / mul);
-         val = Math.abs(val);
-         if(!isNaN(val)) {
-            if(prefered_sign && symbol === '') symbol = prefered_sign;
-            if(no_symbol) symbol = '';
-            $input.val(symbol + val + dot);
-            last_value = val;
-            $input.trigger('input');
-         }
+        let val = $input.val();
+        let symbol = '';
+
+        if (val.startsWith('+') || val.startsWith('-')) symbol = val[0];
+        val = remove_all_matches_except_first(val, /\./g);
+        val = val.replace(/[^\d.]/g,'');
+        val = symbol + val;
+
+        $input.val(val);
+        $input.trigger('change');
+        return;
       }
       input._listener && $input.off('input', input._listener);
       input._listener = listener;
@@ -640,7 +623,37 @@ rv.binders['decimal-round'] = {
      console.warn('getValue');
      return el.value;
    }
+};
+
+function decimalPlaces(num) {
+  const match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+  let ret = 0;
+  if (match) {
+    ret = Math.max( 0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
+  }
+  return ret;
 }
+
+rv.binders['number-format'] = {
+  priority: 3002,
+  routine: (input, max_nr_of_decimals) => {
+    const $input = $(input);
+    const listener = () => {
+      let val = $input.val();
+      val = remove_all_matches_except_first(val, /\./g);
+      val = val.replace(/[^\d.]/g,'');
+
+      if (decimalPlaces(val) > max_nr_of_decimals) val = (+val).toFixed(max_nr_of_decimals);
+
+      $input.val(val);
+      $input.trigger('change');
+      return;
+    }
+    input._listener && $input.off('input', input._listener);
+    input._listener = listener;
+    $input.on('input', listener)
+  }
+};
 
 /* binder with high priority to apply attributes first */
 rv.binders['attr-*'] = {
@@ -666,7 +679,7 @@ rv.binders['sparkline'] = (el, spots) => {
    };
    setTimeout(() => {
       chart.sparkline(spots, config);
-      spots.length ? chart.show() : chart.hide();
+      spots && spots.length ? chart.show() : chart.hide();
    }, 0);
 }
 
