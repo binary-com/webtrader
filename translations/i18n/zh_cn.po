@@ -2724,7 +2724,7 @@ msgstr "平滑移动平均线 (SMMA)"
 msgid "Sold"
 msgstr "已卖出"
 
-msgid "Some products are not available in all countries. This website s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
 
 msgid "Source of wealth"
