@@ -33,9 +33,6 @@ msgstr "El premio \"Mejor Empresa de Probabilidades Fijas 2012\" de Global Banki
 msgid "'Financial Betting Operator of the Year' award by eGaming Review"
 msgstr "El premio \"Operador de Apuestas Financieras del Año\" de eGaming Review"
 
-msgid "'In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
-msgstr ""
-
 msgid "'contract period'"
 msgstr "\"período del contrato\""
 
@@ -1657,6 +1654,9 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Al ofrecerle nuestros servicios, estamos obligados a obtener información de usted con el fin de evaluar si un determinado producto o servicio es adecuado para usted (es decir, si posee la experiencia y el conocimiento necesario para entender los riesgos)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
+msgstr ""
+
+msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
 msgstr ""
 
 msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
