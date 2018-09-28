@@ -1,39 +1,3 @@
-/**
- * Created by amin on November 18, 2015.
- */
-
-/* init(...) parameters => The symbol is in the following format:
-     symbol = {
-        symbol: "frxXAUUSD",
-        display_name: "Gold/USD",
-        delay_amount: 0,
-        settlement: "",
-        feed_license: "realtime",
-        events: [{ dates: "Fridays", descrip: "Closes early (at 21:00)" }, { dates: "2015-11-26", descrip: "Closes early (at 18:00)" }],
-        times: { open: ["00:00:00"], close: ["23:59:59"], settlement: "23:59:59" },
-        pip: "0.001"
-      },
-
-  The contracts_for is in the following format:
-    contracts_for = {
-        open: 1447801200,
-        close: 1447822800,
-        hit_count: 14,
-        spot: "5137.20",
-        available: [
-            {
-                market: "indices",                  contract_display: "higher",
-                min_contract_duration: "1d",        max_contract_duration: "365d",
-                barriers: 0,                        sentiment: "up",
-                barrier_category: "euro_atm",       start_type: "spot",
-                contract_category: "callput",       submarket: "asia_oceania",
-                exchange_name: "ASX",               expiry_type: "daily",
-                underlying_symbol: "AS51",          contract_category_display: "Up/Down",
-                contract_type: "CALL"
-            }]
-    }
-*/
-
 import _ from 'lodash';
 import $ from 'jquery';
 import moment from 'moment';
@@ -217,7 +181,7 @@ function set_current_template(state, tpl) {
       if(state.categories.value.contract_category !== 'spreads') {
         _.defer(function() {
           state.basis.value = tpl.basis_value;
-          state.currency.value = tpl.currency_value;
+          state.currency.value = state.currency.value ? state.currency.value : tpl.currency_value;
           state.basis.amount = tpl.basis_amount;
         });
       } /* <----- basis, currency */
@@ -302,6 +266,9 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       selected: ''
     },
     barriers: {
+      is_offset_barrier: false,
+      is_offset_low_barrier: false,
+      is_offset_high_barrier: false,
       barrier_count: 0,
       barrier : '',
       perv_barrier: '', // previous barrier value for intraday and tick contracts.
@@ -810,14 +777,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       request.stop_loss = state.spreads.stop_loss;
       request.stop_profit = state.spreads.stop_profit;
     }
-    /* set the value for barrier(s) */
-    if (state.barriers.barrier_count == 1) {
-      request.barrier = state.barriers.barrier;
-    }
-    if (state.barriers.barrier_count == 2) {
-      request.barrier = state.barriers.high_barrier;
-      request.barrier2 = state.barriers.low_barrier + '';
-    }
+
+    add_barriers_to_request(state, request);
+    set_is_barrier_offset(state);
+
     if (state.categories.value.contract_category === 'digits') {
       request.barrier = state.digits.value + '';
     }
@@ -842,18 +805,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       });
     }
 
-    /**
-     * Adds retry to proposal subscription request
-     *
-     * @param {Object}   request_obj          Object of the request to be made
-     * @param {Number}   times_retry          Times to retry the request if the request fails
-     * @param {String}   required_err_code    Optional - only retry if the response error code matches this error code
-     */
-    async function subscribeProposalHandler(request_obj, times_retry, required_err_code) {
+    async function subscribeProposalHandler(request, times_to_retry, required_err_code_for_retry) {
       let response;
-      for (let i = 0; i < times_retry; i++) {
+      for (let i = 0; i < times_to_retry; i++) {
         try {
-          response = await liveapi.send(request_obj);
+          response = await liveapi.send(request);
           state.proposal.error = '';
           state.proposal.id = response.proposal && response.proposal.id;
           break;
@@ -861,7 +817,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           state.proposal.error = err.message;
           state.proposal.message = '';
           state.proposal.loading = false;
-          if (required_err_code && required_err_code !== err.code) { break; }
+          if (required_err_code_for_retry && required_err_code_for_retry !== err.code) { break; }
         }
       }
       return response;
@@ -874,6 +830,26 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
     dialog.update_track(dialog.get_template());
   };
+
+  function add_barriers_to_request(state, request) {
+    const { barrier, high_barrier, low_barrier, barrier_count } = state.barriers;
+    if (+barrier_count === 2) {
+      request.barrier = high_barrier;
+      request.barrier2 = low_barrier;
+      return;
+    }
+    if (+barrier_count === 1) request.barrier = barrier;
+  }
+
+  function set_is_barrier_offset(state) {
+    state.barriers.is_offset_barrier = is_offset(state.barriers.barrier);
+    state.barriers.is_offset_low_barrier = is_offset(state.barriers.low_barrier);
+    state.barriers.is_offset_high_barrier = is_offset(state.barriers.high_barrier);
+  }
+
+  function is_offset(barrier) {
+    return barrier && (barrier.startsWith('+') || barrier.startsWith('-')) ? true : false;
+  }
 
   state.purchase.onclick = async function() {
     const categories_with_tick_chart = ['digits', 'callput', 'callputequal', 'asian', 'touchnotouch'];
@@ -1025,6 +1001,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   });
 
   liveapi.events.on('set_account_currency', update_currency);
+  liveapi.events.on('login', update_currency);
 
   update_currency();
 
@@ -1041,7 +1018,8 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         minimizable: true,
         maximizable: false,
         width:  400,
-        'data-authorized': 'true',
+        'data-authorized': 'false',
+        'data-account-specific': 'true',
         isTrackerInitiated: isTrackerInitiated,
         relativePosition: true,
         close: function() {

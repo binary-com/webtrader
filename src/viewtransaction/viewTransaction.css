@@ -149,6 +149,7 @@
 }
 .view-transaction-dialog .footer .sell-at-market {
   display: flex;
+  width: 100%;
   padding: 5px;
 }
 .view-transaction-dialog .footer .bid-price {
@@ -165,8 +166,12 @@
 .view-transaction-dialog .footer .sell-at-market > span {
     flex: 1 1 33%;
     line-height: 2em;
+    display: block;
 }
-
+.u-flex-end {
+  margin-left: auto;
+  align-self: flex-end;
+}
 .view-transaction-dialog .footer .sell-at-market .sell-button {
     max-width: 200px;
     width: 100%;

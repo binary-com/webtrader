@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-08-16 05:20\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi_VN\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -48,14 +48,11 @@ msgstr "(còn được biết đến như"
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(nếu thời hạn ít hơn một ngày), hoặc vào cuối ngày giao dịch (nếu thời hạn một ngày hoặc nhiều hơn)"
 
-msgid "(license reference no: 39172)"
-msgstr ""
-
-msgid "(license reference no: 39495)"
-msgstr ""
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") trở nên trực tiếp, thiết lập một dịch vụ cá cược tài chính suốt ngày đêm trên một loạt các chỉ số tài chính. Kinh doanh phát triển nhanh chóng, và chúng tôi sớm trở thành người dẫn đầu thị trường về tỉ lệ cá cược tài chính"
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "- Hưởng lợi từ cùng một tỷ suất lợi nhuận như là thương nhân liên ngân hàng. Giá của chúng tôi được so sánh hàng ngày đối với các thị trường liên ngân hàng lựa chọn"
@@ -423,8 +420,8 @@ msgstr "Giá dao động tuyệt đối (APO)"
 msgid "Accept"
 msgstr "Chấp nhận"
 
-msgid "Accessible from any web browser in 13 languages"
-msgstr "Có thể truy cập từ bất kỳ trình duyệt web nào với 13 ngôn ngữ"
+msgid "Accessible from any web browser in 12 languages"
+msgstr ""
 
 msgid "Account balance"
 msgstr "Số dư tài khoản"
@@ -494,9 +491,6 @@ msgstr "Cho phép người khác để sao chép các giao dịch của bạn"
 
 msgid "Amount"
 msgstr "Tổng"
-
-msgid "Amount Per Point"
-msgstr "Số tiền cho mỗi điểm"
 
 msgid "Amount per point"
 msgstr "Số tiền cho mỗi điểm"
@@ -746,6 +740,9 @@ msgstr "Binary.com đạt mốc 1 triệu người dùng, đến một mốc l�
 
 msgid "Binary.com introduces an"
 msgstr "Binary.com giới thiệu một"
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
+msgstr ""
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "Binary.com được trao tặng giải thưởng nhà môi giới tốt nhất tùy chọn nhị phân bởi giải thưởng cá nhân giàu có trực tuyến thuộc vương quốc Anh năm 2017, theo bình chọn của các nhà đầu tư trên toàn thế giới"
@@ -1152,9 +1149,6 @@ msgstr "Mô tả token này để tìm nó về sau"
 msgid "Description"
 msgstr "Mô tả"
 
-msgid "Deutsch"
-msgstr "Tiếng Đức"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Phát triển bởi Donald Dorsey, chỉ số khối lượng sử dụng phạm vi cao thấp để xác định các đảo ngược xu hướng dựa trên phạm vi rộng. Trong ý nghĩa này, các chỉ số khối lượng là một chỉ số biến động mà không có một xu hướng định hướng. Thay vào đó, các chỉ số khối lượng xác định chỗ phình ra phạm vi có thể báo trước của một sự đảo ngược của xu hướng hiện nay"
 
@@ -1338,9 +1332,6 @@ msgstr "Giá nhập điểm"
 msgid "Error getting data for %1"
 msgstr "Lỗi lấy dữ liệu cho %1"
 
-msgid "Espa ol"
-msgstr "Espa già"
-
 msgid "Estimated Net Worth"
 msgstr "Ước tính giá trị ròng"
 
@@ -1461,9 +1452,6 @@ msgstr "Phân dạng"
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fractals là các chỉ số trên biểu đồ nến mà xác định đảo ngược điểm trên thị trường. Thương nhân thường sử dụng fractals để có được một ý tưởng về hướng đi mà giá cả sẽ phát triển. Fractal một sẽ hình thành khi một chiều hướng thay đổi giá cụ thể xảy ra trên một biểu đồ"
 
-msgid "Fran ais"
-msgstr "Fran ais"
-
 msgid "Fri"
 msgstr "Thứ sáu"
 
@@ -1532,6 +1520,9 @@ msgstr "Trợ giúp"
 
 msgid "High"
 msgstr "Cao"
+
+msgid "High Barrier"
+msgstr ""
 
 msgid "High barrier"
 msgstr "Hàng rào cao"
@@ -1662,13 +1653,16 @@ msgstr "Để áp dụng đúng chủ đề, việc làm mới lại trang là c
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "Trong quá trình cung cấp dịch vụ tới bạn, chúng tôi cần thu thập thông tin từ bạn để đánh giá xem một sản phẩm hoặc dịch vụ nhất định có thích hợp cho bạn hay không (đó là, cho dù bạn có kinh nghiệm và kiến thức để hiểu các rủi ro liên quan)"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
 msgstr ""
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr "Ở Vương Quốc Anh và đảo Man, khách hàng của chúng tôi giao dịch qua Binary (IOM) Ltd Tại Nhật bản, họ thương mại thông qua Binary KK. Trong liên minh châu Âu (ngoại trừ Anh), họ thương mại qua Binary (Châu Âu) công ty TNHH và đầu tư Binary (Châu Âu) Ltd. Ở phần còn lại của thế giới, họ thương mại thông qua Binary (C.R.) S.A"
+msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
+msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr ""
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
 msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
@@ -1710,9 +1704,6 @@ msgstr "Chỉ số tần số giao dịch"
 msgid "Individual Traders"
 msgstr "Các nhà giao dịch đơn lẻ"
 
-msgid "Indonesia"
-msgstr "Ở Indonesia:"
-
 msgid "Industry of Employment"
 msgstr "Ngành công nghiệp việc làm"
 
@@ -1751,9 +1742,6 @@ msgstr "Đôi khi có thể bán một tùy chọn trước thời hạn của 
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "Đó là thời điểm để mở rộng. Chúng tôi thiết lập một trung tâm lập trình ở Cyberjaya - Thung lũng Silicon của Kuala Lumpur – để duy trì và cải thiện BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "Tiếng Italia"
 
 msgid "Jan"
 msgstr "Tháng một"
@@ -1821,8 +1809,8 @@ msgstr "Chúng ta hãy làm điều đó"
 msgid "Level of Education"
 msgstr "Cấp độ giáo dục"
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "Được cấp phép và quy định ở Malta, Vương Quốc Anh, đảo Man, Ai-len và Nhật bản"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
+msgstr ""
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "Giống như EMA, LWMA gán thêm ý nghĩa cho các mức giá tại và gán ít hơn cho giá đóng cửa từ thời kỳ của bắt đầu. Vì thế họ nhanh hơn lúc phát hiện một xu hướng đảo ngược, mặc dù nó họ có thể nhạy cảm với biến động của thị trường"
@@ -2193,8 +2181,8 @@ msgstr "Tháng mười"
 msgid "Odd"
 msgstr "Lẻ"
 
-msgid "Offices in Malta, Malaysia and Japan"
-msgstr "Các văn phòng tại Malta, Malaysia và Nhật bản"
+msgid "Offices in Malta and Malaysia"
+msgstr ""
 
 msgid "Ok"
 msgstr "Ok"
@@ -2424,14 +2412,8 @@ msgstr "Lợi nhận/thiệt hại"
 msgid "Points"
 msgstr "Điểm"
 
-msgid "Polski"
-msgstr "polski"
-
 msgid "Portfolio"
 msgstr "Danh mục đầu tư"
-
-msgid "Portugu s"
-msgstr "portugu s"
 
 msgid "Postal code/ZIP"
 msgstr "Mã bưu chính/ZIP"
@@ -2481,14 +2463,11 @@ msgstr "Bảng lợi nhuận"
 msgid "Profit/ Loss"
 msgstr "Lợi nhuận/Thua lỗ"
 
-msgid "Profit/Loss (points)"
-msgstr "Lợi nhuận/thua lỗ (điểm)"
-
 msgid "Protect your profits"
 msgstr "Bảo vệ lợi nhuận của bạn"
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "Xuất bản dưới các ngôn ngữ: tiếng Anh, Indonesia, Nhật bản, Trung Quốc, Ba Lan, Đức, Pháp, tiếng Tây Ban Nha, tiếng Bồ Đào Nha, ý, Nga, và Thái Lan"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgstr ""
 
 msgid "Purchase"
 msgstr "Mua"
@@ -2510,9 +2489,6 @@ msgstr "tỷ lệ tỉ giá hối đoái (ROCR)"
 
 msgid "Read"
 msgstr "Đọc"
-
-msgid "Read about"
-msgstr "Đọc về"
 
 msgid "Ref"
 msgstr "REF"
@@ -2748,7 +2724,7 @@ msgstr "Đường biến thiên trung bình mượt (SMMA)"
 msgid "Sold"
 msgstr "Đã bán"
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
 
 msgid "Source of wealth"
@@ -2858,12 +2834,6 @@ msgstr "Kinh nghiệm giao dịch cổ phiếu"
 
 msgid "Stocks trading frequency"
 msgstr "Tần suất giao dịch cổ phiếu"
-
-msgid "Stop Loss Level"
-msgstr "Ngăn chặn mức độ thua"
-
-msgid "Stop Profit Level"
-msgstr "Ngăn chặn mức độ lợi nhuận"
 
 msgid "Stop-loss"
 msgstr "Chặn thua"
@@ -3270,9 +3240,6 @@ msgstr "Thời gian đang thay đổi. Chúng tôi tăng tiền thưởng v
 msgid "Title"
 msgstr "Tiêu đề"
 
-msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
-
 msgid "To"
 msgstr "Tới"
 
@@ -3369,8 +3336,8 @@ msgstr "Thời Gian Giao Dịch"
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "Giao dịch các tùy chọn nhị phân là tương đối dễ dàng, và bạn có thể mua một giao dịch trong chỉ ba bước đơn giản"
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr "Giao dịch quyền chọn nhị phân có thể không thích hợp cho tất cả mọi người, vì vậy vui lòng bảo đảo rằng bạn đã hiểu hoàn toàn về rủi ro có liên quan. Thất thoát của bạn có thể vượt quá số tiền gửi ban đầu và bạn sẽ không được sở hữu hay có bất kì tiền lãi nào trong tài sản cơ sở. Liên quan tới quyền chọn nhị phân, là sản phẩm cá cược, hãy nhớ rằng chơi cá cược có thể bị nghiện - vui lòng chơi một cách có trách nhiệm"
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr ""
 
 msgid "Tradingview for Binary.com"
 msgstr "Xem giao dịch cho Binary.com"
@@ -3723,9 +3690,6 @@ msgstr "Phóng to"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "cho phép khách hàng phát triển rô bốt tự động giao dịch của họ với tính năng kéo thả đơn giản"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
-
 msgid "and start learning how to trade"
 msgstr "và bắt đầu học làm thế nào để thương mại"
 
@@ -3861,6 +3825,12 @@ msgstr "Đại lý thanh toán"
 msgid "points"
 msgstr "điểm số"
 
+msgid "reference no: 39172"
+msgstr ""
+
+msgid "reference no: 39495"
+msgstr ""
+
 msgid "sec"
 msgstr ""
 
@@ -3906,3 +3876,59 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
+#~ msgid "Accessible from any web browser in 13 languages"
+#~ msgstr "Có thể truy cập từ bất kỳ trình duyệt web nào với 13 ngôn ngữ"
+
+#~ msgid "Amount Per Point"
+#~ msgstr "Số tiền cho mỗi điểm"
+
+#~ msgid "Deutsch"
+#~ msgstr "Tiếng Đức"
+
+#~ msgid "Espa ol"
+#~ msgstr "Espa già"
+
+#~ msgid "Fran ais"
+#~ msgstr "Fran ais"
+
+#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+#~ msgstr "Ở Vương Quốc Anh và đảo Man, khách hàng của chúng tôi giao dịch qua Binary (IOM) Ltd Tại Nhật bản, họ thương mại thông qua Binary KK. Trong liên minh châu Âu (ngoại trừ Anh), họ thương mại qua Binary (Châu Âu) công ty TNHH và đầu tư Binary (Châu Âu) Ltd. Ở phần còn lại của thế giới, họ thương mại thông qua Binary (C.R.) S.A"
+
+#~ msgid "Indonesia"
+#~ msgstr "Ở Indonesia:"
+
+#~ msgid "Italiano"
+#~ msgstr "Tiếng Italia"
+
+#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
+#~ msgstr "Được cấp phép và quy định ở Malta, Vương Quốc Anh, đảo Man, Ai-len và Nhật bản"
+
+#~ msgid "Offices in Malta, Malaysia and Japan"
+#~ msgstr "Các văn phòng tại Malta, Malaysia và Nhật bản"
+
+#~ msgid "Polski"
+#~ msgstr "polski"
+
+#~ msgid "Portugu s"
+#~ msgstr "portugu s"
+
+#~ msgid "Profit/Loss (points)"
+#~ msgstr "Lợi nhuận/thua lỗ (điểm)"
+
+#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+#~ msgstr "Xuất bản dưới các ngôn ngữ: tiếng Anh, Indonesia, Nhật bản, Trung Quốc, Ba Lan, Đức, Pháp, tiếng Tây Ban Nha, tiếng Bồ Đào Nha, ý, Nga, và Thái Lan"
+
+#~ msgid "Read about"
+#~ msgstr "Đọc về"
+
+#~ msgid "Stop Loss Level"
+#~ msgstr "Ngăn chặn mức độ thua"
+
+#~ msgid "Stop Profit Level"
+#~ msgstr "Ngăn chặn mức độ lợi nhuận"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Ti ng Vi t"
+
+#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
+#~ msgstr "Giao dịch quyền chọn nhị phân có thể không thích hợp cho tất cả mọi người, vì vậy vui lòng bảo đảo rằng bạn đã hiểu hoàn toàn về rủi ro có liên quan. Thất thoát của bạn có thể vượt quá số tiền gửi ban đầu và bạn sẽ không được sở hữu hay có bất kì tiền lãi nào trong tài sản cơ sở. Liên quan tới quyền chọn nhị phân, là sản phẩm cá cược, hãy nhớ rằng chơi cá cược có thể bị nghiện - vui lòng chơi một cách có trách nhiệm"
