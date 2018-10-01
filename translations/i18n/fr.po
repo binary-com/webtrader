@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-08-19 08:10\n"
+"PO-Revision-Date: 2018-08-26 13:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1669,7 +1669,7 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr "Dans le Royaume-Uni et l’île de Man, nos clients tradent à travers Binary (IOM) Ltd. au Japon, ils tradent à travers Binary KK. Dans l'Union Européenne (sauf le Royaume-Uni), ils tradent à travers Binary (Europe) Ltd et Binary Investment (Europe) Ltd. Dans le reste du monde, ils tradent à travers Binary (C.R.) S.A"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr ""
+msgstr "Dans le reste de l’UE, les Indices de volatilité sont offerts par Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte ; agréée et régulée par (1) l'autorité des Jeux de Malte à Malte (licence no. MGA/Cl2/118/2000 délivrée le 26 mai 2015), pour les clients Britanniques de (2) la Commission des Jeux du Royaume-Uni"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "Schéma Dans le Col (CDLINNECK)"
@@ -1927,10 +1927,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "Recherchez une grande bougie blanche dans une tendance de prix à la hausse. Suite à cela, une bougie noire a un corps qui crée un fossé au-dessus du corps de la précédente bougie. Le dernier jour est une autre bougie noire, mais celle-ci engloutit la bougie baissière précédente mais se ferme au-dessus de l'ouverture de la première barre"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookbacks"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "Les loockbacks sont actuellement seulement disponibles pour les Indices de volatilité"
 
 msgid "Low"
 msgstr "Bas"
@@ -2053,7 +2053,7 @@ msgid "Minimum of 6 characters required"
 msgstr "Minimum de 6 caractères requis"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Minimum de six lettres minuscules et majuscules avec des chiffres"
 
 msgid "Minimum price over selected period"
 msgstr "Prix minimum sur la période sélectionnée"
@@ -2104,7 +2104,7 @@ msgid "Ms"
 msgstr "Mlle"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplicateur"
 
 msgid "Name"
 msgstr "Nom"
@@ -2470,7 +2470,7 @@ msgid "Print chart"
 msgstr "Imprimer le graphique"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "Client professionnel"
 
 msgid "Profit"
 msgstr "Profits"
@@ -2560,7 +2560,7 @@ msgid "Register free account"
 msgstr "Ouvrez un compte gratuit"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "Informations réglementaires"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Indice de Force Relative (IFR)"
@@ -2749,7 +2749,7 @@ msgid "Sold"
 msgstr "Vendu"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "Certains produits ne sont pas disponibles dans tous les pays. Les services de ce site Web ne sont pas disponibles dans certains pays comme les Etats-Unis, Costa Rica, Hong Kong, ou aux personnes de moins de 18 ans"
 
 msgid "Source of wealth"
 msgstr "Source de richesse"
@@ -3196,7 +3196,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "Cette Moyenne Mobile utilise la courbe de distribution (Gauss) Normale qui peut être placée par le paramètre de compensation allant de 0 à 1. Le paramètre permet de réguler le lissage et la haute sensibilité de la Moyenne Mobile. Sigma est un autre paramètre qui est responsable de la forme des coefficients de la courbe"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "Cette fonction ne s'applique pas aux comptes d'argent virtuels"
 
 msgid "This field is required"
 msgstr "Ce champ est requis"
@@ -3361,7 +3361,7 @@ msgid "Trades break down"
 msgstr "Les Trades se décomposent"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "Expérience du trading"
 
 msgid "Trading Times"
 msgstr "Horaires de trading"
@@ -3418,7 +3418,7 @@ msgid "Two-way pricing"
 msgstr "Fixation des prix bidirectionnelle"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "Types de lookbacks"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Prix Typique (TYPPRICE)"
@@ -3544,7 +3544,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "Nous le réalisons encore une fois. BetOnMarkets.com après notre récompense de 2007 est voté 'Meilleur Fournisseur de Trading de Paris à Cote Fixes' pour 2008"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "Nous vous proposons trois types de lookback "
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Nous changeons le nom de BetOnMarkets.com pour"
@@ -3586,13 +3586,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "Quels sont les actions et indices OTC ?"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "Quels sont les lookbacks"
 
 msgid "What is pep?"
 msgstr "Qu'est ce que pep ?"
 
 msgid "What is this?"
-msgstr ""
+msgstr "Qu'est-ce que c est ?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "Quand vous êtes satisfait avec le prix que vous recevez, exécutez immédiatement votre trade. Grâce à notre plate-forme unique, vous n’aurez pas à composer avec les « dérapages » ou des marché béants. Et surtout, il n’y a aucun frais invisibles. Vous pouvez également revendre tout trade de long terme à tout moment avant leur expiration pour protéger les bénéfices que vous pouvez avoir gagné ou minimiser vos pertes"
@@ -3619,13 +3619,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "Gagner plusieurs fois le montant de la clotûre moins le plus bas"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "Gagner plusieurs fois le montant du plus haut moins la clotûre"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "Gagner plusieurs fois le montant du plus haut moins le plus bas"
 
 msgid "With Binary.com you can trade"
 msgstr "Avec Binary.com vous pouvez trader"
@@ -3724,7 +3724,7 @@ msgid "allowing clients to develop their own automated trading robots with  drag
 msgstr "permettre aux clients de développer leurs propres robots de trading automatisés avec la simplicité d'un glisser-déposer"
 
 msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
+msgstr "et pour les clients Irlandais par (3) les Commissaires du Revenu en Irlande (Licence de Bookmaker à distance no. 1010285 émise le 1er Juillet 2017 )"
 
 msgid "and start learning how to trade"
 msgstr "et commencez à apprendre à trader"
@@ -3751,7 +3751,7 @@ msgid "contact support"
 msgstr "contacter le service clientèle"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "créer un jeton en lecture seule et partager le jeton avec un(des) copieur(s)"
 
 msgid "customer support"
 msgstr "service clientèle"
@@ -3862,7 +3862,7 @@ msgid "points"
 msgstr "points"
 
 msgid "sec"
-msgstr ""
+msgstr "sec"
 
 msgid "second"
 msgstr "seconde"
@@ -3901,7 +3901,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Retour"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permettant aux clients, affiliés, et développeurs d'acheter et vendre des produits Binary.com"

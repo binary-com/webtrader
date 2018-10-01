@@ -89,13 +89,7 @@ rv.binders['tick-chart'] = {
       }
 
       function draw_exit_spot(model, ticks) {
-            const is_path_dependent_contract = !!model.is_path_dependent;
-            let exit_tick_idx = ticks.findIndex((tick) => {
-                  if (is_path_dependent_contract) {
-                        return tick.epoch === (+model.sell_spot_time);
-                  }
-                  return tick.epoch === (+model.exit_tick_time);
-            });
+            let exit_tick_idx = ticks.findIndex((tick) => tick.epoch === (+model.exit_tick_time));
             const exit_spot = model.make_exit_spot(exit_tick_idx + 1);
             draw_x_line(el.chart, exit_spot);
       };
@@ -184,9 +178,9 @@ const register_ticks = (state, extra) => {
       function make_tooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = (+tick.quote).toFixed(decimal_digits);
+            const tick_quote_formatted = addComma((+tick.quote).toFixed(decimal_digits));
 
-            return `${tick_time}<br/>${symbol_name} ${(+tick.quote).toFixed(decimal_digits)}`;
+            return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };
    };
 
@@ -199,9 +193,7 @@ const register_ticks = (state, extra) => {
       forget_stream_and_cb();
 
       state.ticks.contract_is_finished = true;
-      state.ticks.is_path_dependent = proposal_open_contract.is_path_dependent ? proposal_open_contract.is_path_dependent : null;
       state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
-      state.ticks.sell_spot_time = proposal_open_contract.sell_spot_time ? proposal_open_contract.sell_spot_time : null;
       state.ticks.status = proposal_open_contract.status;
 
       state.buy.update();
@@ -315,7 +307,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
          array: [],
          contract_is_finished: false,
          exit_tick_time: null,
-         sell_spot_time: null,
          is_path_dependent: null,
          make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
          make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
@@ -361,7 +352,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          liveapi.sell_expired(); // to update balance immediately
       }
       state.buy.show_result = true;
-   }
+   };
 
    state.back.onclick = () => hide_callback(root);
    state.arrow.onclick = (e) => {
@@ -375,7 +366,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
       }
    };
 
-   const view = rv.bind(root[0], state)
+   const view = rv.bind(root[0], state);
 
    if(!state.arrow.visible) { register_ticks(state, extra); }
    else { state.back.visible = true; }

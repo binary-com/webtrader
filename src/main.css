@@ -55,7 +55,6 @@ body > .footer .addiction-warning a:hover {
   text-decoration: underline;
 }
 
-
 .ui-dialog .ui-dialog-titlebar-close { /* override jquery-ui.icons.css library */
     height: 18px !important;
 }
