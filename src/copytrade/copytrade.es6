@@ -114,13 +114,14 @@ const state = {
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
   groupedAssets: [],
   is_loading: true,
-  is_virtual: false,
+  is_virtual: true,
   allowCopy: {
     allow_copiers: 0,
     onAllowCopyChangeCopierCellClick: () => state.onChangeCopytradeSettings(0),
     onAllowCopyChangeTraderCellClick: () => state.onChangeCopytradeSettings(1),
   },
   onChangeCopytradeSettings: _.debounce((allow_copiers) => {
+    if (state.is_virtual) return;
     state.is_loading = true;
     liveapi
       .send({
@@ -309,41 +310,43 @@ const initConfigWindow = () => {
     modal: false,
     width: 600,
     open: () => {
+      //Refresh all token details
+      const copyTrade = local_storage.get(getStorageName());
+      if (copyTrade) {
+        _.merge(state, copyTrade);
+        state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
+      }
+      state.is_loading = true;
       state.is_virtual = isVirtual();
-      if (!state.is_virtual) {
-        //Refresh all token details
-        const copyTrade = local_storage.get(getStorageName());
-        if (copyTrade) {
-          _.merge(state, copyTrade);
-          state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
-        }
-        state.is_loading = true;
-        //Get the copy settings
+      //VRTC can only be copiers
+      if (state.is_virtual) {
+        state.is_loading = false;
+        state.allowCopy.allow_copiers = 0;
+      } else {
         liveapi
-          .send({ get_settings: 1 })
-          .then((settings) => {
-            state.is_loading = false;
-            state.allowCopy.allow_copiers = settings.get_settings.allow_copiers
-          })
-          .catch((e) => {
-            state.is_loading = false;
-            $.growl.error({ message: e.message });
-          });
-
-        //Refresh locally stored trader statistics
-        if (copyTrade) {
-          (async function () {
-            for (let traderToken of copyTrade.traderTokens) {
-              try {
-                const loginid = traderToken.loginid;
-                const token = traderToken.yourCopySettings.copy_start;
-                await refreshTraderStats(loginid, token, state);
-              } catch (e) {
-                console.error(e);
-              }
+        .send({ get_settings: 1 })
+        .then((settings) => {
+          state.is_loading = false;
+          state.allowCopy.allow_copiers = settings.get_settings.allow_copiers;
+        })
+        .catch((e) => {
+          state.is_loading = false;
+          $.growl.error({ message: e.message });
+        });
+      }
+      //Refresh locally stored trader statistics
+      if (copyTrade) {
+        (async function () {
+          for (let traderToken of copyTrade.traderTokens) {
+            try {
+              const loginid = traderToken.loginid;
+              const token = traderToken.yourCopySettings.copy_start;
+              await refreshTraderStats(loginid, token, state);
+            } catch (e) {
+              console.error(e);
             }
-          })();
-        }
+          }
+        })();
       }
     },
     close: () => {
