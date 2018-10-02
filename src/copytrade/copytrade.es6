@@ -16,10 +16,10 @@ const getLoggedInUserId = () => local_storage.get("oauth")[0].id;
 const TRADE_TYPES = trade_types;
 
 const form_error_messages = {
-    invalid_stake_limit: 'Min trade stake should be lower than max trade stake.',
-    token_already_added: 'Token already added',
-    enter_valid_token: 'Enter a valid trader token',
-    refresh_failed: 'Refresh failed',
+    INVALID_STAKE_LIMIT: 'Min trade stake should be lower than max trade stake.'.i18n(),
+    TOKEN_ALREADY_ADDED: 'Token already added'.i18n(),
+    ENTER_VALID_TOKEN: 'Enter a valid trader token'.i18n(),
+    REFRESH_FAILED: 'Refresh failed'.i18n(),
 };
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
@@ -216,7 +216,7 @@ const state = {
           updateLocalStorage(state);
         })
         .catch((e) => {
-          $.growl.error({ message: form_error_messages.refresh_failed });
+          $.growl.error({ message: form_error_messages.REFRESH_FAILED });
           trader.disableRefresh = false;
           updateLocalStorage(scope);
         });
@@ -243,7 +243,7 @@ const state = {
       updateLocalStorage(state);
       $.growl.notice({ message: 'Updated successfully' });
     } else {
-      $.growl.error({ message: form_error_messages.invalid_stake_limit });
+      $.growl.error({ message: form_error_messages.INVALID_STAKE_LIMIT });
     }
   },
   searchToken: {
@@ -258,13 +258,13 @@ const state = {
     addToken: (event, scope) => {
       //If searchToken.token is empty, do nothing
       if (!scope.searchToken.token) {
-        $.growl.error({ message: form_error_messages.enter_valid_token });
+        $.growl.error({ message: form_error_messages.ENTER_VALID_TOKEN });
         return;
       }
 
       //If already added, throw error
       if (_.some(state.traderTokens, f => f.yourCopySettings.copy_start === scope.searchToken.token)) {
-        $.growl.error({ message: form_error_messages.token_already_added });
+        $.growl.error({ message: form_error_messages.TOKEN_ALREADY_ADDED });
         return;
       }
 
