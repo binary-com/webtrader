@@ -1,6 +1,22 @@
 .copytrade-dialog {
   padding: 15px 0px !important;
 
+  .tab-container {
+    display: flex;
+    &__tab {
+      cursor: pointer;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+    &__radio-container {
+      padding-right: 10px;
+    }
+    &__text-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   input {
     &:disabled {
       color: #aeaeae;
@@ -45,7 +61,7 @@
     width: 100%;
   }
   .copytrade-settings {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     .table {
       margin-left: 5px;
       width: 98%;

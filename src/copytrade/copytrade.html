@@ -4,33 +4,25 @@
   </div>
   <div rv-show="is_loading | eq false">
     <div class="copytrade-settings table">
-      <div class="row">
-        <div class="cell">
-          <div class="table">
-            <div class="row" rv-on-click="allowCopy.onAllowCopyChangeCopierCellClick">
-              <div class="cell">
-                <input id="copier_checkbox" type="radio" value="0" rv-checked="allowCopy.allow_copiers" rv-on-click="allowCopy.onAllowCopyChangeCopierCellClick" />
-                <label for="copier_checkbox" />
-              </div>
-              <div class="cell">
-                <span>Copier</span>
-                <span class="font-s">You wish to copy another trader's trades.</span>
-              </div>
-            </div>
+      <div class="tab-container">
+        <div class="tab-container__tab" rv-on-click="allowCopy.onAllowCopyChangeCopierCellClick">
+          <div class="tab-container__radio-container">
+            <input id="copier_checkbox" type="radio" value="0" rv-checked="allowCopy.allow_copiers" rv-on-click="allowCopy.onAllowCopyChangeCopierCellClick" />
+            <label for="copier_checkbox" />
+          </div>
+          <div class="tab-container__text-container">
+            <span>Copier</span>
+            <span class="font-s">You wish to copy another trader's trades.</span>
           </div>
         </div>
-        <div class="cell">
-          <div class="table" >
-            <div class="row" rv-show="is_virtual | eq false" rv-on-click="allowCopy.onAllowCopyChangeTraderCellClick">
-              <div class="cell">
-                <input id="trader_checkbox" type="radio" value="1" rv-checked="allowCopy.allow_copiers" rv-on-click="allowCopy.onAllowCopyChangeTraderCellClick" />
-                <label for="trader_checkbox" />
-              </div>
-              <div class="cell">
-                <span>Trader</span>
-                <span class="font-s">You wish to allow other traders to copy your trades.</span>
-              </div>
-            </div>
+        <div class="tab-container__tab" rv-show="is_virtual | eq false" rv-on-click="allowCopy.onAllowCopyChangeTraderCellClick">
+          <div class="tab-container__radio-container">
+            <input id="trader_checkbox" type="radio" value="1" rv-checked="allowCopy.allow_copiers" rv-on-click="allowCopy.onAllowCopyChangeTraderCellClick" />
+            <label for="trader_checkbox" />
+          </div>
+          <div class="tab-container__text-container">
+            <span>Trader</span>
+            <span class="font-s">You wish to allow other traders to copy your trades.</span>
           </div>
         </div>
       </div>
