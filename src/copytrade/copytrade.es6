@@ -122,15 +122,18 @@ const state = {
   },
   onChangeCopytradeSettings: _.debounce((allow_copiers) => {
     if (state.is_virtual) return;
+    if (state.allowCopy.allow_copiers === allow_copiers) return;
+
     state.is_loading = true;
+
     liveapi
       .send({
         set_settings: 1,
         allow_copiers,
       })
+      // settings res does not return updated settings
       .then((settings) => {
         state.is_loading = false;
-        // settings req does not return updated settings
         state.allowCopy.allow_copiers = allow_copiers;
       })
       .catch(e => {

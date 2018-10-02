@@ -9,7 +9,9 @@
       }
     }
   }
-
+  label[for="copier_checkbox"], label[for="trader_checkbox"], #trader_checkbox, #copier_checkbox {
+    pointer-events: none;
+  }
   .section-header {
     display: flex;
     align-items: center;
