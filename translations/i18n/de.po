@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-08-21 22:50\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: German\n"
-"Language: de_DE\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"PO-Revision-Date: 2018-10-03 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3876,77 +3876,3 @@ msgstr "| Rendite"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "ermöglicht Kunden, Partnern und Unternehmern Binary.com Produkte zu kaufen und zu verkaufen"
 
-#~ msgid "(license reference no: 39172)"
-#~ msgstr "(Lizenznummer: 39172)"
-
-#~ msgid "(license reference no: 39495)"
-#~ msgstr "(Lizenznummer: 39495)"
-
-#~ msgid "Accessible from any web browser in 13 languages"
-#~ msgstr "In 13 Sprachen von jedem Webbrowser zugänglich"
-
-#~ msgid "Amount Per Point"
-#~ msgstr "Betrag per Punkt"
-
-#~ msgid "Deutsch"
-#~ msgstr "Deutsch"
-
-#~ msgid "Espa ol"
-#~ msgstr "Spanisch"
-
-#~ msgid "Fran ais"
-#~ msgstr "Französisch"
-
-#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-#~ msgstr "In der EU werden Finanzprodukte von Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten; lizensiert und reguliert als Kategorie 3 Investment Services Anbieter von der Malta Financial Services Authority (Lizenznr. IS / 70156). Auf der Isle Of Man und in Großbritannien werden Volatilitätsindizes von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle Of Man, britische Inseln angeboten; lizensiert und reguliert durch (1) die Gambling Supervision Commission auf der Isle Of Man (aktuelle Lizenz ausgestellt am 31. August 2017) und (2) von der UK Gambling Commission"
-
-#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-#~ msgstr "In Großbritannien und auf der Isle of Man handeln unsere Kunden über Binary (IOM) Ltd. In Japan, handeln sie mittels Binary KK. In der Europäischen Union (ausgenommen Großbritannien) handeln sie über Binary (Europe) Ltd. und Binary Investments (Europe) Ltd. Im Rest der Welt über Binary (C.R.) S.A"
-
-#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-#~ msgstr "Im Rest der EU werden Volatilität Indizes von Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten; lizensiert und reguliert (1) von der Malta Gaming Authority in Malta (Lizenznummer MGA/CL2/118/2000 am 26. Mai 2015 ausgestellt) und für Kunden aus Großbritannien (2) von der UK Gambling Commission"
-
-#~ msgid "Indonesia"
-#~ msgstr "Indonesien"
-
-#~ msgid "Italiano"
-#~ msgstr "Italienisch"
-
-#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-#~ msgstr "In Malta, Großbritannien, auf der Isle of Man, in Irland und Japan zugelassen und überwacht"
-
-#~ msgid "Offices in Malta, Malaysia and Japan"
-#~ msgstr "Firmensitze in Malta, Malaysia und Japan"
-
-#~ msgid "Polski"
-#~ msgstr "Polnisch"
-
-#~ msgid "Portugu s"
-#~ msgstr "Portugiesisch"
-
-#~ msgid "Profit/Loss (points)"
-#~ msgstr "Gewinn/Verlust (Punkte)"
-
-#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-#~ msgstr "Auf Englisch, Indonesisch, Japanisch, Chinesisch, Polnisch, Deutsch, Französisch, Spanisch, Portugiesisch, Italienisch, Russisch, und Thailändisch herausgegeben"
-
-#~ msgid "Read about"
-#~ msgstr "Lesen Sie über"
-
-#~ msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-#~ msgstr "Manche Produkte sind nicht in allen Ländern erhältlich. Die Dienstleistungen dieser Website sind in manchen Ländern wie den USA, Costa Rica, Hong Kong, oder für Personen unter 18 Jahren nicht erhältlich"
-
-#~ msgid "Stop Loss Level"
-#~ msgstr "Stop Loss Höhe"
-
-#~ msgid "Stop Profit Level"
-#~ msgstr "Stop Profit Höhe"
-
-#~ msgid "Ti ng Vi t"
-#~ msgstr "Vietnamesisch"
-
-#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-#~ msgstr "Der Handel von binären Optionen ist nicht für jeden geeignet. Daher müssen Sie dafür sorgen, dass Sie die damit verbundenen Risiken erkennen. Ihre Verluste können Ihre ursprüngliche Einzahlung übersteigen und Sie besitzen die zugrundeliegenden Werte nicht oder haben keinen Anteil daran. Hinsichtlich der binären Optionen, die Glücksspielprodukte sind, müssen Sie beachten, dass Glücksspiel süchtig machen kann - Bitte spielen Sie verantwortungsbewusst"
-
-#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-#~ msgstr "und für Kunden aus Irland von den (3) Revenue Commissioners in Irland (entfernte Buchmacherlizenznr.: 1010285, ausgestellt am 1. Juli, 2017). Komplett ansehen"
