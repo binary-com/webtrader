@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-08-21 08:40\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: id\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Indonesian\n"
-"Language: id_ID\n"
-"PO-Revision-Date: 2018-08-21 08:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -48,14 +48,11 @@ msgstr "(sebelumnya dikenal sebagai"
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(jika durasi kurang dari satu hari), atau pada akhir hari trading (jika durasi satu hari atau lebih)"
 
-msgid "(license reference no: 39172)"
-msgstr "(nomor referensi lisensi: 39172)"
-
-msgid "(license reference no: 39495)"
-msgstr "(nomor referensi lisensi: 39495)"
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") ditayangkan secara langsung, menyediakan layanan trading financial pada berbagai pilihan bursa saham. Bisnis ini berkembang sangat cepat dan kami menjadi pemimpin dalam menyediakan trading financial fixed-odds"
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "- Keuntungan yang sama seperti yang didapatkan oleh trader antar bank. Harga kami adalah distandarkan setiap hari berbanding dengan opsi pasar antar bank"
@@ -423,8 +420,8 @@ msgstr "Absolute Price Oscillator (APO)"
 msgid "Accept"
 msgstr "Menerima"
 
-msgid "Accessible from any web browser in 13 languages"
-msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
+msgid "Accessible from any web browser in 12 languages"
+msgstr ""
 
 msgid "Account balance"
 msgstr "Saldo akun"
@@ -494,9 +491,6 @@ msgstr "Membolehkan orang lain untuk menyalin trading Anda"
 
 msgid "Amount"
 msgstr "Jumlah"
-
-msgid "Amount Per Point"
-msgstr "Jumlah Per Poin"
 
 msgid "Amount per point"
 msgstr "Jumlah per poin"
@@ -746,6 +740,9 @@ msgstr "Binary.com mencapai 1 juta pengguna, pencapaian bersejarah. Perusahaan a
 
 msgid "Binary.com introduces an"
 msgstr "Binary.com memperkenalkan sebuah"
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
+msgstr ""
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "Binary.com dianugerahi sebagai Broker Opsi Binary Terbaik oleh Online Personal Wealth Awards 2017 di Inggris, yang dipilih oleh para investor di seluruh dunia"
@@ -1152,9 +1149,6 @@ msgstr "Jelaskan token apa ini untuk menemukannya nanti"
 msgid "Description"
 msgstr "Deskripsi"
 
-msgid "Deutsch"
-msgstr "Deutsch"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Dikembangkan oleh Donald Dorsey, Indeks Massa menggunakan range high-low untuk mengidentifikasi pembalikan tren berdasarkan ekspansi range. Dalam hal ini, Indeks Massa adalah indikator volatilitas yang tidak memiliki arah bias. Sebaliknya, Indeks Massa mengidentifikasi tonjolan jangkauan yang dapat menandai pembalikan tren saat ini"
 
@@ -1338,9 +1332,6 @@ msgstr "Harga spot masuk"
 msgid "Error getting data for %1"
 msgstr "Error dalam memperoleh data %1"
 
-msgid "Espa ol"
-msgstr "Espanol"
-
 msgid "Estimated Net Worth"
 msgstr "Estimasi Kekayaan"
 
@@ -1461,9 +1452,6 @@ msgstr "Fractal (FRACTAL)"
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fraktal adalah indikator pada grafik candlestick yang mengidentifikasi titik balik pasar. Trader sering menggunakan fraktal untuk mendapatkan ide tentang arah di mana harga akan berkembang. Fraktal akan terbentuk bila pola harga tertentu terjadi pada grafik"
 
-msgid "Fran ais"
-msgstr "Fran ais"
-
 msgid "Fri"
 msgstr "Jum"
 
@@ -1532,6 +1520,9 @@ msgstr "Bantuan"
 
 msgid "High"
 msgstr "Tinggi"
+
+msgid "High Barrier"
+msgstr ""
 
 msgid "High barrier"
 msgstr "Batasan Tinggi"
@@ -1662,14 +1653,17 @@ msgstr "Untuk menggunakan tema dengan benar, merefresh halaman adalah penting. A
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk memahami risiko yang terlibat)"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr "Di Uni Eropa, produk finansial ditawarkan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai penyedia Layanan Investasi Kategori 3 oleh Otoritas Layanan Keuangan Malta (lisensi no. IS/70156). Di Isle of Man dan Inggris, Indeks Volatilitas ditawarkan oleh Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
+msgstr ""
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr "Di Inggris dan Isle of Man, klien kami bertrading melalui Binary (IOM) Ltd. Di Jepang, mereka bertrading melalui Binary KK. Di Uni Eropa (kecuali Inggris), mereka bertrading melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sisa bagian dunia lainnya, mereka bertrading melalui Binary (C.R.) S.A"
+msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
+msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr "Di seluruh Uni Eropa lainnya, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr ""
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
+msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "In-Neck Pattern (CDLINNECK)"
@@ -1710,9 +1704,6 @@ msgstr "Frekuensi trading indeks"
 msgid "Individual Traders"
 msgstr "Trader Perorangan"
 
-msgid "Indonesia"
-msgstr "Indonesia"
-
 msgid "Industry of Employment"
 msgstr "Industri Tenaga Kerja"
 
@@ -1751,9 +1742,6 @@ msgstr "Tersedia kesempatan untuk menjual kontrak sebelum berakhir namun hal ini
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "Sudah saatnya untuk memperluas. Kami mendirikan pusat pemrograman di Cyberjaya - Silicon Valley Kuala Lumpur - untuk mempertahankan dan meningkatkan BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "Italiano"
 
 msgid "Jan"
 msgstr "Jan"
@@ -1821,8 +1809,8 @@ msgstr "Mari kita lakukan"
 msgid "Level of Education"
 msgstr "Tingkat Pendidikan"
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "Berlisensi dan diatur di Malta, Inggris, Isle of Man, Irlandia dan Jepang"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
+msgstr ""
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "Seperti EMA, LWMA yang memberi lebih banyak arti pada harga baru-baru ini dan kurang pada harga penutupan dari awal periode. Dengan demikian mereka lebih cepat dalam mendeteksi pembalikan tren, meski bisa lebih rentan terhadap kebisingan pasar"
@@ -2193,8 +2181,8 @@ msgstr "Oktober"
 msgid "Odd"
 msgstr "Odd"
 
-msgid "Offices in Malta, Malaysia and Japan"
-msgstr "Kantor di Malta, Malaysia dan Jepang"
+msgid "Offices in Malta and Malaysia"
+msgstr ""
 
 msgid "Ok"
 msgstr "Ok"
@@ -2424,14 +2412,8 @@ msgstr "Untung/Rugi"
 msgid "Points"
 msgstr "Poin"
 
-msgid "Polski"
-msgstr "Polski"
-
 msgid "Portfolio"
 msgstr "Portopolio"
-
-msgid "Portugu s"
-msgstr "Portugis"
 
 msgid "Postal code/ZIP"
 msgstr "Kode Pos"
@@ -2481,14 +2463,11 @@ msgstr "Tabel untung"
 msgid "Profit/ Loss"
 msgstr "Untung/ Rugi"
 
-msgid "Profit/Loss (points)"
-msgstr "Untung/Rugi (poin)"
-
 msgid "Protect your profits"
 msgstr "Melindungi keuntungan Anda"
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "Diterbitkan dalam bahasa Indonesia"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgstr ""
 
 msgid "Purchase"
 msgstr "Beli"
@@ -2510,9 +2489,6 @@ msgstr "Tingkat Perubahan Rasio (ROCR)"
 
 msgid "Read"
 msgstr "Baca"
-
-msgid "Read about"
-msgstr "Baca tentang"
 
 msgid "Ref"
 msgstr "Ref"
@@ -2748,8 +2724,8 @@ msgstr "Smoothed Moving Average (SMMA)"
 msgid "Sold"
 msgstr "Terjual"
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "Beberapa produk tidak tersedia di semua negara. Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Costa Rica, Hong Kong, atau bagi siapapun di bawah umur 18 tahun"
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr ""
 
 msgid "Source of wealth"
 msgstr "Sumber kekayaan"
@@ -2858,12 +2834,6 @@ msgstr "Pengalaman trading bursa saham"
 
 msgid "Stocks trading frequency"
 msgstr "Frekuensi trading bursa saham"
-
-msgid "Stop Loss Level"
-msgstr "Tingkat Stop Loss"
-
-msgid "Stop Profit Level"
-msgstr "Tingkat Stop Profit"
 
 msgid "Stop-loss"
 msgstr "Stop-loss"
@@ -3270,9 +3240,6 @@ msgstr "Waktu berubah. Kami meningkatkan hasil sehingga klien kami dapat memaksi
 msgid "Title"
 msgstr "Judul"
 
-msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
-
 msgid "To"
 msgstr "Kepada"
 
@@ -3369,8 +3336,8 @@ msgstr "Waktu Trading"
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "Trading opsi binary relatif mudah, dan Anda dapat membeli kontrak hanya dengan tiga langkah sederhana"
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr "Trading opsi Binary mungkin tidak cocok untuk semua orang, maka pastikan Anda sudah memahami risiko yang terlibat. Jumlah kerugian bisa lebih dari jumlah modal awal dan Anda tidak memperoleh bunga dari aset dasar yang Anda tradingkan"
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr ""
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview untuk Binary.com"
@@ -3723,9 +3690,6 @@ msgstr "Zoom"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "memungkinkan klien untuk mengembangkan robot trading mereka sendiri secara otomatis dengan konsep sederhana “drag-and-drop”"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr "dan untuk klien Irlandia oleh (3) Komisaris Pendapatan di Irlandia (Lisensi Remote Bookmaker no. 1010285 dikeluarkan pada 1 Juli 2017). Lihat"
-
 msgid "and start learning how to trade"
 msgstr "dan mulai belajar cara bertrading"
 
@@ -3861,6 +3825,12 @@ msgstr "agen pembayaran"
 msgid "points"
 msgstr "poin"
 
+msgid "reference no: 39172"
+msgstr ""
+
+msgid "reference no: 39495"
+msgstr ""
+
 msgid "sec"
 msgstr "detik"
 
@@ -3906,3 +3876,77 @@ msgstr "| Laba"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "memungkinkan klien, afiliasi, dan pengembang untuk membeli dan menjual produk Binary.com"
 
+#~ msgid "(license reference no: 39172)"
+#~ msgstr "(nomor referensi lisensi: 39172)"
+
+#~ msgid "(license reference no: 39495)"
+#~ msgstr "(nomor referensi lisensi: 39495)"
+
+#~ msgid "Accessible from any web browser in 13 languages"
+#~ msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
+
+#~ msgid "Amount Per Point"
+#~ msgstr "Jumlah Per Poin"
+
+#~ msgid "Deutsch"
+#~ msgstr "Deutsch"
+
+#~ msgid "Espa ol"
+#~ msgstr "Espanol"
+
+#~ msgid "Fran ais"
+#~ msgstr "Fran ais"
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+#~ msgstr "Di Uni Eropa, produk finansial ditawarkan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai penyedia Layanan Investasi Kategori 3 oleh Otoritas Layanan Keuangan Malta (lisensi no. IS/70156). Di Isle of Man dan Inggris, Indeks Volatilitas ditawarkan oleh Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles"
+
+#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+#~ msgstr "Di Inggris dan Isle of Man, klien kami bertrading melalui Binary (IOM) Ltd. Di Jepang, mereka bertrading melalui Binary KK. Di Uni Eropa (kecuali Inggris), mereka bertrading melalui Binary (Europe) Ltd dan Binary Investments (Europe) Ltd. Sisa bagian dunia lainnya, mereka bertrading melalui Binary (C.R.) S.A"
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+#~ msgstr "Di seluruh Uni Eropa lainnya, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta"
+
+#~ msgid "Indonesia"
+#~ msgstr "Indonesia"
+
+#~ msgid "Italiano"
+#~ msgstr "Italiano"
+
+#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
+#~ msgstr "Berlisensi dan diatur di Malta, Inggris, Isle of Man, Irlandia dan Jepang"
+
+#~ msgid "Offices in Malta, Malaysia and Japan"
+#~ msgstr "Kantor di Malta, Malaysia dan Jepang"
+
+#~ msgid "Polski"
+#~ msgstr "Polski"
+
+#~ msgid "Portugu s"
+#~ msgstr "Portugis"
+
+#~ msgid "Profit/Loss (points)"
+#~ msgstr "Untung/Rugi (poin)"
+
+#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+#~ msgstr "Diterbitkan dalam bahasa Indonesia"
+
+#~ msgid "Read about"
+#~ msgstr "Baca tentang"
+
+#~ msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+#~ msgstr "Beberapa produk tidak tersedia di semua negara. Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Costa Rica, Hong Kong, atau bagi siapapun di bawah umur 18 tahun"
+
+#~ msgid "Stop Loss Level"
+#~ msgstr "Tingkat Stop Loss"
+
+#~ msgid "Stop Profit Level"
+#~ msgstr "Tingkat Stop Profit"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Ti ng Vi t"
+
+#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
+#~ msgstr "Trading opsi Binary mungkin tidak cocok untuk semua orang, maka pastikan Anda sudah memahami risiko yang terlibat. Jumlah kerugian bisa lebih dari jumlah modal awal dan Anda tidak memperoleh bunga dari aset dasar yang Anda tradingkan"
+
+#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+#~ msgstr "dan untuk klien Irlandia oleh (3) Komisaris Pendapatan di Irlandia (Lisensi Remote Bookmaker no. 1010285 dikeluarkan pada 1 Juli 2017). Lihat"

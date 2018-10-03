@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
+"PO-Revision-Date: 2018-10-01 06:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3637,7 +3637,7 @@ msgid "Withdrawal via payment agents"
 msgstr "Retirada a través de agentes de pago"
 
 msgid "Workspace"
-msgstr ""
+msgstr "Espacio de trabajo"
 
 msgid "X-axis labels"
 msgstr "Etiquetas de eje-x"

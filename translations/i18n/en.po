@@ -49,13 +49,10 @@ msgstr ""
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 
-msgid "(license reference no: 39172)"
-msgstr ""
-
-msgid "(license reference no: 39495)"
-msgstr ""
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
+msgstr ""
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
 msgstr ""
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
@@ -424,7 +421,7 @@ msgstr ""
 msgid "Accept"
 msgstr "Accept"
 
-msgid "Accessible from any web browser in 13 languages"
+msgid "Accessible from any web browser in 12 languages"
 msgstr ""
 
 msgid "Account balance"
@@ -496,9 +493,6 @@ msgstr ""
 
 msgid "Amount"
 msgstr "Amount"
-
-msgid "Amount Per Point"
-msgstr "Amount Per Point"
 
 msgid "Amount per point"
 msgstr "Amount per point"
@@ -747,6 +741,9 @@ msgid "Binary.com hits 1 million users, reaching a historic milestone. The compa
 msgstr ""
 
 msgid "Binary.com introduces an"
+msgstr ""
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
 msgstr ""
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
@@ -1154,9 +1151,6 @@ msgstr "Describe what this token is for to find it later"
 msgid "Description"
 msgstr "Description"
 
-msgid "Deutsch"
-msgstr ""
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr ""
 
@@ -1341,9 +1335,6 @@ msgstr ""
 msgid "Error getting data for %1"
 msgstr ""
 
-msgid "Espa ol"
-msgstr ""
-
 msgid "Estimated Net Worth"
 msgstr "Estimated Net Worth"
 
@@ -1464,9 +1455,6 @@ msgstr ""
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr ""
 
-msgid "Fran ais"
-msgstr ""
-
 msgid "Fri"
 msgstr "Fri"
 
@@ -1535,6 +1523,9 @@ msgstr ""
 
 msgid "High"
 msgstr ""
+
+msgid "High Barrier"
+msgstr "High Barrier"
 
 msgid "High barrier"
 msgstr ""
@@ -1665,13 +1656,16 @@ msgstr "In order to properly apply theme, a full refresh of page is required. Ar
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
 msgstr ""
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
 msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr ""
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
 msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
@@ -1713,9 +1707,6 @@ msgstr "Indices trading frequency"
 msgid "Individual Traders"
 msgstr ""
 
-msgid "Indonesia"
-msgstr ""
-
 msgid "Industry of Employment"
 msgstr "Industry of Employment"
 
@@ -1753,9 +1744,6 @@ msgid "It is sometimes possible to sell an option before the expiry of a trade, 
 msgstr ""
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
-msgstr ""
-
-msgid "Italiano"
 msgstr ""
 
 msgid "Jan"
@@ -1824,7 +1812,7 @@ msgstr "Let's do it"
 msgid "Level of Education"
 msgstr "Level of Education"
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
 msgstr ""
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
@@ -2196,7 +2184,7 @@ msgstr "October"
 msgid "Odd"
 msgstr ""
 
-msgid "Offices in Malta, Malaysia and Japan"
+msgid "Offices in Malta and Malaysia"
 msgstr ""
 
 msgid "Ok"
@@ -2427,14 +2415,8 @@ msgstr "Profit/Loss"
 msgid "Points"
 msgstr "Points"
 
-msgid "Polski"
-msgstr ""
-
 msgid "Portfolio"
 msgstr "Portfolio"
-
-msgid "Portugu s"
-msgstr ""
 
 msgid "Postal code/ZIP"
 msgstr "Postal code/ZIP"
@@ -2485,13 +2467,10 @@ msgstr "Profit table"
 msgid "Profit/ Loss"
 msgstr "Profit/ Loss"
 
-msgid "Profit/Loss (points)"
-msgstr "Profit/Loss (points)"
-
 msgid "Protect your profits"
 msgstr ""
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
 msgstr ""
 
 msgid "Purchase"
@@ -2514,9 +2493,6 @@ msgstr ""
 
 msgid "Read"
 msgstr "Read"
-
-msgid "Read about"
-msgstr ""
 
 msgid "Ref"
 msgstr "Ref"
@@ -2752,7 +2728,7 @@ msgstr ""
 msgid "Sold"
 msgstr "Sold"
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
 
 msgid "Source of wealth"
@@ -2862,12 +2838,6 @@ msgstr "Stocks trading experience"
 
 msgid "Stocks trading frequency"
 msgstr "Stocks trading frequency"
-
-msgid "Stop Loss Level"
-msgstr "Stop Loss Level"
-
-msgid "Stop Profit Level"
-msgstr "Stop Profit Level"
 
 msgid "Stop-loss"
 msgstr "Stop-loss"
@@ -3274,9 +3244,6 @@ msgstr ""
 msgid "Title"
 msgstr "Title"
 
-msgid "Ti ng Vi t"
-msgstr ""
-
 msgid "To"
 msgstr "To"
 
@@ -3373,8 +3340,8 @@ msgstr "Trading Times"
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr ""
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr ""
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview for Binary.com"
@@ -3728,9 +3695,6 @@ msgstr "Zoom"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr ""
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
-
 msgid "and start learning how to trade"
 msgstr ""
 
@@ -3866,6 +3830,12 @@ msgstr "payment agent"
 msgid "points"
 msgstr "points"
 
+msgid "reference no: 39172"
+msgstr ""
+
+msgid "reference no: 39495"
+msgstr ""
+
 msgid "sec"
 msgstr ""
 
@@ -3911,6 +3881,18 @@ msgstr "| Return"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr ""
 
+#~ msgid "Amount Per Point"
+#~ msgstr "Amount Per Point"
+
+#~ msgid "Profit/Loss (points)"
+#~ msgstr "Profit/Loss (points)"
+
+#~ msgid "Stop Loss Level"
+#~ msgstr "Stop Loss Level"
+
+#~ msgid "Stop Profit Level"
+#~ msgstr "Stop Profit Level"
+
 #~ msgid "Loading"
 #~ msgstr "Loading"
 
@@ -3925,9 +3907,6 @@ msgstr ""
 
 #~ msgid "Ends In/Out"
 #~ msgstr "Ends In/Out"
-
-#~ msgid "High Barrier"
-#~ msgstr "High Barrier"
 
 #~ msgid "Home Address"
 #~ msgstr "Home Address"
@@ -4075,9 +4054,6 @@ msgstr ""
 
 #~ msgid "In regards to binary options which are gambling products, remember that gambling can be addictive"
 #~ msgstr "In regards to binary options which are gambling products, remember that gambling can be addictive"
-
-#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
-#~ msgstr "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
 
 #~ msgid "please play responsibly. Read about"
 #~ msgstr "please play responsibly. Read about"

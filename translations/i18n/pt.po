@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-09-18 05:30\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Portuguese\n"
+"Language: pt_PT\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: pt-PT\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Portuguese\n"
-"Language: pt_PT\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "'contract period'"
 msgstr "\"período do contrato\""
 
 msgid "(6,000   5,200) * 2 = $1600"
-msgstr ""
+msgstr "(6.000 – 5.200) * 2 = $1.600"
 
 msgid "(One) Touch trades"
 msgstr "Negociações de toque (único)"
@@ -48,14 +48,11 @@ msgstr "(anteriormente conhecida como"
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(se menos de um dia de duração) ou no fim do dia de negociação (se um dia ou mais de duração)"
 
-msgid "(license reference no: 39172)"
-msgstr ""
-
-msgid "(license reference no: 39495)"
-msgstr ""
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr ") entra em operação, estabelecendo um serviço de apostas 24 horas por dia numa variedade de índices financeiros. O negócio cresce rapidamente e em pouco tempo tornamo-nos o líder de mercado em apostas financeiras de probabilidades fixas"
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr ""
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "- Beneficie-se das mesmas taxas de retorno que os negociadores interbancários. Os nossos preços são comparados diariamente com os mercados de opções interbancários"
@@ -388,7 +385,7 @@ msgid "A derivative is a financial instrument whose value is determined by refer
 msgstr "Um derivado é um instrumento financeiro cujo valor é determinado por referência a um mercado subjacente. Derivados são frequentemente negociados no mercado interbancário e opções binárias são uma das formas mais simples de derivados"
 
 msgid "A lookback contract has a payout that depends on the optimum high or low achieved by the market. The option allows the holder to \"look back\" over time to determine the payout"
-msgstr ""
+msgstr "Os prêmios de contratos retrospectivos dependem da alta ou baixa ótima alcançada pelo mercado. A opção permite que o detentor analise o contrato em retrospectiva, ao longo do tempo, para escolher o prêmio"
 
 msgid "A medium to long bullish or bearish candlestick with the key defining trait being no head or tail shadows"
 msgstr "Uma vela baixista ou altista de comprimento médio a longo com o traço chave que o define sendo a falta de nenhuma sobre superior ou inferior"
@@ -423,8 +420,8 @@ msgstr "Oscilador de Preço Absoluto (OPA)"
 msgid "Accept"
 msgstr "Aceitar"
 
-msgid "Accessible from any web browser in 13 languages"
-msgstr "Acessível a partir de qualquer navegador web em 13 línguas"
+msgid "Accessible from any web browser in 12 languages"
+msgstr ""
 
 msgid "Account balance"
 msgstr "Saldo da conta"
@@ -457,7 +454,7 @@ msgid "Add/remove indicators"
 msgstr "Adicionar/remover indicadores"
 
 msgid "Address"
-msgstr ""
+msgstr "Endereço"
 
 msgid "Admin"
 msgstr "Administração"
@@ -469,7 +466,7 @@ msgid "All durations"
 msgstr "Todas as durações"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Todos os campos são opcionais. Caso deseje copiar todos os tipos de ativos e negociações, deixe todos os campos em branco"
 
 msgid "All market conditions"
 msgstr "Todas as condições de mercad"
@@ -494,9 +491,6 @@ msgstr "Permitir que outros copiem as suas negociações"
 
 msgid "Amount"
 msgstr "Valor"
-
-msgid "Amount Per Point"
-msgstr "Montante por ponto"
 
 msgid "Amount per point"
 msgstr "Montante por ponto"
@@ -595,7 +589,7 @@ msgid "Avg. Duration"
 msgstr "Duração média"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Duração média das posições abertas"
 
 msgid "Avg. Loss"
 msgstr "Perda média"
@@ -691,10 +685,10 @@ msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Frequência da negociação de opções binárias ou outros derivados financeiros"
 
 msgid "Binary options trading experience"
-msgstr ""
+msgstr "Experiência na negociação de opções binárias"
 
 msgid "Binary options trading frequency"
-msgstr ""
+msgstr "Frequência de negociação de opções binárias"
 
 msgid "Binary trading is flexible"
 msgstr "A negociação de opções binárias é flexível"
@@ -746,6 +740,9 @@ msgstr "A Binary.com atinge 1 milhão de usuários, alcançando um marco histór
 
 msgid "Binary.com introduces an"
 msgstr "A Binary.com apresenta"
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
+msgstr ""
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "A Binary.com recebe o prêmio de Melhor Corretora de Opções Binárias nos Online Personal Wealth Awards 2017 do Reino Unido, conforme as votações de investidores de todo o mundo"
@@ -844,13 +841,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Ao clicar OK, você confirma que você leu e aceitou"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "Por padrão, todos os clientes são tratados como clientes particulares. Prefere ser tratado como cliente profissional no caso de corresponder aos critérios necessários?"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "Experiência na negociação de CFDs"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "Frequência de negociação de CFDs"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Pode ser usado para comprar e vender contratos, renovar aquisições expiradas e financiar contas de dinheiro virtual"
@@ -937,7 +934,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "Nacionalidade"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Clique para conectar-se com a sua conta Binary.com"
@@ -1152,9 +1149,6 @@ msgstr "Descreva para o que serve este token para encontrá-lo mais tarde"
 msgid "Description"
 msgstr "Descrição"
 
-msgid "Deutsch"
-msgstr "Alemão"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "Desenvolvido por Donaldo Dorsey, o Índice de Massa usa um intervalo alto-baixo para identificar inversões de tendência baseadas em expansões de intervalo. Neste sentido, o Índice de Massa é um indicador de volatilidade que não possui parcialidade direcional. Em vez disso, o Índice de Massa identifica aumentos no intervalo que podem indicar uma inversão da tendência atual"
 
@@ -1338,9 +1332,6 @@ msgstr "Preço à vista de entrada"
 msgid "Error getting data for %1"
 msgstr "Erro ao obter dados para %1"
 
-msgid "Espa ol"
-msgstr "Espanhol"
-
 msgid "Estimated Net Worth"
 msgstr "Patrimônio líquido estimado"
 
@@ -1435,7 +1426,7 @@ msgid "Flexible"
 msgstr "Flexível"
 
 msgid "For example, let s say the market has a low of 5,200 and a close of 6,000 over the contract duration, then a  Close-Low  lookback with a multiplier of $2 would have a payout of"
-msgstr ""
+msgstr "Por exemplo, digamos que o mercado alcance uma baixa de 5.200 e um fechamento de 6.000 ao longo da duração do contrato, então um contrato retrospectivo \"Fechar-Baixo\" com um multiplicador de $2 pagaria um prêmio de"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category"
 msgstr "Pelo terceiro ano seguido, a BetOnMarkets.com é votada o \"Melhor Fornecedor de Negociação Financeira de Probabilidades Fixas\" pela Shares Magazine UK. Foi a última vez que ganhamos este prêmio porque a Shares Magazine para de atribuir prêmios nesta categoria."
@@ -1460,9 +1451,6 @@ msgstr "Fractal (FRACTAL)"
 
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "Fractais são indicadores em gráficos de velas que identificam pontos de inversão no mercado. Os negociadores usam muitas vezes fractais a fim de ter uma ideia sobre a direção em que o preço irá se desenvolver. Um fractal irá se formar quando um determinado padrão de preço ocorrer num gráfico"
-
-msgid "Fran ais"
-msgstr "Francês"
 
 msgid "Fri"
 msgstr "Sex"
@@ -1533,6 +1521,9 @@ msgstr "Ajuda"
 msgid "High"
 msgstr "Alta"
 
+msgid "High Barrier"
+msgstr ""
+
 msgid "High barrier"
 msgstr "barreira alto"
 
@@ -1597,10 +1588,10 @@ msgid "I have read and agree to Binary.com"
 msgstr "Eu li e concordo com os"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "Confirmo, pela presente, que as informações fiscais que forneci são verdadeiras e completas. Também irei informar a Binary Investments (Europe) Ltd. sobre quaisquer alterações a estas informações"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "Quero ser tratado como um cliente profissional"
 
 msgid "I'm new to binaries, where do I start?"
 msgstr "Sou principiante com opções binárias, onde começo?"
@@ -1662,13 +1653,16 @@ msgstr "Para poder aplicar o tema de forma correta, uma atualização total da p
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "Na prestação dos nossos serviços, somos obrigados a obter informações de você para poder avaliar se um determinado produto ou serviço é-lhe adequado (isto é, se você possui a experiência e os conhecimentos necessários para compreender os riscos envolvidos)"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
 msgstr ""
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr "No Reino Unido e na Ilha de Man, os nossos clientes negociam através da Binary (IOM) Ltd. No Japão, eles negociam através da Binary KK. Na União Europeia (exceto no RU), eles negociam através da Binary (Europe) Ltd. e Binary Investments (Europe) Ltd. No resto do mundo, eles negociam através da Binary (C.R.) S.A"
+msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
+msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr ""
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
 msgstr ""
 
 msgid "In-Neck Pattern (CDLINNECK)"
@@ -1710,9 +1704,6 @@ msgstr "Frequência das negociações de índices"
 msgid "Individual Traders"
 msgstr "Negociadores individuais"
 
-msgid "Indonesia"
-msgstr "Indonésia"
-
 msgid "Industry of Employment"
 msgstr "Área profissional"
 
@@ -1751,9 +1742,6 @@ msgstr "É possível às vezes vender uma opção antes da expiração da negoci
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "Está na altura de expandir. Criamos um centro de programação em Cyberjaya - o Vale do Silício de Kuala Lumpur - para manter e melhorar a BetOnMarkets.com"
-
-msgid "Italiano"
-msgstr "Italiano"
 
 msgid "Jan"
 msgstr "Jan"
@@ -1821,8 +1809,8 @@ msgstr "Vamos a isso"
 msgid "Level of Education"
 msgstr "Nível de formação educacional"
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "Licenciada e regulada em Malta, no Reino Unido, na Ilha de Man, na Irlanda e no Japão"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
+msgstr ""
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "Como a MME, MMPL atribui mais significado aos preços recentes e menos ao preço de fechamento do início do período. Portanto, são mais rápidas na detecção de inversão de tendências, apesar de serem mais sujeitas a ruído do mercado"
@@ -1927,10 +1915,10 @@ msgid "Look for a tall white candle in an upward price trend. Following that, a 
 msgstr "Procure uma alta vela branca numa tendência de preços altista. A seguir a isso, uma vela preta tem um corpo que registra uma lacuna acima do corpo da vela anterior. O último dia é outra vela preta, mas esta envolve a vela baixista anterior, fechando-se acima da abertura da primeira barra"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Retrospectivos"
 
 msgid "Lookbacks are currently only available for Volatility Indices"
-msgstr ""
+msgstr "Contratos retrospectivos estão atualmente apenas disponíveis em Índices Volatility"
 
 msgid "Low"
 msgstr "Baixa"
@@ -2053,7 +2041,7 @@ msgid "Minimum of 6 characters required"
 msgstr "Um mínimo de 6 caracteres é necessário"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Um mínimo de seis letras minúsculas e maiúsculas com números"
 
 msgid "Minimum price over selected period"
 msgstr "Preço mínimo durante período selecionado"
@@ -2104,7 +2092,7 @@ msgid "Ms"
 msgstr "Sra."
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplicador"
 
 msgid "Name"
 msgstr "Nome"
@@ -2193,8 +2181,8 @@ msgstr "Outubro"
 msgid "Odd"
 msgstr "Ímpar"
 
-msgid "Offices in Malta, Malaysia and Japan"
-msgstr "Escritórios em Malta, Malásia e Japão"
+msgid "Offices in Malta and Malaysia"
+msgstr ""
 
 msgid "Ok"
 msgstr "OK"
@@ -2424,14 +2412,8 @@ msgstr "Lucro/Perda"
 msgid "Points"
 msgstr "Pontos"
 
-msgid "Polski"
-msgstr "Polonês"
-
 msgid "Portfolio"
 msgstr "Portfólio"
-
-msgid "Portugu s"
-msgstr "Português"
 
 msgid "Postal code/ZIP"
 msgstr "Código postal/CEP"
@@ -2470,7 +2452,7 @@ msgid "Print chart"
 msgstr "Imprimir gráfico"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "Cliente profissional"
 
 msgid "Profit"
 msgstr "Lucro"
@@ -2481,14 +2463,11 @@ msgstr "Tabela de lucro"
 msgid "Profit/ Loss"
 msgstr "Lucro/Perda"
 
-msgid "Profit/Loss (points)"
-msgstr "Lucro/Perda (pontos)"
-
 msgid "Protect your profits"
 msgstr "Proteja os lucros"
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "Publicado em Inglês, Indonésio, Japonês, Chinês, Polaco, Alemão, Francês, Espanhol, Português, Italiano, Russo e Tailandês"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgstr ""
 
 msgid "Purchase"
 msgstr "Comprar"
@@ -2510,9 +2489,6 @@ msgstr "Rácio da Taxa de Alteração (RTA)"
 
 msgid "Read"
 msgstr "Ler"
-
-msgid "Read about"
-msgstr "Leia sobre"
 
 msgid "Ref"
 msgstr "Ref"
@@ -2560,7 +2536,7 @@ msgid "Register free account"
 msgstr "Registrar conta gratuita"
 
 msgid "Regulatory Information"
-msgstr ""
+msgstr "Informação regulamentar"
 
 msgid "Relative Strength Index (RSI)"
 msgstr "Índice de Força Relativa (IFR)"
@@ -2748,7 +2724,7 @@ msgstr "Média Móvel Suavizada (SMMA)"
 msgid "Sold"
 msgstr "Vendido"
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
 msgstr ""
 
 msgid "Source of wealth"
@@ -2858,12 +2834,6 @@ msgstr "Experiência na negociação de ações"
 
 msgid "Stocks trading frequency"
 msgstr "Frequência das negociações de ações"
-
-msgid "Stop Loss Level"
-msgstr "Nível do limite de perdas"
-
-msgid "Stop Profit Level"
-msgstr "Nível do limite de lucros"
 
 msgid "Stop-loss"
 msgstr "Limite de perdas"
@@ -3196,7 +3166,7 @@ msgid "This Moving Average uses curve of the Normal (Gauss) distribution which c
 msgstr "Esta média móvel usa a curva da distribuição Normal (Gauss) que pode ser colocada ao ajustar o parâmetro de Compensação entre 0 e 1. Este parâmetro permite regular a suavidade e alta sensibilidade da média móvel. Sigma é outro parâmetro que é responsável pela forma dos coeficientes da curva"
 
 msgid "This feature is not relevant to virtual-money accounts"
-msgstr ""
+msgstr "Este recurso não é relevante em contas de dinheiro virtual"
 
 msgid "This field is required"
 msgstr "Este campo é obrigatório"
@@ -3269,9 +3239,6 @@ msgstr "Os tempos estão mudando. Aumentamos os pagamentos de prêmios para que 
 
 msgid "Title"
 msgstr "Título"
-
-msgid "Ti ng Vi t"
-msgstr "Ti ng Vi t"
 
 msgid "To"
 msgstr "Para"
@@ -3361,7 +3328,7 @@ msgid "Trades break down"
 msgstr "Decomposição das negociações"
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "Experiência com negociões"
 
 msgid "Trading Times"
 msgstr "Horas de negociação"
@@ -3369,8 +3336,8 @@ msgstr "Horas de negociação"
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "A negociação de opções binárias é relativamente fácil e é possível comprar um contrato em apenas três etapas simples"
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr "A negociação de opções binárias pode não ser adequada para todos. Por essa razão, pedimos que se certifique de que compreenda totalmente todos os riscos envolvidos. As suas perdas podem exceder o seu depósito inicial e você não será titular de, nem possuirá interesses em, o ativo subjacente. Em relação a opções binárias que são produtos de jogo, lembre-se de que os jogos a dinheiro podem ser viciantes - jogue responsavelmente"
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr ""
 
 msgid "Tradingview for Binary.com"
 msgstr "TradingView para Binary.com"
@@ -3418,7 +3385,7 @@ msgid "Two-way pricing"
 msgstr "Determinação de preços bidirecional"
 
 msgid "Types of lookbacks"
-msgstr ""
+msgstr "Tipos de retrospectivos"
 
 msgid "Typical Price (TYPPRICE)"
 msgstr "Preço Típico (TYPPRICE)"
@@ -3544,7 +3511,7 @@ msgid "We do it again. BetOnMarkets.com follows up our 2007 award by being voted
 msgstr "Voltamos a ganhar. A BetOnMarkets.com repete o sucesso de 2007 e é novamente votada a \"Melhor fornecedora de negociações financeiras de probabilidades fixas\" de 2008"
 
 msgid "We offer three types lookbacks"
-msgstr ""
+msgstr "Disponibilizamos três tipos de contratos retrospectivos"
 
 msgid "We rebrand BetOnMarkets.com as"
 msgstr "Alteramos a marca BetOnMarkets.com para"
@@ -3586,13 +3553,13 @@ msgid "What are OTC indices and stocks?"
 msgstr "O que são os índices e as ações OTC?"
 
 msgid "What are lookbacks"
-msgstr ""
+msgstr "O que são contratos retrospectivos"
 
 msgid "What is pep?"
 msgstr "O que uma PPE?"
 
 msgid "What is this?"
-msgstr ""
+msgstr "O que é isto?"
 
 msgid "When you are satisfied with the price that you receive, execute your trade immediately. With our unique platform, you won t have to contend with  slippages  or gaping markets. And most importantly, there are no invisible fees. You can also sell back any long-term trades at any time before they expire to protect the profit you may have earned or to minimise your losses"
 msgstr "Quando você estiver satisfeito com o preço recebido, execute a sua negociação imediatamente. Com a nossa plataforma única, você não terá que lidar com desvios nem mercados com disparidades. E, sobretudo, não há taxas invisíveis. É também possível vender quaisquer contratos de longo prazo em qualquer momento, antes de expiração, para proteger os lucros que possa ter ganho ou para minimizar as suas perdas"
@@ -3619,13 +3586,13 @@ msgid "Williams' %R (WILLR)"
 msgstr "Williams' %R (WILLR)"
 
 msgid "Win the multiplier times the close minus low"
-msgstr ""
+msgstr "Ganhe o multiplicador vezes o fechamento menos a baixa"
 
 msgid "Win the multiplier times the high minus close"
-msgstr ""
+msgstr "Ganhe o multiplicador vezes a alta menos o fechamento"
 
 msgid "Win the multiplier times the high minus low"
-msgstr ""
+msgstr "Ganhe o multiplicador vezes a alta menos a baixa"
 
 msgid "With Binary.com you can trade"
 msgstr "Com a Binary.com é possível negociar"
@@ -3723,9 +3690,6 @@ msgstr "Zoom"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "permitindo que clientes desenvolvam os seus próprios robôs de negociação automatizados com a simplicidade do tipo \"arrastar e soltar\""
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr ""
-
 msgid "and start learning how to trade"
 msgstr "e comece a aprender a negociar"
 
@@ -3751,7 +3715,7 @@ msgid "contact support"
 msgstr "contatar o apoio ao cliente"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "crie um token de somente leitura e compartilhe o token com os seus copiadores"
 
 msgid "customer support"
 msgstr "apoio ao cliente"
@@ -3861,8 +3825,14 @@ msgstr "agente de pagamentos"
 msgid "points"
 msgstr "pontos"
 
-msgid "sec"
+msgid "reference no: 39172"
 msgstr ""
+
+msgid "reference no: 39495"
+msgstr ""
+
+msgid "sec"
+msgstr "seg"
 
 msgid "second"
 msgstr "segundo"
@@ -3901,8 +3871,82 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Voltar"
 
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "permitindo que clientes, afiliados e desenvolvedores possam comprar e vender produtos da Binary.com"
 
+#~ msgid "(license reference no: 39172)"
+#~ msgstr "(referência de licença n.º: 39172)"
+
+#~ msgid "(license reference no: 39495)"
+#~ msgstr "(referência de licença n.º: 39495)"
+
+#~ msgid "Accessible from any web browser in 13 languages"
+#~ msgstr "Acessível a partir de qualquer navegador web em 13 línguas"
+
+#~ msgid "Amount Per Point"
+#~ msgstr "Montante por ponto"
+
+#~ msgid "Deutsch"
+#~ msgstr "Alemão"
+
+#~ msgid "Espa ol"
+#~ msgstr "Espanhol"
+
+#~ msgid "Fran ais"
+#~ msgstr "Francês"
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
+#~ msgstr "Na UE, produtos financeiros são disponibilizados pela Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenciada e regulamentada como um provedor de serviços de investimento de categoria 3 pela Autoridade de Serviços Financeiros de Malta (Licença n.º IS/70156). Na Ilha de Man e no Reino Unido, índices Volatility são disponibilizados pela Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Ilha de Man, Ilhas Britânicas; licenciada e regulamentada respectivamente pela (1) Comissão de Supervisão de Jogos de Azar na Ilha de Man (licença atual emitida a 31 de agosto de 2017) e pela (2) Comissão de Jogos de Azar no Reino Unido"
+
+#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+#~ msgstr "No Reino Unido e na Ilha de Man, os nossos clientes negociam através da Binary (IOM) Ltd. No Japão, eles negociam através da Binary KK. Na União Europeia (exceto no RU), eles negociam através da Binary (Europe) Ltd. e Binary Investments (Europe) Ltd. No resto do mundo, eles negociam através da Binary (C.R.) S.A"
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
+#~ msgstr "No resto da UE, os índices Volatility são disponibilizados pela Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licenciada e regulamentada pela (1) Autoridade de Jogos de Azar de Malta, em Malta (licença n.º MGA/CL2/118/2000 emitida a 26 de maio de 2015) e, para clientes do Reino Unido, pela (2) Comissão de Jogos de Azar do Reino Unido"
+
+#~ msgid "Indonesia"
+#~ msgstr "Indonésia"
+
+#~ msgid "Italiano"
+#~ msgstr "Italiano"
+
+#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
+#~ msgstr "Licenciada e regulada em Malta, no Reino Unido, na Ilha de Man, na Irlanda e no Japão"
+
+#~ msgid "Offices in Malta, Malaysia and Japan"
+#~ msgstr "Escritórios em Malta, Malásia e Japão"
+
+#~ msgid "Polski"
+#~ msgstr "Polonês"
+
+#~ msgid "Portugu s"
+#~ msgstr "Português"
+
+#~ msgid "Profit/Loss (points)"
+#~ msgstr "Lucro/Perda (pontos)"
+
+#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+#~ msgstr "Publicado em Inglês, Indonésio, Japonês, Chinês, Polaco, Alemão, Francês, Espanhol, Português, Italiano, Russo e Tailandês"
+
+#~ msgid "Read about"
+#~ msgstr "Leia sobre"
+
+#~ msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
+#~ msgstr "Alguns produtos não estão disponíveis em todos os países. Os serviços deste site não são disponibilizados em determinados países como os EUA, a Costa Rica, Hong Kong ou a pessoas com idade inferior a 18 anos"
+
+#~ msgid "Stop Loss Level"
+#~ msgstr "Nível do limite de perdas"
+
+#~ msgid "Stop Profit Level"
+#~ msgstr "Nível do limite de lucros"
+
+#~ msgid "Ti ng Vi t"
+#~ msgstr "Ti ng Vi t"
+
+#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
+#~ msgstr "A negociação de opções binárias pode não ser adequada para todos. Por essa razão, pedimos que se certifique de que compreenda totalmente todos os riscos envolvidos. As suas perdas podem exceder o seu depósito inicial e você não será titular de, nem possuirá interesses em, o ativo subjacente. Em relação a opções binárias que são produtos de jogo, lembre-se de que os jogos a dinheiro podem ser viciantes - jogue responsavelmente"
+
+#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+#~ msgstr "e para clientes irlandeses pelo (3) Departamento de Impostos da Irlanda (licença de casa de apostas remota n.º 1010285 emitida a 1 de julho de 2017). Ver tudo"
