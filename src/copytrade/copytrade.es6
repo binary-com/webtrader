@@ -84,12 +84,13 @@ instrumentPromise().then(instruments => {
   DEFAULT_ASSETS = assets.filter(f => f.code === 'R_10').map(m => m.code);
 });
 
-const refreshTraderStats = (loginid, token, scope) => liveapi
+const refreshTraderStats = (loginid, token, scope) => {
+  liveapi
   .send({
     copytrading_statistics: 1,
     trader_id: loginid,
   })
-  .then(copyStatData => {
+  .then((copyStatData) => {
     if (copyStatData.copytrading_statistics) {
       const traderTokenDetails = _.find(scope.traderTokens, f =>
         f.yourCopySettings && f.yourCopySettings.copy_start === token);
@@ -105,7 +106,10 @@ const refreshTraderStats = (loginid, token, scope) => liveapi
       }
     }
     updateLocalStorage(scope);
+  }).catch((e) => {
+    $.growl.error({ message: e.message });
   });
+};
 
 let win = null, win_view = null;
 
@@ -131,7 +135,7 @@ const state = {
         set_settings: 1,
         allow_copiers,
       })
-      // settings res does not return updated settings
+      // set_settings api res does not have updated settings
       .then((settings) => {
         state.is_loading = false;
         state.allowCopy.allow_copiers = allow_copiers;
