@@ -87,7 +87,6 @@
     "datatables.net-jqui": "^1.10.15",
     "es6-promise": "^4.1.1",
     "highstock-release": "^5.0.10",
-    "intl": "^1.2.5",
     "jquery": "^3.2.1",
     "jquery-sparkline": "^2.4.0",
     "jquery-ui-dist": "1.12.0",
