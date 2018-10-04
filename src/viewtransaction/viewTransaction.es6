@@ -6,6 +6,8 @@ import rv from 'common/rivetsExtra';
 import moment from 'moment';
 import 'common/util';
 import Lookback from 'trade/lookback';
+require(['css!viewtransaction/viewTransaction.css']);
+require(['text!viewtransaction/viewTransaction.html']);
 
 const open_dialogs = {};
 const DISPLAY_DECIMALS = 3;
@@ -15,9 +17,6 @@ const NOTE_TEXT = {
   NO_RESALE: 'Resale of this contract is not offered'.i18n(),
   FINISHED: 'This contract has expired'.i18n(),
 };
-
-require(['css!viewtransaction/viewTransaction.css']);
-require(['text!viewtransaction/viewTransaction.html']);
 
 let market_data_disruption_win = null;
 const show_market_data_disruption_win = () => {
