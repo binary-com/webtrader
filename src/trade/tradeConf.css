@@ -21,7 +21,7 @@
     padding: 5px 0;
 }
 .trade-conf .message-row {
-  padding: 10px 0;
+  padding: 5px 0;
   border-bottom: 1px solid #ccc;
 }
 .trade-conf .payout-row {
@@ -30,7 +30,7 @@
   padding: 0;
 }
 .trade-conf .payout-row li {
-  height: 90px;
+  height: 70px;
   display: flex;
   padding: 0 10px;
   flex-direction: column;
@@ -53,7 +53,7 @@
 }
 
 .trade-conf .payout-row li span:first-child {
-  height: 50px;
+  height: 35px;
 }
 .trade-conf .payout-row li span:nth-child(2) {
   font-weight: bold;
@@ -81,6 +81,7 @@
 
 .trade-conf .balance-row {
   width: 100%;
+  padding: 0px;
 }
 .trade-conf .balance-row .bold {
     font-weight: bold;

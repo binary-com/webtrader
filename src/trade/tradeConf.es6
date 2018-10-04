@@ -22,7 +22,7 @@ rv.binders['tick-chart'] = {
             renderTo: el,
             backgroundColor: null, /* make background transparent */
             width: (el.getAttribute('width') || 400)*1,
-            height: (el.getAttribute('height') || 120)*1,
+            height: (el.getAttribute('height') || 145)*1,
             marginLeft: 20,
          },
          tooltip: {
