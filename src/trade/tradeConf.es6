@@ -105,7 +105,7 @@ rv.binders['tick-chart'] = {
 
       function draw_end_time(model, ticks) {
             let exit_time_idx = ticks.findIndex((tick) => tick.epoch === (+model.exit_tick_time));
-            draw_x_line(el.chart, { value: exit_time_idx + 1, dashStyle: 'Dash'});
+            draw_x_line(el.chart, { value: exit_time_idx + 1, dashStyle: 'Dash' });
       };
 
       function draw_tick(tick_idx) {
@@ -288,7 +288,6 @@ export const init = (data, extra, show_callback, hide_callback) => {
    display_decimals = data.display_decimals || 3;
    const root = $(html).i18n();
    const { buy } = data;
-   const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    const state = {
       title: {
          text: 'Contract Confirmation'.i18n(),
