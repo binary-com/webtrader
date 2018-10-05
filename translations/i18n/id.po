@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-05 05:20\n"
+"PO-Revision-Date: 2018-10-05 05:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -742,7 +742,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com memperkenalkan sebuah"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
-msgstr ""
+msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD."
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "Binary.com dianugerahi sebagai Broker Opsi Binary Terbaik oleh Online Personal Wealth Awards 2017 di Inggris, yang dipilih oleh para investor di seluruh dunia"
@@ -2467,7 +2467,7 @@ msgid "Protect your profits"
 msgstr "Melindungi keuntungan Anda"
 
 msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr ""
+msgstr "Diterbitkan dalam bahasa Inggris, Indonesia, Cina, Polandia, Jerman, Perancis, Spanyol, Portugis, Italia, Rusia dan Thai"
 
 msgid "Purchase"
 msgstr "Beli"
@@ -2725,7 +2725,7 @@ msgid "Sold"
 msgstr "Terjual"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "Beberapa produk tidak tersedia di semua negara. Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Kanada, Kosta Rika, Hong Kong, atau bagi siapapun di bawah umur 18 tahun"
 
 msgid "Source of wealth"
 msgstr "Sumber kekayaan"
@@ -3337,7 +3337,7 @@ msgid "Trading binary options is relatively easy, and you can purchase a trade i
 msgstr "Trading opsi binary relatif mudah, dan Anda dapat membeli kontrak hanya dengan tiga langkah sederhana"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
-msgstr ""
+msgstr "Trading opsi binary mungkin tidak cocok untuk semua orang, maka pastikan Anda memahami sepenuhnya risiko yang terlibat. Kerugian Anda dapat melebihi setoran awal Anda dan Anda tidak akan memiliki atau memperoleh bunga dari aset dasar"
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview untuk Binary.com"
