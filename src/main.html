@@ -42,6 +42,23 @@
             document.head.appendChild(crowdin);
         }
     </script>
+    <script type="text/javascript">
+        // Set language from querystring e.g. "?lang='id'"
+        var href = window.location.href;
+        var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
+        var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
+            (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
+
+        if (isLangSupported(lang)) {
+            local_storage.set('i18n', { value: lang });
+        } else {
+            local_storage.set('i18n', { value: 'en' });
+        }
+
+        var window_url = new URL(window.location.href);
+        window_url.search = '';
+        window.history.pushState({ path: window_url.href }, '', window_url.href);
+    </script>
 </head>
 
 <body>
