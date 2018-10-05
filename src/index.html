@@ -105,7 +105,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer primary-bg-color-dark">
+    <footer class="footer primary-bg-color-dark" id="footer">
         <div class="footer__container">
             <div class="footer__image-container">
                 <div class="footer__regulatory-icons">
@@ -204,10 +204,17 @@
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
         }
 
+        var window_url = new URL(window.location.href);
+        window_url.search = '';
+        window.history.pushState({ path: window_url.href }, '', window_url.href);
+
         var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
             (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
         if (isLangSupported(lang)) {
             local_storage.set('i18n', { value: lang });
+            if (lang === 'id') {
+                $('#footer').hide();
+            }
         } else { // In case of invalid language fallback to EN
             local_storage.set('i18n', { value: 'en' });
         }
