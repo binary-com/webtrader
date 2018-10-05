@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Acholi\n"
 "Language: ach_UG\n"
-"PO-Revision-Date: 2018-08-16 05:21\n"
+"PO-Revision-Date: 2018-10-03 05:41\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "crwdns19787:0crwdne19787:0"
@@ -48,14 +48,11 @@ msgstr "crwdns19800:0crwdne19800:0"
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "crwdns15420:0crwdne15420:0"
 
-msgid "(license reference no: 39172)"
-msgstr "crwdns46336:0crwdne46336:0"
-
-msgid "(license reference no: 39495)"
-msgstr "crwdns46337:0crwdne46337:0"
-
 msgid ") goes live, establishing a round-the-clock financial betting service on a variety of financial indices. Business grows quickly, and we soon become the market leader in fixed-odds financial betting"
 msgstr "crwdns19801:0crwdne19801:0"
+
+msgid "), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
+msgstr "crwdns50439:0crwdne50439:0"
 
 msgid "- Benefit from the same rates of return as interbank traders. Our prices are benchmarked daily against the interbank options markets"
 msgstr "crwdns43275:0crwdne43275:0"
@@ -423,8 +420,8 @@ msgstr "crwdns19888:0crwdne19888:0"
 msgid "Accept"
 msgstr "crwdns15473:0crwdne15473:0"
 
-msgid "Accessible from any web browser in 13 languages"
-msgstr "crwdns24275:0crwdne24275:0"
+msgid "Accessible from any web browser in 12 languages"
+msgstr "crwdns50440:0crwdne50440:0"
 
 msgid "Account balance"
 msgstr "crwdns15474:0crwdne15474:0"
@@ -494,9 +491,6 @@ msgstr "crwdns41524:0crwdne41524:0"
 
 msgid "Amount"
 msgstr "crwdns15487:0crwdne15487:0"
-
-msgid "Amount Per Point"
-msgstr "crwdns15488:0crwdne15488:0"
 
 msgid "Amount per point"
 msgstr "crwdns15489:0crwdne15489:0"
@@ -746,6 +740,9 @@ msgstr "crwdns19943:0crwdne19943:0"
 
 msgid "Binary.com introduces an"
 msgstr "crwdns19944:0crwdne19944:0"
+
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
+msgstr "crwdns50441:0crwdne50441:0"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "crwdns43315:0crwdne43315:0"
@@ -1152,9 +1149,6 @@ msgstr "crwdns15599:0crwdne15599:0"
 msgid "Description"
 msgstr "crwdns15600:0crwdne15600:0"
 
-msgid "Deutsch"
-msgstr "crwdns20006:0crwdne20006:0"
-
 msgid "Developed by Donald Dorsey, the Mass Index uses the high-low range to identify trend reversals based on range expansions. In this sense, the Mass Index is a volatility indicator that does not have a directional bias. Instead, the Mass Index identifies range bulges that can foreshadow a reversal of the current trend"
 msgstr "crwdns20007:0crwdne20007:0"
 
@@ -1338,9 +1332,6 @@ msgstr "crwdns20032:0crwdne20032:0"
 msgid "Error getting data for %1"
 msgstr "crwdns24285:0%1crwdne24285:0"
 
-msgid "Espa ol"
-msgstr "crwdns20033:0crwdne20033:0"
-
 msgid "Estimated Net Worth"
 msgstr "crwdns15637:0crwdne15637:0"
 
@@ -1461,9 +1452,6 @@ msgstr "crwdns20051:0crwdne20051:0"
 msgid "Fractals are indicators on candlestick charts that identify reversal points in the market. Traders often use fractals to get an idea about the direction in which the price will develop. A fractal will form when a particular price pattern happens on a chart"
 msgstr "crwdns20052:0crwdne20052:0"
 
-msgid "Fran ais"
-msgstr "crwdns20053:0crwdne20053:0"
-
 msgid "Fri"
 msgstr "crwdns15664:0crwdne15664:0"
 
@@ -1532,6 +1520,9 @@ msgstr "crwdns20064:0crwdne20064:0"
 
 msgid "High"
 msgstr "crwdns20065:0crwdne20065:0"
+
+msgid "High Barrier"
+msgstr "crwdns50442:0crwdne50442:0"
 
 msgid "High barrier"
 msgstr "crwdns20066:0crwdne20066:0"
@@ -1662,14 +1653,17 @@ msgstr "crwdns15692:0crwdne15692:0"
 msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
 msgstr "crwdns15693:0crwdne15693:0"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-msgstr "crwdns46351:0crwdne46351:0"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)"
+msgstr "crwdns50443:0crwdne50443:0"
 
-msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-msgstr "crwdns20093:0crwdne20093:0"
+msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence"
+msgstr "crwdns50444:0crwdne50444:0"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-msgstr "crwdns46352:0crwdne46352:0"
+msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
+msgstr "crwdns50445:0crwdne50445:0"
+
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
+msgstr "crwdns50446:0crwdne50446:0"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "crwdns20094:0crwdne20094:0"
@@ -1710,9 +1704,6 @@ msgstr "crwdns15701:0crwdne15701:0"
 msgid "Individual Traders"
 msgstr "crwdns20097:0crwdne20097:0"
 
-msgid "Indonesia"
-msgstr "crwdns20098:0crwdne20098:0"
-
 msgid "Industry of Employment"
 msgstr "crwdns15702:0crwdne15702:0"
 
@@ -1751,9 +1742,6 @@ msgstr "crwdns20104:0crwdne20104:0"
 
 msgid "It's time to expand. We set up a programming center in Cyberjaya - the Silicon Valley of Kuala Lumpur - to maintain and improve BetOnMarkets.com"
 msgstr "crwdns20105:0crwdne20105:0"
-
-msgid "Italiano"
-msgstr "crwdns20106:0crwdne20106:0"
 
 msgid "Jan"
 msgstr "crwdns15708:0crwdne15708:0"
@@ -1821,8 +1809,8 @@ msgstr "crwdns15723:0crwdne15723:0"
 msgid "Level of Education"
 msgstr "crwdns15725:0crwdne15725:0"
 
-msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-msgstr "crwdns20120:0crwdne20120:0"
+msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
+msgstr "crwdns50447:0crwdne50447:0"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "crwdns20121:0crwdne20121:0"
@@ -2193,8 +2181,8 @@ msgstr "crwdns15820:0crwdne15820:0"
 msgid "Odd"
 msgstr "crwdns20165:0crwdne20165:0"
 
-msgid "Offices in Malta, Malaysia and Japan"
-msgstr "crwdns20166:0crwdne20166:0"
+msgid "Offices in Malta and Malaysia"
+msgstr "crwdns50448:0crwdne50448:0"
 
 msgid "Ok"
 msgstr "crwdns15822:0crwdne15822:0"
@@ -2424,14 +2412,8 @@ msgstr "crwdns15891:0crwdne15891:0"
 msgid "Points"
 msgstr "crwdns15892:0crwdne15892:0"
 
-msgid "Polski"
-msgstr "crwdns20198:0crwdne20198:0"
-
 msgid "Portfolio"
 msgstr "crwdns15893:0crwdne15893:0"
-
-msgid "Portugu s"
-msgstr "crwdns20199:0crwdne20199:0"
 
 msgid "Postal code/ZIP"
 msgstr "crwdns15894:0crwdne15894:0"
@@ -2481,14 +2463,11 @@ msgstr "crwdns15906:0crwdne15906:0"
 msgid "Profit/ Loss"
 msgstr "crwdns15907:0crwdne15907:0"
 
-msgid "Profit/Loss (points)"
-msgstr "crwdns15908:0crwdne15908:0"
-
 msgid "Protect your profits"
 msgstr "crwdns43365:0crwdne43365:0"
 
-msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr "crwdns20204:0crwdne20204:0"
+msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
+msgstr "crwdns50449:0crwdne50449:0"
 
 msgid "Purchase"
 msgstr "crwdns15909:0crwdne15909:0"
@@ -2510,9 +2489,6 @@ msgstr "crwdns20208:0crwdne20208:0"
 
 msgid "Read"
 msgstr "crwdns15913:0crwdne15913:0"
-
-msgid "Read about"
-msgstr "crwdns20209:0crwdne20209:0"
 
 msgid "Ref"
 msgstr "crwdns15917:0crwdne15917:0"
@@ -2748,8 +2724,8 @@ msgstr "crwdns20243:0crwdne20243:0"
 msgid "Sold"
 msgstr "crwdns15985:0crwdne15985:0"
 
-msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr "crwdns46359:0crwdne46359:0"
+msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
+msgstr "crwdns50450:0crwdne50450:0"
 
 msgid "Source of wealth"
 msgstr "crwdns33369:0crwdne33369:0"
@@ -2858,12 +2834,6 @@ msgstr "crwdns15998:0crwdne15998:0"
 
 msgid "Stocks trading frequency"
 msgstr "crwdns15999:0crwdne15999:0"
-
-msgid "Stop Loss Level"
-msgstr "crwdns16000:0crwdne16000:0"
-
-msgid "Stop Profit Level"
-msgstr "crwdns16001:0crwdne16001:0"
 
 msgid "Stop-loss"
 msgstr "crwdns16002:0crwdne16002:0"
@@ -3270,9 +3240,6 @@ msgstr "crwdns20368:0crwdne20368:0"
 msgid "Title"
 msgstr "crwdns16040:0crwdne16040:0"
 
-msgid "Ti ng Vi t"
-msgstr "crwdns20369:0crwdne20369:0"
-
 msgid "To"
 msgstr "crwdns16041:0crwdne16041:0"
 
@@ -3369,8 +3336,8 @@ msgstr "crwdns16060:0crwdne16060:0"
 msgid "Trading binary options is relatively easy, and you can purchase a trade in only three simple steps"
 msgstr "crwdns43394:0crwdne43394:0"
 
-msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-msgstr "crwdns20378:0crwdne20378:0"
+msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
+msgstr "crwdns50451:0crwdne50451:0"
 
 msgid "Tradingview for Binary.com"
 msgstr "crwdns16063:0crwdne16063:0"
@@ -3723,9 +3690,6 @@ msgstr "crwdns16121:0crwdne16121:0"
 msgid "allowing clients to develop their own automated trading robots with  drag-and-drop  simplicity"
 msgstr "crwdns20441:0crwdne20441:0"
 
-msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-msgstr "crwdns46369:0crwdne46369:0"
-
 msgid "and start learning how to trade"
 msgstr "crwdns43409:0crwdne43409:0"
 
@@ -3860,6 +3824,12 @@ msgstr "crwdns16166:0crwdne16166:0"
 
 msgid "points"
 msgstr "crwdns16169:0crwdne16169:0"
+
+msgid "reference no: 39172"
+msgstr "crwdns50452:0crwdne50452:0"
+
+msgid "reference no: 39495"
+msgstr "crwdns50453:0crwdne50453:0"
 
 msgid "sec"
 msgstr "crwdns46371:0crwdne46371:0"

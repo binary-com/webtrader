@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-09-06 03:40\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"PO-Revision-Date: 2018-10-03 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3876,77 +3876,3 @@ msgstr "| 回报"
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "让客户、联盟会员和程序开发员买卖Binary.com的产品"
 
-#~ msgid "(license reference no: 39172)"
-#~ msgstr "(许可证编号：39172)"
-
-#~ msgid "(license reference no: 39495)"
-#~ msgstr "(许可证编号：39495)"
-
-#~ msgid "Accessible from any web browser in 13 languages"
-#~ msgstr "使用任何浏览器，通过13种语言访问"
-
-#~ msgid "Amount Per Point"
-#~ msgstr "每个点的金额"
-
-#~ msgid "Deutsch"
-#~ msgstr "德文"
-
-#~ msgid "Espa ol"
-#~ msgstr "西班牙文"
-
-#~ msgid "Fran ais"
-#~ msgstr "法文"
-
-#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (license no. IS/70156). In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK"
-#~ msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由马耳他金融服务机构授予牌照及监管为3级投资服务提供商，(牌照号码为 IS/70156)。英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛投资监管委员会授予牌照和监管，当前在线博彩牌照于2012 年8 月31 日颁发；及(2) 英国博采委员会授予牌照和监管"
-
-#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-#~ msgstr "在英国和马恩岛，我们的客户通过 Binary (IOM) Ltd. 进行交易。在日本通过 Binary KK 进行交易。在欧盟（除了英国），则通过 Binary (Europe) Ltd 和 Binary Investments (Europe) Ltd. 进行交易。在全世界其他地区，客户通过 Binary (C.R.) S.A.进行交易"
-
-#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/CL2/118/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission"
-#~ msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2018年8月01日）。英国客户由(2) 英国博彩委员会授予牌照和监管"
-
-#~ msgid "Indonesia"
-#~ msgstr "印度尼西亚"
-
-#~ msgid "Italiano"
-#~ msgstr "意大利语"
-
-#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-#~ msgstr "由马耳他、英国、马恩岛、爱尔兰和日本相关机构授予牌照和监管"
-
-#~ msgid "Offices in Malta, Malaysia and Japan"
-#~ msgstr "在马尔他、马来西亚和日本有办公室"
-
-#~ msgid "Polski"
-#~ msgstr "波兰语"
-
-#~ msgid "Portugu s"
-#~ msgstr "葡萄牙语"
-
-#~ msgid "Profit/Loss (points)"
-#~ msgstr "利润/亏损（点）"
-
-#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-#~ msgstr "以英语、印尼文、日文、中文、波兰文、德文、法文、西班牙文、葡萄牙文、意大利文、俄文和泰文发布"
-
-#~ msgid "Read about"
-#~ msgstr "阅读关于"
-
-#~ msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Costa Rica, Hong Kong, or to persons under age 18"
-#~ msgstr "一些产品在所有国家都不可用。本网站不向一些国家如美国、哥斯达黎加、香港、或18岁以下的用户提供服务"
-
-#~ msgid "Stop Loss Level"
-#~ msgstr "止损价位"
-
-#~ msgid "Stop Profit Level"
-#~ msgstr "止盈价位"
-
-#~ msgid "Ti ng Vi t"
-#~ msgstr "越南语"
-
-#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-#~ msgstr "二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会超越起始资金存款，而您并不拥有或占有任何标的资产。在进行博彩产品交易的二元期权交易时，请务必记住博彩活动可能会上瘾，并提醒自己要承担责任"
-
-#~ msgid "and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete"
-#~ msgstr "及爱尔兰客户由(3) 爱尔兰的税务局授予牌照和监管 (远程博彩公司牌照号: 1010285，发照日期为2017年7月1日)。查阅完整的"
