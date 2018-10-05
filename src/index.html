@@ -204,6 +204,10 @@
             local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
         }
 
+        var window_url = new URL(window.location.href);
+        window_url.search = '';
+        window.history.pushState({ path: window_url.href }, '', window_url.href);
+
         var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
             (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
         if (isLangSupported(lang)) {
