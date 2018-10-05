@@ -24,9 +24,6 @@ rv.binders['tick-chart'] = {
                   <span style="${common_vertical_line_style} border-color: #e98024; border-style: solid;"></span> ${'Start Time'.i18n()}
                   <span style="${common_horizontal_line_style} border-color: green; border-style: solid;"></span> ${'Barrier'.i18n()}
                   <span style="${common_vertical_line_style} border-color: #e98024; border-style: dashed;"></span> ${'End Time'.i18n()}`,
-            floating: true,
-            x: 0,
-            y: 5,
             useHTML: true,
          },
          title: '',
