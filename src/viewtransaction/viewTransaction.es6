@@ -17,6 +17,8 @@ const NOTE_TEXT = {
   NO_RESALE: 'Resale of this contract is not offered'.i18n(),
   FINISHED: 'This contract has expired'.i18n(),
 };
+const common_vertical_line_style   = 'margin-bottom: -3px; margin-left: 10px; height: 15px; width: 5px; border: 0; border-left: 2px; display: inline-block;';
+const common_horizontal_line_style = 'margin-bottom: 3px; margin-left: 10px; height: 2; width: 20px; border: 0; border-bottom: 2px; display: inline-block;';
 
 let market_data_disruption_win = null;
 const show_market_data_disruption_win = () => {
@@ -80,6 +82,14 @@ const init_chart = (root, state, options) => {
          marginRight:20
       },
       title: { text: '' },
+      subtitle: {
+        // text   : ChartSettings.getSubtitle(),
+        text: `
+              <span style="${common_vertical_line_style} border-color: #e98024; border-style: solid;"></span> ${'Start Time'.i18n()}
+              <span style="${common_horizontal_line_style} border-color: green; border-style: solid;"></span> ${'Barrier'.i18n()}
+              <span style="${common_vertical_line_style} border-color: #e98024; border-style: dashed;"></span> ${'End Time'.i18n()}`,
+        useHTML: true,
+      },
       tooltip: {
          xDateFormat:'%A, %b %e, %H:%M:%S GMT',
          valueDecimals: decimal_digits || undefined,

@@ -2,6 +2,7 @@
 import moment from 'moment';
 import liveapi from '../websockets/binary_websockets';
 import rv from '../common/rivetsExtra';
+import { trade_types } from '../common/common';
 import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
