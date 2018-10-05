@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Russian\n"
-"Language: ru_RU\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"PO-Revision-Date: 2018-10-03 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -3876,59 +3876,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "позволяющий клиентам, партнёрам и разработчикам покупать и продавать продукты Binary.com"
 
-#~ msgid "Accessible from any web browser in 13 languages"
-#~ msgstr "Доступно на 13 языках с любого веб-браузера"
-
-#~ msgid "Amount Per Point"
-#~ msgstr "Сумма за пункт"
-
-#~ msgid "Deutsch"
-#~ msgstr "Deutsch"
-
-#~ msgid "Espa ol"
-#~ msgstr "Espanol"
-
-#~ msgid "Fran ais"
-#~ msgstr "Francais"
-
-#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-#~ msgstr "Наши клиенты из Великобритании и с Острова Мэн торгуют через Binary (IOM) Ltd. Трейдеров из Японии обслуживает компания Binary KK. Клиенты из Европейского Союза (за исключением Великобритании) торгуют через Binary (Europe) Ltd и Binary Investments (Europe) Ltd. Клиенты из других стран мира торгуют через Binary (C.R.) S.A."
-
-#~ msgid "Indonesia"
-#~ msgstr "Indonesia"
-
-#~ msgid "Italiano"
-#~ msgstr "Italiano"
-
-#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-#~ msgstr "Компания лицензирована и регулируется на Мальте, в Великобритании, на Острове Мэн, в Ирландии и Японии"
-
-#~ msgid "Offices in Malta, Malaysia and Japan"
-#~ msgstr "Офисы на Мальте, в Малайзии и Японии"
-
-#~ msgid "Polski"
-#~ msgstr "Polski"
-
-#~ msgid "Portugu s"
-#~ msgstr "Portugues"
-
-#~ msgid "Profit/Loss (points)"
-#~ msgstr "Прибыль/убытки (пункты)"
-
-#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-#~ msgstr "Сайт работает на русском, английском, индонезийском, японском, китайском, польском, немецком, французском, испанском, португальском, итальянском, русском и тайском языках"
-
-#~ msgid "Read about"
-#~ msgstr "Подробнее"
-
-#~ msgid "Stop Loss Level"
-#~ msgstr "Уровень стоп-лосс"
-
-#~ msgid "Stop Profit Level"
-#~ msgstr "Уровень стоп-профит"
-
-#~ msgid "Ti ng Vi t"
-#~ msgstr "Tieng Viet"
-
-#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-#~ msgstr "Торговля бинарными опционами подходит далеко не всем, поэтому, пожалуйста, убедитесь, что Вы полностью осознаёте все риски. Ваши потери могут превысить первоначальную инвестицию, а Вы не владеете и не получаете никакой доли от базового актива. Помните, что некоторые вариации бинарных опционов являются разновидностью азартных игр и могут вызвать привыкание, поэтому, пожалуйста, играйте ответственно"
