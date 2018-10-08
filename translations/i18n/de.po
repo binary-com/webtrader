@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-10-05 00:50\n"
+"PO-Revision-Date: 2018-10-08 11:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -421,7 +421,7 @@ msgid "Accept"
 msgstr "Akzeptieren"
 
 msgid "Accessible from any web browser in 12 languages"
-msgstr "In 12 Sprachen von jedem Webbrowser zugänglich"
+msgstr "Von jedem Webbrowser in 12 Sprachen zugänglich"
 
 msgid "Account balance"
 msgstr "Kontostand"
@@ -742,7 +742,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com führt eine"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
-msgstr "Binary.com ist ein preisgekrönter Online-Handels-Anbieter, der seinen Kunden mit dem Handel auf Finanzmärkten mittels binären Optionen und CFDs hilft. Der Handel mit binären Optionen und CFDs auf Volatilität Indizes wird als Glücksspiel Tätigkeit eingestuft. Denken Sie daran, dass Glücksspiel süchtig machen kann, bitte spielen Sie verantwortungsbewusst. Erfahren Sie mehr über"
+msgstr "Binary.com ist ein preisgekrönter Online-Handels-Anbieter, der seinen Kunden mit dem Handel auf Finanzmärkten über binäre Optionen und CFDs hilft. Der Handel mit binären Optionen und CFDs auf Volatilität Indizes wird als Glücksspiel Tätigkeit eingestuft. Denken Sie daran, dass Glücksspiel süchtig machen kann, bitte spielen Sie verantwortungsbewusst. Erfahren Sie mehr über"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "Binary.com wird als Best Binary Options Broker von den UK-basierten Online Personal Wealth Awards 2017 ausgezeichnet, sowie von Investoren weltweit ausgewählt"
