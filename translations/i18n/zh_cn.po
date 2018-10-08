@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-08 02:30\n"
+"PO-Revision-Date: 2018-10-08 02:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -742,7 +742,7 @@ msgid "Binary.com introduces an"
 msgstr "Binary.com引入了"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive   please play responsibly. Learn more about"
-msgstr ""
+msgstr "Binary.com 是多次获奖的在线交易提供商，帮助客户通过二元期权和差价合约在金融市场进行交易。基于波动率指数的二元期权和差价合约交易被归类为博彩活动。请记住博彩活动可能会上瘾，并提醒自己要承担责任。查阅详细信息"
 
 msgid "Binary.com is awarded Best Binary Options Broker by the UK-based Online Personal Wealth Awards 2017, as voted by investors worldwide"
 msgstr "2017 年英国网上个人财富奖中，Binary.com被全球投资人评选为最佳二元期权代理商"
@@ -1663,7 +1663,7 @@ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In
 msgstr "在英国和马恩岛，我们的客户通过 Binary (IOM) Ltd. 进行交易。在欧盟（除了英国），则通过 Binary (Europe) Ltd 和 Binary Investments (Europe) Ltd. 进行交易。在全世界其他地区，客户通过 Binary (C.R.) S.A.进行交易"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence"
-msgstr ""
+msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2015年5月26日）。英国客户由(2) 英国博彩委员会授予牌照和监管（牌照"
 
 msgid "In-Neck Pattern (CDLINNECK)"
 msgstr "颈内形态 (CDLINNECK)"
@@ -1810,7 +1810,7 @@ msgid "Level of Education"
 msgstr "教育水平"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
-msgstr ""
+msgstr "由马耳他、英国、马恩岛、和爱尔兰相关机构授予牌照和监管"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "LWMA和EMA一样，对最近价格比较见效，而对交易开始时的收盘价却没有多大影响。因此它们能够快速测出走势反转，但也很容易造成市场波动"
@@ -2182,7 +2182,7 @@ msgid "Odd"
 msgstr "奇"
 
 msgid "Offices in Malta and Malaysia"
-msgstr ""
+msgstr "公司位于马耳他和马来西亚"
 
 msgid "Ok"
 msgstr "确定"
@@ -2467,7 +2467,7 @@ msgid "Protect your profits"
 msgstr "保护利润"
 
 msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr ""
+msgstr "以英语、印尼文、中文、波兰文、德文、法文、西班牙文、葡萄牙文、意大利文、俄文和泰文发布"
 
 msgid "Purchase"
 msgstr "买入"
@@ -2725,7 +2725,7 @@ msgid "Sold"
 msgstr "已卖出"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "一些产品在所有国家都不可用。本网站不向一些国家如美国、加拿大、哥斯达黎加、香港、或18岁以下的用户提供服务"
 
 msgid "Source of wealth"
 msgstr "财富来源"
@@ -3337,7 +3337,7 @@ msgid "Trading binary options is relatively easy, and you can purchase a trade i
 msgstr "二元期权交易非常简单，仅需执行三个简单的步骤即可购入交易"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
-msgstr ""
+msgstr "二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会超越起始资金存款，而您并不拥有或占有任何标的资产"
 
 msgid "Tradingview for Binary.com"
 msgstr "通过Binary.com使用Tradingview"
@@ -3826,10 +3826,10 @@ msgid "points"
 msgstr "点"
 
 msgid "reference no: 39172"
-msgstr ""
+msgstr "编号：39172"
 
 msgid "reference no: 39495"
-msgstr ""
+msgstr "编号：39495"
 
 msgid "sec"
 msgstr "秒钟"
