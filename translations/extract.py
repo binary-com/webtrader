@@ -85,7 +85,7 @@ class WebtraderParser(HTMLParser):
         lines = subprocess.Popen( ['node', 'extract.js'], stdout=subprocess.PIPE ).communicate()[0]
         for line in lines.split('\n'):
             for text in re.split(r'<.+?>', line):
-                text = re.sub( '\s+', ' ', text).strip(' \t\r\n*,+.:-_"\'()').strip();
+                text = re.sub( '\s+', ' ', text).strip(' \t\r\n').strip();
                 if text != '' and len(text) > 1: # ignore empty and single character strings.
                     self.texts.append(text)
 
@@ -112,7 +112,7 @@ os.remove(messages_pot);
 with open(messages_pot, 'a+') as wf:
     for text in texts:
         text = text.replace('"', '\\"')
-        text = re.sub(r'[^\x00-\x7F]+',' ', text).strip() # remove non aski characters
+        text = re.sub(r'[^\x00-\x7F]+',' ', text) # remove non aski characters
         if text:
             wf.write('\n' + 'msgid "' + text + '"'      )
             wf.write('\nmsgstr "" \n')

@@ -126,14 +126,14 @@ function populate_footer() {
             },
         },
         P3: {
-            TEXT: 'In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker’s Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)'.i18n(),
+            TEXT: 'In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker\'s Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)'.i18n(),
             TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39495" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/en/regulation.html">', '</a>'],
             get_html: function() {
                 return add_tags(FOOTER_TEXT.P3.TEXT, FOOTER_TEXT.P3.TAGS);
             }
         },
         P4: {
-            TEXT: 'Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.'.i18n(),
+            TEXT: 'Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website\'s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.'.i18n(),
             TAGS: ['<a href="https://www.binary.com/en/responsible-trading.html" target="_blank">', '</a>'],
             get_html: function() {
                 return add_tags(FOOTER_TEXT.P4.TEXT, FOOTER_TEXT.P4.TAGS);
@@ -148,7 +148,6 @@ function populate_footer() {
     };
 
     for (var key in FOOTER_TEXT) {
-        console.log(key);
         var p_content = FOOTER_TEXT[key].get_html();
         $('#' + key.toLowerCase()).html(p_content);
     }
