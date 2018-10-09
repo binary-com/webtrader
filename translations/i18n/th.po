@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-10-09 01:00\n"
+"PO-Revision-Date: 2018-10-09 01:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1812,7 +1812,7 @@ msgid "Level of Education"
 msgstr "ระดับการศึกษา"
 
 msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, and Ireland"
-msgstr ""
+msgstr "ได้รับอนุญาตและกำกับดูแลในประเทศมอลตา สหราชอาณาจักร เกาะ Isle of Man และไอร์แลนด์"
 
 msgid "Like the EMA, the LWMA assigns more meaning to the recent prices and less to the closing price from the period's beginning. Thus they are faster at detecting a trend reversal, though it they can be more prone to market noise"
 msgstr "เช่นเดียวกับ EMA LWMA ให้ความหมายมากกว่ากับราคาล่าสุด และน้อยกว่ากับราคาปิดของช่วงเวลาเริ่มต้น ดังนั้นจะช่วยให้ค้นพบการย้อนกลับของแนวโน้มได้เร็วกว่า แต่มีแนวโน้มที่ถูกกระทบด้วยคลื่นรบกวนในตลาดได้ง่ายกว่า"
@@ -2184,7 +2184,7 @@ msgid "Odd"
 msgstr "คี่"
 
 msgid "Offices in Malta and Malaysia"
-msgstr ""
+msgstr "สำนักงานที่ประเทศมอลตา และมาเลเซีย"
 
 msgid "Ok"
 msgstr "ตกลง"
@@ -2469,7 +2469,7 @@ msgid "Protect your profits"
 msgstr "ปกป้องผลกำไรของท่าน"
 
 msgid "Published in English, Indonesian, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-msgstr ""
+msgstr "เผยแพร่เป็นภาษาอังกฤษ ภาษาอินโดนีเซีย ภาษาจีน ภาษาโปแลนด์ ภาษาเยอรมัน ภาษาฝรั่งเศส ภาษาสเปน ภาษาโปรตุเกส ภาษาอิตาลี ภาษารัสเซีย และภาษาไทย"
 
 msgid "Purchase"
 msgstr "ซื้อ"
@@ -2727,7 +2727,7 @@ msgid "Sold"
 msgstr "ขาย"
 
 msgid "Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18"
-msgstr ""
+msgstr "ผลิตภัณฑ์บางอันยังไม่มีในทุกประเทศ การบริการของเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง หรือให้แก่บุคคลที่อายุต่ำกว่า 18 ปี"
 
 msgid "Source of wealth"
 msgstr "แหล่งที่มาของรายได้"
@@ -3339,7 +3339,7 @@ msgid "Trading binary options is relatively easy, and you can purchase a trade i
 msgstr "การซื้อขายไบนารีออปชั่นทำได้อย่างง่ายดาย ด้วยเพียง 3 ขั้นตอน เพื่อเริ่มการซื้อขาย"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset"
-msgstr ""
+msgstr "การซื้อขายไบนารีออปชันอาจไม่เหมาะสมสำหรับทุกๆ คน ดังนั้นโปรดแน่ใจคุณเข้าใจความเสี่ยงทั้งหมดที่เกี่ยวข้อง การขาดทุนของคุณอาจสูงกว่าจำนวนเงินฝากในครั้งแรก และคุณไม่ได้เป็นเจ้าของ หรือ ได้รับผลประโยชน์ใดๆ จากผลิตภัณฑ์อ้างอิงนั้น"
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview สำหรับ Binary.com"
@@ -3828,10 +3828,10 @@ msgid "points"
 msgstr "จุด"
 
 msgid "reference no: 39172"
-msgstr ""
+msgstr "ใบอนุญาตเลขที่: 39172"
 
 msgid "reference no: 39495"
-msgstr ""
+msgstr "ใบอนุญาตเลขที่: 39495"
 
 msgid "sec"
 msgstr "วินาที"
