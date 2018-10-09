@@ -149,13 +149,13 @@
                 </div>
             </div>
             <div class="footer__text-container">
-                <p></p>
-                <p></p>
-                <p class="u-margin-bottom-small"></p>
+                <p id="p1"></p>
+                <p id="p2"></p>
+                <p class="u-margin-bottom-small" id="p3"></p>
                 <div class="about-binary">
-                    <p></p>
+                    <p id="p4"></p>
                 </div>
-                <p class="risk-warning"></p>
+                <p class="risk-warning" id="p5"></p>
             </div>
         </div>
     </footer>
@@ -281,32 +281,39 @@
                 P2: {
                     TEXT: `In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence ${'[_1]'}reference no: 39172${'[_2]'}).`.i18n(),
                     TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39172" target="_blank" rel="noopener noreferrer">', '</a>'],
-                    get_html: () => { add_tags(FOOTER_TEXT.P2.TEXT, FOOTER_TEXT.P2.TAGS) } 
+                    get_html: () => add_tags(FOOTER_TEXT.P2.TEXT, FOOTER_TEXT.P2.TAGS)
                 },
                 P3: {
                     TEXT: `In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence ${'[_1]'}reference no: 39495${'[_2]'}), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker’s Licence no. 1010285 issued on 1 July 2017). View complete ${'[_3]'}Regulatory Information${'[_4]'}.)`.i18n(),
                     TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39495" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/en/regulation.html">', '</a>'],
-                    get_html: () => { add_tags(FOOTER_TEXT.P3.TEXT, FOOTER_TEXT.P3.TAGS) } 
+                    get_html: () => add_tags(FOOTER_TEXT.P3.TEXT, FOOTER_TEXT.P3.TAGS)
                 },
-                p4: {
-                    TEXT: 'Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about <a href="https://www.binary.com/en/responsible-trading.html" target="_blank">Responsible Trading</a>. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.'.i18n(),
+                P4: {
+                    TEXT: `Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about ${'[_1]'}Responsible Trading${'[_2]'}. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.`.i18n(),
+                    TAGS: ['<a href="https://www.binary.com/en/responsible-trading.html" target="_blank">', '</a>'],
+                    get_html: () => add_tags(FOOTER_TEXT.P4.TEXT, FOOTER_TEXT.P4.TAGS)
                 },
-                p5: 'Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset.'.i18n(),
+                P5: {
+                    TEXT: 'Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset.'.i18n(),
+                    get_html: () => FOOTER_TEXT.P5.TEXT,
+                },
             };
-            console.log(FOOTER_TEXT.p2.get_html());
-            // [_1] 
-            // [_2] 
-            // [_3] 
-            // [_4]
-            
+
             function add_tags(text, args) {
-                console.log(text, args);
+                if (!text || !Array.isArray(args) || args.length < 0) return;
+
                 for (i = 0; i < args.length; i++) {
                     text = text.replace(`[_${i+1}]`, args[i]);
                 }
-                console.log(text);
+                return text;
+            }
+
+            for (const key in FOOTER_TEXT) {
+                const p_content = FOOTER_TEXT[key].get_html();
+                $(`#${key.toLowerCase()}`).html(p_content);
             }
         }
+
         //For crowdin in-context translation.
         if ((local_storage.get("i18n") || {}).value === 'ach') {
             var _jipt = [];
