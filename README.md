@@ -10,14 +10,13 @@ The goal of this project is to create a full-screen trading interface for [Binar
 
         * git
         * node JS
-        * npm
         * yarn
 
 ## How to work with this project
 
         $ git clone https://github.com/binary-com/webtrader.git
         $ cd webtrader
-        $ yarn #install all dependencies
+        $ yarn install
         $ yarn build #compiles the project
         $ yarn start #Start a local server and serve the compiled files
 
@@ -57,15 +56,16 @@ Every check-in or merge into master will trigger travis-ci build and do a releas
 
 Every check-in or merge of PR into development will trigger travis-ci build and do a beta release
 
-#### Translation-related command
+#### Translations
 
 Translation related files are in `/translations` folder.
     
   To extract text for translation:
 
+        $ yarn build
         $ cd ./translations
-        $ python extract.py # This will extract text from `../src/**/*.html` files.
-        $ extract.py # runs `extract.js` which extracts string literals form `../src/**/*.js` files.
+        $ python extract.py
+        $ extract.py # extracts string literals from `dist/uncompressed` (from *.html and *.js)
         $ extract.py # for merging `.po` files uses `msgmerge` command line tool.
 
 The tool should be available on linux, if you are on Osx try `brew install gettext && brew link gettext --force`.
