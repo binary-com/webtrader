@@ -59,8 +59,13 @@ body {
     flex-wrap: wrap;
 
     a {
-        color: #FFF;
-        font-weight: 400;
+        // !important for overriding binary.css
+        color: #dedede !important;
+        font-weight: 100 !important;
+    }
+
+    a:visited {
+        font-weight: 100;
     }
 
     &__container {
@@ -134,7 +139,6 @@ body {
         }
         .risk-warning {
             margin-top: 7px;
-            font-size: 16px;
         }
         .about-binary {
             border-top: 1px solid #44484c;
