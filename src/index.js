@@ -53,7 +53,7 @@ var contact_us_el = document.getElementById('contact-us');
 contact_us_el.href = 'https://www.binary.com/' + lang + '/contact.html';
 
 if (local_storage.get("oauth") !== null) {
-    window.location.href = VERSION + '/main.html';
+    window.location.href = VERSION + 'main.html';
 } else {
     $(function () {
         $('body').css('display', 'block');
@@ -65,7 +65,6 @@ if (local_storage.get("oauth") !== null) {
                 setup_i18n_translation(data);
                 populate_footer();
             });
-            console.log(lang);
             // Show hidden languages
             $('#select_language').find('.invisible').removeClass('invisible');
             var selected_lang = $('#select_language').find('.' + lang);
@@ -133,15 +132,14 @@ function populate_footer() {
     };
 
     for (var key in FOOTER_TEXT) {
-        var p_content = add_tags(key, FOOTER_TEXT);
+        var text = FOOTER_TEXT[key].TEXT;
+        var tags = FOOTER_TEXT[key].TAGS;
+
+        var p_content = add_tags(text, tags);
         $('#' + key.toLowerCase()).html(p_content);
     }
 
-    function add_tags(key, obj) {
-        var text = obj[key].TEXT;
-        var tags = obj[key].TAGS;
-
-        if (!text) return;
+    function add_tags(text, tags) {
         if (!Array.isArray(tags) || tags.length < 0) return text;
 
         for (i = 0; i < tags.length; i++) {
