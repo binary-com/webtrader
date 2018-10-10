@@ -1,3 +1,7 @@
+$FOOTER_BORDER_GRAY: #44484c;
+$FOOTER_TEXT_GRAY: #a8a8a8;
+$FOOTER_LINK_TEXT_GRAY: #dedede;
+
 body {
     height: 100%;
 }
@@ -53,14 +57,14 @@ body {
 
 .footer {
     padding: 20px 20px;
-    color: #a8a8a8;
+    color: $FOOTER_TEXT_GRAY;
     font-size: 13px;
     font-weight: 100;
     flex-wrap: wrap;
 
     a {
         // !important for overriding binary.css
-        color: #dedede !important;
+        color: $FOOTER_LINK_TEXT_GRAY !important;
         font-weight: 100 !important;
     }
 
@@ -141,8 +145,8 @@ body {
             margin-top: 7px;
         }
         .about-binary {
-            border-top: 1px solid #44484c;
-            border-bottom: 1px solid #44484c;
+            border-top: 1px solid $FOOTER_BORDER_GRAY;
+            border-bottom: 1px solid $FOOTER_BORDER_GRAY;
         }
     }
 }

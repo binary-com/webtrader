@@ -112,7 +112,6 @@ os.remove(messages_pot);
 with open(messages_pot, 'a+') as wf:
     for text in texts:
         text = text.replace('"', '\\"')
-        print text
         text = re.sub(r'[^\x00-\x7F]+',' ', text).strip() # remove non aski characters
         if text:
             wf.write('\n' + 'msgid "' + text + '"'      )
