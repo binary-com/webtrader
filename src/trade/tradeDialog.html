@@ -2,7 +2,6 @@
   <div class="trade-fields" rv-on-click='template.hide'>
     <ul class="categories-row">
         <li>
-            <span class="ui-icon ui-icon-help" rv-on-click="openHelp"></span>
             <select class="contract-category-display"
                     rv-selectmenu="categories.selected | notify categories.update duration.update | debounce proposal.onchange"
                     rv-selectrefresh="categories.array" >
