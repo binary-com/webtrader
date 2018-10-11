@@ -38,7 +38,7 @@ var find = function(tree) {
   }
 }
 
-var files = walk("../src");
+var files = walk("../dist/uncompressed");
 files.forEach(function(file){
     var content = fs.readFileSync(file, "utf8");
     var tree = esprima.parse(content);

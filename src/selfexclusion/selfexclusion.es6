@@ -160,7 +160,7 @@ const settingsData = {
             return;
         }
         if (data.timeout_until || data.exclude_until) {
-            const confirm = window.confirm("When you click \"Ok\" you will be excluded from trading on the site until the selected date.".i18n());
+            const confirm = window.confirm('When you click "Ok" you will be excluded from trading on the site until the selected date.'.i18n());
             if (confirm == false) {
                 return;
             }

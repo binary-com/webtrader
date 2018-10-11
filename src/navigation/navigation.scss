@@ -1,9 +1,3 @@
-/* Created by Armin on 10/17/2015 */
-
-body {
-  min-width: 1000px;
-}
-
 #topbar {
    width: 100%;
    line-height: 1;
@@ -11,7 +5,7 @@ body {
    text-align: right;
    padding: 3px 0;
    height: 23px;
-   min-width: 1000px;
+   min-width: 1150px;
    span.time {
       color: white;
       float: right;
@@ -35,7 +29,7 @@ body {
 }
 
 #nav-menu {
-  min-width: 1000px;
+  min-width: 1150px;
   .trade, .instruments, .resources, .workspace {
       > ul {
          border: none;
