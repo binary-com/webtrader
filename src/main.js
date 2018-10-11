@@ -280,14 +280,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     elem.click();
                 });
 
-            //Register async loading of help dialog
-            load_ondemand($navMenu.find("a.help"), "click", "Loading help docs...".i18n(), "help/help",
-                function(help) {
-                    var elem = $navMenu.find("a.help");
-                    help.init_help(elem);
-                    elem.click();
-                });
-
             load_ondemand($navMenu.find("a.copytrade"), "click", "Loading Copy Trade...".i18n(), "copytrade/index",
               function(copytrade) {
                   var elem = $navMenu.find("a.copytrade");
