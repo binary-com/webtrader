@@ -71,6 +71,8 @@ Translation related files are in `/translations` folder.
 The tool should be available on linux, if you are on Osx try `brew install gettext && brew link gettext --force`.
 to submit text to translators: push to *translation* branch, weblate hook will be triggered.
 
+To see CrowdIn In-Context translations pass querystring `?lang=ach` (obs not for production env)
+
 ### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code:
