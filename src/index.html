@@ -163,6 +163,16 @@
     <!-- For accessing current app version from index.js -->
     <script> var VERSION = "v<version>/"; </script>
     <script src="v<version>/index.js"></script>
+    <script type="text/javascript">
+        var _jipt = [];
+        console.log(local_storage.get("i18n"));
+        if ((local_storage.get("i18n") || {}).value === 'ach') {
+            _jipt.push(['project', 'webtrader']);
+            var crowdin = document.createElement("script");
+            crowdin.setAttribute('src', '//cdn.crowdin.com/jipt/jipt.js');
+            document.head.appendChild(crowdin);
+        }
+    </script>
 
     <!-- Google Tag Manager -->
     <noscript>
