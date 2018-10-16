@@ -342,12 +342,9 @@ function set_language(href, lang) {
         window.history.pushState({ path: window_url.href }, '', window_url.href);
     }
 
-    if (is_lang_supported(lang)) {
-        local_storage.set('i18n', { value: lang });
-    } else {
-        local_storage.set('i18n', { value: 'en' });
-    }
+    local_storage.set('i18n', { value: lang });
 }
+
 /**
  * This includes all loginIds, including the disabled accounts too
 */
