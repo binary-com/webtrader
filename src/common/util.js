@@ -297,12 +297,39 @@ var local_storage = {
     return localStorage.removeItem(name);
   }
 }
+function get_supported_languages() {
+    var SUPPORTED_LANGUAGES = [
+        { value: 'en', name: 'English'},
+        { value: 'de', name: 'Deutsch'},
+        { value: 'es', name: 'Español'},
+        { value: 'fr', name: 'Français'},
+        { value: 'id', name: 'Indonesia'},
+        { value: 'it', name: 'Italiano'},
+        { value: 'pl', name: 'Polish'},
+        { value: 'pt', name: 'Português'},
+        { value: 'ru', name: 'Русский'},
+        { value: 'th', name: 'Thai'},
+        { value: 'vi', name: 'Tiếng Việt'},
+        { value: 'zh_cn', name: '简体中文'},
+        { value: 'zh_tw', name: '繁體中文'}
+    ];
+    return SUPPORTED_LANGUAGES;
+}
 
-function isLangSupported(lang) {
-    lang = (lang || "").trim().toLowerCase();
-    return lang === "ar" || lang === "de" || lang === "en" || lang === "es" || lang === "fr" || lang === "id" || lang === "it" || lang === "th"
-            || lang === "ja" || lang === "pl" || lang === "pt" || lang === "ru" || lang === "vi" || lang === "zn_cn" || lang === "zh_cn" || lang === "zh_tw"
-            || lang === "ach"//Crowdin in context language;
+function is_lang_supported(lang) {
+    if (!lang) return false;
+
+    lang = lang.trim().toLowerCase();
+    var supported_languages = get_supported_languages();
+    var is_supported = false;
+    supported_languages.map(function(supported_lang) {
+        if (supported_lang.value === lang) is_supported = true;
+    });
+
+    // support crowdIn translation setting for beta
+    if (lang === 'ach' && is_beta()) is_supported = true; 
+
+    return is_supported;
 }
 
 /**
