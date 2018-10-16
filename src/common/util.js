@@ -297,6 +297,7 @@ var local_storage = {
     return localStorage.removeItem(name);
   }
 }
+
 function get_supported_languages() {
     var SUPPORTED_LANGUAGES = [
         { value: 'en', name: 'English'},
@@ -322,16 +323,31 @@ function is_lang_supported(lang) {
     lang = lang.trim().toLowerCase();
     var supported_languages = get_supported_languages();
     var is_supported = false;
+
     supported_languages.map(function(supported_lang) {
         if (supported_lang.value === lang) is_supported = true;
     });
 
-    // support crowdIn translation setting for beta
+    // support crowdIn translation view for beta
     if (lang === 'ach' && is_beta()) is_supported = true;
 
     return is_supported;
 }
 
+function set_language(href, lang) {
+    // remove "?lang" querystring from url without refreshing the page
+    if (href) {
+        var window_url = new URL(href);
+        window_url.search = '';
+        window.history.pushState({ path: window_url.href }, '', window_url.href);
+    }
+
+    if (is_lang_supported(lang)) {
+        local_storage.set('i18n', { value: lang });
+    } else {
+        local_storage.set('i18n', { value: 'en' });
+    }
+}
 /**
  * This includes all loginIds, including the disabled accounts too
 */

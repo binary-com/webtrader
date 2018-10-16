@@ -67,25 +67,12 @@ if (local_storage.get("oauth") !== null) {
 }
 
 function setTime() {
-    var time = moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT'
+    var time = moment.utc().format('YYYY-MM-DD HH:mm:ss') + ' GMT';
     $(".time").text(time);
 }
 
 function openTradingPage() {
     window.location.href = VERSION + 'main.html';
-}
-
-function set_language(href, lang) {
-    // remove "?lang" querystring from url without refreshing the page 
-    var window_url = new URL(href);
-    window_url.search = '';
-    window.history.pushState({ path: window_url.href }, '', window_url.href);
-
-    if (is_lang_supported(lang)) {
-        local_storage.set('i18n', { value: lang });
-    } else {
-        local_storage.set('i18n', { value: 'en' });
-    }
 }
 
 function populate_language_dropdown() {
@@ -138,13 +125,4 @@ function populate_footer() {
         }
         return text;
     }
-}
-
-//For crowdin in-context translation.
-if ((local_storage.get("i18n") || {}).value === 'ach') {
-    var _jipt = [];
-    _jipt.push(['project', 'webtrader']);
-    var crowdin = document.createElement("script");
-    crowdin.setAttribute('src', '//cdn.crowdin.com/jipt/jipt.js');
-    document.head.appendChild(crowdin);
 }
