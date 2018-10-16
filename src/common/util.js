@@ -327,7 +327,7 @@ function is_lang_supported(lang) {
     });
 
     // support crowdIn translation setting for beta
-    if (lang === 'ach' && is_beta()) is_supported = true; 
+    if (lang === 'ach' && is_beta()) is_supported = true;
 
     return is_supported;
 }

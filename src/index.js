@@ -1,18 +1,3 @@
-var SUPPORTED_LANGUAGES = [
-    { value: 'en', name: 'English'},
-    { value: 'de', name: 'Deutsch'},
-    { value: 'es', name: 'Español'},
-    { value: 'fr', name: 'Français'},
-    { value: 'id', name: 'Indonesia'},
-    { value: 'it', name: 'Italiano'},
-    { value: 'pl', name: 'Polish'},
-    { value: 'pt', name: 'Português'},
-    { value: 'ru', name: 'Русский'},
-    { value: 'th', name: 'Thai'},
-    { value: 'vi', name: 'Tiếng Việt'},
-    { value: 'zh_cn', name: '简体中文'},
-    { value: 'zh_tw', name: '繁體中文'}
-];
 /* oauth login ? */
 var href = window.location.href;
 //Remove the '#' check later once the backend changes are released TODO
@@ -32,22 +17,12 @@ if (/acct1=/.test(href) && /token1=/.test(href)) {
     local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
 }
 
-var window_url = new URL(window.location.href);
-window_url.search = '';
-window.history.pushState({ path: window_url.href }, '', window_url.href);
-
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
-if (isLangSupported(lang)) {
-    local_storage.set('i18n', { value: lang });
-    if (lang === 'id') {
-        $('#footer').hide();
-    }
-} else { // In case of invalid language fallback to EN
-    local_storage.set('i18n', { value: 'en' });
-}
 
-populate_language_dropdown(SUPPORTED_LANGUAGES);
+set_language(href, lang);
+
+populate_language_dropdown();
 
 var contact_us_el = document.getElementById('contact-us');
 contact_us_el.href = 'https://www.binary.com/' + lang + '/contact.html';
@@ -59,11 +34,13 @@ if (local_storage.get("oauth") !== null) {
         $('body').css('display', 'block');
         setTime();
         setInterval(setTime, 1000);
-
-        if (isLangSupported(lang)) {
+        if (is_lang_supported(lang)) {
             $.getJSON(VERSION + 'i18n/' + lang + '.json', function (data) {
                 setup_i18n_translation(data);
                 populate_footer();
+                if (lang === 'id') {
+                    $('#footer').hide();
+                }
             });
             // Show hidden languages
             $('#select_language').find('.invisible').removeClass('invisible');
@@ -98,7 +75,21 @@ function openTradingPage() {
     window.location.href = VERSION + 'main.html';
 }
 
-function populate_language_dropdown(language_arr) {
+function set_language(href, lang) {
+    // remove "?lang" querystring from url without refreshing the page 
+    var window_url = new URL(href);
+    window_url.search = '';
+    window.history.pushState({ path: window_url.href }, '', window_url.href);
+
+    if (is_lang_supported(lang)) {
+        local_storage.set('i18n', { value: lang });
+    } else {
+        local_storage.set('i18n', { value: 'en' });
+    }
+}
+
+function populate_language_dropdown() {
+    var language_arr = get_supported_languages();
     var ul_el = document.getElementById('select_language');
     language_arr.map(function(language) {
         var li = document.createElement('li');
