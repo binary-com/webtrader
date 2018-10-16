@@ -20,7 +20,7 @@ if (/acct1=/.test(href) && /token1=/.test(href)) {
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
 
-set_language(href, lang);
+is_lang_supported(lang) ? set_language(href, lang) : set_language(href, 'en');
 
 populate_language_dropdown();
 
@@ -34,23 +34,24 @@ if (local_storage.get("oauth") !== null) {
         $('body').css('display', 'block');
         setTime();
         setInterval(setTime, 1000);
-        if (is_lang_supported(lang)) {
-            $.getJSON(VERSION + 'i18n/' + lang + '.json', function (data) {
-                setup_i18n_translation(data);
-                populate_footer();
-                if (lang === 'id') {
-                    $('#footer').hide();
-                }
-            });
-            // Show hidden languages
-            $('#select_language').find('.invisible').removeClass('invisible');
-            var selected_lang = $('#select_language').find('.' + lang);
-            var curr_ele = $('#select_language .current .language');
-            var disp_lang = $("#display_language .language");
-            disp_lang.text(selected_lang.text());
-            curr_ele.text(selected_lang.text());
-            selected_lang.addClass('invisible');
-        }
+
+        var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
+        $.getJSON(VERSION + 'i18n/' + i18n_name + '.json', function (data) {
+            setup_i18n_translation(data);
+            populate_footer();
+            if (lang === 'id') {
+                $('#footer').hide();
+            }
+        });
+
+        // Show hidden languages
+        $('#select_language').find('.invisible').removeClass('invisible');
+        var selected_lang = $('#select_language').find('.' + i18n_name);
+        var curr_ele = $('#select_language .current .language');
+        var disp_lang = $("#display_language .language");
+        disp_lang.text(selected_lang.text());
+        curr_ele.text(selected_lang.text());
+        selected_lang.addClass('invisible');
 
         $('.languages #select_language li').each(function (i, el) {
             $(el).click(function () {
