@@ -39,19 +39,12 @@
         var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
         var lang = (params_str && params_str.match(/lang=[a-zA-Z_]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
             (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
-        if (is_lang_supported(lang)) {
-            local_storage.set('i18n', { value: lang });
-        } else {
-            local_storage.set('i18n', { value: 'en' });
-        }
-
-        var window_url = new URL(window.location.href);
-        window_url.search = '';
-        window.history.pushState({ path: window_url.href }, '', window_url.href);
+        set_language(href, lang)
     </script>
     <script type="text/javascript">
         var _jipt = [];
         if ((local_storage.get("i18n") || {}).value === 'ach') {
+            localStorage.setItem('jipt_language_code_webtrader', 'en');
             _jipt.push(['project', 'webtrader']);
             var crowdin = document.createElement("script");
             crowdin.setAttribute('src', '//cdn.crowdin.com/jipt/jipt.js');
