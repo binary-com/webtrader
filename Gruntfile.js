@@ -62,7 +62,6 @@ module.exports = function (grunt) {
                             "chosen-js/*",
                             "jquery/dist/jquery.min.js",
                             "!vanderlee-colorpicker/**", "vanderlee-colorpicker/jquery.colorpicker.js", "vanderlee-colorpicker/images/**", "vanderlee-colorpicker/jquery.colorpicker.css",
-
                             "datatables.net-dt/images/**",
                             "datatables.net-dt/css/jquery.dataTables.css",
                             "datatables.net/js/jquery.dataTables.js",
