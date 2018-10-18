@@ -270,16 +270,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        sloc: {
-            analyze: {
-                files: {
-                    //Check the negate option. Its not working
-                    //Currently open ticket https://github.com/rhiokim/grunt-sloc/issues/14
-                    //TODO
-                    src: ["**/*.js", "**/*.es6", "**/*.css", "**/*.html", "!**/libs/**"]
-                }
-            }
-        },
         bump: {
             options: {
                 files: ["package.json"],

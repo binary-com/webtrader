@@ -40,10 +40,6 @@ Go to https://webtrader.local:35729 and accept the self signed ssl certificate f
 
 Now you can debug your app on https://webtrader.local/ locally.
 
-In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
-
-        $ yarn sloc
-
 To bump release version, run
 
         $ yarn major-rel
