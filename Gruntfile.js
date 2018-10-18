@@ -434,53 +434,9 @@ module.exports = function (grunt) {
             ]
           }
         },
-        markdown: {
-            helpDocs: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: "src/help/docs/",
-                        src: ["**/*.md"],
-                        bundle: true, //Bundle the markdown text in one file?
-                        bundle_dest: "dist/uncompressed/v<%=pkg.version%>/help/content.html"
-                    }
-                ]
-            }
-        }
     });
 
-    // This is markdown to html converter.
-    var showdown = require("showdown"),
-        converter = new showdown.Converter();
-    /*
-     * pass a bundle: true to bundle files
-     * with bundle_dest: "path" to save it to a specific file at path
-     */
-    grunt.registerMultiTask("markdown","Converts md files to html and bundles them into one file", function(){
-        var content = "";
-        this.files.forEach(function(f){
-            var src= f.src[0].split("/");
-            var id = src[src.length-1].replace(".md","").toLowerCase();
-            var html = "<div id=\"" + id + "\">" + converter.makeHtml(grunt.file.read(f.src[0])) + "</div>";
-            if(f.bundle){
-                content = content + "\n" + html;
-            } else {
-                var write_successfull = grunt.file.write(f.dest,html);
-                if(!write_successfull){
-                    grunt.log.error("Couldn\"t convert " + f.src[0] + " to html");
-                }
-            }
-        });
-
-        if(this.data.files[0].bundle){
-            var write_successfull = grunt.file.write(this.data.files[0].bundle_dest,content);
-            if(!write_successfull){
-                grunt.log.error("Failed bundling the files");
-            }
-        }
-    });
-
-    grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "markdown:helpDocs", "copy:copy_i18n", "copy:copyLibraries", "copy:copyChromeManifest", "rename", "replace:version", "replace:style"]);
+    grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "copy:copy_i18n", "copy:copyLibraries", "copy:copyChromeManifest", "rename", "replace:version", "replace:style"]);
     grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "compress", "copy:copy_AfterCompression"]);
     grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
 

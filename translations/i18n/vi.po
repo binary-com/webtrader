@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-08-16 05:20\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi_VN\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2018-10-17 03:43\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -3876,59 +3876,3 @@ msgstr ""
 msgid "enabling clients, affiliates, and developers to buy and sell Binary.com products"
 msgstr "tạo điều kiện cho khách hàng, chi nhánh, và các nhà phát triển để mua và bán các sản phẩm của Binary.com"
 
-#~ msgid "Accessible from any web browser in 13 languages"
-#~ msgstr "Có thể truy cập từ bất kỳ trình duyệt web nào với 13 ngôn ngữ"
-
-#~ msgid "Amount Per Point"
-#~ msgstr "Số tiền cho mỗi điểm"
-
-#~ msgid "Deutsch"
-#~ msgstr "Tiếng Đức"
-
-#~ msgid "Espa ol"
-#~ msgstr "Espa già"
-
-#~ msgid "Fran ais"
-#~ msgstr "Fran ais"
-
-#~ msgid "In the UK and Isle of Man, our clients trade through Binary (IOM) Ltd. In Japan, they trade through Binary KK. In the European Union (except UK), they trade through Binary (Europe) Ltd and Binary Investments (Europe) Ltd. In the rest of the world, they trade through Binary (C.R.) S.A"
-#~ msgstr "Ở Vương Quốc Anh và đảo Man, khách hàng của chúng tôi giao dịch qua Binary (IOM) Ltd Tại Nhật bản, họ thương mại thông qua Binary KK. Trong liên minh châu Âu (ngoại trừ Anh), họ thương mại qua Binary (Châu Âu) công ty TNHH và đầu tư Binary (Châu Âu) Ltd. Ở phần còn lại của thế giới, họ thương mại thông qua Binary (C.R.) S.A"
-
-#~ msgid "Indonesia"
-#~ msgstr "Ở Indonesia:"
-
-#~ msgid "Italiano"
-#~ msgstr "Tiếng Italia"
-
-#~ msgid "Licensed and regulated in Malta, the United Kingdom, the Isle of Man, Ireland, and Japan"
-#~ msgstr "Được cấp phép và quy định ở Malta, Vương Quốc Anh, đảo Man, Ai-len và Nhật bản"
-
-#~ msgid "Offices in Malta, Malaysia and Japan"
-#~ msgstr "Các văn phòng tại Malta, Malaysia và Nhật bản"
-
-#~ msgid "Polski"
-#~ msgstr "polski"
-
-#~ msgid "Portugu s"
-#~ msgstr "portugu s"
-
-#~ msgid "Profit/Loss (points)"
-#~ msgstr "Lợi nhuận/thua lỗ (điểm)"
-
-#~ msgid "Published in English, Indonesian, Japanese, Chinese, Polish, German, French, Spanish, Portuguese, Italian, Russian, and Thai"
-#~ msgstr "Xuất bản dưới các ngôn ngữ: tiếng Anh, Indonesia, Nhật bản, Trung Quốc, Ba Lan, Đức, Pháp, tiếng Tây Ban Nha, tiếng Bồ Đào Nha, ý, Nga, và Thái Lan"
-
-#~ msgid "Read about"
-#~ msgstr "Đọc về"
-
-#~ msgid "Stop Loss Level"
-#~ msgstr "Ngăn chặn mức độ thua"
-
-#~ msgid "Stop Profit Level"
-#~ msgstr "Ngăn chặn mức độ lợi nhuận"
-
-#~ msgid "Ti ng Vi t"
-#~ msgstr "Ti ng Vi t"
-
-#~ msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset. In regards to binary options which are gambling products, remember that gambling can be addictive - please play responsibly"
-#~ msgstr "Giao dịch quyền chọn nhị phân có thể không thích hợp cho tất cả mọi người, vì vậy vui lòng bảo đảo rằng bạn đã hiểu hoàn toàn về rủi ro có liên quan. Thất thoát của bạn có thể vượt quá số tiền gửi ban đầu và bạn sẽ không được sở hữu hay có bất kì tiền lãi nào trong tài sản cơ sở. Liên quan tới quyền chọn nhị phân, là sản phẩm cá cược, hãy nhớ rằng chơi cá cược có thể bị nghiện - vui lòng chơi một cách có trách nhiệm"
