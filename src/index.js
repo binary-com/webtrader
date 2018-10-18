@@ -20,7 +20,8 @@ if (/acct1=/.test(href) && /token1=/.test(href)) {
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
 
-is_lang_supported(lang) ? set_language(href, lang) : set_language(href, 'en');
+set_language(lang);
+clear_url_querystring(href);
 
 populate_language_dropdown();
 

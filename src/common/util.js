@@ -320,7 +320,6 @@ function get_supported_languages() {
 function is_lang_supported(lang) {
     if (!lang) return false;
 
-    lang = lang.trim().toLowerCase();
     var supported_languages = get_supported_languages();
     var is_supported = false;
 
@@ -334,15 +333,26 @@ function is_lang_supported(lang) {
     return is_supported;
 }
 
-function set_language(href, lang) {
-    // remove "?lang" querystring from url without refreshing the page
+function set_language(lang) {
+    if (!lang) return false;
+
+    lang = lang.trim().toLowerCase();
+    var DEFAULT_LANGUAGE = 'en';
+
+    if (is_lang_supported(lang)) {
+        local_storage.set('i18n', { value: lang });
+        return;
+    }
+    local_storage.set('i18n', { value: DEFAULT_LANGUAGE });
+}
+
+// without refreshing the page
+function clear_url_querystring(href) {
     if (href) {
         var window_url = new URL(href);
         window_url.search = '';
         window.history.pushState({ path: window_url.href }, '', window_url.href);
     }
-
-    local_storage.set('i18n', { value: lang });
 }
 
 /**
