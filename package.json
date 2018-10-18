@@ -42,7 +42,6 @@
     "grunt-shell": "^1.1.2",
     "grunt-text-replace": "^0.4.0",
     "lodash": "^4.17.5",
-    "node-sass": "^4.5.3",
     "showdown": "^1.6.3"
   },
   "scripts": {
