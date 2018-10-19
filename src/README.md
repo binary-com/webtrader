@@ -11,14 +11,6 @@ In order to improve the clarity, quality and development time it is worth consid
 
 ---
 
-### Style Guide
-
-- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript/blob/master/README.md) is partially being followed in our code base.
-
-- Most styling issues will be caught by ESLint, so before pushing your changes remember to run `grunt eslint` to catch and fix any issues that it finds.
-
-- Check below for the rules that are not caught by ESLint but should be followed.
-
 ### Naming Conventions
 
 <a id="naming-conventions-variables"></a>
@@ -75,9 +67,27 @@ const fields = {
 };
 ```
 
+<a id="magic_strings_numbers"></a>
+**[Capitalize "magic" strings and numbers:](#magic_strings_numbers)**:
+
+```js
+const WARNING_MSG = 'This is a warning message';
+const TRADE_TYPES = [{
+    code: 'NOTOUCH',
+    name: 'NoTouch',
+}];
+```
 ---
 
 ### Commenting
+
+## Comments rules
+1. Always try to explain yourself in code first, comments should be seen as a "necessary evil".
+2. Don't add obvious noise.
+3. Don't comment out code. Just remove.
+4. Use as explanation of intent.
+5. Use as clarification of code.
+6. Use as warning of consequences.
 
 <a id="commenting-explanations"></a>
 **[Explanations:](#commenting-explanations)** Feel free to add comments to explain any code that is confusing.
@@ -85,39 +95,9 @@ const fields = {
 <a id="commenting-todo"></a>
 **[To do:](#commenting-todo)** Use `TODO: ...` comments anywhere that needs consideration or attention in the future.
 
-<a id="commenting-api-requests"></a>
-**[API requests:](#commenting-api-requests)** Comments should be added to highlight logic that is hardcoded in the front-end and should move to API:
-
-- For changes that can be done in API V3, use the comment 
-    
-    ```js
-    // API_V3: [description of what needs to be moved to API]
-    ```
-
-- For changes that should be done in API V4, use the comment 
-
-    ```js
-    // API_V4: [description of what needs to be moved to API]
-    ```
-
 ---
 
 ### Import Rules
-
-<a id="import-rules-require"></a>
-**[Require:](#import-rules-require)** Use `require` instead of `import` to stay consistent with the current codebase. We could change it to `import` when switching to React.
-
-<a id="import-rules-align-by-equal"></a>
-**[Align by equal:](#import-rules-align-by-equal)** Assignments are generally aligned by `=` for readability purposes.
-
-```js
-const moment             = require('moment');                       // moment is an npm package
-const CookieStorage      = require('./storage').CookieStorage;      // our own function
-const applyToAllElements = require('./utility').applyToAllElements; // our own function
-const createElement      = require('./utility').createElement;      // our own function
-require('../../_common/lib/polyfills/array.includes');              // polyfill from lib folder
-require('../../_common/lib/polyfills/string.includes');             // polyfill from lib folder
-```
 
 <a id="import-rules-alphabetical-ordering"></a>
 **[Alphabetical ordering:](#import-rules-alphabetical-ordering)** The order is important; it should be sorted alphabetically according to path: 
