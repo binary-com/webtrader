@@ -34,9 +34,12 @@ rv.binders['tick-chart'] = {
             marginBottom: 15,
          },
          tooltip: {
+            useHTML: true,
             formatter: function () {
-               const tick = model.array[this.x-1];
-               return (tick && tick.tooltip) || false;
+               const tick = model.array[this.x - 1];
+               if (tick && tick.tooltip) {
+                     return `<div class='tooltip-body'>${tick.tooltip}</div>`;
+               }
             }
          },
          xAxis: {
