@@ -1,18 +1,16 @@
 ﻿import $ from 'jquery';
 import moment from 'moment';
-import liveapi from '../websockets/binary_websockets';
-import rv from '../common/rivetsExtra';
-import { trade_types } from '../common/common';
-import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
 import 'css!../trade/tradeConf.css';
 import Lookback from './lookback';
+import liveapi from '../websockets/binary_websockets';
+import chartingRequestMap from '../charts/chartingRequestMap';
+import { get_chart_labels } from '../charts/chartSettings';
 import '../common/util';
+import rv from '../common/rivetsExtra';
 
 /* rv binder to show tick chart for this confirmation dialog */
 let display_decimals;
-const common_vertical_line_style   = 'margin-bottom: -3px; margin-left: 10px; height: 15px; width: 5px; border: 0; border-left: 2px; display: inline-block;';
-const common_horizontal_line_style = 'margin-bottom: 3px; margin-left: 10px; height: 2; width: 20px; border: 0; border-bottom: 2px; display: inline-block;';
 
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
@@ -20,11 +18,7 @@ rv.binders['tick-chart'] = {
       const model = this.model;
       el.chart = new Highcharts.Chart({
           subtitle: {
-            // text   : ChartSettings.getSubtitle(),
-            text: `
-                  <span style="${common_vertical_line_style} border-color: #e98024; border-style: solid;"></span> ${'Start Time'.i18n()}
-                  <span style="${common_horizontal_line_style} border-color: green; border-style: solid;"></span> ${'Barrier'.i18n()}
-                  <span style="${common_vertical_line_style} border-color: #e98024; border-style: dashed;"></span> ${'End Time'.i18n()}`,
+            text: get_chart_labels(),
             useHTML: true,
          },
          title: '',
