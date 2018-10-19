@@ -27,6 +27,17 @@ const field_name = '...';
 const myFunction = () => { ... };
 ```
 
+<a id="magic_strings_numbers"></a>
+**[Capitalize "magic" strings and numbers:](#magic_strings_numbers)**
+
+```js
+const WARNING_MSG = 'This is a warning message';
+const TRADE_TYPES = [{
+    code: 'NOTOUCH',
+    name: 'NoTouch',
+}];
+```
+
 <a id="naming-conventions-modules"></a>
 **[Modules:](#naming-conventions-modules)** Module names and classes should be PascalCase.
     
@@ -67,16 +78,6 @@ const fields = {
 };
 ```
 
-<a id="magic_strings_numbers"></a>
-**[Capitalize "magic" strings and numbers:](#magic_strings_numbers)**:
-
-```js
-const WARNING_MSG = 'This is a warning message';
-const TRADE_TYPES = [{
-    code: 'NOTOUCH',
-    name: 'NoTouch',
-}];
-```
 ---
 
 ### Commenting
