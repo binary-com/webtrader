@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-10-20 04:00\n"
+"PO-Revision-Date: 2018-10-20 04:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1273,7 +1273,7 @@ msgid "Maximum number of open positions"
 msgstr "最大未平倉頭寸數目"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "最大未平倉頭寸"
 
 msgid "May"
 msgstr "五月"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "難忘的城鎮/城市"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "最小交易投注額須低於最大交易投注額。"
 
 msgid "Min. Trade Stake"
 msgstr "最小交易投注額"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "減去代理佣金"
 
 msgid "Minute"
-msgstr ""
+msgstr "分鐘"
 
 msgid "Minutes"
 msgstr "分鐘"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "淨利"
 
 msgid "New Account"
-msgstr ""
+msgstr "新帳戶"
 
 msgid "New password"
 msgstr "新密碼"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "未觸及"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "注意: 合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有差異。"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "注： 您只能擁有一個法定貨幣帳戶以及任一種加密貨幣帳戶"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "確定"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "場外交易指數和股票"
 
 msgid "Occupation"
 msgstr "職業"
@@ -1513,22 +1513,22 @@ msgid "PEP Declaration"
 msgstr "PEP 聲明"
 
 msgid "PM"
-msgstr ""
+msgstr "下午"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "密碼必須至少6個字元"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "密碼必須有大小寫字母和數字"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "密碼已成功更新。"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "密碼不相符。請重新輸入"
 
 msgid "Patents"
-msgstr ""
+msgstr "專利"
 
 msgid "Pattern Recognition"
 msgstr "圖形辨識"
@@ -1570,40 +1570,40 @@ msgid "Please"
 msgstr "請"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "請[_1]接受條款和條件[_2]，以提高存取款限額。"
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "請[_1]完成帳戶資料[_2]，以提高取款和交易限額。"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "請選擇至少一個權杖範圍"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "請選擇交易貨幣種類"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "請完成[_1]財務評估表格[_2]，以便提升您的取款和交易限額。"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "請確認以下詳細資料以完成轉帳"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "請輸入之間的數字"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "請輸入有效日期，格式是年-月-日"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "請輸入有效數值"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "請輸入0和以下之間的數字"
 
 msgid "Please enter a value greater than 0"
 msgstr "請輸入大於0的數值"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "超時剩餘時間請輸入小於6週的值。"
 
 msgid "Please enter correct email"
 msgstr "請輸入正確的電子郵件"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "請輸入日期，格式是年-月-日"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "請輸入權杖名稱"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "請輸入時間，格式為小時:分鐘"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "請從以下瀏覽器中選擇一個，並安裝最新版本"
 
 msgid "Please log in"
-msgstr ""
+msgstr "請登入"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "請登入檢視儲存的工作區。"
 
 msgid "Please log in."
-msgstr ""
+msgstr "請登入。"
 
 msgid "Please provide your tax information"
 msgstr "請提供稅務資訊"
@@ -1645,19 +1645,19 @@ msgid "Please select"
 msgstr "請選擇"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "請選擇超時剩餘時間的日期。"
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "請選擇付款代理"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "繼續操作前請選擇開立帳戶的原因"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "請設定幣種。"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "請設定帳戶的[_1]幣種[_2]"
 
 msgid "Please submit a valid verification token"
 msgstr "請提供有效的驗證權杖"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "天"
 
 msgid "deposits"
-msgstr ""
+msgstr "存款"
 
 msgid "end time"
 msgstr "結束時間"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "退市現價"
 
 msgid "for"
-msgstr ""
+msgstr "為"
 
 msgid "for mobile charts"
 msgstr "用於移動式圖表"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "主要網站"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "市場目前已關閉。"
 
 msgid "medium protection"
 msgstr "中等級別保護"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "跳動點"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "提款"
 
 msgid "yes"
 msgstr "是"
