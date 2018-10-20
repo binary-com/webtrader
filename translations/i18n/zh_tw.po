@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-10-20 03:30\n"
+"PO-Revision-Date: 2018-10-20 03:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "自訂主題"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "訂製圖表外觀"
 
 msgid "Daily limit on losses"
 msgstr "每日損失限額"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "說明"
 
 msgid "Deselect"
-msgstr ""
+msgstr "取消"
 
 msgid "Differs"
 msgstr "差異"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
 
 msgid "Done"
-msgstr ""
+msgstr "完成"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。資金已轉給支付代理"
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "下載範本為"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "正在下載工作區為%1"
 
 msgid "Drawing tools"
 msgstr "繪圖工具"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "教育"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "電子郵件驗證失敗"
 
 msgid "Embed code"
 msgstr "內嵌代碼"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "利用擁有先進功能的直觀交易介面，讓您同時監視所有的最愛資產和市場，以及必要的圖表、資產指數、交易時間和歷史資料。最重要的是，您可以選擇想要看到的螢幕畫面"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "輸入有效的交易者權杖"
 
 msgid "Enter your current password"
 msgstr "輸入目前密碼"
@@ -802,16 +802,16 @@ msgid "Exclude me from the website until"
 msgstr "禁止我訪問本網站直到"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "禁止時間"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "禁止時間必須在今日之後。"
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "禁止持續時間不能少於6個月。"
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "禁止持續時間不能超過5年。"
 
 msgid "Exit Spot"
 msgstr "退市現價"
@@ -829,10 +829,10 @@ msgid "Explanation"
 msgstr "說明"
 
 msgid "FAQ"
-msgstr ""
+msgstr "常見問題集"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "未能更新密碼"
 
 msgid "Fall"
 msgstr "下跌"
@@ -868,10 +868,10 @@ msgid "Finance"
 msgstr "金融"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "開立金融帳戶表格"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "財務評估"
 
 msgid "Financial Information"
 msgstr "金融資訊"
@@ -919,10 +919,10 @@ msgid "Get API token from trader(s) and add it in your list"
 msgstr "獲取交易者的 API 權杖, 並將其添加到您的清單中"
 
 msgid "Getting started"
-msgstr ""
+msgstr "開始交易"
 
 msgid "Glossary"
-msgstr ""
+msgstr "詞彙"
 
 msgid "Go to"
 msgstr "前往"
@@ -940,7 +940,7 @@ msgid "Grid Light"
 msgstr "格線光源"
 
 msgid "Group history"
-msgstr ""
+msgstr "集團歷史"
 
 msgid "Health"
 msgstr "健康情況"
@@ -967,19 +967,19 @@ msgid "Historical Data"
 msgstr "歷史資料"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "歷史資料"
 
 msgid "Horizontal line"
 msgstr "水平線"
 
 msgid "Hour"
-msgstr ""
+msgstr "小時"
 
 msgid "Hours"
 msgstr "小時"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "二元期權如何交易?"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "如何在波動率指數市場上交易？"
@@ -1015,13 +1015,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "歐盟國家的金融產品交易由Binary Investments (Europe) Ltd提供，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商，(執照號碼為IS/70156)。"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "英國和曼島的波動率指數交易由Binary (IOM) Ltd. 提供，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1) 由不列顛群島曼島投資監管委員會授予執照和監管，目前線上博彩執照於2012 年8 月31 日頒發；及(2) 由英國博彩委員會授予執照和監管(執照 [_1]編號: 39172[_2])-"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr ""
+msgstr "歐盟其它國家的波動率指數交易由Binary (Europe) Ltd提供，地址為 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 馬爾他的馬爾他博彩局授予執照並受其監管（執照號MGA/B2C/102/2000, 發照日期為2015年5月26日）。英國客戶由(2) 英國博彩委員會授予執照和監管(執照[_1]編號: 39495[_2])， 及愛爾蘭客戶由(3) 愛爾蘭的稅務局授予執照和監管(遠程博彩公司執照號: 1010285，發照日期為2017年7月1日)。查閱完整的[_3]監管資訊[_4]。"
 
 msgid "In/Out"
 msgstr "「範圍之內/之外」"
@@ -1033,7 +1033,7 @@ msgid "Income Source"
 msgstr "收入來源"
 
 msgid "Indicative"
-msgstr ""
+msgstr "指示性"
 
 msgid "Indicative Price"
 msgstr "指示性價格"
@@ -1066,7 +1066,7 @@ msgid "Invalid template type"
 msgstr "無效範本類型"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "無效範本類型。"
 
 msgid "Investments & Dividends"
 msgstr "投資與分紅"
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "一月"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "不支援日本帳戶。"
 
 msgid "Jul"
 msgstr "七月"
@@ -1663,13 +1663,13 @@ msgid "Please submit a valid verification token"
 msgstr "請提供有效的驗證權杖"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "請於1分鐘後重試。"
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "請於數分鐘後重試。"
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "請使用新密碼登入。"
 
 msgid "Plot"
 msgstr "繪圖"
@@ -1720,7 +1720,7 @@ msgid "Profit"
 msgstr "利潤"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "利潤表"
 
 msgid "Profit table"
 msgstr "利潤表"
@@ -1729,10 +1729,10 @@ msgid "Profit/ Loss"
 msgstr "利潤/虧損"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "地址證明 - 水電煤帳單或銀行月結單掃描件（日期不得超過3個月）。地址證明必須包括您的姓名、地址、簽發日期和發證機構名稱。"
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "身份證明 - 顯示您名字和出生日期的護照、駕照（臨時或永久）或身份證的掃描件。"
 
 msgid "Purchase"
 msgstr "買入"
@@ -1747,19 +1747,19 @@ msgid "Read"
 msgstr "閱讀"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "開立真實資金帳戶"
 
 msgid "Reality check"
-msgstr ""
+msgstr "實況調查"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "重新前往oauth登入頁面，"
 
 msgid "Ref"
 msgstr "參考"
 
 msgid "Ref."
-msgstr ""
+msgstr "參考"
 
 msgid "Refresh failed"
 msgstr ""
