@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-20 03:10\n"
+"PO-Revision-Date: 2018-10-20 03:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "七月"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "跳至:"
 
 msgid "Jun"
 msgstr "六月"
@@ -1102,13 +1102,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "最后12个月盈利交易"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "最后数字的预测"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "已超过最后数字"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "已低于最后数字"
 
 msgid "Last used"
 msgstr "上一次使用"
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "加载交易模板"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "加载 ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "加载资产指数 ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "正在加载复制交易..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "加载下载/查看数据 ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "加载MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "加载密码对话 ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "加载利润表 ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "加载真实账户开立程序 ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "加载自我禁止 ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "加载账目表 ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "加载令牌管理 ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "加载交易时间 ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "加载图表与交易菜单 ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "加载定制相主题配置..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "加载投资组合 ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "加载自我制止设置。"
 
 msgid "Loading..."
 msgstr "正在加载..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "登录时间"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "正在登出，因为自我禁止持续时间已超时！"
 
 msgid "Login"
 msgstr "登录"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "低"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "低障碍"
 
 msgid "Low barrier"
 msgstr "低障碍"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "每天最大累计损失量"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "最大余额"
 
 msgid "Maximum number of open positions"
 msgstr "最大未平仓头寸数目"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "最大未平仓头寸"
 
 msgid "May"
 msgstr "五月"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "难忘的城镇/城市"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "最低交易投注额须低于最大交易投注额。"
 
 msgid "Min. Trade Stake"
 msgstr "最小交易投注额"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "减去代理佣金"
 
 msgid "Minute"
-msgstr ""
+msgstr "分钟"
 
 msgid "Minutes"
 msgstr "分钟"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "净利"
 
 msgid "New Account"
-msgstr ""
+msgstr "新账户"
 
 msgid "New password"
 msgstr "新密码"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "未触及"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "注意：合约将在我们服务器收到请求时，以当时的市场价格卖出。此价格可能与报价有差异。"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "注： 您只能拥有一个法定货币账户以及任一种加密货币账户"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "确定"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "场外交易指数和股票"
 
 msgid "Occupation"
 msgstr "职业"
@@ -1513,22 +1513,22 @@ msgid "PEP Declaration"
 msgstr "PEP声明"
 
 msgid "PM"
-msgstr ""
+msgstr "下午"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "密码至少须6个字符"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "密码必须有大小写字母和数字"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "密码已成功更新。"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "密码不相符。请重新输入"
 
 msgid "Patents"
-msgstr ""
+msgstr "专利"
 
 msgid "Pattern Recognition"
 msgstr "图形辨识"
@@ -1570,19 +1570,19 @@ msgid "Please"
 msgstr "请"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "请[_1]接受更新条款和条件[_2]，以提高存取款限额。"
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "请[_1]完成账户资料[_2]，以提高取款和交易限额。"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "请选择至少一个令牌范围"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "请选择交易货币种类"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "请完成[_1]财务评估表格[_2]，以便提升您的取款和交易限额 。"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "请确认以下详情以完成转账"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "跳动点"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "提款"
 
 msgid "yes"
 msgstr "是"
