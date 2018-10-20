@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
+"PO-Revision-Date: 2018-10-20 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,16 +22,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(如期限不到一天)，或於交易日結束時(如期限為一日或更長時間)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* 合約尚未開始"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* 密碼必須至少為6個字元"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* 密碼必須包含大寫字母和數字"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* 請輸入新密碼"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com與上述所有支付代理不存在附屬關係。各支付代理均以獨立服務提供商的身份運營，未由Binary.com支持、擔保或經其它方式批准。客戶與支付代理的業務往來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
@@ -169,40 +169,40 @@ msgid "8h"
 msgstr "8小時"
 
 msgid "AM"
-msgstr ""
+msgstr "上午"
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "關於Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "關於我們"
 
 msgid "Accept"
 msgstr "接受"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "使用任何瀏覽器，通過13種語言存取"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "帳戶驗證"
 
 msgid "Account balance"
 msgstr "帳戶餘額"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "帳戶餘額："
 
 msgid "Account id not found."
-msgstr ""
+msgstr "找不到帳戶 id。"
 
 msgid "Account opening"
-msgstr ""
+msgstr "帳戶開立"
 
 msgid "Account opening reason"
 msgstr "開立帳戶的原因"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "找不到帳戶權杖。"
 
 msgid "Action"
 msgstr "動作"
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "新增/刪除指標"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "新增工作區%"
 
 msgid "Address"
 msgstr "地址"
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "金額"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "數額最小: 10 最大: 2000"
 
 msgid "Amount per point"
 msgstr "每點之金額"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "八月"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "請提交身份與地址證明，立刻進行帳戶驗證。繼續操作，請發送以下文件到%1:"
 
 msgid "Available Currencies"
 msgstr "可用的貨幣"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "二元期權"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "二元期權基本知識"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "二元期權或其他金融衍生品交易經驗"
@@ -373,10 +373,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com 是多次獲獎的線上交易提供商，幫助客戶通過二元期權和差價合約在金融市場進行交易。基於波動率指數的二元期權和差價合約交易被歸類為博彩活動。請記住博彩活動可能會上癮，並提醒自己要承擔責任。查閱[_1]負責任交易[_2]的詳細資訊。一些產品在所有國家都不可用。本網站不向一些國家如美國、加拿大、哥斯達黎加、香港、或18歲以下的使用者提供服務。"
 
 msgid "Blank window"
-msgstr ""
+msgstr "空白視窗"
 
 msgid "Bought"
 msgstr "購入"
@@ -511,10 +511,10 @@ msgid "Confirm transfer"
 msgstr "確認轉帳"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "連接已關閉。"
 
 msgid "Connection error."
-msgstr ""
+msgstr "連接錯誤。"
 
 msgid "Construction"
 msgstr "建構"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "合約"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "合約確認"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "合約詳細資料"
 
 msgid "Contract period"
 msgstr "合約期間"
@@ -547,7 +547,7 @@ msgid "Copier"
 msgstr "複製者"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "複製交易"
 
 msgid "Copy Trading"
 msgstr "複製交易"
