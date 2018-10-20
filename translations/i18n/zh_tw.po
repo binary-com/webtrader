@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-10-20 03:50\n"
+"PO-Revision-Date: 2018-10-20 04:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "七月"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "跳到:"
 
 msgid "Jun"
 msgstr "六月"
@@ -1102,13 +1102,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "最後 12 個月盈利交易"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "最後數字的預測"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "已大於最後數字"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "已小於最後數字"
 
 msgid "Last used"
 msgstr "上一次使用"
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "載入交易範本"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "正在載入 ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "載入資產指數 ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "正在載入複製交易..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "載入下載/檢視資料 ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "MAM裝載..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "載入密碼對話 ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "載入利潤表 ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "載入真實帳戶開立程序 ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "載入自我禁止 ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "載入月結表 ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "載入權杖管理 ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "載入交易時間 ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "載入圖表與交易功能表 ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "載入訂製主題設定..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "載入投資組合 ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "載入自我禁止設定。"
 
 msgid "Loading..."
 msgstr "正在載入..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "登入時間"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "正在登出，因為自我禁止持續時間已超時！"
 
 msgid "Login"
 msgstr "登入"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "低"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "低障礙"
 
 msgid "Low barrier"
 msgstr "低障礙"
@@ -1267,7 +1267,7 @@ msgid "Maximum aggregate loss per day"
 msgstr "每天累計虧損最大額"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "最大餘額"
 
 msgid "Maximum number of open positions"
 msgstr "最大未平倉頭寸數目"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "時間已過。下次開啟時間為"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Websocket請求超時"
 
 msgid "Title"
 msgstr "職稱"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "如要提款，請輸入剛發送到您郵箱的權杖驗證碼"
 
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 msgid "Token"
 msgstr "權杖"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "權杖管理"
 
 msgid "Token already added"
-msgstr ""
+msgstr "已新增權杖"
 
 msgid "Token management"
 msgstr "權杖管理"
@@ -2146,16 +2146,16 @@ msgid "Token name"
 msgstr "權杖名稱"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "權杖名稱可包含帶空格和下劃線的字母數字字元"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "權杖名稱最多可包含32個字元"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "權杖名稱必須包含至少2個字元"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "權杖名稱必須以字母數字字元開頭"
 
 msgid "Token permissions"
 msgstr "權杖權限"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "交易時間"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "二元期權交易並不適合所有人。因此，請確保您完全明白有關的風險。您的虧損可能會超越起始資金存款，而您並不擁有或占有任何標的資產。"
 
 msgid "Tradingview for Binary.com"
 msgstr "通過Binary.com使用Tradingview"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "交易額"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "交易類型"
 
 msgid "USD"
 msgstr "美元"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "驗證代碼已發送到您的郵箱"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "驗證碼已傳到"
 
 msgid "Verification token"
 msgstr "驗證權杖"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "這是甚麽？"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "當您點選「Ok」後，您將被禁止在此網站交易，直到選定期限結束為止。"
 
 msgid "While on the go, you can"
 msgstr "出門在外時，您可"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "為何選擇二元期權交易？"
 
 msgid "Why trade with Binary.com"
 msgstr "為何通過Binary.com進行交易"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "工作區"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "工作區變更已儲存"
 
 msgid "X-axis labels"
 msgstr "X-軸標籤"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "您尚未複製任何交易"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "您已自我禁止至"
 
 msgid "You have sold the following contract"
 msgstr "您已賣出以下合約"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "您支付"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "您必須輸入6-25個字元。"
 
 msgid "You will be automatically logged out after such time"
 msgstr "在該時間後您將自動退出登入"
@@ -2425,16 +2425,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "您的帳戶 (%) 已鎖定, 請聯繫客服部瞭解更多資訊。"
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "您的帳戶已被限制交易。請[_1]聯繫客服部[_2]，以取得協助。"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "您的瀏覽器不支持剪貼板複製功能"
 
 msgid "Your browser is not supported"
 msgstr "不支持您的瀏覽器"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "您的更改已成功更新"
 
 msgid "Your copying settings"
 msgstr "您的複製設置"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "縮放"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "立刻進行[_1]帳戶驗證[_2]，以獲得取款選項的所有優惠。"
 
 msgid "and"
-msgstr ""
+msgstr "和"
 
 msgid "apostrophe (') are allowed"
 msgstr "允許使用所有格號(')"
