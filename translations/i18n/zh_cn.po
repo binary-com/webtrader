@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-20 02:20\n"
+"PO-Revision-Date: 2018-10-20 02:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "金额"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "数值最小: 10 最大: 2000"
 
 msgid "Amount per point"
 msgstr "每个点的金额"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "八月"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "请提交身份与地址证明，立刻进行账户验证。继续操作，请将以下文件发送到%1："
 
 msgid "Available Currencies"
 msgstr "可用的货币"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "二元期权"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "二元期权基础知识"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "二元期权或其他金融衍生品交易经验"
@@ -373,10 +373,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com︰ Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com 是多次获奖的在线交易提供商，帮助客户通过二元期权和差价合约在金融市场进行交易。 基于波动率指数的二元期权和差价合约交易被归类为博彩活动。请记住博彩活动可能会上瘾，并提醒自己要承担责任。查阅[_1]负责任交易[_2]的详细信息。一些产品在所有国家都不可用。本网站不向一些国家如美国、加拿大、哥斯达黎加、香港、或18岁以下的用户提供服务。"
 
 msgid "Blank window"
-msgstr ""
+msgstr "空白窗口"
 
 msgid "Bought"
 msgstr "购入"
@@ -511,10 +511,10 @@ msgid "Confirm transfer"
 msgstr "确认转账"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "连接已关闭。"
 
 msgid "Connection error."
-msgstr ""
+msgstr "连接错误。"
 
 msgid "Construction"
 msgstr "建筑"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "合约"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "合约确认"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "合约细节"
 
 msgid "Contract period"
 msgstr "合约期间"
@@ -547,7 +547,7 @@ msgid "Copier"
 msgstr "复制者"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "复制交易"
 
 msgid "Copy Trading"
 msgstr "复制交易"
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "自定义主题"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "自定义图表外观"
 
 msgid "Daily limit on losses"
 msgstr "每日损失限额"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "说明"
 
 msgid "Deselect"
-msgstr ""
+msgstr "取消"
 
 msgid "Differs"
 msgstr "差异"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
 
 msgid "Done"
-msgstr ""
+msgstr "完成"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。资金已转给支付代理"
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "下载模板为"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "下载工作区为 %1"
 
 msgid "Drawing tools"
 msgstr "绘图工具"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "教育"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "电子邮件验证失败"
 
 msgid "Embed code"
 msgstr "嵌入代码"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "利用拥有先进功能的直观交易界面，让您同时监视所有的偏爱资产和市场，以及必要的图表，资产指数，交易时间和历史数据。最重要的是，您可以选择想要看到的屏幕画面"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "输入有效的交易者令牌"
 
 msgid "Enter your current password"
 msgstr "输入当前密码"
@@ -802,16 +802,16 @@ msgid "Exclude me from the website until"
 msgstr "禁止我访问本网站直到"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "禁止时间"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "禁止时间必须在今日之后。"
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "禁止持续时间不能少于6个月。"
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "禁止持续时间不能超过5年。"
 
 msgid "Exit Spot"
 msgstr "退市现价"
@@ -829,10 +829,10 @@ msgid "Explanation"
 msgstr "说明"
 
 msgid "FAQ"
-msgstr ""
+msgstr "常见问题"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "未能更新密码"
 
 msgid "Fall"
 msgstr "下跌"
