@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-20 03:00\n"
+"PO-Revision-Date: 2018-10-20 03:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2071,16 +2071,16 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr "合约执行期间发生市场数据中断。对于真实货币账户, 我们将尝试纠正此情况并妥善结算合约, 否则合约将取消并退款。虚拟货币合约将取消并退款。"
 
 msgid "There was an error"
-msgstr ""
+msgstr "出现错误"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "此合约已过期"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "此合约亏损"
 
 msgid "This contract won"
-msgstr ""
+msgstr "此合约获利"
 
 msgid "This field is required"
 msgstr "此为必填项"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "时间已过。下次开启时间为"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Websocket请求超时"
 
 msgid "Title"
 msgstr "职务"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
 
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 msgid "Token"
 msgstr "令牌"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "令牌管理"
 
 msgid "Token already added"
-msgstr ""
+msgstr "已添加令牌"
 
 msgid "Token management"
 msgstr "令牌管理"
@@ -2146,16 +2146,16 @@ msgid "Token name"
 msgstr "令牌名称"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "令牌名称可包含带空格和下划线的字母数字字符"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "令牌名称最多可包含32个字符"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "令牌名称必须包含至少2个字符"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "令牌名称必须以字母数字字符开头"
 
 msgid "Token permissions"
 msgstr "令牌权限"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "交易时间"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会超越起始资金存款，而您并不拥有或占有任何标的资产。"
 
 msgid "Tradingview for Binary.com"
 msgstr "通过Binary.com使用Tradingview"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "交易额"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "交易类型"
 
 msgid "USD"
 msgstr "美元"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "验证码已传到"
 
 msgid "Verification token"
 msgstr "验证令牌"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "这是什么？"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "当您点选“Ok”后，您将被禁止在此网站交易，直到选定期限结束为止。"
 
 msgid "While on the go, you can"
 msgstr "出门在外时，您可"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "为何选择二元期权交易？"
 
 msgid "Why trade with Binary.com"
 msgstr "为何通过Binary.com进行交易"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "工作区"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "工作区变更已保存"
 
 msgid "X-axis labels"
 msgstr "X-轴标签"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "您尚未复制任何交易"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "您已自我禁止至"
 
 msgid "You have sold the following contract"
 msgstr "您已卖出以下合约"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "您支付"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "您必须输入6-25个字符。"
 
 msgid "You will be automatically logged out after such time"
 msgstr "在该时间后您将自动退出登录"
@@ -2425,16 +2425,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "您的账户 (%) 已锁定, 请联系客服部了解更多信息。"
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "您的账户已被限制。请[_1]联系客服部[_2]，以获得帮助。"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "您的浏览器不支持剪贴板复制功能"
 
 msgid "Your browser is not supported"
 msgstr "您的浏览器不受支持"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "您的更改已成功更新"
 
 msgid "Your copying settings"
 msgstr "您的复制设置"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "缩放"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "立刻进行[_1]账户验证[_2]，以获得取款选项的所有优惠。"
 
 msgid "and"
-msgstr ""
+msgstr "和"
 
 msgid "apostrophe (') are allowed"
 msgstr "允许使用省略号(')"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "日"
 
 msgid "deposits"
-msgstr ""
+msgstr "存款"
 
 msgid "end time"
 msgstr "结束时间"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "退市现价"
 
 msgid "for"
-msgstr ""
+msgstr "用于"
 
 msgid "for mobile charts"
 msgstr "移动式图表专用"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "主要网站"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "市场目前已关闭。"
 
 msgid "medium protection"
 msgstr "中等级别保护"
