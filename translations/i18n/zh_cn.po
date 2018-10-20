@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-20 03:20\n"
+"PO-Revision-Date: 2018-10-20 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1588,22 +1588,22 @@ msgid "Please confirm the following details in order to complete the transfer"
 msgstr "请确认以下详情以完成转账"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "请输入之间的数字"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "请输入有效日期，格式为年-月-日"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "请输入有效数值"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "请输入0和以下之间的数字"
 
 msgid "Please enter a value greater than 0"
 msgstr "请输入大于0的数值"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "超时剩余时间请输入小于6周的值。"
 
 msgid "Please enter correct email"
 msgstr "请输入正确的电子邮件"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "请输入日期，格式是年-月-日"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "请输入令牌名称"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "请输入时间，格式为小时：分钟"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "以下浏览器请选择一个并安装最新版本"
 
 msgid "Please log in"
-msgstr ""
+msgstr "请登录"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "请登录查看已保存的工作区。"
 
 msgid "Please log in."
-msgstr ""
+msgstr "请登录。"
 
 msgid "Please provide your tax information"
 msgstr "请提供税务信息"
@@ -1645,19 +1645,19 @@ msgid "Please select"
 msgstr "请选择"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "请选择超时剩余时间的日期。"
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "请选择支付代理"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "继续操作前请选择开立账户的原因"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "请设置币种。"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "请设置账户的[_1]币种[_2]"
 
 msgid "Please submit a valid verification token"
 msgstr "请提供有效的验证令牌"
