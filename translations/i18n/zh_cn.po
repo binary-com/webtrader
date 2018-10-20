@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-20 02:40\n"
+"PO-Revision-Date: 2018-10-20 02:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1753,22 +1753,22 @@ msgid "Reality check"
 msgstr "实况简报"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "再前往oauth登录页面，"
 
 msgid "Ref"
 msgstr "参考"
 
 msgid "Ref."
-msgstr ""
+msgstr "参考"
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "刷新失败"
 
 msgid "Register free account"
 msgstr "注册免费账户"
 
 msgid "Registration"
-msgstr ""
+msgstr "注册"
 
 msgid "Remove"
 msgstr "移除"
