@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
+"PO-Revision-Date: 2018-10-20 02:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,16 +22,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "（如期限不到一天），或于交易日结束时（如期限是一天及以上）"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* 合约还未开始"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* 密码至少须6个字符"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* 密码须包含大写字母和数字"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* 请输入新密码"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
@@ -169,40 +169,40 @@ msgid "8h"
 msgstr "8小时"
 
 msgid "AM"
-msgstr ""
+msgstr "上午"
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "关于 Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "关于我们"
 
 msgid "Accept"
 msgstr "接受"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "使用任何浏览器，通过13种语言访问"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "账户验证"
 
 msgid "Account balance"
 msgstr "账户余额"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "账户余额："
 
 msgid "Account id not found."
-msgstr ""
+msgstr "找不到账户 id。"
 
 msgid "Account opening"
-msgstr ""
+msgstr "账户开立"
 
 msgid "Account opening reason"
 msgstr "开立账户的原因"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "找不到账户令牌。"
 
 msgid "Action"
 msgstr "操作"
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "添加/删除指标"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "添加新工作区%"
 
 msgid "Address"
 msgstr "地址"
