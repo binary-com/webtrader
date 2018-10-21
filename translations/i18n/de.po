@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-10-21 13:50\n"
+"PO-Revision-Date: 2018-10-21 14:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "Einprägsamer Ort/Stadt"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr "Der Min Handelseinsatz sollte nicht niedriger als der Max Handelseinsatz sein."
+msgstr "Der min Handelseinsatz sollte nicht niedriger als der max Handelseinsatz sein."
 
 msgid "Min. Trade Stake"
 msgstr "Min. Handelseinsatz"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "Kein Ziel"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr "Hinweis: Der Kontrakt wird, sobald der Auftrag von unseren Servern empfangen wurde, zum dann geltenden Marktkurs verkauft. Dieser Kurs kann von den angegebenen Kursen abweichen."
+msgstr "Hinweis: Der Kontrakt wird, sobald der Auftrag von unseren Servern empfangen ist, zum dann geltenden Marktkurs verkauft. Dieser Kurs kann von den angegebenen Kursen abweichen."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Hinweis: Sie können nur ein Fiat-Währungskonto und ein Konto je Kryptowährung haben"
@@ -2155,7 +2155,7 @@ msgid "Token name must contain atleast 2 characters"
 msgstr "Tokenname muss mindestens 2 Zeichen lang sein"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr "Tokenname sollte mit nur alphanumerischen Zeichen beginnen"
+msgstr "Tokenname sollte nur mit alphanumerischen Zeichen beginnen"
 
 msgid "Token permissions"
 msgstr "Tokengenehmigungen"
@@ -2425,7 +2425,7 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Ihr Konto (%) ist gesperrt, bitte kontaktieren Sie den Kunden-Support für weitere Informationen."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr "Ihr Konto ist eingeschränkt. Bitte [_1]kontaktieren Sie die Kundenbetreuung[_2] für Hilfe."
+msgstr "Ihr Konto ist eingeschränkt. Bitte [_1]kontaktieren Sie die Kundenbetreuung[_2] um Hilfe."
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Ihr Browser unterstützt Kopieren in die Zwischenablage nicht"
@@ -2455,7 +2455,7 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr "Bitte [_1]Authentifizieren Sie Ihr Konto[_2] jetzt, um von allen Abhebeoptionen Gebrauch zu machen."
+msgstr "Bitte [_1]authentifizieren Sie Ihr Konto[_2] jetzt, um von allen Abhebeoptionen Gebrauch zu machen."
 
 msgid "and"
 msgstr "und"
