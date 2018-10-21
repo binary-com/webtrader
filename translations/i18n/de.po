@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
+"PO-Revision-Date: 2018-10-21 13:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,16 +22,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(wenn weniger als die Dauer eines Tages), oder am Ende eines Handelstages (wenn die Dauer ein oder mehrere Tag(e) ist/sind)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Kontrakt ist noch nicht gestartet"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* Passwort muss mindestens 6 Zeichen lang sein"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* Passwort muss Großbuchstaben und Ziffern enthalten"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Bitte geben Sie Ihr neues Passwort ein"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com ist kein Geschäftspartner einer der oben aufgeführten Zahlungsagenten. Jeder Zahlungsagent arbeitet als eigenständiger Dienstleister und wird nicht von Binary.com empfohlen, garantiert oder anderweitig genehmigt. DIE KUNDEN HANDELN MIT ZAHLUNGSAGENTEN AUF IHR EIGENES RISIKO UND IHRE EIGENE GEFAHR. Den Kunden wird empfohlen, die Angaben der Zahlungsagenten zu überprüfen, bevor sie Geld überweisen. Binary.com kann für Transaktionen zwischen Kunden und Zahlungsagenten nicht haftbar gemacht werden"
@@ -169,40 +169,40 @@ msgid "8h"
 msgstr "8 Std."
 
 msgid "AM"
-msgstr ""
+msgstr "morgens"
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "Über Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "Über uns"
 
 msgid "Accept"
 msgstr "Akzeptieren"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "In 13 Sprachen von jedem Webbrowser aus zugänglich"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Kontoauthentifizierung"
 
 msgid "Account balance"
 msgstr "Kontostand"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Kontostand:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "Konto-ID nicht gefunden."
 
 msgid "Account opening"
-msgstr ""
+msgstr "Kontoeröffnung"
 
 msgid "Account opening reason"
 msgstr "Kontoeröffnungs-Grund"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Konto-Token nicht gefunden."
 
 msgid "Action"
 msgstr "Aktion"
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "Indikator hinzufügen/entfernen"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Neuer Arbeitsbereich % hinzugefügt"
 
 msgid "Address"
 msgstr "Adresse"
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "Betrag"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Betrag Min: 10 Max: 2000"
 
 msgid "Amount per point"
 msgstr "Betrag per Punkt"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "August"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "Bestätigen Sie jetzt Ihr Konto, indem Sie Ihre Identität und Adresse überprüfen. Um fortzufahren, senden Sie einfach die folgenden Dokumente an %1:"
 
 msgid "Available Currencies"
 msgstr "Verfügbare Währungen"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "Binäre Option"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "Grundlagen der Binären Optionen"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Erfahrung mit Binären Optionen oder Handel mit anderen Finanzderivaten"
