@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-10-21 13:40\n"
+"PO-Revision-Date: 2018-10-21 13:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -811,7 +811,7 @@ msgid "Exclude until time cannot be less than 6 months."
 msgstr "Die Ausschluss bis zum Zeitpunkt darf nicht kürzer als 6 Monate sein."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr "Die Ausschluss bis zum Zeitpunkt darf nicht kürzer als 5 Jahre sein."
+msgstr "Die Ausschluss bis zum Zeitpunkt darf nicht länger als 5 Jahre sein."
 
 msgid "Exit Spot"
 msgstr "Schlusskurs"
@@ -1018,7 +1018,7 @@ msgid "In the EU, financial products are offered by Binary Investments (Europe) 
 msgstr "In der EU werden Finanzprodukte von Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten, lizenziert und reguliert als Kategorie 3 Investment Dienstleistungsanbieter von der Malta Financial Services Authority (Lizenz Nr. IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr "Auf der Isle of Man und in Großbritannien werden Volatilität Indizes von von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man; lizensiert und reguliert von (1) der Gambling Supervision Commission (Glücksspielbehörde) (die aktuelle Lizenz wurde am 31. August 2017 ausgestellt), und von der (2) Gambling Commission in Großbritannien (Lizenz [_1] Referenznummer 39172[_2])."
+msgstr "Auf der Isle of Man und in Großbritannien werden Volatilität Indizes von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man angeboten; lizensiert und reguliert von (1) der Gambling Supervision Commission (Glücksspielbehörde) (die aktuelle Lizenz wurde am 31. August 2017 ausgestellt), und von der (2) Gambling Commission in Großbritannien (Lizenz [_1] Referenznummer 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
 msgstr "Im Rest der EU werden Volatilität Indizes von Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten; lizenziert und reguliert durch (1) die Malta Gaming Authority in Malta (Lizenznr. MGA/B2C/102/2000, ausgestellt am 26. Mai 2015), für Kunden aus Großbritannien von (2) der UK Gambling Commission ([_1]Lizenz-Referenznr. : 39495[_2]), und für irische Kunden durch (3) die Revenue Commissioners in Irland (entfernte Buchmacherlizenznr. 1010285, ausgestellt am 1. Juli 2017). Komplette [_3]Zulassungsinformationen[_4] anzeigen."
@@ -1588,22 +1588,22 @@ msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Bitte bestätigen Sie die folgenden Angaben, um die Überweisung zu vervollständigen"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Bitte geben Sie eine Zahl zwischen   ein"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Bitte geben Sie ein gültiges Datum im Format jjjj-mm-tt an"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Bitte geben Sie einen gültigen Wert ein für"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Bitte geben Sie eine Zahl zwischen 0 und   ein"
 
 msgid "Please enter a value greater than 0"
 msgstr "Bitte geben Sie einen Wert größer als 0 ein"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Bitte geben Sie einen Wert von weniger als 6 Wochen für eine Unterbrechung ein."
 
 msgid "Please enter correct email"
 msgstr "Bitte geben Sie eine korrekte E-Mail Adresse ein"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Bitte geben Sie ein Datum im Format JJJJ-MM-TT an"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Bitte geben Sie den Tokennamen ein"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Bitte geben Sie die Zeit im Format HH:MM an"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Bitte installieren Sie die letzte Version einer dieser Browser"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Melden Sie sich bitte an"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Bitte melden Sie sich an, um Ihren gespeicherten Arbeitsbereich einzusehen."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Melden Sie sich bitte an."
 
 msgid "Please provide your tax information"
 msgstr "Bitte geben Sie Ihre Steuerinformationen an"
@@ -1645,25 +1645,25 @@ msgid "Please select"
 msgstr "Bitte auswählen"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Bitte wählen Sie ein Datum für die Unterbrechung bis"
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Bitte wählen Sie einen Zahlungsagent aus"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Bitte legen Sie einen Kontoeröffnung-Grund fest, bevor Sie fortfahren"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "Bitte legen Sie eine Währung fest."
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Bitte legen Sie die [_1]Währung[_2] für Ihr Konto fest"
 
 msgid "Please submit a valid verification token"
 msgstr "Bitte übermitteln Sie einen gültigen Verifikationstoken"
 
 msgid "Please try again after 1 minute."
-msgstr "Bitte nach 1 Minute erneut versuchen."
+msgstr "Bitte nach 1er Minute erneut versuchen."
 
 msgid "Please try again after few minutes."
 msgstr "Bitte nach wenigen Minuten erneut versuchen."
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "Tage"
 
 msgid "deposits"
-msgstr ""
+msgstr "Einzahlungen"
 
 msgid "end time"
 msgstr "Endzeit"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "Schlusskurs"
 
 msgid "for"
-msgstr ""
+msgstr "für"
 
 msgid "for mobile charts"
 msgstr "für mobile Charts"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "Hauptsite"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "Markt ist derzeit geschlossen."
 
 msgid "medium protection"
 msgstr "Mittlerer Schutz"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "Ticks"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "Behebungen"
 
 msgid "yes"
 msgstr "ja"
