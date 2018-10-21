@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-10-21 13:20\n"
+"PO-Revision-Date: 2018-10-21 13:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "Sicherheitsfrage"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Es scheint, dass unsere Server heruntergefahren sind, wir arbeiten daran, dies zu beheben."
 
 msgid "Self-Employed"
 msgstr "Selbstständig"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "Selbstausschluss"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Selbstausschluss Hilfen"
 
 msgid "Sell At Market"
 msgstr "Zum Börsenkurs verkaufen"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Sitzung"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Sitzungsdauer-Limit:"
 
 msgid "Session duration limit, in minutes"
 msgstr "Sitzungsdauerlimit, in Minuten"
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "Verkauft"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Ein zufälliger Index"
 
 msgid "Source of wealth"
 msgstr "Quelle des Vermögens"
@@ -1993,10 +1993,10 @@ msgid "Submit"
 msgstr "Absenden"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Neuer Token erfolgreich hinzugefügt"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Arbeitsbereich erfolgreich hinzugefügt, als"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Die Vorlage ist erfolgreich angewendet und wird gespeichert als"
@@ -2011,10 +2011,10 @@ msgid "Table"
 msgstr "Tabelle"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "Steuerinformationen"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "Steuerinformationen erfolgreich aktualisiert"
 
 msgid "Tax identification number"
 msgstr "Steuer-Identifizierungsnummer"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Vorlage bereits gespeichert als"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Vorlage zum Teil angewendet."
 
 msgid "Template changes saved"
 msgstr "Vorlageänderungen gespeichert"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Vorlage ist nicht anwendbar."
 
 msgid "Template name"
 msgstr "Vorlagenname"
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "Bedingungen"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Allgemeine Geschäftsbedingungen"
 
 msgid "Tertiary"
 msgstr "Tertiär"
@@ -2068,19 +2068,19 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Die Finanzhandelsdienste, die diese Site enthält, eignen sich nur für Kunden, die einen Verlust ihres gesamten investierten Geldes verkraften können und die die Risiken erkennen, die mit dem Erwerb von Finanzverträgen im Zusammenhang stehen und damit Erfahrung haben. Transaktionen mit Finanzkontrakten beinhalten ein hohes Risiko. Wenn erworbene Kontrakte wertlos auslaufen, geht Ihre gesamte Investition, die aus der Kontraktprämie besteht, verloren"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Es gab eine Markt-Datenstörung während der Kontraktlaufzeit. Wir werden versuchen dies für Echtgeldkonten zu korrigieren und den Kontrakt ordnungsgemäß zu regeln, anderenfalls wird der Kontrakt storniert und erstattet. Virtuelle Konten werden storniert und erstattet."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Es ist ein Fehler aufgetreten"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Dieser Kontrakt ist abgelaufen"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Dieser Kontrakt hat verloren"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Dieser Kontrakt hat gewonnen"
 
 msgid "This field is required"
 msgstr "Dieses Feld ist erforderlich"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "Unterbrechung bis"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Auszeit für Websocket-Anfrage"
 
 msgid "Title"
 msgstr "Titel"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Um Gelder abzuheben, geben Sie bitte den speziellen Verifikationstoken, den wir gerade per E-Mail an Sie verschickt haben, ein"
 
 msgid "Today"
-msgstr ""
+msgstr "Heute"
 
 msgid "Token"
 msgstr "Token"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "Tokenmanagement"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token bereits hinzugefügt"
 
 msgid "Token management"
 msgstr "Tokenmanagement"
@@ -2146,16 +2146,16 @@ msgid "Token name"
 msgstr "Tokenname"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Tokenname kann alphanumerische Zeichen mit Leerzeichen und Unterstrichen enthalten"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Tokenname kann maximal 32 Zeichen lang sein"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "Tokenname muss mindestens 2 Zeichen lang sein"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "Tokenname sollte mit nur alphanumerischen Zeichen beginnen"
 
 msgid "Token permissions"
 msgstr "Tokengenehmigungen"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "Handelszeiten"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Der Handel mit binären Optionen ist möglicherweise nicht für jeden geeignet, versichern Sie sich, dass Sie die damit verbundenen Risiken vollständig verstehen. Ihre Verluste können Ihre ursprüngliche Einzahlung übersteigen und Sie besitzen den Basiswert nicht, noch haben Sie Zinsen in jenem."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingansicht für Binary.com"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "Umsatz"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "Handelsarten"
 
 msgid "USD"
 msgstr "USD"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-Mail verschickt wurde, ein"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Bestätigungs-Code geschickt an"
 
 msgid "Verification token"
 msgstr "Token Überprüfung"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "Was ist das?"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Wenn Sie auf 'Ok' klicken, werden Sie bis zum ausgewählten Datum vom Handel auf dieser Site ausgeschlossen."
 
 msgid "While on the go, you can"
 msgstr "Während Sie unterwegs sind, können Sie"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "Warum sollte man sich für den binären Handel entscheiden?"
 
 msgid "Why trade with Binary.com"
 msgstr "Warum mit Binary.com handeln"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "Arbeitsbereich"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Arbeitsbereich-Änderungen gespeichert"
 
 msgid "X-axis labels"
 msgstr "X-Achse Labels"
