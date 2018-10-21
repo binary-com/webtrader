@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-10-21 13:30\n"
+"PO-Revision-Date: 2018-10-21 13:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "Juli"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Spring zu:"
 
 msgid "Jun"
 msgstr "Jun"
@@ -1102,13 +1102,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Profitable Trades der letzten 12 Monate"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Voraussage der letzten Kommastelle"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Letzte Kommastelle ist über"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Letzte Kommastelle ist unter"
 
 msgid "Last used"
 msgstr "Zuletzt verwendet"
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "Handelsvorlage laden"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Wird geladen ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Aktienindex wird geladen ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Handelskopie wird geladen..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Download/Daten Einsehen wird geladen ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "MAM wird geladen..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Passwortdialog wird geladen ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Gewinntabelle wird geladen ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "Echtgeld-Kontoeröffnung wird geladen ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Selbstausschluss wird geladen ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Kontoauszugstabelle wird geladen ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Tokenmanagement wird geladen ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Handelszeiten werden geladen ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Chart- und Handelsmenüs werden geladen ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Konfiguration des benutzerdefineierten Themas wird geladen..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Portfolio wird geladen ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Selbstausschlusseinstellungen werden geladen."
 
 msgid "Loading..."
 msgstr "Wird geladen..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "Login-Zeit"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Abmeldung wegen Selbstausschluss-Sitzungsende!"
 
 msgid "Login"
 msgstr "Login"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "Tief"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Untere Schwelle"
 
 msgid "Low barrier"
 msgstr "Niedrige Schwelle"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Maximaler Gesamtverlust je Tag"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Maximaler Kontostand"
 
 msgid "Maximum number of open positions"
 msgstr "Maximale Anzahl offener Positionen"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Maximum an offenen Positionen"
 
 msgid "May"
 msgstr "Mai"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "Einprägsamer Ort/Stadt"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Der Min Handelseinsatz sollte nicht niedriger als der Max Handelseinsatz sein."
 
 msgid "Min. Trade Stake"
 msgstr "Min. Handelseinsatz"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "Abzüglich der Provision des Agenten"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minute"
 
 msgid "Minutes"
 msgstr "Minuten"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "Nettogewinn"
 
 msgid "New Account"
-msgstr ""
+msgstr "Neues Konto"
 
 msgid "New password"
 msgstr "Aktuelles Passwort"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "Kein Ziel"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Hinweis: Der Kontrakt wird, sobald der Auftrag von unseren Servern empfangen wurde, zum dann geltenden Marktkurs verkauft. Dieser Kurs kann von den angegebenen Kursen abweichen."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Hinweis: Sie können nur ein Fiat-Währungskonto und ein Konto je Kryptowährung haben"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "Okay"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "OTC Indizes und Aktien"
 
 msgid "Occupation"
 msgstr "Beruf"
@@ -1513,22 +1513,22 @@ msgid "PEP Declaration"
 msgstr "PEP Erklärung"
 
 msgid "PM"
-msgstr ""
+msgstr "nachmittags"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "Passwort muss mindestens 6 Zeichen lang sein"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Das Passwort muss Klein- und Großbuchstaben sowie Zahlen enthalten"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Passwort erfolgreich aktualisiert."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Die Passwörter stimmten nicht überein. Bitte geben Sie sie erneut ein"
 
 msgid "Patents"
-msgstr ""
+msgstr "Patente"
 
 msgid "Pattern Recognition"
 msgstr "Mustererkennung"
@@ -1570,19 +1570,19 @@ msgid "Please"
 msgstr "Bitte"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Bitte [_1]akzeptieren Sie die aktualisierten allgemeinen Geschäftsbedingungen[_2], um Ihre Abhebe- und Handelslimits aufzuheben."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Bitte [_1]vervollständigen Sie Ihr Kontoprofil[_2], um Ihre Abhebe- und Handelslimits aufzuheben."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Bitte wählen Sie zumindest einen Tokenbereich"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Bitte wählen Sie die Währung, in der Sie die Transaktion vornehmen möchten"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Füllen Sie bitte das [_1]finanzielle Beurteilungsformular[_2] aus, um Ihre Abhebe- und Handelslimits aufzuheben."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Bitte bestätigen Sie die folgenden Angaben, um die Überweisung zu vervollständigen"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Sie kopieren derzeit keine(n) Trade(s)"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Sie haben sich ausgeschlossen bis"
 
 msgid "You have sold the following contract"
 msgstr "Sie haben den folgenden Kontrakt verkauft"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "Sie zahlen"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "Sie müssen zwischen 6 - 25 Zeichen eingeben."
 
 msgid "You will be automatically logged out after such time"
 msgstr "Sie werden nach dieser Zeit automatisch abgemeldet"
@@ -2425,16 +2425,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Ihr Konto (%) ist gesperrt, bitte kontaktieren Sie den Kunden-Support für weitere Informationen."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Ihr Konto ist eingeschränkt. Bitte [_1]kontaktieren Sie die Kundenbetreuung[_2] für Hilfe."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Ihr Browser unterstützt Kopieren in die Zwischenablage nicht"
 
 msgid "Your browser is not supported"
 msgstr "Ihr Browser wird nicht unterstützt"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Ihre Änderungen wurden aktualisiert"
 
 msgid "Your copying settings"
 msgstr "Ihre Kopie-Einstellungen"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "Bitte [_1]Authentifizieren Sie Ihr Konto[_2] jetzt, um von allen Abhebeoptionen Gebrauch zu machen."
 
 msgid "and"
-msgstr ""
+msgstr "und"
 
 msgid "apostrophe (') are allowed"
 msgstr "Apostrophe (') sind erlaubt"
