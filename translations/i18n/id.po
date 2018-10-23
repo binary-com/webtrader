@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
+"PO-Revision-Date: 2018-10-23 03:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,7 +22,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(jika durasi kurang dari satu hari), atau pada akhir hari trading (jika durasi satu hari atau lebih)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Kontrak belum dimulai lagi"
 
 msgid "* Password must be 6 characters minimum"
 msgstr ""
@@ -31,7 +31,7 @@ msgid "* Password must contain uppercase letters and numbers"
 msgstr ""
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Masukan kata sandi baru Anda"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com tidak berafiliasi dengan Agen Pembayaran manapun. Setiap Agen Pembayaran beroperasi sendiri dan Binary.com tidak bertanggung jawab atas risiko penggunaannya. PELANGGAN BERURUSAN DENGAN AGEN PEMBAYARAN ATAS RISIKO SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka. Binary.com dalam keadaan apapun tidak bertanggung jawab atas transaksi yang dilakukan antara Pelanggan dan Agen Pembayaran"
@@ -172,31 +172,31 @@ msgid "AM"
 msgstr ""
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "Tentang Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "Tentang Kami"
 
 msgid "Accept"
 msgstr "Menerima"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Pembuktian akun"
 
 msgid "Account balance"
 msgstr "Saldo akun"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Saldo akun:"
 
 msgid "Account id not found."
 msgstr ""
 
 msgid "Account opening"
-msgstr ""
+msgstr "Pendaftaran akun"
 
 msgid "Account opening reason"
 msgstr "Alasan pedaftaran akun"
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "Jumlah"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Jumlah Min: 10 Mak: 2000"
 
 msgid "Amount per point"
 msgstr "Jumlah per poin"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "Agustus"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "Otentikasi akun Anda sekarang dengan memverifikasi identitas dan alamat Anda. Untuk melanjutkan, cukup kirim dokumen-dokumen berikut ke %1:"
 
 msgid "Available Currencies"
 msgstr "Mata Uang Yang Tersedia"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "Opsi Binary"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "Opsi binary dasar"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Opsi Binary atau pengalaman trading pada keuangan derivatif lainnya"
@@ -514,7 +514,7 @@ msgid "Connection closed."
 msgstr ""
 
 msgid "Connection error."
-msgstr ""
+msgstr "Koneksi error."
 
 msgid "Construction"
 msgstr "Konstruksi"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "Kontrak"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Konfirmasi Kontrak"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Rincian Kontrak"
 
 msgid "Contract period"
 msgstr "Periode kontrak"
@@ -547,7 +547,7 @@ msgid "Copier"
 msgstr "Copier"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "Copy Trading"
 
 msgid "Copy Trading"
 msgstr "Copy Trading"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 
 msgid "Done"
-msgstr ""
+msgstr "Selesai"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Selesai. Dana tersebut telah ditransfer ke agen pembayaran"
@@ -805,13 +805,13 @@ msgid "Exclude time"
 msgstr ""
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Waktu pengecualian harus setelah hari ini."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "Kecualikan hingga waktu tidak boleh kurang dari 6 bulan."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "Kecualikan hingga waktu tidak melebihi dari 5 tahun."
 
 msgid "Exit Spot"
 msgstr "Spot Akhir"
@@ -829,7 +829,7 @@ msgid "Explanation"
 msgstr "Penjelasan"
 
 msgid "FAQ"
-msgstr ""
+msgstr "Pertanyaan Umum"
 
 msgid "Failed to update the password"
 msgstr ""
@@ -868,10 +868,10 @@ msgid "Finance"
 msgstr "Keuangan"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "Formulir pendaftaran Akun Finansial"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "Penilaian Finansial"
 
 msgid "Financial Information"
 msgstr "Informasi Keuangan"
@@ -919,10 +919,10 @@ msgid "Get API token from trader(s) and add it in your list"
 msgstr "Dapatkan token API dari trader dan tambahkan pada daftar Anda"
 
 msgid "Getting started"
-msgstr ""
+msgstr "Langkah memulai"
 
 msgid "Glossary"
-msgstr ""
+msgstr "Kamus"
 
 msgid "Go to"
 msgstr "Kunjungi"
@@ -940,7 +940,7 @@ msgid "Grid Light"
 msgstr "Grid Muda"
 
 msgid "Group history"
-msgstr ""
+msgstr "Sejarah grup"
 
 msgid "Health"
 msgstr "Kesehatan"
@@ -967,19 +967,19 @@ msgid "Historical Data"
 msgstr "Data Historikal"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "Data Historikal Untuk"
 
 msgid "Horizontal line"
 msgstr "Garis horisontal"
 
 msgid "Hour"
-msgstr ""
+msgstr "Jam"
 
 msgid "Hours"
 msgstr "Jam"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "Bagaimana cara bertrading opsi binary?"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "Bagaimana cara bertrading pasar Indeks Volatilitas?"
@@ -1015,7 +1015,7 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk memahami risiko yang terlibat)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "Di negara Uni Eropa. produk finansial disediakan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai Kategori 3 oleh Otoritas Jasa Keuangan Malta (lisensi no. IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr ""
@@ -1033,7 +1033,7 @@ msgid "Income Source"
 msgstr "Sumber Pendapatan"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Indikatif"
 
 msgid "Indicative Price"
 msgstr "Harga Indikatif"
@@ -1066,7 +1066,7 @@ msgid "Invalid template type"
 msgstr "Jenis template tidak valid"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Jenis template tidak valid."
 
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
