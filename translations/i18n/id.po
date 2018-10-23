@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 04:10\n"
+"PO-Revision-Date: 2018-10-23 04:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "Kota bersejarah"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Minimal harga kontrak harus lebih rendah dari maksimal harga kontrak."
 
 msgid "Min. Trade Stake"
 msgstr "Min. Modal Trading"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "Indeks OTC dan saham"
 
 msgid "Occupation"
 msgstr "Pekerjaan"
@@ -1516,13 +1516,13 @@ msgid "PM"
 msgstr "PM"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "Kata sandi harus minimal 6 karakter"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Kata sandi harus berisi huruf kecil dan besar dengan angka"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Kata sandi berhasil diperbarui."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Kata sandi tidak cocok. Silahkan ketik ulang"
@@ -1570,31 +1570,31 @@ msgid "Please"
 msgstr "Silahkan"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Silahkan [_1]setujui Syarat dan Ketentuan terbaru[_2] untuk meningkatkan batasan penarikan dan trading Anda."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Silahkan [_1]lengkapi profil akun Anda[_2] untuk meningkatkan batasan penarikan dan trading."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Silahkan pilih setidaknya satu lingkup token"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Silahkan pilih mata uang yang ingin Anda transaksikan"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Silahkan lengkapi [_1]formulir penilaian finansial[_2] untuk meningkatkan batasan penarikan dan trading Anda."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Silahkan konfirmasi rincian sebagai berikut untuk menyelesaikan transfer"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Silakan masukkan nomor antara"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Silahkan masukkan tanggal yang valid dalam format yyyy-mm-dd"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Masukkan nilai yang berlaku untuk"
 
 msgid "Please enter a value between 0 and"
 msgstr "Masukkan nilai antara 0 dan"
@@ -1645,10 +1645,10 @@ msgid "Please select"
 msgstr "Silahkan pilih"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Silahkan pilih tanggal pengecualian hingga."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Silahkan pilih agen pembayaran"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Silahkan pilih alasan pendaftaran akun sebelum melanjutkan"
@@ -1657,19 +1657,19 @@ msgid "Please set currency."
 msgstr "Silakan tentukan mata uang."
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Tentukan [_1]mata uang[_2] akun Anda"
 
 msgid "Please submit a valid verification token"
 msgstr "Kirimkan token verifikasi yang berlaku"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Silahkan coba kembali setelah 1 menit."
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "Silahkan coba kembali beberapa menit."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Silakan gunakan kata sandi baru Anda untuk masuk."
 
 msgid "Plot"
 msgstr "Plot"
