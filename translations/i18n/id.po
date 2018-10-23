@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 04:40\n"
+"PO-Revision-Date: 2018-10-23 04:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1996,7 +1996,7 @@ msgid "Successfully added new token"
 msgstr "Berhasil menambahkan token baru"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Berhasil menambahkan ruang kerja sebagai"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Berhasil menerapkan template dan menyimpannya sebagai"
@@ -2014,7 +2014,7 @@ msgid "Tax Information"
 msgstr "Informasi Pajak"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "Informasi Pajak berhasil diperbarui"
 
 msgid "Tax identification number"
 msgstr "Nomor Pokok Wajib Pajak"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Template sudah disimpan sebagai"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Template diterapkan secara parsial."
 
 msgid "Template changes saved"
 msgstr "Perubahan template disimpan"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Template tidak berlaku."
 
 msgid "Template name"
 msgstr "Nama template"
