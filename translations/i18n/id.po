@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 04:20\n"
+"PO-Revision-Date: 2018-10-23 04:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1729,10 +1729,10 @@ msgid "Profit/ Loss"
 msgstr "Untung/ Rugi"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "Bukti alamat - Salinan scan rekening koran atau tagihan utilitas tidak lebih dari tiga bulan setelah tanggal cetak. Bukti alamat harus menampilkan nama, alamat, tanggal cetak, dan nama organisasi pengeluar bukti alamat tersebut."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "Bukti identitas - Scan Ktp, Sim, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
 
 msgid "Purchase"
 msgstr "Beli"
@@ -1753,7 +1753,7 @@ msgid "Reality check"
 msgstr "Pemeriksaan realitas"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Mengalihkan ke halaman login oauth,"
 
 msgid "Ref"
 msgstr "Ref"
