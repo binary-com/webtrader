@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 04:30\n"
+"PO-Revision-Date: 2018-10-23 04:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1762,7 +1762,7 @@ msgid "Ref."
 msgstr "Ref."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Pembaruan gagal"
 
 msgid "Register free account"
 msgstr "Daftar akun gratis"
@@ -1783,7 +1783,7 @@ msgid "Repeat password"
 msgstr "Ulang kata sandi"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Penjualan kembali kontrak ini tidak ditawarkan"
 
 msgid "Resale price"
 msgstr "Harga jual kembali"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "Pertanyaan keamanan"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Sepertinya server kami sedang mengalami gangguan, kami sedang berusaha memperbaikinya."
 
 msgid "Self-Employed"
 msgstr "Wirausaha"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Sesi"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Batas durasi sesi"
 
 msgid "Session duration limit, in minutes"
 msgstr "Batas sesi durasi, dalam menit"
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "Terjual"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Beberapa indeks acak"
 
 msgid "Source of wealth"
 msgstr "Sumber kekayaan"
@@ -1993,7 +1993,7 @@ msgid "Submit"
 msgstr "Ajukan"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Berhasil menambahkan token baru"
 
 msgid "Successfully added workspace as"
 msgstr ""
