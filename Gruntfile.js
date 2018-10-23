@@ -62,7 +62,6 @@ module.exports = function (grunt) {
                             "chosen-js/*",
                             "jquery/dist/jquery.min.js",
                             "!vanderlee-colorpicker/**", "vanderlee-colorpicker/jquery.colorpicker.js", "vanderlee-colorpicker/images/**", "vanderlee-colorpicker/jquery.colorpicker.css",
-
                             "datatables.net-dt/images/**",
                             "datatables.net-dt/css/jquery.dataTables.css",
                             "datatables.net/js/jquery.dataTables.js",
@@ -267,16 +266,6 @@ module.exports = function (grunt) {
                     hostname: "0.0.0.0",
                     keepalive: true,
                     livereload: true
-                }
-            }
-        },
-        sloc: {
-            analyze: {
-                files: {
-                    //Check the negate option. Its not working
-                    //Currently open ticket https://github.com/rhiokim/grunt-sloc/issues/14
-                    //TODO
-                    src: ["**/*.js", "**/*.es6", "**/*.css", "**/*.html", "!**/libs/**"]
                 }
             }
         },
