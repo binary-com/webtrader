@@ -3,12 +3,13 @@
       padding : 0 !important;
       position: relative;
    }
-   .instrumnet-dropdown {
+   .instrument-dropdown {
       position: absolute;
       background: linear-gradient(#2A3052,#15212D);
-      height: 34px;
+      height: 36px;
       width: 170px;
-      left: 160px;
+      left: 180px;
+      
       top: 0;
       color: white;
       z-index: +1;
@@ -22,6 +23,7 @@
          list-style-image: none !important;
          .ui-menu-item-wrapper {
             padding: 5px 1em 5px .4em;
+            margin: 0;
          }
       }
       .ui-widget.ui-widget-content {
@@ -34,7 +36,7 @@
       }
       li {
          min-width: 130px;
-         font-size: 14px;
+         font-size:90%;
          background: #2A3052;
          color: white;
       }
@@ -42,29 +44,31 @@
          background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
          padding-left: 20px;
          line-height: 34px;
-         background-size: 12px 12px !important;
-         background-position: 2px 50% !important;
+         font-size:18px;
+         padding-left:28px;
+         margin:auto;
+         background-size: 10px 10px !important;
+         background-position: 8px 55% !important;
          background-repeat: no-repeat;
          margin: 0;
          white-space: nowrap;
       }
-      .ui-state-active {
-         margin: 0 !important;
-      }
+
    }
    .ui-dialog-titlebar {
       .ui-dialog-title {
-         font-size: 16px;
+         
          width: 320px;
       }
    }
    .date-time {
+    
       position: absolute;
       background: linear-gradient(#2A3052,#15212D);
       height: 34px;
       width: 210px;
-      left: 340px;
-      top: 0;
+      left: 360px;
+      top: 2px;
       color: white;
       input {
          color: white;

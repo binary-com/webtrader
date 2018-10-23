@@ -20,8 +20,8 @@ const buildMenu = ($root, instrumentName, callback) => {
       _.delay(() => buildMenu($root, instrumentName, callback), 1000);
       return;
    }
-   const menu = `<ul>${
-      markets.map(m => `<li><div>${m.display_name}</div><ul>${
+   const menu = `<ul >${
+      markets.map(m => `<li ><div>${m.display_name}</div><ul>${
          m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${
             s.instruments.map(i => `<li symbol='${i.symbol}'><div>${i.display_name}</div></li>`).join('')
          }</ul></li>`).join('')
@@ -34,7 +34,7 @@ const buildMenu = ($root, instrumentName, callback) => {
       titlebar.find('.title').text(display_name);
       callback(symbol, display_name);
    });
-   const titlebar = $(`<div class='instrumnet-dropdown' ><div class='title'>${instrumentName}</div>`);
+   const titlebar = $(`<div class='instrument-dropdown'><div class='title'>${instrumentName}</div>`);
    $root.closest('.ui-dialog').append(titlebar);
    titlebar.append($menu);
    $menu.menu();
