@@ -4,7 +4,7 @@
   "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">=9.0"
+    "node": ">=8.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
