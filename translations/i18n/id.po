@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 04:50\n"
+"PO-Revision-Date: 2018-10-23 05:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "Tambah/hapus indikator"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Menambahkan % ruang kerja baru"
 
 msgid "Address"
 msgstr "Alamat"
@@ -2068,13 +2068,13 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk Pelanggan yang mampu menanggung kerugian pada semua modal yang mereka tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang akan dialami pada trading kontrak finansial. Kontrak transaksi finansial adalah memiliki risiko tinggi. Jika prediksi Anda tidak tepat maka Anda akan kehilangan semua modal yang anda tanamkan berupa harga kontrak yang Anda bayarkan"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Terdapat gangguan data pasar selama periode kontrak berlangsung. Untuk akun uang riil, kami akan berusaha memperbaiki masalah ini dan menyelesaikan kontrak dengan benar, jika tidak, kontrak akan dibatalkan dan dikembalikan. Untuk kontrak uang virtual akan dibatalkan dan dikembalikan."
 
 msgid "There was an error"
 msgstr "Terdapat error"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Kontrak ini telah berakhir"
 
 msgid "This contract lost"
 msgstr "Kontrak ini rugi"
@@ -2146,16 +2146,16 @@ msgid "Token name"
 msgstr "Nama token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Nama token dapat berisi karakter alfanumerik dengan spasi dan garis bawah"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Nama token dapat memiliki maksimal 32 karakter"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "Nama token harus mengandung minimal 2 karakter"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "Nama token harus dimulai hanya dengan karakter alfanumerik"
 
 msgid "Token permissions"
 msgstr "Izin token"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Kode verifikasi dikirim ke"
 
 msgid "Verification token"
 msgstr "Token verifikasi"
