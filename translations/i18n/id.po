@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 03:50\n"
+"PO-Revision-Date: 2018-10-23 04:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -25,10 +25,10 @@ msgid "* Contract has not started yet"
 msgstr "* Kontrak belum dimulai lagi"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* Kata sandi harus minimal 6 karakter"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* Kata sandi harus berisi huruf besar dan angka"
 
 msgid "* Please enter your new password"
 msgstr "* Masukan kata sandi baru Anda"
@@ -193,7 +193,7 @@ msgid "Account balance:"
 msgstr "Saldo akun:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "Id akun tidak ditemukan."
 
 msgid "Account opening"
 msgstr "Pendaftaran akun"
@@ -202,7 +202,7 @@ msgid "Account opening reason"
 msgstr "Alasan pedaftaran akun"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Token akun tidak ditemukan."
 
 msgid "Action"
 msgstr "Aksi"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "Deskripsi"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Hapus pilihan"
 
 msgid "Differs"
 msgstr "Differs"
@@ -1597,13 +1597,13 @@ msgid "Please enter a valid value for"
 msgstr ""
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Masukkan nilai antara 0 dan"
 
 msgid "Please enter a value greater than 0"
 msgstr "Masukkan nilai lebih besar dari 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Masukkan nilai hingga kurang dari 6 minggu untuk waktu pengecualian."
 
 msgid "Please enter correct email"
 msgstr "Silakan masukkan email yang benar"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Silahkan masukkan tanggal dalam format YYYY-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Silakan masukkan nama token"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Masukkan format waktu dalam JJ:MM"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Silahkan install versi terbaru dari salah satu browser ini"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Silahkan masuk"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Silahkan masuk untuk melihat ruang kerja yang disimpan."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Silahkan masuk."
 
 msgid "Please provide your tax information"
 msgstr "Mohon sediakan informasi pajak Anda"
@@ -1654,7 +1654,7 @@ msgid "Please select an account opening reason before continuing"
 msgstr "Silahkan pilih alasan pendaftaran akun sebelum melanjutkan"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "Silakan tentukan mata uang."
 
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr ""
@@ -1720,7 +1720,7 @@ msgid "Profit"
 msgstr "Untung"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Laba Rugi"
 
 msgid "Profit table"
 msgstr "Tabel untung"
@@ -1750,7 +1750,7 @@ msgid "Real Money Account Opening"
 msgstr "Pendaftaran Akun Uang Riil"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Pemeriksaan realitas"
 
 msgid "Redirecting to oauth login page,"
 msgstr ""
@@ -2077,10 +2077,10 @@ msgid "This contract has expired"
 msgstr ""
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Kontrak ini rugi"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Kontrak ini untung"
 
 msgid "This field is required"
 msgstr "Bagian ini diperlukan"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "Waktu Trading"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Trading opsi binary mungkin tidak cocok untuk semua orang, maka pastikan Anda memahami sepenuhnya risiko yang terlibat. Kerugian Anda dapat melebihi setoran awal Anda dan Anda tidak akan memiliki atau memperoleh bunga dari aset dasar."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview untuk Binary.com"
@@ -2434,7 +2434,7 @@ msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Perubahan Anda telah diperbarui"
 
 msgid "Your copying settings"
 msgstr "Susunan duplikasi Anda"
