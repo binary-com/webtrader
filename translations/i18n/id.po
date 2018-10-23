@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 04:00\n"
+"PO-Revision-Date: 2018-10-23 04:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -376,7 +376,7 @@ msgid "Binary.com is an award-winning online trading provider that helps its cli
 msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs ini tidak tersedia di beberapa negara seperti AS, Kanada, Kosta Rika, Hong Kong atau siapapun dibawah umur 18."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Window kosong"
 
 msgid "Bought"
 msgstr "Membeli"
@@ -511,7 +511,7 @@ msgid "Confirm transfer"
 msgstr "Konfirmasi transfer"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Koneksi ditutup."
 
 msgid "Connection error."
 msgstr "Koneksi error."
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "Tema Wajib"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Sesuaikan tampilan grafik"
 
 msgid "Daily limit on losses"
 msgstr "Batas rugi harian"
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "Men-download template sebagai"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Mengunduh ruang kerja sebagai %1"
 
 msgid "Drawing tools"
 msgstr "Alat gambar"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "Edukasi"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Verifikasi email gagal"
 
 msgid "Embed code"
 msgstr "Menanamkan kode"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Nikmati antarmuka trading intuitif dengan fungsi lanjutan yang memungkinkan Anda untuk memantau semua aset dan pasar favorit Anda pada saat bersamaan, termasuk grafik penting, indeks aset, waktu trading, dan data historis. Yang terpenting, Anda dapat memilih apa yang ingin Anda tampilkan pada layar Anda"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Masukkan token trader"
 
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
@@ -802,7 +802,7 @@ msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari website hingga"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Kecualikan waktu"
 
 msgid "Exclude time must be after today."
 msgstr "Waktu pengecualian harus setelah hari ini."
@@ -832,7 +832,7 @@ msgid "FAQ"
 msgstr "Pertanyaan Umum"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Gagal memperbarui kata sandi"
 
 msgid "Fall"
 msgstr "Fall"
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "Januari"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Akun Jepang tidak tersedia."
 
 msgid "Jul"
 msgstr "Jul"
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "Juli"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Lompat ke:"
 
 msgid "Jun"
 msgstr "Jun"
@@ -1105,10 +1105,10 @@ msgid "Last Digit Prediction"
 msgstr "Analisa Digit Terakhir"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Digit Terakhir Over"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Digit Terakhir Under"
 
 msgid "Last used"
 msgstr "Terakhir digunakan"
@@ -1189,7 +1189,7 @@ msgid "Loading portfolio ..."
 msgstr "Pemuatan portopolio ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Memuat pengaturan pengecualian diri."
 
 msgid "Loading..."
 msgstr "Pemuatan..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "Waktu masuk"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Keluar berhubung sesi waktu pengecualian diri!"
 
 msgid "Login"
 msgstr "Login"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Maksimum jumlah kerugian per hari"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Saldo maksimum"
 
 msgid "Maximum number of open positions"
 msgstr "Maksimum jumlah posisi berjalan"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Maksimum posisi berjalan"
 
 msgid "May"
 msgstr "Mei"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "Time out hingga"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Waktu berakhir untuk permintaan websocket"
 
 msgid "Title"
 msgstr "Judul"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "Manajemen Token"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token sudah ditambahkan"
 
 msgid "Token management"
 msgstr "Manajemen token"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "Apa ini?"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Setelah mengklik \"Ok\" Anda akan dikecualikan dari trading hingga tanggal yang dipilih."
 
 msgid "While on the go, you can"
 msgstr "Saat bepergian, Anda dapat"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "Mengapa memilih Trading Binary?"
 
 msgid "Why trade with Binary.com"
 msgstr "Mengapa bertrading di Binary.com"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "Ruang kerja"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Perubahan ruang kerja tersimpan"
 
 msgid "X-axis labels"
 msgstr "Label x-axis"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Anda belum mengcopy kontrak manapun"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Anda telah mengecualikan diri hingga"
 
 msgid "You have sold the following contract"
 msgstr "Anda telah menjual kontrak berikut ini"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "Anda membayar"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "Anda harus memasukkan 6-25 karakter."
 
 msgid "You will be automatically logged out after such time"
 msgstr "Anda akan secara otomatis keluar setelah waktu tersebut"
@@ -2425,10 +2425,10 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Akun Anda (%) dibatalkan, silahkan hubungi customer support untuk info lebih lanjut."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Akun Anda memiliki akses terbatas. Silahkan [_1]hubungi customer support[_2] untuk bantuan."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Browser Anda tidak mendukung copy ke clipboard"
 
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
@@ -2455,7 +2455,7 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Otentikasi akun Anda[_2] untuk manfaat maksimal dari pilihan penarikan yang tersedia."
 
 msgid "and"
 msgstr "dan"
