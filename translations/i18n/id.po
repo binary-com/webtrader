@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 03:40\n"
+"PO-Revision-Date: 2018-10-23 03:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -169,7 +169,7 @@ msgid "8h"
 msgstr "8h"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "About Binary.com"
 msgstr "Tentang Binary.com"
@@ -373,7 +373,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs ini tidak tersedia di beberapa negara seperti AS, Kanada, Kosta Rika, Hong Kong atau siapapun dibawah umur 18."
 
 msgid "Blank window"
 msgstr ""
@@ -1018,10 +1018,10 @@ msgid "In the EU, financial products are offered by Binary Investments (Europe) 
 msgstr "Di negara Uni Eropa. produk finansial disediakan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai Kategori 3 oleh Otoritas Jasa Keuangan Malta (lisensi no. IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Di negara Isle of Man dan Inggris, Indeks Volatilitas disediakan oleh Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; berlisensi dan diatur."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr ""
+msgstr "Di seluruh Uni Eropa, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; berlisensi dan diatur."
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -1102,7 +1102,7 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Trading Menguntungkan 12 bulan Terakhir"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Analisa Digit Terakhir"
 
 msgid "Last Digit is Over"
 msgstr ""
@@ -1144,49 +1144,49 @@ msgid "Load trade template"
 msgstr "Muat template trading"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Pemuatan ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Loading Indeks Aset ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Pemuatan Copy Trade..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Pemuatan Download/Lihat Data ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "Pemuatan MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Pemuatan dialog kata sandi ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Pemuatan Profit Table ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "Pemuatan pendaftaran akun Riil ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Pemuatan Pengecualian Diri ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Pemuatan Tabel Pernyataan ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Pemuatan Token manajemen ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Pemuatan Waktu Trading ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Pemuatan grafik dan menu trading ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Pemuatan konfigurasi tema khusus..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Pemuatan portopolio ..."
 
 msgid "Loading self-exclusion settings."
 msgstr ""
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "Rendah"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Batas Rendah"
 
 msgid "Low barrier"
 msgstr "Batasan Rendah"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "Minus komisi agen"
 
 msgid "Minute"
-msgstr ""
+msgstr "Menit"
 
 msgid "Minutes"
 msgstr "Menit"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "Profit Bersih"
 
 msgid "New Account"
-msgstr ""
+msgstr "Akun Baru"
 
 msgid "New password"
 msgstr "Kata sandi baru"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "No touch"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Nota: Kontrak akan dijual pada harga pasar terkini ketika permintaan diterima oleh server kami. Harga ini mungkin berbeda dari harga yang diindikasikan."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Catatan: Anda hanya dapat memiliki satu akun mata uang fiat dan satu dari setiap akun mata uang crypto"
@@ -1513,7 +1513,7 @@ msgid "PEP Declaration"
 msgstr "Deklarasi PEP"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Password must be 6 characters minimum"
 msgstr ""
@@ -1528,7 +1528,7 @@ msgid "Passwords didn't match. Please type them again"
 msgstr "Kata sandi tidak cocok. Silahkan ketik ulang"
 
 msgid "Patents"
-msgstr ""
+msgstr "Paten"
 
 msgid "Pattern Recognition"
 msgstr "Pengakuan Pola"
@@ -1747,7 +1747,7 @@ msgid "Read"
 msgstr "Baca"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "Pendaftaran Akun Uang Riil"
 
 msgid "Reality check"
 msgstr ""
@@ -1759,7 +1759,7 @@ msgid "Ref"
 msgstr "Ref"
 
 msgid "Ref."
-msgstr ""
+msgstr "Ref."
 
 msgid "Refresh failed"
 msgstr ""
@@ -1768,7 +1768,7 @@ msgid "Register free account"
 msgstr "Daftar akun gratis"
 
 msgid "Registration"
-msgstr ""
+msgstr "Pendaftaran"
 
 msgid "Remove"
 msgstr "Hapus"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "Pengecualian-Diri"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Fasilitas Pengecualian Diri"
 
 msgid "Sell At Market"
 msgstr "Jual Pada Pasar"
@@ -2011,7 +2011,7 @@ msgid "Table"
 msgstr "Tabel"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "Informasi Pajak"
 
 msgid "Tax Information successfully updated"
 msgstr ""
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "Syarat"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Syarat dan Ketentuan"
 
 msgid "Tertiary"
 msgstr "Tersier"
@@ -2071,7 +2071,7 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr ""
 
 msgid "There was an error"
-msgstr ""
+msgstr "Terdapat error"
 
 msgid "This contract has expired"
 msgstr ""
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Untuk menarik dana silahkan masukkan token verifikasi khusus yang kami baru saja emailkan kepada Anda"
 
 msgid "Today"
-msgstr ""
+msgstr "Hari ini"
 
 msgid "Token"
 msgstr "Token"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "Turnover"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "Jenis kontrak"
 
 msgid "USD"
 msgstr "USD"
@@ -2458,7 +2458,7 @@ msgid "[_1]Authenticate your account[_2] now to take full advantage of all withd
 msgstr ""
 
 msgid "and"
-msgstr ""
+msgstr "dan"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrof (') diperbolehkan"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "hari"
 
 msgid "deposits"
-msgstr ""
+msgstr "deposit"
 
 msgid "end time"
 msgstr "waktu akhir"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "spot keluar"
 
 msgid "for"
-msgstr ""
+msgstr "untuk"
 
 msgid "for mobile charts"
 msgstr "untuk grafik mobile"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "situs utama"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "pasar saat ini ditutup."
 
 msgid "medium protection"
 msgstr "perlindungan menengah"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "tik"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "pencairan"
 
 msgid "yes"
 msgstr "iya"
