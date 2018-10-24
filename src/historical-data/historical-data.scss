@@ -1,3 +1,5 @@
+$primary-color: #2a3052;
+
 .historical-data-dialog {
 	.historical-data {
 		padding: 0 !important;
@@ -20,7 +22,7 @@
 		.ui-menu .ui-menu-item {
 			list-style-image: none !important;
 			.ui-menu-item-wrapper {
-				padding: 5px 1em 5px .4em;
+				padding: 5px 16px 5px 6.5px;
 				margin: 0;
 			}
 		}
@@ -35,7 +37,7 @@
 		li {
 			min-width: 130px;
 			font-size: 90%;
-			background: #2a3052;
+			background: $primary-color;
 			color: white;
 		}
 		.title {
@@ -62,13 +64,14 @@
 		top: 5px;
 		color: white;
 		input {
-			position: relative;
+			cursor:pointer;
 			border: none;
+			
 			display: inline-block;
-			width: 106px;
+			width: 108px;
 		}
 		input:hover {
-			border: 0.2px solid #2a3052;
+			border: 0.2px solid $primary-color;
 		}
 	}
 }

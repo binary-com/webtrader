@@ -398,8 +398,8 @@ button[disabled] {
 }
 .ui-timepicker td a {
 	display: block;
-	padding: .2em .3em;
-	width: 1.2em;
+	padding: 3px 5px;
+	width: 19px;
 	text-align: right;
 	text-decoration: none;
 	cursor: pointer;

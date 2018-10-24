@@ -41,9 +41,9 @@ const buildMenu = ($root, instrumentName, callback) => {
 };
 
 const buildDatetime = (dialog, $root, callback) => {
-    const datetime = $(`<div class='date-time historical-data-pickers-container'>
-                    <input type="button" class="date" tab-index="-1"></input>
-                    <input type="button" class="time" tab-index="-1" value="00:00"></input>
+    const datetime = $(`<div class='date-time'>
+                    <input type="text" class="date" tab-index="-1" readonly></input>
+                    <input type="text" class="time" tab-index="-1" value="00:00" readonly></input>
           </div>`);
     $root.closest('.ui-dialog').append(datetime);
     datetime.find('.date')
@@ -61,7 +61,7 @@ const buildDatetime = (dialog, $root, callback) => {
                    marginLeft: '-60px',
                    top: datetime.find('.date').offset().top + 31,
                    left: datetime.find('.date').offset().left,
-                   zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 1
+                   zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 100
                 }));
              },
              minDate : moment.utc().subtract(1, "years").toDate(),
@@ -75,7 +75,8 @@ const buildDatetime = (dialog, $root, callback) => {
             showCloseButton : false,
             beforeShow: (input, inst) => inst.tpDiv.css({
                 marginLeft: '-120px',
-                marginTop: '6px'
+                marginTop: '6px',
+                zIndex: 101,
             }),
             onSelect: function() { $(this).change(); update_time(); },
          });
