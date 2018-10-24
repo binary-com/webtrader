@@ -80,3 +80,39 @@
       }
    }
 }
+
+
+.ui-timepicker-hours{
+    padding:0;
+    
+}
+
+.ui-timepicker-minutes{
+    padding:0;
+}
+
+.ui-corner-all {
+    border-radius: unset;
+}
+
+.ui-timepicker-title {
+    text-align: center;
+}
+
+.ui-timepicker td {
+    border: none;
+
+}
+
+.ui-timepicker td a {
+    display: block;
+    padding: .2em .3em;
+    width: 1.2em;
+    text-align: right;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ui-timepicker-hours .ui-timepicker tbody {
+    border-right: 3px solid #f2f2f2;
+}
