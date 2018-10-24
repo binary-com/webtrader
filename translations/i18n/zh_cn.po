@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
+"PO-Revision-Date: 2018-10-20 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,16 +22,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "（如期限不到一天），或于交易日结束时（如期限是一天及以上）"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* 合约还未开始"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* 密码至少须6个字符"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* 密码须包含大写字母和数字"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* 请输入新密码"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com 都不对客户与支付代理之间的交易承担责任"
@@ -169,40 +169,40 @@ msgid "8h"
 msgstr "8小时"
 
 msgid "AM"
-msgstr ""
+msgstr "上午"
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "关于 Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "关于我们"
 
 msgid "Accept"
 msgstr "接受"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "使用任何浏览器，通过13种语言访问"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "账户验证"
 
 msgid "Account balance"
 msgstr "账户余额"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "账户余额："
 
 msgid "Account id not found."
-msgstr ""
+msgstr "找不到账户 id。"
 
 msgid "Account opening"
-msgstr ""
+msgstr "账户开立"
 
 msgid "Account opening reason"
 msgstr "开立账户的原因"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "找不到账户令牌。"
 
 msgid "Action"
 msgstr "操作"
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "添加/删除指标"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "添加新工作区%"
 
 msgid "Address"
 msgstr "地址"
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "金额"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "数值最小: 10 最大: 2000"
 
 msgid "Amount per point"
 msgstr "每个点的金额"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "八月"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "请提交身份与地址证明，立刻进行账户验证。继续操作，请将以下文件发送到%1："
 
 msgid "Available Currencies"
 msgstr "可用的货币"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "二元期权"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "二元期权基础知识"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "二元期权或其他金融衍生品交易经验"
@@ -373,10 +373,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com︰ Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com 是多次获奖的在线交易提供商，帮助客户通过二元期权和差价合约在金融市场进行交易。 基于波动率指数的二元期权和差价合约交易被归类为博彩活动。请记住博彩活动可能会上瘾，并提醒自己要承担责任。查阅[_1]负责任交易[_2]的详细信息。一些产品在所有国家都不可用。本网站不向一些国家如美国、加拿大、哥斯达黎加、香港、或18岁以下的用户提供服务。"
 
 msgid "Blank window"
-msgstr ""
+msgstr "空白窗口"
 
 msgid "Bought"
 msgstr "购入"
@@ -511,10 +511,10 @@ msgid "Confirm transfer"
 msgstr "确认转账"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "连接已关闭。"
 
 msgid "Connection error."
-msgstr ""
+msgstr "连接错误。"
 
 msgid "Construction"
 msgstr "建筑"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "合约"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "合约确认"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "合约细节"
 
 msgid "Contract period"
 msgstr "合约期间"
@@ -547,7 +547,7 @@ msgid "Copier"
 msgstr "复制者"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "复制交易"
 
 msgid "Copy Trading"
 msgstr "复制交易"
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "自定义主题"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "自定义图表外观"
 
 msgid "Daily limit on losses"
 msgstr "每日损失限额"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "说明"
 
 msgid "Deselect"
-msgstr ""
+msgstr "取消"
 
 msgid "Differs"
 msgstr "差异"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "还未开立账户？请注册并获取10,000美元虚拟账户"
 
 msgid "Done"
-msgstr ""
+msgstr "完成"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "已完成。资金已转给支付代理"
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "下载模板为"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "下载工作区为 %1"
 
 msgid "Drawing tools"
 msgstr "绘图工具"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "教育"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "电子邮件验证失败"
 
 msgid "Embed code"
 msgstr "嵌入代码"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "利用拥有先进功能的直观交易界面，让您同时监视所有的偏爱资产和市场，以及必要的图表，资产指数，交易时间和历史数据。最重要的是，您可以选择想要看到的屏幕画面"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "输入有效的交易者令牌"
 
 msgid "Enter your current password"
 msgstr "输入当前密码"
@@ -802,16 +802,16 @@ msgid "Exclude me from the website until"
 msgstr "禁止我访问本网站直到"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "禁止时间"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "禁止时间必须在今日之后。"
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "禁止持续时间不能少于6个月。"
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "禁止持续时间不能超过5年。"
 
 msgid "Exit Spot"
 msgstr "退市现价"
@@ -829,10 +829,10 @@ msgid "Explanation"
 msgstr "说明"
 
 msgid "FAQ"
-msgstr ""
+msgstr "常见问题"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "未能更新密码"
 
 msgid "Fall"
 msgstr "下跌"
@@ -868,10 +868,10 @@ msgid "Finance"
 msgstr "金融"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "开立金融账户表格"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "财务评估"
 
 msgid "Financial Information"
 msgstr "金融信息"
@@ -919,10 +919,10 @@ msgid "Get API token from trader(s) and add it in your list"
 msgstr "获取交易者的 API 令牌, 并将其添加到您的列表中"
 
 msgid "Getting started"
-msgstr ""
+msgstr "开始交易"
 
 msgid "Glossary"
-msgstr ""
+msgstr "术语表"
 
 msgid "Go to"
 msgstr "前往"
@@ -940,7 +940,7 @@ msgid "Grid Light"
 msgstr "网格光照"
 
 msgid "Group history"
-msgstr ""
+msgstr "集团历史"
 
 msgid "Health"
 msgstr "健康状况"
@@ -967,19 +967,19 @@ msgid "Historical Data"
 msgstr "历史数据"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "历史数据"
 
 msgid "Horizontal line"
 msgstr "水平线"
 
 msgid "Hour"
-msgstr ""
+msgstr "小时"
 
 msgid "Hours"
 msgstr "小时"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "二元期权如何交易?"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "如何在波动率指数市场上交易？"
@@ -1015,13 +1015,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "为了给您提供服务，我们必须向您获取信息，以便确定产品或服务是否适合您（也就是说，看您是否拥有足够经验和知识，以了解相关的风险）"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由马耳他金融服务机构授予牌照及监管为3级投资服务提供商，(牌照号码为 IS/70156)。"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛投资监管委员会授予牌照和监管，当前在线博彩牌照于2012 年8 月31 日颁发；及(2) 英国博采委员会授予牌照和监管 (牌照 [_1]编号: 39172[_2])。"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr ""
+msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2018年8月01日）。英国客户由(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39495[_2])， 及爱尔兰客户由(3) 爱尔兰的税务局授予牌照和监管 (远程博彩公司牌照号: 1010285，发照日期为2017年7月1日)。查阅完整的 [_3]监管信息[_4]。"
 
 msgid "In/Out"
 msgstr "“范围之内/之外”"
@@ -1033,7 +1033,7 @@ msgid "Income Source"
 msgstr "收入来源"
 
 msgid "Indicative"
-msgstr ""
+msgstr "指示性"
 
 msgid "Indicative Price"
 msgstr "指示性价格"
@@ -1066,7 +1066,7 @@ msgid "Invalid template type"
 msgstr "无效的模板类型"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "无效的模板类型."
 
 msgid "Investments & Dividends"
 msgstr "投资与分红"
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "一月"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "不支持日本账户。"
 
 msgid "Jul"
 msgstr "七月"
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "七月"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "跳至:"
 
 msgid "Jun"
 msgstr "六月"
@@ -1102,13 +1102,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "最后12个月盈利交易"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "最后数字的预测"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "已超过最后数字"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "已低于最后数字"
 
 msgid "Last used"
 msgstr "上一次使用"
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "加载交易模板"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "加载 ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "加载资产指数 ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "正在加载复制交易..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "加载下载/查看数据 ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "加载MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "加载密码对话 ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "加载利润表 ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "加载真实账户开立程序 ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "加载自我禁止 ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "加载账目表 ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "加载令牌管理 ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "加载交易时间 ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "加载图表与交易菜单 ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "加载定制相主题配置..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "加载投资组合 ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "加载自我制止设置。"
 
 msgid "Loading..."
 msgstr "正在加载..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "登录时间"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "正在登出，因为自我禁止持续时间已超时！"
 
 msgid "Login"
 msgstr "登录"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "低"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "低障碍"
 
 msgid "Low barrier"
 msgstr "低障碍"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "每天最大累计损失量"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "最大余额"
 
 msgid "Maximum number of open positions"
 msgstr "最大未平仓头寸数目"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "最大未平仓头寸"
 
 msgid "May"
 msgstr "五月"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "难忘的城镇/城市"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "最低交易投注额须低于最大交易投注额。"
 
 msgid "Min. Trade Stake"
 msgstr "最小交易投注额"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "减去代理佣金"
 
 msgid "Minute"
-msgstr ""
+msgstr "分钟"
 
 msgid "Minutes"
 msgstr "分钟"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "净利"
 
 msgid "New Account"
-msgstr ""
+msgstr "新账户"
 
 msgid "New password"
 msgstr "新密码"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "未触及"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "注意：合约将在我们服务器收到请求时，以当时的市场价格卖出。此价格可能与报价有差异。"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "注： 您只能拥有一个法定货币账户以及任一种加密货币账户"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "确定"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "场外交易指数和股票"
 
 msgid "Occupation"
 msgstr "职业"
@@ -1513,22 +1513,22 @@ msgid "PEP Declaration"
 msgstr "PEP声明"
 
 msgid "PM"
-msgstr ""
+msgstr "下午"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "密码至少须6个字符"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "密码必须有大小写字母和数字"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "密码已成功更新。"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "密码不相符。请重新输入"
 
 msgid "Patents"
-msgstr ""
+msgstr "专利"
 
 msgid "Pattern Recognition"
 msgstr "图形辨识"
@@ -1570,40 +1570,40 @@ msgid "Please"
 msgstr "请"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "请[_1]接受更新条款和条件[_2]，以提高存取款限额。"
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "请[_1]完成账户资料[_2]，以提高取款和交易限额。"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "请选择至少一个令牌范围"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "请选择交易货币种类"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "请完成[_1]财务评估表格[_2]，以便提升您的取款和交易限额 。"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "请确认以下详情以完成转账"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "请输入之间的数字"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "请输入有效日期，格式为年-月-日"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "请输入有效数值"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "请输入0和以下之间的数字"
 
 msgid "Please enter a value greater than 0"
 msgstr "请输入大于0的数值"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "超时剩余时间请输入小于6周的值。"
 
 msgid "Please enter correct email"
 msgstr "请输入正确的电子邮件"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "请输入日期，格式是年-月-日"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "请输入令牌名称"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "请输入时间，格式为小时：分钟"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "以下浏览器请选择一个并安装最新版本"
 
 msgid "Please log in"
-msgstr ""
+msgstr "请登录"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "请登录查看已保存的工作区。"
 
 msgid "Please log in."
-msgstr ""
+msgstr "请登录。"
 
 msgid "Please provide your tax information"
 msgstr "请提供税务信息"
@@ -1645,31 +1645,31 @@ msgid "Please select"
 msgstr "请选择"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "请选择超时剩余时间的日期。"
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "请选择支付代理"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "继续操作前请选择开立账户的原因"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "请设置币种。"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "请设置账户的[_1]币种[_2]"
 
 msgid "Please submit a valid verification token"
 msgstr "请提供有效的验证令牌"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "请于1分钟后重试."
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "请于数分钟后重试."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "请使用新密码登录。"
 
 msgid "Plot"
 msgstr "绘图"
@@ -1720,7 +1720,7 @@ msgid "Profit"
 msgstr "利润"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "利润表"
 
 msgid "Profit table"
 msgstr "利润表"
@@ -1729,10 +1729,10 @@ msgid "Profit/ Loss"
 msgstr "利润/亏损"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "地址证明 - 水电煤账单或银行月结单扫描件（日期不得超过3个月）。地址证明必须包括您的姓名、地址、发证日期和发证机构名称。"
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "身份证明 - 显示您名字和出生日期的护照、驾照（临时或永久）或身份证的扫描件。"
 
 msgid "Purchase"
 msgstr "买入"
@@ -1747,28 +1747,28 @@ msgid "Read"
 msgstr "阅读"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "开立真实资金账户"
 
 msgid "Reality check"
-msgstr ""
+msgstr "实况简报"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "再前往oauth登录页面，"
 
 msgid "Ref"
 msgstr "参考"
 
 msgid "Ref."
-msgstr ""
+msgstr "参考"
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "刷新失败"
 
 msgid "Register free account"
 msgstr "注册免费账户"
 
 msgid "Registration"
-msgstr ""
+msgstr "注册"
 
 msgid "Remove"
 msgstr "移除"
@@ -1783,7 +1783,7 @@ msgid "Repeat password"
 msgstr "重复输入密码"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "此合约不提供转售"
 
 msgid "Resale price"
 msgstr "转售价格"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "安全提示问题"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "我们的服务器好像发生故障，我们正在努力修复中。"
 
 msgid "Self-Employed"
 msgstr "个体经营"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "自我禁止"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "自我禁止工具"
 
 msgid "Sell At Market"
 msgstr "按市价卖出"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "会话"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "交易期持续时间限制"
 
 msgid "Session duration limit, in minutes"
 msgstr "交易期持续时间限制，以分钟为单位"
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "已卖出"
 
 msgid "Some random index"
-msgstr ""
+msgstr "一些随机指数"
 
 msgid "Source of wealth"
 msgstr "财富来源"
@@ -1993,10 +1993,10 @@ msgid "Submit"
 msgstr "提交"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "已成功添加新令牌"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "已成功添加工作区为"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "模板已应用成功并保存为"
@@ -2011,10 +2011,10 @@ msgid "Table"
 msgstr "表"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "税务信息"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "税务信息已成功更新"
 
 msgid "Tax identification number"
 msgstr "税务编号"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "电话"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "模板已保存为"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "部分应用的模板。"
 
 msgid "Template changes saved"
 msgstr "模板更改已保存"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "模板不适用。"
 
 msgid "Template name"
 msgstr "模板名称"
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "条款"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "条款与条件"
 
 msgid "Tertiary"
 msgstr "三级"
@@ -2068,19 +2068,19 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约到期时一文不值，您将损失全部投资，包括合约费用"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "合约执行期间发生市场数据中断。对于真实货币账户, 我们将尝试纠正此情况并妥善结算合约, 否则合约将取消并退款。虚拟货币合约将取消并退款。"
 
 msgid "There was an error"
-msgstr ""
+msgstr "出现错误"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "此合约已过期"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "此合约亏损"
 
 msgid "This contract won"
-msgstr ""
+msgstr "此合约获利"
 
 msgid "This field is required"
 msgstr "此为必填项"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "时间已过。下次开启时间为"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Websocket请求超时"
 
 msgid "Title"
 msgstr "职务"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
 
 msgid "Today"
-msgstr ""
+msgstr "今天"
 
 msgid "Token"
 msgstr "令牌"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "令牌管理"
 
 msgid "Token already added"
-msgstr ""
+msgstr "已添加令牌"
 
 msgid "Token management"
 msgstr "令牌管理"
@@ -2146,16 +2146,16 @@ msgid "Token name"
 msgstr "令牌名称"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "令牌名称可包含带空格和下划线的字母数字字符"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "令牌名称最多可包含32个字符"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "令牌名称必须包含至少2个字符"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "令牌名称必须以字母数字字符开头"
 
 msgid "Token permissions"
 msgstr "令牌权限"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "交易时间"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "二元期权交易并不适合所有人。因此，请确保您完全明白有关的风险。您的亏损可能会超越起始资金存款，而您并不拥有或占有任何标的资产。"
 
 msgid "Tradingview for Binary.com"
 msgstr "通过Binary.com使用Tradingview"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "交易额"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "交易类型"
 
 msgid "USD"
 msgstr "美元"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "验证代码已发送到您的邮箱"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "验证码已传到"
 
 msgid "Verification token"
 msgstr "验证令牌"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "这是什么？"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "当您点选“Ok”后，您将被禁止在此网站交易，直到选定期限结束为止。"
 
 msgid "While on the go, you can"
 msgstr "出门在外时，您可"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "为何选择二元期权交易？"
 
 msgid "Why trade with Binary.com"
 msgstr "为何通过Binary.com进行交易"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "工作区"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "工作区变更已保存"
 
 msgid "X-axis labels"
 msgstr "X-轴标签"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "您尚未复制任何交易"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "您已自我禁止至"
 
 msgid "You have sold the following contract"
 msgstr "您已卖出以下合约"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "您支付"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "您必须输入6-25个字符。"
 
 msgid "You will be automatically logged out after such time"
 msgstr "在该时间后您将自动退出登录"
@@ -2425,16 +2425,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "您的账户 (%) 已锁定, 请联系客服部了解更多信息。"
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "您的账户已被限制。请[_1]联系客服部[_2]，以获得帮助。"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "您的浏览器不支持剪贴板复制功能"
 
 msgid "Your browser is not supported"
 msgstr "您的浏览器不受支持"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "您的更改已成功更新"
 
 msgid "Your copying settings"
 msgstr "您的复制设置"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "缩放"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "立刻进行[_1]账户验证[_2]，以获得取款选项的所有优惠。"
 
 msgid "and"
-msgstr ""
+msgstr "和"
 
 msgid "apostrophe (') are allowed"
 msgstr "允许使用省略号(')"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "日"
 
 msgid "deposits"
-msgstr ""
+msgstr "存款"
 
 msgid "end time"
 msgstr "结束时间"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "退市现价"
 
 msgid "for"
-msgstr ""
+msgstr "用于"
 
 msgid "for mobile charts"
 msgstr "移动式图表专用"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "主要网站"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "市场目前已关闭。"
 
 msgid "medium protection"
 msgstr "中等级别保护"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "跳动点"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "提款"
 
 msgid "yes"
 msgstr "是"
