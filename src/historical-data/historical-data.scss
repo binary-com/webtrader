@@ -1,4 +1,5 @@
-$primary-color: #2a3052;
+$COLOR_DARK_BLUE: #2a3052;
+$COLOR_WHITE: #ffffff;
 
 .historical-data-dialog {
 	.historical-data {
@@ -11,7 +12,7 @@ $primary-color: #2a3052;
 		width: 170px;
 		left: 180px;
 		top: 2px;
-		color: white;
+		color: $COLOR_WHITE;
 		z-index: +1;
 		> ul {
 			border: none;
@@ -37,8 +38,8 @@ $primary-color: #2a3052;
 		li {
 			min-width: 130px;
 			font-size: 90%;
-			background: $primary-color;
-			color: white;
+			background: $COLOR_DARK_BLUE;
+			color: $COLOR_WHITE;
 		}
 		.title {
 			background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
@@ -62,7 +63,7 @@ $primary-color: #2a3052;
 		position: absolute;
 		left: 335px;
 		top: 5px;
-		color: white;
+		color: $COLOR_WHITE;
 		input {
 			cursor:pointer;
 			border: none;
@@ -71,7 +72,7 @@ $primary-color: #2a3052;
 			width: 108px;
 		}
 		input:hover {
-			border: 0.2px solid $primary-color;
+			border: 0.2px solid $COLOR_DARK_BLUE;
 		}
 	}
 }
