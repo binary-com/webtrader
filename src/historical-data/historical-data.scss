@@ -5,12 +5,11 @@
    }
    .instrument-dropdown {
       position: absolute;
-      background: linear-gradient(#2A3052,#15212D);
+      
       height: 36px;
       width: 170px;
       left: 180px;
-      
-      top: 0;
+      top: 2px;
       color: white;
       z-index: +1;
       > ul {
@@ -41,17 +40,18 @@
          color: white;
       }
       .title {
-         background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
-         padding-left: 20px;
-         line-height: 34px;
-         font-size:18px;
-         padding-left:28px;
-         margin:auto;
-         background-size: 10px 10px !important;
-         background-position: 8px 55% !important;
-         background-repeat: no-repeat;
-         margin: 0;
-         white-space: nowrap;
+
+        background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
+        padding-left: 7px;
+        line-height: 34px;
+        font-size:18px;
+
+        margin:auto;
+        background-size: 10px 10px !important;
+        background-position: 90px 50% !important;
+        background-repeat: no-repeat;
+        margin: 0;
+        white-space: nowrap;
       }
 
    }
