@@ -5,6 +5,8 @@ import chartingRequestMap from 'charts/chartingRequestMap';
 import rv from 'common/rivetsExtra';
 import moment from 'moment';
 import 'common/util';
+import { get_chart_labels } from '../charts/chartSettings';
+
 import Lookback from 'trade/lookback';
 require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
@@ -78,21 +80,21 @@ const init_chart = (root, state, options) => {
          backgroundColor: null, /* make background transparent */
          width: 0,
          height: 0,
-         marginLeft:20,
+         marginLeft: 65,
          marginRight:20
       },
       title: { text: '' },
       subtitle: {
-        // text   : ChartSettings.getSubtitle(),
-        text: `
-              <span style="${common_vertical_line_style} border-color: #e98024; border-style: solid;"></span> ${'Start Time'.i18n()}
-              <span style="${common_horizontal_line_style} border-color: green; border-style: solid;"></span> ${'Barrier'.i18n()}
-              <span style="${common_vertical_line_style} border-color: #e98024; border-style: dashed;"></span> ${'End Time'.i18n()}`,
+        text: get_chart_labels(),
         useHTML: true,
       },
       tooltip: {
-         xDateFormat:'%A, %b %e, %H:%M:%S GMT',
-         valueDecimals: decimal_digits || undefined,
+         useHTML: true,
+         formatter() {
+            const spot = addComma(this.y.toFixed());
+            const spot_time = moment.utc(this.x).format('dddd, MMM D, HH:mm:ss');
+            return `<div class='tooltip-body'>${spot_time} GMT<br/>${this.series.name} ${spot}</div>`;
+        },
       },
       xAxis: {
          type: 'datetime',
@@ -106,7 +108,7 @@ const init_chart = (root, state, options) => {
       yAxis: {
         labels: {
           align: 'left',
-          x: 0,
+          x: -65,
           y: -2,
           formatter() {
             return addComma(this.value.toFixed(DISPLAY_DECIMALS));

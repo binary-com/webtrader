@@ -184,3 +184,14 @@
 .entry-spot[data-balloon]:before {
   transform: translate(-40%,0);
 }
+
+.highcharts-tooltip span {
+    top: 1px !important;
+    left: 2px !important;
+      .tooltip-body {
+        background-color: #fff;
+        padding: 6px;
+        margin-bottom: -14px;
+        margin-right: -14px;
+    }
+}
