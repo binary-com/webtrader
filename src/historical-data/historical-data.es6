@@ -43,7 +43,7 @@ const buildMenu = ($root, instrumentName, callback) => {
 const buildDatetime = (dialog, $root, callback) => {
     const datetime = $(`<div class='date-time'>
                     <input type="button" class="date" tab-index="-1"></input>
-                    <input type="button" class="time" value="00:00"></input>
+                    <input type="button" class="time" tab-index="-1" value="00:00"></input>
           </div>`);
     $root.closest('.ui-dialog').append(datetime);
     datetime.find('.date')
@@ -54,26 +54,32 @@ const buildDatetime = (dialog, $root, callback) => {
              changeYear : true,
              dateFormat : 'yy-mm-dd',
              showButtonPanel : true,
+             showCloseButton : false,
              onSelect: function () { $(this).change(); update_time(); },
              beforeShow: (input, inst) => {
                 _.delay(() => inst.dpDiv.css({
                    marginLeft: '-60px',
-                   top: datetime.find('.date').offset().top + 35,
+                   top: datetime.find('.date').offset().top + 31,
                    left: datetime.find('.date').offset().left,
                    zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 1
                 }));
              },
              minDate : moment.utc().subtract(1, "years").toDate(),
              maxDate : moment.utc().toDate(),
-             closeText: 'Done'.i18n(),
              currentText: 'Today'.i18n()
          })
          .datepicker("setDate", moment.utc().subtract(1, "years").toDate().toISOString().slice(0, 10));
 
      datetime.find('.time')
          .timepicker({
-            showCloseButton : true,
-            beforeShow: (input, inst) => inst.tpDiv.css({marginLeft: '-120px'}),
+            showCloseButton : false,
+            beforeShow: (input, inst) => inst.tpDiv.css(
+            {
+                marginLeft: '-120px',
+                marginTop: '6px'
+            }
+                
+            ),
             onSelect: function() { $(this).change(); update_time(); },
          });
     const update_time = () => {

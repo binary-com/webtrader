@@ -64,19 +64,21 @@
    .date-time {
     
       position: absolute;
-      background: linear-gradient(#2A3052,#15212D);
-      height: 34px;
-      width: 210px;
+      
+      
       left: 360px;
-      top: 2px;
+      top: 5px;
       color: white;
       input {
-         color: white;
+         
          position: relative;
-         background: transparent;
+         
          border: none;
          display: inline-block;
-         width: 100px;
+         width: 105px;
+      }
+      input:hover {
+        border: 0.2px solid #2a3052;
       }
    }
 }
@@ -84,11 +86,12 @@
 
 .ui-timepicker-hours{
     padding:0;
-    
+    background:white;
 }
 
 .ui-timepicker-minutes{
     padding:0;
+    background:white;
 }
 
 .ui-corner-all {
@@ -115,4 +118,12 @@
 
 .ui-timepicker-hours .ui-timepicker tbody {
     border-right: 3px solid #f2f2f2;
+}
+
+.ui-widget-content button {
+    float: right !important;
+}
+
+.ui-datepicker-close {
+    display: none;
 }
