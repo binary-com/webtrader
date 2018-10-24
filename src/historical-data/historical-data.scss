@@ -1,129 +1,74 @@
 .historical-data-dialog {
-   .historical-data {
-      padding : 0 !important;
-      position: relative;
-   }
-   .instrument-dropdown {
-      position: absolute;
-      
-      height: 36px;
-      width: 170px;
-      left: 180px;
-      top: 2px;
-      color: white;
-      z-index: +1;
-      > ul {
-         border: none;
-         visibility: hidden;
-         opacity: 0;
-         transition: visibility 0.5s, opacity 0.1s linear 0.4s;
-      }
-      .ui-menu .ui-menu-item {
-         list-style-image: none !important;
-         .ui-menu-item-wrapper {
-            padding: 5px 1em 5px .4em;
-            margin: 0;
-         }
-      }
-      .ui-widget.ui-widget-content {
-         border: none !important;
-      }
-      &:hover > ul {
-         visibility: visible;
-         opacity: 1;
-         transition: visibility 0s;
-      }
-      li {
-         min-width: 130px;
-         font-size:90%;
-         background: #2A3052;
-         color: white;
-      }
-      .title {
-
-        background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
-        padding-left: 7px;
-        line-height: 34px;
-        font-size:18px;
-
-        margin:auto;
-        background-size: 10px 10px !important;
-        background-position: 90px 50% !important;
-        background-repeat: no-repeat;
-        margin: 0;
-        white-space: nowrap;
-      }
-
-   }
-   .ui-dialog-titlebar {
-      .ui-dialog-title {
-         
-         width: 320px;
-      }
-   }
-   .date-time {
-    
-      position: absolute;
-      
-      
-      left: 360px;
-      top: 5px;
-      color: white;
-      input {
-         
-         position: relative;
-         
-         border: none;
-         display: inline-block;
-         width: 105px;
-      }
-      input:hover {
-        border: 0.2px solid #2a3052;
-      }
-   }
-}
-
-
-.ui-timepicker-hours{
-    padding:0;
-    background:white;
-}
-
-.ui-timepicker-minutes{
-    padding:0;
-    background:white;
-}
-
-.ui-corner-all {
-    border-radius: unset;
-}
-
-.ui-timepicker-title {
-    text-align: center;
-}
-
-.ui-timepicker td {
-    border: none;
-
-}
-
-.ui-timepicker td a {
-    display: block;
-    padding: .2em .3em;
-    width: 1.2em;
-    text-align: right;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.ui-timepicker-hours .ui-timepicker tbody {
-    border-right: 3px solid #f2f2f2;
-}
-
-.ui-widget-content button {
-    float: right !important;
-}
-
-.ui-datepicker-close {
-    display: none;
+	.historical-data {
+		padding: 0 !important;
+		position: relative;
+	}
+	.instrument-dropdown {
+		position: absolute;
+		height: 36px;
+		width: 170px;
+		left: 180px;
+		top: 2px;
+		color: white;
+		z-index: +1;
+		> ul {
+			border: none;
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0.5s, opacity 0.1s linear 0.4s;
+		}
+		.ui-menu .ui-menu-item {
+			list-style-image: none !important;
+			.ui-menu-item-wrapper {
+				padding: 5px 1em 5px .4em;
+				margin: 0;
+			}
+		}
+		.ui-widget.ui-widget-content {
+			border: none !important;
+		}
+		&:hover > ul {
+			visibility: visible;
+			opacity: 1;
+			transition: visibility 0s;
+		}
+		li {
+			min-width: 130px;
+			font-size: 90%;
+			background: #2a3052;
+			color: white;
+		}
+		.title {
+			background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
+			padding-left: 7px;
+			line-height: 34px;
+			font-size: 18px;
+			margin: auto;
+			background-size: 10px 10px !important;
+			background-position: 90px 50% !important;
+			background-repeat: no-repeat;
+			margin: 0;
+			white-space: nowrap;
+		}
+	}
+	.ui-dialog-titlebar {
+		.ui-dialog-title {
+			width: 320px;
+		}
+	}
+	.date-time {
+		position: absolute;
+		left: 335px;
+		top: 5px;
+		color: white;
+		input {
+			position: relative;
+			border: none;
+			display: inline-block;
+			width: 106px;
+		}
+		input:hover {
+			border: 0.2px solid #2a3052;
+		}
+	}
 }

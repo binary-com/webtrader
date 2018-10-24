@@ -20,8 +20,8 @@ const buildMenu = ($root, instrumentName, callback) => {
       _.delay(() => buildMenu($root, instrumentName, callback), 1000);
       return;
    }
-   const menu = `<ul >${
-      markets.map(m => `<li ><div>${m.display_name}</div><ul>${
+   const menu = `<ul>${
+      markets.map(m => `<li><div>${m.display_name}</div><ul>${
          m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${
             s.instruments.map(i => `<li symbol='${i.symbol}'><div>${i.display_name}</div></li>`).join('')
          }</ul></li>`).join('')
@@ -41,7 +41,7 @@ const buildMenu = ($root, instrumentName, callback) => {
 };
 
 const buildDatetime = (dialog, $root, callback) => {
-    const datetime = $(`<div class='date-time'>
+    const datetime = $(`<div class='date-time historical-data-pickers-container'>
                     <input type="button" class="date" tab-index="-1"></input>
                     <input type="button" class="time" tab-index="-1" value="00:00"></input>
           </div>`);
@@ -73,13 +73,10 @@ const buildDatetime = (dialog, $root, callback) => {
      datetime.find('.time')
          .timepicker({
             showCloseButton : false,
-            beforeShow: (input, inst) => inst.tpDiv.css(
-            {
+            beforeShow: (input, inst) => inst.tpDiv.css({
                 marginLeft: '-120px',
                 marginTop: '6px'
-            }
-                
-            ),
+            }),
             onSelect: function() { $(this).change(); update_time(); },
          });
     const update_time = () => {
@@ -122,7 +119,6 @@ export const createWindow = function(options) {
        };
     };
     show_chart();
-
 
     buildMenu($root, options_copy.instrumentName, (symbol, display_name) => {
        options_copy.instrumentName = display_name;

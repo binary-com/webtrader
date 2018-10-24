@@ -355,7 +355,7 @@ button[disabled] {
   opacity: 0.3 !important;
 }
 
-/* override datepicker syles */
+/* override datepicker styles */
 .ui-datepicker, .ui-timepicker .ui-widget-content {
   padding: 0;
   border: none;
@@ -370,6 +370,42 @@ button[disabled] {
   opacity: 0.75;
   background: none;
   border: none;
+}
+.ui-datepicker-close {
+	display: none;
+}
+.ui-widget-content button {
+	float: right !important;
+}
+
+/* override timepicker styles */
+.ui-timepicker-hours {
+	padding: 0;
+	background: white;
+}
+.ui-timepicker-minutes {
+	padding: 0;
+	background: white;
+}
+.ui-corner-all {
+	border-radius: unset;
+}
+.ui-timepicker-title {
+	text-align: center;
+}
+.ui-timepicker td {
+	border: none;
+}
+.ui-timepicker td a {
+	display: block;
+	padding: .2em .3em;
+	width: 1.2em;
+	text-align: right;
+	text-decoration: none;
+	cursor: pointer;
+}
+.ui-timepicker-hours .ui-timepicker tbody {
+	border-right: 3px solid #f2f2f2;
 }
 
 /* override table styles*/
