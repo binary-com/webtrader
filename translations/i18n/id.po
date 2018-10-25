@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-25 08:10\n"
+"PO-Revision-Date: 2018-10-25 08:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1732,7 +1732,7 @@ msgid "Proof of address - A scanned copy of a utility bill or bank statement tha
 msgstr "Bukti alamat - Salinan scan rekening koran atau tagihan utilitas tidak lebih dari tiga bulan setelah tanggal cetak. Bukti alamat harus menampilkan nama, alamat, tanggal cetak, dan nama organisasi pengeluar bukti alamat tersebut."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "Bukti identitas - Scan Ktp, Sim, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
+msgstr "Bukti identitas - Scan KTP, SIM, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
 
 msgid "Purchase"
 msgstr "Beli"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Sesi"
 
 msgid "Session duration limit"
-msgstr "Batas durasi sesi"
+msgstr "Batasan durasi sesi"
 
 msgid "Session duration limit, in minutes"
 msgstr "Batas sesi durasi, dalam menit"
