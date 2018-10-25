@@ -190,7 +190,6 @@ const initLang = (root) => {
       },
       languages: [
          { value: 'en', name: 'English'},
-         { value: 'ar', name: 'Arabic'},
          { value: 'de', name: 'Deutsch'},
          { value: 'es', name: 'Español'},
          { value: 'fr', name: 'Français'},
