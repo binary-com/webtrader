@@ -5,7 +5,7 @@ import chartingRequestMap from 'charts/chartingRequestMap';
 import rv from 'common/rivetsExtra';
 import moment from 'moment';
 import 'common/util';
-import { get_chart_labels } from '../charts/chartSettings';
+import * as ChartSettings from '../charts/chartSettings';
 
 import Lookback from 'trade/lookback';
 require(['css!viewtransaction/viewTransaction.css']);
@@ -19,8 +19,6 @@ const NOTE_TEXT = {
   NO_RESALE: 'Resale of this contract is not offered'.i18n(),
   FINISHED: 'This contract has expired'.i18n(),
 };
-const common_vertical_line_style   = 'margin-bottom: -3px; margin-left: 10px; height: 15px; width: 5px; border: 0; border-left: 2px; display: inline-block;';
-const common_horizontal_line_style = 'margin-bottom: 3px; margin-left: 10px; height: 2; width: 20px; border: 0; border-bottom: 2px; display: inline-block;';
 
 let market_data_disruption_win = null;
 const show_market_data_disruption_win = () => {
@@ -85,7 +83,7 @@ const init_chart = (root, state, options) => {
       },
       title: { text: '' },
       subtitle: {
-        text: get_chart_labels(),
+        text: ChartSettings.getLabels(true),
         useHTML: true,
       },
       tooltip: {
@@ -119,7 +117,8 @@ const init_chart = (root, state, options) => {
       series: [{
          name: title,
          data: data,
-         type: type
+         type: type,
+         zIndex: 10
       }],
       exporting: { enabled: false, enableImages: false},
       legend: { enabled: false},
@@ -146,7 +145,7 @@ const init_chart = (root, state, options) => {
          id: options.id || options.value,
          label: { text: (options.label || 'label'), x: options.text_left ? -15 : 5},
          color: options.color || '#e98024',
-         zIndex: 4,
+         zIndex: 0,
          width: options.width || 2,
          dashStyle: options.dashStyle,
       });
@@ -158,8 +157,9 @@ const init_chart = (root, state, options) => {
          value: options.value,
          label: { text: options.label, align: 'center', y: options.text_under ? 15 : -5 },
          color: options.color || 'green',
-         zIndex: 4,
+         zIndex: 0,
          width: 2,
+         dashStyle: options.dashStyle,
       });
    };
    return el.chart = chart;
@@ -264,25 +264,32 @@ function draw_chart(contract, state) {
 
 function draw_vertical_lines(contract, state, chart) {
   const { entry_tick_time, exit_tick_time, date_expiry, date_start } = contract;
-  const text_left = true;
 
-  draw_entry_spot(entry_tick_time);
-  draw_start_time(date_start, text_left);
+  drawEntrySpot(entry_tick_time);
+  draw_start_time(date_start);
 
-  draw_exit_spot(exit_tick_time, text_left);
+  drawExitSpot(exit_tick_time);
   draw_end_time(date_expiry);
 
-  function draw_entry_spot(entry_tick_time) {
+  // TODO: drawspots to one function
+  function drawEntrySpot(entry_tick_time) {
     const label = 'Entry Spot'.i18n();
     if (!entry_tick_time || chart_has_label(label)) return;
-    chart.addPlotLineX({ value: entry_tick_time * 1000, label });
+
+    const entry_spot_point = chart.series[0].data.find((marker) => +marker.x === +(entry_tick_time * 1000));
+    if (!entry_spot_point) return;
+
+    const marker = ChartSettings.getMarkerSettings('entry_spot');
+    entry_spot_point.update({ marker });
   }
 
-  function draw_exit_spot(exit_tick_time, text_left) {
+  function drawExitSpot(exit_tick_time) {
     const label = 'Exit Spot'.i18n();
     if (!exit_tick_time || chart_has_label(label)) return;
-
-    chart.addPlotLineX({ value: (+exit_tick_time) * 1000, label, text_left, dashStyle: 'Dash' });
+    
+    const exit_spot_point = chart.series[0].data.find((marker) => +marker.x === +(exit_tick_time * 1000));
+    const marker = ChartSettings.getMarkerSettings('exit_spot');
+    exit_spot_point.update({ marker });
   }
 
   function draw_end_time(date_expiry) {
@@ -297,7 +304,8 @@ function draw_vertical_lines(contract, state, chart) {
     if (!date_start || chart_has_label(label)) return;
     chart.addPlotLineX({ value: date_start * 1000, label, text_left });
   }
-
+  
+  // TODO: move to state.chart
   function chart_has_label(label) {
     if (state.chart.added_labels.includes(label)) return true;
 

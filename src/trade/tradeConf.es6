@@ -5,7 +5,7 @@ import 'css!../trade/tradeConf.css';
 import Lookback from './lookback';
 import liveapi from '../websockets/binary_websockets';
 import chartingRequestMap from '../charts/chartingRequestMap';
-import { get_chart_labels } from '../charts/chartSettings';
+import { getLabels } from '../charts/chartSettings';
 import '../common/util';
 import rv from '../common/rivetsExtra';
 
@@ -18,7 +18,7 @@ rv.binders['tick-chart'] = {
       const model = this.model;
       el.chart = new Highcharts.Chart({
           subtitle: {
-            text: get_chart_labels(),
+            text: getLabels(),
             useHTML: true,
          },
          title: '',
