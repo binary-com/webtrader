@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-25 07:50\n"
+"PO-Revision-Date: 2018-10-25 08:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -184,7 +184,7 @@ msgid "Accessible from any web browser in 13 languages"
 msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
 
 msgid "Account authentication"
-msgstr "Pembuktian akun"
+msgstr "Autentikasi akun"
 
 msgid "Account balance"
 msgstr "Saldo akun"
@@ -376,7 +376,7 @@ msgid "Binary.com is an award-winning online trading provider that helps its cli
 msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs ini tidak tersedia di beberapa negara seperti AS, Kanada, Kosta Rika, Hong Kong atau siapapun dibawah umur 18."
 
 msgid "Blank window"
-msgstr "Window kosong"
+msgstr "Jendela kosong"
 
 msgid "Bought"
 msgstr "Membeli"
@@ -514,7 +514,7 @@ msgid "Connection closed."
 msgstr "Koneksi ditutup."
 
 msgid "Connection error."
-msgstr "Koneksi error."
+msgstr "Koneksi eror."
 
 msgid "Construction"
 msgstr "Konstruksi"
