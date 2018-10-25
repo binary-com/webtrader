@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-25 08:00\n"
+"PO-Revision-Date: 2018-10-25 08:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Nikmati antarmuka trading intuitif dengan fungsi lanjutan yang memungkinkan Anda untuk memantau semua aset dan pasar favorit Anda pada saat bersamaan, termasuk grafik penting, indeks aset, waktu trading, dan data historis. Yang terpenting, Anda dapat memilih apa yang ingin Anda tampilkan pada layar Anda"
 
 msgid "Enter a valid trader token"
-msgstr "Masukkan token trader"
+msgstr "Masukkan token trader yang valid"
 
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
