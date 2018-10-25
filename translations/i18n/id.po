@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-25 08:20\n"
+"PO-Revision-Date: 2018-10-25 08:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "Muat template trading"
 
 msgid "Loading ..."
-msgstr "Pemuatan ..."
+msgstr "Loading ..."
 
 msgid "Loading Asset Index ..."
 msgstr "Loading Indeks Aset ..."
 
 msgid "Loading Copy Trade..."
-msgstr "Pemuatan Copy Trade..."
+msgstr "Loading Copy Trade..."
 
 msgid "Loading Download/View Data ..."
-msgstr "Pemuatan Download/Lihat Data ..."
+msgstr "Loading Download/Lihat Data ..."
 
 msgid "Loading MAM..."
-msgstr "Pemuatan MAM..."
+msgstr "Loading MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr "Pemuatan dialog kata sandi ..."
+msgstr "Loading dialog kata sandi ..."
 
 msgid "Loading Profit Table ..."
-msgstr "Pemuatan Profit Table ..."
+msgstr "Loading Tabel Profit ..."
 
 msgid "Loading Real account opening ..."
-msgstr "Pemuatan pendaftaran akun Riil ..."
+msgstr "Loading pendaftaran akun Riil ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr "Pemuatan Pengecualian Diri ..."
+msgstr "Loading Pengecualian Diri ..."
 
 msgid "Loading Statement Table ..."
-msgstr "Pemuatan Tabel Pernyataan ..."
+msgstr "Loading Tabel Pernyataan ..."
 
 msgid "Loading Token management ..."
-msgstr "Pemuatan Token manajemen ..."
+msgstr "Loading Token manajemen ..."
 
 msgid "Loading Trading Times ..."
-msgstr "Pemuatan Waktu Trading ..."
+msgstr "Loading Waktu Trading ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr "Pemuatan grafik dan menu trading ..."
+msgstr "Loading grafik dan menu trading ..."
 
 msgid "Loading custom theme configuration..."
-msgstr "Pemuatan konfigurasi tema khusus..."
+msgstr "Loading konfigurasi tema khusus..."
 
 msgid "Loading portfolio ..."
-msgstr "Pemuatan portopolio ..."
+msgstr "Loading portopolio ..."
 
 msgid "Loading self-exclusion settings."
-msgstr "Memuat pengaturan pengecualian diri."
+msgstr "Loading pengaturan pengecualian diri."
 
 msgid "Loading..."
 msgstr "Pemuatan..."
@@ -1273,7 +1273,7 @@ msgid "Maximum number of open positions"
 msgstr "Maksimum jumlah posisi berjalan"
 
 msgid "Maximum open positions"
-msgstr "Maksimum posisi berjalan"
+msgstr "Posisi berjalan Maksimum"
 
 msgid "May"
 msgstr "Mei"
@@ -2428,7 +2428,7 @@ msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for a
 msgstr "Akun Anda memiliki akses terbatas. Silahkan [_1]hubungi customer support[_2] untuk bantuan."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr "Browser Anda tidak mendukung copy ke clipboard"
+msgstr "Browser Anda tidak mendukung salin ke clipboard"
 
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
