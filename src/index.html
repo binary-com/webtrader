@@ -12,7 +12,6 @@
     <title>Binary.com : Webtrader</title>
 
     <script src="v<version>/common/util.js"></script>
-    <script src="v<version>/common/inContextTranslation.js"></script>
     <script src="v<version>/lib/jquery/dist/jquery.min.js"></script>
     <script src="v<version>/lib/moment/min/moment.min.js"></script>
     <script src="<style-url>/binary.js"></script>
@@ -158,6 +157,16 @@
     <!-- For accessing current app version from index.js -->
     <script> var VERSION = "v<version>/"; </script>
     <script src="v<version>/index.js"></script>
+    <script>
+        var _jipt = [];
+        if ((local_storage.get("i18n") || {}).value === 'ach') {
+            localStorage.setItem('jipt_language_code_webtrader', 'en');
+            _jipt.push(['project', 'webtrader']);
+            var crowdin = document.createElement("script");
+            crowdin.setAttribute('src', '//cdn.crowdin.com/jipt/jipt.js');
+            document.head.appendChild(crowdin);
+        }
+    </script>
 
     <!-- Google Tag Manager -->
     <noscript>
