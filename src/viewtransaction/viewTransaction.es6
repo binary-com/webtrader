@@ -6,7 +6,6 @@ import rv from 'common/rivetsExtra';
 import moment from 'moment';
 import 'common/util';
 import * as ChartSettings from '../charts/chartSettings';
-
 import Lookback from 'trade/lookback';
 require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
@@ -21,7 +20,7 @@ const NOTE_TEXT = {
 };
 
 let market_data_disruption_win = null;
-const show_market_data_disruption_win = () => {
+const showMarketDataDisruptionWindow = () => {
    if (market_data_disruption_win) {
       market_data_disruption_win.moveToTop();
       return;
@@ -47,7 +46,7 @@ const show_market_data_disruption_win = () => {
    window.dd = market_data_disruption_win;
 };
 
-const init_chart = (root, state, options) => {
+const initChart = (root, state, options) => {
    let data = [];
    let type = '';
    let decimal_digits = 0;
@@ -176,7 +175,7 @@ export const init = (contract_id, transaction_id) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */
             if (proposal.underlying === undefined && proposal.shortcode === undefined) {
-               show_market_data_disruption_win(proposal);
+               showMarketDataDisruptionWindow(proposal);
                return;
             }
             proposal.transaction_id = transaction_id;
@@ -191,29 +190,29 @@ export const init = (contract_id, transaction_id) => {
    });
 };
 
-const handle_error = (message) => {
+const handleError = (message) => {
   $.growl.error({ message });
   liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
   liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
 };
 
-const update_indicative = (data, state) => {
+const updateIndicative = (data, state) => {
   const contract = data.proposal_open_contract;
-  update_state(contract, state);
+  updateState(contract, state);
   drawChart(contract, state);
 
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
-    on_contract_finished(state);
+    onContractFinished(state);
     return;
   }
 
-  update_state_sell();
-  handle_forward_starting();
-  state.chart.manual_reflow();
+  updateStateSell();
+  handleForwardStarting();
+  state.chart.manualReflow();
 
-  function update_state(contract, state) {
-    // note: rivets.js 2-way data-binding breaks if new object
+  function updateState(contract, state) {
+    // note: cannot use spread operator - rivets.js 2-way data-binding breaks if new object
     state.proposal_open_contract.user_sold = contract.exit_tick_time && contract.exit_tick_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
@@ -231,17 +230,17 @@ const update_indicative = (data, state) => {
     state.proposal_open_contract.high_barrier = contract.high_barrier;
     state.proposal_open_contract.low_barrier = contract.low_barrier;
 
-    state.note = make_note(contract);
+    state.note = makeNote(contract);
   }
 
-  function update_state_sell() {
+  function updateStateSell() {
     if (contract.bid_price) {
       state.sell.bid_price.value = contract.bid_price;
       [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
     }
   }
 
-  function handle_forward_starting() {
+  function handleForwardStarting() {
     const constract_is_forward_starting = contract.is_forward_starting && +contract.date_start > +contract.current_spot_time;
     if (constract_is_forward_starting) {
       state.fwd_starting = '* Contract has not started yet'.i18n();
@@ -291,12 +290,12 @@ function drawVerticalLines(contract, state, chart) {
   }
 }
 
-const on_contract_finished = (state) => {
+const onContractFinished = (state) => {
   state.proposal_open_contract.is_ended = true;
   state.sell.sell_at_market_enabled = false;
 };
 
-const make_note = (contract) => {
+const makeNote = (contract) => {
     if (contract.validation_error) return contract.validation_error;
     if (contract.status !== 'open') return NOTE_TEXT.FINISHED;
     if (contract.is_expired || contract.is_sold) return NOTE_TEXT.EXPIRED;
@@ -313,7 +312,7 @@ const drawSparkline = (contract, state) => {
 const init_dialog = (proposal) => {
    require(['text!viewtransaction/viewTransaction.html'], (html) => {
       const root = $(html).i18n();
-      const state = init_state(proposal, root);
+      const state = initState(proposal, root);
 
       const transWin = windows.createBlankWindow(root, {
          title: proposal.display_name + ' (' + proposal.transaction_id + ')',
@@ -335,7 +334,7 @@ const init_dialog = (proposal) => {
           liveapi.proposal_open_contract.forget(proposal.contract_id);
          },
          resize: () => {
-            state.chart.manual_reflow();
+            state.chart.manualReflow();
          },
          'data-authorized': 'true'
       });
@@ -346,7 +345,7 @@ const init_dialog = (proposal) => {
    });
 };
 
-const sell_at_market = (state, root) => {
+const sellAtMarket = (state, root) => {
    state.sell.sell_at_market_enabled = false;
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
    liveapi.send({ sell: state.proposal_open_contract.contract_id, price: 0 })
@@ -379,13 +378,13 @@ const sell_at_market = (state, root) => {
       });
 };
 
-const init_state = (proposal, root) => {
+const initState = (proposal, root) => {
    const state = {
       route: {
          value: 'table',
          update: (value) => { state.route.value = value; },
       },
-      note: make_note(proposal),
+      note: makeNote(proposal),
       chart: {
          chart: null, /* highchart object */
          loading: 'Loading ' + proposal.display_name + ' ...',
@@ -397,7 +396,7 @@ const init_state = (proposal, root) => {
           return false;
          },
          type: 'ticks', // could be 'tick' or 'ohlc'
-         manual_reflow: () => {
+         manualReflow: () => {
           if (!state.chart.chart) return;
 
           const h = -1 * (root.find('.longcode').height() + root.find('.tabs').height() + root.find('.footer').height()) - 16;
@@ -430,53 +429,53 @@ const init_state = (proposal, root) => {
             cent: undefined,
             value: undefined,
          },
-         sell: () => sell_at_market(state, root),
+         sell: () => sellAtMarket(state, root),
          sell_at_market_enabled: true,
       },
       onclose: [], /* cleanup callback array when dialog is closed */
    };
-   setup_chart(state, root);
+   setupChart(state, root);
    return state;
 };
 
 let on_proposal_open_contract_cb;
-function get_contract_data(state, proposal) {
-  on_proposal_open_contract_cb = on_proposal_open_contract;
+function getContractData(state, proposal) {
+  on_proposal_open_contract_cb = onProposalOpenContract;
 
   liveapi.proposal_open_contract.subscribe(proposal.contract_id)
   liveapi.events.on('proposal_open_contract', on_proposal_open_contract_cb);
 
-  function on_proposal_open_contract(data) {
+  function onProposalOpenContract(data) {
     const is_different_stream = +data.proposal_open_contract.contract_id !== +state.proposal_open_contract.contract_id;
     if (is_different_stream) return;
 
     if (data.error) {
-      handle_error(data.error.message);
+      handleError(data.error.message);
       return;
     }
-    update_indicative(data, state);
+    updateIndicative(data, state);
   }
 }
 
-const update_live_chart = (state, granularity) => {
+const updateLiveChart = (state, granularity) => {
   const key = chartingRequestMap.keyFor(state.proposal_open_contract.underlying, granularity);
-  handle_chartingRequestMap(key);
+  handleChartingRequestMap(key);
 
   let on_tick_cb = undefined;
   let on_candles_cb = undefined;
   let clean_up_done = false;
-  state.onclose.push(clean_up);
+  state.onclose.push(cleanUp);
 
   if (granularity === 0) {
-    handle_tick();
+    handleTick();
     return;
   }
-  handle_candle();
+  handleCandle();
 
   /* don't register if already someone else has registered for this symbol */
-  function handle_chartingRequestMap() {
+  function handleChartingRequestMap() {
     if(!chartingRequestMap[key]){
-      const req = make_chartingRequestMap_request(granularity, state.proposal_open_contract.underlying);
+      const req = makeChartingRequestMapRequest(granularity, state.proposal_open_contract.underlying);
       chartingRequestMap.register(req)
           .catch((err) => {
             $.growl.error({ message: err.message });
@@ -487,7 +486,7 @@ const update_live_chart = (state, granularity) => {
     }
   }
 
-  function make_chartingRequestMap_request(granularity, symbol) {
+  function makeChartingRequestMapRequest(granularity, symbol) {
     return ({
       symbol,
       subscribe: 1,
@@ -496,7 +495,7 @@ const update_live_chart = (state, granularity) => {
     });
   }
 
-  function handle_tick() {
+  function handleTick() {
     on_tick_cb = liveapi.events.on('tick', (data) => {
         if (!data.tick || data.tick.symbol !== state.proposal_open_contract.underlying) return;
 
@@ -506,20 +505,20 @@ const update_live_chart = (state, granularity) => {
 
         const contract_has_finished = is_sold || status !== 'open' || exit_tick || exit_tick_time;
         if (contract_has_finished) {
-          clean_up();
+          cleanUp();
           return;
         };
 
-        add_tick_to_chart(chart, tick);
+        addTickToChart(chart, tick);
     });
 
-    function add_tick_to_chart(chart, tick) {
+    function addTickToChart(chart, tick) {
       if (!chart) return;
       chart.series[0].addPoint([tick.epoch * 1000, tick.quote * 1]);
     }
   }
 
-  function handle_candle() {
+  function handleCandle() {
     on_candles_cb = liveapi.events.on('ohlc', (data) => {
       const data_key = chartingRequestMap.keyFor(data.ohlc.symbol, data.ohlc.granularity);
       if (key !== data_key) return;
@@ -541,11 +540,11 @@ const update_live_chart = (state, granularity) => {
       const { status, is_sold, exit_tick, exit_tick_time, date_expiry} = state.proposal_open_contract;
       const contract_has_finished = (c.epoch * 1 > date_expiry * 1) || status !== 'open' || exit_tick || exit_tick_time;
 
-      if (contract_has_finished) clean_up();
+      if (contract_has_finished) cleanUp();
     });
   }
 
-  function clean_up() {
+  function cleanUp() {
     if (clean_up_done) return;
     clean_up_done = true;
 
@@ -559,50 +558,50 @@ const drawBarriers = (contract, state) => {
   const { chart } = state.chart;
   const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
 
-  remove_barriers(barrier, high_barrier, low_barrier);
-  add_barriers_to_chart(barrier, high_barrier, low_barrier);
+  removeBarriers(barrier, high_barrier, low_barrier);
+  addBarrierToChart(barrier, high_barrier, low_barrier);
 
-  function add_barriers_to_chart(barrier, high_barrier, low_barrier ) {
+  function addBarrierToChart(barrier, high_barrier, low_barrier ) {
     if (barrier) {
-      add_plot_line_y('barrier', barrier);
+      addPlotLineY('barrier', barrier);
     }
     if (high_barrier) {
-      add_plot_line_y('high_barrier', high_barrier);
+      addPlotLineY('high_barrier', high_barrier);
     }
     if (low_barrier) {
-      add_plot_line_y('low_barrier', low_barrier);
+      addPlotLineY('low_barrier', low_barrier);
     }
 
-    function add_plot_line_y(id, value, color) {
+    function addPlotLineY(id, value, color) {
       chart.addPlotLineY({ id, value, color });
     };
   }
 
-  function remove_barriers(barrier, high_barrier, low_barrier) {
+  function removeBarriers(barrier, high_barrier, low_barrier) {
     barrier && chart.yAxis[0].removePlotLine('barrier');
     high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
     low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
   }
 }
 
-const setup_chart = (state, root) => {
+const setupChart = (state, root) => {
   const duration = Math.min(+state.proposal_open_contract.date_expiry, moment.utc().unix()) - (state.proposal_open_contract.purchase_time || state.proposal_open_contract.date_start);
-  const granularity = make_granularity(duration);
-  const margin = make_time_margin(duration, granularity);
-  const tick_history_request = make_tick_history_request(granularity, margin);
+  const granularity = makeGranularity(duration);
+  const margin = makeTimeMargin(duration, granularity);
+  const tick_history_request = makeTickHistoryRequest(granularity, margin);
 
   // setup tick/candle stream for chart
-  if (!state.proposal_open_contract.is_ended) update_live_chart(state, granularity);
+  if (!state.proposal_open_contract.is_ended) updateLiveChart(state, granularity);
 
   liveapi.send(tick_history_request)
     .then((data) => {
-      on_tick_history_success(data);
-      get_contract_data(state, state.proposal_open_contract);
+      onTickHistorySuccess(data);
+      getContractData(state, state.proposal_open_contract);
     }).catch((err) => {
-      on_tick_history_error(err);
+      onTickHistoryError(err);
   });
 
-  function make_granularity(duration) {
+  function makeGranularity(duration) {
     let granularity = 0;
 
     if (duration <= 60 * 60) { granularity = 0; } // 1 hour
@@ -613,13 +612,13 @@ const setup_chart = (state, root) => {
     return granularity;
   }
 
-  function make_time_margin(duration, granularity) {
+  function makeTimeMargin(duration, granularity) {
     let margin = 0;
     margin = (granularity === 0) ? Math.max(3, 30 * duration / (60 * 60) | 0) : 3 * granularity;
     return margin;
   }
 
-  function make_tick_history_request(granularity, margin) {
+  function makeTickHistoryRequest(granularity, margin) {
     const { is_forward_starting, date_start, current_spot_time, purchase_time, exit_tick_time } = state.proposal_open_contract;
     const contract_has_not_started = (is_forward_starting && +date_start > +current_spot_time) || +exit_tick_time < +date_start;
     const start = contract_has_not_started ? +purchase_time : (+date_start || +purchase_time);
@@ -643,19 +642,19 @@ const setup_chart = (state, root) => {
   }
 
 
-  function on_tick_history_success(data) {
+  function onTickHistorySuccess(data) {
     state.chart.loading = '';
-    const chart_options = make_chart_options(data, state.proposal_open_contract.display_name);
-    const chart = init_chart(root, state, chart_options);
+    const chart_options = makeChartOptions(data, state.proposal_open_contract.display_name);
+    const chart = initChart(root, state, chart_options);
     state.chart.chart = chart;
-    state.chart.manual_reflow();
+    state.chart.manualReflow();
 
-    function make_chart_options(data, title) {
+    function makeChartOptions(data, title) {
       return ({ title, ...data });
     }
   }
 
-  function on_tick_history_error(err) {
+  function onTickHistoryError(err) {
     state.chart.loading = err.message;
     console.error(err);
   }
