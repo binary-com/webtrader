@@ -15,7 +15,7 @@ const CHART_LABELS = {
 const getLabels = (labels) => {
     let label_el = '';
     for (const label of labels) {
-        if (CHART_LABELS[label]) {
+        if (label && CHART_LABELS[label]) {
             label_el += CHART_LABELS[label];
         }
     }
