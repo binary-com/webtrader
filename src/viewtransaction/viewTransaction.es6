@@ -70,6 +70,7 @@ const init_chart = (root, state, options) => {
 
    const { title } = options;
    const el = root.find('.transaction-chart')[0];
+   const CHART_LABELS = ['start_time', 'entry_spot', 'barrier', 'exit_spot', 'end_time'];
    const chart_options = {
       credits: { href: '#', text: '' },
       chart: {
@@ -83,7 +84,7 @@ const init_chart = (root, state, options) => {
       },
       title: { text: '' },
       subtitle: {
-        text: ChartSettings.getLabels(true),
+        text: ChartSettings.getLabels(CHART_LABELS),
         useHTML: true,
       },
       tooltip: {
@@ -143,7 +144,6 @@ const init_chart = (root, state, options) => {
       chart.xAxis[0].addPlotLine({
          value: options.value,
          id: options.id || options.value,
-         label: { text: (options.label || 'label'), x: options.text_left ? -15 : 5},
          color: options.color || '#e98024',
          zIndex: 0,
          width: options.width || 2,
@@ -153,9 +153,8 @@ const init_chart = (root, state, options) => {
 
    chart.addPlotLineY = (options) => {
       chart.yAxis[0].addPlotLine({
-         id: options.id || options.label,
+         id: options.id,
          value: options.value,
-         label: { text: options.label, align: 'center', y: options.text_under ? 15 : -5 },
          color: options.color || 'green',
          zIndex: 0,
          width: 2,
@@ -266,7 +265,7 @@ function draw_vertical_lines(contract, state, chart) {
   const { entry_tick_time, exit_tick_time, date_expiry, date_start } = contract;
 
   drawEntrySpot(entry_tick_time);
-  draw_start_time(date_start);
+  drawStartTime(date_start);
 
   drawExitSpot(exit_tick_time);
   draw_end_time(date_expiry);
@@ -298,13 +297,14 @@ function draw_vertical_lines(contract, state, chart) {
     const label = 'End Time'.i18n();
     if (!date_expiry || chart_has_label(label)) return false;
 
-    chart.addPlotLineX({ value: date_expiry * 1000, label, dashStyle: 'Dash' });
+    chart.addPlotLineX({ value: date_expiry * 1000, dashStyle: 'Dash' });
   }
 
-  function draw_start_time(date_start, text_left) {
+  function drawStartTime(date_start, text_left) {
     const label = 'Start Time'.i18n();
     if (!date_start || chart_has_label(label)) return;
-    chart.addPlotLineX({ value: date_start * 1000, label, text_left });
+  
+    chart.addPlotLineX({ value: date_start * 1000 });
   }
   
   // TODO: move to state.chart
@@ -583,20 +583,17 @@ const draw_barrier = (contract, state) => {
 
   function add_barriers_to_chart(barrier, high_barrier, low_barrier ) {
     if (barrier) {
-      const barrier_label = `${ 'Barrier'.i18n()} ( ${addComma((+barrier).toFixed(DISPLAY_DECIMALS))} )`;
-      add_plot_line_y('barrier', barrier, barrier_label);
+      add_plot_line_y('barrier', barrier);
     }
     if (high_barrier) {
-      const high_barrier_label = `${'High Barrier'.i18n()} ( ${addComma((+high_barrier).toFixed(DISPLAY_DECIMALS))} )`;
-      add_plot_line_y('high_barrier', high_barrier, high_barrier_label);
+      add_plot_line_y('high_barrier', high_barrier);
     }
     if (low_barrier) {
-      const low_barrier_label = `${'Low Barrier'.i18n()} ( ${addComma((+low_barrier).toFixed(DISPLAY_DECIMALS))} )`;
-      add_plot_line_y('low_barrier', low_barrier, low_barrier_label, 'red', true );
+      add_plot_line_y('low_barrier', low_barrier);
     }
 
-    function add_plot_line_y(id, value, label, color, text_under) {
-      chart.addPlotLineY({ id, value, label, color, text_under });
+    function add_plot_line_y(id, value, color) {
+      chart.addPlotLineY({ id, value, color });
     };
   }
 

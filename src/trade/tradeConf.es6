@@ -11,14 +11,14 @@ import rv from '../common/rivetsExtra';
 
 /* rv binder to show tick chart for this confirmation dialog */
 let display_decimals;
-
+const CHART_LABELS = ['start_time', 'barrier', 'end_time'];
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
    bind: function(el) {
       const model = this.model;
       el.chart = new Highcharts.Chart({
           subtitle: {
-            text: getLabels(),
+            text: getLabels(CHART_LABELS),
             useHTML: true,
          },
          title: '',
