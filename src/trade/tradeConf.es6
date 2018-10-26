@@ -28,7 +28,7 @@ rv.binders['tick-chart'] = {
             renderTo: el,
             backgroundColor: null, /* make background transparent */
             width: 400,
-            height: 145,
+            height: 144,
             marginLeft: 20,
             marginTop: 35,
             marginBottom: 15,

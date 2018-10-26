@@ -119,6 +119,10 @@
 }
 
 .tick-chart {
+  .highcharts-subtitle {
+    margin-top: -6px;
+  }
+
   .highcharts-tooltip span {
       top: 1px !important;
       left: 2px !important;
