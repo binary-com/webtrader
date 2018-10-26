@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-26 19:40\n"
+"PO-Revision-Date: 2018-10-26 19:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -28,10 +28,10 @@ msgid "* Password must be 6 characters minimum"
 msgstr "* A senha deve conter no mínimo 6 caracteres"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* A senha deve conter letras maiúsculas e números"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Insira a sua nova senha"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- A Binary.com não está afiliada com qualquer um dos agentes de pagamentos listados acima. Cada agente de pagamentos opera como um fornecedor de serviços independente e não é endossado, garantido ou de outra forma aprovado pela Binary.com. OS CLIENTES LIDAM COM AGENTES DE PAGAMENTOS POR SUA CONTA E RISCO. Recomenda-se que os clientes verifiquem as credenciais dos agentes de pagamentos antes de lhes enviar quaisquer fundos. A Binary.com não será responsável, em qualquer circunstância, pelas transações efetuadas entre clientes e agentes de pagamentos"
@@ -169,19 +169,19 @@ msgid "8h"
 msgstr "8h"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "Sobre a Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "Sobre nós"
 
 msgid "Accept"
 msgstr "Aceitar"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Acessível a partir de qualquer navegador Web em 13 idiomas"
 
 msgid "Account authentication"
 msgstr ""
