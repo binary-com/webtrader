@@ -271,7 +271,7 @@ function draw_vertical_lines(contract, state, chart) {
   drawExitSpot(exit_tick_time);
   draw_end_time(date_expiry);
 
-  // TODO: drawspots to one function
+    // TODO: drawspots to one function
   function drawEntrySpot(entry_tick_time) {
     const label = 'Entry Spot'.i18n();
     if (!entry_tick_time || chart_has_label(label)) return;
@@ -279,7 +279,7 @@ function draw_vertical_lines(contract, state, chart) {
     const entry_spot_point = chart.series[0].data.find((marker) => +marker.x === +(entry_tick_time * 1000));
     if (!entry_spot_point) return;
 
-    const marker = ChartSettings.getMarkerSettings('entry_spot');
+    const marker = ChartSettings.getMarkerSettings('white');
     entry_spot_point.update({ marker });
   }
 
@@ -288,7 +288,9 @@ function draw_vertical_lines(contract, state, chart) {
     if (!exit_tick_time || chart_has_label(label)) return;
     
     const exit_spot_point = chart.series[0].data.find((marker) => +marker.x === +(exit_tick_time * 1000));
-    const marker = ChartSettings.getMarkerSettings('exit_spot');
+    if (!exit_spot_point) return;
+
+    const marker = ChartSettings.getMarkerSettings('orange');
     exit_spot_point.update({ marker });
   }
 

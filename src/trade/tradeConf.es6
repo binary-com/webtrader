@@ -68,7 +68,7 @@ rv.binders['tick-chart'] = {
                type: 'scatter',
                marker: { enabled: false },
                data: []
-            }
+            },
          ],
          plotOptions: { scatter: { enableMouseTracking: false } },
          exporting: {enabled: false, enableImages: false},

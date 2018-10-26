@@ -185,7 +185,12 @@
   transform: translate(-40%,0);
 }
 
-.highcharts-tooltip span {
+.view-transaction-dialog {
+  .highcharts-subtitle {
+    left: 150px !important;
+  }
+
+  .highcharts-tooltip span {
     top: 1px !important;
     left: 2px !important;
       .tooltip-body {
@@ -194,4 +199,6 @@
         margin-bottom: -14px;
         margin-right: -14px;
     }
+  }
 }
+

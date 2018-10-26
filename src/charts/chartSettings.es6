@@ -10,16 +10,18 @@ const COMMON_SPOT_STYLE = 'margin-left: 10px; margin-right: 5px; display: inline
 // common chart labels
 const getLabels = (is_viewtrade) => {
     // TODO: move border color to common style
-    const labels = `<span style="${COMMON_VERTICAL_LINE_STYLE} border-color: #e98024; border-style: solid;"></span> ${'Start Time'.i18n()}
+    const labels = `
+        <span style="${COMMON_VERTICAL_LINE_STYLE} border-color: #e98024; border-style: solid;"></span> ${'Start Time'.i18n()}
         <span style="${COMMON_HORIZONTAL_LINE_STYLE} border-color: green; border-style: solid;"></span> ${'Barrier'.i18n()}
         <span style="${COMMON_VERTICAL_LINE_STYLE} border-color: #e98024; border-style: dashed;"></span> ${'End Time'.i18n()}`;
-    const spot_labels = `<div class='nowrap gr-padding-10 gr-parent'><span style="${COMMON_SPOT_STYLE} border: 3px solid orange; width: 4px; height: 4px;"></span>${'Entry Spot'.i18n()}&nbsp;</div>
-        <div class='nowrap gr-padding-10 gr-parent'><span style="${COMMON_SPOT_STYLE} background-color: orange; width:10px; height: 10px;"></span>${'Exit Spot'.i18n()}&nbsp;</div>`
+    const spot_labels = `
+        <span style="${COMMON_SPOT_STYLE} border: 3px solid orange; width: 4px; height: 4px;"></span>${'Entry Spot'.i18n()}&nbsp;
+        <span style="${COMMON_SPOT_STYLE} background-color: orange; width:10px; height: 10px;"></span>${'Exit Spot'.i18n()}&nbsp;`;
+
     return is_viewtrade ? labels + spot_labels : labels;
 };
 
-const getMarkerSettings = (type) => {
-    const fillColor = type === 'entry_spot' ? 'white' : 'orange';
+const getMarkerSettings = (fillColor = 'white') => {
     return { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4 }}};
 };
 
