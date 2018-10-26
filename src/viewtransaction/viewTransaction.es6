@@ -257,7 +257,7 @@ function drawChart(contract, state) {
   if (!chart) return;
 
   drawSpots(contract, state, chart);
-  drawVerticalLines(contract, state, chart);
+  drawXLines(contract, state, chart);
   drawBarriers(contract, state);
 }
 
@@ -277,13 +277,13 @@ function drawSpots(contract, state, chart) {
   }
 }
 
-function drawVerticalLines(contract, state, chart) {
+function drawXLines(contract, state, chart) {
   const { date_expiry, date_start } = contract;
 
-  drawVerticalLine({ line_time: date_start, label: 'start_time' });
-  drawVerticalLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
+  drawXLine({ line_time: date_start, label: 'start_time' });
+  drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
 
-  function drawVerticalLine({ line_time, label, dashStyle }) {
+  function drawXLine({ line_time, label, dashStyle }) {
     if (!line_time || state.chart.hasLabel(label)) return false;
 
     chart.addPlotLineX({ value: line_time * 1000, dashStyle });

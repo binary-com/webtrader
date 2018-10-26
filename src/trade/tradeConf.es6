@@ -79,45 +79,45 @@ rv.binders['tick-chart'] = {
       // Handles updating chart: state.ticks.array updates => routine fires
       const model = this.model;
       const tick_idx = ticks.length;
-      const barrier = model.make_barrier();
+      const barrier = model.makeBarrier();
       const { contract_is_finished } = model;
 
       if (barrier) {
-            draw_barrier(barrier);
+            drawBarrier(barrier);
       }
 
       if (contract_is_finished) {
-            draw_end_time(model, ticks);
+            drawEndTime(model, ticks);
             return;
       }
 
       if (tick_idx === 0) return;
-      draw_tick(tick_idx);
+      drawTick(tick_idx);
 
       if (tick_idx === 1) {
-            draw_start_time(tick_idx);
+            drawStartTime(tick_idx);
       }
 
-      function draw_end_time(model, ticks) {
+      function drawEndTime(model, ticks) {
             let exit_time_idx = ticks.findIndex((tick) => tick.epoch === (+model.exit_tick_time));
-            draw_x_line(el.chart, { value: exit_time_idx + 1, dashStyle: 'Dash' });
+            drawXLine(el.chart, { value: exit_time_idx + 1, dashStyle: 'Dash' });
       };
 
-      function draw_tick(tick_idx) {
+      function drawTick(tick_idx) {
             const tick = ticks[tick_idx -1];
             el.chart.series[0].addPoint([tick_idx, tick.quote]);
       };
 
-      function draw_start_time(tick_idx) {
-            draw_x_line(el.chart, { value: tick_idx });
+      function drawStartTime(tick_idx) {
+            drawXLine(el.chart, { value: tick_idx });
       };
 
-      function draw_barrier(barrier) {
+      function drawBarrier(barrier) {
             el.chart.yAxis[0].removePlotLine(barrier.id);
-            draw_y_line(el.chart, barrier);
+            drawYLine(el.chart, barrier);
       };
 
-      function draw_x_line(chart, options) {
+      function drawXLine(chart, options) {
    
             chart.xAxis[0].addPlotLine({
                value: options.value,
@@ -128,7 +128,7 @@ rv.binders['tick-chart'] = {
             });
       };
 
-      function draw_y_line(chart, options) {
+      function drawYLine(chart, options) {
             chart.yAxis[0].addPlotLine({
                id: options.id || options.label,
                value: options.value,
@@ -141,13 +141,13 @@ rv.binders['tick-chart'] = {
    }
 };
 
-const register_ticks = (state, extra) => {
+const registerTicks = (state, extra) => {
    let proposal_open_contract;
    let on_proposal_open_contract;
    let on_tick;
    let { tick_count } = extra;
    /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const add_tick  = (tick) => {
+   const addTick  = (tick) => {
       const is_or_after_contract_entry = (+tick.epoch) >= (+proposal_open_contract.entry_tick_time);
       const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch * 1 === tick.epoch * 1);
       const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
@@ -157,19 +157,19 @@ const register_ticks = (state, extra) => {
             state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
 
             if (contract_is_finished) {
-                  on_contract_finished(proposal_open_contract);
-                  update_chart();
+                  onContractFinished(proposal_open_contract);
+                  updateChart();
             }
             tick_count--;
             if (tick_count > -1) {
-                  add_tick_to_state(tick);
+                  addTickToState(tick);
             }
       }
    }
 
-   function add_tick_to_state(tick) {
+   function addTickToState(tick) {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-      const tooltip = make_tooltip(tick);
+      const tooltip = makeTooltip(tick);
 
       state.ticks.array.push({
          quote: (+tick.quote),
@@ -179,7 +179,7 @@ const register_ticks = (state, extra) => {
          decimal_digits,
       });
 
-      function make_tooltip(tick) {
+      function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
             const tick_quote_formatted = addComma((+tick.quote).toFixed(decimal_digits));
@@ -188,13 +188,13 @@ const register_ticks = (state, extra) => {
       };
    };
 
-   function update_chart() {
+   function updateChart() {
             const tick_arr_copy = state.ticks.array.slice();
             state.ticks.array = [...tick_arr_copy];
     };
 
-   const on_contract_finished = (proposal_open_contract) => {
-      forget_stream_and_cb();
+   const onContractFinished = (proposal_open_contract) => {
+      forgetStreamAndCb();
 
       state.ticks.contract_is_finished = true;
       state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
@@ -203,7 +203,7 @@ const register_ticks = (state, extra) => {
       state.buy.update();
       state.back.visible = true;
 
-      function forget_stream_and_cb() {
+      function forgetStreamAndCb() {
             const { contract_id } = extra;
             liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
             liveapi.events.off('tick', on_tick);
@@ -216,7 +216,7 @@ const register_ticks = (state, extra) => {
             if (is_different_open_contract_stream) return;
 
             if (data.error) {
-                  on_open_proposal_error(data);
+                  onOpenProposalError(data);
                   return;
             }
 
@@ -241,7 +241,7 @@ const register_ticks = (state, extra) => {
       if (has_missing_ticks) {
             is_getting_history = true;
             first_tick_epoch = entry_tick_time;
-            get_tick_history(entry_tick_time, extra.symbol);
+            getTickHistory(entry_tick_time, extra.symbol);
       }
 
       if (is_getting_history) {
@@ -250,14 +250,14 @@ const register_ticks = (state, extra) => {
       };
 
       if (temp_ticks.length > 0) {
-            temp_ticks.forEach((stored_tick) => add_tick(stored_tick));
+            temp_ticks.forEach((stored_tick) => addTick(stored_tick));
             temp_ticks = [];
       }
 
-      add_tick(data.tick);
+      addTick(data.tick);
     });
 
-    function get_tick_history(start, ticks_history) {
+    function getTickHistory(start, ticks_history) {
       liveapi.send({ ticks_history, end: 'latest', start, style: 'ticks', count: 5000})
             .then((data) => {
                   is_getting_history = false;
@@ -272,14 +272,14 @@ const register_ticks = (state, extra) => {
             }).catch((err) => $.growl.error({ message: data.error.message }));
     };
 
-   const on_open_proposal_error = (data) => {
+   const onOpenProposalError = (data) => {
       $.growl.error({message: data.error.message});
       liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
       liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
    };
 };
 
-export const init = (data, extra, show_callback, hide_callback) => {
+export const init = (data, extra, showCallback, hideCallback) => {
    display_decimals = data.display_decimals || 3;
    const root = $(html).i18n();
    const { buy } = data;
@@ -311,7 +311,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
          contract_is_finished: false,
          exit_tick_time: null,
          is_path_dependent: null,
-         make_barrier: () => {
+         makeBarrier: () => {
             const { barrier } = state.buy;
             if (barrier) {
                   return { value: +barrier };
@@ -355,7 +355,7 @@ export const init = (data, extra, show_callback, hide_callback) => {
       state.buy.show_result = true;
    };
 
-   state.back.onclick = () => hide_callback(root);
+   state.back.onclick = () => hideCallback(root);
    state.arrow.onclick = (e) => {
       const $target = $(e.target);
       if(!$target.hasClass('disabled')) {
@@ -369,10 +369,10 @@ export const init = (data, extra, show_callback, hide_callback) => {
 
    const view = rv.bind(root[0], state);
 
-   if(!state.arrow.visible) { register_ticks(state, extra); }
+   if(!state.arrow.visible) { registerTicks(state, extra); }
    else { state.back.visible = true; }
 
-   show_callback(root);
+   showCallback(root);
 }
 
 export default  { init }
