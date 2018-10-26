@@ -200,7 +200,7 @@ const handle_error = (message) => {
 const update_indicative = (data, state) => {
   const contract = data.proposal_open_contract;
   update_state(contract, state);
-  draw_chart(contract, state);
+  drawChart(contract, state);
 
   const contract_has_finished = contract.status !== 'open';
   if (contract_has_finished) {
@@ -251,68 +251,43 @@ const update_indicative = (data, state) => {
   }
 };
 
-function draw_chart(contract, state) {
-  draw_sparkline(contract, state);
+function drawChart(contract, state) {
+  drawSparkline(contract, state);
 
   const { chart } = state.chart;
   if (!chart) return;
 
-  draw_vertical_lines(contract, state, chart);
-  draw_barrier(contract, state);
+  drawSpots(contract, state, chart);
+  drawVerticalLines(contract, state, chart);
+  drawBarriers(contract, state);
 }
 
-function draw_vertical_lines(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, date_expiry, date_start } = contract;
+function drawSpots(contract, state, chart) {
+  const { entry_tick_time, exit_tick_time } = contract;
+  drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
+  drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
 
-  drawEntrySpot(entry_tick_time);
-  drawStartTime(date_start);
+  function drawSpot({ spot_time, label, color }) {
+    if (!spot_time || state.chart.hasLabel(label)) return;
 
-  drawExitSpot(exit_tick_time);
-  draw_end_time(date_expiry);
+    const series_spot = chart.series[0].data.find((marker) => +marker.x === +(spot_time * 1000));
+    if (!series_spot) return;
 
-    // TODO: drawspots to one function
-  function drawEntrySpot(entry_tick_time) {
-    const label = 'Entry Spot'.i18n();
-    if (!entry_tick_time || chart_has_label(label)) return;
-
-    const entry_spot_point = chart.series[0].data.find((marker) => +marker.x === +(entry_tick_time * 1000));
-    if (!entry_spot_point) return;
-
-    const marker = ChartSettings.getMarkerSettings('white');
-    entry_spot_point.update({ marker });
+    const marker = ChartSettings.getMarkerSettings(color);
+    series_spot.update({ marker })
   }
+}
 
-  function drawExitSpot(exit_tick_time) {
-    const label = 'Exit Spot'.i18n();
-    if (!exit_tick_time || chart_has_label(label)) return;
-    
-    const exit_spot_point = chart.series[0].data.find((marker) => +marker.x === +(exit_tick_time * 1000));
-    if (!exit_spot_point) return;
+function drawVerticalLines(contract, state, chart) {
+  const { date_expiry, date_start } = contract;
 
-    const marker = ChartSettings.getMarkerSettings('orange');
-    exit_spot_point.update({ marker });
-  }
+  drawVerticalLine({ line_time: date_start, label: 'start_time' });
+  drawVerticalLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
 
-  function draw_end_time(date_expiry) {
-    const label = 'End Time'.i18n();
-    if (!date_expiry || chart_has_label(label)) return false;
+  function drawVerticalLine({ line_time, label, dashStyle }) {
+    if (!line_time || state.chart.hasLabel(label)) return false;
 
-    chart.addPlotLineX({ value: date_expiry * 1000, dashStyle: 'Dash' });
-  }
-
-  function drawStartTime(date_start, text_left) {
-    const label = 'Start Time'.i18n();
-    if (!date_start || chart_has_label(label)) return;
-  
-    chart.addPlotLineX({ value: date_start * 1000 });
-  }
-  
-  // TODO: move to state.chart
-  function chart_has_label(label) {
-    if (state.chart.added_labels.includes(label)) return true;
-
-    state.chart.added_labels.push(label);
-    return false;
+    chart.addPlotLineX({ value: line_time * 1000, dashStyle });
   }
 }
 
@@ -329,7 +304,7 @@ const make_note = (contract) => {
     if (!contract.is_valid_to_sell) return NOTE_TEXT.NO_RESALE;
 };
 
-const draw_sparkline = (contract, state) => {
+const drawSparkline = (contract, state) => {
   if (state.sell.bid_prices.length > 40) state.sell.bid_prices.shift();
 
   state.sell.bid_prices.push(contract.bid_price);
@@ -415,6 +390,12 @@ const init_state = (proposal, root) => {
          chart: null, /* highchart object */
          loading: 'Loading ' + proposal.display_name + ' ...',
          added_labels: [],
+         hasLabel: (label) => {
+          if (state.chart.added_labels.includes(label)) return true;
+
+          state.chart.added_labels.push(label);
+          return false;
+         },
          type: 'ticks', // could be 'tick' or 'ohlc'
          manual_reflow: () => {
           if (!state.chart.chart) return;
@@ -574,7 +555,7 @@ const update_live_chart = (state, granularity) => {
   }
 };
 
-const draw_barrier = (contract, state) => {
+const drawBarriers = (contract, state) => {
   const { chart } = state.chart;
   const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
 
