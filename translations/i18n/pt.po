@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 18:00\n"
+"PO-Revision-Date: 2018-10-27 18:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1588,22 +1588,22 @@ msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Confirme os seguintes dados para poder concluir a transferência"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Insira um número entre"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Insira uma data válida no formato aaaa-mm-dd"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Insira um valor válido para"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Insira um valor entre 0 e"
 
 msgid "Please enter a value greater than 0"
 msgstr "Insira um valor maior que 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Insira um valor inferior a 6 semana para \"exclusão até\"."
 
 msgid "Please enter correct email"
 msgstr "Insira um endereço de e-mail correto"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Insira uma data no formato AAAA-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Insira o nome do token"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Insira a hora no formato HH:MM"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Instale a versão mais recente de um destes navegadores"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Conecte-se"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Conecte-se para ver o seu espaço de trabalho salvo."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Conecte-se."
 
 msgid "Please provide your tax information"
 msgstr "Forneça as suas informações fiscais"
@@ -1645,16 +1645,16 @@ msgid "Please select"
 msgstr "Selecione"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Selecione uma data para \"exclusão até\"."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Selecione um agente de pagamentos"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Selecione um motivo de abertura de conta antes de continuar"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "Defina a moeda."
 
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr "Defina a [_1]moeda[_2] da sua conta"
@@ -2458,7 +2458,7 @@ msgid "[_1]Authenticate your account[_2] now to take full advantage of all withd
 msgstr "[_1]Autentica a sua conta[_2] agora para tirar o máximo partido de todas as opções de retirada disponíveis."
 
 msgid "and"
-msgstr ""
+msgstr "e"
 
 msgid "apostrophe (') are allowed"
 msgstr "apóstrofo (') é permitido"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "dias"
 
 msgid "deposits"
-msgstr ""
+msgstr "depósitos"
 
 msgid "end time"
 msgstr "hora de fim"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "preço de saída"
 
 msgid "for"
-msgstr ""
+msgstr "para"
 
 msgid "for mobile charts"
 msgstr "para gráficos móveis"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "Site principal"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "mercado encontra-se atualmente fechado."
 
 msgid "medium protection"
 msgstr "proteção média"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "tique-taques"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "retiradas"
 
 msgid "yes"
 msgstr "sim"
