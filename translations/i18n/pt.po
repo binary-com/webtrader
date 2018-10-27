@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 17:20\n"
+"PO-Revision-Date: 2018-10-27 17:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Você ainda não está copiando quaisquer negociações"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Você se excluiu até"
 
 msgid "You have sold the following contract"
 msgstr "Você vendeu o seguinte contrato"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "Você paga"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "Você dever inserir entre 6 a 25 caracteres."
 
 msgid "You will be automatically logged out after such time"
 msgstr "Você será automaticamente desconectado após tal hora"
@@ -2425,16 +2425,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "A sua conta (%) encontra-se bloqueada. Contate o apoio ao cliente para mais informações."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "A sua conta está restrita. Contate o [_1]apoio ao cliente[_2] para assistência."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "O seu navegador não suporta copiar para a área de transferência"
 
 msgid "Your browser is not supported"
 msgstr "O seu navegador não é suportado"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "As suas alterações foram atualizadas"
 
 msgid "Your copying settings"
 msgstr "As suas configurações de cópia"
