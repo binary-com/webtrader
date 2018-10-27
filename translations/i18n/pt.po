@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-26 19:50\n"
+"PO-Revision-Date: 2018-10-27 08:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -184,13 +184,13 @@ msgid "Accessible from any web browser in 13 languages"
 msgstr "Acessível a partir de qualquer navegador Web em 13 idiomas"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Autenticação de conta"
 
 msgid "Account balance"
 msgstr "Saldo da conta"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Saldo da conta:"
 
 msgid "Account id not found."
 msgstr ""
