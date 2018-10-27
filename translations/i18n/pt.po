@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 16:40\n"
+"PO-Revision-Date: 2018-10-27 16:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2014,7 +2014,7 @@ msgid "Tax Information"
 msgstr "Informações fiscais"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "Informações fiscais atualizadas com sucesso"
 
 msgid "Tax identification number"
 msgstr "Número de identificação fiscal"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "O modelo já foi salvo como"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Modelo aplicado parcialmente."
 
 msgid "Template changes saved"
 msgstr "Alterações ao modelo salvas"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "O modelo não é aplicável."
 
 msgid "Template name"
 msgstr "Nome do modelo"
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "Termos"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Termos e condições"
 
 msgid "Tertiary"
 msgstr "Terciário/Superior"
