@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 17:30\n"
+"PO-Revision-Date: 2018-10-27 17:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "Janeiro"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Contas do Japão não são suportadas."
 
 msgid "Jul"
 msgstr "Jul"
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "Julho"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Saltar para:"
 
 msgid "Jun"
 msgstr "Jun"
@@ -1102,13 +1102,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Negociações rentáveis dos últimos 12 mins."
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Previsão do último dígito"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "O último dígito é superior a"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "O último dígito é inferior a"
 
 msgid "Last used"
 msgstr "Última utilização"
@@ -1144,19 +1144,19 @@ msgid "Load trade template"
 msgstr "Carregar modelo do gráfico"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Carregando ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Carregando índice de ativos ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Carregando negociação de cópia..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Carregando dados de download/visualização ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "Carregando MAM (Gestor multi-contas)"
 
 msgid "Loading Password dialog ..."
 msgstr ""
@@ -2455,7 +2455,7 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Autentica a sua conta[_2] agora para tirar o máximo partido de todas as opções de retirada disponíveis."
 
 msgid "and"
 msgstr ""
