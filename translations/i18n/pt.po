@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 10:20\n"
+"PO-Revision-Date: 2018-10-27 16:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "Vendido"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Algum índice aleatório"
 
 msgid "Source of wealth"
 msgstr "Fonte de riqueza"
@@ -1993,10 +1993,10 @@ msgid "Submit"
 msgstr "Enviar"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "O novo token foi adicionado com sucesso"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "O espaço de trabalho foi adicionado com sucesso como"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Modelo aplicado com sucesso e salvo como"
@@ -2011,7 +2011,7 @@ msgid "Table"
 msgstr "Tabela"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "Informações fiscais"
 
 msgid "Tax Information successfully updated"
 msgstr ""
