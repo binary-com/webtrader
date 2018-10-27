@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 17:10\n"
+"PO-Revision-Date: 2018-10-27 17:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2152,10 +2152,10 @@ msgid "Token name can have a maximum of 32 characters"
 msgstr "O nome do token pode conter no máximo 32 caracteres"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "O nome do token deve conter no mínimo 2 caracteres"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "O nome do token deve começar com caracteres alfanuméricos apenas"
 
 msgid "Token permissions"
 msgstr "Permissões do token"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "Horas de negociação"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "A negociação de opções binárias pode não ser adequada para todos. Portanto, certifique-se de que compreenda totalmente os riscos envolvidos. As suas perdas podem exceder o seu depósito inicial e você não deterá nem possuirá interesses no ativo subjacente."
 
 msgid "Tradingview for Binary.com"
 msgstr "TradingView para Binary.com"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "Volume de negócios"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "Tipos de negociações"
 
 msgid "USD"
 msgstr "USD"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "O código de verificação foi enviado para o seu e-mail"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Código de verificação enviado para"
 
 msgid "Verification token"
 msgstr "Token de verificação"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "O que é isto?"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Quando você clicar em \"OK\" será excluído de poder negociar no site até a data selecionada."
 
 msgid "While on the go, you can"
 msgstr "Em qualquer lugar, você pode"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "Por que escolher negociar na Binary?"
 
 msgid "Why trade with Binary.com"
 msgstr "Por que negociar com a Binary.com"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "Mesa de negociações"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Alterações do espaço de trabalho salvas"
 
 msgid "X-axis labels"
 msgstr "Etiquetas do eixo X"
