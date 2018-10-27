@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 17:40\n"
+"PO-Revision-Date: 2018-10-27 17:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1159,37 +1159,37 @@ msgid "Loading MAM..."
 msgstr "Carregando MAM (Gestor multi-contas)"
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Carregando caixa de diálogo da senha ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Carregando tabela de lucro ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "Carregando a abertura de contas reais ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Carregando a auto-exclusão ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Carregando tabela de extrato ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Carregando o gerenciamento de tokens ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Carregando as horas de negociação ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Carregando os menus de gráficos e negociação ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Carregando a configuração de tema personalizado..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Carregando o portfólio ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Carregando as configurações de auto-exclusão."
 
 msgid "Loading..."
 msgstr "Carregando..."
