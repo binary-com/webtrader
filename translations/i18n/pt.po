@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 17:50\n"
+"PO-Revision-Date: 2018-10-27 18:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "Hora de login"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Desconectando devido ao esgotamento do tempo limite de sessão de auto-exclusão!"
 
 msgid "Login"
 msgstr "Conectar-se"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "Baixa"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Barreira baixa"
 
 msgid "Low barrier"
 msgstr "Barreira baixa"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Máximo de perdas agregadas por dia"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Saldo máximo"
 
 msgid "Maximum number of open positions"
 msgstr "Número máximo de posições em aberto"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Máximo de posições em aberto"
 
 msgid "May"
 msgstr "Maio"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "Município/cidade memorável"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Aposta mínima de negociação deve ser inferior à aposta máxima de negociação."
 
 msgid "Min. Trade Stake"
 msgstr "Aposta mínima de negociação"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "Menos a comissão do agente"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 msgid "Minutes"
 msgstr "Minutos"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "Lucro líquido"
 
 msgid "New Account"
-msgstr ""
+msgstr "Nova conta"
 
 msgid "New password"
 msgstr "Nova senha"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "Não toca"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Nota: O contrato será vendido ao preço prevalecente do mercado no momento em que o pedido for recebido pelos nossos servidores. Esse preço pode ser diferente do preço indicado."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Nota: Só é possível ter uma conta de moeda fiduciária e uma conta de cada criptomoeda"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "Índices e ações OTC"
 
 msgid "Occupation"
 msgstr "Emprego"
@@ -1513,22 +1513,22 @@ msgid "PEP Declaration"
 msgstr "Declaração PPE"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "A senha deve conter no mínimo 6 caracteres"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "A senha deve conter letras minúsculas e maiúsculas com números"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Senha atualizada com sucesso."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "As senhas não correspondem. Digite novamente"
 
 msgid "Patents"
-msgstr ""
+msgstr "Patentes"
 
 msgid "Pattern Recognition"
 msgstr "Reconhecimento de padrões"
@@ -1570,19 +1570,19 @@ msgid "Please"
 msgstr "Por favor"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Por favor [_1]aceite os termos e condições atualizados[_2] para aumentar os seus limites de retirada e negociação."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "[_1]Complete o seu perfil de conta[_2] para aumentar os seus limites de retirada e negociação."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Escolha pelo um escopo de token"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Escolha a moeda na qual você deseja negociar"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Complete o [_1]ormulário de avaliação financeira[_2] para aumentar os seus limites de retirada e negociação."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Confirme os seguintes dados para poder concluir a transferência"
