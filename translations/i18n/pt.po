@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 16:50\n"
+"PO-Revision-Date: 2018-10-27 17:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2068,19 +2068,19 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Os serviços de negociação financeira contidos neste site são apenas adequados para clientes que tenham a capacidade de suportar as perdas de todo o dinheiro que investem e que compreendam e tenham experiência com os riscos envolvidos na aquisição de contratos financeiros. Transações de contratos financeiros implicam um alto grau de risco. Se os contratos adquiridos expirarem sem ganhos, você irá sofrer uma perda total do seu investimento, que consiste no prêmio do contrato"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Houve uma interrupção nos dados de mercado durante o período do contrato. Em contas de dinheiro real, iremos tentar corrigir isto e liquidar o contrato de forma correta. Caso contrário, o contrato será cancelado e reembolsado. Contratos de dinheiro virtual serão cancelados e reembolsados."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Houve um erro"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Este contrato expirou"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Este contrato perdeu"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Esse contrato ganhou"
 
 msgid "This field is required"
 msgstr "Este campo é obrigatório"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "Bloqueio até"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Tempo limite da solicitação websocket"
 
 msgid "Title"
 msgstr "Título"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Para retirar fundos, insira o token de verificação especial que acabamos de lhe enviar por e-mail"
 
 msgid "Today"
-msgstr ""
+msgstr "Hoje"
 
 msgid "Token"
 msgstr "Token"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "Gerenciamento de tokens"
 
 msgid "Token already added"
-msgstr ""
+msgstr "O token já foi adicionado"
 
 msgid "Token management"
 msgstr "Gerenciamento do token"
