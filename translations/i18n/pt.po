@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 10:10\n"
+"PO-Revision-Date: 2018-10-27 10:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1783,7 +1783,7 @@ msgid "Repeat password"
 msgstr "Repetir senha"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Não permitimos a revenda deste contrato"
 
 msgid "Resale price"
 msgstr "Preço de revenda"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "Pergunta de segurança"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Parece que os nossos servidores estão inativos. Estamos trabalhando no problema."
 
 msgid "Self-Employed"
 msgstr "Trabalhador autônomo"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "Autoexclusão"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Ferramentas de auto-exclusão"
 
 msgid "Sell At Market"
 msgstr "Vender no mercado"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Sessão"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Limite de duração de sessão"
 
 msgid "Session duration limit, in minutes"
 msgstr "Limite de duração de sessão, em minutos"
