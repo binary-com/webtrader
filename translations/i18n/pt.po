@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 17:00\n"
+"PO-Revision-Date: 2018-10-27 17:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2146,10 +2146,10 @@ msgid "Token name"
 msgstr "Nome do token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "O nome do token pode conter caracteres alfanuméricos com espaços e sublinhados"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "O nome do token pode conter no máximo 32 caracteres"
 
 msgid "Token name must contain atleast 2 characters"
 msgstr ""
