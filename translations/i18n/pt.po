@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2018-10-27 08:40\n"
+"PO-Revision-Date: 2018-10-27 08:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -193,16 +193,16 @@ msgid "Account balance:"
 msgstr "Saldo da conta:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "ID de conta não encontrada."
 
 msgid "Account opening"
-msgstr ""
+msgstr "Abertura de conta"
 
 msgid "Account opening reason"
 msgstr "Motivo de abertura de conta"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Token de conta não encontrado."
 
 msgid "Action"
 msgstr "Ação"
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "Adicionar/remover indicadores"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Novo espaço de trabalho adicionado %"
 
 msgid "Address"
 msgstr "Endereço"
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "Valor"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Valor Mín: 10 Máx: 2000"
 
 msgid "Amount per point"
 msgstr "Montante por ponto"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "Autentique a sua conta agora ao verificar a sua identidade e o seu endereço. Para avançar, basta enviar os seguintes documentos à %1:"
 
 msgid "Available Currencies"
 msgstr "Moedas disponíveis"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "Opção binária"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "Princípios de opções binárias"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Experiência com opções binárias ou outros derivados financeiros"
@@ -373,10 +373,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "A Binary.com é um premiado provedor de negociações online que ajuda os seus clientes a negociar em mercados financeiros através de opções binárias e CFDs. A negociação de opções binárias e CFDs em índices Volatility classifica-se como uma atividade de jogo. Não se esqueça que os jogos podem ser viciantes – jogue responsavelmente. Aprenda mais sobre a [_1]Negociação Responsável[_2]. Alguns produtos não estão disponíveis em todos os países. Os serviços deste site não são disponibilizados em determinados países como os EUA, Canadá, Costa Rica e Hong Kong ou a pessoas com idade inferior a 18 anos."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Janela em branco"
 
 msgid "Bought"
 msgstr "Adquiridos"
@@ -511,10 +511,10 @@ msgid "Confirm transfer"
 msgstr "Confirmar transferência"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Conexão fechada."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Erro de conexão."
 
 msgid "Construction"
 msgstr "Construção"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "Contrato"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Confirmação de contrato"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Dados do contrato"
 
 msgid "Contract period"
 msgstr "período do contrato"
@@ -547,7 +547,7 @@ msgid "Copier"
 msgstr "Copiador"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "Negociação de cópia"
 
 msgid "Copy Trading"
 msgstr "Negociações de cópia"
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "Tema personalizado"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Personalizar a aparência do gráfico"
 
 msgid "Daily limit on losses"
 msgstr "Limite diário de perdas"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "Descrição"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Desmarque a opção"
 
 msgid "Differs"
 msgstr "Difere"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Você ainda não tem uma conta? Inscreva-se e receba uma conta virtual com $10.000"
 
 msgid "Done"
-msgstr ""
+msgstr "Concluído"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Concluído. Os fundos estão sendo transferidos para o agente de pagamentos"
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "Baixando modelo como"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Baixando o espaço de trabalho como %1"
 
 msgid "Drawing tools"
 msgstr "Ferramentas de desenho"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "Educação"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Falha na verificação do e-mail"
 
 msgid "Embed code"
 msgstr "Código de inserção"
