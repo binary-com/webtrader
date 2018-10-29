@@ -1,13 +1,13 @@
 ﻿import $ from 'jquery';
 import moment from 'moment';
-import html from 'text!../trade/tradeConf.html';
-import 'css!../trade/tradeConf.css';
 import Lookback from './lookback';
-import liveapi from '../websockets/binary_websockets';
 import chartingRequestMap from '../charts/chartingRequestMap';
 import { getLabels } from '../charts/chartSettings';
-import '../common/util';
+import liveapi from '../websockets/binary_websockets';
 import rv from '../common/rivetsExtra';
+import '../common/util';
+import 'css!../trade/tradeConf.css';
+import html from 'text!../trade/tradeConf.html';
 
 /* rv binder to show tick chart for this confirmation dialog */
 let display_decimals;

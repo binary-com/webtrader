@@ -69,7 +69,14 @@ const initChart = (root, state, options) => {
 
    const { title } = options;
    const el = root.find('.transaction-chart')[0];
-   const CHART_LABELS = ['start_time', 'entry_spot', 'barrier', 'exit_spot', 'end_time'];
+   console.log(state);
+   let CHART_LABELS = ['start_time', 'entry_spot', 'barrier', 'exit_spot'];
+   // TODO refactor this add label at the same time as line is drawn
+   const { date_expiry } = state.proposal_open_contract;
+   const { exit_tick_time } = state.proposal_open_contract;
+   if (exit_tick_time >= date_expiry) {
+     CHART_LABELS.push('end_time');
+   }
    const chart_options = {
       credits: { href: '#', text: '' },
       chart: {
