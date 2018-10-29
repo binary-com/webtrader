@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
+"PO-Revision-Date: 2018-10-25 08:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,16 +22,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(jika durasi kurang dari satu hari), atau pada akhir hari trading (jika durasi satu hari atau lebih)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Kontrak belum dimulai"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* Kata sandi harus minimal 6 karakter"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* Kata sandi harus berisi huruf besar dan angka"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Masukan kata sandi baru Anda"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com tidak berafiliasi dengan Agen Pembayaran manapun. Setiap Agen Pembayaran beroperasi sendiri dan Binary.com tidak bertanggung jawab atas risiko penggunaannya. PELANGGAN BERURUSAN DENGAN AGEN PEMBAYARAN ATAS RISIKO SENDIRI. Pelanggan disarankan untuk mengecek kredibilitas dan eksistensi Agen Pembayaran bersangkutan sebelum bertransaksi dengan mereka. Binary.com dalam keadaan apapun tidak bertanggung jawab atas transaksi yang dilakukan antara Pelanggan dan Agen Pembayaran"
@@ -169,40 +169,40 @@ msgid "8h"
 msgstr "8h"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "Tentang Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "Tentang Kami"
 
 msgid "Accept"
 msgstr "Menerima"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Autentikasi akun"
 
 msgid "Account balance"
 msgstr "Saldo akun"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Saldo akun:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "Id akun tidak ditemukan."
 
 msgid "Account opening"
-msgstr ""
+msgstr "Pendaftaran akun"
 
 msgid "Account opening reason"
 msgstr "Alasan pedaftaran akun"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Token akun tidak ditemukan."
 
 msgid "Action"
 msgstr "Aksi"
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "Tambah/hapus indikator"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Menambahkan % ruang kerja baru"
 
 msgid "Address"
 msgstr "Alamat"
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "Jumlah"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Jumlah Min: 10 Mak: 2000"
 
 msgid "Amount per point"
 msgstr "Jumlah per poin"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "Agustus"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "Otentikasi akun Anda sekarang dengan memverifikasi identitas dan alamat Anda. Untuk melanjutkan, cukup kirim dokumen-dokumen berikut ke %1:"
 
 msgid "Available Currencies"
 msgstr "Mata Uang Yang Tersedia"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "Opsi Binary"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "Opsi binary dasar"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Opsi Binary atau pengalaman trading pada keuangan derivatif lainnya"
@@ -373,10 +373,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs ini tidak tersedia di beberapa negara seperti AS, Kanada, Kosta Rika, Hong Kong atau siapapun dibawah umur 18."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Jendela kosong"
 
 msgid "Bought"
 msgstr "Membeli"
@@ -511,10 +511,10 @@ msgid "Confirm transfer"
 msgstr "Konfirmasi transfer"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Koneksi ditutup."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Koneksi eror."
 
 msgid "Construction"
 msgstr "Konstruksi"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "Kontrak"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Konfirmasi Kontrak"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Rincian Kontrak"
 
 msgid "Contract period"
 msgstr "Periode kontrak"
@@ -547,7 +547,7 @@ msgid "Copier"
 msgstr "Copier"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "Copy Trading"
 
 msgid "Copy Trading"
 msgstr "Copy Trading"
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "Tema Wajib"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Sesuaikan tampilan grafik"
 
 msgid "Daily limit on losses"
 msgstr "Batas rugi harian"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "Deskripsi"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Hapus pilihan"
 
 msgid "Differs"
 msgstr "Differs"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 
 msgid "Done"
-msgstr ""
+msgstr "Selesai"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Selesai. Dana tersebut telah ditransfer ke agen pembayaran"
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "Men-download template sebagai"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Mengunduh ruang kerja sebagai %1"
 
 msgid "Drawing tools"
 msgstr "Alat gambar"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "Edukasi"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Verifikasi email gagal"
 
 msgid "Embed code"
 msgstr "Menanamkan kode"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Nikmati antarmuka trading intuitif dengan fungsi lanjutan yang memungkinkan Anda untuk memantau semua aset dan pasar favorit Anda pada saat bersamaan, termasuk grafik penting, indeks aset, waktu trading, dan data historis. Yang terpenting, Anda dapat memilih apa yang ingin Anda tampilkan pada layar Anda"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Masukkan token trader yang valid"
 
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
@@ -802,16 +802,16 @@ msgid "Exclude me from the website until"
 msgstr "Kecualikan saya dari website hingga"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Kecualikan waktu"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Waktu pengecualian harus setelah hari ini."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "Kecualikan hingga waktu tidak boleh kurang dari 6 bulan."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "Kecualikan hingga waktu tidak melebihi dari 5 tahun."
 
 msgid "Exit Spot"
 msgstr "Spot Akhir"
@@ -829,10 +829,10 @@ msgid "Explanation"
 msgstr "Penjelasan"
 
 msgid "FAQ"
-msgstr ""
+msgstr "Pertanyaan Umum"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Gagal memperbarui kata sandi"
 
 msgid "Fall"
 msgstr "Fall"
@@ -868,10 +868,10 @@ msgid "Finance"
 msgstr "Keuangan"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "Formulir pendaftaran Akun Finansial"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "Penilaian Finansial"
 
 msgid "Financial Information"
 msgstr "Informasi Keuangan"
@@ -919,10 +919,10 @@ msgid "Get API token from trader(s) and add it in your list"
 msgstr "Dapatkan token API dari trader dan tambahkan pada daftar Anda"
 
 msgid "Getting started"
-msgstr ""
+msgstr "Langkah memulai"
 
 msgid "Glossary"
-msgstr ""
+msgstr "Kamus"
 
 msgid "Go to"
 msgstr "Kunjungi"
@@ -940,7 +940,7 @@ msgid "Grid Light"
 msgstr "Grid Muda"
 
 msgid "Group history"
-msgstr ""
+msgstr "Sejarah grup"
 
 msgid "Health"
 msgstr "Kesehatan"
@@ -967,19 +967,19 @@ msgid "Historical Data"
 msgstr "Data Historikal"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "Data Historikal Untuk"
 
 msgid "Horizontal line"
 msgstr "Garis horisontal"
 
 msgid "Hour"
-msgstr ""
+msgstr "Jam"
 
 msgid "Hours"
 msgstr "Jam"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "Bagaimana cara bertrading opsi binary?"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "Bagaimana cara bertrading pasar Indeks Volatilitas?"
@@ -1015,13 +1015,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk memahami risiko yang terlibat)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "Di negara Uni Eropa. produk finansial disediakan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai Kategori 3 oleh Otoritas Jasa Keuangan Malta (lisensi no. IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Di negara Isle of Man dan Inggris, Indeks Volatilitas disediakan oleh Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; berlisensi dan diatur."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr ""
+msgstr "Di seluruh Uni Eropa, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; berlisensi dan diatur."
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -1033,7 +1033,7 @@ msgid "Income Source"
 msgstr "Sumber Pendapatan"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Indikatif"
 
 msgid "Indicative Price"
 msgstr "Harga Indikatif"
@@ -1066,7 +1066,7 @@ msgid "Invalid template type"
 msgstr "Jenis template tidak valid"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Jenis template tidak valid."
 
 msgid "Investments & Dividends"
 msgstr "Instrumen & Dividen"
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "Januari"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Akun Jepang tidak tersedia."
 
 msgid "Jul"
 msgstr "Jul"
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "Juli"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Lompat ke:"
 
 msgid "Jun"
 msgstr "Jun"
@@ -1102,13 +1102,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Trading Menguntungkan 12 bulan Terakhir"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Analisa Digit Terakhir"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Digit Terakhir Over"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Digit Terakhir Under"
 
 msgid "Last used"
 msgstr "Terakhir digunakan"
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "Muat template trading"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Loading ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Loading Indeks Aset ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Loading Copy Trade..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Loading Download/Lihat Data ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "Loading MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Loading dialog kata sandi ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Loading Tabel Profit ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "Loading pendaftaran akun Riil ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Loading Pengecualian Diri ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Loading Tabel Pernyataan ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Loading Token manajemen ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Loading Waktu Trading ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Loading grafik dan menu trading ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Loading konfigurasi tema khusus..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Loading portopolio ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Loading pengaturan pengecualian diri."
 
 msgid "Loading..."
 msgstr "Pemuatan..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "Waktu masuk"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Keluar berhubung sesi waktu pengecualian diri!"
 
 msgid "Login"
 msgstr "Login"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "Rendah"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Batas Rendah"
 
 msgid "Low barrier"
 msgstr "Batasan Rendah"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Maksimum jumlah kerugian per hari"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Saldo maksimum"
 
 msgid "Maximum number of open positions"
 msgstr "Maksimum jumlah posisi berjalan"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Posisi berjalan Maksimum"
 
 msgid "May"
 msgstr "Mei"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "Kota bersejarah"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Minimal harga kontrak harus lebih rendah dari maksimal harga kontrak."
 
 msgid "Min. Trade Stake"
 msgstr "Min. Modal Trading"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "Minus komisi agen"
 
 msgid "Minute"
-msgstr ""
+msgstr "Menit"
 
 msgid "Minutes"
 msgstr "Menit"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "Profit Bersih"
 
 msgid "New Account"
-msgstr ""
+msgstr "Akun Baru"
 
 msgid "New password"
 msgstr "Kata sandi baru"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "No touch"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Nota: Kontrak akan dijual pada harga pasar terkini ketika permintaan diterima oleh server kami. Harga ini mungkin berbeda dari harga yang diindikasikan."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Catatan: Anda hanya dapat memiliki satu akun mata uang fiat dan satu dari setiap akun mata uang crypto"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "Indeks OTC dan saham"
 
 msgid "Occupation"
 msgstr "Pekerjaan"
@@ -1513,22 +1513,22 @@ msgid "PEP Declaration"
 msgstr "Deklarasi PEP"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "Kata sandi harus minimal 6 karakter"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Kata sandi harus berisi huruf kecil dan besar dengan angka"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Kata sandi berhasil diperbarui."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Kata sandi tidak cocok. Silahkan ketik ulang"
 
 msgid "Patents"
-msgstr ""
+msgstr "Paten"
 
 msgid "Pattern Recognition"
 msgstr "Pengakuan Pola"
@@ -1570,40 +1570,40 @@ msgid "Please"
 msgstr "Silahkan"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Silahkan [_1]setujui Syarat dan Ketentuan terbaru[_2] untuk meningkatkan batasan penarikan dan trading Anda."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Silahkan [_1]lengkapi profil akun Anda[_2] untuk meningkatkan batasan penarikan dan trading."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Silahkan pilih setidaknya satu lingkup token"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Silahkan pilih mata uang yang ingin Anda transaksikan"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Silahkan lengkapi [_1]formulir penilaian finansial[_2] untuk meningkatkan batasan penarikan dan trading Anda."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Silahkan konfirmasi rincian sebagai berikut untuk menyelesaikan transfer"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Silakan masukkan nomor antara"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Silahkan masukkan tanggal yang valid dalam format yyyy-mm-dd"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Masukkan nilai yang berlaku untuk"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Masukkan nilai antara 0 dan"
 
 msgid "Please enter a value greater than 0"
 msgstr "Masukkan nilai lebih besar dari 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Masukkan nilai hingga kurang dari 6 minggu untuk waktu pengecualian."
 
 msgid "Please enter correct email"
 msgstr "Silakan masukkan email yang benar"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Silahkan masukkan tanggal dalam format YYYY-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Silakan masukkan nama token"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Masukkan format waktu dalam JJ:MM"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Silahkan install versi terbaru dari salah satu browser ini"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Silahkan masuk"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Silahkan masuk untuk melihat ruang kerja yang disimpan."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Silahkan masuk."
 
 msgid "Please provide your tax information"
 msgstr "Mohon sediakan informasi pajak Anda"
@@ -1645,31 +1645,31 @@ msgid "Please select"
 msgstr "Silahkan pilih"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Silahkan pilih tanggal pengecualian hingga."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Silahkan pilih agen pembayaran"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Silahkan pilih alasan pendaftaran akun sebelum melanjutkan"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "Silakan tentukan mata uang."
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Tentukan [_1]mata uang[_2] akun Anda"
 
 msgid "Please submit a valid verification token"
 msgstr "Kirimkan token verifikasi yang berlaku"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Silahkan coba kembali setelah 1 menit."
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "Silahkan coba kembali beberapa menit."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Silakan gunakan kata sandi baru Anda untuk masuk."
 
 msgid "Plot"
 msgstr "Plot"
@@ -1720,7 +1720,7 @@ msgid "Profit"
 msgstr "Untung"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Laba Rugi"
 
 msgid "Profit table"
 msgstr "Tabel untung"
@@ -1729,10 +1729,10 @@ msgid "Profit/ Loss"
 msgstr "Untung/ Rugi"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "Bukti alamat - Salinan scan rekening koran atau tagihan utilitas tidak lebih dari tiga bulan setelah tanggal cetak. Bukti alamat harus menampilkan nama, alamat, tanggal cetak, dan nama organisasi pengeluar bukti alamat tersebut."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "Bukti identitas - Scan KTP, SIM, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
 
 msgid "Purchase"
 msgstr "Beli"
@@ -1747,28 +1747,28 @@ msgid "Read"
 msgstr "Baca"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "Pendaftaran Akun Uang Riil"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Pemeriksaan realitas"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Mengalihkan ke halaman login oauth,"
 
 msgid "Ref"
 msgstr "Ref"
 
 msgid "Ref."
-msgstr ""
+msgstr "Ref."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Pembaruan gagal"
 
 msgid "Register free account"
 msgstr "Daftar akun gratis"
 
 msgid "Registration"
-msgstr ""
+msgstr "Pendaftaran"
 
 msgid "Remove"
 msgstr "Hapus"
@@ -1783,7 +1783,7 @@ msgid "Repeat password"
 msgstr "Ulang kata sandi"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Penjualan kembali kontrak ini tidak ditawarkan"
 
 msgid "Resale price"
 msgstr "Harga jual kembali"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "Pertanyaan keamanan"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Sepertinya server kami sedang mengalami gangguan, kami sedang berusaha memperbaikinya."
 
 msgid "Self-Employed"
 msgstr "Wirausaha"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "Pengecualian-Diri"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Fasilitas Pengecualian Diri"
 
 msgid "Sell At Market"
 msgstr "Jual Pada Pasar"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Sesi"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Batasan durasi sesi"
 
 msgid "Session duration limit, in minutes"
 msgstr "Batas sesi durasi, dalam menit"
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "Terjual"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Beberapa indeks acak"
 
 msgid "Source of wealth"
 msgstr "Sumber kekayaan"
@@ -1993,10 +1993,10 @@ msgid "Submit"
 msgstr "Ajukan"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Berhasil menambahkan token baru"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Berhasil menambahkan ruang kerja sebagai"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Berhasil menerapkan template dan menyimpannya sebagai"
@@ -2011,10 +2011,10 @@ msgid "Table"
 msgstr "Tabel"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "Informasi Pajak"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "Informasi Pajak berhasil diperbarui"
 
 msgid "Tax identification number"
 msgstr "Nomor Pokok Wajib Pajak"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Template sudah disimpan sebagai"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Template diterapkan secara parsial."
 
 msgid "Template changes saved"
 msgstr "Perubahan template disimpan"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Template tidak berlaku."
 
 msgid "Template name"
 msgstr "Nama template"
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "Syarat"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Syarat dan Ketentuan"
 
 msgid "Tertiary"
 msgstr "Tersier"
@@ -2068,19 +2068,19 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk Pelanggan yang mampu menanggung kerugian pada semua modal yang mereka tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang akan dialami pada trading kontrak finansial. Kontrak transaksi finansial adalah memiliki risiko tinggi. Jika prediksi Anda tidak tepat maka Anda akan kehilangan semua modal yang anda tanamkan berupa harga kontrak yang Anda bayarkan"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Terdapat gangguan data pasar selama periode kontrak berlangsung. Untuk akun uang riil, kami akan berusaha memperbaiki masalah ini dan menyelesaikan kontrak dengan benar, jika tidak, kontrak akan dibatalkan dan dikembalikan. Untuk kontrak uang virtual akan dibatalkan dan dikembalikan."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Terdapat error"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Kontrak ini telah berakhir"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Kontrak ini rugi"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Kontrak ini untung"
 
 msgid "This field is required"
 msgstr "Bagian ini diperlukan"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "Time out hingga"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Waktu berakhir untuk permintaan websocket"
 
 msgid "Title"
 msgstr "Judul"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Untuk menarik dana silahkan masukkan token verifikasi khusus yang kami baru saja emailkan kepada Anda"
 
 msgid "Today"
-msgstr ""
+msgstr "Hari ini"
 
 msgid "Token"
 msgstr "Token"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "Manajemen Token"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token sudah ditambahkan"
 
 msgid "Token management"
 msgstr "Manajemen token"
@@ -2146,16 +2146,16 @@ msgid "Token name"
 msgstr "Nama token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Nama token dapat berisi karakter alfanumerik dengan spasi dan garis bawah"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Nama token dapat memiliki maksimal 32 karakter"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "Nama token harus mengandung minimal 2 karakter"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "Nama token harus dimulai hanya dengan karakter alfanumerik"
 
 msgid "Token permissions"
 msgstr "Izin token"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "Waktu Trading"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Trading opsi binary mungkin tidak cocok untuk semua orang, maka pastikan Anda memahami sepenuhnya risiko yang terlibat. Kerugian Anda dapat melebihi setoran awal Anda dan Anda tidak akan memiliki atau memperoleh bunga dari aset dasar."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview untuk Binary.com"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "Turnover"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "Jenis kontrak"
 
 msgid "USD"
 msgstr "USD"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "Kode verifikasi telah dikirimkan ke email Anda"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Kode verifikasi dikirim ke"
 
 msgid "Verification token"
 msgstr "Token verifikasi"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "Apa ini?"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Setelah mengklik \"Ok\" Anda akan dikecualikan dari trading hingga tanggal yang dipilih."
 
 msgid "While on the go, you can"
 msgstr "Saat bepergian, Anda dapat"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "Mengapa memilih Trading Binary?"
 
 msgid "Why trade with Binary.com"
 msgstr "Mengapa bertrading di Binary.com"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "Ruang kerja"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Perubahan ruang kerja tersimpan"
 
 msgid "X-axis labels"
 msgstr "Label x-axis"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Anda belum mengcopy kontrak manapun"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Anda telah mengecualikan diri hingga"
 
 msgid "You have sold the following contract"
 msgstr "Anda telah menjual kontrak berikut ini"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "Anda membayar"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "Anda harus memasukkan 6-25 karakter."
 
 msgid "You will be automatically logged out after such time"
 msgstr "Anda akan secara otomatis keluar setelah waktu tersebut"
@@ -2425,16 +2425,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Akun Anda (%) dibatalkan, silahkan hubungi customer support untuk info lebih lanjut."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Akun Anda memiliki akses terbatas. Silahkan [_1]hubungi customer support[_2] untuk bantuan."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Browser Anda tidak mendukung salin ke clipboard"
 
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Perubahan Anda telah diperbarui"
 
 msgid "Your copying settings"
 msgstr "Susunan duplikasi Anda"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Otentikasi akun Anda[_2] untuk manfaat maksimal dari pilihan penarikan yang tersedia."
 
 msgid "and"
-msgstr ""
+msgstr "dan"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrof (') diperbolehkan"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "hari"
 
 msgid "deposits"
-msgstr ""
+msgstr "deposit"
 
 msgid "end time"
 msgstr "waktu akhir"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "spot keluar"
 
 msgid "for"
-msgstr ""
+msgstr "untuk"
 
 msgid "for mobile charts"
 msgstr "untuk grafik mobile"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "situs utama"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "pasar saat ini ditutup."
 
 msgid "medium protection"
 msgstr "perlindungan menengah"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "tik"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "pencairan"
 
 msgid "yes"
 msgstr "iya"
