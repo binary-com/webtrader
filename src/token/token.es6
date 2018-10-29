@@ -155,7 +155,7 @@ const init_state = (root) => {
         liveapi.send(request).then((data) => {
             state.token.name = '';
             state.token.btn_disabled = false;
-            $.growl.notice({ message: 'Successfully added new token "'.i18n() + request.new_token + '"' });
+            $.growl.notice({ message: `${'Successfully added new token '.i18n()} ${request.new_token}` });
 
             const tokens = (data.api_token && data.api_token.tokens) || [];
             state.update_tokens(tokens);

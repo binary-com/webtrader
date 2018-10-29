@@ -10,7 +10,6 @@ import 'css!trade/tradeDialog.css';
 import 'timepicker';
 import 'jquery-ui';
 import 'common/util';
-import help from 'help/help';
 import Lookback from './lookback';
 
 require(['trade/tradeConf']); /* trigger async loading of trade Confirmation */
@@ -380,10 +379,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       name: '',
       visible: false,
     },
-    openHelp: ()=>{
-      $.growl.notice({message:"Loading help text for ".i18n() + state.categories.value.contract_category_display});
-      help.showSpecificContent(state.categories.value.contract_category_display);
-    }
   };
 
   var update_currency = function() {

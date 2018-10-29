@@ -164,7 +164,7 @@ const init_state = (root, win) => {
                state.route.update('account');
             }
             else  {
-               throw { message: 'Email verification failed ('.i18n() + data.msg_type + ')' };
+               throw { message: `${'Email verification failed'.i18n()} (${data.msg_type})` };
             }
          })
          .catch((err) => {
