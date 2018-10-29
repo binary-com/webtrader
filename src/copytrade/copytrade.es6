@@ -2,8 +2,8 @@ import $ from 'jquery';
 import windows from '../windows/windows';
 import rv from '../common/rivetsExtra';
 import _ from 'lodash';
-import html from 'text!./index.html';
-import 'css!./index.css';
+import html from 'text!./copytrade.html';
+import 'css!./copytrade.css';
 import { trade_types } from '../common/common';
 import '../common/util';
 import liveapi from 'websockets/binary_websockets';
@@ -16,10 +16,10 @@ const getLoggedInUserId = () => local_storage.get("oauth")[0].id;
 const TRADE_TYPES = trade_types;
 
 const form_error_messages = {
-    invalid_stake_limit: 'Min trade stake should be lower than max trade stake.',
-    token_already_added: 'Token already added',
-    enter_valid_token: 'Enter a valid trader token',
-    refresh_failed: 'Refresh failed',
+    INVALID_STAKE_LIMIT: 'Min trade stake should be lower than max trade stake.'.i18n(),
+    TOKEN_ALREADY_ADDED: 'Token already added'.i18n(),
+    ENTER_VALID_TOKEN: 'Enter a valid trader token'.i18n(),
+    REFRESH_FAILED: 'Refresh failed'.i18n(),
 };
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
@@ -84,12 +84,13 @@ instrumentPromise().then(instruments => {
   DEFAULT_ASSETS = assets.filter(f => f.code === 'R_10').map(m => m.code);
 });
 
-const refreshTraderStats = (loginid, token, scope) => liveapi
+const refreshTraderStats = (loginid, token, scope) => {
+  liveapi
   .send({
     copytrading_statistics: 1,
     trader_id: loginid,
   })
-  .then(copyStatData => {
+  .then((copyStatData) => {
     if (copyStatData.copytrading_statistics) {
       const traderTokenDetails = _.find(scope.traderTokens, f =>
         f.yourCopySettings && f.yourCopySettings.copy_start === token);
@@ -105,7 +106,10 @@ const refreshTraderStats = (loginid, token, scope) => liveapi
       }
     }
     updateLocalStorage(scope);
+  }).catch((e) => {
+    $.growl.error({ message: e.message });
   });
+};
 
 let win = null, win_view = null;
 
@@ -114,22 +118,26 @@ const state = {
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
   groupedAssets: [],
   is_loading: true,
-  is_virtual: false,
+  is_virtual: true,
   allowCopy: {
     allow_copiers: 0,
     onAllowCopyChangeCopierCellClick: () => state.onChangeCopytradeSettings(0),
     onAllowCopyChangeTraderCellClick: () => state.onChangeCopytradeSettings(1),
   },
   onChangeCopytradeSettings: _.debounce((allow_copiers) => {
+    if (state.is_virtual) return;
+    if (state.allowCopy.allow_copiers === allow_copiers) return;
+
     state.is_loading = true;
+
     liveapi
       .send({
         set_settings: 1,
         allow_copiers,
       })
+      // set_settings api res does not have updated settings
       .then((settings) => {
         state.is_loading = false;
-        // settings req does not return updated settings
         state.allowCopy.allow_copiers = allow_copiers;
       })
       .catch(e => {
@@ -216,7 +224,7 @@ const state = {
           updateLocalStorage(state);
         })
         .catch((e) => {
-          $.growl.error({ message: form_error_messages.refresh_failed });
+          $.growl.error({ message: form_error_messages.REFRESH_FAILED });
           trader.disableRefresh = false;
           updateLocalStorage(scope);
         });
@@ -243,7 +251,7 @@ const state = {
       updateLocalStorage(state);
       $.growl.notice({ message: 'Updated successfully' });
     } else {
-      $.growl.error({ message: form_error_messages.invalid_stake_limit });
+      $.growl.error({ message: form_error_messages.INVALID_STAKE_LIMIT });
     }
   },
   searchToken: {
@@ -258,13 +266,13 @@ const state = {
     addToken: (event, scope) => {
       //If searchToken.token is empty, do nothing
       if (!scope.searchToken.token) {
-        $.growl.error({ message: form_error_messages.enter_valid_token });
+        $.growl.error({ message: form_error_messages.ENTER_VALID_TOKEN });
         return;
       }
 
       //If already added, throw error
       if (_.some(state.traderTokens, f => f.yourCopySettings.copy_start === scope.searchToken.token)) {
-        $.growl.error({ message: form_error_messages.token_already_added });
+        $.growl.error({ message: form_error_messages.TOKEN_ALREADY_ADDED });
         return;
       }
 
@@ -309,41 +317,43 @@ const initConfigWindow = () => {
     modal: false,
     width: 600,
     open: () => {
+      //Refresh all token details
+      const copyTrade = local_storage.get(getStorageName());
+      if (copyTrade) {
+        _.merge(state, copyTrade);
+        state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
+      }
+      state.is_loading = true;
       state.is_virtual = isVirtual();
-      if (!state.is_virtual) {
-        //Refresh all token details
-        const copyTrade = local_storage.get(getStorageName());
-        if (copyTrade) {
-          _.merge(state, copyTrade);
-          state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
-        }
-        state.is_loading = true;
-        //Get the copy settings
+      //VRTC can only be copiers
+      if (state.is_virtual) {
+        state.is_loading = false;
+        state.allowCopy.allow_copiers = 0;
+      } else {
         liveapi
-          .send({ get_settings: 1 })
-          .then((settings) => {
-            state.is_loading = false;
-            state.allowCopy.allow_copiers = settings.get_settings.allow_copiers
-          })
-          .catch((e) => {
-            state.is_loading = false;
-            $.growl.error({ message: e.message });
-          });
-
-        //Refresh locally stored trader statistics
-        if (copyTrade) {
-          (async function () {
-            for (let traderToken of copyTrade.traderTokens) {
-              try {
-                const loginid = traderToken.loginid;
-                const token = traderToken.yourCopySettings.copy_start;
-                await refreshTraderStats(loginid, token, state);
-              } catch (e) {
-                console.error(e);
-              }
+        .send({ get_settings: 1 })
+        .then((settings) => {
+          state.is_loading = false;
+          state.allowCopy.allow_copiers = settings.get_settings.allow_copiers;
+        })
+        .catch((e) => {
+          state.is_loading = false;
+          $.growl.error({ message: e.message });
+        });
+      }
+      //Refresh locally stored trader statistics
+      if (copyTrade) {
+        (async function () {
+          for (let traderToken of copyTrade.traderTokens) {
+            try {
+              const loginid = traderToken.loginid;
+              const token = traderToken.yourCopySettings.copy_start;
+              await refreshTraderStats(loginid, token, state);
+            } catch (e) {
+              console.error(e);
             }
-          })();
-        }
+          }
+        })();
       }
     },
     close: () => {

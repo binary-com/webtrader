@@ -10,14 +10,13 @@ The goal of this project is to create a full-screen trading interface for [Binar
 
         * git
         * node JS
-        * npm
         * yarn
 
 ## How to work with this project
 
         $ git clone https://github.com/binary-com/webtrader.git
         $ cd webtrader
-        $ yarn #install all dependencies
+        $ yarn install
         $ yarn build #compiles the project
         $ yarn start #Start a local server and serve the compiled files
 
@@ -41,10 +40,6 @@ Go to https://webtrader.local:35729 and accept the self signed ssl certificate f
 
 Now you can debug your app on https://webtrader.local/ locally.
 
-In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
-
-        $ yarn sloc
-
 To bump release version, run
 
         $ yarn major-rel
@@ -57,19 +52,22 @@ Every check-in or merge into master will trigger travis-ci build and do a releas
 
 Every check-in or merge of PR into development will trigger travis-ci build and do a beta release
 
-#### Translation-related command
+#### Translations
 
 Translation related files are in `/translations` folder.
     
   To extract text for translation:
 
+        $ yarn build
         $ cd ./translations
-        $ python extract.py # This will extract text from `../src/**/*.html` files.
-        $ extract.py # runs `extract.js` which extracts string literals form `../src/**/*.js` files.
+        $ python extract.py
+        $ extract.py # extracts string literals from `dist/uncompressed` (from *.html and *.js)
         $ extract.py # for merging `.po` files uses `msgmerge` command line tool.
 
 The tool should be available on linux, if you are on Osx try `brew install gettext && brew link gettext --force`.
 to submit text to translators: push to *translation* branch, weblate hook will be triggered.
+
+To see CrowdIn In-Context translations pass querystring `?lang=ach` (obs not for production env)
 
 ### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.

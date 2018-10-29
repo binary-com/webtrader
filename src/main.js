@@ -145,9 +145,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
     /* setup translating string literals */
     window.setup_i18n_translation(JSON.parse(lang_json));
-    if (i18n_name === "ar") {
-        $("body").addClass("rtl-direction");
-    }
 
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,
@@ -280,15 +277,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     elem.click();
                 });
 
-            //Register async loading of help dialog
-            load_ondemand($navMenu.find("a.help"), "click", "Loading help docs...".i18n(), "help/help",
-                function(help) {
-                    var elem = $navMenu.find("a.help");
-                    help.init_help(elem);
-                    elem.click();
-                });
-
-            load_ondemand($navMenu.find("a.copytrade"), "click", "Loading Copy Trade...".i18n(), "copytrade/index",
+            load_ondemand($navMenu.find("a.copytrade"), "click", "Loading Copy Trade...".i18n(), "copytrade/copytrade",
               function(copytrade) {
                   var elem = $navMenu.find("a.copytrade");
                   copytrade.init(elem);

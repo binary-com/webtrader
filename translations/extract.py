@@ -85,13 +85,9 @@ class WebtraderParser(HTMLParser):
         lines = subprocess.Popen( ['node', 'extract.js'], stdout=subprocess.PIPE ).communicate()[0]
         for line in lines.split('\n'):
             for text in re.split(r'<.+?>', line):
-                text = re.sub( '\s+', ' ', text).strip(' \t\r\n*,+.:-_"\'()').strip();
+                text = re.sub( '\s+', ' ', text).strip(' \t\r\n').strip();
                 if text != '' and len(text) > 1: # ignore empty and single character strings.
                     self.texts.append(text)
-
-    def parse_md_files(self):
-        lines = subprocess.Popen( ['node', 'extract_md.js'], stdout=subprocess.PIPE ).communicate()[0]
-        self.feed(lines);
 
     def get_texts(self):
         return sorted(set(self.texts)) # sort and remove duplicates
@@ -102,8 +98,7 @@ print "parsing ../src/**/*.html files ..."
 parser.parse_html_files('../src')
 print "parsing ../src/**/*.js files ..."
 parser.parse_js_files('../src')
-print "parsing ../src/**/*.md files ..."
-parser.parse_md_files();
+
 texts = parser.get_texts()
 
 messages_pot = './i18n/messages.pot'
