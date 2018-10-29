@@ -130,7 +130,7 @@ rv.binders['tick-chart'] = {
 
       function drawYLine(chart, options) {
             chart.yAxis[0].addPlotLine({
-               id: options.id || options.label,
+               id: options.id,
                value: options.value,
                color: 'green',
                width: 2,
