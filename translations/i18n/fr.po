@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-10-30 03:20\n"
+"PO-Revision-Date: 2018-10-30 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1102,7 +1102,7 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Derniers 12 mois de trades rentables"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Prédiction sur le dernier chiffre"
 
 msgid "Last Digit is Over"
 msgstr ""
@@ -1144,49 +1144,49 @@ msgid "Load trade template"
 msgstr "Charger le modèle de trading"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Chargement ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Chargement Indice des actifs ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Chargement de copie de trade..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Chargement Télécharger/Afficher des données ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "Chargement de MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Chargement Boîte de dialogue mot de passe ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Chargement Tableau des profits ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "Chargement Ouverture d'un compte réel ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Chargement Auto-exclusion ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Chargement Relevé ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Chargement Gestion des jetons ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Chargement Horaires de trading ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Chargement des menus graphiques et de trading ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Chargement de la configuration de thème personnalisé..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Chargement du portefeuille ..."
 
 msgid "Loading self-exclusion settings."
 msgstr ""
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "Bénéfice net"
 
 msgid "New Account"
-msgstr ""
+msgstr "Nouveau Compte"
 
 msgid "New password"
 msgstr "Nouveau mot de passe"
@@ -1528,7 +1528,7 @@ msgid "Passwords didn't match. Please type them again"
 msgstr "Les mots de passe fournis ne correspondent pas. Veuillez les saisir à nouveau"
 
 msgid "Patents"
-msgstr ""
+msgstr "Brevets"
 
 msgid "Pattern Recognition"
 msgstr "Schéma de Reconnaissance"
@@ -1588,7 +1588,7 @@ msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Veuillez confirmer les informations suivantes afin de procéder au transfert"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Veuillez saisir un chiffre entre"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Veuillez saisir une date valide, au format aaaa-mm-jj."
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Veuillez installer la dernière version de l'un de ces navigateurs"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Veuillez vous connecter"
 
 msgid "Please log in to see your saved workspace."
 msgstr ""
 
 msgid "Please log in."
-msgstr ""
+msgstr "Veuillez vous connecter."
 
 msgid "Please provide your tax information"
 msgstr "S'il vous plaît communiquez votre information fiscale"
@@ -1648,7 +1648,7 @@ msgid "Please select a date for time out until."
 msgstr ""
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Veuillez sélectionner une date valide"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Veuillez sélectionner une raison pour l’ouverture du compte avant de continuer"
@@ -1663,7 +1663,7 @@ msgid "Please submit a valid verification token"
 msgstr "S'il vous plaît, soumettez un coupon de vérification valide"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Veuillez réessayer dans une minute."
 
 msgid "Please try again after few minutes."
 msgstr ""
@@ -1720,7 +1720,7 @@ msgid "Profit"
 msgstr "Profits"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Tableau des profits"
 
 msgid "Profit table"
 msgstr "Tableau des profits"
@@ -1732,7 +1732,7 @@ msgid "Proof of address - A scanned copy of a utility bill or bank statement tha
 msgstr ""
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "Preuve d'identité : une copie scannée de votre passeport, de votre permis de conduire (provisoire ou non) ou de votre carte d'identité, indiquant votre nom et votre date de naissance."
 
 msgid "Purchase"
 msgstr "Achat"
@@ -1747,7 +1747,7 @@ msgid "Read"
 msgstr "Lire"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "Ouverture d'un compte réel"
 
 msgid "Reality check"
 msgstr ""
@@ -1759,7 +1759,7 @@ msgid "Ref"
 msgstr "Réf."
 
 msgid "Ref."
-msgstr ""
+msgstr "Réf."
 
 msgid "Refresh failed"
 msgstr ""
@@ -1768,7 +1768,7 @@ msgid "Register free account"
 msgstr "Ouvrez un compte gratuit"
 
 msgid "Registration"
-msgstr ""
+msgstr "Registration"
 
 msgid "Remove"
 msgstr "Supprimer"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "Auto-exclusion"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Fonctionnalités d'auto-exclusion"
 
 msgid "Sell At Market"
 msgstr "Vente au prix du marché"
@@ -2011,7 +2011,7 @@ msgid "Table"
 msgstr "Tableau"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "Informations fiscales"
 
 msgid "Tax Information successfully updated"
 msgstr ""
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "Conditions"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Conditions générales"
 
 msgid "Tertiary"
 msgstr "Supérieur"
@@ -2071,16 +2071,16 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr ""
 
 msgid "There was an error"
-msgstr ""
+msgstr "Une erreur s'est produite"
 
 msgid "This contract has expired"
 msgstr ""
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Ce contrat a été perdu"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Ce contrat a été gagné"
 
 msgid "This field is required"
 msgstr "Ce champ est requis"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Pour retirer des fonds, veuillez saisir le jeton de vérification spécifique que nous venons de vous envoyer par e-mail"
 
 msgid "Today"
-msgstr ""
+msgstr "Aujourd'hui"
 
 msgid "Token"
 msgstr "Jeton"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "Horaires de trading"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Le trading d’options binaires peut ne pas convenir à tout le monde, donc veuillez vous assurer que vous comprenez les risques encourus. Vos pertes peuvent dépasser votre dépôt initial et vous ne possédez ni n'avez aucun intérêt dans l’actif sous-jacent."
 
 msgid "Tradingview for Binary.com"
 msgstr "Affichage Trading pour Binary.com"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "Volume de transactions"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "Types d'options"
 
 msgid "USD"
 msgstr "USD"
@@ -2434,7 +2434,7 @@ msgid "Your browser is not supported"
 msgstr "Votre navigateur n'est pas pris en charge"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Vos modifications ont été prises en compte"
 
 msgid "Your copying settings"
 msgstr "Vos paramètres de copie"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Authentifiez votre compte[_2] maintenant profiter pleinement de toutes les possibilités de retrait disponibles."
 
 msgid "and"
-msgstr ""
+msgstr "et"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrophes (') sont autorisés"
