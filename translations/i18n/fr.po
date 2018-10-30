@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
+"PO-Revision-Date: 2018-10-30 03:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,7 +22,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(si la durée est de moins d'un jour), ou à la fin de la séance boursière (si la durée est d'un jour ou plus)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Le contrat n’a pas encore commencé"
 
 msgid "* Password must be 6 characters minimum"
 msgstr ""
@@ -181,16 +181,16 @@ msgid "Accept"
 msgstr "Accepter"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accessible depuis n’importe quel navigateur web en 13 langues"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Authentification de compte"
 
 msgid "Account balance"
 msgstr "Solde du compte"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Solde du compte :"
 
 msgid "Account id not found."
 msgstr ""
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "août"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "Authentifiez votre compte en vérifiant votre identité et votre adresse. Pour cela, envoyoyez simplement les documents suivants à %1 :"
 
 msgid "Available Currencies"
 msgstr "Devises disponibles"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "Option binaire"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "Les bases des options binaires"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Expérience de trading des options binaires ou autre dérivés financiers"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "Contrat"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Confirmation de contrat"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Détails du contrat"
 
 msgid "Contract period"
 msgstr "La période du contrat"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Vous n'avez pas encore de compte ? Inscrivez-vous pour accéder à un compte virtuel de 10 000 dollars US."
 
 msgid "Done"
-msgstr ""
+msgstr "Terminé"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Terminé. Le transfert des fonds vers l'agent de paiement est en cours."
@@ -805,7 +805,7 @@ msgid "Exclude time"
 msgstr ""
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "L'exclusion doit être ultérieure à aujourd'hui."
 
 msgid "Exclude until time cannot be less than 6 months."
 msgstr ""
@@ -829,7 +829,7 @@ msgid "Explanation"
 msgstr "Explication"
 
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 msgid "Failed to update the password"
 msgstr ""
@@ -871,7 +871,7 @@ msgid "Financial Account Opening form"
 msgstr ""
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "Évaluation financière"
 
 msgid "Financial Information"
 msgstr "Information Financière"
@@ -919,10 +919,10 @@ msgid "Get API token from trader(s) and add it in your list"
 msgstr "Obtenir le jeton API d'un(e) trader(s) et l’ajouter dans votre liste"
 
 msgid "Getting started"
-msgstr ""
+msgstr "Pour débuter"
 
 msgid "Glossary"
-msgstr ""
+msgstr "Glossaire"
 
 msgid "Go to"
 msgstr "Aller à"
@@ -949,7 +949,7 @@ msgid "High"
 msgstr "Haut"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Barrière supérieure"
 
 msgid "High barrier"
 msgstr "Barrière supérieure"
@@ -973,13 +973,13 @@ msgid "Horizontal line"
 msgstr "Ligne horizontale"
 
 msgid "Hour"
-msgstr ""
+msgstr "Heure"
 
 msgid "Hours"
 msgstr "Heures"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "Comment négocier les options binaires ?"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "Comment trader les indices de volatilité?"
@@ -1015,10 +1015,10 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Dans le cadre des services que nous vous fournissons, nous sommes dans l'obligation d'obtenir des informations de votre part afin de déterminer si un produit ou service donné est pertinent dans votre cas (c'est-à-dire si vous possédez l'expérience et les connaissances nécessaires pour comprendre les risques impliqués)."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "Dans l'UE, les produits financiers sont offerts par Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte, agréé et réglementé comme un fournisseur de Services d’investissement de Catégorie 3 par l'Autorité des Services Financiers Maltais (numéro de licence IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Dans l'île de Man et le Royaume Uni, les Indices de Volatilité sont offerts par Binary (IOM Ltd., 1er étage, Millennium House, Victoria Road, Douglas, IM2 4RW, île de Man, îles Britanniques, autorisé et régulé respectivement par (1) la Commission de Supervision des Jeux dans l'île de Man (licence actuelle émise le 31 Août 2017) et par (2) la Commission des Jeux du Royaume-Uni (licence [_1]no référence: 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
 msgstr ""
@@ -1033,7 +1033,7 @@ msgid "Income Source"
 msgstr "Source de revenus"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Indicatif"
 
 msgid "Indicative Price"
 msgstr "Prix indicatif"
@@ -1066,7 +1066,7 @@ msgid "Invalid template type"
 msgstr "Type de modèle non valide"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Type de modèle non valide."
 
 msgid "Investments & Dividends"
 msgstr "Investissements et dividendes"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "Bas"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Barrière inférieure"
 
 msgid "Low barrier"
 msgstr "Barrière inférieure"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "Moins la commission de l'agent"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minute"
 
 msgid "Minutes"
 msgstr "Minutes"
