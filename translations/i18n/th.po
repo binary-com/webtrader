@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-10-30 03:20\n"
+"PO-Revision-Date: 2018-10-30 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "เซสชัน"
 
 msgid "Session duration limit"
-msgstr "ข้อจำกัดระยะเวลาที่ใช้งาน:"
+msgstr "ข้อจำกัดระยะเวลาที่ใช้งาน"
 
 msgid "Session duration limit, in minutes"
 msgstr "รอบระยะเวลาการซื้อขาย ในหน่วยนาที"
@@ -1993,10 +1993,10 @@ msgid "Submit"
 msgstr "ส่ง"
 
 msgid "Successfully added new token"
-msgstr "โทเค่นใหม่ที่ถูกเพิ่มเข้ามาแล้ว"
+msgstr "โทเค่นใหม่ได้ถูกเพิ่มเข้ามาแล้ว"
 
 msgid "Successfully added workspace as"
-msgstr "พื้นที่ทำงานใหม่ที่ถูกเพิ่มเข้ามาให้เป็น"
+msgstr "พื้นที่ทำงานใหม่ได้ถูกเพิ่มเข้ามาให้เป็น"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "เลือกใช้แม่แบบแล้ว และบันทึกเป็น"
@@ -2152,10 +2152,10 @@ msgid "Token name can have a maximum of 32 characters"
 msgstr "ชื่อโทเค่นมีจำนวนตัวอักษรได้สูงสุด 32 ตัว"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "ชื่อโทเคนต้องประกอบด้วยอักษรอย่างน้อย 2 ตัว"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "ชื่อโทเค่นควรขึ้นต้นด้วยอักษรตัวเลขเท่านั้น"
 
 msgid "Token permissions"
 msgstr "สิทธิ์โทเค่น"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "เวลาซื้อขาย"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "การซื้อขายไบนารีออปชันอาจไม่เหมาะสมสำหรับทุกคน ดังนั้นโปรดแน่ใจว่าคุณเข้าใจความเสี่ยงที่เกี่ยวข้อง การขาดทุนของคุณอาจเกินจำนวนเงินฝากเบื้องต้นและคุณไม่ได้เป็นเจ้าของหรือได้รับผลประโยชน์ใดๆจากสินทรัพย์ที่อ้างอิง"
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview สำหรับ Binary.com"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "การซื้อขาย"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "ประเภทของการซื้อขาย"
 
 msgid "USD"
 msgstr "USD"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "รหัสยืนยันได้ถูกส่งให้ท่านแล้วทางอีเมล์"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "รหัสยืนยันถูกส่งไปที่"
 
 msgid "Verification token"
 msgstr "รหัสตรวจสอบ"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "นี้คืออะไร"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "เมื่อคุณเลือก \"Ok\" คุณจะถูกพักจากระบบซื้อขายจนถึงวันที่ที่ระบุ"
 
 msgid "While on the go, you can"
 msgstr "ขณะตลาดดำเนินไป ท่านสามารถ"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "ทำไมจึงเลือกการซื้อขายไบนารี"
 
 msgid "Why trade with Binary.com"
 msgstr "ทำไมต้องเทรดกับ Binary.com"
@@ -2368,7 +2368,7 @@ msgid "Workspace"
 msgstr "พื้นที่ใช้งาน"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "ได้บันทึกการเปลี่ยนแปลงในพื้นที่ใช้งานแล้ว"
 
 msgid "X-axis labels"
 msgstr "ป้ายชื่อแกนเอ็กซ์ (แนวนอน)"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "ท่านยังไม่ได้คัดลอกการซื้อขายใดๆ"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "คุณได้พักตนเองจนกระทั่ง"
 
 msgid "You have sold the following contract"
 msgstr "ท่านจำหน่ายสัญญาต่อไปนี้แล้ว"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "ท่านชำระ"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "คุณควรกรอกตัวอักษรระหว่าง 6-25 ตัว"
 
 msgid "You will be automatically logged out after such time"
 msgstr "ท่านออกจากระบบโดยอัตโนมัติภายหลังเวลาดังกล่าว"
@@ -2425,7 +2425,7 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "บัญชีของท่าน (%) ถูกระงับการใช้งาน โปรดติดต่อฝ่ายบริการลูกค้าเพื่อดำเนินการ"
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "บัญชีของท่านถูกระงับ โปรด[_1]ติดต่อฝ่ายลูกค้าสัมพันธ์[_2] เพื่อดำเนินการต่อไป"
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr ""
@@ -2434,7 +2434,7 @@ msgid "Your browser is not supported"
 msgstr "เบราเซอร์ของท่านไม่รองรับการใช้งาน"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "การเปลี่ยนแปลงของคุณได้ถูกอัพเดทแล้ว"
 
 msgid "Your copying settings"
 msgstr "การตั้งค่าการคัดลอกของท่าน"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "ขยาย"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]ยืนยันบัญชีของคุณ[_2]เดี๋ยวนี้ เพื่อใช้ประโยชน์จากวิธีการถอนเงินที่มีทั้งหมด"
 
 msgid "and"
-msgstr ""
+msgstr "และ"
 
 msgid "apostrophe (') are allowed"
 msgstr "เครื่องหมายอัญประกาศ (') สามารถใช้ได้"
