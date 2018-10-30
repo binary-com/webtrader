@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-10-30 03:00\n"
+"PO-Revision-Date: 2018-10-30 03:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "ชุดรูปแบบกำหนดเอง"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "ปรับแต่งหน้าตาของแผนภูมิ"
 
 msgid "Daily limit on losses"
 msgstr "วงเงินขาดทุนต่อวัน"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "รายละเอียด"
 
 msgid "Deselect"
-msgstr ""
+msgstr "ยกเลิกการเลือก"
 
 msgid "Differs"
 msgstr "แตกต่าง"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "ท่านมีบัญชีหรือยัง? สมัครและรับบัญชีทดลองพร้อมเงินทดลอง 10,000 เหรียญสหรัฐ"
 
 msgid "Done"
-msgstr ""
+msgstr "เสร็จ"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "เสร็จแล้ว หลักประกันได้ถูกโอนไปยังตัวแทนรับชำระเงินแล้ว"
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "ดาวน์โหลดแม่แบบเป็น"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "กำลังดาวน์โหลดพื้นที่ใช้งานให้เป็น %1"
 
 msgid "Drawing tools"
 msgstr "เครื่องมือวาดภาพ"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "การศึกษา"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "การยืนยันอีเมลล้มเหลว"
 
 msgid "Embed code"
 msgstr "รหัสที่ฝังไว้"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "เพลิดเพลินไปกับการเชื่อมต่อในการซื้อขายที่ใช้ง่าย ด้วยฟังก์ชันขั้นสูงที่ให้ท่านได้ตรวจสอบสินทรัพย์ที่ท่านโปรดปรานทั้งหมดและตลาดในเวลาเดียวกัน เช่นเดียวกับแผนภูมิสำคัญ ดัชนีสินทรัพย์ เวลาการซื้อขาย และข้อมูลประวัติ ที่สำคัญที่สุด ท่านเลือกได้ว่าต้องการเห็นอะไรในหน้าจอ"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "กรอกโทเค่นของนักลงทุนที่ถูกต้อง"
 
 msgid "Enter your current password"
 msgstr "โปรดป้อนรหัสผ่านปัจจุบันของท่าน"
@@ -802,16 +802,16 @@ msgid "Exclude me from the website until"
 msgstr "พักการใช้งานของฉันจากเว็บไซต์จนถึง"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "เวลาของการพัก"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "เวลาของการพักจะต้องเป็นหลังจากวันนี้"
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "การพักจนถึงเวลาต้องไม่น้อยกว่า 6 เดือน"
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "การพักจนถึงเวลาต้องไม่น้อยกว่า 5 เดือน"
 
 msgid "Exit Spot"
 msgstr "สปอตสิ้นสุด"
@@ -829,10 +829,10 @@ msgid "Explanation"
 msgstr "คำอธิบาย"
 
 msgid "FAQ"
-msgstr ""
+msgstr "คำถามที่พบบ่อย"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "ไม่สามารถอัพเดทรหัสผ่าน"
 
 msgid "Fall"
 msgstr "Fall"
@@ -868,10 +868,10 @@ msgid "Finance"
 msgstr "การเงิน"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "แบบฟอร์มการเปิดบัญชีทางการเงิน"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "การประเมินทางการเงิน"
 
 msgid "Financial Information"
 msgstr "ข้อมูลทางการเงิน"
@@ -919,10 +919,10 @@ msgid "Get API token from trader(s) and add it in your list"
 msgstr "ใช้ API โทเค่น จากนักลงทุน และเพิ่มเข้าในรายการของท่าน"
 
 msgid "Getting started"
-msgstr ""
+msgstr "เริ่มต้น"
 
 msgid "Glossary"
-msgstr ""
+msgstr "อภิธานศัพท์"
 
 msgid "Go to"
 msgstr "ไปที่"
@@ -940,7 +940,7 @@ msgid "Grid Light"
 msgstr "Grid Light"
 
 msgid "Group history"
-msgstr ""
+msgstr "ประวัติของกลุ่ม"
 
 msgid "Health"
 msgstr "สุขภาพ"
@@ -967,19 +967,19 @@ msgid "Historical Data"
 msgstr "ข้อมูลเก่า"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "ข้อมูลเก่าสำหรับ"
 
 msgid "Horizontal line"
 msgstr "เส้นแนวนอน"
 
 msgid "Hour"
-msgstr ""
+msgstr "ชั่วโมง"
 
 msgid "Hours"
 msgstr "ชั่วโมง"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "จะซื้อขายไบนารีออปชั่นอย่างไร"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "จะเทรดดัชนีผันผวนอย่างไร?"
@@ -1015,13 +1015,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินดำเนินธุรกิจบริการการลงทุนโดย Binary Investments (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและการควบคุมดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156)"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "ที่เกาะ Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย ดักลาส IM2 4RW เกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Gambling Supervision Commission บนเกาะ Isle of Man (ใบอนุญาตปัจจุบันออกให้เมื่อวันที่ 31 สิงหาคม 2017) และโดย (2) Gambling Commission ในสหราชอาณาจักร (ใบอนุญาต[_1]หมายเลขอ้างอิง: 39172[_2])"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr ""
+msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนถูกเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 26 พฤษภาคม 2015) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์)"
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -1033,7 +1033,7 @@ msgid "Income Source"
 msgstr "แหล่งที่มาของรายได้"
 
 msgid "Indicative"
-msgstr ""
+msgstr "บ่งชี้"
 
 msgid "Indicative Price"
 msgstr "ราคาดัชนี"
@@ -1066,7 +1066,7 @@ msgid "Invalid template type"
 msgstr "ประเภทแม่แบบไม่ถูกต้อง"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "ประเภทแม่แบบไม่ถูกต้อง"
 
 msgid "Investments & Dividends"
 msgstr "การลงทุนและเงินปันผล"
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "มกราคม"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "ไม่สนับสนุนบัญชีญี่ปุ่น"
 
 msgid "Jul"
 msgstr "ก.ค."
@@ -1663,13 +1663,13 @@ msgid "Please submit a valid verification token"
 msgstr "โปรดแจ้งโทเค่นเพื่อการตรวจสอบที่ถูกต้อง"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "โปรดทดลองใหม่อีกครั้งในอีก 1 นาที"
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "โปรดทดลองใหม่อีกครั้งในอีกไม่กี่นาที"
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "กรุณาใช้รหัสผ่านใหม่เพื่อลงชื่อเข้าใช้"
 
 msgid "Plot"
 msgstr "วาด"
@@ -1720,7 +1720,7 @@ msgid "Profit"
 msgstr "กำไร"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "ตารางกำไร"
 
 msgid "Profit table"
 msgstr "ตารางผลกำไร"
@@ -1729,7 +1729,7 @@ msgid "Profit/ Loss"
 msgstr "กำไร / ขาดทุน"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "หลักฐานที่อยู่ - สำเนาของใบเรียกเก็บเงินค่าสาธารณูปโภค หรือใบแจ้งยอดจากธนาคารที่มีอายุไม่เกินสามเดือน หลักฐานที่อยู่นี้จะต้องมีชื่อของท่าน ที่อยู่ วันที่ออกเอกสาร และชื่อขององค์กรที่ออกเอกสาร"
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
 msgstr ""
