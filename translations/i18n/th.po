@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-10-30 03:10\n"
+"PO-Revision-Date: 2018-10-30 03:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1732,7 +1732,7 @@ msgid "Proof of address - A scanned copy of a utility bill or bank statement tha
 msgstr "หลักฐานที่อยู่ - สำเนาของใบเรียกเก็บเงินค่าสาธารณูปโภค หรือใบแจ้งยอดจากธนาคารที่มีอายุไม่เกินสามเดือน หลักฐานที่อยู่นี้จะต้องมีชื่อของท่าน ที่อยู่ วันที่ออกเอกสาร และชื่อขององค์กรที่ออกเอกสาร"
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "หลักฐานแสดงตัวบุคคล - สำเนาหนังสือเดินทาง หรือ สำเนาใบขับขี่ (ฉบับชั่วคราว หรือ ฉบับตลอดชีพ) หรือ สำเนาบัตรประชาชน ที่แสดงชื่อสกุลจริงของท่านและวันเดือนปีเกิด จำนวน 1 ฉบับ"
 
 msgid "Purchase"
 msgstr "ซื้อ"
@@ -1747,28 +1747,28 @@ msgid "Read"
 msgstr "อ่าน"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "การเปิดบัญชีเงินจริง"
 
 msgid "Reality check"
-msgstr ""
+msgstr "การตรวจสอบสภาพความเป็นจริง"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "เปลี่ยนเส้นทางไปหน้าลงชื่อเข้าใช้ oauth"
 
 msgid "Ref"
 msgstr "อ้างอิง"
 
 msgid "Ref."
-msgstr ""
+msgstr "อ้างอิง"
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "การรีเฟรชล้มเหลว"
 
 msgid "Register free account"
 msgstr "ลงทะเบียนบัญชีใหม่ฟรี"
 
 msgid "Registration"
-msgstr ""
+msgstr "การลงทะเบียน"
 
 msgid "Remove"
 msgstr "ลบ"
@@ -1783,7 +1783,7 @@ msgid "Repeat password"
 msgstr "ป้อนรหัสผ่านอีกครั้ง"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "ไม่มีการเสนอการจำหน่ายซ้ำของสัญญานี้"
 
 msgid "Resale price"
 msgstr "ราคาจำหน่ายต่อ"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "คำถามลับ"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "ดูเหมือนว่าเซิร์ฟเวอร์จะขัดข้อง เรากำลังดำเนินการแก้ไข"
 
 msgid "Self-Employed"
 msgstr "อาชีพอิสระ"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "การพักการใช้งาน"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "เครื่องมือสำหรับพักการซื้อขาย"
 
 msgid "Sell At Market"
 msgstr "ขายที่ราคาตลาด"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "เซสชัน"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "ข้อจำกัดระยะเวลาที่ใช้งาน:"
 
 msgid "Session duration limit, in minutes"
 msgstr "รอบระยะเวลาการซื้อขาย ในหน่วยนาที"
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "ขาย"
 
 msgid "Some random index"
-msgstr ""
+msgstr "ดัชนี้สุ่มบางตัว"
 
 msgid "Source of wealth"
 msgstr "แหล่งที่มาของรายได้"
@@ -1993,10 +1993,10 @@ msgid "Submit"
 msgstr "ส่ง"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "โทเค่นใหม่ที่ถูกเพิ่มเข้ามาแล้ว"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "พื้นที่ทำงานใหม่ที่ถูกเพิ่มเข้ามาให้เป็น"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "เลือกใช้แม่แบบแล้ว และบันทึกเป็น"
@@ -2011,10 +2011,10 @@ msgid "Table"
 msgstr "ตาราง"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "ข้อมูลภาษี"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "ข้อมูลภาษีได้ถูกอัพเดทเรียบร้อยแล้ว"
 
 msgid "Tax identification number"
 msgstr "เลขประจำตัวผู้เสียภาษี"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "โทร"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "ได้บันทึกแม่แบบเป็น"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "แม่แบบถูกใช้เพียงบางส่วน"
 
 msgid "Template changes saved"
 msgstr "การเปลี่ยนแปลงแม่แบบได้ถูกบันทึกแล้ว"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "แม่แบบไม่สามารถใช้ได้"
 
 msgid "Template name"
 msgstr "ชื่อแม่แบบ"
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "ข้อตกลง"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "ข้อตกลงและเงื่อนไข"
 
 msgid "Tertiary"
 msgstr "ลำดับที่สาม"
@@ -2068,19 +2068,19 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "บริการการซื้อขายทางการเงินในเว็บไซต์นี้เหมาะกับลูกค้าผู้ซึ่งพึงรับรู้ต่อภาวะขาดทุนต่อเงินทั้งหมดที่ได้ลงทุน และผู้ซึ่งเข้าใจและมีประสบการณ์ต่อความเสี่ยงที่เกี่ยวข้องกับการได้มาซึ่งสัญญาทางการเงินต่างๆ ธุรกรรมที่เกี่ยวข้องกับสัญญาทางการเงินมีความเสี่ยงระดับสูง หากสัญญาที่ซื้อหมดอายุ ท่านจะสูญเสียเงินลงทุนของท่านทั้งหมด ซึ่งรวมถึงค่าธรรมเนียมของสัญญาด้วย"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "มีการหยุดชะงักของข้อมูลตลาดในช่วงระยะเวลาของสัญญา สำหรับบัญชีเงินจริง เราจะพยายามแก้ไขและชำระสัญญาอย่างเหมาะสม มิเช่นนั้นสัญญาจะถูกยกเลิกและคืนเงิน สัญญาเงินเสมือนจะถูกยกเลิกและคืนเงิน"
 
 msgid "There was an error"
-msgstr ""
+msgstr "มีความผิดพลาดเกิดขึ้น"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "สัญญานี้หมดอายุ"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "สัญญานี้ขาดทุน"
 
 msgid "This contract won"
-msgstr ""
+msgstr "สัญญานี้กำไร"
 
 msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "หมดเวลากระทั่ง"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "หมดเวลาสำหรับการร้องขอ websocket"
 
 msgid "Title"
 msgstr "คำนำหน้าชื่อ"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "ในการถอนหลักประกัน โปรดป้อนรหัสโทเค่นเพื่อการยืนยัน ซึ่งเราได้ส่งให้ท่านทางอีเมล์แล้ว"
 
 msgid "Today"
-msgstr ""
+msgstr "วันนี้"
 
 msgid "Token"
 msgstr "โทเค่น"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "การจัดการโทเค่น"
 
 msgid "Token already added"
-msgstr ""
+msgstr "โทเค่นได้ถูกเพิ่มแล้ว"
 
 msgid "Token management"
 msgstr "การจัดการโทเค่น"
@@ -2146,10 +2146,10 @@ msgid "Token name"
 msgstr "ชื่อโทเค่น"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "ชื่อโทเค่นประกอบด้วยอักษรตัวเลข ช่องว่าง และขีดเส้นใต้ได้"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "ชื่อโทเค่นมีจำนวนตัวอักษรได้สูงสุด 32 ตัว"
 
 msgid "Token name must contain atleast 2 characters"
 msgstr ""
