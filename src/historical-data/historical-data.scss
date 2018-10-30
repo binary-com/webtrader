@@ -84,3 +84,21 @@ a.ui-state-default.ui-state-active {
 a.ui-state-default.ui-state-hover {
 	background: #dedede;
 }
+
+#ui-datepicker-div .ui-icon-circle-triangle-e, #ui-timepicker-div .ui-icon-circle-triangle-e {
+    background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0yMjk2NSAtMjExMTguOTQxIDE0LjgyIDI0Jz48cGF0aCBmaWxsPSd3aGl0ZScgZD0nTTguNTksMjcuMTgsMTcuNzUsMTgsOC41OSw4LjgyLDExLjQxLDZsMTIsMTItMTIsMTJaJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgtMjI5NzMuNTkgLTIxMTI0Ljk0MSknLz48L3N2Zz4=) !important;
+    background-position: initial;
+}
+
+#ui-datepicker-div .ui-icon-circle-triangle-w, #ui-timepicker-div .ui-icon-circle-triangle-w {
+    background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0yMzM5OC4yOTUgLTIxMTE4Ljk0MSAxNC44MiAyNCc+PHBhdGggZmlsbD0nd2hpdGUnIGQ9J004LjU5LDI3LjE4LDE3Ljc1LDE4LDguNTksOC44MiwxMS40MSw2bDEyLDEyLTEyLDEyWicgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTIzMzc0Ljg4NSAtMjEwODguOTQxKSByb3RhdGUoMTgwKScvPjwvc3ZnPg==) !important;
+    background-position: initial;
+}
+
+.ui-icon-circle-triangle-w:after {
+    content: unset;
+}
+
+.ui-icon-circle-triangle-e:after {
+    content: unset;
+}
