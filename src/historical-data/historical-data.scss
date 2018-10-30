@@ -37,7 +37,6 @@ $COLOR_WHITE: #ffffff;
 		}
 		li {
 			min-width: 130px;
-			font-size: 90%;
 			background: $COLOR_DARK_BLUE;
 			color: $COLOR_WHITE;
 		}
@@ -74,4 +73,14 @@ $COLOR_WHITE: #ffffff;
 			border: 0.2px solid $COLOR_DARK_BLUE;
 		}
 	}
+}
+
+a.ui-state-default.ui-state-active {
+    border: 2px solid #2a3052!important;
+    background: #2a3052!important;
+    color: #fff!important;
+}
+
+a.ui-state-default.ui-state-hover {
+	background: #dedede;
 }

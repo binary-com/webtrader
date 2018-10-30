@@ -68,7 +68,7 @@ const buildDatetime = (dialog, $root, callback) => {
              maxDate : moment.utc().toDate(),
              currentText: 'Today'.i18n()
          })
-         .datepicker("setDate", moment.utc().subtract(1, "years").toDate().toISOString().slice(0, 10));
+         .datepicker("setDate", "0");
 
      datetime.find('.time')
          .timepicker({

@@ -77,11 +77,14 @@ body > .footer .addiction-warning a:hover {
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-    border: 0px solid #273051;
-    background: #273051;
+    border: 2px solid #f2f2f2;
+    background: #f2f2f2;
     font-weight: normal;
-    color: #FFFFFF;
+    color: #2a3052;
+    border-radius: 2px;
 }
+
+
 .ui-selectmenu-button span.ui-selectmenu-text {
   padding: 0.2em 0.5em 0 0.5em;
 }
@@ -396,6 +399,11 @@ button[disabled] {
 .ui-timepicker td {
 	border: none;
 }
+
+.ui-timepicker th {
+    background: none;
+    border-bottom:unset;
+}
 .ui-timepicker td a {
 	display: block;
 	padding: 3px 5px;
@@ -405,8 +413,17 @@ button[disabled] {
 	cursor: pointer;
 }
 .ui-timepicker-hours .ui-timepicker tbody {
-	border-right: 3px solid #f2f2f2;
+    border-right: 3px solid #f2f2f2;
+    border-left: 3px solid #f2f2f2;
+    border-bottom: 3px solid #f2f2f2;
 }
+
+.ui-timepicker-minutes .ui-timepicker tbody {
+    border-right: 3px solid #f2f2f2;
+    border-bottom: 3px solid #f2f2f2;
+}
+
+
 
 /* override table styles*/
 table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
