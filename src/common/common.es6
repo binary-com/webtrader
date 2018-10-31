@@ -1,73 +1,91 @@
 const trade_types = [{
-    code: 'CALL',
+    api_code: 'CALL',
     name: 'Rise',
+    code: 'rise'
   }, {
-    code: 'CALL',
+    api_code: 'CALL',
     name: 'Higher',
+    code: 'higher'
   },
   {
-    code: 'PUT',
+    api_code: 'PUT',
     name: 'Fall',
+    code: 'fall'
   },
   {
-    code: 'PUT',
+    api_code: 'PUT',
     name: 'Lower',
+    code: 'lower'
   },
   {
-    code: 'ONETOUCH',
+    api_code: 'ONETOUCH',
     name: 'Touch',
+    code: 'touch'
   },
   {
-    code: 'NOTOUCH',
+    api_code: 'NOTOUCH',
     name: 'NoTouch',
+    code: 'notouch'
   },
   {
-    code: 'EXPIRYMISS',
+    api_code: 'EXPIRYMISS',
     name: 'Ends Outside',
+    code: 'endsoutside'
   },
   {
-    code: 'EXPIRYRANGE',
+    api_code: 'EXPIRYRANGE',
     name: 'Ends Between',
+    code: 'endsbetween'
   },
   {
-    code: 'DIGITDIFF',
+    api_code: 'DIGITDIFF',
     name: 'Digits Differ',
+    code: 'digitsdiffer'
   },
   {
-    code: 'DIGITMATCH',
+    api_code: 'DIGITMATCH',
     name: 'Digits Match',
+    code: 'digitsmatch'
   },
   {
-    code: 'DIGITOVER',
+    api_code: 'DIGITOVER',
     name: 'Digits Over',
+    code: 'digitsover'
   },
   {
-    code: 'DIGITUNDER',
+    api_code: 'DIGITUNDER',
     name: 'Digits Under',
+    code: 'digitsunder'
   },
   {
-    code: 'DIGITODD',
+    api_code: 'DIGITODD',
     name: 'Digits Odd',
+    code: 'digitsodd'
   },
   {
-    code: 'DIGITEVEN',
+    api_code: 'DIGITEVEN',
     name: 'Digits Even',
+    code: 'digitseven'
   },
   {
-    code: 'ASIANU',
+    api_code: 'ASIANU',
     name: 'Asians Up',
+    code: 'asiansup'
   },
   {
-    code: 'ASIAND',
+    api_code: 'ASIAND',
     name: 'Asians Down',
+    code: 'asiansdown'
   },
   {
-    code: 'RANGE',
+    api_code: 'RANGE',
     name: 'Stays Between',
+    code: 'staysbetween'
   },
   {
-    code: 'UPORDOWN',
+    api_code: 'UPORDOWN',
     name: 'Goes Outside',
+    code: 'goesoutside'
   }];
 
 const financial_account_opening = {

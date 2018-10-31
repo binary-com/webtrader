@@ -169,6 +169,13 @@ const state = {
             if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
             if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
             if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
+
+            let newTradeTypes = settingsToSend.trade_types.map(function(x,i){
+              return TRADE_TYPES[i].api_code
+            }, this)
+
+            settingsToSend.trade_types = newTradeTypes;
+
             liveapi
               .send(settingsToSend)
               .then(() => {
