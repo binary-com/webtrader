@@ -53,13 +53,10 @@ const buildDatetime = (dialog, $root, callback) => {
              numberOfMonths: 1,
              changeYear : true,
              dateFormat : 'yy-mm-dd',
-             showButtonPanel : true,
-             showCloseButton : false,
-             onSelect: function () { $(this).change(); update_time(); },
              beforeShow: (input, inst) => {
                 _.delay(() => inst.dpDiv.css({
                    marginLeft: '-60px',
-                   top: datetime.find('.date').offset().top + 31,
+                   top: datetime.find('.date').offset().top + 32,
                    left: datetime.find('.date').offset().left,
                    zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 100
                 }));
