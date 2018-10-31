@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-10-31 03:40\n"
+"PO-Revision-Date: 2018-10-31 03:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "ไม่แตะเส้น"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr "หมายเหตุ: สัญญาจะถูกจำหน่ายที่ราคาทั่วไปของตลาดเมื่อระบบซื้อขายได้รับการแจ้งความจำนง ราคานี้อาจจะแตกต่างจากราคาที่ระบุ"
+msgstr "หมายเหตุ: สัญญาจะถูกจำหน่ายที่ราคาทั่วไปของตลาดเมื่อเซิร์ฟเวอร์ได้รับการแจ้งความจำนง ราคานี้อาจจะแตกต่างจากราคาที่ระบุ"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "หมายเหตุ: ท่านสามารถมีได้เพียงบัญชีสกุลเงินกระดาษหนึ่งบัญชี และหนึ่งบัญชีของบัญชีเงินดิจิทัล"
@@ -1516,19 +1516,19 @@ msgid "PM"
 msgstr "น."
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "รหัสผ่านจะต้องประกอบด้วยอักษรตัวเล็ก อักษรตัวใหญ่ และตัวเลข"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "ได้อัพเดทรหัสผ่านแล้ว"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "รหัสผ่านไม่ตรงกัน โปรดพิมพ์อีกครั้ง"
 
 msgid "Patents"
-msgstr ""
+msgstr "สิทธิบัตร"
 
 msgid "Pattern Recognition"
 msgstr "การรู้จำรูปแบบ"
@@ -1570,40 +1570,40 @@ msgid "Please"
 msgstr "โปรด"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "โปรด[_1]ยอมรับข้อตกลงและเงื่อนไขที่ปรับปรุงใหม่[_2] เพื่อเพิ่มวงเงินการถอนเงินและการซื้อขายของคุณ"
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "โปรด[_1]กรอกประวัติในบัญชีของคุณ[_2] เพื่อเพิ่มวงเงินการถอนเงินและการซื้อขายของคุณ"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "โปรดเลือกอย่างน้อยหนึ่งขอบเขตโทเค่น"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "โปรดระบุสกุลเงินที่ท่านต้องการ"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "โปรดกรอก[_1]แบบฟอร์มการประเมินทางการเงิน[_2]ให้เสร็จสิ้น เพื่อเพิ่มวงเงินการถอนเงินและการซื้อขายของคุณ"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "โปรดยืนยันรายละเอียดของธุรกรรมเพื่อดำเนินการโอนเงิน"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "โปรดป้อนตัวเลขระหว่าง"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "โปรดป้อนวันที่ในรูปแบบ yyyy-mm-dd ให้ถูกต้อง"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "โปรดป้อนตัวเลขที่ถูกต้องสำหรับ"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "โปรดป้อนตัวเลขระหว่าง 0 และ"
 
 msgid "Please enter a value greater than 0"
 msgstr "โปรดป้อนค่าที่มากกว่าศูนย์"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "โปรดป้อนตัวเลขที่น้อยกว่า 6 สัปดาห์สำหรับระยะเวลาการหมดเวลา"
 
 msgid "Please enter correct email"
 msgstr "โปรดป้อนอีเมล์ที่ถูกต้องของท่าน"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "โปรดป้อนวันที่ในรูปแบบ YYYY-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "โปรดใส่ชื่อโทเค่น"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "โปรดป้อนเวลาในรูปแบบ HH:MM"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please log in"
-msgstr ""
+msgstr "โปรดเข้าสู่ระบบ"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "โปรดเข้าสู่ระบบเพื่อดูพื้นที่ทำงานของคุณบันทึกไว้"
 
 msgid "Please log in."
-msgstr ""
+msgstr "โปรดเข้าสู่ระบบ"
 
 msgid "Please provide your tax information"
 msgstr "โปรดให้ข้อมูลภาษีของท่าน"
@@ -1645,19 +1645,19 @@ msgid "Please select"
 msgstr "โปรดระบุ"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "โปรดเลือกวันที่ที่จะให้หมดเวลาถึง"
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "โปรดระบุตัวแทนรับชำระเงิน"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "กรุณาระบุเหตุผลของการเปิดบัญชีก่อนดำเนินการต่อ"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "กรุณาตั้งสกุลเงิน"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "กรุณาตั้ง [_1]สกุลเงิน[_2] ของบัญชีของคุณ"
 
 msgid "Please submit a valid verification token"
 msgstr "โปรดแจ้งโทเค่นเพื่อการตรวจสอบที่ถูกต้อง"
