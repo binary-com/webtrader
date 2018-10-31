@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-10-30 03:30\n"
+"PO-Revision-Date: 2018-10-31 03:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "กรกฎาคม"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "ไปที่:"
 
 msgid "Jun"
 msgstr "มิ.ย."
@@ -1102,7 +1102,7 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "ตารางผลกำไร 12 รอบเดือนที่ผ่านมา"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "การพยากรณ์เลขหลักสุดท้าย"
 
 msgid "Last Digit is Over"
 msgstr ""
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "โหลดแม่แบบสำหรับซื้อขาย"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "กำลังโหลด ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "กำลังโหลดดัชนีสินทรัพย์..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "กำลังโหลดคัดลอกการซื้อขาย..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "กำลังโหลด ดาวน์โหลด/ดูข้อมูล ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "กำลังโหลด MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "กำลังโหลด Password Dialog ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "กำลังโหลดตารางกำไร ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "กำลังโหลดการเปิดบัญชีจริง ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "กำลังโหลดเมนูพักการใช้งาน ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "กำลังโหลดตารางรายการธุรกรรม..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "กำลังโหลดการจัดการโทเค่น ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "กำลังโหลดเวลาซื้อขาย ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "กำลังโหลดแผนภูมิและเมนูในการเทรด ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "กำลังโหลดค่าตัวแปรในการปรับแต่งธีม..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "กำลังโหลดพอร์ตโฟลิโอ ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "กำลังโหลดการตั้งค่าการพักการใช้งาน"
 
 msgid "Loading..."
 msgstr "กำลังโหลด..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "เวลาเข้าสู่ระบบ"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "ออกจากระบบเนื่องจากหมดเวลาของเซสชันการพักการใช้งาน"
 
 msgid "Login"
 msgstr "เข้าสู่ระบบ"
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "ต่ำ"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Barrier ต่ำ"
 
 msgid "Low barrier"
 msgstr "Barrier ต่ำ"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "มูลค่ารวมที่ขาดทุนสูงสุดต่อวัน"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "ยอดคงเหลือสูงสุด"
 
 msgid "Maximum number of open positions"
 msgstr "จำนวนสูงสุดของโพซิชั่นที่เปิดอยู่"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "โพซิชั่นที่เปิดอยู่สูงสุด"
 
 msgid "May"
 msgstr "พ.ค."
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "เมืองแห่งความทรงจำ"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "การเดิมพันต่ำสุดควรต่ำกว่าการเดิมพันสูงสุด"
 
 msgid "Min. Trade Stake"
 msgstr "เดิมพันต่ำสุด"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "หักค่านายหน้าตัวแทน"
 
 msgid "Minute"
-msgstr ""
+msgstr "นาที"
 
 msgid "Minutes"
 msgstr "นาที"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "กำไรสุทธิ"
 
 msgid "New Account"
-msgstr ""
+msgstr "บัญชีใหม่"
 
 msgid "New password"
 msgstr "รหัสผ่านใหม่"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "ไม่แตะเส้น"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "หมายเหตุ: สัญญาจะถูกจำหน่ายที่ราคาทั่วไปของตลาดเมื่อระบบซื้อขายได้รับการแจ้งความจำนง ราคานี้อาจจะแตกต่างจากราคาที่ระบุ"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "หมายเหตุ: ท่านสามารถมีได้เพียงบัญชีสกุลเงินกระดาษหนึ่งบัญชี และหนึ่งบัญชีของบัญชีเงินดิจิทัล"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "ดัชนี OTC และหุ้น"
 
 msgid "Occupation"
 msgstr "อาชีพ"
@@ -1513,7 +1513,7 @@ msgid "PEP Declaration"
 msgstr "การแสดงเจตนารมณ์ไม่เกี่ยวข้องทางการเมือง (PEP Declaration)"
 
 msgid "PM"
-msgstr ""
+msgstr "น."
 
 msgid "Password must be 6 characters minimum"
 msgstr ""
