@@ -2,7 +2,7 @@
 import moment from 'moment';
 import Lookback from './lookback';
 import chartingRequestMap from '../charts/chartingRequestMap';
-import { getLabels } from '../charts/chartSettings';
+import { getLabelEl } from '../charts/chartSettings';
 import liveapi from '../websockets/binary_websockets';
 import rv from '../common/rivetsExtra';
 import '../common/util';
@@ -18,7 +18,7 @@ rv.binders['tick-chart'] = {
       const model = this.model;
       el.chart = new Highcharts.Chart({
           subtitle: {
-            text: getLabels(CHART_LABELS),
+            text: getLabelEl(CHART_LABELS),
             useHTML: true,
          },
          title: '',

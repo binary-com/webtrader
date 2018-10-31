@@ -12,7 +12,7 @@ const CHART_LABELS = {
     exit_spot: `<span style="${SPOT_STYLE} background-color: orange; width:10px; height: 10px;"></span>${'Exit Spot'.i18n()}&nbsp;`,
 };
 
-const getLabels = (labels) => {
+const getLabelEl = (labels) => {
     let label_el = '';
     for (const label of labels) {
         if (label && CHART_LABELS[label]) {
@@ -26,4 +26,4 @@ const getMarkerSettings = (fillColor = 'white') => {
     return { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4 }}};
 };
 
-export { getLabels, getMarkerSettings };
+export { getLabelEl, getMarkerSettings };
