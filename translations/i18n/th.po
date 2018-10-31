@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-10-31 03:50\n"
+"PO-Revision-Date: 2018-10-31 04:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -808,10 +808,10 @@ msgid "Exclude time must be after today."
 msgstr "เวลาของการพักจะต้องเป็นหลังจากวันนี้"
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr "การพักจนถึงเวลาต้องไม่น้อยกว่า 6 เดือน"
+msgstr "เวลาการพักต้องไม่น้อยกว่า 6 เดือน"
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr "การพักจนถึงเวลาต้องไม่น้อยกว่า 5 เดือน"
+msgstr "เวลาการพักต้องไม่น้อยกว่า 5 เดือน"
 
 msgid "Exit Spot"
 msgstr "สปอตสิ้นสุด"
@@ -1105,10 +1105,10 @@ msgid "Last Digit Prediction"
 msgstr "การพยากรณ์เลขหลักสุดท้าย"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "เลขหลักสุดท้ายมากกว่า"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "เลขหลักสุดท้ายต่ำกว่า"
 
 msgid "Last used"
 msgstr "ใช้ครั้งล่าสุด"
@@ -2428,7 +2428,7 @@ msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for a
 msgstr "บัญชีของท่านถูกระงับ โปรด[_1]ติดต่อฝ่ายลูกค้าสัมพันธ์[_2] เพื่อดำเนินการต่อไป"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "เบราเซอร์ของคุณไม่สนับสนุนการคัดลอกลงคลิปบอร์ด"
 
 msgid "Your browser is not supported"
 msgstr "เบราเซอร์ของท่านไม่รองรับการใช้งาน"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "วัน"
 
 msgid "deposits"
-msgstr ""
+msgstr "การฝาก"
 
 msgid "end time"
 msgstr "เวลาสิ้นสุด"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "สปอตสิ้นสุด"
 
 msgid "for"
-msgstr ""
+msgstr "สำหรับ"
 
 msgid "for mobile charts"
 msgstr "สำหรับแผนภูมิ"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "เว็บไซต์หลัก"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "ขณะนี้ ตลาดปิดทำการ"
 
 msgid "medium protection"
 msgstr "การป้องกันระดับกลาง"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "ช่วงห่างของราคา"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "การถอนเงิน"
 
 msgid "yes"
 msgstr "ใช่"
