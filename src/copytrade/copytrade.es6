@@ -282,17 +282,10 @@ const state = {
         .then(tokenUserData => {
           if (!tokenUserData) throw new Error('Invalid token');
           refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope)
-            .then(() => {
-              scope.searchToken.token = '';
-              scope.searchToken.disable = false;
-              updateLocalStorage(scope);
-            })
-            .catch(e => {
-              $.growl.error({ message: e.message });
-              scope.searchToken.disable = false;
-              updateLocalStorage(scope);
-              _.defer(() => $(event.target).focus());
-            });
+          scope.searchToken.token = '';
+          scope.searchToken.disable = false;
+          updateLocalStorage(scope);
+
         })
         .catch(error => {
           $.growl.error({ message: error.message });
