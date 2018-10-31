@@ -400,7 +400,7 @@ module.exports = function (grunt) {
         babel: {
           options: {
             sourceMap: true,
-            presets: ["es2015", "stage-0"],
+            presets: ["env", "stage-0"],
             "plugins": [
               "transform-es2015-modules-amd",
               ["transform-runtime", {
