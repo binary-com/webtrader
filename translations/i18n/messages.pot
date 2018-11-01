@@ -620,9 +620,6 @@ msgstr ""
 msgid "Digits"
 msgstr "" 
 
-msgid "Do you want to install Webtrader chrome extension?"
-msgstr "" 
-
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "" 
 

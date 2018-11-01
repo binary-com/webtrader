@@ -633,9 +633,6 @@ msgstr "Отличается"
 msgid "Digits"
 msgstr "Цифровые"
 
-msgid "Do you want to install Webtrader chrome extension?"
-msgstr "Хотите установить расширение Webtrader для Chrome?"
-
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
 
@@ -2480,6 +2477,9 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr ""
+
+#~ msgid "Do you want to install Webtrader chrome extension?"
+#~ msgstr "Хотите установить расширение Webtrader для Chrome?"
 
 #~ msgid "(One) Touch trades"
 #~ msgstr "Контракты Касание"

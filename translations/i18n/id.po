@@ -633,9 +633,6 @@ msgstr "Differs"
 msgid "Digits"
 msgstr "Digits"
 
-msgid "Do you want to install Webtrader chrome extension?"
-msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
-
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Tidak punya akun? Daftar dan dapatkan $10.000 akun virtual"
 
@@ -2480,6 +2477,9 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Laba"
+
+#~ msgid "Do you want to install Webtrader chrome extension?"
+#~ msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
 
 #~ msgid "(One) Touch trades"
 #~ msgstr "Kontrak (One) Touch"

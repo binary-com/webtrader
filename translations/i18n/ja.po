@@ -633,9 +633,6 @@ msgstr "DIFFERS"
 msgid "Digits"
 msgstr "数字"
 
-msgid "Do you want to install Webtrader chrome extension?"
-msgstr "ウェブトレーダーのchrome拡張機能をインストールしますか？"
-
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマネーでお取引を始めましょう"
 
@@ -2480,6 +2477,9 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr ""
+
+#~ msgid "Do you want to install Webtrader chrome extension?"
+#~ msgstr "ウェブトレーダーのchrome拡張機能をインストールしますか？"
 
 #~ msgid "(One) Touch trades"
 #~ msgstr "（ワン）タッチ取引"

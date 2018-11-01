@@ -633,9 +633,6 @@ msgstr "差異"
 msgid "Digits"
 msgstr "數字"
 
-msgid "Do you want to install Webtrader chrome extension?"
-msgstr "是否安裝Webtrader chrome擴充套件?"
-
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "還未開立帳戶?請註冊並獲取10,000美元虛擬帳戶"
 
@@ -2480,6 +2477,9 @@ msgstr "{代理.佣金}%"
 
 msgid "| Return"
 msgstr "| 回報"
+
+#~ msgid "Do you want to install Webtrader chrome extension?"
+#~ msgstr "是否安裝Webtrader chrome擴充套件?"
 
 #~ msgid "(One) Touch trades"
 #~ msgstr "一觸即付交易"

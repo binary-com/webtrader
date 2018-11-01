@@ -635,9 +635,6 @@ msgstr ""
 msgid "Digits"
 msgstr "Digits"
 
-msgid "Do you want to install Webtrader chrome extension?"
-msgstr "Do you want to install Webtrader chrome extension?"
-
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Don't have an account yet? Sign up and get a $10,000 virtual account"
 
@@ -2487,6 +2484,9 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Return"
+
+#~ msgid "Do you want to install Webtrader chrome extension?"
+#~ msgstr "Do you want to install Webtrader chrome extension?"
 
 #~ msgid "Loading Asset Index"
 #~ msgstr "Loading Asset Index"
