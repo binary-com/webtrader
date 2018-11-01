@@ -10,7 +10,7 @@ static = [
     'In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?',
     '40 transactions or more in the past 12 months', 'Rise', 'Memorable date', 'Construction', 'Mon', 'Fall',
     'Now', 'Tourism', 'Tue', 'Secondary', 'Payout', '6-10 transactions in the past 12 months',
-    'Do you want to install Webtrader chrome extension?', 'Spreads', 'Duration', 'Favourite artist',
+    'Spreads', 'Duration', 'Favourite artist',
     'seconds', 'Thu', 'Favourite dish', 'Less than', 'hours', 'Remove Selected', 'Pension', 'Download SVG',
     'Mr', 'Download CSV', "Mother's maiden name", 'tick', 'Brand of first car', 'day', 'minute', 'Asians',
     'Name of first love', '1-2 years', 'Over 3 years', 'hour', 'Touch/No Touch', 'Memorable town/city',
@@ -103,17 +103,29 @@ texts = parser.get_texts()
 
 messages_pot = './i18n/messages.pot'
 
+def has_ascii(text):
+        return all(ord(c) < 128 for c in text)
+
+def handle_error(text):
+    warning_bc = '\033[93m'
+    end_bc = '\033[0m'
+    print  '\n\n' + warning_bc +  '==== ERROR: Please remove the non-ascii character from the text ====' + end_bc
+    print text + '\n\n'
+    raise ValueError('Non-ascii character detected')
+
 os.remove(messages_pot);
 with open(messages_pot, 'a+') as wf:
     for text in texts:
         text = text.replace('"', '\\"')
-        text = re.sub(r'[^\x00-\x7F]+',' ', text).strip() # remove non aski characters
+
+        if not has_ascii(text):
+            handle_error(text)
+
         if text:
             wf.write('\n' + 'msgid "' + text + '"'      )
             wf.write('\nmsgstr "" \n')
 
 files = [
-    './i18n/ar.po',
     './i18n/de.po',
     './i18n/en.po',
     './i18n/es.po',
