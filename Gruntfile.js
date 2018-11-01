@@ -77,7 +77,6 @@ module.exports = function (grunt) {
                             "jquery-sparkline/jquery.sparkline.min.js",
                             "!jquery.growl/**", "jquery.growl/javascripts/jquery.growl.js", "jquery.growl/stylesheets/jquery.growl.css",
                             "npm-modernizr/modernizr.js",
-                            "intl/dist/Intl.complete.js",
                         ],
                         dest: "dist/uncompressed/v<%=pkg.version%>/lib/",
                     }
@@ -118,17 +117,6 @@ module.exports = function (grunt) {
                     }
                 ]
             },
-            copyChromeManifest: {
-                files: [
-                    {
-                        expand: true,
-                        flatten: true,
-                        cwd: ".",
-                        src: ["chrome_extension/*"],
-                        dest: "dist/uncompressed/"
-                    }
-                ]
-            }
         },
         rename: {
             moveThis: {
@@ -326,7 +314,7 @@ module.exports = function (grunt) {
           scripts: {
             options: { livereload: false },
             files: ["src/**","!src/index.html", "!src/**/*.scss", "!src/**/*.es6"],
-            tasks: [ "newer:copy:main", "newer:copy:copy_i18n", "newer:copy:copyChromeManifest", "replace:style"],
+            tasks: [ "newer:copy:main", "newer:copy:copy_i18n", "replace:style"],
           },
         },
         shell: {
@@ -356,22 +344,6 @@ module.exports = function (grunt) {
                 },
                 //array of tasks to execute if all tests pass
                 ifTrue: [ "shell:moveEverythingToBETA_folder", "gh-pages:travis-deploy" ]
-            }
-        },
-        compress: {
-            main: {
-                options: {
-                    archive: "dist/uncompressed/chrome_extension.zip"
-                },
-                files:
-                    [
-                        {
-                            expand: true,
-                            cwd: "dist/uncompressed/",
-                            src: ["auto-update.xml", "manifest.json", "chrome_background.js",
-                                "v<%=pkg.version%>/images/favicons/**"]
-                        }
-                    ]
             }
         },
         po2json: {
@@ -425,8 +397,8 @@ module.exports = function (grunt) {
         },
     });
 
-    grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "copy:copy_i18n", "copy:copyLibraries", "copy:copyChromeManifest", "rename", "replace:version", "replace:style"]);
-    grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "compress", "copy:copy_AfterCompression"]);
+    grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "copy:copy_i18n", "copy:copyLibraries", "rename", "replace:version", "replace:style"]);
+    grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "copy:copy_AfterCompression"]);
     grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
 
     //Meant for local development use ONLY - for pushing to individual forks
