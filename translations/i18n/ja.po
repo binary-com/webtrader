@@ -1,22 +1,19 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-10-17 04:11\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Japanese\n"
-"Language: ja_JP\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-
-msgid "(One) Touch trades"
-msgstr "（ワン）タッチ取引"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "（取引期間が1日未満の場合）、または取引最終日（取引期間が1日以上の場合）"
@@ -169,12 +166,6 @@ msgid "8h"
 msgstr "8時間"
 
 msgid "AM"
-msgstr ""
-
-msgid "About Binary.com"
-msgstr ""
-
-msgid "About us"
 msgstr ""
 
 msgid "Accept"
@@ -342,17 +333,8 @@ msgstr "バリア"
 msgid "Barrier offset"
 msgstr "追加バリア値"
 
-msgid "Barrier(s)"
-msgstr "バリア"
-
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary option"
-msgstr "バイナリーオプション"
-
-msgid "Binary options basics"
-msgstr ""
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "バイナリーオプションの取引経験"
@@ -480,9 +462,6 @@ msgstr ""
 msgid "Click to log in with your Binary.com account"
 msgstr "「Binary.comアカウントでログインする」をクリックしてください"
 
-msgid "Client funds"
-msgstr ""
-
 msgid "Close"
 msgstr "終値"
 
@@ -491,9 +470,6 @@ msgstr ""
 
 msgid "Closes"
 msgstr "取引終了時間"
-
-msgid "Commodities"
-msgstr "コモディティ"
 
 msgid "Commodities trading experience"
 msgstr "コモディティ取引のご経験"
@@ -536,9 +512,6 @@ msgstr ""
 
 msgid "Contract Details"
 msgstr ""
-
-msgid "Contract period"
-msgstr "取引期間"
 
 msgid "Contracts"
 msgstr "トレード"
@@ -645,12 +618,6 @@ msgstr "資金のご入金"
 msgid "Deposit of USD"
 msgstr "USDでのご入金"
 
-msgid "Depositing and withdrawing funds"
-msgstr "入金/出金について"
-
-msgid "Derivative"
-msgstr "デリバティブ"
-
 msgid "Describe what this token is for to find it later"
 msgstr "後で認識できるよう、このトークンの説明を記入してください"
 
@@ -668,9 +635,6 @@ msgstr "数字"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "ウェブトレーダーのchrome拡張機能をインストールしますか？"
-
-msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "まだ口座をお持ちではありませんか？デモ口座を開設して、100万円のバーチャルマネーでお取引を始めましょう"
@@ -756,9 +720,6 @@ msgstr ""
 msgid "End Time"
 msgstr "終了時刻"
 
-msgid "Ends Between/Ends Outside trades"
-msgstr "END-IN/END-OUT トレード"
-
 msgid "Ends Between/Outside"
 msgstr ""
 
@@ -785,9 +746,6 @@ msgstr "取引時刻直後のテック"
 
 msgid "Entry spot"
 msgstr "取引時刻直後のテック"
-
-msgid "Entry spot price"
-msgstr "取引時レート"
 
 msgid "Error getting data for %1"
 msgstr "%1のデータ取得中にエラーが発生しました"
@@ -822,14 +780,8 @@ msgstr "売却/判定時刻"
 msgid "Exit spot"
 msgstr "終値"
 
-msgid "Expiry price"
-msgstr "終値"
-
 msgid "Explanation"
 msgstr "取引概要"
-
-msgid "FAQ"
-msgstr ""
 
 msgid "Failed to update the password"
 msgstr ""
@@ -888,9 +840,6 @@ msgstr "番地"
 msgid "First name"
 msgstr "名前（名）"
 
-msgid "Forex"
-msgstr "外国為替"
-
 msgid "Forex trading experience"
 msgstr "外国為替取引のご経験"
 
@@ -912,16 +861,7 @@ msgstr "全画面取引インターフェース"
 msgid "Further instructions"
 msgstr "詳細説明"
 
-msgid "GMT"
-msgstr "GMT"
-
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
-
-msgid "Getting started"
-msgstr ""
-
-msgid "Glossary"
 msgstr ""
 
 msgid "Go to"
@@ -938,9 +878,6 @@ msgstr "グリッド"
 
 msgid "Grid Light"
 msgstr "グリッド ライト"
-
-msgid "Group history"
-msgstr ""
 
 msgid "Health"
 msgstr "健全度"
@@ -960,9 +897,6 @@ msgstr "上限追加バリア値"
 msgid "Higher"
 msgstr "HIGH"
 
-msgid "Higher/Lower trades"
-msgstr "HIGH/LOW・トレード"
-
 msgid "Historical Data"
 msgstr ""
 
@@ -977,12 +911,6 @@ msgstr ""
 
 msgid "Hours"
 msgstr "時間"
-
-msgid "How to trade binary options?"
-msgstr ""
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr ""
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "私は、犯罪収益移動防止法に規定されている外国人PEPsに該当しないことを宣言いたします。また、該当することになった場合は、当社カスタマーサポートまですみやかに申し出ることに同意します。"
@@ -1020,14 +948,11 @@ msgstr ""
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
 msgstr ""
 
 msgid "In/Out"
 msgstr "In/Out"
-
-msgid "In/Out trades"
-msgstr "レンジ トレード"
 
 msgid "Income Source"
 msgstr "収入源"
@@ -1040,9 +965,6 @@ msgstr "気配値"
 
 msgid "Indicators"
 msgstr "指標（英語表示のみ）"
-
-msgid "Indices"
-msgstr "インデックス"
 
 msgid "Indices trading experience"
 msgstr "インデックス取引のご経験"
@@ -1112,9 +1034,6 @@ msgstr ""
 
 msgid "Last used"
 msgstr "最後に使用したもの"
-
-msgid "Learning to trade"
-msgstr "トレードの練習"
 
 msgid "Less than"
 msgstr "未満"
@@ -1238,9 +1157,6 @@ msgstr "3月"
 
 msgid "March"
 msgstr "3月"
-
-msgid "Market exit price"
-msgstr "市場出口価格"
 
 msgid "Matches"
 msgstr "MATCHE"
@@ -1386,9 +1302,6 @@ msgstr "新しいパスワード"
 msgid "No"
 msgstr "いいえ"
 
-msgid "No Touch trades"
-msgstr "NO-TOUCHトレード"
-
 msgid "No touch"
 msgstr "NO-TOUCH"
 
@@ -1415,9 +1328,6 @@ msgstr "OHLC"
 
 msgid "OK"
 msgstr "OK"
-
-msgid "OTC indices and stocks"
-msgstr ""
 
 msgid "Occupation"
 msgstr "職業"
@@ -1479,9 +1389,6 @@ msgstr "口座開設"
 msgid "Open account"
 msgstr "口座開設"
 
-msgid "Opening an account"
-msgstr "口座開設"
-
 msgid "Opens"
 msgstr "取引開始時間"
 
@@ -1527,9 +1434,6 @@ msgstr ""
 msgid "Passwords didn't match. Please type them again"
 msgstr "パスワードが一致しませんでした。再度お試しください。"
 
-msgid "Patents"
-msgstr ""
-
 msgid "Pattern Recognition"
 msgstr "パターン認識"
 
@@ -1559,9 +1463,6 @@ msgstr "お客さま登録情報"
 
 msgid "Phone"
 msgstr "電話番号"
-
-msgid "Pip"
-msgstr "Pip"
 
 msgid "Place of birth"
 msgstr "出生地"
@@ -1785,9 +1686,6 @@ msgstr "パスワード再入力"
 msgid "Resale of this contract is not offered"
 msgstr ""
 
-msgid "Resale price"
-msgstr "売却価格"
-
 msgid "Reset zoom"
 msgstr "ズームをリセット"
 
@@ -1805,9 +1703,6 @@ msgstr "リターン率"
 
 msgid "Rise"
 msgstr "RISE"
-
-msgid "Rise/Fall trades"
-msgstr "ラダートレード"
 
 msgid "Robust and secure platform"
 msgstr "ロバストで安心なプラットフォーム"
@@ -1872,9 +1767,6 @@ msgstr ""
 msgid "Sell At Market"
 msgstr "売却"
 
-msgid "Sell option"
-msgstr "オプションの売却"
-
 msgid "Sent to account"
 msgstr "口座に送金"
 
@@ -1902,9 +1794,6 @@ msgstr "シェア"
 msgid "Share chart"
 msgstr "チャートを共有"
 
-msgid "Smart Indices"
-msgstr ""
-
 msgid "Sold"
 msgstr "売却"
 
@@ -1916,9 +1805,6 @@ msgstr ""
 
 msgid "Spline"
 msgstr "スプライン"
-
-msgid "Spot price"
-msgstr "スポット価格"
 
 msgid "Spreads"
 msgstr "スプレッド"
@@ -1961,9 +1847,6 @@ msgstr "金融資産"
 
 msgid "Stays Between/Goes Outside"
 msgstr ""
-
-msgid "Stays Between/Goes Outside trades"
-msgstr "STAY-IN/BREAK-OUT トレード"
 
 msgid "Stays in"
 msgstr "STAY-IN"
@@ -2244,9 +2127,6 @@ msgstr "火曜日"
 msgid "Turnover"
 msgstr "取引数量"
 
-msgid "Types of trades"
-msgstr ""
-
 msgid "USD"
 msgstr "USD"
 
@@ -2255,9 +2135,6 @@ msgstr "USDJPY"
 
 msgid "Under"
 msgstr "未満"
-
-msgid "Underlying"
-msgstr "原資産"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "残念ながら、お使いのブラウザは対応しておりません"
@@ -2316,9 +2193,6 @@ msgstr "取引履歴を表示する"
 msgid "Volatility Indicators"
 msgstr "ボラティリティ指標"
 
-msgid "Volatility Indices"
-msgstr "ボラティリティインデックス"
-
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "当社はライセンスにより、当社が保持しているお客さまの口座の資金に何か起きた場合、及び支払不能になった場合にどの資金が保護されるかその範囲をお知らせする必要があります。"
 
@@ -2351,12 +2225,6 @@ msgstr ""
 
 msgid "While on the go, you can"
 msgstr "出先でもお取引が可能"
-
-msgid "Why choose Binary Trading?"
-msgstr ""
-
-msgid "Why trade with Binary.com"
-msgstr ""
 
 msgid "Withdraw funds"
 msgstr "資金のご出金"
@@ -2613,3 +2481,83 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr ""
 
+#~ msgid "(One) Touch trades"
+#~ msgstr "（ワン）タッチ取引"
+
+#~ msgid "Barrier(s)"
+#~ msgstr "バリア"
+
+#~ msgid "Binary option"
+#~ msgstr "バイナリーオプション"
+
+#~ msgid "Commodities"
+#~ msgstr "コモディティ"
+
+#~ msgid "Contract period"
+#~ msgstr "取引期間"
+
+#~ msgid "Depositing and withdrawing funds"
+#~ msgstr "入金/出金について"
+
+#~ msgid "Derivative"
+#~ msgstr "デリバティブ"
+
+#~ msgid "Ends Between/Ends Outside trades"
+#~ msgstr "END-IN/END-OUT トレード"
+
+#~ msgid "Entry spot price"
+#~ msgstr "取引時レート"
+
+#~ msgid "Expiry price"
+#~ msgstr "終値"
+
+#~ msgid "Forex"
+#~ msgstr "外国為替"
+
+#~ msgid "GMT"
+#~ msgstr "GMT"
+
+#~ msgid "Higher/Lower trades"
+#~ msgstr "HIGH/LOW・トレード"
+
+#~ msgid "In/Out trades"
+#~ msgstr "レンジ トレード"
+
+#~ msgid "Indices"
+#~ msgstr "インデックス"
+
+#~ msgid "Learning to trade"
+#~ msgstr "トレードの練習"
+
+#~ msgid "Market exit price"
+#~ msgstr "市場出口価格"
+
+#~ msgid "No Touch trades"
+#~ msgstr "NO-TOUCHトレード"
+
+#~ msgid "Opening an account"
+#~ msgstr "口座開設"
+
+#~ msgid "Pip"
+#~ msgstr "Pip"
+
+#~ msgid "Resale price"
+#~ msgstr "売却価格"
+
+#~ msgid "Rise/Fall trades"
+#~ msgstr "ラダートレード"
+
+#~ msgid "Sell option"
+#~ msgstr "オプションの売却"
+
+#~ msgid "Spot price"
+#~ msgstr "スポット価格"
+
+#~ msgid "Stays Between/Goes Outside trades"
+#~ msgstr "STAY-IN/BREAK-OUT トレード"
+
+#~ msgid "Underlying"
+#~ msgstr "原資産"
+
+#~ msgid "Volatility Indices"
+#~ msgstr "ボラティリティインデックス"
