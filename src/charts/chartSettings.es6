@@ -2,7 +2,7 @@
 const COMMON_LINE_STYLE = 'margin-left: 10px; border: 0; display: inline-block;'
 const VERTICAL_LINE_STYLE = `${COMMON_LINE_STYLE} margin-bottom: -3px; height: 15px; width: 5px; border-left: 2px; border-color: #e98024;`;
 const HORIZONTAL_LINE_STYLE = `${COMMON_LINE_STYLE} margin-bottom: 3px; height: 2; width: 20px; border-bottom: 2px; border-color: green;`;
-const SPOT_STYLE = 'margin-left: 10px; margin-right: 5px; display: inline-block; border-radius: 6px;';
+const SPOT_STYLE = 'margin: 3px 5px 0 10px; display: inline-block; border-radius: 6px;';
 
 const CHART_LABELS = {
     start_time: `<span style="${VERTICAL_LINE_STYLE} border-style: solid;"></span> ${'Start Time'.i18n()}`,
@@ -19,7 +19,7 @@ const getLabelEl = (labels) => {
             label_el += CHART_LABELS[label];
         }
     }
-    return label_el;
+    return `<div>${label_el}</div>`;
 };
 
 const getMarkerSettings = (fillColor = 'white') => {

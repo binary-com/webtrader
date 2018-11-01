@@ -189,9 +189,11 @@
 
 .view-transaction-dialog {
   .highcharts-subtitle {
-    left: 151px !important;
+    left: 0px !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
   }
 
   @include chartTooltip;
 }
-
