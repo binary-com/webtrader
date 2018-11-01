@@ -1,3 +1,5 @@
+@import "../charts/chartStyle.scss";
+
 .trade-conf {
   overflow: hidden;
 }
@@ -123,14 +125,5 @@
     margin-top: -6px;
   }
 
-  .highcharts-tooltip span {
-      top: 1px !important;
-      left: 2px !important;
-       .tooltip-body {
-          background-color: #fff;
-          padding: 6px;
-          margin-bottom: -14px;
-          margin-right: -14px;
-      }
-  }
+ @include chartTooltip;
 }
