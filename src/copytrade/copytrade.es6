@@ -24,6 +24,11 @@ const form_error_messages = {
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
+//map the trade type code to api_code
+const mapCodeToApiCode = (tradeTypeSettings) => tradeTypeSettings.map(function(x,i){
+  return TRADE_TYPES[i].api_code
+}, this)
+
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
 
 const defaultCopySettings = (traderApiToken) => ({
@@ -169,13 +174,7 @@ const state = {
             if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
             if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
             if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
-
-            let newTradeTypes = settingsToSend.trade_types.map(function(x,i){
-              return TRADE_TYPES[i].api_code
-            }, this)
-
-            settingsToSend.trade_types = newTradeTypes;
-
+            settingsToSend.trade_types = mapCodeToApiCode(settingsToSend.trade_types);
             liveapi
               .send(settingsToSend)
               .then(() => {
