@@ -24,9 +24,10 @@ const form_error_messages = {
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
-const mapCodeToApiCode = (selected_trade_types, all_trade_types) => all_trade_types
-  .filter(on_filter_trade_type => selected_trade_types.includes(on_filter_trade_type.code))
-  .map(trade_types => trade_types.api_code);
+const mapCodeToApiCode = (selected_trade_types = [], all_trade_types) => 
+  all_trade_types
+    .filter(trade_type => selected_trade_types.includes(trade_type.code))
+    .map(filtered_trade_type => filtered_trade_type.api_code);
 
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
 
