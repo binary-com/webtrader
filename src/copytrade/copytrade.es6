@@ -24,10 +24,13 @@ const form_error_messages = {
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
-//map the trade type code to api_code
-const mapCodeToApiCode = (tradeTypeSettings) => tradeTypeSettings.map(function(x,i){
-  return TRADE_TYPES[i].api_code
-}, this)
+const mapCodeToApiCode = (selected_trade_types, all_trade_types) =>
+  selected_trade_types.map((selected_trade_type) => {
+    all_trade_types.forEach((trade_type) => {
+      if (trade_type.code === selected_trade_type) return trade_type.api_code;
+    });
+  }
+);
 
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
 
@@ -174,7 +177,8 @@ const state = {
             if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
             if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
             if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
-            settingsToSend.trade_types = mapCodeToApiCode(settingsToSend.trade_types);
+            settingsToSend.trade_types = mapCodeToApiCode(settingsToSend.trade_types, TRADE_TYPES);
+
             liveapi
               .send(settingsToSend)
               .then(() => {
