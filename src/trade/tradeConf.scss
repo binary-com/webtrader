@@ -1,4 +1,5 @@
 @import "../charts/chartStyle.scss";
+$COLOR_GRAY: #ccc;
 
 .trade-conf {
   overflow: hidden;
@@ -24,11 +25,11 @@
 }
 .trade-conf .message-row {
   padding: 5px 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $COLOR_GRAY;
 }
 .trade-conf .payout-row {
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid $COLOR_GRAY;
+  border-top: 1px solid $COLOR_GRAY;
   padding: 0;
 }
 .trade-conf .payout-row li {
@@ -46,8 +47,8 @@
   width: auto; /* fix for IE broken flexbox implementation */
 }
 .trade-conf .payout-row li:nth-child(2) {
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-left: 1px solid $COLOR_GRAY;
+  border-right: 1px solid $COLOR_GRAY;
 }
 .trade-conf .payout-row li.amount-per-point span:nth-child(1) {
   white-space: nowrap;
