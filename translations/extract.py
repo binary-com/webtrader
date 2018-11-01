@@ -103,7 +103,7 @@ texts = parser.get_texts()
 
 messages_pot = './i18n/messages.pot'
 
-def has_ascii(text):
+def is_ascii(text):
         return all(ord(c) < 128 for c in text)
 
 def handle_error(text):
@@ -118,7 +118,7 @@ with open(messages_pot, 'a+') as wf:
     for text in texts:
         text = text.replace('"', '\\"')
 
-        if not has_ascii(text):
+        if not is_ascii(text):
             handle_error(text)
 
         if text:
