@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2018-10-23 05:00\n"
+"PO-Revision-Date: 2018-10-25 08:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,7 +22,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(jika durasi kurang dari satu hari), atau pada akhir hari trading (jika durasi satu hari atau lebih)"
 
 msgid "* Contract has not started yet"
-msgstr "* Kontrak belum dimulai lagi"
+msgstr "* Kontrak belum dimulai"
 
 msgid "* Password must be 6 characters minimum"
 msgstr "* Kata sandi harus minimal 6 karakter"
@@ -184,7 +184,7 @@ msgid "Accessible from any web browser in 13 languages"
 msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
 
 msgid "Account authentication"
-msgstr "Pembuktian akun"
+msgstr "Autentikasi akun"
 
 msgid "Account balance"
 msgstr "Saldo akun"
@@ -376,7 +376,7 @@ msgid "Binary.com is an award-winning online trading provider that helps its cli
 msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs ini tidak tersedia di beberapa negara seperti AS, Kanada, Kosta Rika, Hong Kong atau siapapun dibawah umur 18."
 
 msgid "Blank window"
-msgstr "Window kosong"
+msgstr "Jendela kosong"
 
 msgid "Bought"
 msgstr "Membeli"
@@ -514,7 +514,7 @@ msgid "Connection closed."
 msgstr "Koneksi ditutup."
 
 msgid "Connection error."
-msgstr "Koneksi error."
+msgstr "Koneksi eror."
 
 msgid "Construction"
 msgstr "Konstruksi"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Nikmati antarmuka trading intuitif dengan fungsi lanjutan yang memungkinkan Anda untuk memantau semua aset dan pasar favorit Anda pada saat bersamaan, termasuk grafik penting, indeks aset, waktu trading, dan data historis. Yang terpenting, Anda dapat memilih apa yang ingin Anda tampilkan pada layar Anda"
 
 msgid "Enter a valid trader token"
-msgstr "Masukkan token trader"
+msgstr "Masukkan token trader yang valid"
 
 msgid "Enter your current password"
 msgstr "Masukkan kata sandi Anda"
@@ -1144,52 +1144,52 @@ msgid "Load trade template"
 msgstr "Muat template trading"
 
 msgid "Loading ..."
-msgstr "Pemuatan ..."
+msgstr "Loading ..."
 
 msgid "Loading Asset Index ..."
 msgstr "Loading Indeks Aset ..."
 
 msgid "Loading Copy Trade..."
-msgstr "Pemuatan Copy Trade..."
+msgstr "Loading Copy Trade..."
 
 msgid "Loading Download/View Data ..."
-msgstr "Pemuatan Download/Lihat Data ..."
+msgstr "Loading Download/Lihat Data ..."
 
 msgid "Loading MAM..."
-msgstr "Pemuatan MAM..."
+msgstr "Loading MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr "Pemuatan dialog kata sandi ..."
+msgstr "Loading dialog kata sandi ..."
 
 msgid "Loading Profit Table ..."
-msgstr "Pemuatan Profit Table ..."
+msgstr "Loading Tabel Profit ..."
 
 msgid "Loading Real account opening ..."
-msgstr "Pemuatan pendaftaran akun Riil ..."
+msgstr "Loading pendaftaran akun Riil ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr "Pemuatan Pengecualian Diri ..."
+msgstr "Loading Pengecualian Diri ..."
 
 msgid "Loading Statement Table ..."
-msgstr "Pemuatan Tabel Pernyataan ..."
+msgstr "Loading Tabel Pernyataan ..."
 
 msgid "Loading Token management ..."
-msgstr "Pemuatan Token manajemen ..."
+msgstr "Loading Token manajemen ..."
 
 msgid "Loading Trading Times ..."
-msgstr "Pemuatan Waktu Trading ..."
+msgstr "Loading Waktu Trading ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr "Pemuatan grafik dan menu trading ..."
+msgstr "Loading grafik dan menu trading ..."
 
 msgid "Loading custom theme configuration..."
-msgstr "Pemuatan konfigurasi tema khusus..."
+msgstr "Loading konfigurasi tema khusus..."
 
 msgid "Loading portfolio ..."
-msgstr "Pemuatan portopolio ..."
+msgstr "Loading portopolio ..."
 
 msgid "Loading self-exclusion settings."
-msgstr "Memuat pengaturan pengecualian diri."
+msgstr "Loading pengaturan pengecualian diri."
 
 msgid "Loading..."
 msgstr "Pemuatan..."
@@ -1273,7 +1273,7 @@ msgid "Maximum number of open positions"
 msgstr "Maksimum jumlah posisi berjalan"
 
 msgid "Maximum open positions"
-msgstr "Maksimum posisi berjalan"
+msgstr "Posisi berjalan Maksimum"
 
 msgid "May"
 msgstr "Mei"
@@ -1732,7 +1732,7 @@ msgid "Proof of address - A scanned copy of a utility bill or bank statement tha
 msgstr "Bukti alamat - Salinan scan rekening koran atau tagihan utilitas tidak lebih dari tiga bulan setelah tanggal cetak. Bukti alamat harus menampilkan nama, alamat, tanggal cetak, dan nama organisasi pengeluar bukti alamat tersebut."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "Bukti identitas - Scan Ktp, Sim, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
+msgstr "Bukti identitas - Scan KTP, SIM, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
 
 msgid "Purchase"
 msgstr "Beli"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Sesi"
 
 msgid "Session duration limit"
-msgstr "Batas durasi sesi"
+msgstr "Batasan durasi sesi"
 
 msgid "Session duration limit, in minutes"
 msgstr "Batas sesi durasi, dalam menit"
@@ -2428,7 +2428,7 @@ msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for a
 msgstr "Akun Anda memiliki akses terbatas. Silahkan [_1]hubungi customer support[_2] untuk bantuan."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr "Browser Anda tidak mendukung copy ke clipboard"
+msgstr "Browser Anda tidak mendukung salin ke clipboard"
 
 msgid "Your browser is not supported"
 msgstr "Browser Anda tidak mendukung"
