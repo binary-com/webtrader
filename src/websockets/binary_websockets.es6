@@ -14,23 +14,19 @@ let queued_requests = {};
 
 const get_app_id = () => {
   const app_ids = JSON.parse(app_ids_json);
-  const default_app_id = 11;
-  let is_default_app_id = true;
-  let token = localStorage.getItem('config.app_id');
+  const DEFAULT_APP_ID = 11;
+  const href = window.location.href;
+  let stored_app_id = '';
 
-  if (!token) {
-    const href = window.location.href;
-    for (const url in app_ids) {
+  for (const url in app_ids) {
       if (href.lastIndexOf(url, 0) === 0) {
-        token = app_ids[url];
-        is_default_app_id = false;
-        localStorage.setItem('config.app_id', token);
+        stored_app_id = app_ids[url];
         break;
       }
-    }
   }
 
-  const app_id = is_default_app_id ? default_app_id : token;
+  const app_id = stored_app_id || DEFAULT_APP_ID;
+  localStorage.setItem('config.app_id', app_id);
 
   return app_id;
 };
@@ -43,7 +39,7 @@ const get_socket_url = () => {
 };
 
 export const socket_url = get_socket_url();
-export const app_id = get_app_id();
+export const app_id = localStorage.getItem('config.app_id') || get_app_id();
 export const server_url = get_server_url();
 
 const connect = () => {
