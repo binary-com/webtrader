@@ -105,7 +105,7 @@ def is_ascii(text):
     total_ascii_chars = 128
     return all(ord(c) < total_ascii_chars for c in text)
 
-def handle_error(error_msg, text):
+def handle_error(error_msg, text=''):
     warning_bc = '\033[93m'
     end_bc = '\033[0m'
 
