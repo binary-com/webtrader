@@ -369,13 +369,16 @@ a.ui-state-default.ui-state-hover {
 }
 
 .ui-widget.ui-widget-content {
-    border: unset;
+    border: 1px solid #c5c5c5;
 }
 
 /* override datepicker styles */
 .ui-datepicker, .ui-timepicker .ui-widget-content {
   padding: 0;
   border: none;
+}
+.ui-datepicker.ui-widget.ui-widget-content {
+    border: unset;
 }
 .ui-datepicker-buttonpane {
   border: none;
@@ -390,9 +393,6 @@ a.ui-state-default.ui-state-hover {
 }
 .ui-datepicker-close {
 	display: none;
-}
-.ui-widget-content button {
-	float: right !important;
 }
 
 .ui-datepicker thead {
