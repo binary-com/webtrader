@@ -25,9 +25,6 @@ export const init = (li) => {
                 dialogClass: 'assetIndex',
                 minWidth: 800,
                 minHeight: 400,
-                resizable: false,
-                minimizable: true,
-                maximizable: true,
             });
             assetWin.track({
                 module_id: 'assetIndex',
