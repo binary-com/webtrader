@@ -178,7 +178,7 @@ const initStatement = () => {
 
 };
 
-const on_arrow_click = (e) =>{
+const on_arrow_click = (e) => {
    const target = e.target;
    const $target = $(target);
    if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
