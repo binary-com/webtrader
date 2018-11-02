@@ -1,45 +1,34 @@
 ﻿import $ from 'jquery';
 import moment from 'moment';
-import Lookback from './lookback';
-import chartingRequestMap from '../charts/chartingRequestMap';
-import { getLabelEl } from '../charts/chartSettings';
 import liveapi from '../websockets/binary_websockets';
 import rv from '../common/rivetsExtra';
-import '../common/util';
-import 'css!../trade/tradeConf.css';
+import chartingRequestMap from '../charts/chartingRequestMap';
 import html from 'text!../trade/tradeConf.html';
+import 'css!../trade/tradeConf.css';
+import Lookback from './lookback';
+import '../common/util';
 
 /* rv binder to show tick chart for this confirmation dialog */
 let display_decimals;
-const CHART_LABELS = ['start_time', 'barrier', 'end_time'];
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
    bind: function(el) {
       const model = this.model;
       el.chart = new Highcharts.Chart({
-          subtitle: {
-            text: getLabelEl(CHART_LABELS),
-            useHTML: true,
-         },
          title: '',
          credits: {enabled: false},
          chart: {
             type: 'line',
             renderTo: el,
             backgroundColor: null, /* make background transparent */
-            width: 400,
-            height: 144,
+            width: (el.getAttribute('width') || 400)*1,
+            height: (el.getAttribute('height') || 120)*1,
             marginLeft: 20,
-            marginTop: 35,
-            marginBottom: 15,
          },
          tooltip: {
-            useHTML: true,
             formatter: function () {
-               const tick = model.array[this.x - 1];
-               if (tick && tick.tooltip) {
-                     return `<div class='tooltip-body'>${tick.tooltip}</div>`;
-               }
+               const tick = model.array[this.x-1];
+               return (tick && tick.tooltip) || false;
             }
          },
          xAxis: {
@@ -68,7 +57,7 @@ rv.binders['tick-chart'] = {
                type: 'scatter',
                marker: { enabled: false },
                data: []
-            },
+            }
          ],
          plotOptions: { scatter: { enableMouseTracking: false } },
          exporting: {enabled: false, enableImages: false},
@@ -79,59 +68,66 @@ rv.binders['tick-chart'] = {
       // Handles updating chart: state.ticks.array updates => routine fires
       const model = this.model;
       const tick_idx = ticks.length;
-      const barrier = model.makeBarrier();
+      const barrier = model.make_barrier();
       const { contract_is_finished } = model;
 
       if (barrier) {
-            drawBarrier(barrier);
+            draw_barrier(barrier);
       }
 
       if (contract_is_finished) {
-            drawEndTime(model, ticks);
+            draw_exit_spot(model, ticks);
             return;
       }
 
       if (tick_idx === 0) return;
-      drawTick(tick_idx);
+
+      draw_tick(tick_idx);
 
       if (tick_idx === 1) {
-            drawStartTime(tick_idx);
+            draw_entry_spot(tick_idx);
       }
 
-      function drawEndTime(model, ticks) {
-            let exit_time_idx = ticks.findIndex((tick) => tick.epoch === (+model.exit_tick_time));
-            drawXLine(el.chart, { value: exit_time_idx + 1, dashStyle: 'Dash' });
+      function draw_exit_spot(model, ticks) {
+            let exit_tick_idx = ticks.findIndex((tick) => tick.epoch === (+model.exit_tick_time));
+            const exit_spot = model.make_exit_spot(exit_tick_idx + 1);
+            draw_x_line(el.chart, exit_spot);
       };
 
-      function drawTick(tick_idx) {
+      function draw_tick(tick_idx) {
             const tick = ticks[tick_idx -1];
             el.chart.series[0].addPoint([tick_idx, tick.quote]);
       };
 
-      function drawStartTime(tick_idx) {
-            drawXLine(el.chart, { value: tick_idx });
+      function draw_entry_spot(tick_idx) {
+            const is_label_left = true;
+            const entry_spot = model.make_entry_spot(tick_idx);
+            draw_x_line(el.chart, entry_spot, is_label_left);
       };
 
-      function drawBarrier(barrier) {
+      function draw_barrier(barrier) {
             el.chart.yAxis[0].removePlotLine(barrier.id);
-            drawYLine(el.chart, barrier);
+            draw_y_line(el.chart, barrier);
       };
 
-      function drawXLine(chart, options) {
+      function draw_x_line(chart, options, align_label_left) {
+            const label_x_position = align_label_left ? -15 : 5;
    
             chart.xAxis[0].addPlotLine({
                value: options.value,
                id: options.id || options.value,
+               label: {text: options.label || 'label', x:  label_x_position },
                color: options.color || '#e98024',
                width: options.width || 2,
                dashStyle: options.dashStyle || false,
             });
       };
 
-      function drawYLine(chart, options) {
+      function draw_y_line(chart,options) {
             chart.yAxis[0].addPlotLine({
-               id: options.id,
+               id: options.id || options.label,
                value: options.value,
+               label: {text: options.label, align: 'center'},
                color: 'green',
                width: 2,
             });
@@ -141,13 +137,13 @@ rv.binders['tick-chart'] = {
    }
 };
 
-const registerTicks = (state, extra) => {
+const register_ticks = (state, extra) => {
    let proposal_open_contract;
    let on_proposal_open_contract;
    let on_tick;
    let { tick_count } = extra;
    /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const addTick  = (tick) => {
+   const add_tick  = (tick) => {
       const is_or_after_contract_entry = (+tick.epoch) >= (+proposal_open_contract.entry_tick_time);
       const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch * 1 === tick.epoch * 1);
       const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
@@ -157,19 +153,19 @@ const registerTicks = (state, extra) => {
             state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
 
             if (contract_is_finished) {
-                  onContractFinished(proposal_open_contract);
-                  updateChart();
+                  on_contract_finished(proposal_open_contract);
+                  update_chart();
             }
             tick_count--;
             if (tick_count > -1) {
-                  addTickToState(tick);
+                  add_tick_to_state(tick);
             }
       }
    }
 
-   function addTickToState(tick) {
+   function add_tick_to_state(tick) {
       const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
-      const tooltip = makeTooltip(tick);
+      const tooltip = make_tooltip(tick);
 
       state.ticks.array.push({
          quote: (+tick.quote),
@@ -179,7 +175,7 @@ const registerTicks = (state, extra) => {
          decimal_digits,
       });
 
-      function makeTooltip(tick) {
+      function make_tooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
             const tick_quote_formatted = addComma((+tick.quote).toFixed(decimal_digits));
@@ -188,13 +184,13 @@ const registerTicks = (state, extra) => {
       };
    };
 
-   function updateChart() {
+   function update_chart() {
             const tick_arr_copy = state.ticks.array.slice();
             state.ticks.array = [...tick_arr_copy];
     };
 
-   const onContractFinished = (proposal_open_contract) => {
-      forgetStreamAndCb();
+   const on_contract_finished = (proposal_open_contract) => {
+      forget_stream_and_cb();
 
       state.ticks.contract_is_finished = true;
       state.ticks.exit_tick_time = proposal_open_contract.exit_tick_time ? proposal_open_contract.exit_tick_time : null;
@@ -203,7 +199,7 @@ const registerTicks = (state, extra) => {
       state.buy.update();
       state.back.visible = true;
 
-      function forgetStreamAndCb() {
+      function forget_stream_and_cb() {
             const { contract_id } = extra;
             liveapi.events.off('proposal_open_contract', on_proposal_open_contract);
             liveapi.events.off('tick', on_tick);
@@ -216,7 +212,7 @@ const registerTicks = (state, extra) => {
             if (is_different_open_contract_stream) return;
 
             if (data.error) {
-                  onOpenProposalError(data);
+                  on_open_proposal_error(data);
                   return;
             }
 
@@ -241,7 +237,7 @@ const registerTicks = (state, extra) => {
       if (has_missing_ticks) {
             is_getting_history = true;
             first_tick_epoch = entry_tick_time;
-            getTickHistory(entry_tick_time, extra.symbol);
+            get_tick_history(entry_tick_time, extra.symbol);
       }
 
       if (is_getting_history) {
@@ -250,14 +246,14 @@ const registerTicks = (state, extra) => {
       };
 
       if (temp_ticks.length > 0) {
-            temp_ticks.forEach((stored_tick) => addTick(stored_tick));
+            temp_ticks.forEach((stored_tick) => add_tick(stored_tick));
             temp_ticks = [];
       }
 
-      addTick(data.tick);
+      add_tick(data.tick);
     });
 
-    function getTickHistory(start, ticks_history) {
+    function get_tick_history(start, ticks_history) {
       liveapi.send({ ticks_history, end: 'latest', start, style: 'ticks', count: 5000})
             .then((data) => {
                   is_getting_history = false;
@@ -272,17 +268,18 @@ const registerTicks = (state, extra) => {
             }).catch((err) => $.growl.error({ message: data.error.message }));
     };
 
-   const onOpenProposalError = (data) => {
+   const on_open_proposal_error = (data) => {
       $.growl.error({message: data.error.message});
       liveapi.proposal_open_contract.forget(data.echo_req.contract_id);
       liveapi.proposal_open_contract.subscribe(data.echo_req.contract_id);
    };
 };
 
-export const init = (data, extra, showCallback, hideCallback) => {
+export const init = (data, extra, show_callback, hide_callback) => {
    display_decimals = data.display_decimals || 3;
    const root = $(html).i18n();
    const { buy } = data;
+   const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    const state = {
       title: {
          text: 'Contract Confirmation'.i18n(),
@@ -311,10 +308,12 @@ export const init = (data, extra, showCallback, hideCallback) => {
          contract_is_finished: false,
          exit_tick_time: null,
          is_path_dependent: null,
-         makeBarrier: () => {
+         make_exit_spot: (inx) => ({value: inx, label: 'Exit Spot'.i18n(), dashStyle: 'Dash'}),
+         make_entry_spot: (inx) => ({value: inx, label: 'Entry Spot'.i18n()}),
+         make_barrier: () => {
             const { barrier } = state.buy;
             if (barrier) {
-                  return { value: +barrier };
+                  return { value: +barrier, label: `${'Barrier'.i18n()} ('${addComma(barrier.toFixed(display_decimals))})`, id: 'plot-barrier-y'};
             }
             return null;
          },
@@ -355,7 +354,7 @@ export const init = (data, extra, showCallback, hideCallback) => {
       state.buy.show_result = true;
    };
 
-   state.back.onclick = () => hideCallback(root);
+   state.back.onclick = () => hide_callback(root);
    state.arrow.onclick = (e) => {
       const $target = $(e.target);
       if(!$target.hasClass('disabled')) {
@@ -369,10 +368,10 @@ export const init = (data, extra, showCallback, hideCallback) => {
 
    const view = rv.bind(root[0], state);
 
-   if(!state.arrow.visible) { registerTicks(state, extra); }
+   if(!state.arrow.visible) { register_ticks(state, extra); }
    else { state.back.visible = true; }
 
-   showCallback(root);
+   show_callback(root);
 }
 
 export default  { init }
