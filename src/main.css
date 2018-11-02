@@ -435,6 +435,10 @@ a.ui-state-default.ui-state-hover {
     right: 2px;
 }
 
+button.ui-datepicker-current { 
+    display: none;
+}
+
 /* override timepicker styles */
 .ui-timepicker-hours {
 	padding: 0;
