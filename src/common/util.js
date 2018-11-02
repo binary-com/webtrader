@@ -490,3 +490,7 @@ function isVirtual() {
     var is_virtual = (local_storage.get('authorize') || '').is_virtual;
     return !!is_virtual;
 }
+
+function set_url_external_binary_url (href) {
+    return href.includes('binary.me') ? 'www.binary.me' : 'www.binary.com';
+}

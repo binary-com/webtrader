@@ -80,6 +80,9 @@ class AccountStatus {
       _this = this;
     // Contains validations, messages, onclick callbacks.
     // Maintaining the order of priority.
+    const href = window.href;
+    const link = set_url_external_binary_url(href);
+
     const model = {
       excluded_until: {
         message: "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
@@ -87,7 +90,7 @@ class AccountStatus {
         is_valid: _ => local_storage.get("excluded") == false,
         callback: () => {
           const lang = local_storage.get("i18n").value ? local_storage.get("i18n").value : "en";
-          const win = window.open("http://www.binary.com/" + lang + "/contact.html");
+          const win = window.open(`http://${link}/${lang}/contact.html`);
           win.focus();
         }
       },
@@ -127,7 +130,7 @@ class AccountStatus {
         is_valid: _ => !/(unwelcome|(cashier|withdrawal)_locked)/.test(status),
         callback: () => {
           const lang = local_storage.get("i18n").value ? local_storage.get("i18n").value : "en";
-          const win = window.open("http://www.binary.com/" + lang + "/contact.html");
+          const win = window.open(`http://${link}/${lang}/contact.html`);
           win.focus();
         }
       }

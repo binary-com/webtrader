@@ -223,7 +223,11 @@ const initLang = (root) => {
    state.lang = _.find(state.languages, {value: value}); // set the initial state.
 
    const contact_us_el = document.getElementById('contact-us');
-   contact_us_el.href = `https://www.binary.com/${value}/contact.html`;
+   const href = window.location.href;
+
+   const link = set_url_external_binary_url(href);
+
+   contact_us_el.href = `https://${link}/${value}/contact.html`;
 
    rv.bind(root[0], state);
 

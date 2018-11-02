@@ -18,7 +18,7 @@ const get_app_id = () => {
   let is_default_app_id = true;
   let token = localStorage.getItem('config.app_id');
 
-  if (!token) { /* find the appropriate token */
+  if (!token) {
     const href = window.location.href;
     for (const url in app_ids) {
       if (href.lastIndexOf(url, 0) === 0) {
