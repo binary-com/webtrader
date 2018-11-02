@@ -184,7 +184,6 @@ export const init = (contract_id, transaction_id) => {
          })
          .catch((err) => {
             console.error(err);
-            $.growl.error({ message: err.message });
             reject(err);
          });
    });
