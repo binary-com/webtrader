@@ -12,24 +12,28 @@ let is_website_up = false;
 let queued_requests = {};
 
 
-const get_app_default_appid = () => {
+const get_app_id = () => {
   const app_ids = JSON.parse(app_ids_json);
-  let token = localStorage.getItem('config.app_id')
+  const default_app_id = 11;
+  let is_default_app_id = true;
+  let token = localStorage.getItem('config.app_id');
 
-  if(!token) { /* find the appropriate token */
+  if (!token) { /* find the appropriate token */
     const href = window.location.href;
-    for(const web_address in app_ids) {
-      if(href.lastIndexOf(web_address, 0) == 0) {
-        token = app_ids[web_address];
+    for (const url in app_ids) {
+      if (href.lastIndexOf(url, 0) === 0) {
+        token = app_ids[url];
+        is_default_app_id = false;
+        localStorage.setItem('config.app_id', token);
         break;
       }
     }
   }
-  localStorage.setItem('config.default_app_id', token);
-  return token;
-};
 
-const get_app_id = () => localStorage.getItem('config.app_id') || get_app_default_appid() || 11;
+  const app_id = is_default_app_id ? default_app_id : token;
+
+  return app_id;
+};
 
 const get_server_url = () => localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
 
