@@ -53,6 +53,8 @@ module.exports = function (grunt) {
                             "!binary-com-jquery-dialogextended/**", "binary-com-jquery-dialogextended/jquery.dialogextend.min.js",
                             "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js", "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css",
                             "binary-com-longcode/dist/main.js",
+                            "binary-style/binary.css",
+                            "binary-style/binary.js",
                             "!highstock-release/**", "highstock-release/highstock.js", "highstock-release/themes/**", "highstock-release/modules/exporting.js", "highstock-release/modules/offline-exporting.js", "highstock-release/highcharts-more.js",
                             "moment/min/moment.min.js", "moment/locale/**",
                             "text/text.js",
