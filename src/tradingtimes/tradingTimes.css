@@ -45,7 +45,3 @@ table.trading-times-dialog .search-input:-ms-input-placeholder /* ie */ {
 .tradingTimes .webtrader-dialog {
   width: auto !important;
 }
-
-button.ui-datepicker-current { 
-    display: none; 
-}
