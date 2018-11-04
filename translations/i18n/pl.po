@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-11-04 20:40\n"
+"PO-Revision-Date: 2018-11-04 20:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -25,13 +25,13 @@ msgid "* Contract has not started yet"
 msgstr "* Kontrakt jeszcze się nie rozpoczął"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* Hasło musi mieć minimum 6 znaków"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* Hasło musi zawierać wielkie litery i cyfry"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Wprowadź swoje nowe hasło"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Firma Binary.com nie jest związana z żadnym z pośredników płatności wymienionych powyżej. Każdy pośrednik płatności działa jako niezależny usługodawca i nie jest w żaden sposób zatwierdzony ani popierany przez Binary.com. KLIENCI KORZYSTAJĄ Z USŁUG POŚREDNIKÓW NA WŁASNE RYZYKO. Zaleca się sprawdzenie danych pośredników płatności przed wysłaniem do nich pieniędzy. Binary.com nie ponosi żadnej odpowiedzialności za transakcje zawarte między klientami a pośrednikami płatności"
@@ -169,40 +169,40 @@ msgid "8h"
 msgstr "8 godz."
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "About Binary.com"
-msgstr ""
+msgstr "Informacje o Binary.com"
 
 msgid "About us"
-msgstr ""
+msgstr "O nas"
 
 msgid "Accept"
 msgstr "Akceptuj"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Dostępność w 13 językach z dowolnej przeglądarki"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "Weryfikacja konta"
 
 msgid "Account balance"
 msgstr "Saldo konta"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Saldo konta:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "Nie znaleziono identyfikatora konta."
 
 msgid "Account opening"
-msgstr ""
+msgstr "Otwarcie konta"
 
 msgid "Account opening reason"
 msgstr "Powód otwarcia konta"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Nie znaleziono tokenu konta."
 
 msgid "Action"
 msgstr "Czynność"
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "Kwota"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Kwota min.: 10 maks.: 2000"
 
 msgid "Amount per point"
 msgstr "Kwota na punkt"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "Sierpień"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "Zweryfikuj swoje konto już teraz, potwierdzając swoją tożsamość i swoje dane adresowe. Wystarczy wysłać następujące dokumenty na adres %1:"
 
 msgid "Available Currencies"
 msgstr "Dostępne waluty"
@@ -352,7 +352,7 @@ msgid "Binary option"
 msgstr "Opcja binarna"
 
 msgid "Binary options basics"
-msgstr ""
+msgstr "Podstawowe informacje o opcjach binarnych"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Doświadczenie w handlowaniu opcjami binarnymi lub innymi instrumentami pochodnymi"
@@ -373,10 +373,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com to zdobywająca nagrody platforma do handlu online, która ułatwia swoim klientom handel na rynkach finansowych, oferując opcje binarne i kontrakty na różnice kursowe. Handel opcjami binarnymi i kontraktami na różnice kursowe wskaźników zmienności jest uznawany za grę hazardową. Należy pamiętać, że gra hazardowa może uzależniać - prosimy o rozsądną grę. Dowiedz się więcej na temat [_1]odpowiedzialnego handlowania[_2]. Niektóre produkty są niedostępne w niektórych krajach. Usługi oferowane za pośrednictwem tej strony internetowej nie są dostępne w niektórych krajach, np. w Stanach Zjednoczonych, Kanadzie, Kostaryce, Hong Kongu, oraz dla osób poniżej 18 roku życia."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Puste okno"
 
 msgid "Bought"
 msgstr "Kupiono"
@@ -514,7 +514,7 @@ msgid "Connection closed."
 msgstr ""
 
 msgid "Connection error."
-msgstr ""
+msgstr "Błąd połączenia."
 
 msgid "Construction"
 msgstr "Budownictwo"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "Kontrakt"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Potwierdzenie kontraktu"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Szczegóły kontraktu"
 
 msgid "Contract period"
 msgstr "Okres trwania kontraktu"
@@ -547,7 +547,7 @@ msgid "Copier"
 msgstr "Kopiujący"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "Handlowanie przez kopiowanie"
 
 msgid "Copy Trading"
 msgstr "Handlowanie przez kopiowanie"
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "Motyw niestandardowy"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Dostosuj wygląd wykresu"
 
 msgid "Daily limit on losses"
 msgstr "Dzienny limit strat"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "Opis"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Odznacz"
 
 msgid "Differs"
 msgstr "Różni się"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Nie masz jeszcze konta? Zarejestruj się i otrzymaj 10 000 $ na wirtualnym koncie"
 
 msgid "Done"
-msgstr ""
+msgstr "Gotowe"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Gotowe. Trwa przelewanie środków do pośrednika płatności"
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "Edukacja"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Nie udało się zweryfikować adresu e-mail"
 
 msgid "Embed code"
 msgstr "Kod osadzania"
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Możesz cieszyć się naszym intuicyjnym interfejsem do handlowania z zaawansowanymi funkcjami, które umożliwiają jednoczesne monitorowanie wszystkich Twoich ulubionych aktywów i rynków. Możesz również korzystać z niezbędnych wykresów, indeksów aktywów, czy danych historycznych. Ale co najważniejsze, decydować, co chcesz zobaczyć na ekranie"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Wprowadź prawidłowy token gracza"
 
 msgid "Enter your current password"
 msgstr "Wprowadź swoje obecne hasło"
@@ -802,16 +802,16 @@ msgid "Exclude me from the website until"
 msgstr "Wyłącz mnie z portalu do dnia"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Okres wykluczenia"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Okres wykluczenia musi zaczynać się jutro lub później."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "Okres wykluczenia nie może być krótszy niż {{max}}."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "Okres wykluczenia nie może być dłuższy niż 5 lat."
 
 msgid "Exit Spot"
 msgstr "Pozycja wyjściowa"
@@ -829,10 +829,10 @@ msgid "Explanation"
 msgstr "Wyjaśnienie"
 
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Nie udało się zaktualizować hasła"
 
 msgid "Fall"
 msgstr "Spadek"
@@ -868,10 +868,10 @@ msgid "Finance"
 msgstr "Finanse"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "Formularz otwarcia konta finansowego"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "Ocena finansowa"
 
 msgid "Financial Information"
 msgstr "Informacje finansowe"
@@ -919,10 +919,10 @@ msgid "Get API token from trader(s) and add it in your list"
 msgstr "Uzyskaj token API od gracza/graczy i dodaj go do swojej listy"
 
 msgid "Getting started"
-msgstr ""
+msgstr "Rozpoczynanie"
 
 msgid "Glossary"
-msgstr ""
+msgstr "Słowniczek"
 
 msgid "Go to"
 msgstr "Przejdź do"
@@ -940,7 +940,7 @@ msgid "Grid Light"
 msgstr "Grid Light"
 
 msgid "Group history"
-msgstr ""
+msgstr "Historia grupy"
 
 msgid "Health"
 msgstr "Sektor opieki zdrowotnej"
@@ -949,7 +949,7 @@ msgid "High"
 msgstr "Wysoki"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Górny limit"
 
 msgid "High barrier"
 msgstr "Górny limit"
@@ -967,19 +967,19 @@ msgid "Historical Data"
 msgstr "Dane historyczne"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "Dane historyczne dla"
 
 msgid "Horizontal line"
 msgstr "Linia pozioma"
 
 msgid "Hour"
-msgstr ""
+msgstr "Godzina"
 
 msgid "Hours"
 msgstr "Godziny"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "Jak handlować opcjami binarnymi?"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "Jak handlować na rynkach wskaźników zmienności?"
@@ -1015,13 +1015,13 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Świadcząc nasze usługi, jesteśmy zobligowani do uzyskania od Ciebie informacji w celu przeprowadzenia oceny, czy dany produkt lub usługa jest odpowiednia dla Ciebie (tzn. czy posiadasz odpowiednie doświadczenie i wiedzę potrzebne do zrozumienia ryzyka związanego z danym produktem)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "W UE produkty finansowe są oferowane przez Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, objętą licencją i regulacjami Urzędu ds. Usług Finansowych na Malcie: Malta Financial Services Authority jako firma świadcząca usługi inwestycyjne kategorii 3 (licencja o nr IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Na Wyspie Man i w Wielkiej Brytanii wskaźniki zmienności są oferowane przez Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Wyspa Man, Wyspy Brytyjskie; za wydawanie licencji i jego regulację odpowiada odpowiednio (1) Komisja Nadzoru Gier Hazardowych Wyspy Man, na Wyspach Brytyjskich (Gambling Supervision Commission) – aktualna licencja została wydana dnia 31 sierpnia 2017 r., (2) Komisja ds. Gier Hazardowych w Zjednoczonym Królestwie (UK Gambling Commission) – licencja o [_1]numerze referencyjnym: 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr ""
+msgstr "W pozostałej części UE wskaźniki zmienności są oferowane przez Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta - za licencję i regulację odpowiada (1) Urząd ds. Gier Hazardowych: Malta Gaming Authority na Malcie (licencja o numerze MGA/B2C/102/2000 wydana 26 maja 2015 r.), w przypadku klientów ze Zjednoczonego Królestwa (2) Komisja ds. Gier Hazardowych w Zjednoczonym Królestwie: UK Gambling Commission (licencja o [_1]numerze referencyjnym: 39495[_2]), w przypadku klientów z Irlandii (3) Irlandzkie Władze Podatkowe i Celne: Revenue Commissioners (Zdalna licencja bukmacherska o numerze: 1010285 wydana 1 lipca 2017 r.). Zobacz pełną treść [_3]Informacji o przepisach prawnych[_4]."
 
 msgid "In/Out"
 msgstr "W/poza"
@@ -1033,7 +1033,7 @@ msgid "Income Source"
 msgstr "Źródło dochodu"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Orientacyjny"
 
 msgid "Indicative Price"
 msgstr "Cena orientacyjna"
@@ -1066,7 +1066,7 @@ msgid "Invalid template type"
 msgstr "Nieprawidłowy typ szablonu"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Nieprawidłowy typ szablonu."
 
 msgid "Investments & Dividends"
 msgstr "Inwestycje i dywidenda"
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "Styczeń"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Konta japońskie nie są obsługiwane."
 
 msgid "Jul"
 msgstr "Lip"
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "Lipiec"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Przejdź do:"
 
 msgid "Jun"
 msgstr "Cze"
@@ -1102,10 +1102,10 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Zakłady z zyskiem z ostatnich 12 miesięcy"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Szacowanie ostatniej cyfry"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Ostatnia cyfra większa"
 
 msgid "Last Digit is Under"
 msgstr ""
