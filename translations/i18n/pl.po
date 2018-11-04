@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-11-04 20:50\n"
+"PO-Revision-Date: 2018-11-04 21:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1105,10 +1105,10 @@ msgid "Last Digit Prediction"
 msgstr "Szacowanie ostatniej cyfry"
 
 msgid "Last Digit is Over"
-msgstr "Ostatnia cyfra większa"
+msgstr "Ostatnia cyfra jest większa"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Ostatnia cyfra jest mniejsza"
 
 msgid "Last used"
 msgstr "Ostatnio używane"
@@ -1144,49 +1144,49 @@ msgid "Load trade template"
 msgstr "Załaduj szablon handlowy"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Ładowanie ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Ładowanie indeksu aktywów ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Ładowanie kopiowania zakładów..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Ładowanie danych pobierania/przeglądania ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "Ładowanie MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Ładowanie okna dialogowego wprowadzania hasła ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Ładowanie tabeli zysków ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "Ładowanie sekcji Otwieranie prawdziwego konta ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Ładowanie sekcji Samodzielne wyłączenie ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Ładowanie tabeli stanu konta ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Ładowanie sekcji Zarządzanie tokenami ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Ładowanie godzin handlu ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Ładowanie menu wykresu i handlowania ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Ładowanie konfiguracji niestandardowych motywów..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Ładowanie portfolio ..."
 
 msgid "Loading self-exclusion settings."
 msgstr ""
@@ -1216,7 +1216,7 @@ msgid "Low"
 msgstr "Niski"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Dolny limit"
 
 msgid "Low barrier"
 msgstr "Dolny limit"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Maksymalna łączna strata dzienna"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Maksymalne saldo"
 
 msgid "Maximum number of open positions"
 msgstr "Maksymalna liczba otwartych pozycji"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Maksymalna liczba otwartych pozycji"
 
 msgid "May"
 msgstr "Maj"
@@ -1309,7 +1309,7 @@ msgid "Minus the agent's commission"
 msgstr "Minus prowizja pośrednika"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minuta"
 
 msgid "Minutes"
 msgstr "Minuty"
@@ -1378,7 +1378,7 @@ msgid "Net Profit"
 msgstr "Zysk netto"
 
 msgid "New Account"
-msgstr ""
+msgstr "Nowe konto"
 
 msgid "New password"
 msgstr "Nowe hasło"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "Nie osiągnie"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Uwaga: Kontrakty będą sprzedawane po obowiązującej cenie rynkowej po dotarciu wniosku na nasze serwery. Cena może różnić się od podanej ceny."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Uwaga: Możesz mieć tylko jedno konto w walucie fiducjarnej i jedno konto dla każdej kryptowaluty"
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "Wskaźniki i akcje OTC"
 
 msgid "Occupation"
 msgstr "Zawód"
@@ -1513,13 +1513,13 @@ msgid "PEP Declaration"
 msgstr "Oświadczenie ws. PEP"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "Hasło musi mieć minimum 6 znaków"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Hasło musi składać się z małych i wielkich liter oraz cyfr"
 
 msgid "Password successfully updated."
 msgstr ""
@@ -1732,7 +1732,7 @@ msgid "Proof of address - A scanned copy of a utility bill or bank statement tha
 msgstr ""
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "Potwierdzenie tożsamości – skan Twojego paszportu, prawa jazdy (czasowego lub normalnego) lub dowodu osobistego z Twoim imieniem i nazwiskiem oraz datą urodzenia."
 
 msgid "Purchase"
 msgstr "Zakup"
@@ -1747,28 +1747,28 @@ msgid "Read"
 msgstr "Przeczytaj"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "Otwierania konta z prawdziwymi pieniędzmi"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Bieżąca kontrola konta"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Przekierowywanie do strony logowania oauth,"
 
 msgid "Ref"
 msgstr "Ref"
 
 msgid "Ref."
-msgstr ""
+msgstr "Ref."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Nie można odświeżyć"
 
 msgid "Register free account"
 msgstr "Zarejestruj darmowe konto"
 
 msgid "Registration"
-msgstr ""
+msgstr "Rejestracja"
 
 msgid "Remove"
 msgstr "Usuń"
@@ -1783,7 +1783,7 @@ msgid "Repeat password"
 msgstr "Wprowadź hasło ponownie"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Nie można odsprzedać tego kontraktu"
 
 msgid "Resale price"
 msgstr "Cena odsprzedaży"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "Pytanie zabezpieczające"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Wygląda na to, że mamy problem z serwerami, pracujemy nad rozwiązaniem problemu."
 
 msgid "Self-Employed"
 msgstr "Osoba samozatrudniona"
@@ -1867,7 +1867,7 @@ msgid "Self-Exclusion"
 msgstr "Samodzielne wyłączenie"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Udogodnienia samodzielnego wyłączenia"
 
 msgid "Sell At Market"
 msgstr "Sprzedaj na rynku"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Sesja"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Czas trwania sesji"
 
 msgid "Session duration limit, in minutes"
 msgstr "Limit czasu sesji, w minutach"
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "Sprzedane"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Jakiś losowy wskaźnik"
 
 msgid "Source of wealth"
 msgstr "Źródło majątku"
@@ -1993,7 +1993,7 @@ msgid "Submit"
 msgstr "Prześlij"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Dodano nowy token"
 
 msgid "Successfully added workspace as"
 msgstr ""
@@ -2011,10 +2011,10 @@ msgid "Table"
 msgstr "Tabela"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "Informacje podatkowe"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "Zaktualizowano informacje podatkowe"
 
 msgid "Tax identification number"
 msgstr "Numer identyfikacji podatkowej"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "Tel."
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Szablon został już zapisany"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Szablon został zastosowany częściowo."
 
 msgid "Template changes saved"
 msgstr "Zapisano zmiany szablonu"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Nie można zastosować szablonu."
 
 msgid "Template name"
 msgstr "Nazwa szablonu"
@@ -2050,7 +2050,7 @@ msgid "Terms"
 msgstr "Warunki"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Regulamin"
 
 msgid "Tertiary"
 msgstr "Wyższe"
@@ -2071,16 +2071,16 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr ""
 
 msgid "There was an error"
-msgstr ""
+msgstr "Wystąpił błąd"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Kontrakt wygasł"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Ten kontrakt przegrał"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Ten kontrakt wygrał"
 
 msgid "This field is required"
 msgstr "To pole jest wymagane"
@@ -2128,7 +2128,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Aby wypłacić środki, wpisz specjalny kod weryfikacyjny wysłany na Twój adres e-mail"
 
 msgid "Today"
-msgstr ""
+msgstr "Dzisiaj"
 
 msgid "Token"
 msgstr "Token"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "Zarządzanie tokenami"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token został już dodany"
 
 msgid "Token management"
 msgstr "Zarządzanie tokenami"
@@ -2221,7 +2221,7 @@ msgid "Trading Times"
 msgstr "Godziny handlowania"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Handlowanie opcjami binarnymi może nie być odpowiednie dla wszystkich, więc upewnij się, że w pełni rozumiesz powiązane z nim ryzyko. Twoje straty mogą przekroczyć Twoją początkową wpłatę, a aktywa bazowe nie są Twoją własnością i nie posiadasz praw w stosunku do nich."
 
 msgid "Tradingview for Binary.com"
 msgstr "Widok handlowy Binary.com"
@@ -2245,7 +2245,7 @@ msgid "Turnover"
 msgstr "Obrót"
 
 msgid "Types of trades"
-msgstr ""
+msgstr "Rodzaje zakładów"
 
 msgid "USD"
 msgstr "USD"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "Kod weryfikacyjny został wysłany na Twój adres e-mail"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Kod weryfikacyjny został wysłany do"
 
 msgid "Verification token"
 msgstr "Token weryfikacyjny"
@@ -2347,13 +2347,13 @@ msgid "What is this?"
 msgstr "Co to jest?"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Po kliknięciu przycisku „OK” handlowanie na portalu nie będzie możliwe aż do wybranej daty."
 
 msgid "While on the go, you can"
 msgstr "Także w podróży możesz"
 
 msgid "Why choose Binary Trading?"
-msgstr ""
+msgstr "Dlaczego warto wybrać handel opcjami binarnymi?"
 
 msgid "Why trade with Binary.com"
 msgstr "Dlaczego warto handlować z Binary.com"
@@ -2395,7 +2395,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Nie kopiujesz jeszcze żadnego gracza"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Skorzystałeś/-aś z samodzielnego wykluczenia do"
 
 msgid "You have sold the following contract"
 msgstr "Sprzedano następujący kontrakt"
@@ -2407,7 +2407,7 @@ msgid "You pay"
 msgstr "Płacisz"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "Proszę wprowadzić od 6 do 25 znaków."
 
 msgid "You will be automatically logged out after such time"
 msgstr "Po tym czasie nastąpi automatyczne wylogowanie"
@@ -2425,16 +2425,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Twoje konto (%) jest zablokowane. Skontaktuj się z działem obsługi klienta, aby uzyskać więcej informacji."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Na Twoje konto zostały nałożone ograniczenia. [_1]Skontaktuj się z obsługą klienta[_2], aby uzyskać pomoc."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Twoja przeglądarka nie obsługuje kopiowania do schowka"
 
 msgid "Your browser is not supported"
 msgstr "Twoja przeglądarka nie jest obsługiwana"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Twoje zmiany zostały wprowadzone"
 
 msgid "Your copying settings"
 msgstr "Twoje ustawienia kopiowania"
@@ -2455,10 +2455,10 @@ msgid "Zoom"
 msgstr "Powiększ"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Zweryfikuj swoje konto[_2] już teraz, aby w pełni korzystać ze wszystkich dostępnych opcji wypłat."
 
 msgid "and"
-msgstr ""
+msgstr "i"
 
 msgid "apostrophe (') are allowed"
 msgstr "apostrof (') są dozwolone"
@@ -2485,7 +2485,7 @@ msgid "days"
 msgstr "dni"
 
 msgid "deposits"
-msgstr ""
+msgstr "wpłaty"
 
 msgid "end time"
 msgstr "czas zakończenia"
@@ -2497,7 +2497,7 @@ msgid "exit spot"
 msgstr "pozycja wyjściowa"
 
 msgid "for"
-msgstr ""
+msgstr "dla"
 
 msgid "for mobile charts"
 msgstr "dla wykresów na urządzenia mobilne"
@@ -2548,7 +2548,7 @@ msgid "main site"
 msgstr "strona główna"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "rynek jest obecnie zamknięty."
 
 msgid "medium protection"
 msgstr "średnia ochrona"
@@ -2602,7 +2602,7 @@ msgid "ticks"
 msgstr "najmniejsze zmiany ceny"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "wypłaty"
 
 msgid "yes"
 msgstr "tak"
