@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-11-04 21:00\n"
+"PO-Revision-Date: 2018-11-04 21:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "Dodaj/usuń wskaźniki"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Dodano nowy obszar roboczy %"
 
 msgid "Address"
 msgstr "Adres"
@@ -511,7 +511,7 @@ msgid "Confirm transfer"
 msgstr "Potwierdź przelew"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Połączenie przerwane."
 
 msgid "Connection error."
 msgstr "Błąd połączenia."
@@ -724,7 +724,7 @@ msgid "Downloading template as"
 msgstr "Pobieranie szablonu jako"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Pobieranie obszaru roboczego jako %1"
 
 msgid "Drawing tools"
 msgstr "Narzędzia do rysowania"
@@ -1189,7 +1189,7 @@ msgid "Loading portfolio ..."
 msgstr "Ładowanie portfolio ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Ładowanie ustawień samo-wykluczenia."
 
 msgid "Loading..."
 msgstr "Ładowanie..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "Czas logowania"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Przekroczono czas sesji samo-wykluczenia. Wylogowano!"
 
 msgid "Login"
 msgstr "Logowanie"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "Łatwe do zapamiętania miasto"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Minimalna stawka zakładu powinna być niższa niż jego maksymalna stawka."
 
 msgid "Min. Trade Stake"
 msgstr "Min. stawka zakładu"
@@ -1522,13 +1522,13 @@ msgid "Password must contain lower and uppercase letters with numbers"
 msgstr "Hasło musi składać się z małych i wielkich liter oraz cyfr"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Zaktualizowano hasło."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Hasła nie zgadzają się. Wprowadź je ponownie"
 
 msgid "Patents"
-msgstr ""
+msgstr "Patenty"
 
 msgid "Pattern Recognition"
 msgstr "Rozpoznawanie formacji"
@@ -1570,40 +1570,40 @@ msgid "Please"
 msgstr "Proszę"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Aby podnieść wysokość limitów wypłat i limitów handlowych, proszę [_1]zaakceptować zaktualizowany regulamin[_2]."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Aby podnieść wysokość limitów wypłat i limitów handlowych, [_1]uzupełnij swój profil[_2]."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Proszę wybrać minimum jeden zakres tokenu"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Wybierz w jakiej walucie chcesz przeprowadzić transakcję"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Aby podnieść swoje limity wypłat i limity handlowe, wypełnij [_1]formularz oceny sytuacji finansowej[_2]."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Potwierdź następujące dane w celu dokonania przelewu"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Proszę wpisać liczbę z przedziału"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Wprowadź poprawną datę w formacie rrrr-mm-dd"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Proszę podać poprawną wartość dla"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Proszę wpisać wartość od 0 do"
 
 msgid "Please enter a value greater than 0"
 msgstr "Podaj wartość większą od 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Proszę podać wartość mniejszą niż 6 tygodni dla pola Okresu wyłączenia do."
 
 msgid "Please enter correct email"
 msgstr "Proszę podać poprawny adres e-mail"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Wprowadź datę w formacie RRRR-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Proszę wpisać nazwę tokenu"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Proszę podać godzinę w formacie GG:MM"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Zainstaluj najnowszą wersję jednej z tych przeglądarek"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Proszę się zalogować"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Zaloguj się, aby zobaczyć swoje zapisane obszary robocze."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Proszę się zalogować."
 
 msgid "Please provide your tax information"
 msgstr "Proszę podać informacje podatkowe"
@@ -1645,31 +1645,31 @@ msgid "Please select"
 msgstr "Wybierz"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Proszę wybrać datę dla pola Okres wyłączenia do."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Proszę wybrać pośrednika płatności"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Zanim przejdziesz dalej, wybierz powód otwarcia konta"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "Proszę ustawić walutę."
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Ustaw [_1]walutę[_2] swojego konta"
 
 msgid "Please submit a valid verification token"
 msgstr "Proszę podać poprawny token weryfikujący"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Spróbuj ponownie za minutę."
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "Spróbuj ponownie za kilka minut."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Użyj swojego nowego hasła, aby się zalogować."
 
 msgid "Plot"
 msgstr "Motyw"
@@ -1720,7 +1720,7 @@ msgid "Profit"
 msgstr "Zysk"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Tabela zysków"
 
 msgid "Profit table"
 msgstr "Tabela zysków"
@@ -1729,7 +1729,7 @@ msgid "Profit/ Loss"
 msgstr "Zysk/strata"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "Potwierdzenie adresu – skan rachunku za media lub wyciągu bankowego z ostatnich 3 miesięcy. Dokument potwierdzający dane adresowe musi zawierać Twoje imię i nazwisko, adres, datę wystawienia oraz nazwę podmiotu wystawiającego dokument."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
 msgstr "Potwierdzenie tożsamości – skan Twojego paszportu, prawa jazdy (czasowego lub normalnego) lub dowodu osobistego z Twoim imieniem i nazwiskiem oraz datą urodzenia."
@@ -1996,7 +1996,7 @@ msgid "Successfully added new token"
 msgstr "Dodano nowy token"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Dodano obszar roboczy jako"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Szablon został zastosowany i zapisany jako"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "Przekroczono limit czasu do"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Przekroczono czas dla żądania websocket"
 
 msgid "Title"
 msgstr "Tytuł"
