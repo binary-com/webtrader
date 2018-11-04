@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
+"PO-Revision-Date: 2018-11-04 20:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,7 +22,7 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(jeśli okres trwania jest krótszy niż jeden dzień) lub na koniec dnia handlowego (jeśli okres trwania wynosi co najmniej jeden dzień)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Kontrakt jeszcze się nie rozpoczął"
 
 msgid "* Password must be 6 characters minimum"
 msgstr ""
