@@ -11,6 +11,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import tncApprovalWin from "cashier/uk_funds_protection"
 import html from 'text!cashier/deposit.html';
+import '../common/util';
 
 require(['text!cashier/deposit.html']);
 require(['css!cashier/deposit.css']);

@@ -27,6 +27,8 @@ const getType = (acc) => {
 const initLoginButton = (root) => {
    const account_menu = root.find('.account-menu');
    const time = root.find('span.time');
+   const binary_domain = getBinaryDomain();
+   const lang = (local_storage.get('i18n') || {value: 'en'}).value;
    const state = {
       show_login: local_storage.get('oauth') ? false : true,
       login_disabled: false,
@@ -41,7 +43,7 @@ const initLoginButton = (root) => {
       },
       show_submenu: false,
       show_new_account_link: false,
-
+      binary_url: `https://binary${binary_domain}/${lang}`
    };
 const destroy_windows = (data_attribute) => {
   $(`.webtrader-dialog[${data_attribute}]`).each((inx, elm) => {
@@ -151,16 +153,15 @@ const destroy_windows = (data_attribute) => {
          state.has_mf_or_mlt = _.some(loginIds, {is_mf: true}) || _.some(loginIds, {is_mlt: true});
          state.show_new_account_link = what_todo === 'new-account';
          state.has_disabled_account =  _.some(loginIds, {is_disabled: true});
-
          // https://trello.com/c/9PCHncnx/5146-8-raunak-accountlistordering
          // https://trello.com/c/fNZ1Zkbb/2529-negar-accountlistauthorize
          if(_.some(oAuthLoginIds(), {is_disabled: true})) {
             const lockedIds = _.filter(loginIds, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
-               message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
-               + "Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
-               + "</a>"
+               message:`<a href='${state.binary_url}/contact.html' target='_blank'>
+                ${"Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)}
+               </a>`
             });
          }
       });
