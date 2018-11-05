@@ -515,7 +515,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         expiry.today_times.disabled = true;
         trading_times_for(expiry.value_date, state.proposal.symbol)
           .then(function(times){
-            var value_hour = times.close !== '--' ? times.close : '00:00:00';
+            var value_hour = times.close !== '--' ? times.close : '23:59:59';
             expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
             expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
             state.barriers.update();
