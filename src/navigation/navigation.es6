@@ -27,8 +27,6 @@ const getType = (acc) => {
 const initLoginButton = (root) => {
    const account_menu = root.find('.account-menu');
    const time = root.find('span.time');
-   const binary_domain = getBinaryDomain();
-   const lang = (local_storage.get('i18n') || {value: 'en'}).value;
    const state = {
       show_login: local_storage.get('oauth') ? false : true,
       login_disabled: false,
@@ -43,7 +41,6 @@ const initLoginButton = (root) => {
       },
       show_submenu: false,
       show_new_account_link: false,
-      binary_url: `https://binary${binary_domain}/${lang}`
    };
 const destroy_windows = (data_attribute) => {
   $(`.webtrader-dialog[${data_attribute}]`).each((inx, elm) => {
@@ -224,9 +221,12 @@ const initLang = (root) => {
    state.lang = _.find(state.languages, {value: lang}); // set the initial state.
 
    const contact_us_el = document.getElementById('contact-us');
+   const logo_container = document.getElementById('logo-container');
    const binary_domain = getBinaryDomain();
+   const binary_url = `https://binary${binary_domain}/${lang}`;
 
-   contact_us_el.href = `https://binary${binary_domain}/${lang}/contact.html`;
+   contact_us_el.href = `${binary_url}/contact.html`;
+   logo_container.href = `${binary_url}/home.html`;
 
    rv.bind(root[0], state);
 

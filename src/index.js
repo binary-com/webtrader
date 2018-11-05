@@ -26,7 +26,12 @@ clear_url_querystring(href);
 populate_language_dropdown();
 
 var contact_us_el = document.getElementById('contact-us');
-contact_us_el.href = 'https://www.binary.com/' + lang + '/contact.html';
+var logo_el = document.getElementById('logo');
+var binary_domain = getBinaryDomain();
+var binary_url = 'https://www.binary' + binary_domain + '/' + lang;
+
+contact_us_el.href = binary_url + '/contact.html';
+logo_el.href = binary_url + '/home.html';
 
 if (local_storage.get('oauth') !== null) {
     window.location.href = VERSION + 'main.html';
@@ -90,6 +95,7 @@ function populate_language_dropdown() {
 }
 
 function populate_footer() {
+    var responsible_trading_url = binary_url + '/responsible-trading.html';
     var FOOTER_TEXT = {
         P1: {
             TEXT: 'In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156).'.i18n(),
@@ -104,7 +110,7 @@ function populate_footer() {
         },
         P4: {
             TEXT: 'Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website\'s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.'.i18n(),
-            TAGS: ['<a href="https://www.binary.com/en/responsible-trading.html" target="_blank">', '</a>'],
+            TAGS: ['<a href=' + responsible_trading_url + ' target="_blank">', '</a>'],
         },
         P5: {
             TEXT: 'Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset.'.i18n(),
