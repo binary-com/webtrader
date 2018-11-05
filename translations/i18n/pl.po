@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-11-05 21:40\n"
+"PO-Revision-Date: 2018-11-05 21:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2029,7 +2029,7 @@ msgid "Tel"
 msgstr "Tel."
 
 msgid "Template already saved as"
-msgstr "Szablon został już zapisany"
+msgstr "Szablon został już zapisany jako"
 
 msgid "Template applied partially."
 msgstr "Szablon został zastosowany częściowo."
