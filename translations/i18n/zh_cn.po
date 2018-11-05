@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-10-20 03:30\n"
+"PO-Revision-Date: 2018-11-05 07:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -229,7 +229,7 @@ msgid "Add/remove indicators"
 msgstr "添加/删除指标"
 
 msgid "Added new workspace %"
-msgstr "添加新工作区%"
+msgstr "已添加新工作区%"
 
 msgid "Address"
 msgstr "地址"
