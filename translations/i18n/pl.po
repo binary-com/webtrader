@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-11-04 21:20\n"
+"PO-Revision-Date: 2018-11-05 21:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -808,7 +808,7 @@ msgid "Exclude time must be after today."
 msgstr "Okres wykluczenia musi zaczynać się jutro lub później."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr "Okres wykluczenia nie może być krótszy niż {{max}}."
+msgstr "Okres wykluczenia nie może być krótszy niż 6 miesięcy."
 
 msgid "Exclude until time cannot be more than 5 years."
 msgstr "Okres wykluczenia nie może być dłuższy niż 5 lat."
