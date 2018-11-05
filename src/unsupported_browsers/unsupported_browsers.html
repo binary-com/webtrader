@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="v<version>/lib/binary-style/binary.css">
 	<link rel="stylesheet" type="text/css" href="unsupported_browsers.css">
 	<script type="text/javascript" src="../lib/modernizr/modernizr.js"></script>
+	<script src="v<version>/common/util.js"></script>
 	<script>
 	// For showing links based on OS
 	function updateLinks(){
@@ -98,12 +99,18 @@
 		<p class="alternatives secondary-color"><b>While on the go, you can:</b></p>
 		<table class="mobile-options fill-bg-color">
 			<tr>
-				<td>Try <a href="http://ticktrade.binary.com/" target="_blank">Tick Trade app</a></td>
-				<td>Use <a href="http://tradingview.binary.com/" target="_blank">Tradingview for Binary.com</a> for mobile charts</td>
-				<td>Trade using <a href="http://binary.com/" target="_blank">Binary.com</a> main site</td>
+				<td>Try <a href="#" id="tick-trade-link" target="_blank">Tick Trade app</a></td>
+				<td>Use <a href="#" id="trading-view-link" target="_blank">Tradingview for Binary.com</a> for mobile charts</td>
+				<td>Trade using <a href="#" id="binary-link" target="_blank">Binary.com</a> main site</td>
 			</tr>
 		</table>
 	</div>
-	
+	<script>
+		var binary_url = getBinaryUrl('main.html');
+		var domain = window.href.includes('binary.me') ? '.me' : '.com';
+		document.getElementById('binary-link').href = binary_url;
+		document.getElementById('trading-view-link').href = 'https://ticktrade.binary' + domain;
+		document.getElementById('tick-trade-link').href = 'https://ticktrade.binary' + domain;
+	</script>
 </body>
 </html>

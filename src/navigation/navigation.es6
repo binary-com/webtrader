@@ -156,7 +156,7 @@ const destroy_windows = (data_attribute) => {
             const lockedIds = _.filter(loginIds, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
-               message:`<a href='${state.binary_url}/contact.html' target='_blank'>
+               message:`<a href='${getBinaryUrl('contact.html')}' target='_blank'>
                 ${"Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)}
                </a>`
             });
