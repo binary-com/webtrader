@@ -55,9 +55,7 @@ export const init = () => {
         const binary_domain = getBinaryDomain();
         const lang = (local_storage.get('i18n') || {value: 'en'}).value;
         const binary_url_tc = `https://binary${binary_domain}/${lang}/terms-and-conditions.html`;
-        $('.tc a').each(() => {
-            this.href = binary_url_tc;
-        });
+        Array.from(document.getElementsByClassName('tc-link')).forEach((a_el) => a_el.href = binary_url_tc);
     }
 }
 
