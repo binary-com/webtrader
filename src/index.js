@@ -27,11 +27,9 @@ populate_language_dropdown();
 
 var contact_us_el = document.getElementById('contact-us');
 var logo_el = document.getElementById('logo');
-var binary_domain = getBinaryDomain();
-var binary_url = 'https://www.binary' + binary_domain + '/' + lang;
 
-contact_us_el.href = binary_url + '/contact.html';
-logo_el.href = binary_url + '/home.html';
+contact_us_el.href = getBinaryUrl('contact.html');
+logo_el.href = getBinaryUrl('home.html');
 
 if (local_storage.get('oauth') !== null) {
     window.location.href = VERSION + 'main.html';

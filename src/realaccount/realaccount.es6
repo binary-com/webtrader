@@ -86,11 +86,6 @@ const init_real_win = (root, what_todo) => {
 }
 
 const init_state = (root, what_todo) => {
-   const app_id = liveapi.app_id;
-   const binary_domain = getBinaryDomain();
-   const lang = (local_storage.get('i18n') || {value: 'en'}).value;
-   const binary_url =  `https://www.binary${binary_domain}/${lang}`;
-
    const state = {
       route: { value: 'user' }, // routes: ['user', 'financial']
       empty_fields: {
@@ -177,8 +172,8 @@ const init_state = (root, what_todo) => {
          financial_information_select_data: {
             ...financial_account_opening.financial_information_select_data,
          },
-         binary_url_contact: `${binary_url}/contact`,
-         binary_url_tc: `${binary_url}/terms-and-conditions.html`,
+         binary_url_contact: getBinaryUrl('contact.html'),
+         binary_url_tc: getBinaryUrl('terms-and-conditions.html'),
       }
    };
 

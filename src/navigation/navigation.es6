@@ -222,11 +222,9 @@ const initLang = (root) => {
 
    const contact_us_el = document.getElementById('contact-us');
    const logo_container = document.getElementById('logo-container');
-   const binary_domain = getBinaryDomain();
-   const binary_url = `https://binary${binary_domain}/${lang}`;
 
-   contact_us_el.href = `${binary_url}/contact.html`;
-   logo_container.href = `${binary_url}/home.html`;
+   contact_us_el.href = getBinaryUrl('contact.html');
+   logo_container.href = getBinaryUrl('home.html');
 
    rv.bind(root[0], state);
 

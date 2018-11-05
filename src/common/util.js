@@ -491,7 +491,11 @@ function isVirtual() {
     return !!is_virtual;
 }
 
-function getBinaryDomain() {
-    const hostname = new URL(window.href).hostname;
-    return hostname.includes('binary.me') ? '.me' : '.com';
+function getBinaryUrl(page) {
+    var hostname = new URL(window.href).hostname;
+    var lang = (local_storage.get('i18n') || {value: 'en'}).value;
+    var domain = hostname.includes('binary.me') ? '.me' : '.com';
+    var binary_url = 'https://binary' + domain + '/' + lang + '/' + page;
+
+    return binary_url;
 }

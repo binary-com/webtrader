@@ -73,8 +73,6 @@ const limits = {
         "name": "Time out until".i18n()
     }
 };
-const binary_domain = getBinaryDomain();
-const lang = (local_storage.get('i18n') || {value: 'en'}).value;
 
 const settingsData = {
     max_balance: null,
@@ -89,7 +87,7 @@ const settingsData = {
     exclude_until: null,
     timeout_until_date: null,
     timeout_until_time: null,
-    binary_url_contact: `https://binary${binary_domain}/${lang}/contact`,
+    binary_url_contact: getBinaryUrl('contact.html'),
     trimString: (event, scope) => {
         const $el = $(event.target),
             decimals = currencyFractionalDigits(),
