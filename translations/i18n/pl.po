@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2018-11-05 21:30\n"
+"PO-Revision-Date: 2018-11-05 21:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1603,7 +1603,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Podaj wartość większą od 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr "Proszę podać wartość mniejszą niż 6 tygodni dla pola Okresu wyłączenia do."
+msgstr "Proszę podać wartość mniejszą niż 6 tygodni dla pola Okres wyłączenia do."
 
 msgid "Please enter correct email"
 msgstr "Proszę podać poprawny adres e-mail"
