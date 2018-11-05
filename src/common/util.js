@@ -491,6 +491,7 @@ function isVirtual() {
     return !!is_virtual;
 }
 
-function set_url_external_binary_url (href) {
-    return href.includes('binary.me') ? 'www.binary.me' : 'www.binary.com';
+function getBinaryDomain () {
+    const hostname = new URL(window.href).hostname;
+    return hostname.includes('binary.me') ? '.me' : '.com';
 }

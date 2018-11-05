@@ -219,15 +219,13 @@ const initLang = (root) => {
       state.confirm.visible = visible;
    }
 
-   const value = (local_storage.get('i18n') || {value: 'en'}).value;
-   state.lang = _.find(state.languages, {value: value}); // set the initial state.
+   const lang = (local_storage.get('i18n') || {value: 'en'}).value;
+   state.lang = _.find(state.languages, {value: lang}); // set the initial state.
 
    const contact_us_el = document.getElementById('contact-us');
-   const href = window.location.href;
+   const binary_domain = getBinaryDomain();
 
-   const link = set_url_external_binary_url(href);
-
-   contact_us_el.href = `https://${link}/${value}/contact.html`;
+   contact_us_el.href = `https://binary${binary_domain}/${lang}/contact.html`;
 
    rv.bind(root[0], state);
 

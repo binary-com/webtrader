@@ -80,8 +80,7 @@ class AccountStatus {
       _this = this;
     // Contains validations, messages, onclick callbacks.
     // Maintaining the order of priority.
-    const href = window.href;
-    const link = set_url_external_binary_url(href);
+    const binary_domain = getBinaryDomain();
 
     const model = {
       excluded_until: {
@@ -90,7 +89,7 @@ class AccountStatus {
         is_valid: _ => local_storage.get("excluded") == false,
         callback: () => {
           const lang = local_storage.get("i18n").value ? local_storage.get("i18n").value : "en";
-          const win = window.open(`http://${link}/${lang}/contact.html`);
+          const win = window.open(`http://binary${binary_domain}/${lang}/contact.html`);
           win.focus();
         }
       },
@@ -130,7 +129,7 @@ class AccountStatus {
         is_valid: _ => !/(unwelcome|(cashier|withdrawal)_locked)/.test(status),
         callback: () => {
           const lang = local_storage.get("i18n").value ? local_storage.get("i18n").value : "en";
-          const win = window.open(`http://${link}/${lang}/contact.html`);
+          const win = window.open(`http://binary${binary_domain}/${lang}/contact.html`);
           win.focus();
         }
       }

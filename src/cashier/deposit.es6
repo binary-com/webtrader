@@ -79,6 +79,9 @@ function init_deposit_win(root) {
 
 function init_state(root) {
     var app_id = liveapi.app_id;
+    const lang = (local_storage.get('i18n') || {value: 'en'}).value;
+    const binary_domain = getBinaryDomain();
+
     var state = {
         route: { value: 'standard-methods' },
         empty_fields: {
@@ -103,8 +106,9 @@ function init_state(root) {
         },
         payment_agents: {
             list: [],
-            current: {}
-        }
+            current: {},
+        },
+        binary_url: `https://www.binary${binary_domain}/${lang}/payment-agent.html`,
     };
 
     state.route.update = route => { state.route.value = route; };
