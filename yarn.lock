@@ -30,6 +30,11 @@ alameda@^1.2.0:
   resolved "https://registry.yarnpkg.com/alameda/-/alameda-1.2.1.tgz#db0b5d38cc9a8e69c6716025add09a15306e5126"
   integrity sha512-Ti59o4CVyn67pidAz7o1OrwFuvlFyy7XzONIRxkRyGSA2SgvJsf5VaZOG4DLlx4qPJARJpAgpdIIE/UrM09uYw==
 
+almond@~0.3.1:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/almond/-/almond-0.3.3.tgz#a0e7c95ac7624d6417b4494b1e68bff693168a20"
+  integrity sha1-oOfJWsdiTWQXtElLHmi/9pMWiiA=
+
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
@@ -1149,6 +1154,13 @@ binary-com-jquery-ui-timepicker@^1.0.1:
   integrity sha1-fypxoH5ak509GH0X6lxQaAJWuAE=
   dependencies:
     jquery "^3.0.0"
+
+binary-style@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/binary-style/-/binary-style-0.2.4.tgz#24d9b6c5f4525cedbf6cf305876c02641fd4859a"
+  integrity sha1-JNm2xfRSXO2/bPMFh2wCZB/UhZo=
+  dependencies:
+    select2 "4.0.5"
 
 bind-obj-methods@^2.0.0:
   version "2.0.0"
@@ -4223,6 +4235,11 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
+jquery-mousewheel@~3.1.13:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
+  integrity sha1-BvAzXxbjU6aV5yBr9QUDy1I6buU=
+
 jquery-sparkline@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/jquery-sparkline/-/jquery-sparkline-2.4.0.tgz#1be8b7b704dd3857152708aefb1d4a4b3a69fb33"
@@ -6234,6 +6251,14 @@ seek-bzip@^1.0.3:
   integrity sha1-z+kXyz0nS8/6x5J1ivUxc+sfq9w=
   dependencies:
     commander "~2.8.1"
+
+select2@4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.5.tgz#7aac50692561985b34d3b82ec55e226f8960d40a"
+  integrity sha1-eqxQaSVhmFs007guxV4ib4lg1Ao=
+  dependencies:
+    almond "~0.3.1"
+    jquery-mousewheel "~3.1.13"
 
 select@^1.1.2:
   version "1.1.2"

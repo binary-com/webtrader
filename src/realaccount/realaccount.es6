@@ -12,6 +12,7 @@ import { getLandingCompany } from 'navigation/navigation';
 import html from 'text!realaccount/realaccount.html';
 import 'css!realaccount/realaccount.css';
 import { financial_account_opening } from '../common/common';
+import '../common/util';
 
 let real_win = null;
 let real_win_view = null; // rivets view
@@ -85,7 +86,6 @@ const init_real_win = (root, what_todo) => {
 }
 
 const init_state = (root, what_todo) => {
-   const app_id = liveapi.app_id;
    const state = {
       route: { value: 'user' }, // routes: ['user', 'financial']
       empty_fields: {
@@ -172,6 +172,8 @@ const init_state = (root, what_todo) => {
          financial_information_select_data: {
             ...financial_account_opening.financial_information_select_data,
          },
+         binary_url_contact: getBinaryUrl('contact.html'),
+         binary_url_tc: getBinaryUrl('terms-and-conditions.html'),
       }
    };
 
