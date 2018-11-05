@@ -75,6 +75,7 @@
     "alameda": "^1.2.0",
     "binary-com-jquery-dialogextended": "binary-com/jquery-dialogextend#master",
     "binary-com-jquery-ui-timepicker": "^1.0.1",
+    "binary-style": "^0.2.4",
     "chosen-js": "^1.6.2",
     "clipboard": "^1.7.1",
     "datatables.net": "^1.10.15",

@@ -490,3 +490,12 @@ function isVirtual() {
     var is_virtual = (local_storage.get('authorize') || '').is_virtual;
     return !!is_virtual;
 }
+
+function getBinaryUrl(page) {
+    var hostname = new URL(window.location.href).hostname;
+    var lang = (local_storage.get('i18n') || {value: 'en'}).value;
+    var domain = hostname.includes('binary.me') ? '.me' : '.com';
+    var binary_url = 'https://binary' + domain + '/' + lang + '/' + page;
+
+    return binary_url;
+}

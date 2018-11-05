@@ -53,6 +53,9 @@ module.exports = function (grunt) {
                             "!binary-com-jquery-dialogextended/**", "binary-com-jquery-dialogextended/jquery.dialogextend.min.js",
                             "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js", "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css",
                             "binary-com-longcode/dist/main.js",
+                            "binary-style/binary.css",
+                            "binary-style/binary.js",
+                            "binary-style/src/images/favicons/**",
                             "!highstock-release/**", "highstock-release/highstock.js", "highstock-release/themes/**", "highstock-release/modules/exporting.js", "highstock-release/modules/offline-exporting.js", "highstock-release/highcharts-more.js",
                             "moment/min/moment.min.js", "moment/locale/**",
                             "text/text.js",
@@ -139,14 +142,6 @@ module.exports = function (grunt) {
                     to: "<%=pkg.description%>"
                 }]
             },
-            style : {
-                src: ["dist/uncompressed/index.html", "dist/uncompressed/v<%=pkg.version%>/main.html","dist/uncompressed/v<%=pkg.version%>/main.js", "dist/uncompressed/v<%=pkg.version%>/navigation/navigation.html", "dist/uncompressed/v<%=pkg.version%>/unsupported_browsers/unsupported_browsers.html"],
-                overwrite: true,
-                replacements: [{
-                    from: "<style-url>",
-                    to: "https://style.binary.com"
-                }]
-            }
         },
         cssmin: {
             minify: {
@@ -314,7 +309,7 @@ module.exports = function (grunt) {
           scripts: {
             options: { livereload: false },
             files: ["src/**","!src/index.html", "!src/**/*.scss", "!src/**/*.es6"],
-            tasks: [ "newer:copy:main", "newer:copy:copy_i18n", "replace:style"],
+            tasks: [ "newer:copy:main", "newer:copy:copy_i18n"],
           },
         },
         shell: {
@@ -397,7 +392,7 @@ module.exports = function (grunt) {
         },
     });
 
-    grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "copy:copy_i18n", "copy:copyLibraries", "rename", "replace:version", "replace:style"]);
+    grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "copy:copy_i18n", "copy:copyLibraries", "rename", "replace:version"]);
     grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "copy:copy_AfterCompression"]);
     grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
 
