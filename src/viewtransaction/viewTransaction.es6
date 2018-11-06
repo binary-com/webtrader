@@ -66,20 +66,10 @@ const initChart = (root, state, options) => {
       type = 'candlestick';
       data = options.candles.map((c) => [c.epoch * 1000, c.open * 1, c.high * 1, c.low * 1, c.close * 1]);
    }
-   function makeChartLabels({ tick_count, date_start, purchase_time }) {
-    const CHART_LABELS = ['start_time', 'entry_spot', 'barrier_dotted', 'exit_spot', 'end_time'];
-    const TICK_CHART_LABELS = ['start_time', 'barrier', 'end_time'];
 
-    if (tick_count) return TICK_CHART_LABELS;
-
-    if (date_start > purchase_time) CHART_LABELS.unshift('purchase_time');
-
-    return CHART_LABELS;
-   }
    const { title } = options;
    const el = root.find('.transaction-chart')[0];
-   console.log(state, options);
-   const CHART_LABELS = makeChartLabels(state.proposal_open_contract);
+   const CHART_LABELS = ChartSettings.getChartLabels(state.proposal_open_contract);
    const chart_options = {
       credits: { href: '#', text: '' },
       chart: {
@@ -99,7 +89,7 @@ const initChart = (root, state, options) => {
       tooltip: {
          useHTML: true,
          formatter() {
-            const spot = addComma(this.y.toFixed());
+            const spot = addComma(this.y.toFixed(DISPLAY_DECIMALS));
             const spot_time = moment.utc(this.x).format('dddd, MMM D, HH:mm:ss');
             return `<div class='tooltip-body'>${spot_time} GMT<br/>${this.series.name} ${spot}</div>`;
         },
@@ -291,11 +281,16 @@ function drawSpots(contract, state, chart) {
 }
 
 function drawXLines(contract, state, chart) {
-  const { date_expiry, date_start, purchase_time } = contract;
+  const { entry_tick_time, exit_tick_time, date_expiry, date_start, purchase_time, tick_count } = contract;
+
+  if (tick_count) { // only for tick contracts
+    drawXLine({ line_time: entry_tick_time, label: 'start_time' });
+    drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
+    return;
+  }
 
   drawXLine({ line_time: date_start, label: 'start_time' });
   drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
-
   if (date_start > purchase_time) drawXLine({ line_time: purchase_time, label: 'purchase_time', color:'#7cb5ec' });
 
   function drawXLine({ line_time, label, dashStyle, color }) {
@@ -578,21 +573,16 @@ const drawBarriers = (contract, state) => {
 
   function addBarrierToChart(barrier, high_barrier, low_barrier) {
     const dashStyle = tick_count ? '' : 'dot';
-    if (barrier) {
-      chart.addPlotLineY({ id: 'barrier', value: barrier, dashStyle })
-    }
-    if (high_barrier) {
-      chart.addPlotLineY({ id: 'high_barrier', value: barrier, dashStyle })
-    }
-    if (low_barrier) {
-      chart.addPlotLineY({ id: 'low_barrier', value: barrier, dashStyle })
-    }
+
+    if (barrier)  chart.addPlotLineY({ id: 'barrier', value: barrier, dashStyle })
+    if (high_barrier) chart.addPlotLineY({ id: 'high_barrier', value: high_barrier, dashStyle })
+    if (low_barrier) chart.addPlotLineY({ id: 'low_barrier', value: low_barrier, dashStyle })
   }
 
   function removeBarriers(barrier, high_barrier, low_barrier) {
-    barrier && chart.yAxis[0].removePlotLine('barrier');
-    high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
-    low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
+    if (barrier) chart.yAxis[0].removePlotLine('barrier');
+    if (high_barrier) chart.yAxis[0].removePlotLine('high_barrier');
+    if (low_barrier) chart.yAxis[0].removePlotLine('low_barrier');
   }
 }
 

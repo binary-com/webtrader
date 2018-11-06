@@ -28,4 +28,15 @@ const getMarkerSettings = (fillColor = 'white') => {
     return { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4 }}};
 };
 
-export { getLabelEl, getMarkerSettings };
+const getChartLabels = ({ tick_count, date_start, purchase_time }) => {
+    const CHART_LABELS = ['start_time', 'entry_spot', 'barrier_dotted', 'exit_spot', 'end_time'];
+    const TICK_CHART_LABELS = ['start_time', 'barrier', 'end_time'];
+
+    if (tick_count) return TICK_CHART_LABELS;
+
+    if (date_start > purchase_time) CHART_LABELS.unshift('purchase_time');
+
+    return CHART_LABELS;
+};
+
+export { getLabelEl, getMarkerSettings, getChartLabels };
