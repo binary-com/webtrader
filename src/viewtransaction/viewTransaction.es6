@@ -66,10 +66,20 @@ const initChart = (root, state, options) => {
       type = 'candlestick';
       data = options.candles.map((c) => [c.epoch * 1000, c.open * 1, c.high * 1, c.low * 1, c.close * 1]);
    }
+   function makeChartLabels({ tick_count, date_start, purchase_time }) {
+    const CHART_LABELS = ['start_time', 'entry_spot', 'barrier_dotted', 'exit_spot', 'end_time'];
+    const TICK_CHART_LABELS = ['start_time', 'barrier', 'end_time'];
 
+    if (tick_count) return TICK_CHART_LABELS;
+
+    if (date_start > purchase_time) CHART_LABELS.unshift('purchase_time');
+
+    return CHART_LABELS;
+   }
    const { title } = options;
    const el = root.find('.transaction-chart')[0];
-   const CHART_LABELS = ['start_time', 'entry_spot', 'barrier', 'exit_spot', 'end_time'];
+   console.log(state, options);
+   const CHART_LABELS = makeChartLabels(state.proposal_open_contract);
    const chart_options = {
       credits: { href: '#', text: '' },
       chart: {
@@ -262,7 +272,10 @@ function drawChart(contract, state) {
 }
 
 function drawSpots(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time } = contract;
+  const { entry_tick_time, exit_tick_time, tick_count } = contract;
+
+  if (tick_count) return; // tick contracts = chart should not have entry/exit spots
+
   drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
   drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
 
@@ -278,15 +291,17 @@ function drawSpots(contract, state, chart) {
 }
 
 function drawXLines(contract, state, chart) {
-  const { date_expiry, date_start } = contract;
+  const { date_expiry, date_start, purchase_time } = contract;
 
   drawXLine({ line_time: date_start, label: 'start_time' });
   drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
 
-  function drawXLine({ line_time, label, dashStyle }) {
+  if (date_start > purchase_time) drawXLine({ line_time: purchase_time, label: 'purchase_time', color:'#7cb5ec' });
+
+  function drawXLine({ line_time, label, dashStyle, color }) {
     if (!line_time || state.chart.hasLabel(label)) return false;
 
-    chart.addPlotLineX({ value: line_time * 1000, dashStyle });
+    chart.addPlotLineX({ value: line_time * 1000, dashStyle, color});
   }
 }
 
@@ -317,7 +332,7 @@ const init_dialog = (proposal) => {
       const transWin = windows.createBlankWindow(root, {
          title: proposal.display_name + ' (' + proposal.transaction_id + ')',
          width: 700,
-         minWidth: 490,
+         minWidth: 630,
          minHeight: 480,
          height: 480,
          destroy: () => {},
@@ -556,25 +571,22 @@ const updateLiveChart = (state, granularity) => {
 
 const drawBarriers = (contract, state) => {
   const { chart } = state.chart;
-  const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
+  const { barrier, high_barrier, low_barrier, tick_count } = state.proposal_open_contract;
 
   removeBarriers(barrier, high_barrier, low_barrier);
   addBarrierToChart(barrier, high_barrier, low_barrier);
 
   function addBarrierToChart(barrier, high_barrier, low_barrier) {
+    const dashStyle = tick_count ? '' : 'dot';
     if (barrier) {
-      addPlotLineY('barrier', barrier);
+      chart.addPlotLineY({ id: 'barrier', value: barrier, dashStyle })
     }
     if (high_barrier) {
-      addPlotLineY('high_barrier', high_barrier);
+      chart.addPlotLineY({ id: 'high_barrier', value: barrier, dashStyle })
     }
     if (low_barrier) {
-      addPlotLineY('low_barrier', low_barrier);
+      chart.addPlotLineY({ id: 'low_barrier', value: barrier, dashStyle })
     }
-
-    function addPlotLineY(id, value, color) {
-      chart.addPlotLineY({ id, value, color });
-    };
   }
 
   function removeBarriers(barrier, high_barrier, low_barrier) {

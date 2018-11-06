@@ -5,11 +5,13 @@ const HORIZONTAL_LINE_STYLE = `${COMMON_LINE_STYLE} margin-bottom: 3px; height: 
 const SPOT_STYLE = 'margin: 3px 5px 0 10px; display: inline-block; border-radius: 6px;';
 
 const CHART_LABELS = {
+    purchase_time: `<span style="${VERTICAL_LINE_STYLE} border-color: #7cb5ec; border-style: solid;"></span>${'Purchase Time'.i18n()}`,
     start_time: `<span style="${VERTICAL_LINE_STYLE} border-style: solid;"></span> ${'Start Time'.i18n()}`,
     barrier: `<span style="${HORIZONTAL_LINE_STYLE} border-style: solid;"></span> ${'Barrier'.i18n()}`,
+    barrier_dotted: `<span style="${HORIZONTAL_LINE_STYLE} border-style: dotted;"></span> ${'Barrier'.i18n()}`,
     end_time: `<span style="${VERTICAL_LINE_STYLE} border-style: dashed;"></span> ${'End Time'.i18n()}`,
-    entry_spot: `<span style="${SPOT_STYLE} border: 3px solid orange; width: 4px; height: 4px;"></span>${'Entry Spot'.i18n()}&nbsp;`,
-    exit_spot: `<span style="${SPOT_STYLE} background-color: orange; width:10px; height: 10px;"></span>${'Exit Spot'.i18n()}&nbsp;`,
+    entry_spot: `<span style="${SPOT_STYLE} border: 3px solid orange; width: 4px; height: 4px;"></span>${'Entry Spot'.i18n()}`,
+    exit_spot: `<span style="${SPOT_STYLE} background-color: orange; width:10px; height: 10px;"></span>${'Exit Spot'.i18n()}`,
 };
 
 const getLabelEl = (labels) => {
