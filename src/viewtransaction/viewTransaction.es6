@@ -70,6 +70,8 @@ const initChart = (root, state, options) => {
    const { title } = options;
    const el = root.find('.transaction-chart')[0];
    const CHART_LABELS = ChartSettings.getChartLabels(state.proposal_open_contract);
+   const { entry_tick_time, exit_tick_time } = state.proposal_open_contract;
+
    const chart_options = {
       credits: { href: '#', text: '' },
       chart: {
@@ -118,7 +120,21 @@ const initChart = (root, state, options) => {
          name: title,
          data: data,
          type: type,
-         zIndex: 10
+         zIndex: 10,
+         zoneAxis: 'x',
+         // zones are used to display color of the line
+         zones:[{
+             // make the line grey until it reaches entry time or start time if entry spot time is not yet known
+             value: entry_tick_time ? entry_tick_time * 1000 : '',
+             color: '#ccc',
+         }, {
+             // make the line default color until exit time is reached
+             value: exit_tick_time ? exit_tick_time * 1000 : '',
+             color: '',
+         }, {
+             // make the line grey again after trade ended
+             color: '#ccc',
+         }],
       }],
       exporting: { enabled: false, enableImages: false},
       legend: { enabled: false},
@@ -259,6 +275,20 @@ function drawChart(contract, state) {
   drawSpots(contract, state, chart);
   drawXLines(contract, state, chart);
   drawBarriers(contract, state);
+  drawZones(contract, state, chart);
+}
+
+function drawZones(contract, state, chart) {
+  const { entry_tick_time, exit_tick_time } = contract;
+
+  drawZone({ spot_time: entry_tick_time, label: 'entry_zone', zone_idx: 0 });
+  drawZone({ spot_time: exit_tick_time, label: 'exit_zone', zone_idx: 1 });
+
+  function drawZone({spot_time, label, zone_idx}) {
+    if (!spot_time || state.chart.hasLabel(label)) return;
+
+    chart.series[0].zones[zone_idx].value = (spot_time * 1000);
+  }
 }
 
 function drawSpots(contract, state, chart) {
@@ -276,7 +306,7 @@ function drawSpots(contract, state, chart) {
     if (!series_spot) return;
 
     const marker = ChartSettings.getMarkerSettings(color);
-    series_spot.update({ marker })
+    series_spot.update({ marker });
   }
 }
 
@@ -524,7 +554,7 @@ const updateLiveChart = (state, granularity) => {
 
     function addTickToChart(chart, tick) {
       if (!chart) return;
-      chart.series[0].addPoint([tick.epoch * 1000, tick.quote * 1]);
+      chart.series[0].addPoint([tick.epoch * 1000, tick.quote * 1, 'gray']);
     }
   }
 
