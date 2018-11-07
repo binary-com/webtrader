@@ -16,9 +16,9 @@ export function login() {
       const app_id = liveapi.app_id;
       const hostname = new URL(window.location.href).hostname;
       const domain_extension = hostname.includes('binary.me') ? '.me' : '.com';
-      const lang = (local_storage.get('i18n') || { value:'en' }).value;
       const login_url = liveapi.server_url.includes('qa') ? liveapi.server_url : `oauth.binary${domain_extension}`;
       const oauth_url = `https://${login_url}/oauth2/authorize`;
+      const lang = (local_storage.get('i18n') || { value:'en' }).value;
       window.location =  oauth_url + '?app_id=' + app_id + '&l=' +lang;
 }
 
