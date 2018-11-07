@@ -172,9 +172,9 @@ const init_state = (root, what_todo) => {
          financial_information_select_data: {
             ...financial_account_opening.financial_information_select_data,
          },
-         binary_url_contact: getBinaryUrl('contact.html'),
-         binary_url_tc: getBinaryUrl('terms-and-conditions.html'),
-      }
+      },
+      binary_url_contact: getBinaryUrl('contact.html'),
+      binary_url_tc: getBinaryUrl('terms-and-conditions.html'),
    };
 
    state.input_disabled = local_storage.get("oauth").reduce((a, b) => {
