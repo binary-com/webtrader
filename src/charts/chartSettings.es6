@@ -29,14 +29,14 @@ const getMarkerSettings = (fillColor = 'white') => {
 };
 
 const getChartLabels = ({ tick_count, date_start, purchase_time, is_sold_before_expiry, is_path_dependent }) => {
-    const CHART_LABELS = ['start_time', 'entry_spot', 'barrier_dotted', 'exit_spot', 'end_time'];
-    const TICK_CHART_LABELS = ['start_time', 'barrier', 'end_time'];
+    let chart_labels = ['start_time', 'entry_spot', 'barrier_dotted', 'exit_spot', 'end_time'];
+    const tick_chart_labels = ['start_time', 'barrier', 'end_time'];
 
-    if (tick_count) return TICK_CHART_LABELS;
-    if (is_sold_before_expiry && !is_path_dependent) CHART_LABELS[3] = '';
-    if (date_start > purchase_time) CHART_LABELS.unshift('purchase_time');
+    if (tick_count) return tick_chart_labels;
+    if (is_sold_before_expiry && !is_path_dependent) chart_labels = chart_labels.filter((label) => label !== 'exit_spot');
+    if (date_start > purchase_time) chart_labels.unshift('purchase_time');
 
-    return CHART_LABELS;
+    return chart_labels;
 };
 
 export { getLabelEl, getMarkerSettings, getChartLabels };
