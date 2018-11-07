@@ -179,6 +179,7 @@ const initAssetWin = ($html) => {
             { "defaultContent": "-", "targets": [0, 1, 2, 3, 4, 5, 6, 7] }
         ],
         paging: false,
+        bAutoWidth: false,
         ordering: false,
         searching: true,
         processing: true
