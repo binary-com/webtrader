@@ -196,6 +196,9 @@
               }
             }
         }
+        .button-disabled {
+          pointer-events: none;
+        }
     }
   }
 
@@ -350,6 +353,9 @@
         right: 0;
       }
     }
+  }
+  .chosen-disable {
+    z-index: unset;
   }
 }
 
