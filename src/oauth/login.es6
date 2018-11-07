@@ -12,6 +12,16 @@ import 'css!./login.css';
 let login_win = null;
 let login_win_view = null; // rivets view
 
+export function login() {
+      const app_id = liveapi.app_id;
+      const hostname = new URL(window.location.href).hostname;
+      const domain_extension = hostname.includes('binary.me') ? '.me' : '.com';
+      const lang = (local_storage.get('i18n') || {value:"en"}).value;
+      const login_url = liveapi.server_url.includes('qa') ? liveapi.server_url : `oauth.binary${domain_extension}`;
+      const oauth_url = `https://${login_url}/oauth2/authorize`;
+      window.location =  oauth_url + '?app_id=' + app_id + '&l=' +lang;
+}
+
 export const init = () => {
    if(login_win){
       login_win.moveToTop();
@@ -99,10 +109,7 @@ const init_state = (root, win) => {
 
    state.login.login = () => {
       state.login.disabled = true;
-      const lang = (local_storage.get('i18n') || {value:"en"}).value;
-      const server_url = liveapi.server_url;
-      const oauth_url = `https://${server_url}/oauth2/authorize`;
-      window.location =  oauth_url + '?app_id=' + app_id + '&l=' +lang;
+      login();
    }
 
    state.confirm.confirm = () => {
@@ -244,13 +251,6 @@ const init_state = (root, win) => {
          console.error(err);
          $.growl.error({ message: err.message });
       });
-}
-
-export const login = () => {
-   const app_id = liveapi.app_id;
-   const server_url = liveapi.server_url;
-   const oauth_url = `https://${server_url}/oauth2/authorize`;
-   window.location =  oauth_url + '?app_id=' + app_id;
 }
 
 export default {
