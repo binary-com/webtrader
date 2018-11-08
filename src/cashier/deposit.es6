@@ -11,6 +11,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import tncApprovalWin from "cashier/uk_funds_protection"
 import html from 'text!cashier/deposit.html';
+import '../common/util';
 
 require(['text!cashier/deposit.html']);
 require(['css!cashier/deposit.css']);
@@ -78,7 +79,6 @@ function init_deposit_win(root) {
 }
 
 function init_state(root) {
-    var app_id = liveapi.app_id;
     var state = {
         route: { value: 'standard-methods' },
         empty_fields: {
@@ -103,8 +103,9 @@ function init_state(root) {
         },
         payment_agents: {
             list: [],
-            current: {}
-        }
+            current: {},
+        },
+        binary_url: getBinaryUrl('payment-agent.html'),
     };
 
     state.route.update = route => { state.route.value = route; };

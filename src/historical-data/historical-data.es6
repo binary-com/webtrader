@@ -34,7 +34,7 @@ const buildMenu = ($root, instrumentName, callback) => {
       titlebar.find('.title').text(display_name);
       callback(symbol, display_name);
    });
-   const titlebar = $(`<div class='instrumnet-dropdown' ><div class='title'>${instrumentName}</div>`);
+   const titlebar = $(`<div class='instrument-dropdown' ><div class='title'>${instrumentName}</div>`);
    $root.closest('.ui-dialog').append(titlebar);
    titlebar.append($menu);
    $menu.menu();
@@ -42,8 +42,8 @@ const buildMenu = ($root, instrumentName, callback) => {
 
 const buildDatetime = (dialog, $root, callback) => {
     const datetime = $(`<div class='date-time'>
-                    <input type="button" class="date" tab-index="-1"></input>
-                    <input type="button" class="time" value="00:00"></input>
+                    <input type="text" class="date" tab-index="-1" readonly></input>
+                    <input type="text" class="time" tab-index="-1" value="00:00" readonly></input>
           </div>`);
     $root.closest('.ui-dialog').append(datetime);
     datetime.find('.date')
@@ -53,27 +53,28 @@ const buildDatetime = (dialog, $root, callback) => {
              numberOfMonths: 1,
              changeYear : true,
              dateFormat : 'yy-mm-dd',
-             showButtonPanel : true,
              onSelect: function () { $(this).change(); update_time(); },
              beforeShow: (input, inst) => {
                 _.delay(() => inst.dpDiv.css({
                    marginLeft: '-60px',
-                   top: datetime.find('.date').offset().top + 35,
+                   top: datetime.find('.date').offset().top + 32,
                    left: datetime.find('.date').offset().left,
-                   zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 1
+                   zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 100
                 }));
              },
-             minDate : moment.utc().subtract(1, "years").toDate(),
+             minDate : moment.utc().subtract(1, 'years').toDate(),
              maxDate : moment.utc().toDate(),
-             closeText: 'Done'.i18n(),
-             currentText: 'Today'.i18n()
          })
-         .datepicker("setDate", moment.utc().subtract(1, "years").toDate().toISOString().slice(0, 10));
+         .datepicker('setDate', '0');
 
      datetime.find('.time')
          .timepicker({
-            showCloseButton : true,
-            beforeShow: (input, inst) => inst.tpDiv.css({marginLeft: '-120px'}),
+            showCloseButton : false,
+            beforeShow: (input, inst) => inst.tpDiv.css({
+                marginLeft: '-120px',
+                marginTop: '6px',
+                zIndex: 101,
+            }),
             onSelect: function() { $(this).change(); update_time(); },
          });
     const update_time = () => {
@@ -116,7 +117,6 @@ export const createWindow = function(options) {
        };
     };
     show_chart();
-
 
     buildMenu($root, options_copy.instrumentName, (symbol, display_name) => {
        options_copy.instrumentName = display_name;
