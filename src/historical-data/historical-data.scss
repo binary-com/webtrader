@@ -1,76 +1,78 @@
-$COLOR_DARK_BLUE: #2a3052;
-$COLOR_WHITE: #ffffff;
-
 .historical-data-dialog {
-	.historical-data {
-		padding: 0 !important;
-		position: relative;
-	}
-	.instrument-dropdown {
-		position: absolute;
-		height: 36px;
-		width: 170px;
-		left: 180px;
-		top: 2px;
-		color: $COLOR_WHITE;
-		z-index: +1;
-		> ul {
-			border: none;
-			visibility: hidden;
-			opacity: 0;
-			transition: visibility 0.5s, opacity 0.1s linear 0.4s;
-		}
-		.ui-menu .ui-menu-item {
-			list-style-image: none !important;
-			.ui-menu-item-wrapper {
-				padding: 5px 16px 5px 6.5px;
-				margin: 0;
-			}
-		}
-		.ui-widget.ui-widget-content {
-			border: none !important;
-		}
-		&:hover > ul {
-			visibility: visible;
-			opacity: 1;
-			transition: visibility 0s;
-		}
-		li {
-			min-width: 130px;
-			background: $COLOR_DARK_BLUE;
-			color: $COLOR_WHITE;
-		}
-		.title {
-			background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
-			padding-left: 7px;
-			line-height: 34px;
-			font-size: 18px;
-			margin: auto;
-			background-size: 10px 10px !important;
-			background-position: 90px 50% !important;
-			background-repeat: no-repeat;
-			white-space: nowrap;
-		}
-	}
-	.ui-dialog-titlebar {
-		.ui-dialog-title {
-			width: 320px;
-		}
-	}
-	.date-time {
-		position: absolute;
-		left: 335px;
-		top: 5px;
-		color: $COLOR_WHITE;
-		input {
-			cursor:pointer;
-			border: none;
-			
-			display: inline-block;
-			width: 108px;
-		}
-		input:hover {
-			border: 0.2px solid $COLOR_DARK_BLUE;
-		}
-	}
+   .historical-data {
+      padding : 0 !important;
+      position: relative;
+   }
+   .instrumnet-dropdown {
+      position: absolute;
+      background: linear-gradient(#2A3052,#15212D);
+      height: 34px;
+      width: 170px;
+      left: 160px;
+      top: 0;
+      color: white;
+      z-index: +1;
+      > ul {
+         border: none;
+         visibility: hidden;
+         opacity: 0;
+         transition: visibility 0.5s, opacity 0.1s linear 0.4s;
+      }
+      .ui-menu .ui-menu-item {
+         list-style-image: none !important;
+         .ui-menu-item-wrapper {
+            padding: 5px 1em 5px .4em;
+         }
+      }
+      .ui-widget.ui-widget-content {
+         border: none !important;
+      }
+      &:hover > ul {
+         visibility: visible;
+         opacity: 1;
+         transition: visibility 0s;
+      }
+      li {
+         min-width: 130px;
+         font-size: 14px;
+         background: #2A3052;
+         color: white;
+      }
+      .title {
+         background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
+         padding-left: 20px;
+         line-height: 34px;
+         background-size: 12px 12px !important;
+         background-position: 2px 50% !important;
+         background-repeat: no-repeat;
+         margin: 0;
+         white-space: nowrap;
+      }
+      .ui-state-active {
+         margin: 0 !important;
+      }
+   }
+   .ui-dialog-titlebar {
+      .ui-dialog-title {
+         font-size: 16px;
+         width: 320px;
+      }
+   }
+   .date-time {
+      position: absolute;
+      background: linear-gradient(#2A3052,#15212D);
+      height: 34px;
+      width: 210px;
+      left: 340px;
+      top: 0;
+      color: white;
+      input {
+         color: white;
+         position: relative;
+         background: transparent;
+         border: none;
+         display: inline-block;
+         width: 100px;
+      }
+   }
 }

@@ -74,7 +74,9 @@
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
        rv-class-won="ticks.status | eq 'won'"
-       rv-class-lost="ticks.status | eq 'lost'">
+       rv-class-lost="ticks.status | eq 'lost'"
+       width='400'
+       height='130'>
   </div>
 
   <ul class='balance-row' rv-css-bottom="ticks.category.contract_category | eq 'digits' | or ticks.chart_visible">

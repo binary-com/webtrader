@@ -12,24 +12,24 @@ let is_website_up = false;
 let queued_requests = {};
 
 
-const get_app_default_appid = () => {
+const get_app_id = () => {
   const app_ids = JSON.parse(app_ids_json);
-  let token = localStorage.getItem('config.app_id')
+  const DEFAULT_APP_ID = 11;
+  const href = window.location.href;
+  let stored_app_id = '';
 
-  if(!token) { /* find the appropriate token */
-    const href = window.location.href;
-    for(const web_address in app_ids) {
-      if(href.lastIndexOf(web_address, 0) == 0) {
-        token = app_ids[web_address];
+  for (const url in app_ids) {
+      if (href.lastIndexOf(url, 0) === 0) {
+        stored_app_id = app_ids[url];
         break;
       }
-    }
   }
-  localStorage.setItem('config.default_app_id', token);
-  return token;
-};
 
-const get_app_id = () => localStorage.getItem('config.app_id') || get_app_default_appid() || 11;
+  const app_id = stored_app_id || DEFAULT_APP_ID;
+  localStorage.setItem('config.app_id', app_id);
+
+  return app_id;
+};
 
 const get_server_url = () => localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
 
@@ -39,7 +39,7 @@ const get_socket_url = () => {
 };
 
 export const socket_url = get_socket_url();
-export const app_id = get_app_id();
+export const app_id = localStorage.getItem('config.app_id') || get_app_id();
 export const server_url = get_server_url();
 
 const connect = () => {
