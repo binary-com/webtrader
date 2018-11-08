@@ -324,9 +324,7 @@ function drawSpots(contract, state, chart) {
 }
 
 function drawXLines(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, date_expiry, 
-    date_start, purchase_time, tick_count, sell_time, is_path_dependent } = contract;
-  const { is_sold_before_expiry } = state.proposal_open_contract;
+  const { entry_tick_time, exit_tick_time, date_expiry, date_start, tick_count, sell_time } = contract;
 
   if (tick_count) { // only for tick contracts
     drawXLine({ line_time: entry_tick_time, label: 'start_time' });
@@ -335,22 +333,30 @@ function drawXLines(contract, state, chart) {
   }
 
   drawXLine({ line_time: date_start, label: 'start_time' });
-
-  if (is_path_dependent && exit_tick_time && is_sold_before_expiry) {
-    drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
-  }
-
-  if (is_sold_before_expiry) drawXLine({ line_time: sell_time, label: 'end_time', dashStyle: 'Dash' });
-  if (!is_path_dependent) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
-
-  if (date_start > purchase_time) {
-    drawXLine({ line_time: purchase_time, label: 'purchase_time', color:'#7cb5ec' });
-  }
+  drawEndTime(contract);
+  drawPurchaseTime(contract);
 
   function drawXLine({ line_time, label, dashStyle, color }) {
     if (!line_time || state.chart.hasLabel(label)) return false;
 
     chart.addPlotLineX({ value: +line_time * 1000, dashStyle, color});
+  }
+
+  function drawEndTime({ is_path_dependent }) {
+    const { is_sold_before_expiry } = state.proposal_open_contract;
+
+    if (is_path_dependent && exit_tick_time && is_sold_before_expiry) {
+      drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
+    }
+
+    if (is_sold_before_expiry) drawXLine({ line_time: sell_time, label: 'end_time', dashStyle: 'Dash' });
+    if (!is_path_dependent) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
+  }
+
+  function drawPurchaseTime({ purchase_time }) {
+    if (date_start > purchase_time) {
+      drawXLine({ line_time: purchase_time, label: 'purchase_time', color:'#7cb5ec' });
+    }
   }
 }
 
