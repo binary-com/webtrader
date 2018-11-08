@@ -1641,6 +1641,9 @@ msgstr "วันที่ซื้อ"
 msgid "Purchase Price"
 msgstr "ราคาซื้อ"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "อ่าน"
 

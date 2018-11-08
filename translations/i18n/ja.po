@@ -1641,6 +1641,9 @@ msgstr "購入日時"
 msgid "Purchase Price"
 msgstr "購入金額"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "読む"
 

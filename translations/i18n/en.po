@@ -1646,6 +1646,9 @@ msgstr "Purchase Date"
 msgid "Purchase Price"
 msgstr "Purchase Price"
 
+msgid "Purchase Time"
+msgstr "Purchase Time"
+
 msgid "Read"
 msgstr "Read"
 
@@ -3034,9 +3037,6 @@ msgstr "| Return"
 
 #~ msgid "Plot Color"
 #~ msgstr "Plot Color"
-
-#~ msgid "Purchase Time"
-#~ msgstr "Purchase Time"
 
 #~ msgid "Short MA Type"
 #~ msgstr "Short MA Type"

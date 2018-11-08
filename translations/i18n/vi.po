@@ -1641,6 +1641,9 @@ msgstr "Ngày mua"
 msgid "Purchase Price"
 msgstr "Giá mua"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "Đọc"
 

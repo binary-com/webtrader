@@ -1641,6 +1641,9 @@ msgstr "Tanggal Beli"
 msgid "Purchase Price"
 msgstr "Harga Beli"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "Baca"
 

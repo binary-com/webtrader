@@ -1628,6 +1628,9 @@ msgstr ""
 msgid "Purchase Price"
 msgstr "" 
 
+msgid "Purchase Time"
+msgstr "" 
+
 msgid "Read"
 msgstr "" 
 
