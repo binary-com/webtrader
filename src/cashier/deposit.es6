@@ -179,7 +179,6 @@ function init_state(root) {
                 return agent;
             });
         state.payment_agents.list = pa_list;
-        console.log(state.payment_agents.list);
     }).catch(error_handler);
 }
 
