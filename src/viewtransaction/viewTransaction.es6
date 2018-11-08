@@ -70,7 +70,8 @@ const initChart = (root, state, options) => {
    const { title } = options;
    const el = root.find('.transaction-chart')[0];
    const CHART_LABELS = ChartSettings.getChartLabels(state.proposal_open_contract);
-   const { entry_tick_time } = state.proposal_open_contract;
+   const { entry_tick_time, date_start } = state.proposal_open_contract;
+   const zone_start = entry_tick_time || date_start;
 
    const chart_options = {
       credits: { href: '#', text: '' },
@@ -124,8 +125,8 @@ const initChart = (root, state, options) => {
          zoneAxis: 'x',
          // zones are used to display color of the line
          zones:[{
-             // make the line grey until it reaches entry time or start time if entry spot time is not yet known
-             value: entry_tick_time ? entry_tick_time * 1000 : '',
+             // make the line grey until it reaches entry time or zone_start time if entry spot time is not yet known
+             value: zone_start ? +zone_start * 1000 : '',
              color: '#ccc',
          }, {
              // make the line default color until exit time is reached
@@ -228,6 +229,7 @@ const updateIndicative = (data, state) => {
 
   function updateState(contract, state) {
     const sell_time = contract.is_path_dependent && contract.status !== 'sold' ? contract.exit_tick_time : parseInt(contract.sell_time);
+
     // note: cannot use spread operator - rivets.js 2-way data-binding breaks if new object
     state.proposal_open_contract.is_sold_before_expiry = sell_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
@@ -279,17 +281,20 @@ function drawChart(contract, state) {
 }
 
 function drawZones(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, date_expiry } = contract;
+  const { entry_tick_time, exit_tick_time, date_expiry, sell_time } = contract;
   const { is_sold_before_expiry } = state.proposal_open_contract;
 
   drawZone({ spot_time: entry_tick_time, label: 'entry_zone', zone_idx: 0 });
-  if (is_sold_before_expiry) drawZone({ spot_time: date_expiry, label: 'exit_zone', zone_idx: 1 });
+
+  if (is_sold_before_expiry) {
+    drawZone({ spot_time: exit_tick_time || sell_time, label: 'exit_zone', zone_idx: 1 });
+  }
   drawZone({ spot_time: exit_tick_time || date_expiry, label: 'exit_zone', zone_idx: 1 });
 
   function drawZone({spot_time, label, zone_idx}) {
     if (!spot_time || state.chart.hasLabel(label)) return;
 
-    chart.series[0].zones[zone_idx].value = (spot_time * 1000);
+    chart.series[0].zones[zone_idx].value = (+spot_time * 1000);
   }
 }
 
@@ -300,13 +305,17 @@ function drawSpots(contract, state, chart) {
   if (tick_count) return; // tick contracts = chart should not have entry/exit spots
 
   drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
-  if (is_path_dependent && exit_tick_time) drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
+
+  if (is_path_dependent && exit_tick_time) {
+    drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
+  }
+
   if (!is_sold_before_expiry) drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
 
   function drawSpot({ spot_time, label, color }) {
     if (!spot_time || state.chart.hasLabel(label)) return;
 
-    const series_spot = chart.series[0].data.find((marker) => +marker.x === +(spot_time * 1000));
+    const series_spot = chart.series[0].data.find((marker) => +marker.x === (+spot_time * 1000));
     if (!series_spot) return;
 
     const marker = ChartSettings.getMarkerSettings(color);
@@ -315,7 +324,7 @@ function drawSpots(contract, state, chart) {
 }
 
 function drawXLines(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, date_expiry,
+  const { entry_tick_time, exit_tick_time, date_expiry, 
     date_start, purchase_time, tick_count, sell_time, is_path_dependent } = contract;
   const { is_sold_before_expiry } = state.proposal_open_contract;
 
@@ -327,16 +336,21 @@ function drawXLines(contract, state, chart) {
 
   drawXLine({ line_time: date_start, label: 'start_time' });
 
-  if (is_path_dependent && exit_tick_time && is_sold_before_expiry) drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
+  if (is_path_dependent && exit_tick_time && is_sold_before_expiry) {
+    drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
+  }
+
   if (is_sold_before_expiry) drawXLine({ line_time: sell_time, label: 'end_time', dashStyle: 'Dash' });
   if (!is_path_dependent) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
 
-  if (date_start > purchase_time) drawXLine({ line_time: purchase_time, label: 'purchase_time', color:'#7cb5ec' });
+  if (date_start > purchase_time) {
+    drawXLine({ line_time: purchase_time, label: 'purchase_time', color:'#7cb5ec' });
+  }
 
   function drawXLine({ line_time, label, dashStyle, color }) {
     if (!line_time || state.chart.hasLabel(label)) return false;
 
-    chart.addPlotLineX({ value: line_time * 1000, dashStyle, color});
+    chart.addPlotLineX({ value: +line_time * 1000, dashStyle, color});
   }
 }
 
