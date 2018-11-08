@@ -343,7 +343,8 @@ class Withdraw {
         liveapi.send({ get_settings: 1 })
             .then(data => {
                 agent.residence = data.get_settings.country_code;
-                return liveapi.cached.send({ paymentagent_list: agent.residence });
+                const currency = local_storage.get('currency');
+                return liveapi.cached.send({ paymentagent_list: agent.residence, currency  });
             })
             .then(data => {
                 agent.agents = data.paymentagent_list.list;
