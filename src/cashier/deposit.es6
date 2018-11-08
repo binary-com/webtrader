@@ -92,6 +92,7 @@ function init_state(root) {
             }
         },
         user: {
+            currency: local_storage.get('currency'),
             email: local_storage.get('authorize').email,
             cashier_url: '',
             residence: '',
@@ -169,17 +170,16 @@ function init_state(root) {
     residence_promise.then(function() {
         if (!state.user.residence)
             return { paymentagent_list: { list: [] } };
-        return liveapi.send({ paymentagent_list: state.user.residence });
+        return liveapi.send({ paymentagent_list: state.user.residence, currency: state.user.currency });
     }).then((data) => {
-        const currency = local_storage.get('currency');
-        const list = data.paymentagent_list.list
-            .filter((pa) => pa.currencies === currency)
+        const pa_list = data.paymentagent_list.list
             .map((agent) => {
                 agent.commission_text = state.payment_agents.get_commission_text(agent);
                 agent.supported_banks = agent.supported_banks.toLowerCase().split(',');
                 return agent;
             });
-        state.payment_agents.list = list;
+        state.payment_agents.list = pa_list;
+        console.log(state.payment_agents.list);
     }).catch(error_handler);
 }
 
