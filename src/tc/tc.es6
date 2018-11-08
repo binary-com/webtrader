@@ -52,6 +52,8 @@ export const init = () => {
         //This helps in showing multiple dialog windows in modal form
         $('body').append(win.dialog('widget'));
         win.dialog('open');
+        const binary_url_tc = getBinaryUrl('terms-and-conditions.html');
+        Array.from(document.getElementsByClassName('tc-link')).forEach((a_el) => a_el.href = binary_url_tc);
     }
 }
 

@@ -23,7 +23,7 @@ window.requirejs.config({
         "moment-locale":"lib/moment/locale",
         "clipboard": "lib/clipboard/dist/clipboard.min",
         "indicator_levels": "charts/indicators/level",
-        "binary-style": "<style-url>/binary",
+        "binary-style": "lib/binary-style/binary",
         "babel-runtime/regenerator": "lib/regenerator-runtime/runtime",
         "webtrader-charts" : "lib/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",
@@ -145,9 +145,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
     /* setup translating string literals */
     window.setup_i18n_translation(JSON.parse(lang_json));
-    if (i18n_name === "ar") {
-        $("body").addClass("rtl-direction");
-    }
 
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,
@@ -321,8 +318,8 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
             });
         });
 
-        /*Trigger T&C check, self-exclusion, reality check, chrome extension check, csr_tax_information check*/
-        require(["selfexclusion/selfexclusion", "chrome/chrome", "accountstatus/accountstatus", "realitycheck/realitycheck", "websitestatus/websitestatus"]);
+        /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/
+        require(["selfexclusion/selfexclusion", "accountstatus/accountstatus", "realitycheck/realitycheck", "websitestatus/websitestatus"]);
     }
 
     //Our chart is accessed directly

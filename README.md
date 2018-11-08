@@ -40,10 +40,6 @@ Go to https://webtrader.local:35729 and accept the self signed ssl certificate f
 
 Now you can debug your app on https://webtrader.local/ locally.
 
-In order to get SLOC(Source line of Code, which displays total number of lines of source code) report, run
-
-        $ yarn sloc
-
 To bump release version, run
 
         $ yarn major-rel
@@ -70,6 +66,8 @@ Translation related files are in `/translations` folder.
 
 The tool should be available on linux, if you are on Osx try `brew install gettext && brew link gettext --force`.
 to submit text to translators: push to *translation* branch, weblate hook will be triggered.
+
+To see CrowdIn In-Context translations pass querystring `?lang=ach` (obs not for production env)
 
 ### Contribution
 In order to contribute, please fork and submit pull request by following all the above mentioned coding rules.

@@ -24,6 +24,11 @@ const form_error_messages = {
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
+const mapCodeToApiCode = (selected_trade_types = [], all_trade_types) => 
+  all_trade_types
+    .filter(trade_type => selected_trade_types.includes(trade_type.code))
+    .map(filtered_trade_type => filtered_trade_type.api_code);
+
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
 
 const defaultCopySettings = (traderApiToken) => ({
@@ -168,7 +173,8 @@ const state = {
             if (!settingsToSend.min_trade_stake) delete settingsToSend.min_trade_stake;
             if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
             if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
-            if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
+            settingsToSend.trade_types = mapCodeToApiCode(settingsToSend.trade_types, TRADE_TYPES);
+
             liveapi
               .send(settingsToSend)
               .then(() => {
@@ -281,18 +287,10 @@ const state = {
       validateToken(scope.searchToken.token)
         .then(tokenUserData => {
           if (!tokenUserData) throw new Error('Invalid token');
-          refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope)
-            .then(() => {
-              scope.searchToken.token = '';
-              scope.searchToken.disable = false;
-              updateLocalStorage(scope);
-            })
-            .catch(e => {
-              $.growl.error({ message: e.message });
-              scope.searchToken.disable = false;
-              updateLocalStorage(scope);
-              _.defer(() => $(event.target).focus());
-            });
+          refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope);
+          scope.searchToken.token = '';
+          scope.searchToken.disable = false;
+          updateLocalStorage(scope);
         })
         .catch(error => {
           $.growl.error({ message: error.message });
