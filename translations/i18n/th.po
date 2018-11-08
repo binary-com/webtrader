@@ -1,22 +1,19 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-10-31 04:00\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Thai\n"
-"Language: th_TH\n"
-"PO-Revision-Date: 2018-10-31 04:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-
-msgid "(One) Touch trades"
-msgstr "(One) Touch Trades"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือ สิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
@@ -170,12 +167,6 @@ msgstr "8 ชั่วโมง"
 
 msgid "AM"
 msgstr "น."
-
-msgid "About Binary.com"
-msgstr "เกี่ยวกับ Binary.com"
-
-msgid "About us"
-msgstr "เกี่ยวกับเรา"
 
 msgid "Accept"
 msgstr "ยอมรับ"
@@ -342,17 +333,8 @@ msgstr "Barrier"
 msgid "Barrier offset"
 msgstr "Barrier ออฟเซ็ท"
 
-msgid "Barrier(s)"
-msgstr "Barrier"
-
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary option"
-msgstr "ไบนารีออปชั่น"
-
-msgid "Binary options basics"
-msgstr "พื้นฐานไบนารีออปชั่น"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "ประสบการณ์การซื้อขายไบนารีออปชั่น หรือ อนุพันธ์ต่างๆ"
@@ -480,9 +462,6 @@ msgstr "สัญชาติ"
 msgid "Click to log in with your Binary.com account"
 msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของท่าน"
 
-msgid "Client funds"
-msgstr "หลักประกันของลูกค้า"
-
 msgid "Close"
 msgstr "ปิด"
 
@@ -491,9 +470,6 @@ msgstr "ปิดทั้งหมด"
 
 msgid "Closes"
 msgstr "ปิด"
-
-msgid "Commodities"
-msgstr "สินค้าโภคภัณฑ์"
 
 msgid "Commodities trading experience"
 msgstr "ประสบการณ์ในการซื้อขายสินค้าโภคภัณฑ์"
@@ -536,9 +512,6 @@ msgstr "การยืนยันสัญญา"
 
 msgid "Contract Details"
 msgstr "รายละเอียดสัญญา"
-
-msgid "Contract period"
-msgstr "ระยะเวลาของสัญญา"
 
 msgid "Contracts"
 msgstr "สัญญา"
@@ -645,12 +618,6 @@ msgstr "การฝากเงิน"
 msgid "Deposit of USD"
 msgstr "การฝากเงินดอลลาร์สหรัฐ"
 
-msgid "Depositing and withdrawing funds"
-msgstr "การฝากและถอนหลักประกัน"
-
-msgid "Derivative"
-msgstr "อนุพันธ์"
-
 msgid "Describe what this token is for to find it later"
 msgstr "อธิบายว่า โทเค่นนี้มีไว้สำหรับการค้นหาภายหลัง"
 
@@ -667,9 +634,6 @@ msgid "Digits"
 msgstr "ตัวเลข"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
-
-msgid "Do you want to install the Webtrader chrome extension?"
 msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
@@ -756,9 +720,6 @@ msgstr "สถานะการจ้างงาน"
 msgid "End Time"
 msgstr "เวลาสิ้นสุด"
 
-msgid "Ends Between/Ends Outside trades"
-msgstr "การซื้อขายแบบ สิ้นสุดระหว่าง/สิ้นสุดนอกขอบเขต"
-
 msgid "Ends Between/Outside"
 msgstr "สิ้นสุดระหว่าง/นอกขอบเขต"
 
@@ -785,9 +746,6 @@ msgstr "สปอตเริ่มต้น"
 
 msgid "Entry spot"
 msgstr "สปอตเริ่มต้น"
-
-msgid "Entry spot price"
-msgstr "ราคาสปอตเริ่มต้น"
 
 msgid "Error getting data for %1"
 msgstr "ข้อผิดพลาดในการรับข้อมูลสำหรับ %1"
@@ -822,14 +780,8 @@ msgstr "เวลาที่สปอตสิ้นสุด"
 msgid "Exit spot"
 msgstr "สปอตสิ้นสุด"
 
-msgid "Expiry price"
-msgstr "ราคาที่หมดอายุ"
-
 msgid "Explanation"
 msgstr "คำอธิบาย"
-
-msgid "FAQ"
-msgstr "คำถามที่พบบ่อย"
 
 msgid "Failed to update the password"
 msgstr "ไม่สามารถอัพเดทรหัสผ่าน"
@@ -888,9 +840,6 @@ msgstr "บรรทัดแรกของที่อยู่"
 msgid "First name"
 msgstr "ชื่อตัว"
 
-msgid "Forex"
-msgstr "ฟอเร็กซ์"
-
 msgid "Forex trading experience"
 msgstr "ประสบการณ์การซื้อขายฟอเร็กซ์"
 
@@ -912,17 +861,8 @@ msgstr "อินเทอร์เฟสของการซื้อขาย
 msgid "Further instructions"
 msgstr "คำแนะนำเพิ่มเติม"
 
-msgid "GMT"
-msgstr "GMT"
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "ใช้ API โทเค่น จากนักลงทุน และเพิ่มเข้าในรายการของท่าน"
-
-msgid "Getting started"
-msgstr "เริ่มต้น"
-
-msgid "Glossary"
-msgstr "อภิธานศัพท์"
 
 msgid "Go to"
 msgstr "ไปที่"
@@ -938,9 +878,6 @@ msgstr "Grid"
 
 msgid "Grid Light"
 msgstr "Grid Light"
-
-msgid "Group history"
-msgstr "ประวัติของกลุ่ม"
 
 msgid "Health"
 msgstr "สุขภาพ"
@@ -960,9 +897,6 @@ msgstr "Barrier สูง ที่หักกลบลบกัน"
 msgid "Higher"
 msgstr "สูงกว่า"
 
-msgid "Higher/Lower trades"
-msgstr "ซื้อขายสูงกว่า/ต่ำกว่า"
-
 msgid "Historical Data"
 msgstr "ข้อมูลเก่า"
 
@@ -977,12 +911,6 @@ msgstr "ชั่วโมง"
 
 msgid "Hours"
 msgstr "ชั่วโมง"
-
-msgid "How to trade binary options?"
-msgstr "จะซื้อขายไบนารีออปชั่นอย่างไร"
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr "จะเทรดดัชนีผันผวนอย่างไร?"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "ข้าพเจ้ารับรองว่า ข้าพเจ้าไม่ใช่บุคคลที่เกี่ยวข้องกับการเมือง (PEP)"
@@ -1020,14 +948,11 @@ msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทา�
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "ที่เกาะ Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย ดักลาส IM2 4RW เกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Gambling Supervision Commission บนเกาะ Isle of Man (ใบอนุญาตปัจจุบันออกให้เมื่อวันที่ 31 สิงหาคม 2017) และโดย (2) Gambling Commission ในสหราชอาณาจักร (ใบอนุญาต[_1]หมายเลขอ้างอิง: 39172[_2])"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนถูกเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 26 พฤษภาคม 2015) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์)"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr ""
 
 msgid "In/Out"
 msgstr "In/Out"
-
-msgid "In/Out trades"
-msgstr "การซื้อขาย In/Out"
 
 msgid "Income Source"
 msgstr "แหล่งที่มาของรายได้"
@@ -1040,9 +965,6 @@ msgstr "ราคาดัชนี"
 
 msgid "Indicators"
 msgstr "ดัชนีต่างๆ"
-
-msgid "Indices"
-msgstr "ดัชนี"
 
 msgid "Indices trading experience"
 msgstr "ประสบการณ์ในการซื้อขายดัชนีต่างๆ"
@@ -1112,9 +1034,6 @@ msgstr "เลขหลักสุดท้ายต่ำกว่า"
 
 msgid "Last used"
 msgstr "ใช้ครั้งล่าสุด"
-
-msgid "Learning to trade"
-msgstr "ศึกษาการซื้อขาย"
 
 msgid "Less than"
 msgstr "น้อยกว่า  "
@@ -1238,9 +1157,6 @@ msgstr "มี.ค."
 
 msgid "March"
 msgstr "มีนาคม"
-
-msgid "Market exit price"
-msgstr "ราคาสิ้นสุดของตลาด"
 
 msgid "Matches"
 msgstr "จับคู่"
@@ -1386,9 +1302,6 @@ msgstr "รหัสผ่านใหม่"
 msgid "No"
 msgstr "ไม่ใช่"
 
-msgid "No Touch trades"
-msgstr "การซื้อขายแบบไม่แตะเส้น"
-
 msgid "No touch"
 msgstr "ไม่แตะเส้น"
 
@@ -1415,9 +1328,6 @@ msgstr "OHLC"
 
 msgid "OK"
 msgstr "OK"
-
-msgid "OTC indices and stocks"
-msgstr "ดัชนี OTC และหุ้น"
 
 msgid "Occupation"
 msgstr "อาชีพ"
@@ -1479,9 +1389,6 @@ msgstr "เปิดบัญชีทางการเงิน 1 บัญช
 msgid "Open account"
 msgstr "เปิดบัญชี"
 
-msgid "Opening an account"
-msgstr "เปิดบัญชี"
-
 msgid "Opens"
 msgstr "เปิด"
 
@@ -1527,9 +1434,6 @@ msgstr "ได้อัพเดทรหัสผ่านแล้ว"
 msgid "Passwords didn't match. Please type them again"
 msgstr "รหัสผ่านไม่ตรงกัน โปรดพิมพ์อีกครั้ง"
 
-msgid "Patents"
-msgstr "สิทธิบัตร"
-
 msgid "Pattern Recognition"
 msgstr "การรู้จำรูปแบบ"
 
@@ -1559,9 +1463,6 @@ msgstr "รายละเอียดส่วนบุคคล"
 
 msgid "Phone"
 msgstr "โทรศัพท์"
-
-msgid "Pip"
-msgstr "Pip"
 
 msgid "Place of birth"
 msgstr "สถานที่เกิด"
@@ -1743,6 +1644,9 @@ msgstr "วันที่ซื้อ"
 msgid "Purchase Price"
 msgstr "ราคาซื้อ"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "อ่าน"
 
@@ -1785,9 +1689,6 @@ msgstr "ป้อนรหัสผ่านอีกครั้ง"
 msgid "Resale of this contract is not offered"
 msgstr "ไม่มีการเสนอการจำหน่ายซ้ำของสัญญานี้"
 
-msgid "Resale price"
-msgstr "ราคาจำหน่ายต่อ"
-
 msgid "Reset zoom"
 msgstr "ตั้งค่าขยายเป็นค่าเดิม"
 
@@ -1805,9 +1706,6 @@ msgstr "ผลตอบแทน"
 
 msgid "Rise"
 msgstr "ขึ้น"
-
-msgid "Rise/Fall trades"
-msgstr "การซื้อขาย Rise/Fall"
 
 msgid "Robust and secure platform"
 msgstr "แพลตฟอร์มที่แข็งแกร่งและปลอดภัย"
@@ -1872,9 +1770,6 @@ msgstr "เครื่องมือสำหรับพักการซื
 msgid "Sell At Market"
 msgstr "ขายที่ราคาตลาด"
 
-msgid "Sell option"
-msgstr "ขายออปชั่น"
-
 msgid "Sent to account"
 msgstr "ส่งไปยังบัญชี"
 
@@ -1902,9 +1797,6 @@ msgstr "หุ้น"
 msgid "Share chart"
 msgstr "แบ่งปันแผนภูมิ"
 
-msgid "Smart Indices"
-msgstr "ดัชนีสมาร์ท"
-
 msgid "Sold"
 msgstr "ขาย"
 
@@ -1916,9 +1808,6 @@ msgstr "แหล่งที่มาของรายได้"
 
 msgid "Spline"
 msgstr "เส้นโค้ง"
-
-msgid "Spot price"
-msgstr "ราคาสปอต"
 
 msgid "Spreads"
 msgstr "สเปรด"
@@ -1961,9 +1850,6 @@ msgstr "สถานะ"
 
 msgid "Stays Between/Goes Outside"
 msgstr "อยู่ใน/นอกขอบเขต"
-
-msgid "Stays Between/Goes Outside trades"
-msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
 
 msgid "Stays in"
 msgstr "Stays in"
@@ -2244,9 +2130,6 @@ msgstr "วันอังคาร"
 msgid "Turnover"
 msgstr "การซื้อขาย"
 
-msgid "Types of trades"
-msgstr "ประเภทของการซื้อขาย"
-
 msgid "USD"
 msgstr "USD"
 
@@ -2255,9 +2138,6 @@ msgstr "USDJPY"
 
 msgid "Under"
 msgstr "ต่ำกว่า"
-
-msgid "Underlying"
-msgstr "ผลิตภัณฑ์อ้างอิง"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "ขออภัย เบราเซอร์ของท่านไม่รองรับการใช้งาน"
@@ -2316,9 +2196,6 @@ msgstr "ดูรายการเดินบัญชี"
 msgid "Volatility Indicators"
 msgstr "ดัชนีความผันผวน"
 
-msgid "Volatility Indices"
-msgstr "ดัชนีความผันผวน"
-
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "พวกเราถูกกำหนดโดยใบอนุญาตของพวกเราเพื่อเรียนให้ท่านทราบเกี่ยวกับสิ่งที่เกิดขึ้นกับเงินทุนที่พวกเราดูแลในบัญชีของท่าน และขอบเขตที่เงินทุนได้รับการปกป้องจากภาวะล้มละลาย "
 
@@ -2351,12 +2228,6 @@ msgstr "เมื่อคุณเลือก \"Ok\" คุณจะถูก�
 
 msgid "While on the go, you can"
 msgstr "ขณะตลาดดำเนินไป ท่านสามารถ"
-
-msgid "Why choose Binary Trading?"
-msgstr "ทำไมจึงเลือกการซื้อขายไบนารี"
-
-msgid "Why trade with Binary.com"
-msgstr "ทำไมต้องเทรดกับ Binary.com"
 
 msgid "Withdraw funds"
 msgstr "ถอนหลักประกัน"
@@ -2613,3 +2484,137 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| ผลตอบแทน"
 
+#~ msgid "(One) Touch trades"
+#~ msgstr "(One) Touch Trades"
+
+#~ msgid "About Binary.com"
+#~ msgstr "เกี่ยวกับ Binary.com"
+
+#~ msgid "About us"
+#~ msgstr "เกี่ยวกับเรา"
+
+#~ msgid "Barrier(s)"
+#~ msgstr "Barrier"
+
+#~ msgid "Binary option"
+#~ msgstr "ไบนารีออปชั่น"
+
+#~ msgid "Binary options basics"
+#~ msgstr "พื้นฐานไบนารีออปชั่น"
+
+#~ msgid "Client funds"
+#~ msgstr "หลักประกันของลูกค้า"
+
+#~ msgid "Commodities"
+#~ msgstr "สินค้าโภคภัณฑ์"
+
+#~ msgid "Contract period"
+#~ msgstr "ระยะเวลาของสัญญา"
+
+#~ msgid "Depositing and withdrawing funds"
+#~ msgstr "การฝากและถอนหลักประกัน"
+
+#~ msgid "Derivative"
+#~ msgstr "อนุพันธ์"
+
+#~ msgid "Do you want to install the Webtrader chrome extension?"
+#~ msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
+
+#~ msgid "Ends Between/Ends Outside trades"
+#~ msgstr "การซื้อขายแบบ สิ้นสุดระหว่าง/สิ้นสุดนอกขอบเขต"
+
+#~ msgid "Entry spot price"
+#~ msgstr "ราคาสปอตเริ่มต้น"
+
+#~ msgid "Expiry price"
+#~ msgstr "ราคาที่หมดอายุ"
+
+#~ msgid "FAQ"
+#~ msgstr "คำถามที่พบบ่อย"
+
+#~ msgid "Forex"
+#~ msgstr "ฟอเร็กซ์"
+
+#~ msgid "GMT"
+#~ msgstr "GMT"
+
+#~ msgid "Getting started"
+#~ msgstr "เริ่มต้น"
+
+#~ msgid "Glossary"
+#~ msgstr "อภิธานศัพท์"
+
+#~ msgid "Group history"
+#~ msgstr "ประวัติของกลุ่ม"
+
+#~ msgid "Higher/Lower trades"
+#~ msgstr "ซื้อขายสูงกว่า/ต่ำกว่า"
+
+#~ msgid "How to trade binary options?"
+#~ msgstr "จะซื้อขายไบนารีออปชั่นอย่างไร"
+
+#~ msgid "How to trade the Volatility Indices markets?"
+#~ msgstr "จะเทรดดัชนีผันผวนอย่างไร?"
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
+#~ msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนถูกเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 26 พฤษภาคม 2015) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์)"
+
+#~ msgid "In/Out trades"
+#~ msgstr "การซื้อขาย In/Out"
+
+#~ msgid "Indices"
+#~ msgstr "ดัชนี"
+
+#~ msgid "Learning to trade"
+#~ msgstr "ศึกษาการซื้อขาย"
+
+#~ msgid "Market exit price"
+#~ msgstr "ราคาสิ้นสุดของตลาด"
+
+#~ msgid "No Touch trades"
+#~ msgstr "การซื้อขายแบบไม่แตะเส้น"
+
+#~ msgid "OTC indices and stocks"
+#~ msgstr "ดัชนี OTC และหุ้น"
+
+#~ msgid "Opening an account"
+#~ msgstr "เปิดบัญชี"
+
+#~ msgid "Patents"
+#~ msgstr "สิทธิบัตร"
+
+#~ msgid "Pip"
+#~ msgstr "Pip"
+
+#~ msgid "Resale price"
+#~ msgstr "ราคาจำหน่ายต่อ"
+
+#~ msgid "Rise/Fall trades"
+#~ msgstr "การซื้อขาย Rise/Fall"
+
+#~ msgid "Sell option"
+#~ msgstr "ขายออปชั่น"
+
+#~ msgid "Smart Indices"
+#~ msgstr "ดัชนีสมาร์ท"
+
+#~ msgid "Spot price"
+#~ msgstr "ราคาสปอต"
+
+#~ msgid "Stays Between/Goes Outside trades"
+#~ msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
+
+#~ msgid "Types of trades"
+#~ msgstr "ประเภทของการซื้อขาย"
+
+#~ msgid "Underlying"
+#~ msgstr "ผลิตภัณฑ์อ้างอิง"
+
+#~ msgid "Volatility Indices"
+#~ msgstr "ดัชนีความผันผวน"
+
+#~ msgid "Why choose Binary Trading?"
+#~ msgstr "ทำไมจึงเลือกการซื้อขายไบนารี"
+
+#~ msgid "Why trade with Binary.com"
+#~ msgstr "ทำไมต้องเทรดกับ Binary.com"
