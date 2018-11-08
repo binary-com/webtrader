@@ -170,12 +170,15 @@ function init_state(root) {
         if (!state.user.residence)
             return { paymentagent_list: { list: [] } };
         return liveapi.send({ paymentagent_list: state.user.residence });
-    }).then(function(data) {
-        var list = data.paymentagent_list.list.map(function(agent) {
-            agent.commission_text = state.payment_agents.get_commission_text(agent);
-            agent.supported_banks = agent.supported_banks.toLowerCase().split(',');
-            return agent;
-        })
+    }).then((data) => {
+        const currency = local_storage.get('currency');
+        const list = data.paymentagent_list.list
+            .filter((pa) => pa.currencies === currency)
+            .map((agent) => {
+                agent.commission_text = state.payment_agents.get_commission_text(agent);
+                agent.supported_banks = agent.supported_banks.toLowerCase().split(',');
+                return agent;
+            });
         state.payment_agents.list = list;
     }).catch(error_handler);
 }
