@@ -628,6 +628,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if (!range) return;
     state.duration_count.min = range.min;
     state.duration_count.max = range.max;
+    $('#minimum_hint').html(range.min)
+    $('#maximum_hint').html(range.max)
     if(try_to_keep_value !== true) {
       state.duration_count.value = range.min;
     }
@@ -798,6 +800,25 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         var id = data && data.proposal && data.proposal.id;
         id && liveapi.send({forget: id});
       });
+    }
+
+    var $duration_input = $('#duration-input')
+    var $duration_hint_minimum = $('#duration-hint-minimum')
+    var $duration_hint_maximum = $('#duration-hint-maximum')
+    if($duration_input.val() < state.duration_count.min){
+      $duration_input.addClass('error-field')
+      $duration_hint_maximum.addClass('invisible')
+      $duration_hint_minimum.removeClass('invisible')
+    }
+    else if($duration_input.val() > state.duration_count.max){
+      $duration_input.addClass('error-field')
+      $duration_hint_minimum.addClass('invisible')
+      $duration_hint_maximum.removeClass('invisible')
+      }
+    else{
+      $duration_hint_maximum.addClass('invisible')
+      $duration_hint_minimum.addClass('invisible')
+      $duration_input.removeClass('error-field')
     }
 
     async function subscribeProposalHandler(request, times_to_retry, required_err_code_for_retry) {
