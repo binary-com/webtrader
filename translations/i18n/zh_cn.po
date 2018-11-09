@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-11-09 01:30\n"
+"PO-Revision-Date: 2018-11-09 01:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "安全提示问题"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr "我们的服务器好像发生故障，我们正在努力修复中。"
+msgstr "我们的服务器好像发生故障，正在努力修复中。"
 
 msgid "Self-Employed"
 msgstr "个体经营"
@@ -2032,7 +2032,7 @@ msgid "Template already saved as"
 msgstr "模板已保存为"
 
 msgid "Template applied partially."
-msgstr "部分应用的模板。"
+msgstr "已使用部分模板。"
 
 msgid "Template changes saved"
 msgstr "模板更改已保存"
