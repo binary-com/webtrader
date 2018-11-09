@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-11-09 01:20\n"
+"PO-Revision-Date: 2018-11-09 01:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1183,13 +1183,13 @@ msgid "Loading chart and trade menus ..."
 msgstr "加载图表与交易菜单 ..."
 
 msgid "Loading custom theme configuration..."
-msgstr "加载定制相主题配置..."
+msgstr "加载自定义主题配置..."
 
 msgid "Loading portfolio ..."
 msgstr "加载投资组合 ..."
 
 msgid "Loading self-exclusion settings."
-msgstr "加载自我制止设置。"
+msgstr "加载自我禁止设置。"
 
 msgid "Loading..."
 msgstr "正在加载..."
@@ -1570,7 +1570,7 @@ msgid "Please"
 msgstr "请"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr "请[_1]接受更新条款和条件[_2]，以提高存取款限额。"
+msgstr "请[_1]接受更新条款和条件[_2]，以提高取款和交易限额。"
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
 msgstr "请[_1]完成账户资料[_2]，以提高取款和交易限额。"
