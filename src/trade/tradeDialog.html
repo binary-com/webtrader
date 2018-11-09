@@ -98,7 +98,7 @@
                    rv-datepicker="date_expiry.value_date | notify date_expiry.update" />
         </li>
         <li rv-if="duration.value | eq 'End Time' ">
-            <input type="text" class="date-expiry-hour"
+            <input type="text" class="date-expiry-hour" rv-hide="date_expiry.today_times.disabled"
                    marginTop="0px" marginLeft="-255px"
                    rv-disabled="date_expiry.today_times.disabled"
                    rv-css-opacity="date_expiry.today_times.disabled | ternary 0.8 1"
