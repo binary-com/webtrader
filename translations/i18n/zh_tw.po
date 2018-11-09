@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-11-09 01:50\n"
+"PO-Revision-Date: 2018-11-09 02:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1570,7 +1570,7 @@ msgid "Please"
 msgstr "請"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr "請[_1]接受條款和條件[_2]，以提高存取款限額。"
+msgstr "請[_1]接受更新條款和條件[_2]，以提高取款和交易限額。"
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
 msgstr "請[_1]完成帳戶資料[_2]，以提高取款和交易限額。"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "安全提示問題"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr "像是我們的伺服器發生故障，我們正在努力修復中。"
+msgstr "像是我們的伺服器發生故障，正在努力修復中。"
 
 msgid "Self-Employed"
 msgstr "自雇者"
