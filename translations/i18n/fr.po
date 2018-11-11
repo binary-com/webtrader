@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-11 13:40\n"
+"PO-Revision-Date: 2018-11-11 13:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1021,7 +1021,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "Dans l'île de Man et le Royaume Uni, les Indices de Volatilité sont offerts par Binary (IOM Ltd., 1er étage, Millennium House, Victoria Road, Douglas, IM2 4RW, île de Man, îles Britanniques, autorisé et régulé respectivement par (1) la Commission de Supervision des Jeux dans l'île de Man (licence actuelle émise le 31 Août 2017) et par (2) la Commission des Jeux du Royaume-Uni (licence [_1]no référence: 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr ""
+msgstr "Dans le reste de l’UE, les Indices de Volatilité sont offerts par Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte ; agréée et régulée par (1) l'Autorité des Jeux de Malte à Malte (no. de licence MGA/B2C/102/2000 délivré le 26 mai 2018), pour les clients britanniques par (2) la Commission des jeux du Royaume Uni (licence [_1]référence ne : 39495[_2]) et pour les clients irlandais par (3) les Commissionaires du Revenu en Irlande (Licence de bookmaker à distance n ° 1010285 publié le 1er juillet 2017). Voir l'ensemble des [_3]informations réglementaires[_4]"
 
 msgid "In/Out"
 msgstr "Dans/Hors De"
@@ -1078,7 +1078,7 @@ msgid "January"
 msgstr "janvier"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Les comptes du Japon ne sont pas pris en charge."
 
 msgid "Jul"
 msgstr "juill."
@@ -1087,7 +1087,7 @@ msgid "July"
 msgstr "juillet"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Accéder directement à :"
 
 msgid "Jun"
 msgstr "juin"
@@ -1105,10 +1105,10 @@ msgid "Last Digit Prediction"
 msgstr "Prédiction sur le dernier chiffre"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Dernier chiffre est Supérieur"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Dernier chiffre est Inférieur"
 
 msgid "Last used"
 msgstr "Dernière utilisation"
@@ -1189,7 +1189,7 @@ msgid "Loading portfolio ..."
 msgstr "Chargement du portefeuille ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Chargement des paramètres d’auto-exclusion."
 
 msgid "Loading..."
 msgstr "Chargement..."
@@ -1201,7 +1201,7 @@ msgid "Log in time"
 msgstr "Heure de connexion"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Déconnexion pour cause de fin de la session d’auto-exclusion !"
 
 msgid "Login"
 msgstr "Connexion"
@@ -1267,13 +1267,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Maximum global des pertes par jour"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Solde maximal"
 
 msgid "Maximum number of open positions"
 msgstr "Nombre maximal de positions ouvertes"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Positions Ouvertes Maximales"
 
 msgid "May"
 msgstr "mai"
@@ -1285,7 +1285,7 @@ msgid "Memorable town/city"
 msgstr "Ville mémorable"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "La mise de trade minimale devrait être inférieur à la mise de trade maximale."
 
 msgid "Min. Trade Stake"
 msgstr "Min. Mise pour le Trade"
@@ -1393,7 +1393,7 @@ msgid "No touch"
 msgstr "Ne touche pas"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Remarque : le Contrat sera vendu au prix du marché lorsque la demande est reçue par nos serveurs. Ce prix peut différer du prix indiqué."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Remarque : Vous ne pouvez avoir qu'un compte en monnaie fiduciaire et un pour chaque monnaie digitale"
