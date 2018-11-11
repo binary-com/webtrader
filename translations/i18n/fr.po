@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-11 13:50\n"
+"PO-Revision-Date: 2018-11-11 14:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1417,7 +1417,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "OTC indices and stocks"
-msgstr ""
+msgstr "Indices et actions de gré à gré (OTC)"
 
 msgid "Occupation"
 msgstr "Profession"
@@ -1513,16 +1513,16 @@ msgid "PEP Declaration"
 msgstr "Déclaration PEP"
 
 msgid "PM"
-msgstr ""
+msgstr "Après midi"
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "Le mot de passe doit être de minimum 6 caractères"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Le mot de passe doit être composé de minuscules, de majuscules et de chiffres"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Mot de passe mis à jour."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Les mots de passe fournis ne correspondent pas. Veuillez les saisir à nouveau"
@@ -1570,19 +1570,19 @@ msgid "Please"
 msgstr "Veuillez"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Veuillez [_1]accepter les Conditions Générales mises à jour[_2] pour supprimer vos limites de retrait et de trading."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "S'il vous plait [_1]complétez le profile de votre compte[_2] pour supprimer vos limites de retrait et de trading."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Veuillez choisir au moins une gamme de token"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Veuillez sélectionner la devise dans laquelle vous souhaitez effectuer vos transactions"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Veuillez remplir le [_1]formulaire d'évaluation financière[_2] pour lever vos limites de retrait et de trading."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Veuillez confirmer les informations suivantes afin de procéder au transfert"
