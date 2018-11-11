@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-11 14:00\n"
+"PO-Revision-Date: 2018-11-11 14:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1594,10 +1594,10 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Veuillez saisir une date valide, au format aaaa-mm-jj."
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Veuillez entrer une valeur valide pour"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Veuillez saisir un chiffre entre 0 et"
 
 msgid "Please enter a value greater than 0"
 msgstr "Entrez une valeur plus grande que 0 s'il vous plaît"
