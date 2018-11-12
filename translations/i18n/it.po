@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 14:15\n"
+"PO-Revision-Date: 2018-11-12 14:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -547,10 +547,10 @@ msgid "Copier"
 msgstr ""
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "Copy Trade"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "Copy Trading"
 
 msgid "Country of residence"
 msgstr "Paese di residenza"
@@ -595,7 +595,7 @@ msgid "Custom Theme"
 msgstr "Personalizza argomento"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Personalizza l'aspetto del grafico"
 
 msgid "Daily limit on losses"
 msgstr "Limite giornaliero delle perdite"
@@ -658,7 +658,7 @@ msgid "Description"
 msgstr "Descrizione"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Deseleziona"
 
 msgid "Differs"
 msgstr "Differisce"
@@ -676,7 +676,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Non hai ancora un account? Registrati e otterrai un account virtuale di 10.000"
 
 msgid "Done"
-msgstr ""
+msgstr "Fatto"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Fatto. I fondi sono stati trasferiti all'agente di pagamento"
