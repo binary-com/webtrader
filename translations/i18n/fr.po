@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-12 13:52\n"
+"PO-Revision-Date: 2018-11-12 14:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2068,13 +2068,13 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Les services financiers disponibles sur ce site conviennent uniquement aux clients capables d'assumer la perte de l'ensemble des fonds qu'ils investissent, et qui comprennent et ont l'expérience des risques liés à l'acquisition de contrats financiers. Les transactions sur contrats financiers impliquent un degré de risque élevé. Si les contrats achetés expirent sans valeur, vous perdrez la totalité de votre investissement, à savoir la prime de l'option"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Il y avait une interruption des données du marché pendant la durée du contrat. Pour les comptes d’argent réel, nous tenterons de corriger cela et régler le contrat correctement, sinon le contrat sera annulé et remboursé. Les contrats de monnaie virtuelle seront annulés et remboursés."
 
 msgid "There was an error"
 msgstr "Une erreur s'est produite"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Ce contrat a expiré"
 
 msgid "This contract lost"
 msgstr "Ce contrat a été perdu"
@@ -2110,7 +2110,7 @@ msgid "Time out until"
 msgstr "Expiré jusqu'à"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Temps terminé pour la demande de websocket"
 
 msgid "Title"
 msgstr "Titre"
@@ -2137,7 +2137,7 @@ msgid "Token Management"
 msgstr "Gestion des jetons"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Jeton déjà ajouté"
 
 msgid "Token management"
 msgstr "Gestion des jetons"
@@ -2146,16 +2146,16 @@ msgid "Token name"
 msgstr "Nom du jeton"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Le nom du jeton peut contenir des caractères alphanumériques, avec des espaces et des tirets bas"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Le nom du jeton peut avoir un maximum de 32 caractères"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "Le nom du jeton doit contenir au moins 2 caractères"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "Le nom du jeton doit commencer par des caractères alphanumériques uniquement"
 
 msgid "Token permissions"
 msgstr "Permissions du jeton"
@@ -2296,7 +2296,7 @@ msgid "Verification code has been sent to your email"
 msgstr "Un code de vérification vous a été envoyé par e-mail"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Code de vérification envoyé à"
 
 msgid "Verification token"
 msgstr "Jeton de vérification"
