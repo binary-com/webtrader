@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 16:20\n"
+"PO-Revision-Date: 2018-11-12 16:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1669,7 +1669,7 @@ msgid "Please try again after few minutes."
 msgstr "Riprova tra qualche minuto."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Utilizza la nuova password per effettuare il login."
 
 msgid "Plot"
 msgstr "Grafico"
@@ -1714,13 +1714,13 @@ msgid "Print chart"
 msgstr "Stampa il grafico"
 
 msgid "Professional Client"
-msgstr ""
+msgstr "Cliente professionista"
 
 msgid "Profit"
 msgstr "Profitto"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Tabella dei rendimenti"
 
 msgid "Profit table"
 msgstr "Tabella dei profitti"
@@ -1759,10 +1759,10 @@ msgid "Ref"
 msgstr "Rif"
 
 msgid "Ref."
-msgstr ""
+msgstr "Rif."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Aggiornamento non riuscito"
 
 msgid "Register free account"
 msgstr "Registra un account gratis"
