@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 16:00\n"
+"PO-Revision-Date: 2018-11-12 16:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1549,7 +1549,7 @@ msgid "Pension"
 msgstr "Pensione"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Probabilità di rendimento"
 
 msgid "Permissions"
 msgstr "Autorizzazioni"
@@ -1570,25 +1570,25 @@ msgid "Please"
 msgstr "Prego"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Per innalzare il limite dei prelievi e del trading, [_1]accetta i Termini e condizioni aggiornati[_2]."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Per innalzare il limite dei prelievi e del trading, [_1]completa il profilo del tuo conto[_2]."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Seleziona almeno un ambito del token"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "Scegli in quale valuta desideri negoziare"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Per innalzare il limite dei prelievi e del trading, [_1]compila il modulo della valutazione finanziaria[_2]."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Per poter completare il trasferimento, conferma i seguenti dati"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Inserisci un numero compreso tra"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Inserisci una data valida nel formato aaaa-mm-gg"
