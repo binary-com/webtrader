@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-11 14:10\n"
+"PO-Revision-Date: 2018-11-12 13:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1603,7 +1603,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Entrez une valeur plus grande que 0 s'il vous plaît"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Veuillew entrer une valeur de moins de 6 semaines pour le time out jusqu'à."
 
 msgid "Please enter correct email"
 msgstr "Veuillez saisir une adresse e-mail correcte"
@@ -1612,7 +1612,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Veuillez saisir la date au format AAAA-MM-JJ."
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Veuillez entrer le nom du jeton"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Veuillez saisir l'horaire au format HH:MM"
@@ -1633,7 +1633,7 @@ msgid "Please log in"
 msgstr "Veuillez vous connecter"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Veuillez vous connecter pour voir votre espace de travail enregistré."
 
 msgid "Please log in."
 msgstr "Veuillez vous connecter."
@@ -1645,7 +1645,7 @@ msgid "Please select"
 msgstr "Veuillez sélectionner"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Veuillez sélectionner une date pour time out jusqu'à."
 
 msgid "Please select a payment agent"
 msgstr "Veuillez sélectionner une date valide"
@@ -1654,10 +1654,10 @@ msgid "Please select an account opening reason before continuing"
 msgstr "Veuillez sélectionner une raison pour l’ouverture du compte avant de continuer"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "Veuillez choisir une monnaie."
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Veuillez définir la [_1]devise[_2] de votre compte"
 
 msgid "Please submit a valid verification token"
 msgstr "S'il vous plaît, soumettez un coupon de vérification valide"
@@ -1666,7 +1666,7 @@ msgid "Please try again after 1 minute."
 msgstr "Veuillez réessayer dans une minute."
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "Veuillez réessayer dans quelques minutes."
 
 msgid "Please use your new password to login."
 msgstr ""
