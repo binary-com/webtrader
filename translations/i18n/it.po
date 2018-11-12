@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 16:10\n"
+"PO-Revision-Date: 2018-11-12 16:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1594,10 +1594,10 @@ msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "Inserisci una data valida nel formato aaaa-mm-gg"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Inserisci un valore valido per"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Inserire un valore compreso tra 0 e"
 
 msgid "Please enter a value greater than 0"
 msgstr "Inserire un valore superiore a 0"
@@ -1630,13 +1630,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Effettua il login"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Effettua il login per visualizzare l'area di lavoro salvata."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Effettua il login."
 
 msgid "Please provide your tax information"
 msgstr "Si prega di fornire i dati fiscali"
@@ -1648,25 +1648,25 @@ msgid "Please select a date for time out until."
 msgstr ""
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Seleziona un agente di pagamento"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Prima di continuare, seleziona un motivo per l'apertura dell'account"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "Imposta una valuta."
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Imposta la [_1]valuta[_2] del tuo conto"
 
 msgid "Please submit a valid verification token"
 msgstr "Invia un token di verifica valido"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Riprova tra 1 minuto."
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "Riprova tra qualche minuto."
 
 msgid "Please use your new password to login."
 msgstr ""
