@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 15:30\n"
+"PO-Revision-Date: 2018-11-12 15:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -994,7 +994,7 @@ msgid "I hereby confirm that the tax information I provided is true and complete
 msgstr "Con la presente confermo che le informazioni fiscali fornite sono veritiere e complete. Informerò inoltre Binary Investments (Europe) Ltd. di eventuali modifiche a tali informazioni"
 
 msgid "I want to be treated as a professional client"
-msgstr ""
+msgstr "Voglio essere classificato come cliente professionale"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "DISCLAIMER IMPORTANTE"
@@ -1015,7 +1015,7 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "Per usufruire dei nostri servizi, richiediamo delle informazioni necessarie per valutare se un dato prodotto o servizio è adegutao a te (ossia se possiedi l'esperienza e la conoscenza per comprendere i rischi connessi)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "Nell'UE, i prodotti finanziari sono offerti da Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorizzata e regolamentata come appartenente alla Categoria 3 dei fornitori di servizi di investimento dalla Malta Financial Services Authority (licenza n. IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr ""
