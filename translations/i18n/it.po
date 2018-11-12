@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 15:20\n"
+"PO-Revision-Date: 2018-11-12 15:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -916,16 +916,16 @@ msgid "GMT"
 msgstr "GMT"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Ottieni il token dell'API dal/i trader e aggiungilo alla tua lista"
 
 msgid "Getting started"
-msgstr ""
+msgstr "Per iniziare"
 
 msgid "Glossary"
-msgstr ""
+msgstr "Glossario"
 
 msgid "Go to"
-msgstr ""
+msgstr "Vai a"
 
 msgid "Goes out"
 msgstr "Goes out"
@@ -940,7 +940,7 @@ msgid "Grid Light"
 msgstr "Griglia light"
 
 msgid "Group history"
-msgstr ""
+msgstr "Storia del gruppo"
 
 msgid "Health"
 msgstr "Salute"
@@ -949,7 +949,7 @@ msgid "High"
 msgstr "High"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Barriera superiore"
 
 msgid "High barrier"
 msgstr "Barriera superiore"
@@ -967,19 +967,19 @@ msgid "Historical Data"
 msgstr "Dati storici"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "Dati storici per"
 
 msgid "Horizontal line"
 msgstr "Linea orizzontale"
 
 msgid "Hour"
-msgstr ""
+msgstr "Ora"
 
 msgid "Hours"
 msgstr "Ore"
 
 msgid "How to trade binary options?"
-msgstr ""
+msgstr "Come fare trading di opzioni binarie?"
 
 msgid "How to trade the Volatility Indices markets?"
 msgstr "Come si negozia nei mercati con Indici di volatilità?"
@@ -991,7 +991,7 @@ msgid "I have read and agree to Binary.com"
 msgstr "Ho letto e accetto i"
 
 msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
+msgstr "Con la presente confermo che le informazioni fiscali fornite sono veritiere e complete. Informerò inoltre Binary Investments (Europe) Ltd. di eventuali modifiche a tali informazioni"
 
 msgid "I want to be treated as a professional client"
 msgstr ""
