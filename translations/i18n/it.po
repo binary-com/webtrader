@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 10:50\n"
+"PO-Revision-Date: 2018-11-12 13:52\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -250,7 +250,7 @@ msgid "Amount"
 msgstr "Importo"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Min: 10 Max: 2000"
 
 msgid "Amount per point"
 msgstr "Importo per punto"
@@ -313,7 +313,7 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "Autentica ora il conto verificando la tua identità e il tuo indirizzo. Per procedere, basta inviare a %1 i seguenti documenti:"
 
 msgid "Available Currencies"
 msgstr "Valute disponibili"
@@ -322,7 +322,7 @@ msgid "Avg. Duration"
 msgstr "Durata media"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Durata media delle posizioni aperte"
 
 msgid "Avg. Loss"
 msgstr "Perdita media"
