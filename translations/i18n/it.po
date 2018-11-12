@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 14:00\n"
+"PO-Revision-Date: 2018-11-12 14:15\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -400,13 +400,13 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Cliccando OK, confermi di aver letto e accettato l'aggiornamento"
 
 msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
+msgstr "Normalmente i clienti vengono considerati clienti al dettaglio. Previa verifica dei requisiti richiesti, desideri essere considerato cliente professionale?"
 
 msgid "CFD trading experience"
-msgstr ""
+msgstr "Esperienza di trading di CFD"
 
 msgid "CFD trading frequency"
-msgstr ""
+msgstr "Frequenza del trading di CFD"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Può essere utilizzato per acquistare e vendere contratti, rinnovare acquisti scaduti e integrare account di moneta virtuale."
@@ -475,13 +475,13 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Citizenship"
-msgstr ""
+msgstr "Cittadinanza"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Clicca per accedere con il tuo account Binary.com"
 
 msgid "Client funds"
-msgstr ""
+msgstr "Fondi dei clienti"
 
 msgid "Close"
 msgstr "Chiudi"
@@ -511,10 +511,10 @@ msgid "Confirm transfer"
 msgstr "Conferma il trasferimento"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Connessione chiusa."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Errore di connessione."
 
 msgid "Construction"
 msgstr "Edilizia"
@@ -532,10 +532,10 @@ msgid "Contract"
 msgstr "Contratto"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Conferma del contratto"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Dettagli del contratto"
 
 msgid "Contract period"
 msgstr "Periodo del contratto"
