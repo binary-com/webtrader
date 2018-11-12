@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-12 13:30\n"
+"PO-Revision-Date: 2018-11-12 13:52\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1669,7 +1669,7 @@ msgid "Please try again after few minutes."
 msgstr "Veuillez réessayer dans quelques minutes."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Veuillez utiliser votre nouveau mot de passe pour vous connecter."
 
 msgid "Plot"
 msgstr "Zone de traçage"
@@ -1729,7 +1729,7 @@ msgid "Profit/ Loss"
 msgstr "Profits/pertes"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "Justificatif de domicile : une copie scannée d'une facture de gaz, d'électricité, d'eau ou d'un relevé bancaire datant de moins de 3 mois. Votre justificatif de domicile doit inclure votre nom, adresse, date d'émission, et le nom de l'organisation émettrice."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
 msgstr "Preuve d'identité : une copie scannée de votre passeport, de votre permis de conduire (provisoire ou non) ou de votre carte d'identité, indiquant votre nom et votre date de naissance."
@@ -1750,10 +1750,10 @@ msgid "Real Money Account Opening"
 msgstr "Ouverture d'un compte réel"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Relevé d'activité"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Redirection vers la page de connexion oauth,"
 
 msgid "Ref"
 msgstr "Réf."
@@ -1762,7 +1762,7 @@ msgid "Ref."
 msgstr "Réf."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "L'actualisation a échoué"
 
 msgid "Register free account"
 msgstr "Ouvrez un compte gratuit"
@@ -1783,7 +1783,7 @@ msgid "Repeat password"
 msgstr "Répéter le mot de passe"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "La revente de ce contrat n’est pas offert"
 
 msgid "Resale price"
 msgstr "Prix de revente"
@@ -1858,7 +1858,7 @@ msgid "Security question"
 msgstr "Question de sécurité"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Il semble que nos serveurs sont en panne, nous travaillons à leur réparation."
 
 msgid "Self-Employed"
 msgstr "Non-salarié"
@@ -1888,7 +1888,7 @@ msgid "Session"
 msgstr "Session"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Limite de durée de session"
 
 msgid "Session duration limit, in minutes"
 msgstr "Limite de durée de session, en minutes"
@@ -1909,7 +1909,7 @@ msgid "Sold"
 msgstr "Vendu"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Certains indices aléatoires"
 
 msgid "Source of wealth"
 msgstr "Source de richesse"
@@ -1993,10 +1993,10 @@ msgid "Submit"
 msgstr "Envoyer"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Ajouté avec succès le nouveau jeton"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Ajout réussi de l'espace de travail comme"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Le modèle a été correctement appliqué et enregistré comme"
@@ -2014,7 +2014,7 @@ msgid "Tax Information"
 msgstr "Informations fiscales"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "Renseignements fiscaux mis à jour"
 
 msgid "Tax identification number"
 msgstr "Numéro d'identification fiscale"
@@ -2029,16 +2029,16 @@ msgid "Tel"
 msgstr "Tél."
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Modèle déjà enregistré comme"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Modèle appliqué partiellement."
 
 msgid "Template changes saved"
 msgstr "Modifications apportées au modèle enregistrées"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Le modèle n’est pas applicable."
 
 msgid "Template name"
 msgstr "Nom du modèle"
