@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 15:10\n"
+"PO-Revision-Date: 2018-11-12 15:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -868,10 +868,10 @@ msgid "Finance"
 msgstr "Finanza"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "Modulo per l'apertura del conto finanziario"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "Valutazione finanziaria"
 
 msgid "Financial Information"
 msgstr "Informazioni finanziarie"
