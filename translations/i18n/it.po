@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 15:01\n"
+"PO-Revision-Date: 2018-11-12 15:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -802,16 +802,16 @@ msgid "Exclude me from the website until"
 msgstr "Escludimi dal sito internet fino al"
 
 msgid "Exclude time"
-msgstr "Tempo di esclusione"
+msgstr "Periodo di esclusione"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Il periodo di esclusione deve essere successivo a oggi."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "L'esclusione non può durare meno di 6 mesi."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "L'esclusione non può durare più di 5 anni."
 
 msgid "Exit Spot"
 msgstr "Spot d'uscita"
@@ -829,10 +829,10 @@ msgid "Explanation"
 msgstr "Spiegazione"
 
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Impossibile aggiornare la password"
 
 msgid "Fall"
 msgstr "Ribasso"
