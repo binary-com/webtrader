@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 14:40\n"
+"PO-Revision-Date: 2018-11-12 14:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -745,7 +745,7 @@ msgid "Education"
 msgstr "Istruzione"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "Verifica dell'indirizzo e-mail non riuscita"
 
 msgid "Embed code"
 msgstr "Codice inserito"
