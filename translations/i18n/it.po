@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-12 14:50\n"
+"PO-Revision-Date: 2018-11-12 15:01\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -775,7 +775,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Goditi un'interfaccia di trading intuitiva con funzionalità avanzate che ti consente di monitorare tutti i tuoi asset e mercati preferiti contemporaneamente, così come i grafici fondamentali, gli indici degli asset, gli orari di trading e i dati storici. La cosa più importante è che puoi scegliere che cosa desideri guardare sul tuo schermo"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Inserisci un token per il trading valido"
 
 msgid "Enter your current password"
 msgstr "Inserisci la tua password attuale"
@@ -802,7 +802,7 @@ msgid "Exclude me from the website until"
 msgstr "Escludimi dal sito internet fino al"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Tempo di esclusione"
 
 msgid "Exclude time must be after today."
 msgstr ""
