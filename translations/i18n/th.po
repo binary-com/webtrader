@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-31 04:00\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Thai\n"
-"Language: th_TH\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2484,137 +2484,3 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| ผลตอบแทน"
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "(One) Touch Trades"
-
-#~ msgid "About Binary.com"
-#~ msgstr "เกี่ยวกับ Binary.com"
-
-#~ msgid "About us"
-#~ msgstr "เกี่ยวกับเรา"
-
-#~ msgid "Barrier(s)"
-#~ msgstr "Barrier"
-
-#~ msgid "Binary option"
-#~ msgstr "ไบนารีออปชั่น"
-
-#~ msgid "Binary options basics"
-#~ msgstr "พื้นฐานไบนารีออปชั่น"
-
-#~ msgid "Client funds"
-#~ msgstr "หลักประกันของลูกค้า"
-
-#~ msgid "Commodities"
-#~ msgstr "สินค้าโภคภัณฑ์"
-
-#~ msgid "Contract period"
-#~ msgstr "ระยะเวลาของสัญญา"
-
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "การฝากและถอนหลักประกัน"
-
-#~ msgid "Derivative"
-#~ msgstr "อนุพันธ์"
-
-#~ msgid "Do you want to install the Webtrader chrome extension?"
-#~ msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
-
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "การซื้อขายแบบ สิ้นสุดระหว่าง/สิ้นสุดนอกขอบเขต"
-
-#~ msgid "Entry spot price"
-#~ msgstr "ราคาสปอตเริ่มต้น"
-
-#~ msgid "Expiry price"
-#~ msgstr "ราคาที่หมดอายุ"
-
-#~ msgid "FAQ"
-#~ msgstr "คำถามที่พบบ่อย"
-
-#~ msgid "Forex"
-#~ msgstr "ฟอเร็กซ์"
-
-#~ msgid "GMT"
-#~ msgstr "GMT"
-
-#~ msgid "Getting started"
-#~ msgstr "เริ่มต้น"
-
-#~ msgid "Glossary"
-#~ msgstr "อภิธานศัพท์"
-
-#~ msgid "Group history"
-#~ msgstr "ประวัติของกลุ่ม"
-
-#~ msgid "Higher/Lower trades"
-#~ msgstr "ซื้อขายสูงกว่า/ต่ำกว่า"
-
-#~ msgid "How to trade binary options?"
-#~ msgstr "จะซื้อขายไบนารีออปชั่นอย่างไร"
-
-#~ msgid "How to trade the Volatility Indices markets?"
-#~ msgstr "จะเทรดดัชนีผันผวนอย่างไร?"
-
-#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-#~ msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนถูกเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 26 พฤษภาคม 2015) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์)"
-
-#~ msgid "In/Out trades"
-#~ msgstr "การซื้อขาย In/Out"
-
-#~ msgid "Indices"
-#~ msgstr "ดัชนี"
-
-#~ msgid "Learning to trade"
-#~ msgstr "ศึกษาการซื้อขาย"
-
-#~ msgid "Market exit price"
-#~ msgstr "ราคาสิ้นสุดของตลาด"
-
-#~ msgid "No Touch trades"
-#~ msgstr "การซื้อขายแบบไม่แตะเส้น"
-
-#~ msgid "OTC indices and stocks"
-#~ msgstr "ดัชนี OTC และหุ้น"
-
-#~ msgid "Opening an account"
-#~ msgstr "เปิดบัญชี"
-
-#~ msgid "Patents"
-#~ msgstr "สิทธิบัตร"
-
-#~ msgid "Pip"
-#~ msgstr "Pip"
-
-#~ msgid "Resale price"
-#~ msgstr "ราคาจำหน่ายต่อ"
-
-#~ msgid "Rise/Fall trades"
-#~ msgstr "การซื้อขาย Rise/Fall"
-
-#~ msgid "Sell option"
-#~ msgstr "ขายออปชั่น"
-
-#~ msgid "Smart Indices"
-#~ msgstr "ดัชนีสมาร์ท"
-
-#~ msgid "Spot price"
-#~ msgstr "ราคาสปอต"
-
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
-
-#~ msgid "Types of trades"
-#~ msgstr "ประเภทของการซื้อขาย"
-
-#~ msgid "Underlying"
-#~ msgstr "ผลิตภัณฑ์อ้างอิง"
-
-#~ msgid "Volatility Indices"
-#~ msgstr "ดัชนีความผันผวน"
-
-#~ msgid "Why choose Binary Trading?"
-#~ msgstr "ทำไมจึงเลือกการซื้อขายไบนารี"
-
-#~ msgid "Why trade with Binary.com"
-#~ msgstr "ทำไมต้องเทรดกับ Binary.com"
