@@ -16,14 +16,6 @@ module.exports = function (grunt) {
             local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
             remote: { origin: { url: "" } }
         },
-        jshint: {
-            options: {
-                node: true
-            },
-            all: [
-                // "src/**/*.js", "src/*.js" TODO
-            ]
-        },
         clean: {
             compressed: ["dist/compressed"],
             uncompressed: ["dist/uncompressed"],
@@ -270,14 +262,6 @@ module.exports = function (grunt) {
                 regExp: false
             }
         },
-        removelogging: {
-            dist: {
-                src : ["dist/compressed/**/*.js", "!dist/compressed/**/lib/**/*.js"],
-                options : {
-                  "verbose" : false
-                }
-            }
-        },
         watch: {
           options: {
             spawn: true,
@@ -394,7 +378,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "copy:copy_i18n", "copy:copyLibraries", "rename", "replace:version"]);
     grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "copy:copy_AfterCompression"]);
-    grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
+    grunt.registerTask("default", ["po2json", "mainTask", "compressionAndUglify"]);
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Deploy to a sub-folder of gh-pages with the name of current branch,
