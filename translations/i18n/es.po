@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2484,83 +2484,3 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr ""
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "Contratos toque"
-
-#~ msgid "Barrier(s)"
-#~ msgstr "Límite(s)"
-
-#~ msgid "Binary option"
-#~ msgstr "Opciones binarias"
-
-#~ msgid "Commodities"
-#~ msgstr "Materias primas"
-
-#~ msgid "Contract period"
-#~ msgstr "Período del contrato"
-
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "Depositar y retirar fondos"
-
-#~ msgid "Derivative"
-#~ msgstr "Derivativo"
-
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "Contratos Finaliza dentro/Finaliza fuera"
-
-#~ msgid "Entry spot price"
-#~ msgstr "Precio de entrada al contado"
-
-#~ msgid "Expiry price"
-#~ msgstr "Precio de expiración"
-
-#~ msgid "Forex"
-#~ msgstr "Forex"
-
-#~ msgid "GMT"
-#~ msgstr "GMT"
-
-#~ msgid "Higher/Lower trades"
-#~ msgstr "Contratos Superior/Inferior"
-
-#~ msgid "In/Out trades"
-#~ msgstr "Contratos Dentro/Fuera"
-
-#~ msgid "Indices"
-#~ msgstr "Índices"
-
-#~ msgid "Learning to trade"
-#~ msgstr "Aprender a operar"
-
-#~ msgid "Market exit price"
-#~ msgstr "Precio de salida del mercado"
-
-#~ msgid "No Touch trades"
-#~ msgstr "Contratos Sin toque"
-
-#~ msgid "Opening an account"
-#~ msgstr "Abrir cuenta"
-
-#~ msgid "Pip"
-#~ msgstr "Porcentaje en punto (pip)"
-
-#~ msgid "Resale price"
-#~ msgstr "Precio de reventa"
-
-#~ msgid "Rise/Fall trades"
-#~ msgstr "Contratos Alza/Baja"
-
-#~ msgid "Sell option"
-#~ msgstr "Opción de venta"
-
-#~ msgid "Spot price"
-#~ msgstr "Precio al contado"
-
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "Contratos Queda Dentro/Sale"
-
-#~ msgid "Underlying"
-#~ msgstr "Subyacente"
-
-#~ msgid "Volatility Indices"
-#~ msgstr "Índices de Volatilidad"
