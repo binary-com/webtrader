@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi_VN\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -2484,98 +2484,3 @@ msgstr "{hoa hồng cho đại lý}%"
 msgid "| Return"
 msgstr ""
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "(Một) Các giao dịch một chạm"
-
-#~ msgid "Barrier(s)"
-#~ msgstr "Các rào cản"
-
-#~ msgid "Binary option"
-#~ msgstr "tùy chọn nhị phân"
-
-#~ msgid "Client funds"
-#~ msgstr "Quỹ của khách hàng"
-
-#~ msgid "Commodities"
-#~ msgstr "Hàng hóa"
-
-#~ msgid "Contract period"
-#~ msgstr "Thời hạn hợp đồng"
-
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "Ký quỹ và rút tiền"
-
-#~ msgid "Derivative"
-#~ msgstr "Dẫn xuất"
-
-#~ msgid "Do you want to install the Webtrader chrome extension?"
-#~ msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
-
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "Kết thúc giữa / kết thúc bên ngoài giao dịch"
-
-#~ msgid "Entry spot price"
-#~ msgstr "Giá nhập điểm"
-
-#~ msgid "Expiry price"
-#~ msgstr "Giá hết hạn"
-
-#~ msgid "Forex"
-#~ msgstr "Ngoại hối"
-
-#~ msgid "GMT"
-#~ msgstr "Giờ quốc tế"
-
-#~ msgid "Higher/Lower trades"
-#~ msgstr "Các giao dịch cao hơn/thấp hơn"
-
-#~ msgid "How to trade the Volatility Indices markets?"
-#~ msgstr "Giao dịch thị trường Chỉ số Biến động như thế nào?"
-
-#~ msgid "In/Out trades"
-#~ msgstr "Trong/Ngoài giao dịch"
-
-#~ msgid "Indices"
-#~ msgstr "Chỉ số"
-
-#~ msgid "Learning to trade"
-#~ msgstr "học cách giao dịch"
-
-#~ msgid "Market exit price"
-#~ msgstr "Giá xuất cảnh của thị trường"
-
-#~ msgid "No Touch trades"
-#~ msgstr "giao dịch không chạm"
-
-#~ msgid "Opening an account"
-#~ msgstr "Mở một tài khoản"
-
-#~ msgid "Pip"
-#~ msgstr "pip"
-
-#~ msgid "Resale price"
-#~ msgstr "Giá bán lại"
-
-#~ msgid "Rise/Fall trades"
-#~ msgstr "giao dịch tăng/giảm"
-
-#~ msgid "Sell option"
-#~ msgstr "tùy chọn bán"
-
-#~ msgid "Smart Indices"
-#~ msgstr "Chỉ số Thông minh"
-
-#~ msgid "Spot price"
-#~ msgstr "Giá tại chỗ"
-
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "Các giao dịch ở yên giữa/ra bên ngoài"
-
-#~ msgid "Underlying"
-#~ msgstr "Tài sản cơ bản"
-
-#~ msgid "Volatility Indices"
-#~ msgstr "Chỉ số biến động"
-
-#~ msgid "Why trade with Binary.com"
-#~ msgstr "Tại sao lại xử dụng sàn giao dịch Binary.com"
