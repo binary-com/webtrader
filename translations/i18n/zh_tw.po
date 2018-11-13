@@ -10,13 +10,10 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2018-11-09 02:00\n"
+"PO-Revision-Date: 2018-11-13 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-
-msgid "(One) Touch trades"
-msgstr "一觸即付交易"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(如期限不到一天)，或於交易日結束時(如期限為一日或更長時間)"
@@ -170,12 +167,6 @@ msgstr "8小時"
 
 msgid "AM"
 msgstr "上午"
-
-msgid "About Binary.com"
-msgstr "關於Binary.com"
-
-msgid "About us"
-msgstr "關於我們"
 
 msgid "Accept"
 msgstr "接受"
@@ -342,17 +333,8 @@ msgstr "障礙"
 msgid "Barrier offset"
 msgstr "障礙位移"
 
-msgid "Barrier(s)"
-msgstr "障礙"
-
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary option"
-msgstr "二元期權"
-
-msgid "Binary options basics"
-msgstr "二元期權基本知識"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "二元期權或其他金融衍生品交易經驗"
@@ -480,9 +462,6 @@ msgstr "公民身份"
 msgid "Click to log in with your Binary.com account"
 msgstr "點選登入Binary.com帳戶"
 
-msgid "Client funds"
-msgstr "客戶基金"
-
 msgid "Close"
 msgstr "關"
 
@@ -491,9 +470,6 @@ msgstr "全部關閉"
 
 msgid "Closes"
 msgstr "關"
-
-msgid "Commodities"
-msgstr "大宗商品"
 
 msgid "Commodities trading experience"
 msgstr "大宗商品交易經驗"
@@ -536,9 +512,6 @@ msgstr "合約確認"
 
 msgid "Contract Details"
 msgstr "合約詳細資料"
-
-msgid "Contract period"
-msgstr "合約期間"
 
 msgid "Contracts"
 msgstr "合約"
@@ -645,12 +618,6 @@ msgstr "存入資金"
 msgid "Deposit of USD"
 msgstr "美元存款"
 
-msgid "Depositing and withdrawing funds"
-msgstr "存款及取款"
-
-msgid "Derivative"
-msgstr "衍生工具"
-
 msgid "Describe what this token is for to find it later"
 msgstr "權杖用途說明，以備稍後找尋"
 
@@ -667,9 +634,6 @@ msgid "Digits"
 msgstr "數字"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr "是否安裝Webtrader chrome擴充套件?"
-
-msgid "Do you want to install the Webtrader chrome extension?"
 msgstr "是否安裝Webtrader chrome擴充套件?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
@@ -756,9 +720,6 @@ msgstr "就業狀況"
 msgid "End Time"
 msgstr "結束時間"
 
-msgid "Ends Between/Ends Outside trades"
-msgstr "「收於範圍之內/之外」的交易"
-
 msgid "Ends Between/Outside"
 msgstr "到期時價格處於範圍之內/之外"
 
@@ -784,9 +745,6 @@ msgid "Entry Spot"
 msgstr "入市現價"
 
 msgid "Entry spot"
-msgstr "入市現價"
-
-msgid "Entry spot price"
 msgstr "入市現價"
 
 msgid "Error getting data for %1"
@@ -822,14 +780,8 @@ msgstr "退市現價時間"
 msgid "Exit spot"
 msgstr "退市現價"
 
-msgid "Expiry price"
-msgstr "到期價格"
-
 msgid "Explanation"
 msgstr "說明"
-
-msgid "FAQ"
-msgstr "常見問題集"
 
 msgid "Failed to update the password"
 msgstr "未能更新密碼"
@@ -888,9 +840,6 @@ msgstr "家庭地址第一行"
 msgid "First name"
 msgstr "名字"
 
-msgid "Forex"
-msgstr "外匯"
-
 msgid "Forex trading experience"
 msgstr "外匯交易經驗"
 
@@ -912,17 +861,8 @@ msgstr "全螢幕交易介面"
 msgid "Further instructions"
 msgstr "詳細說明"
 
-msgid "GMT"
-msgstr "格林威治標準時間"
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "獲取交易者的 API 權杖, 並將其添加到您的清單中"
-
-msgid "Getting started"
-msgstr "開始交易"
-
-msgid "Glossary"
-msgstr "詞彙"
 
 msgid "Go to"
 msgstr "前往"
@@ -938,9 +878,6 @@ msgstr "格線"
 
 msgid "Grid Light"
 msgstr "格線光源"
-
-msgid "Group history"
-msgstr "集團歷史"
 
 msgid "Health"
 msgstr "健康情況"
@@ -960,9 +897,6 @@ msgstr "高障礙位移"
 msgid "Higher"
 msgstr "較高"
 
-msgid "Higher/Lower trades"
-msgstr "「高於/低於」交易"
-
 msgid "Historical Data"
 msgstr "歷史資料"
 
@@ -977,12 +911,6 @@ msgstr "小時"
 
 msgid "Hours"
 msgstr "小時"
-
-msgid "How to trade binary options?"
-msgstr "二元期權如何交易?"
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr "如何在波動率指數市場上交易？"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "我確認本人不是政治公眾人士(PEP)"
@@ -1020,14 +948,11 @@ msgstr "歐盟國家的金融產品交易由Binary Investments (Europe) Ltd提�
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "英國和曼島的波動率指數交易由Binary (IOM) Ltd. 提供，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1) 由不列顛群島曼島博彩監管委員會授予執照和監管，目前線上博彩執照於2017 年8 月31 日頒發；及(2) 由英國博彩委員會授予執照和監管(執照 [_1]編號: 39172[_2])。"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr "歐盟其它國家的波動率指數交易由Binary (Europe) Ltd提供，地址為 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 馬爾他的馬爾他博彩局授予執照並受其監管（執照號MGA/B2C/102/2000, 發照日期為2015年5月26日）。英國客戶由(2) 英國博彩委員會授予執照和監管(執照[_1]編號: 39495[_2])， 及愛爾蘭客戶由(3) 愛爾蘭的稅務局授予執照和監管(遠程博彩公司執照號: 1010285，發照日期為2017年7月1日)。查閱完整的[_3]監管資訊[_4]。"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr ""
 
 msgid "In/Out"
 msgstr "「範圍之內/之外」"
-
-msgid "In/Out trades"
-msgstr "「範圍之內/之外」交易"
 
 msgid "Income Source"
 msgstr "收入來源"
@@ -1040,9 +965,6 @@ msgstr "指示性價格"
 
 msgid "Indicators"
 msgstr "指標"
-
-msgid "Indices"
-msgstr "指數"
 
 msgid "Indices trading experience"
 msgstr "指數交易經驗"
@@ -1112,9 +1034,6 @@ msgstr "已小於最後數字"
 
 msgid "Last used"
 msgstr "上一次使用"
-
-msgid "Learning to trade"
-msgstr "學習交易"
 
 msgid "Less than"
 msgstr "少於"
@@ -1238,9 +1157,6 @@ msgstr "三月"
 
 msgid "March"
 msgstr "三月"
-
-msgid "Market exit price"
-msgstr "平倉價"
 
 msgid "Matches"
 msgstr "相符"
@@ -1386,9 +1302,6 @@ msgstr "新密碼"
 msgid "No"
 msgstr "否"
 
-msgid "No Touch trades"
-msgstr "「未觸及」交易"
-
 msgid "No touch"
 msgstr "未觸及"
 
@@ -1415,9 +1328,6 @@ msgstr "OHLC條形圖"
 
 msgid "OK"
 msgstr "確定"
-
-msgid "OTC indices and stocks"
-msgstr "場外交易指數和股票"
 
 msgid "Occupation"
 msgstr "職業"
@@ -1479,9 +1389,6 @@ msgstr "開立金融帳戶"
 msgid "Open account"
 msgstr "開立帳戶"
 
-msgid "Opening an account"
-msgstr "開立帳戶"
-
 msgid "Opens"
 msgstr "開盤"
 
@@ -1527,9 +1434,6 @@ msgstr "密碼已成功更新。"
 msgid "Passwords didn't match. Please type them again"
 msgstr "密碼不相符。請重新輸入"
 
-msgid "Patents"
-msgstr "專利"
-
 msgid "Pattern Recognition"
 msgstr "圖形辨識"
 
@@ -1559,9 +1463,6 @@ msgstr "個人資料"
 
 msgid "Phone"
 msgstr "電話"
-
-msgid "Pip"
-msgstr "點"
 
 msgid "Place of birth"
 msgstr "出生地"
@@ -1743,6 +1644,9 @@ msgstr "買入日期"
 msgid "Purchase Price"
 msgstr "買入價格"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "閱讀"
 
@@ -1785,9 +1689,6 @@ msgstr "再次輸入密碼"
 msgid "Resale of this contract is not offered"
 msgstr "此合約不提供轉售"
 
-msgid "Resale price"
-msgstr "轉售價格"
-
 msgid "Reset zoom"
 msgstr "縮放重設"
 
@@ -1805,9 +1706,6 @@ msgstr "回報"
 
 msgid "Rise"
 msgstr "上漲"
-
-msgid "Rise/Fall trades"
-msgstr "上漲/下跌交易"
 
 msgid "Robust and secure platform"
 msgstr "穩健和安全的平台"
@@ -1872,9 +1770,6 @@ msgstr "自我禁止工具"
 msgid "Sell At Market"
 msgstr "按市價賣出"
 
-msgid "Sell option"
-msgstr "賣出期權"
-
 msgid "Sent to account"
 msgstr "傳送到帳戶"
 
@@ -1902,9 +1797,6 @@ msgstr "共享"
 msgid "Share chart"
 msgstr "共享圖表"
 
-msgid "Smart Indices"
-msgstr "智慧指數"
-
 msgid "Sold"
 msgstr "已賣出"
 
@@ -1916,9 +1808,6 @@ msgstr "財富來源"
 
 msgid "Spline"
 msgstr "Spline法"
-
-msgid "Spot price"
-msgstr "現貨價格"
 
 msgid "Spreads"
 msgstr "價差交易"
@@ -1961,9 +1850,6 @@ msgstr "狀況"
 
 msgid "Stays Between/Goes Outside"
 msgstr "「保持在範圍之內/超出範圍之外」"
-
-msgid "Stays Between/Goes Outside trades"
-msgstr "「保持在範圍之內/超出範圍之外」的交易"
 
 msgid "Stays in"
 msgstr "範圍內"
@@ -2244,9 +2130,6 @@ msgstr "週二"
 msgid "Turnover"
 msgstr "交易額"
 
-msgid "Types of trades"
-msgstr "交易類型"
-
 msgid "USD"
 msgstr "美元"
 
@@ -2255,9 +2138,6 @@ msgstr "美元日圓"
 
 msgid "Under"
 msgstr "下方"
-
-msgid "Underlying"
-msgstr "標的資產"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遺憾。您的瀏覽器不支持這些程式"
@@ -2316,9 +2196,6 @@ msgstr "檢視帳單"
 msgid "Volatility Indicators"
 msgstr "波動率指標"
 
-msgid "Volatility Indices"
-msgstr "波動率指數"
-
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "根據執照要求，我們通知您：在公司失去償付能力的情況下，由我們代您保管的資金會發生什麼情況，以及我們將提供何種程度的資金保護"
 
@@ -2351,12 +2228,6 @@ msgstr "當您點選「Ok」後，您將被禁止在此網站交易，直到選�
 
 msgid "While on the go, you can"
 msgstr "出門在外時，您可"
-
-msgid "Why choose Binary Trading?"
-msgstr "為何選擇二元期權交易？"
-
-msgid "Why trade with Binary.com"
-msgstr "為何通過Binary.com進行交易"
 
 msgid "Withdraw funds"
 msgstr "取出資金"
