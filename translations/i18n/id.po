@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-25 08:30\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Indonesian\n"
-"Language: id_ID\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: id\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2484,137 +2484,3 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Laba"
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "Kontrak (One) Touch"
-
-#~ msgid "About Binary.com"
-#~ msgstr "Tentang Binary.com"
-
-#~ msgid "About us"
-#~ msgstr "Tentang Kami"
-
-#~ msgid "Barrier(s)"
-#~ msgstr "Batasan"
-
-#~ msgid "Binary option"
-#~ msgstr "Opsi Binary"
-
-#~ msgid "Binary options basics"
-#~ msgstr "Opsi binary dasar"
-
-#~ msgid "Client funds"
-#~ msgstr "Dana klien"
-
-#~ msgid "Commodities"
-#~ msgstr "Komoditas"
-
-#~ msgid "Contract period"
-#~ msgstr "Periode kontrak"
-
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "Deposit dan penarikan dana"
-
-#~ msgid "Derivative"
-#~ msgstr "Derivatif"
-
-#~ msgid "Do you want to install the Webtrader chrome extension?"
-#~ msgstr "Apakah Anda ingin menginstal ekstensi WebTrader pada chrome?"
-
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "Kontrak Ends Between/Ends Outside"
-
-#~ msgid "Entry spot price"
-#~ msgstr "Harga spot masuk"
-
-#~ msgid "Expiry price"
-#~ msgstr "Harga akhir"
-
-#~ msgid "FAQ"
-#~ msgstr "Pertanyaan Umum"
-
-#~ msgid "Forex"
-#~ msgstr "Forex"
-
-#~ msgid "GMT"
-#~ msgstr "GMT"
-
-#~ msgid "Getting started"
-#~ msgstr "Langkah memulai"
-
-#~ msgid "Glossary"
-#~ msgstr "Kamus"
-
-#~ msgid "Group history"
-#~ msgstr "Sejarah grup"
-
-#~ msgid "Higher/Lower trades"
-#~ msgstr "Kontrak Higher/Lower"
-
-#~ msgid "How to trade binary options?"
-#~ msgstr "Bagaimana cara bertrading opsi binary?"
-
-#~ msgid "How to trade the Volatility Indices markets?"
-#~ msgstr "Bagaimana cara bertrading pasar Indeks Volatilitas?"
-
-#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-#~ msgstr "Di seluruh Uni Eropa, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; berlisensi dan diatur."
-
-#~ msgid "In/Out trades"
-#~ msgstr "Kontrak In/Out"
-
-#~ msgid "Indices"
-#~ msgstr "Indeks"
-
-#~ msgid "Learning to trade"
-#~ msgstr "Belajar bertrading"
-
-#~ msgid "Market exit price"
-#~ msgstr "Harga akhir pasar"
-
-#~ msgid "No Touch trades"
-#~ msgstr "Kontrak No Touch"
-
-#~ msgid "OTC indices and stocks"
-#~ msgstr "Indeks OTC dan saham"
-
-#~ msgid "Opening an account"
-#~ msgstr "Mendaftar akun"
-
-#~ msgid "Patents"
-#~ msgstr "Paten"
-
-#~ msgid "Pip"
-#~ msgstr "Pip"
-
-#~ msgid "Resale price"
-#~ msgstr "Harga jual kembali"
-
-#~ msgid "Rise/Fall trades"
-#~ msgstr "kontrak Rise/Fall"
-
-#~ msgid "Sell option"
-#~ msgstr "Opsi jual"
-
-#~ msgid "Smart Indices"
-#~ msgstr "Indeks Smart"
-
-#~ msgid "Spot price"
-#~ msgstr "Harga spot"
-
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "kontrak Stays Between/Goes Outside"
-
-#~ msgid "Types of trades"
-#~ msgstr "Jenis kontrak"
-
-#~ msgid "Underlying"
-#~ msgstr "Dasar"
-
-#~ msgid "Volatility Indices"
-#~ msgstr "Indeks Volatilitas"
-
-#~ msgid "Why choose Binary Trading?"
-#~ msgstr "Mengapa memilih Trading Binary?"
-
-#~ msgid "Why trade with Binary.com"
-#~ msgstr "Mengapa bertrading di Binary.com"
