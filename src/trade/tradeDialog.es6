@@ -508,7 +508,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.date_expiry.update = function (date_or_hour) {
-    let expiry = state.date_expiry;
+    var expiry = state.date_expiry;
     /* contracts that are more not today must end at the market close time */
     const is_today = !moment.utc(expiry.value_date).isAfter(moment.utc(),'day');
     if(!is_today){
@@ -516,7 +516,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
         trading_times_for(expiry.value_date, state.proposal.symbol)
           .then(function(times){
             const value_hour = times.close !== '--' ? times.close : '23:59:59';
-            expiry.value_hour = moment.utc(value_hour, "HH:mm:ss").format('HH:mm');
+            expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
             expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
             state.barriers.update();
             debounce(expiry.value, state.proposal.onchange);
