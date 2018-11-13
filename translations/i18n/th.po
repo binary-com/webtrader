@@ -1,37 +1,34 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-10-31 04:00\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Thai\n"
-"Language: th_TH\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-
-msgid "(One) Touch trades"
-msgstr "(One) Touch Trades"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(ถ้าระยะเวลาน้อยกว่าหนึ่งวัน) หรือ สิ้นสุดของวันซื้อขาย (ถ้าเป็นระยะเวลาหนึ่งวันหรือมากกว่า)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* สัญญายังไม่เริ่ม"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* รหัสผ่านต้องประกอบด้วยอักษรตัวพิมพ์ใหญ่และตัวเลข"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* โปรดป้อนรหัสผ่านใหม่ของคุณ"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com ไม่ได้เข้าร่วมเป็นพันธมิตรกับตัวแทนรับชำระเงินที่แจกแจงข้างต้น ตัวแทนรับชำระเงินแต่ละรายดำเนินการในฐานะผู้ให้บริการอิสระ และไม่ได้รับการรับรอง รับประกัน หรืออนุมัติโดย Binary.com ลูกค้าที่ติดต่อกับตัวแทนรับชำระเงินจะต้องรับผิดชอบต่อความเสี่ยงต่างๆ ด้วยตัวเอง ขอแนะนำให้ลูกค้าตรวจสอบข้อมูลหลักฐานอ้างอิงของตัวแทนรับชำระเงินก่อนที่จะส่งเงินใดๆให้กับตัวแทน Binary.com ไม่ว่าในกรณีใดๆ ก็ตาม จะไม่รับผิดชอบต่อธุรกรรมที่กระทำขึ้นระหว่างลูกค้ากับตัวแทนรับชำระเงิน"
@@ -169,40 +166,34 @@ msgid "8h"
 msgstr "8 ชั่วโมง"
 
 msgid "AM"
-msgstr ""
-
-msgid "About Binary.com"
-msgstr ""
-
-msgid "About us"
-msgstr ""
+msgstr "น."
 
 msgid "Accept"
 msgstr "ยอมรับ"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "เข้าถึงได้จากเว็บเบราว์เซอร์ใดๆก็ได้ 13 ภาษา"
 
 msgid "Account authentication"
-msgstr ""
+msgstr "การยืนยันบัญชี"
 
 msgid "Account balance"
 msgstr "ยอดคงเหลือในบัญชี"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "ยอดคงเหลือในบัญชี:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "ไม่พบหมายเลขบัญชี"
 
 msgid "Account opening"
-msgstr ""
+msgstr "การเปิดบัญชี"
 
 msgid "Account opening reason"
 msgstr "เหตุผลในการเปิดบัญชี"
 
 msgid "Account token not found."
-msgstr ""
+msgstr "ไม่พบโทเค่นของบัญชี"
 
 msgid "Action"
 msgstr "การดำเนินการ"
@@ -229,7 +220,7 @@ msgid "Add/remove indicators"
 msgstr "เพิ่ม/ลบ ตัวชี้วัด"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "เพิ่มพื้นที่ใช้งานใหม่ %"
 
 msgid "Address"
 msgstr "ที่อยู่"
@@ -250,7 +241,7 @@ msgid "Amount"
 msgstr "มูลค่า"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "จำนวนต่ำสุด: 10 สูงสุด: 2000"
 
 msgid "Amount per point"
 msgstr "จำนวนต่อจุด"
@@ -313,7 +304,7 @@ msgid "August"
 msgstr "สิงหาคม"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
+msgstr "ยืนยันบัญชีของคุณตอนนี้โดยตรวจสอบข้อมูลอัตลักษณ์และที่อยู่ของคุณ เพื่อดำเนินการต่อ โปรดส่งเอกสารต่อไปนี้มายัง%1:"
 
 msgid "Available Currencies"
 msgstr "สกุลเงินที่มีอยู่"
@@ -342,17 +333,8 @@ msgstr "Barrier"
 msgid "Barrier offset"
 msgstr "Barrier ออฟเซ็ท"
 
-msgid "Barrier(s)"
-msgstr "Barrier"
-
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary option"
-msgstr "ไบนารีออปชั่น"
-
-msgid "Binary options basics"
-msgstr ""
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "ประสบการณ์การซื้อขายไบนารีออปชั่น หรือ อนุพันธ์ต่างๆ"
@@ -373,10 +355,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : เว็บเทรดเดอร์ (Webtrader)"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com เป็นผู้ให้บริการการซื้อขายออนไลน์ที่ได้รับรางวัลที่ช่วยให้ลูกค้าได้ทำการซื้อขายในตลาดการเงินผ่านทางไบนารีออปชันและ CFD การซื้อขายไบนารีออปชันและ CFD บนดัชนีผันผวนถูกจัดให้เป็นกิจกรรมด้านการพนัน โปรดจำไว้ว่า การพนันอาจทำให้เกิดการเสพติด กรุณาดำเนินการซื้อขายด้วยความรับผิดชอบ ศึกษาเพิ่มเติมเกี่ยวกับ [_1]ความรับผิดชอบในการซื้อขาย[_2] ผลิตภัณฑ์บางรายการยังไม่มีในทุกประเทศ การบริการทางเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง หรือไม่ได้ให้บริการแก่บุคคลที่อายุต่ำกว่า 18 ปี"
 
 msgid "Blank window"
-msgstr ""
+msgstr "หน้าต่างว่าง"
 
 msgid "Bought"
 msgstr "ซื้อ"
@@ -480,9 +462,6 @@ msgstr "สัญชาติ"
 msgid "Click to log in with your Binary.com account"
 msgstr "คลิกเพื่อเข้าสู่ระบบด้วยบัญชี Binary.com ของท่าน"
 
-msgid "Client funds"
-msgstr "หลักประกันของลูกค้า"
-
 msgid "Close"
 msgstr "ปิด"
 
@@ -491,9 +470,6 @@ msgstr "ปิดทั้งหมด"
 
 msgid "Closes"
 msgstr "ปิด"
-
-msgid "Commodities"
-msgstr "สินค้าโภคภัณฑ์"
 
 msgid "Commodities trading experience"
 msgstr "ประสบการณ์ในการซื้อขายสินค้าโภคภัณฑ์"
@@ -511,10 +487,10 @@ msgid "Confirm transfer"
 msgstr "ยืนยันการโอนเงิน"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "การเชื่อมต่อถูกปิด"
 
 msgid "Connection error."
-msgstr ""
+msgstr "การเชื่อมต่อมีความผิดพลาด"
 
 msgid "Construction"
 msgstr "การก่อสร้าง"
@@ -532,13 +508,10 @@ msgid "Contract"
 msgstr "สัญญา"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "การยืนยันสัญญา"
 
 msgid "Contract Details"
-msgstr ""
-
-msgid "Contract period"
-msgstr "ระยะเวลาของสัญญา"
+msgstr "รายละเอียดสัญญา"
 
 msgid "Contracts"
 msgstr "สัญญา"
@@ -547,7 +520,7 @@ msgid "Copier"
 msgstr "ตัวช่วยคัดลอก"
 
 msgid "Copy Trade"
-msgstr ""
+msgstr "คัดลอกการซื้อขาย"
 
 msgid "Copy Trading"
 msgstr "คัดลอกการซื้อขาย"
@@ -595,7 +568,7 @@ msgid "Custom Theme"
 msgstr "ชุดรูปแบบกำหนดเอง"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "ปรับแต่งหน้าตาของแผนภูมิ"
 
 msgid "Daily limit on losses"
 msgstr "วงเงินขาดทุนต่อวัน"
@@ -645,12 +618,6 @@ msgstr "การฝากเงิน"
 msgid "Deposit of USD"
 msgstr "การฝากเงินดอลลาร์สหรัฐ"
 
-msgid "Depositing and withdrawing funds"
-msgstr "การฝากและถอนหลักประกัน"
-
-msgid "Derivative"
-msgstr "อนุพันธ์"
-
 msgid "Describe what this token is for to find it later"
 msgstr "อธิบายว่า โทเค่นนี้มีไว้สำหรับการค้นหาภายหลัง"
 
@@ -658,7 +625,7 @@ msgid "Description"
 msgstr "รายละเอียด"
 
 msgid "Deselect"
-msgstr ""
+msgstr "ยกเลิกการเลือก"
 
 msgid "Differs"
 msgstr "แตกต่าง"
@@ -669,14 +636,11 @@ msgstr "ตัวเลข"
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
 
-msgid "Do you want to install the Webtrader chrome extension?"
-msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
-
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "ท่านมีบัญชีหรือยัง? สมัครและรับบัญชีทดลองพร้อมเงินทดลอง 10,000 เหรียญสหรัฐ"
 
 msgid "Done"
-msgstr ""
+msgstr "เสร็จ"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "เสร็จแล้ว หลักประกันได้ถูกโอนไปยังตัวแทนรับชำระเงินแล้ว"
@@ -724,7 +688,7 @@ msgid "Downloading template as"
 msgstr "ดาวน์โหลดแม่แบบเป็น"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "กำลังดาวน์โหลดพื้นที่ใช้งานให้เป็น %1"
 
 msgid "Drawing tools"
 msgstr "เครื่องมือวาดภาพ"
@@ -745,7 +709,7 @@ msgid "Education"
 msgstr "การศึกษา"
 
 msgid "Email verification failed"
-msgstr ""
+msgstr "การยืนยันอีเมลล้มเหลว"
 
 msgid "Embed code"
 msgstr "รหัสที่ฝังไว้"
@@ -755,9 +719,6 @@ msgstr "สถานะการจ้างงาน"
 
 msgid "End Time"
 msgstr "เวลาสิ้นสุด"
-
-msgid "Ends Between/Ends Outside trades"
-msgstr "การซื้อขายแบบ สิ้นสุดระหว่าง/สิ้นสุดนอกขอบเขต"
 
 msgid "Ends Between/Outside"
 msgstr "สิ้นสุดระหว่าง/นอกขอบเขต"
@@ -775,7 +736,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "เพลิดเพลินไปกับการเชื่อมต่อในการซื้อขายที่ใช้ง่าย ด้วยฟังก์ชันขั้นสูงที่ให้ท่านได้ตรวจสอบสินทรัพย์ที่ท่านโปรดปรานทั้งหมดและตลาดในเวลาเดียวกัน เช่นเดียวกับแผนภูมิสำคัญ ดัชนีสินทรัพย์ เวลาการซื้อขาย และข้อมูลประวัติ ที่สำคัญที่สุด ท่านเลือกได้ว่าต้องการเห็นอะไรในหน้าจอ"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "กรอกโทเค่นของนักลงทุนที่ถูกต้อง"
 
 msgid "Enter your current password"
 msgstr "โปรดป้อนรหัสผ่านปัจจุบันของท่าน"
@@ -785,9 +746,6 @@ msgstr "สปอตเริ่มต้น"
 
 msgid "Entry spot"
 msgstr "สปอตเริ่มต้น"
-
-msgid "Entry spot price"
-msgstr "ราคาสปอตเริ่มต้น"
 
 msgid "Error getting data for %1"
 msgstr "ข้อผิดพลาดในการรับข้อมูลสำหรับ %1"
@@ -802,16 +760,16 @@ msgid "Exclude me from the website until"
 msgstr "พักการใช้งานของฉันจากเว็บไซต์จนถึง"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "เวลาของการพัก"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "เวลาของการพักจะต้องเป็นหลังจากวันนี้"
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "เวลาการพักต้องไม่น้อยกว่า 6 เดือน"
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "เวลาการพักต้องไม่น้อยกว่า 5 เดือน"
 
 msgid "Exit Spot"
 msgstr "สปอตสิ้นสุด"
@@ -822,17 +780,11 @@ msgstr "เวลาที่สปอตสิ้นสุด"
 msgid "Exit spot"
 msgstr "สปอตสิ้นสุด"
 
-msgid "Expiry price"
-msgstr "ราคาที่หมดอายุ"
-
 msgid "Explanation"
 msgstr "คำอธิบาย"
 
-msgid "FAQ"
-msgstr ""
-
 msgid "Failed to update the password"
-msgstr ""
+msgstr "ไม่สามารถอัพเดทรหัสผ่าน"
 
 msgid "Fall"
 msgstr "Fall"
@@ -868,10 +820,10 @@ msgid "Finance"
 msgstr "การเงิน"
 
 msgid "Financial Account Opening form"
-msgstr ""
+msgstr "แบบฟอร์มการเปิดบัญชีทางการเงิน"
 
 msgid "Financial Assessment"
-msgstr ""
+msgstr "การประเมินทางการเงิน"
 
 msgid "Financial Information"
 msgstr "ข้อมูลทางการเงิน"
@@ -887,9 +839,6 @@ msgstr "บรรทัดแรกของที่อยู่"
 
 msgid "First name"
 msgstr "ชื่อตัว"
-
-msgid "Forex"
-msgstr "ฟอเร็กซ์"
 
 msgid "Forex trading experience"
 msgstr "ประสบการณ์การซื้อขายฟอเร็กซ์"
@@ -912,17 +861,8 @@ msgstr "อินเทอร์เฟสของการซื้อขาย
 msgid "Further instructions"
 msgstr "คำแนะนำเพิ่มเติม"
 
-msgid "GMT"
-msgstr "GMT"
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "ใช้ API โทเค่น จากนักลงทุน และเพิ่มเข้าในรายการของท่าน"
-
-msgid "Getting started"
-msgstr ""
-
-msgid "Glossary"
-msgstr ""
 
 msgid "Go to"
 msgstr "ไปที่"
@@ -938,9 +878,6 @@ msgstr "Grid"
 
 msgid "Grid Light"
 msgstr "Grid Light"
-
-msgid "Group history"
-msgstr ""
 
 msgid "Health"
 msgstr "สุขภาพ"
@@ -960,29 +897,20 @@ msgstr "Barrier สูง ที่หักกลบลบกัน"
 msgid "Higher"
 msgstr "สูงกว่า"
 
-msgid "Higher/Lower trades"
-msgstr "ซื้อขายสูงกว่า/ต่ำกว่า"
-
 msgid "Historical Data"
 msgstr "ข้อมูลเก่า"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "ข้อมูลเก่าสำหรับ"
 
 msgid "Horizontal line"
 msgstr "เส้นแนวนอน"
 
 msgid "Hour"
-msgstr ""
+msgstr "ชั่วโมง"
 
 msgid "Hours"
 msgstr "ชั่วโมง"
-
-msgid "How to trade binary options?"
-msgstr ""
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr "จะเทรดดัชนีผันผวนอย่างไร?"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "ข้าพเจ้ารับรองว่า ข้าพเจ้าไม่ใช่บุคคลที่เกี่ยวข้องกับการเมือง (PEP)"
@@ -1015,34 +943,28 @@ msgid "In providing our services to you, we are required to obtain information f
 msgstr "ในการให้บริการ พวกเราขออนุญาตสอบถามข้อมูลจากท่านเพื่อประเมินผลิตภัณฑ์และบริการที่เหมาะสมให้กับท่าน (ซึ่งรายละเอียดจะเกี่ยวข้องกับประสบการณ์และความรู้ของท่านเพื่อให้เข้าใจถึงระดับความเสี่ยงที่เกี่ยวข้องในผลิตภัณฑ์แต่ละประเภท)"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินดำเนินธุรกิจบริการการลงทุนโดย Binary Investments (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและการควบคุมดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156)"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "ที่เกาะ Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย ดักลาส IM2 4RW เกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Gambling Supervision Commission บนเกาะ Isle of Man (ใบอนุญาตปัจจุบันออกให้เมื่อวันที่ 31 สิงหาคม 2017) และโดย (2) Gambling Commission ในสหราชอาณาจักร (ใบอนุญาต[_1]หมายเลขอ้างอิง: 39172[_2])"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
 msgstr ""
 
 msgid "In/Out"
 msgstr "In/Out"
 
-msgid "In/Out trades"
-msgstr "การซื้อขาย In/Out"
-
 msgid "Income Source"
 msgstr "แหล่งที่มาของรายได้"
 
 msgid "Indicative"
-msgstr ""
+msgstr "บ่งชี้"
 
 msgid "Indicative Price"
 msgstr "ราคาดัชนี"
 
 msgid "Indicators"
 msgstr "ดัชนีต่างๆ"
-
-msgid "Indices"
-msgstr "ดัชนี"
 
 msgid "Indices trading experience"
 msgstr "ประสบการณ์ในการซื้อขายดัชนีต่างๆ"
@@ -1066,7 +988,7 @@ msgid "Invalid template type"
 msgstr "ประเภทแม่แบบไม่ถูกต้อง"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "ประเภทแม่แบบไม่ถูกต้อง"
 
 msgid "Investments & Dividends"
 msgstr "การลงทุนและเงินปันผล"
@@ -1078,7 +1000,7 @@ msgid "January"
 msgstr "มกราคม"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "ไม่สนับสนุนบัญชีญี่ปุ่น"
 
 msgid "Jul"
 msgstr "ก.ค."
@@ -1087,7 +1009,7 @@ msgid "July"
 msgstr "กรกฎาคม"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "ไปที่:"
 
 msgid "Jun"
 msgstr "มิ.ย."
@@ -1102,19 +1024,16 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "ตารางผลกำไร 12 รอบเดือนที่ผ่านมา"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "การพยากรณ์เลขหลักสุดท้าย"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "เลขหลักสุดท้ายมากกว่า"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "เลขหลักสุดท้ายต่ำกว่า"
 
 msgid "Last used"
 msgstr "ใช้ครั้งล่าสุด"
-
-msgid "Learning to trade"
-msgstr "ศึกษาการซื้อขาย"
 
 msgid "Less than"
 msgstr "น้อยกว่า  "
@@ -1144,52 +1063,52 @@ msgid "Load trade template"
 msgstr "โหลดแม่แบบสำหรับซื้อขาย"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "กำลังโหลด ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "กำลังโหลดดัชนีสินทรัพย์..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "กำลังโหลดคัดลอกการซื้อขาย..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "กำลังโหลด ดาวน์โหลด/ดูข้อมูล ..."
 
 msgid "Loading MAM..."
-msgstr ""
+msgstr "กำลังโหลด MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "กำลังโหลด Password Dialog ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "กำลังโหลดตารางกำไร ..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "กำลังโหลดการเปิดบัญชีจริง ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "กำลังโหลดเมนูพักการใช้งาน ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "กำลังโหลดตารางรายการธุรกรรม..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "กำลังโหลดการจัดการโทเค่น ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "กำลังโหลดเวลาซื้อขาย ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "กำลังโหลดแผนภูมิและเมนูในการเทรด ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "กำลังโหลดค่าตัวแปรในการปรับแต่งธีม..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "กำลังโหลดพอร์ตโฟลิโอ ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "กำลังโหลดการตั้งค่าการพักการใช้งาน"
 
 msgid "Loading..."
 msgstr "กำลังโหลด..."
@@ -1201,7 +1120,7 @@ msgid "Log in time"
 msgstr "เวลาเข้าสู่ระบบ"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "ออกจากระบบเนื่องจากหมดเวลาของเซสชันการพักการใช้งาน"
 
 msgid "Login"
 msgstr "เข้าสู่ระบบ"
@@ -1216,7 +1135,7 @@ msgid "Low"
 msgstr "ต่ำ"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Barrier ต่ำ"
 
 msgid "Low barrier"
 msgstr "Barrier ต่ำ"
@@ -1238,9 +1157,6 @@ msgstr "มี.ค."
 
 msgid "March"
 msgstr "มีนาคม"
-
-msgid "Market exit price"
-msgstr "ราคาสิ้นสุดของตลาด"
 
 msgid "Matches"
 msgstr "จับคู่"
@@ -1267,13 +1183,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "มูลค่ารวมที่ขาดทุนสูงสุดต่อวัน"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "ยอดคงเหลือสูงสุด"
 
 msgid "Maximum number of open positions"
 msgstr "จำนวนสูงสุดของโพซิชั่นที่เปิดอยู่"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "โพซิชั่นที่เปิดอยู่สูงสุด"
 
 msgid "May"
 msgstr "พ.ค."
@@ -1285,7 +1201,7 @@ msgid "Memorable town/city"
 msgstr "เมืองแห่งความทรงจำ"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "การเดิมพันต่ำสุดควรต่ำกว่าการเดิมพันสูงสุด"
 
 msgid "Min. Trade Stake"
 msgstr "เดิมพันต่ำสุด"
@@ -1309,7 +1225,7 @@ msgid "Minus the agent's commission"
 msgstr "หักค่านายหน้าตัวแทน"
 
 msgid "Minute"
-msgstr ""
+msgstr "นาที"
 
 msgid "Minutes"
 msgstr "นาที"
@@ -1378,7 +1294,7 @@ msgid "Net Profit"
 msgstr "กำไรสุทธิ"
 
 msgid "New Account"
-msgstr ""
+msgstr "บัญชีใหม่"
 
 msgid "New password"
 msgstr "รหัสผ่านใหม่"
@@ -1386,14 +1302,11 @@ msgstr "รหัสผ่านใหม่"
 msgid "No"
 msgstr "ไม่ใช่"
 
-msgid "No Touch trades"
-msgstr "การซื้อขายแบบไม่แตะเส้น"
-
 msgid "No touch"
 msgstr "ไม่แตะเส้น"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "หมายเหตุ: สัญญาจะถูกจำหน่ายที่ราคาทั่วไปของตลาดเมื่อเซิร์ฟเวอร์ได้รับการแจ้งความจำนง ราคานี้อาจจะแตกต่างจากราคาที่ระบุ"
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "หมายเหตุ: ท่านสามารถมีได้เพียงบัญชีสกุลเงินกระดาษหนึ่งบัญชี และหนึ่งบัญชีของบัญชีเงินดิจิทัล"
@@ -1415,9 +1328,6 @@ msgstr "OHLC"
 
 msgid "OK"
 msgstr "OK"
-
-msgid "OTC indices and stocks"
-msgstr ""
 
 msgid "Occupation"
 msgstr "อาชีพ"
@@ -1479,9 +1389,6 @@ msgstr "เปิดบัญชีทางการเงิน 1 บัญช
 msgid "Open account"
 msgstr "เปิดบัญชี"
 
-msgid "Opening an account"
-msgstr "เปิดบัญชี"
-
 msgid "Opens"
 msgstr "เปิด"
 
@@ -1513,22 +1420,19 @@ msgid "PEP Declaration"
 msgstr "การแสดงเจตนารมณ์ไม่เกี่ยวข้องทางการเมือง (PEP Declaration)"
 
 msgid "PM"
-msgstr ""
+msgstr "น."
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "รหัสผ่านจะต้องประกอบด้วยอักษรตัวเล็ก อักษรตัวใหญ่ และตัวเลข"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "ได้อัพเดทรหัสผ่านแล้ว"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "รหัสผ่านไม่ตรงกัน โปรดพิมพ์อีกครั้ง"
-
-msgid "Patents"
-msgstr ""
 
 msgid "Pattern Recognition"
 msgstr "การรู้จำรูปแบบ"
@@ -1560,9 +1464,6 @@ msgstr "รายละเอียดส่วนบุคคล"
 msgid "Phone"
 msgstr "โทรศัพท์"
 
-msgid "Pip"
-msgstr "Pip"
-
 msgid "Place of birth"
 msgstr "สถานที่เกิด"
 
@@ -1570,40 +1471,40 @@ msgid "Please"
 msgstr "โปรด"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "โปรด[_1]ยอมรับข้อตกลงและเงื่อนไขที่ปรับปรุงใหม่[_2] เพื่อเพิ่มวงเงินการถอนเงินและการซื้อขายของคุณ"
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "โปรด[_1]กรอกประวัติในบัญชีของคุณ[_2] เพื่อเพิ่มวงเงินการถอนเงินและการซื้อขายของคุณ"
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "โปรดเลือกอย่างน้อยหนึ่งขอบเขตโทเค่น"
 
 msgid "Please choose which currency you would like to transact in"
 msgstr "โปรดระบุสกุลเงินที่ท่านต้องการ"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "โปรดกรอก[_1]แบบฟอร์มการประเมินทางการเงิน[_2]ให้เสร็จสิ้น เพื่อเพิ่มวงเงินการถอนเงินและการซื้อขายของคุณ"
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "โปรดยืนยันรายละเอียดของธุรกรรมเพื่อดำเนินการโอนเงิน"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "โปรดป้อนตัวเลขระหว่าง"
 
 msgid "Please enter a valid date in yyyy-mm-dd format"
 msgstr "โปรดป้อนวันที่ในรูปแบบ yyyy-mm-dd ให้ถูกต้อง"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "โปรดป้อนตัวเลขที่ถูกต้องสำหรับ"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "โปรดป้อนตัวเลขระหว่าง 0 และ"
 
 msgid "Please enter a value greater than 0"
 msgstr "โปรดป้อนค่าที่มากกว่าศูนย์"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "โปรดป้อนตัวเลขที่น้อยกว่า 6 สัปดาห์สำหรับระยะเวลาการหมดเวลา"
 
 msgid "Please enter correct email"
 msgstr "โปรดป้อนอีเมล์ที่ถูกต้องของท่าน"
@@ -1612,7 +1513,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "โปรดป้อนวันที่ในรูปแบบ YYYY-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "โปรดใส่ชื่อโทเค่น"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "โปรดป้อนเวลาในรูปแบบ HH:MM"
@@ -1630,13 +1531,13 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please log in"
-msgstr ""
+msgstr "โปรดเข้าสู่ระบบ"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "โปรดเข้าสู่ระบบเพื่อดูพื้นที่ทำงานของคุณบันทึกไว้"
 
 msgid "Please log in."
-msgstr ""
+msgstr "โปรดเข้าสู่ระบบ"
 
 msgid "Please provide your tax information"
 msgstr "โปรดให้ข้อมูลภาษีของท่าน"
@@ -1645,31 +1546,31 @@ msgid "Please select"
 msgstr "โปรดระบุ"
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "โปรดเลือกวันที่ที่จะให้หมดเวลาถึง"
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "โปรดระบุตัวแทนรับชำระเงิน"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "กรุณาระบุเหตุผลของการเปิดบัญชีก่อนดำเนินการต่อ"
 
 msgid "Please set currency."
-msgstr ""
+msgstr "กรุณาตั้งสกุลเงิน"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "กรุณาตั้ง [_1]สกุลเงิน[_2] ของบัญชีของคุณ"
 
 msgid "Please submit a valid verification token"
 msgstr "โปรดแจ้งโทเค่นเพื่อการตรวจสอบที่ถูกต้อง"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "โปรดทดลองใหม่อีกครั้งในอีก 1 นาที"
 
 msgid "Please try again after few minutes."
-msgstr ""
+msgstr "โปรดทดลองใหม่อีกครั้งในอีกไม่กี่นาที"
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "กรุณาใช้รหัสผ่านใหม่เพื่อลงชื่อเข้าใช้"
 
 msgid "Plot"
 msgstr "วาด"
@@ -1720,7 +1621,7 @@ msgid "Profit"
 msgstr "กำไร"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "ตารางกำไร"
 
 msgid "Profit table"
 msgstr "ตารางผลกำไร"
@@ -1729,10 +1630,10 @@ msgid "Profit/ Loss"
 msgstr "กำไร / ขาดทุน"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
+msgstr "หลักฐานที่อยู่ - สำเนาของใบเรียกเก็บเงินค่าสาธารณูปโภค หรือใบแจ้งยอดจากธนาคารที่มีอายุไม่เกินสามเดือน หลักฐานที่อยู่นี้จะต้องมีชื่อของท่าน ที่อยู่ วันที่ออกเอกสาร และชื่อขององค์กรที่ออกเอกสาร"
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
+msgstr "หลักฐานแสดงตัวบุคคล - สำเนาหนังสือเดินทาง หรือ สำเนาใบขับขี่ (ฉบับชั่วคราว หรือ ฉบับตลอดชีพ) หรือ สำเนาบัตรประชาชน ที่แสดงชื่อสกุลจริงของท่านและวันเดือนปีเกิด จำนวน 1 ฉบับ"
 
 msgid "Purchase"
 msgstr "ซื้อ"
@@ -1743,32 +1644,35 @@ msgstr "วันที่ซื้อ"
 msgid "Purchase Price"
 msgstr "ราคาซื้อ"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "อ่าน"
 
 msgid "Real Money Account Opening"
-msgstr ""
+msgstr "การเปิดบัญชีเงินจริง"
 
 msgid "Reality check"
-msgstr ""
+msgstr "การตรวจสอบสภาพความเป็นจริง"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "เปลี่ยนเส้นทางไปหน้าลงชื่อเข้าใช้ oauth"
 
 msgid "Ref"
 msgstr "อ้างอิง"
 
 msgid "Ref."
-msgstr ""
+msgstr "อ้างอิง"
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "การรีเฟรชล้มเหลว"
 
 msgid "Register free account"
 msgstr "ลงทะเบียนบัญชีใหม่ฟรี"
 
 msgid "Registration"
-msgstr ""
+msgstr "การลงทะเบียน"
 
 msgid "Remove"
 msgstr "ลบ"
@@ -1783,10 +1687,7 @@ msgid "Repeat password"
 msgstr "ป้อนรหัสผ่านอีกครั้ง"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
-
-msgid "Resale price"
-msgstr "ราคาจำหน่ายต่อ"
+msgstr "ไม่มีการเสนอการจำหน่ายซ้ำของสัญญานี้"
 
 msgid "Reset zoom"
 msgstr "ตั้งค่าขยายเป็นค่าเดิม"
@@ -1805,9 +1706,6 @@ msgstr "ผลตอบแทน"
 
 msgid "Rise"
 msgstr "ขึ้น"
-
-msgid "Rise/Fall trades"
-msgstr "การซื้อขาย Rise/Fall"
 
 msgid "Robust and secure platform"
 msgstr "แพลตฟอร์มที่แข็งแกร่งและปลอดภัย"
@@ -1858,7 +1756,7 @@ msgid "Security question"
 msgstr "คำถามลับ"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "ดูเหมือนว่าเซิร์ฟเวอร์จะขัดข้อง เรากำลังดำเนินการแก้ไข"
 
 msgid "Self-Employed"
 msgstr "อาชีพอิสระ"
@@ -1867,13 +1765,10 @@ msgid "Self-Exclusion"
 msgstr "การพักการใช้งาน"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "เครื่องมือสำหรับพักการซื้อขาย"
 
 msgid "Sell At Market"
 msgstr "ขายที่ราคาตลาด"
-
-msgid "Sell option"
-msgstr "ขายออปชั่น"
 
 msgid "Sent to account"
 msgstr "ส่งไปยังบัญชี"
@@ -1888,7 +1783,7 @@ msgid "Session"
 msgstr "เซสชัน"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "ข้อจำกัดระยะเวลาที่ใช้งาน"
 
 msgid "Session duration limit, in minutes"
 msgstr "รอบระยะเวลาการซื้อขาย ในหน่วยนาที"
@@ -1902,23 +1797,17 @@ msgstr "หุ้น"
 msgid "Share chart"
 msgstr "แบ่งปันแผนภูมิ"
 
-msgid "Smart Indices"
-msgstr "ดัชนีสมาร์ท"
-
 msgid "Sold"
 msgstr "ขาย"
 
 msgid "Some random index"
-msgstr ""
+msgstr "ดัชนี้สุ่มบางตัว"
 
 msgid "Source of wealth"
 msgstr "แหล่งที่มาของรายได้"
 
 msgid "Spline"
 msgstr "เส้นโค้ง"
-
-msgid "Spot price"
-msgstr "ราคาสปอต"
 
 msgid "Spreads"
 msgstr "สเปรด"
@@ -1962,9 +1851,6 @@ msgstr "สถานะ"
 msgid "Stays Between/Goes Outside"
 msgstr "อยู่ใน/นอกขอบเขต"
 
-msgid "Stays Between/Goes Outside trades"
-msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
-
 msgid "Stays in"
 msgstr "Stays in"
 
@@ -1993,10 +1879,10 @@ msgid "Submit"
 msgstr "ส่ง"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "โทเค่นใหม่ได้ถูกเพิ่มเข้ามาแล้ว"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "พื้นที่ทำงานใหม่ได้ถูกเพิ่มเข้ามาให้เป็น"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "เลือกใช้แม่แบบแล้ว และบันทึกเป็น"
@@ -2011,10 +1897,10 @@ msgid "Table"
 msgstr "ตาราง"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "ข้อมูลภาษี"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "ข้อมูลภาษีได้ถูกอัพเดทเรียบร้อยแล้ว"
 
 msgid "Tax identification number"
 msgstr "เลขประจำตัวผู้เสียภาษี"
@@ -2029,16 +1915,16 @@ msgid "Tel"
 msgstr "โทร"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "ได้บันทึกแม่แบบเป็น"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "แม่แบบถูกใช้เพียงบางส่วน"
 
 msgid "Template changes saved"
 msgstr "การเปลี่ยนแปลงแม่แบบได้ถูกบันทึกแล้ว"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "แม่แบบไม่สามารถใช้ได้"
 
 msgid "Template name"
 msgstr "ชื่อแม่แบบ"
@@ -2050,7 +1936,7 @@ msgid "Terms"
 msgstr "ข้อตกลง"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "ข้อตกลงและเงื่อนไข"
 
 msgid "Tertiary"
 msgstr "ลำดับที่สาม"
@@ -2068,19 +1954,19 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "บริการการซื้อขายทางการเงินในเว็บไซต์นี้เหมาะกับลูกค้าผู้ซึ่งพึงรับรู้ต่อภาวะขาดทุนต่อเงินทั้งหมดที่ได้ลงทุน และผู้ซึ่งเข้าใจและมีประสบการณ์ต่อความเสี่ยงที่เกี่ยวข้องกับการได้มาซึ่งสัญญาทางการเงินต่างๆ ธุรกรรมที่เกี่ยวข้องกับสัญญาทางการเงินมีความเสี่ยงระดับสูง หากสัญญาที่ซื้อหมดอายุ ท่านจะสูญเสียเงินลงทุนของท่านทั้งหมด ซึ่งรวมถึงค่าธรรมเนียมของสัญญาด้วย"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "มีการหยุดชะงักของข้อมูลตลาดในช่วงระยะเวลาของสัญญา สำหรับบัญชีเงินจริง เราจะพยายามแก้ไขและชำระสัญญาอย่างเหมาะสม มิเช่นนั้นสัญญาจะถูกยกเลิกและคืนเงิน สัญญาเงินเสมือนจะถูกยกเลิกและคืนเงิน"
 
 msgid "There was an error"
-msgstr ""
+msgstr "มีความผิดพลาดเกิดขึ้น"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "สัญญานี้หมดอายุ"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "สัญญานี้ขาดทุน"
 
 msgid "This contract won"
-msgstr ""
+msgstr "สัญญานี้กำไร"
 
 msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
@@ -2110,7 +1996,7 @@ msgid "Time out until"
 msgstr "หมดเวลากระทั่ง"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "หมดเวลาสำหรับการร้องขอ websocket"
 
 msgid "Title"
 msgstr "คำนำหน้าชื่อ"
@@ -2128,7 +2014,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "ในการถอนหลักประกัน โปรดป้อนรหัสโทเค่นเพื่อการยืนยัน ซึ่งเราได้ส่งให้ท่านทางอีเมล์แล้ว"
 
 msgid "Today"
-msgstr ""
+msgstr "วันนี้"
 
 msgid "Token"
 msgstr "โทเค่น"
@@ -2137,7 +2023,7 @@ msgid "Token Management"
 msgstr "การจัดการโทเค่น"
 
 msgid "Token already added"
-msgstr ""
+msgstr "โทเค่นได้ถูกเพิ่มแล้ว"
 
 msgid "Token management"
 msgstr "การจัดการโทเค่น"
@@ -2146,16 +2032,16 @@ msgid "Token name"
 msgstr "ชื่อโทเค่น"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "ชื่อโทเค่นประกอบด้วยอักษรตัวเลข ช่องว่าง และขีดเส้นใต้ได้"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "ชื่อโทเค่นมีจำนวนตัวอักษรได้สูงสุด 32 ตัว"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "ชื่อโทเคนต้องประกอบด้วยอักษรอย่างน้อย 2 ตัว"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "ชื่อโทเค่นควรขึ้นต้นด้วยอักษรตัวเลขเท่านั้น"
 
 msgid "Token permissions"
 msgstr "สิทธิ์โทเค่น"
@@ -2221,7 +2107,7 @@ msgid "Trading Times"
 msgstr "เวลาซื้อขาย"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "การซื้อขายไบนารีออปชันอาจไม่เหมาะสมสำหรับทุกคน ดังนั้นโปรดแน่ใจว่าคุณเข้าใจความเสี่ยงที่เกี่ยวข้อง การขาดทุนของคุณอาจเกินจำนวนเงินฝากเบื้องต้นและคุณไม่ได้เป็นเจ้าของหรือได้รับผลประโยชน์ใดๆจากสินทรัพย์ที่อ้างอิง"
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview สำหรับ Binary.com"
@@ -2244,9 +2130,6 @@ msgstr "วันอังคาร"
 msgid "Turnover"
 msgstr "การซื้อขาย"
 
-msgid "Types of trades"
-msgstr ""
-
 msgid "USD"
 msgstr "USD"
 
@@ -2255,9 +2138,6 @@ msgstr "USDJPY"
 
 msgid "Under"
 msgstr "ต่ำกว่า"
-
-msgid "Underlying"
-msgstr "ผลิตภัณฑ์อ้างอิง"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "ขออภัย เบราเซอร์ของท่านไม่รองรับการใช้งาน"
@@ -2296,7 +2176,7 @@ msgid "Verification code has been sent to your email"
 msgstr "รหัสยืนยันได้ถูกส่งให้ท่านแล้วทางอีเมล์"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "รหัสยืนยันถูกส่งไปที่"
 
 msgid "Verification token"
 msgstr "รหัสตรวจสอบ"
@@ -2314,9 +2194,6 @@ msgid "View Statement"
 msgstr "ดูรายการเดินบัญชี"
 
 msgid "Volatility Indicators"
-msgstr "ดัชนีความผันผวน"
-
-msgid "Volatility Indices"
 msgstr "ดัชนีความผันผวน"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
@@ -2347,16 +2224,10 @@ msgid "What is this?"
 msgstr "นี้คืออะไร"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "เมื่อคุณเลือก \"Ok\" คุณจะถูกพักจากระบบซื้อขายจนถึงวันที่ที่ระบุ"
 
 msgid "While on the go, you can"
 msgstr "ขณะตลาดดำเนินไป ท่านสามารถ"
-
-msgid "Why choose Binary Trading?"
-msgstr ""
-
-msgid "Why trade with Binary.com"
-msgstr "ทำไมต้องเทรดกับ Binary.com"
 
 msgid "Withdraw funds"
 msgstr "ถอนหลักประกัน"
@@ -2368,7 +2239,7 @@ msgid "Workspace"
 msgstr "พื้นที่ใช้งาน"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "ได้บันทึกการเปลี่ยนแปลงในพื้นที่ใช้งานแล้ว"
 
 msgid "X-axis labels"
 msgstr "ป้ายชื่อแกนเอ็กซ์ (แนวนอน)"
@@ -2395,7 +2266,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "ท่านยังไม่ได้คัดลอกการซื้อขายใดๆ"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "คุณได้พักตนเองจนกระทั่ง"
 
 msgid "You have sold the following contract"
 msgstr "ท่านจำหน่ายสัญญาต่อไปนี้แล้ว"
@@ -2407,7 +2278,7 @@ msgid "You pay"
 msgstr "ท่านชำระ"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "คุณควรกรอกตัวอักษรระหว่าง 6-25 ตัว"
 
 msgid "You will be automatically logged out after such time"
 msgstr "ท่านออกจากระบบโดยอัตโนมัติภายหลังเวลาดังกล่าว"
@@ -2425,16 +2296,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "บัญชีของท่าน (%) ถูกระงับการใช้งาน โปรดติดต่อฝ่ายบริการลูกค้าเพื่อดำเนินการ"
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "บัญชีของท่านถูกระงับ โปรด[_1]ติดต่อฝ่ายลูกค้าสัมพันธ์[_2] เพื่อดำเนินการต่อไป"
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "เบราเซอร์ของคุณไม่สนับสนุนการคัดลอกลงคลิปบอร์ด"
 
 msgid "Your browser is not supported"
 msgstr "เบราเซอร์ของท่านไม่รองรับการใช้งาน"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "การเปลี่ยนแปลงของคุณได้ถูกอัพเดทแล้ว"
 
 msgid "Your copying settings"
 msgstr "การตั้งค่าการคัดลอกของท่าน"
@@ -2455,10 +2326,10 @@ msgid "Zoom"
 msgstr "ขยาย"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]ยืนยันบัญชีของคุณ[_2]เดี๋ยวนี้ เพื่อใช้ประโยชน์จากวิธีการถอนเงินที่มีทั้งหมด"
 
 msgid "and"
-msgstr ""
+msgstr "และ"
 
 msgid "apostrophe (') are allowed"
 msgstr "เครื่องหมายอัญประกาศ (') สามารถใช้ได้"
@@ -2485,7 +2356,7 @@ msgid "days"
 msgstr "วัน"
 
 msgid "deposits"
-msgstr ""
+msgstr "การฝาก"
 
 msgid "end time"
 msgstr "เวลาสิ้นสุด"
@@ -2497,7 +2368,7 @@ msgid "exit spot"
 msgstr "สปอตสิ้นสุด"
 
 msgid "for"
-msgstr ""
+msgstr "สำหรับ"
 
 msgid "for mobile charts"
 msgstr "สำหรับแผนภูมิ"
@@ -2548,7 +2419,7 @@ msgid "main site"
 msgstr "เว็บไซต์หลัก"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "ขณะนี้ ตลาดปิดทำการ"
 
 msgid "medium protection"
 msgstr "การป้องกันระดับกลาง"
@@ -2602,7 +2473,7 @@ msgid "ticks"
 msgstr "ช่วงห่างของราคา"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "การถอนเงิน"
 
 msgid "yes"
 msgstr "ใช่"
@@ -2613,3 +2484,137 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| ผลตอบแทน"
 
+#~ msgid "(One) Touch trades"
+#~ msgstr "(One) Touch Trades"
+
+#~ msgid "About Binary.com"
+#~ msgstr "เกี่ยวกับ Binary.com"
+
+#~ msgid "About us"
+#~ msgstr "เกี่ยวกับเรา"
+
+#~ msgid "Barrier(s)"
+#~ msgstr "Barrier"
+
+#~ msgid "Binary option"
+#~ msgstr "ไบนารีออปชั่น"
+
+#~ msgid "Binary options basics"
+#~ msgstr "พื้นฐานไบนารีออปชั่น"
+
+#~ msgid "Client funds"
+#~ msgstr "หลักประกันของลูกค้า"
+
+#~ msgid "Commodities"
+#~ msgstr "สินค้าโภคภัณฑ์"
+
+#~ msgid "Contract period"
+#~ msgstr "ระยะเวลาของสัญญา"
+
+#~ msgid "Depositing and withdrawing funds"
+#~ msgstr "การฝากและถอนหลักประกัน"
+
+#~ msgid "Derivative"
+#~ msgstr "อนุพันธ์"
+
+#~ msgid "Do you want to install the Webtrader chrome extension?"
+#~ msgstr "ท่านต้องการติดตั้ง Webtrader ส่วนเพิ่มของ Chrome หรือไม่?"
+
+#~ msgid "Ends Between/Ends Outside trades"
+#~ msgstr "การซื้อขายแบบ สิ้นสุดระหว่าง/สิ้นสุดนอกขอบเขต"
+
+#~ msgid "Entry spot price"
+#~ msgstr "ราคาสปอตเริ่มต้น"
+
+#~ msgid "Expiry price"
+#~ msgstr "ราคาที่หมดอายุ"
+
+#~ msgid "FAQ"
+#~ msgstr "คำถามที่พบบ่อย"
+
+#~ msgid "Forex"
+#~ msgstr "ฟอเร็กซ์"
+
+#~ msgid "GMT"
+#~ msgstr "GMT"
+
+#~ msgid "Getting started"
+#~ msgstr "เริ่มต้น"
+
+#~ msgid "Glossary"
+#~ msgstr "อภิธานศัพท์"
+
+#~ msgid "Group history"
+#~ msgstr "ประวัติของกลุ่ม"
+
+#~ msgid "Higher/Lower trades"
+#~ msgstr "ซื้อขายสูงกว่า/ต่ำกว่า"
+
+#~ msgid "How to trade binary options?"
+#~ msgstr "จะซื้อขายไบนารีออปชั่นอย่างไร"
+
+#~ msgid "How to trade the Volatility Indices markets?"
+#~ msgstr "จะเทรดดัชนีผันผวนอย่างไร?"
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
+#~ msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนถูกเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 26 พฤษภาคม 2015) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์)"
+
+#~ msgid "In/Out trades"
+#~ msgstr "การซื้อขาย In/Out"
+
+#~ msgid "Indices"
+#~ msgstr "ดัชนี"
+
+#~ msgid "Learning to trade"
+#~ msgstr "ศึกษาการซื้อขาย"
+
+#~ msgid "Market exit price"
+#~ msgstr "ราคาสิ้นสุดของตลาด"
+
+#~ msgid "No Touch trades"
+#~ msgstr "การซื้อขายแบบไม่แตะเส้น"
+
+#~ msgid "OTC indices and stocks"
+#~ msgstr "ดัชนี OTC และหุ้น"
+
+#~ msgid "Opening an account"
+#~ msgstr "เปิดบัญชี"
+
+#~ msgid "Patents"
+#~ msgstr "สิทธิบัตร"
+
+#~ msgid "Pip"
+#~ msgstr "Pip"
+
+#~ msgid "Resale price"
+#~ msgstr "ราคาจำหน่ายต่อ"
+
+#~ msgid "Rise/Fall trades"
+#~ msgstr "การซื้อขาย Rise/Fall"
+
+#~ msgid "Sell option"
+#~ msgstr "ขายออปชั่น"
+
+#~ msgid "Smart Indices"
+#~ msgstr "ดัชนีสมาร์ท"
+
+#~ msgid "Spot price"
+#~ msgstr "ราคาสปอต"
+
+#~ msgid "Stays Between/Goes Outside trades"
+#~ msgstr "การซื้อขาย อยู่ใน/นอกขอบเขต"
+
+#~ msgid "Types of trades"
+#~ msgstr "ประเภทของการซื้อขาย"
+
+#~ msgid "Underlying"
+#~ msgstr "ผลิตภัณฑ์อ้างอิง"
+
+#~ msgid "Volatility Indices"
+#~ msgstr "ดัชนีความผันผวน"
+
+#~ msgid "Why choose Binary Trading?"
+#~ msgstr "ทำไมจึงเลือกการซื้อขายไบนารี"
+
+#~ msgid "Why trade with Binary.com"
+#~ msgstr "ทำไมต้องเทรดกับ Binary.com"
