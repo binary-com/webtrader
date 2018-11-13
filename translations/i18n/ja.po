@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Japanese\n"
-"Language: ja_JP\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2484,83 +2484,3 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr ""
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "（ワン）タッチ取引"
-
-#~ msgid "Barrier(s)"
-#~ msgstr "バリア"
-
-#~ msgid "Binary option"
-#~ msgstr "バイナリーオプション"
-
-#~ msgid "Commodities"
-#~ msgstr "コモディティ"
-
-#~ msgid "Contract period"
-#~ msgstr "取引期間"
-
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "入金/出金について"
-
-#~ msgid "Derivative"
-#~ msgstr "デリバティブ"
-
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "END-IN/END-OUT トレード"
-
-#~ msgid "Entry spot price"
-#~ msgstr "取引時レート"
-
-#~ msgid "Expiry price"
-#~ msgstr "終値"
-
-#~ msgid "Forex"
-#~ msgstr "外国為替"
-
-#~ msgid "GMT"
-#~ msgstr "GMT"
-
-#~ msgid "Higher/Lower trades"
-#~ msgstr "HIGH/LOW・トレード"
-
-#~ msgid "In/Out trades"
-#~ msgstr "レンジ トレード"
-
-#~ msgid "Indices"
-#~ msgstr "インデックス"
-
-#~ msgid "Learning to trade"
-#~ msgstr "トレードの練習"
-
-#~ msgid "Market exit price"
-#~ msgstr "市場出口価格"
-
-#~ msgid "No Touch trades"
-#~ msgstr "NO-TOUCHトレード"
-
-#~ msgid "Opening an account"
-#~ msgstr "口座開設"
-
-#~ msgid "Pip"
-#~ msgstr "Pip"
-
-#~ msgid "Resale price"
-#~ msgstr "売却価格"
-
-#~ msgid "Rise/Fall trades"
-#~ msgstr "ラダートレード"
-
-#~ msgid "Sell option"
-#~ msgstr "オプションの売却"
-
-#~ msgid "Spot price"
-#~ msgstr "スポット価格"
-
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "STAY-IN/BREAK-OUT トレード"
-
-#~ msgid "Underlying"
-#~ msgstr "原資産"
-
-#~ msgid "Volatility Indices"
-#~ msgstr "ボラティリティインデックス"
