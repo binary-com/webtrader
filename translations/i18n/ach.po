@@ -10,13 +10,10 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Acholi\n"
 "Language: ach_UG\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "crwdns19787:0crwdne19787:0"
-
-msgid "(One) Touch trades"
-msgstr "crwdns19799:0crwdne19799:0"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "crwdns15420:0crwdne15420:0"
@@ -170,12 +167,6 @@ msgstr "crwdns15468:0crwdne15468:0"
 
 msgid "AM"
 msgstr "crwdns50598:0crwdne50598:0"
-
-msgid "About Binary.com"
-msgstr "crwdns50600:0crwdne50600:0"
-
-msgid "About us"
-msgstr "crwdns50602:0crwdne50602:0"
 
 msgid "Accept"
 msgstr "crwdns15473:0crwdne15473:0"
@@ -342,17 +333,8 @@ msgstr "crwdns15509:0crwdne15509:0"
 msgid "Barrier offset"
 msgstr "crwdns15510:0crwdne15510:0"
 
-msgid "Barrier(s)"
-msgstr "crwdns19910:0crwdne19910:0"
-
 msgid "Bill Williams"
 msgstr "crwdns19922:0crwdne19922:0"
-
-msgid "Binary option"
-msgstr "crwdns19928:0crwdne19928:0"
-
-msgid "Binary options basics"
-msgstr "crwdns50622:0crwdne50622:0"
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "crwdns19929:0crwdne19929:0"
@@ -480,9 +462,6 @@ msgstr "crwdns46347:0crwdne46347:0"
 msgid "Click to log in with your Binary.com account"
 msgstr "crwdns15544:0crwdne15544:0"
 
-msgid "Client funds"
-msgstr "crwdns43330:0crwdne43330:0"
-
 msgid "Close"
 msgstr "crwdns19988:0crwdne19988:0"
 
@@ -491,9 +470,6 @@ msgstr "crwdns33467:0crwdne33467:0"
 
 msgid "Closes"
 msgstr "crwdns15547:0crwdne15547:0"
-
-msgid "Commodities"
-msgstr "crwdns19990:0crwdne19990:0"
 
 msgid "Commodities trading experience"
 msgstr "crwdns15548:0crwdne15548:0"
@@ -536,9 +512,6 @@ msgstr "crwdns50632:0crwdne50632:0"
 
 msgid "Contract Details"
 msgstr "crwdns50634:0crwdne50634:0"
-
-msgid "Contract period"
-msgstr "crwdns19994:0crwdne19994:0"
 
 msgid "Contracts"
 msgstr "crwdns15563:0crwdne15563:0"
@@ -645,12 +618,6 @@ msgstr "crwdns15597:0crwdne15597:0"
 msgid "Deposit of USD"
 msgstr "crwdns15598:0crwdne15598:0"
 
-msgid "Depositing and withdrawing funds"
-msgstr "crwdns20004:0crwdne20004:0"
-
-msgid "Derivative"
-msgstr "crwdns20005:0crwdne20005:0"
-
 msgid "Describe what this token is for to find it later"
 msgstr "crwdns15599:0crwdne15599:0"
 
@@ -668,9 +635,6 @@ msgstr "crwdns15601:0crwdne15601:0"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "crwdns15602:0crwdne15602:0"
-
-msgid "Do you want to install the Webtrader chrome extension?"
-msgstr "crwdns42934:0crwdne42934:0"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "crwdns15603:0crwdne15603:0"
@@ -756,9 +720,6 @@ msgstr "crwdns33367:0crwdne33367:0"
 msgid "End Time"
 msgstr "crwdns15628:0crwdne15628:0"
 
-msgid "Ends Between/Ends Outside trades"
-msgstr "crwdns20027:0crwdne20027:0"
-
 msgid "Ends Between/Outside"
 msgstr "crwdns43344:0crwdne43344:0"
 
@@ -785,9 +746,6 @@ msgstr "crwdns15632:0crwdne15632:0"
 
 msgid "Entry spot"
 msgstr "crwdns15633:0crwdne15633:0"
-
-msgid "Entry spot price"
-msgstr "crwdns20032:0crwdne20032:0"
 
 msgid "Error getting data for %1"
 msgstr "crwdns24285:0%1crwdne24285:0"
@@ -822,14 +780,8 @@ msgstr "crwdns20037:0crwdne20037:0"
 msgid "Exit spot"
 msgstr "crwdns15640:0crwdne15640:0"
 
-msgid "Expiry price"
-msgstr "crwdns20038:0crwdne20038:0"
-
 msgid "Explanation"
 msgstr "crwdns15641:0crwdne15641:0"
-
-msgid "FAQ"
-msgstr "crwdns50658:0crwdne50658:0"
 
 msgid "Failed to update the password"
 msgstr "crwdns50660:0crwdne50660:0"
@@ -888,9 +840,6 @@ msgstr "crwdns20045:0crwdne20045:0"
 msgid "First name"
 msgstr "crwdns15661:0crwdne15661:0"
 
-msgid "Forex"
-msgstr "crwdns20049:0crwdne20049:0"
-
 msgid "Forex trading experience"
 msgstr "crwdns15662:0crwdne15662:0"
 
@@ -912,17 +861,8 @@ msgstr "crwdns24287:0crwdne24287:0"
 msgid "Further instructions"
 msgstr "crwdns15667:0crwdne15667:0"
 
-msgid "GMT"
-msgstr "crwdns20054:0crwdne20054:0"
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "crwdns42935:0crwdne42935:0"
-
-msgid "Getting started"
-msgstr "crwdns50666:0crwdne50666:0"
-
-msgid "Glossary"
-msgstr "crwdns50668:0crwdne50668:0"
 
 msgid "Go to"
 msgstr "crwdns43482:0crwdne43482:0"
@@ -938,9 +878,6 @@ msgstr "crwdns15669:0crwdne15669:0"
 
 msgid "Grid Light"
 msgstr "crwdns15670:0crwdne15670:0"
-
-msgid "Group history"
-msgstr "crwdns50670:0crwdne50670:0"
 
 msgid "Health"
 msgstr "crwdns15673:0crwdne15673:0"
@@ -960,9 +897,6 @@ msgstr "crwdns15677:0crwdne15677:0"
 msgid "Higher"
 msgstr "crwdns15678:0crwdne15678:0"
 
-msgid "Higher/Lower trades"
-msgstr "crwdns20070:0crwdne20070:0"
-
 msgid "Historical Data"
 msgstr "crwdns33368:0crwdne33368:0"
 
@@ -977,12 +911,6 @@ msgstr "crwdns50674:0crwdne50674:0"
 
 msgid "Hours"
 msgstr "crwdns15685:0crwdne15685:0"
-
-msgid "How to trade binary options?"
-msgstr "crwdns50676:0crwdne50676:0"
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr "crwdns43350:0crwdne43350:0"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "crwdns20079:0crwdne20079:0"
@@ -1020,14 +948,11 @@ msgstr "crwdns50678:0crwdne50678:0"
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "crwdns50680:0[_1]crwdnd50680:0[_2]crwdne50680:0"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr "crwdns50682:0[_1]crwdnd50682:0[_2]crwdnd50682:0[_3]crwdnd50682:0[_4]crwdne50682:0"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr "crwdns51318:0[_1]crwdnd51318:0[_2]crwdnd51318:0[_3]crwdnd51318:0[_4]crwdne51318:0"
 
 msgid "In/Out"
 msgstr "crwdns15695:0crwdne15695:0"
-
-msgid "In/Out trades"
-msgstr "crwdns20095:0crwdne20095:0"
 
 msgid "Income Source"
 msgstr "crwdns15696:0crwdne15696:0"
@@ -1040,9 +965,6 @@ msgstr "crwdns15698:0crwdne15698:0"
 
 msgid "Indicators"
 msgstr "crwdns15699:0crwdne15699:0"
-
-msgid "Indices"
-msgstr "crwdns20096:0crwdne20096:0"
 
 msgid "Indices trading experience"
 msgstr "crwdns15700:0crwdne15700:0"
@@ -1112,9 +1034,6 @@ msgstr "crwdns50696:0crwdne50696:0"
 
 msgid "Last used"
 msgstr "crwdns15721:0crwdne15721:0"
-
-msgid "Learning to trade"
-msgstr "crwdns20117:0crwdne20117:0"
 
 msgid "Less than"
 msgstr "crwdns15722:0crwdne15722:0"
@@ -1238,9 +1157,6 @@ msgstr "crwdns15765:0crwdne15765:0"
 
 msgid "March"
 msgstr "crwdns15766:0crwdne15766:0"
-
-msgid "Market exit price"
-msgstr "crwdns20139:0crwdne20139:0"
 
 msgid "Matches"
 msgstr "crwdns20143:0crwdne20143:0"
@@ -1386,9 +1302,6 @@ msgstr "crwdns15806:0crwdne15806:0"
 msgid "No"
 msgstr "crwdns15807:0crwdne15807:0"
 
-msgid "No Touch trades"
-msgstr "crwdns20158:0crwdne20158:0"
-
 msgid "No touch"
 msgstr "crwdns20161:0crwdne20161:0"
 
@@ -1415,9 +1328,6 @@ msgstr "crwdns15817:0crwdne15817:0"
 
 msgid "OK"
 msgstr "crwdns24291:0crwdne24291:0"
-
-msgid "OTC indices and stocks"
-msgstr "crwdns50746:0crwdne50746:0"
 
 msgid "Occupation"
 msgstr "crwdns20164:0crwdne20164:0"
@@ -1479,9 +1389,6 @@ msgstr "crwdns15830:0crwdne15830:0"
 msgid "Open account"
 msgstr "crwdns15831:0crwdne15831:0"
 
-msgid "Opening an account"
-msgstr "crwdns20176:0crwdne20176:0"
-
 msgid "Opens"
 msgstr "crwdns15832:0crwdne15832:0"
 
@@ -1527,9 +1434,6 @@ msgstr "crwdns50754:0crwdne50754:0"
 msgid "Passwords didn't match. Please type them again"
 msgstr "crwdns15849:0crwdne15849:0"
 
-msgid "Patents"
-msgstr "crwdns50756:0crwdne50756:0"
-
 msgid "Pattern Recognition"
 msgstr "crwdns20186:0crwdne20186:0"
 
@@ -1559,9 +1463,6 @@ msgstr "crwdns15860:0crwdne15860:0"
 
 msgid "Phone"
 msgstr "crwdns15861:0crwdne15861:0"
-
-msgid "Pip"
-msgstr "crwdns20190:0crwdne20190:0"
 
 msgid "Place of birth"
 msgstr "crwdns20192:0crwdne20192:0"
@@ -1743,6 +1644,9 @@ msgstr "crwdns15910:0crwdne15910:0"
 msgid "Purchase Price"
 msgstr "crwdns15911:0crwdne15911:0"
 
+msgid "Purchase Time"
+msgstr "crwdns51320:0crwdne51320:0"
+
 msgid "Read"
 msgstr "crwdns15913:0crwdne15913:0"
 
@@ -1785,9 +1689,6 @@ msgstr "crwdns15923:0crwdne15923:0"
 msgid "Resale of this contract is not offered"
 msgstr "crwdns50814:0crwdne50814:0"
 
-msgid "Resale price"
-msgstr "crwdns20226:0crwdne20226:0"
-
 msgid "Reset zoom"
 msgstr "crwdns15926:0crwdne15926:0"
 
@@ -1805,9 +1706,6 @@ msgstr "crwdns15931:0crwdne15931:0"
 
 msgid "Rise"
 msgstr "crwdns15933:0crwdne15933:0"
-
-msgid "Rise/Fall trades"
-msgstr "crwdns20229:0crwdne20229:0"
 
 msgid "Robust and secure platform"
 msgstr "crwdns24292:0crwdne24292:0"
@@ -1872,9 +1770,6 @@ msgstr "crwdns50818:0crwdne50818:0"
 msgid "Sell At Market"
 msgstr "crwdns15953:0crwdne15953:0"
 
-msgid "Sell option"
-msgstr "crwdns20234:0crwdne20234:0"
-
 msgid "Sent to account"
 msgstr "crwdns15958:0crwdne15958:0"
 
@@ -1902,9 +1797,6 @@ msgstr "crwdns15965:0crwdne15965:0"
 msgid "Share chart"
 msgstr "crwdns15966:0crwdne15966:0"
 
-msgid "Smart Indices"
-msgstr "crwdns43376:0crwdne43376:0"
-
 msgid "Sold"
 msgstr "crwdns15985:0crwdne15985:0"
 
@@ -1916,9 +1808,6 @@ msgstr "crwdns33369:0crwdne33369:0"
 
 msgid "Spline"
 msgstr "crwdns15987:0crwdne15987:0"
-
-msgid "Spot price"
-msgstr "crwdns20245:0crwdne20245:0"
 
 msgid "Spreads"
 msgstr "crwdns15988:0crwdne15988:0"
@@ -1961,9 +1850,6 @@ msgstr "crwdns15996:0crwdne15996:0"
 
 msgid "Stays Between/Goes Outside"
 msgstr "crwdns43378:0crwdne43378:0"
-
-msgid "Stays Between/Goes Outside trades"
-msgstr "crwdns20253:0crwdne20253:0"
 
 msgid "Stays in"
 msgstr "crwdns20254:0crwdne20254:0"
@@ -2244,9 +2130,6 @@ msgstr "crwdns16067:0crwdne16067:0"
 msgid "Turnover"
 msgstr "crwdns16068:0crwdne16068:0"
 
-msgid "Types of trades"
-msgstr "crwdns50866:0crwdne50866:0"
-
 msgid "USD"
 msgstr "crwdns16069:0crwdne16069:0"
 
@@ -2255,9 +2138,6 @@ msgstr "crwdns20387:0crwdne20387:0"
 
 msgid "Under"
 msgstr "crwdns20389:0crwdne20389:0"
-
-msgid "Underlying"
-msgstr "crwdns20390:0crwdne20390:0"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "crwdns16070:0crwdne16070:0"
@@ -2316,9 +2196,6 @@ msgstr "crwdns20402:0crwdne20402:0"
 msgid "Volatility Indicators"
 msgstr "crwdns20404:0crwdne20404:0"
 
-msgid "Volatility Indices"
-msgstr "crwdns20405:0crwdne20405:0"
-
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "crwdns20408:0crwdne20408:0"
 
@@ -2351,12 +2228,6 @@ msgstr "crwdns50870:0crwdne50870:0"
 
 msgid "While on the go, you can"
 msgstr "crwdns16096:0crwdne16096:0"
-
-msgid "Why choose Binary Trading?"
-msgstr "crwdns50872:0crwdne50872:0"
-
-msgid "Why trade with Binary.com"
-msgstr "crwdns43406:0crwdne43406:0"
 
 msgid "Withdraw funds"
 msgstr "crwdns16098:0crwdne16098:0"
