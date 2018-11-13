@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Russian\n"
-"Language: ru_RU\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2484,98 +2484,3 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr ""
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "Контракты Касание"
-
-#~ msgid "Barrier(s)"
-#~ msgstr "Барьер(ы)"
-
-#~ msgid "Binary option"
-#~ msgstr "Бинарный опцион"
-
-#~ msgid "Client funds"
-#~ msgstr "Средства клиента"
-
-#~ msgid "Commodities"
-#~ msgstr "Сырьевые товары"
-
-#~ msgid "Contract period"
-#~ msgstr "Период контракта"
-
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "Пополнение и вывод средств"
-
-#~ msgid "Derivative"
-#~ msgstr "Производные"
-
-#~ msgid "Do you want to install the Webtrader chrome extension?"
-#~ msgstr "Хотите установить расширение Webtrader для Chrome?"
-
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "Закончится между/Закончится вне"
-
-#~ msgid "Entry spot price"
-#~ msgstr "Спот-котировка на входе"
-
-#~ msgid "Expiry price"
-#~ msgstr "Цена при окончании"
-
-#~ msgid "Forex"
-#~ msgstr "Forex"
-
-#~ msgid "GMT"
-#~ msgstr "GMT"
-
-#~ msgid "Higher/Lower trades"
-#~ msgstr "Контракты Выше/Ниже"
-
-#~ msgid "How to trade the Volatility Indices markets?"
-#~ msgstr "Как торговать на рынках Индексов волатильности?"
-
-#~ msgid "In/Out trades"
-#~ msgstr "Контракты Внутри/Вне"
-
-#~ msgid "Indices"
-#~ msgstr "Индексы"
-
-#~ msgid "Learning to trade"
-#~ msgstr "Научитесь торговле"
-
-#~ msgid "Market exit price"
-#~ msgstr "Выходная цена рынка"
-
-#~ msgid "No Touch trades"
-#~ msgstr "Контракты Нет касания"
-
-#~ msgid "Opening an account"
-#~ msgstr "Открытие счёта"
-
-#~ msgid "Pip"
-#~ msgstr "Пипс"
-
-#~ msgid "Resale price"
-#~ msgstr "Цена перепродажи"
-
-#~ msgid "Rise/Fall trades"
-#~ msgstr "Контракты Повышение/Падение"
-
-#~ msgid "Sell option"
-#~ msgstr "Продажа опциона"
-
-#~ msgid "Smart Indices"
-#~ msgstr "Smart-индексы"
-
-#~ msgid "Spot price"
-#~ msgstr "Спот-цена"
-
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "Контракты Останется между/Выйдет за пределы"
-
-#~ msgid "Underlying"
-#~ msgstr "Рынок"
-
-#~ msgid "Volatility Indices"
-#~ msgstr "Индексы волатильности"
-
-#~ msgid "Why trade with Binary.com"
-#~ msgstr "Преимущества торговли на Binary.com"
