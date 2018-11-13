@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-27 18:10\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Portuguese\n"
-"Language: pt_PT\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: pt-PT\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Portuguese\n"
+"Language: pt_PT\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2484,137 +2484,3 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Voltar"
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "Negociações de toque (único)"
-
-#~ msgid "About Binary.com"
-#~ msgstr "Sobre a Binary.com"
-
-#~ msgid "About us"
-#~ msgstr "Sobre nós"
-
-#~ msgid "Barrier(s)"
-#~ msgstr "Barreira(s)"
-
-#~ msgid "Binary option"
-#~ msgstr "Opção binária"
-
-#~ msgid "Binary options basics"
-#~ msgstr "Princípios de opções binárias"
-
-#~ msgid "Client funds"
-#~ msgstr "Fundos de clientes"
-
-#~ msgid "Commodities"
-#~ msgstr "Matérias-primas"
-
-#~ msgid "Contract period"
-#~ msgstr "período do contrato"
-
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "Depositar e retirar fundos"
-
-#~ msgid "Derivative"
-#~ msgstr "Derivado"
-
-#~ msgid "Do you want to install the Webtrader chrome extension?"
-#~ msgstr "Deseja instalar a extensão do Webtrader para Chrome?"
-
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "Negociações Termina entre/Termina fora"
-
-#~ msgid "Entry spot price"
-#~ msgstr "Preço à vista de entrada"
-
-#~ msgid "Expiry price"
-#~ msgstr "Preço de expiração"
-
-#~ msgid "FAQ"
-#~ msgstr "Perguntas frequentes"
-
-#~ msgid "Forex"
-#~ msgstr "Mercado de câmbio"
-
-#~ msgid "GMT"
-#~ msgstr "GMT"
-
-#~ msgid "Getting started"
-#~ msgstr "Introdução"
-
-#~ msgid "Glossary"
-#~ msgstr "Glossário"
-
-#~ msgid "Group history"
-#~ msgstr "História do grupo"
-
-#~ msgid "Higher/Lower trades"
-#~ msgstr "Negociações Superior/Inferior"
-
-#~ msgid "How to trade binary options?"
-#~ msgstr "Como negociar opções binárias?"
-
-#~ msgid "How to trade the Volatility Indices markets?"
-#~ msgstr "Como negociar os mercados dos índices Volatility?"
-
-#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-#~ msgstr "No resto da UE, os índices Volatility são disponibilizados pela Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenciada e regulamentada (1) Autoridade de Jogos de Malta (licença n.º MGA/B2C/102/2000 emitida a 01 de agosto de 2018), para clientes do Reino Unido pela (2) Comissão de Jogos de Azar do Reino Unido (licença com %1referência n.º: 39495%2) e para clientes irlandeses pelo (3) Departamento de Impostos da Irlanda (licença de casa de apostas remota n.º: 1010285 emitida a 1 de julho de 2017). Ver %3informações regulamentares%2 completas."
-
-#~ msgid "In/Out trades"
-#~ msgstr "Negociações dentro/fora"
-
-#~ msgid "Indices"
-#~ msgstr "Índices"
-
-#~ msgid "Learning to trade"
-#~ msgstr "Aprendendo negociar"
-
-#~ msgid "Market exit price"
-#~ msgstr "Preço de saída do mercado"
-
-#~ msgid "No Touch trades"
-#~ msgstr "Negociações sem toque"
-
-#~ msgid "OTC indices and stocks"
-#~ msgstr "Índices e ações OTC"
-
-#~ msgid "Opening an account"
-#~ msgstr "Abrindo uma conta"
-
-#~ msgid "Patents"
-#~ msgstr "Patentes"
-
-#~ msgid "Pip"
-#~ msgstr "Pip"
-
-#~ msgid "Resale price"
-#~ msgstr "Preço de revenda"
-
-#~ msgid "Rise/Fall trades"
-#~ msgstr "Negociações Sobe/Desce"
-
-#~ msgid "Sell option"
-#~ msgstr "Vender a opção"
-
-#~ msgid "Smart Indices"
-#~ msgstr "Índices Inteligentes"
-
-#~ msgid "Spot price"
-#~ msgstr "Preço à vista"
-
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "Negociações Fica entre/Sai fora"
-
-#~ msgid "Types of trades"
-#~ msgstr "Tipos de negociações"
-
-#~ msgid "Underlying"
-#~ msgstr "Subjacente"
-
-#~ msgid "Volatility Indices"
-#~ msgstr "Índices Volatility"
-
-#~ msgid "Why choose Binary Trading?"
-#~ msgstr "Por que escolher negociar na Binary?"
-
-#~ msgid "Why trade with Binary.com"
-#~ msgstr "Por que negociar com a Binary.com"
