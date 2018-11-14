@@ -463,29 +463,28 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.date_start.update = function () {
-    // TODO: 
-    // 1. This function only updates state.date_start
-    // 2. show timepicker for forward starting contracts
-    // 3. Fix date dropdown array (next three days)
-    // 4. Handle click event when date time is clicked
-  
-    console.log('date_start.update()');
-    var forward_starting_market = _(available).filter({
-      'contract_category_display': state.categories.value.contract_category_display,
-      'contract_display': state.category_displays.selected.name,
-      'start_type': 'forward'
-    }).head();
-    // For markets with spot start_type
-    var spot_starting_options = _(available).filter({
-      'contract_category_display': state.categories.value.contract_category_display,
-      'contract_display': state.category_displays.selected.name,
-      'start_type': 'spot'
-    }).head();
+    const forward_starting_market = 
+      _(available)
+        .filter({
+          'contract_category_display': state.categories.value.contract_category_display,
+          'contract_display': state.category_displays.selected.name,
+          'start_type': 'forward'
+        })
+        .head();
 
     if (!forward_starting_market) {
       _.assign(state.date_start, { visible: false, array: [], value: 'now' });
       return;
     };
+
+    const spot_starting_options = 
+      _(available)
+        .filter({
+          'contract_category_display': state.categories.value.contract_category_display,
+          'contract_display': state.category_displays.selected.name,
+          'start_type': 'spot'
+        })
+        .head();
 
     const start_dates = forward_starting_market.forward_starting_options.map((available_day) => {
       const { date } = available_day;
@@ -504,8 +503,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     };
 
     _.assign(state.date_start, options);
-    console.log(state.date_start);
   };
+
+  state.updateDateStartHour = (selected_hour) => {
+    console.log('updateDateStartHour', selected_hour);
+  }
 
   state.date_expiry.update = function (date_or_hour) {
     var expiry = state.date_expiry;
