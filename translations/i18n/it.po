@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 16:53\n"
+"PO-Revision-Date: 2018-11-14 17:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2287,7 +2287,7 @@ msgid "You wish to allow other traders to copy your trades"
 msgstr "Vuoi consentire ad altri trader di copiare i tuoi trade"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "Desideri copiare i trade di un altro trader"
 
 msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 msgstr "Il tuo account Binary.com è stato creato ma per iniziare a fare trading bisogna consentire a Webtrader di accedere"
@@ -2296,10 +2296,10 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Il tuo account (%) è bloccato. Per ulteriori informazioni, contatta l'assistenza clienti."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Il tuo conto è sottoposto a limitazioni. [_1]Contatta l'assistenza clienti[_2] per ricevere supporto."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Il tuo browser non consente l'azione Copia negli appunti"
 
 msgid "Your browser is not supported"
 msgstr "Il tuo browser non è supportato"
@@ -2329,7 +2329,7 @@ msgid "[_1]Authenticate your account[_2] now to take full advantage of all withd
 msgstr ""
 
 msgid "and"
-msgstr ""
+msgstr "e"
 
 msgid "apostrophe (') are allowed"
 msgstr "è consentito l'apostrofo (')"
@@ -2356,7 +2356,7 @@ msgid "days"
 msgstr "giorni"
 
 msgid "deposits"
-msgstr ""
+msgstr "depositi"
 
 msgid "end time"
 msgstr "orario di fine"
@@ -2368,7 +2368,7 @@ msgid "exit spot"
 msgstr "spot d'uscita"
 
 msgid "for"
-msgstr ""
+msgstr "per"
 
 msgid "for mobile charts"
 msgstr "per grafici mobili"
@@ -2419,7 +2419,7 @@ msgid "main site"
 msgstr "sito principale"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "Il mercato è attualmente chiuso."
 
 msgid "medium protection"
 msgstr "protezione media"
@@ -2443,7 +2443,7 @@ msgid "points"
 msgstr "punti"
 
 msgid "sec"
-msgstr ""
+msgstr "sec"
 
 msgid "second"
 msgstr "secondo"
@@ -2473,7 +2473,7 @@ msgid "ticks"
 msgstr "tick"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "prelievi"
 
 msgid "yes"
 msgstr "sì"
