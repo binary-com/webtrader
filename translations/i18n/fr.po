@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-14 11:40\n"
+"PO-Revision-Date: 2018-11-14 11:56\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -166,7 +166,7 @@ msgid "8h"
 msgstr "8h"
 
 msgid "AM"
-msgstr "Matin"
+msgstr " "
 
 msgid "Accept"
 msgstr "Accepter"
@@ -220,7 +220,7 @@ msgid "Add/remove indicators"
 msgstr "Ajouter/supprimer des indicateurs"
 
 msgid "Added new workspace %"
-msgstr "Ajouté le nouvel espace de travail %"
+msgstr "Nouvel espace de travail % ajouté"
 
 msgid "Address"
 msgstr "Adresse"
@@ -304,7 +304,7 @@ msgid "August"
 msgstr "août"
 
 msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr "Authentifiez votre compte en vérifiant votre identité et votre adresse. Pour cela, envoyoyez simplement les documents suivants à %1 :"
+msgstr "Authentifiez votre compte en vérifiant votre identité et votre adresse. Pour cela, envoyez simplement les documents suivants à %1 :"
 
 msgid "Available Currencies"
 msgstr "Devises disponibles"
@@ -355,7 +355,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com est un fournisseur de trading en ligne primé qui aide ses clients à trader sur les marchés financiers par le biais d’options binaires et CFDs. Le Trading d’options binaires et CFDs sur Indices de volatilité est classé comme une activité de jeu. N’oubliez pas que le jeu peut être addictif – veuillez jouer de façon responsable. En savoir plus sur le [_1]Trading responsable[_2]. Certains produits ne sont pas disponibles dans tous les pays. Les services du site Internet ne sont pas rendus disponibles dans certains pays comme les Etats-Unis, Canada, Costa Rica, Hong Kong, ou aux personnes de moins de 18 ans."
+msgstr "Binary.com est un fournisseur de trading en ligne primé qui aide ses clients à trader sur les marchés financiers par le biais d’options binaires et de CFDs. Le Trading d’options binaires et de CFDs sur Indices de volatilité est classé comme une activité de jeu. N’oubliez pas que le jeu peut être addictif – veuillez jouer de façon responsable. En savoir plus sur le [_1]Trading responsable[_2]. Certains produits ne sont pas disponibles dans tous les pays. Les services du site Internet ne sont pas rendus disponibles dans certains pays comme les Etats-Unis, Canada, Costa Rica, Hong Kong, ou aux personnes de moins de 18 ans."
 
 msgid "Blank window"
 msgstr "Fenêtre vide"
@@ -490,7 +490,7 @@ msgid "Connection closed."
 msgstr "Connexion fermée."
 
 msgid "Connection error."
-msgstr "Erreur de Connexion."
+msgstr "Erreur de connexion."
 
 msgid "Construction"
 msgstr "Construction"
@@ -508,10 +508,10 @@ msgid "Contract"
 msgstr "Contrat"
 
 msgid "Contract Confirmation"
-msgstr "Confirmation de contrat"
+msgstr "Confirmation de Contrat"
 
 msgid "Contract Details"
-msgstr "Détails du contrat"
+msgstr "Détails du Contrat"
 
 msgid "Contracts"
 msgstr "Contrats"
@@ -709,7 +709,7 @@ msgid "Education"
 msgstr "Formation"
 
 msgid "Email verification failed"
-msgstr "La vérification d’adresse e-mail a échouée"
+msgstr "La vérification d’adresse e-mail a échoué"
 
 msgid "Embed code"
 msgstr "Intégrer le code"
@@ -760,13 +760,13 @@ msgid "Exclude me from the website until"
 msgstr "M'auto-exclure du site jusqu'au"
 
 msgid "Exclude time"
-msgstr "Exclure le temps"
+msgstr "Date d'exclusion"
 
 msgid "Exclude time must be after today."
-msgstr "L'exclusion doit être ultérieure à aujourd'hui."
+msgstr "La date d'exclusion doit être ultérieure à aujourd'hui."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr "L'exclusion jusqu'à temps ne peut pas être inférieur à 6 mois."
+msgstr "La période d'auto exclusion ne peut pas être inférieure à 6 mois."
 
 msgid "Exclude until time cannot be more than 5 years."
 msgstr "L'exclusion jusqu'à temps ne peut pas être inférieur à 5 mois."
