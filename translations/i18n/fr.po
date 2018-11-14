@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-14 12:10\n"
+"PO-Revision-Date: 2018-11-14 12:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1027,10 +1027,10 @@ msgid "Last Digit Prediction"
 msgstr "Prédiction sur le Dernier Chiffre"
 
 msgid "Last Digit is Over"
-msgstr "Dernier chiffre est Supérieur"
+msgstr "Le Dernier Chiffre est Supérieur"
 
 msgid "Last Digit is Under"
-msgstr "Dernier chiffre est Inférieur"
+msgstr "Le Dernier Chiffre est Inférieur"
 
 msgid "Last used"
 msgstr "Dernière utilisation"
@@ -1066,37 +1066,37 @@ msgid "Loading ..."
 msgstr "Chargement ..."
 
 msgid "Loading Asset Index ..."
-msgstr "Chargement Indice des actifs ..."
+msgstr "Chargement des Indice d'actifs ..."
 
 msgid "Loading Copy Trade..."
-msgstr "Chargement de copie de trade..."
+msgstr "Chargement Copier Trade..."
 
 msgid "Loading Download/View Data ..."
-msgstr "Chargement Télécharger/Afficher des données ..."
+msgstr "Chargement Télécharger/Afficher des Données ..."
 
 msgid "Loading MAM..."
 msgstr "Chargement de MAM..."
 
 msgid "Loading Password dialog ..."
-msgstr "Chargement Boîte de dialogue mot de passe ..."
+msgstr "Chargement Dialogue Mot de Passe ..."
 
 msgid "Loading Profit Table ..."
-msgstr "Chargement Tableau des profits ..."
+msgstr "Chargement Tableau des Profits ..."
 
 msgid "Loading Real account opening ..."
-msgstr "Chargement Ouverture d'un compte réel ..."
+msgstr "Chargement ouverture d'un compte réel ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr "Chargement Auto-exclusion ..."
+msgstr "Chargement Auto-Exclusion ..."
 
 msgid "Loading Statement Table ..."
 msgstr "Chargement Relevé ..."
 
 msgid "Loading Token management ..."
-msgstr "Chargement Gestion des jetons ..."
+msgstr "Chargement gestion des Jetons ..."
 
 msgid "Loading Trading Times ..."
-msgstr "Chargement Horaires de trading ..."
+msgstr "Chargement Horaires de Trading ..."
 
 msgid "Loading chart and trade menus ..."
 msgstr "Chargement des menus graphiques et de trading ..."
@@ -1135,7 +1135,7 @@ msgid "Low"
 msgstr "Bas"
 
 msgid "Low Barrier"
-msgstr "Barrière inférieure"
+msgstr "Barrière Inférieure"
 
 msgid "Low barrier"
 msgstr "Barrière inférieure"
@@ -1201,7 +1201,7 @@ msgid "Memorable town/city"
 msgstr "Ville mémorable"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr "La mise de trade minimale devrait être inférieur à la mise de trade maximale."
+msgstr "La mise de trade minimale devrait être inférieure à la mise de trade maximale."
 
 msgid "Min. Trade Stake"
 msgstr "Min. Mise pour le Trade"
