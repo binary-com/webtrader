@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 15:00\n"
+"PO-Revision-Date: 2018-11-14 15:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1135,7 +1135,7 @@ msgid "Low"
 msgstr "Low"
 
 msgid "Low Barrier"
-msgstr ""
+msgstr "Barriera inferiore"
 
 msgid "Low barrier"
 msgstr "Barriera inferiore"
@@ -1225,7 +1225,7 @@ msgid "Minus the agent's commission"
 msgstr "Meno la commissione dell'agente"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 msgid "Minutes"
 msgstr "Minuti"
@@ -1243,7 +1243,7 @@ msgid "Monday"
 msgstr "Lunedì"
 
 msgid "Monthly Profitable Trades"
-msgstr ""
+msgstr "Trade remunerativi mensili"
 
 msgid "Mother's maiden name"
 msgstr "Cognome della madre"
@@ -1258,7 +1258,7 @@ msgid "Ms"
 msgstr "Sig.ra"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Moltiplicatore"
 
 msgid "Name"
 msgstr "Nome"
@@ -1294,7 +1294,7 @@ msgid "Net Profit"
 msgstr "Profitto netto"
 
 msgid "New Account"
-msgstr ""
+msgstr "Nuovo conto"
 
 msgid "New password"
 msgstr "Nuova password"
