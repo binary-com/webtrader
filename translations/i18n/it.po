@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-13 06:31\n"
+"PO-Revision-Date: 2018-11-14 14:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -949,7 +949,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "Nell'Isola di Man e nel Regno Unito, gli indici di volatilità sono offerti da Binary (IOM) Ltd., primo piano, Millennium House, Victoria Road, Douglas, IM2 4RW, Isola di Man, Isole Britanniche; autorizzata e regolamentata rispettivamente dalla (1) Gambling Supervision Commission dell'Isola di Man (licenza attuale emessa il 31 agosto 2017) e dalla (2) Gambling Commission del Regno Unito ([_1]licenza n. 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "Nel resto dell'UE, gli indici di volatilità sono offerti dalla Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorizzata e regolamentata dalla (1) Malta Gaming Authority di Malta (licenza n. MGA/B2C/102/2000 rilasciata il 26 maggio 2015); per i clienti nel Regno Unito dalla (2) UK Gambling Commission (licenza [_1]n. 39495[_2]) e per i clienti in Irlanda dalla (3) Revenue Commissioners irlandese (licenza del Remote Bookmaker n. 1010285 emessa l'1 luglio 2017). Consulta le [_3]informazioni complete sulla regolamentazione[_4]."
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -958,7 +958,7 @@ msgid "Income Source"
 msgstr "Fonte di reddito"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Indicativo"
 
 msgid "Indicative Price"
 msgstr "Prezzo indicativo"
@@ -988,7 +988,7 @@ msgid "Invalid template type"
 msgstr "Tipo di modello non valido"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Tipo di modello non valido."
 
 msgid "Investments & Dividends"
 msgstr "Investimenti e dividendi"
@@ -1000,7 +1000,7 @@ msgid "January"
 msgstr "Gennaio"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "I conti giapponesi non sono supportati."
 
 msgid "Jul"
 msgstr "Lug"
@@ -1009,7 +1009,7 @@ msgid "July"
 msgstr "Luglio"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Passa a:"
 
 msgid "Jun"
 msgstr "Giu"
