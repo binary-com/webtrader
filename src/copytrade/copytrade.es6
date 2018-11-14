@@ -109,7 +109,6 @@ const refreshTraderStats = (loginid, token, scope) => {
         updateLocalStorage(scope);
         resolve();
       }).catch((e) => {
-        $.growl.error({ message: e });
         reject();
       });
   });
@@ -229,7 +228,6 @@ const state = {
           updateLocalStorage(state);
         })
         .catch((e) => {
-          console.error(e.message)
           $.growl.error({ message: form_error_messages.REFRESH_FAILED });
           trader.disableRefresh = false;
         });
@@ -354,6 +352,7 @@ const initConfigWindow = () => {
               await refreshTraderStats(loginid, token, state);
             } catch (e) {
               console.error(e);
+              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
             }
           }
         })();
