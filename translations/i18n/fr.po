@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-14 11:56\n"
+"PO-Revision-Date: 2018-11-14 12:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -769,7 +769,7 @@ msgid "Exclude until time cannot be less than 6 months."
 msgstr "La période d'auto exclusion ne peut pas être inférieure à 6 mois."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr "L'exclusion jusqu'à temps ne peut pas être inférieur à 5 mois."
+msgstr "La période d'auto exclusion ne peut pas être inférieure à 5 mois."
 
 msgid "Exit Spot"
 msgstr "Point de sortie"
@@ -823,7 +823,7 @@ msgid "Financial Account Opening form"
 msgstr "Formulaire d’Ouverture du Compte Financier"
 
 msgid "Financial Assessment"
-msgstr "Évaluation financière"
+msgstr "Évaluation Financière"
 
 msgid "Financial Information"
 msgstr "Information Financière"
@@ -886,7 +886,7 @@ msgid "High"
 msgstr "Haut"
 
 msgid "High Barrier"
-msgstr "Barrière supérieure"
+msgstr "Barrière Supérieure"
 
 msgid "High barrier"
 msgstr "Barrière supérieure"
@@ -901,7 +901,7 @@ msgid "Historical Data"
 msgstr "Données historiques"
 
 msgid "Historical Data For"
-msgstr "Données Historiques pour"
+msgstr "Données Historiques Pour"
 
 msgid "Horizontal line"
 msgstr "Ligne horizontale"
