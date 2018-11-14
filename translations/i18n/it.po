@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 14:40\n"
+"PO-Revision-Date: 2018-11-14 14:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1027,10 +1027,10 @@ msgid "Last Digit Prediction"
 msgstr "Previsione dell'ultima cifra"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "L'ultima cifra è superiore"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "L'ultima cifra è inferiore"
 
 msgid "Last used"
 msgstr "Ultima volta"
@@ -1054,7 +1054,7 @@ msgid "Link"
 msgstr "Link"
 
 msgid "Load Workspace"
-msgstr ""
+msgstr "Carica l'area di lavoro"
 
 msgid "Load chart template"
 msgstr "Carica modello del grafico"
@@ -1063,10 +1063,10 @@ msgid "Load trade template"
 msgstr "Carica modello del trade"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Caricamento in corso..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Caricamento dell'indice degli asset..."
 
 msgid "Loading Copy Trade..."
 msgstr ""
