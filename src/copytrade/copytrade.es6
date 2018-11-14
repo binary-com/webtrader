@@ -294,7 +294,7 @@ const state = {
             })
             .catch((e) => {
               scope.searchToken.disable = false;
-              $.growl.error(e);
+              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
             });
         })
         .catch(error => {
