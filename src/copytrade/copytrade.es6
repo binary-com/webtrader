@@ -294,7 +294,7 @@ const state = {
             })
             .catch((e) => {
               scope.searchToken.disable = false;
-              console.error(e)
+              $.growl.error(e);
             });
         })
         .catch(error => {
