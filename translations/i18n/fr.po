@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-14 12:20\n"
+"PO-Revision-Date: 2018-11-14 12:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -166,7 +166,7 @@ msgid "8h"
 msgstr "8h"
 
 msgid "AM"
-msgstr " "
+msgstr "  du matin"
 
 msgid "Accept"
 msgstr "Accepter"
@@ -1420,7 +1420,7 @@ msgid "PEP Declaration"
 msgstr "Déclaration PEP"
 
 msgid "PM"
-msgstr "Après midi"
+msgstr " de l'après midi"
 
 msgid "Password must be 6 characters minimum"
 msgstr "Le mot de passe doit être de minimum 6 caractères"
@@ -1474,7 +1474,7 @@ msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withd
 msgstr "Veuillez [_1]accepter les Conditions Générales mises à jour[_2] pour supprimer vos limites de retrait et de trading."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr "S'il vous plait [_1]complétez le profile de votre compte[_2] pour supprimer vos limites de retrait et de trading."
+msgstr "S'il vous plait [_1]complétez le profil de votre compte[_2] pour supprimer vos limites de retrait et de trading."
 
 msgid "Please choose at least one token scope"
 msgstr "Veuillez choisir au moins une gamme de token"
@@ -1549,13 +1549,13 @@ msgid "Please select a date for time out until."
 msgstr "Veuillez sélectionner une date pour time out jusqu'à."
 
 msgid "Please select a payment agent"
-msgstr "Veuillez sélectionner une date valide"
+msgstr "Veuillez sélectionner un agent de paiement"
 
 msgid "Please select an account opening reason before continuing"
 msgstr "Veuillez sélectionner une raison pour l’ouverture du compte avant de continuer"
 
 msgid "Please set currency."
-msgstr "Veuillez choisir une monnaie."
+msgstr "Veuillez choisir une devise."
 
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr "Veuillez définir la [_1]devise[_2] de votre compte"
@@ -1621,7 +1621,7 @@ msgid "Profit"
 msgstr "Profits"
 
 msgid "Profit Table"
-msgstr "Tableau des profits"
+msgstr "Tableau des Profits"
 
 msgid "Profit table"
 msgstr "Tableau des profits"
@@ -1630,7 +1630,7 @@ msgid "Profit/ Loss"
 msgstr "Profits/pertes"
 
 msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr "Justificatif de domicile : une copie scannée d'une facture de gaz, d'électricité, d'eau ou d'un relevé bancaire datant de moins de 3 mois. Votre justificatif de domicile doit inclure votre nom, adresse, date d'émission, et le nom de l'organisation émettrice."
+msgstr "Justificatif de domicile - Une copie scannée d'une facture de gaz, d'électricité, d'eau ou d'un relevé bancaire datant de moins de 3 mois. Votre justificatif de domicile doit inclure votre nom, adresse, date d'émission, et le nom de l'organisation émettrice."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
 msgstr "Preuve d'identité : une copie scannée de votre passeport, de votre permis de conduire (provisoire ou non) ou de votre carte d'identité, indiquant votre nom et votre date de naissance."
