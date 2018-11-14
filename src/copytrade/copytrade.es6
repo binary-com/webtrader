@@ -225,7 +225,6 @@ const state = {
       refreshTraderStats(loginid, token, state)
         .then(() => {
           trader.disableRefresh = false;
-          updateLocalStorage(state);
         })
         .catch((e) => {
           console.error(e)
@@ -289,7 +288,6 @@ const state = {
             .then(() => {
               scope.searchToken.token = '';
               scope.searchToken.disable = false;
-              updateLocalStorage(scope);
             })
             .catch((e) => {
               scope.searchToken.disable = false;
@@ -300,7 +298,6 @@ const state = {
         .catch(error => {
           $.growl.error({ message: error.message });
           scope.searchToken.disable = false;
-          updateLocalStorage(scope);
         });
     },
   },
