@@ -109,7 +109,7 @@ const refreshTraderStats = (loginid, token, scope) => {
         updateLocalStorage(scope);
         resolve();
       }).catch((e) => {
-        reject();
+        reject(e);
       });
   });
 };
@@ -228,6 +228,7 @@ const state = {
           updateLocalStorage(state);
         })
         .catch((e) => {
+          console.error(e)
           $.growl.error({ message: form_error_messages.REFRESH_FAILED });
           trader.disableRefresh = false;
         });
@@ -292,6 +293,7 @@ const state = {
             })
             .catch((e) => {
               scope.searchToken.disable = false;
+              console.error(e)
               $.growl.error({ message: form_error_messages.REFRESH_FAILED });
             });
         })
