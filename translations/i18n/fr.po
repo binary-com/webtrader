@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-14 12:30\n"
+"PO-Revision-Date: 2018-11-14 12:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1633,7 +1633,7 @@ msgid "Proof of address - A scanned copy of a utility bill or bank statement tha
 msgstr "Justificatif de domicile - Une copie scannée d'une facture de gaz, d'électricité, d'eau ou d'un relevé bancaire datant de moins de 3 mois. Votre justificatif de domicile doit inclure votre nom, adresse, date d'émission, et le nom de l'organisation émettrice."
 
 msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "Preuve d'identité : une copie scannée de votre passeport, de votre permis de conduire (provisoire ou non) ou de votre carte d'identité, indiquant votre nom et votre date de naissance."
+msgstr "Preuve d'identité - Une copie scannée de votre passeport, de votre permis de conduire (provisoire ou non) ou de votre carte d'identité, indiquant votre nom et votre date de naissance."
 
 msgid "Purchase"
 msgstr "Achat"
@@ -1651,7 +1651,7 @@ msgid "Read"
 msgstr "Lire"
 
 msgid "Real Money Account Opening"
-msgstr "Ouverture d'un compte réel"
+msgstr "Ouverture d'un Compte d'Argent Réel"
 
 msgid "Reality check"
 msgstr "Relevé d'activité"
@@ -1672,7 +1672,7 @@ msgid "Register free account"
 msgstr "Ouvrez un compte gratuit"
 
 msgid "Registration"
-msgstr "Registration"
+msgstr "Inscription"
 
 msgid "Remove"
 msgstr "Supprimer"
@@ -1687,7 +1687,7 @@ msgid "Repeat password"
 msgstr "Répéter le mot de passe"
 
 msgid "Resale of this contract is not offered"
-msgstr "La revente de ce contrat n’est pas offert"
+msgstr "La revente de ce contrat n’est pas offerte"
 
 msgid "Reset zoom"
 msgstr "Réinitialiser le zoom"
@@ -1756,7 +1756,7 @@ msgid "Security question"
 msgstr "Question de sécurité"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr "Il semble que nos serveurs sont en panne, nous travaillons à leur réparation."
+msgstr "Il semble que nos serveurs sont en panne, nous travaillons à leurs réparations."
 
 msgid "Self-Employed"
 msgstr "Non-salarié"
@@ -1765,7 +1765,7 @@ msgid "Self-Exclusion"
 msgstr "Auto-exclusion"
 
 msgid "Self-Exclusion Facilities"
-msgstr "Fonctionnalités d'auto-exclusion"
+msgstr "Fonctionnalités d'Auto-Exclusion"
 
 msgid "Sell At Market"
 msgstr "Vente au prix du marché"
@@ -1897,7 +1897,7 @@ msgid "Table"
 msgstr "Tableau"
 
 msgid "Tax Information"
-msgstr "Informations fiscales"
+msgstr "Informations Fiscales"
 
 msgid "Tax Information successfully updated"
 msgstr "Renseignements fiscaux mis à jour"
@@ -1924,7 +1924,7 @@ msgid "Template changes saved"
 msgstr "Modifications apportées au modèle enregistrées"
 
 msgid "Template is not applicable."
-msgstr "Le modèle n’est pas applicable."
+msgstr "Le Modèle n’est pas applicable."
 
 msgid "Template name"
 msgstr "Nom du modèle"
@@ -1936,7 +1936,7 @@ msgid "Terms"
 msgstr "Conditions"
 
 msgid "Terms and Conditions"
-msgstr "Conditions générales"
+msgstr "Conditions Générales"
 
 msgid "Tertiary"
 msgstr "Supérieur"
@@ -1954,7 +1954,7 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Les services financiers disponibles sur ce site conviennent uniquement aux clients capables d'assumer la perte de l'ensemble des fonds qu'ils investissent, et qui comprennent et ont l'expérience des risques liés à l'acquisition de contrats financiers. Les transactions sur contrats financiers impliquent un degré de risque élevé. Si les contrats achetés expirent sans valeur, vous perdrez la totalité de votre investissement, à savoir la prime de l'option"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr "Il y avait une interruption des données du marché pendant la durée du contrat. Pour les comptes d’argent réel, nous tenterons de corriger cela et régler le contrat correctement, sinon le contrat sera annulé et remboursé. Les contrats de monnaie virtuelle seront annulés et remboursés."
+msgstr "Il y avait une interruption des données du marché pendant la durée du contrat. Pour les comptes d’argent réel, nous tenterons de corriger cela et de régler le contrat correctement, sinon le contrat sera annulé et remboursé. Les contrats de monnaie virtuelle seront annulés et remboursés."
 
 msgid "There was an error"
 msgstr "Une erreur s'est produite"
