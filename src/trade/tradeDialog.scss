@@ -308,7 +308,7 @@
 }
 
 .trade-fields ul li select.date-start-select + .chosen-container {
-  width: 115px !important;
+  width: 160px !important;
   .chosen-search { display: none; }
   ul.chosen-results {
     flex-direction: column;
@@ -316,8 +316,10 @@
     li {
       width: calc(100% - 10px);
       text-align: center;
-      line-height: 18px;
       display: block;
+      height: 100%;
+      padding: 5px 0;
+      line-height: 18px;
     }
   }
 
