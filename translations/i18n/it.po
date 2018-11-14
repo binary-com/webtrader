@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 14:30\n"
+"PO-Revision-Date: 2018-11-14 14:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1021,10 +1021,10 @@ msgid "Just click  Grant  button on the page you will now be taken to"
 msgstr "Basta cliccare sul pulsante Grant sulla pagina da adottare"
 
 msgid "Last 12 mnts Profitable Trades"
-msgstr ""
+msgstr "Trade redditizi degli ultimi 12 mesi"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Previsione dell'ultima cifra"
 
 msgid "Last Digit is Over"
 msgstr ""
