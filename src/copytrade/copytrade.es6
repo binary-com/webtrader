@@ -219,16 +219,16 @@ const state = {
     const token = trader.yourCopySettings.copy_start;
     if (loginid && token) {
       trader.disableRefresh = true;
-      refreshTraderStats(loginid, token, state)
-        .then(() => {
-          trader.disableRefresh = false;
-          updateLocalStorage(state);
-        })
-        .catch((e) => {
-          $.growl.error({ message: form_error_messages.REFRESH_FAILED });
-          trader.disableRefresh = false;
-          updateLocalStorage(scope);
-        });
+      try {
+        refreshTraderStats(loginid, token, state)
+        trader.disableRefresh = false;
+        updateLocalStorage(state);
+      }
+      catch (e) {
+        console.error(e)
+        $.growl.error({ message: form_error_messages.REFRESH_FAILED });
+        trader.disableRefresh = false;
+      }
     }
   },
   onMinTradeChange: (event, scope) => {
