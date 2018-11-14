@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 15:50\n"
+"PO-Revision-Date: 2018-11-14 16:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2170,13 +2170,13 @@ msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del trade"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "Varie caratteristiche come il caricamento e la disposizione degli asset, la creazione di grafici e altre risorse personalizzabili in base alle tue preferenze"
 
 msgid "Verification code has been sent to your email"
 msgstr "Il codice di verifica è stato inviato al tuo indirizzo email"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Codice di verifica inviato a"
 
 msgid "Verification token"
 msgstr "Token di verifica"
@@ -2221,7 +2221,7 @@ msgid "What is pep?"
 msgstr "Che cosa è pep?"
 
 msgid "What is this?"
-msgstr ""
+msgstr "Di cosa si tratta?"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr ""
