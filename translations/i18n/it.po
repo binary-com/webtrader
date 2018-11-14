@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 15:40\n"
+"PO-Revision-Date: 2018-11-14 15:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2101,13 +2101,13 @@ msgid "Trades break down"
 msgstr ""
 
 msgid "Trading Experience"
-msgstr ""
+msgstr "Esperienza di trading"
 
 msgid "Trading Times"
 msgstr "Orari di trading"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Il trading di opzioni binarie può non essere adatto a tutti, pertanto occorre assicurarsi di aver compreso appieno i rischi connessi. Le perdite possono superare il deposito iniziale, e il Cliente non è effettivamente in possesso degli asset sottostanti, né ha degli interessi su di essi."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview per Binary.com"
