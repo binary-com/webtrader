@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 16:40\n"
+"PO-Revision-Date: 2018-11-14 16:53\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2224,7 +2224,7 @@ msgid "What is this?"
 msgstr "Di cosa si tratta?"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Cliccando su \"Ok\" verrai escluso dal trading sul sito fino alla data selezionata."
 
 msgid "While on the go, you can"
 msgstr "Mentre sei in movimento, puoi"
@@ -2239,7 +2239,7 @@ msgid "Workspace"
 msgstr "Area di lavoro"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Modifiche dell'area di lavoro salvate"
 
 msgid "X-axis labels"
 msgstr "Etichetta dell'asse delle X"
@@ -2266,7 +2266,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Non hai ancora copiato alcun trade"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Ti sei autoescluso fino al"
 
 msgid "You have sold the following contract"
 msgstr "Hai venduto il seguente contratto"
@@ -2278,13 +2278,13 @@ msgid "You pay"
 msgstr "Paghi"
 
 msgid "You should enter between 6-25 characters."
-msgstr ""
+msgstr "Il numero di caratteri deve essere compreso tra 6 e 25."
 
 msgid "You will be automatically logged out after such time"
 msgstr "Dopo questo tempo, verrai automaticamente loggato"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "Vuoi consentire ad altri trader di copiare i tuoi trade"
 
 msgid "You wish to copy another trader's trades"
 msgstr ""
