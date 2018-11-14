@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 15:10\n"
+"PO-Revision-Date: 2018-11-14 15:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1306,7 +1306,7 @@ msgid "No touch"
 msgstr "No touch"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Attenzione: il contratto verrá venduto al prezzo di mercato prevalente nel momento in cui i nostri server ricevono la richiesta. Tale prezzo può differire rispetto al prezzo indicato."
 
 msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr "Nota: puoi avere solo un account di moneta fiat e uno per ogni account di criptovaluta"
@@ -1354,7 +1354,7 @@ msgid "One last step left"
 msgstr "Rimane l'ultimo step"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione al sito web, o invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta fissati, i limiti possono essere esclusivamente aumentati; saranno rimossi o allargati solo dopo 7 giorni, con l'eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta che è stata confermata. Per rimuovere o aumentare i tuoi limiti, contatta"
 
 msgid "Only letters, numbers, hyphen are allowed"
 msgstr "Sono consentiti solo lettere, numeri e trattini"
@@ -1423,13 +1423,13 @@ msgid "PM"
 msgstr ""
 
 msgid "Password must be 6 characters minimum"
-msgstr ""
+msgstr "La password deve contenere minimo 6 caratteri"
 
 msgid "Password must contain lower and uppercase letters with numbers"
-msgstr ""
+msgstr "La password deve contenere numeri e lettere maiuscole e minuscole"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "La password è stata aggiornata."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Le password non corrispondono. Digitale di nuovo"
