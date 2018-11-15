@@ -445,3 +445,12 @@
     }
   }
 }
+
+.future-timepicker-wrapper {
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0;
+    padding-left: 5px;
+  }
+}
