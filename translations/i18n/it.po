@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-15 10:00\n"
+"PO-Revision-Date: 2018-11-15 10:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1090,7 +1090,7 @@ msgid "Loading Self-Exclusion ..."
 msgstr "Caricamento dell'autoesecuzione..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Caricamento dell'estratto conto..."
 
 msgid "Loading Token management ..."
 msgstr ""
@@ -1183,13 +1183,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Perdita aggregata massima al giorno"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Saldo massimo"
 
 msgid "Maximum number of open positions"
 msgstr "Numero massimo di posizioni aperte"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Limite di posizioni aperte"
 
 msgid "May"
 msgstr "Maggio"
