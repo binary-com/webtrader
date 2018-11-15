@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-15 10:10\n"
+"PO-Revision-Date: 2018-11-15 10:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1201,10 +1201,10 @@ msgid "Memorable town/city"
 msgstr "Città indimenticabile"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "La puntata minima per il trade deve essere inferiore a quella massima."
 
 msgid "Min. Trade Stake"
-msgstr ""
+msgstr "Puntata minima per il trade"
 
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
@@ -1219,7 +1219,7 @@ msgid "Minimum of 6 characters required"
 msgstr "Minimo 6 caratteri obbligatori"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Minimo di sei caratteri tra numeri e lettere maiuscole e minuscole"
 
 msgid "Minus the agent's commission"
 msgstr "Meno la commissione dell'agente"
