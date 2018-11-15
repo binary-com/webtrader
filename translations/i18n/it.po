@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-15 09:20\n"
+"PO-Revision-Date: 2018-11-15 09:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1078,10 +1078,10 @@ msgid "Loading MAM..."
 msgstr ""
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Caricamento della finestra di dialogo della password..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Caricamento della tabella dei profitti..."
 
 msgid "Loading Real account opening ..."
 msgstr ""
@@ -2305,7 +2305,7 @@ msgid "Your browser is not supported"
 msgstr "Il tuo browser non è supportato"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Le modifiche sono state salvate"
 
 msgid "Your copying settings"
 msgstr "Le tue impostazioni per la copia"
@@ -2326,7 +2326,7 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Autentica ora il tuo conto[_2] per accedere a tutte le opzioni di prelievo disponibili."
 
 msgid "and"
 msgstr "e"
