@@ -131,10 +131,12 @@ function set_current_template(state, tpl) {
     _.defer(function() {
       if(state.date_start.visible) {
         _.defer(function() {
-          if(tpl.date_start_value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1}))
+          // TODO: Why are we changing state of date_start.value here?
+          if (state.date_start.value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1})) {
             state.date_start.value = tpl.date_start_value*1;
-          else
+          } else {
             state.date_start.value = 'now';
+          }
         });
       }
       if(state.digits.visible) {
@@ -505,8 +507,22 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     _.assign(state.date_start, options);
   };
 
-  state.updateDateStartHour = (selected_hour) => {
-    console.log('updateDateStartHour', selected_hour);
+  state.selected_future_time = 'now';
+  state.setDateStartHour = (selected_hour) => {
+    let mom;
+    const init_picker = selected_hour !== 'now' && state.selected_future_time === 'now';
+    if (selected_hour === 'now') {
+      mom = selected_hour;
+    } else if (init_picker) {
+      mom = moment.unix(selected_hour).format('HH:MM');
+    } else if (!init_picker) {
+      const date_start_formatted = moment.unix(state.date_start.value).format('YYYY-MM-DD');
+      const combined = moment(date_start_formatted + ' ' + selected_hour);
+      const new_date_start_value = moment.utc(combined).unix() * 1000;
+      // state.date_start.value = moment.utc(combined).unix();
+      mom = selected_hour;
+    }
+    state.selected_future_time = mom;
   }
 
   state.date_expiry.update = function (date_or_hour) {
@@ -618,7 +634,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     }
 
     state.duration_unit.array = array;
-    console.log('update state.duration_unit: ', state.duration_unit);
     /* manualy notify 'duration_count' and 'barriers' to update themselves */
     state.barriers.update();
     state.date_expiry.update_times();
@@ -744,7 +759,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.proposal.onchange = function () {
-    console.log('onchange: ', state);
     var unit = state.duration_unit.value;
     var expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
     if(state.categories.value.contract_category === 'spreads') expiry_type = 'intraday';
