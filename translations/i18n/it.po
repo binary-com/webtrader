@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-15 09:10\n"
+"PO-Revision-Date: 2018-11-15 09:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2014,16 +2014,16 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Per prelevare fondi, inserisci lo speciale token di verifica che ti abbiamo appena inviato tramite email"
 
 msgid "Today"
-msgstr ""
+msgstr "Oggi"
 
 msgid "Token"
 msgstr "Token"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Gestione dei token"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token già aggiunto"
 
 msgid "Token management"
 msgstr "Gestione dei token"
@@ -2032,10 +2032,10 @@ msgid "Token name"
 msgstr "Nome del token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Il nome del token può contenere caratteri alfanumerici, spazi e trattini bassi"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Il nome del token può contenere al massimo 32 caratteri"
 
 msgid "Token name must contain atleast 2 characters"
 msgstr "Il nome del token deve contenere almeno 2 caratteri"
