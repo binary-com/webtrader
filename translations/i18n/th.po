@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2018-11-13 06:31\n"
+"PO-Revision-Date: 2018-11-15 01:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1645,7 +1645,7 @@ msgid "Purchase Price"
 msgstr "ราคาซื้อ"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "เวลาซื้อ"
 
 msgid "Read"
 msgstr "อ่าน"
