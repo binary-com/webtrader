@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-14 17:00\n"
+"PO-Revision-Date: 2018-11-15 09:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1966,7 +1966,7 @@ msgid "This contract lost"
 msgstr ""
 
 msgid "This contract won"
-msgstr ""
+msgstr "Questo contratto ha vinto"
 
 msgid "This field is required"
 msgstr "Questo campo è obbligatorio"
@@ -1996,7 +1996,7 @@ msgid "Time out until"
 msgstr "Tempo scaduto fino a"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Richiesta di websocket interrotta"
 
 msgid "Title"
 msgstr "Titolo"
@@ -2482,5 +2482,5 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Rendimento"
 
