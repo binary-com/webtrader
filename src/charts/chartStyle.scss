@@ -1,0 +1,14 @@
+$COLOR_WHITE: #fff;
+
+@mixin chartTooltip {
+    .highcharts-tooltip span {
+        top: 1px !important;
+        left: 2px !important;
+         .tooltip-body {
+            background-color: $COLOR_WHITE;
+            padding: 6px;
+            margin-bottom: -14px;
+            margin-right: -14px;
+        }
+    }
+}

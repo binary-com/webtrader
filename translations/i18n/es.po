@@ -1,22 +1,19 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-10-17 04:11\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-
-msgid "(One) Touch trades"
-msgstr "Contratos toque"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(si menos de un día de duración), o al final de la jornada bursátil (si un día o más de duración)"
@@ -169,12 +166,6 @@ msgid "8h"
 msgstr "8h"
 
 msgid "AM"
-msgstr ""
-
-msgid "About Binary.com"
-msgstr ""
-
-msgid "About us"
 msgstr ""
 
 msgid "Accept"
@@ -342,17 +333,8 @@ msgstr "Barrera"
 msgid "Barrier offset"
 msgstr "Desplazamiento de la barrera"
 
-msgid "Barrier(s)"
-msgstr "Límite(s)"
-
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary option"
-msgstr "Opciones binarias"
-
-msgid "Binary options basics"
-msgstr ""
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Experiencia comercial con opciones binarias o derivados de otros instrumentos financieros"
@@ -480,9 +462,6 @@ msgstr ""
 msgid "Click to log in with your Binary.com account"
 msgstr "Haga clic para iniciar sesión con su cuenta de Binary.com"
 
-msgid "Client funds"
-msgstr ""
-
 msgid "Close"
 msgstr "Cerrar"
 
@@ -491,9 +470,6 @@ msgstr ""
 
 msgid "Closes"
 msgstr "Cierra"
-
-msgid "Commodities"
-msgstr "Materias primas"
 
 msgid "Commodities trading experience"
 msgstr "Experiencia de comerciar con materias primas"
@@ -536,9 +512,6 @@ msgstr ""
 
 msgid "Contract Details"
 msgstr ""
-
-msgid "Contract period"
-msgstr "Período del contrato"
 
 msgid "Contracts"
 msgstr "Contratos"
@@ -645,12 +618,6 @@ msgstr "Depositar fondos"
 msgid "Deposit of USD"
 msgstr "Depósito de USD"
 
-msgid "Depositing and withdrawing funds"
-msgstr "Depositar y retirar fondos"
-
-msgid "Derivative"
-msgstr "Derivativo"
-
 msgid "Describe what this token is for to find it later"
 msgstr "Describir para qué es este token para encontrarlo más tarde"
 
@@ -668,9 +635,6 @@ msgstr "Dígitos"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "¿Quiere instalar la extensión Webtrader de chrome?"
-
-msgid "Do you want to install the Webtrader chrome extension?"
-msgstr ""
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "¿Todavía no tiene una cuenta? Regístrese y obtenga una cuenta virtual de $10.000"
@@ -756,9 +720,6 @@ msgstr "Situación laboral"
 msgid "End Time"
 msgstr "Hora de finalización"
 
-msgid "Ends Between/Ends Outside trades"
-msgstr "Contratos Finaliza dentro/Finaliza fuera"
-
 msgid "Ends Between/Outside"
 msgstr ""
 
@@ -785,9 +746,6 @@ msgstr "Punto de Entrada"
 
 msgid "Entry spot"
 msgstr "Punto de entrada"
-
-msgid "Entry spot price"
-msgstr "Precio de entrada al contado"
 
 msgid "Error getting data for %1"
 msgstr "Error al obtener datos para %1"
@@ -822,14 +780,8 @@ msgstr "Tiempo de punto de salida"
 msgid "Exit spot"
 msgstr "Punto de salida"
 
-msgid "Expiry price"
-msgstr "Precio de expiración"
-
 msgid "Explanation"
 msgstr "Explicación"
-
-msgid "FAQ"
-msgstr ""
 
 msgid "Failed to update the password"
 msgstr ""
@@ -888,9 +840,6 @@ msgstr "Primera línea de domicilio"
 msgid "First name"
 msgstr "Nombre"
 
-msgid "Forex"
-msgstr "Forex"
-
 msgid "Forex trading experience"
 msgstr "Experiencia de comercio con Forex"
 
@@ -912,16 +861,7 @@ msgstr "Interfaz comercial de pantalla completa"
 msgid "Further instructions"
 msgstr "Otras instrucciones"
 
-msgid "GMT"
-msgstr "GMT"
-
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
-
-msgid "Getting started"
-msgstr ""
-
-msgid "Glossary"
 msgstr ""
 
 msgid "Go to"
@@ -938,9 +878,6 @@ msgstr "Rejilla"
 
 msgid "Grid Light"
 msgstr "Luz de la Rejilla"
-
-msgid "Group history"
-msgstr ""
 
 msgid "Health"
 msgstr "Salud"
@@ -960,9 +897,6 @@ msgstr "Offset del límite alto"
 msgid "Higher"
 msgstr "Más alto"
 
-msgid "Higher/Lower trades"
-msgstr "Contratos Superior/Inferior"
-
 msgid "Historical Data"
 msgstr "Datos Históricos"
 
@@ -977,12 +911,6 @@ msgstr ""
 
 msgid "Hours"
 msgstr "Horas"
-
-msgid "How to trade binary options?"
-msgstr ""
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr ""
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Declaro que soy una persona políticamente expuesta (PEP)"
@@ -1020,14 +948,11 @@ msgstr ""
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
 msgstr ""
 
 msgid "In/Out"
 msgstr "Dentro/Fuera"
-
-msgid "In/Out trades"
-msgstr "Contratos Dentro/Fuera"
 
 msgid "Income Source"
 msgstr "Fuente de Ingresos"
@@ -1040,9 +965,6 @@ msgstr "Precio Indicativo"
 
 msgid "Indicators"
 msgstr "Indicadores"
-
-msgid "Indices"
-msgstr "Índices"
 
 msgid "Indices trading experience"
 msgstr "Experiencia de comercio con índices"
@@ -1112,9 +1034,6 @@ msgstr ""
 
 msgid "Last used"
 msgstr "Utilizado por última vez"
-
-msgid "Learning to trade"
-msgstr "Aprender a operar"
 
 msgid "Less than"
 msgstr "Menos de"
@@ -1238,9 +1157,6 @@ msgstr "Mar"
 
 msgid "March"
 msgstr "Marzo"
-
-msgid "Market exit price"
-msgstr "Precio de salida del mercado"
 
 msgid "Matches"
 msgstr "Coincidencias"
@@ -1386,9 +1302,6 @@ msgstr "Nueva contraseña"
 msgid "No"
 msgstr "Núm"
 
-msgid "No Touch trades"
-msgstr "Contratos Sin toque"
-
 msgid "No touch"
 msgstr "Sin Toque"
 
@@ -1415,9 +1328,6 @@ msgstr "Gráfico OHLC"
 
 msgid "OK"
 msgstr "Aceptar"
-
-msgid "OTC indices and stocks"
-msgstr ""
 
 msgid "Occupation"
 msgstr "Ocupación"
@@ -1479,9 +1389,6 @@ msgstr "Abrir una cuenta financiera"
 msgid "Open account"
 msgstr "Abrir una cuenta"
 
-msgid "Opening an account"
-msgstr "Abrir cuenta"
-
 msgid "Opens"
 msgstr "Se abre"
 
@@ -1527,9 +1434,6 @@ msgstr ""
 msgid "Passwords didn't match. Please type them again"
 msgstr "Las contraseñas no coinciden. Por favor, escríbalas otra vez"
 
-msgid "Patents"
-msgstr ""
-
 msgid "Pattern Recognition"
 msgstr "Reconocimiento de patrones"
 
@@ -1559,9 +1463,6 @@ msgstr "Datos personales"
 
 msgid "Phone"
 msgstr "Teléfono"
-
-msgid "Pip"
-msgstr "Porcentaje en punto (pip)"
 
 msgid "Place of birth"
 msgstr "Lugar de nacimiento"
@@ -1743,6 +1644,9 @@ msgstr "Fecha de Compra"
 msgid "Purchase Price"
 msgstr "Precio de Compra"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "Leer"
 
@@ -1785,9 +1689,6 @@ msgstr "Repetir contraseña"
 msgid "Resale of this contract is not offered"
 msgstr ""
 
-msgid "Resale price"
-msgstr "Precio de reventa"
-
 msgid "Reset zoom"
 msgstr "Reiniciar zoom"
 
@@ -1805,9 +1706,6 @@ msgstr "Volver"
 
 msgid "Rise"
 msgstr "Aumento"
-
-msgid "Rise/Fall trades"
-msgstr "Contratos Alza/Baja"
 
 msgid "Robust and secure platform"
 msgstr "Plataforma robusta y segura"
@@ -1872,9 +1770,6 @@ msgstr ""
 msgid "Sell At Market"
 msgstr "Vender en el Mercado"
 
-msgid "Sell option"
-msgstr "Opción de venta"
-
 msgid "Sent to account"
 msgstr "Enviado a la cuenta"
 
@@ -1902,9 +1797,6 @@ msgstr "Compartir"
 msgid "Share chart"
 msgstr "Compartir gráfico"
 
-msgid "Smart Indices"
-msgstr ""
-
 msgid "Sold"
 msgstr "Vendido"
 
@@ -1916,9 +1808,6 @@ msgstr ""
 
 msgid "Spline"
 msgstr "Spline"
-
-msgid "Spot price"
-msgstr "Precio al contado"
 
 msgid "Spreads"
 msgstr "Spreads"
@@ -1961,9 +1850,6 @@ msgstr "Estado"
 
 msgid "Stays Between/Goes Outside"
 msgstr ""
-
-msgid "Stays Between/Goes Outside trades"
-msgstr "Contratos Queda Dentro/Sale"
 
 msgid "Stays in"
 msgstr "Queda dentro"
@@ -2244,9 +2130,6 @@ msgstr "Martes"
 msgid "Turnover"
 msgstr "Volumen de ventas"
 
-msgid "Types of trades"
-msgstr ""
-
 msgid "USD"
 msgstr "USD"
 
@@ -2255,9 +2138,6 @@ msgstr "USDJPY"
 
 msgid "Under"
 msgstr "Inferior"
-
-msgid "Underlying"
-msgstr "Subyacente"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Desafortunadamente, su navegador no es compatible"
@@ -2316,9 +2196,6 @@ msgstr ""
 msgid "Volatility Indicators"
 msgstr "Indicadores de volatilidad"
 
-msgid "Volatility Indices"
-msgstr "Índices de Volatilidad"
-
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "Estamos obligados por nuestra licencia a informarle acerca de lo que ocurre con los fondos que guardamos en la cuenta para usted y sobre el grado de protección de los mismos en caso de insolvencia"
 
@@ -2351,12 +2228,6 @@ msgstr ""
 
 msgid "While on the go, you can"
 msgstr "Mientras viaja, puede"
-
-msgid "Why choose Binary Trading?"
-msgstr ""
-
-msgid "Why trade with Binary.com"
-msgstr ""
 
 msgid "Withdraw funds"
 msgstr "Retirar fondos"
@@ -2613,3 +2484,83 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr ""
 
+#~ msgid "(One) Touch trades"
+#~ msgstr "Contratos toque"
+
+#~ msgid "Barrier(s)"
+#~ msgstr "Límite(s)"
+
+#~ msgid "Binary option"
+#~ msgstr "Opciones binarias"
+
+#~ msgid "Commodities"
+#~ msgstr "Materias primas"
+
+#~ msgid "Contract period"
+#~ msgstr "Período del contrato"
+
+#~ msgid "Depositing and withdrawing funds"
+#~ msgstr "Depositar y retirar fondos"
+
+#~ msgid "Derivative"
+#~ msgstr "Derivativo"
+
+#~ msgid "Ends Between/Ends Outside trades"
+#~ msgstr "Contratos Finaliza dentro/Finaliza fuera"
+
+#~ msgid "Entry spot price"
+#~ msgstr "Precio de entrada al contado"
+
+#~ msgid "Expiry price"
+#~ msgstr "Precio de expiración"
+
+#~ msgid "Forex"
+#~ msgstr "Forex"
+
+#~ msgid "GMT"
+#~ msgstr "GMT"
+
+#~ msgid "Higher/Lower trades"
+#~ msgstr "Contratos Superior/Inferior"
+
+#~ msgid "In/Out trades"
+#~ msgstr "Contratos Dentro/Fuera"
+
+#~ msgid "Indices"
+#~ msgstr "Índices"
+
+#~ msgid "Learning to trade"
+#~ msgstr "Aprender a operar"
+
+#~ msgid "Market exit price"
+#~ msgstr "Precio de salida del mercado"
+
+#~ msgid "No Touch trades"
+#~ msgstr "Contratos Sin toque"
+
+#~ msgid "Opening an account"
+#~ msgstr "Abrir cuenta"
+
+#~ msgid "Pip"
+#~ msgstr "Porcentaje en punto (pip)"
+
+#~ msgid "Resale price"
+#~ msgstr "Precio de reventa"
+
+#~ msgid "Rise/Fall trades"
+#~ msgstr "Contratos Alza/Baja"
+
+#~ msgid "Sell option"
+#~ msgstr "Opción de venta"
+
+#~ msgid "Spot price"
+#~ msgstr "Precio al contado"
+
+#~ msgid "Stays Between/Goes Outside trades"
+#~ msgstr "Contratos Queda Dentro/Sale"
+
+#~ msgid "Underlying"
+#~ msgstr "Subyacente"
+
+#~ msgid "Volatility Indices"
+#~ msgstr "Índices de Volatilidad"

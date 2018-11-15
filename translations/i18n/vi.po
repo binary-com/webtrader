@@ -1,22 +1,19 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-10-17 04:10\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi_VN\n"
-"PO-Revision-Date: 2018-10-17 04:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
-
-msgid "(One) Touch trades"
-msgstr "(Một) Các giao dịch một chạm"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "(nếu thời hạn ít hơn một ngày), hoặc vào cuối ngày giao dịch (nếu thời hạn một ngày hoặc nhiều hơn)"
@@ -169,12 +166,6 @@ msgid "8h"
 msgstr "8 giờ"
 
 msgid "AM"
-msgstr ""
-
-msgid "About Binary.com"
-msgstr ""
-
-msgid "About us"
 msgstr ""
 
 msgid "Accept"
@@ -342,17 +333,8 @@ msgstr "Barie"
 msgid "Barrier offset"
 msgstr "Offset barie"
 
-msgid "Barrier(s)"
-msgstr "Các rào cản"
-
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary option"
-msgstr "tùy chọn nhị phân"
-
-msgid "Binary options basics"
-msgstr ""
 
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Các tùy chọn nhị phân hoặc các dẫn xuất kinh nghiệm kinh doanh tài chính khác"
@@ -480,9 +462,6 @@ msgstr ""
 msgid "Click to log in with your Binary.com account"
 msgstr "Nhấn vào đây để đăng nhập bằng tài khoản Binary.com của bạn"
 
-msgid "Client funds"
-msgstr "Quỹ của khách hàng"
-
 msgid "Close"
 msgstr "Đóng"
 
@@ -491,9 +470,6 @@ msgstr "Đóng tất cả"
 
 msgid "Closes"
 msgstr "Kết thúc"
-
-msgid "Commodities"
-msgstr "Hàng hóa"
 
 msgid "Commodities trading experience"
 msgstr "Kinh nghiệm giao dịch hàng hóa"
@@ -536,9 +512,6 @@ msgstr ""
 
 msgid "Contract Details"
 msgstr ""
-
-msgid "Contract period"
-msgstr "Thời hạn hợp đồng"
 
 msgid "Contracts"
 msgstr "Hợp đồng"
@@ -645,12 +618,6 @@ msgstr "Khoản tiền đặt cọc"
 msgid "Deposit of USD"
 msgstr "Tiền gửi USD"
 
-msgid "Depositing and withdrawing funds"
-msgstr "Ký quỹ và rút tiền"
-
-msgid "Derivative"
-msgstr "Dẫn xuất"
-
 msgid "Describe what this token is for to find it later"
 msgstr "Mô tả token này để tìm nó về sau"
 
@@ -667,9 +634,6 @@ msgid "Digits"
 msgstr "Chữ số"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
-
-msgid "Do you want to install the Webtrader chrome extension?"
 msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
@@ -756,9 +720,6 @@ msgstr "Tình trạng tuyển dụng"
 msgid "End Time"
 msgstr "Thời gian kết thúc"
 
-msgid "Ends Between/Ends Outside trades"
-msgstr "Kết thúc giữa / kết thúc bên ngoài giao dịch"
-
 msgid "Ends Between/Outside"
 msgstr "Kết thúc ở giữa / Bên ngoài"
 
@@ -785,9 +746,6 @@ msgstr "Điểm khởi đầu"
 
 msgid "Entry spot"
 msgstr "Điểm khởi đầu"
-
-msgid "Entry spot price"
-msgstr "Giá nhập điểm"
 
 msgid "Error getting data for %1"
 msgstr "Lỗi lấy dữ liệu cho %1"
@@ -822,14 +780,8 @@ msgstr "Thời điểm thoát"
 msgid "Exit spot"
 msgstr "Điểm chốt"
 
-msgid "Expiry price"
-msgstr "Giá hết hạn"
-
 msgid "Explanation"
 msgstr "Lời giải thích"
-
-msgid "FAQ"
-msgstr ""
 
 msgid "Failed to update the password"
 msgstr ""
@@ -888,9 +840,6 @@ msgstr "Dòng đầu tiên của địa chỉ nhà"
 msgid "First name"
 msgstr "Họ"
 
-msgid "Forex"
-msgstr "Ngoại hối"
-
 msgid "Forex trading experience"
 msgstr "Kinh nghiệm giao dịch ngoại hối"
 
@@ -912,17 +861,8 @@ msgstr "Giao diện giao dịch toàn màn hình"
 msgid "Further instructions"
 msgstr "Hướng dẫn thêm"
 
-msgid "GMT"
-msgstr "Giờ quốc tế"
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "Lấy API token từ (các) nhà giao dịch và thêm nó vào danh sách của bạn"
-
-msgid "Getting started"
-msgstr ""
-
-msgid "Glossary"
-msgstr ""
 
 msgid "Go to"
 msgstr "Đi tới"
@@ -938,9 +878,6 @@ msgstr "Ô lưới"
 
 msgid "Grid Light"
 msgstr "Ô lưới nhẹ"
-
-msgid "Group history"
-msgstr ""
 
 msgid "Health"
 msgstr "Sức khỏe"
@@ -960,9 +897,6 @@ msgstr "Offset barie cao"
 msgid "Higher"
 msgstr "Cao hơn"
 
-msgid "Higher/Lower trades"
-msgstr "Các giao dịch cao hơn/thấp hơn"
-
 msgid "Historical Data"
 msgstr "Dữ liệu lịch sử"
 
@@ -977,12 +911,6 @@ msgstr ""
 
 msgid "Hours"
 msgstr "Giờ"
-
-msgid "How to trade binary options?"
-msgstr ""
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr "Giao dịch thị trường Chỉ số Biến động như thế nào?"
 
 msgid "I acknowledge that I am not a politically exposed person (PEP)"
 msgstr "Tôi thừa nhận rằng tôi không phải là một người tiếp xúc chính trị nhiều (PEP)"
@@ -1020,14 +948,11 @@ msgstr ""
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr ""
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
 msgstr ""
 
 msgid "In/Out"
 msgstr "Vào/Ra"
-
-msgid "In/Out trades"
-msgstr "Trong/Ngoài giao dịch"
 
 msgid "Income Source"
 msgstr "Nguồn thu nhập"
@@ -1039,9 +964,6 @@ msgid "Indicative Price"
 msgstr "Giá biểu thị"
 
 msgid "Indicators"
-msgstr "Chỉ số"
-
-msgid "Indices"
 msgstr "Chỉ số"
 
 msgid "Indices trading experience"
@@ -1112,9 +1034,6 @@ msgstr ""
 
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
-
-msgid "Learning to trade"
-msgstr "học cách giao dịch"
 
 msgid "Less than"
 msgstr "Ít hơn"
@@ -1238,9 +1157,6 @@ msgstr "Tháng ba"
 
 msgid "March"
 msgstr "Tháng ba"
-
-msgid "Market exit price"
-msgstr "Giá xuất cảnh của thị trường"
 
 msgid "Matches"
 msgstr "Trận đấu"
@@ -1386,9 +1302,6 @@ msgstr "Mật khẩu mới"
 msgid "No"
 msgstr "Không"
 
-msgid "No Touch trades"
-msgstr "giao dịch không chạm"
-
 msgid "No touch"
 msgstr "Không chạm"
 
@@ -1415,9 +1328,6 @@ msgstr "OHLC"
 
 msgid "OK"
 msgstr "Ok"
-
-msgid "OTC indices and stocks"
-msgstr ""
 
 msgid "Occupation"
 msgstr "Nghề nghiệp"
@@ -1479,9 +1389,6 @@ msgstr "Mở một tài khoản tài chính"
 msgid "Open account"
 msgstr "Mở tài khoản"
 
-msgid "Opening an account"
-msgstr "Mở một tài khoản"
-
 msgid "Opens"
 msgstr "Mở"
 
@@ -1527,9 +1434,6 @@ msgstr ""
 msgid "Passwords didn't match. Please type them again"
 msgstr "Mật khẩu không khớp. Vui lòng nhập lại"
 
-msgid "Patents"
-msgstr ""
-
 msgid "Pattern Recognition"
 msgstr "Mô hình công nhận"
 
@@ -1559,9 +1463,6 @@ msgstr "Chi tiết cá nhân"
 
 msgid "Phone"
 msgstr "Điện thoại"
-
-msgid "Pip"
-msgstr "pip"
 
 msgid "Place of birth"
 msgstr "Nơi sinh"
@@ -1743,6 +1644,9 @@ msgstr "Ngày mua"
 msgid "Purchase Price"
 msgstr "Giá mua"
 
+msgid "Purchase Time"
+msgstr ""
+
 msgid "Read"
 msgstr "Đọc"
 
@@ -1785,9 +1689,6 @@ msgstr "Lặp lại mật khẩu"
 msgid "Resale of this contract is not offered"
 msgstr ""
 
-msgid "Resale price"
-msgstr "Giá bán lại"
-
 msgid "Reset zoom"
 msgstr "Đặt lại phóng to"
 
@@ -1805,9 +1706,6 @@ msgstr "Quay trở lại"
 
 msgid "Rise"
 msgstr "Tăng"
-
-msgid "Rise/Fall trades"
-msgstr "giao dịch tăng/giảm"
 
 msgid "Robust and secure platform"
 msgstr "Nền tảng vững chắc và an toàn"
@@ -1872,9 +1770,6 @@ msgstr ""
 msgid "Sell At Market"
 msgstr "Bán tại thị trường"
 
-msgid "Sell option"
-msgstr "tùy chọn bán"
-
 msgid "Sent to account"
 msgstr "Gửi đến tài khoản"
 
@@ -1902,9 +1797,6 @@ msgstr "Chia sẻ"
 msgid "Share chart"
 msgstr "Chia sẻ biểu đồ"
 
-msgid "Smart Indices"
-msgstr "Chỉ số Thông minh"
-
 msgid "Sold"
 msgstr "Đã bán"
 
@@ -1916,9 +1808,6 @@ msgstr "Nguồn tài sản"
 
 msgid "Spline"
 msgstr "Chốt"
-
-msgid "Spot price"
-msgstr "Giá tại chỗ"
 
 msgid "Spreads"
 msgstr "Lan tỏa"
@@ -1961,9 +1850,6 @@ msgstr "Trạng thái"
 
 msgid "Stays Between/Goes Outside"
 msgstr "Ở Giữa/ Đi ra ngoài"
-
-msgid "Stays Between/Goes Outside trades"
-msgstr "Các giao dịch ở yên giữa/ra bên ngoài"
 
 msgid "Stays in"
 msgstr "Ở lại trong"
@@ -2244,9 +2130,6 @@ msgstr "Thứ ba"
 msgid "Turnover"
 msgstr "Doanh số"
 
-msgid "Types of trades"
-msgstr ""
-
 msgid "USD"
 msgstr "USD"
 
@@ -2255,9 +2138,6 @@ msgstr "USDJPY"
 
 msgid "Under"
 msgstr "Dưới"
-
-msgid "Underlying"
-msgstr "Tài sản cơ bản"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "Thật không may, trình duyệt của bạn không hỗ trợ họ"
@@ -2316,9 +2196,6 @@ msgstr "Xem tuyên bố"
 msgid "Volatility Indicators"
 msgstr "Chỉ số biến động"
 
-msgid "Volatility Indices"
-msgstr "Chỉ số biến động"
-
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "Chúng tôi bắt buộc phải thông báo cho bạn về những điều xảy ra vơi số tiền chúng tôi giữ trong tài khoản của bạn, và mức độ tiền được bảo toàn trong trường hợp bị phá sản"
 
@@ -2351,12 +2228,6 @@ msgstr ""
 
 msgid "While on the go, you can"
 msgstr "Khi đang tiến hành, bạn có thể"
-
-msgid "Why choose Binary Trading?"
-msgstr ""
-
-msgid "Why trade with Binary.com"
-msgstr "Tại sao lại xử dụng sàn giao dịch Binary.com"
 
 msgid "Withdraw funds"
 msgstr "Rút tiền tài khoản"
@@ -2613,3 +2484,98 @@ msgstr "{hoa hồng cho đại lý}%"
 msgid "| Return"
 msgstr ""
 
+#~ msgid "(One) Touch trades"
+#~ msgstr "(Một) Các giao dịch một chạm"
+
+#~ msgid "Barrier(s)"
+#~ msgstr "Các rào cản"
+
+#~ msgid "Binary option"
+#~ msgstr "tùy chọn nhị phân"
+
+#~ msgid "Client funds"
+#~ msgstr "Quỹ của khách hàng"
+
+#~ msgid "Commodities"
+#~ msgstr "Hàng hóa"
+
+#~ msgid "Contract period"
+#~ msgstr "Thời hạn hợp đồng"
+
+#~ msgid "Depositing and withdrawing funds"
+#~ msgstr "Ký quỹ và rút tiền"
+
+#~ msgid "Derivative"
+#~ msgstr "Dẫn xuất"
+
+#~ msgid "Do you want to install the Webtrader chrome extension?"
+#~ msgstr "Bạn có muốn cài đặt phần mở rộng Webtrader cho Chrome?"
+
+#~ msgid "Ends Between/Ends Outside trades"
+#~ msgstr "Kết thúc giữa / kết thúc bên ngoài giao dịch"
+
+#~ msgid "Entry spot price"
+#~ msgstr "Giá nhập điểm"
+
+#~ msgid "Expiry price"
+#~ msgstr "Giá hết hạn"
+
+#~ msgid "Forex"
+#~ msgstr "Ngoại hối"
+
+#~ msgid "GMT"
+#~ msgstr "Giờ quốc tế"
+
+#~ msgid "Higher/Lower trades"
+#~ msgstr "Các giao dịch cao hơn/thấp hơn"
+
+#~ msgid "How to trade the Volatility Indices markets?"
+#~ msgstr "Giao dịch thị trường Chỉ số Biến động như thế nào?"
+
+#~ msgid "In/Out trades"
+#~ msgstr "Trong/Ngoài giao dịch"
+
+#~ msgid "Indices"
+#~ msgstr "Chỉ số"
+
+#~ msgid "Learning to trade"
+#~ msgstr "học cách giao dịch"
+
+#~ msgid "Market exit price"
+#~ msgstr "Giá xuất cảnh của thị trường"
+
+#~ msgid "No Touch trades"
+#~ msgstr "giao dịch không chạm"
+
+#~ msgid "Opening an account"
+#~ msgstr "Mở một tài khoản"
+
+#~ msgid "Pip"
+#~ msgstr "pip"
+
+#~ msgid "Resale price"
+#~ msgstr "Giá bán lại"
+
+#~ msgid "Rise/Fall trades"
+#~ msgstr "giao dịch tăng/giảm"
+
+#~ msgid "Sell option"
+#~ msgstr "tùy chọn bán"
+
+#~ msgid "Smart Indices"
+#~ msgstr "Chỉ số Thông minh"
+
+#~ msgid "Spot price"
+#~ msgstr "Giá tại chỗ"
+
+#~ msgid "Stays Between/Goes Outside trades"
+#~ msgstr "Các giao dịch ở yên giữa/ra bên ngoài"
+
+#~ msgid "Underlying"
+#~ msgstr "Tài sản cơ bản"
+
+#~ msgid "Volatility Indices"
+#~ msgstr "Chỉ số biến động"
+
+#~ msgid "Why trade with Binary.com"
+#~ msgstr "Tại sao lại xử dụng sàn giao dịch Binary.com"

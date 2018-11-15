@@ -64,7 +64,7 @@
             <span class='u-span-text-normal u-margin-left-small' rv-text='user.residence_name'></span>
             <div class='validations'>
                 <span class='explanation'>
-                    Please <a href="https://www.binary.com/en/contact" target="_blank">contact support</a>
+                    Please <a rv-attr-href='binary_url_contact' target="_blank">contact support</a>
                     if this is not your country of residence.
                 </span>
             </div>
@@ -176,7 +176,7 @@
             <div rv-if='what_todo | eq "upgrade-mlt"'>
                 <input type='checkbox' id='tac_checkbox' rv-checked='user.accepted' />
                 <label for='tac_checkbox'>I have read and agree to Binary.com
-                    <a href="https://www.binary.com/en/terms-and-conditions.html" target="_blank">terms and conditions</a>.
+                    <a rv-attr-href='binary_url_tc' target="_blank">terms and conditions</a>.
                 </label>
             </div>
         </div>
@@ -360,7 +360,7 @@
             <input type='checkbox' id='financial_checkbox' rv-checked='financial.accepted' />
             <label for='financial_checkbox'>
                 I have read and agree to Binary.com
-                <a href="https://www.binary.com/en/terms-and-conditions.html" target="_blank">terms and conditions</a>.
+                <a rv-attr-href='binary_url_tc' target="_blank">terms and conditions</a>.
             </label>
         </div>
         <div class='row'>
