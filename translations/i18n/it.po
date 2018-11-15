@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-15 09:50\n"
+"PO-Revision-Date: 2018-11-15 10:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -277,7 +277,7 @@ msgid "Are you sure you want to overwrite current template?"
 msgstr "Sei sicuro di voler sostituire il modello attuale?"
 
 msgid "Arrange"
-msgstr ""
+msgstr "Organizza"
 
 msgid "Asian down"
 msgstr "Asian down"
@@ -1084,10 +1084,10 @@ msgid "Loading Profit Table ..."
 msgstr "Caricamento della tabella dei profitti..."
 
 msgid "Loading Real account opening ..."
-msgstr ""
+msgstr "Apertura del conto reale…"
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Caricamento dell'autoesecuzione..."
 
 msgid "Loading Statement Table ..."
 msgstr ""
@@ -1105,10 +1105,10 @@ msgid "Loading custom theme configuration..."
 msgstr ""
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Caricamento del portafoglio..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Caricamento delle impostazioni di autoesclusione."
 
 msgid "Loading..."
 msgstr "Caricamento..."
