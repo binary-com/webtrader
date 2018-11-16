@@ -522,9 +522,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
     const is_HH_MM = selected_hour.includes(':');
     if (!is_HH_MM) {
-      console.log('!_is_HH_MM: ', selected_hour);
-      console.log(moment.unix(+selected_hour).format('HH:MM'));
-      state.selected_future_timepicker = moment.unix(+selected_hour).format('HH:MM');
+      state.selected_future_timepicker = moment.utc(moment.unix(+selected_hour)).format('HH:mm');
       state.selected_future_time = selected_hour;
       console.log(state.selected_future_timepicker);
     }
@@ -536,8 +534,9 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       // add hour minute to date_start_value
       state.date_start.value = date_start_with_selected_hour;
       state.selected_future_time = date_start_with_selected_hour;
+      state.selected_future_timepicker = selected_hour;
     }
-
+    console.log(state.selected_future_timepicker);
   }
 
   state.date_expiry.update = function (date_or_hour) {
