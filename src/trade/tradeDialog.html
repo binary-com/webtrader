@@ -42,7 +42,6 @@
             <select class="date-start-select"
                     rv-jq-class="'trade-dialog-date-start-ul'"
                     rv-chosen="date_start.value 
-                        | notify setDateStartHour
                         | notify duration_unit.update 
                         | debounce proposal.onchange"
                     rv-chosenrefresh="date_start.array"
@@ -53,7 +52,7 @@
         </li>
         <li class="future-timepicker-wrapper" rv-if="selected_future_time | not-eq 'now'">
             <input type="text" class="date-expiry-hour"
-                rv-timepicker="selected_future_time | notify setDateStartHour" />
+                rv-timepicker="selected_future_timepicker | notify setDateStartHour" />
             <p>GMT</p>
         </li>
     </ul>
