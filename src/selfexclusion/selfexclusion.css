@@ -1,6 +1,10 @@
+.selfExclusionDialog .webtrader-dialog {
+  width: auto !important;
+}
+
 .selfexclusion {
     padding-bottom: 20px;
-    width: auto !important;
+    width: 100%;
 }
 
 .selfexclusion_headerContent {
@@ -8,7 +12,6 @@
 }
 
 .selfexclusion_bodyContent {
-    margin: auto;
     padding: 10px;
     border: solid 1px #E5E5E5;
     display: table;
