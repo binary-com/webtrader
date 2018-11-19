@@ -509,34 +509,41 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if (selected_date !== 'now' && state.selected_future_time !== selected_date) {
       state.setDateStartHour(selected_date);
     }
+
+    if (selected_date === 'now') {
+      state.selected_future_time = 'now';
+    }
   };
 
-  state.selected_future_time = 'now';
-  state.selected_future_timepicker = '';
-
-  state.setDateStartHour = (selected_hour) => {
-    if (selected_hour === 'now') {
-      state.selected_future_time = selected_hour;
+  state.selected_future_time = '';
+  state.setDateStartHour = (selected_time) => {
+    console.log(selected_time);
+    if (selected_time === 'now' || !selected_time) {
+      state.selected_future_time = selected_time;
       return;
     }
 
-    const is_HH_MM = selected_hour.includes(':');
+    const $time_picker = $('#future-timepicker')[0];
+    let HH_MM = '';
+    const is_HH_MM = selected_time.includes(':');
     if (!is_HH_MM) {
-      state.selected_future_timepicker = moment.utc(moment.unix(+selected_hour)).format('HH:mm');
-      state.selected_future_time = selected_hour;
-      console.log(state.selected_future_timepicker);
+      HH_MM = moment.utc(moment.unix(+selected_time)).format('HH:mm');
+      state.selected_future_time = selected_time;
     }
 
     if (is_HH_MM) {
       const date_start_formatted = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
-      const date_start_with_selected_hour = moment.utc(date_start_formatted + ' ' + selected_hour).unix();
+      const date_start_with_selected_time = moment.utc(date_start_formatted + ' ' + selected_time).unix();
 
       // add hour minute to date_start_value
-      state.date_start.value = date_start_with_selected_hour;
-      state.selected_future_time = date_start_with_selected_hour;
-      state.selected_future_timepicker = selected_hour;
+      state.date_start.value = date_start_with_selected_time;
+      state.selected_future_time = date_start_with_selected_time;
+      HH_MM = selected_time;
     }
-    console.log(state.selected_future_timepicker);
+    if ($time_picker) {
+      $time_picker.value = HH_MM;
+    }
+    console.log(HH_MM);
   }
 
   state.date_expiry.update = function (date_or_hour) {

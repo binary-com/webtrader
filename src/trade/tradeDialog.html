@@ -50,13 +50,14 @@
                     <option rv-each-row="date_start.array" rv-value="row.value">{row.text | i18n}</option>
            </select>
         </li>
-        <li class="future-timepicker-wrapper" rv-if="selected_future_time | not-eq 'now'">
-            <input type="text" class="date-expiry-hour"
+        <li class="future-timepicker-wrapper" rv-if="date_start.value | not-eq 'now'">
+            <input type="text"
+                class="date-expiry-hour"
+                id="future-timepicker"
+                rv-value="selected_future_timepicker"
                 rv-timepicker="selected_future_timepicker | notify setDateStartHour" />
-            <p>GMT</p>
         </li>
     </ul>
-
     <ul class="digits-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="digits.visible">
