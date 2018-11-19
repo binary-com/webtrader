@@ -12,6 +12,7 @@
 }
 
 .selfexclusion_bodyContent {
+    margin: auto;
     padding: 10px;
     border: solid 1px #E5E5E5;
     display: table;
