@@ -11,7 +11,6 @@ require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
 
 const open_dialogs = {};
-const DISPLAY_DECIMALS = 3;
 const NOTE_TEXT = {
   EXPIRED: 'This contract has expired'.i18n(),
   MARKET_RATE: 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n(),
@@ -49,7 +48,7 @@ const showMarketDataDisruptionWindow = () => {
 const initChart = (root, state, options) => {
    let data = [];
    let type = '';
-   let decimal_digits = 0;
+   let display_decimals = 3;
 
    if (options.history) {
       type = 'line';
@@ -58,7 +57,7 @@ const initChart = (root, state, options) => {
 
       for (let i = 0; i < times.length; ++i) {
          data.push([times[i] * 1000, prices[i] * 1]);
-         decimal_digits = Math.max(decimal_digits, prices[i].substring(prices[i].indexOf('.') + 1).length);
+         display_decimals = Math.max(display_decimals, prices[i].substring(prices[i].indexOf('.') + 1).length);
       }
    }
 
@@ -92,7 +91,7 @@ const initChart = (root, state, options) => {
       tooltip: {
          useHTML: true,
          formatter() {
-            const spot = addComma(this.y.toFixed(DISPLAY_DECIMALS));
+            const spot = addComma(this.y.toFixed(display_decimals));
             const spot_time = moment.utc(this.x).format('dddd, MMM D, HH:mm:ss');
             return `<div class='tooltip-body'>${spot_time} GMT<br/>${this.series.name} ${spot}</div>`;
         },
@@ -112,7 +111,7 @@ const initChart = (root, state, options) => {
           x: -65,
           y: -2,
           formatter() {
-            return addComma(this.value.toFixed(DISPLAY_DECIMALS));
+            return addComma(this.value.toFixed(display_decimals));
           },
         },
          title: '',
