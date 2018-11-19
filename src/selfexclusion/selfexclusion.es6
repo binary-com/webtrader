@@ -194,7 +194,7 @@ const init_win = function() {
         });
         win = windows.createBlankWindow($('<div/>'), {
             title: 'Self-Exclusion Facilities'.i18n(),
-            dialogClass: 'selfExclusionDialog',
+            dialogClass: 'self-exclusion',
             width: 900,
             minHeight: 500,
             height: 500,
