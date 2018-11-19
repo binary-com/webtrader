@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2018-11-19 15:40\n"
+"PO-Revision-Date: 2018-11-19 15:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1129,7 +1129,7 @@ msgid "Logout"
 msgstr "Logout"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookback (opzioni retrospettive)"
 
 msgid "Low"
 msgstr "Low"
@@ -1162,7 +1162,7 @@ msgid "Matches"
 msgstr "Corrisponde"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Puntata massima per il trade"
 
 msgid "Maximum account cash balance"
 msgstr "Saldo massimo della cassa dell'account"
@@ -1882,7 +1882,7 @@ msgid "Successfully added new token"
 msgstr ""
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Area di lavoro aggiunta come"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Il modello è stato correttamente applicato e salvato come"
@@ -1897,10 +1897,10 @@ msgid "Table"
 msgstr "Tabella"
 
 msgid "Tax Information"
-msgstr ""
+msgstr "Informazioni fiscali"
 
 msgid "Tax Information successfully updated"
-msgstr ""
+msgstr "Informazioni fiscali aggiornate correttamente"
 
 msgid "Tax identification number"
 msgstr "Numero di identificazione fiscale"
@@ -1915,16 +1915,16 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Modello già salvato come"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Il modello è stato applicato parzialmente."
 
 msgid "Template changes saved"
 msgstr "Modifiche apportate al modello salvato"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Questo modello non è applicabile."
 
 msgid "Template name"
 msgstr "Nome del modello"
@@ -1936,7 +1936,7 @@ msgid "Terms"
 msgstr "Termini"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Termini e condizioni"
 
 msgid "Tertiary"
 msgstr "Terziario"
@@ -1957,7 +1957,7 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr ""
 
 msgid "There was an error"
-msgstr ""
+msgstr "Si è verificato un errore"
 
 msgid "This contract has expired"
 msgstr ""
