@@ -1,7 +1,3 @@
-/*
- * Created by amin on May 1, 2016.
- */
-
 import liveapi from '../websockets/binary_websockets';
 import windows from '../windows/windows';
 import rv from '../common/rivetsExtra';
@@ -69,6 +65,10 @@ const init_state = (root, win) => {
    const state = {
       route: { value: 'login' },
       login: { disabled: false },
+      onRegister: () => {
+         const register_link = getBinaryUrl('home');
+         window.open(register_link, '_blank');
+      },
       registration: {
          email: '',
          disabled: false,
