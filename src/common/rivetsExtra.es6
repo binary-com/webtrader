@@ -160,7 +160,6 @@ rv.formatters['percent-of'] = (changed, original) => {
    return `${percentage_of_amount}%`;
 }
 
-rv.formatters['is-valid-email'] = (email) => email === '' || validateEmail(email);
 rv.formatters['is-valid-date'] = (date, format =  'YYYY-MM-DD') => moment(date, format, true).isValid();
 rv.formatters['is-valid-regex'] = (str, regex) => new RegExp(regex).test(str);
 rv.formatters.length = (value) => value.length;
