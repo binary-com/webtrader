@@ -1,7 +1,6 @@
 import $ from "jquery";
 import liveapi from "../websockets/binary_websockets";
 import _ from "lodash";
-import notice from "shownotice/shownotice";
 import tc from "../tc/tc";
 import taxInformation from "../taxInformation/taxInformation";
 import currency from "../cashier/currency";
@@ -122,7 +121,10 @@ class AccountStatus {
         message: "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available.".i18n()
           .replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => _this.is_authenticated,
-        callback: notice.init
+        callback: () => {
+          const binary_url_authenticate = getBinaryUrl('user/authenticate');
+          window.open(binary_url_authenticate, '_blank');
+        }
       },
       unwelcome: {
         message: "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
