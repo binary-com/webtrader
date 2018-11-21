@@ -2,7 +2,6 @@ import $ from "jquery";
 import liveapi from "../websockets/binary_websockets";
 import _ from "lodash";
 import tc from "../tc/tc";
-import taxInformation from "../taxInformation/taxInformation";
 import "../common/util";
 
 const reposition_dialogs = (min) => {
@@ -108,7 +107,10 @@ class AccountStatus {
         message: "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => !_this.is_mf || /crs_tin_information/.test(status),
-        callback: taxInformation.init
+        callback: () => {
+          const binary_url_tax = getBinaryUrl('user/settings/detailsws');
+          const win = window.open(binary_url_tax, '_blank');
+        }
       },
       currency: {
         message: "Please set the [_1]currency[_2] of your account"
