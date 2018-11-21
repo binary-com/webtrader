@@ -1,5 +1,3 @@
-/* Created by Armin on 10/17/2015 */
-
 import $ from 'jquery';
 import moment from 'moment';
 import _ from 'lodash';
@@ -44,6 +42,10 @@ const initLoginButton = (root) => {
       openRealAccount: () => {
          const real_account_binary_url = getBinaryUrl('new_account/realws');
          window.open(real_account_binary_url, '_blank');
+      },
+      openFinancialAccountMF: () => {
+         const financial_account_binary_url = getBinaryUrl('new_account/maltainvestws');
+         window.open(financial_account_binary_url, '_blank')
       }
    };
 const destroy_windows = (data_attribute) => {
@@ -359,4 +361,3 @@ export default {
    init,
    getLandingCompany
 };
-
