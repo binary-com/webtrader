@@ -1,3 +1,5 @@
+@import "../charts/chartStyle.scss";
+
 .ui-dialog .ui-dialog-content.data-disruption-dialog {
   text-align: center;
   line-height: 1.6em;
@@ -183,4 +185,15 @@
 
 .entry-spot[data-balloon]:before {
   transform: translate(-40%,0);
+}
+
+.view-transaction-dialog {
+  .highcharts-subtitle {
+    left: 0px !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+  }
+
+  @include chartTooltip;
 }
