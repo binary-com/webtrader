@@ -101,6 +101,9 @@ const refreshTable = () => {
                 props.push(getRowValue('staysinout'));
                 props.push(getRowValue('digits'));
                 props.push(getRowValue('asian'));
+                props.push(getRowValue('reset'));
+                props.push(getRowValue('callputspread'));
+                props.push(getRowValue('highlowticks'));
                 props.push(getRowValue('callputequal'));
 
                 return props;
@@ -110,8 +113,11 @@ const refreshTable = () => {
         // Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
         const show = market_name.indexOf('Volatility Indices') !== -1;
         table.api().column(1).visible(show);
-        table.api().column(6).visible(show);
         table.api().column(7).visible(show);
+        table.api().column(8).visible(show);
+        table.api().column(9).visible(show);
+        table.api().column(10).visible(show);
+        table.api().column(11).visible(show);
         table.api().draw();
     }
 
@@ -179,8 +185,8 @@ const initAssetWin = ($html) => {
     table = table.dataTable({
         data: [],
         "columnDefs": [
-            { className: "dt-body-center dt-header-center", "targets": [0, 1, 2, 3, 4, 5, 6, 7] },
-            { "defaultContent": "-", "targets": [0, 1, 2, 3, 4, 5, 6, 7] }
+            { className: "dt-body-center dt-header-center", "targets": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+            { "defaultContent": "-", "targets": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] }
         ],
         paging: false,
         bAutoWidth: false,
