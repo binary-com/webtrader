@@ -24,7 +24,7 @@ const form_error_messages = {
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
-const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
+const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.api_code);
 
 const defaultCopySettings = (traderApiToken) => ({
   copy_start: traderApiToken,
@@ -85,29 +85,32 @@ instrumentPromise().then(instruments => {
 });
 
 const refreshTraderStats = (loginid, token, scope) => {
-  liveapi
-  .send({
-    copytrading_statistics: 1,
-    trader_id: loginid,
-  })
-  .then((copyStatData) => {
-    if (copyStatData.copytrading_statistics) {
-      const traderTokenDetails = _.find(scope.traderTokens, f =>
-        f.yourCopySettings && f.yourCopySettings.copy_start === token);
-      //Check if we already added this trader. If yes, then merge the changes
-      if (traderTokenDetails) {
-        _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
-      }
-      //If not added, then add this along with default yourCopySettings object
-      else {
-        scope.traderTokens.push(_.merge({
-          traderStatistics: copyStatData.copytrading_statistics,
-        }, defaultTraderDetails(token, loginid)));
-      }
-    }
-    updateLocalStorage(scope);
-  }).catch((e) => {
-    $.growl.error({ message: e.message });
+  return new Promise((resolve, reject) => {
+    liveapi
+      .send({
+        copytrading_statistics: 1,
+        trader_id: loginid,
+      })
+      .then((copyStatData) => {
+        if (copyStatData.copytrading_statistics) {
+          const traderTokenDetails = _.find(scope.traderTokens, f =>
+            f.yourCopySettings && f.yourCopySettings.copy_start === token);
+          //Check if we already added this trader. If yes, then merge the changes
+          if (traderTokenDetails) {
+            _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
+          }
+          //If not added, then add this along with default yourCopySettings object
+          else {
+            scope.traderTokens.push(_.merge({
+              traderStatistics: copyStatData.copytrading_statistics,
+            }, defaultTraderDetails(token, loginid)));
+          }
+        }
+        updateLocalStorage(scope);
+        resolve();
+      }).catch((e) => {
+        reject(e);
+      });
   });
 };
 
@@ -169,6 +172,7 @@ const state = {
             if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
             if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
             if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
+
             liveapi
               .send(settingsToSend)
               .then(() => {
@@ -221,12 +225,11 @@ const state = {
       refreshTraderStats(loginid, token, state)
         .then(() => {
           trader.disableRefresh = false;
-          updateLocalStorage(state);
         })
         .catch((e) => {
+          console.error(e)
           $.growl.error({ message: form_error_messages.REFRESH_FAILED });
           trader.disableRefresh = false;
-          updateLocalStorage(scope);
         });
     }
   },
@@ -285,19 +288,16 @@ const state = {
             .then(() => {
               scope.searchToken.token = '';
               scope.searchToken.disable = false;
-              updateLocalStorage(scope);
             })
-            .catch(e => {
-              $.growl.error({ message: e.message });
+            .catch((e) => {
               scope.searchToken.disable = false;
-              updateLocalStorage(scope);
-              _.defer(() => $(event.target).focus());
+              console.error(e)
+              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
             });
         })
         .catch(error => {
           $.growl.error({ message: error.message });
           scope.searchToken.disable = false;
-          updateLocalStorage(scope);
         });
     },
   },
@@ -351,6 +351,7 @@ const initConfigWindow = () => {
               await refreshTraderStats(loginid, token, state);
             } catch (e) {
               console.error(e);
+              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
             }
           }
         })();

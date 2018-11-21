@@ -11,7 +11,6 @@ require(['css!viewtransaction/viewTransaction.css']);
 require(['text!viewtransaction/viewTransaction.html']);
 
 const open_dialogs = {};
-const DISPLAY_DECIMALS = 3;
 const NOTE_TEXT = {
   EXPIRED: 'This contract has expired'.i18n(),
   MARKET_RATE: 'Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price.'.i18n(),
@@ -49,7 +48,7 @@ const showMarketDataDisruptionWindow = () => {
 const initChart = (root, state, options) => {
    let data = [];
    let type = '';
-   let decimal_digits = 0;
+   let display_decimals = 3;
 
    if (options.history) {
       type = 'line';
@@ -58,7 +57,7 @@ const initChart = (root, state, options) => {
 
       for (let i = 0; i < times.length; ++i) {
          data.push([times[i] * 1000, prices[i] * 1]);
-         decimal_digits = Math.max(decimal_digits, prices[i].substring(prices[i].indexOf('.') + 1).length);
+         display_decimals = Math.max(display_decimals, prices[i].substring(prices[i].indexOf('.') + 1).length);
       }
    }
 
@@ -69,7 +68,10 @@ const initChart = (root, state, options) => {
 
    const { title } = options;
    const el = root.find('.transaction-chart')[0];
-   const CHART_LABELS = ['start_time', 'entry_spot', 'barrier', 'exit_spot', 'end_time'];
+   const CHART_LABELS = ChartSettings.getChartLabels(state.proposal_open_contract);
+   const { entry_tick_time, date_start } = state.proposal_open_contract;
+   const zone_start = entry_tick_time || date_start;
+
    const chart_options = {
       credits: { href: '#', text: '' },
       chart: {
@@ -89,7 +91,7 @@ const initChart = (root, state, options) => {
       tooltip: {
          useHTML: true,
          formatter() {
-            const spot = addComma(this.y.toFixed());
+            const spot = addComma(this.y.toFixed(display_decimals));
             const spot_time = moment.utc(this.x).format('dddd, MMM D, HH:mm:ss');
             return `<div class='tooltip-body'>${spot_time} GMT<br/>${this.series.name} ${spot}</div>`;
         },
@@ -109,7 +111,7 @@ const initChart = (root, state, options) => {
           x: -65,
           y: -2,
           formatter() {
-            return addComma(this.value.toFixed(DISPLAY_DECIMALS));
+            return addComma(this.value.toFixed(display_decimals));
           },
         },
          title: '',
@@ -118,7 +120,20 @@ const initChart = (root, state, options) => {
          name: title,
          data: data,
          type: type,
-         zIndex: 10
+         zIndex: 10,
+         zoneAxis: 'x',
+         // zones are used to display color of the line
+         zones:[{
+             // make the line grey until it reaches entry time or zone_start time if entry spot time is not yet known
+             value: zone_start ? +zone_start * 1000 : '',
+             color: '#ccc',
+         }, {
+             // make the line default color until exit time is reached
+             color: '',
+         }, {
+             // make the line grey again after trade ended
+             color: '#ccc',
+         }],
       }],
       exporting: { enabled: false, enableImages: false},
       legend: { enabled: false},
@@ -212,8 +227,10 @@ const updateIndicative = (data, state) => {
   state.chart.manualReflow();
 
   function updateState(contract, state) {
+    const sell_time = contract.is_path_dependent && contract.status !== 'sold' ? contract.exit_tick_time : parseInt(contract.sell_time);
+
     // note: cannot use spread operator - rivets.js 2-way data-binding breaks if new object
-    state.proposal_open_contract.user_sold = contract.exit_tick_time && contract.exit_tick_time < contract.date_expiry;
+    state.proposal_open_contract.is_sold_before_expiry = sell_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.proposal_open_contract.bid_price = contract.bid_price;
@@ -259,34 +276,86 @@ function drawChart(contract, state) {
   drawSpots(contract, state, chart);
   drawXLines(contract, state, chart);
   drawBarriers(contract, state);
+  drawZones(contract, state, chart);
+}
+
+function drawZones(contract, state, chart) {
+  const { entry_tick_time, exit_tick_time, date_expiry, sell_time } = contract;
+  const { is_sold_before_expiry } = state.proposal_open_contract;
+
+  drawZone({ spot_time: entry_tick_time, label: 'entry_zone', zone_idx: 0 });
+
+  if (is_sold_before_expiry) {
+    drawZone({ spot_time: exit_tick_time || sell_time, label: 'exit_zone', zone_idx: 1 });
+  }
+  drawZone({ spot_time: exit_tick_time || date_expiry, label: 'exit_zone', zone_idx: 1 });
+
+  function drawZone({spot_time, label, zone_idx}) {
+    if (!spot_time || state.chart.hasLabel(label)) return;
+
+    chart.series[0].zones[zone_idx].value = (+spot_time * 1000);
+  }
 }
 
 function drawSpots(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time } = contract;
+  const { entry_tick_time, exit_tick_time, tick_count, is_path_dependent } = contract;
+  const { is_sold_before_expiry } = state.proposal_open_contract;
+
+  if (tick_count) return; // tick contracts = chart should not have entry/exit spots
+
   drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
-  drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
+
+  if (is_path_dependent && exit_tick_time) {
+    drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
+  }
+
+  if (!is_sold_before_expiry) drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
 
   function drawSpot({ spot_time, label, color }) {
     if (!spot_time || state.chart.hasLabel(label)) return;
 
-    const series_spot = chart.series[0].data.find((marker) => +marker.x === +(spot_time * 1000));
+    const series_spot = chart.series[0].data.find((marker) => +marker.x === (+spot_time * 1000));
     if (!series_spot) return;
 
     const marker = ChartSettings.getMarkerSettings(color);
-    series_spot.update({ marker })
+    series_spot.update({ marker });
   }
 }
 
 function drawXLines(contract, state, chart) {
-  const { date_expiry, date_start } = contract;
+  const { entry_tick_time, exit_tick_time, date_expiry, date_start, tick_count, sell_time } = contract;
+
+  if (tick_count) { // only for tick contracts
+    drawXLine({ line_time: entry_tick_time, label: 'start_time' });
+    drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
+    return;
+  }
 
   drawXLine({ line_time: date_start, label: 'start_time' });
-  drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
+  drawEndTime(contract);
+  drawPurchaseTime(contract);
 
-  function drawXLine({ line_time, label, dashStyle }) {
+  function drawXLine({ line_time, label, dashStyle, color }) {
     if (!line_time || state.chart.hasLabel(label)) return false;
 
-    chart.addPlotLineX({ value: line_time * 1000, dashStyle });
+    chart.addPlotLineX({ value: +line_time * 1000, dashStyle, color});
+  }
+
+  function drawEndTime({ is_path_dependent }) {
+    const { is_sold_before_expiry } = state.proposal_open_contract;
+
+    if (is_path_dependent && exit_tick_time && is_sold_before_expiry) {
+      drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
+    }
+
+    if (is_sold_before_expiry) drawXLine({ line_time: sell_time, label: 'end_time', dashStyle: 'Dash' });
+    if (!is_path_dependent) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
+  }
+
+  function drawPurchaseTime({ purchase_time }) {
+    if (date_start > purchase_time) {
+      drawXLine({ line_time: purchase_time, label: 'purchase_time', color:'#7cb5ec' });
+    }
   }
 }
 
@@ -317,7 +386,7 @@ const init_dialog = (proposal) => {
       const transWin = windows.createBlankWindow(root, {
          title: proposal.display_name + ' (' + proposal.transaction_id + ')',
          width: 700,
-         minWidth: 490,
+         minWidth: 630,
          minHeight: 480,
          height: 480,
          destroy: () => {},
@@ -350,7 +419,7 @@ const sellAtMarket = (state, root) => {
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
    liveapi.send({ sell: state.proposal_open_contract.contract_id, price: 0 })
       .then((data) => {
-         state.proposal_open_contract.user_sold = true;
+         state.proposal_open_contract.is_sold_before_expiry = true;
          const { sell } = data;
          require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css'],
             (html) => {
@@ -379,6 +448,8 @@ const sellAtMarket = (state, root) => {
 };
 
 const initState = (proposal, root) => {
+   const sell_time = proposal.is_path_dependent && proposal.status !== 'sold' ? proposal.exit_tick_time : parseInt(proposal.sell_time);
+
    const state = {
       route: {
          value: 'table',
@@ -418,7 +489,7 @@ const initState = (proposal, root) => {
         currency: (proposal.currency ||  'USD') + ' ',
         is_ended: proposal.is_settleable || proposal.is_sold || proposal.status !== 'open',
         is_sold_at_market: false,
-        user_sold: proposal.exit_tick_time && proposal.exit_tick_time < proposal.date_expiry,
+        is_sold_before_expiry: sell_time < proposal.date_expiry,
         isLookback: Lookback.isLookback(proposal.contract_type),
         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
       },
@@ -514,7 +585,7 @@ const updateLiveChart = (state, granularity) => {
 
     function addTickToChart(chart, tick) {
       if (!chart) return;
-      chart.series[0].addPoint([tick.epoch * 1000, tick.quote * 1]);
+      chart.series[0].addPoint([tick.epoch * 1000, tick.quote * 1, 'gray']);
     }
   }
 
@@ -556,31 +627,23 @@ const updateLiveChart = (state, granularity) => {
 
 const drawBarriers = (contract, state) => {
   const { chart } = state.chart;
-  const { barrier, high_barrier, low_barrier } = state.proposal_open_contract;
+  const { barrier, high_barrier, low_barrier, tick_count } = state.proposal_open_contract;
 
   removeBarriers(barrier, high_barrier, low_barrier);
   addBarrierToChart(barrier, high_barrier, low_barrier);
 
   function addBarrierToChart(barrier, high_barrier, low_barrier) {
-    if (barrier) {
-      addPlotLineY('barrier', barrier);
-    }
-    if (high_barrier) {
-      addPlotLineY('high_barrier', high_barrier);
-    }
-    if (low_barrier) {
-      addPlotLineY('low_barrier', low_barrier);
-    }
+    const dashStyle = tick_count ? '' : 'dot';
 
-    function addPlotLineY(id, value, color) {
-      chart.addPlotLineY({ id, value, color });
-    };
+    if (barrier)  chart.addPlotLineY({ id: 'barrier', value: barrier, dashStyle })
+    if (high_barrier) chart.addPlotLineY({ id: 'high_barrier', value: high_barrier, dashStyle })
+    if (low_barrier) chart.addPlotLineY({ id: 'low_barrier', value: low_barrier, dashStyle })
   }
 
   function removeBarriers(barrier, high_barrier, low_barrier) {
-    barrier && chart.yAxis[0].removePlotLine('barrier');
-    high_barrier && chart.yAxis[0].removePlotLine('high_barrier');
-    low_barrier && chart.yAxis[0].removePlotLine('low_barrier');
+    if (barrier) chart.yAxis[0].removePlotLine('barrier');
+    if (high_barrier) chart.yAxis[0].removePlotLine('high_barrier');
+    if (low_barrier) chart.yAxis[0].removePlotLine('low_barrier');
   }
 }
 
@@ -619,9 +682,16 @@ const setupChart = (state, root) => {
   }
 
   function makeTickHistoryRequest(granularity, margin) {
-    const { is_forward_starting, date_start, current_spot_time, purchase_time, exit_tick_time } = state.proposal_open_contract;
-    const contract_has_not_started = (is_forward_starting && +date_start > +current_spot_time) || +exit_tick_time < +date_start;
-    const start = contract_has_not_started ? +purchase_time : (+date_start || +purchase_time);
+    const { date_start, current_spot_time, purchase_time, exit_tick_time } = state.proposal_open_contract;
+    const is_forward_starting = +date_start > +purchase_time;
+    let start;
+
+    if (is_forward_starting) {
+      start = purchase_time;
+    } else {
+      const contract_has_not_started = (+date_start > +current_spot_time) || +exit_tick_time < +date_start;
+      start = contract_has_not_started ? +purchase_time : (+date_start || +purchase_time);
+    }
     const end = ((start > exit_tick_time) || !exit_tick_time) ? 'latest' : +exit_tick_time + margin;
 
     const request = {

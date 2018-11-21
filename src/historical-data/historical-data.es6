@@ -34,7 +34,7 @@ const buildMenu = ($root, instrumentName, callback) => {
       titlebar.find('.title').text(display_name);
       callback(symbol, display_name);
    });
-   const titlebar = $(`<div class='instrument-dropdown'><div class='title'>${instrumentName}</div>`);
+   const titlebar = $(`<div class='instrument-dropdown' ><div class='title'>${instrumentName}</div>`);
    $root.closest('.ui-dialog').append(titlebar);
    titlebar.append($menu);
    $menu.menu();
@@ -53,6 +53,7 @@ const buildDatetime = (dialog, $root, callback) => {
              numberOfMonths: 1,
              changeYear : true,
              dateFormat : 'yy-mm-dd',
+             onSelect: function () { $(this).change(); update_time(); },
              beforeShow: (input, inst) => {
                 _.delay(() => inst.dpDiv.css({
                    marginLeft: '-60px',
@@ -61,9 +62,8 @@ const buildDatetime = (dialog, $root, callback) => {
                    zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 100
                 }));
              },
-             minDate : moment.utc().subtract(1, "years").toDate(),
+             minDate : moment.utc().subtract(1, 'years').toDate(),
              maxDate : moment.utc().toDate(),
-             currentText: 'Today'.i18n()
          })
          .datepicker('setDate', '0');
 

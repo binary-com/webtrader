@@ -1,6 +1,5 @@
 $COLOR_DARK_BLUE: #2a3052;
 $COLOR_WHITE: #ffffff;
-
 .historical-data-dialog {
 	.historical-data {
 		padding: 0 !important;
@@ -63,9 +62,9 @@ $COLOR_WHITE: #ffffff;
 		top: 5px;
 		color: $COLOR_WHITE;
 		input {
-			cursor:pointer;
+			cursor: pointer;
 			border: none;
-			
+
 			display: inline-block;
 			width: 108px;
 		}
