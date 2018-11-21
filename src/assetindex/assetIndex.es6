@@ -106,10 +106,11 @@ const refreshTable = () => {
                       _.chain(asset[idx.cells]).find(f => _.first(f) === key).value() || [];
                     return `${_.trim(prop[idx.cell_props.cell_from])} - ${_.trim(prop[idx.cell_props.cell_to])}`;
                 };
+                console.log(asset[idx.cells])
                 props.push(asset[1]);
                 props.push(getRowValue('lookback'));
-                props.push(getRowValue('callput', asset[idx.cells][0][idx.cell_props.cell_display_name])); // first callput -> rise/fall
-                props.push(getRowValue('callput', asset[idx.cells][1][idx.cell_props.cell_display_name])); // second callput -> higher/lower
+                props.push(getRowValue('callput', asset[idx.cells][0] ? asset[idx.cells][0][idx.cell_props.cell_display_name] : '-')); // first callput -> rise/fall
+                props.push(getRowValue('callput', asset[idx.cells][1] ? asset[idx.cells][1][idx.cell_props.cell_display_name] : '-')); // second callput -> higher/lower
                 props.push(getRowValue('touchnotouch'));
                 props.push(getRowValue('endsinout'));
                 props.push(getRowValue('staysinout'));
