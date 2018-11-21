@@ -3,7 +3,6 @@ import liveapi from "../websockets/binary_websockets";
 import _ from "lodash";
 import tc from "../tc/tc";
 import taxInformation from "../taxInformation/taxInformation";
-import currency from "../cashier/currency";
 import "../common/util";
 
 const reposition_dialogs = (min) => {
@@ -115,7 +114,10 @@ class AccountStatus {
         message: "Please set the [_1]currency[_2] of your account"
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => local_storage.get("currency"),
-        callback: currency.check_currency
+        callback: () => {
+          const binary_url_set_currency = getBinaryUrl('user/set-currency');
+          window.open(binary_url_set_currency, '_blank');
+        }
       },
       authenticate: {
         message: "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available.".i18n()
