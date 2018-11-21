@@ -3,7 +3,6 @@ import liveapi from "../websockets/binary_websockets";
 import _ from "lodash";
 import notice from "shownotice/shownotice";
 import tc from "../tc/tc";
-import financialassessment from "../financialassessment/financialassessment";
 import taxInformation from "../taxInformation/taxInformation";
 import currency from "../cashier/currency";
 import "../common/util";
@@ -88,7 +87,7 @@ class AccountStatus {
         .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => local_storage.get("excluded") == false,
         callback: () => {
-          const win = window.open(binary_url_contact);
+          const win = window.open(binary_url_contact, '_blank');
           win.focus();
         }
       },
@@ -102,7 +101,10 @@ class AccountStatus {
         message: "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => _this.financial_assessment_submitted,
-        callback: financialassessment.init
+        callback: () => {
+          const binary_url_financial_assessment = getBinaryUrl('user/settings/assessmentws');
+          const win = window.open(binary_url_financial_assessment, '_blank');
+        }
       },
       tax: {
         message: "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
@@ -127,7 +129,7 @@ class AccountStatus {
           .i18n().replace("[_1]", "<a href='#'>").replace("[_2]", "</a>"),
         is_valid: _ => !/(unwelcome|(cashier|withdrawal)_locked)/.test(status),
         callback: () => {
-          const win = window.open(binary_url_contact);
+          const win = window.open(binary_url_contact, '_blank');
           win.focus();
         }
       }
