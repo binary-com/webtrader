@@ -6,7 +6,7 @@ import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import menu from "../navigation/menu";
 import _ from "lodash";
-import "datatables";
+import rv from "common/rivetsExtra";
 import "jquery-growl";
 import 'css!./assetIndex.css';
 
@@ -38,6 +38,11 @@ export const init = (li) => {
     });
 }
 
+const asset_indexes = {
+    rows: [],
+    cols: [],
+    vol_indx: true
+}
 const processMarketSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
 
@@ -63,9 +68,22 @@ const processMarketSubmarkets = (markets) => {
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
         const symbols = markets[market_name][submarket_name];
+        const idx = {
+            symbol      : 0,
+            display_name: 1,
+            cells       : 2,
+            sym_info    : 3,
+            values      : 4,
+            cell_props  : {
+                cell_name        : 0,
+                cell_display_name: 1,
+                cell_from        : 2,
+                cell_to          : 3,
+            },
+        };
         const rows = assets
             .filter((asset) => {
-                return symbols.indexOf(asset[1] /* asset.name */ ) > -1;
+                return symbols.indexOf(asset[idx.display_name] /* asset.name */ ) > -1;
             })
             .map((asset) => {
                 /* secham:
@@ -86,29 +104,38 @@ const refreshTable = () => {
                       prop[3] = 365d
                 */
                 const props = [];
-                const getRowValue = (key) => {
-                  const prop = _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
-                  return `${_.trim(prop[2])} - ${_.trim(prop[3])}`;
+                const getRowValue = (key, subkey) => {
+                    const prop = typeof(subkey) !== "undefined" ? 
+                      _.chain(asset[idx.cells]).find(f => _.nth(f, idx.cell_props.cell_display_name) === subkey).value() || [] : 
+                      _.chain(asset[idx.cells]).find(f => _.first(f) === key).value() || [];
+                    return `${_.trim(prop[idx.cell_props.cell_from])} - ${_.trim(prop[idx.cell_props.cell_to])}`;
                 };
+                console.log(asset[idx.cells])
                 props.push(asset[1]);
                 props.push(getRowValue('lookback'));
-                props.push(getRowValue('callput'));
+                props.push(getRowValue('callput', asset[idx.cells][0] ? asset[idx.cells][0][idx.cell_props.cell_display_name] : '-')); // first callput -> rise/fall
+                props.push(getRowValue('callput', asset[idx.cells][1] ? asset[idx.cells][1][idx.cell_props.cell_display_name] : '-')); // second callput -> higher/lower
                 props.push(getRowValue('touchnotouch'));
                 props.push(getRowValue('endsinout'));
                 props.push(getRowValue('staysinout'));
                 props.push(getRowValue('digits'));
                 props.push(getRowValue('asian'));
+                props.push(getRowValue('reset'));
+                props.push(getRowValue('callputspread'));
+                props.push(getRowValue('highlowticks'));
+                props.push(getRowValue('callputequal'));
 
                 return props;
             });
-        table.api().rows().remove();
-        table.api().rows.add(rows);
+        asset_indexes.rows = rows;
+        rows.forEach(row => asset_indexes.cols.push(row))
+        console.log(asset_indexes.cols)
         // Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
-        const show = market_name.indexOf('Volatility Indices') !== -1;
-        table.api().column(1).visible(show);
-        table.api().column(6).visible(show);
-        table.api().column(7).visible(show);
-        table.api().draw();
+        const show = market_name.indexOf(market_names[0][3].innerText) !== -1;
+        console.log(show)
+        asset_indexes.vol_indx = show;
+        asset_indexes.vol_indx ? $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').show() : $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').hide()
+
     }
 
     const processing_msg = $('#' + table.attr('id') + '_processing').show();
@@ -133,6 +160,7 @@ const refreshTable = () => {
                               const list = Object.keys(markets[val]); /* get list of sub_markets */
                               submarket_names.update_list(list);
                               updateTable(market_names.val(), submarket_names.val());
+                              asset_indexes.vol_indx ? $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').show() : $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').hide()
                           },
                           width: '180px'
                       });
@@ -171,35 +199,28 @@ const initAssetWin = ($html) => {
     $html = $($html).i18n();
     table = $html.filter('table');
     $html.appendTo(assetWin);
-
-    table = table.dataTable({
-        data: [],
-        "columnDefs": [
-            { className: "dt-body-center dt-header-center", "targets": [0, 1, 2, 3, 4, 5, 6, 7] },
-            { "defaultContent": "-", "targets": [0, 1, 2, 3, 4, 5, 6, 7] }
-        ],
-        paging: false,
-        bAutoWidth: false,
-        ordering: false,
-        searching: true,
-        processing: true
-    });
-    table.parent().addClass('hide-search-input');
-
-    // Apply the a search on each column input change
-    table.api().column(0).every(function() {
-        const column = this;
-        $('input', this.header()).on('keyup change', function() {
-            if (column.search() !== this.value)
-                column.search(this.value).draw();
-        });
-    });
-
+    rv.bind($html[0], asset_indexes);
     refreshTable();
     require(['websockets/binary_websockets'], (liveapi) => {
       liveapi.events.on('login', refreshTable);
       liveapi.events.on('logout', refreshTable);
    });
+
+   $('.search-input').on('keyup', () => {
+       let value = $(this).val();
+       $("tbody tr").each(function(index) {
+        if (index !== 0) {
+            let market = $(this).find("td:first").text();
+
+            if (market.indexOf(value) !== 0) {
+                $(this).hide();
+            }
+            else {
+                $(this).show();
+            }
+        }
+    });
+   })
 }
 
 export default {
