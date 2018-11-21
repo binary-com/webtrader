@@ -86,18 +86,22 @@ const refreshTable = () => {
                       prop[3] = 365d
                 */
                 const props = [];
-                const getRowValue = (key) => {
-                  const prop = _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
-                  return `${_.trim(prop[2])} - ${_.trim(prop[3])}`;
+                const getRowValue = (key, subkey) => {
+                    const prop = typeof(subkey) !== "undefined" ? 
+                      _.chain(asset[2]).find(f => _.nth(f, 1) === subkey).value() || [] : 
+                      _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
+                    return `${_.trim(prop[2])} - ${_.trim(prop[3])}`;
                 };
                 props.push(asset[1]);
                 props.push(getRowValue('lookback'));
-                props.push(getRowValue('callput'));
+                props.push(getRowValue('callput', 'Rise/Fall'));
+                props.push(getRowValue('callput', 'Higher/Lower'));
                 props.push(getRowValue('touchnotouch'));
                 props.push(getRowValue('endsinout'));
                 props.push(getRowValue('staysinout'));
                 props.push(getRowValue('digits'));
                 props.push(getRowValue('asian'));
+                props.push(getRowValue('callputequal'));
 
                 return props;
             });
