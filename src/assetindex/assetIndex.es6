@@ -63,9 +63,23 @@ const processMarketSubmarkets = (markets) => {
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
         const symbols = markets[market_name][submarket_name];
+        // index of items in asset_index response
+        const idx = {
+            symbol      : 0,
+            display_name: 1,
+            cells       : 2,
+            sym_info    : 3,
+            values      : 4,
+            cell_props  : {
+                cell_name        : 0,
+                cell_display_name: 1,
+                cell_from        : 2,
+                cell_to          : 3,
+            },
+        };
         const rows = assets
             .filter((asset) => {
-                return symbols.indexOf(asset[1] /* asset.name */ ) > -1;
+                return symbols.indexOf(asset[idx.display_name] /* asset.name */ ) > -1;
             })
             .map((asset) => {
                 /* secham:
@@ -88,14 +102,14 @@ const refreshTable = () => {
                 const props = [];
                 const getRowValue = (key, subkey) => {
                     const prop = typeof(subkey) !== "undefined" ? 
-                      _.chain(asset[2]).find(f => _.nth(f, 1) === subkey).value() || [] : 
-                      _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
-                    return `${_.trim(prop[2])} - ${_.trim(prop[3])}`;
+                      _.chain(asset[idx.cells]).find(f => _.nth(f, idx.cell_props.cell_display_name) === subkey).value() || [] : 
+                      _.chain(asset[idx.cells]).find(f => _.first(f) === key).value() || [];
+                    return `${_.trim(prop[idx.cell_props.cell_from])} - ${_.trim(prop[idx.cell_props.cell_to])}`;
                 };
                 props.push(asset[1]);
                 props.push(getRowValue('lookback'));
-                props.push(getRowValue('callput', 'Rise/Fall'));
-                props.push(getRowValue('callput', 'Higher/Lower'));
+                props.push(getRowValue('callput', asset[idx.cells][0][idx.cell_props.cell_display_name])); // first callput -> rise/fall
+                props.push(getRowValue('callput', asset[idx.cells][1][idx.cell_props.cell_display_name])); // second callput -> higher/lower
                 props.push(getRowValue('touchnotouch'));
                 props.push(getRowValue('endsinout'));
                 props.push(getRowValue('staysinout'));
@@ -111,7 +125,7 @@ const refreshTable = () => {
         table.api().rows().remove();
         table.api().rows.add(rows);
         // Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
-        const show = market_name.indexOf('Volatility Indices') !== -1;
+        const show = market_name.indexOf(market_names[0][3].innerText) !== -1; // fourth market name -> volatility indices
         table.api().column(1).visible(show);
         table.api().column(7).visible(show);
         table.api().column(8).visible(show);
