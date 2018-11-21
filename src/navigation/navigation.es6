@@ -41,6 +41,10 @@ const initLoginButton = (root) => {
       },
       show_submenu: false,
       show_new_account_link: false,
+      openRealAccount: () => {
+         const real_account_binary_url = getBinaryUrl('new_account/realws');
+         window.open(real_account_binary_url, '_blank');
+      }
    };
 const destroy_windows = (data_attribute) => {
   $(`.webtrader-dialog[${data_attribute}]`).each((inx, elm) => {
@@ -200,7 +204,7 @@ const initLang = (root) => {
          { value: 'vi', name: 'Tiếng Việt'},
          { value: 'zh_cn', name: '简体中文'},
          { value: 'zh_tw', name: '繁體中文'}
-      ]
+      ],
    };
 
    state.onclick = (value) => {
