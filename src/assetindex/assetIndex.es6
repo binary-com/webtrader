@@ -71,34 +71,39 @@ const refreshTable = () => {
                 /* secham:
                     [ "frxAUDJPY","AUD/JPY",
                       [
-                        ["callput","callput","5t","365d"],
+                        ["callput","Rise/Fall","5t","365d"],
+                        ["callput","Higher/Lower","5t","365d"],
                         ["touchnotouch","Touch/No Touch","1h","1h"],
                         ["endsinout","endsinout","1d","1d"],
-                        ["staysinout","staysinout","1d","1d"]
+                        ["staysinout","staysinout","1d","1d"],
+                        ["callputequal","Rise/Fall Equal","1d","1d"]
                       ]
                     ]
                     asset[0] = frxAUDJPY
                     asset[1] = AUD/JPY
-                    asset[2] = ["callput","callput","5t","365d"]
+                    asset[2] = ["callput","Rise/Fall","5t","365d"]
                       prop[0] = callput
-                      prop[1] = callput
+                      prop[1] = Rise/Fall
                       prop[2] = 5t
                       prop[3] = 365d
                 */
                 const props = [];
-                const getRowValue = (key) => {
-                  const prop = _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
+                const getRowValue = (key, subkey) => {
+                  const prop = typeof(subkey) !== "undefined" ? 
+                    _.chain(asset[2]).find(f => _.nth(f, 1) === subkey).value() || [] : 
+                    _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
                   return `${_.trim(prop[2])} - ${_.trim(prop[3])}`;
                 };
                 props.push(asset[1]);
                 props.push(getRowValue('lookback'));
-                props.push(getRowValue('callput'));
+                props.push(getRowValue('callput', 'Rise/Fall'));
+                props.push(getRowValue('callput', 'Higher/Lower'));
                 props.push(getRowValue('touchnotouch'));
                 props.push(getRowValue('endsinout'));
                 props.push(getRowValue('staysinout'));
                 props.push(getRowValue('digits'));
                 props.push(getRowValue('asian'));
-
+                props.push(getRowValue('callputequal'))
                 return props;
             });
         table.api().rows().remove();
