@@ -39,10 +39,31 @@ export const init = (li) => {
 }
 
 const asset_indexes = {
-    rows: [],
-    cols: [],
-    vol_indx: true
+    assets: [],
+    filtered: [],
+    is_volatility: true,
+    search_input: '',
+    market_name: null,
+    market_names: null,
+    search: function(event, model){
+        model.filtered = []
+        let value = model.search_input.toLowerCase();
+        model.assets.forEach((asset, index) => {
+            if(asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1){
+                model.filtered.push(asset)
+            }
+        })
+        checkVolatility(model.market_name, model.market_names)
+    }
 }
+
+// Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
+const checkVolatility = (market_name, market_names) => {
+    const is_volatility = market_name.indexOf(market_names[0][3].innerText) !== -1; /* Handle different language */
+    asset_indexes.is_volatility = is_volatility;
+    asset_indexes.is_volatility ? $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').show() : $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').hide()
+}
+
 const processMarketSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
 
@@ -86,23 +107,6 @@ const refreshTable = () => {
                 return symbols.indexOf(asset[idx.display_name] /* asset.name */ ) > -1;
             })
             .map((asset) => {
-                /* secham:
-                    [ "frxAUDJPY","AUD/JPY",
-                      [
-                        ["callput","callput","5t","365d"],
-                        ["touchnotouch","Touch/No Touch","1h","1h"],
-                        ["endsinout","endsinout","1d","1d"],
-                        ["staysinout","staysinout","1d","1d"]
-                      ]
-                    ]
-                    asset[0] = frxAUDJPY
-                    asset[1] = AUD/JPY
-                    asset[2] = ["callput","callput","5t","365d"]
-                      prop[0] = callput
-                      prop[1] = callput
-                      prop[2] = 5t
-                      prop[3] = 365d
-                */
                 const props = [];
                 const getRowValue = (key, subkey) => {
                     const prop = typeof(subkey) !== "undefined" ? 
@@ -110,7 +114,6 @@ const refreshTable = () => {
                       _.chain(asset[idx.cells]).find(f => _.first(f) === key).value() || [];
                     return `${_.trim(prop[idx.cell_props.cell_from])} - ${_.trim(prop[idx.cell_props.cell_to])}`;
                 };
-                console.log(asset[idx.cells])
                 props.push(asset[1]);
                 props.push(getRowValue('lookback'));
                 props.push(getRowValue('callput', asset[idx.cells][0] ? asset[idx.cells][0][idx.cell_props.cell_display_name] : '-')); // first callput -> rise/fall
@@ -127,17 +130,12 @@ const refreshTable = () => {
 
                 return props;
             });
-        asset_indexes.rows = rows;
-        rows.forEach(row => asset_indexes.cols.push(row))
-        console.log(asset_indexes.cols)
-        // Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
-        const show = market_name.indexOf(market_names[0][3].innerText) !== -1;
-        console.log(show)
-        asset_indexes.vol_indx = show;
-        asset_indexes.vol_indx ? $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').show() : $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').hide()
-
+        asset_indexes.assets = rows;
+        asset_indexes.filtered = rows;
+        checkVolatility(market_name, market_names)
+        asset_indexes.market_name = market_name;
+        asset_indexes.market_names = market_names;
     }
-
     const processing_msg = $('#' + table.attr('id') + '_processing').show();
     Promise.all(
             [
@@ -160,7 +158,6 @@ const refreshTable = () => {
                               const list = Object.keys(markets[val]); /* get list of sub_markets */
                               submarket_names.update_list(list);
                               updateTable(market_names.val(), submarket_names.val());
-                              asset_indexes.vol_indx ? $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').show() : $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').hide()
                           },
                           width: '180px'
                       });
@@ -205,22 +202,6 @@ const initAssetWin = ($html) => {
       liveapi.events.on('login', refreshTable);
       liveapi.events.on('logout', refreshTable);
    });
-
-   $('.search-input').on('keyup', () => {
-       let value = $(this).val();
-       $("tbody tr").each(function(index) {
-        if (index !== 0) {
-            let market = $(this).find("td:first").text();
-
-            if (market.indexOf(value) !== 0) {
-                $(this).hide();
-            }
-            else {
-                $(this).show();
-            }
-        }
-    });
-   })
 }
 
 export default {

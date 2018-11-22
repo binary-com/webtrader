@@ -2,9 +2,9 @@
     <thead>
         <tr>
             <th>
-                <input class="search-input" placeholder="Search">
+                <input class="search-input" placeholder="Search" rv-value="search_input" rv-on-keyup="search">
             </th>
-            <th> Lookback </th>
+            <th> Lookbacks </th>
             <th> Rise/Fall </th>
             <th> Higher/Lower </th>
             <th> Touch/No Touch </th>
@@ -20,7 +20,7 @@
     </thead>
 
     <tbody>
-        <tr rv-each-row="rows">
+        <tr rv-each-row="filtered">
             <td rv-each-col="row">{ col }</td>
         </tr>
     </tbody>
