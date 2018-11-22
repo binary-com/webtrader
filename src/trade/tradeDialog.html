@@ -42,7 +42,7 @@
             <select class="date-start-select"
                     rv-jq-class="'trade-dialog-date-start-ul'"
                     rv-chosen="date_start.value 
-                        | notify duration_unit.update 
+                        | notify duration_unit.update
                         | debounce proposal.onchange"
                     rv-chosenrefresh="date_start.array"
                     style="width: 100px"
@@ -55,7 +55,7 @@
                 class="date-expiry-hour"
                 id="future-timepicker"
                 rv-value="selected_future_timepicker"
-                rv-timepicker="selected_future_timepicker | notify setDateStartHour" />
+                rv-timepicker="date_start.selected_future_timepicker | notify setDateStartHour" />
         </li>
     </ul>
     <ul class="digits-row"

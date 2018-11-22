@@ -220,6 +220,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 'now', /* epoch value if selected */
       array: [{ text: 'Now', value: 'now' } ],
       visible: false,
+      selected_future_timepicker: '',
+      selected_future_time: '',
     },
     date_expiry: {
       value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
@@ -227,6 +229,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 0,    /* epoch value of date+hour */
       today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
       onHourShow: function(hour) { /* for timepicker */
+        console.log('onHourShow', hour);
         var times = state.date_expiry.today_times;
         if(times.open === '--') return true;
         var now = moment.utc();
@@ -506,7 +509,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
     _.assign(state.date_start, options);
 
-    if (selected_date !== 'now' && state.selected_future_time !== selected_date) {
+    if (selected_date !== 'now' && +state.date_start.selected_future_time !== +selected_date) {
       state.setDateStartHour(selected_date);
     }
 
@@ -515,35 +518,29 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     }
   };
 
-  state.selected_future_time = '';
   state.setDateStartHour = (selected_time) => {
-    console.log(selected_time);
     if (selected_time === 'now' || !selected_time) {
-      state.selected_future_time = selected_time;
+      state.date_start.selected_future_time = selected_time;
       return;
     }
 
-    const $time_picker = $('#future-timepicker')[0];
-    let HH_MM = '';
-    const is_HH_MM = selected_time.includes(':');
+    let HH_MM = '00:00';
+    const is_HH_MM = selected_time.toString().includes(':');
     if (!is_HH_MM) {
       HH_MM = moment.utc(moment.unix(+selected_time)).format('HH:mm');
-      state.selected_future_time = selected_time;
+      state.date_start.selected_future_time = selected_time;
     }
 
     if (is_HH_MM) {
       const date_start_formatted = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
-      const date_start_with_selected_time = moment.utc(date_start_formatted + ' ' + selected_time).unix();
+      const date_start_with_selected_time = moment.utc(`${date_start_formatted} ${selected_time}`).unix();
 
       // add hour minute to date_start_value
       state.date_start.value = date_start_with_selected_time;
-      state.selected_future_time = date_start_with_selected_time;
+      state.date_start.selected_future_time = date_start_with_selected_time;
       HH_MM = selected_time;
     }
-    if ($time_picker) {
-      $time_picker.value = HH_MM;
-    }
-    console.log(HH_MM);
+    state.date_start.selected_future_timepicker = HH_MM;
   }
 
   state.date_expiry.update = function (date_or_hour) {
