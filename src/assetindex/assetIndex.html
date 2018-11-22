@@ -4,18 +4,7 @@
             <th>
                 <input class="search-input" placeholder="Search" rv-value="search_input" rv-on-keyup="search">
             </th>
-            <th> Lookbacks </th>
-            <th> Rise/Fall </th>
-            <th> Higher/Lower </th>
-            <th> Touch/No Touch </th>
-            <th> Ends Between/Outside </th>
-            <th> Stays Between/Goes Outside </th>
-            <th> Digits </th>
-            <th> Asians </th>
-            <th> Reset Call/Reset Put </th>
-            <th> Call Spread/Put Spread </th>
-            <th> High/Low Ticks </th>
-            <th> Rise/Fall Equal </th>
+            <th rv-each-item="asset_headers"> { item } </th>
         </tr>
     </thead>
 

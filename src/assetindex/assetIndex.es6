@@ -1,7 +1,4 @@
-﻿/**
- * Created by amin on October 19, 2015.
- */
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import menu from "../navigation/menu";
@@ -39,34 +36,33 @@ export const init = (li) => {
 }
 
 const asset_indexes = {
-    assets: [],
-    filtered: [],
+    assets: null,
+    filtered: null,
+    asset_headers: null,
     is_volatility: true,
     search_input: '',
     market_name: null,
     market_names: null,
     search: function(event, model){
-        model.filtered = []
+        model.filtered = [];
         let value = model.search_input.toLowerCase();
         model.assets.forEach((asset, index) => {
             if(asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1){
-                model.filtered.push(asset)
+                model.filtered.push(asset);
             }
         })
-        checkVolatility(model.market_name, model.market_names)
+        model.is_volatility = checkVolatility(model.market_name, model.market_names);
     }
 }
 
-// Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
+/* check Volatility handle for different language */
 const checkVolatility = (market_name, market_names) => {
-    const is_volatility = market_name.indexOf(market_names[0][3].innerText) !== -1; /* Handle different language */
-    asset_indexes.is_volatility = is_volatility;
-    asset_indexes.is_volatility ? $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').show() : $('td,th').filter(':nth-child(2), :nth-child(8), :nth-child(9), :nth-child(10), :nth-child(11), :nth-child(12)').hide()
+    const is_volatility = market_name.indexOf(market_names[0][3].innerText) !== -1;
+    return is_volatility;
 }
 
 const processMarketSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
-
     const ret = {};
     markets
       .filter(eMarket => {
@@ -88,13 +84,12 @@ const processMarketSubmarkets = (markets) => {
 
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
+        asset_indexes.is_volatility = checkVolatility(market_name, market_names);
         const symbols = markets[market_name][submarket_name];
         const idx = {
             symbol      : 0,
             display_name: 1,
             cells       : 2,
-            sym_info    : 3,
-            values      : 4,
             cell_props  : {
                 cell_name        : 0,
                 cell_display_name: 1,
@@ -115,26 +110,40 @@ const refreshTable = () => {
                     return `${_.trim(prop[idx.cell_props.cell_from])} - ${_.trim(prop[idx.cell_props.cell_to])}`;
                 };
                 props.push(asset[1]);
-                props.push(getRowValue('lookback'));
                 props.push(getRowValue('callput', asset[idx.cells][0] ? asset[idx.cells][0][idx.cell_props.cell_display_name] : '-')); // first callput -> rise/fall
                 props.push(getRowValue('callput', asset[idx.cells][1] ? asset[idx.cells][1][idx.cell_props.cell_display_name] : '-')); // second callput -> higher/lower
                 props.push(getRowValue('touchnotouch'));
                 props.push(getRowValue('endsinout'));
                 props.push(getRowValue('staysinout'));
-                props.push(getRowValue('digits'));
-                props.push(getRowValue('asian'));
-                props.push(getRowValue('reset'));
-                props.push(getRowValue('callputspread'));
-                props.push(getRowValue('highlowticks'));
                 props.push(getRowValue('callputequal'));
-
+                if(asset_indexes.is_volatility) {
+                    props.push(getRowValue('lookback'));
+                    props.push(getRowValue('digits'));
+                    props.push(getRowValue('asian'));
+                    props.push(getRowValue('reset'));
+                    props.push(getRowValue('callputspread'));
+                    props.push(getRowValue('highlowticks'));
+                }
                 return props;
             });
         asset_indexes.assets = rows;
         asset_indexes.filtered = rows;
-        checkVolatility(market_name, market_names)
         asset_indexes.market_name = market_name;
         asset_indexes.market_names = market_names;
+        asset_indexes.asset_headers = [];
+        assets.forEach(asset => {
+            asset[2].forEach(rows => {
+                if (!asset_indexes.asset_headers.includes(rows[1])) {
+                    if(asset_indexes.is_volatility){
+                        asset_indexes.asset_headers.push(rows[1]);
+                    } else {
+                        if(asset_indexes.asset_headers.length < 6 ) {
+                            asset_indexes.asset_headers.push(rows[1]);
+                        }
+                    }
+                }
+            })
+        })
     }
     const processing_msg = $('#' + table.attr('id') + '_processing').show();
     Promise.all(
@@ -144,11 +153,10 @@ const refreshTable = () => {
             ])
         .then((results) => {
             try {
-              assets = results[1].asset_index;
-              markets = processMarketSubmarkets(results[0]);
+                assets = results[1].asset_index;
+                markets = processMarketSubmarkets(results[0]);
                 const header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 const dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
-
                 if (!market_names) {
                   market_names = windows
                       .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
