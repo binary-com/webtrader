@@ -1,10 +1,10 @@
 ﻿import $ from 'jquery';
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
-import menu from "../navigation/menu";
-import _ from "lodash";
-import rv from "common/rivetsExtra";
-import "jquery-growl";
+import menu from '../navigation/menu';
+import _ from 'lodash';
+import rv from 'common/rivetsExtra';
+import 'jquery-growl';
 import 'css!./assetIndex.css';
 
 let table = null;
@@ -104,7 +104,7 @@ const refreshTable = () => {
             .map((asset) => {
                 const props = [];
                 const getRowValue = (key, subkey) => {
-                    const prop = typeof(subkey) !== "undefined" ? 
+                    const prop = typeof(subkey) !== 'undefined' ? 
                       _.chain(asset[idx.cells]).find(f => _.nth(f, idx.cell_props.cell_display_name) === subkey).value() || [] : 
                       _.chain(asset[idx.cells]).find(f => _.first(f) === key).value() || [];
                     return `${_.trim(prop[idx.cell_props.cell_from])} - ${_.trim(prop[idx.cell_props.cell_to])}`;
