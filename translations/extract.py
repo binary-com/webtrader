@@ -127,7 +127,7 @@ with open(messages_pot, 'a+') as wf:
             handle_error('Non-ascii character detected: ', text)
 
         if text:
-            wf.write('\n' + 'msgid "' + text + '"'      )
+            wf.write('\n' + 'msgid "' + text + '"')
             wf.write('\nmsgstr "" \n')
 
 files = [
