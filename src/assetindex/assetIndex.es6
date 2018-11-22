@@ -47,7 +47,7 @@ const asset_indexes = {
         model.filtered = [];
         let value = model.search_input.toLowerCase();
         model.assets.forEach((asset, index) => {
-            if(asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1){
+            if(asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1) {
                 model.filtered.push(asset);
             }
         })
