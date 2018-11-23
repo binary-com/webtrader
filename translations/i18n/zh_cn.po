@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2018-11-13 06:30\n"
+"PO-Revision-Date: 2018-11-23 09:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -949,7 +949,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛博彩监管委员会授予牌照和监管（当前在线牌照于2012 年8 月31 日颁发）及(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39172[_2])。"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2015年8月01日）。英国客户由(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39495[_2])， 及爱尔兰客户由(3) 爱尔兰的税务局授予牌照和监管 (远程博彩公司牌照号: 1010285，发照日期为2017年7月1日)。查阅完整的 [_3]监管信息[_4]。"
 
 msgid "In/Out"
 msgstr "“范围之内/之外”"
@@ -1645,7 +1645,7 @@ msgid "Purchase Price"
 msgstr "买入价格"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "买入时间"
 
 msgid "Read"
 msgstr "阅读"
