@@ -2,12 +2,10 @@
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import menu from '../navigation/menu';
-import _ from 'lodash';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
 
-/* DOM elements */
 let table = null;
 let assetWin = null;
 let header = null;
@@ -78,7 +76,6 @@ const checkVolatility = (market_name, market_names) => {
     const is_volatility = market_name.indexOf(volatility_indices) !== -1;
     return is_volatility;
 }
-
 const checkEU = (markets) => {
     const volatility_indices = markets[3].name;
     markets.filter(market => {
@@ -90,7 +87,6 @@ const checkEU = (markets) => {
       });
     return markets;
 }
-
 const getMarketsSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
     const select_market_submarket = {};
@@ -105,7 +101,6 @@ const getMarketsSubmarkets = (markets) => {
     });
     return select_market_submarket;
 }
-
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
         state.dropdown.selected_market = market_name;
@@ -114,7 +109,7 @@ const refreshTable = () => {
         updateHeader();
         const rows = state.table.asset_data
             .filter((asset) => {
-                return symbols.indexOf(asset[state.index.display_name] /* asset.name */ ) > -1;
+                return symbols.indexOf(asset[state.index.display_name]) > -1;
             })
             .map((asset) => {
                 const props = [];
@@ -123,11 +118,9 @@ const refreshTable = () => {
                 const getRowValue = (name, display_name) => {
                     // handle two different callputs: Rise/Fall and Higher/Lower
                     const prop = typeof(display_name) !== 'undefined' ? 
-                      _.chain(asset[state.index.assets])
-                        .find(asset => _.nth(asset, state.index.asset_props.asset_display_name) === display_name).value() || [] : 
-                      _.chain(asset[state.index.assets])
-                        .find(asset => _.first(asset) === name).value() || [];
-                    return `${_.trim(prop[state.index.asset_props.asset_from])} - ${_.trim(prop[state.index.asset_props.asset_to])}`;
+                        asset[state.index.assets].find(asset => asset[state.index.asset_props.asset_display_name] === display_name) || [] : 
+                        asset[state.index.assets].find(asset => asset[state.index.asset_props.asset_name] === name) || [];
+                    return `${prop[state.index.asset_props.asset_from] || ''} - ${prop[state.index.asset_props.asset_to] || ''}`;
                 };
                 props.push(asset[1]);
                 props.push(getRowValue('callput', Rise_Fall ? Rise_Fall[state.index.asset_props.asset_display_name] : '-'));
@@ -146,6 +139,7 @@ const refreshTable = () => {
                 }
                 return props;
             });
+        console.log(rows)
         state.table.display_asset_data = rows;
         state.table.asset_data_extract = rows;
     }
@@ -221,7 +215,6 @@ const refreshTable = () => {
         });
     
 }
-
 const initAssetWin = ($html) => {
     $html = $($html).i18n();
     table = $html.filter('table');
