@@ -7,12 +7,11 @@ import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
 
+/* DOM elements */
 let table = null;
 let assetWin = null;
-let market_names = null;
-let submarket_names = null;
-let assets = [];
-let markets = {};
+let header = null;
+let dialog_buttons = null;
 
 export const init = (li) => {
     li.click(() => {
@@ -35,88 +34,109 @@ export const init = (li) => {
     });
 }
 
-const asset_indexes = {
-    assets: null,
-    filtered: null,
-    asset_headers: null,
-    is_volatility: true,
-    search_input: '',
-    market_name: null,
-    market_names: null,
-    search: function(event, model){
-        model.filtered = [];
-        let value = model.search_input.toLowerCase();
-        model.assets.forEach((asset, index) => {
-            if(asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1) {
-                model.filtered.push(asset);
+const state = {
+    dropdown: {
+        display_markets: null,
+        display_submarkets: null,
+        is_volatility: false,
+        market_submarkets: null,
+        selected_market: null
+    },
+    table: {
+        asset_data: [],
+        asset_data_extract: [],
+        display_headers: [],
+        display_asset_name: [],
+        display_asset_data: [],
+        search_input: ''
+    },
+    index: {
+        symbol: 0,
+        display_name: 1,
+        assets: 2,
+        asset_props: {
+            asset_name: 0,
+            asset_display_name: 1,
+            asset_from: 2,
+            asset_to: 3,
+        }
+    },
+    search: function (event, model) {
+        model.table.display_asset_data = [];
+        let value = model.table.search_input.toLowerCase();
+        model.table.asset_data_extract.forEach((asset, index) => {
+            if (asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1) {
+                model.table.display_asset_data.push(asset);
             }
-        })
-        model.is_volatility = checkVolatility(model.market_name, model.market_names);
+        });
+        model.dropdown.is_volatility = checkVolatility(model.dropdown.selected_market, model.dropdown.display_markets);
     }
 }
 
-/* check Volatility handle for different language */
 const checkVolatility = (market_name, market_names) => {
-    const is_volatility = market_name.indexOf(market_names[0][3].innerText) !== -1;
+    const volatility_indices = market_names[0][3].innerText;
+    const is_volatility = market_name.indexOf(volatility_indices) !== -1;
     return is_volatility;
 }
 
-const processMarketSubmarkets = (markets) => {
-    markets = menu.extractFilteredMarkets(markets);
-    const ret = {};
-    markets
-      .filter(eMarket => {
+const checkEU = (markets) => {
+    const volatility_indices = markets[3].name;
+    markets.filter(market => {
         const loginId = (local_storage.get('authorize') || {}).loginid || '';
-        return (/MF/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
-        || (/MLT/gi.test(loginId) && eMarket.name === 'Volatility Indices')
-        || (/MX/gi.test(loginId) && eMarket.name === 'Volatility Indices')
-        || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
-      })
-      .forEach((market) => {
-        const smarkets = ret[market.display_name] = {};
-        market.submarkets.forEach((smarket) => {
-            smarkets[smarket.display_name] = smarket.instruments.map((symbol) => {
-                return symbol.display_name; });
+        return (/MF/gi.test(loginId) && market.name !== volatility_indices)
+                || (/MLT/gi.test(loginId) && market.name === volatility_indices)
+                || (/MX/gi.test(loginId) && market.name === volatility_indices)
+                || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
+      });
+    return markets;
+}
+
+const getMarketsSubmarkets = (markets) => {
+    markets = menu.extractFilteredMarkets(markets);
+    const select_market_submarket = {};
+    const checked_eu_markets = checkEU(markets);
+    checked_eu_markets.forEach((market) => {
+        select_market_submarket[market.display_name] = {};
+        
+        market.submarkets.forEach((select_market) => {
+            select_market_submarket[market.display_name][select_market.display_name]
+              = select_market.instruments.map((symbol) => symbol.display_name);
         });
     });
-    return ret;
+    return select_market_submarket;
 }
 
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
-        asset_indexes.is_volatility = checkVolatility(market_name, market_names);
-        const symbols = markets[market_name][submarket_name];
-        const idx = {
-            symbol      : 0,
-            display_name: 1,
-            cells       : 2,
-            cell_props  : {
-                cell_name        : 0,
-                cell_display_name: 1,
-                cell_from        : 2,
-                cell_to          : 3,
-            },
-        };
-        const rows = assets
+        state.dropdown.selected_market = market_name;
+        state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
+        const symbols = state.dropdown.market_submarkets[market_name][submarket_name];
+        updateHeader();
+        const rows = state.table.asset_data
             .filter((asset) => {
-                return symbols.indexOf(asset[idx.display_name] /* asset.name */ ) > -1;
+                return symbols.indexOf(asset[state.index.display_name] /* asset.name */ ) > -1;
             })
             .map((asset) => {
                 const props = [];
-                const getRowValue = (key, subkey) => {
-                    const prop = typeof(subkey) !== 'undefined' ? 
-                      _.chain(asset[idx.cells]).find(f => _.nth(f, idx.cell_props.cell_display_name) === subkey).value() || [] : 
-                      _.chain(asset[idx.cells]).find(f => _.first(f) === key).value() || [];
-                    return `${_.trim(prop[idx.cell_props.cell_from])} - ${_.trim(prop[idx.cell_props.cell_to])}`;
+                const Rise_Fall = asset[state.index.assets][0];
+                const Higher_Lower = asset[state.index.assets][1];
+                const getRowValue = (name, display_name) => {
+                    // handle two different callputs: Rise/Fall and Higher/Lower
+                    const prop = typeof(display_name) !== 'undefined' ? 
+                      _.chain(asset[state.index.assets])
+                        .find(asset => _.nth(asset, state.index.asset_props.asset_display_name) === display_name).value() || [] : 
+                      _.chain(asset[state.index.assets])
+                        .find(asset => _.first(asset) === name).value() || [];
+                    return `${_.trim(prop[state.index.asset_props.asset_from])} - ${_.trim(prop[state.index.asset_props.asset_to])}`;
                 };
                 props.push(asset[1]);
-                props.push(getRowValue('callput', asset[idx.cells][0] ? asset[idx.cells][0][idx.cell_props.cell_display_name] : '-')); // first callput -> rise/fall
-                props.push(getRowValue('callput', asset[idx.cells][1] ? asset[idx.cells][1][idx.cell_props.cell_display_name] : '-')); // second callput -> higher/lower
+                props.push(getRowValue('callput', Rise_Fall ? Rise_Fall[state.index.asset_props.asset_display_name] : '-'));
+                props.push(getRowValue('callput', Higher_Lower ? Higher_Lower[state.index.asset_props.asset_display_name] : '-'));
                 props.push(getRowValue('touchnotouch'));
                 props.push(getRowValue('endsinout'));
                 props.push(getRowValue('staysinout'));
                 props.push(getRowValue('callputequal'));
-                if(asset_indexes.is_volatility) {
+                if(state.dropdown.is_volatility) {
                     props.push(getRowValue('lookback'));
                     props.push(getRowValue('digits'));
                     props.push(getRowValue('asian'));
@@ -126,85 +146,87 @@ const refreshTable = () => {
                 }
                 return props;
             });
-        asset_indexes.assets = rows;
-        asset_indexes.filtered = rows;
-        asset_indexes.market_name = market_name;
-        asset_indexes.market_names = market_names;
-        asset_indexes.asset_headers = [];
-        assets.forEach(asset => {
+        state.table.display_asset_data = rows;
+        state.table.asset_data_extract = rows;
+    }
+    const updateHeader = () => {
+        state.table.display_headers = [];
+        state.table.asset_data.forEach(asset => {
             asset[2].forEach(rows => {
-                if (!asset_indexes.asset_headers.includes(rows[1])) {
-                    if(asset_indexes.is_volatility){
-                        asset_indexes.asset_headers.push(rows[1]);
+                if (!state.table.display_headers.includes(rows[1])) {
+                    if(state.dropdown.is_volatility){
+                        state.table.display_headers.push(rows[1]);
                     } else {
-                        if(asset_indexes.asset_headers.length < 6 ) {
-                            asset_indexes.asset_headers.push(rows[1]);
+                        if(state.table.display_headers.length < 6 ) {
+                            state.table.display_headers.push(rows[1]);
                         }
                     }
                 }
             })
         })
     }
-    const processing_msg = $('#' + table.attr('id') + '_processing').show();
+    const marketsChanged = (market_submarkets) => {
+        if (!state.dropdown.display_markets) {
+            state.dropdown.display_markets = windows
+                .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
+                    list: Object.keys(market_submarkets), //Keys are the display_name
+                    inx: 0, //Index to select the item in drop down
+                    changed: (val) => {
+                        const list = Object.keys(market_submarkets[val]); /* get list of sub_markets */
+                        state.dropdown.display_submarkets.update_list(list);
+                        updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
+                    },
+                    width: '180px'
+                });
+            state.dropdown.display_markets.selectmenu('widget').addClass('asset-index-selectmenu');
+        } else {
+            state.dropdown.display_markets.update_list(Object.keys(market_submarkets));
+        }
+    }
+    const submarketsChanged = (market_submarkets) => {
+        if (!state.dropdown.display_submarkets) {
+            state.dropdown.display_submarkets = windows
+              .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
+                  list: Object.keys(market_submarkets[state.dropdown.display_markets.val()]),
+                  inx: 0,
+                  changed: (val) => {
+                      updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
+                  },
+                  width: '200px'
+              });
+            state.dropdown.display_submarkets.selectmenu('widget').addClass('asset-index-selectmenu');
+          } else {
+            state.dropdown.display_submarkets.update_list(Object.keys(market_submarkets[state.dropdown.display_markets.val()]));
+          }
+    }
+    const processing_msg = $(`#${table.attr('id')}_processing`).show();
     Promise.all(
             [
                 liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
                 liveapi.cached.send({ asset_index: 1 }),
             ])
         .then((results) => {
-            try {
-                assets = results[1].asset_index;
-                markets = processMarketSubmarkets(results[0]);
-                const header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
-                const dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
-                if (!market_names) {
-                  market_names = windows
-                      .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                          list: Object.keys(markets), //Keys are the display_name
-                          inx: 0, //Index to select the item in drop down
-                          changed: (val) => {
-                              const list = Object.keys(markets[val]); /* get list of sub_markets */
-                              submarket_names.update_list(list);
-                              updateTable(market_names.val(), submarket_names.val());
-                          },
-                          width: '180px'
-                      });
-                  market_names.selectmenu('widget').addClass('asset-index-selectmenu');
-                } else {
-                  market_names.update_list(Object.keys(markets));
-                }
-
-                const is_rtl_language = local_storage.get('i18n') && local_storage.get('i18n').value === 'ar';
-                if (!submarket_names) {
-                  submarket_names = windows
-                    .makeSelectmenu($('<select />').insertBefore(is_rtl_language ? market_names : dialog_buttons), {
-                        list: Object.keys(markets[market_names.val()]),
-                        inx: 0,
-                        changed: (val) => {
-                            updateTable(market_names.val(), submarket_names.val());
-                        },
-                        width: '200px'
-                    });
-                  submarket_names.selectmenu('widget').addClass('asset-index-selectmenu');
-                } else {
-                  submarket_names.update_list(Object.keys(markets[market_names.val()]));
-                }
-
-                updateTable(market_names.val(), submarket_names.val());
+                state.table.asset_data = [...results[1].asset_index];
+                state.dropdown.market_submarkets = getMarketsSubmarkets(Object.assign(results[0]));
+                header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
+                dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
+                marketsChanged(state.dropdown.market_submarkets);
+                submarketsChanged(state.dropdown.market_submarkets);
+                updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
                 processing_msg.hide();
-            } catch (err) { console.error(err) }
         })
         .catch((error) => {
             $.growl.error({ message: error.message });
             console.error(error);
         });
+    
 }
 
 const initAssetWin = ($html) => {
     $html = $($html).i18n();
     table = $html.filter('table');
     $html.appendTo(assetWin);
-    rv.bind($html[0], asset_indexes);
+    rv.bind($html[0], state);
     refreshTable();
     require(['websockets/binary_websockets'], (liveapi) => {
       liveapi.events.on('login', refreshTable);

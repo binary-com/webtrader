@@ -2,14 +2,14 @@
     <thead>
         <tr>
             <th>
-                <input class="search-input" placeholder="Search" rv-value="search_input" rv-on-keyup="search">
+                <input class="search-input" placeholder="Search" rv-value="table.search_input" rv-on-keyup="search">
             </th>
-            <th rv-each-item="asset_headers"> { item } </th>
+            <th rv-each-item="table.display_headers"> { item } </th>
         </tr>
     </thead>
 
     <tbody>
-        <tr rv-each-row="filtered">
+        <tr rv-each-row="table.display_asset_data">
             <td rv-each-col="row">{ col }</td>
         </tr>
     </tbody>
