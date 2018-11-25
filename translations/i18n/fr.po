@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-14 12:40\n"
+"PO-Revision-Date: 2018-11-25 13:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -760,16 +760,16 @@ msgid "Exclude me from the website until"
 msgstr "M'auto-exclure du site jusqu'au"
 
 msgid "Exclude time"
-msgstr "Date d'exclusion"
+msgstr "Temps d'exclusion"
 
 msgid "Exclude time must be after today."
-msgstr "La date d'exclusion doit être ultérieure à aujourd'hui."
+msgstr "La temps d'exclusion doit être ultérieure à aujourd'hui."
 
 msgid "Exclude until time cannot be less than 6 months."
 msgstr "La période d'auto exclusion ne peut pas être inférieure à 6 mois."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr "La période d'auto exclusion ne peut pas être inférieure à 5 mois."
+msgstr "La période d'auto exclusion ne peut pas être supérieure à 5 ans."
 
 msgid "Exit Spot"
 msgstr "Point de sortie"
@@ -1546,7 +1546,7 @@ msgid "Please select"
 msgstr "Veuillez sélectionner"
 
 msgid "Please select a date for time out until."
-msgstr "Veuillez sélectionner une date pour time out jusqu'à."
+msgstr "Veuillez sélectionner une date pour la période d'auto exclusion."
 
 msgid "Please select a payment agent"
 msgstr "Veuillez sélectionner un agent de paiement"
