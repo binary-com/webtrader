@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-11-25 13:20\n"
+"PO-Revision-Date: 2018-11-25 13:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1996,7 +1996,7 @@ msgid "Time out until"
 msgstr "Expiré jusqu'à"
 
 msgid "Timeout for websocket request"
-msgstr "Temps terminé pour la demande de websocket"
+msgstr "Temps terminé pour la requête vis à vis de websocket"
 
 msgid "Title"
 msgstr "Titre"
@@ -2266,7 +2266,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Vous ne copiez encore aucun trade(s)"
 
 msgid "You have excluded yourself until"
-msgstr "Vous vous êtres vous-même exclu jusqu'à"
+msgstr "Vous vous êtes vous-même exclu jusqu'à"
 
 msgid "You have sold the following contract"
 msgstr "Vous avez vendu le contrat suivant"
