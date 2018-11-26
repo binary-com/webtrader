@@ -42,11 +42,11 @@ Now you can debug your app on https://webtrader.local/ locally.
 
 To bump release version, run
 
-        $ npm version major
+        $ npm run major-rel
         or
-        $ npm version minor
+        $ npm run minor-rel
         or
-        $ npm version patch
+        $ npm run patch-rel
 
 Every check-in or merge into master will trigger travis-ci build and do a release to production.
 
