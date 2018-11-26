@@ -26,11 +26,7 @@ class Withdraw {
     init = li => {
         li.click(() => {
             if (!win) {
-                liveapi.cached.authorize().then(data => {
-                    if (!data.authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
-                        return currencyDialog.check_currency();
-                    return true; // OK
-                }).then(() => {
+                liveapi.cached.authorize().then(() => {
                     this._init_win(html)
                 }).catch(error_handler);
             } else

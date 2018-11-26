@@ -1,8 +1,4 @@
-﻿/**
- * Created by amin on November 25, 2015.
- */
-
-import _ from 'lodash';
+﻿import _ from 'lodash';
 import $ from 'jquery';
 import rv from 'rivets';
 import moment from 'moment';
@@ -160,9 +156,6 @@ rv.formatters['percent-of'] = (changed, original) => {
    return `${percentage_of_amount}%`;
 }
 
-rv.formatters['is-valid-email'] = (email) => email === '' || validateEmail(email);
-rv.formatters['is-valid-date'] = (date, format =  'YYYY-MM-DD') => moment(date, format, true).isValid();
-rv.formatters['is-valid-regex'] = (str, regex) => new RegExp(regex).test(str);
 rv.formatters.length = (value) => value.length;
 
 /* Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called.
