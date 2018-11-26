@@ -10,15 +10,15 @@ The goal of this project is to create a full-screen trading interface for [Binar
 
         * git
         * node JS
-        * yarn
+        * npm
 
 ## How to work with this project
 
         $ git clone https://github.com/binary-com/webtrader.git
         $ cd webtrader
-        $ yarn install
-        $ yarn build #compiles the project
-        $ yarn start #Start a local server and serve the compiled files
+        $ npm install
+        $ npm run build #compiles the project
+        $ npm start #Start a local server and serve the compiled files
 
 Running this command will launch local server at http://localhost:9001
 
@@ -42,11 +42,11 @@ Now you can debug your app on https://webtrader.local/ locally.
 
 To bump release version, run
 
-        $ yarn major-rel
+        $ npm run major-rel
         or
-        $ yarn minor-rel
+        $ npm run minor-rel
         or
-        $ yarn patch-rel
+        $ npm run patch-rel
 
 Every check-in or merge into master will trigger travis-ci build and do a release to production.
 
@@ -58,7 +58,7 @@ Translation related files are in `/translations` folder.
     
   To extract text for translation:
 
-        $ yarn build
+        $ npm run build
         $ cd ./translations
         $ python extract.py
         $ extract.py # extracts string literals from `dist/uncompressed` (from *.html and *.js)
