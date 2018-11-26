@@ -48,7 +48,6 @@ img.reload {
     cursor: pointer;
     background-image: url('../images/maximize.svg')!important;
     position: relative;
-    right: 3px;
 }
 .ui-icon.custom-icon-minimize {
     cursor: pointer;
@@ -58,11 +57,11 @@ img.reload {
 }
 .ui-icon.custom-icon-restore {
     cursor: pointer;
-    background-image: url('../images/new-window.png')!important;
+    background-image: url('../images/new-windows.svg')!important;
     position: relative;
     background-repeat:no-repeat;
     background-size:contain;
-    right: 3px;
+    color: white;
 }
 .ui-dialog-titlebar-restore, .ui-dialog-titlebar-restore:hover {
     margin-left:4px;
