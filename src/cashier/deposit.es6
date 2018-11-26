@@ -5,7 +5,6 @@
 import $ from 'jquery';
 import liveapi from 'websockets/binary_websockets';
 import windows from 'windows/windows';
-import currencyDialog from 'cashier/currency';
 import rv from 'common/rivetsExtra';
 import _ from 'lodash';
 import moment from 'moment';
@@ -26,11 +25,7 @@ const error_handler = function(err) {
 export function init(li) {
     li.click(() => {
         if (!deposit_win) {
-            liveapi.cached.authorize().then(data => {
-                if (!data.authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
-                    return currencyDialog.check_currency();
-                return true; // OK
-            }).then(() => {
+            liveapi.cached.authorize().then(() => {
                 init_deposit_win(html);
             }).catch(error_handler);
         } else
@@ -92,6 +87,7 @@ function init_state(root) {
             }
         },
         user: {
+            currency: local_storage.get('currency'),
             email: local_storage.get('authorize').email,
             cashier_url: '',
             residence: '',
@@ -169,14 +165,15 @@ function init_state(root) {
     residence_promise.then(function() {
         if (!state.user.residence)
             return { paymentagent_list: { list: [] } };
-        return liveapi.send({ paymentagent_list: state.user.residence });
-    }).then(function(data) {
-        var list = data.paymentagent_list.list.map(function(agent) {
-            agent.commission_text = state.payment_agents.get_commission_text(agent);
-            agent.supported_banks = agent.supported_banks.toLowerCase().split(',');
-            return agent;
-        })
-        state.payment_agents.list = list;
+        return liveapi.send({ paymentagent_list: state.user.residence, currency: state.user.currency });
+    }).then((data) => {
+        const pa_list = data.paymentagent_list.list
+            .map((agent) => {
+                agent.commission_text = state.payment_agents.get_commission_text(agent);
+                agent.supported_banks = agent.supported_banks.toLowerCase().split(',');
+                return agent;
+            });
+        state.payment_agents.list = pa_list;
     }).catch(error_handler);
 }
 

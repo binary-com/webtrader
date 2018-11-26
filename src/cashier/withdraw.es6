@@ -26,11 +26,7 @@ class Withdraw {
     init = li => {
         li.click(() => {
             if (!win) {
-                liveapi.cached.authorize().then(data => {
-                    if (!data.authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
-                        return currencyDialog.check_currency();
-                    return true; // OK
-                }).then(() => {
+                liveapi.cached.authorize().then(() => {
                     this._init_win(html)
                 }).catch(error_handler);
             } else
@@ -343,7 +339,8 @@ class Withdraw {
         liveapi.send({ get_settings: 1 })
             .then(data => {
                 agent.residence = data.get_settings.country_code;
-                return liveapi.cached.send({ paymentagent_list: agent.residence });
+                const currency = local_storage.get('currency');
+                return liveapi.cached.send({ paymentagent_list: agent.residence, currency  });
             })
             .then(data => {
                 agent.agents = data.paymentagent_list.list;
