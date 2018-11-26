@@ -174,9 +174,6 @@ msgstr "Akzeptieren"
 msgid "Accessible from any web browser in 13 languages"
 msgstr "In 13 Sprachen von jedem Webbrowser aus zugänglich"
 
-msgid "Account authentication"
-msgstr "Kontoauthentifizierung"
-
 msgid "Account balance"
 msgstr "Kontostand"
 
@@ -185,12 +182,6 @@ msgstr "Kontostand:"
 
 msgid "Account id not found."
 msgstr "Konto-ID nicht gefunden."
-
-msgid "Account opening"
-msgstr "Kontoeröffnung"
-
-msgid "Account opening reason"
-msgstr "Kontoeröffnungs-Grund"
 
 msgid "Account token not found."
 msgstr "Konto-Token nicht gefunden."
@@ -222,9 +213,6 @@ msgstr "Indikator hinzufügen/entfernen"
 msgid "Added new workspace %"
 msgstr "Neuer Arbeitsbereich % hinzugefügt"
 
-msgid "Address"
-msgstr "Adresse"
-
 msgid "Admin"
 msgstr "Admin"
 
@@ -233,9 +221,6 @@ msgstr "Alle Felder sind optional. Wenn Sie alle Vermögenswerte und Handelsarte
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Alle Zeiten sind in GTM (Greenwich Mean Time)"
-
-msgid "Allow others to copy your trades"
-msgstr "Erlauben Sie anderen, Ihre Trades zu kopieren"
 
 msgid "Amount"
 msgstr "Betrag"
@@ -246,20 +231,11 @@ msgstr "Betrag Min: 10 Max: 2000"
 msgid "Amount per point"
 msgstr "Betrag per Punkt"
 
-msgid "Answer"
-msgstr "Antwort"
-
-msgid "Anticipated account turnover"
-msgstr "Erwarteter Kontoumsatz"
-
 msgid "Apply"
 msgstr "Anwenden"
 
 msgid "Apply to become a Binary.com"
 msgstr "Anwenden, um ein Binary.com"
-
-msgid "Appropriateness Test: WARNING"
-msgstr "Angemessenheitstest: ACHTUNG"
 
 msgid "Apr"
 msgstr "Apr"
@@ -303,15 +279,6 @@ msgstr "Aug"
 msgid "August"
 msgstr "August"
 
-msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr "Bestätigen Sie jetzt Ihr Konto, indem Sie Ihre Identität und Adresse überprüfen. Um fortzufahren, senden Sie einfach die folgenden Dokumente an %1:"
-
-msgid "Available Currencies"
-msgstr "Verfügbare Währungen"
-
-msgid "Avg. Duration"
-msgstr "Durchschnittliche Dauer"
-
 msgid "Avg. Duration of Open Positions"
 msgstr "Durchschnittliche Dauer der offenen Positionen"
 
@@ -335,18 +302,6 @@ msgstr "Schwellenverschiebung"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary options or other financial derivatives trading experience"
-msgstr "Erfahrung mit Binären Optionen oder Handel mit anderen Finanzderivaten"
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr "Handelshäufigkeit mit Binären Optionen oder anderen Finanzderivaten"
-
-msgid "Binary options trading experience"
-msgstr "Binäre Optionen Handelserfahrung"
-
-msgid "Binary options trading frequency"
-msgstr "Binäre Optionen Handelshäufigkeit"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -375,20 +330,8 @@ msgstr "Kurs kaufen"
 msgid "Buy price"
 msgstr "Kurs kaufen"
 
-msgid "By clicking"
-msgstr "Indem Sie klicken"
-
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Wenn Sie auf OK klicken, bestätigen Sie, dass Sie die aktualisierten gelesen haben und diesen zustimmen"
-
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr "Standardmäßig werden alle Kunden als Einzelhandelskunden behandelt. Würden Sie es bevorzugen, als professioneller Kunde behandelt zu werden, sollten Sie die erforderlichen Kriterien erfüllen?"
-
-msgid "CFD trading experience"
-msgstr "CFD Handelserfahrung"
-
-msgid "CFD trading frequency"
-msgstr "CFD Handelshäufigkeit"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Kann verwendet werden, um Kontrakte zu kaufen und zu verkaufen, abgelaufene Kontrakte zu erneuern, und um virtuelle Konten aufzustocken."
@@ -444,9 +387,6 @@ msgstr "Chart-Vorlage"
 msgid "Chart type"
 msgstr "Charttyp"
 
-msgid "Choose password"
-msgstr "Passwort auswählen"
-
 msgid "Choose your pereferred payment agent"
 msgstr "Wählen Sie Ihren bevorzugten Zahlungsagenten"
 
@@ -455,9 +395,6 @@ msgstr "Wählen Sie Ihre bevorzugte Auszahlungsmethode"
 
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Citizenship"
-msgstr "Staatsbürgerschaft"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Anklicken, um sich mit Ihrem Binary.com Konto anzumelden"
@@ -470,12 +407,6 @@ msgstr "Alle schließen"
 
 msgid "Closes"
 msgstr "Schließt"
-
-msgid "Commodities trading experience"
-msgstr "Erfahrung im Rohstoffhandel"
-
-msgid "Commodities trading frequency"
-msgstr "Häufigkeit im Rohstoffhandel"
 
 msgid "Comparisons"
 msgstr "Vergleiche"
@@ -498,9 +429,6 @@ msgstr "Konstruktion"
 msgid "Contact Us"
 msgstr "Kontaktieren Sie uns"
 
-msgid "Continue"
-msgstr "Fortfahren"
-
 msgid "Continue Trading"
 msgstr "Weiter Handeln"
 
@@ -519,14 +447,8 @@ msgstr "Kontrakte"
 msgid "Copier"
 msgstr "Kopierer"
 
-msgid "Copy Trade"
-msgstr "Kopierter Handel"
-
 msgid "Copy Trading"
 msgstr "Kopierter Handel"
-
-msgid "Country of residence"
-msgstr "Wohnsitzland"
 
 msgid "Create"
 msgstr "Erstellen"
@@ -588,9 +510,6 @@ msgstr "Dunkel"
 msgid "Date"
 msgstr "Datum"
 
-msgid "Date of birth"
-msgstr "Geburtsdatum"
-
 msgid "Days"
 msgstr "Tage"
 
@@ -599,9 +518,6 @@ msgstr "Dez"
 
 msgid "December"
 msgstr "Dezember"
-
-msgid "Decline"
-msgstr "Ablehnen"
 
 msgid "Default"
 msgstr "Vorgabe"
@@ -693,9 +609,6 @@ msgstr "Arbeitsbereich wird als %1 heruntergeladen"
 msgid "Drawing tools"
 msgstr "Zeichenwerkzeuge"
 
-msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr "Wegen der kürzlich vorgenommenen Änderungen der Vorschriften sind wir gezwungen, unsere Kunden zu bitten, die folgende Finanzielle Beurteilung auszufüllen. Bitte beachten Sie, dass Sie, bis diese ausgefüllt ist, nicht weiter Handel treiben können"
-
 msgid "Duration"
 msgstr "Dauer"
 
@@ -708,14 +621,8 @@ msgstr "Rand"
 msgid "Education"
 msgstr "Ausbildung"
 
-msgid "Email verification failed"
-msgstr "E-Mail-Überprüfung fehlgeschlagen"
-
 msgid "Embed code"
 msgstr "Code einbinden"
-
-msgid "Employment status"
-msgstr "Beschäftigungsstatus"
 
 msgid "End Time"
 msgstr "Endzeit"
@@ -749,9 +656,6 @@ msgstr "Startkurs"
 
 msgid "Error getting data for %1"
 msgstr "Fehler beim Abrufen von Daten für %1"
-
-msgid "Estimated Net Worth"
-msgstr "Geschätztes Nettovermögen"
 
 msgid "Even"
 msgstr "Gerade"
@@ -789,9 +693,6 @@ msgstr "Aktualisierung des Passworts fehlgeschlagen"
 msgid "Fall"
 msgstr "Fallen"
 
-msgid "Family name"
-msgstr "Familienname"
-
 msgid "Favorites"
 msgstr "Favoriten"
 
@@ -819,32 +720,8 @@ msgstr "Schlusskurs"
 msgid "Finance"
 msgstr "Finanzen"
 
-msgid "Financial Account Opening form"
-msgstr "Finanzkonto-Eröffnungsform"
-
-msgid "Financial Assessment"
-msgstr "Finanzielle Bewertung"
-
-msgid "Financial Information"
-msgstr "Finanzinformationen"
-
-msgid "Financial information"
-msgstr "Finanzinformation"
-
 msgid "Firefox"
 msgstr "Firefox"
-
-msgid "First line of home address"
-msgstr "1. Zeile der Privatanschrift"
-
-msgid "First name"
-msgstr "Vorname"
-
-msgid "Forex trading experience"
-msgstr "Erfahrung im Devisenhandel"
-
-msgid "Forex trading frequency"
-msgstr "Devisenhandel Häufigkeit"
 
 msgid "Fri"
 msgstr "Fr"
@@ -912,18 +789,6 @@ msgstr "Stunde"
 msgid "Hours"
 msgstr "Stunden"
 
-msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr "Ich bestätige hiermit, dass ich keine politisch exponierte Person (PEP) bin"
-
-msgid "I have read and agree to Binary.com"
-msgstr "Ich habe gelesen und akzeptiere die Binary.com"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr "Hiermit bestätige ich, dass die von mir angegebenen Steuerinformationen wahr und vollständig sind. Ich werde Binary Investments (Europe) Ltd. auch über Änderungen dieser Angaben informieren"
-
-msgid "I want to be treated as a professional client"
-msgstr "Ich möchte als professioneller Kunde behandelt werden"
-
 msgid "IMPORTANT DISCLAIMER"
 msgstr "WICHTIGER RECHTLICHER HINWEIS"
 
@@ -939,9 +804,6 @@ msgstr "Wenn Sie einen speziellen auswählen"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Um das Thema richtig anzuwenden, ist es erforderlich, die Seite neu zu laden. Sind Sie sicher, dass Sie fortfahren möchten?"
 
-msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr "Damit wir Ihnen unsere Dienstleistungen zur Verfügung stellen können, müssen wir einige Informationen von Ihnen erhalten, um festzustellen, ob ein Produkt oder Service für Sie geeignet ist (ob Sie die Erfahrung und das Wissen besitzen, die damit verbundenen Risiken zu erkennen)"
-
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
 msgstr "In der EU werden Finanzprodukte von Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta angeboten, lizenziert und reguliert als Kategorie 3 Investment Dienstleistungsanbieter von der Malta Financial Services Authority (Lizenz Nr. IS/70156)."
 
@@ -954,9 +816,6 @@ msgstr ""
 msgid "In/Out"
 msgstr "Innerhalb/Außerhalb"
 
-msgid "Income Source"
-msgstr "Einkommensquelle"
-
 msgid "Indicative"
 msgstr "Indikativ"
 
@@ -965,15 +824,6 @@ msgstr "Richtkurs"
 
 msgid "Indicators"
 msgstr "Indikatoren"
-
-msgid "Indices trading experience"
-msgstr "Erfahrung im Indexhandel"
-
-msgid "Indices trading frequency"
-msgstr "Indexhandel Häufigkeit"
-
-msgid "Industry of Employment"
-msgstr "Beschäftigungsbranche"
 
 msgid "Instruments"
 msgstr "Instrument"
@@ -1017,9 +867,6 @@ msgstr "Jun"
 msgid "June"
 msgstr "Juni"
 
-msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "Klicken Sie auf den  Gewähren  Knopf auf der Seite, Sie werden nun weitergeleitet zu"
-
 msgid "Last 12 mnts Profitable Trades"
 msgstr "Profitable Trades der letzten 12 Monate"
 
@@ -1037,12 +884,6 @@ msgstr "Zuletzt verwendet"
 
 msgid "Less than"
 msgstr "Weniger als"
-
-msgid "Let's do it"
-msgstr "Machen wir das"
-
-msgid "Level of Education"
-msgstr "Ausbildunggrad"
 
 msgid "Line"
 msgstr "Linie"
@@ -1074,17 +915,11 @@ msgstr "Handelskopie wird geladen..."
 msgid "Loading Download/View Data ..."
 msgstr "Download/Daten Einsehen wird geladen ..."
 
-msgid "Loading MAM..."
-msgstr "MAM wird geladen..."
-
 msgid "Loading Password dialog ..."
 msgstr "Passwortdialog wird geladen ..."
 
 msgid "Loading Profit Table ..."
 msgstr "Gewinntabelle wird geladen ..."
-
-msgid "Loading Real account opening ..."
-msgstr "Echtgeld-Kontoeröffnung wird geladen ..."
 
 msgid "Loading Self-Exclusion ..."
 msgstr "Selbstausschluss wird geladen ..."
@@ -1133,9 +968,6 @@ msgstr "Lookbacks"
 
 msgid "Low"
 msgstr "Tief"
-
-msgid "Low Barrier"
-msgstr "Untere Schwelle"
 
 msgid "Low barrier"
 msgstr "Niedrige Schwelle"
@@ -1209,15 +1041,6 @@ msgstr "Min. Handelseinsatz"
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
 
-msgid "Minimum of 2 characters required"
-msgstr "Mindestens 2 Zeichen sind erforderlich"
-
-msgid "Minimum of 4 characters required"
-msgstr "Mindestens 4 Zeichen sind erforderlich"
-
-msgid "Minimum of 6 characters required"
-msgstr "Mindestens 6 Zeichen sind erforderlich"
-
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "Mindestens aus sechs Groß- und Kleinbuchstaben mit Zahlen"
 
@@ -1241,9 +1064,6 @@ msgstr "Mo"
 
 msgid "Monday"
 msgstr "Montag"
-
-msgid "Monthly Profitable Trades"
-msgstr "Monatliche Gewinn-Trades"
 
 msgid "Mother's maiden name"
 msgstr "Mädchenname der Mutter"
@@ -1287,14 +1107,8 @@ msgstr "Navigator Serienfarbe"
 msgid "Navigator series line"
 msgstr "Navigator Serienlinie"
 
-msgid "Net Annual Income"
-msgstr "Nettojahreseinkommen"
-
 msgid "Net Profit"
 msgstr "Nettogewinn"
-
-msgid "New Account"
-msgstr "Neues Konto"
 
 msgid "New password"
 msgstr "Aktuelles Passwort"
@@ -1307,9 +1121,6 @@ msgstr "Kein Ziel"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "Hinweis: Der Kontrakt wird, sobald der Auftrag von unseren Servern empfangen ist, zum dann geltenden Marktkurs verkauft. Dieser Kurs kann von den angegebenen Kursen abweichen."
-
-msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "Hinweis: Sie können nur ein Fiat-Währungskonto und ein Konto je Kryptowährung haben"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Bitte beachten: Die Abhebung über einen Zahlungsagenten ist nur möglich, wenn Sie auch über diesen Zahlungsagenten eingezahlt haben"
@@ -1329,9 +1140,6 @@ msgstr "OHLC"
 msgid "OK"
 msgstr "Okay"
 
-msgid "Occupation"
-msgstr "Beruf"
-
 msgid "Oct"
 msgstr "Okt"
 
@@ -1344,50 +1152,20 @@ msgstr "Ungerade"
 msgid "Ok"
 msgstr "Ok"
 
-msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr "Auf der Grundlage der von Ihnen bezüglich Ihrer Kenntnis und Erfahrung zur Verfügung gestellten Informationen sehen wir die über diese Website möglichen Anlagegeschäfte für Sie als nicht geeignet an"
-
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Wenn dieses Limit erreicht wird, können Sie keine weiteren Einzahlungen mehr vornehmen"
-
-msgid "One last step left"
-msgstr "Ein letzter Schritt"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Onlinehandel kann abhängig machen. Füllen Sie das Formular im Anschluss aus, um Ihre Teilnahme auf der Website zu begrenzen oder schicken Sie einen unterschriebenen Brief oder ein Fax an unser Kundenbetreuungsteam. Einmal eingerichtet, können Ihre Limits nur herabgesetzt werden. Die Limits, mit Ausnahme des Datums für den Selbstausschluss, das nicht aufgehoben oder geändert werden kann, sobald Sie dies bestätigt haben, können nur nach Ablauf von 7 Tagen aufgehoben oder gelockert werden. Um Ihre Limits zu löschen oder zu erhöhen, setzen Sie sich bitte in Verbindung mit"
 
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr "Es sind nur Buchstaben, Zahlen und Bindestriche erlaubt"
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr "Es sind nur Buchstaben, Zahlen, Leerzeichen, Bindestriche, Punkte und Apostrophe erlaubt"
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr "Es sind nur Buchstaben, Zahlen, Leerzeichen, Punkte, Beistriche und - / @ ' erlaubt"
-
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "Nur Buchstaben, Zahlen, Abstand, Punkt, Komma, Querstrich(-)"
-
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr "Es sind nur Buchstaben, Leerzeichen, Bindestriche, Punkte und Apostrophe erlaubt"
-
-msgid "Only numbers and space are allowed"
-msgstr "Es sind nur Zahlen und Leerzeichen erlaubt"
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr "Es sind nur Zahlen, Buchstaben und Bindestriche erlaubt"
 
 msgid "Open"
 msgstr "Offen"
 
-msgid "Open Account"
-msgstr "Konto eröffnen"
-
 msgid "Open a Financial Account"
 msgstr "Finanzkonto eröffnen"
-
-msgid "Open account"
-msgstr "Konto eröffnen"
 
 msgid "Opens"
 msgstr "Öffnet"
@@ -1401,12 +1179,6 @@ msgstr "Der Optionenhandel kann zu einer wirklichen Abhängigkeit führen, so wi
 msgid "Other"
 msgstr "Andere"
 
-msgid "Other financial instruments trading experience"
-msgstr "Sonstige Handelserfahrung mit Finanzinstrumenten"
-
-msgid "Other financial instruments trading frequency"
-msgstr "Sonstige Handelshäufigkeit mit Finanzinstrumenten"
-
 msgid "Over"
 msgstr "Über"
 
@@ -1416,17 +1188,8 @@ msgstr "Über 3 Jahre"
 msgid "Overlap Studies"
 msgstr "Überschneidende Studien"
 
-msgid "PEP Declaration"
-msgstr "PEP Erklärung"
-
 msgid "PM"
 msgstr "nachmittags"
-
-msgid "Password must be 6 characters minimum"
-msgstr "Passwort muss mindestens 6 Zeichen lang sein"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "Das Passwort muss Klein- und Großbuchstaben sowie Zahlen enthalten"
 
 msgid "Password successfully updated."
 msgstr "Passwort erfolgreich aktualisiert."
@@ -1458,18 +1221,6 @@ msgstr "Leistungs-Wahrscheinlichkeit"
 msgid "Permissions"
 msgstr "Genehmigungen"
 
-msgid "Personal Details"
-msgstr "Persönliche Angaben"
-
-msgid "Phone"
-msgstr "Telefon"
-
-msgid "Place of birth"
-msgstr "Geburtsort"
-
-msgid "Please"
-msgstr "Bitte"
-
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
 msgstr "Bitte [_1]akzeptieren Sie die aktualisierten allgemeinen Geschäftsbedingungen[_2], um Ihre Abhebe- und Handelslimits aufzuheben."
 
@@ -1479,9 +1230,6 @@ msgstr "Bitte [_1]vervollständigen Sie Ihr Kontoprofil[_2], um Ihre Abhebe- und
 msgid "Please choose at least one token scope"
 msgstr "Bitte wählen Sie zumindest einen Tokenbereich"
 
-msgid "Please choose which currency you would like to transact in"
-msgstr "Bitte wählen Sie die Währung, in der Sie die Transaktion vornehmen möchten"
-
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr "Füllen Sie bitte das [_1]finanzielle Beurteilungsformular[_2] aus, um Ihre Abhebe- und Handelslimits aufzuheben."
 
@@ -1490,9 +1238,6 @@ msgstr "Bitte bestätigen Sie die folgenden Angaben, um die Überweisung zu verv
 
 msgid "Please enter a number between"
 msgstr "Bitte geben Sie eine Zahl zwischen   ein"
-
-msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "Bitte geben Sie ein gültiges Datum im Format jjjj-mm-tt an"
 
 msgid "Please enter a valid value for"
 msgstr "Bitte geben Sie einen gültigen Wert ein für"
@@ -1506,9 +1251,6 @@ msgstr "Bitte geben Sie einen Wert größer als 0 ein"
 msgid "Please enter a value less than 6 weeks for time out until."
 msgstr "Bitte geben Sie einen Wert von weniger als 6 Wochen für eine Unterbrechung ein."
 
-msgid "Please enter correct email"
-msgstr "Bitte geben Sie eine korrekte E-Mail Adresse ein"
-
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Bitte geben Sie ein Datum im Format JJJJ-MM-TT an"
 
@@ -1520,9 +1262,6 @@ msgstr "Bitte geben Sie die Zeit im Format HH:MM an"
 
 msgid "Please enter your current password"
 msgstr "Geben Sie Ihr aktuelles Passwort ein"
-
-msgid "Please enter your email"
-msgstr "Bitte geben Sie Ihre E-Mail Adresse ein"
 
 msgid "Please input correct token"
 msgstr "Bitte geben Sie den richtigen Token ein"
@@ -1539,35 +1278,17 @@ msgstr "Bitte melden Sie sich an, um Ihren gespeicherten Arbeitsbereich einzuseh
 msgid "Please log in."
 msgstr "Melden Sie sich bitte an."
 
-msgid "Please provide your tax information"
-msgstr "Bitte geben Sie Ihre Steuerinformationen an"
-
-msgid "Please select"
-msgstr "Bitte auswählen"
-
 msgid "Please select a date for time out until."
 msgstr "Bitte wählen Sie ein Datum für die Unterbrechung bis"
 
 msgid "Please select a payment agent"
 msgstr "Bitte wählen Sie einen Zahlungsagent aus"
 
-msgid "Please select an account opening reason before continuing"
-msgstr "Bitte legen Sie einen Kontoeröffnung-Grund fest, bevor Sie fortfahren"
-
-msgid "Please set currency."
-msgstr "Bitte legen Sie eine Währung fest."
-
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr "Bitte legen Sie die [_1]Währung[_2] für Ihr Konto fest"
 
-msgid "Please submit a valid verification token"
-msgstr "Bitte übermitteln Sie einen gültigen Verifikationstoken"
-
 msgid "Please try again after 1 minute."
 msgstr "Bitte nach 1er Minute erneut versuchen."
-
-msgid "Please try again after few minutes."
-msgstr "Bitte nach wenigen Minuten erneut versuchen."
 
 msgid "Please use your new password to login."
 msgstr "Bitte verwenden Sie Ihr neues Passwort zum Login."
@@ -1583,9 +1304,6 @@ msgstr "Punkte"
 
 msgid "Portfolio"
 msgstr "Portfolio"
-
-msgid "Postal code/ZIP"
-msgstr "Postleitzahl/PLZ"
 
 msgid "Potential Payout"
 msgstr "Mögliche Auszahlung"
@@ -1614,9 +1332,6 @@ msgstr "Primär"
 msgid "Print chart"
 msgstr "Chart drucken"
 
-msgid "Professional Client"
-msgstr "Professioneller Kunde"
-
 msgid "Profit"
 msgstr "Gewinn"
 
@@ -1628,12 +1343,6 @@ msgstr "Gewinntabelle"
 
 msgid "Profit/ Loss"
 msgstr "Gewinn/Verlust"
-
-msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr "Nachweis der Adresse - Eine gescannte Kopie einer Abrechnung öffentlicher Versorgungsbetriebe oder eines Bankkontoauszuges, die nicht älter als drei Monate ist. Ihr Nachweis der Adresse muss Ihren Namen, Ihre Adresse, das Datum der Ausstellung und den Namen der ausstellenden Organisation beinhalten."
-
-msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "Identitätsnachweis - Eine gescannte Kopie Ihres Reisepasses, gültigen Führerscheins (entweder vorläufig oder endgültig), oder Personalausweises, auf dem Ihr voller Name und das Geburtsdatum erkennbar sind."
 
 msgid "Purchase"
 msgstr "Kauf"
@@ -1649,9 +1358,6 @@ msgstr ""
 
 msgid "Read"
 msgstr "Lesen"
-
-msgid "Real Money Account Opening"
-msgstr "Echtgeldkonto Eröffnung"
 
 msgid "Reality check"
 msgstr "Realitätscheck"
@@ -1671,9 +1377,6 @@ msgstr "Aktualisierung fehlgeschlagen"
 msgid "Register free account"
 msgstr "Gratis-Konto registrieren"
 
-msgid "Registration"
-msgstr "Anmeldung"
-
 msgid "Remove"
 msgstr "Entfernen"
 
@@ -1682,9 +1385,6 @@ msgstr "Auswahl entfernen"
 
 msgid "Rename"
 msgstr "Umbenennen"
-
-msgid "Repeat password"
-msgstr "Passwort wiederholen"
 
 msgid "Resale of this contract is not offered"
 msgstr "Weiterverkauf dieses Kontrakts wird nicht angeboten"
@@ -1743,17 +1443,8 @@ msgstr "Änderungen speichern"
 msgid "Saved"
 msgstr "Gespeichert"
 
-msgid "Second line of home address"
-msgstr "2. Zeile der Wohnadresse"
-
 msgid "Secondary"
 msgstr "Sekundär"
-
-msgid "Security"
-msgstr "Sicherheit"
-
-msgid "Security question"
-msgstr "Sicherheitsfrage"
 
 msgid "Seems like our servers are down, we are working on fixing it."
 msgstr "Es scheint, dass unsere Server heruntergefahren sind, wir arbeiten daran, dies zu beheben."
@@ -1803,9 +1494,6 @@ msgstr "Verkauft"
 msgid "Some random index"
 msgstr "Ein zufälliger Index"
 
-msgid "Source of wealth"
-msgstr "Quelle des Vermögens"
-
 msgid "Spline"
 msgstr "Spline"
 
@@ -1836,9 +1524,6 @@ msgstr "Beginnen Sie zu Handeln"
 msgid "Start time"
 msgstr "Startzeit"
 
-msgid "State/province/region"
-msgstr "Staat/Provinz/Region"
-
 msgid "Statement"
 msgstr "Kontoauszug"
 
@@ -1853,12 +1538,6 @@ msgstr "Bleibt Innerhalb/Geht Außerhalb"
 
 msgid "Stays in"
 msgstr "Bleibt innerhalb"
-
-msgid "Stocks trading experience"
-msgstr "Erfahrung im Aktienhandel"
-
-msgid "Stocks trading frequency"
-msgstr "Aktienhandel Häufigkeit"
 
 msgid "Stop-loss"
 msgstr "Stop-Loss"
@@ -1896,21 +1575,6 @@ msgstr "Sonntag"
 msgid "Table"
 msgstr "Tabelle"
 
-msgid "Tax Information"
-msgstr "Steuerinformationen"
-
-msgid "Tax Information successfully updated"
-msgstr "Steuerinformationen erfolgreich aktualisiert"
-
-msgid "Tax identification number"
-msgstr "Steuer-Identifizierungsnummer"
-
-msgid "Tax information"
-msgstr "Steuerinformation"
-
-msgid "Tax residence"
-msgstr "Steuerdomizil"
-
 msgid "Tel"
 msgstr "Tel"
 
@@ -1946,12 +1610,6 @@ msgstr "Die"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "Das Unternehmen unterhält Kundengelder auf von den betrieblichen Konten getrennten Bankkonten, die im Fall einer Insolvenz keinen Anteil am Firmenvermögen darstellen. Dies entspricht nach den Vorschriften der Glücksspielbehörden zur Abtrennung von Kundenvermögen dem Grad"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr "Die Finanzhandelsdienstleistungen, die diese Site enthält, eignen sich nur für Kunden, die einen Verlust ihres gesamten investierten Geldes verkraften können und die die Risiken erkennen, die mit dem Erwerb von Finanzverträgen im Zusammenhang stehen und damit Erfahrung haben. Transaktionen mit Finanzkontrakten beinhalten ein hohes Risiko. Wenn erworbene Kontrakte wertlos auslaufen, geht Ihre gesamte Investition, die aus der Kontraktprämie besteht, verloren"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "Die Finanzhandelsdienste, die diese Site enthält, eignen sich nur für Kunden, die einen Verlust ihres gesamten investierten Geldes verkraften können und die die Risiken erkennen, die mit dem Erwerb von Finanzverträgen im Zusammenhang stehen und damit Erfahrung haben. Transaktionen mit Finanzkontrakten beinhalten ein hohes Risiko. Wenn erworbene Kontrakte wertlos auslaufen, geht Ihre gesamte Investition, die aus der Kontraktprämie besteht, verloren"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Es gab eine Markt-Datenstörung während der Kontraktlaufzeit. Wir werden versuchen dies für Echtgeldkonten zu korrigieren und den Kontrakt ordnungsgemäß zu regeln, anderenfalls wird der Kontrakt storniert und erstattet. Virtuelle Konten werden storniert und erstattet."
@@ -2073,9 +1731,6 @@ msgstr "Ziel/kein Ziel"
 msgid "Tourism"
 msgstr "Tourismus"
 
-msgid "Town/City"
-msgstr "Ort/Stadt"
-
 msgid "Trade"
 msgstr "Handel"
 
@@ -2096,12 +1751,6 @@ msgstr "Trader Statistiken"
 
 msgid "Trades Profitability"
 msgstr "Trade Profitabilität"
-
-msgid "Trades break down"
-msgstr "Trade Break-Down"
-
-msgid "Trading Experience"
-msgstr "Handelserfahrung"
 
 msgid "Trading Times"
 msgstr "Handelszeiten"
@@ -2172,9 +1821,6 @@ msgstr "Verwenden Sie die „Speichern unter ...” Schaltfläche, um die Handel
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr "Verschiedene anpassbare Funktionen; wie das Laden und Arrangieren von Anlagen, Diagramme und andere Rohstoffe, wie es Ihnen passt"
 
-msgid "Verification code has been sent to your email"
-msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-Mail verschickt wurde, ein"
-
 msgid "Verification code sent to"
 msgstr "Bestätigungs-Code geschickt an"
 
@@ -2217,12 +1863,6 @@ msgstr "Mittwoch"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Willkommen bei Binary.com Webtrader"
 
-msgid "What is pep?"
-msgstr "Was ist Pep?"
-
-msgid "What is this?"
-msgstr "Was ist das?"
-
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr "Wenn Sie auf 'Ok' klicken, werden Sie bis zum ausgewählten Datum vom Handel auf dieser Site ausgeschlossen."
 
@@ -2256,9 +1896,6 @@ msgstr "Y-Achse Gitternetzlinie"
 msgid "Y-axis labels"
 msgstr "Y-Achse Labels"
 
-msgid "Yearly Profitable Trades"
-msgstr "Jährliche Gewinn-Trades"
-
 msgid "Yes"
 msgstr "Ja"
 
@@ -2277,9 +1914,6 @@ msgstr "Sie haben noch keine Vorlagen gespeichert"
 msgid "You pay"
 msgstr "Sie zahlen"
 
-msgid "You should enter between 6-25 characters."
-msgstr "Sie müssen zwischen 6 - 25 Zeichen eingeben."
-
 msgid "You will be automatically logged out after such time"
 msgstr "Sie werden nach dieser Zeit automatisch abgemeldet"
 
@@ -2288,9 +1922,6 @@ msgstr "Sie möchten anderen Händlern erlauben, Ihr Geschäft nachzumachen"
 
 msgid "You wish to copy another trader's trades"
 msgstr "Sie möchten das Geschäft anderer Händler nachmachen"
-
-msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr "Ihr Binary.com Konto ist erstellt, aber um mit dem Handeln zu beginnen, müssen Sie Webtrader erlauben darauf zuzugreifen"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr "Ihr Konto (%) ist gesperrt, bitte kontaktieren Sie den Kunden-Support für weitere Informationen."
@@ -2309,9 +1940,6 @@ msgstr "Ihre Änderungen wurden aktualisiert"
 
 msgid "Your copying settings"
 msgstr "Ihre Kopie-Einstellungen"
-
-msgid "Your email"
-msgstr "Ihre E-Mail"
 
 msgid "Your new account balance is"
 msgstr "Ihr neuer Kontostand beträgt"
@@ -2334,14 +1962,8 @@ msgstr "und"
 msgid "apostrophe (') are allowed"
 msgstr "Apostrophe (') sind erlaubt"
 
-msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "nachfolgend und mit der Kontoeröffnung fortfahren, müssen Sie beachten, dass Sie sich selbst Risiken aussetzen können (die erheblich sind, einschließlich des Verlusts des gesamten investierten Betrags), wenn Sie nicht das Wissen und die Erfahrung haben, diese richtig zu beurteilen oder abzuschwächen"
-
 msgid "commission"
 msgstr "Provision"
-
-msgid "contact support"
-msgstr "Support kontaktieren"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr "erstellen Sie einen Read-only Token und teilen Sie den Token mit Ihren Kopierern"
@@ -2381,9 +2003,6 @@ msgstr "Stunde"
 
 msgid "hours"
 msgstr "Stunden"
-
-msgid "if this is not your country of residence"
-msgstr "Dies ist nicht Ihr Wohnsitzland"
 
 msgid "in the future, the"
 msgstr "in der Zukunft, die"
@@ -2457,9 +2076,6 @@ msgstr "Sitzungsübersicht"
 msgid "start time"
 msgstr "Startzeit"
 
-msgid "terms and conditions"
-msgstr "allgemeine Bedingungen"
-
 msgid "the"
 msgstr "der"
 
@@ -2483,6 +2099,390 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Rendite"
+
+#~ msgid "Account authentication"
+#~ msgstr "Kontoauthentifizierung"
+
+#~ msgid "Account opening"
+#~ msgstr "Kontoeröffnung"
+
+#~ msgid "Account opening reason"
+#~ msgstr "Kontoeröffnungs-Grund"
+
+#~ msgid "Address"
+#~ msgstr "Adresse"
+
+#~ msgid "Allow others to copy your trades"
+#~ msgstr "Erlauben Sie anderen, Ihre Trades zu kopieren"
+
+#~ msgid "Answer"
+#~ msgstr "Antwort"
+
+#~ msgid "Anticipated account turnover"
+#~ msgstr "Erwarteter Kontoumsatz"
+
+#~ msgid "Appropriateness Test: WARNING"
+#~ msgstr "Angemessenheitstest: ACHTUNG"
+
+#~ msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
+#~ msgstr "Bestätigen Sie jetzt Ihr Konto, indem Sie Ihre Identität und Adresse überprüfen. Um fortzufahren, senden Sie einfach die folgenden Dokumente an %1:"
+
+#~ msgid "Available Currencies"
+#~ msgstr "Verfügbare Währungen"
+
+#~ msgid "Avg. Duration"
+#~ msgstr "Durchschnittliche Dauer"
+
+#~ msgid "Binary options or other financial derivatives trading experience"
+#~ msgstr "Erfahrung mit Binären Optionen oder Handel mit anderen Finanzderivaten"
+
+#~ msgid "Binary options or other financial derivatives trading frequency"
+#~ msgstr "Handelshäufigkeit mit Binären Optionen oder anderen Finanzderivaten"
+
+#~ msgid "Binary options trading experience"
+#~ msgstr "Binäre Optionen Handelserfahrung"
+
+#~ msgid "Binary options trading frequency"
+#~ msgstr "Binäre Optionen Handelshäufigkeit"
+
+#~ msgid "By clicking"
+#~ msgstr "Indem Sie klicken"
+
+#~ msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
+#~ msgstr "Standardmäßig werden alle Kunden als Einzelhandelskunden behandelt. Würden Sie es bevorzugen, als professioneller Kunde behandelt zu werden, sollten Sie die erforderlichen Kriterien erfüllen?"
+
+#~ msgid "CFD trading experience"
+#~ msgstr "CFD Handelserfahrung"
+
+#~ msgid "CFD trading frequency"
+#~ msgstr "CFD Handelshäufigkeit"
+
+#~ msgid "Choose password"
+#~ msgstr "Passwort auswählen"
+
+#~ msgid "Citizenship"
+#~ msgstr "Staatsbürgerschaft"
+
+#~ msgid "Commodities trading experience"
+#~ msgstr "Erfahrung im Rohstoffhandel"
+
+#~ msgid "Commodities trading frequency"
+#~ msgstr "Häufigkeit im Rohstoffhandel"
+
+#~ msgid "Continue"
+#~ msgstr "Fortfahren"
+
+#~ msgid "Copy Trade"
+#~ msgstr "Kopierter Handel"
+
+#~ msgid "Country of residence"
+#~ msgstr "Wohnsitzland"
+
+#~ msgid "Date of birth"
+#~ msgstr "Geburtsdatum"
+
+#~ msgid "Decline"
+#~ msgstr "Ablehnen"
+
+#~ msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
+#~ msgstr "Wegen der kürzlich vorgenommenen Änderungen der Vorschriften sind wir gezwungen, unsere Kunden zu bitten, die folgende Finanzielle Beurteilung auszufüllen. Bitte beachten Sie, dass Sie, bis diese ausgefüllt ist, nicht weiter Handel treiben können"
+
+#~ msgid "Email verification failed"
+#~ msgstr "E-Mail-Überprüfung fehlgeschlagen"
+
+#~ msgid "Employment status"
+#~ msgstr "Beschäftigungsstatus"
+
+#~ msgid "Estimated Net Worth"
+#~ msgstr "Geschätztes Nettovermögen"
+
+#~ msgid "Family name"
+#~ msgstr "Familienname"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Finanzkonto-Eröffnungsform"
+
+#~ msgid "Financial Assessment"
+#~ msgstr "Finanzielle Bewertung"
+
+#~ msgid "Financial Information"
+#~ msgstr "Finanzinformationen"
+
+#~ msgid "Financial information"
+#~ msgstr "Finanzinformation"
+
+#~ msgid "First line of home address"
+#~ msgstr "1. Zeile der Privatanschrift"
+
+#~ msgid "First name"
+#~ msgstr "Vorname"
+
+#~ msgid "Forex trading experience"
+#~ msgstr "Erfahrung im Devisenhandel"
+
+#~ msgid "Forex trading frequency"
+#~ msgstr "Devisenhandel Häufigkeit"
+
+#~ msgid "I acknowledge that I am not a politically exposed person (PEP)"
+#~ msgstr "Ich bestätige hiermit, dass ich keine politisch exponierte Person (PEP) bin"
+
+#~ msgid "I have read and agree to Binary.com"
+#~ msgstr "Ich habe gelesen und akzeptiere die Binary.com"
+
+#~ msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
+#~ msgstr "Hiermit bestätige ich, dass die von mir angegebenen Steuerinformationen wahr und vollständig sind. Ich werde Binary Investments (Europe) Ltd. auch über Änderungen dieser Angaben informieren"
+
+#~ msgid "I want to be treated as a professional client"
+#~ msgstr "Ich möchte als professioneller Kunde behandelt werden"
+
+#~ msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
+#~ msgstr "Damit wir Ihnen unsere Dienstleistungen zur Verfügung stellen können, müssen wir einige Informationen von Ihnen erhalten, um festzustellen, ob ein Produkt oder Service für Sie geeignet ist (ob Sie die Erfahrung und das Wissen besitzen, die damit verbundenen Risiken zu erkennen)"
+
+#~ msgid "Income Source"
+#~ msgstr "Einkommensquelle"
+
+#~ msgid "Indices trading experience"
+#~ msgstr "Erfahrung im Indexhandel"
+
+#~ msgid "Indices trading frequency"
+#~ msgstr "Indexhandel Häufigkeit"
+
+#~ msgid "Industry of Employment"
+#~ msgstr "Beschäftigungsbranche"
+
+#~ msgid "Just click  Grant  button on the page you will now be taken to"
+#~ msgstr "Klicken Sie auf den  Gewähren  Knopf auf der Seite, Sie werden nun weitergeleitet zu"
+
+#~ msgid "Let's do it"
+#~ msgstr "Machen wir das"
+
+#~ msgid "Level of Education"
+#~ msgstr "Ausbildunggrad"
+
+#~ msgid "Loading MAM..."
+#~ msgstr "MAM wird geladen..."
+
+#~ msgid "Loading Real account opening ..."
+#~ msgstr "Echtgeld-Kontoeröffnung wird geladen ..."
+
+#~ msgid "Low Barrier"
+#~ msgstr "Untere Schwelle"
+
+#~ msgid "Minimum of 2 characters required"
+#~ msgstr "Mindestens 2 Zeichen sind erforderlich"
+
+#~ msgid "Minimum of 4 characters required"
+#~ msgstr "Mindestens 4 Zeichen sind erforderlich"
+
+#~ msgid "Minimum of 6 characters required"
+#~ msgstr "Mindestens 6 Zeichen sind erforderlich"
+
+#~ msgid "Monthly Profitable Trades"
+#~ msgstr "Monatliche Gewinn-Trades"
+
+#~ msgid "Net Annual Income"
+#~ msgstr "Nettojahreseinkommen"
+
+#~ msgid "New Account"
+#~ msgstr "Neues Konto"
+
+#~ msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+#~ msgstr "Hinweis: Sie können nur ein Fiat-Währungskonto und ein Konto je Kryptowährung haben"
+
+#~ msgid "Occupation"
+#~ msgstr "Beruf"
+
+#~ msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
+#~ msgstr "Auf der Grundlage der von Ihnen bezüglich Ihrer Kenntnis und Erfahrung zur Verfügung gestellten Informationen sehen wir die über diese Website möglichen Anlagegeschäfte für Sie als nicht geeignet an"
+
+#~ msgid "One last step left"
+#~ msgstr "Ein letzter Schritt"
+
+#~ msgid "Only letters, numbers, hyphen are allowed"
+#~ msgstr "Es sind nur Buchstaben, Zahlen und Bindestriche erlaubt"
+
+#~ msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "Es sind nur Buchstaben, Zahlen, Leerzeichen, Bindestriche, Punkte und Apostrophe erlaubt"
+
+#~ msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+#~ msgstr "Es sind nur Buchstaben, Zahlen, Leerzeichen, Punkte, Beistriche und - / @ ' erlaubt"
+
+#~ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "Es sind nur Buchstaben, Leerzeichen, Bindestriche, Punkte und Apostrophe erlaubt"
+
+#~ msgid "Only numbers and space are allowed"
+#~ msgstr "Es sind nur Zahlen und Leerzeichen erlaubt"
+
+#~ msgid "Only numbers, letters, hyphens are allowed"
+#~ msgstr "Es sind nur Zahlen, Buchstaben und Bindestriche erlaubt"
+
+#~ msgid "Open Account"
+#~ msgstr "Konto eröffnen"
+
+#~ msgid "Open account"
+#~ msgstr "Konto eröffnen"
+
+#~ msgid "Other financial instruments trading experience"
+#~ msgstr "Sonstige Handelserfahrung mit Finanzinstrumenten"
+
+#~ msgid "Other financial instruments trading frequency"
+#~ msgstr "Sonstige Handelshäufigkeit mit Finanzinstrumenten"
+
+#~ msgid "PEP Declaration"
+#~ msgstr "PEP Erklärung"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "Passwort muss mindestens 6 Zeichen lang sein"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "Das Passwort muss Klein- und Großbuchstaben sowie Zahlen enthalten"
+
+#~ msgid "Personal Details"
+#~ msgstr "Persönliche Angaben"
+
+#~ msgid "Phone"
+#~ msgstr "Telefon"
+
+#~ msgid "Place of birth"
+#~ msgstr "Geburtsort"
+
+#~ msgid "Please"
+#~ msgstr "Bitte"
+
+#~ msgid "Please choose which currency you would like to transact in"
+#~ msgstr "Bitte wählen Sie die Währung, in der Sie die Transaktion vornehmen möchten"
+
+#~ msgid "Please enter a valid date in yyyy-mm-dd format"
+#~ msgstr "Bitte geben Sie ein gültiges Datum im Format jjjj-mm-tt an"
+
+#~ msgid "Please enter correct email"
+#~ msgstr "Bitte geben Sie eine korrekte E-Mail Adresse ein"
+
+#~ msgid "Please enter your email"
+#~ msgstr "Bitte geben Sie Ihre E-Mail Adresse ein"
+
+#~ msgid "Please provide your tax information"
+#~ msgstr "Bitte geben Sie Ihre Steuerinformationen an"
+
+#~ msgid "Please select"
+#~ msgstr "Bitte auswählen"
+
+#~ msgid "Please select an account opening reason before continuing"
+#~ msgstr "Bitte legen Sie einen Kontoeröffnung-Grund fest, bevor Sie fortfahren"
+
+#~ msgid "Please set currency."
+#~ msgstr "Bitte legen Sie eine Währung fest."
+
+#~ msgid "Please submit a valid verification token"
+#~ msgstr "Bitte übermitteln Sie einen gültigen Verifikationstoken"
+
+#~ msgid "Please try again after few minutes."
+#~ msgstr "Bitte nach wenigen Minuten erneut versuchen."
+
+#~ msgid "Postal code/ZIP"
+#~ msgstr "Postleitzahl/PLZ"
+
+#~ msgid "Professional Client"
+#~ msgstr "Professioneller Kunde"
+
+#~ msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
+#~ msgstr "Nachweis der Adresse - Eine gescannte Kopie einer Abrechnung öffentlicher Versorgungsbetriebe oder eines Bankkontoauszuges, die nicht älter als drei Monate ist. Ihr Nachweis der Adresse muss Ihren Namen, Ihre Adresse, das Datum der Ausstellung und den Namen der ausstellenden Organisation beinhalten."
+
+#~ msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
+#~ msgstr "Identitätsnachweis - Eine gescannte Kopie Ihres Reisepasses, gültigen Führerscheins (entweder vorläufig oder endgültig), oder Personalausweises, auf dem Ihr voller Name und das Geburtsdatum erkennbar sind."
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Echtgeldkonto Eröffnung"
+
+#~ msgid "Registration"
+#~ msgstr "Anmeldung"
+
+#~ msgid "Repeat password"
+#~ msgstr "Passwort wiederholen"
+
+#~ msgid "Second line of home address"
+#~ msgstr "2. Zeile der Wohnadresse"
+
+#~ msgid "Security"
+#~ msgstr "Sicherheit"
+
+#~ msgid "Security question"
+#~ msgstr "Sicherheitsfrage"
+
+#~ msgid "Source of wealth"
+#~ msgstr "Quelle des Vermögens"
+
+#~ msgid "State/province/region"
+#~ msgstr "Staat/Provinz/Region"
+
+#~ msgid "Stocks trading experience"
+#~ msgstr "Erfahrung im Aktienhandel"
+
+#~ msgid "Stocks trading frequency"
+#~ msgstr "Aktienhandel Häufigkeit"
+
+#~ msgid "Tax Information"
+#~ msgstr "Steuerinformationen"
+
+#~ msgid "Tax Information successfully updated"
+#~ msgstr "Steuerinformationen erfolgreich aktualisiert"
+
+#~ msgid "Tax identification number"
+#~ msgstr "Steuer-Identifizierungsnummer"
+
+#~ msgid "Tax information"
+#~ msgstr "Steuerinformation"
+
+#~ msgid "Tax residence"
+#~ msgstr "Steuerdomizil"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
+#~ msgstr "Die Finanzhandelsdienstleistungen, die diese Site enthält, eignen sich nur für Kunden, die einen Verlust ihres gesamten investierten Geldes verkraften können und die die Risiken erkennen, die mit dem Erwerb von Finanzverträgen im Zusammenhang stehen und damit Erfahrung haben. Transaktionen mit Finanzkontrakten beinhalten ein hohes Risiko. Wenn erworbene Kontrakte wertlos auslaufen, geht Ihre gesamte Investition, die aus der Kontraktprämie besteht, verloren"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+#~ msgstr "Die Finanzhandelsdienste, die diese Site enthält, eignen sich nur für Kunden, die einen Verlust ihres gesamten investierten Geldes verkraften können und die die Risiken erkennen, die mit dem Erwerb von Finanzverträgen im Zusammenhang stehen und damit Erfahrung haben. Transaktionen mit Finanzkontrakten beinhalten ein hohes Risiko. Wenn erworbene Kontrakte wertlos auslaufen, geht Ihre gesamte Investition, die aus der Kontraktprämie besteht, verloren"
+
+#~ msgid "Town/City"
+#~ msgstr "Ort/Stadt"
+
+#~ msgid "Trades break down"
+#~ msgstr "Trade Break-Down"
+
+#~ msgid "Trading Experience"
+#~ msgstr "Handelserfahrung"
+
+#~ msgid "Verification code has been sent to your email"
+#~ msgstr "Bitte geben Sie den Verifizierungscode, der an Ihre E-Mail verschickt wurde, ein"
+
+#~ msgid "What is pep?"
+#~ msgstr "Was ist Pep?"
+
+#~ msgid "What is this?"
+#~ msgstr "Was ist das?"
+
+#~ msgid "Yearly Profitable Trades"
+#~ msgstr "Jährliche Gewinn-Trades"
+
+#~ msgid "You should enter between 6-25 characters."
+#~ msgstr "Sie müssen zwischen 6 - 25 Zeichen eingeben."
+
+#~ msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+#~ msgstr "Ihr Binary.com Konto ist erstellt, aber um mit dem Handeln zu beginnen, müssen Sie Webtrader erlauben darauf zuzugreifen"
+
+#~ msgid "Your email"
+#~ msgstr "Ihre E-Mail"
+
+#~ msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
+#~ msgstr "nachfolgend und mit der Kontoeröffnung fortfahren, müssen Sie beachten, dass Sie sich selbst Risiken aussetzen können (die erheblich sind, einschließlich des Verlusts des gesamten investierten Betrags), wenn Sie nicht das Wissen und die Erfahrung haben, diese richtig zu beurteilen oder abzuschwächen"
+
+#~ msgid "contact support"
+#~ msgstr "Support kontaktieren"
+
+#~ msgid "if this is not your country of residence"
+#~ msgstr "Dies ist nicht Ihr Wohnsitzland"
+
+#~ msgid "terms and conditions"
+#~ msgstr "allgemeine Bedingungen"
 
 #~ msgid "(One) Touch trades"
 #~ msgstr "(Einmalige) Zielkontrakte"
