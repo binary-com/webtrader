@@ -337,6 +337,7 @@
     background-image: none;
     border-radius: 2px;
     font-weight: normal;
+    text-align: center;
     position: relative;
     box-shadow: none;
   }
@@ -345,7 +346,6 @@
     .chosen-single {
       box-shadow: none;
       border: 1px solid #F2F2F2;
-      text-align: center;
       padding: 0;
       > span {
         width: calc(100% - 10px);
