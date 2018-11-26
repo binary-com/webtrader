@@ -303,11 +303,11 @@ export const createBlankWindow = function($html,options) {
       at: 'center',
       of: window,
       title: 'Blank window'.i18n(),
-      hide: 'fade',
       icons: {
          close: 'custom-icon-close',
          minimize: 'custom-icon-minimize',
-         maximize: 'custom-icon-maximize'
+         maximize: 'custom-icon-maximize',
+         restore: 'custom-icon-restore'
       },
    }, options || {});
    options.minWidth = options.minWidth || options.width;
