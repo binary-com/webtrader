@@ -87,9 +87,9 @@ const getEUMarkets = (markets) => {
 
 const getMarketsSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
-    const select_market_submarket = {};
     const checked_eu_markets = getEUMarkets(markets);
     console.log(checked_eu_markets)
+    const select_market_submarket = {}
     checked_eu_markets.forEach((market) => {
         select_market_submarket[market.display_name] = {};
         market.submarkets.forEach((select_submarket) => {
