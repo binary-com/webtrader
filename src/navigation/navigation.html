@@ -105,8 +105,16 @@
                 </a>
                 <ul>
                   <a class="link real-account" href="javascript:;" rv-show="show_financial_link | or show_realaccount_link | or show_new_account_link">
-                    <li rv-show="show_financial_link | negate | and show_realaccount_link">Upgrade to a Real Account</li>
-                    <li rv-show="show_financial_link">Open a Financial Account</li>
+                    <li
+                      rv-on-click="openRealAccount"
+                      rv-show="show_financial_link | negate | and show_realaccount_link">
+                      Upgrade to a Real Account
+                    </li>
+                    <li
+                      rv-on-click="openFinancialAccountMF"
+                      rv-show="show_financial_link">
+                      Open a Financial Account
+                    </li>
                     <li rv-show="show_new_account_link">Create Account</li>
                   </a>
                   <div rv-show="show_financial_link | or show_realaccount_link | or show_new_account_link" class="separator-line-thin-gray"></div>
@@ -140,9 +148,6 @@
                   <a class="link copytrade" href="javascript:;">
                     <li>Copy Trading</li>
                   </a>
-                  <!--<a class="link mam" href="javascript:;">-->
-                    <!--<li>MAM</li>-->
-                  <!--</a>-->
                   <a class="link change-password" href="javascript:;">
                     <li>Change password</li>
                   </a>
