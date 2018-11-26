@@ -62,6 +62,7 @@ img.reload {
     background-repeat:no-repeat;
     background-size:contain;
     color: white;
+    right: 2px;
 }
 .ui-dialog-titlebar-restore, .ui-dialog-titlebar-restore:hover {
     margin-left:4px;
