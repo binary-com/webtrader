@@ -88,8 +88,7 @@ const getEUMarkets = (markets) => {
 const getMarketsSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
     const checked_eu_markets = getEUMarkets(markets);
-    console.log(checked_eu_markets)
-    const select_market_submarket = {}
+    const select_market_submarket = {};
     checked_eu_markets.forEach((market) => {
         select_market_submarket[market.display_name] = {};
         market.submarkets.forEach((select_submarket) => {
@@ -205,7 +204,6 @@ const refreshTable = () => {
         .then((results) => {
                 state.table.asset_data = [...results[1].asset_index];
                 state.dropdown.market_submarkets = getMarketsSubmarkets(Object.assign(results[0]));
-                console.log(state.dropdown.market_submarkets)
                 header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
                 marketsChanged(state.dropdown.market_submarkets);
