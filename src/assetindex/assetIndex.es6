@@ -61,12 +61,8 @@ const state = {
     },
     search: function (event, model) {
         model.table.display_asset_data = [];
-        let value = model.table.search_input.toLowerCase();
-        model.table.asset_data_extract.forEach((asset, index) => {
-            if (asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1) {
-                model.table.display_asset_data.push(asset);
-            }
-        });
+        const value = model.table.search_input.toLowerCase();
+        model.table.display_asset_data = model.table.asset_data_extract.filter((asset) => asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1);
         model.dropdown.is_volatility = checkVolatility(model.dropdown.selected_market, model.dropdown.display_markets);
     }
 }
@@ -76,31 +72,34 @@ const checkVolatility = (market_name, market_names) => {
     const is_volatility = market_name.indexOf(volatility_indices) !== -1;
     return is_volatility;
 }
-const checkEU = (markets) => {
-    const volatility_indices = markets[3].name;
-    markets.filter(market => {
-        const loginId = (local_storage.get('authorize') || {}).loginid || '';
-        return (/MF/gi.test(loginId) && market.name !== volatility_indices)
-                || (/MLT/gi.test(loginId) && market.name === volatility_indices)
-                || (/MX/gi.test(loginId) && market.name === volatility_indices)
+
+const getEUMarkets = (markets) => {
+    const volatility_index_name = markets[3].name;
+    const loginId = (local_storage.get('authorize') || {}).loginid || '';
+    markets = markets.filter(market => {
+        return (/MF/gi.test(loginId) && market.name !== volatility_index_name)
+                || (/MLT/gi.test(loginId) && market.name === volatility_index_name)
+                || (/MX/gi.test(loginId) && market.name === volatility_index_name)
                 || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
       });
     return markets;
 }
+
 const getMarketsSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
     const select_market_submarket = {};
-    const checked_eu_markets = checkEU(markets);
+    const checked_eu_markets = getEUMarkets(markets);
+    console.log(checked_eu_markets)
     checked_eu_markets.forEach((market) => {
         select_market_submarket[market.display_name] = {};
-        
-        market.submarkets.forEach((select_market) => {
-            select_market_submarket[market.display_name][select_market.display_name]
-              = select_market.instruments.map((symbol) => symbol.display_name);
+        market.submarkets.forEach((select_submarket) => {
+            select_market_submarket[market.display_name][select_submarket.display_name]
+              = select_submarket.instruments.map((symbol) => symbol.display_name);
         });
     });
     return select_market_submarket;
 }
+
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
         state.dropdown.selected_market = market_name;
@@ -139,10 +138,10 @@ const refreshTable = () => {
                 }
                 return props;
             });
-        console.log(rows)
         state.table.display_asset_data = rows;
         state.table.asset_data_extract = rows;
     }
+
     const updateHeader = () => {
         state.table.display_headers = [];
         state.table.asset_data.forEach(asset => {
@@ -159,6 +158,7 @@ const refreshTable = () => {
             })
         })
     }
+
     const marketsChanged = (market_submarkets) => {
         if (!state.dropdown.display_markets) {
             state.dropdown.display_markets = windows
@@ -177,6 +177,7 @@ const refreshTable = () => {
             state.dropdown.display_markets.update_list(Object.keys(market_submarkets));
         }
     }
+
     const submarketsChanged = (market_submarkets) => {
         if (!state.dropdown.display_submarkets) {
             state.dropdown.display_submarkets = windows
@@ -193,7 +194,9 @@ const refreshTable = () => {
             state.dropdown.display_submarkets.update_list(Object.keys(market_submarkets[state.dropdown.display_markets.val()]));
           }
     }
+
     const processing_msg = $(`#${table.attr('id')}_processing`).show();
+
     Promise.all(
             [
                 liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
@@ -202,6 +205,7 @@ const refreshTable = () => {
         .then((results) => {
                 state.table.asset_data = [...results[1].asset_index];
                 state.dropdown.market_submarkets = getMarketsSubmarkets(Object.assign(results[0]));
+                console.log(state.dropdown.market_submarkets)
                 header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
                 marketsChanged(state.dropdown.market_submarkets);
@@ -215,6 +219,7 @@ const refreshTable = () => {
         });
     
 }
+
 const initAssetWin = ($html) => {
     $html = $($html).i18n();
     table = $html.filter('table');
