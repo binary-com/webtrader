@@ -510,6 +510,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     _.assign(state.date_start, options);
 
     if (selected_date !== 'now' && +state.date_start.selected_future_time !== +selected_date) {
+      state.date_start.selected_future_time = selected_date;
       state.setDateStartHour(selected_date);
     }
 
