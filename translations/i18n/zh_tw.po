@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-11-23 09:50\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Chinese Traditional\n"
-"Language: zh_TW\n"
-"PO-Revision-Date: 2018-11-23 09:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -174,9 +174,6 @@ msgstr "接受"
 msgid "Accessible from any web browser in 13 languages"
 msgstr "使用任何瀏覽器，通過13種語言存取"
 
-msgid "Account authentication"
-msgstr "帳戶驗證"
-
 msgid "Account balance"
 msgstr "帳戶餘額"
 
@@ -185,12 +182,6 @@ msgstr "帳戶餘額："
 
 msgid "Account id not found."
 msgstr "找不到帳戶 id。"
-
-msgid "Account opening"
-msgstr "帳戶開立"
-
-msgid "Account opening reason"
-msgstr "開立帳戶的原因"
 
 msgid "Account token not found."
 msgstr "找不到帳戶權杖。"
@@ -222,9 +213,6 @@ msgstr "新增/刪除指標"
 msgid "Added new workspace %"
 msgstr "新增工作區%"
 
-msgid "Address"
-msgstr "地址"
-
 msgid "Admin"
 msgstr "管理中心"
 
@@ -233,9 +221,6 @@ msgstr "所有欄位為可選項。如果想要複製所有資產和交易類型
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "所有時間均採用格林威治標準時間（GMT）"
-
-msgid "Allow others to copy your trades"
-msgstr "允許他人複製您的交易"
 
 msgid "Amount"
 msgstr "金額"
@@ -246,20 +231,11 @@ msgstr "數額最小: 10 最大: 2000"
 msgid "Amount per point"
 msgstr "每點之金額"
 
-msgid "Answer"
-msgstr "答案"
-
-msgid "Anticipated account turnover"
-msgstr "預期的帳戶交易額"
-
 msgid "Apply"
 msgstr "申請"
 
 msgid "Apply to become a Binary.com"
 msgstr "申請成為Binary.com"
-
-msgid "Appropriateness Test: WARNING"
-msgstr "合適性測試:警告"
 
 msgid "Apr"
 msgstr "四月"
@@ -303,15 +279,6 @@ msgstr "八月"
 msgid "August"
 msgstr "八月"
 
-msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr "請提交身份與地址證明，立刻進行帳戶驗證。繼續操作，請發送以下文件到%1:"
-
-msgid "Available Currencies"
-msgstr "可用的貨幣"
-
-msgid "Avg. Duration"
-msgstr "平均持續時間"
-
 msgid "Avg. Duration of Open Positions"
 msgstr "持倉頭寸的平均持續期"
 
@@ -335,18 +302,6 @@ msgstr "障礙位移"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary options or other financial derivatives trading experience"
-msgstr "二元期權或其他金融衍生品交易經驗"
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr "二元期權或其它金融衍生品交易頻率"
-
-msgid "Binary options trading experience"
-msgstr "二元期權交易經驗"
-
-msgid "Binary options trading frequency"
-msgstr "二元期權交易頻率"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -375,20 +330,8 @@ msgstr "購入價"
 msgid "Buy price"
 msgstr "購入價"
 
-msgid "By clicking"
-msgstr "通過點選"
-
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "通過點選OK按鈕，您確定已經閱讀和接受此更新"
-
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr "預設情況下, 所有客戶都被視為零售。如果您符合必要的標準, 您同意被視為專業客戶嗎？"
-
-msgid "CFD trading experience"
-msgstr "差價合約交易經驗"
-
-msgid "CFD trading frequency"
-msgstr "差價合約交易頻率"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用於合同購入與售出、給到期的購入合同延期、及給虛擬金錢帳戶存入資金。"
@@ -444,9 +387,6 @@ msgstr "圖表範本"
 msgid "Chart type"
 msgstr "圖表類型"
 
-msgid "Choose password"
-msgstr "選擇密碼"
-
 msgid "Choose your pereferred payment agent"
 msgstr "選擇您較傾向的支付代理"
 
@@ -455,9 +395,6 @@ msgstr "選擇您較傾向的取款方法"
 
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Citizenship"
-msgstr "公民身份"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "點選登入Binary.com帳戶"
@@ -470,12 +407,6 @@ msgstr "全部關閉"
 
 msgid "Closes"
 msgstr "關"
-
-msgid "Commodities trading experience"
-msgstr "大宗商品交易經驗"
-
-msgid "Commodities trading frequency"
-msgstr "大宗商品交易頻率"
 
 msgid "Comparisons"
 msgstr "比較"
@@ -498,9 +429,6 @@ msgstr "建構"
 msgid "Contact Us"
 msgstr "聯繫我們"
 
-msgid "Continue"
-msgstr "繼續"
-
 msgid "Continue Trading"
 msgstr "繼續交易"
 
@@ -519,14 +447,8 @@ msgstr "合約"
 msgid "Copier"
 msgstr "複製者"
 
-msgid "Copy Trade"
-msgstr "複製交易"
-
 msgid "Copy Trading"
 msgstr "複製交易"
-
-msgid "Country of residence"
-msgstr "居住國"
 
 msgid "Create"
 msgstr "建立"
@@ -588,9 +510,6 @@ msgstr "Dark Unica主題"
 msgid "Date"
 msgstr "日期"
 
-msgid "Date of birth"
-msgstr "出生日期"
-
 msgid "Days"
 msgstr "日"
 
@@ -599,9 +518,6 @@ msgstr "十二月"
 
 msgid "December"
 msgstr "十二月"
-
-msgid "Decline"
-msgstr "拒絕"
 
 msgid "Default"
 msgstr "預設"
@@ -693,9 +609,6 @@ msgstr "正在下載工作區為%1"
 msgid "Drawing tools"
 msgstr "繪圖工具"
 
-msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr "由於最近的法規變更，客戶必須填寫以下金融評估。您須填寫完成才能繼續交易"
-
 msgid "Duration"
 msgstr "期間"
 
@@ -708,14 +621,8 @@ msgstr "邊緣"
 msgid "Education"
 msgstr "教育"
 
-msgid "Email verification failed"
-msgstr "電子郵件驗證失敗"
-
 msgid "Embed code"
 msgstr "內嵌代碼"
-
-msgid "Employment status"
-msgstr "就業狀況"
 
 msgid "End Time"
 msgstr "結束時間"
@@ -749,9 +656,6 @@ msgstr "入市現價"
 
 msgid "Error getting data for %1"
 msgstr "獲取%1資料時出錯"
-
-msgid "Estimated Net Worth"
-msgstr "估計淨值"
 
 msgid "Even"
 msgstr "偶"
@@ -789,9 +693,6 @@ msgstr "未能更新密碼"
 msgid "Fall"
 msgstr "下跌"
 
-msgid "Family name"
-msgstr "姓氏"
-
 msgid "Favorites"
 msgstr "我的最愛"
 
@@ -819,32 +720,8 @@ msgstr "最終價格"
 msgid "Finance"
 msgstr "金融"
 
-msgid "Financial Account Opening form"
-msgstr "開立金融帳戶表格"
-
-msgid "Financial Assessment"
-msgstr "財務評估"
-
-msgid "Financial Information"
-msgstr "金融資訊"
-
-msgid "Financial information"
-msgstr "財務資料"
-
 msgid "Firefox"
 msgstr "Firefox"
-
-msgid "First line of home address"
-msgstr "家庭地址第一行"
-
-msgid "First name"
-msgstr "名字"
-
-msgid "Forex trading experience"
-msgstr "外匯交易經驗"
-
-msgid "Forex trading frequency"
-msgstr "外匯交易頻率"
 
 msgid "Fri"
 msgstr "星期五"
@@ -912,18 +789,6 @@ msgstr "小時"
 msgid "Hours"
 msgstr "小時"
 
-msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr "我確認本人不是政治公眾人士(PEP)"
-
-msgid "I have read and agree to Binary.com"
-msgstr "本人已經閱讀並同意Binary.com的"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr "我特此確認, 我提供的稅務資訊是真實和完整的。將來如果此資訊有任何更改，我將會通知Binary投資 (歐洲) 有限公司"
-
-msgid "I want to be treated as a professional client"
-msgstr "我要被視為專業客戶"
-
 msgid "IMPORTANT DISCLAIMER"
 msgstr "重要免責聲明"
 
@@ -939,9 +804,6 @@ msgstr "如您選擇特定的"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "必須完全重新整理頁面才能正確啟用主題。確定要繼續?"
 
-msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr "為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
-
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
 msgstr "歐盟國家的金融產品交易由Binary Investments (Europe) Ltd提供，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商 (執照號碼為IS/70156)。"
 
@@ -954,9 +816,6 @@ msgstr "歐盟其它國家的波動率指數交易由Binary (Europe) Ltd提供�
 msgid "In/Out"
 msgstr "「範圍之內/之外」"
 
-msgid "Income Source"
-msgstr "收入來源"
-
 msgid "Indicative"
 msgstr "指示性"
 
@@ -965,15 +824,6 @@ msgstr "指示性價格"
 
 msgid "Indicators"
 msgstr "指標"
-
-msgid "Indices trading experience"
-msgstr "指數交易經驗"
-
-msgid "Indices trading frequency"
-msgstr "指數交易頻率"
-
-msgid "Industry of Employment"
-msgstr "職業領域"
 
 msgid "Instruments"
 msgstr "工具"
@@ -1017,9 +867,6 @@ msgstr "六月"
 msgid "June"
 msgstr "六月"
 
-msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "僅須即將導入的頁面上點擊“授予”"
-
 msgid "Last 12 mnts Profitable Trades"
 msgstr "最後 12 個月盈利交易"
 
@@ -1037,12 +884,6 @@ msgstr "上一次使用"
 
 msgid "Less than"
 msgstr "少於"
-
-msgid "Let's do it"
-msgstr "開始操作"
-
-msgid "Level of Education"
-msgstr "教育水平"
 
 msgid "Line"
 msgstr "列"
@@ -1074,17 +915,11 @@ msgstr "正在載入複製交易..."
 msgid "Loading Download/View Data ..."
 msgstr "載入下載/檢視資料 ..."
 
-msgid "Loading MAM..."
-msgstr "MAM裝載..."
-
 msgid "Loading Password dialog ..."
 msgstr "載入密碼對話 ..."
 
 msgid "Loading Profit Table ..."
 msgstr "載入利潤表 ..."
-
-msgid "Loading Real account opening ..."
-msgstr "載入真實帳戶開立程序 ..."
 
 msgid "Loading Self-Exclusion ..."
 msgstr "載入自我禁止 ..."
@@ -1133,9 +968,6 @@ msgstr "回顧"
 
 msgid "Low"
 msgstr "低"
-
-msgid "Low Barrier"
-msgstr "低障礙"
 
 msgid "Low barrier"
 msgstr "低障礙"
@@ -1209,15 +1041,6 @@ msgstr "最小交易投注額"
 msgid "Min: 10 Max: 2000"
 msgstr "最小: 10 最大: 2000"
 
-msgid "Minimum of 2 characters required"
-msgstr "需要至少2個字元"
-
-msgid "Minimum of 4 characters required"
-msgstr "需要至少4個字元"
-
-msgid "Minimum of 6 characters required"
-msgstr "需要至少6個字元"
-
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "至少六個大小寫字母和數字"
 
@@ -1241,9 +1064,6 @@ msgstr "週一"
 
 msgid "Monday"
 msgstr "週一"
-
-msgid "Monthly Profitable Trades"
-msgstr "每月盈利交易"
 
 msgid "Mother's maiden name"
 msgstr "母親婚前的姓氏"
@@ -1287,14 +1107,8 @@ msgstr "導覽器系列顏色"
 msgid "Navigator series line"
 msgstr "導覽器系列線"
 
-msgid "Net Annual Income"
-msgstr "年淨收入"
-
 msgid "Net Profit"
 msgstr "淨利"
-
-msgid "New Account"
-msgstr "新帳戶"
 
 msgid "New password"
 msgstr "新密碼"
@@ -1307,9 +1121,6 @@ msgstr "未觸及"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "注意: 合約將在我們伺服器收到要求時以當時的市場價格賣出。此價格可能會與報價有差異。"
-
-msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "注： 您只能擁有一個法定貨幣帳戶以及任一種加密貨幣帳戶"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "請注意:如果要使用付款代理提款，您必須僅通過付款代理存款"
@@ -1329,9 +1140,6 @@ msgstr "OHLC條形圖"
 msgid "OK"
 msgstr "確定"
 
-msgid "Occupation"
-msgstr "職業"
-
 msgid "Oct"
 msgstr "十月"
 
@@ -1344,50 +1152,20 @@ msgstr "奇"
 msgid "Ok"
 msgstr "確定"
 
-msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr "根據您所提供的知識和經驗相關資訊，我們認為此網站的投資活動對您來說並不合適"
-
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "達到此限額後，您不能再存款"
-
-msgid "One last step left"
-msgstr "剩下最後一步"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "線上交易可能使人上癮。請填寫下表以限制您對本網站的參與，您也可以傳送簽名信或傳真到我們的客服團隊。設定好後，您將只能收緊限制。限制只能在7天后取消或放寬，而自我禁止期在您確認後就不能取消或更改。若要解除或增加您的限制，請聯繫"
 
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr "只允許字母、數字和連字符"
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr "只允許使用字母、數字、空格、連字號、句號和所有格號"
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr "只允許使用字母、數字、空格、句號、逗號和 - / @ '"
-
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "只允許使用字母、數字、空格、句號、逗號和虛線(-)"
-
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr "只允許使用字母、空格、連字號、句號和所有格號"
-
-msgid "Only numbers and space are allowed"
-msgstr "只允許使用數字和空格"
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr "只允許使用數字、字母和連字符"
 
 msgid "Open"
 msgstr "開盤"
 
-msgid "Open Account"
-msgstr "開立帳戶"
-
 msgid "Open a Financial Account"
 msgstr "開立金融帳戶"
-
-msgid "Open account"
-msgstr "開立帳戶"
 
 msgid "Opens"
 msgstr "開盤"
@@ -1401,12 +1179,6 @@ msgstr "二元期權交易就像任何其他活動一樣，過於沉迷可能會
 msgid "Other"
 msgstr "其它"
 
-msgid "Other financial instruments trading experience"
-msgstr "其它金融工具交易經驗"
-
-msgid "Other financial instruments trading frequency"
-msgstr "其他金融工具交易頻率"
-
 msgid "Over"
 msgstr "超過"
 
@@ -1416,17 +1188,8 @@ msgstr "3年以上"
 msgid "Overlap Studies"
 msgstr "重疊研究"
 
-msgid "PEP Declaration"
-msgstr "PEP 聲明"
-
 msgid "PM"
 msgstr "下午"
-
-msgid "Password must be 6 characters minimum"
-msgstr "密碼必須至少6個字元"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "密碼必須有大小寫字母和數字"
 
 msgid "Password successfully updated."
 msgstr "密碼已成功更新。"
@@ -1458,18 +1221,6 @@ msgstr "性能概率"
 msgid "Permissions"
 msgstr "權限"
 
-msgid "Personal Details"
-msgstr "個人資料"
-
-msgid "Phone"
-msgstr "電話"
-
-msgid "Place of birth"
-msgstr "出生地"
-
-msgid "Please"
-msgstr "請"
-
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
 msgstr "請[_1]接受更新條款和條件[_2]，以提高取款和交易限額。"
 
@@ -1479,9 +1230,6 @@ msgstr "請[_1]完成帳戶資料[_2]，以提高取款和交易限額。"
 msgid "Please choose at least one token scope"
 msgstr "請選擇至少一個權杖範圍"
 
-msgid "Please choose which currency you would like to transact in"
-msgstr "請選擇交易貨幣種類"
-
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr "請完成[_1]財務評估表格[_2]，以便提升您的取款和交易限額。"
 
@@ -1490,9 +1238,6 @@ msgstr "請確認以下詳細資料以完成轉帳"
 
 msgid "Please enter a number between"
 msgstr "請輸入之間的數字"
-
-msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "請輸入有效日期，格式是年-月-日"
 
 msgid "Please enter a valid value for"
 msgstr "請輸入有效數值"
@@ -1506,9 +1251,6 @@ msgstr "請輸入大於0的數值"
 msgid "Please enter a value less than 6 weeks for time out until."
 msgstr "超時剩餘時間請輸入小於6週的值。"
 
-msgid "Please enter correct email"
-msgstr "請輸入正確的電子郵件"
-
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "請輸入日期，格式是年-月-日"
 
@@ -1520,9 +1262,6 @@ msgstr "請輸入時間，格式為小時:分鐘"
 
 msgid "Please enter your current password"
 msgstr "請輸入當前密碼"
-
-msgid "Please enter your email"
-msgstr "請輸入電子郵件"
 
 msgid "Please input correct token"
 msgstr "請輸入正確的權杖"
@@ -1539,35 +1278,17 @@ msgstr "請登入檢視儲存的工作區。"
 msgid "Please log in."
 msgstr "請登入。"
 
-msgid "Please provide your tax information"
-msgstr "請提供稅務資訊"
-
-msgid "Please select"
-msgstr "請選擇"
-
 msgid "Please select a date for time out until."
 msgstr "請選擇超時剩餘時間的日期。"
 
 msgid "Please select a payment agent"
 msgstr "請選擇付款代理"
 
-msgid "Please select an account opening reason before continuing"
-msgstr "繼續操作前請選擇開立帳戶的原因"
-
-msgid "Please set currency."
-msgstr "請設定幣種。"
-
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr "請設定帳戶的[_1]幣種[_2]"
 
-msgid "Please submit a valid verification token"
-msgstr "請提供有效的驗證權杖"
-
 msgid "Please try again after 1 minute."
 msgstr "請於1分鐘後重試。"
-
-msgid "Please try again after few minutes."
-msgstr "請於數分鐘後重試。"
 
 msgid "Please use your new password to login."
 msgstr "請使用新密碼登入。"
@@ -1583,9 +1304,6 @@ msgstr "點"
 
 msgid "Portfolio"
 msgstr "投資組合"
-
-msgid "Postal code/ZIP"
-msgstr "郵區編號"
 
 msgid "Potential Payout"
 msgstr "可能的賠付額"
@@ -1614,9 +1332,6 @@ msgstr "主要"
 msgid "Print chart"
 msgstr "列印圖表"
 
-msgid "Professional Client"
-msgstr "專業客戶"
-
 msgid "Profit"
 msgstr "利潤"
 
@@ -1628,12 +1343,6 @@ msgstr "利潤表"
 
 msgid "Profit/ Loss"
 msgstr "利潤/虧損"
-
-msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr "地址證明 - 水電煤帳單或銀行月結單掃描件（日期不得超過3個月）。地址證明必須包括您的姓名、地址、簽發日期和發證機構名稱。"
-
-msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "身份證明 - 顯示您名字和出生日期的護照、駕照（臨時或永久）或身份證的掃描件。"
 
 msgid "Purchase"
 msgstr "買入"
@@ -1649,9 +1358,6 @@ msgstr "買入時間"
 
 msgid "Read"
 msgstr "閱讀"
-
-msgid "Real Money Account Opening"
-msgstr "開立真實資金帳戶"
 
 msgid "Reality check"
 msgstr "實況調查"
@@ -1671,9 +1377,6 @@ msgstr "刷新失敗"
 msgid "Register free account"
 msgstr "註冊免費帳戶"
 
-msgid "Registration"
-msgstr "註冊"
-
 msgid "Remove"
 msgstr "移除"
 
@@ -1682,9 +1385,6 @@ msgstr "移除選定項目"
 
 msgid "Rename"
 msgstr "重命名"
-
-msgid "Repeat password"
-msgstr "再次輸入密碼"
 
 msgid "Resale of this contract is not offered"
 msgstr "此合約不提供轉售"
@@ -1743,17 +1443,8 @@ msgstr "儲存更改"
 msgid "Saved"
 msgstr "已儲存"
 
-msgid "Second line of home address"
-msgstr "家庭地址第二行"
-
 msgid "Secondary"
 msgstr "次要"
-
-msgid "Security"
-msgstr "安全"
-
-msgid "Security question"
-msgstr "安全提示問題"
 
 msgid "Seems like our servers are down, we are working on fixing it."
 msgstr "像是我們的伺服器發生故障，正在努力修復中。"
@@ -1803,9 +1494,6 @@ msgstr "已賣出"
 msgid "Some random index"
 msgstr "一些隨機指數"
 
-msgid "Source of wealth"
-msgstr "財富來源"
-
 msgid "Spline"
 msgstr "Spline法"
 
@@ -1836,9 +1524,6 @@ msgstr "開始交易"
 msgid "Start time"
 msgstr "開始時間"
 
-msgid "State/province/region"
-msgstr "州/省/區"
-
 msgid "Statement"
 msgstr "帳單"
 
@@ -1853,12 +1538,6 @@ msgstr "「保持在範圍之內/超出範圍之外」"
 
 msgid "Stays in"
 msgstr "範圍內"
-
-msgid "Stocks trading experience"
-msgstr "股票交易經驗"
-
-msgid "Stocks trading frequency"
-msgstr "股票交易頻率"
 
 msgid "Stop-loss"
 msgstr "止損"
@@ -1896,21 +1575,6 @@ msgstr "週日"
 msgid "Table"
 msgstr "表"
 
-msgid "Tax Information"
-msgstr "稅務資訊"
-
-msgid "Tax Information successfully updated"
-msgstr "稅務資訊已成功更新"
-
-msgid "Tax identification number"
-msgstr "稅務編號"
-
-msgid "Tax information"
-msgstr "稅務資訊"
-
-msgid "Tax residence"
-msgstr "稅務居住地"
-
 msgid "Tel"
 msgstr "電話"
 
@@ -1946,12 +1610,6 @@ msgstr "關於"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "公司把客戶資金存在獨立的銀行帳戶，與操作帳戶分開，因此如果公司破產，客戶資金不會成為公司資產的一部分。這符合客戶資金獨立分離帳戶管理的博彩委員會要求，級別為"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr "本網站所涵蓋的金融交易服務僅適合這樣的客戶：能夠承受全部投入資金虧損的風險，了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風險。如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "本網站所涵蓋的金融交易服務僅適合這樣的客戶：能夠承受全部投入資金虧損的風險，了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風險。如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "合約執行期間發生市場資料中斷。對於真實貨幣帳戶, 我們將嘗試糾正此情況並妥善結算合約, 否則合約將取消並退款。虛擬貨幣合約將取消並退款。"
@@ -2073,9 +1731,6 @@ msgstr "觸及/未觸及"
 msgid "Tourism"
 msgstr "旅遊"
 
-msgid "Town/City"
-msgstr "城鎮/城市"
-
 msgid "Trade"
 msgstr "交易"
 
@@ -2096,12 +1751,6 @@ msgstr "交易員統計"
 
 msgid "Trades Profitability"
 msgstr "交易獲利率"
-
-msgid "Trades break down"
-msgstr "交易明細"
-
-msgid "Trading Experience"
-msgstr "交易經驗"
 
 msgid "Trading Times"
 msgstr "交易時間"
@@ -2172,9 +1821,6 @@ msgstr "使用「另存為...」按鍵儲存交易設定"
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr "隨意設定各種自訂功能如資產、圖表和其他資源的加載和安排"
 
-msgid "Verification code has been sent to your email"
-msgstr "驗證代碼已發送到您的郵箱"
-
 msgid "Verification code sent to"
 msgstr "驗證碼已傳到"
 
@@ -2217,12 +1863,6 @@ msgstr "週三"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "歡迎來到Binary.com Webtrader"
 
-msgid "What is pep?"
-msgstr "Pep 是什麼？"
-
-msgid "What is this?"
-msgstr "這是甚麽？"
-
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr "當您點選「Ok」後，您將被禁止在此網站交易，直到選定期限結束為止。"
 
@@ -2256,9 +1896,6 @@ msgstr "Y-軸方格線"
 msgid "Y-axis labels"
 msgstr "Y-軸標籤"
 
-msgid "Yearly Profitable Trades"
-msgstr "年度盈利交易"
-
 msgid "Yes"
 msgstr "是"
 
@@ -2277,9 +1914,6 @@ msgstr "您尚未儲存任何範本"
 msgid "You pay"
 msgstr "您支付"
 
-msgid "You should enter between 6-25 characters."
-msgstr "您必須輸入6-25個字元。"
-
 msgid "You will be automatically logged out after such time"
 msgstr "在該時間後您將自動退出登入"
 
@@ -2288,9 +1922,6 @@ msgstr "您想允許其他交易者複製您的交易"
 
 msgid "You wish to copy another trader's trades"
 msgstr "您想複製其他交易者的交易"
-
-msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr "您的帳戶 (%) 已鎖定, 請聯繫客服部瞭解更多資訊。"
@@ -2309,9 +1940,6 @@ msgstr "您的更改已成功更新"
 
 msgid "Your copying settings"
 msgstr "您的複製設置"
-
-msgid "Your email"
-msgstr "您的電子郵件"
 
 msgid "Your new account balance is"
 msgstr "您的新帳戶餘額是"
@@ -2334,14 +1962,8 @@ msgstr "和"
 msgid "apostrophe (') are allowed"
 msgstr "允許使用所有格號(')"
 
-msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "以下並繼續開立帳戶，請注意您可能會冒一些風險（可能很嚴重，甚至損失整個投資資金），而您可能缺乏正確評估或化解風險的知識及經驗"
-
 msgid "commission"
 msgstr "佣金"
-
-msgid "contact support"
-msgstr "聯繫客服部"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr "建立唯讀權杖並與您的複製者共用"
@@ -2381,9 +2003,6 @@ msgstr "小時"
 
 msgid "hours"
 msgstr "小時"
-
-msgid "if this is not your country of residence"
-msgstr "如不是您的居住國"
 
 msgid "in the future, the"
 msgstr "未來的"
@@ -2457,9 +2076,6 @@ msgstr "工作階段概觀"
 msgid "start time"
 msgstr "開始時間"
 
-msgid "terms and conditions"
-msgstr "條款和條件"
-
 msgid "the"
 msgstr "關於"
 
@@ -2484,3 +2100,386 @@ msgstr "{代理.佣金}%"
 msgid "| Return"
 msgstr "| 回報"
 
+#~ msgid "Account authentication"
+#~ msgstr "帳戶驗證"
+
+#~ msgid "Account opening"
+#~ msgstr "帳戶開立"
+
+#~ msgid "Account opening reason"
+#~ msgstr "開立帳戶的原因"
+
+#~ msgid "Address"
+#~ msgstr "地址"
+
+#~ msgid "Allow others to copy your trades"
+#~ msgstr "允許他人複製您的交易"
+
+#~ msgid "Answer"
+#~ msgstr "答案"
+
+#~ msgid "Anticipated account turnover"
+#~ msgstr "預期的帳戶交易額"
+
+#~ msgid "Appropriateness Test: WARNING"
+#~ msgstr "合適性測試:警告"
+
+#~ msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
+#~ msgstr "請提交身份與地址證明，立刻進行帳戶驗證。繼續操作，請發送以下文件到%1:"
+
+#~ msgid "Available Currencies"
+#~ msgstr "可用的貨幣"
+
+#~ msgid "Avg. Duration"
+#~ msgstr "平均持續時間"
+
+#~ msgid "Binary options or other financial derivatives trading experience"
+#~ msgstr "二元期權或其他金融衍生品交易經驗"
+
+#~ msgid "Binary options or other financial derivatives trading frequency"
+#~ msgstr "二元期權或其它金融衍生品交易頻率"
+
+#~ msgid "Binary options trading experience"
+#~ msgstr "二元期權交易經驗"
+
+#~ msgid "Binary options trading frequency"
+#~ msgstr "二元期權交易頻率"
+
+#~ msgid "By clicking"
+#~ msgstr "通過點選"
+
+#~ msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
+#~ msgstr "預設情況下, 所有客戶都被視為零售。如果您符合必要的標準, 您同意被視為專業客戶嗎？"
+
+#~ msgid "CFD trading experience"
+#~ msgstr "差價合約交易經驗"
+
+#~ msgid "CFD trading frequency"
+#~ msgstr "差價合約交易頻率"
+
+#~ msgid "Choose password"
+#~ msgstr "選擇密碼"
+
+#~ msgid "Citizenship"
+#~ msgstr "公民身份"
+
+#~ msgid "Commodities trading experience"
+#~ msgstr "大宗商品交易經驗"
+
+#~ msgid "Commodities trading frequency"
+#~ msgstr "大宗商品交易頻率"
+
+#~ msgid "Continue"
+#~ msgstr "繼續"
+
+#~ msgid "Copy Trade"
+#~ msgstr "複製交易"
+
+#~ msgid "Country of residence"
+#~ msgstr "居住國"
+
+#~ msgid "Date of birth"
+#~ msgstr "出生日期"
+
+#~ msgid "Decline"
+#~ msgstr "拒絕"
+
+#~ msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
+#~ msgstr "由於最近的法規變更，客戶必須填寫以下金融評估。您須填寫完成才能繼續交易"
+
+#~ msgid "Email verification failed"
+#~ msgstr "電子郵件驗證失敗"
+
+#~ msgid "Employment status"
+#~ msgstr "就業狀況"
+
+#~ msgid "Estimated Net Worth"
+#~ msgstr "估計淨值"
+
+#~ msgid "Family name"
+#~ msgstr "姓氏"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "開立金融帳戶表格"
+
+#~ msgid "Financial Assessment"
+#~ msgstr "財務評估"
+
+#~ msgid "Financial Information"
+#~ msgstr "金融資訊"
+
+#~ msgid "Financial information"
+#~ msgstr "財務資料"
+
+#~ msgid "First line of home address"
+#~ msgstr "家庭地址第一行"
+
+#~ msgid "First name"
+#~ msgstr "名字"
+
+#~ msgid "Forex trading experience"
+#~ msgstr "外匯交易經驗"
+
+#~ msgid "Forex trading frequency"
+#~ msgstr "外匯交易頻率"
+
+#~ msgid "I acknowledge that I am not a politically exposed person (PEP)"
+#~ msgstr "我確認本人不是政治公眾人士(PEP)"
+
+#~ msgid "I have read and agree to Binary.com"
+#~ msgstr "本人已經閱讀並同意Binary.com的"
+
+#~ msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
+#~ msgstr "我特此確認, 我提供的稅務資訊是真實和完整的。將來如果此資訊有任何更改，我將會通知Binary投資 (歐洲) 有限公司"
+
+#~ msgid "I want to be treated as a professional client"
+#~ msgstr "我要被視為專業客戶"
+
+#~ msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
+#~ msgstr "為了給您提供服務，我們需要向您獲取資訊，以便評估某項產品或服務是否適合您（也就是說，要看您是否擁有足夠的經驗和知識來了解相關的風險）"
+
+#~ msgid "Income Source"
+#~ msgstr "收入來源"
+
+#~ msgid "Indices trading experience"
+#~ msgstr "指數交易經驗"
+
+#~ msgid "Indices trading frequency"
+#~ msgstr "指數交易頻率"
+
+#~ msgid "Industry of Employment"
+#~ msgstr "職業領域"
+
+#~ msgid "Just click  Grant  button on the page you will now be taken to"
+#~ msgstr "僅須即將導入的頁面上點擊“授予”"
+
+#~ msgid "Let's do it"
+#~ msgstr "開始操作"
+
+#~ msgid "Level of Education"
+#~ msgstr "教育水平"
+
+#~ msgid "Loading MAM..."
+#~ msgstr "MAM裝載..."
+
+#~ msgid "Loading Real account opening ..."
+#~ msgstr "載入真實帳戶開立程序 ..."
+
+#~ msgid "Low Barrier"
+#~ msgstr "低障礙"
+
+#~ msgid "Minimum of 2 characters required"
+#~ msgstr "需要至少2個字元"
+
+#~ msgid "Minimum of 4 characters required"
+#~ msgstr "需要至少4個字元"
+
+#~ msgid "Minimum of 6 characters required"
+#~ msgstr "需要至少6個字元"
+
+#~ msgid "Monthly Profitable Trades"
+#~ msgstr "每月盈利交易"
+
+#~ msgid "Net Annual Income"
+#~ msgstr "年淨收入"
+
+#~ msgid "New Account"
+#~ msgstr "新帳戶"
+
+#~ msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+#~ msgstr "注： 您只能擁有一個法定貨幣帳戶以及任一種加密貨幣帳戶"
+
+#~ msgid "Occupation"
+#~ msgstr "職業"
+
+#~ msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
+#~ msgstr "根據您所提供的知識和經驗相關資訊，我們認為此網站的投資活動對您來說並不合適"
+
+#~ msgid "One last step left"
+#~ msgstr "剩下最後一步"
+
+#~ msgid "Only letters, numbers, hyphen are allowed"
+#~ msgstr "只允許字母、數字和連字符"
+
+#~ msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "只允許使用字母、數字、空格、連字號、句號和所有格號"
+
+#~ msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+#~ msgstr "只允許使用字母、數字、空格、句號、逗號和 - / @ '"
+
+#~ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "只允許使用字母、空格、連字號、句號和所有格號"
+
+#~ msgid "Only numbers and space are allowed"
+#~ msgstr "只允許使用數字和空格"
+
+#~ msgid "Only numbers, letters, hyphens are allowed"
+#~ msgstr "只允許使用數字、字母和連字符"
+
+#~ msgid "Open Account"
+#~ msgstr "開立帳戶"
+
+#~ msgid "Open account"
+#~ msgstr "開立帳戶"
+
+#~ msgid "Other financial instruments trading experience"
+#~ msgstr "其它金融工具交易經驗"
+
+#~ msgid "Other financial instruments trading frequency"
+#~ msgstr "其他金融工具交易頻率"
+
+#~ msgid "PEP Declaration"
+#~ msgstr "PEP 聲明"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "密碼必須至少6個字元"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "密碼必須有大小寫字母和數字"
+
+#~ msgid "Personal Details"
+#~ msgstr "個人資料"
+
+#~ msgid "Phone"
+#~ msgstr "電話"
+
+#~ msgid "Place of birth"
+#~ msgstr "出生地"
+
+#~ msgid "Please"
+#~ msgstr "請"
+
+#~ msgid "Please choose which currency you would like to transact in"
+#~ msgstr "請選擇交易貨幣種類"
+
+#~ msgid "Please enter a valid date in yyyy-mm-dd format"
+#~ msgstr "請輸入有效日期，格式是年-月-日"
+
+#~ msgid "Please enter correct email"
+#~ msgstr "請輸入正確的電子郵件"
+
+#~ msgid "Please enter your email"
+#~ msgstr "請輸入電子郵件"
+
+#~ msgid "Please provide your tax information"
+#~ msgstr "請提供稅務資訊"
+
+#~ msgid "Please select"
+#~ msgstr "請選擇"
+
+#~ msgid "Please select an account opening reason before continuing"
+#~ msgstr "繼續操作前請選擇開立帳戶的原因"
+
+#~ msgid "Please set currency."
+#~ msgstr "請設定幣種。"
+
+#~ msgid "Please submit a valid verification token"
+#~ msgstr "請提供有效的驗證權杖"
+
+#~ msgid "Please try again after few minutes."
+#~ msgstr "請於數分鐘後重試。"
+
+#~ msgid "Postal code/ZIP"
+#~ msgstr "郵區編號"
+
+#~ msgid "Professional Client"
+#~ msgstr "專業客戶"
+
+#~ msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
+#~ msgstr "地址證明 - 水電煤帳單或銀行月結單掃描件（日期不得超過3個月）。地址證明必須包括您的姓名、地址、簽發日期和發證機構名稱。"
+
+#~ msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
+#~ msgstr "身份證明 - 顯示您名字和出生日期的護照、駕照（臨時或永久）或身份證的掃描件。"
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "開立真實資金帳戶"
+
+#~ msgid "Registration"
+#~ msgstr "註冊"
+
+#~ msgid "Repeat password"
+#~ msgstr "再次輸入密碼"
+
+#~ msgid "Second line of home address"
+#~ msgstr "家庭地址第二行"
+
+#~ msgid "Security"
+#~ msgstr "安全"
+
+#~ msgid "Security question"
+#~ msgstr "安全提示問題"
+
+#~ msgid "Source of wealth"
+#~ msgstr "財富來源"
+
+#~ msgid "State/province/region"
+#~ msgstr "州/省/區"
+
+#~ msgid "Stocks trading experience"
+#~ msgstr "股票交易經驗"
+
+#~ msgid "Stocks trading frequency"
+#~ msgstr "股票交易頻率"
+
+#~ msgid "Tax Information"
+#~ msgstr "稅務資訊"
+
+#~ msgid "Tax Information successfully updated"
+#~ msgstr "稅務資訊已成功更新"
+
+#~ msgid "Tax identification number"
+#~ msgstr "稅務編號"
+
+#~ msgid "Tax information"
+#~ msgstr "稅務資訊"
+
+#~ msgid "Tax residence"
+#~ msgstr "稅務居住地"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
+#~ msgstr "本網站所涵蓋的金融交易服務僅適合這樣的客戶：能夠承受全部投入資金虧損的風險，了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風險。如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+#~ msgstr "本網站所涵蓋的金融交易服務僅適合這樣的客戶：能夠承受全部投入資金虧損的風險，了解購買金融合約所蘊含的風險並擁有相關的風險經歷。金融合約交易涉及很大的風險。如果所購買的合約到期時一文不值，您的投資將完全損失，其中還包括合約費用"
+
+#~ msgid "Town/City"
+#~ msgstr "城鎮/城市"
+
+#~ msgid "Trades break down"
+#~ msgstr "交易明細"
+
+#~ msgid "Trading Experience"
+#~ msgstr "交易經驗"
+
+#~ msgid "Verification code has been sent to your email"
+#~ msgstr "驗證代碼已發送到您的郵箱"
+
+#~ msgid "What is pep?"
+#~ msgstr "Pep 是什麼？"
+
+#~ msgid "What is this?"
+#~ msgstr "這是甚麽？"
+
+#~ msgid "Yearly Profitable Trades"
+#~ msgstr "年度盈利交易"
+
+#~ msgid "You should enter between 6-25 characters."
+#~ msgstr "您必須輸入6-25個字元。"
+
+#~ msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+#~ msgstr "您已開立Binary.com帳戶，但須向Webtrader提供存取權限才可開始交易"
+
+#~ msgid "Your email"
+#~ msgstr "您的電子郵件"
+
+#~ msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
+#~ msgstr "以下並繼續開立帳戶，請注意您可能會冒一些風險（可能很嚴重，甚至損失整個投資資金），而您可能缺乏正確評估或化解風險的知識及經驗"
+
+#~ msgid "contact support"
+#~ msgstr "聯繫客服部"
+
+#~ msgid "if this is not your country of residence"
+#~ msgstr "如不是您的居住國"
+
+#~ msgid "terms and conditions"
+#~ msgstr "條款和條件"

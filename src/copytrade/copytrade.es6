@@ -24,12 +24,7 @@ const form_error_messages = {
 
 const getStorageName = () => `copyTrade_${getLoggedInUserId()}`;
 
-const mapCodeToApiCode = (selected_trade_types = [], all_trade_types) => 
-  all_trade_types
-    .filter(trade_type => selected_trade_types.includes(trade_type.code))
-    .map(filtered_trade_type => filtered_trade_type.api_code);
-
-const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.code);
+const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.api_code);
 
 const defaultCopySettings = (traderApiToken) => ({
   copy_start: traderApiToken,
@@ -90,29 +85,32 @@ instrumentPromise().then(instruments => {
 });
 
 const refreshTraderStats = (loginid, token, scope) => {
-  liveapi
-  .send({
-    copytrading_statistics: 1,
-    trader_id: loginid,
-  })
-  .then((copyStatData) => {
-    if (copyStatData.copytrading_statistics) {
-      const traderTokenDetails = _.find(scope.traderTokens, f =>
-        f.yourCopySettings && f.yourCopySettings.copy_start === token);
-      //Check if we already added this trader. If yes, then merge the changes
-      if (traderTokenDetails) {
-        _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
-      }
-      //If not added, then add this along with default yourCopySettings object
-      else {
-        scope.traderTokens.push(_.merge({
-          traderStatistics: copyStatData.copytrading_statistics,
-        }, defaultTraderDetails(token, loginid)));
-      }
-    }
-    updateLocalStorage(scope);
-  }).catch((e) => {
-    $.growl.error({ message: e.message });
+  return new Promise((resolve, reject) => {
+    liveapi
+      .send({
+        copytrading_statistics: 1,
+        trader_id: loginid,
+      })
+      .then((copyStatData) => {
+        if (copyStatData.copytrading_statistics) {
+          const traderTokenDetails = _.find(scope.traderTokens, f =>
+            f.yourCopySettings && f.yourCopySettings.copy_start === token);
+          //Check if we already added this trader. If yes, then merge the changes
+          if (traderTokenDetails) {
+            _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
+          }
+          //If not added, then add this along with default yourCopySettings object
+          else {
+            scope.traderTokens.push(_.merge({
+              traderStatistics: copyStatData.copytrading_statistics,
+            }, defaultTraderDetails(token, loginid)));
+          }
+        }
+        updateLocalStorage(scope);
+        resolve();
+      }).catch((e) => {
+        reject(e);
+      });
   });
 };
 
@@ -173,7 +171,7 @@ const state = {
             if (!settingsToSend.min_trade_stake) delete settingsToSend.min_trade_stake;
             if (!settingsToSend.max_trade_stake) delete settingsToSend.max_trade_stake;
             if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
-            settingsToSend.trade_types = mapCodeToApiCode(settingsToSend.trade_types, TRADE_TYPES);
+            if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
 
             liveapi
               .send(settingsToSend)
@@ -227,12 +225,11 @@ const state = {
       refreshTraderStats(loginid, token, state)
         .then(() => {
           trader.disableRefresh = false;
-          updateLocalStorage(state);
         })
         .catch((e) => {
+          console.error(e)
           $.growl.error({ message: form_error_messages.REFRESH_FAILED });
           trader.disableRefresh = false;
-          updateLocalStorage(scope);
         });
     }
   },
@@ -287,15 +284,20 @@ const state = {
       validateToken(scope.searchToken.token)
         .then(tokenUserData => {
           if (!tokenUserData) throw new Error('Invalid token');
-          refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope);
-          scope.searchToken.token = '';
-          scope.searchToken.disable = false;
-          updateLocalStorage(scope);
+          refreshTraderStats(tokenUserData.loginid, scope.searchToken.token, scope)
+            .then(() => {
+              scope.searchToken.token = '';
+              scope.searchToken.disable = false;
+            })
+            .catch((e) => {
+              scope.searchToken.disable = false;
+              console.error(e)
+              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
+            });
         })
         .catch(error => {
           $.growl.error({ message: error.message });
           scope.searchToken.disable = false;
-          updateLocalStorage(scope);
         });
     },
   },
@@ -349,6 +351,7 @@ const initConfigWindow = () => {
               await refreshTraderStats(loginid, token, state);
             } catch (e) {
               console.error(e);
+              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
             }
           }
         })();

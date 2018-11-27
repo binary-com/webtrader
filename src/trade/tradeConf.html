@@ -39,7 +39,10 @@
     <li> <span rv-text="buy.potential_profit_text"></span> <span rv-html='buy.potential_profit | format-price buy.currency' /> </li>
   </ul>
 
-  <ul class='barrier-row' rv-show='buy.barrier'>
+  <ul
+    class='barrier-row'
+    rv-if="ticks.category.contract_category | not-eq 'digits'"
+    rv-show="buy.barrier">
     <li>
       <span>Barrier:&nbsp;</span><span rv-text='buy.barrier | format-price' />
     </li>
@@ -74,9 +77,7 @@
        rv-tick-chart='ticks.array'
        rv-attr-tick-count='ticks.tick_count'
        rv-class-won="ticks.status | eq 'won'"
-       rv-class-lost="ticks.status | eq 'lost'"
-       width='400'
-       height='130'>
+       rv-class-lost="ticks.status | eq 'lost'">
   </div>
 
   <ul class='balance-row' rv-css-bottom="ticks.category.contract_category | eq 'digits' | or ticks.chart_visible">

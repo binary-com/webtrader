@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-11-23 08:50\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: id\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Indonesian\n"
-"Language: id_ID\n"
-"PO-Revision-Date: 2018-11-23 08:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -174,9 +174,6 @@ msgstr "Menerima"
 msgid "Accessible from any web browser in 13 languages"
 msgstr "Dapat diakses dari berbagai browser dalam 13 bahasa"
 
-msgid "Account authentication"
-msgstr "Autentikasi akun"
-
 msgid "Account balance"
 msgstr "Saldo akun"
 
@@ -185,12 +182,6 @@ msgstr "Saldo akun:"
 
 msgid "Account id not found."
 msgstr "Id akun tidak ditemukan."
-
-msgid "Account opening"
-msgstr "Pendaftaran akun"
-
-msgid "Account opening reason"
-msgstr "Alasan pedaftaran akun"
 
 msgid "Account token not found."
 msgstr "Token akun tidak ditemukan."
@@ -222,9 +213,6 @@ msgstr "Tambah/hapus indikator"
 msgid "Added new workspace %"
 msgstr "Menambahkan % ruang kerja baru"
 
-msgid "Address"
-msgstr "Alamat"
-
 msgid "Admin"
 msgstr "Admin"
 
@@ -233,9 +221,6 @@ msgstr "Semua kolom bersifat pilihan. Jika Anda ingin menyalin semua aset dan je
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Semua waktu dalam GMT (Greenwich Mean Time)"
-
-msgid "Allow others to copy your trades"
-msgstr "Membolehkan orang lain untuk menyalin trading Anda"
 
 msgid "Amount"
 msgstr "Jumlah"
@@ -246,20 +231,11 @@ msgstr "Jumlah Min: 10 Mak: 2000"
 msgid "Amount per point"
 msgstr "Jumlah per poin"
 
-msgid "Answer"
-msgstr "Jawaban"
-
-msgid "Anticipated account turnover"
-msgstr "Antisipasi turnover akun"
-
 msgid "Apply"
 msgstr "Daftar"
 
 msgid "Apply to become a Binary.com"
 msgstr "Mendaftar sebagai"
-
-msgid "Appropriateness Test: WARNING"
-msgstr "Uji Kelayakan: PERINGATAN"
 
 msgid "Apr"
 msgstr "Apr"
@@ -303,15 +279,6 @@ msgstr "Agst"
 msgid "August"
 msgstr "Agustus"
 
-msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr "Otentikasi akun Anda sekarang dengan memverifikasi identitas dan alamat Anda. Untuk melanjutkan, cukup kirim dokumen-dokumen berikut ke %1:"
-
-msgid "Available Currencies"
-msgstr "Mata Uang Yang Tersedia"
-
-msgid "Avg. Duration"
-msgstr "Rata-rata Durasi"
-
 msgid "Avg. Duration of Open Positions"
 msgstr "Rata-rata Durasi dari Open Position"
 
@@ -335,18 +302,6 @@ msgstr "Batas offset"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary options or other financial derivatives trading experience"
-msgstr "Opsi Binary atau pengalaman trading pada keuangan derivatif lainnya"
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr "Opsi Binary atau frekuensi trading keuangan derivatif lainnya"
-
-msgid "Binary options trading experience"
-msgstr "Pengalaman trading opsi Binary"
-
-msgid "Binary options trading frequency"
-msgstr "Frekuensi trading opsi binary"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -375,20 +330,8 @@ msgstr "Harga Beli"
 msgid "Buy price"
 msgstr "Harga beli"
 
-msgid "By clicking"
-msgstr "Dengan mengklik"
-
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Dengan mengklik OK, maka Anda telah membaca dan menerima pembaruan"
-
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr "Secara otomatis, klien akan di layani sebagai retail. Apakah Anda ingin dilayani sebagai klien profesional jika Anda lulus pada kreteria yang di wajibkan?"
-
-msgid "CFD trading experience"
-msgstr "Pengalaman trading CFD"
-
-msgid "CFD trading frequency"
-msgstr "Trading frekuensi CFD"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Dapat digunakan untuk membeli dan menjual kontrak, memperbaharui kontrak yang telah berakhir, dan mengisi ulang akun virtual."
@@ -444,9 +387,6 @@ msgstr "Template grafik"
 msgid "Chart type"
 msgstr "Jenis grafik"
 
-msgid "Choose password"
-msgstr "Pilih kata sandi"
-
 msgid "Choose your pereferred payment agent"
 msgstr "Pilih agen pembayaran pilihan Anda"
 
@@ -455,9 +395,6 @@ msgstr "Pilih metode penarikan pilihan Anda"
 
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Citizenship"
-msgstr "Kewarganegaraan"
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Klik untuk masuk pada akun Binary.com Anda"
@@ -470,12 +407,6 @@ msgstr "Tutup Semua"
 
 msgid "Closes"
 msgstr "Tutup"
-
-msgid "Commodities trading experience"
-msgstr "Pengalaman trading komoditas"
-
-msgid "Commodities trading frequency"
-msgstr "Frekuensi trading komoditas"
 
 msgid "Comparisons"
 msgstr "Perbandingan"
@@ -498,9 +429,6 @@ msgstr "Konstruksi"
 msgid "Contact Us"
 msgstr "Hubungi Kami"
 
-msgid "Continue"
-msgstr "Lanjutkan"
-
 msgid "Continue Trading"
 msgstr "Lanjutkan Trading"
 
@@ -519,14 +447,8 @@ msgstr "Kontrak"
 msgid "Copier"
 msgstr "Copier"
 
-msgid "Copy Trade"
-msgstr "Copy Trading"
-
 msgid "Copy Trading"
 msgstr "Copy Trading"
-
-msgid "Country of residence"
-msgstr "Negara tempat tinggal"
 
 msgid "Create"
 msgstr "Membuat"
@@ -588,9 +510,6 @@ msgstr "Unica Tua"
 msgid "Date"
 msgstr "Tanggal"
 
-msgid "Date of birth"
-msgstr "Tanggal lahir"
-
 msgid "Days"
 msgstr "Hari"
 
@@ -599,9 +518,6 @@ msgstr "Des"
 
 msgid "December"
 msgstr "Desember"
-
-msgid "Decline"
-msgstr "Menurun"
 
 msgid "Default"
 msgstr "Kelalaian"
@@ -693,9 +609,6 @@ msgstr "Mengunduh ruang kerja sebagai %1"
 msgid "Drawing tools"
 msgstr "Alat gambar"
 
-msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr "Berhubung perubahan terbaru dalam peraturan, kami perlu memastikan untuk meminta klien menyelesaikan Penilaian Keuangan berikut. Mohon diketahui bahwa Anda tidak akan dapat melanjutkan pendaftaran hingga proses ini selesai"
-
 msgid "Duration"
 msgstr "Durasi"
 
@@ -708,14 +621,8 @@ msgstr "Edge"
 msgid "Education"
 msgstr "Edukasi"
 
-msgid "Email verification failed"
-msgstr "Verifikasi email gagal"
-
 msgid "Embed code"
 msgstr "Menanamkan kode"
-
-msgid "Employment status"
-msgstr "Status pekerjaan"
 
 msgid "End Time"
 msgstr "Waktu Akhir"
@@ -749,9 +656,6 @@ msgstr "Spot awal"
 
 msgid "Error getting data for %1"
 msgstr "Error dalam memperoleh data %1"
-
-msgid "Estimated Net Worth"
-msgstr "Estimasi Kekayaan"
 
 msgid "Even"
 msgstr "Even"
@@ -789,9 +693,6 @@ msgstr "Gagal memperbarui kata sandi"
 msgid "Fall"
 msgstr "Fall"
 
-msgid "Family name"
-msgstr "Nama keluarga"
-
 msgid "Favorites"
 msgstr "Favorit"
 
@@ -819,32 +720,8 @@ msgstr "Harga akhir"
 msgid "Finance"
 msgstr "Keuangan"
 
-msgid "Financial Account Opening form"
-msgstr "Formulir pendaftaran Akun Finansial"
-
-msgid "Financial Assessment"
-msgstr "Penilaian Finansial"
-
-msgid "Financial Information"
-msgstr "Informasi Keuangan"
-
-msgid "Financial information"
-msgstr "Informasi keuangan"
-
 msgid "Firefox"
 msgstr "Firefox"
-
-msgid "First line of home address"
-msgstr "Alamat Rumah"
-
-msgid "First name"
-msgstr "Nama Depan"
-
-msgid "Forex trading experience"
-msgstr "Pengalaman trading forex"
-
-msgid "Forex trading frequency"
-msgstr "Frekuensi trading Forex"
 
 msgid "Fri"
 msgstr "Jum"
@@ -912,18 +789,6 @@ msgstr "Jam"
 msgid "Hours"
 msgstr "Jam"
 
-msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr "Saya menyatakan bahwa saya bukan orang yang terlibat dengan politik (PEP)"
-
-msgid "I have read and agree to Binary.com"
-msgstr "Saya telah membaca dan menyetujui Binary.com"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr "Dengan ini saya mengkonfirmasikan bahwa informasi pajak yang saya berikan adalah benar dan lengkap. Saya juga akan menginformasikan kepada Binary Investments (Europe) Ltd. jika terdapat perubahan pada informasi ini"
-
-msgid "I want to be treated as a professional client"
-msgstr "Saya ingin diperlakukan sebagai klien profesional"
-
 msgid "IMPORTANT DISCLAIMER"
 msgstr "SANGGAHAN PENTING"
 
@@ -939,9 +804,6 @@ msgstr "Jika Anda memilih"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Untuk menggunakan tema dengan benar, merefresh halaman adalah penting. Apa Anda ingin melanjutkan?"
 
-msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr "Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk memahami risiko yang terlibat)"
-
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
 msgstr "Di negara Uni Eropa. produk finansial disediakan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai Kategori 3 oleh Otoritas Jasa Keuangan Malta (lisensi no. IS/70156)."
 
@@ -954,9 +816,6 @@ msgstr "Di seluruh Uni Eropa, Indeks Volatilitas ditawarkan oleh Binary (Europe)
 msgid "In/Out"
 msgstr "In/Out"
 
-msgid "Income Source"
-msgstr "Sumber Pendapatan"
-
 msgid "Indicative"
 msgstr "Indikatif"
 
@@ -965,15 +824,6 @@ msgstr "Harga Indikatif"
 
 msgid "Indicators"
 msgstr "Indikator"
-
-msgid "Indices trading experience"
-msgstr "Pengalaman trading indeks"
-
-msgid "Indices trading frequency"
-msgstr "Frekuensi trading indeks"
-
-msgid "Industry of Employment"
-msgstr "Industri Tenaga Kerja"
 
 msgid "Instruments"
 msgstr "Instrumen"
@@ -1017,9 +867,6 @@ msgstr "Jun"
 msgid "June"
 msgstr "Juni"
 
-msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "Cukup klik tombol  Hibah  pada halaman dan Anda akan dibawa ke"
-
 msgid "Last 12 mnts Profitable Trades"
 msgstr "Trading Menguntungkan 12 bulan Terakhir"
 
@@ -1037,12 +884,6 @@ msgstr "Terakhir digunakan"
 
 msgid "Less than"
 msgstr "Kurang dari"
-
-msgid "Let's do it"
-msgstr "Mari kita lakukan"
-
-msgid "Level of Education"
-msgstr "Tingkat Pendidikan"
 
 msgid "Line"
 msgstr "Garis"
@@ -1074,17 +915,11 @@ msgstr "Loading Copy Trade..."
 msgid "Loading Download/View Data ..."
 msgstr "Loading Download/Lihat Data ..."
 
-msgid "Loading MAM..."
-msgstr "Loading MAM..."
-
 msgid "Loading Password dialog ..."
 msgstr "Loading dialog kata sandi ..."
 
 msgid "Loading Profit Table ..."
 msgstr "Loading Tabel Profit ..."
-
-msgid "Loading Real account opening ..."
-msgstr "Loading pendaftaran akun Riil ..."
 
 msgid "Loading Self-Exclusion ..."
 msgstr "Loading Pengecualian Diri ..."
@@ -1133,9 +968,6 @@ msgstr "Lookbacks"
 
 msgid "Low"
 msgstr "Rendah"
-
-msgid "Low Barrier"
-msgstr "Batas Rendah"
 
 msgid "Low barrier"
 msgstr "Batasan Rendah"
@@ -1209,15 +1041,6 @@ msgstr "Min. Modal Trading"
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Mak: 2000"
 
-msgid "Minimum of 2 characters required"
-msgstr "Minimal 2 karakter yang dibutuhkan"
-
-msgid "Minimum of 4 characters required"
-msgstr "Minimal 4 karakter diperlukan"
-
-msgid "Minimum of 6 characters required"
-msgstr "Minimal 6 karakter diperlukan"
-
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "Minimal enam huruf kecil dan huruf besar dengan angka"
 
@@ -1241,9 +1064,6 @@ msgstr "Senin"
 
 msgid "Monday"
 msgstr "Senin"
-
-msgid "Monthly Profitable Trades"
-msgstr "Kontrak Menguntungkan Bulanan"
 
 msgid "Mother's maiden name"
 msgstr "Nama panggilan Ibu Anda"
@@ -1287,14 +1107,8 @@ msgstr "Warna seri navigator"
 msgid "Navigator series line"
 msgstr "Seri garis navigator"
 
-msgid "Net Annual Income"
-msgstr "Pendapatan Bersih Tahunan"
-
 msgid "Net Profit"
 msgstr "Profit Bersih"
-
-msgid "New Account"
-msgstr "Akun Baru"
 
 msgid "New password"
 msgstr "Kata sandi baru"
@@ -1307,9 +1121,6 @@ msgstr "No touch"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "Nota: Kontrak akan dijual pada harga pasar terkini ketika permintaan diterima oleh server kami. Harga ini mungkin berbeda dari harga yang diindikasikan."
-
-msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "Catatan: Anda hanya dapat memiliki satu akun mata uang fiat dan satu dari setiap akun mata uang crypto"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: Penarikan via agen pembayaran hanya tersedia jika Anda mendeposit via agen pembayaran"
@@ -1329,9 +1140,6 @@ msgstr "OHLC"
 msgid "OK"
 msgstr "OK"
 
-msgid "Occupation"
-msgstr "Pekerjaan"
-
 msgid "Oct"
 msgstr "Okt"
 
@@ -1344,50 +1152,20 @@ msgstr "Odd"
 msgid "Ok"
 msgstr "Ok"
 
-msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr "Berdasarkan informasi yang diberikan berkaitan dengan pengetahuan dan pengalaman, kami menganggap bahwa investasi yang tersedia melalui website ini tidak sesuai untuk Anda"
-
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Saat batasan ini tercapai, Anda tidak dapat mendeposit"
-
-msgid "One last step left"
-msgstr "Satu langkah terakhir"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Trading online dapat menyebabkan ketagihan. Isikan formulir dibawah ini untuk membatasi keikutsertaan Anda pada situs web ini atau kirimkan surat yang ditandatangani atau kirimkan fax kepada tim customer support kami. Setelah ditetapkan, Anda hanya dapat merubah batasan Anda. Batas hanya akan dihapus atau dirubah setelah 7 hari dengan pengecualian dari tanggal pengecualian diri, yang tidak dapat dihapus atau diubah setelah Anda konfirmasi. Untuk menghapus atau meningkatkan batasan Anda, silahkan hubungi customer support"
 
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr "Hanya huruf, angka, tanda hubung yang diizinkan"
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr "Hanya huruf, angka, spasi, tanda hubung, periode, tanda kutip yang diperbolehkan"
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr "Hanya huruf, angka, spasi, periode, koma, - / @ ' diperbolehkan"
-
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "Hanya huruf, angka, spasi, periode, koma, tanda hubung (-)"
-
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr "Hanya huruf, spasi, tanda hubung, periode, tanda kutip yang diperbolehkan"
-
-msgid "Only numbers and space are allowed"
-msgstr "Hanya nomor dan spasi diizinkan"
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr "Hanya angka, huruf, tanda hubung diizinkan"
 
 msgid "Open"
 msgstr "Buka"
 
-msgid "Open Account"
-msgstr "Daftar Akun"
-
 msgid "Open a Financial Account"
 msgstr "Daftar Akun Keuangan"
-
-msgid "Open account"
-msgstr "Daftar akun"
 
 msgid "Opens"
 msgstr "Buka"
@@ -1401,12 +1179,6 @@ msgstr "Opsi trading dapat menyebabkan ketagihan seperti kegiatan lain yang dila
 msgid "Other"
 msgstr "Lain"
 
-msgid "Other financial instruments trading experience"
-msgstr "Pengalaman trading instrumen keuangan lainnya"
-
-msgid "Other financial instruments trading frequency"
-msgstr "Frekuensi trading instrumen keuangan lainnya"
-
 msgid "Over"
 msgstr "Lebih"
 
@@ -1416,17 +1188,8 @@ msgstr "3 tahun lebih"
 msgid "Overlap Studies"
 msgstr "Studi Tumpang Tindih"
 
-msgid "PEP Declaration"
-msgstr "Deklarasi PEP"
-
 msgid "PM"
 msgstr "PM"
-
-msgid "Password must be 6 characters minimum"
-msgstr "Kata sandi harus minimal 6 karakter"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "Kata sandi harus berisi huruf kecil dan besar dengan angka"
 
 msgid "Password successfully updated."
 msgstr "Kata sandi berhasil diperbarui."
@@ -1458,18 +1221,6 @@ msgstr "Probabilitas Kinerja"
 msgid "Permissions"
 msgstr "Izin"
 
-msgid "Personal Details"
-msgstr "Data Pribadi"
-
-msgid "Phone"
-msgstr "Telepon"
-
-msgid "Place of birth"
-msgstr "Tempat lahir"
-
-msgid "Please"
-msgstr "Silahkan"
-
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
 msgstr "Silahkan [_1]setujui Syarat dan Ketentuan terbaru[_2] untuk meningkatkan batasan penarikan dan trading Anda."
 
@@ -1479,9 +1230,6 @@ msgstr "Silahkan [_1]lengkapi profil akun Anda[_2] untuk meningkatkan batasan pe
 msgid "Please choose at least one token scope"
 msgstr "Silahkan pilih setidaknya satu lingkup token"
 
-msgid "Please choose which currency you would like to transact in"
-msgstr "Silahkan pilih mata uang yang ingin Anda transaksikan"
-
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr "Silahkan lengkapi [_1]formulir penilaian finansial[_2] untuk meningkatkan batasan penarikan dan trading Anda."
 
@@ -1490,9 +1238,6 @@ msgstr "Silahkan konfirmasi rincian sebagai berikut untuk menyelesaikan transfer
 
 msgid "Please enter a number between"
 msgstr "Silakan masukkan nomor antara"
-
-msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "Silahkan masukkan tanggal yang valid dalam format yyyy-mm-dd"
 
 msgid "Please enter a valid value for"
 msgstr "Masukkan nilai yang berlaku untuk"
@@ -1506,9 +1251,6 @@ msgstr "Masukkan nilai lebih besar dari 0"
 msgid "Please enter a value less than 6 weeks for time out until."
 msgstr "Masukkan nilai hingga kurang dari 6 minggu untuk waktu pengecualian."
 
-msgid "Please enter correct email"
-msgstr "Silakan masukkan email yang benar"
-
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Silahkan masukkan tanggal dalam format YYYY-MM-DD"
 
@@ -1520,9 +1262,6 @@ msgstr "Masukkan format waktu dalam JJ:MM"
 
 msgid "Please enter your current password"
 msgstr "Silahkan masukkan kata sandi Anda"
-
-msgid "Please enter your email"
-msgstr "Masukkan email Anda"
 
 msgid "Please input correct token"
 msgstr "Silakan masukan token yang benar"
@@ -1539,35 +1278,17 @@ msgstr "Silahkan masuk untuk melihat ruang kerja yang disimpan."
 msgid "Please log in."
 msgstr "Silahkan masuk."
 
-msgid "Please provide your tax information"
-msgstr "Mohon sediakan informasi pajak Anda"
-
-msgid "Please select"
-msgstr "Silahkan pilih"
-
 msgid "Please select a date for time out until."
 msgstr "Silahkan pilih tanggal pengecualian hingga."
 
 msgid "Please select a payment agent"
 msgstr "Silahkan pilih agen pembayaran"
 
-msgid "Please select an account opening reason before continuing"
-msgstr "Silahkan pilih alasan pendaftaran akun sebelum melanjutkan"
-
-msgid "Please set currency."
-msgstr "Silakan tentukan mata uang."
-
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr "Tentukan [_1]mata uang[_2] akun Anda"
 
-msgid "Please submit a valid verification token"
-msgstr "Kirimkan token verifikasi yang berlaku"
-
 msgid "Please try again after 1 minute."
 msgstr "Silahkan coba kembali setelah 1 menit."
-
-msgid "Please try again after few minutes."
-msgstr "Silahkan coba kembali beberapa menit."
 
 msgid "Please use your new password to login."
 msgstr "Silakan gunakan kata sandi baru Anda untuk masuk."
@@ -1583,9 +1304,6 @@ msgstr "Poin"
 
 msgid "Portfolio"
 msgstr "Portopolio"
-
-msgid "Postal code/ZIP"
-msgstr "Kode Pos"
 
 msgid "Potential Payout"
 msgstr "Potensi Hasil"
@@ -1614,9 +1332,6 @@ msgstr "Utama"
 msgid "Print chart"
 msgstr "Cetak grafik"
 
-msgid "Professional Client"
-msgstr "Klien Profesional"
-
 msgid "Profit"
 msgstr "Untung"
 
@@ -1628,12 +1343,6 @@ msgstr "Tabel untung"
 
 msgid "Profit/ Loss"
 msgstr "Untung/ Rugi"
-
-msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr "Bukti alamat - Salinan scan rekening koran atau tagihan utilitas tidak lebih dari tiga bulan setelah tanggal cetak. Bukti alamat harus menampilkan nama, alamat, tanggal cetak, dan nama organisasi pengeluar bukti alamat tersebut."
-
-msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "Bukti identitas - Scan KTP, SIM, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
 
 msgid "Purchase"
 msgstr "Beli"
@@ -1649,9 +1358,6 @@ msgstr "Waktu Beli"
 
 msgid "Read"
 msgstr "Baca"
-
-msgid "Real Money Account Opening"
-msgstr "Pendaftaran Akun Uang Riil"
 
 msgid "Reality check"
 msgstr "Pemeriksaan realitas"
@@ -1671,9 +1377,6 @@ msgstr "Pembaruan gagal"
 msgid "Register free account"
 msgstr "Daftar akun gratis"
 
-msgid "Registration"
-msgstr "Pendaftaran"
-
 msgid "Remove"
 msgstr "Hapus"
 
@@ -1682,9 +1385,6 @@ msgstr "Hapus Pilihan"
 
 msgid "Rename"
 msgstr "Ganti nama"
-
-msgid "Repeat password"
-msgstr "Ulang kata sandi"
 
 msgid "Resale of this contract is not offered"
 msgstr "Penjualan kembali kontrak ini tidak ditawarkan"
@@ -1743,17 +1443,8 @@ msgstr "Simpan perubahan"
 msgid "Saved"
 msgstr "Tersimpan"
 
-msgid "Second line of home address"
-msgstr "Baris kedua alamat rumah"
-
 msgid "Secondary"
 msgstr "Sekunder"
-
-msgid "Security"
-msgstr "Keamanan"
-
-msgid "Security question"
-msgstr "Pertanyaan keamanan"
 
 msgid "Seems like our servers are down, we are working on fixing it."
 msgstr "Sepertinya server kami sedang mengalami gangguan, kami sedang berusaha memperbaikinya."
@@ -1803,9 +1494,6 @@ msgstr "Terjual"
 msgid "Some random index"
 msgstr "Beberapa indeks acak"
 
-msgid "Source of wealth"
-msgstr "Sumber kekayaan"
-
 msgid "Spline"
 msgstr "Spline"
 
@@ -1836,9 +1524,6 @@ msgstr "Mulai Trading"
 msgid "Start time"
 msgstr "Waktu mulai"
 
-msgid "State/province/region"
-msgstr "Negera/provinsi/daerah"
-
 msgid "Statement"
 msgstr "Pernyataan"
 
@@ -1853,12 +1538,6 @@ msgstr "Stays Between/Goes Outside"
 
 msgid "Stays in"
 msgstr "Stays in"
-
-msgid "Stocks trading experience"
-msgstr "Pengalaman trading bursa saham"
-
-msgid "Stocks trading frequency"
-msgstr "Frekuensi trading bursa saham"
 
 msgid "Stop-loss"
 msgstr "Stop-loss"
@@ -1896,21 +1575,6 @@ msgstr "Minggu"
 msgid "Table"
 msgstr "Tabel"
 
-msgid "Tax Information"
-msgstr "Informasi Pajak"
-
-msgid "Tax Information successfully updated"
-msgstr "Informasi Pajak berhasil diperbarui"
-
-msgid "Tax identification number"
-msgstr "Nomor Pokok Wajib Pajak"
-
-msgid "Tax information"
-msgstr "Informasi pajak"
-
-msgid "Tax residence"
-msgstr "Pajak rumah"
-
 msgid "Tel"
 msgstr "Tel"
 
@@ -1946,12 +1610,6 @@ msgstr "Itu"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "Perusahaan menyimpan dana Pelanggan pada rekening yang berbeda dengan rekening untuk biaya oprasional yang bukan merupakan bagian dari aset Perusahaan jika terjadi kebangkrutan. Hal ini adalah merupakan syarat yang harus dipenuhi dalam hal pemisahan dana pelanggan pada tingkat"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr "Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk klien yang mampu menanggung kerugian pada semua modal yang mereka tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang akan dialami pada trading kontrak finansial. Transaksi pada kontrak finansial memiliki tingkat risiko tinggi. Jika kontrak yang Anda beli tidak bernilai, Anda akan menanggung kerugian, yaitu harga kontrak"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk Pelanggan yang mampu menanggung kerugian pada semua modal yang mereka tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang akan dialami pada trading kontrak finansial. Kontrak transaksi finansial adalah memiliki risiko tinggi. Jika prediksi Anda tidak tepat maka Anda akan kehilangan semua modal yang anda tanamkan berupa harga kontrak yang Anda bayarkan"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Terdapat gangguan data pasar selama periode kontrak berlangsung. Untuk akun uang riil, kami akan berusaha memperbaiki masalah ini dan menyelesaikan kontrak dengan benar, jika tidak, kontrak akan dibatalkan dan dikembalikan. Untuk kontrak uang virtual akan dibatalkan dan dikembalikan."
@@ -2073,9 +1731,6 @@ msgstr "Touch/No Touch"
 msgid "Tourism"
 msgstr "Pariwisata"
 
-msgid "Town/City"
-msgstr "Kota"
-
 msgid "Trade"
 msgstr "Trading"
 
@@ -2096,12 +1751,6 @@ msgstr "Statistik Trader"
 
 msgid "Trades Profitability"
 msgstr "Kontrak Profitabilitas"
-
-msgid "Trades break down"
-msgstr "Penjelasan kontrak"
-
-msgid "Trading Experience"
-msgstr "Pengalaman Trading"
 
 msgid "Trading Times"
 msgstr "Waktu Trading"
@@ -2172,9 +1821,6 @@ msgstr "Gunakan tombol \"Simpan sebagai...\" untuk menyimpan susunan trading"
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr "Berbagai fitur yang dapat disesuaikan seperti mengunggah dan mengatur aset, chart dan sumber lain yang Anda perlukan"
 
-msgid "Verification code has been sent to your email"
-msgstr "Kode verifikasi telah dikirimkan ke email Anda"
-
 msgid "Verification code sent to"
 msgstr "Kode verifikasi dikirim ke"
 
@@ -2217,12 +1863,6 @@ msgstr "Rabu"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Selamat datang di Webtrader Binary.com"
 
-msgid "What is pep?"
-msgstr "Apa itu pep?"
-
-msgid "What is this?"
-msgstr "Apa ini?"
-
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr "Setelah mengklik \"Ok\" Anda akan dikecualikan dari trading hingga tanggal yang dipilih."
 
@@ -2256,9 +1896,6 @@ msgstr "Garis grid Y-axis"
 msgid "Y-axis labels"
 msgstr "Label y-axis"
 
-msgid "Yearly Profitable Trades"
-msgstr "Kontrak Menguntungkan Tahunan"
-
 msgid "Yes"
 msgstr "Iya"
 
@@ -2277,9 +1914,6 @@ msgstr "Anda belum menyimpan template apa pun"
 msgid "You pay"
 msgstr "Anda membayar"
 
-msgid "You should enter between 6-25 characters."
-msgstr "Anda harus memasukkan 6-25 karakter."
-
 msgid "You will be automatically logged out after such time"
 msgstr "Anda akan secara otomatis keluar setelah waktu tersebut"
 
@@ -2288,9 +1922,6 @@ msgstr "Jika Anda menginginkan trader lain untuk menduplikasi trading Anda"
 
 msgid "You wish to copy another trader's trades"
 msgstr "Anda ingin menduplikasi trading trader lain"
-
-msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu mengijinkan Webtrader untuk mengaksesnya"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr "Akun Anda (%) dibatalkan, silahkan hubungi customer support untuk info lebih lanjut."
@@ -2309,9 +1940,6 @@ msgstr "Perubahan Anda telah diperbarui"
 
 msgid "Your copying settings"
 msgstr "Susunan duplikasi Anda"
-
-msgid "Your email"
-msgstr "Email Anda"
 
 msgid "Your new account balance is"
 msgstr "Saldo akun baru Anda adalah"
@@ -2334,14 +1962,8 @@ msgstr "dan"
 msgid "apostrophe (') are allowed"
 msgstr "apostrof (') diperbolehkan"
 
-msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "dibawah ini dan melanjutkan Pendaftaran Akun berarti Anda memahami bahwa Anda akan mungkin akan mengalami risiko (yang mungkin segnifikan termasuk risiko kehilangan semua dana yang Anda investasikan) dimana Anda mungkin tidak memiliki pengetahuan dan pengalaman untuk mengurangi atau menghindarinya"
-
 msgid "commission"
 msgstr "komisi"
-
-msgid "contact support"
-msgstr "hubungi support"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr "buat token Baca-saja, dan bagikan token kepada copier Anda"
@@ -2381,9 +2003,6 @@ msgstr "jam"
 
 msgid "hours"
 msgstr "jam"
-
-msgid "if this is not your country of residence"
-msgstr "jika ini adalah bukan negara domisili Anda"
 
 msgid "in the future, the"
 msgstr "di masa depan,"
@@ -2457,9 +2076,6 @@ msgstr "tinjauan sesi"
 msgid "start time"
 msgstr "waktu mulai"
 
-msgid "terms and conditions"
-msgstr "syarat dan ketentuan"
-
 msgid "the"
 msgstr "itu"
 
@@ -2484,3 +2100,386 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Laba"
 
+#~ msgid "Account authentication"
+#~ msgstr "Autentikasi akun"
+
+#~ msgid "Account opening"
+#~ msgstr "Pendaftaran akun"
+
+#~ msgid "Account opening reason"
+#~ msgstr "Alasan pedaftaran akun"
+
+#~ msgid "Address"
+#~ msgstr "Alamat"
+
+#~ msgid "Allow others to copy your trades"
+#~ msgstr "Membolehkan orang lain untuk menyalin trading Anda"
+
+#~ msgid "Answer"
+#~ msgstr "Jawaban"
+
+#~ msgid "Anticipated account turnover"
+#~ msgstr "Antisipasi turnover akun"
+
+#~ msgid "Appropriateness Test: WARNING"
+#~ msgstr "Uji Kelayakan: PERINGATAN"
+
+#~ msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
+#~ msgstr "Otentikasi akun Anda sekarang dengan memverifikasi identitas dan alamat Anda. Untuk melanjutkan, cukup kirim dokumen-dokumen berikut ke %1:"
+
+#~ msgid "Available Currencies"
+#~ msgstr "Mata Uang Yang Tersedia"
+
+#~ msgid "Avg. Duration"
+#~ msgstr "Rata-rata Durasi"
+
+#~ msgid "Binary options or other financial derivatives trading experience"
+#~ msgstr "Opsi Binary atau pengalaman trading pada keuangan derivatif lainnya"
+
+#~ msgid "Binary options or other financial derivatives trading frequency"
+#~ msgstr "Opsi Binary atau frekuensi trading keuangan derivatif lainnya"
+
+#~ msgid "Binary options trading experience"
+#~ msgstr "Pengalaman trading opsi Binary"
+
+#~ msgid "Binary options trading frequency"
+#~ msgstr "Frekuensi trading opsi binary"
+
+#~ msgid "By clicking"
+#~ msgstr "Dengan mengklik"
+
+#~ msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
+#~ msgstr "Secara otomatis, klien akan di layani sebagai retail. Apakah Anda ingin dilayani sebagai klien profesional jika Anda lulus pada kreteria yang di wajibkan?"
+
+#~ msgid "CFD trading experience"
+#~ msgstr "Pengalaman trading CFD"
+
+#~ msgid "CFD trading frequency"
+#~ msgstr "Trading frekuensi CFD"
+
+#~ msgid "Choose password"
+#~ msgstr "Pilih kata sandi"
+
+#~ msgid "Citizenship"
+#~ msgstr "Kewarganegaraan"
+
+#~ msgid "Commodities trading experience"
+#~ msgstr "Pengalaman trading komoditas"
+
+#~ msgid "Commodities trading frequency"
+#~ msgstr "Frekuensi trading komoditas"
+
+#~ msgid "Continue"
+#~ msgstr "Lanjutkan"
+
+#~ msgid "Copy Trade"
+#~ msgstr "Copy Trading"
+
+#~ msgid "Country of residence"
+#~ msgstr "Negara tempat tinggal"
+
+#~ msgid "Date of birth"
+#~ msgstr "Tanggal lahir"
+
+#~ msgid "Decline"
+#~ msgstr "Menurun"
+
+#~ msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
+#~ msgstr "Berhubung perubahan terbaru dalam peraturan, kami perlu memastikan untuk meminta klien menyelesaikan Penilaian Keuangan berikut. Mohon diketahui bahwa Anda tidak akan dapat melanjutkan pendaftaran hingga proses ini selesai"
+
+#~ msgid "Email verification failed"
+#~ msgstr "Verifikasi email gagal"
+
+#~ msgid "Employment status"
+#~ msgstr "Status pekerjaan"
+
+#~ msgid "Estimated Net Worth"
+#~ msgstr "Estimasi Kekayaan"
+
+#~ msgid "Family name"
+#~ msgstr "Nama keluarga"
+
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Formulir pendaftaran Akun Finansial"
+
+#~ msgid "Financial Assessment"
+#~ msgstr "Penilaian Finansial"
+
+#~ msgid "Financial Information"
+#~ msgstr "Informasi Keuangan"
+
+#~ msgid "Financial information"
+#~ msgstr "Informasi keuangan"
+
+#~ msgid "First line of home address"
+#~ msgstr "Alamat Rumah"
+
+#~ msgid "First name"
+#~ msgstr "Nama Depan"
+
+#~ msgid "Forex trading experience"
+#~ msgstr "Pengalaman trading forex"
+
+#~ msgid "Forex trading frequency"
+#~ msgstr "Frekuensi trading Forex"
+
+#~ msgid "I acknowledge that I am not a politically exposed person (PEP)"
+#~ msgstr "Saya menyatakan bahwa saya bukan orang yang terlibat dengan politik (PEP)"
+
+#~ msgid "I have read and agree to Binary.com"
+#~ msgstr "Saya telah membaca dan menyetujui Binary.com"
+
+#~ msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
+#~ msgstr "Dengan ini saya mengkonfirmasikan bahwa informasi pajak yang saya berikan adalah benar dan lengkap. Saya juga akan menginformasikan kepada Binary Investments (Europe) Ltd. jika terdapat perubahan pada informasi ini"
+
+#~ msgid "I want to be treated as a professional client"
+#~ msgstr "Saya ingin diperlakukan sebagai klien profesional"
+
+#~ msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
+#~ msgstr "Dalam memberikan pelayanan, kami diharuskan untuk memperoleh informasi dari Anda untuk memastikan apakah produk atau layanan yang diberikan adalah tepat untuk Anda (yaitu, apakah Anda memiliki pengalaman dan pengetahuan untuk memahami risiko yang terlibat)"
+
+#~ msgid "Income Source"
+#~ msgstr "Sumber Pendapatan"
+
+#~ msgid "Indices trading experience"
+#~ msgstr "Pengalaman trading indeks"
+
+#~ msgid "Indices trading frequency"
+#~ msgstr "Frekuensi trading indeks"
+
+#~ msgid "Industry of Employment"
+#~ msgstr "Industri Tenaga Kerja"
+
+#~ msgid "Just click  Grant  button on the page you will now be taken to"
+#~ msgstr "Cukup klik tombol  Hibah  pada halaman dan Anda akan dibawa ke"
+
+#~ msgid "Let's do it"
+#~ msgstr "Mari kita lakukan"
+
+#~ msgid "Level of Education"
+#~ msgstr "Tingkat Pendidikan"
+
+#~ msgid "Loading MAM..."
+#~ msgstr "Loading MAM..."
+
+#~ msgid "Loading Real account opening ..."
+#~ msgstr "Loading pendaftaran akun Riil ..."
+
+#~ msgid "Low Barrier"
+#~ msgstr "Batas Rendah"
+
+#~ msgid "Minimum of 2 characters required"
+#~ msgstr "Minimal 2 karakter yang dibutuhkan"
+
+#~ msgid "Minimum of 4 characters required"
+#~ msgstr "Minimal 4 karakter diperlukan"
+
+#~ msgid "Minimum of 6 characters required"
+#~ msgstr "Minimal 6 karakter diperlukan"
+
+#~ msgid "Monthly Profitable Trades"
+#~ msgstr "Kontrak Menguntungkan Bulanan"
+
+#~ msgid "Net Annual Income"
+#~ msgstr "Pendapatan Bersih Tahunan"
+
+#~ msgid "New Account"
+#~ msgstr "Akun Baru"
+
+#~ msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
+#~ msgstr "Catatan: Anda hanya dapat memiliki satu akun mata uang fiat dan satu dari setiap akun mata uang crypto"
+
+#~ msgid "Occupation"
+#~ msgstr "Pekerjaan"
+
+#~ msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
+#~ msgstr "Berdasarkan informasi yang diberikan berkaitan dengan pengetahuan dan pengalaman, kami menganggap bahwa investasi yang tersedia melalui website ini tidak sesuai untuk Anda"
+
+#~ msgid "One last step left"
+#~ msgstr "Satu langkah terakhir"
+
+#~ msgid "Only letters, numbers, hyphen are allowed"
+#~ msgstr "Hanya huruf, angka, tanda hubung yang diizinkan"
+
+#~ msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "Hanya huruf, angka, spasi, tanda hubung, periode, tanda kutip yang diperbolehkan"
+
+#~ msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+#~ msgstr "Hanya huruf, angka, spasi, periode, koma, - / @ ' diperbolehkan"
+
+#~ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "Hanya huruf, spasi, tanda hubung, periode, tanda kutip yang diperbolehkan"
+
+#~ msgid "Only numbers and space are allowed"
+#~ msgstr "Hanya nomor dan spasi diizinkan"
+
+#~ msgid "Only numbers, letters, hyphens are allowed"
+#~ msgstr "Hanya angka, huruf, tanda hubung diizinkan"
+
+#~ msgid "Open Account"
+#~ msgstr "Daftar Akun"
+
+#~ msgid "Open account"
+#~ msgstr "Daftar akun"
+
+#~ msgid "Other financial instruments trading experience"
+#~ msgstr "Pengalaman trading instrumen keuangan lainnya"
+
+#~ msgid "Other financial instruments trading frequency"
+#~ msgstr "Frekuensi trading instrumen keuangan lainnya"
+
+#~ msgid "PEP Declaration"
+#~ msgstr "Deklarasi PEP"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "Kata sandi harus minimal 6 karakter"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "Kata sandi harus berisi huruf kecil dan besar dengan angka"
+
+#~ msgid "Personal Details"
+#~ msgstr "Data Pribadi"
+
+#~ msgid "Phone"
+#~ msgstr "Telepon"
+
+#~ msgid "Place of birth"
+#~ msgstr "Tempat lahir"
+
+#~ msgid "Please"
+#~ msgstr "Silahkan"
+
+#~ msgid "Please choose which currency you would like to transact in"
+#~ msgstr "Silahkan pilih mata uang yang ingin Anda transaksikan"
+
+#~ msgid "Please enter a valid date in yyyy-mm-dd format"
+#~ msgstr "Silahkan masukkan tanggal yang valid dalam format yyyy-mm-dd"
+
+#~ msgid "Please enter correct email"
+#~ msgstr "Silakan masukkan email yang benar"
+
+#~ msgid "Please enter your email"
+#~ msgstr "Masukkan email Anda"
+
+#~ msgid "Please provide your tax information"
+#~ msgstr "Mohon sediakan informasi pajak Anda"
+
+#~ msgid "Please select"
+#~ msgstr "Silahkan pilih"
+
+#~ msgid "Please select an account opening reason before continuing"
+#~ msgstr "Silahkan pilih alasan pendaftaran akun sebelum melanjutkan"
+
+#~ msgid "Please set currency."
+#~ msgstr "Silakan tentukan mata uang."
+
+#~ msgid "Please submit a valid verification token"
+#~ msgstr "Kirimkan token verifikasi yang berlaku"
+
+#~ msgid "Please try again after few minutes."
+#~ msgstr "Silahkan coba kembali beberapa menit."
+
+#~ msgid "Postal code/ZIP"
+#~ msgstr "Kode Pos"
+
+#~ msgid "Professional Client"
+#~ msgstr "Klien Profesional"
+
+#~ msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
+#~ msgstr "Bukti alamat - Salinan scan rekening koran atau tagihan utilitas tidak lebih dari tiga bulan setelah tanggal cetak. Bukti alamat harus menampilkan nama, alamat, tanggal cetak, dan nama organisasi pengeluar bukti alamat tersebut."
+
+#~ msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
+#~ msgstr "Bukti identitas - Scan KTP, SIM, Paspor atau kartu identitas yang menunjukkan nama lengkap dan tanggal lahir."
+
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Pendaftaran Akun Uang Riil"
+
+#~ msgid "Registration"
+#~ msgstr "Pendaftaran"
+
+#~ msgid "Repeat password"
+#~ msgstr "Ulang kata sandi"
+
+#~ msgid "Second line of home address"
+#~ msgstr "Baris kedua alamat rumah"
+
+#~ msgid "Security"
+#~ msgstr "Keamanan"
+
+#~ msgid "Security question"
+#~ msgstr "Pertanyaan keamanan"
+
+#~ msgid "Source of wealth"
+#~ msgstr "Sumber kekayaan"
+
+#~ msgid "State/province/region"
+#~ msgstr "Negera/provinsi/daerah"
+
+#~ msgid "Stocks trading experience"
+#~ msgstr "Pengalaman trading bursa saham"
+
+#~ msgid "Stocks trading frequency"
+#~ msgstr "Frekuensi trading bursa saham"
+
+#~ msgid "Tax Information"
+#~ msgstr "Informasi Pajak"
+
+#~ msgid "Tax Information successfully updated"
+#~ msgstr "Informasi Pajak berhasil diperbarui"
+
+#~ msgid "Tax identification number"
+#~ msgstr "Nomor Pokok Wajib Pajak"
+
+#~ msgid "Tax information"
+#~ msgstr "Informasi pajak"
+
+#~ msgid "Tax residence"
+#~ msgstr "Pajak rumah"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
+#~ msgstr "Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk klien yang mampu menanggung kerugian pada semua modal yang mereka tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang akan dialami pada trading kontrak finansial. Transaksi pada kontrak finansial memiliki tingkat risiko tinggi. Jika kontrak yang Anda beli tidak bernilai, Anda akan menanggung kerugian, yaitu harga kontrak"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+#~ msgstr "Layanan trading finansial yang disediakan pada situs ini hanya cocok untuk Pelanggan yang mampu menanggung kerugian pada semua modal yang mereka tanamkan dan bagi yang mengerti dan memiliki pengalaman tentang risiko yang akan dialami pada trading kontrak finansial. Kontrak transaksi finansial adalah memiliki risiko tinggi. Jika prediksi Anda tidak tepat maka Anda akan kehilangan semua modal yang anda tanamkan berupa harga kontrak yang Anda bayarkan"
+
+#~ msgid "Town/City"
+#~ msgstr "Kota"
+
+#~ msgid "Trades break down"
+#~ msgstr "Penjelasan kontrak"
+
+#~ msgid "Trading Experience"
+#~ msgstr "Pengalaman Trading"
+
+#~ msgid "Verification code has been sent to your email"
+#~ msgstr "Kode verifikasi telah dikirimkan ke email Anda"
+
+#~ msgid "What is pep?"
+#~ msgstr "Apa itu pep?"
+
+#~ msgid "What is this?"
+#~ msgstr "Apa ini?"
+
+#~ msgid "Yearly Profitable Trades"
+#~ msgstr "Kontrak Menguntungkan Tahunan"
+
+#~ msgid "You should enter between 6-25 characters."
+#~ msgstr "Anda harus memasukkan 6-25 karakter."
+
+#~ msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+#~ msgstr "Akun Binary.com Anda telah terdaftar, namun untuk memulai trading Anda perlu mengijinkan Webtrader untuk mengaksesnya"
+
+#~ msgid "Your email"
+#~ msgstr "Email Anda"
+
+#~ msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
+#~ msgstr "dibawah ini dan melanjutkan Pendaftaran Akun berarti Anda memahami bahwa Anda akan mungkin akan mengalami risiko (yang mungkin segnifikan termasuk risiko kehilangan semua dana yang Anda investasikan) dimana Anda mungkin tidak memiliki pengetahuan dan pengalaman untuk mengurangi atau menghindarinya"
+
+#~ msgid "contact support"
+#~ msgstr "hubungi support"
+
+#~ msgid "if this is not your country of residence"
+#~ msgstr "jika ini adalah bukan negara domisili Anda"
+
+#~ msgid "terms and conditions"
+#~ msgstr "syarat dan ketentuan"

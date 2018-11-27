@@ -136,7 +136,7 @@
           <span rv-text="proposal_open_contract.profit | to-fixed 2" rv-class-green="proposal_open_contract.profit | gt -0.01" rv-class-red="proposal_open_contract.profit | lt 0"></span>
       </div>
     </div>
-    <div class="chart-container" rv-show="route.value | notify chart.manual_reflow | eq 'chart'">
+    <div class="chart-container" rv-show="route.value | notify chart.manualReflow | eq 'chart'">
       <div class='transaction-chart' rv-show="chart.loading | eq ''"> </div>
 
       <div class='loading' rv-show="chart.loading | not-eq ''">
