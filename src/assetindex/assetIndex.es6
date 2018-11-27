@@ -214,8 +214,7 @@ const refreshTable = () => {
         .catch((error) => {
             $.growl.error({ message: error.message });
             console.error(error);
-        });
-    
+        });   
 }
 
 const initAssetWin = ($html) => {
