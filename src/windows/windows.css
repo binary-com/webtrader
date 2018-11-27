@@ -59,13 +59,13 @@ img.reload {
     cursor: pointer;
     background-image: url('../images/new-windows.svg')!important;
     position: relative;
-    background-repeat:no-repeat;
-    background-size:contain;
+    background-repeat: no-repeat;
+    background-size: contain;
     color: white;
     right: 2px;
 }
 .ui-dialog-titlebar-restore, .ui-dialog-titlebar-restore:hover {
-    margin-left:4px;
+    margin-left: 4px;
 }
 .ui-dialog-titlebar-buttonpane {
     right: 0 !important;
