@@ -5,7 +5,6 @@
 import $ from 'jquery';
 import liveapi from 'websockets/binary_websockets';
 import windows from 'windows/windows';
-import currencyDialog from 'cashier/currency';
 import rv from 'common/rivetsExtra';
 import _ from 'lodash';
 import moment from 'moment';
@@ -26,11 +25,7 @@ const error_handler = function(err) {
 export function init(li) {
     li.click(() => {
         if (!deposit_win) {
-            liveapi.cached.authorize().then(data => {
-                if (!data.authorize.currency && !local_storage.get("currency")) // if currency is not set ask for currency
-                    return currencyDialog.check_currency();
-                return true; // OK
-            }).then(() => {
+            liveapi.cached.authorize().then(() => {
                 init_deposit_win(html);
             }).catch(error_handler);
         } else
