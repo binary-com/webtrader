@@ -178,7 +178,7 @@ const initStatement = () => {
 
 };
 
-const on_arrow_click = (e) =>{
+const on_arrow_click = (e) => {
    const target = e.target;
    const $target = $(target);
    if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
@@ -188,7 +188,10 @@ const on_arrow_click = (e) =>{
    transaction = _.last(transaction);
    $target.addClass('button-disabled');
    viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-      .then(() => $target.removeClass('button-disabled')).catch((err)=>{});
+      .then(() => $target.removeClass('button-disabled')).catch((err) => {
+         $target.removeClass('button-disabled');
+         $.growl.error({ message: err.message });
+      });
 }
 
 export default  { init }
