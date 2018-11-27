@@ -131,7 +131,6 @@ function set_current_template(state, tpl) {
     _.defer(function() {
       if(state.date_start.visible) {
         _.defer(function() {
-          // TODO: Why are we changing state of date_start.value here?
           if (state.date_start.value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1})) {
             state.date_start.value = tpl.date_start_value*1;
           } else {
