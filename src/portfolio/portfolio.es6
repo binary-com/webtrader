@@ -109,8 +109,7 @@ const proposalOpenContract = (command) => {
 const on_arrow_click = (e) => {
     const target = e.target;
     const $target = $(target);
-    if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
-        return;
+    if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled')) return;
     const tr = target.parentElement.parentElement;
     let transaction = table.api().row(tr).data();
     transaction = _.last(transaction);
