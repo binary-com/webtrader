@@ -53,7 +53,7 @@
         <li class="future-timepicker-wrapper" rv-if="date_start.value | not-eq 'now'">
             <input type="text"
                 rv-value="selected_future_timepicker"
-                rv-timepicker="date_start.selected_future_timepicker | notify setDateStartHour" />
+                rv-timepicker="date_start.hour_minute | notify setDateStartHourMinute" />
         </li>
     </ul>
     <ul class="digits-row"

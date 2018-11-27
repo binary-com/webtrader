@@ -220,7 +220,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 'now', /* epoch value if selected */
       array: [{ text: 'Now', value: 'now' } ],
       visible: false,
-      selected_future_timepicker: '',
+      hour_minute: '',
     },
     date_expiry: {
       value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
@@ -228,7 +228,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 0,    /* epoch value of date+hour */
       today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
       onHourShow: function(hour) { /* for timepicker */
-        console.log('onHourShow', hour);
         var times = state.date_expiry.today_times;
         if(times.open === '--') return true;
         var now = moment.utc();
@@ -508,20 +507,17 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
     _.assign(state.date_start, options);
 
-    if (selected_date === 'now') {
-      state.date_start.selected_future_timepicker = '00:00';
-    } else if (state.date_start.selected_future_timepicker !== '00:00') {
-      state.date_start.selected_future_timepicker = '00:00';
+    if (selected_date === 'now' || state.date_start.hour_minute !== '00:00') {
+      state.date_start.hour_minute = '00:00';
     }
   };
 
-  state.setDateStartHour = (selected_time) => {
+  state.setDateStartHourMinute = (hour_minute) => {
     const date_start_formatted = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
-    const date_start_with_selected_time = moment.utc(`${date_start_formatted} ${selected_time}`).unix();
+    const date_start_with_selected_hour_minute = moment.utc(`${date_start_formatted} ${hour_minute}`).unix();
 
-    // add hour minute to date_start_value
-    state.date_start.value = date_start_with_selected_time;
-    state.date_start.selected_future_timepicker = selected_time;
+    state.date_start.value = date_start_with_selected_hour_minute;
+    state.date_start.hour_minute = hour_minute;
   }
 
   state.date_expiry.update = function (date_or_hour) {
