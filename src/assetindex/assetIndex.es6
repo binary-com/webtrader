@@ -68,7 +68,7 @@ const state = {
 }
 
 const checkVolatility = (market_name, market_names) => {
-    const volatility_indices = market_names[0][3].innerText;
+    const volatility_indices = isEU() ? market_names[0][0].innerText : market_names[0][3].innerText;
     const is_volatility = market_name.indexOf(volatility_indices) !== -1;
     return is_volatility;
 }
@@ -77,31 +77,37 @@ const getEUMarkets = (markets) => {
     const volatility_index_name = markets[3].name;
     const loginId = (local_storage.get('authorize') || {}).loginid || '';
     markets = markets.filter(market => {
-        return (/MF/gi.test(loginId) && market.name !== volatility_index_name)
-                || (/MLT/gi.test(loginId) && market.name === volatility_index_name)
-                || (/MX/gi.test(loginId) && market.name === volatility_index_name)
-                || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
+        return ((isEU() && market.name === volatility_index_name)
+            || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId)));
       });
     return markets;
 }
 
+const isEU = () => {
+    const loginId = (local_storage.get('authorize') || {}).loginid || '';
+    return /MF/gi.test(loginId) || /MLT/gi.test(loginId) || /MX/gi.test(loginId)
+}
+
+const filterMarkets = (markets, display_name) => markets.reduce((object, item) => {
+    if (item.hasOwnProperty('instruments')) {
+        object[item[display_name]] = item.instruments.map((symbol) => symbol.display_name);
+    } else {
+        object[item[display_name]] = filterMarkets(item.submarkets, 'display_name');
+    }
+    return object;
+}, {})
+
 const getMarketsSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
     const checked_eu_markets = getEUMarkets(markets);
-    const select_market_submarket = {};
-    checked_eu_markets.forEach((market) => {
-        select_market_submarket[market.display_name] = {};
-        market.submarkets.forEach((select_submarket) => {
-            select_market_submarket[market.display_name][select_submarket.display_name]
-              = select_submarket.instruments.map((symbol) => symbol.display_name);
-        });
-    });
+    const select_market_submarket = filterMarkets(checked_eu_markets, 'display_name');
     return select_market_submarket;
 }
 
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
         state.dropdown.selected_market = market_name;
+        console.log(isEU())
         state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
         const symbols = state.dropdown.market_submarkets[market_name][submarket_name];
         updateHeader();
@@ -120,21 +126,21 @@ const refreshTable = () => {
                         asset[state.index.assets].find(asset => asset[state.index.asset_props.asset_name] === name) || [];
                     return `${prop[state.index.asset_props.asset_from] || ''} - ${prop[state.index.asset_props.asset_to] || ''}`;
                 };
-                props.push(asset[1]);
-                props.push(getRowValue('callput', Rise_Fall ? Rise_Fall[state.index.asset_props.asset_display_name] : '-'));
-                props.push(getRowValue('callput', Higher_Lower ? Higher_Lower[state.index.asset_props.asset_display_name] : '-'));
-                props.push(getRowValue('touchnotouch'));
-                props.push(getRowValue('endsinout'));
-                props.push(getRowValue('staysinout'));
-                props.push(getRowValue('callputequal'));
-                if(state.dropdown.is_volatility) {
-                    props.push(getRowValue('lookback'));
-                    props.push(getRowValue('digits'));
-                    props.push(getRowValue('asian'));
-                    props.push(getRowValue('reset'));
-                    props.push(getRowValue('callputspread'));
-                    props.push(getRowValue('highlowticks'));
-                }
+                    props.push(asset[1]);
+                    props.push(getRowValue('callput', Rise_Fall ? Rise_Fall[state.index.asset_props.asset_display_name] : '-'));
+                    props.push(getRowValue('callput', Higher_Lower ? Higher_Lower[state.index.asset_props.asset_display_name] : '-'));
+                    props.push(getRowValue('touchnotouch'));
+                    props.push(getRowValue('endsinout'));
+                    props.push(getRowValue('staysinout'));
+                    props.push(getRowValue('callputequal'));
+                    if(state.dropdown.is_volatility) {
+                        props.push(getRowValue('lookback'));
+                        props.push(getRowValue('digits'));
+                        props.push(getRowValue('asian'));
+                        props.push(getRowValue('reset'));
+                        props.push(getRowValue('callputspread'));
+                        props.push(getRowValue('highlowticks'));
+                    }
                 return props;
             });
         state.table.display_asset_data = rows;
@@ -162,7 +168,7 @@ const refreshTable = () => {
         if (!state.dropdown.display_markets) {
             state.dropdown.display_markets = windows
                 .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                    list: Object.keys(market_submarkets), //Keys are the display_name
+                    list: isEU() ? [Object.keys(market_submarkets)[3]] : Object.keys(market_submarkets), //Keys are the display_name
                     inx: 0, //Index to select the item in drop down
                     changed: (val) => {
                         const list = Object.keys(market_submarkets[val]); /* get list of sub_markets */
