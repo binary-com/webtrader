@@ -85,7 +85,8 @@ const getEUMarkets = (markets) => {
 
 const isEU = () => {
     const loginId = (local_storage.get('authorize') || {}).loginid || '';
-    return /MF/gi.test(loginId) || /MLT/gi.test(loginId) || /MX/gi.test(loginId)
+    const residence = (local_storage.get('authorize') || {}).country || '';
+    return /MF/gi.test(loginId) || /MLT/gi.test(loginId) || /MX/gi.test(loginId) || /no/gi.test(residence)
 }
 
 const filterMarkets = (markets, display_name) => markets.reduce((object, item) => {
