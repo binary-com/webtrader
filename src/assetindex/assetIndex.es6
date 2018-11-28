@@ -102,13 +102,24 @@ const getMarketsSubmarkets = (markets) => {
     markets = menu.extractFilteredMarkets(markets);
     const checked_eu_markets = getEUMarkets(markets);
     const select_market_submarket = filterMarkets(checked_eu_markets, 'display_name');
+    console.log(select_market_submarket)
     return select_market_submarket;
+}
+
+const getMsYeah = (active_symbols) => {
+    const select_market_submarket = active_symbols.reduce((object, item)=> {
+        object[item.market_display_name] = object[item.market_display_name] || {};
+        object[item.market_display_name][item.submarket_display_name] = object[item.market_display_name][item.submarket_display_name] || [];
+        object[item.market_display_name][item.submarket_display_name].push(item.display_name);
+        return object
+    }, {})
+    console.log(select_market_submarket)
+    return active_symbols
 }
 
 const refreshTable = () => {
     const updateTable = (market_name, submarket_name) => {
         state.dropdown.selected_market = market_name;
-        console.log(isEU())
         state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
         const symbols = state.dropdown.market_submarkets[market_name][submarket_name];
         updateHeader();
@@ -207,10 +218,12 @@ const refreshTable = () => {
             [
                 liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
                 liveapi.cached.send({ asset_index: 1 }),
+                liveapi.cached.send({ active_symbols: 'brief' })
             ])
         .then((results) => {
                 state.table.asset_data = [...results[1].asset_index];
                 state.dropdown.market_submarkets = getMarketsSubmarkets(Object.assign(results[0]));
+                const active_symbols = getMsYeah(Object.assign(results[2].active_symbols))
                 header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
                 dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
                 marketsChanged(state.dropdown.market_submarkets);
