@@ -100,9 +100,6 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
     padding: .5em .5em;
     padding-bottom: 0;
 }
-.ui-dialog-titlebar-buttonpane {
-  margin-right: 10px;
-}
 
 button.ui-button-text-only {
     margin-top: 15px;
