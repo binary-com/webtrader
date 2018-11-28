@@ -37,7 +37,7 @@
             </div>
             <div class="cell">
               <button rv-on-click="searchToken.addToken" rv-disabled="searchToken.disable">
-                <span class="ui-icon-plus"></span>
+                <span class="ui-icon ui-icon-plus"></span>
               </button>
             </div>
           </div>
@@ -119,7 +119,7 @@
                             <select style="width: 200px" multiple rv-value="item.yourCopySettings.trade_types"
                               data-placeholder="Select trade types" rv-chosen="item.yourCopySettings.trade_types"
                               rv-chosenrefresh="masterTradeTypeList" rv-chosendisable="item.started">
-                              <option rv-each-row="masterTradeTypeList" rv-value="row.code">{row.name}</option>
+                              <option rv-each-row="masterTradeTypeList" rv-value="row.api_code">{row.name | i18n}</option>
                             </select>
                           </div>
                         </div>

@@ -197,12 +197,6 @@ function setLongTimeout(callback, timeout_ms, _callBackWithHandler) {
     }
 }
 
-/* source: http://stackoverflow.com/questions/46155 */
-function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
-
 String.prototype.replaceAll = function(target, replacement) {
     return this.split(target).join(replacement);
 };
@@ -489,4 +483,13 @@ var isCryptoCurrency = function (curr) {
 function isVirtual() {
     var is_virtual = (local_storage.get('authorize') || '').is_virtual;
     return !!is_virtual;
+}
+
+function getBinaryUrl(page) {
+    var hostname = new URL(window.location.href).hostname;
+    var lang = (local_storage.get('i18n') || {value: 'en'}).value;
+    var domain = hostname.includes('binary.me') ? '.me' : '.com';
+    var binary_url = 'https://binary' + domain + '/' + lang + '/' + page;
+
+    return binary_url;
 }

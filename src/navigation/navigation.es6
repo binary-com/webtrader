@@ -1,5 +1,3 @@
-/* Created by Armin on 10/17/2015 */
-
 import $ from 'jquery';
 import moment from 'moment';
 import _ from 'lodash';
@@ -41,7 +39,14 @@ const initLoginButton = (root) => {
       },
       show_submenu: false,
       show_new_account_link: false,
-
+      openRealAccount: () => {
+         const real_account_binary_url = getBinaryUrl('new_account/realws');
+         window.open(real_account_binary_url, '_blank');
+      },
+      openFinancialAccountMF: () => {
+         const financial_account_binary_url = getBinaryUrl('new_account/maltainvestws');
+         window.open(financial_account_binary_url, '_blank')
+      }
    };
 const destroy_windows = (data_attribute) => {
   $(`.webtrader-dialog[${data_attribute}]`).each((inx, elm) => {
@@ -151,16 +156,15 @@ const destroy_windows = (data_attribute) => {
          state.has_mf_or_mlt = _.some(loginIds, {is_mf: true}) || _.some(loginIds, {is_mlt: true});
          state.show_new_account_link = what_todo === 'new-account';
          state.has_disabled_account =  _.some(loginIds, {is_disabled: true});
-
          // https://trello.com/c/9PCHncnx/5146-8-raunak-accountlistordering
          // https://trello.com/c/fNZ1Zkbb/2529-negar-accountlistauthorize
          if(_.some(oAuthLoginIds(), {is_disabled: true})) {
             const lockedIds = _.filter(loginIds, {is_disabled:true}).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
-               message:"<a href='https://www.binary.com/en/contact.html' target='_blank'>"
-               + "Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)
-               + "</a>"
+               message:`<a href='${getBinaryUrl('contact.html')}' target='_blank'>
+                ${"Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)}
+               </a>`
             });
          }
       });
@@ -202,7 +206,7 @@ const initLang = (root) => {
          { value: 'vi', name: 'Tiếng Việt'},
          { value: 'zh_cn', name: '简体中文'},
          { value: 'zh_tw', name: '繁體中文'}
-      ]
+      ],
    };
 
    state.onclick = (value) => {
@@ -219,11 +223,14 @@ const initLang = (root) => {
       state.confirm.visible = visible;
    }
 
-   const value = (local_storage.get('i18n') || {value: 'en'}).value;
-   state.lang = _.find(state.languages, {value: value}); // set the initial state.
+   const lang = (local_storage.get('i18n') || {value: 'en'}).value;
+   state.lang = _.find(state.languages, {value: lang}); // set the initial state.
 
    const contact_us_el = document.getElementById('contact-us');
-   contact_us_el.href = `https://www.binary.com/${value}/contact.html`;
+   const logo_container = document.getElementById('logo-container');
+
+   contact_us_el.href = getBinaryUrl('contact.html');
+   logo_container.href = getBinaryUrl('home.html');
 
    rv.bind(root[0], state);
 
@@ -354,4 +361,3 @@ export default {
    init,
    getLandingCompany
 };
-

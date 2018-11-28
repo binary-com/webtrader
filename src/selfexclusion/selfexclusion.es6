@@ -87,6 +87,7 @@ const settingsData = {
     exclude_until: null,
     timeout_until_date: null,
     timeout_until_time: null,
+    binary_url_contact: getBinaryUrl('contact.html'),
     trimString: (event, scope) => {
         const $el = $(event.target),
             decimals = currencyFractionalDigits(),
@@ -193,6 +194,7 @@ const init_win = function() {
         });
         win = windows.createBlankWindow($('<div/>'), {
             title: 'Self-Exclusion Facilities'.i18n(),
+            dialogClass: 'self-exclusion',
             width: 900,
             minHeight: 500,
             height: 500,
