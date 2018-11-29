@@ -86,7 +86,7 @@ const refreshTable = () => {
                 asset[2].forEach(asset_list => {
                     state.table.display_headers.push(asset_list[1]);
                     props.push([asset_list[1],`${asset_list[2]} - ${asset_list[3]}`]);
-                })
+                });
                 return props;
             });
         rows = assignAssetRows(rows);
@@ -94,7 +94,6 @@ const refreshTable = () => {
         state.table.display_asset_data = rows;
         state.table.asset_data_extract = rows;
     }
-
     const assignAssetRows = (rows) => {
         rows.forEach((assets) => {
             assets.forEach(asset => {
@@ -106,7 +105,6 @@ const refreshTable = () => {
         });
         return rows;
     }
-
     const fillEmptyRows = (rows) => {
         const header_length = state.table.display_headers.length;
         for(let i=0; i <= header_length; i++){
@@ -118,7 +116,6 @@ const refreshTable = () => {
         }
         return rows;
     }
-
     const marketsChanged = (market_submarkets) => {
         if (!state.dropdown.display_markets) {
             state.dropdown.display_markets = windows
@@ -137,7 +134,6 @@ const refreshTable = () => {
             state.dropdown.display_markets.update_list(Object.keys(market_submarkets));
         }
     }
-
     const submarketsChanged = (market_submarkets) => {
         if (!state.dropdown.display_submarkets) {
             state.dropdown.display_submarkets = windows
@@ -154,9 +150,7 @@ const refreshTable = () => {
             state.dropdown.display_submarkets.update_list(Object.keys(market_submarkets[state.dropdown.display_markets.val()]));
           }
     }
-
     const processing_msg = $(`#${table.attr('id')}_processing`).show();
-
     Promise.all(
             [
                 liveapi.cached.send({ active_symbols: 'brief' }),
@@ -175,7 +169,7 @@ const refreshTable = () => {
         .catch((error) => {
             $.growl.error({ message: error.message });
             console.error(error);
-        });   
+        }); 
 }
 
 const initAssetWin = ($html) => {
