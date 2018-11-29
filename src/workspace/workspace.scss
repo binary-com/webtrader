@@ -65,11 +65,15 @@
       .dialog {
         line-height: 30px;
         display: flex;
+        cursor: pointer;
         .name {
           padding-left: 24px;
           flex-grow: 1;
           font-size: small;
         }
+        &:hover {
+          background-color: #e8e8e8
+        } 
       }
     }
     [data-balloon]{

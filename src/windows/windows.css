@@ -83,8 +83,12 @@ img.reload {
     right: 3px;
     top: 9px;
 }
-.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-resizable.webtrader-dialog-widget {
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.webtrader-dialog-widget {
     min-width: 225px !important;
+}
+.ui-dialog .ui-dialog-title {
+    cursor: default;
+    width: fit-content;
 }
 .webtrader-dialog-widget .ui-dialog-titlebar-close {
    top: 1px;

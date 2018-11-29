@@ -311,7 +311,7 @@ const initConfigWindow = () => {
   win = windows.createBlankWindow(root, {
     title: 'Copy Trading'.i18n(),
     resizable: false,
-    collapsable: true,
+    collapsable: false,
     minimizable: true,
     maximizable: false,
     modal: false,
