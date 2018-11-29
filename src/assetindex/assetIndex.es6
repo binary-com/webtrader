@@ -46,11 +46,11 @@ const state = {
         display_asset_data: [],
         search_input: ''
     },
-    search: function (event, model) {
-        model.table.display_asset_data = [];
-        const value = model.table.search_input.toLowerCase();
-        model.table.display_asset_data = model.table.asset_data_extract.filter((asset) => asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1);
-        model.dropdown.is_volatility = checkVolatility(model.dropdown.selected_market, model.dropdown.display_markets);
+    search: function (event) {
+        const value = state.table.search_input.toLowerCase();
+        state.table.display_asset_data = [];
+        state.table.display_asset_data = state.table.asset_data_extract.filter((asset) => asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1);
+        state.dropdown.is_volatility = checkVolatility(state.dropdown.selected_market, state.dropdown.display_markets);
     }
 }
 
@@ -61,11 +61,11 @@ const checkVolatility = (market_name, market_names) => {
 }
 
 const getMarketsSubmarkets = (active_symbols) => {
-    const select_market_submarket = active_symbols.reduce((object, item) => {
-        object[item.market_display_name] = object[item.market_display_name] || {};
-        object[item.market_display_name][item.submarket_display_name] = object[item.market_display_name][item.submarket_display_name] || [];
-        object[item.market_display_name][item.submarket_display_name].push(item.display_name);
-        return object;
+    const select_market_submarket = active_symbols.reduce((market_submarket_result, market_submarket_current) => {
+        market_submarket_result[market_submarket_current.market_display_name] = market_submarket_result[market_submarket_current.market_display_name] || {};
+        market_submarket_result[market_submarket_current.market_display_name][market_submarket_current.submarket_display_name] = market_submarket_result[market_submarket_current.market_display_name][market_submarket_current.submarket_display_name] || [];
+        market_submarket_result[market_submarket_current.market_display_name][market_submarket_current.submarket_display_name].push(market_submarket_current.display_name);
+        return market_submarket_result;
     }, {})
     return select_market_submarket
 }
@@ -75,10 +75,7 @@ const refreshTable = () => {
         state.dropdown.selected_market = market_name;
         state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
         const symbols = state.dropdown.market_submarkets[market_name][submarket_name];
-        let rows = state.table.asset_data
-            .filter((asset) => {
-                return symbols.indexOf(asset[1]) > -1;
-            })
+        let rows = state.table.asset_data.filter((asset) => symbols.indexOf(asset[1]) > -1)
             .map((asset) => {
                 state.table.display_headers = [];
                 const props = [];
@@ -120,11 +117,11 @@ const refreshTable = () => {
         if (!state.dropdown.display_markets) {
             state.dropdown.display_markets = windows
                 .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                    list: Object.keys(market_submarkets), //Keys are the display_name
-                    inx: 0, //Index to select the item in drop down
+                    list: Object.keys(market_submarkets),
+                    inx: 0,
                     changed: (val) => {
-                        const list = Object.keys(market_submarkets[val]); /* get list of sub_markets */
-                        state.dropdown.display_submarkets.update_list(list);
+                        const submarket_list = Object.keys(market_submarkets[val]);
+                        state.dropdown.display_submarkets.update_list(submarket_list);
                         updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
                     },
                     width: '180px'
