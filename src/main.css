@@ -433,13 +433,16 @@ button.ui-datepicker-current {
 .ui-corner-all {
 	border-radius: unset;
 }
+.ui-timepicker-close {
+	display: none;
+}
 .ui-timepicker-title {
 	text-align: center;
 }
 .ui-timepicker td {
 	border: none;
 }
- .ui-timepicker th {
+.ui-timepicker th {
     background: none;
     border-bottom:unset;
 }
