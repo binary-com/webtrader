@@ -93,6 +93,17 @@ function populate_language_dropdown() {
 }
 
 function populate_footer() {
+    var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
+
+    ws.onopen = function(evt) {
+        ws.send(JSON.stringify({"website_status": 1}));
+    };
+
+    ws.onmessage = function(msg) {
+        var data = JSON.parse(msg.data);
+
+        console.log(/mt/gi.test(data.website_status.clients_country))
+    };
     var binary_responsible_trading_url = getBinaryUrl('responsible-trading.html');
     var binary_regulation_url = getBinaryUrl('regulation.html');
     var FOOTER_TEXT = {
@@ -140,9 +151,9 @@ function populate_footer() {
     };
 
 
-    for (var key in FOOTER_TEXT) {
-        var text = FOOTER_TEXT[key].TEXT;
-        var tags = FOOTER_TEXT[key].TAGS;
+    for (var key in FOOTER_TEXT_EU) {
+        var text = FOOTER_TEXT_EU[key].TEXT;
+        var tags = FOOTER_TEXT_EU[key].TAGS;
 
         var p_content = add_tags(text, tags);
         $('#' + key.toLowerCase()).html(p_content);
