@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
+"PO-Revision-Date: 2018-11-13 06:31\n"
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -174,9 +174,6 @@ msgstr "Aceptar"
 msgid "Accessible from any web browser in 13 languages"
 msgstr ""
 
-msgid "Account authentication"
-msgstr ""
-
 msgid "Account balance"
 msgstr "Saldo de la cuenta"
 
@@ -185,12 +182,6 @@ msgstr ""
 
 msgid "Account id not found."
 msgstr ""
-
-msgid "Account opening"
-msgstr ""
-
-msgid "Account opening reason"
-msgstr "Motivo para abrir la cuenta"
 
 msgid "Account token not found."
 msgstr ""
@@ -222,9 +213,6 @@ msgstr "Agregar o quitar indicadores"
 msgid "Added new workspace %"
 msgstr ""
 
-msgid "Address"
-msgstr ""
-
 msgid "Admin"
 msgstr "Administrador"
 
@@ -233,9 +221,6 @@ msgstr ""
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todas las horas están en GMT (Greenwich Mean Time)"
-
-msgid "Allow others to copy your trades"
-msgstr ""
 
 msgid "Amount"
 msgstr "Cantidad"
@@ -246,20 +231,11 @@ msgstr ""
 msgid "Amount per point"
 msgstr "Cantidad por punto"
 
-msgid "Answer"
-msgstr "Respuesta"
-
-msgid "Anticipated account turnover"
-msgstr ""
-
 msgid "Apply"
 msgstr "Aplicar"
 
 msgid "Apply to become a Binary.com"
 msgstr "Solicitar convertirse en un"
-
-msgid "Appropriateness Test: WARNING"
-msgstr "Prueba de Idoneidad: ADVERTENCIA"
 
 msgid "Apr"
 msgstr "Abr"
@@ -303,15 +279,6 @@ msgstr "Ago"
 msgid "August"
 msgstr "Agosto"
 
-msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
-
-msgid "Available Currencies"
-msgstr ""
-
-msgid "Avg. Duration"
-msgstr ""
-
 msgid "Avg. Duration of Open Positions"
 msgstr ""
 
@@ -335,18 +302,6 @@ msgstr "Desplazamiento de la barrera"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary options or other financial derivatives trading experience"
-msgstr "Experiencia comercial con opciones binarias o derivados de otros instrumentos financieros"
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr "Frecuencia de comercio con opciones binarias o de otros derivados financieros"
-
-msgid "Binary options trading experience"
-msgstr ""
-
-msgid "Binary options trading frequency"
-msgstr ""
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -375,20 +330,8 @@ msgstr "Precio de Compra"
 msgid "Buy price"
 msgstr "Precio de compra"
 
-msgid "By clicking"
-msgstr "Haciendo clic"
-
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Haciendo clic en OK, usted confirma que ha leído y aceptado la actualización del"
-
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
-
-msgid "CFD trading experience"
-msgstr ""
-
-msgid "CFD trading frequency"
-msgstr ""
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Se puede utilizar para comprar y vender contratos, renovar compras caducadas y recargar las cuentas de dinero virtual."
@@ -444,9 +387,6 @@ msgstr "Plantilla del gráfico"
 msgid "Chart type"
 msgstr "Tipo de gráfico"
 
-msgid "Choose password"
-msgstr "Elegir contraseña"
-
 msgid "Choose your pereferred payment agent"
 msgstr "Seleccione su agente de pago preferido"
 
@@ -455,9 +395,6 @@ msgstr "Seleccione el método de retirada preferido"
 
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Citizenship"
-msgstr ""
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Haga clic para iniciar sesión con su cuenta de Binary.com"
@@ -470,12 +407,6 @@ msgstr ""
 
 msgid "Closes"
 msgstr "Cierra"
-
-msgid "Commodities trading experience"
-msgstr "Experiencia de comerciar con materias primas"
-
-msgid "Commodities trading frequency"
-msgstr "Frecuencia de comerciar con materias primas"
 
 msgid "Comparisons"
 msgstr "Comparaciones"
@@ -498,9 +429,6 @@ msgstr "Construcción"
 msgid "Contact Us"
 msgstr "Contáctenos"
 
-msgid "Continue"
-msgstr "Continuar"
-
 msgid "Continue Trading"
 msgstr "Seguir Operando"
 
@@ -519,14 +447,8 @@ msgstr "Contratos"
 msgid "Copier"
 msgstr ""
 
-msgid "Copy Trade"
-msgstr ""
-
 msgid "Copy Trading"
 msgstr ""
-
-msgid "Country of residence"
-msgstr "País de residencia"
 
 msgid "Create"
 msgstr "Crear"
@@ -588,9 +510,6 @@ msgstr "Oscuro Única"
 msgid "Date"
 msgstr "Fecha"
 
-msgid "Date of birth"
-msgstr "Fecha de nacimiento"
-
 msgid "Days"
 msgstr "Días"
 
@@ -599,9 +518,6 @@ msgstr "Dic"
 
 msgid "December"
 msgstr "Diciembre"
-
-msgid "Decline"
-msgstr "Disminución"
 
 msgid "Default"
 msgstr "Predeterminado"
@@ -693,9 +609,6 @@ msgstr ""
 msgid "Drawing tools"
 msgstr "Herramientas para dibujar"
 
-msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr "Debido a recientes cambios en las regulaciones, nos vemos obligados a pedir a nuestros clientes que completen el siguiente Asesoramiento Financiero. Tenga en cuenta que no podrá seguir operando hasta que no lo complete"
-
 msgid "Duration"
 msgstr "Duración"
 
@@ -708,14 +621,8 @@ msgstr "Borde"
 msgid "Education"
 msgstr "Educación"
 
-msgid "Email verification failed"
-msgstr ""
-
 msgid "Embed code"
 msgstr "Incrustar código"
-
-msgid "Employment status"
-msgstr "Situación laboral"
 
 msgid "End Time"
 msgstr "Hora de finalización"
@@ -749,9 +656,6 @@ msgstr "Punto de entrada"
 
 msgid "Error getting data for %1"
 msgstr "Error al obtener datos para %1"
-
-msgid "Estimated Net Worth"
-msgstr "Valor Neto Estimado"
 
 msgid "Even"
 msgstr "Par"
@@ -789,9 +693,6 @@ msgstr ""
 msgid "Fall"
 msgstr "Baja"
 
-msgid "Family name"
-msgstr "Apellido"
-
 msgid "Favorites"
 msgstr "Favoritos"
 
@@ -819,32 +720,8 @@ msgstr "Precio final"
 msgid "Finance"
 msgstr "Finanzas"
 
-msgid "Financial Account Opening form"
-msgstr ""
-
-msgid "Financial Assessment"
-msgstr ""
-
-msgid "Financial Information"
-msgstr "Información financiera"
-
-msgid "Financial information"
-msgstr "Información financiera"
-
 msgid "Firefox"
 msgstr "Firefox"
-
-msgid "First line of home address"
-msgstr "Primera línea de domicilio"
-
-msgid "First name"
-msgstr "Nombre"
-
-msgid "Forex trading experience"
-msgstr "Experiencia de comercio con Forex"
-
-msgid "Forex trading frequency"
-msgstr "Frecuencia de comercio con Forex"
 
 msgid "Fri"
 msgstr "Vie"
@@ -912,18 +789,6 @@ msgstr ""
 msgid "Hours"
 msgstr "Horas"
 
-msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr "Declaro que soy una persona políticamente expuesta (PEP)"
-
-msgid "I have read and agree to Binary.com"
-msgstr "He leído y estoy de acuerdo con"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
-
-msgid "I want to be treated as a professional client"
-msgstr ""
-
 msgid "IMPORTANT DISCLAIMER"
 msgstr "AVISO IMPORTANTE"
 
@@ -939,9 +804,6 @@ msgstr "Si  selecciona un"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Para aplicar correctamente el tema, se requiere una actualización completa de la página. ¿Está seguro que desea proceder?"
 
-msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr "Al ofrecerle nuestros servicios, estamos obligados a obtener información de usted con el fin de evaluar si un determinado producto o servicio es adecuado para usted (es decir, si posee la experiencia y el conocimiento necesario para entender los riesgos)"
-
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
 msgstr ""
 
@@ -954,9 +816,6 @@ msgstr ""
 msgid "In/Out"
 msgstr "Dentro/Fuera"
 
-msgid "Income Source"
-msgstr "Fuente de Ingresos"
-
 msgid "Indicative"
 msgstr ""
 
@@ -965,15 +824,6 @@ msgstr "Precio Indicativo"
 
 msgid "Indicators"
 msgstr "Indicadores"
-
-msgid "Indices trading experience"
-msgstr "Experiencia de comercio con índices"
-
-msgid "Indices trading frequency"
-msgstr "Frecuencia de comercio índices"
-
-msgid "Industry of Employment"
-msgstr "Sector del Empleo"
 
 msgid "Instruments"
 msgstr "Instrumentos"
@@ -1017,9 +867,6 @@ msgstr "Jun"
 msgid "June"
 msgstr "Junio"
 
-msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "Simplemente haga clic en el botón Grant en la página a la que será llevado ahora"
-
 msgid "Last 12 mnts Profitable Trades"
 msgstr ""
 
@@ -1037,12 +884,6 @@ msgstr "Utilizado por última vez"
 
 msgid "Less than"
 msgstr "Menos de"
-
-msgid "Let's do it"
-msgstr "Hagámoslo"
-
-msgid "Level of Education"
-msgstr "Nivel de Educación"
 
 msgid "Line"
 msgstr "Línea"
@@ -1074,16 +915,10 @@ msgstr ""
 msgid "Loading Download/View Data ..."
 msgstr ""
 
-msgid "Loading MAM..."
-msgstr ""
-
 msgid "Loading Password dialog ..."
 msgstr ""
 
 msgid "Loading Profit Table ..."
-msgstr ""
-
-msgid "Loading Real account opening ..."
 msgstr ""
 
 msgid "Loading Self-Exclusion ..."
@@ -1133,9 +968,6 @@ msgstr ""
 
 msgid "Low"
 msgstr "Mínimo"
-
-msgid "Low Barrier"
-msgstr ""
 
 msgid "Low barrier"
 msgstr "Límite bajo"
@@ -1209,15 +1041,6 @@ msgstr ""
 msgid "Min: 10 Max: 2000"
 msgstr "Mín: 10 máx: 2000"
 
-msgid "Minimum of 2 characters required"
-msgstr "Mínimo de 2 caracteres requeridos"
-
-msgid "Minimum of 4 characters required"
-msgstr "Mínimo de 4 caracteres requeridos"
-
-msgid "Minimum of 6 characters required"
-msgstr "Mínimo de 6 caracteres requeridos"
-
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr ""
 
@@ -1241,9 +1064,6 @@ msgstr "Lun"
 
 msgid "Monday"
 msgstr "Lunes"
-
-msgid "Monthly Profitable Trades"
-msgstr ""
 
 msgid "Mother's maiden name"
 msgstr "Apellido de soltera de su madre"
@@ -1287,14 +1107,8 @@ msgstr "Color de la serie del navegador"
 msgid "Navigator series line"
 msgstr "Línea de la serie del navegador"
 
-msgid "Net Annual Income"
-msgstr "Ingreso Neto Anual"
-
 msgid "Net Profit"
 msgstr "Ganancia neta"
-
-msgid "New Account"
-msgstr ""
 
 msgid "New password"
 msgstr "Nueva contraseña"
@@ -1306,9 +1120,6 @@ msgid "No touch"
 msgstr "Sin Toque"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
-
-msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
@@ -1329,9 +1140,6 @@ msgstr "Gráfico OHLC"
 msgid "OK"
 msgstr "Aceptar"
 
-msgid "Occupation"
-msgstr "Ocupación"
-
 msgid "Oct"
 msgstr "Oct"
 
@@ -1344,50 +1152,20 @@ msgstr "Impar"
 msgid "Ok"
 msgstr "Aceptar"
 
-msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr "Sobre la base de la información proporcionada en relación con sus conocimientos y experiencia, consideramos que las inversiones disponibles a través de este sitio web no son adecuadas para usted"
-
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una vez que se alcanza este límite, ya no puede depositar"
-
-msgid "One last step left"
-msgstr "Queda un último paso"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr ""
 
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr "Se permiten sólo letras, números y guiones"
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr "Se permite sólo el uso de letras, números, espacios, guiones, puntos y apóstrofes"
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr "Se permite sólo el uso de letras, números, espacios, puntos, comas, -, / y @"
-
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "Se permite sólo el uso de letras, números, espacios, puntos, comas y rayas(-)"
-
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr "Se permite sólo el uso de letras, espacios, guiones, puntos y apóstrofes"
-
-msgid "Only numbers and space are allowed"
-msgstr "Se permiten sólo números y espacios"
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr "Se permiten sólo letras, números y guiones"
 
 msgid "Open"
 msgstr "Abierto"
 
-msgid "Open Account"
-msgstr "Abrir una cuenta"
-
 msgid "Open a Financial Account"
 msgstr "Abrir una cuenta financiera"
-
-msgid "Open account"
-msgstr "Abrir una cuenta"
 
 msgid "Opens"
 msgstr "Se abre"
@@ -1401,12 +1179,6 @@ msgstr "El comercio con opciones binarias puede ser una verdadera adicción, com
 msgid "Other"
 msgstr "Otro"
 
-msgid "Other financial instruments trading experience"
-msgstr "Experiencia de comerciar con otros instrumentos financieros"
-
-msgid "Other financial instruments trading frequency"
-msgstr "Frecuencia de comerciar con otros instumentos financieros"
-
 msgid "Over"
 msgstr "Encima"
 
@@ -1416,16 +1188,7 @@ msgstr "Más de 3 años"
 msgid "Overlap Studies"
 msgstr "Estudios sobrepuestos"
 
-msgid "PEP Declaration"
-msgstr "Declaración de PEP"
-
 msgid "PM"
-msgstr ""
-
-msgid "Password must be 6 characters minimum"
-msgstr ""
-
-msgid "Password must contain lower and uppercase letters with numbers"
 msgstr ""
 
 msgid "Password successfully updated."
@@ -1458,18 +1221,6 @@ msgstr ""
 msgid "Permissions"
 msgstr "Permisos"
 
-msgid "Personal Details"
-msgstr "Datos personales"
-
-msgid "Phone"
-msgstr "Teléfono"
-
-msgid "Place of birth"
-msgstr "Lugar de nacimiento"
-
-msgid "Please"
-msgstr "Por favor"
-
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
 msgstr ""
 
@@ -1479,9 +1230,6 @@ msgstr ""
 msgid "Please choose at least one token scope"
 msgstr ""
 
-msgid "Please choose which currency you would like to transact in"
-msgstr "Seleccione la divisa con la que desea realizar la transacción"
-
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr ""
 
@@ -1490,9 +1238,6 @@ msgstr "Por favor, confirme los siguientes datos para completar la transferencia
 
 msgid "Please enter a number between"
 msgstr ""
-
-msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "Por favor introduzca una fecha válida en formato aaaa-mm-dd"
 
 msgid "Please enter a valid value for"
 msgstr ""
@@ -1506,9 +1251,6 @@ msgstr "Ingrese un valor mayor a 0"
 msgid "Please enter a value less than 6 weeks for time out until."
 msgstr ""
 
-msgid "Please enter correct email"
-msgstr "Por favor introduzca una dirección de correo electrónico correcta"
-
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Por favor introduzca la fecha en formato AAAA-MM-DD"
 
@@ -1520,9 +1262,6 @@ msgstr "Introduzca la hora en formato HH:MM"
 
 msgid "Please enter your current password"
 msgstr "Por favor, introduzca su contraseña actual"
-
-msgid "Please enter your email"
-msgstr "Por favor introduzca su correo electrónico"
 
 msgid "Please input correct token"
 msgstr "Digite el token correcto"
@@ -1539,34 +1278,16 @@ msgstr ""
 msgid "Please log in."
 msgstr ""
 
-msgid "Please provide your tax information"
-msgstr "Por favor, proporcione su información tributaria"
-
-msgid "Please select"
-msgstr "Por favor, seleccione"
-
 msgid "Please select a date for time out until."
 msgstr ""
 
 msgid "Please select a payment agent"
 msgstr ""
 
-msgid "Please select an account opening reason before continuing"
-msgstr ""
-
-msgid "Please set currency."
-msgstr ""
-
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr ""
 
-msgid "Please submit a valid verification token"
-msgstr "Por favor, envíe un token de verificación válido"
-
 msgid "Please try again after 1 minute."
-msgstr ""
-
-msgid "Please try again after few minutes."
 msgstr ""
 
 msgid "Please use your new password to login."
@@ -1583,9 +1304,6 @@ msgstr "Puntos"
 
 msgid "Portfolio"
 msgstr "Cartera"
-
-msgid "Postal code/ZIP"
-msgstr "Código postal"
 
 msgid "Potential Payout"
 msgstr "Pago Potencial"
@@ -1614,9 +1332,6 @@ msgstr "Primario"
 msgid "Print chart"
 msgstr "Imprimir gráfico"
 
-msgid "Professional Client"
-msgstr ""
-
 msgid "Profit"
 msgstr "Ganancia"
 
@@ -1628,12 +1343,6 @@ msgstr "Tabla de ganancias"
 
 msgid "Profit/ Loss"
 msgstr "Ganancias/Pérdidas"
-
-msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
-
-msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
 
 msgid "Purchase"
 msgstr "Comprar"
@@ -1649,9 +1358,6 @@ msgstr ""
 
 msgid "Read"
 msgstr "Leer"
-
-msgid "Real Money Account Opening"
-msgstr ""
 
 msgid "Reality check"
 msgstr ""
@@ -1671,9 +1377,6 @@ msgstr ""
 msgid "Register free account"
 msgstr "Registrar una cuenta gratis"
 
-msgid "Registration"
-msgstr ""
-
 msgid "Remove"
 msgstr "Quitar"
 
@@ -1682,9 +1385,6 @@ msgstr "Quitar Seleccionado"
 
 msgid "Rename"
 msgstr "Renombrar"
-
-msgid "Repeat password"
-msgstr "Repetir contraseña"
 
 msgid "Resale of this contract is not offered"
 msgstr ""
@@ -1743,17 +1443,8 @@ msgstr "Guardar cambios"
 msgid "Saved"
 msgstr ""
 
-msgid "Second line of home address"
-msgstr "Segunda línea de dirección"
-
 msgid "Secondary"
 msgstr "Secundario"
-
-msgid "Security"
-msgstr "Seguridad"
-
-msgid "Security question"
-msgstr "Pregunta de seguridad"
 
 msgid "Seems like our servers are down, we are working on fixing it."
 msgstr ""
@@ -1803,9 +1494,6 @@ msgstr "Vendido"
 msgid "Some random index"
 msgstr ""
 
-msgid "Source of wealth"
-msgstr ""
-
 msgid "Spline"
 msgstr "Spline"
 
@@ -1836,9 +1524,6 @@ msgstr "Comience a operar"
 msgid "Start time"
 msgstr "Hora de inicio"
 
-msgid "State/province/region"
-msgstr "Estado/provincia/región"
-
 msgid "Statement"
 msgstr "Declaración"
 
@@ -1853,12 +1538,6 @@ msgstr ""
 
 msgid "Stays in"
 msgstr "Queda dentro"
-
-msgid "Stocks trading experience"
-msgstr "Experiencia de comerciar con acciones"
-
-msgid "Stocks trading frequency"
-msgstr "Frecuencia de comerciar con acciones"
 
 msgid "Stop-loss"
 msgstr "Stop-pérdida"
@@ -1896,21 +1575,6 @@ msgstr "Domingo"
 msgid "Table"
 msgstr "Tabla"
 
-msgid "Tax Information"
-msgstr ""
-
-msgid "Tax Information successfully updated"
-msgstr ""
-
-msgid "Tax identification number"
-msgstr "Número de identificación fiscal"
-
-msgid "Tax information"
-msgstr "Información tributaria"
-
-msgid "Tax residence"
-msgstr "Residencia fiscal"
-
 msgid "Tel"
 msgstr "Tel"
 
@@ -1946,12 +1610,6 @@ msgstr "El"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "La Compañía mantiene los fondos de los clientes en cuentas bancarias separadas de las cuentas operativas, las cuales, en caso de insolvencia, no formarán parte de los activos de la compañía. Esto cumple con los requisitos de la Comisión de Juego para la segregación de los recursos de clientes a un nivel de: protección media"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr "Los servicios contractuales financieros de este sitio solo son adecuados para los clientes que pueden hacer frente a la pérdida del dinero que invierten y que comprenden y tienen experiencia con los riesgos implícitos en la adquisición de contratos financieros. Las transacciones en los contractos financieros implican un alto grado de riesgo. Si los contratos comprados caducan sin valor, sufrirá la pérdida total de su inversión, la que consistirá en la prima contractual"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "Los servicios comerciales financieros contenidos en este sitio son adecuados solamente para los clientes que son capaces de soportar la pérdida de todo el dinero de su inversión y que entienden y tienen experiencia con el riesgo a la hora de adquirir contratos financieros. Las transacciones en contratos financieros conllevan un alto grado de riesgo. Si los contratos comprados caducan sin valor, usted sufrirá una pérdida total de su inversión, que consiste en el contrato permium"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr ""
@@ -2073,9 +1731,6 @@ msgstr "Toque/No Toque"
 msgid "Tourism"
 msgstr "Turismo"
 
-msgid "Town/City"
-msgstr "Ciudad"
-
 msgid "Trade"
 msgstr "Comerciar"
 
@@ -2095,12 +1750,6 @@ msgid "Trader's Statistics"
 msgstr ""
 
 msgid "Trades Profitability"
-msgstr ""
-
-msgid "Trades break down"
-msgstr ""
-
-msgid "Trading Experience"
 msgstr ""
 
 msgid "Trading Times"
@@ -2172,9 +1821,6 @@ msgstr ""
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr ""
 
-msgid "Verification code has been sent to your email"
-msgstr "El código de verificación ha sido enviado a su correo electrónico"
-
 msgid "Verification code sent to"
 msgstr ""
 
@@ -2217,12 +1863,6 @@ msgstr "Miércoles"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "Bienvenido a Webtrader de Binary.com"
 
-msgid "What is pep?"
-msgstr ""
-
-msgid "What is this?"
-msgstr ""
-
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr ""
 
@@ -2256,9 +1896,6 @@ msgstr "Cuadrícula del eje-y"
 msgid "Y-axis labels"
 msgstr "Etiquetas del eje-y"
 
-msgid "Yearly Profitable Trades"
-msgstr ""
-
 msgid "Yes"
 msgstr "Sí"
 
@@ -2277,9 +1914,6 @@ msgstr "Aún no ha guardado ninguna plantilla"
 msgid "You pay"
 msgstr "Usted paga"
 
-msgid "You should enter between 6-25 characters."
-msgstr ""
-
 msgid "You will be automatically logged out after such time"
 msgstr "Usted será deconectado automáticamente después de esa hora"
 
@@ -2288,9 +1922,6 @@ msgstr ""
 
 msgid "You wish to copy another trader's trades"
 msgstr ""
-
-msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr "Su cuenta Binary.com ha sido creada, pero para comenzar a operar debe permitir que Webtrader acceda a ella"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr ""
@@ -2309,9 +1940,6 @@ msgstr ""
 
 msgid "Your copying settings"
 msgstr ""
-
-msgid "Your email"
-msgstr "Su correo electrónico"
 
 msgid "Your new account balance is"
 msgstr "El nuevo saldo de su cuenta es"
@@ -2334,14 +1962,8 @@ msgstr ""
 msgid "apostrophe (') are allowed"
 msgstr "se permiten apóstrofes (')"
 
-msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "debajo y procediendo con la apertura de la cuenta debe tener en cuenta que puede exponerse a riesgos (que pueden ser significativos, incluyendo el riesgo de pérdida de la suma total invertida) que puede que no conozca y no tenga experiencia para evaluar correctamente o mitigar"
-
 msgid "commission"
 msgstr "comisión"
-
-msgid "contact support"
-msgstr "contactar con ayuda al cliente"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr ""
@@ -2381,9 +2003,6 @@ msgstr "hora"
 
 msgid "hours"
 msgstr "horas"
-
-msgid "if this is not your country of residence"
-msgstr "si este no es su país de residencia"
 
 msgid "in the future, the"
 msgstr "en el futuro, el"
@@ -2457,9 +2076,6 @@ msgstr "resumen de la sesión"
 msgid "start time"
 msgstr "hora de inicio"
 
-msgid "terms and conditions"
-msgstr "términos y condiciones"
-
 msgid "the"
 msgstr "el"
 
@@ -2484,83 +2100,251 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr ""
 
-#~ msgid "(One) Touch trades"
-#~ msgstr "Contratos toque"
+#~ msgid "Account opening reason"
+#~ msgstr "Motivo para abrir la cuenta"
 
-#~ msgid "Barrier(s)"
-#~ msgstr "Límite(s)"
+#~ msgid "Answer"
+#~ msgstr "Respuesta"
 
-#~ msgid "Binary option"
-#~ msgstr "Opciones binarias"
+#~ msgid "Appropriateness Test: WARNING"
+#~ msgstr "Prueba de Idoneidad: ADVERTENCIA"
 
-#~ msgid "Commodities"
-#~ msgstr "Materias primas"
+#~ msgid "Binary options or other financial derivatives trading experience"
+#~ msgstr "Experiencia comercial con opciones binarias o derivados de otros instrumentos financieros"
 
-#~ msgid "Contract period"
-#~ msgstr "Período del contrato"
+#~ msgid "Binary options or other financial derivatives trading frequency"
+#~ msgstr "Frecuencia de comercio con opciones binarias o de otros derivados financieros"
 
-#~ msgid "Depositing and withdrawing funds"
-#~ msgstr "Depositar y retirar fondos"
+#~ msgid "By clicking"
+#~ msgstr "Haciendo clic"
 
-#~ msgid "Derivative"
-#~ msgstr "Derivativo"
+#~ msgid "Choose password"
+#~ msgstr "Elegir contraseña"
 
-#~ msgid "Ends Between/Ends Outside trades"
-#~ msgstr "Contratos Finaliza dentro/Finaliza fuera"
+#~ msgid "Commodities trading experience"
+#~ msgstr "Experiencia de comerciar con materias primas"
 
-#~ msgid "Entry spot price"
-#~ msgstr "Precio de entrada al contado"
+#~ msgid "Commodities trading frequency"
+#~ msgstr "Frecuencia de comerciar con materias primas"
 
-#~ msgid "Expiry price"
-#~ msgstr "Precio de expiración"
+#~ msgid "Continue"
+#~ msgstr "Continuar"
 
-#~ msgid "Forex"
-#~ msgstr "Forex"
+#~ msgid "Country of residence"
+#~ msgstr "País de residencia"
 
-#~ msgid "GMT"
-#~ msgstr "GMT"
+#~ msgid "Date of birth"
+#~ msgstr "Fecha de nacimiento"
 
-#~ msgid "Higher/Lower trades"
-#~ msgstr "Contratos Superior/Inferior"
+#~ msgid "Decline"
+#~ msgstr "Disminución"
 
-#~ msgid "In/Out trades"
-#~ msgstr "Contratos Dentro/Fuera"
+#~ msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
+#~ msgstr "Debido a recientes cambios en las regulaciones, nos vemos obligados a pedir a nuestros clientes que completen el siguiente Asesoramiento Financiero. Tenga en cuenta que no podrá seguir operando hasta que no lo complete"
 
-#~ msgid "Indices"
-#~ msgstr "Índices"
+#~ msgid "Employment status"
+#~ msgstr "Situación laboral"
 
-#~ msgid "Learning to trade"
-#~ msgstr "Aprender a operar"
+#~ msgid "Estimated Net Worth"
+#~ msgstr "Valor Neto Estimado"
 
-#~ msgid "Market exit price"
-#~ msgstr "Precio de salida del mercado"
+#~ msgid "Family name"
+#~ msgstr "Apellido"
 
-#~ msgid "No Touch trades"
-#~ msgstr "Contratos Sin toque"
+#~ msgid "Financial Information"
+#~ msgstr "Información financiera"
 
-#~ msgid "Opening an account"
-#~ msgstr "Abrir cuenta"
+#~ msgid "Financial information"
+#~ msgstr "Información financiera"
 
-#~ msgid "Pip"
-#~ msgstr "Porcentaje en punto (pip)"
+#~ msgid "First line of home address"
+#~ msgstr "Primera línea de domicilio"
 
-#~ msgid "Resale price"
-#~ msgstr "Precio de reventa"
+#~ msgid "First name"
+#~ msgstr "Nombre"
 
-#~ msgid "Rise/Fall trades"
-#~ msgstr "Contratos Alza/Baja"
+#~ msgid "Forex trading experience"
+#~ msgstr "Experiencia de comercio con Forex"
 
-#~ msgid "Sell option"
-#~ msgstr "Opción de venta"
+#~ msgid "Forex trading frequency"
+#~ msgstr "Frecuencia de comercio con Forex"
 
-#~ msgid "Spot price"
-#~ msgstr "Precio al contado"
+#~ msgid "I acknowledge that I am not a politically exposed person (PEP)"
+#~ msgstr "Declaro que soy una persona políticamente expuesta (PEP)"
 
-#~ msgid "Stays Between/Goes Outside trades"
-#~ msgstr "Contratos Queda Dentro/Sale"
+#~ msgid "I have read and agree to Binary.com"
+#~ msgstr "He leído y estoy de acuerdo con"
 
-#~ msgid "Underlying"
-#~ msgstr "Subyacente"
+#~ msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
+#~ msgstr "Al ofrecerle nuestros servicios, estamos obligados a obtener información de usted con el fin de evaluar si un determinado producto o servicio es adecuado para usted (es decir, si posee la experiencia y el conocimiento necesario para entender los riesgos)"
 
-#~ msgid "Volatility Indices"
-#~ msgstr "Índices de Volatilidad"
+#~ msgid "Income Source"
+#~ msgstr "Fuente de Ingresos"
+
+#~ msgid "Indices trading experience"
+#~ msgstr "Experiencia de comercio con índices"
+
+#~ msgid "Indices trading frequency"
+#~ msgstr "Frecuencia de comercio índices"
+
+#~ msgid "Industry of Employment"
+#~ msgstr "Sector del Empleo"
+
+#~ msgid "Just click  Grant  button on the page you will now be taken to"
+#~ msgstr "Simplemente haga clic en el botón Grant en la página a la que será llevado ahora"
+
+#~ msgid "Let's do it"
+#~ msgstr "Hagámoslo"
+
+#~ msgid "Level of Education"
+#~ msgstr "Nivel de Educación"
+
+#~ msgid "Minimum of 2 characters required"
+#~ msgstr "Mínimo de 2 caracteres requeridos"
+
+#~ msgid "Minimum of 4 characters required"
+#~ msgstr "Mínimo de 4 caracteres requeridos"
+
+#~ msgid "Minimum of 6 characters required"
+#~ msgstr "Mínimo de 6 caracteres requeridos"
+
+#~ msgid "Net Annual Income"
+#~ msgstr "Ingreso Neto Anual"
+
+#~ msgid "Occupation"
+#~ msgstr "Ocupación"
+
+#~ msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
+#~ msgstr "Sobre la base de la información proporcionada en relación con sus conocimientos y experiencia, consideramos que las inversiones disponibles a través de este sitio web no son adecuadas para usted"
+
+#~ msgid "One last step left"
+#~ msgstr "Queda un último paso"
+
+#~ msgid "Only letters, numbers, hyphen are allowed"
+#~ msgstr "Se permiten sólo letras, números y guiones"
+
+#~ msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "Se permite sólo el uso de letras, números, espacios, guiones, puntos y apóstrofes"
+
+#~ msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
+#~ msgstr "Se permite sólo el uso de letras, números, espacios, puntos, comas, -, / y @"
+
+#~ msgid "Only letters, space, hyphen, period, apostrophe are allowed"
+#~ msgstr "Se permite sólo el uso de letras, espacios, guiones, puntos y apóstrofes"
+
+#~ msgid "Only numbers and space are allowed"
+#~ msgstr "Se permiten sólo números y espacios"
+
+#~ msgid "Only numbers, letters, hyphens are allowed"
+#~ msgstr "Se permiten sólo letras, números y guiones"
+
+#~ msgid "Open Account"
+#~ msgstr "Abrir una cuenta"
+
+#~ msgid "Open account"
+#~ msgstr "Abrir una cuenta"
+
+#~ msgid "Other financial instruments trading experience"
+#~ msgstr "Experiencia de comerciar con otros instrumentos financieros"
+
+#~ msgid "Other financial instruments trading frequency"
+#~ msgstr "Frecuencia de comerciar con otros instumentos financieros"
+
+#~ msgid "PEP Declaration"
+#~ msgstr "Declaración de PEP"
+
+#~ msgid "Personal Details"
+#~ msgstr "Datos personales"
+
+#~ msgid "Phone"
+#~ msgstr "Teléfono"
+
+#~ msgid "Place of birth"
+#~ msgstr "Lugar de nacimiento"
+
+#~ msgid "Please"
+#~ msgstr "Por favor"
+
+#~ msgid "Please choose which currency you would like to transact in"
+#~ msgstr "Seleccione la divisa con la que desea realizar la transacción"
+
+#~ msgid "Please enter a valid date in yyyy-mm-dd format"
+#~ msgstr "Por favor introduzca una fecha válida en formato aaaa-mm-dd"
+
+#~ msgid "Please enter correct email"
+#~ msgstr "Por favor introduzca una dirección de correo electrónico correcta"
+
+#~ msgid "Please enter your email"
+#~ msgstr "Por favor introduzca su correo electrónico"
+
+#~ msgid "Please provide your tax information"
+#~ msgstr "Por favor, proporcione su información tributaria"
+
+#~ msgid "Please select"
+#~ msgstr "Por favor, seleccione"
+
+#~ msgid "Please submit a valid verification token"
+#~ msgstr "Por favor, envíe un token de verificación válido"
+
+#~ msgid "Postal code/ZIP"
+#~ msgstr "Código postal"
+
+#~ msgid "Repeat password"
+#~ msgstr "Repetir contraseña"
+
+#~ msgid "Second line of home address"
+#~ msgstr "Segunda línea de dirección"
+
+#~ msgid "Security"
+#~ msgstr "Seguridad"
+
+#~ msgid "Security question"
+#~ msgstr "Pregunta de seguridad"
+
+#~ msgid "State/province/region"
+#~ msgstr "Estado/provincia/región"
+
+#~ msgid "Stocks trading experience"
+#~ msgstr "Experiencia de comerciar con acciones"
+
+#~ msgid "Stocks trading frequency"
+#~ msgstr "Frecuencia de comerciar con acciones"
+
+#~ msgid "Tax identification number"
+#~ msgstr "Número de identificación fiscal"
+
+#~ msgid "Tax information"
+#~ msgstr "Información tributaria"
+
+#~ msgid "Tax residence"
+#~ msgstr "Residencia fiscal"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
+#~ msgstr "Los servicios contractuales financieros de este sitio solo son adecuados para los clientes que pueden hacer frente a la pérdida del dinero que invierten y que comprenden y tienen experiencia con los riesgos implícitos en la adquisición de contratos financieros. Las transacciones en los contractos financieros implican un alto grado de riesgo. Si los contratos comprados caducan sin valor, sufrirá la pérdida total de su inversión, la que consistirá en la prima contractual"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+#~ msgstr "Los servicios comerciales financieros contenidos en este sitio son adecuados solamente para los clientes que son capaces de soportar la pérdida de todo el dinero de su inversión y que entienden y tienen experiencia con el riesgo a la hora de adquirir contratos financieros. Las transacciones en contratos financieros conllevan un alto grado de riesgo. Si los contratos comprados caducan sin valor, usted sufrirá una pérdida total de su inversión, que consiste en el contrato permium"
+
+#~ msgid "Town/City"
+#~ msgstr "Ciudad"
+
+#~ msgid "Verification code has been sent to your email"
+#~ msgstr "El código de verificación ha sido enviado a su correo electrónico"
+
+#~ msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+#~ msgstr "Su cuenta Binary.com ha sido creada, pero para comenzar a operar debe permitir que Webtrader acceda a ella"
+
+#~ msgid "Your email"
+#~ msgstr "Su correo electrónico"
+
+#~ msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
+#~ msgstr "debajo y procediendo con la apertura de la cuenta debe tener en cuenta que puede exponerse a riesgos (que pueden ser significativos, incluyendo el riesgo de pérdida de la suma total invertida) que puede que no conozca y no tenga experiencia para evaluar correctamente o mitigar"
+
+#~ msgid "contact support"
+#~ msgstr "contactar con ayuda al cliente"
+
+#~ msgid "if this is not your country of residence"
+#~ msgstr "si este no es su país de residencia"
+
+#~ msgid "terms and conditions"
+#~ msgstr "términos y condiciones"
