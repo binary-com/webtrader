@@ -81,7 +81,7 @@ const getMarketsSubmarkets = (active_symbols) => {
     return select_market_submarket
 }
 
-const refreshTable = () => {
+const initTable = () => {
     getActiveSymAndAssetsData()
         .then((result) => {
             populateTable(result);
@@ -92,8 +92,10 @@ const refreshTable = () => {
         });
 
     function populateTable(result) {
-        state.dropdown.market_submarkets = getMarketsSubmarkets(Object.assign(result[0].active_symbols));
-        state.table.asset_data = [...result[1].asset_index];
+        const active_symbols_data = Object.assign(result[0].active_symbols);
+        const asset_index_data = [...result[1].asset_index];
+        state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
+        state.table.asset_data = asset_index_data;
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
         dialog_buttons_el = asset_win_el.parent().find('.ui-dialog-titlebar-buttonpane');
@@ -106,23 +108,28 @@ const refreshTable = () => {
             const symbols = state.dropdown.market_submarkets[market_name][submarket_name];
             state.dropdown.selected_market = market_name;
             state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
-
+            console.log(state.table.asset_data)
             let rows = state.table.asset_data
-                .filter((asset) => symbols.indexOf(asset[1]) > -1)
+                .filter((asset) => symbols.indexOf(asset[1]) > -1) // asset[1] is symbol
                 .map((asset) => {
                     const props = [];
+                    const symbol = asset[1];
+                    const asset_data = asset[2];
                     state.table.display_headers = [];
-                    props.push(asset[1]);
-                    asset[2].forEach(asset_list => {
-                        state.table.display_headers.push(asset_list[1]);
-                        props.push([asset_list[1], `${asset_list[2]} - ${asset_list[3]}`]);
+                    props.push(symbol);
+                    asset_data.forEach(asset_list => {
+                        const asset_type = asset_list[1];
+                        const asset_from = asset_list[2];
+                        const asset_to = asset_list[3];
+                        state.table.display_headers.push(asset_type);
+                        props.push([asset_type, `${asset_from} - ${asset_to}`]);
                     });
 
                     return props;
                 });
 
             rows = assignAssetRows(rows);
-            rows = fillEmptyRows(rows);
+            rows = fillFalseRows(rows);
             state.table.display_asset_data = rows;
             state.table.asset_data_extract = rows;
 
@@ -130,8 +137,10 @@ const refreshTable = () => {
                 rows.forEach((assets) => {
                     assets.forEach(asset => {
                         if (Array.isArray(asset)) {
-                            const indexhead = state.table.display_headers.indexOf(asset[0]) + 1;
-                            assets[indexhead] = asset[1];
+                            const asset_type = asset[0];
+                            const asset_from_to = asset[1]
+                            const indexhead = state.table.display_headers.indexOf(asset_type) + 1;
+                            assets[indexhead] = asset_from_to;
                         }
                     });
                 });
@@ -139,7 +148,7 @@ const refreshTable = () => {
                 return rows;
             }
 
-            function fillEmptyRows(rows) {
+            function fillFalseRows(rows) {
                 const header_length = state.table.display_headers.length;
 
                 for (let i = 0; i <= header_length; i++) {
@@ -216,10 +225,10 @@ const initAssetWin = ($html) => {
     table_el = $html.filter('table');
     $html.appendTo(asset_win_el);
     rv.bind($html[0], state);
-    refreshTable();
+    initTable();
     require(['websockets/binary_websockets'], (liveapi) => {
-      liveapi.events.on('login', refreshTable);
-      liveapi.events.on('logout', refreshTable);
+      liveapi.events.on('login', initTable);
+      liveapi.events.on('logout', initTable);
    });
 }
 
