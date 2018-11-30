@@ -92,6 +92,17 @@ function populate_language_dropdown() {
     });
 }
 
+function getAppId() {
+    var default_id = 11;
+    var local_id = localStorage.getItem('config.app_id');
+    return local_id || default_id;
+}
+
+function getUrl() {
+    var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
+    return 'wss://' + server_url + '/websockets/v3';
+}
+
 function populate_footer() {
     var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
 
