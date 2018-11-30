@@ -108,7 +108,6 @@ const initTable = () => {
             const symbols = state.dropdown.market_submarkets[market_name][submarket_name];
             state.dropdown.selected_market = market_name;
             state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
-            console.log(state.table.asset_data)
             let rows = state.table.asset_data
                 .filter((asset) => symbols.indexOf(asset[1]) > -1) // asset[1] is symbol
                 .map((asset) => {
