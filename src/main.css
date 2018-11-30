@@ -443,7 +443,7 @@ button.ui-datepicker-current {
     background: none;
     border-bottom:unset;
 }
-.ui-timepicker td a {
+.ui-timepicker td a, .ui-timepicker td span {
 	display: block;
 	padding: 3px 5px;
 	width: 19px;
