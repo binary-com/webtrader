@@ -27,6 +27,8 @@ populate_language_dropdown();
 
 var contact_us_el = document.getElementById('contact-us');
 var logo_el = document.getElementById('logo');
+var picture_eu_el = document.getElementById('footer-eu');
+var picture_non_eu_el = document.getElementById('footer-non-eu');
 
 contact_us_el.href = getBinaryUrl('contact.html');
 logo_el.href = getBinaryUrl('home.html');
@@ -161,7 +163,8 @@ function populate_footer() {
             }
         };
         var FOOTER_TEXT = is_eu ? FOOTER_TEXT_EU : FOOTER_TEXT_NON_EU;
-        console.log(is_eu)
+
+        is_eu ? picture_non_eu_el.style.display = 'none' : picture_eu_el.style.display = 'none';
 
         for (var key in FOOTER_TEXT) {
             var text = FOOTER_TEXT[key].TEXT;
