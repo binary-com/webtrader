@@ -1,5 +1,12 @@
+$COLOR_LIGHT_GRAY: #D3D3D3;
+$COLOR_GRAY: #D8D8D8;
+$COLOR_DARK_BLUE: #2A3052;
+$COLOR_ASH_GRAY: #E8E8E8;
+$COLOR_WHITE: #FFFFFF;
+$COLOR_SHADOW_GRAY: #F5F5F5;
+
 .workspace-manager-dialog {
-  background: lightgray;
+  background: $COLOR_LIGHT_GRAY;
   padding: 0 !important;
   position: relative;
   overflow: hidden;
@@ -9,19 +16,19 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid $COLOR_GRAY;
     > div {
       cursor: pointer;
       flex-grow: 1;
       text-align: center;
-      color: #2A3052;
+      color: $COLOR_DARK_BLUE;
       box-sizing: border-box;
       border-bottom: 3px solid transparent;
       line-height: 30px;
       position: relative;
       top: 1px;
       &.selected {
-        border-bottom: 3px solid #2A3052;
+        border-bottom: 3px solid $COLOR_DARK_BLUE;
       }
     }
   }
@@ -32,7 +39,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     .current-workspace {
-      background-color: #e8e8e8e8;
+      background-color: $COLOR_ASH_GRAY;
       height: 38px;
       display: flex;
       text-align: center;
@@ -48,8 +55,8 @@
           line-height: 30px;
           background-color: transparent;
           border: none;
-          &:hover { background-color: #f5f5f5; }
-          &:focus { background-color: #fff; }
+          &:hover { background-color: $COLOR_SHADOW_GRAY; }
+          &:focus { background-color: $COLOR_WHITE; }
           &:focus + .icon-confirm { pointer-events: all; opacity: 1; }
           font-weight: bold;
         }
@@ -72,7 +79,7 @@
           font-size: small;
         }
         &:hover {
-          background-color: #e8e8e8
+          background-color: $COLOR_ASH_GRAY;
         } 
       }
     }
@@ -107,7 +114,7 @@
       height: 34px;
       display: flex;
       flex-direction: row;
-      color: #2A3052;
+      color: $COLOR_DARK_BLUE;
       .name { flex-grow: 1 }
     }
     .workspaces {
@@ -127,8 +134,8 @@
             line-height: 30px;
             background-color: transparent;
             border: none;
-            &:hover { background-color: #f5f5f5; }
-            &:focus { background-color: #e8e8e8; }
+            &:hover { background-color: $COLOR_SHADOW_GRAY; }
+            &:focus { background-color: $COLOR_ASH_GRAY; }
           }
         }
       }
