@@ -144,25 +144,25 @@ $COLOR_SHADOW_GRAY: #F5F5F5;
   .icon-remove, .icon-delete {
     width: 30px;
     background: url('../images/delete-black.svg') no-repeat 50% 50% ;
-    &:hover { background-color: #e8e8e8; }
+    &:hover { background-color: $COLOR_ASH_GRAY; }
     cursor: pointer;
   }
   .icon-download{
     width: 30px;
     background: url('../images/ic-download.svg') no-repeat 50% 50% ;
-    &:hover { background-color: #e8e8e8; }
+    &:hover { background-color: $COLOR_ASH_GRAY; }
     cursor: pointer;
   }
   .icon-save {
     width: 38px;
     background: url('../images/save.svg') no-repeat 50% 50% ;
-    &:hover { background-color: #e8e8e8; }
+    &:hover { background-color: $COLOR_ASH_GRAY; }
     cursor: pointer;
   }
   .icon-saveas {
     width: 38px;
     background: url('../images/save-as.svg') no-repeat 50% 50% ;
-    &:hover { background-color: #e8e8e8; }
+    &:hover { background-color: $COLOR_ASH_GRAY; }
     cursor: pointer;
   }
   .icon-tick-normal {
