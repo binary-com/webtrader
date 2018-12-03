@@ -104,19 +104,20 @@ function getUrl() {
 }
 
 function populate_footer() {
-    var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
-
+    var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
+    var api_url = getUrl() + '?l=' + i18n_name + '&app_id=' + getAppId();
+    var ws = new WebSocket(api_url);
     ws.onopen = function(evt) {
         ws.send(JSON.stringify({"website_status": 1}));
     };
 
     ws.onmessage = function(msg) {
         var data = JSON.parse(msg.data);
-
-        console.log(/mt/gi.test(data.website_status.clients_country))
+        var eu_regex   = new RegExp('^mt$');
+        var is_eu = eu_regex.test(data.website_status.clients_country);
         var binary_responsible_trading_url = getBinaryUrl('responsible-trading.html');
         var binary_regulation_url = getBinaryUrl('regulation.html');
-        var FOOTER_TEXT = {
+        var FOOTER_TEXT_NON_EU = {
             P1: {
                 TEXT: 'In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2]).'.i18n(),
                 TAGS: ['<a href="https://www.binary.com/download/WS-Binary-Investments-Europe-Limited.pdf" target="_blank" rel="noopener noreferrer">', '</a>'],
@@ -128,9 +129,9 @@ function populate_footer() {
             P3: {
                 TEXT: 'This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18.'.i18n()
             },
-            P4: {
-                TEXT: 'Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website\'s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.'.i18n(),
-                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>', '<p>', '</p>'],
+            P5: {
+                TEXT: '[_5][_7][_3]The financial products offered via this website include binary options, contracts for difference ("CFDs") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2].[_4][_6]'.i18n(),
+                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>', '<p>', '</p>','<fieldset>','</fieldset>','<legend>risk warning</legend>'],
             }
         };
         var FOOTER_TEXT_EU = {
@@ -144,11 +145,11 @@ function populate_footer() {
             },
             P3: {
                 TEXT: '[_5]In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker\'s Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].[_6]'.i18n(),
-                TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39495" target="_blank" rel="noopener noreferrer">', '</a>', '<a href=' + binary_regulation_url + ' target="_blank">', '</a>', '<p>', '</p>'],
+                TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39495" target="_blank" rel="noopener noreferrer">', '</a>', '<a href=' + binary_regulation_url + ' target="_blank">', '</a>', '<p class="u-margin-bottom-small">', '</p>'],
             },
             P4: {
                 TEXT: '[_3]Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website\'s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.[_4]'.i18n(),
-                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>', '<p>', '</p>'],
+                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>', '<p class="about-binary">', '</p>'],
             },
             P5: {
                 TEXT: '[_1]Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset.[_2]'.i18n(),
@@ -159,16 +160,17 @@ function populate_footer() {
                 TAGS: ['<p>', '</p>']
             }
         };
-    
-    
-        for (var key in FOOTER_TEXT_EU) {
-            var text = FOOTER_TEXT_EU[key].TEXT;
-            var tags = FOOTER_TEXT_EU[key].TAGS;
+        var FOOTER_TEXT = is_eu ? FOOTER_TEXT_EU : FOOTER_TEXT_NON_EU;
+        console.log(is_eu)
+
+        for (var key in FOOTER_TEXT) {
+            var text = FOOTER_TEXT[key].TEXT;
+            var tags = FOOTER_TEXT[key].TAGS;
     
             var p_content = add_tags(text, tags);
             $('#' + key.toLowerCase()).html(p_content);
         }
-    
+
         function add_tags(text, tags) {
             if (!Array.isArray(tags) || tags.length < 0) return text;
     

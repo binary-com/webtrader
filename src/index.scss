@@ -87,6 +87,15 @@ body {
         }
     }
 
+    fieldset {
+        border-color: $FOOTER_BORDER_GRAY;
+
+            legend {
+                text-transform: uppercase;
+                padding: 0 12px;
+                font-weight: bold;
+            }
+    }
     &__regulatory-icons {
         display: flex;
 
