@@ -94,18 +94,19 @@ const initTable = () => {
     function populateTable(result) {
         const active_symbols_data = Object.assign(result[0].active_symbols);
         const asset_index_data = [...result[1].asset_index];
+
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
         dialog_buttons_el = asset_win_el.parent().find('.ui-dialog-titlebar-buttonpane');
 
-        marketsChanged(state.dropdown.market_submarkets);
-        submarketsChanged(state.dropdown.market_submarkets);
+        marketsDropdown(state.dropdown.market_submarkets);
+        submarketsDropdown(state.dropdown.market_submarkets);
         updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
 
         function updateTable(market_name, submarket_name) {
-            const symbols = state.dropdown.market_submarkets[market_name][submarket_name];
+            const symbols = [...state.dropdown.market_submarkets[market_name][submarket_name]];
             state.dropdown.selected_market = market_name;
             state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
             let rows = state.table.asset_data
@@ -126,9 +127,9 @@ const initTable = () => {
 
                     return props;
                 });
-
             rows = assignAssetRows(rows);
             rows = fillFalseRows(rows);
+
             state.table.display_asset_data = rows;
             state.table.asset_data_extract = rows;
 
@@ -137,7 +138,7 @@ const initTable = () => {
                     assets.forEach(asset => {
                         if (Array.isArray(asset)) {
                             const asset_type = asset[0];
-                            const asset_from_to = asset[1]
+                            const asset_from_to = asset[1];
                             const indexhead = state.table.display_headers.indexOf(asset_type) + 1;
                             assets[indexhead] = asset_from_to;
                         }
@@ -162,7 +163,7 @@ const initTable = () => {
             }
         }
 
-        function marketsChanged(market_submarkets) {
+        function marketsDropdown(market_submarkets) {
             if (!state.dropdown.display_markets) {
                 state.dropdown.display_markets = windows
                     .makeSelectmenu($('<select />').insertBefore(dialog_buttons_el), {
@@ -181,7 +182,7 @@ const initTable = () => {
             }
         }
 
-        function submarketsChanged(market_submarkets) {
+        function submarketsDropdown(market_submarkets) {
             if (!state.dropdown.display_submarkets) {
                 state.dropdown.display_submarkets = windows
                     .makeSelectmenu($('<select />').insertBefore(dialog_buttons_el), {
@@ -214,6 +215,7 @@ const initTable = () => {
                 return Promise.resolve(results);
             })
             .catch((error) => {
+                processing_msg.hide();
                 return Promise.reject(error);
             });
     };
