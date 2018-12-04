@@ -20,10 +20,10 @@ if (/acct1=/.test(href) && /token1=/.test(href)) {
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
 
-set_language(lang);
-clear_url_querystring(href);
+setLanguage(lang);
+clearUrlQuerystring(href);
 
-populate_language_dropdown();
+populateLanguageDropdown();
 
 var contact_us_el = document.getElementById('contact-us');
 var logo_el = document.getElementById('logo');
@@ -43,8 +43,8 @@ if (local_storage.get('oauth') !== null) {
 
         var i18n_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
         $.getJSON(VERSION + 'i18n/' + i18n_name + '.json', function (data) {
-            setup_i18n_translation(data);
-            process_footer();
+            setupi18nTranslation(data);
+            processFooter();
             if (lang === 'id') {
                 $('#footer').hide();
             }
@@ -82,8 +82,8 @@ function openTradingPage() {
     window.location.href = VERSION + 'main.html';
 }
 
-function populate_language_dropdown() {
-    var language_arr = get_supported_languages();
+function populateLanguageDropdown() {
+    var language_arr = getSupportedLanguages();
     var ul_el = document.getElementById('select_language');
     language_arr.map(function(language) {
         var li = document.createElement('li');
@@ -94,7 +94,7 @@ function populate_language_dropdown() {
     });
 }
 
-function process_footer() {
+function processFooter() {
     var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
     var api_url = getUrl() + '?l=' + i18n_name + '&app_id=' + getAppId();
     
@@ -150,7 +150,7 @@ function process_footer() {
         }
     };
 
-    function add_tags(text, tags) {
+    function addTags(text, tags) {
         if (!Array.isArray(tags) || tags.length < 0) return text;
 
         for (i = 0; i < tags.length; i++) {
@@ -180,7 +180,7 @@ function process_footer() {
         for (var key in FOOTER_TEXT) {
             var text = FOOTER_TEXT[key].TEXT;
             var tags = FOOTER_TEXT[key].TAGS;
-            var p_content = add_tags(text, tags);
+            var p_content = addTags(text, tags);
             $('#' + key.toLowerCase()).html(p_content);
         }
     }

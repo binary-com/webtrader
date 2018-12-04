@@ -144,7 +144,7 @@ var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
     /* setup translating string literals */
-    window.setup_i18n_translation(JSON.parse(lang_json));
+    window.setupi18nTranslation(JSON.parse(lang_json));
 
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,

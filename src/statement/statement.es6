@@ -41,7 +41,7 @@ const refreshTable  = (yyy_mm_dd) => {
 
    /* if a date is specified get the transactions for that date */
    if (typeof yyy_mm_dd === 'string') {
-      request.date_from = yyyy_mm_dd_to_epoch(yyy_mm_dd, { utc: true });
+      request.date_from = yearMonthDayToEpoch(yyy_mm_dd, { utc: true });
       const one_day_utc = Date.UTC(1970, 0, 1, 23, 59, 59) / 1000;
       request.date_to = request.date_from + one_day_utc;
       table.api().rows().remove();
@@ -65,7 +65,7 @@ const refreshTable  = (yyy_mm_dd) => {
          const view_button = '<button '+view_button_class+'>' + view_button_text + '</button>';
          const amount = trans.amount * 1;
          return [
-            epoch_to_string(trans.transaction_time, { utc: true }),
+            epochToString(trans.transaction_time, { utc: true }),
             trans.transaction_id,
             _.capitalize(trans.action_type),
             trans.longcode,
