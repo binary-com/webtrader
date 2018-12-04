@@ -94,24 +94,18 @@ function populate_language_dropdown() {
     });
 }
 
-function getAppId() {
-    var default_id = 11;
-    var local_id = localStorage.getItem('config.app_id');
-    return local_id || default_id;
-}
-
-function getUrl() {
-    var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
-    return 'wss://' + server_url + '/websockets/v3';
-}
-
 function process_footer() {
     var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
     var api_url = getUrl() + '?l=' + i18n_name + '&app_id=' + getAppId();
+    
     var ws = new WebSocket(api_url);
+    ws.onopen = sendApiResponse;
+    ws.onmessage = processApiResponse;
+
     var clients_country;
     var binary_responsible_trading_url = getBinaryUrl('responsible-trading.html');
     var binary_regulation_url = getBinaryUrl('regulation.html');
+
     var FOOTER_TEXT_NON_EU = {
         P1: {
             TEXT: 'In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2]).'.i18n(),
@@ -156,11 +150,6 @@ function process_footer() {
         }
     };
 
-    ws.onopen = function(evt) {
-        ws.send(JSON.stringify({ 'website_status': 1 }));
-    }
-    ws.onmessage = processApiResponse;
-
     function add_tags(text, tags) {
         if (!Array.isArray(tags) || tags.length < 0) return text;
 
@@ -196,6 +185,10 @@ function process_footer() {
         }
     }
 
+    function sendApiResponse(evt) {
+        ws.send(JSON.stringify({ 'website_status': 1 }));
+    }
+
     function processApiResponse(response) {
         var data = JSON.parse(response.data)
         if (data.website_status) {
@@ -206,9 +199,19 @@ function process_footer() {
         }
     }
 
-    // Executed after we retrieve the website_status response
     function sendLandingCompany(clients_country) {
         ws.send(JSON.stringify({ 'landing_company': clients_country }));
+    }
+
+    function getAppId() {
+        var default_id = 11;
+        var local_id = localStorage.getItem('config.app_id');
+        return local_id || default_id;
+    }
+    
+    function getUrl() {
+        var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
+        return 'wss://' + server_url + '/websockets/v3';
     }
 
 }

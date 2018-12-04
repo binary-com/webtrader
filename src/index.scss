@@ -84,6 +84,45 @@ body {
         display: flex;
         flex-wrap: wrap;
 
+        #footer-eu {
+            display: none;
+            .gamstop-lga-container {
+                height: 100%;
+                min-width: 100px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .iom_icon {
+                max-width: 90px;
+                min-width: 76px;
+                margin-right: 20px;
+            }
+            .lga_icon {
+                align-self: flex-start;
+                max-width: 70px;
+                width: 100%;
+            }
+            .gamstop_icon {
+                max-width: 120px;
+                width: 100%;
+            }
+        }
+    
+        #footer-non-eu {
+            display: none;
+            .vanuatu-icon {
+                width: 100px;
+            }
+            .bvi-icon {
+                width: 75px;
+            }
+            .labuan-icon {
+                width: 120px;
+            }
+        }
+
         @media screen and (max-width: 609px)  {
             justify-content: center;
         }
@@ -120,6 +159,15 @@ body {
         text-decoration: none;
         text-align: justify;
 
+        fieldset {
+            border-color: $FOOTER_BORDER_GRAY;
+    
+                legend {
+                    text-transform: uppercase;
+                    padding: 0 12px;
+                    font-weight: bold;
+                }
+        }
         .u-margin-bottom-small {
             margin-bottom: 7px
         }
@@ -130,55 +178,6 @@ body {
             border-top: 1px solid $FOOTER_BORDER_GRAY;
             border-bottom: 1px solid $FOOTER_BORDER_GRAY;
             padding: 10px 0;
-        }
-    }
-
-    fieldset {
-        border-color: $FOOTER_BORDER_GRAY;
-
-            legend {
-                text-transform: uppercase;
-                padding: 0 12px;
-                font-weight: bold;
-            }
-    }
-
-    #footer-eu {
-        display: none;
-        .gamstop-lga-container {
-            height: 100%;
-            min-width: 100px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .iom_icon {
-            max-width: 90px;
-            min-width: 76px;
-            margin-right: 20px;
-        }
-        .lga_icon {
-            align-self: flex-start;
-            max-width: 70px;
-            width: 100%;
-        }
-        .gamstop_icon {
-            max-width: 120px;
-            width: 100%;
-        }
-    }
-
-    #footer-non-eu {
-        display: none;
-        .vanuatu-icon {
-            width: 100px;
-        }
-        .bvi-icon {
-            width: 75px;
-        }
-        .labuan-icon {
-            width: 120px;
         }
     }
 }
