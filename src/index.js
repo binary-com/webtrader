@@ -213,5 +213,4 @@ function processFooter() {
         var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
         return 'wss://' + server_url + '/websockets/v3';
     }
-
 }
