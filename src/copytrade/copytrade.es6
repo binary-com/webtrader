@@ -292,7 +292,7 @@ const state = {
             .catch((e) => {
               scope.searchToken.disable = false;
               console.error(e)
-              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
+              $.growl.error({ message: e.message });
             });
         })
         .catch(error => {
