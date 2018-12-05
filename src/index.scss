@@ -85,7 +85,6 @@ body {
         flex-wrap: wrap;
 
         #footer-eu {
-            display: none;
             .gamstop-lga-container {
                 height: 100%;
                 min-width: 100px;
@@ -111,7 +110,6 @@ body {
         }
     
         #footer-non-eu {
-            display: none;
             .vanuatu-icon {
                 width: 100px;
             }
@@ -123,12 +121,20 @@ body {
             }
         }
 
+        .data-show {
+            display: flex;
+        }
+
         @media screen and (max-width: 609px)  {
             justify-content: center;
         }
     }
     &__regulatory-icons {
         display: flex;
+
+        &:not(.data-show) {
+            display: none !important;
+        }
 
         > * {
             margin-right: 20px;

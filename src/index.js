@@ -1,76 +1,91 @@
-/* oauth login ? */
+var contact_us_el = document.getElementById('contact-us');
+var logo_el = document.getElementById('logo');
+var picture_eu_el = document.getElementById('footer-eu');
+var picture_non_eu_el = document.getElementById('footer-non-eu');
+
 var href = window.location.href;
+var app_id_json = null;
 //Remove the '#' check later once the backend changes are released TODO
 var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
-if (/acct1=/.test(href) && /token1=/.test(href)) {
-    var accts = (params_str.match(/acct\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
-    var tokens = (params_str.match(/token\d=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
-    var currs = (params_str.match(/cur\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
-    var oauth = [];
-    for (var i = 0; i < accts.length; i++) {
-        var id = accts[i];
-        var token = tokens[i];
-        var curr = currs[i];
-        oauth.push({ id: id, token: token, currency: curr });
-    }
-    local_storage.set('oauth', oauth);
-    local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
-}
-
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
+
+contact_us_el.href = getBinaryUrl('contact.html');
+logo_el.href = getBinaryUrl('home.html');
+
+loadAppId();
+
+checkRedirectToken(params_str);
 
 setLanguage(lang);
 clearUrlQuerystring(href);
 
 populateLanguageDropdown();
 
-var contact_us_el = document.getElementById('contact-us');
-var logo_el = document.getElementById('logo');
-var picture_eu_el = document.getElementById('footer-eu');
-var picture_non_eu_el = document.getElementById('footer-non-eu');
+setSelectedLanguage();
 
-contact_us_el.href = getBinaryUrl('contact.html');
-logo_el.href = getBinaryUrl('home.html');
-
-if (local_storage.get('oauth') !== null) {
-    window.location.href = VERSION + 'main.html';
-} else {
+function loadAppId() {
     $(function () {
-        $('body').css('display', 'block');
-        setTime();
-        setInterval(setTime, 1000);
-
-        var i18n_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
-        $.getJSON(VERSION + 'i18n/' + i18n_name + '.json', function (data) {
-            setupi18nTranslation(data);
-            processFooter();
-            if (lang === 'id') {
-                $('#footer').hide();
-            }
-        });
-
-        // Show hidden languages
-        $('#select_language').find('.invisible').removeClass('invisible');
-        var selected_lang = $('#select_language').find('.' + i18n_name);
-        var curr_ele = $('#select_language .current .language');
-        var disp_lang = $("#display_language .language");
-        disp_lang.text(selected_lang.text());
-        curr_ele.text(selected_lang.text());
-        selected_lang.addClass('invisible');
-
-        $('.languages #select_language li').each(function (i, el) {
-            $(el).click(function () {
-                var lang = $(el).find('a').data('lang');
-                if (lang) {
-                    local_storage.set('i18n', { value: lang });
-                    window.location.reload();
-                }
-                return false;
-            });
-        });
-
+        $.getJSON(VERSION + 'oauth/app_id.json', function (app_ids) {
+            app_id_json = app_ids;
+        })
     });
+}
+
+function setSelectedLanguage() {
+    if (local_storage.get('oauth') !== null) {
+        window.location.href = VERSION + 'main.html';
+    } else {
+        $(function () {
+            $('body').css('display', 'block');
+            setTime();
+            setInterval(setTime, 1000);
+    
+            var i18n_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
+            $.getJSON(VERSION + 'i18n/' + i18n_name + '.json', function (data) {
+                setupi18nTranslation(data);
+                processFooter();
+            });
+    
+            // Show hidden languages
+            $('#select_language').find('.invisible').removeClass('invisible');
+            var selected_lang = $('#select_language').find('.' + i18n_name);
+            var curr_ele = $('#select_language .current .language');
+            var disp_lang = $("#display_language .language");
+            disp_lang.text(selected_lang.text());
+            curr_ele.text(selected_lang.text());
+            selected_lang.addClass('invisible');
+    
+            $('.languages #select_language li').each(function (i, el) {
+                $(el).click(function () {
+                    var lang = $(el).find('a').data('lang');
+                    if (lang) {
+                        local_storage.set('i18n', { value: lang });
+                        window.location.reload();
+                    }
+                    return false;
+                });
+            });
+    
+        });
+    }
+}
+
+function checkRedirectToken(params_str) {
+    if (/acct1=/.test(href) && /token1=/.test(href)) {
+        var accts = (params_str.match(/acct\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+        var tokens = (params_str.match(/token\d=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
+        var currs = (params_str.match(/cur\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+        var oauth = [];
+        for (var i = 0; i < accts.length; i++) {
+            var id = accts[i];
+            var token = tokens[i];
+            var curr = currs[i];
+            oauth.push({ id: id, token: token, currency: curr });
+        }
+        local_storage.set('oauth', oauth);
+        local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
+    }
 }
 
 function setTime() {
@@ -85,6 +100,7 @@ function openTradingPage() {
 function populateLanguageDropdown() {
     var language_arr = getSupportedLanguages();
     var ul_el = document.getElementById('select_language');
+
     language_arr.map(function(language) {
         var li = document.createElement('li');
         li.className = language.value;
@@ -100,28 +116,8 @@ function processFooter() {
     var clients_country;
     var ws = new WebSocket(api_url);
 
-    ws.onopen = sendApiResponse;
+    ws.onopen = sendWebsiteStatus;
     ws.onmessage = processApiResponse;
-
-    function addTags(text, tags) {
-        if (!Array.isArray(tags) || tags.length < 0) return text;
-
-        for (i = 0; i < tags.length; i++) {
-            text = text.replace('[_' + (i + 1) + ']', tags[i]);
-        }
-        return text;
-    }
-
-    function isEuCountry(landing_company) {
-        var eu_shortcode_regex = new RegExp('^(maltainvest|malta|iom)$');
-        var eu_excluded_regex = new RegExp('^mt$');
-        var financial_shortcode = landing_company.financial_company ? landing_company.financial_company.shortcode : false;
-        var gaming_shortcode = landing_company.gaming_company ? landing_company.gaming_company.shortcode : false;
-
-        return financial_shortcode || gaming_shortcode
-            ? eu_shortcode_regex.test(financial_shortcode) || eu_shortcode_regex.test(gaming_shortcode)
-            : eu_excluded_regex.test(clients_country);
-    }
 
     function populateFooter(data) {
         var binary_responsible_trading_url = getBinaryUrl('responsible-trading.html');
@@ -173,9 +169,8 @@ function processFooter() {
 
         var isEu = isEuCountry(data.landing_company);
         var FOOTER_TEXT = isEu ? FOOTER_TEXT_EU : FOOTER_TEXT_NON_EU;
-
-        picture_eu_el.style.display = isEu ? 'flex' : 'none';
-        picture_non_eu_el.style.display = isEu ? 'none' : 'flex';
+        
+        isEu ? picture_eu_el.classList.add('data-show') : picture_non_eu_el.classList.add('data-show');
 
         for (var key in FOOTER_TEXT) {
             var text = FOOTER_TEXT[key].TEXT;
@@ -183,14 +178,46 @@ function processFooter() {
             var p_content = addTags(text, tags);
             $('#' + key.toLowerCase()).html(p_content);
         }
+
+        ws.close();
+
+        function addTags(text, tags) {
+            if (!Array.isArray(tags) || tags.length < 0) return text;
+
+            for (i = 0; i < tags.length; i++) {
+                text = text.replace('[_' + (i + 1) + ']', tags[i]);
+            }
+
+            return text;
+        }
+
+        function isEuCountry(landing_company) {
+            var eu_shortcode_regex = new RegExp('^(maltainvest|malta|iom)$');
+            var eu_excluded_regex = new RegExp('^mt$');
+            var financial_shortcode = landing_company.financial_company ? landing_company.financial_company.shortcode : false;
+            var gaming_shortcode = landing_company.gaming_company ? landing_company.gaming_company.shortcode : false;
+
+            return financial_shortcode || gaming_shortcode
+                ? eu_shortcode_regex.test(financial_shortcode) || eu_shortcode_regex.test(gaming_shortcode)
+                : eu_excluded_regex.test(clients_country);
+        }
     }
 
-    function sendApiResponse(evt) {
-        ws.send(JSON.stringify({ 'website_status': 1 }));
+    function sendApiRequest(request) {
+        ws.send(JSON.stringify(request));
+    }
+
+    function sendWebsiteStatus(evt) {
+        sendApiRequest({ website_status: 1 });
+    }
+
+    function sendLandingCompany(clients_country) {
+        sendApiRequest({ landing_company: clients_country });
     }
 
     function processApiResponse(response) {
         var data = JSON.parse(response.data);
+
         if (data.website_status) {
             clients_country = data.website_status.clients_country;
             sendLandingCompany(clients_country);
@@ -199,18 +226,22 @@ function processFooter() {
         }
     }
 
-    function sendLandingCompany(clients_country) {
-        ws.send(JSON.stringify({ 'landing_company': clients_country }));
-    }
-
     function getAppId() {
         var default_id = 11;
-        var local_id = localStorage.getItem('config.app_id');
-        return local_id || default_id;
+        var stored_app_id = '';
+
+        for(var url in app_id_json) {
+            if(href.lastIndexOf(url, 0) === 0) {
+                stored_app_id = app_id_json[url];
+            }
+        }
+
+        return stored_app_id || default_id;
     }
     
     function getUrl() {
         var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
+        
         return 'wss://' + server_url + '/websockets/v3';
     }
 }
