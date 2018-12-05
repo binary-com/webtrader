@@ -6,6 +6,7 @@
     width: 100%;
     tr {
       td, th {
+        text-align: center;
         &:first-child {
           white-space: nowrap;
           width: 100px !important;
