@@ -39,7 +39,7 @@ $COLOR_SHADOW_GRAY: #F5F5F5;
     overflow-y: scroll;
     overflow-x: hidden;
     .current-workspace {
-      background-color: $COLOR_ASH_GRAY;
+      background-color: $COLOR_GRAY;
       height: 38px;
       display: flex;
       text-align: center;
@@ -78,7 +78,7 @@ $COLOR_SHADOW_GRAY: #F5F5F5;
           flex-grow: 1;
           font-size: small;
         }
-        &:hover {
+        & > *:hover {
           background-color: $COLOR_ASH_GRAY;
         } 
       }

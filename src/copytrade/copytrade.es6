@@ -289,10 +289,10 @@ const state = {
               scope.searchToken.token = '';
               scope.searchToken.disable = false;
             })
-            .catch((e) => {
+            .catch((error) => {
               scope.searchToken.disable = false;
-              console.error(e)
-              $.growl.error({ message: form_error_messages.REFRESH_FAILED });
+              console.error(error)
+              $.growl.error({ message: error.message });
             });
         })
         .catch(error => {
