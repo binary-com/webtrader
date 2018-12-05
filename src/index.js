@@ -190,7 +190,7 @@ function processFooter() {
     }
 
     function processApiResponse(response) {
-        var data = JSON.parse(response.data)
+        var data = JSON.parse(response.data);
         if (data.website_status) {
             clients_country = data.website_status.clients_country;
             sendLandingCompany(clients_country);
