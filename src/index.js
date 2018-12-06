@@ -1,7 +1,7 @@
 var contact_us_el = document.getElementById('contact-us');
 var logo_el = document.getElementById('logo');
-var picture_eu_el = document.getElementById('footer-eu');
-var picture_non_eu_el = document.getElementById('footer-non-eu');
+var footer_eu_el = document.getElementById('footer-eu');
+var footer_non_eu_el = document.getElementById('footer-non-eu');
 
 var href = window.location.href;
 var app_id_json = null;
@@ -135,9 +135,9 @@ function processFooter() {
             P3: {
                 TEXT: 'This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18.'.i18n()
             },
-            P5: {
-                TEXT: '[_5][_7][_3]The financial products offered via this website include binary options, contracts for difference ("CFDs") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2].[_4][_6]'.i18n(),
-                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>', '<p>', '</p>', '<fieldset>', '</fieldset>', '<legend>risk warning</legend>'],
+            P4: {
+                TEXT: 'The financial products offered via this website include binary options, contracts for difference ("CFDs") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2].'.i18n(),
+                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>'],
             }
         };
         var FOOTER_TEXT_EU = {
@@ -150,33 +150,31 @@ function processFooter() {
                 TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39172" target="_blank" rel="noopener noreferrer">', '</a>'],
             },
             P3: {
-                TEXT: '[_5]In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker\'s Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].[_6]'.i18n(),
-                TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39495" target="_blank" rel="noopener noreferrer">', '</a>', '<a href=' + binary_regulation_url + ' target="_blank">', '</a>', '<p class="u-margin-bottom-small">', '</p>'],
+                TEXT: 'In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker\'s Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].'.i18n(),
+                TAGS: ['<a href="https://secure.gamblingcommission.gov.uk/PublicRegister/Search/Detail/39495" target="_blank" rel="noopener noreferrer">', '</a>', '<a href=' + binary_regulation_url + ' target="_blank">', '</a>'],
             },
             P4: {
-                TEXT: '[_3]Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website\'s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.[_4]'.i18n(),
-                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>', '<p class="about-binary">', '</p>'],
+                TEXT: 'Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website\'s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18.'.i18n(),
+                TAGS: ['<a href=' + binary_responsible_trading_url + ' target="_blank">', '</a>'],
             },
             P5: {
-                TEXT: '[_1]Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset.[_2]'.i18n(),
-                TAGS: ['<p>', '</p>']
+                TEXT: 'Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset.'.i18n(),
             },
             P6: {
-                TEXT: '[_1]CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.[_2]'.i18n(),
-                TAGS: ['<p>', '</p>']
+                TEXT: 'CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.'.i18n(),
             }
         };
 
         var isEu = isEuCountry(data.landing_company);
         var FOOTER_TEXT = isEu ? FOOTER_TEXT_EU : FOOTER_TEXT_NON_EU;
         
-        isEu ? picture_eu_el.classList.add('data-show') : picture_non_eu_el.classList.add('data-show');
+        isEu ? footer_eu_el.classList.add('data-show') : footer_non_eu_el.classList.add('data-show');
 
         for (var key in FOOTER_TEXT) {
             var text = FOOTER_TEXT[key].TEXT;
             var tags = FOOTER_TEXT[key].TAGS;
             var p_content = addTags(text, tags);
-            $('#' + key.toLowerCase()).html(p_content);
+            $('.' + key.toLowerCase()).html(p_content);
         }
 
         ws.close();

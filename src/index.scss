@@ -78,15 +78,12 @@ body {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0px 40px;
-    }
-
-    &__image-container {
-        display: flex;
-        flex-wrap: wrap;
+        & >*:not(.data-show) {
+            display: none;
+        }
 
         #footer-eu {
             .gamstop-lga-container {
-                height: 100%;
                 min-width: 100px;
                 display: flex;
                 align-items: center;
@@ -123,7 +120,14 @@ body {
 
         .data-show {
             display: flex;
+            flex-direction: column;
+            margin-top: -55px;
         }
+    }
+
+    &__image-container {
+        display: flex;
+        flex-wrap: wrap;
 
         @media screen and (max-width: 609px)  {
             justify-content: center;
@@ -132,19 +136,16 @@ body {
     &__regulatory-icons {
         display: flex;
 
-        &:not(.data-show) {
-            display: none !important;
-        }
-
         > * {
             margin-right: 20px;
         }
     }
 
     &__social-icons {
-        margin-left: auto;
-        display: flex;
+        display: flex !important;
         align-items: center;
+        justify-content: flex-end;
+        padding-top: 20px;
 
         > *:not(:first-child) {
             margin-left: 10px;
