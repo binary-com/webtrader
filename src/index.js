@@ -4,6 +4,7 @@ var footer_eu_el = document.getElementById('footer-eu');
 var footer_non_eu_el = document.getElementById('footer-non-eu');
 
 var href = window.location.href;
+var default_app_id = 11;
 
 //Remove the '#' check later once the backend changes are released TODO
 var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
@@ -23,13 +24,15 @@ populateLanguageDropdown();
 setSelectedLanguage();
 
 function loadAppId(getAppId) {
-    return $.getJSON(VERSION + 'oauth/app_id.json').then(function(data){
-        return getAppId(data)
-    })
+    return $.getJSON(VERSION + 'oauth/app_id.json').then(function (data) {
+        return getAppId(data);
+    }).catch(function(err) {
+        console.error(err);
+        return default_app_id;
+    });
 }
 
 function getAppId(app_id_json) {
-    var default_id = 11;
     var stored_app_id = '';
 
     for(var url in app_id_json) {
@@ -38,7 +41,7 @@ function getAppId(app_id_json) {
         }
     }
 
-    return stored_app_id || default_id;
+    return stored_app_id || default_app_id;
 }
 
 function setSelectedLanguage() {
