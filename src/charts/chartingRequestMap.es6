@@ -149,7 +149,6 @@ export const unregister = function(key, containerIDWithHash) {
                 if(tickSubscribers)
                     map.register({
                         symbol: instrument,
-                        granularity: 0,
                         subscribe: 1,
                         count: 50 // To avoid missing any ticks.
                     });

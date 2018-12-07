@@ -1047,7 +1047,6 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         chartingRequestMap.register({
           symbol: symbol.symbol,
           subscribe: 1,
-          granularity: 0,
           style: 'ticks'
         }).catch(function (err) {
           /* if this contract offers tick trades, prevent user from trading */
