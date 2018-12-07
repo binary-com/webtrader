@@ -23,12 +23,11 @@ populateLanguageDropdown();
 
 setSelectedLanguage();
 
-function loadAppId(getAppId) {
-    return $.getJSON(VERSION + 'oauth/app_id.json').then(function (data) {
-        return getAppId(data);
-    }).catch(function(err) {
-        console.error(err);
-        return default_app_id;
+function loadAppId(callback) {
+    $.getJSON(VERSION + 'oauth/app_id.json').then(function (app_id_json) {
+        callback(false, app_id_json);
+    }).catch(function (err) {
+        callback(err);
     });
 }
 
@@ -123,8 +122,9 @@ function populateLanguageDropdown() {
 }
 
 function processFooter() {
-    loadAppId(getAppId).then(function(app_id) {
+    loadAppId(function(err, app_id_json) {
         var clients_country;
+        var app_id = err ? default_app_id : getAppId(app_id_json);
         var i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
         var api_url = getUrl() + '?l=' + i18n_name + '&app_id=' + app_id;
         var ws = new WebSocket(api_url);
