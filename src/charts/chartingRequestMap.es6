@@ -146,7 +146,7 @@ export const unregister = function(key, containerIDWithHash) {
             // Remove this part as well.
             .then(()=>{
                 // Resubscribe to tick stream if there are any tickSubscribers.
-                if(tickSubscribers)
+                if (tickSubscribers)
                     map.register({
                         symbol: instrument,
                         subscribe: 1,
