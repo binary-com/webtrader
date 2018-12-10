@@ -417,8 +417,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
           // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
           // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
           // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
-    });
-}
+      });
+  }
 
   state.categories.update = function (msg) {
     state.categories.value = _.find(state.categories.array,{contract_category: state.categories.selected});
