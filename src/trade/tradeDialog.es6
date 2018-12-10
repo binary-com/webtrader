@@ -405,18 +405,18 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   state.barriers.root = state; // reference to root object for computed properties
 
   state.date_expiry.update_times = function(){
-    trading_times_for(state.date_expiry.value_date, state.proposal.symbol)
-      .then(function(times) {
-        var expiry = state.date_expiry;
-        expiry.today_times.open = times.open;
-        expiry.today_times.close = times.close;
-        var range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
-        expiry.today_times.disabled = !range;
-        var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
-        expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
-        // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
-        // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
-        // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
+      trading_times_for(state.date_expiry.value_date, state.proposal.symbol)
+        .then(function(times) {
+          var expiry = state.date_expiry;
+          expiry.today_times.open = times.open;
+          expiry.today_times.close = times.close;
+          var range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
+          expiry.today_times.disabled = !range;
+          var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
+          expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
+          // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
+          // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
+          // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
     });
 }
 
