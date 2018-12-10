@@ -5,9 +5,7 @@
 *.log
 
 dist
-!/lib/*/*/dist
-translations/i18n/json/
-webtrader-charts/
+translations
 
 node_modules
 bower_components
