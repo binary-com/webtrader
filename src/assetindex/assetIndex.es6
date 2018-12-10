@@ -16,13 +16,9 @@ export const init = (li) => {
             asset_win_el = windows.createBlankWindow($('<div/>'), {
                 title: 'Asset Index'.i18n(),
                 dialogClass: 'assetIndex',
+                relativePosition: true,
                 minWidth: 800,
                 minHeight: 400,
-            });
-            asset_win_el.track({
-                module_id: 'assetIndex',
-                is_unique: true,
-                data: null
             });
             asset_win_el.dialog('open');
             require(['text!assetindex/assetIndex.html'], initAssetWin);

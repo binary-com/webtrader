@@ -7,16 +7,11 @@
   text-align: right;
 }
 
-
-.ui-dialog-titlebar .ui-dialog-title.with-content {
-    min-width:200px;
-    width: 20%;
-}
-
 .ui-dialog-titlebar .ui-selectmenu-button {
     padding: 0;
     height: 28px;
     vertical-align: top;
+    margin-left: 10px;
 }
 
 .ui-dialog-titlebar .title {
@@ -68,11 +63,15 @@ img.reload {
 .ui-dialog-titlebar-minimize, .ui-dialog-titlebar-minimize:hover {
     margin-right: 6px;
 }
+
 .ui-dialog-titlebar-buttonpane {
+    position: initial !important;
+    min-width: 75px !important;
+    margin-left: auto;
     background: #2a3052;
     top: 0 !important;
     margin-top: 0 !important;
-    padding-top: 10px;
+    padding-top: 5px;
     height: 22px !important;
 }
 .ui-button:hover .ui-icon.custom-icon-close,
@@ -98,6 +97,7 @@ img.reload {
 .webtrader-dialog-widget .ui-dialog-titlebar-close {
    border: none;
    margin-left: -14px !important;
+   margin-right: -10px !important;
 }
 .ui-datepicker-trigger.ui-button {
     margin-left: -10px;
@@ -114,4 +114,6 @@ img.reload {
   position: relative;
 }
 
-.span-in-dialog-header { padding-right: 15px }
+.span-in-dialog-header { display: none; }
+
+/* .reload { display: none; } */
