@@ -52,13 +52,13 @@ function processPageLanguage() {
             setTime();
             setInterval(setTime, 1000);
     
-            var i18n_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
-            $.getJSON(VERSION + 'i18n/' + i18n_name + '.json', function (data) {
+            var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
+            $.getJSON(VERSION + 'i18n/' + selected_language_name + '.json', function (data) {
                 setupi18nTranslation(data);
                 processFooter();
             });
     
-            onChangeSelectLanguage();
+            onChangeSelectLanguage(selected_language_name);
         });
     }
 
@@ -75,9 +75,9 @@ function processPageLanguage() {
         });
     }
 
-    function onChangeSelectLanguage() {
+    function onChangeSelectLanguage(selected_language_name) {
         $('#select_language').find('.invisible').removeClass('invisible');
-        var selected_lang = $('#select_language').find('.' + i18n_name);
+        var selected_lang = $('#select_language').find('.' + selected_language_name);
         var curr_ele = $('#select_language .current .language');
         var disp_lang = $("#display_language .language");
         disp_lang.text(selected_lang.text());
