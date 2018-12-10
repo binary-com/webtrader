@@ -509,23 +509,23 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   state.date_expiry.update = function (date_or_hour) {
     const { value_date } = state.date_expiry;
-    const is_today = !moment.utc(value_date).isAfter(moment.utc(),'day');
-    if(!is_today) {
+    const is_today = !moment.utc(value_date).isAfter(moment.utc(), 'day');
+    if (!is_today) {
       state.date_expiry.today_times.disabled = true;
-        trading_times_for(value_date, state.proposal.symbol)
-          .then(function(times){
-            const value_hour = times.close !== '--' ? times.close : '23:59:59';
-            state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
-            state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + value_hour).unix();
-            state.barriers.update();
-            debounce(state.date_expiry.value, state.proposal.onchange);
-          });
+      trading_times_for(value_date, state.proposal.symbol)
+        .then(function (times) {
+          const value_hour = times.close !== '--' ? times.close : '23:59:59';
+          state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
+          state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + value_hour).unix();
+          state.barriers.update();
+          debounce(state.date_expiry.value, state.proposal.onchange);
+        });
     }
     else {
-        if(date_or_hour !== state.date_expiry.value_hour) { state.date_expiry.update_times(); }
-        state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + state.date_expiry.value_hour).unix();
-        state.barriers.update();
-        debounce(state.date_expiry.value, state.proposal.onchange);
+      if (date_or_hour !== state.date_expiry.value_hour) { state.date_expiry.update_times(); }
+      state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + state.date_expiry.value_hour).unix();
+      state.barriers.update();
+      debounce(state.date_expiry.value, state.proposal.onchange);
     }
   }
 
