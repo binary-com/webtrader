@@ -19,9 +19,7 @@ checkRedirectToken(params_str);
 setLanguage(lang);
 clearUrlQuerystring(href);
 
-populateLanguageDropdown();
-
-setSelectedLanguage();
+processPageLanguage();
 
 function loadAppId(callback) {
     $.getJSON(VERSION + 'oauth/app_id.json').then(function (app_id_json) {
@@ -43,7 +41,9 @@ function getAppId(app_id_json) {
     return stored_app_id || default_app_id;
 }
 
-function setSelectedLanguage() {
+function processPageLanguage() {
+    populateLanguageDropdown();
+
     if (local_storage.get('oauth') !== null) {
         window.location.href = VERSION + 'main.html';
     } else {
@@ -58,26 +58,41 @@ function setSelectedLanguage() {
                 processFooter();
             });
     
-            // Show hidden languages
-            $('#select_language').find('.invisible').removeClass('invisible');
-            var selected_lang = $('#select_language').find('.' + i18n_name);
-            var curr_ele = $('#select_language .current .language');
-            var disp_lang = $("#display_language .language");
-            disp_lang.text(selected_lang.text());
-            curr_ele.text(selected_lang.text());
-            selected_lang.addClass('invisible');
+            onChangeSelectLanguage();
+        });
+    }
+
+    function populateLanguageDropdown() {
+        var language_arr = getSupportedLanguages();
+        var ul_el = document.getElementById('select_language');
     
-            $('.languages #select_language li').each(function (i, el) {
-                $(el).click(function () {
-                    var lang = $(el).find('a').data('lang');
-                    if (lang) {
-                        local_storage.set('i18n', { value: lang });
-                        window.location.reload();
-                    }
-                    return false;
-                });
+        language_arr.map(function(language) {
+            var li = document.createElement('li');
+            li.className = language.value;
+            if (li.value === 'en') li.className = 'invisible';
+            li.innerHTML = '<a href="/" data-lang=' + language.value + '>' + language.name + '</a>';
+            ul_el.appendChild(li);
+        });
+    }
+
+    function onChangeSelectLanguage() {
+        $('#select_language').find('.invisible').removeClass('invisible');
+        var selected_lang = $('#select_language').find('.' + i18n_name);
+        var curr_ele = $('#select_language .current .language');
+        var disp_lang = $("#display_language .language");
+        disp_lang.text(selected_lang.text());
+        curr_ele.text(selected_lang.text());
+        selected_lang.addClass('invisible');
+
+        $('.languages #select_language li').each(function (i, el) {
+            $(el).click(function () {
+                var lang = $(el).find('a').data('lang');
+                if (lang) {
+                    local_storage.set('i18n', { value: lang });
+                    window.location.reload();
+                }
+                return false;
             });
-    
         });
     }
 }
@@ -106,19 +121,6 @@ function setTime() {
 
 function openTradingPage() {
     window.location.href = VERSION + 'main.html';
-}
-
-function populateLanguageDropdown() {
-    var language_arr = getSupportedLanguages();
-    var ul_el = document.getElementById('select_language');
-
-    language_arr.map(function(language) {
-        var li = document.createElement('li');
-        li.className = language.value;
-        if (li.value === 'en') li.className = 'invisible';
-        li.innerHTML = '<a href="/" data-lang=' + language.value + '>' + language.name + '</a>';
-        ul_el.appendChild(li);
-    });
 }
 
 function processFooter() {
