@@ -460,10 +460,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     state.category_displays.selected.name = $(e.target).attr('data-name');
     state.category_displays.selected.sentiment = $(e.target).attr('data-sentiment');
     state.category_displays.selected.contract_type = $(e.target).attr('data-contract_type');
-    if(state.category_displays.selected.name === 'Higher' || state.category_displays.selected.name === 'Lower') {
-      state.date_expiry.value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
-      tpl.expiry_value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
-    }
   };
 
   state.date_start.update = function () {
@@ -513,6 +509,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   state.date_expiry.update = function (date_or_hour) {
     var expiry = state.date_expiry;
+    state.category_displays.selected.name === 'Higher' ||
+    state.category_displays.selected.name === 'Lower' ?
+    expiry.value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD') :
+    expiry.value_date = moment.utc().format('YYYY-MM-DD');
+
     /* contracts that are more not today must end at the market close time */
     var is_today = !moment.utc(expiry.value_date).isAfter(moment.utc(),'day');
     if(!is_today){
