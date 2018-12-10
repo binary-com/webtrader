@@ -16,7 +16,6 @@
 .ui-dialog-titlebar .ui-selectmenu-button {
     padding: 0;
     height: 28px;
-    margin-right: 5px;
     vertical-align: top;
 }
 
@@ -46,12 +45,12 @@ img.reload {
     cursor: pointer;
     background-image: url('../images/maximize.svg')!important;
     position: relative;
+
 }
 .ui-icon.custom-icon-minimize {
     cursor: pointer;
     background-image: url('../images/minimize.svg')!important;
     position: relative;
-    right: 6px;
 }
 .ui-icon.custom-icon-restore {
     cursor: pointer;
@@ -60,13 +59,17 @@ img.reload {
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    right: 2px;
 }
 .ui-dialog-titlebar-restore, .ui-dialog-titlebar-restore:hover {
-    margin-left: 4px;
+    margin-right: 6px;
+}
+.ui-dialog-titlebar-maximize, .ui-dialog-titlebar-maximize:hover {
+    margin-right: 6px;
+}
+.ui-dialog-titlebar-minimize, .ui-dialog-titlebar-minimize:hover {
+    margin-right: 6px;
 }
 .ui-dialog-titlebar-buttonpane {
-    right: 0 !important;
     background: #2a3052;
     top: 0 !important;
     margin-top: 0 !important;
@@ -78,7 +81,6 @@ img.reload {
 .ui-icon.custom-icon-close {
     cursor: pointer;
     background-image: url('../images/close.svg')!important;
-    right: 3px;
     top: 9px;
 }
 .ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.webtrader-dialog-widget {
@@ -96,6 +98,7 @@ img.reload {
 .webtrader-dialog-widget .ui-dialog-titlebar-close:hover,
 .webtrader-dialog-widget .ui-dialog-titlebar-close {
    border: none;
+   margin-left: -14px !important;
 }
 .ui-datepicker-trigger.ui-button {
     margin-left: -10px;

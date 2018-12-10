@@ -462,6 +462,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     state.category_displays.selected.contract_type = $(e.target).attr('data-contract_type');
     if(state.category_displays.selected.name === 'Higher' || state.category_displays.selected.name === 'Lower') {
       state.date_expiry.value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
+      tpl.expiry_value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
     }
   };
 
