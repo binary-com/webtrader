@@ -45,7 +45,6 @@ img.reload {
     cursor: pointer;
     background-image: url('../images/maximize.svg')!important;
     position: relative;
-
 }
 .ui-icon.custom-icon-minimize {
     cursor: pointer;
