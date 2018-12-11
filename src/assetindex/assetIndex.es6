@@ -8,6 +8,8 @@ import 'css!./assetIndex.css';
 let table_el = null;
 let asset_win_el = null;
 let header_el = null;
+let dialog_buttons_min = null;
+let dialog_buttons_res = null;
 let dialog_buttons_el = null;
 
 export const init = (li) => {
@@ -96,6 +98,14 @@ const initTable = () => {
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
         dialog_buttons_el = asset_win_el.parent().find('.ui-dialog-titlebar-buttonpane');
+        dialog_buttons_min = asset_win_el.parent().find('.ui-dialog-titlebar-minimize');
+        dialog_buttons_min.on('click', () => {
+            $('.ui-selectmenu-button').hide();
+        })
+        dialog_buttons_res = asset_win_el.parent().find('.ui-dialog-titlebar-restore');
+        dialog_buttons_res.on('click', () => {
+            $('.ui-selectmenu-button').show();
+        })
 
         marketsDropdown(state.dropdown.market_submarkets);
         submarketsDropdown(state.dropdown.market_submarkets);

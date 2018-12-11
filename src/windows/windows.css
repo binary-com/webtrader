@@ -114,6 +114,5 @@ img.reload {
   position: relative;
 }
 
-.span-in-dialog-header { display: none; }
+.span-in-dialog-header { margin: 0 15px; }
 
-/* .reload { display: none; } */
