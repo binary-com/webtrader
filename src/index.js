@@ -87,10 +87,11 @@ function processPageLanguage() {
 
 function checkRedirectToken(params_str) {
     if (/acct1=/.test(href) && /token1=/.test(href)) {
-        var accts = (params_str.match(/acct\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
-        var tokens = (params_str.match(/token\d=[\w\d-]+/g) || []).map(function (val) { return val.split('=')[1] });
-        var currs = (params_str.match(/cur\d=[\w\d]+/g) || []).map(function (val) { return val.split('=')[1] });
+        var accts = matchRegex(/acct\d=[\w\d]+/g);
+        var tokens = matchRegex(/token\d=[\w\d-]+/g);
+        var currs = matchRegex(/cur\d=[\w\d]+/g);
         var oauth = [];
+
         for (var i = 0; i < accts.length; i++) {
             var id = accts[i];
             var token = tokens[i];
@@ -99,6 +100,10 @@ function checkRedirectToken(params_str) {
         }
         local_storage.set('oauth', oauth);
         local_storage.set('oauth-login', { value: true }); /* used to fire oauth-login event in binary_websockets.js */
+
+        function matchRegex(regex) {
+            return (params_str.match(regex) || []).map(function (val) { return val.split('=')[1] })
+        }
     }
 }
 
