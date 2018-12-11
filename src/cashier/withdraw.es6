@@ -6,7 +6,6 @@ import $ from 'jquery';
 import liveapi from 'websockets/binary_websockets';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
-import currencyDialog from 'cashier/currency';
 import { debounce } from 'lodash'
 import moment from 'moment';
 import tncApprovalWin from 'cashier/uk_funds_protection';

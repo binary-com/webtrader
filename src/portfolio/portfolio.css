@@ -1,3 +1,7 @@
+.portfolio .ui-dialog-title {
+  padding-right: 20%;
+}
+
 .portfolio-dialog th {
   width: auto;
 }

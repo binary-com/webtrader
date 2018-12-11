@@ -1,6 +1,6 @@
-﻿/**
- * Created by amin on 10/5/15.
- */
+﻿.profitTable .ui-dialog-title {
+    padding-right: 10%;
+}
 
 table.profit-table-dialog th span {
     height: 2.5em;

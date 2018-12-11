@@ -8,8 +8,6 @@ import 'css!./assetIndex.css';
 let table_el = null;
 let asset_win_el = null;
 let header_el = null;
-let dialog_buttons_min = null;
-let dialog_buttons_res = null;
 let dialog_buttons_el = null;
 
 export const init = (li) => {
@@ -22,6 +20,11 @@ export const init = (li) => {
                 minWidth: 800,
                 minHeight: 400,
             });
+            asset_win_el.track({
+                module_id: 'assetIndex',
+                is_unique: true,
+                data: null
+             });
             asset_win_el.dialog('open');
             require(['text!assetindex/assetIndex.html'], initAssetWin);
         } else
@@ -98,14 +101,6 @@ const initTable = () => {
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
         dialog_buttons_el = asset_win_el.parent().find('.ui-dialog-titlebar-buttonpane');
-        dialog_buttons_min = asset_win_el.parent().find('.ui-dialog-titlebar-minimize');
-        dialog_buttons_min.on('click', () => {
-            $('.ui-selectmenu-button').hide();
-        })
-        dialog_buttons_res = asset_win_el.parent().find('.ui-dialog-titlebar-restore');
-        dialog_buttons_res.on('click', () => {
-            $('.ui-selectmenu-button').show();
-        })
 
         marketsDropdown(state.dropdown.market_submarkets);
         submarketsDropdown(state.dropdown.market_submarkets);
@@ -233,6 +228,14 @@ const initAssetWin = ($html) => {
     $html.appendTo(asset_win_el);
     rv.bind($html[0], state);
     initTable();
+    let dialog_buttons_min = asset_win_el.parent().find('.ui-dialog-titlebar-minimize');
+        dialog_buttons_min.on('click', () => {
+            $('.assetIndex .ui-selectmenu-button').hide();
+        });
+    let dialog_buttons_res = asset_win_el.parent().find('.ui-dialog-titlebar-restore');
+        dialog_buttons_res.on('click', () => {
+            $('.assetIndex .ui-selectmenu-button').show();
+        });
     require(['websockets/binary_websockets'], (liveapi) => {
       liveapi.events.on('login', initTable);
       liveapi.events.on('logout', initTable);

@@ -1,4 +1,8 @@
-﻿.trading-times-sub-header{
+﻿.tradingTimes .ui-dialog-title {
+    padding-right: 12%;
+}
+
+.trading-times-sub-header{
   margin-bottom: 6px;
 }
 .trading-times-sub-header .ui-selectmenu-button {

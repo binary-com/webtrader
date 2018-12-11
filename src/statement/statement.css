@@ -1,3 +1,7 @@
+.statement .ui-dialog-title {
+  padding-right: 15%;
+}
+
 .ui-dialog .ui-dialog-content.statement-dialog-content {
   padding: 0;
 }
