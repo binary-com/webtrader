@@ -24,7 +24,7 @@ export const init = (li) => {
                 module_id: 'assetIndex',
                 is_unique: true,
                 data: null
-             });
+            });
             asset_win_el.dialog('open');
             require(['text!assetindex/assetIndex.html'], initAssetWin);
         } else
