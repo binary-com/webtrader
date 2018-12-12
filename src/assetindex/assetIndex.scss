@@ -1,6 +1,19 @@
 .assetIndex {
-  .ui-dialog-title {
-    padding-right: 10%;
+  .asset-index-selectmenu {
+    position: absolute;
+    left: 240px;
+    padding: 5px;
+    height: 20px;
+    top: 2px;
+
+    &:first-of-type {
+      position: absolute;
+      left: 400px;
+    }
+
+    .ui-selectmenu-text {
+      padding: 0 2px;
+    }
   }
   .webtrader-dialog {
     width: auto !important;

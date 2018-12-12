@@ -167,7 +167,7 @@ const initTable = () => {
         function marketsDropdown(market_submarkets) {
             if (!state.dropdown.display_markets) {
                 state.dropdown.display_markets = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons_el), {
+                    .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
                         list: Object.keys(market_submarkets),
                         inx: 0,
                         changed: (val) => {
@@ -186,7 +186,7 @@ const initTable = () => {
         function submarketsDropdown(market_submarkets) {
             if (!state.dropdown.display_submarkets) {
                 state.dropdown.display_submarkets = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons_el), {
+                    .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
                         list: Object.keys(market_submarkets[state.dropdown.display_markets.val()]),
                         inx: 0,
                         changed: (val) => {
@@ -228,14 +228,14 @@ const initAssetWin = ($html) => {
     $html.appendTo(asset_win_el);
     rv.bind($html[0], state);
     initTable();
-    let dialog_buttons_min = asset_win_el.parent().find('.ui-dialog-titlebar-minimize');
-        dialog_buttons_min.on('click', () => {
-            $('.assetIndex .ui-selectmenu-button').hide();
-        });
-    let dialog_buttons_res = asset_win_el.parent().find('.ui-dialog-titlebar-restore');
-        dialog_buttons_res.on('click', () => {
-            $('.assetIndex .ui-selectmenu-button').show();
-        });
+    // let dialog_buttons_min = asset_win_el.parent().find('.ui-dialog-titlebar-minimize');
+    //     dialog_buttons_min.on('click', () => {
+    //         $('.assetIndex .ui-selectmenu-button').hide();
+    //     });
+    // let dialog_buttons_res = asset_win_el.parent().find('.ui-dialog-titlebar-restore');
+    //     dialog_buttons_res.on('click', () => {
+    //         $('.assetIndex .ui-selectmenu-button').show();
+    //     });
     require(['websockets/binary_websockets'], (liveapi) => {
       liveapi.events.on('login', initTable);
       liveapi.events.on('logout', initTable);
