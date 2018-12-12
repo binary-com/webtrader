@@ -124,7 +124,6 @@ function processFooter(selected_language_name) {
         var ws = new WebSocket(api_url);
         ws.onopen = sendWebsiteStatus;
         ws.onmessage = processApiResponse;
-        ws.onerror = processError;
 
         function getAppId(app_id_json) {
             var stored_app_id = '';
@@ -156,29 +155,17 @@ function processFooter(selected_language_name) {
             sendApiRequest({ landing_company: clients_country });
         }
 
-        function processError(evt) {
-            if(!navigator.onLine) {
-                console.error('offline');
-            }
-            else {
-                console.error(evt.data)
-            }
-        }
-
         function processApiResponse(response) {
             var data = JSON.parse(response.data);
 
-            if(!data.error) {
-                if (data.website_status) {
-                    clients_country = data.website_status.clients_country;
-                    sendLandingCompany(clients_country);
-                } else if (data.landing_company) {
-                    populateFooter(data);
-                }
-            } else {
-                console.error(data.error.code)
+            if (data.error) return;
+
+            if (data.website_status) {
+                clients_country = data.website_status.clients_country;
+                sendLandingCompany(clients_country);
+            } else if (data.landing_company) {
+                populateFooter(data);
             }
-            
 
             function populateFooter(data) {
                 var binary_responsible_trading_url = getBinaryUrl('responsible-trading.html');
