@@ -51,11 +51,11 @@
 					&:focus {
 						box-shadow: 3px -1px 8px 1pt lightblue;
 						outline: 0;
-                    }
-                    
-                    &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
-                        font-size: 90%;
-                    }
+					}
+
+					&::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+						font-size: 90%;
+					}
 				}
 			}
 

@@ -49,11 +49,7 @@
 				width: 13%;
 				padding-right: 0;
 
-				&:nth-child(1),
-				&:nth-child(2),
-				&:nth-child(3),
-				&:nth-child(5),
-				&:nth-child(6) {
+				&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(5), &:nth-child(6) {
 					padding-top: 12px;
 				}
 
@@ -67,9 +63,9 @@
 			}
 		}
 
-    button {
-      padding: 10px 12px;
-    }
+		button {
+			padding: 10px 12px;
+		}
 
 		.arrow {
 			width: 20px;
@@ -77,6 +73,6 @@
 			margin: 10px 0;
 			cursor: pointer;
 			float: right;
-    }
+		}
 	}
 }

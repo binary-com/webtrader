@@ -1,4 +1,7 @@
-﻿.ui-dialog {
+﻿$COLOR_WHITE: #ffffff;
+$COLOR_DARK_BLUE: #2a3052;
+
+.ui-dialog {
 	&.ui-corner-all.ui-widget.ui-widget-content.ui-front.webtrader-dialog-widget {
 		min-width: 225px !important;
 	}
@@ -36,14 +39,14 @@
             background: none;
             box-shadow: none;
             font-weight: normal;
-            color: $white;
+            color: $COLOR_WHITE;
         }
         
 		.ui-dialog-titlebar-buttonpane {
 			position: initial !important;
 			min-width: 71px !important;
 			margin-left: auto;
-			background: #2a3052;
+			background: $COLOR_DARK_BLUE;
 			top: 0 !important;
 			margin-top: 0 !important;
 			padding-top: 5px;
@@ -66,7 +69,7 @@
 					position: relative;
 					background-repeat: no-repeat;
 					background-size: contain;
-					color: $white;
+					color: $COLOR_WHITE;
 				}
 				&.custom-icon-close {
 					cursor: pointer;
@@ -111,6 +114,5 @@
                 display: none;
             }
         }
-
     }
 }
