@@ -93,7 +93,6 @@ export const init = ($menuLink) => {
             data: null
          });
          tradingWin.dialog('open');
-         let dialog_buttons_min = tradingWin.parent().find('.ui-dialog-titlebar-minimize');
          require(['text!tradingtimes/tradingTimes.html'], initTradingWin);
       }
       else

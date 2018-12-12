@@ -176,7 +176,6 @@ const initStatement = () => {
       }
    });
 
-
 };
 
 const on_arrow_click = (e) => {

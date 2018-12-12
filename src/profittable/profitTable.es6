@@ -137,7 +137,7 @@ const initProfitWin = () => {
       is_unique: true,
       data: null
    });
-   
+
    table = $(html).i18n();
    table.appendTo(profitWin);
    const footer = $('<div/>').addClass('profit-table-info');
