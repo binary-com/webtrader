@@ -127,13 +127,13 @@ function processFooter(selected_language_name) {
 
         function getAppId(app_id_json) {
             var stored_app_id = '';
-        
+
             for(var url in app_id_json) {
                 if(href.lastIndexOf(url, 0) === 0) {
                     stored_app_id = app_id_json[url];
                 }
             }
-        
+
             return stored_app_id || default_app_id;
         }
 
