@@ -8,13 +8,13 @@
 		th {
 			width: auto;
 
-			&:nth-child(n - 3) {
+			&:nth-child(n-3) {
 				text-align: center;
 			}
 		}
 
 		td {
-			&:nth-child(n - 3) {
+			&:nth-child(n-3) {
 				text-align: center;
 			}
 		}
