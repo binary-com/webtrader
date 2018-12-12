@@ -117,21 +117,6 @@ const initStatement = () => {
       data: null,
    });
 
-   let dialog_buttons_min = statement.parent().find('.ui-dialog-titlebar-minimize');
-   dialog_buttons_min.on('click', () => {
-       $('.statement .span-in-dialog-header').hide();
-       $('.statement .windows-dateInput').hide();
-       $('.statement .ui-datepicker-trigger').hide();
-       $('.statement .reload').hide();
-   });
-   let dialog_buttons_res = statement.parent().find('.ui-dialog-titlebar-restore');
-   dialog_buttons_res.on('click', () => {
-      $('.statement .span-in-dialog-header').show();
-      $('.statement .windows-dateInput').show();
-      $('.statement .ui-datepicker-trigger').show();
-      $('.statement .reload').show();
-   });
-
    table = $(html).i18n();
    table.appendTo(statement);
 

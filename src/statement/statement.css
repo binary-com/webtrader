@@ -1,5 +1,16 @@
-.statement .ui-dialog-title {
-  padding-right: 15%;
+.statement .span-in-dialog-header {
+  position: absolute;
+  left: 225px;
+}
+
+.statement .windows-dateInput {
+  position: absolute;
+  left: 320px;
+}
+
+.statement .ui-datepicker-trigger {
+  position: absolute;
+  left: 525px;
 }
 
 .ui-dialog .ui-dialog-content.statement-dialog-content {
