@@ -1,5 +1,16 @@
-﻿.tradingTimes .ui-dialog-title {
-    padding-right: 12%;
+﻿.tradingTimes .span-in-dialog-header {
+    position: absolute;
+    left: 250px;
+}
+
+.tradingTimes .windows-dateInput {
+    position: absolute;
+    left: 320px;
+}
+
+.tradingTimes .ui-datepicker-trigger {
+    position: absolute;
+    left: 525px;
 }
 
 .trading-times-sub-header{

@@ -94,17 +94,6 @@ export const init = ($menuLink) => {
          });
          tradingWin.dialog('open');
          let dialog_buttons_min = tradingWin.parent().find('.ui-dialog-titlebar-minimize');
-         dialog_buttons_min.on('click', () => {
-            $('.tradingTimes .span-in-dialog-header').hide();
-            $('.tradingTimes .windows-dateInput').hide();
-            $('.tradingTimes .ui-datepicker-trigger').hide();
-         });
-         let dialog_buttons_res = tradingWin.parent().find('.ui-dialog-titlebar-restore');
-         dialog_buttons_res.on('click', () => {
-            $('.tradingTimes .span-in-dialog-header').show();
-            $('.tradingTimes .windows-dateInput').show();
-            $('.tradingTimes .ui-datepicker-trigger').show();
-         });
          require(['text!tradingtimes/tradingTimes.html'], initTradingWin);
       }
       else
