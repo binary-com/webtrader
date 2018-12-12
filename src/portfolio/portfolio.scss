@@ -1,3 +1,6 @@
+$COLOR_RED: #d71818;
+$COLOR_GREEN: #02920e;
+
 .portfolio {
 	.span-in-dialog-header {
 		position: absolute;
@@ -33,11 +36,11 @@
 			}
 
 			&.indicative-red > td::nth-child(4) span {
-				color: #d71818;
+				color: $COLOR_RED;
 			}
 
 			&.indicative-green > td::nth-child(4) span {
-				color: #02920e;
+				color: $COLOR_GREEN;
 			}
 		}
 
