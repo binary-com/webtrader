@@ -1,8 +1,4 @@
-﻿/**
- * Created by amin on 10/9/15.
- */
-
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import 'jquery-ui';
@@ -231,16 +227,6 @@ const initPortfolioWin = () => {
                 data: null
             });
             portfolioWin.dialog('open');
-            let dialog_buttons_min = portfolioWin.parent().find('.ui-dialog-titlebar-minimize');
-            dialog_buttons_min.on('click', () => {
-                $('.portfolio .span-in-dialog-header').hide();
-                $('.portfolio .reload').hide();
-            });
-            let dialog_buttons_res = portfolioWin.parent().find('.ui-dialog-titlebar-restore');
-            dialog_buttons_res.on('click', () => {
-                $('.portfolio .span-in-dialog-header').show();
-                $('.portfolio .reload').show();
-            });
         })
         .catch(
            (err) => console.error(err)

@@ -1,5 +1,6 @@
-.portfolio .ui-dialog-title {
-  padding-right: 20%;
+.portfolio .span-in-dialog-header {
+  position: absolute;
+  left: 235px;
 }
 
 .portfolio-dialog th {
