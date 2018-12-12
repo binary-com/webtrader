@@ -6,14 +6,12 @@
 .rtl-direction .ui-dialog-titlebar .ui-selectmenu-text {
   text-align: right;
 }
-
 .ui-dialog-titlebar .ui-selectmenu-button {
     padding: 0;
     height: 28px;
     vertical-align: top;
     margin-left: 10px;
 }
-
 .ui-dialog-titlebar .title {
     margin-top: .1em;
     float:left;
@@ -63,7 +61,6 @@ img.reload {
 .ui-dialog-titlebar-minimize, .ui-dialog-titlebar-minimize:hover {
     margin-right: 6px;
 }
-
 .ui-dialog-titlebar-buttonpane {
     position: initial !important;
     min-width: 71px !important;
@@ -92,7 +89,6 @@ img.reload {
    top: 1px;
    background: transparent;
 }
-
 .webtrader-dialog-widget .ui-dialog-titlebar-close:hover,
 .webtrader-dialog-widget .ui-dialog-titlebar-close {
    border: none;
