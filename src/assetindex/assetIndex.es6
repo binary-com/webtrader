@@ -16,7 +16,6 @@ export const init = (li) => {
             asset_win_el = windows.createBlankWindow($('<div/>'), {
                 title: 'Asset Index'.i18n(),
                 dialogClass: 'assetIndex',
-                relativePosition: true,
                 minWidth: 800,
                 minHeight: 400,
             });
@@ -228,14 +227,6 @@ const initAssetWin = ($html) => {
     $html.appendTo(asset_win_el);
     rv.bind($html[0], state);
     initTable();
-    // let dialog_buttons_min = asset_win_el.parent().find('.ui-dialog-titlebar-minimize');
-    //     dialog_buttons_min.on('click', () => {
-    //         $('.assetIndex .ui-selectmenu-button').hide();
-    //     });
-    // let dialog_buttons_res = asset_win_el.parent().find('.ui-dialog-titlebar-restore');
-    //     dialog_buttons_res.on('click', () => {
-    //         $('.assetIndex .ui-selectmenu-button').show();
-    //     });
     require(['websockets/binary_websockets'], (liveapi) => {
       liveapi.events.on('login', initTable);
       liveapi.events.on('logout', initTable);
