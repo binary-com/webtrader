@@ -88,7 +88,6 @@ rv.binders['tick-chart'] = {
 
       if (contract_is_finished) {
             drawEndTime(model, ticks);
-            console.log(model);
             return;
       }
 
@@ -150,23 +149,24 @@ const registerTicks = (state, extra) => {
    let { tick_count } = extra;
 
    const addTick = (tick) => {
-      const is_between_entry_exit = (+tick.epoch) >= (+proposal_open_contract.entry_tick_time);
+      const is_or_after_contract_entry = (+tick.epoch) >= (+proposal_open_contract.entry_tick_time);
       const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch * 1 === tick.epoch * 1);
-      const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_between_entry_exit;
+      const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
 
       if (should_add_new_tick) {
-            const contract_is_finished = proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
-            state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
+         const contract_is_finished = proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
+         state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
 
-            if (contract_is_finished && (tick_count < -1) || is_last_tick) {
-               onContractFinished(proposal_open_contract);
-               updateChart();
-            }
-            tick_count--;
-            if (tick_count > -1) {
-               is_last_tick = tick.epoch >= proposal_open_contract.exit_tick_time ? true : false;
-               addTickToState(tick);
-            }
+         if (contract_is_finished && (tick_count < -1) || is_last_tick) {
+            onContractFinished(proposal_open_contract);
+            updateChart();
+         }
+
+         tick_count--;
+         if (tick_count > -1) {
+            is_last_tick = tick.epoch >= proposal_open_contract.exit_tick_time ? true : false;
+            addTickToState(tick);
+         }
       }
    }
 
