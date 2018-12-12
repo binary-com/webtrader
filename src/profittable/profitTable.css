@@ -1,5 +1,16 @@
-﻿.profitTable .ui-dialog-title {
-    padding-right: 10%;
+﻿.profitTable .span-in-dialog-header {
+    position: absolute;
+    left: 210px;
+}
+
+.profitTable .windows-dateInput {
+    position: absolute;
+    left: 300px;
+}
+
+.profitTable .ui-datepicker-trigger {
+    position: absolute;
+    left: 500px;
 }
 
 table.profit-table-dialog th span {

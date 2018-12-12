@@ -137,21 +137,6 @@ const initProfitWin = () => {
       is_unique: true,
       data: null
    });
-
-   let dialog_buttons_min = profitWin.parent().find('.ui-dialog-titlebar-minimize');
-   dialog_buttons_min.on('click', () => {
-       $('.profitTable .span-in-dialog-header').hide();
-       $('.profitTable .windows-dateInput').hide();
-       $('.profitTable .ui-datepicker-trigger').hide();
-       $('.profitTable .reload').hide();
-   });
-   let dialog_buttons_res = profitWin.parent().find('.ui-dialog-titlebar-restore');
-   dialog_buttons_res.on('click', () => {
-      $('.profitTable .span-in-dialog-header').show();
-      $('.profitTable .windows-dateInput').show();
-      $('.profitTable .ui-datepicker-trigger').show();
-      $('.profitTable .reload').show();
-   });
    
    table = $(html).i18n();
    table.appendTo(profitWin);
