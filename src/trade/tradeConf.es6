@@ -145,7 +145,7 @@ const registerTicks = (state, extra) => {
    let proposal_open_contract;
    let on_proposal_open_contract;
    let on_tick;
-   let is_last_tick = false;
+   let is_path_dependent_last_tick = false;
    let { tick_count } = extra;
 
    const addTick = (tick) => {
@@ -157,14 +157,14 @@ const registerTicks = (state, extra) => {
          const contract_is_finished = proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
          state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
 
-         if (contract_is_finished && (tick_count < -1) || is_last_tick) {
+         if (contract_is_finished && (tick_count < -1) || is_path_dependent_last_tick) {
             onContractFinished(proposal_open_contract);
             updateChart();
          }
 
          tick_count--;
          if (tick_count > -1) {
-            is_last_tick = tick.epoch >= proposal_open_contract.exit_tick_time ? true : false;
+            is_path_dependent_last_tick = tick.epoch >= proposal_open_contract.exit_tick_time ? true : false;
             addTickToState(tick);
          }
       }
