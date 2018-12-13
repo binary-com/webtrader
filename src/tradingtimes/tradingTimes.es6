@@ -12,27 +12,8 @@ let tradingWin = null;
 let select = null;
 let sub_select = null;
 
-/* data: result of trading_times api */
 const processData = (markets) => {
    markets = markets || [];
-   //    || [{
-   //    display_name: 'Forex',
-   //    submarkets: [{
-   //        display_name: 'Major Paris',
-   //        instruments: [{
-   //            delay_amount: 0,
-   //            events: [{dates:'Fridays',descrip:'Closes early at(21:00)'}],
-   //            display_name: 'AUD/JPY',
-   //            settlement: '23:59:59',
-   //            symbol: 'frxAUDJPY',
-   //            times: {
-   //                close: ['23:59:59'],
-   //                open: ['00:00:00']
-   //            }
-   //        }]
-   //    }]
-   //}];
-   /* extract market and submarket names */
    const market_names = [];
    const submarket_names = { };
    markets
@@ -189,12 +170,23 @@ const initTradingWin = ($html) => {
          
       };
 
-      const getCachedData = () => liveapi.cached.send({ trading_times: yyyy_mm_dd })
-      .then(result => refresh(result))
-      .catch((error) => {
-        $.growl.error({ message: error.message });
-        refresh({});
-      });
+      const getCachedData = () => {
+        const active_symbols_request = { active_symbols: 'brief' };
+        const asset_index_request = { trading_times: yyyy_mm_dd };
+
+        Promise.all(
+            [
+                liveapi.cached.send(active_symbols_request),
+                liveapi.cached.send(asset_index_request),
+            ])
+            .then((results) => {
+                refresh(results);
+            })
+            .catch((error) => {
+                $.growl.error({ message: error.message });
+                refresh({});
+            });
+      };
 
       getCachedData();
       require(['websockets/binary_websockets'], (liveapi) => {
