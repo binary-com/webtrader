@@ -27,14 +27,20 @@ $COLOR_DARK_BLUE: #2a3052;
             width: fit-content;
         }
 
+        .span-in-dialog-header {
+            position: absolute;
+            left: 225px;
+        }
+    
         .windows-dateInput {
-            width: initial !important;
-            position: relative;
+            width: initial;
+            position: absolute;
+            left: 320px;
         }
 
         .ui-datepicker-trigger{
-            margin-left: -10px;
-            position: relative;
+            left: 525px;
+            position: absolute;
             border: none;
             background: none;
             box-shadow: none;
