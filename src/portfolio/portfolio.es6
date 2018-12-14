@@ -1,8 +1,4 @@
-﻿/**
- * Created by amin on 10/9/15.
- */
-
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import 'jquery-ui';

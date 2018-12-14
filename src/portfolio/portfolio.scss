@@ -1,0 +1,57 @@
+$COLOR_RED: #d71818;
+$COLOR_GREEN: #02920e;
+
+.portfolio {
+	.span-in-dialog-header {
+		position: absolute;
+		left: 235px;
+	}
+
+	.portfolio-dialog {
+		th {
+			width: auto;
+
+			&:nth-child(n-3) {
+				text-align: center;
+			}
+		}
+
+		td {
+			&:nth-child(n-3) {
+				text-align: center;
+			}
+		}
+
+		tr {
+			&.resale-not-offered {
+				td:nth-child(4) {
+					opacity: 0.5;
+					position: relative;
+					&::after {
+						content: 'Resale not offered';
+						display: block;
+						font-size: .6em;
+					}
+				}
+			}
+
+			&.indicative-red > td::nth-child(4) span {
+				color: $COLOR_RED;
+			}
+
+			&.indicative-green > td::nth-child(4) span {
+				color: $COLOR_GREEN;
+			}
+		}
+
+		img {
+			&.arrow {
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				float: right;
+				position: relative;
+			}
+		}
+	}
+}

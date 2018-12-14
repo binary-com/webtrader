@@ -166,7 +166,7 @@ const initTable = () => {
         function marketsDropdown(market_submarkets) {
             if (!state.dropdown.display_markets) {
                 state.dropdown.display_markets = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons_el), {
+                    .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
                         list: Object.keys(market_submarkets),
                         inx: 0,
                         changed: (val) => {
@@ -185,7 +185,7 @@ const initTable = () => {
         function submarketsDropdown(market_submarkets) {
             if (!state.dropdown.display_submarkets) {
                 state.dropdown.display_submarkets = windows
-                    .makeSelectmenu($('<select />').insertBefore(dialog_buttons_el), {
+                    .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
                         list: Object.keys(market_submarkets[state.dropdown.display_markets.val()]),
                         inx: 0,
                         changed: (val) => {
