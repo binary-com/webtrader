@@ -17,6 +17,11 @@
 	.statement-dialog-content {
 		padding: 0;
 		width: auto !important;
+		.dataTables_filter {
+			label {
+				display: none;
+			}
+		}
 	}
 
 	.statement-dialog {
