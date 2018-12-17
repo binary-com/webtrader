@@ -123,8 +123,7 @@ const initTradingWin = ($html) => {
    });
 
    let market_names = null,
-      submarket_names = null,
-      changedFn = null;
+      submarket_names = null
 
    const refreshTable = (yyyy_mm_dd) => {
       /* update the table with the given marketname and submarketname */
@@ -177,7 +176,6 @@ const initTradingWin = ($html) => {
                submarket_names = windows.makeSelectmenu(sub_select, {
                   list: Object.keys(header[market_names.val()]),
                   inx: 0,
-                  changed: changedFn,
                });
                submarket_names.off('selectmenuchange', changed);
                submarket_names.on('selectmenuchange', changed);
