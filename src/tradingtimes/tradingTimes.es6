@@ -138,7 +138,6 @@ const initTradingWin = ($html) => {
 
          function changed() {
             const val = $(this).val();
-
             if (header[val]) submarket_names.update_list(Object.keys(header[val]));
 
             updateTable(result, market_names.val(), submarket_names.val());
@@ -152,7 +151,6 @@ const initTradingWin = ($html) => {
                   list: Object.keys(header),
                   inx: 0,
                });
-
                market_names.off('selectmenuchange', changed);
                market_names.on('selectmenuchange', changed);
             } else {
@@ -183,7 +181,6 @@ const initTradingWin = ($html) => {
       const getCachedData = () => {
         const active_symbols_request = { active_symbols: 'brief' };
         const asset_index_request = { trading_times: yyyy_mm_dd };
-
         const processing_msg = $('#' + table.attr('id') + '_processing').show();
 
         Promise.all(
