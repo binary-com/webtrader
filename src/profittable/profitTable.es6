@@ -120,7 +120,7 @@ const initProfitWin = () => {
    profitWin = windows.createBlankWindow($('<div/>'), {
       title: 'Profit Table'.i18n(),
       dialogClass: 'profitTable',
-      width: 700 ,
+      width: 800 ,
       height: 400,
       destroy: () => {
          table && table.DataTable().destroy(true);
