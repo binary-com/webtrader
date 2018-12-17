@@ -9,8 +9,6 @@ import moment from 'moment';
 
 let table = null;
 let tradingWin = null;
-let select = null;
-let sub_select = null;
 
 const processData = (markets) => {
    markets = markets || [];
