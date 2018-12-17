@@ -4,7 +4,14 @@ $COLOR_DARK_BLUE: #2a3052;
 .ui-dialog {
 	&.ui-corner-all.ui-widget.ui-widget-content.ui-front.webtrader-dialog-widget {
 		min-width: 225px !important;
-	}
+    }
+
+    &.tradingTimes .span-in-dialog-header,
+    &.statement .span-in-dialog-header,
+    &.profitTable .span-in-dialog-header {
+        position: absolute;
+        left: 225px;
+    }
 
 	.ui-dialog-titlebar {
 		height: 20px;
@@ -25,11 +32,6 @@ $COLOR_DARK_BLUE: #2a3052;
         .ui-dialog-title {
             cursor: default;
             width: fit-content;
-        }
-
-        .span-in-dialog-header {
-            position: absolute;
-            left: 225px;
         }
     
         .windows-dateInput {
