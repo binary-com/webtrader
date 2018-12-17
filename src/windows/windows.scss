@@ -11,6 +11,25 @@ $COLOR_DARK_BLUE: #2a3052;
         position: absolute;
         left: 225px;
     }
+    &.tradingTimes .windows-dateInput,
+    &.statement .windows-dateInput,
+    &.profitTable .windows-dateInput {
+        width: initial;
+        position: absolute;
+        left: 320px;
+    }
+
+    &.tradingTimes .ui-datepicker-trigger,
+    &.statement .ui-datepicker-trigger,
+    &.profitTable .ui-datepicker-trigger {
+        left: 525px;
+        position: absolute;
+        border: none;
+        background: none;
+        box-shadow: none;
+        font-weight: normal;
+        color: $COLOR_WHITE;
+    }
 
 	.ui-dialog-titlebar {
 		height: 20px;
@@ -31,22 +50,6 @@ $COLOR_DARK_BLUE: #2a3052;
         .ui-dialog-title {
             cursor: default;
             width: fit-content;
-        }
-
-        .windows-dateInput {
-            width: initial;
-            position: absolute;
-            left: 320px;
-        }
-
-        .ui-datepicker-trigger{
-            left: 525px;
-            position: absolute;
-            border: none;
-            background: none;
-            box-shadow: none;
-            font-weight: normal;
-            color: $COLOR_WHITE;
         }
         
 		.ui-dialog-titlebar-buttonpane {
