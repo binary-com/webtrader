@@ -4,6 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
+import getMarketsSubmarkets from '../common/sharedFunction';
 
 let table_el = null;
 let asset_win_el = null;
@@ -65,20 +66,6 @@ const checkVolatility = (market_name, market_names) => {
     const is_volatility = market_name.indexOf(volatility_indices) !== -1;
 
     return is_volatility;
-}
-
-const getMarketsSubmarkets = (active_symbols) => {
-    const select_market_submarket = active_symbols.reduce((market_result, market) => {
-        const { market_display_name, submarket_display_name, display_name } = market;
-
-        market_result[market_display_name] = market_result[market_display_name] || {};
-        market_result[market_display_name][submarket_display_name] = market_result[market_display_name][submarket_display_name] || [];
-        market_result[market_display_name][submarket_display_name].push(display_name);
-
-        return market_result;
-    }, {})
-
-    return select_market_submarket
 }
 
 const initTable = () => {

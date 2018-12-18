@@ -6,6 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
+import getMarketsSubmarkets from '../common/sharedFunction';
 
 let table = null;
 let tradingWin = null;
@@ -47,20 +48,6 @@ const processData = (markets) => {
       return rows;
     }
   };
-}
-
-const getMarketsSubmarkets = (active_symbols) => {
-   const select_market_submarket = active_symbols.reduce((market_result, market) => {
-       const { market_display_name, submarket_display_name, display_name } = market;
-
-       market_result[market_display_name] = market_result[market_display_name] || {};
-       market_result[market_display_name][submarket_display_name] = market_result[market_display_name][submarket_display_name] || [];
-       market_result[market_display_name][submarket_display_name].push(display_name);
-
-       return market_result;
-   }, {})
-
-   return select_market_submarket
 }
 
 export const init = ($menuLink) => {
