@@ -6,7 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
-import getMarketsSubmarkets from '../common/sharedFunction';
+import getMarketsSubmarkets from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
@@ -117,10 +117,6 @@ const initTradingWin = ($html) => {
          const result = processData(menu.extractFilteredMarkets(data[1]));
          const header = getMarketsSubmarkets(data[0].active_symbols);
 
-         marketDropdown();
-         submarketDropdown();
-         updateTable(result, market_names.val(), submarket_names.val());
-
          function changed() {
             const val = $(this).val();
             if (header[val]) submarket_names.update_list(Object.keys(header[val]));
@@ -128,39 +124,37 @@ const initTradingWin = ($html) => {
             updateTable(result, market_names.val(), submarket_names.val());
          };
 
-         function marketDropdown() {
-            if (market_names == null) {
-               const select = $('<select />');
-               select.appendTo(subheader);
-               market_names = windows.makeSelectmenu(select, {
-                  list: Object.keys(header),
-                  inx: 0,
-               });
-               market_names.off('selectmenuchange', changed);
-               market_names.on('selectmenuchange', changed);
-            } else {
-               market_names.update_list(Object.keys(header));
-               market_names.off('selectmenuchange', changed);
-               market_names.on('selectmenuchange', changed);
-            }
+         if (market_names == null) {
+            const select = $('<select />');
+            select.appendTo(subheader);
+            market_names = windows.makeSelectmenu(select, {
+               list: Object.keys(header),
+               inx: 0,
+            });
+            market_names.off('selectmenuchange', changed);
+            market_names.on('selectmenuchange', changed);
+         } else {
+            market_names.update_list(Object.keys(header));
+            market_names.off('selectmenuchange', changed);
+            market_names.on('selectmenuchange', changed);
          }
 
-         function submarketDropdown() {
-            if (submarket_names == null) {
-               const sub_select = $('<select />');
-               sub_select.appendTo(subheader);
-               submarket_names = windows.makeSelectmenu(sub_select, {
-                  list: Object.keys(header[market_names.val()]),
-                  inx: 0,
-               });
-               submarket_names.off('selectmenuchange', changed);
-               submarket_names.on('selectmenuchange', changed);
-            } else {
-               submarket_names.update_list(Object.keys(header[market_names.val()]));
-               submarket_names.off('selectmenuchange', changed);
-               submarket_names.on('selectmenuchange', changed);
-            }
+         if (submarket_names == null) {
+            const sub_select = $('<select />');
+            sub_select.appendTo(subheader);
+            submarket_names = windows.makeSelectmenu(sub_select, {
+               list: Object.keys(header[market_names.val()]),
+               inx: 0,
+            });
+            submarket_names.off('selectmenuchange', changed);
+            submarket_names.on('selectmenuchange', changed);
+         } else {
+            submarket_names.update_list(Object.keys(header[market_names.val()]));
+            submarket_names.off('selectmenuchange', changed);
+            submarket_names.on('selectmenuchange', changed);
          }
+
+         updateTable(result, market_names.val(), submarket_names.val());
       };
 
       const getCachedData = () => {
