@@ -94,7 +94,7 @@
     "rivets": "0.8.1",
     "text": "requirejs/text",
     "vanderlee-colorpicker": "^1.2.13",
-    "@binary-com/webtrader-charts": "0.5.0"
+    "webtrader-charts": "^0.4.12"
   },
   "contributors": [
     {
