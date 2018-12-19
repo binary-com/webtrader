@@ -63,7 +63,7 @@ const refreshTable  = (yyy_mm_dd) => {
       const rows = transactions.map((trans) => {
          let class_name = _(['buy', 'sell']).includes(trans.action_type) ? '' : 'button-disabled';
              class_name = _(['deposit', 'withdraw']).includes(trans.action_type) ? 'invisible' : class_name;
-         const view_button = '<button class="'+class_name+'">' + view_button_text + '</button>';
+         const view_button = `<button class="${ class_name }">${ view_button_text }</button>`;
          const amount = trans.amount * 1;
          return [
             epoch_to_string(trans.transaction_time, { utc: true }),
