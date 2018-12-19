@@ -145,6 +145,8 @@ const initTradingWin = ($html) => {
       const refresh = (data) => {
         const result = processData(menu.extractFilteredMarkets(data[1]));
         const header = getMarketsSubmarkets(data[0].active_symbols);
+        const market_name_list = Object.keys(header);
+        const submarket_name_list = Object.keys(header[market_names.val()]);
 
         function changed() {
           const val = $(this).val();
@@ -158,13 +160,13 @@ const initTradingWin = ($html) => {
               const select = $('<select />');
               select.appendTo(subheader);
               market_names = windows.makeSelectmenu(select, {
-                list: Object.keys(header),
+                list: market_name_list,
                 inx: 0,
               });
               market_names.off('selectmenuchange', changed);
               market_names.on('selectmenuchange', changed);
           } else {
-            market_names.update_list(Object.keys(header));
+            market_names.update_list(market_name_list);
             market_names.off('selectmenuchange', changed);
             market_names.on('selectmenuchange', changed);
         }
@@ -173,14 +175,14 @@ const initTradingWin = ($html) => {
               const sub_select = $('<select />');
               sub_select.appendTo(subheader);
               submarket_names = windows.makeSelectmenu(sub_select, {
-                list: Object.keys(header[market_names.val()]),
+                list: submarket_name_list,
                 inx: 0,
                 changed: changedFn,
               });
               submarket_names.off('selectmenuchange', changed);
               submarket_names.on('selectmenuchange', changed);
             } else {
-            submarket_names.update_list(Object.keys(header[market_names.val()]));
+            submarket_names.update_list(submarket_name_list);
             submarket_names.off('selectmenuchange', changed);
             submarket_names.on('selectmenuchange', changed);
         }
@@ -191,7 +193,8 @@ const initTradingWin = ($html) => {
       const getCachedData = () => {
          const active_symbols_request = { active_symbols: 'brief' };
          const asset_index_request = { trading_times: yyyy_mm_dd };
-         const processing_msg = $('#' + table.attr('id') + '_processing').show();
+         const $processing_msg = $('#' + table.attr('id') + '_processing')
+                                    .show();
    
          Promise.all(
              [
@@ -200,11 +203,11 @@ const initTradingWin = ($html) => {
              ])
              .then((results) => {
                  refresh(results);
-                 processing_msg.hide();
+                 $processing_msg.hide();
              })
              .catch((error) => {
                  $.growl.error({ message: error.message });
-                 processing_msg.hide();
+                 $processing_msg.hide();
              });
        };
 
