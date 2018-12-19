@@ -146,7 +146,6 @@ const initTradingWin = ($html) => {
         const result = processData(menu.extractFilteredMarkets(data[1]));
         const header = getMarketsSubmarkets(data[0].active_symbols);
         const market_name_list = Object.keys(header);
-        const submarket_name_list = Object.keys(header[market_names.val()]);
 
         function changed() {
           const val = $(this).val();
@@ -175,14 +174,14 @@ const initTradingWin = ($html) => {
               const sub_select = $('<select />');
               sub_select.appendTo(subheader);
               submarket_names = windows.makeSelectmenu(sub_select, {
-                list: submarket_name_list,
+                list: Object.keys(header[market_names.val()]),
                 inx: 0,
                 changed: changedFn,
               });
               submarket_names.off('selectmenuchange', changed);
               submarket_names.on('selectmenuchange', changed);
             } else {
-            submarket_names.update_list(submarket_name_list);
+            submarket_names.update_list(Object.keys(header[market_names.val()]));
             submarket_names.off('selectmenuchange', changed);
             submarket_names.on('selectmenuchange', changed);
         }
