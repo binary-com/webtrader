@@ -192,9 +192,9 @@ const initTradingWin = ($html) => {
       const getCachedData = () => {
          const active_symbols_request = { active_symbols: 'brief' };
          const asset_index_request = { trading_times: yyyy_mm_dd };
-         const $processing_msg = $('#' + table.attr('id') + '_processing')
-                                    .show();
-   
+         const $processing_msg = $('#' + table.attr('id') + '_processing');
+
+         $processing_msg.show();
          Promise.all(
              [
                  liveapi.cached.send(active_symbols_request),
