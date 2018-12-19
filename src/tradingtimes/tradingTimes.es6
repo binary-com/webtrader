@@ -10,12 +10,40 @@ import getMarketsSubmarkets from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
+let select = null;
+let sub_select = null;
 
+/* data: result of trading_times api */
 const processData = (markets) => {
    markets = markets || [];
+   //    || [{
+   //    display_name: 'Forex',
+   //    submarkets: [{
+   //        display_name: 'Major Paris',
+   //        instruments: [{
+   //            delay_amount: 0,
+   //            events: [{dates:'Fridays',descrip:'Closes early at(21:00)'}],
+   //            display_name: 'AUD/JPY',
+   //            settlement: '23:59:59',
+   //            symbol: 'frxAUDJPY',
+   //            times: {
+   //                close: ['23:59:59'],
+   //                open: ['00:00:00']
+   //            }
+   //        }]
+   //    }]
+   //}];
+   /* extract market and submarket names */
    const market_names = [];
    const submarket_names = { };
    markets
+    .filter(eMarket => {
+      const loginId = (local_storage.get('authorize') || {}).loginid || '';
+      return (/MF/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
+        || (/MLT/gi.test(loginId) && eMarket.name === 'Volatility Indices')
+        || (/MX/gi.test(loginId) && eMarket.name === 'Volatility Indices')
+        || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
+    })
     .forEach((market) => {
       market_names.push(market.display_name);
       submarket_names[market.display_name] = [];
@@ -101,7 +129,8 @@ const initTradingWin = ($html) => {
    });
 
    let market_names = null,
-      submarket_names = null
+      submarket_names = null,
+      changedFn = null;
 
    const refreshTable = (yyyy_mm_dd) => {
       /* update the table with the given marketname and submarketname */
@@ -114,68 +143,70 @@ const initTradingWin = ($html) => {
 
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
       const refresh = (data) => {
-         const result = processData(menu.extractFilteredMarkets(data[1]));
-         const header = getMarketsSubmarkets(data[0].active_symbols);
+        const result = processData(menu.extractFilteredMarkets(data[1]));
+        const header = getMarketsSubmarkets(data[0].active_symbols);
 
-         function changed() {
-            const val = $(this).val();
-            if (header[val]) submarket_names.update_list(Object.keys(header[val]));
+        function changed() {
+          const val = $(this).val();
 
-            updateTable(result, market_names.val(), submarket_names.val());
-         };
+          if (header[val]) submarket_names.update_list(Object.keys(header[val]));
 
-         if (market_names == null) {
-            const select = $('<select />');
-            select.appendTo(subheader);
-            market_names = windows.makeSelectmenu(select, {
-               list: Object.keys(header),
-               inx: 0,
-            });
-            market_names.off('selectmenuchange', changed);
-            market_names.on('selectmenuchange', changed);
-         } else {
+          updateTable(result, market_names.val(), submarket_names.val());
+        };
+
+          if (market_names == null) {
+              const select = $('<select />');
+              select.appendTo(subheader);
+              market_names = windows.makeSelectmenu(select, {
+                list: Object.keys(header),
+                inx: 0,
+              });
+              market_names.off('selectmenuchange', changed);
+              market_names.on('selectmenuchange', changed);
+          } else {
             market_names.update_list(Object.keys(header));
             market_names.off('selectmenuchange', changed);
             market_names.on('selectmenuchange', changed);
-         }
+        }
 
-         if (submarket_names == null) {
-            const sub_select = $('<select />');
-            sub_select.appendTo(subheader);
-            submarket_names = windows.makeSelectmenu(sub_select, {
-               list: Object.keys(header[market_names.val()]),
-               inx: 0,
-            });
-            submarket_names.off('selectmenuchange', changed);
-            submarket_names.on('selectmenuchange', changed);
-         } else {
+          if (submarket_names == null) {
+              const sub_select = $('<select />');
+              sub_select.appendTo(subheader);
+              submarket_names = windows.makeSelectmenu(sub_select, {
+                list: Object.keys(header[market_names.val()]),
+                inx: 0,
+                changed: changedFn,
+              });
+              submarket_names.off('selectmenuchange', changed);
+              submarket_names.on('selectmenuchange', changed);
+            } else {
             submarket_names.update_list(Object.keys(header[market_names.val()]));
             submarket_names.off('selectmenuchange', changed);
             submarket_names.on('selectmenuchange', changed);
-         }
+        }
 
-         updateTable(result, market_names.val(), submarket_names.val());
+          updateTable(result, market_names.val(), submarket_names.val());
       };
 
       const getCachedData = () => {
-        const active_symbols_request = { active_symbols: 'brief' };
-        const asset_index_request = { trading_times: yyyy_mm_dd };
-        const processing_msg = $('#' + table.attr('id') + '_processing').show();
-
-        Promise.all(
-            [
-                liveapi.cached.send(active_symbols_request),
-                liveapi.cached.send(asset_index_request),
-            ])
-            .then((results) => {
-                refresh(results);
-                processing_msg.hide();
-            })
-            .catch((error) => {
-                $.growl.error({ message: error.message });
-                processing_msg.hide();
-            });
-      };
+         const active_symbols_request = { active_symbols: 'brief' };
+         const asset_index_request = { trading_times: yyyy_mm_dd };
+         const processing_msg = $('#' + table.attr('id') + '_processing').show();
+   
+         Promise.all(
+             [
+                 liveapi.cached.send(active_symbols_request),
+                 liveapi.cached.send(asset_index_request),
+             ])
+             .then((results) => {
+                 refresh(results);
+                 processing_msg.hide();
+             })
+             .catch((error) => {
+                 $.growl.error({ message: error.message });
+                 processing_msg.hide();
+             });
+       };
 
       getCachedData();
       require(['websockets/binary_websockets'], (liveapi) => {
