@@ -25,7 +25,7 @@ window.requirejs.config({
         "indicator_levels": "charts/indicators/level",
         "binary-style": "lib/binary-style/binary",
         "babel-runtime/regenerator": "lib/regenerator-runtime/runtime",
-        "webtrader-charts" : "lib/webtrader-charts/dist/webtrader-charts.iife",
+        "webtrader-charts" : "lib/@binary-com/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",
         "highstock-release": "lib/highstock-release",
     },
