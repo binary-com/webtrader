@@ -10,13 +10,10 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Acholi\n"
 "Language: ach_UG\n"
-"PO-Revision-Date: 2018-10-17 04:11\n"
+"PO-Revision-Date: 2018-11-30 05:41\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "crwdns19787:0crwdne19787:0"
-
-msgid "(One) Touch trades"
-msgstr "crwdns19799:0crwdne19799:0"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "crwdns15420:0crwdne15420:0"
@@ -171,20 +168,11 @@ msgstr "crwdns15468:0crwdne15468:0"
 msgid "AM"
 msgstr "crwdns50598:0crwdne50598:0"
 
-msgid "About Binary.com"
-msgstr "crwdns50600:0crwdne50600:0"
-
-msgid "About us"
-msgstr "crwdns50602:0crwdne50602:0"
-
 msgid "Accept"
 msgstr "crwdns15473:0crwdne15473:0"
 
 msgid "Accessible from any web browser in 13 languages"
 msgstr "crwdns50604:0crwdne50604:0"
-
-msgid "Account authentication"
-msgstr "crwdns50606:0crwdne50606:0"
 
 msgid "Account balance"
 msgstr "crwdns15474:0crwdne15474:0"
@@ -194,12 +182,6 @@ msgstr "crwdns50608:0crwdne50608:0"
 
 msgid "Account id not found."
 msgstr "crwdns50610:0crwdne50610:0"
-
-msgid "Account opening"
-msgstr "crwdns50612:0crwdne50612:0"
-
-msgid "Account opening reason"
-msgstr "crwdns24276:0crwdne24276:0"
 
 msgid "Account token not found."
 msgstr "crwdns50614:0crwdne50614:0"
@@ -231,9 +213,6 @@ msgstr "crwdns15483:0crwdne15483:0"
 msgid "Added new workspace %"
 msgstr "crwdns50616:0crwdne50616:0"
 
-msgid "Address"
-msgstr "crwdns46339:0crwdne46339:0"
-
 msgid "Admin"
 msgstr "crwdns15485:0crwdne15485:0"
 
@@ -242,9 +221,6 @@ msgstr "crwdns46340:0crwdne46340:0"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "crwdns15486:0crwdne15486:0"
-
-msgid "Allow others to copy your trades"
-msgstr "crwdns41524:0crwdne41524:0"
 
 msgid "Amount"
 msgstr "crwdns15487:0crwdne15487:0"
@@ -255,20 +231,11 @@ msgstr "crwdns50618:0crwdne50618:0"
 msgid "Amount per point"
 msgstr "crwdns15489:0crwdne15489:0"
 
-msgid "Answer"
-msgstr "crwdns15490:0crwdne15490:0"
-
-msgid "Anticipated account turnover"
-msgstr "crwdns33364:0crwdne33364:0"
-
 msgid "Apply"
 msgstr "crwdns15492:0crwdne15492:0"
 
 msgid "Apply to become a Binary.com"
 msgstr "crwdns15493:0crwdne15493:0"
-
-msgid "Appropriateness Test: WARNING"
-msgstr "crwdns15494:0crwdne15494:0"
 
 msgid "Apr"
 msgstr "crwdns15495:0crwdne15495:0"
@@ -312,15 +279,6 @@ msgstr "crwdns15503:0crwdne15503:0"
 msgid "August"
 msgstr "crwdns15504:0crwdne15504:0"
 
-msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr "crwdns50620:0%1crwdne50620:0"
-
-msgid "Available Currencies"
-msgstr "crwdns33466:0crwdne33466:0"
-
-msgid "Avg. Duration"
-msgstr "crwdns41526:0crwdne41526:0"
-
 msgid "Avg. Duration of Open Positions"
 msgstr "crwdns46341:0crwdne46341:0"
 
@@ -342,29 +300,8 @@ msgstr "crwdns15509:0crwdne15509:0"
 msgid "Barrier offset"
 msgstr "crwdns15510:0crwdne15510:0"
 
-msgid "Barrier(s)"
-msgstr "crwdns19910:0crwdne19910:0"
-
 msgid "Bill Williams"
 msgstr "crwdns19922:0crwdne19922:0"
-
-msgid "Binary option"
-msgstr "crwdns19928:0crwdne19928:0"
-
-msgid "Binary options basics"
-msgstr "crwdns50622:0crwdne50622:0"
-
-msgid "Binary options or other financial derivatives trading experience"
-msgstr "crwdns19929:0crwdne19929:0"
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr "crwdns19930:0crwdne19930:0"
-
-msgid "Binary options trading experience"
-msgstr "crwdns46342:0crwdne46342:0"
-
-msgid "Binary options trading frequency"
-msgstr "crwdns46343:0crwdne46343:0"
 
 msgid "Binary.com"
 msgstr "crwdns15512:0crwdne15512:0"
@@ -393,20 +330,8 @@ msgstr "crwdns15518:0crwdne15518:0"
 msgid "Buy price"
 msgstr "crwdns15519:0crwdne15519:0"
 
-msgid "By clicking"
-msgstr "crwdns15520:0crwdne15520:0"
-
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "crwdns15521:0crwdne15521:0"
-
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr "crwdns46344:0crwdne46344:0"
-
-msgid "CFD trading experience"
-msgstr "crwdns46345:0crwdne46345:0"
-
-msgid "CFD trading frequency"
-msgstr "crwdns46346:0crwdne46346:0"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "crwdns19964:0crwdne19964:0"
@@ -462,9 +387,6 @@ msgstr "crwdns15537:0crwdne15537:0"
 msgid "Chart type"
 msgstr "crwdns15538:0crwdne15538:0"
 
-msgid "Choose password"
-msgstr "crwdns15539:0crwdne15539:0"
-
 msgid "Choose your pereferred payment agent"
 msgstr "crwdns15540:0crwdne15540:0"
 
@@ -474,14 +396,8 @@ msgstr "crwdns15541:0crwdne15541:0"
 msgid "Chrome"
 msgstr "crwdns15542:0crwdne15542:0"
 
-msgid "Citizenship"
-msgstr "crwdns46347:0crwdne46347:0"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "crwdns15544:0crwdne15544:0"
-
-msgid "Client funds"
-msgstr "crwdns43330:0crwdne43330:0"
 
 msgid "Close"
 msgstr "crwdns19988:0crwdne19988:0"
@@ -491,15 +407,6 @@ msgstr "crwdns33467:0crwdne33467:0"
 
 msgid "Closes"
 msgstr "crwdns15547:0crwdne15547:0"
-
-msgid "Commodities"
-msgstr "crwdns19990:0crwdne19990:0"
-
-msgid "Commodities trading experience"
-msgstr "crwdns15548:0crwdne15548:0"
-
-msgid "Commodities trading frequency"
-msgstr "crwdns15549:0crwdne15549:0"
 
 msgid "Comparisons"
 msgstr "crwdns15550:0crwdne15550:0"
@@ -522,9 +429,6 @@ msgstr "crwdns15556:0crwdne15556:0"
 msgid "Contact Us"
 msgstr "crwdns19993:0crwdne19993:0"
 
-msgid "Continue"
-msgstr "crwdns15557:0crwdne15557:0"
-
 msgid "Continue Trading"
 msgstr "crwdns15558:0crwdne15558:0"
 
@@ -537,23 +441,14 @@ msgstr "crwdns50632:0crwdne50632:0"
 msgid "Contract Details"
 msgstr "crwdns50634:0crwdne50634:0"
 
-msgid "Contract period"
-msgstr "crwdns19994:0crwdne19994:0"
-
 msgid "Contracts"
 msgstr "crwdns15563:0crwdne15563:0"
 
 msgid "Copier"
 msgstr "crwdns42933:0crwdne42933:0"
 
-msgid "Copy Trade"
-msgstr "crwdns50636:0crwdne50636:0"
-
 msgid "Copy Trading"
 msgstr "crwdns42942:0crwdne42942:0"
-
-msgid "Country of residence"
-msgstr "crwdns15564:0crwdne15564:0"
 
 msgid "Create"
 msgstr "crwdns15565:0crwdne15565:0"
@@ -615,9 +510,6 @@ msgstr "crwdns15585:0crwdne15585:0"
 msgid "Date"
 msgstr "crwdns15587:0crwdne15587:0"
 
-msgid "Date of birth"
-msgstr "crwdns15588:0crwdne15588:0"
-
 msgid "Days"
 msgstr "crwdns15589:0crwdne15589:0"
 
@@ -626,9 +518,6 @@ msgstr "crwdns15590:0crwdne15590:0"
 
 msgid "December"
 msgstr "crwdns15591:0crwdne15591:0"
-
-msgid "Decline"
-msgstr "crwdns15592:0crwdne15592:0"
 
 msgid "Default"
 msgstr "crwdns15593:0crwdne15593:0"
@@ -644,12 +533,6 @@ msgstr "crwdns15597:0crwdne15597:0"
 
 msgid "Deposit of USD"
 msgstr "crwdns15598:0crwdne15598:0"
-
-msgid "Depositing and withdrawing funds"
-msgstr "crwdns20004:0crwdne20004:0"
-
-msgid "Derivative"
-msgstr "crwdns20005:0crwdne20005:0"
 
 msgid "Describe what this token is for to find it later"
 msgstr "crwdns15599:0crwdne15599:0"
@@ -668,9 +551,6 @@ msgstr "crwdns15601:0crwdne15601:0"
 
 msgid "Do you want to install Webtrader chrome extension?"
 msgstr "crwdns15602:0crwdne15602:0"
-
-msgid "Do you want to install the Webtrader chrome extension?"
-msgstr "crwdns42934:0crwdne42934:0"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "crwdns15603:0crwdne15603:0"
@@ -729,9 +609,6 @@ msgstr "crwdns50644:0%1crwdne50644:0"
 msgid "Drawing tools"
 msgstr "crwdns15620:0crwdne15620:0"
 
-msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr "crwdns20022:0crwdne20022:0"
-
 msgid "Duration"
 msgstr "crwdns15621:0crwdne15621:0"
 
@@ -744,20 +621,11 @@ msgstr "crwdns15623:0crwdne15623:0"
 msgid "Education"
 msgstr "crwdns15625:0crwdne15625:0"
 
-msgid "Email verification failed"
-msgstr "crwdns50646:0crwdne50646:0"
-
 msgid "Embed code"
 msgstr "crwdns15627:0crwdne15627:0"
 
-msgid "Employment status"
-msgstr "crwdns33367:0crwdne33367:0"
-
 msgid "End Time"
 msgstr "crwdns15628:0crwdne15628:0"
-
-msgid "Ends Between/Ends Outside trades"
-msgstr "crwdns20027:0crwdne20027:0"
 
 msgid "Ends Between/Outside"
 msgstr "crwdns43344:0crwdne43344:0"
@@ -786,14 +654,8 @@ msgstr "crwdns15632:0crwdne15632:0"
 msgid "Entry spot"
 msgstr "crwdns15633:0crwdne15633:0"
 
-msgid "Entry spot price"
-msgstr "crwdns20032:0crwdne20032:0"
-
 msgid "Error getting data for %1"
 msgstr "crwdns24285:0%1crwdne24285:0"
-
-msgid "Estimated Net Worth"
-msgstr "crwdns15637:0crwdne15637:0"
 
 msgid "Even"
 msgstr "crwdns20034:0crwdne20034:0"
@@ -822,23 +684,14 @@ msgstr "crwdns20037:0crwdne20037:0"
 msgid "Exit spot"
 msgstr "crwdns15640:0crwdne15640:0"
 
-msgid "Expiry price"
-msgstr "crwdns20038:0crwdne20038:0"
-
 msgid "Explanation"
 msgstr "crwdns15641:0crwdne15641:0"
-
-msgid "FAQ"
-msgstr "crwdns50658:0crwdne50658:0"
 
 msgid "Failed to update the password"
 msgstr "crwdns50660:0crwdne50660:0"
 
 msgid "Fall"
 msgstr "crwdns15643:0crwdne15643:0"
-
-msgid "Family name"
-msgstr "crwdns15644:0crwdne15644:0"
 
 msgid "Favorites"
 msgstr "crwdns15650:0crwdne15650:0"
@@ -867,35 +720,8 @@ msgstr "crwdns15656:0crwdne15656:0"
 msgid "Finance"
 msgstr "crwdns15657:0crwdne15657:0"
 
-msgid "Financial Account Opening form"
-msgstr "crwdns50662:0crwdne50662:0"
-
-msgid "Financial Assessment"
-msgstr "crwdns50664:0crwdne50664:0"
-
-msgid "Financial Information"
-msgstr "crwdns20042:0crwdne20042:0"
-
-msgid "Financial information"
-msgstr "crwdns15659:0crwdne15659:0"
-
 msgid "Firefox"
 msgstr "crwdns15660:0crwdne15660:0"
-
-msgid "First line of home address"
-msgstr "crwdns20045:0crwdne20045:0"
-
-msgid "First name"
-msgstr "crwdns15661:0crwdne15661:0"
-
-msgid "Forex"
-msgstr "crwdns20049:0crwdne20049:0"
-
-msgid "Forex trading experience"
-msgstr "crwdns15662:0crwdne15662:0"
-
-msgid "Forex trading frequency"
-msgstr "crwdns15663:0crwdne15663:0"
 
 msgid "Fri"
 msgstr "crwdns15664:0crwdne15664:0"
@@ -912,17 +738,8 @@ msgstr "crwdns24287:0crwdne24287:0"
 msgid "Further instructions"
 msgstr "crwdns15667:0crwdne15667:0"
 
-msgid "GMT"
-msgstr "crwdns20054:0crwdne20054:0"
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "crwdns42935:0crwdne42935:0"
-
-msgid "Getting started"
-msgstr "crwdns50666:0crwdne50666:0"
-
-msgid "Glossary"
-msgstr "crwdns50668:0crwdne50668:0"
 
 msgid "Go to"
 msgstr "crwdns43482:0crwdne43482:0"
@@ -938,9 +755,6 @@ msgstr "crwdns15669:0crwdne15669:0"
 
 msgid "Grid Light"
 msgstr "crwdns15670:0crwdne15670:0"
-
-msgid "Group history"
-msgstr "crwdns50670:0crwdne50670:0"
 
 msgid "Health"
 msgstr "crwdns15673:0crwdne15673:0"
@@ -960,9 +774,6 @@ msgstr "crwdns15677:0crwdne15677:0"
 msgid "Higher"
 msgstr "crwdns15678:0crwdne15678:0"
 
-msgid "Higher/Lower trades"
-msgstr "crwdns20070:0crwdne20070:0"
-
 msgid "Historical Data"
 msgstr "crwdns33368:0crwdne33368:0"
 
@@ -977,24 +788,6 @@ msgstr "crwdns50674:0crwdne50674:0"
 
 msgid "Hours"
 msgstr "crwdns15685:0crwdne15685:0"
-
-msgid "How to trade binary options?"
-msgstr "crwdns50676:0crwdne50676:0"
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr "crwdns43350:0crwdne43350:0"
-
-msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr "crwdns20079:0crwdne20079:0"
-
-msgid "I have read and agree to Binary.com"
-msgstr "crwdns15686:0crwdne15686:0"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr "crwdns46349:0crwdne46349:0"
-
-msgid "I want to be treated as a professional client"
-msgstr "crwdns46350:0crwdne46350:0"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "crwdns15687:0crwdne15687:0"
@@ -1011,26 +804,17 @@ msgstr "crwdns15691:0crwdne15691:0"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "crwdns15692:0crwdne15692:0"
 
-msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr "crwdns15693:0crwdne15693:0"
-
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
 msgstr "crwdns50678:0crwdne50678:0"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "crwdns50680:0[_1]crwdnd50680:0[_2]crwdne50680:0"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr "crwdns50682:0[_1]crwdnd50682:0[_2]crwdnd50682:0[_3]crwdnd50682:0[_4]crwdne50682:0"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr "crwdns51318:0[_1]crwdnd51318:0[_2]crwdnd51318:0[_3]crwdnd51318:0[_4]crwdne51318:0"
 
 msgid "In/Out"
 msgstr "crwdns15695:0crwdne15695:0"
-
-msgid "In/Out trades"
-msgstr "crwdns20095:0crwdne20095:0"
-
-msgid "Income Source"
-msgstr "crwdns15696:0crwdne15696:0"
 
 msgid "Indicative"
 msgstr "crwdns50684:0crwdne50684:0"
@@ -1040,18 +824,6 @@ msgstr "crwdns15698:0crwdne15698:0"
 
 msgid "Indicators"
 msgstr "crwdns15699:0crwdne15699:0"
-
-msgid "Indices"
-msgstr "crwdns20096:0crwdne20096:0"
-
-msgid "Indices trading experience"
-msgstr "crwdns15700:0crwdne15700:0"
-
-msgid "Indices trading frequency"
-msgstr "crwdns15701:0crwdne15701:0"
-
-msgid "Industry of Employment"
-msgstr "crwdns15702:0crwdne15702:0"
 
 msgid "Instruments"
 msgstr "crwdns15705:0crwdne15705:0"
@@ -1095,9 +867,6 @@ msgstr "crwdns15714:0crwdne15714:0"
 msgid "June"
 msgstr "crwdns15715:0crwdne15715:0"
 
-msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "crwdns15716:0crwdne15716:0"
-
 msgid "Last 12 mnts Profitable Trades"
 msgstr "crwdns41529:0crwdne41529:0"
 
@@ -1113,17 +882,8 @@ msgstr "crwdns50696:0crwdne50696:0"
 msgid "Last used"
 msgstr "crwdns15721:0crwdne15721:0"
 
-msgid "Learning to trade"
-msgstr "crwdns20117:0crwdne20117:0"
-
 msgid "Less than"
 msgstr "crwdns15722:0crwdne15722:0"
-
-msgid "Let's do it"
-msgstr "crwdns15723:0crwdne15723:0"
-
-msgid "Level of Education"
-msgstr "crwdns15725:0crwdne15725:0"
 
 msgid "Line"
 msgstr "crwdns15726:0crwdne15726:0"
@@ -1155,17 +915,11 @@ msgstr "crwdns50702:0crwdne50702:0"
 msgid "Loading Download/View Data ..."
 msgstr "crwdns50704:0crwdne50704:0"
 
-msgid "Loading MAM..."
-msgstr "crwdns50706:0crwdne50706:0"
-
 msgid "Loading Password dialog ..."
 msgstr "crwdns50708:0crwdne50708:0"
 
 msgid "Loading Profit Table ..."
 msgstr "crwdns50710:0crwdne50710:0"
-
-msgid "Loading Real account opening ..."
-msgstr "crwdns50712:0crwdne50712:0"
 
 msgid "Loading Self-Exclusion ..."
 msgstr "crwdns50714:0crwdne50714:0"
@@ -1215,9 +969,6 @@ msgstr "crwdns46353:0crwdne46353:0"
 msgid "Low"
 msgstr "crwdns20132:0crwdne20132:0"
 
-msgid "Low Barrier"
-msgstr "crwdns50732:0crwdne50732:0"
-
 msgid "Low barrier"
 msgstr "crwdns20133:0crwdne20133:0"
 
@@ -1238,9 +989,6 @@ msgstr "crwdns15765:0crwdne15765:0"
 
 msgid "March"
 msgstr "crwdns15766:0crwdne15766:0"
-
-msgid "Market exit price"
-msgstr "crwdns20139:0crwdne20139:0"
 
 msgid "Matches"
 msgstr "crwdns20143:0crwdne20143:0"
@@ -1293,15 +1041,6 @@ msgstr "crwdns41532:0crwdne41532:0"
 msgid "Min: 10 Max: 2000"
 msgstr "crwdns15781:0crwdne15781:0"
 
-msgid "Minimum of 2 characters required"
-msgstr "crwdns20149:0crwdne20149:0"
-
-msgid "Minimum of 4 characters required"
-msgstr "crwdns20150:0crwdne20150:0"
-
-msgid "Minimum of 6 characters required"
-msgstr "crwdns20151:0crwdne20151:0"
-
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "crwdns46355:0crwdne46355:0"
 
@@ -1325,9 +1064,6 @@ msgstr "crwdns15786:0crwdne15786:0"
 
 msgid "Monday"
 msgstr "crwdns15787:0crwdne15787:0"
-
-msgid "Monthly Profitable Trades"
-msgstr "crwdns41533:0crwdne41533:0"
 
 msgid "Mother's maiden name"
 msgstr "crwdns15788:0crwdne15788:0"
@@ -1371,14 +1107,8 @@ msgstr "crwdns15802:0crwdne15802:0"
 msgid "Navigator series line"
 msgstr "crwdns15803:0crwdne15803:0"
 
-msgid "Net Annual Income"
-msgstr "crwdns15804:0crwdne15804:0"
-
 msgid "Net Profit"
 msgstr "crwdns15805:0crwdne15805:0"
-
-msgid "New Account"
-msgstr "crwdns50742:0crwdne50742:0"
 
 msgid "New password"
 msgstr "crwdns15806:0crwdne15806:0"
@@ -1386,17 +1116,11 @@ msgstr "crwdns15806:0crwdne15806:0"
 msgid "No"
 msgstr "crwdns15807:0crwdne15807:0"
 
-msgid "No Touch trades"
-msgstr "crwdns20158:0crwdne20158:0"
-
 msgid "No touch"
 msgstr "crwdns20161:0crwdne20161:0"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "crwdns50744:0crwdne50744:0"
-
-msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "crwdns33471:0crwdne33471:0"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "crwdns15810:0crwdne15810:0"
@@ -1416,12 +1140,6 @@ msgstr "crwdns15817:0crwdne15817:0"
 msgid "OK"
 msgstr "crwdns24291:0crwdne24291:0"
 
-msgid "OTC indices and stocks"
-msgstr "crwdns50746:0crwdne50746:0"
-
-msgid "Occupation"
-msgstr "crwdns20164:0crwdne20164:0"
-
 msgid "Oct"
 msgstr "crwdns15819:0crwdne15819:0"
 
@@ -1434,53 +1152,20 @@ msgstr "crwdns20165:0crwdne20165:0"
 msgid "Ok"
 msgstr "crwdns15822:0crwdne15822:0"
 
-msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr "crwdns15823:0crwdne15823:0"
-
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "crwdns15824:0crwdne15824:0"
-
-msgid "One last step left"
-msgstr "crwdns15825:0crwdne15825:0"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "crwdns43359:0crwdne43359:0"
 
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr "crwdns20169:0crwdne20169:0"
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr "crwdns20170:0crwdne20170:0"
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr "crwdns20171:0crwdne20171:0"
-
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr "crwdns20172:0crwdne20172:0"
-
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr "crwdns20173:0crwdne20173:0"
-
-msgid "Only numbers and space are allowed"
-msgstr "crwdns20174:0crwdne20174:0"
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr "crwdns20175:0crwdne20175:0"
 
 msgid "Open"
 msgstr "crwdns15827:0crwdne15827:0"
 
-msgid "Open Account"
-msgstr "crwdns15828:0crwdne15828:0"
-
 msgid "Open a Financial Account"
 msgstr "crwdns15830:0crwdne15830:0"
-
-msgid "Open account"
-msgstr "crwdns15831:0crwdne15831:0"
-
-msgid "Opening an account"
-msgstr "crwdns20176:0crwdne20176:0"
 
 msgid "Opens"
 msgstr "crwdns15832:0crwdne15832:0"
@@ -1494,12 +1179,6 @@ msgstr "crwdns15834:0crwdne15834:0"
 msgid "Other"
 msgstr "crwdns15836:0crwdne15836:0"
 
-msgid "Other financial instruments trading experience"
-msgstr "crwdns15837:0crwdne15837:0"
-
-msgid "Other financial instruments trading frequency"
-msgstr "crwdns15838:0crwdne15838:0"
-
 msgid "Over"
 msgstr "crwdns15839:0crwdne15839:0"
 
@@ -1509,26 +1188,14 @@ msgstr "crwdns15840:0crwdne15840:0"
 msgid "Overlap Studies"
 msgstr "crwdns20182:0crwdne20182:0"
 
-msgid "PEP Declaration"
-msgstr "crwdns20183:0crwdne20183:0"
-
 msgid "PM"
 msgstr "crwdns50748:0crwdne50748:0"
-
-msgid "Password must be 6 characters minimum"
-msgstr "crwdns50750:0crwdne50750:0"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "crwdns50752:0crwdne50752:0"
 
 msgid "Password successfully updated."
 msgstr "crwdns50754:0crwdne50754:0"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "crwdns15849:0crwdne15849:0"
-
-msgid "Patents"
-msgstr "crwdns50756:0crwdne50756:0"
 
 msgid "Pattern Recognition"
 msgstr "crwdns20186:0crwdne20186:0"
@@ -1554,21 +1221,6 @@ msgstr "crwdns41534:0crwdne41534:0"
 msgid "Permissions"
 msgstr "crwdns15859:0crwdne15859:0"
 
-msgid "Personal Details"
-msgstr "crwdns15860:0crwdne15860:0"
-
-msgid "Phone"
-msgstr "crwdns15861:0crwdne15861:0"
-
-msgid "Pip"
-msgstr "crwdns20190:0crwdne20190:0"
-
-msgid "Place of birth"
-msgstr "crwdns20192:0crwdne20192:0"
-
-msgid "Please"
-msgstr "crwdns15862:0crwdne15862:0"
-
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
 msgstr "crwdns50758:0[_1]crwdnd50758:0[_2]crwdne50758:0"
 
@@ -1578,9 +1230,6 @@ msgstr "crwdns50760:0[_1]crwdnd50760:0[_2]crwdne50760:0"
 msgid "Please choose at least one token scope"
 msgstr "crwdns50762:0crwdne50762:0"
 
-msgid "Please choose which currency you would like to transact in"
-msgstr "crwdns15865:0crwdne15865:0"
-
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr "crwdns50764:0[_1]crwdnd50764:0[_2]crwdne50764:0"
 
@@ -1589,9 +1238,6 @@ msgstr "crwdns15866:0crwdne15866:0"
 
 msgid "Please enter a number between"
 msgstr "crwdns50766:0crwdne50766:0"
-
-msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "crwdns15868:0crwdne15868:0"
 
 msgid "Please enter a valid value for"
 msgstr "crwdns50768:0crwdne50768:0"
@@ -1605,9 +1251,6 @@ msgstr "crwdns20193:0crwdne20193:0"
 msgid "Please enter a value less than 6 weeks for time out until."
 msgstr "crwdns50772:0crwdne50772:0"
 
-msgid "Please enter correct email"
-msgstr "crwdns15871:0crwdne15871:0"
-
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "crwdns15872:0crwdne15872:0"
 
@@ -1619,9 +1262,6 @@ msgstr "crwdns20194:0crwdne20194:0"
 
 msgid "Please enter your current password"
 msgstr "crwdns15876:0crwdne15876:0"
-
-msgid "Please enter your email"
-msgstr "crwdns15877:0crwdne15877:0"
 
 msgid "Please input correct token"
 msgstr "crwdns20195:0crwdne20195:0"
@@ -1638,35 +1278,17 @@ msgstr "crwdns50778:0crwdne50778:0"
 msgid "Please log in."
 msgstr "crwdns50780:0crwdne50780:0"
 
-msgid "Please provide your tax information"
-msgstr "crwdns20196:0crwdne20196:0"
-
-msgid "Please select"
-msgstr "crwdns15886:0crwdne15886:0"
-
 msgid "Please select a date for time out until."
 msgstr "crwdns50782:0crwdne50782:0"
 
 msgid "Please select a payment agent"
 msgstr "crwdns50784:0crwdne50784:0"
 
-msgid "Please select an account opening reason before continuing"
-msgstr "crwdns33472:0crwdne33472:0"
-
-msgid "Please set currency."
-msgstr "crwdns50786:0crwdne50786:0"
-
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr "crwdns50788:0[_1]crwdnd50788:0[_2]crwdne50788:0"
 
-msgid "Please submit a valid verification token"
-msgstr "crwdns20197:0crwdne20197:0"
-
 msgid "Please try again after 1 minute."
 msgstr "crwdns50790:0crwdne50790:0"
-
-msgid "Please try again after few minutes."
-msgstr "crwdns50792:0crwdne50792:0"
 
 msgid "Please use your new password to login."
 msgstr "crwdns50794:0crwdne50794:0"
@@ -1682,9 +1304,6 @@ msgstr "crwdns15892:0crwdne15892:0"
 
 msgid "Portfolio"
 msgstr "crwdns15893:0crwdne15893:0"
-
-msgid "Postal code/ZIP"
-msgstr "crwdns15894:0crwdne15894:0"
 
 msgid "Potential Payout"
 msgstr "crwdns15895:0crwdne15895:0"
@@ -1713,9 +1332,6 @@ msgstr "crwdns15902:0crwdne15902:0"
 msgid "Print chart"
 msgstr "crwdns15903:0crwdne15903:0"
 
-msgid "Professional Client"
-msgstr "crwdns46357:0crwdne46357:0"
-
 msgid "Profit"
 msgstr "crwdns15904:0crwdne15904:0"
 
@@ -1728,12 +1344,6 @@ msgstr "crwdns15906:0crwdne15906:0"
 msgid "Profit/ Loss"
 msgstr "crwdns15907:0crwdne15907:0"
 
-msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr "crwdns50798:0crwdne50798:0"
-
-msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "crwdns50800:0crwdne50800:0"
-
 msgid "Purchase"
 msgstr "crwdns15909:0crwdne15909:0"
 
@@ -1743,11 +1353,11 @@ msgstr "crwdns15910:0crwdne15910:0"
 msgid "Purchase Price"
 msgstr "crwdns15911:0crwdne15911:0"
 
+msgid "Purchase Time"
+msgstr "crwdns51320:0crwdne51320:0"
+
 msgid "Read"
 msgstr "crwdns15913:0crwdne15913:0"
-
-msgid "Real Money Account Opening"
-msgstr "crwdns50802:0crwdne50802:0"
 
 msgid "Reality check"
 msgstr "crwdns50804:0crwdne50804:0"
@@ -1767,9 +1377,6 @@ msgstr "crwdns50810:0crwdne50810:0"
 msgid "Register free account"
 msgstr "crwdns15918:0crwdne15918:0"
 
-msgid "Registration"
-msgstr "crwdns50812:0crwdne50812:0"
-
 msgid "Remove"
 msgstr "crwdns20225:0crwdne20225:0"
 
@@ -1779,14 +1386,8 @@ msgstr "crwdns15921:0crwdne15921:0"
 msgid "Rename"
 msgstr "crwdns15922:0crwdne15922:0"
 
-msgid "Repeat password"
-msgstr "crwdns15923:0crwdne15923:0"
-
 msgid "Resale of this contract is not offered"
 msgstr "crwdns50814:0crwdne50814:0"
-
-msgid "Resale price"
-msgstr "crwdns20226:0crwdne20226:0"
 
 msgid "Reset zoom"
 msgstr "crwdns15926:0crwdne15926:0"
@@ -1805,9 +1406,6 @@ msgstr "crwdns15931:0crwdne15931:0"
 
 msgid "Rise"
 msgstr "crwdns15933:0crwdne15933:0"
-
-msgid "Rise/Fall trades"
-msgstr "crwdns20229:0crwdne20229:0"
 
 msgid "Robust and secure platform"
 msgstr "crwdns24292:0crwdne24292:0"
@@ -1845,17 +1443,8 @@ msgstr "crwdns15945:0crwdne15945:0"
 msgid "Saved"
 msgstr "crwdns33473:0crwdne33473:0"
 
-msgid "Second line of home address"
-msgstr "crwdns20233:0crwdne20233:0"
-
 msgid "Secondary"
 msgstr "crwdns15946:0crwdne15946:0"
-
-msgid "Security"
-msgstr "crwdns15947:0crwdne15947:0"
-
-msgid "Security question"
-msgstr "crwdns15948:0crwdne15948:0"
 
 msgid "Seems like our servers are down, we are working on fixing it."
 msgstr "crwdns50816:0crwdne50816:0"
@@ -1871,9 +1460,6 @@ msgstr "crwdns50818:0crwdne50818:0"
 
 msgid "Sell At Market"
 msgstr "crwdns15953:0crwdne15953:0"
-
-msgid "Sell option"
-msgstr "crwdns20234:0crwdne20234:0"
 
 msgid "Sent to account"
 msgstr "crwdns15958:0crwdne15958:0"
@@ -1902,23 +1488,14 @@ msgstr "crwdns15965:0crwdne15965:0"
 msgid "Share chart"
 msgstr "crwdns15966:0crwdne15966:0"
 
-msgid "Smart Indices"
-msgstr "crwdns43376:0crwdne43376:0"
-
 msgid "Sold"
 msgstr "crwdns15985:0crwdne15985:0"
 
 msgid "Some random index"
 msgstr "crwdns50822:0crwdne50822:0"
 
-msgid "Source of wealth"
-msgstr "crwdns33369:0crwdne33369:0"
-
 msgid "Spline"
 msgstr "crwdns15987:0crwdne15987:0"
-
-msgid "Spot price"
-msgstr "crwdns20245:0crwdne20245:0"
 
 msgid "Spreads"
 msgstr "crwdns15988:0crwdne15988:0"
@@ -1947,9 +1524,6 @@ msgstr "crwdns20251:0crwdne20251:0"
 msgid "Start time"
 msgstr "crwdns15993:0crwdne15993:0"
 
-msgid "State/province/region"
-msgstr "crwdns15994:0crwdne15994:0"
-
 msgid "Statement"
 msgstr "crwdns15995:0crwdne15995:0"
 
@@ -1962,17 +1536,8 @@ msgstr "crwdns15996:0crwdne15996:0"
 msgid "Stays Between/Goes Outside"
 msgstr "crwdns43378:0crwdne43378:0"
 
-msgid "Stays Between/Goes Outside trades"
-msgstr "crwdns20253:0crwdne20253:0"
-
 msgid "Stays in"
 msgstr "crwdns20254:0crwdne20254:0"
-
-msgid "Stocks trading experience"
-msgstr "crwdns15998:0crwdne15998:0"
-
-msgid "Stocks trading frequency"
-msgstr "crwdns15999:0crwdne15999:0"
 
 msgid "Stop-loss"
 msgstr "crwdns16002:0crwdne16002:0"
@@ -2010,21 +1575,6 @@ msgstr "crwdns16012:0crwdne16012:0"
 msgid "Table"
 msgstr "crwdns16015:0crwdne16015:0"
 
-msgid "Tax Information"
-msgstr "crwdns50828:0crwdne50828:0"
-
-msgid "Tax Information successfully updated"
-msgstr "crwdns50830:0crwdne50830:0"
-
-msgid "Tax identification number"
-msgstr "crwdns20270:0crwdne20270:0"
-
-msgid "Tax information"
-msgstr "crwdns20271:0crwdne20271:0"
-
-msgid "Tax residence"
-msgstr "crwdns20272:0crwdne20272:0"
-
 msgid "Tel"
 msgstr "crwdns16016:0crwdne16016:0"
 
@@ -2060,12 +1610,6 @@ msgstr "crwdns16021:0crwdne16021:0"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "crwdns20321:0crwdne20321:0"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr "crwdns20326:0crwdne20326:0"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "crwdns16022:0crwdne16022:0"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "crwdns50840:0crwdne50840:0"
@@ -2187,9 +1731,6 @@ msgstr "crwdns16054:0crwdne16054:0"
 msgid "Tourism"
 msgstr "crwdns16055:0crwdne16055:0"
 
-msgid "Town/City"
-msgstr "crwdns16056:0crwdne16056:0"
-
 msgid "Trade"
 msgstr "crwdns16057:0crwdne16057:0"
 
@@ -2210,12 +1751,6 @@ msgstr "crwdns41538:0crwdne41538:0"
 
 msgid "Trades Profitability"
 msgstr "crwdns41539:0crwdne41539:0"
-
-msgid "Trades break down"
-msgstr "crwdns41540:0crwdne41540:0"
-
-msgid "Trading Experience"
-msgstr "crwdns46361:0crwdne46361:0"
 
 msgid "Trading Times"
 msgstr "crwdns16060:0crwdne16060:0"
@@ -2244,9 +1779,6 @@ msgstr "crwdns16067:0crwdne16067:0"
 msgid "Turnover"
 msgstr "crwdns16068:0crwdne16068:0"
 
-msgid "Types of trades"
-msgstr "crwdns50866:0crwdne50866:0"
-
 msgid "USD"
 msgstr "crwdns16069:0crwdne16069:0"
 
@@ -2255,9 +1787,6 @@ msgstr "crwdns20387:0crwdne20387:0"
 
 msgid "Under"
 msgstr "crwdns20389:0crwdne20389:0"
-
-msgid "Underlying"
-msgstr "crwdns20390:0crwdne20390:0"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "crwdns16070:0crwdne16070:0"
@@ -2292,9 +1821,6 @@ msgstr "crwdns20399:0crwdne20399:0"
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr "crwdns43485:0crwdne43485:0"
 
-msgid "Verification code has been sent to your email"
-msgstr "crwdns16080:0crwdne16080:0"
-
 msgid "Verification code sent to"
 msgstr "crwdns50868:0crwdne50868:0"
 
@@ -2315,9 +1841,6 @@ msgstr "crwdns20402:0crwdne20402:0"
 
 msgid "Volatility Indicators"
 msgstr "crwdns20404:0crwdne20404:0"
-
-msgid "Volatility Indices"
-msgstr "crwdns20405:0crwdne20405:0"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "crwdns20408:0crwdne20408:0"
@@ -2340,23 +1863,11 @@ msgstr "crwdns16095:0crwdne16095:0"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "crwdns24300:0crwdne24300:0"
 
-msgid "What is pep?"
-msgstr "crwdns33370:0crwdne33370:0"
-
-msgid "What is this?"
-msgstr "crwdns46365:0crwdne46365:0"
-
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr "crwdns50870:0crwdne50870:0"
 
 msgid "While on the go, you can"
 msgstr "crwdns16096:0crwdne16096:0"
-
-msgid "Why choose Binary Trading?"
-msgstr "crwdns50872:0crwdne50872:0"
-
-msgid "Why trade with Binary.com"
-msgstr "crwdns43406:0crwdne43406:0"
 
 msgid "Withdraw funds"
 msgstr "crwdns16098:0crwdne16098:0"
@@ -2385,9 +1896,6 @@ msgstr "crwdns16103:0crwdne16103:0"
 msgid "Y-axis labels"
 msgstr "crwdns16104:0crwdne16104:0"
 
-msgid "Yearly Profitable Trades"
-msgstr "crwdns41541:0crwdne41541:0"
-
 msgid "Yes"
 msgstr "crwdns16105:0crwdne16105:0"
 
@@ -2406,9 +1914,6 @@ msgstr "crwdns16109:0crwdne16109:0"
 msgid "You pay"
 msgstr "crwdns16110:0crwdne16110:0"
 
-msgid "You should enter between 6-25 characters."
-msgstr "crwdns50878:0crwdne50878:0"
-
 msgid "You will be automatically logged out after such time"
 msgstr "crwdns16111:0crwdne16111:0"
 
@@ -2417,9 +1922,6 @@ msgstr "crwdns43486:0crwdne43486:0"
 
 msgid "You wish to copy another trader's trades"
 msgstr "crwdns43487:0crwdne43487:0"
-
-msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr "crwdns16112:0crwdne16112:0"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr "crwdns42941:0crwdne42941:0"
@@ -2438,9 +1940,6 @@ msgstr "crwdns50884:0crwdne50884:0"
 
 msgid "Your copying settings"
 msgstr "crwdns41542:0crwdne41542:0"
-
-msgid "Your email"
-msgstr "crwdns16117:0crwdne16117:0"
 
 msgid "Your new account balance is"
 msgstr "crwdns16118:0crwdne16118:0"
@@ -2463,14 +1962,8 @@ msgstr "crwdns50888:0crwdne50888:0"
 msgid "apostrophe (') are allowed"
 msgstr "crwdns20443:0crwdne20443:0"
 
-msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "crwdns16124:0crwdne16124:0"
-
 msgid "commission"
 msgstr "crwdns16126:0crwdne16126:0"
-
-msgid "contact support"
-msgstr "crwdns16127:0crwdne16127:0"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr "crwdns46370:0crwdne46370:0"
@@ -2510,9 +2003,6 @@ msgstr "crwdns16143:0crwdne16143:0"
 
 msgid "hours"
 msgstr "crwdns16144:0crwdne16144:0"
-
-msgid "if this is not your country of residence"
-msgstr "crwdns16147:0crwdne16147:0"
 
 msgid "in the future, the"
 msgstr "crwdns16148:0crwdne16148:0"
@@ -2585,9 +2075,6 @@ msgstr "crwdns16173:0crwdne16173:0"
 
 msgid "start time"
 msgstr "crwdns16174:0crwdne16174:0"
-
-msgid "terms and conditions"
-msgstr "crwdns16175:0crwdne16175:0"
 
 msgid "the"
 msgstr "crwdns16176:0crwdne16176:0"

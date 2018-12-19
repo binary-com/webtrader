@@ -1,0 +1,128 @@
+﻿$COLOR_WHITE: #ffffff;
+$COLOR_DARK_BLUE: #2a3052;
+
+.ui-dialog {
+	&.ui-corner-all.ui-widget.ui-widget-content.ui-front.webtrader-dialog-widget {
+		min-width: 225px !important;
+    }
+
+    &.statement .span-in-dialog-header,
+    &.profitTable .span-in-dialog-header {
+        position: absolute;
+        left: 225px;
+    }
+    &.tradingTimes .windows-dateInput,
+    &.statement .windows-dateInput,
+    &.profitTable .windows-dateInput {
+        width: initial;
+        position: absolute;
+        left: 320px;
+    }
+
+    &.tradingTimes .ui-datepicker-trigger,
+    &.statement .ui-datepicker-trigger,
+    &.profitTable .ui-datepicker-trigger {
+        left: 525px;
+        position: absolute;
+        border: none;
+        background: none;
+        box-shadow: none;
+        font-weight: normal;
+        color: $COLOR_WHITE;
+    }
+
+	.ui-dialog-titlebar {
+		height: 20px;
+		overflow: hidden;
+		direction: ltr;
+
+		&-restore, &-maximize, &-minimize {
+			margin-right: 6px;
+        }
+
+        .reload {
+            cursor: pointer;
+            padding-left: 7px;
+            padding-bottom: 2px;
+            height: 14px;
+        }
+
+        .ui-dialog-title {
+            cursor: default;
+            width: fit-content;
+        }
+        
+		.ui-dialog-titlebar-buttonpane {
+			position: initial !important;
+			min-width: 71px !important;
+			margin-left: auto;
+			background: $COLOR_DARK_BLUE;
+			top: 0 !important;
+			margin-top: 0 !important;
+			padding-top: 5px;
+			height: 22px !important;
+
+			.ui-icon {
+				&.custom-icon-maximize {
+					cursor: pointer;
+					background-image: url(../images/maximize.svg) !important;
+					position: relative;
+				}
+				&.custom-icon-minimize {
+					cursor: pointer;
+					background-image: url(../images/minimize.svg) !important;
+					position: relative;
+				}
+				&.custom-icon-restore {
+					cursor: pointer;
+					background-image: url(../images/new-windows.svg) !important;
+					position: relative;
+					background-repeat: no-repeat;
+					background-size: contain;
+					color: $COLOR_WHITE;
+				}
+				&.custom-icon-close {
+					cursor: pointer;
+					background-image: url(../images/close.svg) !important;
+					top: 9px;
+				}
+            }
+            
+            .ui-dialog-titlebar-close {
+                top: 1px;
+                background: transparent;
+                border: none;
+                margin-left: -14px !important;
+                margin-right: -10px !important;
+            }
+        }
+        
+        .ui-selectmenu-button {
+            padding: 0;
+            height: 28px;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+
+        .title {
+            margin-top: .1em;
+            float: left;
+        }
+    }
+    
+    .webtrader-dialog {
+        img.disabled {
+            opacity: 0.5;
+        }
+
+        .date-day {
+            max-height: 320px;
+        }
+
+        .hide-search-input {
+            .dataTables_filter {
+                display: none;
+            }
+        }
+    }
+}

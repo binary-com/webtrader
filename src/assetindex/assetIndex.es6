@@ -1,204 +1,235 @@
-﻿/**
- * Created by amin on October 19, 2015.
- */
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
-import menu from "../navigation/menu";
-import _ from "lodash";
-import "datatables";
-import "jquery-growl";
+import rv from 'common/rivetsExtra';
+import 'jquery-growl';
 import 'css!./assetIndex.css';
 
-let table = null;
-let assetWin = null;
-let market_names = null;
-let submarket_names = null;
-let assets = [];
-let markets = {};
+let table_el = null;
+let asset_win_el = null;
+let header_el = null;
+let dialog_buttons_el = null;
 
 export const init = (li) => {
     li.click(() => {
-        if (!assetWin) {
-            assetWin = windows.createBlankWindow($('<div/>'), {
+        if (!asset_win_el) {
+            asset_win_el = windows.createBlankWindow($('<div/>'), {
                 title: 'Asset Index'.i18n(),
                 dialogClass: 'assetIndex',
                 minWidth: 800,
                 minHeight: 400,
             });
-            assetWin.track({
+            asset_win_el.track({
                 module_id: 'assetIndex',
                 is_unique: true,
                 data: null
             });
-            assetWin.dialog('open'); /* bring window to front */
+            asset_win_el.dialog('open');
             require(['text!assetindex/assetIndex.html'], initAssetWin);
         } else
-            assetWin.moveToTop();
+            asset_win_el.moveToTop();
     });
 }
 
-const processMarketSubmarkets = (markets) => {
-    markets = menu.extractFilteredMarkets(markets);
+const state = {
+    dropdown: {
+        display_markets: null,
+        display_submarkets: null,
+        is_volatility: false,
+        market_submarkets: null,
+        selected_market: null
+    },
+    table: {
+        asset_data: [],
+        asset_data_extract: [],
+        display_headers: [],
+        display_asset_data: [],
+        search_input: ''
+    },
+    search: function (event) {
+        function isTableRowSearchValue(asset) {
+            const value = state.table.search_input.toLowerCase();
+            return asset[0].toLowerCase().indexOf(value.toLowerCase()) !== -1;
+        }
 
-    const ret = {};
-    markets
-      .filter(eMarket => {
-        const loginId = (local_storage.get('authorize') || {}).loginid || '';
-        return (/MF/gi.test(loginId) && eMarket.name !== 'Volatility Indices')
-        || (/MLT/gi.test(loginId) && eMarket.name === 'Volatility Indices')
-        || (/MX/gi.test(loginId) && eMarket.name === 'Volatility Indices')
-        || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
-      })
-      .forEach((market) => {
-        const smarkets = ret[market.display_name] = {};
-        market.submarkets.forEach((smarket) => {
-            smarkets[smarket.display_name] = smarket.instruments.map((symbol) => {
-                return symbol.display_name; });
-        });
-    });
-    return ret;
-}
-
-const refreshTable = () => {
-    const updateTable = (market_name, submarket_name) => {
-        const symbols = markets[market_name][submarket_name];
-        const rows = assets
-            .filter((asset) => {
-                return symbols.indexOf(asset[1] /* asset.name */ ) > -1;
-            })
-            .map((asset) => {
-                /* secham:
-                    [ "frxAUDJPY","AUD/JPY",
-                      [
-                        ["callput","callput","5t","365d"],
-                        ["touchnotouch","Touch/No Touch","1h","1h"],
-                        ["endsinout","endsinout","1d","1d"],
-                        ["staysinout","staysinout","1d","1d"]
-                      ]
-                    ]
-                    asset[0] = frxAUDJPY
-                    asset[1] = AUD/JPY
-                    asset[2] = ["callput","callput","5t","365d"]
-                      prop[0] = callput
-                      prop[1] = callput
-                      prop[2] = 5t
-                      prop[3] = 365d
-                */
-                const props = [];
-                const getRowValue = (key) => {
-                  const prop = _.chain(asset[2]).find(f => _.first(f) === key).value() || [];
-                  return `${_.trim(prop[2])} - ${_.trim(prop[3])}`;
-                };
-                props.push(asset[1]);
-                props.push(getRowValue('lookback'));
-                props.push(getRowValue('callput'));
-                props.push(getRowValue('touchnotouch'));
-                props.push(getRowValue('endsinout'));
-                props.push(getRowValue('staysinout'));
-                props.push(getRowValue('digits'));
-                props.push(getRowValue('asian'));
-
-                return props;
-            });
-        table.api().rows().remove();
-        table.api().rows.add(rows);
-        // Show/Hide Lookback, Digits & Asians col based on market = Volatility Indices
-        const show = market_name.indexOf('Volatility Indices') !== -1;
-        table.api().column(1).visible(show);
-        table.api().column(6).visible(show);
-        table.api().column(7).visible(show);
-        table.api().draw();
+        return (function updateDisplayTable() {
+            state.table.display_asset_data = [];
+            state.table.display_asset_data = state.table.asset_data_extract.filter(isTableRowSearchValue);
+            state.dropdown.is_volatility = checkVolatility(state.dropdown.selected_market, state.dropdown.display_markets);
+        })();
     }
+}
 
-    const processing_msg = $('#' + table.attr('id') + '_processing').show();
-    Promise.all(
-            [
-                liveapi.cached.send({ trading_times: new Date().toISOString().slice(0, 10) }),
-                liveapi.cached.send({ asset_index: 1 }),
-            ])
-        .then((results) => {
-            try {
-              assets = results[1].asset_index;
-              markets = processMarketSubmarkets(results[0]);
-                const header = assetWin.parent().find('.ui-dialog-title').addClass('with-content');
-                const dialog_buttons = assetWin.parent().find('.ui-dialog-titlebar-buttonpane');
+const checkVolatility = (market_name, market_names) => {
+    const volatility_indices = market_names[0][2] ? market_names[0][2].innerText : market_names[0][0].innerText;
+    const is_volatility = market_name.indexOf(volatility_indices) !== -1;
 
-                if (!market_names) {
-                  market_names = windows
-                      .makeSelectmenu($('<select />').insertBefore(dialog_buttons), {
-                          list: Object.keys(markets), //Keys are the display_name
-                          inx: 0, //Index to select the item in drop down
-                          changed: (val) => {
-                              const list = Object.keys(markets[val]); /* get list of sub_markets */
-                              submarket_names.update_list(list);
-                              updateTable(market_names.val(), submarket_names.val());
-                          },
-                          width: '180px'
-                      });
-                  market_names.selectmenu('widget').addClass('asset-index-selectmenu');
-                } else {
-                  market_names.update_list(Object.keys(markets));
-                }
+    return is_volatility;
+}
 
-                const is_rtl_language = local_storage.get('i18n') && local_storage.get('i18n').value === 'ar';
-                if (!submarket_names) {
-                  submarket_names = windows
-                    .makeSelectmenu($('<select />').insertBefore(is_rtl_language ? market_names : dialog_buttons), {
-                        list: Object.keys(markets[market_names.val()]),
-                        inx: 0,
-                        changed: (val) => {
-                            updateTable(market_names.val(), submarket_names.val());
-                        },
-                        width: '200px'
-                    });
-                  submarket_names.selectmenu('widget').addClass('asset-index-selectmenu');
-                } else {
-                  submarket_names.update_list(Object.keys(markets[market_names.val()]));
-                }
+const getMarketsSubmarkets = (active_symbols) => {
+    const select_market_submarket = active_symbols.reduce((market_result, market) => {
+        const { market_display_name, submarket_display_name, display_name } = market;
 
-                updateTable(market_names.val(), submarket_names.val());
-                processing_msg.hide();
-            } catch (err) { console.error(err) }
+        market_result[market_display_name] = market_result[market_display_name] || {};
+        market_result[market_display_name][submarket_display_name] = market_result[market_display_name][submarket_display_name] || [];
+        market_result[market_display_name][submarket_display_name].push(display_name);
+
+        return market_result;
+    }, {})
+
+    return select_market_submarket
+}
+
+const initTable = () => {
+    getActiveSymAndAssetsData()
+        .then((result) => {
+            populateTable(result);
         })
         .catch((error) => {
             $.growl.error({ message: error.message });
             console.error(error);
         });
+
+    function populateTable(result) {
+        const active_symbols_data = Object.assign(result[0].active_symbols);
+        const asset_index_data = [...result[1].asset_index];
+
+        state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
+        state.table.asset_data = asset_index_data;
+
+        header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
+        dialog_buttons_el = asset_win_el.parent().find('.ui-dialog-titlebar-buttonpane');
+
+        marketsDropdown(state.dropdown.market_submarkets);
+        submarketsDropdown(state.dropdown.market_submarkets);
+        updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
+
+        function updateTable(market_name, submarket_name) {
+            const symbols = [...state.dropdown.market_submarkets[market_name][submarket_name]];
+            state.dropdown.selected_market = market_name;
+            state.dropdown.is_volatility = checkVolatility(market_name, state.dropdown.display_markets);
+            let rows = state.table.asset_data
+                .filter((asset) => symbols.indexOf(asset[1]) > -1) // asset[1] is symbol
+                .map((asset) => {
+                    const props = [];
+                    const symbol = asset[1];
+                    const asset_data = asset[2];
+                    state.table.display_headers = [];
+                    props.push(symbol);
+                    asset_data.forEach(asset_list => {
+                        const asset_type = asset_list[1];
+                        const asset_from = asset_list[2];
+                        const asset_to = asset_list[3];
+                        state.table.display_headers.push(asset_type);
+                        props.push([asset_type, `${asset_from} - ${asset_to}`]);
+                    });
+
+                    return props;
+                });
+            rows = assignAssetRows(rows);
+            rows = fillFalseRows(rows);
+
+            state.table.display_asset_data = rows;
+            state.table.asset_data_extract = rows;
+
+            function assignAssetRows(rows) {
+                rows.forEach((assets) => {
+                    assets.forEach(asset => {
+                        if (Array.isArray(asset)) {
+                            const asset_type = asset[0];
+                            const asset_from_to = asset[1];
+                            const indexhead = state.table.display_headers.indexOf(asset_type) + 1;
+                            assets[indexhead] = asset_from_to;
+                        }
+                    });
+                });
+
+                return rows;
+            }
+
+            function fillFalseRows(rows) {
+                const header_length = state.table.display_headers.length;
+
+                for (let i = 0; i <= header_length; i++) {
+                    rows.forEach(row => {
+                        if (!row[i] || Array.isArray[row[i]]) {
+                            row[i] = '-';
+                        }
+                    });
+                }
+
+                return rows;
+            }
+        }
+
+        function marketsDropdown(market_submarkets) {
+            if (!state.dropdown.display_markets) {
+                state.dropdown.display_markets = windows
+                    .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
+                        list: Object.keys(market_submarkets),
+                        inx: 0,
+                        changed: (val) => {
+                            const submarket_list = Object.keys(market_submarkets[val]);
+                            state.dropdown.display_submarkets.update_list(submarket_list);
+                            updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
+                        },
+                        width: '180px'
+                    });
+                state.dropdown.display_markets.selectmenu('widget').addClass('asset-index-selectmenu');
+            } else {
+                state.dropdown.display_markets.update_list(Object.keys(market_submarkets));
+            }
+        }
+
+        function submarketsDropdown(market_submarkets) {
+            if (!state.dropdown.display_submarkets) {
+                state.dropdown.display_submarkets = windows
+                    .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
+                        list: Object.keys(market_submarkets[state.dropdown.display_markets.val()]),
+                        inx: 0,
+                        changed: (val) => {
+                            updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
+                        },
+                        width: '200px'
+                    });
+                state.dropdown.display_submarkets.selectmenu('widget').addClass('asset-index-selectmenu');
+            } else {
+                state.dropdown.display_submarkets.update_list(Object.keys(market_submarkets[state.dropdown.display_markets.val()]));
+            }
+        }
+    }
+
+    function getActiveSymAndAssetsData() {
+        const processing_msg = $(`#${table_el.attr('id')}_processing`).show();
+        const active_symbols_request = { active_symbols: 'brief' };
+        const asset_index_request = { asset_index: 1 };
+
+        return Promise.all(
+            [
+                liveapi.cached.send(active_symbols_request),
+                liveapi.cached.send(asset_index_request),
+            ])
+            .then((results) => {
+                processing_msg.hide();
+                return Promise.resolve(results);
+            })
+            .catch((error) => {
+                processing_msg.hide();
+                return Promise.reject(error);
+            });
+    };
 }
 
 const initAssetWin = ($html) => {
     $html = $($html).i18n();
-    table = $html.filter('table');
-    $html.appendTo(assetWin);
-
-    table = table.dataTable({
-        data: [],
-        "columnDefs": [
-            { className: "dt-body-center dt-header-center", "targets": [0, 1, 2, 3, 4, 5, 6, 7] },
-            { "defaultContent": "-", "targets": [0, 1, 2, 3, 4, 5, 6, 7] }
-        ],
-        paging: false,
-        bAutoWidth: false,
-        ordering: false,
-        searching: true,
-        processing: true
-    });
-    table.parent().addClass('hide-search-input');
-
-    // Apply the a search on each column input change
-    table.api().column(0).every(function() {
-        const column = this;
-        $('input', this.header()).on('keyup change', function() {
-            if (column.search() !== this.value)
-                column.search(this.value).draw();
-        });
-    });
-
-    refreshTable();
+    table_el = $html.filter('table');
+    $html.appendTo(asset_win_el);
+    rv.bind($html[0], state);
+    initTable();
     require(['websockets/binary_websockets'], (liveapi) => {
-      liveapi.events.on('login', refreshTable);
-      liveapi.events.on('logout', refreshTable);
+      liveapi.events.on('login', initTable);
+      liveapi.events.on('logout', initTable);
    });
 }
 

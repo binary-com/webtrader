@@ -175,9 +175,6 @@ msgstr "Accept"
 msgid "Accessible from any web browser in 13 languages"
 msgstr ""
 
-msgid "Account authentication"
-msgstr ""
-
 msgid "Account balance"
 msgstr "Account balance"
 
@@ -185,12 +182,6 @@ msgid "Account balance:"
 msgstr ""
 
 msgid "Account id not found."
-msgstr ""
-
-msgid "Account opening"
-msgstr "Account opening"
-
-msgid "Account opening reason"
 msgstr ""
 
 msgid "Account token not found."
@@ -224,9 +215,6 @@ msgstr "Add/remove indicators"
 msgid "Added new workspace %"
 msgstr ""
 
-msgid "Address"
-msgstr ""
-
 msgid "Admin"
 msgstr "Admin"
 
@@ -235,9 +223,6 @@ msgstr ""
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "All times are in GMT (Greenwich Mean Time)"
-
-msgid "Allow others to copy your trades"
-msgstr ""
 
 msgid "Amount"
 msgstr "Amount"
@@ -248,20 +233,11 @@ msgstr ""
 msgid "Amount per point"
 msgstr "Amount per point"
 
-msgid "Answer"
-msgstr "Answer"
-
-msgid "Anticipated account turnover"
-msgstr ""
-
 msgid "Apply"
 msgstr "Apply"
 
 msgid "Apply to become a Binary.com"
 msgstr "Apply to become a Binary.com"
-
-msgid "Appropriateness Test: WARNING"
-msgstr "Apropriateness Test: WARNING"
 
 msgid "Apr"
 msgstr "Apr"
@@ -305,15 +281,6 @@ msgstr "Aug"
 msgid "August"
 msgstr "August"
 
-msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr ""
-
-msgid "Available Currencies"
-msgstr ""
-
-msgid "Avg. Duration"
-msgstr ""
-
 msgid "Avg. Duration of Open Positions"
 msgstr ""
 
@@ -336,18 +303,6 @@ msgid "Barrier offset"
 msgstr "Barrier offset"
 
 msgid "Bill Williams"
-msgstr ""
-
-msgid "Binary options or other financial derivatives trading experience"
-msgstr ""
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr ""
-
-msgid "Binary options trading experience"
-msgstr ""
-
-msgid "Binary options trading frequency"
 msgstr ""
 
 msgid "Binary.com"
@@ -377,20 +332,8 @@ msgstr "Buy Price"
 msgid "Buy price"
 msgstr "Buy price"
 
-msgid "By clicking"
-msgstr "By clicking"
-
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "By clicking OK, you confirm that you have read and accepted the updated"
-
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr ""
-
-msgid "CFD trading experience"
-msgstr ""
-
-msgid "CFD trading frequency"
-msgstr ""
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr ""
@@ -446,9 +389,6 @@ msgstr "Chart template"
 msgid "Chart type"
 msgstr "Chart type"
 
-msgid "Choose password"
-msgstr "Choose password"
-
 msgid "Choose your pereferred payment agent"
 msgstr "Choose your preferred payment agent"
 
@@ -457,9 +397,6 @@ msgstr "Choose your preferred withdrawal method"
 
 msgid "Chrome"
 msgstr "Chrome"
-
-msgid "Citizenship"
-msgstr ""
 
 msgid "Click to log in with your Binary.com account"
 msgstr "Click to log in with your Binary.com account"
@@ -472,12 +409,6 @@ msgstr ""
 
 msgid "Closes"
 msgstr "Closes"
-
-msgid "Commodities trading experience"
-msgstr "Commodities trading experience"
-
-msgid "Commodities trading frequency"
-msgstr "Commodities trading frequency"
 
 msgid "Comparisons"
 msgstr "Comparisons"
@@ -500,9 +431,6 @@ msgstr "Construction"
 msgid "Contact Us"
 msgstr ""
 
-msgid "Continue"
-msgstr "Continue"
-
 msgid "Continue Trading"
 msgstr "Continue Trading"
 
@@ -521,14 +449,8 @@ msgstr "Contracts"
 msgid "Copier"
 msgstr ""
 
-msgid "Copy Trade"
-msgstr ""
-
 msgid "Copy Trading"
 msgstr ""
-
-msgid "Country of residence"
-msgstr "Country of residence"
 
 msgid "Create"
 msgstr "Create"
@@ -590,9 +512,6 @@ msgstr "Dark Unica"
 msgid "Date"
 msgstr "Date"
 
-msgid "Date of birth"
-msgstr "Date of birth"
-
 msgid "Days"
 msgstr "Days"
 
@@ -601,9 +520,6 @@ msgstr "Dec"
 
 msgid "December"
 msgstr "December"
-
-msgid "Decline"
-msgstr "Decline"
 
 msgid "Default"
 msgstr "Default"
@@ -696,9 +612,6 @@ msgstr ""
 msgid "Drawing tools"
 msgstr "Drawing tools"
 
-msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr ""
-
 msgid "Duration"
 msgstr "Duration"
 
@@ -711,14 +624,8 @@ msgstr "Edge"
 msgid "Education"
 msgstr "Education"
 
-msgid "Email verification failed"
-msgstr "Email verification failed"
-
 msgid "Embed code"
 msgstr "Embed code"
-
-msgid "Employment status"
-msgstr ""
 
 msgid "End Time"
 msgstr "End Time"
@@ -752,9 +659,6 @@ msgstr "Entry spot"
 
 msgid "Error getting data for %1"
 msgstr ""
-
-msgid "Estimated Net Worth"
-msgstr "Estimated Net Worth"
 
 msgid "Even"
 msgstr ""
@@ -792,9 +696,6 @@ msgstr "Failed to update the password"
 msgid "Fall"
 msgstr "Fall"
 
-msgid "Family name"
-msgstr "Family name"
-
 msgid "Favorites"
 msgstr "Favorites"
 
@@ -822,33 +723,8 @@ msgstr "Final price"
 msgid "Finance"
 msgstr "Finance"
 
-#, fuzzy
-msgid "Financial Account Opening form"
-msgstr "Financial Account Opening form"
-
-msgid "Financial Assessment"
-msgstr ""
-
-msgid "Financial Information"
-msgstr ""
-
-msgid "Financial information"
-msgstr "Financial information"
-
 msgid "Firefox"
 msgstr "Firefox"
-
-msgid "First line of home address"
-msgstr ""
-
-msgid "First name"
-msgstr "First name"
-
-msgid "Forex trading experience"
-msgstr "Forex trading experience"
-
-msgid "Forex trading frequency"
-msgstr "Forex trading frequency"
 
 msgid "Fri"
 msgstr "Fri"
@@ -916,18 +792,6 @@ msgstr ""
 msgid "Hours"
 msgstr "Hours"
 
-msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr ""
-
-msgid "I have read and agree to Binary.com"
-msgstr "I have read and agree to Binary.com"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr ""
-
-msgid "I want to be treated as a professional client"
-msgstr ""
-
 msgid "IMPORTANT DISCLAIMER"
 msgstr "IMPORTANT DISCLAIMER"
 
@@ -943,9 +807,6 @@ msgstr "If you select a specific"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 
-msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
 msgstr ""
 
@@ -958,9 +819,6 @@ msgstr ""
 msgid "In/Out"
 msgstr "In/Out"
 
-msgid "Income Source"
-msgstr "Income Source"
-
 msgid "Indicative"
 msgstr "Indicative"
 
@@ -969,15 +827,6 @@ msgstr "Indicative Price"
 
 msgid "Indicators"
 msgstr "Indicators"
-
-msgid "Indices trading experience"
-msgstr "Indices trading experience"
-
-msgid "Indices trading frequency"
-msgstr "Indices trading frequency"
-
-msgid "Industry of Employment"
-msgstr "Industry of Employment"
 
 msgid "Instruments"
 msgstr "Instruments"
@@ -1021,9 +870,6 @@ msgstr "Jun"
 msgid "June"
 msgstr "June"
 
-msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "Just click  Grant  button on the page you will now be taken to"
-
 msgid "Last 12 mnts Profitable Trades"
 msgstr ""
 
@@ -1041,12 +887,6 @@ msgstr "Last used"
 
 msgid "Less than"
 msgstr "Less than"
-
-msgid "Let's do it"
-msgstr "Let's do it"
-
-msgid "Level of Education"
-msgstr "Level of Education"
 
 msgid "Line"
 msgstr "Line"
@@ -1078,16 +918,10 @@ msgstr ""
 msgid "Loading Download/View Data ..."
 msgstr ""
 
-msgid "Loading MAM..."
-msgstr ""
-
 msgid "Loading Password dialog ..."
 msgstr ""
 
 msgid "Loading Profit Table ..."
-msgstr ""
-
-msgid "Loading Real account opening ..."
 msgstr ""
 
 msgid "Loading Self-Exclusion ..."
@@ -1137,9 +971,6 @@ msgstr ""
 
 msgid "Low"
 msgstr ""
-
-msgid "Low Barrier"
-msgstr "Low Barrier"
 
 msgid "Low barrier"
 msgstr ""
@@ -1213,15 +1044,6 @@ msgstr ""
 msgid "Min: 10 Max: 2000"
 msgstr "Min: 10 Max: 2000"
 
-msgid "Minimum of 2 characters required"
-msgstr ""
-
-msgid "Minimum of 4 characters required"
-msgstr ""
-
-msgid "Minimum of 6 characters required"
-msgstr ""
-
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr ""
 
@@ -1245,9 +1067,6 @@ msgstr "Mon"
 
 msgid "Monday"
 msgstr "Monday"
-
-msgid "Monthly Profitable Trades"
-msgstr ""
 
 msgid "Mother's maiden name"
 msgstr "Mother's maiden name"
@@ -1291,14 +1110,8 @@ msgstr "Navigator series color"
 msgid "Navigator series line"
 msgstr "Navigator series line"
 
-msgid "Net Annual Income"
-msgstr "Net Annual Income"
-
 msgid "Net Profit"
 msgstr "Net Profit"
-
-msgid "New Account"
-msgstr ""
 
 msgid "New password"
 msgstr "New password"
@@ -1310,9 +1123,6 @@ msgid "No touch"
 msgstr ""
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
-
-msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
 msgstr ""
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
@@ -1333,9 +1143,6 @@ msgstr "OHLC"
 msgid "OK"
 msgstr ""
 
-msgid "Occupation"
-msgstr ""
-
 msgid "Oct"
 msgstr "Oct"
 
@@ -1348,50 +1155,20 @@ msgstr ""
 msgid "Ok"
 msgstr "Ok"
 
-msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Once this limit is reached, you may no longer deposit"
 
-msgid "One last step left"
-msgstr "One last step left"
-
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
-
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr ""
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr ""
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
 msgstr ""
 
 msgid "Only letters, numbers, space, period, comma, dash(-)"
 msgstr ""
 
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr ""
-
-msgid "Only numbers and space are allowed"
-msgstr ""
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr ""
-
 msgid "Open"
 msgstr "Open"
 
-msgid "Open Account"
-msgstr "Open Account"
-
 msgid "Open a Financial Account"
 msgstr "Open a Financial Account"
-
-msgid "Open account"
-msgstr "Open account"
 
 msgid "Opens"
 msgstr "Opens"
@@ -1405,12 +1182,6 @@ msgstr "Option trading can become a real addiction, as can any other activity pu
 msgid "Other"
 msgstr "Other"
 
-msgid "Other financial instruments trading experience"
-msgstr "Other financial instruments trading experience"
-
-msgid "Other financial instruments trading frequency"
-msgstr "Other financial instruments trading frequency"
-
 msgid "Over"
 msgstr "Over"
 
@@ -1420,17 +1191,8 @@ msgstr "Over 3 years"
 msgid "Overlap Studies"
 msgstr ""
 
-msgid "PEP Declaration"
-msgstr ""
-
 msgid "PM"
 msgstr ""
-
-msgid "Password must be 6 characters minimum"
-msgstr "Password must be 6 characters minimum"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "Password must contain lower and uppercase letters with numbers"
 
 msgid "Password successfully updated."
 msgstr ""
@@ -1462,18 +1224,6 @@ msgstr ""
 msgid "Permissions"
 msgstr "Permissions"
 
-msgid "Personal Details"
-msgstr "Personal Details"
-
-msgid "Phone"
-msgstr "Phone"
-
-msgid "Place of birth"
-msgstr ""
-
-msgid "Please"
-msgstr "Please"
-
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
 msgstr ""
 
@@ -1483,9 +1233,6 @@ msgstr ""
 msgid "Please choose at least one token scope"
 msgstr "Please choose at least one token scope"
 
-msgid "Please choose which currency you would like to transact in"
-msgstr "Please choose which currency you would like to transact in"
-
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr ""
 
@@ -1494,9 +1241,6 @@ msgstr "Please confirm the following details in order to complete the transfer"
 
 msgid "Please enter a number between"
 msgstr "Please enter a number between"
-
-msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "Please enter a valid date in yyyy-mm-dd format"
 
 msgid "Please enter a valid value for"
 msgstr ""
@@ -1510,9 +1254,6 @@ msgstr ""
 msgid "Please enter a value less than 6 weeks for time out until."
 msgstr ""
 
-msgid "Please enter correct email"
-msgstr "Please enter correct email"
-
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Please enter date in the format YYYY-MM-DD"
 
@@ -1524,9 +1265,6 @@ msgstr ""
 
 msgid "Please enter your current password"
 msgstr "Please enter your current password"
-
-msgid "Please enter your email"
-msgstr "Please enter your email"
 
 msgid "Please input correct token"
 msgstr ""
@@ -1543,34 +1281,16 @@ msgstr ""
 msgid "Please log in."
 msgstr ""
 
-msgid "Please provide your tax information"
-msgstr ""
-
-msgid "Please select"
-msgstr "Please select"
-
 msgid "Please select a date for time out until."
 msgstr ""
 
 msgid "Please select a payment agent"
 msgstr ""
 
-msgid "Please select an account opening reason before continuing"
-msgstr ""
-
-msgid "Please set currency."
-msgstr ""
-
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr ""
 
-msgid "Please submit a valid verification token"
-msgstr ""
-
 msgid "Please try again after 1 minute."
-msgstr ""
-
-msgid "Please try again after few minutes."
 msgstr ""
 
 msgid "Please use your new password to login."
@@ -1587,9 +1307,6 @@ msgstr "Points"
 
 msgid "Portfolio"
 msgstr "Portfolio"
-
-msgid "Postal code/ZIP"
-msgstr "Postal code/ZIP"
 
 msgid "Potential Payout"
 msgstr "Potential Payout"
@@ -1619,9 +1336,6 @@ msgstr "Primary"
 msgid "Print chart"
 msgstr "Print chart"
 
-msgid "Professional Client"
-msgstr ""
-
 msgid "Profit"
 msgstr "Profit"
 
@@ -1633,12 +1347,6 @@ msgstr "Profit table"
 
 msgid "Profit/ Loss"
 msgstr "Profit/ Loss"
-
-msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr ""
-
-msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr ""
 
 msgid "Purchase"
 msgstr "Purchase"
@@ -1654,10 +1362,6 @@ msgstr "Purchase Time"
 
 msgid "Read"
 msgstr "Read"
-
-#, fuzzy
-msgid "Real Money Account Opening"
-msgstr "Real Money Account Opening"
 
 msgid "Reality check"
 msgstr "Reality check"
@@ -1677,9 +1381,6 @@ msgstr ""
 msgid "Register free account"
 msgstr "Register free account"
 
-msgid "Registration"
-msgstr "Registration"
-
 msgid "Remove"
 msgstr ""
 
@@ -1688,9 +1389,6 @@ msgstr "Remove Selected"
 
 msgid "Rename"
 msgstr "Rename"
-
-msgid "Repeat password"
-msgstr "Repeat password"
 
 msgid "Resale of this contract is not offered"
 msgstr "Resale of this contract is not offered"
@@ -1749,17 +1447,8 @@ msgstr "Save changes"
 msgid "Saved"
 msgstr ""
 
-msgid "Second line of home address"
-msgstr ""
-
 msgid "Secondary"
 msgstr "Secondary"
-
-msgid "Security"
-msgstr "Security"
-
-msgid "Security question"
-msgstr "Security question"
 
 msgid "Seems like our servers are down, we are working on fixing it."
 msgstr ""
@@ -1809,9 +1498,6 @@ msgstr "Sold"
 msgid "Some random index"
 msgstr "Some random index"
 
-msgid "Source of wealth"
-msgstr ""
-
 msgid "Spline"
 msgstr "Spline"
 
@@ -1842,9 +1528,6 @@ msgstr ""
 msgid "Start time"
 msgstr "Start time"
 
-msgid "State/province/region"
-msgstr "State/province/region"
-
 msgid "Statement"
 msgstr "Statement"
 
@@ -1859,12 +1542,6 @@ msgstr ""
 
 msgid "Stays in"
 msgstr ""
-
-msgid "Stocks trading experience"
-msgstr "Stocks trading experience"
-
-msgid "Stocks trading frequency"
-msgstr "Stocks trading frequency"
 
 msgid "Stop-loss"
 msgstr "Stop-loss"
@@ -1902,21 +1579,6 @@ msgstr "Sunday"
 msgid "Table"
 msgstr "Table"
 
-msgid "Tax Information"
-msgstr ""
-
-msgid "Tax Information successfully updated"
-msgstr ""
-
-msgid "Tax identification number"
-msgstr ""
-
-msgid "Tax information"
-msgstr ""
-
-msgid "Tax residence"
-msgstr ""
-
 msgid "Tel"
 msgstr "Tel"
 
@@ -1952,12 +1614,6 @@ msgstr "The"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr ""
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr ""
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr ""
@@ -2079,9 +1735,6 @@ msgstr "Touch/No Touch"
 msgid "Tourism"
 msgstr "Tourism"
 
-msgid "Town/City"
-msgstr "Town/City"
-
 msgid "Trade"
 msgstr "Trade"
 
@@ -2101,12 +1754,6 @@ msgid "Trader's Statistics"
 msgstr ""
 
 msgid "Trades Profitability"
-msgstr ""
-
-msgid "Trades break down"
-msgstr ""
-
-msgid "Trading Experience"
 msgstr ""
 
 msgid "Trading Times"
@@ -2179,9 +1826,6 @@ msgstr ""
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr ""
 
-msgid "Verification code has been sent to your email"
-msgstr "Verification code has been sent to your email"
-
 msgid "Verification code sent to"
 msgstr "Verification code sent to"
 
@@ -2224,12 +1868,6 @@ msgstr "Wednesday"
 msgid "Welcome to Binary.com Webtrader"
 msgstr ""
 
-msgid "What is pep?"
-msgstr ""
-
-msgid "What is this?"
-msgstr ""
-
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr ""
 
@@ -2263,9 +1901,6 @@ msgstr "Y-axis gridline"
 msgid "Y-axis labels"
 msgstr "Y-axis labels"
 
-msgid "Yearly Profitable Trades"
-msgstr ""
-
 msgid "Yes"
 msgstr "Yes"
 
@@ -2284,9 +1919,6 @@ msgstr "You haven't saved any templates yet"
 msgid "You pay"
 msgstr "You pay"
 
-msgid "You should enter between 6-25 characters."
-msgstr ""
-
 msgid "You will be automatically logged out after such time"
 msgstr "You will be automatically logged out after such time"
 
@@ -2295,9 +1927,6 @@ msgstr ""
 
 msgid "You wish to copy another trader's trades"
 msgstr ""
-
-msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr ""
@@ -2316,9 +1945,6 @@ msgstr "Your changes have been updated"
 
 msgid "Your copying settings"
 msgstr ""
-
-msgid "Your email"
-msgstr "Your email"
 
 msgid "Your new account balance is"
 msgstr "Your new account balance is"
@@ -2341,14 +1967,8 @@ msgstr "and"
 msgid "apostrophe (') are allowed"
 msgstr ""
 
-msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-
 msgid "commission"
 msgstr "commission"
-
-msgid "contact support"
-msgstr "contact support"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr ""
@@ -2388,9 +2008,6 @@ msgstr "hour"
 
 msgid "hours"
 msgstr "hours"
-
-msgid "if this is not your country of residence"
-msgstr "if this is not your country of residence"
 
 msgid "in the future, the"
 msgstr "in the future, the"
@@ -2464,9 +2081,6 @@ msgstr "session overview"
 msgid "start time"
 msgstr "start time"
 
-msgid "terms and conditions"
-msgstr "terms and conditions"
-
 msgid "the"
 msgstr "the"
 
@@ -2490,6 +2104,200 @@ msgstr "{agent.commission}%"
 
 msgid "| Return"
 msgstr "| Return"
+
+#~ msgid "Account opening"
+#~ msgstr "Account opening"
+
+#~ msgid "Answer"
+#~ msgstr "Answer"
+
+#~ msgid "Appropriateness Test: WARNING"
+#~ msgstr "Apropriateness Test: WARNING"
+
+#~ msgid "By clicking"
+#~ msgstr "By clicking"
+
+#~ msgid "Choose password"
+#~ msgstr "Choose password"
+
+#~ msgid "Commodities trading experience"
+#~ msgstr "Commodities trading experience"
+
+#~ msgid "Commodities trading frequency"
+#~ msgstr "Commodities trading frequency"
+
+#~ msgid "Continue"
+#~ msgstr "Continue"
+
+#~ msgid "Country of residence"
+#~ msgstr "Country of residence"
+
+#~ msgid "Date of birth"
+#~ msgstr "Date of birth"
+
+#~ msgid "Decline"
+#~ msgstr "Decline"
+
+#~ msgid "Email verification failed"
+#~ msgstr "Email verification failed"
+
+#~ msgid "Estimated Net Worth"
+#~ msgstr "Estimated Net Worth"
+
+#~ msgid "Family name"
+#~ msgstr "Family name"
+
+#, fuzzy
+#~ msgid "Financial Account Opening form"
+#~ msgstr "Financial Account Opening form"
+
+#~ msgid "Financial information"
+#~ msgstr "Financial information"
+
+#~ msgid "First name"
+#~ msgstr "First name"
+
+#~ msgid "Forex trading experience"
+#~ msgstr "Forex trading experience"
+
+#~ msgid "Forex trading frequency"
+#~ msgstr "Forex trading frequency"
+
+#~ msgid "I have read and agree to Binary.com"
+#~ msgstr "I have read and agree to Binary.com"
+
+#~ msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
+#~ msgstr "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
+
+#~ msgid "Income Source"
+#~ msgstr "Income Source"
+
+#~ msgid "Indices trading experience"
+#~ msgstr "Indices trading experience"
+
+#~ msgid "Indices trading frequency"
+#~ msgstr "Indices trading frequency"
+
+#~ msgid "Industry of Employment"
+#~ msgstr "Industry of Employment"
+
+#~ msgid "Just click  Grant  button on the page you will now be taken to"
+#~ msgstr "Just click  Grant  button on the page you will now be taken to"
+
+#~ msgid "Let's do it"
+#~ msgstr "Let's do it"
+
+#~ msgid "Level of Education"
+#~ msgstr "Level of Education"
+
+#~ msgid "Low Barrier"
+#~ msgstr "Low Barrier"
+
+#~ msgid "Net Annual Income"
+#~ msgstr "Net Annual Income"
+
+#~ msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
+#~ msgstr "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
+
+#~ msgid "One last step left"
+#~ msgstr "One last step left"
+
+#~ msgid "Open Account"
+#~ msgstr "Open Account"
+
+#~ msgid "Open account"
+#~ msgstr "Open account"
+
+#~ msgid "Other financial instruments trading experience"
+#~ msgstr "Other financial instruments trading experience"
+
+#~ msgid "Other financial instruments trading frequency"
+#~ msgstr "Other financial instruments trading frequency"
+
+#~ msgid "Password must be 6 characters minimum"
+#~ msgstr "Password must be 6 characters minimum"
+
+#~ msgid "Password must contain lower and uppercase letters with numbers"
+#~ msgstr "Password must contain lower and uppercase letters with numbers"
+
+#~ msgid "Personal Details"
+#~ msgstr "Personal Details"
+
+#~ msgid "Phone"
+#~ msgstr "Phone"
+
+#~ msgid "Please"
+#~ msgstr "Please"
+
+#~ msgid "Please choose which currency you would like to transact in"
+#~ msgstr "Please choose which currency you would like to transact in"
+
+#~ msgid "Please enter a valid date in yyyy-mm-dd format"
+#~ msgstr "Please enter a valid date in yyyy-mm-dd format"
+
+#~ msgid "Please enter correct email"
+#~ msgstr "Please enter correct email"
+
+#~ msgid "Please enter your email"
+#~ msgstr "Please enter your email"
+
+#~ msgid "Please select"
+#~ msgstr "Please select"
+
+#~ msgid "Postal code/ZIP"
+#~ msgstr "Postal code/ZIP"
+
+#, fuzzy
+#~ msgid "Real Money Account Opening"
+#~ msgstr "Real Money Account Opening"
+
+#~ msgid "Registration"
+#~ msgstr "Registration"
+
+#~ msgid "Repeat password"
+#~ msgstr "Repeat password"
+
+#~ msgid "Security"
+#~ msgstr "Security"
+
+#~ msgid "Security question"
+#~ msgstr "Security question"
+
+#~ msgid "State/province/region"
+#~ msgstr "State/province/region"
+
+#~ msgid "Stocks trading experience"
+#~ msgstr "Stocks trading experience"
+
+#~ msgid "Stocks trading frequency"
+#~ msgstr "Stocks trading frequency"
+
+#~ msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+#~ msgstr "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
+
+#~ msgid "Town/City"
+#~ msgstr "Town/City"
+
+#~ msgid "Verification code has been sent to your email"
+#~ msgstr "Verification code has been sent to your email"
+
+#~ msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+#~ msgstr "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
+
+#~ msgid "Your email"
+#~ msgstr "Your email"
+
+#~ msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
+#~ msgstr "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
+
+#~ msgid "contact support"
+#~ msgstr "contact support"
+
+#~ msgid "if this is not your country of residence"
+#~ msgstr "if this is not your country of residence"
+
+#~ msgid "terms and conditions"
+#~ msgstr "terms and conditions"
 
 #~ msgid "Loading Asset Index"
 #~ msgstr "Loading Asset Index"

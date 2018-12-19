@@ -145,25 +145,28 @@ const registerTicks = (state, extra) => {
    let proposal_open_contract;
    let on_proposal_open_contract;
    let on_tick;
+   let is_path_dependent_last_tick = false;
    let { tick_count } = extra;
-   /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const addTick  = (tick) => {
+
+   const addTick = (tick) => {
       const is_or_after_contract_entry = (+tick.epoch) >= (+proposal_open_contract.entry_tick_time);
-      const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch * 1 === tick.epoch * 1);
+      const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch === (+tick.epoch));
       const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
 
       if (should_add_new_tick) {
-            const contract_is_finished = proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
-            state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
+         const contract_is_finished = proposal_open_contract.status !== 'open' && (tick_count < -1 || is_path_dependent_last_tick);
+         state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
 
-            if (contract_is_finished) {
-                  onContractFinished(proposal_open_contract);
-                  updateChart();
-            }
-            tick_count--;
-            if (tick_count > -1) {
-                  addTickToState(tick);
-            }
+         if (contract_is_finished) {
+            onContractFinished(proposal_open_contract);
+            updateChart();
+         }
+
+         tick_count--;
+         if (tick_count > -1) {
+            is_path_dependent_last_tick = tick.epoch >= proposal_open_contract.exit_tick_time ? true : false;
+            addTickToState(tick);
+         }
       }
    }
 

@@ -1,4 +1,20 @@
 .assetIndex {
+  .asset-index-selectmenu {
+    position: absolute;
+    left: 240px;
+    padding: 4px;
+    height: 18px;
+    top: 4px;
+
+    &:first-of-type {
+      position: absolute;
+      left: 400px;
+    }
+
+    .ui-selectmenu-text {
+      padding: 0 2px;
+    }
+  }
   .webtrader-dialog {
     width: auto !important;
   }
@@ -6,6 +22,7 @@
     width: 100%;
     tr {
       td, th {
+        text-align: center;
         &:first-child {
           white-space: nowrap;
           width: 100px !important;
