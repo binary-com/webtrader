@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import getMarketsSubmarkets from '../common/sharedFunction';
+import getMarketsSubmarkets from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
