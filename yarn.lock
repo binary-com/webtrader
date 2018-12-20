@@ -2,6 +2,17 @@
 # yarn lockfile v1
 
 
+"@binary-com/webtrader-charts@0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@binary-com/webtrader-charts/-/webtrader-charts-0.5.2.tgz#8277e1c73a224051a2d460c8f439765dbd9e496a"
+  integrity sha512-Mxh0L/CCMgBP5saUA0FbbbNHUW4lHOto3IxQ2jjeLD3tToIIBeB8M/gY1uWeJnDYWe1nZler7ZCJYvPuyVPV6Q==
+  dependencies:
+    datatables.net-dt "^1.10.15"
+    imports-loader "^0.7.1"
+    lodash "^4.17.4"
+    paralleljs "^0.2.1"
+    rivets "0.8.1"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -7470,17 +7481,6 @@ websocket-extensions@>=0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
   integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
-
-webtrader-charts@^0.4.12:
-  version "0.4.12"
-  resolved "https://registry.yarnpkg.com/webtrader-charts/-/webtrader-charts-0.4.12.tgz#086715470270753fc0226407c152111eaccb4e9d"
-  integrity sha1-CGcVRwJwdT/AImQHwVIRHqzLTp0=
-  dependencies:
-    datatables.net-dt "^1.10.15"
-    imports-loader "^0.7.1"
-    lodash "^4.17.4"
-    paralleljs "^0.2.1"
-    rivets "0.8.1"
 
 whet.extend@~0.9.9:
   version "0.9.9"
