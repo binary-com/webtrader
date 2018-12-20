@@ -1,0 +1,1 @@
+define(["exports"],function(a){"use strict";Object.defineProperty(a,"__esModule",{value:!0});var b=function(a){var b=a.reduce(function(a,b){var c=b.market_display_name,d=b.submarket_display_name,e=b.display_name;return a[c]=a[c]||{},a[c][d]=a[c][d]||[],a[c][d].push(e),a},{});return b};a["default"]=b});
