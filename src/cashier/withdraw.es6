@@ -126,6 +126,9 @@ class Withdraw {
                 agents: [],
                 commission: '',
                 amount: '',
+                min_amount: '',
+                max_amount: '',
+                hint: '',
                 currency: local_storage.get('authorize').currency,
                 residence: '',
                 instructions: '',
@@ -134,12 +137,16 @@ class Withdraw {
                     if (amount === '') {
                         return;
                     }
-                    if (amount > 2000) {
-                        scope.agent.amount = 2000;
+                    if (amount > max_amount) {
+                        scope.agent.amount = max_amount;
                     }
                     if (amount < 0) {
                         scope.agent.amount = '';
                     }
+                },
+                isCrypto: (e, scope) => {
+                    const crypto_currencies = ['BTC', 'LTC', 'ETH', 'UST'];
+                    return crypto_currencies.includes(scope.agent.currency);
                 }
             },
             login_details: loginids().reduce(function(a, b) {
@@ -158,10 +165,22 @@ class Withdraw {
         menu.click = choice => { /* choice is 'transfer', 'agent' or 'standard' */
             menu.choice = choice;
             route.update(choice !== 'transfer' ? 'verify' : 'transfer');
+
             if (choice === 'transfer')
                 return;
+
             const email = local_storage.get('authorize').email;
             const type = choice === 'agent' ? 'paymentagent_withdraw' : 'payment_withdraw';
+
+            if(agent.isCrypto()) {
+                agent.min_amount = 0.002;
+                agent.max_amount = 5;
+            } else {
+                agent.min_amount = 10;
+                agent.max_amount = 2000;
+            }
+
+            agent.hint = `Min: ${agent.min_amount} Max: ${agent.max_amount}`.i18n();
             liveapi.send({
                     verify_email: email,
                     type: type
@@ -247,8 +266,8 @@ class Withdraw {
                 $.growl.error({ message: 'Please select a payment agent'.i18n() });
                 return;
             }
-            if (!(agent.amount >= 10 && agent.amount <= 2000)) {
-                $.growl.error({ message: 'Amount Min: 10 Max: 2000'.i18n() });
+            if (!(agent.amount >= agent.min_amount && agent.amount <= agent.max_amount)) {
+                $.growl.error({ message: `Amount Min: ${agent.min_amount} Max: ${agent.max_amount}`.i18n() });
                 return;
             }
             if (agent.instructions && !validate.text()) {
