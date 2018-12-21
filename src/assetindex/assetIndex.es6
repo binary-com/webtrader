@@ -121,18 +121,22 @@ const initTable = () => {
             state.table.asset_data_extract = rows;
 
             function assignAssetRows(rows) {
+                const row_result = [];
                 rows.forEach((assets) => {
+                    const temp_asset = new Array(state.table.display_headers.length + 1);
                     assets.forEach(asset => {
                         if (Array.isArray(asset)) {
                             const asset_type = asset[0];
                             const asset_from_to = asset[1];
                             const indexhead = state.table.display_headers.indexOf(asset_type) + 1;
-                            assets[indexhead] = asset_from_to;
+                            temp_asset[indexhead] = asset_from_to;
+                        } else {
+                            temp_asset[0] = asset;
                         }
                     });
+                    row_result.push(temp_asset);
                 });
-
-                return rows;
+                return row_result;
             }
 
             function fillFalseRows(rows) {
@@ -140,7 +144,7 @@ const initTable = () => {
 
                 for (let i = 0; i <= header_length; i++) {
                     rows.forEach(row => {
-                        if (!row[i] || Array.isArray[row[i]]) {
+                        if (!row[i] || Array.isArray(row[i])) {
                             row[i] = '-';
                         }
                     });
