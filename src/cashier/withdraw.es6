@@ -92,7 +92,7 @@ class Withdraw {
                     return true;
                 },
                 text: () => {
-                    if (/[^1-9a-zA-Z'\- ,.\n]/g.test(state.agent.instructions)) {
+                    if (/[^1-9a-zA-Z'\- ,.]/g.test(state.agent.instructions)) {
                         state.validate.invalid_text = true;
                         state.clear(state.validate, "invalid_text");
                         return false;
