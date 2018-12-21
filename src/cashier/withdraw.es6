@@ -92,7 +92,7 @@ class Withdraw {
                     return true;
                 },
                 text: () => {
-                    if (/[^1-9a-zA-Z'\- ,.]/g.test(state.agent.instructions)) {
+                    if (/[^1-9a-zA-Z'\- ,.\n]/g.test(state.agent.instructions)) {
                         state.validate.invalid_text = true;
                         state.clear(state.validate, "invalid_text");
                         return false;
@@ -137,16 +137,16 @@ class Withdraw {
                     if (amount === '') {
                         return;
                     }
-                    if (amount > max_amount) {
-                        scope.agent.amount = max_amount;
+                    if (amount > scope.agent.max_amount) {
+                        scope.agent.amount = scope.agent.max_amount;
                     }
                     if (amount < 0) {
                         scope.agent.amount = '';
                     }
                 },
-                isCrypto: (e, scope) => {
+                isCrypto: () => {
                     const crypto_currencies = ['BTC', 'LTC', 'ETH', 'UST'];
-                    return crypto_currencies.includes(scope.agent.currency);
+                    return crypto_currencies.includes(local_storage.get('authorize').currency);
                 }
             },
             login_details: loginids().reduce(function(a, b) {
