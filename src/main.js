@@ -153,7 +153,6 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
     require(["jquery-ui", "highstock-release/highstock"]);
-    require(["jquery-ui-touch-punch"]);
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(["css!lib/jquery-ui-dist/jquery-ui.min.css",
@@ -321,3 +320,5 @@ require(["jquery", "jquery-growl"], function($) {
         };
     });
 });
+
+require(["jquery-ui-touch-punch"]);
