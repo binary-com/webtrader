@@ -80,6 +80,7 @@ module.exports = function (grunt) {
                             "jquery-sparkline/jquery.sparkline.min.js",
                             "!jquery.growl/**", "jquery.growl/javascripts/jquery.growl.js", "jquery.growl/stylesheets/jquery.growl.css",
                             "npm-modernizr/modernizr.js",
+                            "jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"
                         ],
                         dest: "dist/uncompressed/v<%=pkg.version%>/lib/",
                     }

@@ -317,6 +317,7 @@ export const createBlankWindow = function($html,options) {
       options.maximize = options.minimize  = options.restore = options.resize;
 
    const blankWindow = $html.attr("id", id);
+   blankWindow.draggable();
    if (!options.ignoreTileAction) blankWindow.addClass('webtrader-dialog')
    blankWindow.dialog(options).dialogExtend(options);
 

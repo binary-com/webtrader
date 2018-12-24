@@ -6,6 +6,7 @@ window.requirejs.config({
     paths: {
         "jquery": "lib/jquery/dist/jquery.min",
         "jquery-ui": "lib/jquery-ui-dist/jquery-ui.min",
+        "jquery-ui-touch-punch": "lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min",
         "jquery.dialogextend": "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         "jquery-growl": "lib/jquery.growl/javascripts/jquery.growl",
         "modernizr": "lib/npm-modernizr/modernizr",
@@ -152,6 +153,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
        We know that A and B should eventually be loaded, so trigger loading them ahead of time. */
     require(["jquery-ui", "highstock-release/highstock"]);
+    require(["jquery-ui-touch-punch"]);
 
     /* main.css overrides some classes in jquery-ui.css, make sure to load it after jquery-ui.css file */
     require(["css!lib/jquery-ui-dist/jquery-ui.min.css",
