@@ -297,7 +297,9 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
         /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/
         require(["selfexclusion/selfexclusion", "accountstatus/accountstatus", "realitycheck/realitycheck", "websitestatus/websitestatus"]);
-        require(["jquery-ui-touch-punch"]);
+        require(["jquery", "jquery-ui-touch-punch"], function($) {
+            $('.ui-dialog').draggable();
+        });
     }
 
     //Our chart is accessed directly
