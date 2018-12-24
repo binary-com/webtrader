@@ -26,7 +26,6 @@ export const init = (li) => {
                 data: null
             });
             asset_win_el.dialog('open');
-            asset_win_el.draggable();
             require(['text!assetindex/assetIndex.html'], initAssetWin);
         } else
             asset_win_el.moveToTop();
