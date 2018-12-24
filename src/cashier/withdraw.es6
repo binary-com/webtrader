@@ -145,7 +145,7 @@ class Withdraw {
                     }
                 },
                 isCrypto: () => {
-                    const crypto_currencies = ['BTC', 'LTC', 'ETH', 'UST'];
+                    const crypto_currencies = ['BTC', 'LTC', 'ETH', 'BCH', 'ETC'];
                     return crypto_currencies.includes(local_storage.get('authorize').currency);
                 }
             },
