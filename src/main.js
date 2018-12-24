@@ -28,6 +28,7 @@ window.requirejs.config({
         "webtrader-charts" : "lib/@binary-com/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",
         "highstock-release": "lib/highstock-release",
+        "jquery-ui-touch-punch": "lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min",
     },
     map: {
         "*": {
@@ -93,6 +94,9 @@ window.requirejs.config({
         },
         "color-picker": {
             deps: ["jquery", "jquery-ui"] //This should fix the widget not found error
+        },
+        "jquery-ui-touch-punch": {
+            deps: ["jquery", "jquery-ui"]
         }
     }
 });
@@ -293,6 +297,9 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
         /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/
         require(["selfexclusion/selfexclusion", "accountstatus/accountstatus", "realitycheck/realitycheck", "websitestatus/websitestatus"]);
+        require(["jquery", "jquery-ui-touch-punch"], function($) {
+            $('.ui-dialog').draggable();
+        });
     }
 
     //Our chart is accessed directly
