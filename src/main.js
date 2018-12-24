@@ -6,7 +6,6 @@ window.requirejs.config({
     paths: {
         "jquery": "lib/jquery/dist/jquery.min",
         "jquery-ui": "lib/jquery-ui-dist/jquery-ui.min",
-        "jquery-ui-touch-punch": "lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min",
         "jquery.dialogextend": "lib/binary-com-jquery-dialogextended/jquery.dialogextend.min",
         "jquery-growl": "lib/jquery.growl/javascripts/jquery.growl",
         "modernizr": "lib/npm-modernizr/modernizr",
@@ -29,6 +28,7 @@ window.requirejs.config({
         "webtrader-charts" : "lib/@binary-com/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",
         "highstock-release": "lib/highstock-release",
+        "jquery-ui-touch-punch": "lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min",
     },
     map: {
         "*": {
@@ -94,6 +94,9 @@ window.requirejs.config({
         },
         "color-picker": {
             deps: ["jquery", "jquery-ui"] //This should fix the widget not found error
+        },
+        "jquery-ui-touch-punch": {
+            deps: ["jquery", "jquery-ui"]
         }
     }
 });
@@ -294,6 +297,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
         /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/
         require(["selfexclusion/selfexclusion", "accountstatus/accountstatus", "realitycheck/realitycheck", "websitestatus/websitestatus"]);
+        require(["jquery-ui-touch-punch"]);
     }
 
     //Our chart is accessed directly
@@ -320,5 +324,3 @@ require(["jquery", "jquery-growl"], function($) {
         };
     });
 });
-
-require(["jquery-ui-touch-punch"]);
