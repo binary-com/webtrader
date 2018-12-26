@@ -146,6 +146,8 @@ const initTradingWin = ($html) => {
         const result = processData(menu.extractFilteredMarkets(data[1]));
         const header = getMarketsSubmarkets(data[0].active_symbols);
         const market_name_list = Object.keys(header);
+        
+        if($.isEmptyObject(header)) return;
 
         function changed() {
           const val = $(this).val();

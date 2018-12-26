@@ -82,6 +82,8 @@ const initTable = () => {
         const active_symbols_data = Object.assign(result[0].active_symbols);
         const asset_index_data = [...result[1].asset_index];
 
+        if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
+
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
 
