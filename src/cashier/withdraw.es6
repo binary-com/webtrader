@@ -168,11 +168,13 @@ class Withdraw {
             const email = local_storage.get('authorize').email;
             const type = choice === 'agent' ? 'paymentagent_withdraw' : 'payment_withdraw';
 
-            isCrypto() && (agent.currency !== 'DAI' || agent.currency !== 'UST') ? (
-                agent.min_amount = 0.002, agent.max_amount = 5
-            ) : (
-                agent.min_amount = 10, agent.max_amount = 2000
-            );
+            if(isCrypto() && (agent.currency !== 'DAI' || agent.currency !== 'UST')) {
+                agent.min_amount = 0.002;
+                agent.max_amount = 5;
+            } else {
+                agent.min_amount = 10;
+                agent.max_amount = 2000;
+            }
 
             agent.hint = `Min: ${agent.min_amount} Max: ${agent.max_amount}`.i18n();
             liveapi.send({
