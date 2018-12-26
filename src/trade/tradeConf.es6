@@ -37,7 +37,9 @@ rv.binders['tick-chart'] = {
             useHTML: true,
             formatter: function () {
                const tick = model.array[this.x - 1];
+               console.log(tick);
                if (tick && tick.tooltip) {
+                     console.log(tick.tooltip);
                      return `<div class='tooltip-body'>${tick.tooltip}</div>`;
                }
             }
@@ -53,7 +55,7 @@ rv.binders['tick-chart'] = {
                   align: 'left',
                   x: 0,
                   formatter() {
-                        return addComma(this.value.toFixed(display_decimals));
+                        return this.value;
                   },
             },
             title: '',
@@ -76,6 +78,7 @@ rv.binders['tick-chart'] = {
       });
    },
    routine: function(el, ticks){
+      console.log(ticks);
       // Handles updating chart: state.ticks.array updates => routine fires
       const model = this.model;
       const tick_idx = ticks.length;
@@ -99,12 +102,15 @@ rv.binders['tick-chart'] = {
       }
 
       function drawEndTime(model, ticks) {
+         console.log(ticks)
             let exit_time_idx = ticks.findIndex((tick) => tick.epoch === (+model.exit_tick_time));
             drawXLine(el.chart, { value: exit_time_idx + 1, dashStyle: 'Dash' });
       };
 
       function drawTick(tick_idx) {
+            
             const tick = ticks[tick_idx -1];
+            console.log(tick)
             el.chart.series[0].addPoint([tick_idx, tick.quote]);
       };
 
@@ -185,7 +191,7 @@ const registerTicks = (state, extra) => {
       function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = addComma((+tick.quote).toFixed(decimal_digits));
+            const tick_quote_formatted = (+tick.quote);
 
             return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };
