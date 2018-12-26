@@ -62,7 +62,7 @@ const state = {
 }
 
 const checkVolatility = (market_name, market_names) => {
-    const volatility_indices = market_names[0][2] ? market_names[0][2].innerText : market_names[0][0].innerText;
+    const volatility_indices = market_names[0][3] ? market_names[0][3].innerText : market_names[0][0].innerText;
     const is_volatility = market_name.indexOf(volatility_indices) !== -1;
 
     return is_volatility;
@@ -84,7 +84,6 @@ const initTable = () => {
 
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
-
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
         dialog_buttons_el = asset_win_el.parent().find('.ui-dialog-titlebar-buttonpane');
 
@@ -151,10 +150,13 @@ const initTable = () => {
         }
 
         function marketsDropdown(market_submarkets) {
+            const markets_array = Object.keys(market_submarkets);
+            const markets_reversed = Object.assign([], markets_array, {[2]: markets_array[3], [3]: markets_array[2]});
+
             if (!state.dropdown.display_markets) {
                 state.dropdown.display_markets = windows
                     .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
-                        list: Object.keys(market_submarkets),
+                        list: markets_reversed,
                         inx: 0,
                         changed: (val) => {
                             const submarket_list = Object.keys(market_submarkets[val]);
@@ -165,7 +167,7 @@ const initTable = () => {
                     });
                 state.dropdown.display_markets.selectmenu('widget').addClass('asset-index-selectmenu');
             } else {
-                state.dropdown.display_markets.update_list(Object.keys(market_submarkets));
+                state.dropdown.display_markets.update_list(markets_reversed);
             }
         }
 
