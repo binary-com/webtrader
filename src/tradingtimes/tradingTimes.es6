@@ -146,6 +146,7 @@ const initTradingWin = ($html) => {
         const result = processData(menu.extractFilteredMarkets(data[1]));
         const header = getMarketsSubmarkets(data[0].active_symbols);
         const market_name_list = Object.keys(header);
+        const market_name_reversed = market_name_list.length > 1 ? Object.assign([], market_name_list, {[2]: market_name_list[3], [3]: market_name_list[2]}) : market_name_list; // handle norway clients (handle translation)
 
         function changed() {
           const val = $(this).val();
@@ -159,13 +160,13 @@ const initTradingWin = ($html) => {
               const select = $('<select />');
               select.appendTo(subheader);
               market_names = windows.makeSelectmenu(select, {
-                list: market_name_list,
+                list: market_name_reversed,
                 inx: 0,
               });
               market_names.off('selectmenuchange', changed);
               market_names.on('selectmenuchange', changed);
           } else {
-            market_names.update_list(market_name_list);
+            market_names.update_list(market_name_reversed);
             market_names.off('selectmenuchange', changed);
             market_names.on('selectmenuchange', changed);
         }
