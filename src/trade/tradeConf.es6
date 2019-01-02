@@ -185,7 +185,7 @@ const registerTicks = (state, extra) => {
       function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = (+tick.quote);
+            const tick_quote_formatted = (+tick.quote.toFixed(decimal_digits));
 
             return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };
