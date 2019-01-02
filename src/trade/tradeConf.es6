@@ -38,7 +38,7 @@ rv.binders['tick-chart'] = {
             formatter: function () {
                const tick = model.array[this.x - 1];
                if (tick && tick.tooltip) {
-                     return `<div class='tooltip-body'>${tick.tooltip}</div>`;
+                     return `<div class='tooltip-body'>${tick.tooltip.toFixed(display_decimals)}</div>`;
                }
             }
          },
@@ -53,7 +53,7 @@ rv.binders['tick-chart'] = {
                   align: 'left',
                   x: 0,
                   formatter() {
-                        return this.value;
+                        return this.value.toFixed(display_decimals);
                   },
             },
             title: '',
