@@ -38,7 +38,8 @@ rv.binders['tick-chart'] = {
             formatter: function () {
                const tick = model.array[this.x - 1];
                if (tick && tick.tooltip) {
-                     return `<div class='tooltip-body'>${tick.tooltip.toFixed(display_decimals)}</div>`;
+                  console.log(tick.tooltip);
+                  return `<div class='tooltip-body'>${addComma(tick.tooltip, display_decimals)}</div>`;
                }
             }
          },
@@ -53,7 +54,7 @@ rv.binders['tick-chart'] = {
                   align: 'left',
                   x: 0,
                   formatter() {
-                        return this.value.toFixed(display_decimals);
+                        return addComma(this.value, display_decimals);
                   },
             },
             title: '',
@@ -185,7 +186,7 @@ const registerTicks = (state, extra) => {
       function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = (+tick.quote.toFixed(decimal_digits));
+            const tick_quote_formatted = addComma(+tick.quote, decimal_digits);
 
             return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };

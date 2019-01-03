@@ -91,7 +91,7 @@ const initChart = (root, state, options) => {
       tooltip: {
          useHTML: true,
          formatter() {
-            const spot = this.y.toFixed(display_decimals);
+            const spot = addComma(this.y, display_decimals);
             const spot_time = moment.utc(this.x).format('dddd, MMM D, HH:mm:ss');
             return `<div class='tooltip-body'>${spot_time} GMT<br/>${this.series.name} ${spot}</div>`;
         },
@@ -111,7 +111,7 @@ const initChart = (root, state, options) => {
           x: -65,
           y: -2,
           formatter() {
-            return this.value.toFixed(display_decimals);
+            return addComma(this.value, display_decimals);
           },
         },
          title: '',
