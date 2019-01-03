@@ -11,7 +11,7 @@ function isLineDotType(type) {
 }
 
 function isCrypto() {
-    const crypto_currencies = ['BTC', 'LTC', 'ETH', 'BCH', 'ETC', 'DAI', 'UST'];
+    var crypto_currencies = ['BTC', 'LTC', 'ETH', 'BCH', 'ETC', 'DAI', 'UST'];
     return crypto_currencies.includes(local_storage.get('authorize').currency);
 }
 

@@ -38,7 +38,7 @@ rv.binders['tick-chart'] = {
             formatter: function () {
                const tick = model.array[this.x - 1];
                if (tick && tick.tooltip) {
-                  return `<div class='tooltip-body'>${addComma(tick.tooltip, display_decimals)}</div>`;
+                  return `<div class='tooltip-body'>${tick.tooltip}</div>`;
                }
             }
          },
