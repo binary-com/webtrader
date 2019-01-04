@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-04 20:20\n"
+"PO-Revision-Date: 2019-01-04 20:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -928,19 +928,19 @@ msgid "Loading Statement Table ..."
 msgstr "Загружается история счёта..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Загружается управление ключами..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Загружается время открытия рынков..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Загружается график и торговое меню..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Загрузка индивидуальных настроек..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Загрузка портфеля..."
 
 msgid "Loading self-exclusion settings."
 msgstr ""
@@ -1654,7 +1654,7 @@ msgid "Time out until"
 msgstr "Перерыв до"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Время ожидания запроса websocket"
 
 msgid "Title"
 msgstr "Заголовок"
@@ -1672,7 +1672,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Чтобы вывести средства, пожалуйста, введите специальный проверочный код, отправленный на Ваш электронный адрес"
 
 msgid "Today"
-msgstr ""
+msgstr "Сегодня"
 
 msgid "Token"
 msgstr "Ключ"
@@ -1681,7 +1681,7 @@ msgid "Token Management"
 msgstr "Управление ключами"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Ключ уже добавлен"
 
 msgid "Token management"
 msgstr "Управление ключами"
@@ -1930,13 +1930,13 @@ msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for a
 msgstr ""
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Ваш браузер не поддерживает копирование в буфер обмена"
 
 msgid "Your browser is not supported"
 msgstr "Ваш браузер не поддерживается"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Ваши изменения внесены успешно"
 
 msgid "Your copying settings"
 msgstr "Ваши настройки копирования"
@@ -1954,10 +1954,10 @@ msgid "Zoom"
 msgstr "Приблизить"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Пройдите аутентификацию счёта,[_2] чтобы снять торговые лимиты и ограничения на вывод."
 
 msgid "and"
-msgstr ""
+msgstr "и"
 
 msgid "apostrophe (') are allowed"
 msgstr "разрешен апостроф (')"
@@ -1966,7 +1966,7 @@ msgid "commission"
 msgstr "комиссия"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "создать ключ только для чтения и поделиться им с последователями"
 
 msgid "customer support"
 msgstr "служба поддержки"
@@ -1978,7 +1978,7 @@ msgid "days"
 msgstr "дн."
 
 msgid "deposits"
-msgstr ""
+msgstr "пополнение"
 
 msgid "end time"
 msgstr "окончание"
@@ -1990,7 +1990,7 @@ msgid "exit spot"
 msgstr "котировка на выходе"
 
 msgid "for"
-msgstr ""
+msgstr "для"
 
 msgid "for mobile charts"
 msgstr "для мобильных графиков"
@@ -2038,7 +2038,7 @@ msgid "main site"
 msgstr "основной сайт"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "рынок закрыт в данный момент."
 
 msgid "medium protection"
 msgstr "средняя защита"
@@ -2062,7 +2062,7 @@ msgid "points"
 msgstr "пункт."
 
 msgid "sec"
-msgstr ""
+msgstr "сек."
 
 msgid "second"
 msgstr "сек."
@@ -2089,7 +2089,7 @@ msgid "ticks"
 msgstr "тика(ов)"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "вывод"
 
 msgid "yes"
 msgstr "да"
@@ -2098,5 +2098,5 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Прибыль"
 
