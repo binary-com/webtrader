@@ -171,7 +171,6 @@ const registerTicks = (state, extra) => {
    }
 
    function addTickToState(tick) {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       const tooltip = makeTooltip(tick);
 
       state.ticks.array.push({
@@ -179,13 +178,13 @@ const registerTicks = (state, extra) => {
          epoch: (+tick.epoch),
          number: state.ticks.array.length + 1,
          tooltip,
-         decimal_digits,
+         display_decimals,
       });
 
       function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = addComma(+tick.quote, decimal_digits);
+            const tick_quote_formatted = addComma(+tick.quote, display_decimals);
 
             return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };
