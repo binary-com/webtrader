@@ -442,9 +442,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if (isLookback(category)) {
       state.basis.array = ['Multiplier'];
       state.basis.value = 'multiplier';
+      state.currency.decimals = 3;
     } else {
       state.basis.array = ['Payout', 'Stake'];
       state.basis.value = 'payout';
+      state.currency.decimals = currencyFractionalDigits();
     }
     state.category_displays.selected = _.head(state.category_displays.array);
   };
