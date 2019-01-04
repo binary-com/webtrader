@@ -168,7 +168,7 @@ class Withdraw {
             const email = local_storage.get('authorize').email;
             const type = choice === 'agent' ? 'paymentagent_withdraw' : 'payment_withdraw';
 
-            if(isCryptoCurrency(agent.currency) && (agent.currency !== 'DAI' || agent.currency !== 'UST')) {
+            if(isCrypto() && (agent.currency !== 'DAI' || agent.currency !== 'UST')) {
                 agent.min_amount = 0.002;
                 agent.max_amount = 5;
             } else {

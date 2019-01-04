@@ -155,7 +155,7 @@ const registerTicks = (state, extra) => {
 
       if (should_add_new_tick) {
          const contract_is_finished = proposal_open_contract.status !== 'open' && (tick_count < -1 || is_path_dependent_last_tick);
-         state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
+         state.buy.barrier = proposal_open_contract.barrier ? +proposal_open_contract.barrier : null;
 
          if (contract_is_finished) {
             onContractFinished(proposal_open_contract);
