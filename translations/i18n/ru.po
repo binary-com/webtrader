@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-04 20:10\n"
+"PO-Revision-Date: 2019-01-04 20:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -436,10 +436,10 @@ msgid "Contract"
 msgstr "Контракт"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Подтверждение контракта"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Детали контракта"
 
 msgid "Contracts"
 msgstr "Контракты"
@@ -490,7 +490,7 @@ msgid "Custom Theme"
 msgstr "Индивид. настройка"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Настроить вид графика"
 
 msgid "Daily limit on losses"
 msgstr "Дневной лимит на убытки"
@@ -541,7 +541,7 @@ msgid "Description"
 msgstr "Описание"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Отменить выбор"
 
 msgid "Differs"
 msgstr "Отличается"
@@ -556,7 +556,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
 
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Готово. Средства переведены платёжному агенту"
@@ -604,7 +604,7 @@ msgid "Downloading template as"
 msgstr "Загрузка шаблона в формате"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Рабочее пространство загружается как %1"
 
 msgid "Drawing tools"
 msgstr "Ср-ва отображения"
@@ -643,7 +643,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Воспользуйтесь интуитивно-понятным торговым интерфейсом с улучшенными функциями, которые позволят Вам одновременно следить за всеми любимыми активами и рынками, а также просматривать нужные графики, индекс активов, время торговли и исторические данные. Самый важный аспект: Вы можете самостоятельно выбирать, что будет отображено на экране"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Введите действующий ключ"
 
 msgid "Enter your current password"
 msgstr "Введите текущий пароль"
@@ -664,16 +664,16 @@ msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Время исключения"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Время начала ограничения должно быть позднее сегодняшней даты."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "Период ограничения не может быть менее 6 месяцев."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "Период ограничения не может быть больше 5 лет."
 
 msgid "Exit Spot"
 msgstr "Выходная котировка"
@@ -688,7 +688,7 @@ msgid "Explanation"
 msgstr "Пояснение"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Не удалось обновить пароль"
 
 msgid "Fall"
 msgstr "Падение"
@@ -763,7 +763,7 @@ msgid "High"
 msgstr "Выше"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Верхний барьер"
 
 msgid "High barrier"
 msgstr "Верхний барьер"
@@ -778,13 +778,13 @@ msgid "Historical Data"
 msgstr "История"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "История для"
 
 msgid "Horizontal line"
 msgstr "Горизонтальная линия"
 
 msgid "Hour"
-msgstr ""
+msgstr "Час."
 
 msgid "Hours"
 msgstr "Часы"
@@ -805,19 +805,19 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Чтобы изменение темы вступило в силу, необходимо полное обновление страницы. Вы уверены, что хотите продолжить?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "Финансовые продукты на территории ЕС предоставлены компанией Binary Investments (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется Мальтийским управлением финансовых услуг в качестве поставщика инвестиционных услуг, относящихся к 3-й категории (лицензия номер IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Индексы волатильности на острове Мэн и в Великобритании предоставлены компанией Binary (IOM) Ltd., расположенной по адресу First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Компания лицензирована и регулируется (1) Комиссией по надзору за азартными играм на Острове Мэн (текущая лицензия выдана 31 августа 2017 г.), а также (2) Комиссией по азартным играм Великобритании (номер лицензии: [_1] 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "В остальной части ЕС Индексы волатильности предоставлены компанией Binary (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется (1) Управлением по азартным играм Мальты (лицензия номер MGA/B2C/102/2000 выдана 1 августа 2018 г.), для клиентов из Великобритании - (2) Управлением по азартным играм Великобритании (номер лицензии: [_1]39495[_2]), а для клиентов из Ирландии - (3) Налоговой службой Ирландии (лицензия удалённого букмекера номер 1010285, выданная 1 июля 2017 г). Ознакомьтесь с [_3]Информацией о регулировании[_4]."
 
 msgid "In/Out"
 msgstr "Внутри/Вне"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Ориентир. цена"
 
 msgid "Indicative Price"
 msgstr "Ориентировочная цена"
@@ -838,7 +838,7 @@ msgid "Invalid template type"
 msgstr "Неправильный тип шаблона"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Неправильный вид шаблона."
 
 msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"
@@ -850,7 +850,7 @@ msgid "January"
 msgstr "Январь"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Японские счета не поддерживаются."
 
 msgid "Jul"
 msgstr "Июль"
@@ -859,7 +859,7 @@ msgid "July"
 msgstr "Июль"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Перейти к:"
 
 msgid "Jun"
 msgstr "Июнь"
@@ -871,13 +871,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Прибыльные контракты за последние 12 мин"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Прогноз последней десятичной"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Последняя десятичн. больше"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Последняя десятичн. меньше"
 
 msgid "Last used"
 msgstr "Недавние"
@@ -904,28 +904,28 @@ msgid "Load trade template"
 msgstr "Загрузить шаблон контракта"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Идёт загрузка ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Загрузка индекса активов ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Загрузка копирования..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Идет Загрузка/Обзор данных ..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Загружается диалоговое окно пароля ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Загружается таблица прибыли..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Загружается самоисключение..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Загружается история счёта..."
 
 msgid "Loading Token management ..."
 msgstr ""
