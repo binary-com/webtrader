@@ -298,6 +298,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 'payout',
       amount: currencyFractionalDigits() === 8 ? 0.10000000 : 10,
       limit: null,
+      decimals: currencyFractionalDigits(),
     },
     spreads: {
       amount_per_point: 1,
@@ -379,8 +380,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       name: '',
       visible: false,
     },
-    basis_decimals: isCryptoCurrency(local_storage.get('currency')) ? 8 : 2,
   };
+
   var update_currency = function() {
     /* change currency on user login */
     if(liveapi.is_authenticated()) {
