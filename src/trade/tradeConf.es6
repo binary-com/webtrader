@@ -283,7 +283,7 @@ const registerTicks = (state, extra) => {
 };
 
 export const init = (data, extra, showCallback, hideCallback) => {
-   display_decimals = data.display_decimals || 3;
+   display_decimals = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    const root = $(html).i18n();
    const { buy } = data;
    const state = {
