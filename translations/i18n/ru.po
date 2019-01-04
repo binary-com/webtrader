@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-04 20:40\n"
+"PO-Revision-Date: 2019-01-04 20:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1021,7 +1021,7 @@ msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Макс. число открытых позиций"
 
 msgid "May"
 msgstr "Май"
@@ -1033,7 +1033,7 @@ msgid "Memorable town/city"
 msgstr "Любимый город"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Мин. ставка должна быть ниже макс. ставки."
 
 msgid "Min. Trade Stake"
 msgstr "Мин. ставка"
@@ -1042,13 +1042,13 @@ msgid "Min: 10 Max: 2000"
 msgstr "Мин: 10; Макс: 2000"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Минимум шесть заглавных и строчных букв с цифрами"
 
 msgid "Minus the agent's commission"
 msgstr "Минус комиссия агента"
 
 msgid "Minute"
-msgstr ""
+msgstr "Мин."
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -1078,7 +1078,7 @@ msgid "Ms"
 msgstr "Госпожа"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Множитель"
 
 msgid "Name"
 msgstr "Имя"
@@ -1120,7 +1120,7 @@ msgid "No touch"
 msgstr "Нет касания"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Примечание: Контракт будет продан по цене, действующей на момент получения запроса нашими серверами. Эта цена может отличаться от указанной в настоящее время."
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Примечание: вывод средств через платёжного агента возможен лишь в том случае, когда Вы вносите средства исключительно через данного платёжного агента"
@@ -1192,7 +1192,7 @@ msgid "PM"
 msgstr "вечера"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Пароль обновлён успешно."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Пароли не совпали. Пожалуйста, введите пароли снова"
@@ -1222,40 +1222,40 @@ msgid "Permissions"
 msgstr "Разрешения"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Пожалуйста, [_1]примите Правила и условия,[_2] чтобы снять ограничения на торговые лимиты и вывод средств."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Пожалуйста, [_1]заполните свой профайл,[_2] чтобы снять торговые лимиты и ограничения на вывод."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Пожалуйста, выберите мин. один ключ"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Чтобы снять торговые лимиты и ограничения на вывод, пожалуйста, заполните [_1]форму финансовой оценки[_2]."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Пожалуйста, подтвердите следующие данные, чтобы завершить перевод"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Пожалуйста, введите цифру между"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Пожалуйста, введите правильное значение"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Пожалуйста, введите число от 0 до"
 
 msgid "Please enter a value greater than 0"
 msgstr "Пожалуйста, введите значение больше 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Пожалуйста, укажите время окончания самоисключения менее 6 недель."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Пожалуйста, укажите название ключа"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Пожалуйста, введите время в формате ЧЧ:ММ"
@@ -1270,28 +1270,28 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Пожалуйста, установите последнюю версию одного из следующих браузеров"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Пожалуйста, войдите в систему"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Пожалуйста, войдите в систему, чтобы просмотреть сохранённое рабочее пространство."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Пожалуйста, войдите в систему."
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Выберите дату окончания перерыва."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Пожалуйста, выберите платежного агента"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Пожалуйста установите [_1]валюту[_2] Вашего счёта"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Пожалуйста, повторите попытку через 1 минуту."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Пожалуйста, используйте новый пароль для входа."
 
 msgid "Plot"
 msgstr "Тема"
@@ -1336,7 +1336,7 @@ msgid "Profit"
 msgstr "Прибыль"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Анализ счёта"
 
 msgid "Profit table"
 msgstr "Анализ счёта"
@@ -1354,13 +1354,13 @@ msgid "Purchase Price"
 msgstr "Цена покупки"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Время покупки"
 
 msgid "Read"
 msgstr "Читать"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Проверка реальности"
 
 msgid "Redirecting to oauth login page,"
 msgstr ""
