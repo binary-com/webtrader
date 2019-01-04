@@ -155,7 +155,7 @@ const registerTicks = (state, extra) => {
 
       if (should_add_new_tick) {
          const contract_is_finished = proposal_open_contract.status !== 'open' && (tick_count < -1 || is_path_dependent_last_tick);
-         state.buy.barrier = proposal_open_contract.barrier ? addComma(+proposal_open_contract.barrier, display_decimals) : null;
+         state.buy.barrier = proposal_open_contract.barrier ? +proposal_open_contract.barrier : null;
 
          if (contract_is_finished) {
             onContractFinished(proposal_open_contract);
@@ -312,6 +312,7 @@ export const init = (data, extra, showCallback, hideCallback) => {
       ticks: {
          array: [],
          contract_is_finished: false,
+         display_decimals: display_decimals,
          exit_tick_time: null,
          is_path_dependent: null,
          makeBarrier: () => {

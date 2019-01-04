@@ -44,7 +44,7 @@
     rv-if="ticks.category.contract_category | not-eq 'digits'"
     rv-show="buy.barrier">
     <li>
-      <span>Barrier:&nbsp;</span><span rv-text='buy.barrier' />
+      <span>Barrier:&nbsp;</span><span rv-text='buy.barrier | add-comma ticks.display_decimals' />
     </li>
   </ul>
 
