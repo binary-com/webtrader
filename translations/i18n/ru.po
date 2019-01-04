@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-04 20:30\n"
+"PO-Revision-Date: 2019-01-04 20:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -943,7 +943,7 @@ msgid "Loading portfolio ..."
 msgstr "Загрузка портфеля..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Загрузка настроек самоисключения."
 
 msgid "Loading..."
 msgstr "Идёт загрузка..."
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Время входа"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Выход в связи с окончанием самоисключения!"
 
 msgid "Login"
 msgstr "Вход"
@@ -964,7 +964,7 @@ msgid "Logout"
 msgstr "Выход"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookback"
 
 msgid "Low"
 msgstr "Ниже"
@@ -1015,7 +1015,7 @@ msgid "Maximum aggregate loss per day"
 msgstr "Максимальная совокупная сумма убытков за день"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Макс. баланс"
 
 msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
@@ -1690,16 +1690,16 @@ msgid "Token name"
 msgstr "Название ключа"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Название ключа может содержать буквенно-цифровые символы, пробелы и нижнее подчёркивание"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Название ключа может содержать макс. 32 знака"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "Название ключа должно содержать мин. 2 знака"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "Название ключа должно начинаться только с буквенно-цифровых знаков"
 
 msgid "Token permissions"
 msgstr "Право доступа ключа"
@@ -1756,7 +1756,7 @@ msgid "Trading Times"
 msgstr "Торговые часы"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Торговля бинарными опционами подходит далеко не всем, поэтому просим Вас убедиться, что Вы полностью осознаёте все возможные риски. Ваш убыток может превысить сумму первоначального пополнения счёта, а Вы не получаете никаких процентов с активов, на которых заключаете контракты."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview для Binary.com"
@@ -1822,7 +1822,7 @@ msgid "Various customisable features like loading and arranging assets, charting
 msgstr "Различные настраиваемые функции: загрузка и упорядочивание активов, графиков и других ресурсов"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Проверочный код отправлен"
 
 msgid "Verification token"
 msgstr "Проверочный ключ"
@@ -1864,7 +1864,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Добро пожаловать на Webtrader от Binary.com"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Когда Вы нажмёте \"ОК\", Вы будете отстранены от работы на сайте до окончания выбранной даты."
 
 msgid "While on the go, you can"
 msgstr "Прямо на ходу Вы можете"
@@ -1879,7 +1879,7 @@ msgid "Workspace"
 msgstr "Рабочая область"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Изменения сохранены"
 
 msgid "X-axis labels"
 msgstr "Метки оси X"
@@ -1903,7 +1903,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Вы пока не копируете другие контракты"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Вы самоисключились до"
 
 msgid "You have sold the following contract"
 msgstr "Вы продали следующий контракт"
@@ -1927,7 +1927,7 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Ваш счёт (%) заблокирован. Пожалуйста, свяжитесь со службой поддержки для получения дополнительной информации."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Ваш счёт заблокирован. Пожалуйста, свяжитесь с нашей [_1]службой поддержки[_2] для получения помощи."
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Ваш браузер не поддерживает копирование в буфер обмена"
