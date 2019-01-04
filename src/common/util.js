@@ -10,11 +10,6 @@ function isLineDotType(type) {
     return type === "linedot";
 }
 
-function isCrypto() {
-    var crypto_currencies = ['BTC', 'LTC', 'ETH', 'BCH', 'ETC', 'DAI', 'UST'];
-    return crypto_currencies.includes(local_storage.get('authorize').currency);
-}
-
 function convertToTimeperiodObject(timePeriodInStringFormat) {
     return {
         intValue : function() {
