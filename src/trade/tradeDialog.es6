@@ -291,14 +291,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
-      decimals: 0,
+      decimals: currencyFractionalDigits(),
     },
     basis: {
       array: ['Payout', 'Stake'],
       value: 'payout',
       amount: currencyFractionalDigits() === 8 ? 0.10000000 : 10,
       limit: null,
-      decimals: currencyFractionalDigits(),
     },
     spreads: {
       amount_per_point: 1,
@@ -443,15 +442,9 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if (isLookback(category)) {
       state.basis.array = ['Multiplier'];
       state.basis.value = 'multiplier';
-      _.defer(()=> {
-        state.currency.decimals = 3;
-      })
     } else {
       state.basis.array = ['Payout', 'Stake'];
       state.basis.value = 'payout';
-      _.defer(()=> {
-        state.currency.decimals = currencyFractionalDigits();
-      })
     }
     state.category_displays.selected = _.head(state.category_displays.array);
   };
