@@ -312,7 +312,7 @@ export const init = (data, extra, showCallback, hideCallback) => {
       ticks: {
          array: [],
          contract_is_finished: false,
-         display_decimals: display_decimals,
+         display_decimals,
          exit_tick_time: null,
          is_path_dependent: null,
          makeBarrier: () => {
