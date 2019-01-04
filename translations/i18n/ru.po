@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-11-30 05:40\n"
+"PO-Revision-Date: 2019-01-04 20:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -19,16 +19,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(если длительность составляет менее одного дня) или в конце торгового дня (если длительность составляет один день или более)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Контракт ещё не начался"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* Пароль должен состоять из минимум 6 символов"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* Пароль должен содержать заглавные буквы и цифры"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Пожалуйста, введите новый пароль"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com не является партнёром ни одного из вышеперечисленных платёжных агентов. Каждый платёжный агент действует в качестве независимого поставщика услуг и не получает поощрения, гарантий или иного одобрения от Binary.com. КЛИЕНТЫ СОТРУДНИЧАЮТ С ПЛАТЁЖНЫМИ АГЕНТАМИ НА СВОЙ СТРАХ И РИСК. Клиентам рекомендуется проверять рекомендации платёжных агентов перед отправкой им денег. Ни при каких обстоятельствах Binary.com не будет нести ответственности за транзакции, осуществляемые между клиентами и платёжными агентами"
@@ -166,25 +166,25 @@ msgid "8h"
 msgstr "8ч"
 
 msgid "AM"
-msgstr ""
+msgstr "утра"
 
 msgid "Accept"
 msgstr "Принять"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Доступно на 13 языках с любого веб-браузера"
 
 msgid "Account balance"
 msgstr "Баланс счёта"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Баланс счёта:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "Номер счёта не найден."
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Ключ счёта не найден."
 
 msgid "Action"
 msgstr "Действие"
@@ -211,13 +211,13 @@ msgid "Add/remove indicators"
 msgstr "Добавить/удалить индикаторы"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Добавлено новое рабочее пространство %"
 
 msgid "Admin"
 msgstr "Администратор"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Все поля заполняются по желанию. Если Вы хотите копировать все активы и виды торговли, оставтье все поля пустыми"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Всё время указано в GMT (по Гринвичу)"
@@ -226,7 +226,7 @@ msgid "Amount"
 msgstr "Сумма"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Мин: 10; Макс: 2000"
 
 msgid "Amount per point"
 msgstr "Сумма за пункт"
@@ -280,7 +280,7 @@ msgid "August"
 msgstr "Август"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Средн. длит. открытых позиций"
 
 msgid "Avg. Loss"
 msgstr "Средн. убыток"
@@ -310,10 +310,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com – это провайдер услуг в сфере онлайн торговли, удостоенный высоких наград и помогающий своим клиентам торговать на финансовых рынках посредством контрактов на бинарных опционах и CFD. Торговля бинарными опционами и CFD на Индексах волатильности относится к категории азартных игр. Пожалуйста, помните, что азартные игры могут перерасти в зависимость и играйте ответственно. Получите больше информации об [_1]1ответственной торговле[_2]. Ряд продуктов доступен не во всех странах мира. Услуги данного сайта недоступны для лиц моложе 18 лет, а также в следующих странах: США, Канада, Коста-Рика, Гонконг."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Пустое окно"
 
 msgid "Bought"
 msgstr "Куплено"
@@ -418,10 +418,10 @@ msgid "Confirm transfer"
 msgstr "Подтвердить перевод"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Соединение закрыто."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Ошибка соединения."
 
 msgid "Construction"
 msgstr "Строительство"
@@ -1189,7 +1189,7 @@ msgid "Overlap Studies"
 msgstr "Перекрытие графиков"
 
 msgid "PM"
-msgstr ""
+msgstr "вечера"
 
 msgid "Password successfully updated."
 msgstr ""
