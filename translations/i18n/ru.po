@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-05 16:30\n"
+"PO-Revision-Date: 2019-01-05 16:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1927,7 +1927,7 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Ваш счёт (%) заблокирован. Пожалуйста, свяжитесь со службой поддержки для получения дополнительной информации."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr "Ваш счёт заблокирован. Пожалуйста, свяжитесь с нашей [_1]службой поддержки[_2] для получения помощи."
+msgstr "Возможности счёта ограничены. Пожалуйста, свяжитесь с нашей [_1]службой поддержки[_2] для получения помощи."
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr "Ваш браузер не поддерживает копирование в буфер обмена"
