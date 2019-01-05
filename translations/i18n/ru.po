@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-05 15:30\n"
+"PO-Revision-Date: 2019-01-05 15:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -310,7 +310,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com – это провайдер услуг в сфере онлайн торговли, удостоенный высоких наград и помогающий своим клиентам торговать на финансовых рынках посредством контрактов на бинарных опционах и CFD. Торговля бинарными опционами и CFD на Индексах волатильности относится к категории азартных игр. Пожалуйста, помните, что азартные игры могут перерасти в зависимость и играйте ответственно. Получите больше информации об [_1]1ответственной торговле[_2]. Ряд продуктов доступен не во всех странах мира. Услуги данного сайта недоступны для лиц моложе 18 лет, а также в следующих странах: США, Канада, Коста-Рика, Гонконг."
+msgstr "Binary.com – это провайдер услуг в сфере онлайн торговли, удостоенный высоких наград и помогающий своим клиентам торговать на финансовых рынках посредством контрактов на бинарных опционах и CFD. Торговля бинарными опционами и CFD на Индексах волатильности относится к категории азартных игр. Пожалуйста, помните, что азартные игры могут перерасти в зависимость и играйте ответственно. Узнайте больше об [_1]1ответственной торговле[_2]. Ряд продуктов доступен не во всех странах мира. Услуги данного сайта недоступны для лиц моложе 18 лет, а также в следующих странах: США, Канада, Коста-Рика, Гонконг."
 
 msgid "Blank window"
 msgstr "Пустое окно"
