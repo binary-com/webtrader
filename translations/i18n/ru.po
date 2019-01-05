@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-05 15:40\n"
+"PO-Revision-Date: 2019-01-05 16:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1558,7 +1558,7 @@ msgid "Submit"
 msgstr "Подтвердить"
 
 msgid "Successfully added new token"
-msgstr "Новый ключ добавлен успешно"
+msgstr "Новый ключ успешно добавлен"
 
 msgid "Successfully added workspace as"
 msgstr "Успешно добавлено рабочее пространство"
@@ -1864,7 +1864,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Добро пожаловать на Webtrader от Binary.com"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr "Когда Вы нажмёте \"ОК\", Вы будете отстранены от работы на сайте до окончания выбранной даты."
+msgstr "Когда Вы нажмёте \"ОК\", Вы будете отстранены от работы на сайте до выбранной даты."
 
 msgid "While on the go, you can"
 msgstr "Прямо на ходу Вы можете"
@@ -1954,7 +1954,7 @@ msgid "Zoom"
 msgstr "Приблизить"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr "[_1]Пройдите аутентификацию счёта,[_2] чтобы снять торговые лимиты и ограничения на вывод."
+msgstr "[_1]Пройдите аутентификацию счёта,[_2] чтобы получить доступ ко всем доступным способам вывода средств."
 
 msgid "and"
 msgstr "и"
