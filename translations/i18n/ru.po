@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-04 21:00\n"
+"PO-Revision-Date: 2019-01-05 15:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -22,7 +22,7 @@ msgid "* Contract has not started yet"
 msgstr "* Контракт ещё не начался"
 
 msgid "* Password must be 6 characters minimum"
-msgstr "* Пароль должен состоять из минимум 6 символов"
+msgstr "* Пароль должен состоять минимум из 6 символов"
 
 msgid "* Password must contain uppercase letters and numbers"
 msgstr "* Пароль должен содержать заглавные буквы и цифры"
@@ -217,7 +217,7 @@ msgid "Admin"
 msgstr "Администратор"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr "Все поля заполняются по желанию. Если Вы хотите копировать все активы и виды торговли, оставтье все поля пустыми"
+msgstr "Все поля заполняются по желанию. Если Вы хотите копировать все активы и виды контрактов, оставьте все поля пустыми"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Всё время указано в GMT (по Гринвичу)"
