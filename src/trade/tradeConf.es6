@@ -10,7 +10,6 @@ import 'css!../trade/tradeConf.css';
 import html from 'text!../trade/tradeConf.html';
 
 /* rv binder to show tick chart for this confirmation dialog */
-let display_decimals;
 const CHART_LABELS = ['start_time', 'barrier', 'end_time'];
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
@@ -53,7 +52,7 @@ rv.binders['tick-chart'] = {
                   align: 'left',
                   x: 0,
                   formatter() {
-                        return addComma(this.value, display_decimals);
+                     return addComma(this.value, model.display_decimals);
                   },
             },
             title: '',
@@ -171,7 +170,6 @@ const registerTicks = (state, extra) => {
    }
 
    function addTickToState(tick) {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       const tooltip = makeTooltip(tick);
 
       state.ticks.array.push({
@@ -179,13 +177,12 @@ const registerTicks = (state, extra) => {
          epoch: (+tick.epoch),
          number: state.ticks.array.length + 1,
          tooltip,
-         decimal_digits,
       });
 
       function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = addComma(+tick.quote, decimal_digits);
+            const tick_quote_formatted = addComma(+tick.quote, state.ticks.display_decimals);
 
             return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };
@@ -283,7 +280,7 @@ const registerTicks = (state, extra) => {
 };
 
 export const init = (data, extra, showCallback, hideCallback) => {
-   display_decimals = data.display_decimals || 3;
+   const display_decimals = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    const root = $(html).i18n();
    const { buy } = data;
    const state = {

@@ -68,7 +68,7 @@
       <li rv-each-row="ticks.array">
           <span> Tick {row.number} </span>
           <span>{row.epoch | utc-time}</span>
-          <span rv-html="row.quote | to-fixed row.decimal_digits | bold-last-character"></span>
+          <span rv-html="row.quote | to-fixed ticks.display_decimals | bold-last-character"></span>
       </li>
   </ul>
 
