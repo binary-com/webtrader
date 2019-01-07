@@ -52,7 +52,6 @@ rv.binders['tick-chart'] = {
                   align: 'left',
                   x: 0,
                   formatter() {
-                     console.log(model);
                      return addComma(this.value, model.display_decimals);
                   },
             },
@@ -281,7 +280,7 @@ const registerTicks = (state, extra) => {
 };
 
 export const init = (data, extra, showCallback, hideCallback) => {
-   display_decimals = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
+   const display_decimals = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    const root = $(html).i18n();
    const { buy } = data;
    const state = {
