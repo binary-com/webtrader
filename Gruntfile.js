@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                             "!highstock-release/**", "highstock-release/highstock.js", "highstock-release/themes/**", "highstock-release/modules/exporting.js", "highstock-release/modules/offline-exporting.js", "highstock-release/highcharts-more.js",
                             "moment/min/moment.min.js", "moment/locale/**",
                             "text/text.js",
-                            "webtrader-charts/dist/webtrader-charts.iife.js",
+                            "@binary-com/webtrader-charts/dist/webtrader-charts.iife.js",
                             "regenerator-runtime/*",
                             "!jquery-ui-dist/**", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
                             "chosen-js/*",
@@ -80,6 +80,7 @@ module.exports = function (grunt) {
                             "jquery-sparkline/jquery.sparkline.min.js",
                             "!jquery.growl/**", "jquery.growl/javascripts/jquery.growl.js", "jquery.growl/stylesheets/jquery.growl.css",
                             "npm-modernizr/modernizr.js",
+                            "jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"
                         ],
                         dest: "dist/uncompressed/v<%=pkg.version%>/lib/",
                     }

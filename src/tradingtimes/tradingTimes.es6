@@ -6,6 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
+import getMarketsSubmarkets from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
@@ -132,8 +133,6 @@ const initTradingWin = ($html) => {
       changedFn = null;
 
    const refreshTable = (yyyy_mm_dd) => {
-      const processing_msg = $('#' + table.attr('id') + '_processing').show();
-
       /* update the table with the given marketname and submarketname */
       const updateTable = (result, market_name,submarket_name) => {
          const rows = result.getRowsFor(market_name, submarket_name);
@@ -144,11 +143,16 @@ const initTradingWin = ($html) => {
 
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
       const refresh = (data) => {
-        const result = processData(menu.extractFilteredMarkets(data));
+        const result = processData(menu.extractFilteredMarkets(data[1]));
+        const header = getMarketsSubmarkets(data[0].active_symbols);
+        const market_name_list = Object.keys(header);
+        
+        if($.isEmptyObject(header)) return;
+
         function changed() {
           const val = $(this).val();
 
-          if (result.submarket_names[val]) submarket_names.update_list(result.submarket_names[val]);
+          if (header[val]) submarket_names.update_list(Object.keys(header[val]));
 
           updateTable(result, market_names.val(), submarket_names.val());
         };
@@ -157,13 +161,13 @@ const initTradingWin = ($html) => {
               const select = $('<select />');
               select.appendTo(subheader);
               market_names = windows.makeSelectmenu(select, {
-                list: result.market_names,
+                list: market_name_list,
                 inx: 0,
               });
               market_names.off('selectmenuchange', changed);
               market_names.on('selectmenuchange', changed);
           } else {
-            market_names.update_list(result.market_names);
+            market_names.update_list(market_name_list);
             market_names.off('selectmenuchange', changed);
             market_names.on('selectmenuchange', changed);
         }
@@ -172,29 +176,41 @@ const initTradingWin = ($html) => {
               const sub_select = $('<select />');
               sub_select.appendTo(subheader);
               submarket_names = windows.makeSelectmenu(sub_select, {
-                list: result.submarket_names[market_names.val()],
+                list: Object.keys(header[market_names.val()]),
                 inx: 0,
                 changed: changedFn,
               });
               submarket_names.off('selectmenuchange', changed);
               submarket_names.on('selectmenuchange', changed);
             } else {
-            submarket_names.update_list(result.submarket_names[market_names.val()]);
+            submarket_names.update_list(Object.keys(header[market_names.val()]));
             submarket_names.off('selectmenuchange', changed);
             submarket_names.on('selectmenuchange', changed);
         }
 
           updateTable(result, market_names.val(), submarket_names.val());
-          processing_msg.hide();
-         
       };
 
-      const getCachedData = () => liveapi.cached.send({ trading_times: yyyy_mm_dd })
-      .then(result => refresh(result))
-      .catch((error) => {
-        $.growl.error({ message: error.message });
-        refresh({});
-      });
+      const getCachedData = () => {
+         const active_symbols_request = { active_symbols: 'brief' };
+         const asset_index_request = { trading_times: yyyy_mm_dd };
+         const $processing_msg = $('#' + table.attr('id') + '_processing');
+
+         $processing_msg.show();
+         Promise.all(
+             [
+                 liveapi.cached.send(active_symbols_request),
+                 liveapi.cached.send(asset_index_request),
+             ])
+             .then((results) => {
+                 refresh(results);
+                 $processing_msg.hide();
+             })
+             .catch((error) => {
+                 $.growl.error({ message: error.message });
+                 $processing_msg.hide();
+             });
+       };
 
       getCachedData();
       require(['websockets/binary_websockets'], (liveapi) => {

@@ -4,6 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
+import getMarketsSubmarkets from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -67,20 +68,6 @@ const checkVolatility = (market_name, market_names) => {
     return is_volatility;
 }
 
-const getMarketsSubmarkets = (active_symbols) => {
-    const select_market_submarket = active_symbols.reduce((market_result, market) => {
-        const { market_display_name, submarket_display_name, display_name } = market;
-
-        market_result[market_display_name] = market_result[market_display_name] || {};
-        market_result[market_display_name][submarket_display_name] = market_result[market_display_name][submarket_display_name] || [];
-        market_result[market_display_name][submarket_display_name].push(display_name);
-
-        return market_result;
-    }, {})
-
-    return select_market_submarket
-}
-
 const initTable = () => {
     getActiveSymAndAssetsData()
         .then((result) => {
@@ -94,6 +81,8 @@ const initTable = () => {
     function populateTable(result) {
         const active_symbols_data = Object.assign(result[0].active_symbols);
         const asset_index_data = [...result[1].asset_index];
+
+        if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
 
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
@@ -134,18 +123,22 @@ const initTable = () => {
             state.table.asset_data_extract = rows;
 
             function assignAssetRows(rows) {
+                const row_result = [];
                 rows.forEach((assets) => {
+                    const temp_asset = new Array(state.table.display_headers.length + 1);
                     assets.forEach(asset => {
                         if (Array.isArray(asset)) {
                             const asset_type = asset[0];
                             const asset_from_to = asset[1];
                             const indexhead = state.table.display_headers.indexOf(asset_type) + 1;
-                            assets[indexhead] = asset_from_to;
+                            temp_asset[indexhead] = asset_from_to;
+                        } else {
+                            temp_asset[0] = asset;
                         }
                     });
+                    row_result.push(temp_asset);
                 });
-
-                return rows;
+                return row_result;
             }
 
             function fillFalseRows(rows) {
@@ -153,7 +146,7 @@ const initTable = () => {
 
                 for (let i = 0; i <= header_length; i++) {
                     rows.forEach(row => {
-                        if (!row[i] || Array.isArray[row[i]]) {
+                        if (!row[i] || Array.isArray(row[i])) {
                             row[i] = '-';
                         }
                     });

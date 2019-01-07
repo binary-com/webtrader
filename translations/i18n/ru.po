@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-11-30 05:40\n"
+"PO-Revision-Date: 2019-01-05 16:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -19,16 +19,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(если длительность составляет менее одного дня) или в конце торгового дня (если длительность составляет один день или более)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Контракт ещё не начался"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "* Пароль должен состоять минимум из 6 символов"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "* Пароль должен содержать заглавные буквы и цифры"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Пожалуйста, введите новый пароль"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "- Binary.com не является партнёром ни одного из вышеперечисленных платёжных агентов. Каждый платёжный агент действует в качестве независимого поставщика услуг и не получает поощрения, гарантий или иного одобрения от Binary.com. КЛИЕНТЫ СОТРУДНИЧАЮТ С ПЛАТЁЖНЫМИ АГЕНТАМИ НА СВОЙ СТРАХ И РИСК. Клиентам рекомендуется проверять рекомендации платёжных агентов перед отправкой им денег. Ни при каких обстоятельствах Binary.com не будет нести ответственности за транзакции, осуществляемые между клиентами и платёжными агентами"
@@ -166,25 +166,25 @@ msgid "8h"
 msgstr "8ч"
 
 msgid "AM"
-msgstr ""
+msgstr "утра"
 
 msgid "Accept"
 msgstr "Принять"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Доступно на 13 языках с любого веб-браузера"
 
 msgid "Account balance"
 msgstr "Баланс счёта"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Баланс счёта:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "Номер счёта не найден."
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Ключ счёта не найден."
 
 msgid "Action"
 msgstr "Действие"
@@ -211,13 +211,13 @@ msgid "Add/remove indicators"
 msgstr "Добавить/удалить индикаторы"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Добавлено новое рабочее пространство %"
 
 msgid "Admin"
 msgstr "Администратор"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Все поля заполняются по желанию. Если Вы хотите копировать все активы и виды контрактов, оставьте все поля пустыми"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Всё время указано в GMT (по Гринвичу)"
@@ -226,7 +226,7 @@ msgid "Amount"
 msgstr "Сумма"
 
 msgid "Amount Min: 10 Max: 2000"
-msgstr ""
+msgstr "Мин: 10; Макс: 2000"
 
 msgid "Amount per point"
 msgstr "Сумма за пункт"
@@ -280,7 +280,7 @@ msgid "August"
 msgstr "Август"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Средн. длит. открытых позиций"
 
 msgid "Avg. Loss"
 msgstr "Средн. убыток"
@@ -310,10 +310,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com – это провайдер услуг в сфере онлайн торговли, удостоенный высоких наград и помогающий своим клиентам торговать на финансовых рынках посредством контрактов на бинарных опционах и CFD. Торговля бинарными опционами и CFD на Индексах волатильности относится к категории азартных игр. Пожалуйста, помните, что азартные игры могут перерасти в зависимость и играйте ответственно. Узнайте больше об [_1]1ответственной торговле[_2]. Ряд продуктов доступен не во всех странах мира. Услуги данного сайта недоступны для лиц моложе 18 лет, а также в следующих странах: США, Канада, Коста-Рика, Гонконг."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Пустое окно"
 
 msgid "Bought"
 msgstr "Куплено"
@@ -418,10 +418,10 @@ msgid "Confirm transfer"
 msgstr "Подтвердить перевод"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Соединение закрыто."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Ошибка соединения."
 
 msgid "Construction"
 msgstr "Строительство"
@@ -436,10 +436,10 @@ msgid "Contract"
 msgstr "Контракт"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Подтверждение контракта"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Детали контракта"
 
 msgid "Contracts"
 msgstr "Контракты"
@@ -490,7 +490,7 @@ msgid "Custom Theme"
 msgstr "Индивид. настройка"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Настроить вид графика"
 
 msgid "Daily limit on losses"
 msgstr "Дневной лимит на убытки"
@@ -541,7 +541,7 @@ msgid "Description"
 msgstr "Описание"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Отменить выбор"
 
 msgid "Differs"
 msgstr "Отличается"
@@ -556,7 +556,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "У Вас ещё нет счёта? Зарегистрируйтесь и получите на демо-счёт $10 000"
 
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Готово. Средства переведены платёжному агенту"
@@ -604,7 +604,7 @@ msgid "Downloading template as"
 msgstr "Загрузка шаблона в формате"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Рабочее пространство загружается как %1"
 
 msgid "Drawing tools"
 msgstr "Ср-ва отображения"
@@ -643,7 +643,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Воспользуйтесь интуитивно-понятным торговым интерфейсом с улучшенными функциями, которые позволят Вам одновременно следить за всеми любимыми активами и рынками, а также просматривать нужные графики, индекс активов, время торговли и исторические данные. Самый важный аспект: Вы можете самостоятельно выбирать, что будет отображено на экране"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Введите действующий ключ"
 
 msgid "Enter your current password"
 msgstr "Введите текущий пароль"
@@ -664,16 +664,16 @@ msgid "Exclude me from the website until"
 msgstr "Исключите меня с сайта до"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Время исключения"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Время начала ограничения должно быть позднее сегодняшней даты."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "Период ограничения не может быть менее 6 месяцев."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "Период ограничения не может быть больше 5 лет."
 
 msgid "Exit Spot"
 msgstr "Выходная котировка"
@@ -688,7 +688,7 @@ msgid "Explanation"
 msgstr "Пояснение"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Не удалось обновить пароль"
 
 msgid "Fall"
 msgstr "Падение"
@@ -763,7 +763,7 @@ msgid "High"
 msgstr "Выше"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Верхний барьер"
 
 msgid "High barrier"
 msgstr "Верхний барьер"
@@ -778,13 +778,13 @@ msgid "Historical Data"
 msgstr "История"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "История для"
 
 msgid "Horizontal line"
 msgstr "Горизонтальная линия"
 
 msgid "Hour"
-msgstr ""
+msgstr "Час."
 
 msgid "Hours"
 msgstr "Часы"
@@ -805,19 +805,19 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Чтобы изменение темы вступило в силу, необходимо полное обновление страницы. Вы уверены, что хотите продолжить?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr ""
+msgstr "Финансовые продукты на территории ЕС предоставлены компанией Binary Investments (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется Мальтийским управлением финансовых услуг в качестве поставщика инвестиционных услуг, относящихся к 3-й категории (лицензия номер IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Индексы волатильности на острове Мэн и в Великобритании предоставлены компанией Binary (IOM) Ltd., расположенной по адресу First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Компания лицензирована и регулируется (1) Комиссией по надзору за азартными играм на Острове Мэн (текущая лицензия выдана 31 августа 2017 г.), а также (2) Комиссией по азартным играм Великобритании (номер лицензии: [_1] 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "В остальной части ЕС Индексы волатильности предоставлены компанией Binary (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется (1) Управлением по азартным играм Мальты (лицензия номер MGA/B2C/102/2000 выдана 1 августа 2018 г.), для клиентов из Великобритании - (2) Управлением по азартным играм Великобритании (номер лицензии: [_1]39495[_2]), а для клиентов из Ирландии - (3) Налоговой службой Ирландии (лицензия удалённого букмекера номер 1010285, выданная 1 июля 2017 г). Ознакомьтесь с [_3]Информацией о регулировании[_4]."
 
 msgid "In/Out"
 msgstr "Внутри/Вне"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Ориентир. цена"
 
 msgid "Indicative Price"
 msgstr "Ориентировочная цена"
@@ -838,7 +838,7 @@ msgid "Invalid template type"
 msgstr "Неправильный тип шаблона"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Неправильный вид шаблона."
 
 msgid "Investments & Dividends"
 msgstr "Инвестиции и дивиденды"
@@ -850,7 +850,7 @@ msgid "January"
 msgstr "Январь"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Японские счета не поддерживаются."
 
 msgid "Jul"
 msgstr "Июль"
@@ -859,7 +859,7 @@ msgid "July"
 msgstr "Июль"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Перейти к:"
 
 msgid "Jun"
 msgstr "Июнь"
@@ -871,13 +871,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Прибыльные контракты за последние 12 мин"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Прогноз последней десятичной"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Последняя десятичн. больше"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Последняя десятичн. меньше"
 
 msgid "Last used"
 msgstr "Недавние"
@@ -904,46 +904,46 @@ msgid "Load trade template"
 msgstr "Загрузить шаблон контракта"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Идёт загрузка ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Загрузка индекса активов ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Загрузка копирования..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Идет Загрузка/Обзор данных ..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Загружается диалоговое окно пароля ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Загружается таблица прибыли..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Загружается самоисключение..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Загружается история счёта..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Загружается управление ключами..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Загружается время открытия рынков..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Загружается график и торговое меню..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Загрузка индивидуальных настроек..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Загрузка портфеля..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Загрузка настроек самоисключения."
 
 msgid "Loading..."
 msgstr "Идёт загрузка..."
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Время входа"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Выход в связи с окончанием самоисключения!"
 
 msgid "Login"
 msgstr "Вход"
@@ -964,7 +964,7 @@ msgid "Logout"
 msgstr "Выход"
 
 msgid "Lookbacks"
-msgstr ""
+msgstr "Lookback"
 
 msgid "Low"
 msgstr "Ниже"
@@ -1015,13 +1015,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Максимальная совокупная сумма убытков за день"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Макс. баланс"
 
 msgid "Maximum number of open positions"
 msgstr "Максимальное количество открытых позиций"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Макс. число открытых позиций"
 
 msgid "May"
 msgstr "Май"
@@ -1033,7 +1033,7 @@ msgid "Memorable town/city"
 msgstr "Любимый город"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Мин. ставка должна быть ниже макс. ставки."
 
 msgid "Min. Trade Stake"
 msgstr "Мин. ставка"
@@ -1042,13 +1042,13 @@ msgid "Min: 10 Max: 2000"
 msgstr "Мин: 10; Макс: 2000"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Минимум шесть заглавных и строчных букв с цифрами"
 
 msgid "Minus the agent's commission"
 msgstr "Минус комиссия агента"
 
 msgid "Minute"
-msgstr ""
+msgstr "Мин."
 
 msgid "Minutes"
 msgstr "Минуты"
@@ -1078,7 +1078,7 @@ msgid "Ms"
 msgstr "Госпожа"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Множитель"
 
 msgid "Name"
 msgstr "Имя"
@@ -1120,7 +1120,7 @@ msgid "No touch"
 msgstr "Нет касания"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Примечание: Контракт будет продан по цене, действующей на момент получения запроса нашими серверами. Эта цена может отличаться от указанной в настоящее время."
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Примечание: вывод средств через платёжного агента возможен лишь в том случае, когда Вы вносите средства исключительно через данного платёжного агента"
@@ -1189,10 +1189,10 @@ msgid "Overlap Studies"
 msgstr "Перекрытие графиков"
 
 msgid "PM"
-msgstr ""
+msgstr "вечера"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Пароль обновлён успешно."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Пароли не совпали. Пожалуйста, введите пароли снова"
@@ -1222,40 +1222,40 @@ msgid "Permissions"
 msgstr "Разрешения"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Пожалуйста, [_1]примите Правила и условия,[_2] чтобы снять ограничения на торговые лимиты и вывод средств."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Пожалуйста, [_1]заполните свой профайл,[_2] чтобы снять торговые лимиты и ограничения на вывод."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Пожалуйста, выберите мин. один ключ"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Чтобы снять торговые лимиты и ограничения на вывод, пожалуйста, заполните [_1]форму финансовой оценки[_2]."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Пожалуйста, подтвердите следующие данные, чтобы завершить перевод"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Пожалуйста, введите цифру между"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Пожалуйста, введите правильное значение"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Пожалуйста, введите число от 0 до"
 
 msgid "Please enter a value greater than 0"
 msgstr "Пожалуйста, введите значение больше 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Пожалуйста, укажите время окончания самоисключения менее 6 недель."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Пожалуйста, укажите название ключа"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Пожалуйста, введите время в формате ЧЧ:ММ"
@@ -1270,28 +1270,28 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Пожалуйста, установите последнюю версию одного из следующих браузеров"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Пожалуйста, войдите в систему"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Пожалуйста, войдите в систему, чтобы просмотреть сохранённое рабочее пространство."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Пожалуйста, войдите в систему."
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Выберите дату окончания перерыва."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Пожалуйста, выберите платежного агента"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Пожалуйста установите [_1]валюту[_2] Вашего счёта"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Пожалуйста, повторите попытку через 1 минуту."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Пожалуйста, используйте новый пароль для входа."
 
 msgid "Plot"
 msgstr "Тема"
@@ -1336,7 +1336,7 @@ msgid "Profit"
 msgstr "Прибыль"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Анализ счёта"
 
 msgid "Profit table"
 msgstr "Анализ счёта"
@@ -1354,25 +1354,25 @@ msgid "Purchase Price"
 msgstr "Цена покупки"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Время покупки"
 
 msgid "Read"
 msgstr "Читать"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Проверка реальности"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Перенаправление на страницу входа в OAuth,"
 
 msgid "Ref"
 msgstr "Номер"
 
 msgid "Ref."
-msgstr ""
+msgstr "Ном."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Не удалось обновить страницу"
 
 msgid "Register free account"
 msgstr "Откройте бесплатный счёт"
@@ -1387,7 +1387,7 @@ msgid "Rename"
 msgstr "Переименовать"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Продажа данного контракта невозможна"
 
 msgid "Reset zoom"
 msgstr "Сбросить масштаб"
@@ -1447,7 +1447,7 @@ msgid "Secondary"
 msgstr "Среднее"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Похоже, у нас возникли неполадки на сервере. Постараемся исправить их в кратчайшие сроки."
 
 msgid "Self-Employed"
 msgstr "Частный предприниматель"
@@ -1456,7 +1456,7 @@ msgid "Self-Exclusion"
 msgstr "Самоисключение"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Услуги самоограничения"
 
 msgid "Sell At Market"
 msgstr "Продать по текущей цене"
@@ -1474,7 +1474,7 @@ msgid "Session"
 msgstr "Сессия"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Лимит длительности сессии:"
 
 msgid "Session duration limit, in minutes"
 msgstr "Ограничение на длительность сессии, в минутах"
@@ -1492,7 +1492,7 @@ msgid "Sold"
 msgstr "Продано"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Случайный индекс"
 
 msgid "Spline"
 msgstr "Кривая"
@@ -1558,10 +1558,10 @@ msgid "Submit"
 msgstr "Подтвердить"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Новый ключ успешно добавлен"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Успешно добавлено рабочее пространство"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Шаблон успешно применён и сохранён как"
@@ -1579,16 +1579,16 @@ msgid "Tel"
 msgstr "Тел"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Шаблон сохранён как"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Шаблон частично применён."
 
 msgid "Template changes saved"
 msgstr "Изменения сохранены"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Шаблон неприменим."
 
 msgid "Template name"
 msgstr "Название шаблона"
@@ -1600,7 +1600,7 @@ msgid "Terms"
 msgstr "Условия"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Правила и условия"
 
 msgid "Tertiary"
 msgstr "Высшее"
@@ -1612,19 +1612,19 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "Компания держит средства клиентов на отдельных от рабочих счетов банковских счетах, которые в случае неплатежеспособности Компании не войдут в состав её активов. Это отвечает требованиям Комиссии по азартным играм по сегрегации средств клиентов на следующем уровне:"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "На протяжени длительности контракта произошел перебой в получении данных. Мы предпримем все усилия, чтобы исправить это на реальных счетах и правильно установить настройки контракта. В противном случае, контракт будет отменён и все средства возвращены трейдеру. Контракт на демо-счетах будет также отменён с возвратом средств."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Произошла ошибка"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Контракт истёк"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Контракт проиграл"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Контракт выиграл"
 
 msgid "This field is required"
 msgstr "Данное поле является обязательным"
@@ -1654,7 +1654,7 @@ msgid "Time out until"
 msgstr "Перерыв до"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Время ожидания запроса websocket"
 
 msgid "Title"
 msgstr "Заголовок"
@@ -1672,7 +1672,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Чтобы вывести средства, пожалуйста, введите специальный проверочный код, отправленный на Ваш электронный адрес"
 
 msgid "Today"
-msgstr ""
+msgstr "Сегодня"
 
 msgid "Token"
 msgstr "Ключ"
@@ -1681,7 +1681,7 @@ msgid "Token Management"
 msgstr "Управление ключами"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Ключ уже добавлен"
 
 msgid "Token management"
 msgstr "Управление ключами"
@@ -1690,16 +1690,16 @@ msgid "Token name"
 msgstr "Название ключа"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Название ключа может содержать буквенно-цифровые символы, пробелы и нижнее подчёркивание"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Название ключа может содержать макс. 32 знака"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "Название ключа должно содержать мин. 2 знака"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "Название ключа должно начинаться только с буквенно-цифровых знаков"
 
 msgid "Token permissions"
 msgstr "Право доступа ключа"
@@ -1756,7 +1756,7 @@ msgid "Trading Times"
 msgstr "Торговые часы"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Торговля бинарными опционами подходит далеко не всем, поэтому просим Вас убедиться, что Вы полностью осознаёте все возможные риски. Ваш убыток может превысить сумму первоначального пополнения счёта, а Вы не получаете никаких процентов с активов, на которых заключаете контракты."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview для Binary.com"
@@ -1822,7 +1822,7 @@ msgid "Various customisable features like loading and arranging assets, charting
 msgstr "Различные настраиваемые функции: загрузка и упорядочивание активов, графиков и других ресурсов"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Проверочный код отправлен"
 
 msgid "Verification token"
 msgstr "Проверочный ключ"
@@ -1864,7 +1864,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Добро пожаловать на Webtrader от Binary.com"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Когда Вы нажмёте \"ОК\", Вы будете отстранены от работы на сайте до выбранной даты."
 
 msgid "While on the go, you can"
 msgstr "Прямо на ходу Вы можете"
@@ -1879,7 +1879,7 @@ msgid "Workspace"
 msgstr "Рабочая область"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Изменения сохранены"
 
 msgid "X-axis labels"
 msgstr "Метки оси X"
@@ -1903,7 +1903,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Вы пока не копируете другие контракты"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Вы самоисключились до"
 
 msgid "You have sold the following contract"
 msgstr "Вы продали следующий контракт"
@@ -1927,16 +1927,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Ваш счёт (%) заблокирован. Пожалуйста, свяжитесь со службой поддержки для получения дополнительной информации."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Возможности счёта ограничены. Пожалуйста, свяжитесь с нашей [_1]службой поддержки[_2] для получения помощи."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Ваш браузер не поддерживает копирование в буфер обмена"
 
 msgid "Your browser is not supported"
 msgstr "Ваш браузер не поддерживается"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Ваши изменения внесены успешно"
 
 msgid "Your copying settings"
 msgstr "Ваши настройки копирования"
@@ -1954,10 +1954,10 @@ msgid "Zoom"
 msgstr "Приблизить"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Пройдите аутентификацию счёта,[_2] чтобы получить доступ ко всем доступным способам вывода средств."
 
 msgid "and"
-msgstr ""
+msgstr "и"
 
 msgid "apostrophe (') are allowed"
 msgstr "разрешен апостроф (')"
@@ -1966,7 +1966,7 @@ msgid "commission"
 msgstr "комиссия"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "создать ключ только для чтения и поделиться им с последователями"
 
 msgid "customer support"
 msgstr "служба поддержки"
@@ -1978,7 +1978,7 @@ msgid "days"
 msgstr "дн."
 
 msgid "deposits"
-msgstr ""
+msgstr "пополнение"
 
 msgid "end time"
 msgstr "окончание"
@@ -1990,7 +1990,7 @@ msgid "exit spot"
 msgstr "котировка на выходе"
 
 msgid "for"
-msgstr ""
+msgstr "для"
 
 msgid "for mobile charts"
 msgstr "для мобильных графиков"
@@ -2038,7 +2038,7 @@ msgid "main site"
 msgstr "основной сайт"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "рынок закрыт в данный момент."
 
 msgid "medium protection"
 msgstr "средняя защита"
@@ -2062,7 +2062,7 @@ msgid "points"
 msgstr "пункт."
 
 msgid "sec"
-msgstr ""
+msgstr "сек."
 
 msgid "second"
 msgstr "сек."
@@ -2089,7 +2089,7 @@ msgid "ticks"
 msgstr "тика(ов)"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "вывод"
 
 msgid "yes"
 msgstr "да"
@@ -2098,5 +2098,5 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Прибыль"
 

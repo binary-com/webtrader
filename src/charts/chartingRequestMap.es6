@@ -63,11 +63,15 @@ export const register = function(options) {
 
     const req = {
         "ticks_history": options.symbol,
-        "granularity": granularity,
         "count": options.count || 1,
         "end": 'latest',
         "style": style
     };
+
+    if (granularity) {
+        req.granularity = granularity;
+    }
+
     if (options.subscribe === 1) {
         req.subscribe = 1;
     }
@@ -146,10 +150,9 @@ export const unregister = function(key, containerIDWithHash) {
             // Remove this part as well.
             .then(()=>{
                 // Resubscribe to tick stream if there are any tickSubscribers.
-                if(tickSubscribers)
+                if (tickSubscribers)
                     map.register({
                         symbol: instrument,
-                        granularity: 0,
                         subscribe: 1,
                         count: 50 // To avoid missing any ticks.
                     });
