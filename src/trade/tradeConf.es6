@@ -10,7 +10,6 @@ import 'css!../trade/tradeConf.css';
 import html from 'text!../trade/tradeConf.html';
 
 /* rv binder to show tick chart for this confirmation dialog */
-let display_decimals;
 const CHART_LABELS = ['start_time', 'barrier', 'end_time'];
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
@@ -53,7 +52,8 @@ rv.binders['tick-chart'] = {
                   align: 'left',
                   x: 0,
                   formatter() {
-                        return addComma(this.value, display_decimals);
+                     console.log(model);
+                     return addComma(this.value, model.display_decimals);
                   },
             },
             title: '',
@@ -178,13 +178,12 @@ const registerTicks = (state, extra) => {
          epoch: (+tick.epoch),
          number: state.ticks.array.length + 1,
          tooltip,
-         display_decimals,
       });
 
       function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = addComma(+tick.quote, display_decimals);
+            const tick_quote_formatted = addComma(+tick.quote, state.ticks.display_decimals);
 
             return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };
