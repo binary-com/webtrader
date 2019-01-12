@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-12 10:51\n"
+"PO-Revision-Date: 2019-01-12 16:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -811,7 +811,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "Индексы волатильности на острове Мэн и в Великобритании предоставлены компанией Binary (IOM) Ltd., расположенной по адресу First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Компания лицензирована и регулируется (1) Комиссией по надзору за азартными играм на Острове Мэн (текущая лицензия выдана 31 августа 2017 г.), а также (2) Комиссией по азартным играм Великобритании (номер лицензии: [_1] 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "В остальной части ЕС Индексы волатильности предоставлены компанией Binary (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется (1) Управлением по азартным играм Мальты (лицензия номер MGA/B2C/102/2000 выдана 1 августа 2018 г.), для клиентов из Великобритании - (2) Управлением по азартным играм Великобритании (номер лицензии: [_1]39495[_2]), а для клиентов из Ирландии - (3) Налоговой службой Ирландии (лицензия удалённого букмекера номер 1010285, выданная 1 июля 2017 г). Ознакомьтесь с [_3]Информацией о регулировании[_4]."
+msgstr "В остальной части ЕС Индексы волатильности предоставлены компанией Binary (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется (1) Управлением по азартным играм Мальты (лицензия номер MGA/B2C/102/2000 выдана 26 мая 2015 г.), для клиентов из Великобритании - (2) Управлением по азартным играм Великобритании (номер лицензии: [_1]39495[_2]), а для клиентов из Ирландии - (3) Налоговой службой Ирландии (лицензия удалённого букмекера номер 1010285, выданная 1 июля 2017 г). Ознакомьтесь с [_3]Информацией о регулировании[_4]."
 
 msgid "In/Out"
 msgstr "Внутри/Вне"
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Время входа"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr "Выход в связи с окончанием самоисключения!"
+msgstr "Выход из системы согласно настройкам самоисключения!"
 
 msgid "Login"
 msgstr "Вход"
