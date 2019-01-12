@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-05 16:40\n"
+"PO-Revision-Date: 2019-01-12 10:51\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1222,10 +1222,10 @@ msgid "Permissions"
 msgstr "Разрешения"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr "Пожалуйста, [_1]примите Правила и условия,[_2] чтобы снять ограничения на торговые лимиты и вывод средств."
+msgstr "Пожалуйста, [_1]примите Правила и условия,[_2] чтобы снять ограничения на торговлю и вывод средств."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr "Пожалуйста, [_1]заполните свой профайл,[_2] чтобы снять торговые лимиты и ограничения на вывод."
+msgstr "Пожалуйста, [_1]заполните свой профиль,[_2] чтобы снять торговые лимиты и ограничения на вывод."
 
 msgid "Please choose at least one token scope"
 msgstr "Пожалуйста, выберите мин. один ключ"
@@ -1363,7 +1363,7 @@ msgid "Reality check"
 msgstr "Проверка реальности"
 
 msgid "Redirecting to oauth login page,"
-msgstr "Перенаправление на страницу входа в OAuth,"
+msgstr "Перенаправление на страницу входа OAuth,"
 
 msgid "Ref"
 msgstr "Номер"
