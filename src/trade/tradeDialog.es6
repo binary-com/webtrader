@@ -775,6 +775,14 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if (state.categories.value.contract_category === 'digits') {
       request.barrier = state.digits.value + '';
     }
+    if (state.categories.value.contract_category === 'lookback') {
+      if (state.basis.amount > 1000) {
+        state.proposal.error = 'Maximum multiplier of 1000.';
+        state.proposal.message = '';
+        state.proposal.loading = false;
+        return;
+      }
+    }
     if (state.date_start.value !== 'now') {
       request.date_start = state.date_start.value * 1;
     }
