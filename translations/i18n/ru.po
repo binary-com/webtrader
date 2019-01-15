@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-05 16:40\n"
+"PO-Revision-Date: 2019-01-12 16:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -310,7 +310,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com – это провайдер услуг в сфере онлайн торговли, удостоенный высоких наград и помогающий своим клиентам торговать на финансовых рынках посредством контрактов на бинарных опционах и CFD. Торговля бинарными опционами и CFD на Индексах волатильности относится к категории азартных игр. Пожалуйста, помните, что азартные игры могут перерасти в зависимость и играйте ответственно. Узнайте больше об [_1]1ответственной торговле[_2]. Ряд продуктов доступен не во всех странах мира. Услуги данного сайта недоступны для лиц моложе 18 лет, а также в следующих странах: США, Канада, Коста-Рика, Гонконг."
+msgstr "Binary.com – это провайдер услуг в сфере онлайн торговли, удостоенный высоких наград и помогающий своим клиентам торговать на финансовых рынках посредством контрактов на бинарных опционах и CFD. Торговля бинарными опционами и CFD на Индексах волатильности относится к категории азартных игр. Пожалуйста, помните, что азартные игры могут перерасти в зависимость и играйте ответственно. Узнайте больше об [_1]ответственной торговле[_2]. Ряд продуктов доступен не во всех странах мира. Услуги данного сайта недоступны для лиц моложе 18 лет, а также в следующих странах: США, Канада, Коста-Рика, Гонконг."
 
 msgid "Blank window"
 msgstr "Пустое окно"
@@ -811,7 +811,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "Индексы волатильности на острове Мэн и в Великобритании предоставлены компанией Binary (IOM) Ltd., расположенной по адресу First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles. Компания лицензирована и регулируется (1) Комиссией по надзору за азартными играм на Острове Мэн (текущая лицензия выдана 31 августа 2017 г.), а также (2) Комиссией по азартным играм Великобритании (номер лицензии: [_1] 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "В остальной части ЕС Индексы волатильности предоставлены компанией Binary (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется (1) Управлением по азартным играм Мальты (лицензия номер MGA/B2C/102/2000 выдана 1 августа 2018 г.), для клиентов из Великобритании - (2) Управлением по азартным играм Великобритании (номер лицензии: [_1]39495[_2]), а для клиентов из Ирландии - (3) Налоговой службой Ирландии (лицензия удалённого букмекера номер 1010285, выданная 1 июля 2017 г). Ознакомьтесь с [_3]Информацией о регулировании[_4]."
+msgstr "В остальной части ЕС Индексы волатильности предоставлены компанией Binary (Europe) Ltd., расположенной по адресу Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta. Компания лицензирована и регулируется (1) Управлением по азартным играм Мальты (лицензия номер MGA/B2C/102/2000 выдана 26 мая 2015 г.), для клиентов из Великобритании - (2) Управлением по азартным играм Великобритании (номер лицензии: [_1]39495[_2]), а для клиентов из Ирландии - (3) Налоговой службой Ирландии (лицензия удалённого букмекера номер 1010285, выданная 1 июля 2017 г). Ознакомьтесь с [_3]Информацией о регулировании[_4]."
 
 msgid "In/Out"
 msgstr "Внутри/Вне"
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Время входа"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr "Выход в связи с окончанием самоисключения!"
+msgstr "Выход из системы согласно настройкам самоисключения!"
 
 msgid "Login"
 msgstr "Вход"
@@ -1222,10 +1222,10 @@ msgid "Permissions"
 msgstr "Разрешения"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr "Пожалуйста, [_1]примите Правила и условия,[_2] чтобы снять ограничения на торговые лимиты и вывод средств."
+msgstr "Пожалуйста, [_1]примите Правила и условия,[_2] чтобы снять ограничения на торговлю и вывод средств."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr "Пожалуйста, [_1]заполните свой профайл,[_2] чтобы снять торговые лимиты и ограничения на вывод."
+msgstr "Пожалуйста, [_1]заполните свой профиль,[_2] чтобы снять торговые лимиты и ограничения на вывод."
 
 msgid "Please choose at least one token scope"
 msgstr "Пожалуйста, выберите мин. один ключ"
@@ -1249,7 +1249,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Пожалуйста, введите значение больше 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr "Пожалуйста, укажите время окончания самоисключения менее 6 недель."
+msgstr "Пожалуйста, укажите время окончания самоисключения (менее 6 недель)."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Пожалуйста, введите дату в следующем формате: ГГГГ-ММ-ДД"
@@ -1363,7 +1363,7 @@ msgid "Reality check"
 msgstr "Проверка реальности"
 
 msgid "Redirecting to oauth login page,"
-msgstr "Перенаправление на страницу входа в OAuth,"
+msgstr "Перенаправление на страницу входа OAuth,"
 
 msgid "Ref"
 msgstr "Номер"
@@ -1612,7 +1612,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "Компания держит средства клиентов на отдельных от рабочих счетов банковских счетах, которые в случае неплатежеспособности Компании не войдут в состав её активов. Это отвечает требованиям Комиссии по азартным играм по сегрегации средств клиентов на следующем уровне:"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr "На протяжени длительности контракта произошел перебой в получении данных. Мы предпримем все усилия, чтобы исправить это на реальных счетах и правильно установить настройки контракта. В противном случае, контракт будет отменён и все средства возвращены трейдеру. Контракт на демо-счетах будет также отменён с возвратом средств."
+msgstr "Произошел перебой в получении данных. Мы предпримем все усилия, чтобы исправить это на реальных счетах и правильно установить настройки контракта. В противном случае, контракт будет отменён и все средства возвращены трейдеру. Контракт на демо-счетах будет также отменён с возвратом средств."
 
 msgid "There was an error"
 msgstr "Произошла ошибка"
@@ -1654,7 +1654,7 @@ msgid "Time out until"
 msgstr "Перерыв до"
 
 msgid "Timeout for websocket request"
-msgstr "Время ожидания запроса websocket"
+msgstr "Таймаут запроса websocket"
 
 msgid "Title"
 msgstr "Заголовок"
