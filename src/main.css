@@ -378,7 +378,7 @@ a.ui-state-default.ui-state-hover {
 	background: #dedede;
 }
 .ui-widget.ui-widget-content {
-    border: 1px solid #c5c5c5;
+    border: unset;
 }
 .ui-datepicker-close {
 	display: none;

@@ -6,6 +6,15 @@ $COLOR_DARK_BLUE: #2a3052;
 		min-width: 225px !important;
     }
 
+    &.webtrader-dialog-widget {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: box-shadow 0.3s;
+
+        &:hover, &:active, &:focus {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+    }
+
     &.statement .span-in-dialog-header,
     &.profitTable .span-in-dialog-header {
         position: absolute;
