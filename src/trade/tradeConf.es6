@@ -158,6 +158,7 @@ const registerTicks = (state, extra) => {
 
          if (contract_is_finished) {
             onContractFinished(proposal_open_contract);
+            state.ticks.contract_is_finished = true;
             updateChart();
          }
 
