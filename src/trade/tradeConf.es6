@@ -10,7 +10,7 @@ import 'css!../trade/tradeConf.css';
 import html from 'text!../trade/tradeConf.html';
 
 /* rv binder to show tick chart for this confirmation dialog */
-const CHART_LABELS = ['start_time', 'barrier', 'end_time'];
+const CHART_LABELS = ['entry_spot_tick', 'barrier', 'exit_spot_tick'];
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
    bind: function(el) {
