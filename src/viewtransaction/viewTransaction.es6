@@ -348,8 +348,7 @@ function drawXLines(contract, state, chart) {
     }
 
     if (is_sold_before_expiry) drawXLine({ line_time: sell_time, label: 'end_time', dashStyle: 'Dash' });
-    if (!is_path_dependent) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
-    if (is_ended) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
+    if (!is_path_dependent || is_ended) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
   }
 
   function drawPurchaseTime({ purchase_time }) {
