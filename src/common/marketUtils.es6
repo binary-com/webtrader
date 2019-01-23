@@ -12,4 +12,6 @@ const getMarketsSubmarkets = (active_symbols) => {
     return select_market_submarket
  }
 
-export default getMarketsSubmarkets;
+const getSortedMarkets = (markets) => markets.length > 1 ? Object.assign([], markets, {[2]: markets[3], [3]: markets[2]}) : markets;
+
+export { getMarketsSubmarkets, getSortedMarkets };

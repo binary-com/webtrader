@@ -6,7 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
-import getMarketsSubmarkets from '../common/marketUtils';
+import { getMarketsSubmarkets, getSortedMarkets } from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
@@ -145,8 +145,7 @@ const initTradingWin = ($html) => {
       const refresh = (data) => {
         const result = processData(menu.extractFilteredMarkets(data[1]));
         const header = getMarketsSubmarkets(data[0].active_symbols);
-        const market_name_list = Object.keys(header);
-        const market_name_reversed = market_name_list.length > 1 ? Object.assign([], market_name_list, {[2]: market_name_list[3], [3]: market_name_list[2]}) : market_name_list; // handle norway clients (handle translation)
+        const markets_sorted_list = getSortedMarkets(Object.keys(header));
 
         function changed() {
           const val = $(this).val();
@@ -160,13 +159,13 @@ const initTradingWin = ($html) => {
               const select = $('<select />');
               select.appendTo(subheader);
               market_names = windows.makeSelectmenu(select, {
-                list: market_name_reversed,
+                list: markets_sorted_list,
                 inx: 0,
               });
               market_names.off('selectmenuchange', changed);
               market_names.on('selectmenuchange', changed);
           } else {
-            market_names.update_list(market_name_reversed);
+            market_names.update_list(markets_sorted_list);
             market_names.off('selectmenuchange', changed);
             market_names.on('selectmenuchange', changed);
         }

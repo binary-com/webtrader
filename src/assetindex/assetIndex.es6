@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import getMarketsSubmarkets from '../common/marketUtils';
+import { getMarketsSubmarkets, getSortedMarkets } from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -155,13 +155,12 @@ const initTable = () => {
         }
 
         function marketsDropdown(market_submarkets) {
-            const markets_array = Object.keys(market_submarkets);
-            const markets_reversed = markets_array.length > 1 ? Object.assign([], markets_array, {[2]: markets_array[3], [3]: markets_array[2]}) : markets_array; // handle norway clients (handle translation)
+            const markets_sorted_list = getSortedMarkets(Object.keys(market_submarkets));
 
             if (!state.dropdown.display_markets) {
                 state.dropdown.display_markets = windows
                     .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
-                        list: markets_reversed,
+                        list: markets_sorted_list,
                         inx: 0,
                         changed: (val) => {
                             const submarket_list = Object.keys(market_submarkets[val]);
@@ -172,7 +171,7 @@ const initTable = () => {
                     });
                 state.dropdown.display_markets.selectmenu('widget').addClass('asset-index-selectmenu');
             } else {
-                state.dropdown.display_markets.update_list(markets_reversed);
+                state.dropdown.display_markets.update_list(markets_sorted_list);
             }
         }
 
