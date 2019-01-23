@@ -343,7 +343,7 @@ function drawXLines(contract, state, chart) {
   function drawEndTime({ is_path_dependent }) {
     const { is_sold_before_expiry } = state.proposal_open_contract;
 
-    if ((is_path_dependent || !is_path_dependent) && exit_tick_time && is_sold_before_expiry) {
+    if (exit_tick_time && is_sold_before_expiry) {
       drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
     }
 
