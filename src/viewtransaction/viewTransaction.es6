@@ -341,14 +341,14 @@ function drawXLines(contract, state, chart) {
   }
 
   function drawEndTime({ is_path_dependent }) {
-    const { is_sold_before_expiry, is_ended } = state.proposal_open_contract;
+    const { is_sold_before_expiry } = state.proposal_open_contract;
 
-    if (is_path_dependent && exit_tick_time && is_sold_before_expiry) {
+    if ((is_path_dependent || !is_path_dependent) && exit_tick_time && is_sold_before_expiry) {
       drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
     }
 
     if (is_sold_before_expiry) drawXLine({ line_time: sell_time, label: 'end_time', dashStyle: 'Dash' });
-    if (!is_path_dependent || is_ended) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
+    if (!is_path_dependent) drawXLine({ line_time: date_expiry, label: 'end_time', dashStyle: 'Dash' });
   }
 
   function drawPurchaseTime({ purchase_time }) {
