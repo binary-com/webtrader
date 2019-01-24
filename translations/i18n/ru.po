@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-12 16:10\n"
+"PO-Revision-Date: 2019-01-24 08:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -298,7 +298,7 @@ msgid "Barrier"
 msgstr "Барьер"
 
 msgid "Barrier offset"
-msgstr "Изменение барьера"
+msgstr "Оффсет барьера"
 
 msgid "Bill Williams"
 msgstr "Билл Вилльямс"
@@ -769,7 +769,7 @@ msgid "High barrier"
 msgstr "Верхний барьер"
 
 msgid "High barrier offset"
-msgstr "Изменение верхнего барьера"
+msgstr "Оффсет верхнего барьера"
 
 msgid "Higher"
 msgstr "Выше"
@@ -973,7 +973,7 @@ msgid "Low barrier"
 msgstr "Нижний барьер"
 
 msgid "Low barrier offset"
-msgstr "Изменение нижнего барьера"
+msgstr "Оффсет нижнего барьера"
 
 msgid "Lower"
 msgstr "Ниже"
