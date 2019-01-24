@@ -13,7 +13,7 @@ const CHART_LABEL_ELS = {
     entry_spot      : `<span style="${SPOT_STYLE} border: 3px solid orange; width: 4px; height: 4px;"></span>${'Entry Spot'.i18n()}`,
     exit_spot       : `<span style="${SPOT_STYLE} background-color: orange; width:10px; height: 10px;"></span>${'Exit Spot'.i18n()}`,
     entry_spot_tick : `<span style="${VERTICAL_LINE_STYLE} border-style: solid;"></span> ${'Entry Spot'.i18n()}`,
-    exit_spot_tick  : `<span style="${VERTICAL_LINE_STYLE} border-style: solid;"></span> ${'Exit Spot'.i18n()}`,
+    exit_spot_tick  : `<span style="${VERTICAL_LINE_STYLE} border-style: dashed;"></span> ${'Exit Spot'.i18n()}`,
 };
 
 const getLabelEl = (labels) => {
@@ -27,7 +27,7 @@ const getLabelEl = (labels) => {
 };
 
 const getMarkerSettings = (fillColor = 'white') => {
-    return { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4 }}};
+    return { enabled: true, fillColor, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4 }}};
 };
 
 const getChartLabels = (proposal_open_contract) => {

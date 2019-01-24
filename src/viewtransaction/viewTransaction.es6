@@ -302,7 +302,9 @@ function drawSpots(contract, state, chart) {
 
   if (tick_count) return; // tick contracts = chart should not have entry/exit spots
 
-  drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
+  if (entry_tick_time) {
+    drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
+  }
 
   if (is_path_dependent && exit_tick_time) {
     drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
@@ -322,7 +324,7 @@ function drawSpots(contract, state, chart) {
 }
 
 function drawXLines(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, date_expiry, date_start, tick_count, sell_time } = contract;
+  const { entry_tick_time, exit_tick_time, date_start, date_expiry, tick_count, sell_time } = contract;
 
   if (tick_count) { // only for tick contracts
     drawXLine({ line_time: entry_tick_time, label: 'start_time' });
@@ -343,7 +345,7 @@ function drawXLines(contract, state, chart) {
   function drawEndTime({ is_path_dependent }) {
     const { is_sold_before_expiry } = state.proposal_open_contract;
 
-    if (exit_tick_time && is_sold_before_expiry) {
+    if (is_path_dependent && exit_tick_time && is_sold_before_expiry) {
       drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
     }
 
