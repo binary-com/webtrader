@@ -91,7 +91,7 @@ const initChart = (root, state, options) => {
       tooltip: {
          useHTML: true,
          formatter() {
-            const spot = addComma(this.y.toFixed(display_decimals));
+            const spot = addComma(this.y, display_decimals);
             const spot_time = moment.utc(this.x).format('dddd, MMM D, HH:mm:ss');
             return `<div class='tooltip-body'>${spot_time} GMT<br/>${this.series.name} ${spot}</div>`;
         },
@@ -111,7 +111,7 @@ const initChart = (root, state, options) => {
           x: -65,
           y: -2,
           formatter() {
-            return addComma(this.value.toFixed(display_decimals));
+            return addComma(this.value, display_decimals);
           },
         },
          title: '',
@@ -343,7 +343,7 @@ function drawXLines(contract, state, chart) {
   function drawEndTime({ is_path_dependent }) {
     const { is_sold_before_expiry } = state.proposal_open_contract;
 
-    if (is_path_dependent && exit_tick_time && is_sold_before_expiry) {
+    if (exit_tick_time && is_sold_before_expiry) {
       drawXLine({ line_time: exit_tick_time, label: 'end_time', dashStyle: 'Dash' });
     }
 
