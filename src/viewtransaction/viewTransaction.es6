@@ -337,7 +337,7 @@ function drawXLines(contract, state, chart) {
   drawPurchaseTime(contract);
 
   function drawXLine({ line_time, label, dashStyle, color }) {
-    if (!line_time) return false;
+    if (!line_time || state.chart.hasLabel(label)) return false;
 
     chart.addPlotLineX({ value: +line_time * 1000, dashStyle, color});
   }
