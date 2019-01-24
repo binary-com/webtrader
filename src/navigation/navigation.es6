@@ -83,7 +83,6 @@ const destroy_windows = (data_attribute) => {
    state.switchAccount = (id) => {
       destroy_windows('data-account-specific=true');
       liveapi.switch_account(id)
-         .then(() => window.location.reload())
          .catch((err) => {
             $.growl.error({message: err.message});
             // logout user if he decided to self exclude himself.

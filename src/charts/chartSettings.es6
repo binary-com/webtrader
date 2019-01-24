@@ -27,7 +27,7 @@ const getLabelEl = (labels) => {
 };
 
 const getMarkerSettings = (fillColor = 'white') => {
-    return { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4 }}};
+    return { enabled: true, fillColor, lineColor: 'orange', lineWidth: 3, radius: 4, states: { hover: { fillColor, lineColor: 'orange', lineWidth: 3, radius: 4 }}};
 };
 
 const getChartLabels = (proposal_open_contract) => {

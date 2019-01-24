@@ -302,7 +302,7 @@ function drawSpots(contract, state, chart) {
 
   if (tick_count) return; // tick contracts = chart should not have entry/exit spots
 
-  if(entry_tick_time) {
+  if (entry_tick_time) {
     drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
   }
 
@@ -324,7 +324,7 @@ function drawSpots(contract, state, chart) {
 }
 
 function drawXLines(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, date_expiry, date_start, tick_count, sell_time } = contract;
+  const { entry_tick_time, exit_tick_time, date_start, tick_count, sell_time } = contract;
 
   if (tick_count) { // only for tick contracts
     drawXLine({ line_time: entry_tick_time, label: 'start_time' });
