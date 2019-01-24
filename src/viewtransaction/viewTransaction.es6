@@ -297,7 +297,7 @@ function drawZones(contract, state, chart) {
 }
 
 function drawSpots(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, tick_count } = contract;
+  const { entry_tick_time, exit_tick_time, tick_count, is_path_dependent } = contract;
   const { is_sold_before_expiry } = state.proposal_open_contract;
 
   if (tick_count) return; // tick contracts = chart should not have entry/exit spots
@@ -306,7 +306,7 @@ function drawSpots(contract, state, chart) {
     drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
   }
 
-  if (exit_tick_time) {
+  if (is_path_dependent && exit_tick_time) {
     drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
   }
 
