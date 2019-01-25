@@ -79,8 +79,8 @@ const initTable = () => {
         });
 
     function populateTable(result) {
-        const active_symbols_data = Object.assign(result[0].active_symbols);
-        const asset_index_data = [...result[1].asset_index];
+        const active_symbols_data = local_storage.get('active_symbols');
+        const asset_index_data = [...result[0].asset_index];
 
         if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
 
@@ -195,12 +195,10 @@ const initTable = () => {
 
     function getActiveSymAndAssetsData() {
         const processing_msg = $(`#${table_el.attr('id')}_processing`).show();
-        const active_symbols_request = { active_symbols: 'brief' };
         const asset_index_request = { asset_index: 1 };
 
         return Promise.all(
             [
-                liveapi.cached.send(active_symbols_request),
                 liveapi.cached.send(asset_index_request),
             ])
             .then((results) => {
