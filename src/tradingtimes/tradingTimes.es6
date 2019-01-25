@@ -6,7 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
-import { getMarketsSubmarkets, getDefaultMarkets } from '../common/marketUtils';
+import { getMarketsSubmarkets, getOrderedMarkets } from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
@@ -143,9 +143,10 @@ const initTradingWin = ($html) => {
 
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
       const refresh = (data) => {
-        const result = processData(menu.extractFilteredMarkets(data[1]));
-        const header = getMarketsSubmarkets(data[0].active_symbols);
-        const markets_sorted_list = getDefaultMarkets(data[0].active_symbols);
+        const result = processData(menu.extractFilteredMarkets(data[0]));
+        const active_symbols = local_storage.get('active_symbols')
+        const header = getMarketsSubmarkets(active_symbols);
+        const markets_sorted_list = getOrderedMarkets(active_symbols);
         
         if($.isEmptyObject(header)) return;
 
@@ -192,15 +193,13 @@ const initTradingWin = ($html) => {
       };
 
       const getCachedData = () => {
-         const active_symbols_request = { active_symbols: 'brief' };
-         const asset_index_request = { trading_times: yyyy_mm_dd };
+         const trading_times_request = { trading_times: yyyy_mm_dd };
          const $processing_msg = $('#' + table.attr('id') + '_processing');
 
          $processing_msg.show();
          Promise.all(
              [
-                 liveapi.cached.send(active_symbols_request),
-                 liveapi.cached.send(asset_index_request),
+                 liveapi.cached.send(trading_times_request),
              ])
              .then((results) => {
                  refresh(results);

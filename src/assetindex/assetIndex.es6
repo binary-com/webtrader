@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import { getMarketsSubmarkets, getDefaultMarkets } from '../common/marketUtils';
+import { getMarketsSubmarkets, getOrderedMarkets } from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -80,13 +80,14 @@ const initTable = () => {
         });
 
     function populateTable(result) {
-        const active_symbols_data = Object.assign(result[0].active_symbols);
-        const asset_index_data = [...result[1].asset_index];
+        const active_symbols_data = local_storage.get('active_symbols');
+        console.log(result[0].asset_index);
+        const asset_index_data = [...result[0].asset_index];
 
         if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
 
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
-        state.dropdown.sorted_markets = getDefaultMarkets(active_symbols_data);
+        state.dropdown.sorted_markets = getOrderedMarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
@@ -199,12 +200,10 @@ const initTable = () => {
 
     function getActiveSymAndAssetsData() {
         const processing_msg = $(`#${table_el.attr('id')}_processing`).show();
-        const active_symbols_request = { active_symbols: 'brief' };
         const asset_index_request = { asset_index: 1 };
 
         return Promise.all(
             [
-                liveapi.cached.send(active_symbols_request),
                 liveapi.cached.send(asset_index_request),
             ])
             .then((results) => {
