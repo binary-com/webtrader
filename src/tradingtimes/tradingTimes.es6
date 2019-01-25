@@ -6,7 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
-import { getMarketsSubmarkets, getSortedMarkets } from '../common/marketUtils';
+import { getMarketsSubmarkets, getDefaultMarkets } from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
@@ -145,7 +145,7 @@ const initTradingWin = ($html) => {
       const refresh = (data) => {
         const result = processData(menu.extractFilteredMarkets(data[1]));
         const header = getMarketsSubmarkets(data[0].active_symbols);
-        const markets_sorted_list = getSortedMarkets(Object.keys(header));
+        const markets_sorted_list = getDefaultMarkets(data[0].active_symbols);
         
         if($.isEmptyObject(header)) return;
 

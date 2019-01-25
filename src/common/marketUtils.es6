@@ -1,44 +1,46 @@
+const market_order = {
+    forex: 1,
+    indices: 2,
+    commodities: 3,
+    volidx: 4,
+};
+
+const getSortedMarkets = (markets) => markets.sort((a, b) => getMarketsOrder(a) - getMarketsOrder(b));
+
 const getMarketsSubmarkets = (active_symbols) => {
-    console.log(getOrderedMarkets(active_symbols));
-    const select_market_submarket = active_symbols.reduce((market_result, markets) => {
-        const { market, market_display_name, submarket_display_name, display_name } = markets;
+    return active_symbols.reduce((market_result, markets) => {
+        const { market_display_name, submarket_display_name, display_name } = markets;
 
         market_result[market_display_name] = market_result[market_display_name] || {};
         market_result[market_display_name][submarket_display_name] = market_result[market_display_name][submarket_display_name] || [];
         market_result[market_display_name][submarket_display_name].push(display_name);
- 
+
         return market_result;
-    }, {})
- 
-    return select_market_submarket
- }
-
- const getOrderedMarkets = (active_symbols) => active_symbols
-    .map((symbol) => ({
-        [symbol.market]: symbol.market_display_name
-    }))
-    .reduce((market_result, markets) => {
-        return markets || {};
     }, {});
+};
 
- const getMarketsId = (active_symbols) => active_symbols
-    .map(symbol => symbol.market)
-    .filter((markets, index, self) => self
-    .indexOf(markets) === index);
+const getDefaultMarkets = (active_symbols) => {
+    const unsorted_markets = getOrderedMarkets(active_symbols);
+    const sorted_markets_order = getSortedMarkets(Object.keys(unsorted_markets));
 
- const market_order = {
-    forex      : 1,
-    volidx     : 2,
-    indices    : 3,
-    stocks     : 4,
-    commodities: 5,
+    return sorted_markets_order.map(market_id => unsorted_markets[market_id].toString());
+};
+
+const getOrderedMarkets = (active_symbols) => {
+    return active_symbols.reduce((market_result, markets) => {
+        const { market, market_display_name } = markets;
+
+        market_result[market] = market_result[market] || [];
+        if (market_result[market].includes(market_display_name) === false) market_result[market].push(market_display_name);
+
+        return market_result;
+    }, {});
 };
 
 const getMarketsOrder = market => market_order[market] || 100;
 
-const getSortedMarkets = (markets) => markets.sort((a, b) => getMarketsOrder(a) - getMarketsOrder(b));
-
-export { getMarketsSubmarkets,
-         getSortedMarkets,
-         getMarketsId,
-         getMarketsOrder };
+export {
+    getMarketsSubmarkets,
+    getDefaultMarkets,
+    getMarketsOrder
+};

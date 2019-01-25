@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import { getMarketsSubmarkets, getSortedMarkets, getMarketsId } from '../common/marketUtils';
+import { getMarketsSubmarkets, getDefaultMarkets } from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -37,7 +37,7 @@ const state = {
         display_markets: null,
         display_submarkets: null,
         is_volatility: false,
-        markets_id: null,
+        sorted_markets: null,
         market_submarkets: null,
         selected_market: null
     },
@@ -85,7 +85,7 @@ const initTable = () => {
 
         if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
-        state.dropdown.markets_id = getMarketsId(active_symbols_data);
+        state.dropdown.sorted_markets = getDefaultMarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
@@ -158,7 +158,7 @@ const initTable = () => {
         }
 
         function marketsDropdown(market_submarkets) {
-            const markets_sorted_list = getSortedMarkets(state.dropdown.markets_id);
+            const markets_sorted_list = state.dropdown.sorted_markets;
 
             if (!state.dropdown.display_markets) {
                 state.dropdown.display_markets = windows
