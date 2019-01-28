@@ -61,8 +61,9 @@ const refreshTable  = (yyy_mm_dd) => {
       const transactions = (data.statement && data.statement.transactions) || [];
       const view_button_text = 'View'.i18n();
       const rows = transactions.map((trans) => {
-         const view_button_class = _(['buy', 'sell']).includes(trans.action_type) ? '' : 'class="button-disabled"';
-         const view_button = '<button '+view_button_class+'>' + view_button_text + '</button>';
+         let class_name = _(['buy', 'sell']).includes(trans.action_type) ? '' : 'button-disabled';
+             class_name = _(['deposit', 'withdrawal']).includes(trans.action_type) ? 'invisible' : class_name;
+         const view_button = `<button class="${ class_name }">${ view_button_text }</button>`;
          const amount = trans.amount * 1;
          return [
             epochToString(trans.transaction_time, { utc: true }),

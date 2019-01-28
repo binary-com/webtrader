@@ -61,6 +61,8 @@ rv.formatters['gt'] = (vlaue, other) => vlaue > other;
 rv.formatters['lt'] = (vlaue, other) => vlaue < other;
 /* localise price format*/
 rv.formatters['format-price'] = (value, currency) => (value) ?  formatPrice(value, currency) : undefined;
+/* comma added format*/
+rv.formatters['add-comma'] = (value, decimal_points) => (value) ?  addComma(value, decimal_points) : undefined;
 /* rivets formater to capitalize string */
 rv.formatters.capitalize = {
    read: (value) => _.capitalize(value),

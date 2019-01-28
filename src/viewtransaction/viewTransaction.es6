@@ -91,7 +91,7 @@ const initChart = (root, state, options) => {
       tooltip: {
          useHTML: true,
          formatter() {
-            const spot = addComma(this.y.toFixed(display_decimals));
+            const spot = addComma(this.y, display_decimals);
             const spot_time = moment.utc(this.x).format('dddd, MMM D, HH:mm:ss');
             return `<div class='tooltip-body'>${spot_time} GMT<br/>${this.series.name} ${spot}</div>`;
         },
@@ -111,7 +111,7 @@ const initChart = (root, state, options) => {
           x: -65,
           y: -2,
           formatter() {
-            return addComma(this.value.toFixed(display_decimals));
+            return addComma(this.value, display_decimals);
           },
         },
          title: '',
@@ -302,7 +302,9 @@ function drawSpots(contract, state, chart) {
 
   if (tick_count) return; // tick contracts = chart should not have entry/exit spots
 
-  drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
+  if (entry_tick_time) {
+    drawSpot({ spot_time: entry_tick_time, label: 'entry_tick_time', color: 'white' });
+  }
 
   if (is_path_dependent && exit_tick_time) {
     drawSpot({ spot_time: exit_tick_time, label: 'exit_tick_time', color: 'orange' });
@@ -322,7 +324,7 @@ function drawSpots(contract, state, chart) {
 }
 
 function drawXLines(contract, state, chart) {
-  const { entry_tick_time, exit_tick_time, date_expiry, date_start, tick_count, sell_time } = contract;
+  const { entry_tick_time, exit_tick_time, date_start, date_expiry, tick_count, sell_time } = contract;
 
   if (tick_count) { // only for tick contracts
     drawXLine({ line_time: entry_tick_time, label: 'start_time' });
