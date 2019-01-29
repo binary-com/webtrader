@@ -6,7 +6,7 @@ const getMarketPosition = (() => {
         volidx: 4,
     };
 
-    return (markets) => {
+    return function sortMarkets(markets) {
         return markets.sort((a, b) => market_order[typeof a === 'object' ? a.name : a] - market_order[typeof b === 'object' ? b.name : b]);
     };
 })();

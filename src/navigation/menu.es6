@@ -50,29 +50,6 @@ export const extractChartableMarkets = (trading_times_data) => {
    }) || [];
 };
 
-export const sortMenu = (markets) => {
-   const sort_fn = sortAlphaNum('display_name');
-   //Sort market
-   if($.isArray(markets)) {
-
-      const rank = { "forex": 1, "indices": 2, "otc stocks": 3, "commodities": 4, "volidx": 5 };
-      markets = _.sortBy( markets, (o) => rank[o.name.toLowerCase()]);
-      markets.forEach((market) => {
-         if($.isArray(market.submarkets)) {
-            // Sort sub-markets
-            market.submarkets.sort(sort_fn);
-            market.submarkets.forEach((submarket) => {
-               if($.isArray(submarket.instruments)) {
-                  // Sort instruments
-                  submarket.instruments.sort(sort_fn);
-               }
-            });
-         }
-      });
-   }
-   return markets;
-};
-
 export const refreshMenu = (root, markets, callback) => {
    const menu = `<ul>${
       markets.map(m => `<li><div>${m.display_name}</div><ul>${
@@ -99,6 +76,5 @@ export const refreshMenu = (root, markets, callback) => {
 export default {
    extractChartableMarkets,
    extractFilteredMarkets,
-   sortMenu,
    refreshMenu
 };
