@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-11-30 05:40\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: French\n"
-"Language: fr_FR\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"PO-Revision-Date: 2019-01-29 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2103,32 +2103,3 @@ msgstr "| Retour"
 msgid "﻿"
 msgstr ""
 
-#~ msgid "Amount Min: 10 Max: 2000"
-#~ msgstr "Montant Min : 10 Max : 2000"
-
-#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-#~ msgstr "Binary.com est un fournisseur de trading en ligne primé qui aide ses clients à trader sur les marchés financiers par le biais d’options binaires et de CFDs. Le Trading d’options binaires et de CFDs sur Indices de volatilité est classé comme une activité de jeu. N’oubliez pas que le jeu peut être addictif – veuillez jouer de façon responsable. En savoir plus sur le [_1]Trading responsable[_2]. Certains produits ne sont pas disponibles dans tous les pays. Les services du site Internet ne sont pas rendus disponibles dans certains pays comme les Etats-Unis, Canada, Costa Rica, Hong Kong, ou aux personnes de moins de 18 ans."
-
-#~ msgid "Ends Between/Outside"
-#~ msgstr "Termine dans/hors de la zone"
-
-#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-#~ msgstr "Dans l'UE, les produits financiers sont offerts par Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte, agréé et réglementé comme un fournisseur de Services d’investissement de Catégorie 3 par l'Autorité des Services Financiers Maltais (numéro de licence IS/70156)."
-
-#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-#~ msgstr "Dans le reste de l’UE, les Indices de Volatilité sont offerts par Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte ; agréé et régulé par (1) l'Autorité des Jeux de Malte à Malte (no. de licence MGA/B2C/102/2000 délivré le 26 mai 2018), pour les clients britanniques par (2) la Commission des jeux du Royaume Uni (licence [_1]référence ne : 39495[_2]) et pour les clients irlandais par (3) les Commissionnaires du Revenu en Irlande (Licence de bookmaker à distance n ° 1010285 publié le 1er juillet 2017). Voir l'ensemble des [_3]informations réglementaires[_4]."
-
-#~ msgid "Lookbacks"
-#~ msgstr "Lookbacks"
-
-#~ msgid "Min: 10 Max: 2000"
-#~ msgstr "Min : 10 Max : 2000"
-
-#~ msgid "Only letters, numbers, space, period, comma, dash(-)"
-#~ msgstr "Seuls les lettres, les nombres, espace, point, virgule, tiret(-)"
-
-#~ msgid "Stays Between/Goes Outside"
-#~ msgstr "Reste dans/Sort de la zone"
-
-#~ msgid "apostrophe (') are allowed"
-#~ msgstr "apostrophes (') sont autorisés"
