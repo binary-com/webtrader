@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-11-30 05:40\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Chinese Traditional\n"
-"Language: zh_TW\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"PO-Revision-Date: 2019-01-29 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2103,32 +2103,3 @@ msgstr "| 回報"
 msgid "﻿"
 msgstr ""
 
-#~ msgid "Amount Min: 10 Max: 2000"
-#~ msgstr "數額最小: 10 最大: 2000"
-
-#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-#~ msgstr "Binary.com 是多次獲獎的線上交易提供商，幫助客戶通過二元期權和差價合約在金融市場進行交易。基於波動率指數的二元期權和差價合約交易被歸類為博彩活動。請記住博彩活動可能會上癮，並提醒自己要承擔責任。查閱[_1]負責任交易[_2]的詳細資訊。一些產品在所有國家都不可用。本網站不向一些國家如美國、加拿大、哥斯達黎加、香港、或18歲以下的使用者提供服務。"
-
-#~ msgid "Ends Between/Outside"
-#~ msgstr "到期時價格處於範圍之內/之外"
-
-#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-#~ msgstr "歐盟國家的金融產品交易由Binary Investments (Europe) Ltd提供，地址為Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商 (執照號碼為IS/70156)。"
-
-#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-#~ msgstr "歐盟其它國家的波動率指數交易由Binary (Europe) Ltd提供，地址為 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 馬爾他的馬爾他博彩局授予執照並受其監管（執照號MGA/B2C/102/2000, 發照日期為2015年5月26日）。英國客戶由(2) 英國博彩委員會授予執照和監管(執照[_1]編號: 39495[_2])， 及愛爾蘭客戶由(3) 愛爾蘭的稅務局授予執照和監管(遠程博彩公司執照號: 1010285，發照日期為2017年7月1日)。查閱完整的[_3]監管資訊[_4]。"
-
-#~ msgid "Lookbacks"
-#~ msgstr "回顧"
-
-#~ msgid "Min: 10 Max: 2000"
-#~ msgstr "最小: 10 最大: 2000"
-
-#~ msgid "Only letters, numbers, space, period, comma, dash(-)"
-#~ msgstr "只允許使用字母、數字、空格、句號、逗號和虛線(-)"
-
-#~ msgid "Stays Between/Goes Outside"
-#~ msgstr "「保持在範圍之內/超出範圍之外」"
-
-#~ msgid "apostrophe (') are allowed"
-#~ msgstr "允許使用所有格號(')"
