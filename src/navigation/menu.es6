@@ -1,6 +1,11 @@
 ﻿import $ from 'jquery';
 import '../common/util';
 
+/* you can filter the symbols with the options parameter, for example:
+   options: {
+       filter: (sym) => (sym.feed_license !== 'realtime')
+   }
+*/
 export const extractFilteredMarkets = (trading_times_data, options) => {
    const markets = trading_times_data.trading_times.markets.map((m) => {
       const market = {
