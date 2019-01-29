@@ -1,13 +1,15 @@
-const getMarketPosition = (markets) => {
+const getMarketPosition = (() => {
     const market_order = {
         forex: 1,
         indices: 2,
         commodities: 3,
         volidx: 4,
     };
-    
-    return markets.sort((a, b) => market_order[a] - market_order[b]);
-}
+
+    return (markets) => {
+        return markets.sort((a, b) => market_order[a] - market_order[b]);
+    };
+})();
 
 const getMarketsSubmarkets = (active_symbols) => {
     return active_symbols.reduce((market_result, markets) => {
