@@ -3,8 +3,8 @@
         var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
         var lang = (params_str && params_str.match(/lang=[a-zA-Z_]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
             (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
-        set_language(lang);
-        clear_url_querystring(href);</script><script src="common/InContextTranslation.js"></script></head><body><div class="ui-widget mainContainer"><div class="sk-spinner-container"><div class="sk-spinner sk-spinner-wave"><div class="sk-rect1"></div><div class="sk-rect2"></div><div class="sk-rect3"></div><div class="sk-rect4"></div><div class="sk-rect5"></div></div></div></div><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PDDC6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function (w, d, s, l, i) {
+        setLanguage(lang);
+        clearUrlQuerystring(href);</script><script src="common/InContextTranslation.js"></script></head><body><div class="ui-widget mainContainer"><div class="sk-spinner-container"><div class="sk-spinner sk-spinner-wave"><div class="sk-rect1"></div><div class="sk-rect2"></div><div class="sk-rect3"></div><div class="sk-rect4"></div><div class="sk-rect5"></div></div></div></div><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PDDC6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                 new Date().getTime(), event: 'gtm.js'
