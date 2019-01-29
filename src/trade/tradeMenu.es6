@@ -1,7 +1,7 @@
 ﻿import $ from 'jquery';
 import liveapi from '../websockets/binary_websockets';
 import menu from '../navigation/menu';
-import { getMarketPosition } from '../common/marketutils';
+import { getMarketPosition } from '../common/marketUtils';
 import "jquery-growl";
 
 const show_error = (err) => {
