@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-11-30 05:40\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Italian\n"
-"Language: it_IT\n"
-"PO-Revision-Date: 2018-11-30 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -225,9 +225,6 @@ msgstr "Tutti gli orari sono in GMT (Greenwich Mean Time)"
 msgid "Amount"
 msgstr "Importo"
 
-msgid "Amount Min: 10 Max: 2000"
-msgstr "Min: 10 Max: 2000"
-
 msgid "Amount per point"
 msgstr "Importo per punto"
 
@@ -309,8 +306,8 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
-msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com è un fornitore di servizi online, premiato con vari riconoscimenti, che aiuta i clienti ad effettuare trading nei mercati finanziari attraverso opzioni binarie e CFD. Il trading di opzioni binarie e CFD sugli indici di volatilità è classificato come attività di gioco d'azzardo. È importante essere consapevoli che il gioco d'azzardo può creare dipendenza; ti invitiamo a giocare in modo responsabile. Scopri di più sul [_1]trading responsabile[_2]. Alcuni prodotti non sono disponibili in tutti i paesi. I servizi offerti su questo sito web non sono disponibili in alcuni paesi, come USA, Canada, Costa Rica, Hong Kong, o per le persone di età inferiore ai 18 anni."
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+msgstr ""
 
 msgid "Blank window"
 msgstr "Finestra vuota"
@@ -332,6 +329,9 @@ msgstr "Prezzo d'acquisto"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Cliccando OK, confermi di aver letto e accettato l'aggiornamento"
+
+msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
+msgstr ""
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Può essere utilizzato per acquistare e vendere contratti, rinnovare acquisti scaduti e integrare account di moneta virtuale."
@@ -627,9 +627,6 @@ msgstr "Codice inserito"
 msgid "End Time"
 msgstr "Orario di fine"
 
-msgid "Ends Between/Outside"
-msgstr "Ends Between/Outside"
-
 msgid "Ends in"
 msgstr "Ends in"
 
@@ -804,14 +801,17 @@ msgstr "Se selezioni uno specifico"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Per poter applicare lo sfondo in modo adeguato, è richiesto l'aggiornamento della pagina. Sei sicuro di voler procedere?"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr "Nell'UE, i prodotti finanziari sono offerti da Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorizzata e regolamentata come appartenente alla Categoria 3 dei fornitori di servizi di investimento dalla Malta Financial Services Authority (licenza n. IS/70156)."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
+
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "Nell'Isola di Man e nel Regno Unito, gli indici di volatilità sono offerti da Binary (IOM) Ltd., primo piano, Millennium House, Victoria Road, Douglas, IM2 4RW, Isola di Man, Isole Britanniche; autorizzata e regolamentata rispettivamente dalla (1) Gambling Supervision Commission dell'Isola di Man (licenza attuale emessa il 31 agosto 2017) e dalla (2) Gambling Commission del Regno Unito ([_1]licenza n. 39172[_2])."
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "Nel resto dell'UE, gli indici di volatilità sono offerti dalla Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorizzata e regolamentata dalla (1) Malta Gaming Authority di Malta (licenza n. MGA/B2C/102/2000 rilasciata il 26 maggio 2015); per i clienti nel Regno Unito dalla (2) UK Gambling Commission (licenza [_1]n. 39495[_2]) e per i clienti in Irlanda dalla (3) Revenue Commissioners irlandese (licenza del Remote Bookmaker n. 1010285 emessa l'1 luglio 2017). Consulta le [_3]informazioni complete sulla regolamentazione[_4]."
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr ""
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -963,9 +963,6 @@ msgstr "Login"
 msgid "Logout"
 msgstr "Logout"
 
-msgid "Lookbacks"
-msgstr "Lookback (opzioni retrospettive)"
-
 msgid "Low"
 msgstr "Low"
 
@@ -1037,9 +1034,6 @@ msgstr "La puntata minima per il trade deve essere inferiore a quella massima."
 
 msgid "Min. Trade Stake"
 msgstr "Puntata minima per il trade"
-
-msgid "Min: 10 Max: 2000"
-msgstr "Min: 10 Max: 2000"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "Minimo di sei caratteri tra numeri e lettere maiuscole e minuscole"
@@ -1158,9 +1152,6 @@ msgstr "Una volta raggiunto questo limite, non puoi più depositare"
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione al sito web, o invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta fissati, i limiti possono essere esclusivamente aumentati; saranno rimossi o allargati solo dopo 7 giorni, con l'eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta che è stata confermata. Per rimuovere o aumentare i tuoi limiti, contatta"
 
-msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr "Sono consentiti solo lettere, numeri, spazi, punti, virgole, trattini (-)"
-
 msgid "Open"
 msgstr "Apri"
 
@@ -1178,6 +1169,9 @@ msgstr "Il trading in opzioni può creare dipendenza così come una qualsiasi al
 
 msgid "Other"
 msgstr "Altro"
+
+msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
+msgstr ""
 
 msgid "Over"
 msgstr "Su"
@@ -1268,6 +1262,9 @@ msgstr "Inserire il token corretto"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
+
+msgid "Please keep your message to a single line, don’t press enter"
+msgstr ""
 
 msgid "Please log in"
 msgstr "Effettua il login"
@@ -1533,9 +1530,6 @@ msgstr "Funzioni statistiche"
 msgid "Status"
 msgstr "Status"
 
-msgid "Stays Between/Goes Outside"
-msgstr "Stays Between/Goes Outside"
-
 msgid "Stays in"
 msgstr "Stays in"
 
@@ -1611,6 +1605,9 @@ msgstr "Il/Lo/La/Gli/Le/I"
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "La società detiene i fondi dei clienti in conti bancari separati da quelli operativi, i quali non faranno parte, in caso di insolvenza, dell'asset della Società. Ciò rispecchia i requisiti della Commissione sul gioco d'azzardo per la segregazione dei fondi dei clienti a livello"
 
+msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+msgstr ""
+
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr ""
 
@@ -1628,6 +1625,9 @@ msgstr "Questo contratto ha vinto"
 
 msgid "This field is required"
 msgstr "Questo campo è obbligatorio"
+
+msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
+msgstr ""
 
 msgid "Thu"
 msgstr "Gio"
@@ -1959,9 +1959,6 @@ msgstr "[_1]Autentica ora il tuo conto[_2] per accedere a tutte le opzioni di pr
 msgid "and"
 msgstr "e"
 
-msgid "apostrophe (') are allowed"
-msgstr "è consentito l'apostrofo (')"
-
 msgid "commission"
 msgstr "commissione"
 
@@ -2061,6 +2058,9 @@ msgstr "agente di pagamento"
 msgid "points"
 msgstr "punti"
 
+msgid "risk warning"
+msgstr ""
+
 msgid "sec"
 msgstr "sec"
 
@@ -2100,3 +2100,35 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| Rendimento"
 
+msgid "﻿"
+msgstr ""
+
+#~ msgid "Amount Min: 10 Max: 2000"
+#~ msgstr "Min: 10 Max: 2000"
+
+#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+#~ msgstr "Binary.com è un fornitore di servizi online, premiato con vari riconoscimenti, che aiuta i clienti ad effettuare trading nei mercati finanziari attraverso opzioni binarie e CFD. Il trading di opzioni binarie e CFD sugli indici di volatilità è classificato come attività di gioco d'azzardo. È importante essere consapevoli che il gioco d'azzardo può creare dipendenza; ti invitiamo a giocare in modo responsabile. Scopri di più sul [_1]trading responsabile[_2]. Alcuni prodotti non sono disponibili in tutti i paesi. I servizi offerti su questo sito web non sono disponibili in alcuni paesi, come USA, Canada, Costa Rica, Hong Kong, o per le persone di età inferiore ai 18 anni."
+
+#~ msgid "Ends Between/Outside"
+#~ msgstr "Ends Between/Outside"
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
+#~ msgstr "Nell'UE, i prodotti finanziari sono offerti da Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorizzata e regolamentata come appartenente alla Categoria 3 dei fornitori di servizi di investimento dalla Malta Financial Services Authority (licenza n. IS/70156)."
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+#~ msgstr "Nel resto dell'UE, gli indici di volatilità sono offerti dalla Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, autorizzata e regolamentata dalla (1) Malta Gaming Authority di Malta (licenza n. MGA/B2C/102/2000 rilasciata il 26 maggio 2015); per i clienti nel Regno Unito dalla (2) UK Gambling Commission (licenza [_1]n. 39495[_2]) e per i clienti in Irlanda dalla (3) Revenue Commissioners irlandese (licenza del Remote Bookmaker n. 1010285 emessa l'1 luglio 2017). Consulta le [_3]informazioni complete sulla regolamentazione[_4]."
+
+#~ msgid "Lookbacks"
+#~ msgstr "Lookback (opzioni retrospettive)"
+
+#~ msgid "Min: 10 Max: 2000"
+#~ msgstr "Min: 10 Max: 2000"
+
+#~ msgid "Only letters, numbers, space, period, comma, dash(-)"
+#~ msgstr "Sono consentiti solo lettere, numeri, spazi, punti, virgole, trattini (-)"
+
+#~ msgid "Stays Between/Goes Outside"
+#~ msgstr "Stays Between/Goes Outside"
+
+#~ msgid "apostrophe (') are allowed"
+#~ msgstr "è consentito l'apostrofo (')"
