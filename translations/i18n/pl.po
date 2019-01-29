@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-11-30 05:41\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Polish\n"
-"Language: pl_PL\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: pl\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"PO-Revision-Date: 2019-01-29 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2103,29 +2103,3 @@ msgstr "| Zwrot"
 msgid "﻿"
 msgstr ""
 
-#~ msgid "Amount Min: 10 Max: 2000"
-#~ msgstr "Kwota min.: 10 maks.: 2000"
-
-#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-#~ msgstr "Binary.com to zdobywająca nagrody platforma do handlu online, która ułatwia swoim klientom handel na rynkach finansowych, oferując opcje binarne i kontrakty na różnice kursowe. Handel opcjami binarnymi i kontraktami na różnice kursowe wskaźników zmienności jest uznawany za grę hazardową. Należy pamiętać, że gra hazardowa może uzależniać - prosimy o rozsądną grę. Dowiedz się więcej na temat [_1]odpowiedzialnego handlowania[_2]. Niektóre produkty są niedostępne w niektórych krajach. Usługi oferowane za pośrednictwem tej strony internetowej nie są dostępne w niektórych krajach, np. w Stanach Zjednoczonych, Kanadzie, Kostaryce, Hong Kongu, oraz dla osób poniżej 18 roku życia."
-
-#~ msgid "Ends Between/Outside"
-#~ msgstr "Zakończy się w/ Zakończy się poza"
-
-#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-#~ msgstr "W UE produkty finansowe są oferowane przez Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, objętą licencją i regulacjami Urzędu ds. Usług Finansowych na Malcie: Malta Financial Services Authority jako firma świadcząca usługi inwestycyjne kategorii 3 (licencja o nr IS/70156)."
-
-#~ msgid "Lookbacks"
-#~ msgstr "Opcje wsteczne"
-
-#~ msgid "Min: 10 Max: 2000"
-#~ msgstr "Min.: 10 Maks.: 2000"
-
-#~ msgid "Only letters, numbers, space, period, comma, dash(-)"
-#~ msgstr "Tylko litery, cyfry, spacja, kropka, przecinek, myślnik (-)"
-
-#~ msgid "Stays Between/Goes Outside"
-#~ msgstr "Pozostanie pomiędzy/ Przekroczy"
-
-#~ msgid "apostrophe (') are allowed"
-#~ msgstr "apostrof (') są dozwolone"
