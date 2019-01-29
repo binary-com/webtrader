@@ -25,9 +25,10 @@ window.requirejs.config({
         "indicator_levels": "charts/indicators/level",
         "binary-style": "lib/binary-style/binary",
         "babel-runtime/regenerator": "lib/regenerator-runtime/runtime",
-        "webtrader-charts" : "lib/webtrader-charts/dist/webtrader-charts.iife",
+        "webtrader-charts" : "lib/@binary-com/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",
         "highstock-release": "lib/highstock-release",
+        "jquery-ui-touch-punch": "lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min",
     },
     map: {
         "*": {
@@ -93,6 +94,9 @@ window.requirejs.config({
         },
         "color-picker": {
             deps: ["jquery", "jquery-ui"] //This should fix the widget not found error
+        },
+        "jquery-ui-touch-punch": {
+            deps: ["jquery", "jquery-ui"]
         }
     }
 });
@@ -144,7 +148,7 @@ var i18n_name = (window.local_storage.get("i18n") || { value: "en" }).value;
 require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
     "use strict";
     /* setup translating string literals */
-    window.setup_i18n_translation(JSON.parse(lang_json));
+    window.setupi18nTranslation(JSON.parse(lang_json));
 
     /* Trigger *Parallel* loading of big .js files,
        Suppose moudle X depends on lib A and module Y depends on lib B,
@@ -293,6 +297,9 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
 
         /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/
         require(["selfexclusion/selfexclusion", "accountstatus/accountstatus", "realitycheck/realitycheck", "websitestatus/websitestatus"]);
+        require(["jquery", "jquery-ui-touch-punch"], function($) {
+            $('.ui-dialog').draggable();
+        });
     }
 
     //Our chart is accessed directly
