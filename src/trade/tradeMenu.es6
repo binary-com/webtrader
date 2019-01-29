@@ -1,10 +1,7 @@
-﻿/**
- * Created by amin on October 30, 2015.
- */
-import $ from 'jquery';
-import lodash from 'lodash';
+﻿import $ from 'jquery';
 import liveapi from '../websockets/binary_websockets';
 import menu from '../navigation/menu';
+import { getMarketPosition } from '../common/marketutils';
 import "jquery-growl";
 
 const show_error = (err) => {
@@ -35,7 +32,7 @@ const refresh_active_symbols = () => {
             market.is_disabled = _.every(market.submarkets, 'is_disabled');
             return market;
          }).value();
-         markets = menu.sortMenu(markets);
+         markets = getMarketPosition(markets);
 
          const trade = $("#nav-menu").find(".trade");
          menu.refreshMenu(trade, markets, (symbol, display_name, pip) => {
