@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-11-30 05:40\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Thai\n"
-"Language: th_TH\n"
-"PO-Revision-Date: 2018-11-30 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -225,9 +225,6 @@ msgstr "เวลาที่ใช้อ้างอิง คือ GMT (Green
 msgid "Amount"
 msgstr "มูลค่า"
 
-msgid "Amount Min: 10 Max: 2000"
-msgstr "จำนวนต่ำสุด: 10 สูงสุด: 2000"
-
 msgid "Amount per point"
 msgstr "จำนวนต่อจุด"
 
@@ -309,8 +306,8 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com : เว็บเทรดเดอร์ (Webtrader)"
 
-msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com เป็นผู้ให้บริการการซื้อขายออนไลน์ที่ได้รับรางวัลที่ช่วยให้ลูกค้าได้ทำการซื้อขายในตลาดการเงินผ่านทางไบนารีออปชันและ CFD การซื้อขายไบนารีออปชันและ CFD บนดัชนีผันผวนถูกจัดให้เป็นกิจกรรมด้านการพนัน โปรดจำไว้ว่า การพนันอาจทำให้เกิดการเสพติด กรุณาดำเนินการซื้อขายด้วยความรับผิดชอบ ศึกษาเพิ่มเติมเกี่ยวกับ [_1]ความรับผิดชอบในการซื้อขาย[_2] ผลิตภัณฑ์บางรายการยังไม่มีในทุกประเทศ การบริการทางเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง หรือไม่ได้ให้บริการแก่บุคคลที่อายุต่ำกว่า 18 ปี"
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+msgstr ""
 
 msgid "Blank window"
 msgstr "หน้าต่างว่าง"
@@ -332,6 +329,9 @@ msgstr "ราคาซื้อ"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
+
+msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
+msgstr ""
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
@@ -627,9 +627,6 @@ msgstr "รหัสที่ฝังไว้"
 msgid "End Time"
 msgstr "เวลาสิ้นสุด"
 
-msgid "Ends Between/Outside"
-msgstr "สิ้นสุดระหว่าง/นอกขอบเขต"
-
 msgid "Ends in"
 msgstr "สิ้นสุดใน"
 
@@ -804,14 +801,17 @@ msgstr "หากท่านเลือก"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "เพื่อการใช้งานธีมอย่างมีประสิทธิภาพ ต้องมีการรีเฟรชหน้าจอ ท่านต้องการดำเนินการหรือไม่?"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินดำเนินธุรกิจบริการการลงทุนโดย Binary Investments (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและการควบคุมดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156)"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
+
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "ที่เกาะ Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย ดักลาส IM2 4RW เกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Gambling Supervision Commission บนเกาะ Isle of Man (ใบอนุญาตปัจจุบันออกให้เมื่อวันที่ 31 สิงหาคม 2017) และโดย (2) Gambling Commission ในสหราชอาณาจักร (ใบอนุญาต[_1]หมายเลขอ้างอิง: 39172[_2])"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนถูกเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 26 พฤษภาคม 2015) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr ""
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -963,9 +963,6 @@ msgstr "เข้าสู่ระบบ"
 msgid "Logout"
 msgstr "ออกจากระบบ"
 
-msgid "Lookbacks"
-msgstr "Lookbacks"
-
 msgid "Low"
 msgstr "ต่ำ"
 
@@ -1037,9 +1034,6 @@ msgstr "การเดิมพันต่ำสุดควรต่ำกว
 
 msgid "Min. Trade Stake"
 msgstr "เดิมพันต่ำสุด"
-
-msgid "Min: 10 Max: 2000"
-msgstr "ต่ำสุด: 10 สูงสุด: 2000"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "จำนวนตัวอักขระอย่างน้อย 6 อักขระ ซึ่งเป็นอักษรตัวเล็ก ตัวใหญ่ และตัวเลข"
@@ -1158,9 +1152,6 @@ msgstr "เมื่อวงเงินเต็ม ท่านไม่ส�
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "การซื้อขายผลิตภัณฑ์ทางการเงินอาจทำให้ท่านเสพติดได้ โปรดกรอกข้อมูลในแบบฟอร์มด้านล่างเพื่อกำหนดระดับความต้องการในเว็บไซต์ หรือ ส่งจดหมายที่มีการลงนาม หรือ ส่งแฟกซ์มายังฝ่ายลูกค้าสัมพันธ์ เมื่อมีการตั้งค่าตามความประสงค์ของท่านแล้ว ท่านจะถูกจำกัดตามเงื่อนไขดังกล่าว วงเงินจะถูกปรับหรือผ่อนปรนหลังจาก 7 วันของวันที่กำหนดให้พัก แต่หากท่านต้องการลบหรือเพิ่มวงเงินของท่าน โปรดติดต่อ ฝ่ายลูกค้าสัมพันธ์"
 
-msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค ขีดกลาง"
-
 msgid "Open"
 msgstr "เปิด"
 
@@ -1178,6 +1169,9 @@ msgstr "การซื้อขายออปชั่นสามารถท
 
 msgid "Other"
 msgstr "อื่นๆ"
+
+msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
+msgstr ""
 
 msgid "Over"
 msgstr "มากกว่า"
@@ -1268,6 +1262,9 @@ msgstr "โปรดป้อนโทเค่นที่ถูกต้อง
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
+
+msgid "Please keep your message to a single line, don’t press enter"
+msgstr ""
 
 msgid "Please log in"
 msgstr "โปรดเข้าสู่ระบบ"
@@ -1533,9 +1530,6 @@ msgstr "ฟังก์ชันทางสถิติ"
 msgid "Status"
 msgstr "สถานะ"
 
-msgid "Stays Between/Goes Outside"
-msgstr "อยู่ใน/นอกขอบเขต"
-
 msgid "Stays in"
 msgstr "Stays in"
 
@@ -1611,6 +1605,9 @@ msgstr "-"
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "บริษัทฯ ดูแลเงินทุนประกันของลูกค้าในบัญชีที่ถูกจัดสรรแยกเพื่อการปฏิบัติการ และการจัดการเพื่อให้แน่ใจว่า สินทรัพย์ของบัญชีลูกค้ามีการถูกจำหน่ายหากมีกรณีล้มละลาย ซึ่งเป็นไปตามข้อกำหนดของ Gambling Commission ในการแยกเงินทุนลูกค้าโดยเป็นมาตรการการป้องกันระดับ: "
 
+msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+msgstr ""
+
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "มีการหยุดชะงักของข้อมูลตลาดในช่วงระยะเวลาของสัญญา สำหรับบัญชีเงินจริง เราจะพยายามแก้ไขและชำระสัญญาอย่างเหมาะสม มิเช่นนั้นสัญญาจะถูกยกเลิกและคืนเงิน สัญญาเงินเสมือนจะถูกยกเลิกและคืนเงิน"
 
@@ -1628,6 +1625,9 @@ msgstr "สัญญานี้กำไร"
 
 msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
+
+msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
+msgstr ""
 
 msgid "Thu"
 msgstr "พฤ"
@@ -1959,9 +1959,6 @@ msgstr "[_1]ยืนยันบัญชีของคุณ[_2]เดี๋�
 msgid "and"
 msgstr "และ"
 
-msgid "apostrophe (') are allowed"
-msgstr "เครื่องหมายอัญประกาศ (') สามารถใช้ได้"
-
 msgid "commission"
 msgstr "คอมมิชชั่น"
 
@@ -2061,6 +2058,9 @@ msgstr "ตัวแทนรับชำระเงิน"
 msgid "points"
 msgstr "จุด"
 
+msgid "risk warning"
+msgstr ""
+
 msgid "sec"
 msgstr "วินาที"
 
@@ -2100,3 +2100,35 @@ msgstr "{agent.commission}%"
 msgid "| Return"
 msgstr "| ผลตอบแทน"
 
+msgid "﻿"
+msgstr ""
+
+#~ msgid "Amount Min: 10 Max: 2000"
+#~ msgstr "จำนวนต่ำสุด: 10 สูงสุด: 2000"
+
+#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+#~ msgstr "Binary.com เป็นผู้ให้บริการการซื้อขายออนไลน์ที่ได้รับรางวัลที่ช่วยให้ลูกค้าได้ทำการซื้อขายในตลาดการเงินผ่านทางไบนารีออปชันและ CFD การซื้อขายไบนารีออปชันและ CFD บนดัชนีผันผวนถูกจัดให้เป็นกิจกรรมด้านการพนัน โปรดจำไว้ว่า การพนันอาจทำให้เกิดการเสพติด กรุณาดำเนินการซื้อขายด้วยความรับผิดชอบ ศึกษาเพิ่มเติมเกี่ยวกับ [_1]ความรับผิดชอบในการซื้อขาย[_2] ผลิตภัณฑ์บางรายการยังไม่มีในทุกประเทศ การบริการทางเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง หรือไม่ได้ให้บริการแก่บุคคลที่อายุต่ำกว่า 18 ปี"
+
+#~ msgid "Ends Between/Outside"
+#~ msgstr "สิ้นสุดระหว่าง/นอกขอบเขต"
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
+#~ msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินดำเนินธุรกิจบริการการลงทุนโดย Binary Investments (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและการควบคุมดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority (ใบอนุญาตหมายเลข IS/70156)"
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+#~ msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนถูกเสนอโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 26 พฤษภาคม 2015) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์"
+
+#~ msgid "Lookbacks"
+#~ msgstr "Lookbacks"
+
+#~ msgid "Min: 10 Max: 2000"
+#~ msgstr "ต่ำสุด: 10 สูงสุด: 2000"
+
+#~ msgid "Only letters, numbers, space, period, comma, dash(-)"
+#~ msgstr "เฉพาะตัวอักษร ตัวเลข พื้นที่ ระยะเวลา จุลภาค ขีดกลาง"
+
+#~ msgid "Stays Between/Goes Outside"
+#~ msgstr "อยู่ใน/นอกขอบเขต"
+
+#~ msgid "apostrophe (') are allowed"
+#~ msgstr "เครื่องหมายอัญประกาศ (') สามารถใช้ได้"
