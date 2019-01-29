@@ -44,7 +44,7 @@
     rv-if="ticks.category.contract_category | not-eq 'digits'"
     rv-show="buy.barrier">
     <li>
-      <span>Barrier:&nbsp;</span><span rv-text='buy.barrier | format-price' />
+      <span>Barrier:&nbsp;</span><span rv-text='buy.barrier | add-comma ticks.display_decimals' />
     </li>
   </ul>
 
@@ -68,7 +68,7 @@
       <li rv-each-row="ticks.array">
           <span> Tick {row.number} </span>
           <span>{row.epoch | utc-time}</span>
-          <span rv-html="row.quote | to-fixed row.decimal_digits | bold-last-character"></span>
+          <span rv-html="row.quote | to-fixed ticks.display_decimals | bold-last-character"></span>
       </li>
   </ul>
 

@@ -1,8 +1,4 @@
-﻿/**
- * Created by amin on 10/9/15.
- */
-
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import windows from '../windows/windows';
 import liveapi from '../websockets/binary_websockets';
 import 'jquery-ui';
@@ -106,20 +102,21 @@ const proposalOpenContract = (command) => {
     }
 }
 
-const on_arrow_click =(e) => {
+const on_arrow_click = (e) => {
     const target = e.target;
     const $target = $(target);
-    if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled'))
-    return;
+    if(target.tagName !== 'BUTTON' || $target.hasClass('button-disabled')) return;
     const tr = target.parentElement.parentElement;
     let transaction = table.api().row(tr).data();
     transaction = _.last(transaction);
     $target.addClass('button-disabled');
-    require(['viewtransaction/viewTransaction'],(viewTransaction) => {
-    viewTransaction.init(transaction.contract_id, transaction.transaction_id)
-                    .then(() => $target.removeClass('button-disabled')).catch((err)=>{
-                        $target.removeClass('button-disabled');
-                    });
+    require(['viewtransaction/viewTransaction'], (viewTransaction) => {
+        viewTransaction.init(transaction.contract_id, transaction.transaction_id)
+            .then(() => $target.removeClass('button-disabled'))
+            .catch(err => {
+                $target.removeClass('button-disabled');
+                $.growl.error({ message: err.message });
+            });
     });
 }
 

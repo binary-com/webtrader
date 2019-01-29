@@ -291,7 +291,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     currency: {
       array: ['USD'],
       value: 'USD',
-      decimals: 0,
+      decimals: currencyFractionalDigits(),
     },
     basis: {
       array: ['Payout', 'Stake'],
@@ -442,15 +442,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     if (isLookback(category)) {
       state.basis.array = ['Multiplier'];
       state.basis.value = 'multiplier';
-      _.defer(()=> {
-        state.currency.decimals = 3;
-      })
+      state.currency.decimals = 3;
     } else {
       state.basis.array = ['Payout', 'Stake'];
       state.basis.value = 'payout';
-      _.defer(()=> {
-        state.currency.decimals = currencyFractionalDigits();
-      })
+      state.currency.decimals = currencyFractionalDigits();
     }
     state.category_displays.selected = _.head(state.category_displays.array);
   };
@@ -929,8 +925,8 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .map('contract_category_display')
     .uniq()
     .value()
-    // TODO: Remove this filter after implementing high/low,reset,calle/pute options.
-    .filter(f => !/reset|high\/low|spread/.test(f.toLowerCase()))
+    // TODO: Remove this filter after implementing reset, high/low, spread, runs contracts.
+    .filter(f => !/reset|high\/low|spread|runs/.test(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
@@ -1047,7 +1043,6 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
         chartingRequestMap.register({
           symbol: symbol.symbol,
           subscribe: 1,
-          granularity: 0,
           style: 'ticks'
         }).catch(function (err) {
           /* if this contract offers tick trades, prevent user from trading */

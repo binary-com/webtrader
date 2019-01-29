@@ -1,0 +1,83 @@
+﻿.profitTable {
+	.webtrader-dialog {
+		width: auto !important;
+
+		.profit-table-dialog {
+			+ div {
+				padding: 0.5em 0;
+			}
+
+			thead {
+				th {
+					padding: 5px 5px;
+					text-align: center;
+					padding-right: 0;
+
+					&:nth-child(1), &:nth-child(2), &:nth-child(5) {
+						width: 13%;
+					}
+
+					&:nth-child(3) {
+						width: 36%;
+					}
+
+					&:nth-child(4), &:nth-child(6), &:nth-child(7) {
+						width: 8%;
+					}
+
+					span {
+						height: 2.5em;
+						display: block;
+						font-size: 90%;
+					}
+
+					.search-input {
+						text-align: center;
+						box-sizing: border-box;
+						font-size: 90%;
+						margin-bottom: 3px;
+					}
+				}
+			}
+
+			tbody {
+				td {
+					padding: 5px 5px;
+					text-align: center;
+					padding-right: 0;
+
+					&:nth-child(8n) {
+						padding-right: 4px;
+					}
+				}
+			}
+
+			.arrow {
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				float: right;
+				position: relative;
+				right: -5px;
+				top: 5px;
+			}
+
+			button {
+				padding: 10px 12px;
+			}
+		}
+
+		.profit-table-info {
+			display: block;
+			height: 1em;
+			font-weight: bold;
+			font-size: 15px;
+			.total {
+				font-weight: bold;
+				font-size: 15px;
+				float: right;
+				padding-right: 75px;
+			}
+		}
+	}
+}

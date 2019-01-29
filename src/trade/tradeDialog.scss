@@ -227,8 +227,6 @@
     height: 250px;
 }
 /* this will be added to jquery ui widget which is outside of the .trade-fields container */
-.trade-dialog-digits-select-ul:hover { margin-top: -20px; }
-.trade-dialog-digits-select-ul { transition: margin-top 0.5s ease; }
 .trade-dialog-digits-select-ul li {
     overflow:hidden;
     font-size:13px;
