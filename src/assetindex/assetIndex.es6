@@ -81,7 +81,6 @@ const initTable = () => {
 
     function populateTable(result) {
         const active_symbols_data = local_storage.get('active_symbols');
-        console.log(result[0].asset_index);
         const asset_index_data = [...result[0].asset_index];
 
         if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
