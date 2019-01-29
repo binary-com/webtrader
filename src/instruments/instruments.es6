@@ -74,16 +74,10 @@ let markets = [];
 let chartable_markets = [];
 
 export const init = function() {
-    /* cache the result of trading_times call, because assetIndex needs the same data */
-    return liveapi
-        .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-        .then(function(data) {
-            chartable_markets = menu.extractChartableMarkets(data);
-            refresh_active_symbols();
-            liveapi.events.on('login', refresh_active_symbols);
-            liveapi.events.on('logout', refresh_active_symbols);
-            return chartable_markets;
-        });
+    refresh_active_symbols();
+    liveapi.events.on('login', refresh_active_symbols);
+    liveapi.events.on('logout', refresh_active_symbols);
+
 }
 
 export const getMarketData = function() {
