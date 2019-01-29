@@ -1,8 +1,4 @@
-﻿/**
- * Created by amin on October 30, 2015.
- */
-import $ from 'jquery';
-import lodash from 'lodash';
+﻿import $ from 'jquery';
 import liveapi from '../websockets/binary_websockets';
 import menu from '../navigation/menu';
 import "jquery-growl";

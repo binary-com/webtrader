@@ -1,9 +1,5 @@
-﻿/**
- * Created by amin on October 30, 2015.
- */
-import $ from 'jquery';
+﻿import $ from 'jquery';
 import _ from 'lodash';
-import navigation from './navigation';
 import '../common/util';
 
 /* you can filter the symbols with the options parameter, for example:
@@ -59,8 +55,8 @@ export const sortMenu = (markets) => {
    //Sort market
    if($.isArray(markets)) {
 
-      const rank = { "forex": 1, "indices": 2, "otc stocks": 3, "commodities": 4, "volatility indices": 5 };
-      markets = _.sortBy( markets, (o) => rank[o.display_name.toLowerCase()]);
+      const rank = { "forex": 1, "indices": 2, "otc stocks": 3, "commodities": 4, "volidx": 5 };
+      markets = _.sortBy( markets, (o) => rank[o.name.toLowerCase()]);
       markets.forEach((market) => {
          if($.isArray(market.submarkets)) {
             // Sort sub-markets
