@@ -7,7 +7,7 @@ const getMarketPosition = (() => {
     };
 
     return (markets) => {
-        return markets.sort((a, b) => market_order[a] - market_order[b]);
+        return markets.sort((a, b) => market_order[typeof a === 'object' ? a.name : a] - market_order[typeof b === 'object' ? b.name : b]);
     };
 })();
 
@@ -44,4 +44,5 @@ const getMarkets = (active_symbols) => {
 export {
     getMarketsSubmarkets,
     getOrderedMarkets,
+    getMarketPosition,
 };
