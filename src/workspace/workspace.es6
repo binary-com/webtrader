@@ -211,7 +211,7 @@ const state = {
          workspace.template_type = 'workspace-template';
          workspace.random = state.file.hash_code(workspace)
          var json = JSON.stringify(workspace);
-         download_file_in_browser(workspace.name + '.json', 'text/json;charset=utf-8;', json);
+         downloadFileInBrowser(workspace.name + '.json', 'text/json;charset=utf-8;', json);
          $.growl.notice({message: "Downloading workspace as %1".i18n().replace("%1", `<b>${workspace.name}.json</b>`)});
       }
    }

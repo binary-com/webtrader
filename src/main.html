@@ -38,8 +38,8 @@
         var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
         var lang = (params_str && params_str.match(/lang=[a-zA-Z_]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
             (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
-        set_language(lang);
-        clear_url_querystring(href);
+        setLanguage(lang);
+        clearUrlQuerystring(href);
     </script>
     <script src="common/InContextTranslation.js"></script>
 </head>
