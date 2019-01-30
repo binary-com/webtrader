@@ -585,6 +585,10 @@ label.checkbox input:checked ~ span.check {
     transform: scale(1) rotate(45deg);
 }
 
+.logo-parent {
+    padding: 6px 8px !important;
+}
+
 .chosen-disable {
     width: 100%;
     height: 29px;
@@ -592,14 +596,12 @@ label.checkbox input:checked ~ span.check {
     z-index: +1;
 }
 
-.ui-icon-caret-1-e {
-    background-image: url('./images/single-angle-pointing-to-right.svg') !important;
-    background-size: 12px 10px !important;
-    background-position: 2px 5px !important;
-    margin: 0 !important;
-    top: calc(50% - 10px) !important;
-    right: 2px !important;
-    left: auto;
+.ui-icon-caret-1-e:after {
+    content: "»";
+    font-family: roboto, sans-serif !important;
+    font-size: 16px;
+    left: 25% !important;
+    top: 50% !important;
 }
 
 .ui-dialog-titlebar {

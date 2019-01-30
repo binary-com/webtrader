@@ -5,7 +5,6 @@
    text-align: right;
    padding: 3px 0;
    height: 23px;
-   min-width: 1150px;
    span.time {
       color: white;
       float: right;
@@ -29,7 +28,6 @@
 }
 
 #nav-menu {
-  min-width: 1150px;
   .trade, .instruments, .resources, .workspace {
       > ul {
          border: none;
@@ -52,7 +50,8 @@
          list-style-image: none !important;
          white-space: nowrap;
          .ui-menu-item-wrapper {
-            padding: 7px 1em 7px .4em;
+            padding: 10px 30px;
+            font-size: 16px;
          }
         div {
           font-size: 1rem;
@@ -61,6 +60,7 @@
       }
       .ui-widget.ui-widget-content {
          border: none !important;
+         font-size: 16px;
       }
       li {
          min-width: 130px;
