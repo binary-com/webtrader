@@ -600,6 +600,7 @@ label.checkbox input:checked ~ span.check {
     content: "»";
     font-family: roboto, sans-serif !important;
     font-size: 16px;
+    font-weight: bold;
     left: 25% !important;
     top: 50% !important;
 }
