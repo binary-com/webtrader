@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-02-01 03:40\n"
+"PO-Revision-Date: 2019-02-01 03:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -331,7 +331,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "En cliquant sur OK, vous confirmez que vous avez lu et accepté la version à jour des"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr "Les CFD sont des instruments complexes et comportent un risque élevé de perdre de l’argent rapidement dû à l'effet de levier. %1Entre 74 et 89 % des comptes investisseurs de détail perdent de l’argent lors du trading de CFDs. Vous devriez vous demander si vous comprenez comment fonctionnent les CFDs et savoir si vous pouvez vous permettre de prendre le risque élevé de perdre votre argent."
+msgstr "Les CFD sont des instruments complexes et comportent un risque élevé de perdre de l’argent rapidement dû à l'effet de levier. Entre 74 et 89 % des comptes investisseurs de détail perdent de l’argent lors du trading de CFDs. Vous devriez vous demander si vous comprenez comment fonctionnent les CFDs et savoir si vous pouvez vous permettre de prendre le risque élevé de perdre votre argent."
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Peut être utilisé pour acheter et vendre des contrats, renouveler des achats expirés, et abonder des comptes en monnaie virtuelle."
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Veuillez installer la dernière version de l'un de ces navigateurs"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr ""
+msgstr "Restreignez vos message à une seule ligne, n'appuyer pas sur entrer"
 
 msgid "Please log in"
 msgstr "Veuillez vous connecter"
@@ -1606,7 +1606,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "L'entreprise détient les fonds des clients dans des comptes en banque séparés des comptes opérationnels ce qui dans le cas d'un évènement d'insolvabilité ne feraient pas partie des actifs de l'entreprise. Cela satisfait les conditions de la Commissions des Jeux pour la ségrégation des fonds clients au niveau"
 
 msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "Les produits financiers offerts par l’intermédiaire de ce site Web incluent des options binaires, des contrats de différence (« CFD ») et autres dérivés complexes et produits financiers. Le trading d’options binaires peut ne pas convenir à tout le monde. Le trading de CFD comporte un niveau élevé de risque étant donné que l’effet de levier peut fonctionner aussi bien à votre avantage qu'à votre désavantage. En conséquence, les produits offerts sur ce site peuvent ne pas être adaptés à tout investisseur, à cause du risque de perdre tout votre capital investi. Vous ne devez jamais investir l’argent que vous ne supporteriez pas de perdre et ne jamais trader avec de l’argent emprunté. Avant de trader les produits financiers complexes offerts, veuillez être sûr de comprendre les risques impliqués et d'en savoir plus sur [_1]le Trading Responsable[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Il y avait une interruption des données du marché pendant la durée du contrat. Pour les comptes d’argent réel, nous tenterons de corriger cela et de régler le contrat correctement, sinon le contrat sera annulé et remboursé. Les contrats de monnaie virtuelle seront annulés et remboursés."
@@ -1627,7 +1627,7 @@ msgid "This field is required"
 msgstr "Ce champ est requis"
 
 msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "Les Services du site Internet ne sont pas rendus disponibles dans certains pays comme les Etats-Unis, le Canada, le Costa Rica, Hong Kong, le Japon, ou aux personnes de moins de 18 ans."
 
 msgid "Thu"
 msgstr "Jeu."
@@ -2059,7 +2059,7 @@ msgid "points"
 msgstr "points"
 
 msgid "risk warning"
-msgstr ""
+msgstr "avertissement de risque"
 
 msgid "sec"
 msgstr "sec"
@@ -2101,5 +2101,5 @@ msgid "| Return"
 msgstr "| Retour"
 
 msgid "﻿"
-msgstr ""
+msgstr " "
 
