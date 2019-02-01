@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-02-01 03:30\n"
+"PO-Revision-Date: 2019-02-01 03:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -331,7 +331,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "En cliquant sur OK, vous confirmez que vous avez lu et accepté la version à jour des"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr ""
+msgstr "Les CFD sont des instruments complexes et comportent un risque élevé de perdre de l’argent rapidement dû à l'effet de levier. %1Entre 74 et 89 % des comptes investisseurs de détail perdent de l’argent lors du trading de CFDs. Vous devriez vous demander si vous comprenez comment fonctionnent les CFDs et savoir si vous pouvez vous permettre de prendre le risque élevé de perdre votre argent."
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Peut être utilisé pour acheter et vendre des contrats, renouveler des achats expirés, et abonder des comptes en monnaie virtuelle."
@@ -802,16 +802,16 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Pour appliquer un thème, il est nécessaire d'actualiser complètement la page. Voulez-vous vraiment continuer ?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Dans l'UE, les produits financiers sont offerts par Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte, agréé et réglementé comme un fournisseur de Services d’investissement de Catégorie 3 par l'Autorité des Services Financiers Maltais ([_1]numéro de licence IS/70156[_2])."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Dans l'UE, les produits financiers sont offerts par Binary Investments (Europe) Ltd, Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte, réglementé comme un fournisseur de Services d’investissement de Catégorie 3 par l'Autorité des Services Financiers Maltais ([_1]Numéro de licence IS/ 70156[_2])."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "Dans l'île de Man et le Royaume Uni, les Indices de Volatilité sont offerts par Binary (IOM Ltd., 1er étage, Millennium House, Victoria Road, Douglas, IM2 4RW, île de Man, îles Britanniques, autorisé et régulé respectivement par (1) la Commission de Supervision des Jeux dans l'île de Man (licence actuelle émise le 31 Août 2017) et par (2) la Commission des Jeux du Royaume-Uni (licence [_1]no référence: 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "Dans le reste de l’UE, les Indices de Volatilité sont offerts par Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malte ; agréé et régulé par (1) l'Autorité des Jeux de Malte à Malte (no. de licence MGA/B2C/102/2000 délivré le 01 août 2018), pour les clients britanniques par (2) la Commission des jeux du Royaume Uni (licence [_1]référence ne : 39495[_2]) et pour les clients irlandais par (3) les Commissionnaires du Revenu en Irlande (Licence de bookmaker à distance n ° 1010285 publié le 1er juillet 2017). Voir l'ensemble des [_3]informations réglementaires[_4]."
 
 msgid "In/Out"
 msgstr "Dans/Hors De"
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Autre"
 
 msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
-msgstr ""
+msgstr "Hors de l’UE, les produits financiers sont offerts par Binary (C.R.) S.A., 5e étage, immeuble 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, réglementée par la Commission des Services Financiers de Vanuatu ([_1]voir licence[_2]), Binary (BVI) Ltd, 2e étage, O'Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, îles Vierges britanniques, réglementée par la Commission des Services Financiers des îles Vierges Britanniques ([_3]licence no. SIBA/L/18/1114[_4]) et Binary (FX) Ltd., Lot No. F16, Premier Etage, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaisie, réglementée par l'autorité des Services Financiers de Labuan afin d’exploiter une entreprise de courtage monétaire ([_5]licence no. MB/18/0024[_6])"
 
 msgid "Over"
 msgstr "Au-dessus"
