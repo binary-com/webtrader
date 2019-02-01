@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2019-02-01 08:40\n"
+"PO-Revision-Date: 2019-02-01 09:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Silahkan install versi terbaru dari salah satu browser ini"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr "Pastikan pesan Anda hanya satu baris, jangan tekan enter"
+msgstr "Pastikan pesan Anda hanya satu baris, jangan tekan masuk"
 
 msgid "Please log in"
 msgstr "Silahkan masuk"
