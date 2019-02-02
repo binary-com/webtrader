@@ -318,30 +318,6 @@ module.exports = function (grunt) {
                 command: "mkdir beta; mv dist/compressed/* beta; mv beta dist/compressed"
             }
         },
-        if: {
-            live: {
-                // Target-specific file lists and/or options go here.
-                options: {
-                    // execute test function(s)
-                    test() {
-                        return process.env.TRAVIS_BRANCH === "master";
-                    }
-                },
-                //array of tasks to execute if all tests pass
-                ifTrue: [ "gh-pages:travis-deploy" ]
-            },
-            beta: {
-                // Target-specific file lists and/or options go here.
-                options: {
-                    // execute test function(s)
-                    test: function() {
-                        return process.env.TRAVIS_BRANCH === "development";
-                    }
-                },
-                //array of tasks to execute if all tests pass
-                ifTrue: [ "shell:moveEverythingToBETA_folder", "gh-pages:travis-deploy" ]
-            }
-        },
         po2json: {
           options: {
             format: "raw"
@@ -396,6 +372,15 @@ module.exports = function (grunt) {
     grunt.registerTask("mainTask", ["clean:compressed","clean:uncompressed", "copy:main", "sass", "babel", "copy:copy_i18n", "copy:copyLibraries", "rename", "replace:version"]);
     grunt.registerTask("compressionAndUglify", ["cssmin", "htmlmin", "imagemin", "uglify", "copy:copy_AfterCompression"]);
     grunt.registerTask("default", ["jshint", "po2json", "mainTask", "compressionAndUglify", "removelogging"]);
+
+    // conditional switch for deployment
+    grunt.registerTask("deploy", function(deployment_mode) {
+        if (deployment_mode === 'live' && process.env.TRAVIS_BRANCH === "master") {
+            grunt.task.run(["gh-pages:travis-deploy"]);
+        } else if (deployment_mode === 'beta' && process.env.TRAVIS_BRANCH === "development") {
+            grunt.task.run([ "shell:moveEverythingToBETA_folder", "gh-pages:travis-deploy" ]);
+        }
+    });
 
     //Meant for local development use ONLY - for pushing to individual forks
     /* Deploy to a sub-folder of gh-pages with the name of current branch,

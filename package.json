@@ -32,7 +32,6 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-gh-pages": "^3.1.0",
     "grunt-gitinfo": "^0.1.8",
-    "grunt-if": "^0.1.5",
     "grunt-newer": "^1.2.0",
     "grunt-po2json": "^0.3.0",
     "grunt-remove-logging": "ehynds/grunt-remove-logging",
