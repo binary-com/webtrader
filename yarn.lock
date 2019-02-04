@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@binary-com/binary-style@^0.2.15":
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/@binary-com/binary-style/-/binary-style-0.2.15.tgz#49b3eef9135d8e8f2275959abf1b018022f29484"
+  integrity sha512-p1L8xd/GGPE6Hiz1zmG2JAWCYFzJowKju9RzU+ZF7mXqQvjiVdBPqF+eZ5EBR1jOGWpy2+CuSYlZLjD/M9t0Sw==
+  dependencies:
+    select2 "4.0.5"
+
 "@binary-com/webtrader-charts@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@binary-com/webtrader-charts/-/webtrader-charts-0.5.2.tgz#8277e1c73a224051a2d460c8f439765dbd9e496a"
@@ -1135,13 +1142,6 @@ binary-com-jquery-ui-timepicker@^1.0.1:
   integrity sha1-fypxoH5ak509GH0X6lxQaAJWuAE=
   dependencies:
     jquery "^3.0.0"
-
-binary-style@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/binary-style/-/binary-style-0.2.4.tgz#24d9b6c5f4525cedbf6cf305876c02641fd4859a"
-  integrity sha1-JNm2xfRSXO2/bPMFh2wCZB/UhZo=
-  dependencies:
-    select2 "4.0.5"
 
 bind-obj-methods@^2.0.0:
   version "2.0.0"
