@@ -25,10 +25,10 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-htmlmin": "^0.4.0",
-    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-htmlmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-gh-pages": "^2.0.0",
     "grunt-gitinfo": "^0.1.7",
@@ -71,7 +71,10 @@
     "url": "https://github.com/binary-com/webtrader/issues"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@binary-com/binary-style": "^0.2.15",
+=======
+>>>>>>> 49a95262d2b068e0626f13e5ab475289c608b8ae
     "@binary-com/webtrader-charts": "0.5.2",
     "alameda": "^1.2.0",
     "binary-com-jquery-dialogextended": "binary-com/jquery-dialogextend#master",
