@@ -131,10 +131,11 @@ function set_current_template(state, tpl) {
     _.defer(function() {
       if(state.date_start.visible) {
         _.defer(function() {
-          if(tpl.date_start_value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1}))
+          if (state.date_start.value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1})) {
             state.date_start.value = tpl.date_start_value*1;
-          else
+          } else {
             state.date_start.value = 'now';
+          }
         });
       }
       if(state.digits.visible) {
@@ -218,6 +219,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 'now', /* epoch value if selected */
       array: [{ text: 'Now', value: 'now' } ],
       visible: false,
+      hour_minute: '',
     },
     date_expiry: {
       value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
@@ -459,49 +461,61 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.date_start.update = function () {
-    var forward_starting_options = _(available).filter({
-      'contract_category_display': state.categories.value.contract_category_display,
-      'contract_display': state.category_displays.selected.name,
-      'start_type': 'forward'
-    }).head();
-    // For markets with spot start_type
-    var spot_starting_options = _(available).filter({
-      'contract_category_display': state.categories.value.contract_category_display,
-      'contract_display': state.category_displays.selected.name,
-      'start_type': 'spot'
-    }).head();
+    const forward_starting_market = 
+      _(available)
+        .filter({
+          'contract_category_display': state.categories.value.contract_category_display,
+          'contract_display': state.category_displays.selected.name,
+          'start_type': 'forward'
+        })
+        .head();
 
-    if (!forward_starting_options) {
+    if (!forward_starting_market) {
       _.assign(state.date_start, { visible: false, array: [], value: 'now' });
       return;
     };
 
-    forward_starting_options = forward_starting_options.forward_starting_options
-    var model = state.date_start;
-    var array = [];
-    // Add 'NOW' to start time only if the market contains spot start_type.
-    if(spot_starting_options){
-      array = [{ text: 'Now', value: 'now' }];
-    }
-    var later = (new Date().getTime() + 5*60*1000)/1000; // 5 minute from now
-    for(var i = 0; i < forward_starting_options.length; i++){
-      var row = forward_starting_options[i];
-      var step = 5 * 60; // 5 minutes step
-      var from = Math.ceil(Math.max(later, row.open) / step) * step;
-      for (var epoch = from; epoch < row.close; epoch += step) {
-        var d = new Date(epoch * 1000);
-        var text = ("00" + d.getUTCHours()).slice(-2) + ":" +
-        ("00" + d.getUTCMinutes()).slice(-2) + ' ' +
-        ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][d.getUTCDay()];
-        array.push({ text: text, value: epoch });
-      }
-    }
-    var options = { value: array[0].value, array: array, visible: true };
-    if(_.some(array, {value: state.date_start.value*1})) {
-      options.value = state.date_start.value;
-    }
+    const spot_starting_options = 
+      _(available)
+        .filter({
+          'contract_category_display': state.categories.value.contract_category_display,
+          'contract_display': state.category_displays.selected.name,
+          'start_type': 'spot'
+        })
+        .head();
+
+    const start_dates = forward_starting_market.forward_starting_options.map((available_day) => {
+      const { date } = available_day;
+      const text = moment.unix(date).format('ddd - MMMM Do, YYYY');
+      return { text, value: date };
+    });
+
+    if (spot_starting_options) start_dates.unshift({ text: 'Now', value: 'now' });
+
+    const { value: selected_date } = state.date_start;
+  
+    const options = { 
+      value: selected_date, 
+      array: [...start_dates], 
+      visible: true 
+    };
+
     _.assign(state.date_start, options);
+
+    if (selected_date === 'now') {
+      state.date_start.hour_minute = '00:00';
+    } else {
+      state.setDateStartHourMinute(state.date_start.hour_minute);
+    }
   };
+
+  state.setDateStartHourMinute = (hour_minute) => {
+    const date_start_formatted = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
+    const date_start_with_selected_hour_minute = moment.utc(`${date_start_formatted} ${hour_minute}`).unix();
+
+    state.date_start.value = date_start_with_selected_hour_minute;
+    state.date_start.hour_minute = hour_minute;
+  }
 
   state.date_expiry.update = function (date_or_hour) {
     var expiry = state.date_expiry;
@@ -541,7 +555,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   state.duration_unit.update = function () {
     var start_type = state.date_start.value !== 'now' ? 'forward' : 'spot';
-
     var durations = _(available).filter({
       'contract_category_display': state.categories.value.contract_category_display,
       'contract_display': state.category_displays.selected.name,
@@ -613,7 +626,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     }
 
     state.duration_unit.array = array;
-
     /* manualy notify 'duration_count' and 'barriers' to update themselves */
     state.barriers.update();
     state.date_expiry.update_times();
