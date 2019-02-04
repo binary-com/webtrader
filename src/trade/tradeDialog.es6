@@ -502,8 +502,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
     _.assign(state.date_start, options);
 
-    if (selected_date === 'now' || state.date_start.hour_minute !== '00:00') {
+    if (selected_date === 'now') {
       state.date_start.hour_minute = '00:00';
+    } else {
+      state.setDateStartHourMinute(state.date_start.hour_minute);
     }
   };
 
