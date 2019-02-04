@@ -69,7 +69,7 @@ function isSmallView() {
 
 /* convert epoch to stirng yyyy-mm-dd hh:mm:ss format
    options: { utc: true/false } */
-function epoch_to_string(epoch, options) {
+function epochToString(epoch, options) {
     var prefix = (options && options.utc) ? "getUTC" : "get"; // Local or UTC time
     var d = new Date(epoch * 1000); /* since unixEpoch is simply epoch / 1000, we  multiply the argument by 1000 */
      return d[prefix + "FullYear"]() + "-" +
@@ -82,7 +82,7 @@ function epoch_to_string(epoch, options) {
 
 /* convert string in "2015-11-9" format to epoch
    options: { utc: true/false } */
-function yyyy_mm_dd_to_epoch(yyyy_mm_dd, options) {
+function yearMonthDayToEpoch(yyyy_mm_dd, options) {
     var ymd = yyyy_mm_dd.split("-"),
         y = ymd[0] * 1,
         m = ymd[1] * 1,
@@ -292,7 +292,7 @@ var local_storage = {
   }
 }
 
-function get_supported_languages() {
+function getSupportedLanguages() {
     var SUPPORTED_LANGUAGES = [
         { value: 'en', name: 'English'},
         { value: 'de', name: 'Deutsch'},
@@ -311,10 +311,10 @@ function get_supported_languages() {
     return SUPPORTED_LANGUAGES;
 }
 
-function is_lang_supported(lang) {
+function isLangSupported(lang) {
     if (!lang) return false;
 
-    var supported_languages = get_supported_languages();
+    var supported_languages = getSupportedLanguages();
     var is_supported = false;
 
     supported_languages.map(function(supported_lang) {
@@ -327,13 +327,13 @@ function is_lang_supported(lang) {
     return is_supported;
 }
 
-function set_language(lang) {
+function setLanguage(lang) {
     if (!lang) return false;
 
     lang = lang.trim().toLowerCase();
     var DEFAULT_LANGUAGE = 'en';
 
-    if (is_lang_supported(lang)) {
+    if (isLangSupported(lang)) {
         local_storage.set('i18n', { value: lang });
         return;
     }
@@ -341,7 +341,7 @@ function set_language(lang) {
 }
 
 // without refreshing the page
-function clear_url_querystring(href) {
+function clearUrlQuerystring(href) {
     if (href) {
         var window_url = new URL(href);
         window_url.search = '';
@@ -384,7 +384,7 @@ function oAuthLoginIds() {
 }
 
 /* setup translating string literals */
-function setup_i18n_translation(dict) {
+function setupi18nTranslation(dict) {
       var keys = Object.keys(dict).filter(function(key) { return key !== "" && key !== " "; });
       keys = keys.sort(function(a,b){ return b.length - a.length; }) /* match the longes possible substring */
       /* Escape keys for using them in regex. */
@@ -433,7 +433,7 @@ function getAppURL() {
 }
 
 /* type = "text/csv;charset=utf-8;" */
-function download_file_in_browser(filename, type, content){
+function downloadFileInBrowser(filename, type, content){
             var blob = new Blob([content], { type: type });
             if (navigator.msSaveBlob) { // IE 10+
                 navigator.msSaveBlob(blob, filename);

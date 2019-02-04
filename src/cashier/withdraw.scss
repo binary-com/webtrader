@@ -7,7 +7,7 @@ $size_tiny: 12px;
 .ui-dialog .ui-dialog-content.withdraw-dialog {
   background: #fff;
   padding: 0;
-  overflow: hidden;
+  overflow-y: scroll;
 
   .explanation {
       color: $gray;

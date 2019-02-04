@@ -1,0 +1,68 @@
+.statement {
+	.statement-dialog-content {
+		padding: 0;
+		width: auto !important;
+		.dataTables_filter {
+			label {
+				display: none;
+			}
+		}
+	}
+
+	.statement-dialog {
+		thead {
+			th {
+				text-align: center;
+				width: 13%;
+				padding-right: 0;
+
+				&:last-child {
+					width: 6%;
+				}
+
+				span {
+					height: 2.5em;
+					display: block;
+					font-size: 90%;
+				}
+
+				.search-input {
+					text-align: center;
+					box-sizing: border-box;
+				}
+			}
+		}
+
+		tbody {
+			td {
+				text-align: center;
+				width: 13%;
+				padding-right: 0;
+
+				&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(5), &:nth-child(6) {
+					padding-top: 12px;
+				}
+
+				&:nth-child(7n) {
+					padding-right: 4px;
+				}
+
+				&:last-child {
+					width: 6%;
+				}
+			}
+		}
+
+		button {
+			padding: 10px 12px;
+		}
+
+		.arrow {
+			width: 20px;
+			height: 20px;
+			margin: 10px 0;
+			cursor: pointer;
+			float: right;
+		}
+	}
+}

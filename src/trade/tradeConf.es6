@@ -10,8 +10,7 @@ import 'css!../trade/tradeConf.css';
 import html from 'text!../trade/tradeConf.html';
 
 /* rv binder to show tick chart for this confirmation dialog */
-let display_decimals;
-const CHART_LABELS = ['start_time', 'barrier', 'end_time'];
+const CHART_LABELS = ['entry_spot_tick', 'barrier', 'exit_spot_tick'];
 rv.binders['tick-chart'] = {
    priority: 65, /* a low priority to apply last */
    bind: function(el) {
@@ -38,7 +37,7 @@ rv.binders['tick-chart'] = {
             formatter: function () {
                const tick = model.array[this.x - 1];
                if (tick && tick.tooltip) {
-                     return `<div class='tooltip-body'>${tick.tooltip}</div>`;
+                  return `<div class='tooltip-body'>${tick.tooltip}</div>`;
                }
             }
          },
@@ -53,7 +52,7 @@ rv.binders['tick-chart'] = {
                   align: 'left',
                   x: 0,
                   formatter() {
-                        return addComma(this.value.toFixed(display_decimals));
+                     return addComma(this.value, model.display_decimals);
                   },
             },
             title: '',
@@ -145,30 +144,32 @@ const registerTicks = (state, extra) => {
    let proposal_open_contract;
    let on_proposal_open_contract;
    let on_tick;
+   let is_path_dependent_last_tick = false;
    let { tick_count } = extra;
-   /* No need to worry about WS connection getting closed, because the user will be logged out */
-   const addTick  = (tick) => {
+
+   const addTick = (tick) => {
       const is_or_after_contract_entry = (+tick.epoch) >= (+proposal_open_contract.entry_tick_time);
-      const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch * 1 === tick.epoch * 1);
+      const is_new_tick = !state.ticks.array.some((state_tick) => state_tick.epoch === (+tick.epoch));
       const should_add_new_tick = is_new_tick && !state.ticks.contract_is_finished && is_or_after_contract_entry;
 
       if (should_add_new_tick) {
-            const contract_is_finished = proposal_open_contract.status !== 'open' && !state.ticks.contract_is_finished;
-            state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
+         const contract_is_finished = proposal_open_contract.status !== 'open' && (tick_count < -1 || is_path_dependent_last_tick);
+         state.buy.barrier = proposal_open_contract.barrier ? (+proposal_open_contract.barrier) : null;
 
-            if (contract_is_finished) {
-                  onContractFinished(proposal_open_contract);
-                  updateChart();
-            }
-            tick_count--;
-            if (tick_count > -1) {
-                  addTickToState(tick);
-            }
+         if (contract_is_finished) {
+            onContractFinished(proposal_open_contract);
+            updateChart();
+         }
+
+         tick_count--;
+         if (tick_count > -1) {
+            is_path_dependent_last_tick = tick.epoch >= proposal_open_contract.exit_tick_time ? true : false;
+            addTickToState(tick);
+         }
       }
    }
 
    function addTickToState(tick) {
-      const decimal_digits = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
       const tooltip = makeTooltip(tick);
 
       state.ticks.array.push({
@@ -176,13 +177,12 @@ const registerTicks = (state, extra) => {
          epoch: (+tick.epoch),
          number: state.ticks.array.length + 1,
          tooltip,
-         decimal_digits,
       });
 
       function makeTooltip(tick) {
             const tick_time = moment.utc(tick.epoch * 1000).format('dddd, MMM D, HH:mm:ss');
             const { symbol_name } = extra;
-            const tick_quote_formatted = addComma((+tick.quote).toFixed(decimal_digits));
+            const tick_quote_formatted = addComma(+tick.quote, state.ticks.display_decimals);
 
             return `${tick_time}<br/>${symbol_name} ${(tick_quote_formatted)}`;
       };
@@ -280,7 +280,7 @@ const registerTicks = (state, extra) => {
 };
 
 export const init = (data, extra, showCallback, hideCallback) => {
-   display_decimals = data.display_decimals || 3;
+   const display_decimals = chartingRequestMap.digits_after_decimal(extra.pip, extra.symbol);
    const root = $(html).i18n();
    const { buy } = data;
    const state = {
@@ -309,6 +309,7 @@ export const init = (data, extra, showCallback, hideCallback) => {
       ticks: {
          array: [],
          contract_is_finished: false,
+         display_decimals,
          exit_tick_time: null,
          is_path_dependent: null,
          makeBarrier: () => {

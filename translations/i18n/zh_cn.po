@@ -1,22 +1,19 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2018-11-30 05:40\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
-"PO-Revision-Date: 2018-11-09 01:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
-
-msgid "(One) Touch trades"
-msgstr "一触即付交易"
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
 msgstr "（如期限不到一天），或于交易日结束时（如期限是一天及以上）"
@@ -171,20 +168,11 @@ msgstr "8小时"
 msgid "AM"
 msgstr "上午"
 
-msgid "About Binary.com"
-msgstr "关于 Binary.com"
-
-msgid "About us"
-msgstr "关于我们"
-
 msgid "Accept"
 msgstr "接受"
 
 msgid "Accessible from any web browser in 13 languages"
 msgstr "使用任何浏览器，通过13种语言访问"
-
-msgid "Account authentication"
-msgstr "账户验证"
 
 msgid "Account balance"
 msgstr "账户余额"
@@ -194,12 +182,6 @@ msgstr "账户余额："
 
 msgid "Account id not found."
 msgstr "找不到账户 id。"
-
-msgid "Account opening"
-msgstr "账户开立"
-
-msgid "Account opening reason"
-msgstr "开立账户的原因"
 
 msgid "Account token not found."
 msgstr "找不到账户令牌。"
@@ -231,9 +213,6 @@ msgstr "添加/删除指标"
 msgid "Added new workspace %"
 msgstr "已添加新工作区%"
 
-msgid "Address"
-msgstr "地址"
-
 msgid "Admin"
 msgstr "管理中心"
 
@@ -243,32 +222,17 @@ msgstr "所有字段为可选项。如果想要复制所有资产和交易类型
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "所有时间均采用格林威治标准时间（GMT）"
 
-msgid "Allow others to copy your trades"
-msgstr "允许他人复制您的交易"
-
 msgid "Amount"
 msgstr "金额"
 
-msgid "Amount Min: 10 Max: 2000"
-msgstr "数值最小: 10 最大: 2000"
-
 msgid "Amount per point"
 msgstr "每个点的金额"
-
-msgid "Answer"
-msgstr "答案"
-
-msgid "Anticipated account turnover"
-msgstr "预期的账户交易额"
 
 msgid "Apply"
 msgstr "申请"
 
 msgid "Apply to become a Binary.com"
 msgstr "申请成为Binary.com"
-
-msgid "Appropriateness Test: WARNING"
-msgstr "合适性测试:警告"
 
 msgid "Apr"
 msgstr "四月"
@@ -312,15 +276,6 @@ msgstr "八月"
 msgid "August"
 msgstr "八月"
 
-msgid "Authenticate your account now by verifying your identity and address. To proceed, simply send the following documents to %1:"
-msgstr "请提交身份与地址证明，立刻进行账户验证。继续操作，请将以下文件发送到%1："
-
-msgid "Available Currencies"
-msgstr "可用的货币"
-
-msgid "Avg. Duration"
-msgstr "平均持续时间"
-
 msgid "Avg. Duration of Open Positions"
 msgstr "持仓头寸的平均持续期"
 
@@ -342,29 +297,8 @@ msgstr "障碍"
 msgid "Barrier offset"
 msgstr "障碍位移"
 
-msgid "Barrier(s)"
-msgstr "障碍"
-
 msgid "Bill Williams"
 msgstr "Bill Williams"
-
-msgid "Binary option"
-msgstr "二元期权"
-
-msgid "Binary options basics"
-msgstr "二元期权基础知识"
-
-msgid "Binary options or other financial derivatives trading experience"
-msgstr "二元期权或其他金融衍生品交易经验"
-
-msgid "Binary options or other financial derivatives trading frequency"
-msgstr "二元期权或其他金融衍生品交易频率"
-
-msgid "Binary options trading experience"
-msgstr "二元期权交易经验"
-
-msgid "Binary options trading frequency"
-msgstr "二元期权交易频率"
 
 msgid "Binary.com"
 msgstr "Binary.com"
@@ -372,8 +306,8 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com︰ Webtrader"
 
-msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com 是多次获奖的在线交易提供商，帮助客户通过二元期权和差价合约在金融市场进行交易。 基于波动率指数的二元期权和差价合约交易被归类为博彩活动。请记住博彩活动可能会上瘾，并提醒自己要承担责任。查阅[_1]负责任交易[_2]的详细信息。一些产品在所有国家都不可用。本网站不向一些国家如美国、加拿大、哥斯达黎加、香港、或18岁以下的用户提供服务。"
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+msgstr ""
 
 msgid "Blank window"
 msgstr "空白窗口"
@@ -393,20 +327,11 @@ msgstr "购入价"
 msgid "Buy price"
 msgstr "购入价"
 
-msgid "By clicking"
-msgstr "通过点击"
-
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "通过点击OK键，您确认已经阅读并接受更新的"
 
-msgid "By default, all clients are treated as retail. Do you prefer to be treated as a professional client if you match the necessary criteria?"
-msgstr "默认情况下, 所有客户都被视为零售。如果您符合必要的标准, 您同意被视为专业客户吗？"
-
-msgid "CFD trading experience"
-msgstr "差价合约交易经验"
-
-msgid "CFD trading frequency"
-msgstr "差价合约交易频率"
+msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
+msgstr ""
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用于合同购入与售出，给到期的购入合同延期，以及给虚拟金钱账户存入资金。"
@@ -462,9 +387,6 @@ msgstr "图表模板"
 msgid "Chart type"
 msgstr "图表类型"
 
-msgid "Choose password"
-msgstr "选择密码"
-
 msgid "Choose your pereferred payment agent"
 msgstr "选择您较倾向的支付代理"
 
@@ -474,14 +396,8 @@ msgstr "选择您较倾向的提款方法"
 msgid "Chrome"
 msgstr "Chrome"
 
-msgid "Citizenship"
-msgstr "公民身份"
-
 msgid "Click to log in with your Binary.com account"
 msgstr "点击登录Binary.com账户"
-
-msgid "Client funds"
-msgstr "客户基金"
 
 msgid "Close"
 msgstr "关"
@@ -491,15 +407,6 @@ msgstr "全部关闭"
 
 msgid "Closes"
 msgstr "关"
-
-msgid "Commodities"
-msgstr "大宗商品"
-
-msgid "Commodities trading experience"
-msgstr "大宗商品交易经验"
-
-msgid "Commodities trading frequency"
-msgstr "大宗商品交易频率"
 
 msgid "Comparisons"
 msgstr "比较"
@@ -522,9 +429,6 @@ msgstr "建筑"
 msgid "Contact Us"
 msgstr "联系我们"
 
-msgid "Continue"
-msgstr "继续"
-
 msgid "Continue Trading"
 msgstr "继续交易"
 
@@ -537,23 +441,14 @@ msgstr "合约确认"
 msgid "Contract Details"
 msgstr "合约细节"
 
-msgid "Contract period"
-msgstr "合约期间"
-
 msgid "Contracts"
 msgstr "合约"
 
 msgid "Copier"
 msgstr "复制者"
 
-msgid "Copy Trade"
-msgstr "复制交易"
-
 msgid "Copy Trading"
 msgstr "复制交易"
-
-msgid "Country of residence"
-msgstr "居住国"
 
 msgid "Create"
 msgstr "创建"
@@ -615,9 +510,6 @@ msgstr "Dark Unica 主题"
 msgid "Date"
 msgstr "日期"
 
-msgid "Date of birth"
-msgstr "出生日期"
-
 msgid "Days"
 msgstr "日"
 
@@ -626,9 +518,6 @@ msgstr "十二月"
 
 msgid "December"
 msgstr "十二月"
-
-msgid "Decline"
-msgstr "拒绝"
 
 msgid "Default"
 msgstr "默认"
@@ -644,12 +533,6 @@ msgstr "存入资金"
 
 msgid "Deposit of USD"
 msgstr "美元存款"
-
-msgid "Depositing and withdrawing funds"
-msgstr "存款及取款"
-
-msgid "Derivative"
-msgstr "衍生工具"
 
 msgid "Describe what this token is for to find it later"
 msgstr "令牌用途说明，以便稍后查找"
@@ -667,9 +550,6 @@ msgid "Digits"
 msgstr "数字"
 
 msgid "Do you want to install Webtrader chrome extension?"
-msgstr "是否安装Webtrader chrome扩展程序？"
-
-msgid "Do you want to install the Webtrader chrome extension?"
 msgstr "是否安装Webtrader chrome扩展程序？"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
@@ -729,9 +609,6 @@ msgstr "下载工作区为 %1"
 msgid "Drawing tools"
 msgstr "绘图工具"
 
-msgid "Due to recent changes in the regulations, we are required to ask our clients to complete the following Financial Assessment. Please note that you will not be able to continue trading until this is completed"
-msgstr "由于最近的法规变更，客户必须填写以下金融评估。您须填写完成才能继续交易"
-
 msgid "Duration"
 msgstr "持续时间"
 
@@ -744,23 +621,11 @@ msgstr "边缘"
 msgid "Education"
 msgstr "教育"
 
-msgid "Email verification failed"
-msgstr "电子邮件验证失败"
-
 msgid "Embed code"
 msgstr "嵌入代码"
 
-msgid "Employment status"
-msgstr "就业状况"
-
 msgid "End Time"
 msgstr "结束时间"
-
-msgid "Ends Between/Ends Outside trades"
-msgstr "“收于范围之内/之外”的交易"
-
-msgid "Ends Between/Outside"
-msgstr "到期时价格处于某个范围之内/之外"
 
 msgid "Ends in"
 msgstr "范围之内收盘"
@@ -786,14 +651,8 @@ msgstr "入市现价"
 msgid "Entry spot"
 msgstr "入市现价"
 
-msgid "Entry spot price"
-msgstr "入市现价"
-
 msgid "Error getting data for %1"
 msgstr "获取%1数据时出错"
-
-msgid "Estimated Net Worth"
-msgstr "估计净值"
 
 msgid "Even"
 msgstr "偶"
@@ -822,23 +681,14 @@ msgstr "退市现价时间"
 msgid "Exit spot"
 msgstr "退市现价"
 
-msgid "Expiry price"
-msgstr "到期价格"
-
 msgid "Explanation"
 msgstr "说明"
-
-msgid "FAQ"
-msgstr "常见问题"
 
 msgid "Failed to update the password"
 msgstr "未能更新密码"
 
 msgid "Fall"
 msgstr "下跌"
-
-msgid "Family name"
-msgstr "姓氏"
 
 msgid "Favorites"
 msgstr "收藏夹"
@@ -867,35 +717,8 @@ msgstr "最终价格"
 msgid "Finance"
 msgstr "金融"
 
-msgid "Financial Account Opening form"
-msgstr "开立金融账户表格"
-
-msgid "Financial Assessment"
-msgstr "财务评估"
-
-msgid "Financial Information"
-msgstr "金融信息"
-
-msgid "Financial information"
-msgstr "财务信息"
-
 msgid "Firefox"
 msgstr "Firefox"
-
-msgid "First line of home address"
-msgstr "家庭地址第一行"
-
-msgid "First name"
-msgstr "名字"
-
-msgid "Forex"
-msgstr "外汇"
-
-msgid "Forex trading experience"
-msgstr "外汇交易经验"
-
-msgid "Forex trading frequency"
-msgstr "外汇交易频率"
 
 msgid "Fri"
 msgstr "星期五"
@@ -912,17 +735,8 @@ msgstr "全屏幕交易界面"
 msgid "Further instructions"
 msgstr "详细说明"
 
-msgid "GMT"
-msgstr "格林威治标准时间"
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "获取交易者的 API 令牌, 并将其添加到您的列表中"
-
-msgid "Getting started"
-msgstr "开始交易"
-
-msgid "Glossary"
-msgstr "术语表"
 
 msgid "Go to"
 msgstr "前往"
@@ -938,9 +752,6 @@ msgstr "网格"
 
 msgid "Grid Light"
 msgstr "网格光照"
-
-msgid "Group history"
-msgstr "集团历史"
 
 msgid "Health"
 msgstr "健康状况"
@@ -960,9 +771,6 @@ msgstr "高障碍位移"
 msgid "Higher"
 msgstr "较高"
 
-msgid "Higher/Lower trades"
-msgstr "“高于/低于”交易"
-
 msgid "Historical Data"
 msgstr "历史数据"
 
@@ -977,24 +785,6 @@ msgstr "小时"
 
 msgid "Hours"
 msgstr "小时"
-
-msgid "How to trade binary options?"
-msgstr "二元期权如何交易?"
-
-msgid "How to trade the Volatility Indices markets?"
-msgstr "如何在波动率指数市场上交易？"
-
-msgid "I acknowledge that I am not a politically exposed person (PEP)"
-msgstr "我确认本人不是政治公众人士(PEP)"
-
-msgid "I have read and agree to Binary.com"
-msgstr "本人已经阅读并同意Binary.com的"
-
-msgid "I hereby confirm that the tax information I provided is true and complete. I will also inform Binary Investments (Europe) Ltd. about any changes to this information"
-msgstr "我特此确认, 我提供的税务信息是真实和完整的。将来如果此信息有任何更改，我将会通知Binary投资 (欧洲) 有限公司"
-
-msgid "I want to be treated as a professional client"
-msgstr "我要被视为专业客户"
 
 msgid "IMPORTANT DISCLAIMER"
 msgstr "重要免责声明"
@@ -1011,26 +801,20 @@ msgstr "如您选择特定的"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
 
-msgid "In providing our services to you, we are required to obtain information from you in order to assess whether a given product or service is appropriate for you (that is, whether you possess the experience and knowledge to understand the risks involved)"
-msgstr "为了给您提供服务，我们必须向您获取信息，以便确定产品或服务是否适合您（也就是说，看您是否拥有足够经验和知识，以了解相关的风险）"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
-msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由马耳他金融服务机构授予牌照及监管为3级投资服务提供商(牌照号码为 IS/70156)。"
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛博彩监管委员会授予牌照和监管（当前在线牌照于2012 年8 月31 日颁发）及(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39172[_2])。"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4].)"
-msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2015年8月01日）。英国客户由(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39495[_2])， 及爱尔兰客户由(3) 爱尔兰的税务局授予牌照和监管 (远程博彩公司牌照号: 1010285，发照日期为2017年7月1日)。查阅完整的 [_3]监管信息[_4]。"
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr ""
 
 msgid "In/Out"
 msgstr "“范围之内/之外”"
-
-msgid "In/Out trades"
-msgstr "“范围之内 / 之外”交易"
-
-msgid "Income Source"
-msgstr "收入来源"
 
 msgid "Indicative"
 msgstr "指示性"
@@ -1040,18 +824,6 @@ msgstr "指示性价格"
 
 msgid "Indicators"
 msgstr "指标"
-
-msgid "Indices"
-msgstr "指数"
-
-msgid "Indices trading experience"
-msgstr "指数交易经验"
-
-msgid "Indices trading frequency"
-msgstr "指数交易频率"
-
-msgid "Industry of Employment"
-msgstr "职业领域"
 
 msgid "Instruments"
 msgstr "工具"
@@ -1095,9 +867,6 @@ msgstr "六月"
 msgid "June"
 msgstr "六月"
 
-msgid "Just click  Grant  button on the page you will now be taken to"
-msgstr "仅须在您即将看到的页面上点击‘’授予”按钮"
-
 msgid "Last 12 mnts Profitable Trades"
 msgstr "最后12个月盈利交易"
 
@@ -1113,17 +882,8 @@ msgstr "已低于最后数字"
 msgid "Last used"
 msgstr "上一次使用"
 
-msgid "Learning to trade"
-msgstr "学习交易"
-
 msgid "Less than"
 msgstr "少于"
-
-msgid "Let's do it"
-msgstr "开始操作"
-
-msgid "Level of Education"
-msgstr "教育水平"
 
 msgid "Line"
 msgstr "行"
@@ -1155,17 +915,11 @@ msgstr "正在加载复制交易..."
 msgid "Loading Download/View Data ..."
 msgstr "加载下载/查看数据 ..."
 
-msgid "Loading MAM..."
-msgstr "加载MAM..."
-
 msgid "Loading Password dialog ..."
 msgstr "加载密码对话 ..."
 
 msgid "Loading Profit Table ..."
 msgstr "加载利润表 ..."
-
-msgid "Loading Real account opening ..."
-msgstr "加载真实账户开立程序 ..."
 
 msgid "Loading Self-Exclusion ..."
 msgstr "加载自我禁止 ..."
@@ -1209,14 +963,8 @@ msgstr "登录"
 msgid "Logout"
 msgstr "注销"
 
-msgid "Lookbacks"
-msgstr "回顾"
-
 msgid "Low"
 msgstr "低"
-
-msgid "Low Barrier"
-msgstr "低障碍"
 
 msgid "Low barrier"
 msgstr "低障碍"
@@ -1238,9 +986,6 @@ msgstr "三月"
 
 msgid "March"
 msgstr "三月"
-
-msgid "Market exit price"
-msgstr "平仓价"
 
 msgid "Matches"
 msgstr "相符"
@@ -1290,18 +1035,6 @@ msgstr "最低交易投注额须低于最大交易投注额。"
 msgid "Min. Trade Stake"
 msgstr "最小交易投注额"
 
-msgid "Min: 10 Max: 2000"
-msgstr "最小: 10 最大: 2000"
-
-msgid "Minimum of 2 characters required"
-msgstr "需要至少2个字符"
-
-msgid "Minimum of 4 characters required"
-msgstr "需要至少4个字符"
-
-msgid "Minimum of 6 characters required"
-msgstr "需要至少6个字符"
-
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "至少六个大小写字母和数字"
 
@@ -1325,9 +1058,6 @@ msgstr "周一"
 
 msgid "Monday"
 msgstr "周一"
-
-msgid "Monthly Profitable Trades"
-msgstr "每月盈利交易"
 
 msgid "Mother's maiden name"
 msgstr "母亲婚前的姓氏"
@@ -1371,14 +1101,8 @@ msgstr "导航器系列颜色"
 msgid "Navigator series line"
 msgstr "导航器系列线"
 
-msgid "Net Annual Income"
-msgstr "年净收入"
-
 msgid "Net Profit"
 msgstr "净利"
-
-msgid "New Account"
-msgstr "新账户"
 
 msgid "New password"
 msgstr "新密码"
@@ -1386,17 +1110,11 @@ msgstr "新密码"
 msgid "No"
 msgstr "否"
 
-msgid "No Touch trades"
-msgstr "“未触及”交易"
-
 msgid "No touch"
 msgstr "未触及"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgstr "注意：合约将在我们服务器收到请求时，以当时的市场价格卖出。此价格可能与报价有差异。"
-
-msgid "Note: You can only have one fiat currency account and one of each cryptocurrency account"
-msgstr "注： 您只能拥有一个法定货币账户以及任一种加密货币账户"
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "注意：您必须完全通过付款代理存款才可使用付款代理提款"
@@ -1416,12 +1134,6 @@ msgstr "OHLC条形图"
 msgid "OK"
 msgstr "确定"
 
-msgid "OTC indices and stocks"
-msgstr "场外交易指数和股票"
-
-msgid "Occupation"
-msgstr "职业"
-
 msgid "Oct"
 msgstr "十月"
 
@@ -1434,53 +1146,17 @@ msgstr "奇"
 msgid "Ok"
 msgstr "确定"
 
-msgid "On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you"
-msgstr "根据您所提供的知识和经验相关信息，我们认为此网站的投资活动对您来说并不合适"
-
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "达到此限额后，您不能再存款"
-
-msgid "One last step left"
-msgstr "剩下最后一步"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "在线交易可能使人上瘾。请填写下表以限制您对本网站的参与。您也可发送签名信或传真到我们的客服团队。一旦设定好，您只能收紧您的限制。限制只能在 7 天后取消或放宽，自我禁止期在确认后不能取消或更改。若要解除或增加您的限制，请联系"
 
-msgid "Only letters, numbers, hyphen are allowed"
-msgstr "只允许字母、数字和连字号"
-
-msgid "Only letters, numbers, space, hyphen, period, apostrophe are allowed"
-msgstr "只允许使用字母、数字、空格、连字符、句点和省略号"
-
-msgid "Only letters, numbers, space, period, comma, - / @ ' are allowed"
-msgstr "只允许使用字母、数字、空格、句点、逗号和- / @ '"
-
-msgid "Only letters, numbers, space, period, comma, dash(-)"
-msgstr "只允许使用字母、数字、空格、句号、逗号和虚线(-)"
-
-msgid "Only letters, space, hyphen, period, apostrophe are allowed"
-msgstr "只允许使用字母、空格、连字符、句点和省略号"
-
-msgid "Only numbers and space are allowed"
-msgstr "只允许使用数字和空格"
-
-msgid "Only numbers, letters, hyphens are allowed"
-msgstr "只允许使用数字、字母和连字号"
-
 msgid "Open"
 msgstr "开盘"
 
-msgid "Open Account"
-msgstr "开立账户"
-
 msgid "Open a Financial Account"
 msgstr "开立金融账户"
-
-msgid "Open account"
-msgstr "开立账户"
-
-msgid "Opening an account"
-msgstr "开立账户"
 
 msgid "Opens"
 msgstr "开盘"
@@ -1494,11 +1170,8 @@ msgstr "二元期权交易和其他类似活动一样，过于沉迷可能会上
 msgid "Other"
 msgstr "其它"
 
-msgid "Other financial instruments trading experience"
-msgstr "其他金融工具交易体验"
-
-msgid "Other financial instruments trading frequency"
-msgstr "其他金融工具交易频率"
+msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
+msgstr ""
 
 msgid "Over"
 msgstr "超过"
@@ -1509,26 +1182,14 @@ msgstr "3年以上"
 msgid "Overlap Studies"
 msgstr "重叠研究"
 
-msgid "PEP Declaration"
-msgstr "PEP声明"
-
 msgid "PM"
 msgstr "下午"
-
-msgid "Password must be 6 characters minimum"
-msgstr "密码至少须6个字符"
-
-msgid "Password must contain lower and uppercase letters with numbers"
-msgstr "密码必须有大小写字母和数字"
 
 msgid "Password successfully updated."
 msgstr "密码已成功更新。"
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "密码不相符。请重新输入"
-
-msgid "Patents"
-msgstr "专利"
 
 msgid "Pattern Recognition"
 msgstr "图形辨识"
@@ -1554,21 +1215,6 @@ msgstr "性能概率"
 msgid "Permissions"
 msgstr "权限"
 
-msgid "Personal Details"
-msgstr "个人资料"
-
-msgid "Phone"
-msgstr "电话"
-
-msgid "Pip"
-msgstr "点"
-
-msgid "Place of birth"
-msgstr "出生地"
-
-msgid "Please"
-msgstr "请"
-
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
 msgstr "请[_1]接受更新条款和条件[_2]，以提高取款和交易限额。"
 
@@ -1578,9 +1224,6 @@ msgstr "请[_1]完成账户资料[_2]，以提高取款和交易限额。"
 msgid "Please choose at least one token scope"
 msgstr "请选择至少一个令牌范围"
 
-msgid "Please choose which currency you would like to transact in"
-msgstr "请选择交易货币种类"
-
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr "请完成[_1]财务评估表格[_2]，以便提升您的取款和交易限额 。"
 
@@ -1589,9 +1232,6 @@ msgstr "请确认以下详情以完成转账"
 
 msgid "Please enter a number between"
 msgstr "请输入之间的数字"
-
-msgid "Please enter a valid date in yyyy-mm-dd format"
-msgstr "请输入有效日期，格式为年-月-日"
 
 msgid "Please enter a valid value for"
 msgstr "请输入有效数值"
@@ -1605,9 +1245,6 @@ msgstr "请输入大于0的数值"
 msgid "Please enter a value less than 6 weeks for time out until."
 msgstr "超时剩余时间请输入小于6周的值。"
 
-msgid "Please enter correct email"
-msgstr "请输入正确的电子邮件"
-
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "请输入日期，格式是年-月-日"
 
@@ -1620,14 +1257,14 @@ msgstr "请输入时间，格式为小时：分钟"
 msgid "Please enter your current password"
 msgstr "请输入当前密码"
 
-msgid "Please enter your email"
-msgstr "请输入电子邮件"
-
 msgid "Please input correct token"
 msgstr "请输入正确的令牌"
 
 msgid "Please install the latest version of one of these browsers"
 msgstr "以下浏览器请选择一个并安装最新版本"
+
+msgid "Please keep your message to a single line, don’t press enter"
+msgstr ""
 
 msgid "Please log in"
 msgstr "请登录"
@@ -1638,35 +1275,17 @@ msgstr "请登录查看已保存的工作区。"
 msgid "Please log in."
 msgstr "请登录。"
 
-msgid "Please provide your tax information"
-msgstr "请提供税务信息"
-
-msgid "Please select"
-msgstr "请选择"
-
 msgid "Please select a date for time out until."
 msgstr "请选择超时剩余时间的日期。"
 
 msgid "Please select a payment agent"
 msgstr "请选择支付代理"
 
-msgid "Please select an account opening reason before continuing"
-msgstr "继续操作前请选择开立账户的原因"
-
-msgid "Please set currency."
-msgstr "请设置币种。"
-
 msgid "Please set the [_1]currency[_2] of your account"
 msgstr "请设置账户的[_1]币种[_2]"
 
-msgid "Please submit a valid verification token"
-msgstr "请提供有效的验证令牌"
-
 msgid "Please try again after 1 minute."
 msgstr "请于1分钟后重试."
-
-msgid "Please try again after few minutes."
-msgstr "请于数分钟后重试."
 
 msgid "Please use your new password to login."
 msgstr "请使用新密码登录。"
@@ -1682,9 +1301,6 @@ msgstr "点"
 
 msgid "Portfolio"
 msgstr "投资组合"
-
-msgid "Postal code/ZIP"
-msgstr "邮编"
 
 msgid "Potential Payout"
 msgstr "可能的赔付额"
@@ -1713,9 +1329,6 @@ msgstr "主要"
 msgid "Print chart"
 msgstr "打印图表"
 
-msgid "Professional Client"
-msgstr "专业客户"
-
 msgid "Profit"
 msgstr "利润"
 
@@ -1728,12 +1341,6 @@ msgstr "利润表"
 msgid "Profit/ Loss"
 msgstr "利润/亏损"
 
-msgid "Proof of address - A scanned copy of a utility bill or bank statement that s not more than three months old. Your proof of address must contain your name, address, date of issue, and the name of the issuing organisation."
-msgstr "地址证明 - 水电煤账单或银行月结单扫描件（日期不得超过3个月）。地址证明必须包括您的姓名、地址、发证日期和发证机构名称。"
-
-msgid "Proof of identity - A scanned copy of your passport, driving license (either provisional or full), or identity card that shows your full name and date of birth."
-msgstr "身份证明 - 显示您名字和出生日期的护照、驾照（临时或永久）或身份证的扫描件。"
-
 msgid "Purchase"
 msgstr "买入"
 
@@ -1743,11 +1350,11 @@ msgstr "买入日期"
 msgid "Purchase Price"
 msgstr "买入价格"
 
+msgid "Purchase Time"
+msgstr "买入时间"
+
 msgid "Read"
 msgstr "阅读"
-
-msgid "Real Money Account Opening"
-msgstr "开立真实资金账户"
 
 msgid "Reality check"
 msgstr "实况简报"
@@ -1767,9 +1374,6 @@ msgstr "刷新失败"
 msgid "Register free account"
 msgstr "注册免费账户"
 
-msgid "Registration"
-msgstr "注册"
-
 msgid "Remove"
 msgstr "移除"
 
@@ -1779,14 +1383,8 @@ msgstr "移除选定项目"
 msgid "Rename"
 msgstr "重命名"
 
-msgid "Repeat password"
-msgstr "重复输入密码"
-
 msgid "Resale of this contract is not offered"
 msgstr "此合约不提供转售"
-
-msgid "Resale price"
-msgstr "转售价格"
 
 msgid "Reset zoom"
 msgstr "缩放重设"
@@ -1805,9 +1403,6 @@ msgstr "回报"
 
 msgid "Rise"
 msgstr "上涨"
-
-msgid "Rise/Fall trades"
-msgstr "上涨/下跌交易"
 
 msgid "Robust and secure platform"
 msgstr "稳健和安全的平台"
@@ -1845,17 +1440,8 @@ msgstr "保存更改"
 msgid "Saved"
 msgstr "已保存"
 
-msgid "Second line of home address"
-msgstr "家庭地址第二行"
-
 msgid "Secondary"
 msgstr "次要"
-
-msgid "Security"
-msgstr "安全"
-
-msgid "Security question"
-msgstr "安全提示问题"
 
 msgid "Seems like our servers are down, we are working on fixing it."
 msgstr "我们的服务器好像发生故障，正在努力修复中。"
@@ -1871,9 +1457,6 @@ msgstr "自我禁止工具"
 
 msgid "Sell At Market"
 msgstr "按市价卖出"
-
-msgid "Sell option"
-msgstr "卖出期权"
 
 msgid "Sent to account"
 msgstr "发送到账户"
@@ -1902,23 +1485,14 @@ msgstr "分享"
 msgid "Share chart"
 msgstr "分享图表"
 
-msgid "Smart Indices"
-msgstr "智能指数"
-
 msgid "Sold"
 msgstr "已卖出"
 
 msgid "Some random index"
 msgstr "一些随机指数"
 
-msgid "Source of wealth"
-msgstr "财富来源"
-
 msgid "Spline"
 msgstr "Spline法"
-
-msgid "Spot price"
-msgstr "现货价格"
 
 msgid "Spreads"
 msgstr "价差交易"
@@ -1947,9 +1521,6 @@ msgstr "开始交易"
 msgid "Start time"
 msgstr "开始时间"
 
-msgid "State/province/region"
-msgstr "州/省/区"
-
 msgid "Statement"
 msgstr "账单"
 
@@ -1959,20 +1530,8 @@ msgstr "统计函数"
 msgid "Status"
 msgstr "统计"
 
-msgid "Stays Between/Goes Outside"
-msgstr "“保持在范围之内/超出范围之外”"
-
-msgid "Stays Between/Goes Outside trades"
-msgstr "“保持在范围内/超出范围”的交易"
-
 msgid "Stays in"
 msgstr "范围内"
-
-msgid "Stocks trading experience"
-msgstr "股票交易经验"
-
-msgid "Stocks trading frequency"
-msgstr "股票交易频率"
 
 msgid "Stop-loss"
 msgstr "止损"
@@ -2010,21 +1569,6 @@ msgstr "周日"
 msgid "Table"
 msgstr "表"
 
-msgid "Tax Information"
-msgstr "税务信息"
-
-msgid "Tax Information successfully updated"
-msgstr "税务信息已成功更新"
-
-msgid "Tax identification number"
-msgstr "税务编号"
-
-msgid "Tax information"
-msgstr "税务信息"
-
-msgid "Tax residence"
-msgstr "税务居住地"
-
 msgid "Tel"
 msgstr "电话"
 
@@ -2061,11 +1605,8 @@ msgstr "关于"
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "公司把客户资金存在独立的银行账户，与运营账户分开，因此如果公司破产，客户资金不会成为公司资产的一部分。这符合博彩委员会关于客户资金独立管理的要求，级别为"
 
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium"
-msgstr "本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约到期时一文不值，您将损失全部投资，包括合约费用"
-
-msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the aquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract permium"
-msgstr "本网站包含的金融交易服务仅适合这样的客户：能够承受全部投入资金亏损的风险，了解购买金融合约的风险并具有相关经验。金融合约交易有很高的风险。如果购买的合约到期时一文不值，您将损失全部投资，包括合约费用"
+msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+msgstr ""
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "合约执行期间发生市场数据中断。对于真实货币账户, 我们将尝试纠正此情况并妥善结算合约, 否则合约将取消并退款。虚拟货币合约将取消并退款。"
@@ -2084,6 +1625,9 @@ msgstr "此合约获利"
 
 msgid "This field is required"
 msgstr "此为必填项"
+
+msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
+msgstr ""
 
 msgid "Thu"
 msgstr "周四"
@@ -2187,9 +1731,6 @@ msgstr "触及/未触及"
 msgid "Tourism"
 msgstr "旅游"
 
-msgid "Town/City"
-msgstr "城镇/城市"
-
 msgid "Trade"
 msgstr "交易"
 
@@ -2210,12 +1751,6 @@ msgstr "交易员统计"
 
 msgid "Trades Profitability"
 msgstr "交易盈利率"
-
-msgid "Trades break down"
-msgstr "交易明细"
-
-msgid "Trading Experience"
-msgstr "交易经验"
 
 msgid "Trading Times"
 msgstr "交易时间"
@@ -2244,9 +1779,6 @@ msgstr "周二"
 msgid "Turnover"
 msgstr "交易额"
 
-msgid "Types of trades"
-msgstr "交易类型"
-
 msgid "USD"
 msgstr "美元"
 
@@ -2255,9 +1787,6 @@ msgstr "美元日元"
 
 msgid "Under"
 msgstr "下部"
-
-msgid "Underlying"
-msgstr "标的资产"
 
 msgid "Unfortunately, your browser does not support them"
 msgstr "很遗憾，您的浏览器不支持这些程序"
@@ -2292,9 +1821,6 @@ msgstr "使用“另存为...”按键保存交易设置"
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr "随意设置各种可定制功能如资产、图表和其他资源的加载和安排"
 
-msgid "Verification code has been sent to your email"
-msgstr "验证代码已发送到您的邮箱"
-
 msgid "Verification code sent to"
 msgstr "验证码已传到"
 
@@ -2315,9 +1841,6 @@ msgstr "查看报表"
 
 msgid "Volatility Indicators"
 msgstr "波动率指标"
-
-msgid "Volatility Indices"
-msgstr "波动率指数"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
 msgstr "根据牌照的要求，在公司失去偿付能力的情况下，我们应通知您：我们代您保管的资金会发生什么情况；我们将提供何种程度的资金保护"
@@ -2340,23 +1863,11 @@ msgstr "周三"
 msgid "Welcome to Binary.com Webtrader"
 msgstr "欢迎来到 Binary.com Webtrader"
 
-msgid "What is pep?"
-msgstr "Pep是什么？"
-
-msgid "What is this?"
-msgstr "这是什么？"
-
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
 msgstr "当您点选“Ok”后，您将被禁止在此网站交易，直到选定期限结束为止。"
 
 msgid "While on the go, you can"
 msgstr "出门在外时，您可"
-
-msgid "Why choose Binary Trading?"
-msgstr "为何选择二元期权交易？"
-
-msgid "Why trade with Binary.com"
-msgstr "为何通过Binary.com进行交易"
 
 msgid "Withdraw funds"
 msgstr "取出资金"
@@ -2385,9 +1896,6 @@ msgstr "Y-轴网格线"
 msgid "Y-axis labels"
 msgstr "Y-轴标签"
 
-msgid "Yearly Profitable Trades"
-msgstr "年度盈利交易"
-
 msgid "Yes"
 msgstr "是"
 
@@ -2406,9 +1914,6 @@ msgstr "您尚未保存任何模板"
 msgid "You pay"
 msgstr "您支付"
 
-msgid "You should enter between 6-25 characters."
-msgstr "您必须输入6-25个字符。"
-
 msgid "You will be automatically logged out after such time"
 msgstr "在该时间后您将自动退出登录"
 
@@ -2417,9 +1922,6 @@ msgstr "您想允许其他交易者复制您的交易"
 
 msgid "You wish to copy another trader's trades"
 msgstr "您想要复制其他交易者的交易"
-
-msgid "Your Binary.com account is created, but to start trading you need to allow Webtrader access it"
-msgstr "您已开立Binary.com账户，但须向 Webtrader 提供访问权限才可开始交易"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
 msgstr "您的账户 (%) 已锁定, 请联系客服部了解更多信息。"
@@ -2439,9 +1941,6 @@ msgstr "您的更改已成功更新"
 msgid "Your copying settings"
 msgstr "您的复制设置"
 
-msgid "Your email"
-msgstr "您的电子邮件"
-
 msgid "Your new account balance is"
 msgstr "您的新账户余额是"
 
@@ -2460,17 +1959,8 @@ msgstr "立刻进行[_1]账户验证[_2]，以获得取款选项的所有优惠�
 msgid "and"
 msgstr "和"
 
-msgid "apostrophe (') are allowed"
-msgstr "允许使用省略号(')"
-
-msgid "below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate"
-msgstr "以下并依照后续流程开立账户，您须注意，您可能承担一些风险（可能会很严重，包括损失整个投资资金的风险），而对于此类风险缺，你可能乏知识与经验以作出正确评估或化解"
-
 msgid "commission"
 msgstr "佣金"
-
-msgid "contact support"
-msgstr "联系客服部"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
 msgstr "创建只读令牌并与您的复制者共享"
@@ -2510,9 +2000,6 @@ msgstr "小时"
 
 msgid "hours"
 msgstr "小时"
-
-msgid "if this is not your country of residence"
-msgstr "如不是您的居住国"
 
 msgid "in the future, the"
 msgstr "未来的"
@@ -2571,6 +2058,9 @@ msgstr "支付代理"
 msgid "points"
 msgstr "点"
 
+msgid "risk warning"
+msgstr ""
+
 msgid "sec"
 msgstr "秒钟"
 
@@ -2585,9 +2075,6 @@ msgstr "会话概观"
 
 msgid "start time"
 msgstr "开始时间"
-
-msgid "terms and conditions"
-msgstr "条款和条件"
 
 msgid "the"
 msgstr "关于"
@@ -2613,3 +2100,35 @@ msgstr "{代理.佣金}%"
 msgid "| Return"
 msgstr "| 回报"
 
+msgid "﻿"
+msgstr ""
+
+#~ msgid "Amount Min: 10 Max: 2000"
+#~ msgstr "数值最小: 10 最大: 2000"
+
+#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+#~ msgstr "Binary.com 是多次获奖的在线交易提供商，帮助客户通过二元期权和差价合约在金融市场进行交易。 基于波动率指数的二元期权和差价合约交易被归类为博彩活动。请记住博彩活动可能会上瘾，并提醒自己要承担责任。查阅[_1]负责任交易[_2]的详细信息。一些产品在所有国家都不可用。本网站不向一些国家如美国、加拿大、哥斯达黎加、香港、或18岁以下的用户提供服务。"
+
+#~ msgid "Ends Between/Outside"
+#~ msgstr "到期时价格处于某个范围之内/之外"
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority (licence no. IS/70156)."
+#~ msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由马耳他金融服务机构授予牌照及监管为3级投资服务提供商(牌照号码为 IS/70156)。"
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 26 May 2015), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+#~ msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2015年8月01日）。英国客户由(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39495[_2])， 及爱尔兰客户由(3) 爱尔兰的税务局授予牌照和监管 (远程博彩公司牌照号: 1010285，发照日期为2017年7月1日)。查阅完整的 [_3]监管信息[_4]。"
+
+#~ msgid "Lookbacks"
+#~ msgstr "回顾"
+
+#~ msgid "Min: 10 Max: 2000"
+#~ msgstr "最小: 10 最大: 2000"
+
+#~ msgid "Only letters, numbers, space, period, comma, dash(-)"
+#~ msgstr "只允许使用字母、数字、空格、句号、逗号和虚线(-)"
+
+#~ msgid "Stays Between/Goes Outside"
+#~ msgstr "“保持在范围之内/超出范围之外”"
+
+#~ msgid "apostrophe (') are allowed"
+#~ msgstr "允许使用省略号(')"

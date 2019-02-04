@@ -1,0 +1,59 @@
+﻿.tradingTimes {
+	.span-in-dialog-header {
+		position: absolute;
+		left: 250px;
+	}
+
+	.webtrader-dialog {
+		width: auto !important;
+
+		.trading-times-sub-header {
+			margin-bottom: 6px;
+
+			.ui-selectmenu-button {
+				margin-right: .2em;
+				width: 148px;
+			}
+
+			.subheader-message {
+				float: right;
+				margin-top: .5em;
+				font-weight: bold;
+				color: rgba(0, 0, 0, 0.7);
+				font-size: 90%;
+			}
+		}
+
+		.trading-times-dialog {
+			th {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+
+				.search-input {
+					text-align: center;
+					width: 100%;
+					box-sizing: border-box;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					border-radius: 10px;
+
+					&:focus {
+						box-shadow: 3px -1px 8px 1pt lightblue;
+						outline: 0;
+					}
+
+					&::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+						font-size: 90%;
+					}
+				}
+			}
+
+			td {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+	}
+}

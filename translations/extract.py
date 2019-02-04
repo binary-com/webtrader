@@ -99,21 +99,38 @@ parser.parse_html_files('../src')
 print "parsing ../src/**/*.js files ..."
 parser.parse_js_files('../src')
 
-texts = parser.get_texts()
+def is_ascii(text):
+    if text == '\xef\xbb\xbf': #ignore BOM
+        return True
+    total_ascii_chars = 128
+    return all(ord(c) < total_ascii_chars for c in text)
 
+def handle_error(error_msg, text=''):
+    warning_bc = '\033[93m'
+    end_bc = '\033[0m'
+
+    print  '\n\n' + warning_bc +  'ERROR: ' + error_msg + end_bc
+    if text:
+        print text + '\n\n'
+
+    raise ValueError(error_msg)
+
+texts = parser.get_texts()
 messages_pot = './i18n/messages.pot'
 
 os.remove(messages_pot);
+
 with open(messages_pot, 'a+') as wf:
     for text in texts:
         text = text.replace('"', '\\"')
-        text = re.sub(r'[^\x00-\x7F]+',' ', text).strip() # remove non aski characters
+        if not is_ascii(text):
+            handle_error('Non-ascii character detected: ', text)
+
         if text:
-            wf.write('\n' + 'msgid "' + text + '"'      )
+            wf.write('\n' + 'msgid "' + text + '"')
             wf.write('\nmsgstr "" \n')
 
 files = [
-    './i18n/ar.po',
     './i18n/de.po',
     './i18n/en.po',
     './i18n/es.po',
