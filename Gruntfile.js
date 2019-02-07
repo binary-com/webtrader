@@ -381,10 +381,10 @@ module.exports = function (grunt) {
     grunt.registerTask("gh-pages-clean", ["gh-pages:clean"]);
 
     // conditional switch for deployment
-    grunt.registerTask("deploy", function (deployment_mode) {
-        if (deployment_mode === 'live' && process.env.TRAVIS_BRANCH === "master") {
+    grunt.registerTask("deploy", function () {
+        if (process.env.TRAVIS_BRANCH === "master") {
             grunt.task.run(["gh-pages:travis-deploy"]);
-        } else if (deployment_mode === 'beta' && process.env.TRAVIS_BRANCH === "development") {
+        } else if (process.env.TRAVIS_BRANCH === "development") {
             grunt.task.run(["shell:moveEverythingToBETA_folder", "gh-pages:travis-deploy"]);
         }
     });

@@ -42,7 +42,7 @@
     "lodash": "^4.17.5"
   },
   "scripts": {
-    "deploy-gh-pages": "grunt deploy:live deploy:beta",
+    "deploy-gh-pages": "grunt deploy",
     "start": "grunt && concurrently -k \"grunt watch\" \"grunt connect\"",
     "watch": "grunt watch",
     "server": "grunt connect",
