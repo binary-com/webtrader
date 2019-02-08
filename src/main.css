@@ -96,6 +96,10 @@ div.ui-tooltip { /* override default jquery ui max tooltip width */
     outline: 0;
 }
 
+ul.ui-widget.ui-widget-content {
+    border: 1px solid #f2f2f2;
+}
+
 .ui-dialog .ui-dialog-content {
     padding: .5em .5em;
     padding-bottom: 0;

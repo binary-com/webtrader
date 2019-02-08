@@ -1,4 +1,6 @@
 #topbar {
+   position: fixed;
+   z-index: 1000;
    width: 100%;
    line-height: 1;
    font-size: 100%;
@@ -28,6 +30,11 @@
 }
 
 #nav-menu {
+   position: fixed;
+   z-index: 1000;
+   width: 100%;
+   margin-top: 28px;
+
   .trade, .instruments, .resources, .workspace {
       > ul {
          border: none;
