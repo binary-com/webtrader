@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-01-29 06:31\n"
+"PO-Revision-Date: 2019-02-08 03:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1627,7 +1627,7 @@ msgid "This field is required"
 msgstr "ข้อมูลนี้ต้องระบุ ไม่สามารถเป็นค่าว่าง"
 
 msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "บริการต่างๆ ของเว็บไซต์นี้ไม่ได้มีให้บริการในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง ญี่ปุ่น หรือ ให้บริการต่อบุคคลที่อายุต่ำกว่า 18"
 
 msgid "Thu"
 msgstr "พฤ"
@@ -2059,7 +2059,7 @@ msgid "points"
 msgstr "จุด"
 
 msgid "risk warning"
-msgstr ""
+msgstr "การแจ้งเตือนระดับความเสี่ยง"
 
 msgid "sec"
 msgstr "วินาที"
