@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-02-08 03:30\n"
+"PO-Revision-Date: 2019-02-08 03:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -307,7 +307,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : เว็บเทรดเดอร์ (Webtrader)"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com เป็นผู้ให้บริการซื้อขายออนไลน์ที่ได้รับรางวัลที่ช่วยให้ลูกค้าได้ทำการซื้อขายในตลาดการเงินผ่านทางไบนารีออปชันและ CFD การซื้อขายไบนารีออปชันและ CFD บนดัชนีผันผวนถูกจัดให้เป็นกิจกรรมด้านการพนัน โปรดจำไว้ว่า การพนันอาจทำให้เกิดการเสพติด กรุณาดำเนินการซื้อขายด้วยความรับผิดชอบ ศึกษาเพิ่มเติมเกี่ยวกับ [_1]ความรับผิดชอบในการซื้อขาย[_2] ผลิตภัณฑ์บางรายการอาจไม่มีในทุกประเทศ การบริการทางเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง หรือไม่ได้ให้บริการแก่บุคคลที่อายุต่ำกว่า 18 ปี"
 
 msgid "Blank window"
 msgstr "หน้าต่างว่าง"
@@ -331,7 +331,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr ""
+msgstr "CFD คือเครื่องมือทางการเงินที่มีความซับซ้อน และมีความเสี่ยงสูงในการสูญเสียเงินอย่างรวดเร็วตามอัตราเลเวอเรจ ระหว่าง 74-89% ของบัญชีนักลงทุนรายย่อยขาดทุนเมื่อซื้อขาย CFD คุณจึงควรพิจารณาว่า คุณมีความเข้าใจในวิธีการทำงานของ CFD และคุณสามารถรับความเสี่ยงในอัตราสูงจากการขาดทุนได้หรือไม่"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
@@ -802,7 +802,7 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "เพื่อการใช้งานธีมอย่างมีประสิทธิภาพ ต้องมีการรีเฟรชหน้าจอ ท่านต้องการดำเนินการหรือไม่?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "ในสหภาพยุโรป ผลิตภัณฑ์ทางการเงินดำเนินธุรกิจบริการการลงทุนโดย Binary Investments (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและการควบคุมดูแลทางกฎหมายในฐานะผู้ให้บริการทางการลงทุนประเภทที่ 3 โดย Malta Financial Services Authority ([_1]ใบอนุญาตหมายเลข IS/70156[_2])"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr ""
@@ -1606,7 +1606,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "บริษัทฯ ดูแลเงินทุนประกันของลูกค้าในบัญชีที่ถูกจัดสรรแยกเพื่อการปฏิบัติการ และการจัดการเพื่อให้แน่ใจว่า สินทรัพย์ของบัญชีลูกค้ามีการถูกจำหน่ายหากมีกรณีล้มละลาย ซึ่งเป็นไปตามข้อกำหนดของ Gambling Commission ในการแยกเงินทุนลูกค้าโดยเป็นมาตรการการป้องกันระดับ: "
 
 msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "ผลิตภัณฑ์ทางการเงินที่ให้บริการในเว็บไซต์นี้ ได้แก่ ไบนารีออปชั่น สัญญาการซื้อขายส่วนต่าง (\"CFD\") อนุพันธ์และผลิตภัณฑ์ทางการเงินที่มีความซับซ้อนอื่นๆ การซื้อขายไบนารีออปชั่นอาจไม่เหมาะกับทุกคน การซื้อขาย CFD มีความเสี่ยงสูงเพราะเลเวอรเรจจะส่งผลทั้งดีและเสียให้คุณ ดังนั้น ผลิตภัณฑ์ในเว็บไซต์นี้จึงอาจจะไม่เหมาะสมกับนักลงทุนทุกคน เนื่องจากความเสี่ยงที่อาจสูญเสียเงินลงทุนทั้งหมด คุณไม่ควรลงทุน หากไม่สามารถรับภาวะการขาดทุน และต้องไม่ซื้อขายด้วยเงินที่ยืมมา ก่อนการซื้อขายผลิตภัณฑ์ทางการเงินที่มีความซับซ้อน โปรดทำความเข้าใจต่อความเสี่ยงที่เกี่ยวข้องและศึกษาเกี่ยวกับ [_1]การซื้อขายด้วยความรับผิดชอบ[_2]"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "มีการหยุดชะงักของข้อมูลตลาดในช่วงระยะเวลาของสัญญา สำหรับบัญชีเงินจริง เราจะพยายามแก้ไขและชำระสัญญาอย่างเหมาะสม มิเช่นนั้นสัญญาจะถูกยกเลิกและคืนเงิน สัญญาเงินเสมือนจะถูกยกเลิกและคืนเงิน"
