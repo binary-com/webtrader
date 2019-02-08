@@ -168,7 +168,7 @@ class TradeTemplateManager {
     templates.download = (tmpl) => {
       var json = JSON.stringify(tmpl);
       console.log(tmpl);
-      download_file_in_browser(tmpl.name + '.json', 'text/json;charset=utf-8;', json);
+      downloadFileInBrowser(tmpl.name + '.json', 'text/json;charset=utf-8;', json);
       $.growl.notice({message: "Downloading template as <b>".i18n() + tmpl.name + ".json</b>"});
     }
 

@@ -1,12 +1,8 @@
-/**
- * Created by arnab on 2/12/15.
- */
-
 import $ from "jquery";
-import $ui from "jquery-ui";
 import liveapi from "websockets/binary_websockets";
 import menu from "navigation/menu";
 import chartWindow from "charts/chartWindow";
+import { getMarketPosition } from '../common/marketUtils';
 import "jquery-growl";
 import "common/util";
 
@@ -52,8 +48,7 @@ function refresh_active_symbols() {
                 return m.submarkets.length !== 0;
             });
 
-            //console.warn(markets, chartable_markets);
-            markets = menu.sortMenu(markets);
+            markets = getMarketPosition(markets);
 
             const instruments = $("#nav-menu").find(".instruments");
             instruments.find('> ul').remove();
@@ -74,7 +69,6 @@ let markets = [];
 let chartable_markets = [];
 
 export const init = function() {
-    /* cache the result of trading_times call, because assetIndex needs the same data */
     return liveapi
         .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
         .then(function(data) {
@@ -82,6 +76,7 @@ export const init = function() {
             refresh_active_symbols();
             liveapi.events.on('login', refresh_active_symbols);
             liveapi.events.on('logout', refresh_active_symbols);
+
             return chartable_markets;
         });
 }

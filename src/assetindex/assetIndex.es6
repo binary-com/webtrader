@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import getMarketsSubmarkets from '../common/marketUtils';
+import { getMarketsSubmarkets, getOrderedMarkets } from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -37,6 +37,7 @@ const state = {
         display_markets: null,
         display_submarkets: null,
         is_volatility: false,
+        sorted_markets: null,
         market_submarkets: null,
         selected_market: null
     },
@@ -62,7 +63,7 @@ const state = {
 }
 
 const checkVolatility = (market_name, market_names) => {
-    const volatility_indices = market_names[0][2] ? market_names[0][2].innerText : market_names[0][0].innerText;
+    const volatility_indices = market_names[0][3] ? market_names[0][3].innerText : market_names[0][0].innerText; // locate vol_ind (handle translation)
     const is_volatility = market_name.indexOf(volatility_indices) !== -1;
 
     return is_volatility;
@@ -79,12 +80,13 @@ const initTable = () => {
         });
 
     function populateTable(result) {
-        const active_symbols_data = Object.assign(result[0].active_symbols);
-        const asset_index_data = [...result[1].asset_index];
+        const active_symbols_data = local_storage.get('active_symbols');
+        const asset_index_data = [...result[0].asset_index];
 
         if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
 
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
+        state.dropdown.sorted_markets = getOrderedMarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
@@ -157,10 +159,12 @@ const initTable = () => {
         }
 
         function marketsDropdown(market_submarkets) {
+            const markets_sorted_list = state.dropdown.sorted_markets;
+
             if (!state.dropdown.display_markets) {
                 state.dropdown.display_markets = windows
                     .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
-                        list: Object.keys(market_submarkets),
+                        list: markets_sorted_list,
                         inx: 0,
                         changed: (val) => {
                             const submarket_list = Object.keys(market_submarkets[val]);
@@ -171,7 +175,7 @@ const initTable = () => {
                     });
                 state.dropdown.display_markets.selectmenu('widget').addClass('asset-index-selectmenu');
             } else {
-                state.dropdown.display_markets.update_list(Object.keys(market_submarkets));
+                state.dropdown.display_markets.update_list(markets_sorted_list);
             }
         }
 
@@ -195,12 +199,10 @@ const initTable = () => {
 
     function getActiveSymAndAssetsData() {
         const processing_msg = $(`#${table_el.attr('id')}_processing`).show();
-        const active_symbols_request = { active_symbols: 'brief' };
         const asset_index_request = { asset_index: 1 };
 
         return Promise.all(
             [
-                liveapi.cached.send(active_symbols_request),
                 liveapi.cached.send(asset_index_request),
             ])
             .then((results) => {
