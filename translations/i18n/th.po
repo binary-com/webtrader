@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-02-08 03:50\n"
+"PO-Revision-Date: 2019-02-08 04:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "อื่นๆ"
 
 msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
-msgstr ""
+msgstr "พื้นที่นอกสหภาพยุโรปนั้น ผลิตภัณฑ์ทางการเงินให้บริการโดยบริษัท Binary (C.R.) S.A. ตั้งอยู่ที่ ชั้น 5 อาคาร 6 Centro Ejecutivo La Sabana, Sabana Sur, San José ประเทศคอสตาริกา Binary (V) Ltd ตั้งอยู่ที่อาคาร Govant, Port Vila ตู้ปณ 1276 ประเทศวานูอาตู ซึ่งได้รับการควบคุมดูแลตามกฎหมายโดย Vanuatu Financial Services Commission ([_1]ดูใบรับรอง[_2]) Binary (BVI) Ltd ตั้งอยู่ที่ ชั้น 2 อาคาร O’Neal Marketing Associates, Wickham’s Cay II ตู้ปณ 3174, Road Town, Tortola VB1110 หมู่เกาะบริติชเวอร์จิน ซึ่งได้รับการควบคุมดูแลตามกฎหมายโดย British Virgin Islands Financial Services Commission ([_3]ใบรับรองเลขที่ SIBA/L/18/1114[_4]) และ Binary (FX) Ltd ตั้งอยู่ที่ ล็อต F16 ชั้น 1 Paragon Labuan ถนน Tun Mustapha 87000 ลาบวน ประเทศมาเลเซีย ซึ่งได้รับการควบคุมดูแลตามกฎหมายโดย Labuan Financial Services Authority ในการดำเนินการธุรกิจตัวแทนด้านการเงิน ([_5]ใบรับรองเลขที่ MB/18/0024[_6])"
 
 msgid "Over"
 msgstr "มากกว่า"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr ""
+msgstr "กรุณาจำกัดข้อความของคุณให้อยู่ในบรรทัดเดียว อย่ากดปุ่ม Enter"
 
 msgid "Please log in"
 msgstr "โปรดเข้าสู่ระบบ"
