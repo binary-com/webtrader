@@ -198,8 +198,44 @@ function set_current_template(state, tpl) {
   })
 }
 
-function init_state(available,root, dialog, symbol, contracts_for_spot){
+function validate_hour({ hour, today_times }) {
+  const { close, open } = today_times;
+  if (open === '--') return true;
 
+  const now        = moment.utc();
+  const close_hour = moment(close, 'HH:mm:ss').hour();
+  let   open_hour  = moment(open, 'HH:mm:ss').hour();
+
+  if (now.hour() >= open_hour && now.hour() <= close_hour) {
+    open_hour = now.hour();
+  }
+
+  return (hour >= open_hour && hour <= close_hour) ||
+         (hour <= close_hour && close_hour <= open_hour) ||
+         (hour >= open_hour && open_hour >= close_hour);
+}
+
+function validate_minute({ hour, minute, today_times }) {
+  const { close, open } = today_times;
+  if (open === '--') return true;
+
+  const now          = moment.utc(),
+        close_hour   = moment(close, "HH:mm:ss").hour(),
+        close_minute = moment(close, "HH:mm:ss").minute();
+  let open_hour      = moment(open, "HH:mm:ss").hour(),
+      open_minute    = moment(open, "HH:mm:ss").minute();
+
+  if (now.hour() >= open_hour && now.hour() <= close_hour) {
+    open_hour =  now.hour();
+    open_minute = now.minute();
+  }
+  if (open_hour === hour) return minute >= open_minute;
+  if (close_hour === hour) return minute <= close_minute;
+
+  return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
+}
+
+function init_state(available,root, dialog, symbol, contracts_for_spot) {
   var state = {
     duration: {
       array: ['Duration', 'End Time'],
@@ -220,6 +256,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       array: [{ text: 'Now', value: 'now' } ],
       visible: false,
       hour_minute: '',
+      today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
+      onHourShow: function(hour) { /* for timepicker */
+        return validate_hour({ hour, today_times: state.date_start.today_times });
+      },
+      onMinuteShow: function(hour,minute) {
+        return validate_minute({ hour, minute, today_times: state.date_start.today_times });
+      }
     },
     date_expiry: {
       value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
@@ -227,31 +270,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 0,    /* epoch value of date+hour */
       today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
       onHourShow: function(hour) { /* for timepicker */
-        var times = state.date_expiry.today_times;
-        if(times.open === '--') return true;
-        var now = moment.utc();
-        var close_hour = moment(times.close, "HH:mm:ss").hour();
-        var open_hour = moment(times.open, "HH:mm:ss").hour();
-        if(now.hour() >= open_hour && now.hour() <= close_hour ) { open_hour =  now.hour(); }
-        return (hour >= open_hour && hour <= close_hour) ||
-               (hour <= close_hour && close_hour <= open_hour) ||
-               (hour >= open_hour && open_hour >= close_hour);
+        return validate_hour({ hour, today_times: state.date_expiry.today_times });
       },
-      onMinuteShow: function(hour,minute){
-        var times = state.date_expiry.today_times;
-        if(times.open === '--') return true;
-        var now = moment.utc();
-        var close_hour = moment(times.close, "HH:mm:ss").hour(),
-            close_minute = moment(times.close, "HH:mm:ss").minute();
-        var open_hour = moment(times.open, "HH:mm:ss").hour(),
-            open_minute = moment(times.open, "HH:mm:ss").minute();
-        if(now.hour() >= open_hour && now.hour() <= close_hour ) {
-          open_hour =  now.hour();
-          open_minute = now.minute();
-        }
-        if(open_hour === hour) return minute >= open_minute;
-        if(close_hour === hour) return minute <= close_minute;
-        return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
+      onMinuteShow: function(hour,minute) {
+        return validate_minute({ hour, minute, today_times: state.date_expiry.today_times });
       }
     },
     categories: {
@@ -513,8 +535,16 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     const date_start_formatted = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
     const date_start_with_selected_hour_minute = moment.utc(`${date_start_formatted} ${hour_minute}`).unix();
 
-    state.date_start.value = date_start_with_selected_hour_minute;
-    state.date_start.hour_minute = hour_minute;
+    trading_times_for(date_start_formatted, state.proposal.symbol).then(data => {
+      const range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
+      const value_hour = range ? moment.utc().add(range.min + 1, 'm').format('HH:mm') : '00:00';
+
+      state.date_start.today_times.disabled = !range
+      state.date_start.today_times.open = data.open;
+      state.date_start.today_times.close = data.close;
+      state.date_start.hour_minute = value_hour > hour_minute ? value_hour : hour_minute ;
+      state.date_start.value = date_start_with_selected_hour_minute;
+    });
   }
 
   state.date_expiry.update = function (date_or_hour) {
