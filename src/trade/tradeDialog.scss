@@ -310,8 +310,10 @@
   ul.chosen-results {
     flex-direction: column;
     max-height: 250px;
+    margin: 0px;
+    padding: 0px;
     li {
-      width: calc(100% - 10px);
+      width: 100%;
       text-align: center;
       display: block;
       height: 100%;
@@ -346,9 +348,6 @@
       box-shadow: none;
       border: 1px solid #F2F2F2;
       padding: 0;
-      > span {
-        width: calc(100% - 10px);
-      }
       > div {
         position: absolute;
         right: 0;
