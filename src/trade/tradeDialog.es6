@@ -561,11 +561,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
   state.setDateStartHourMinute = (hour_minute) => {
     const date_start_formatted = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
     const date_start_with_selected_hour_minute = moment.utc(`${date_start_formatted} ${hour_minute}`).unix();
-    const is_today = !moment.utc(date_start_formatted).isAfter(moment.utc(),'day');
 
     trading_times_for(date_start_formatted, state.proposal.symbol).then(data => {
       const range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
-      const now = is_today ? moment.utc().format('HH:mm') : '00:00';
+      const now = moment.utc().format('HH:mm');
 
       state.date_start.today_times.open = data.open;
       state.date_start.today_times.close = data.close;
