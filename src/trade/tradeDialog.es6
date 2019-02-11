@@ -289,7 +289,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       onHourShow: function(hour) { /* for timepicker */
         return validateHour({
           hour,
-          state,
           today_times: state.date_expiry.today_times,
           selected_date_unix: state.date_expiry.value,
         });
