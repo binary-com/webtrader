@@ -198,7 +198,11 @@ function set_current_template(state, tpl) {
   })
 }
 
-function validate_hour({ hour, today_times }) {
+function validateHour({ hour, today_times, selected_date_unix }) {
+  const formatted = moment.unix(+selected_date_unix).format('YYYY-MM-DD');
+  const is_today = !moment.utc(formatted).isAfter(moment.utc(),'day');
+  if (!is_today) return true;
+
   const { close, open } = today_times;
   if (open === '--') return true;
 
@@ -215,15 +219,19 @@ function validate_hour({ hour, today_times }) {
          (hour >= open_hour && open_hour >= close_hour);
 }
 
-function validate_minute({ hour, minute, today_times }) {
+function validateMinute({ hour, minute, today_times, selected_date_unix }) {
+  const formatted = moment.unix(+selected_date_unix).format('YYYY-MM-DD');
+  const is_today = !moment.utc(formatted).isAfter(moment.utc(),'day');
+  if (!is_today) return true;
+
   const { close, open } = today_times;
   if (open === '--') return true;
 
   const now          = moment.utc(),
-        close_hour   = moment(close, "HH:mm:ss").hour(),
-        close_minute = moment(close, "HH:mm:ss").minute();
-  let open_hour      = moment(open, "HH:mm:ss").hour(),
-      open_minute    = moment(open, "HH:mm:ss").minute();
+        close_hour   = moment(close, 'HH:mm:ss').hour(),
+        close_minute = moment(close, 'HH:mm:ss').minute();
+  let open_hour      = moment(open, 'HH:mm:ss').hour(),
+      open_minute    = moment(open, 'HH:mm:ss').minute();
 
   if (now.hour() >= open_hour && now.hour() <= close_hour) {
     open_hour =  now.hour();
@@ -256,12 +264,21 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       array: [{ text: 'Now', value: 'now' } ],
       visible: false,
       hour_minute: '',
-      today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
+      today_times: { open: '--', close: '--' }, /* trading times for today */
       onHourShow: function(hour) { /* for timepicker */
-        return validate_hour({ hour, today_times: state.date_start.today_times });
+        return validateHour({
+          hour,
+          today_times: state.date_start.today_times,
+          selected_date_unix: state.date_start.value,
+        });
       },
-      onMinuteShow: function(hour,minute) {
-        return validate_minute({ hour, minute, today_times: state.date_start.today_times });
+      onMinuteShow: function(hour, minute) {
+        return validateMinute({
+          hour,
+          minute,
+          today_times: state.date_start.today_times,
+          selected_date_unix: state.date_start.value,
+        });
       }
     },
     date_expiry: {
@@ -270,10 +287,20 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       value: 0,    /* epoch value of date+hour */
       today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
       onHourShow: function(hour) { /* for timepicker */
-        return validate_hour({ hour, today_times: state.date_expiry.today_times });
+        return validateHour({
+          hour,
+          state,
+          today_times: state.date_expiry.today_times,
+          selected_date_unix: state.date_expiry.value,
+        });
       },
-      onMinuteShow: function(hour,minute) {
-        return validate_minute({ hour, minute, today_times: state.date_expiry.today_times });
+      onMinuteShow: function(hour, minute) {
+        return validateMinute({
+          hour,
+          minute,
+          today_times: state.date_expiry.today_times,
+          selected_date_unix: state.date_expiry.value,
+        });
       }
     },
     categories: {
@@ -534,15 +561,15 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
   state.setDateStartHourMinute = (hour_minute) => {
     const date_start_formatted = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
     const date_start_with_selected_hour_minute = moment.utc(`${date_start_formatted} ${hour_minute}`).unix();
+    const is_today = !moment.utc(date_start_formatted).isAfter(moment.utc(),'day');
 
     trading_times_for(date_start_formatted, state.proposal.symbol).then(data => {
       const range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
-      const value_hour = range ? moment.utc().add(range.min + 1, 'm').format('HH:mm') : '00:00';
+      const now = is_today ? moment.utc().format('HH:mm') : '00:00';
 
-      state.date_start.today_times.disabled = !range
       state.date_start.today_times.open = data.open;
       state.date_start.today_times.close = data.close;
-      state.date_start.hour_minute = value_hour > hour_minute ? value_hour : hour_minute ;
+      state.date_start.hour_minute = now > hour_minute ? now : hour_minute;
       state.date_start.value = date_start_with_selected_hour_minute;
     });
   }
