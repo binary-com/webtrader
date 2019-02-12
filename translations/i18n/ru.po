@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-01-29 06:30\n"
+"PO-Revision-Date: 2019-02-12 03:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2059,7 +2059,7 @@ msgid "points"
 msgstr "пункт."
 
 msgid "risk warning"
-msgstr ""
+msgstr "предупреждение о риске"
 
 msgid "sec"
 msgstr "сек."
@@ -2101,5 +2101,5 @@ msgid "| Return"
 msgstr "| Прибыль"
 
 msgid "﻿"
-msgstr ""
+msgstr "﻿"
 
