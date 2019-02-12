@@ -563,14 +563,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     const is_today                             = !moment.utc(date_start_formatted).isAfter(moment.utc(), 'day');
 
     trading_times_for(date_start_formatted, state.proposal.symbol).then(data => {
-      const range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
-
       state.date_start.today_times.open = data.open;
       state.date_start.today_times.close = data.close;
 
       if (is_today) {
-        const now = moment.utc().format('HH:mm');
-        state.date_start.hour_minute = now > hour_minute ? now : hour_minute;
+        const now_hour_minute = moment.utc().format('HH:mm');
+        state.date_start.hour_minute = now_hour_minute > hour_minute ? now_hour_minute : hour_minute;
       } else {
         state.date_start.hour_minute = hour_minute;
       }
