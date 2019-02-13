@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2019-02-01 09:30\n"
+"PO-Revision-Date: 2019-02-13 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -772,10 +772,10 @@ msgid "Higher"
 msgstr "Higher"
 
 msgid "Historical Data"
-msgstr "Data Historikal"
+msgstr "Data Historis"
 
 msgid "Historical Data For"
-msgstr "Data Historikal Untuk"
+msgstr "Data Historis Untuk"
 
 msgid "Horizontal line"
 msgstr "Garis horisontal"
