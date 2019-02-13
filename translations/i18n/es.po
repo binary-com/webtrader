@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-13 18:20\n"
+"PO-Revision-Date: 2019-02-13 18:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1243,13 +1243,13 @@ msgid "Please enter a value greater than 0"
 msgstr "Ingrese un valor mayor a 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Por favor, introduzca un valor de menos de 6 semanas para Pausa hasta."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Por favor introduzca la fecha en formato AAAA-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Por favor, ingrese el nombre del token"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Introduzca la hora en formato HH:MM"
@@ -1264,31 +1264,31 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Por favor, instale la última versión de uno de estos navegadores"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr ""
+msgstr "Por favor, mantenga su mensaje en una sola línea, no pulse Entrar"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Por favor, inicie sesión"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Por favor, inicie sesión para ver su espacio de trabajo guardado."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Por favor, inicie sesión."
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Por favor, seleccione una fecha para el campo Pausa hasta."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Por favor seleccione un agente de pago"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Configure la [_1]moneda[_2] de su cuenta"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Por favor, intente de nuevo después de 1 minuto."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Por favor, use su contraseña nueva para iniciar sesión."
 
 msgid "Plot"
 msgstr "Tema"
@@ -1333,7 +1333,7 @@ msgid "Profit"
 msgstr "Ganancia"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Tabla de beneficios"
 
 msgid "Profit table"
 msgstr "Tabla de ganancias"
@@ -1351,13 +1351,13 @@ msgid "Purchase Price"
 msgstr "Precio de Compra"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Hora de compra"
 
 msgid "Read"
 msgstr "Leer"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Verificación de la realidad"
 
 msgid "Redirecting to oauth login page,"
 msgstr ""
@@ -1369,7 +1369,7 @@ msgid "Ref."
 msgstr ""
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Actualización fallida"
 
 msgid "Register free account"
 msgstr "Registrar una cuenta gratis"
@@ -1384,7 +1384,7 @@ msgid "Rename"
 msgstr "Renombrar"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "No se ofrece reventa de este contrato"
 
 msgid "Reset zoom"
 msgstr "Reiniciar zoom"
@@ -1444,7 +1444,7 @@ msgid "Secondary"
 msgstr "Secundario"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Parece que nuestros servidores están caídos, estamos trabajando para solucionarlo."
 
 msgid "Self-Employed"
 msgstr "Autónomo"
