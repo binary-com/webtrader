@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-13 18:30\n"
+"PO-Revision-Date: 2019-02-13 18:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1489,7 +1489,7 @@ msgid "Sold"
 msgstr "Vendido"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Un índice aleatorio"
 
 msgid "Spline"
 msgstr "Spline"
@@ -1552,7 +1552,7 @@ msgid "Submit"
 msgstr "Enviar"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Un nuevo token agregado con éxito"
 
 msgid "Successfully added workspace as"
 msgstr ""
@@ -1573,16 +1573,16 @@ msgid "Tel"
 msgstr "Tel"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Plantilla ya guardada como"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Plantilla aplicada parcialmente."
 
 msgid "Template changes saved"
 msgstr "Cambios de plantilla guardados"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Plantilla no es aplicable."
 
 msgid "Template name"
 msgstr "Nombre de la plantilla"
@@ -1954,10 +1954,10 @@ msgid "Zoom"
 msgstr "Zoom"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Autentique su cuenta[_2] ahora para aprovechar al máximo todas las opciones de retiro disponibles."
 
 msgid "and"
-msgstr ""
+msgstr "y"
 
 msgid "commission"
 msgstr "comisión"
