@@ -106,6 +106,7 @@ nav {
    }
    
    .top-nav-menu > li > a { font-size: 18px; color: white; }
+   .nav-menu > li > ul { max-height: 80vh; overflow: auto; }
    
    .login button {
      margin: 15px 0;
