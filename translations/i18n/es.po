@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-13 18:10\n"
+"PO-Revision-Date: 2019-02-13 18:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una vez que se alcanza este límite, ya no puede depositar"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "El comercio en línea puede hacerse adictivo. Rellene el siguiente formulario para limitar su participación en el sitio web o envíe una carta firmada o un fax a nuestro equipo de atención al cliente. Una vez establecido, solo puede ajustar sus límites. Los límites solo se eliminarán o aflojarán después de 7 días, a excepción de la fecha de autoexclusión, que no se puede eliminar ni modificar una vez que lo haya confirmado. Para eliminar o aumentar sus límites, por favor contacte con"
 
 msgid "Open"
 msgstr "Abierto"
@@ -1183,10 +1183,10 @@ msgid "Overlap Studies"
 msgstr "Estudios sobrepuestos"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Contraseña actualizada con éxito."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Las contraseñas no coinciden. Por favor, escríbalas otra vez"
@@ -1210,34 +1210,34 @@ msgid "Pension"
 msgstr "Pensión"
 
 msgid "Performance Probability"
-msgstr ""
+msgstr "Probabilidad de rendimiento"
 
 msgid "Permissions"
 msgstr "Permisos"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Por favor [_1]acepte los Términos y Condiciones actualizados[_2] para aumentar su retiro y los límites comerciales."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Por favor [_1]complete el perfil de su cuenta[_2] para aumentar su retiro y los límites comerciales."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Por favor, elija al menos un alcance de token"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Por favor, complete el [_1]formulario de evaluación financiera[_2] para aumentar su retiro y los límites comerciales."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Por favor, confirme los siguientes datos para completar la transferencia"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Por favor ingrese un número entre"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Por favor, introduzca un valor válido para"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Por favor, ingrese un valor entre 0 y"
 
 msgid "Please enter a value greater than 0"
 msgstr "Ingrese un valor mayor a 0"
