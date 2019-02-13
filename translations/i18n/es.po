@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2018-11-30 05:41\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"PO-Revision-Date: 2019-02-07 19:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -19,16 +19,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(si menos de un día de duración), o al final de la jornada bursátil (si un día o más de duración)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* El contrato no ha comenzado todavía"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "*La contraseña debe tener un mínimo de 6 caracteres"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "*La contraseña debe contener letras mayúsculas y números"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "* Por favor ingrese su nueva contraseña"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "-Binary.com no está afiliado con ninguno de los agentes de pago mencionados anteriormente. Cada agente de pago opera como un proveedor de servicios independiente y no es avalado, garantizado o de lo contrario aprobado por Binary.com. LOS CLIENTES TRATAN CON AGENTES DE PAGO A SU EXCLUSIVO RIESGO Y PELIGRO. Se recomienda a los clientes verificar las credenciales de los agentes de pago antes de enviarles dinero. Binary.com no será responsable en ninguna circunstancia por las transacciones realizadas entre los clientes y los agentes de pago"
@@ -172,28 +172,28 @@ msgid "Accept"
 msgstr "Aceptar"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Accesible desde cualquier navegador web en 13 idiomas"
 
 msgid "Account balance"
 msgstr "Saldo de la cuenta"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Saldo de la cuenta:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "No se ha encontrado el ID de la cuenta."
 
 msgid "Account token not found."
-msgstr ""
+msgstr "No se ha encontrado el token de la cuenta."
 
 msgid "Action"
 msgstr "Acción"
 
 msgid "Active"
-msgstr ""
+msgstr "Activo"
 
 msgid "Active Since"
-msgstr ""
+msgstr "Activo Desde"
 
 msgid "Add comparisons"
 msgstr "Añadir comparaciones"
@@ -268,7 +268,7 @@ msgid "Asset Index"
 msgstr "Índice de activos"
 
 msgid "Assets"
-msgstr ""
+msgstr "Activos"
 
 msgid "Aug"
 msgstr "Ago"
@@ -439,22 +439,22 @@ msgid "Contract Confirmation"
 msgstr ""
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Detalles del contrato"
 
 msgid "Contracts"
 msgstr "Contratos"
 
 msgid "Copier"
-msgstr ""
+msgstr "Copiador"
 
 msgid "Copy Trading"
-msgstr ""
+msgstr "Copy Trading"
 
 msgid "Create"
 msgstr "Crear"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Crear cuenta"
 
 msgid "Create token"
 msgstr "Crear token"
@@ -541,7 +541,7 @@ msgid "Description"
 msgstr "Descripción"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Deseleccionar"
 
 msgid "Differs"
 msgstr "Dígito Difiere"
@@ -556,7 +556,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "¿Todavía no tiene una cuenta? Regístrese y obtenga una cuenta virtual de $10.000"
 
 msgid "Done"
-msgstr ""
+msgstr "Finalizado"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Hecho. Los fondos están siendo transferidos al agente de pago"
@@ -640,7 +640,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Disfrute de una interfaz intuitiva de comercio con funcionalidad avanzada que le permite controlar todos sus activos y mercados favoritos al mismo tiempo, así como los gráficos esenciales, el índice de activos, horarios comerciales y datos del historial. Lo más importante es que puede elegir lo que quiere ver en su pantalla"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Ingrese un token de operador válido"
 
 msgid "Enter your current password"
 msgstr "Introduzca su contraseña actual"
@@ -2103,11 +2103,3 @@ msgstr ""
 msgid "﻿"
 msgstr ""
 
-#~ msgid "Min: 10 Max: 2000"
-#~ msgstr "Mín: 10 máx: 2000"
-
-#~ msgid "Only letters, numbers, space, period, comma, dash(-)"
-#~ msgstr "Se permite sólo el uso de letras, números, espacios, puntos, comas y rayas(-)"
-
-#~ msgid "apostrophe (') are allowed"
-#~ msgstr "se permiten apóstrofes (')"
