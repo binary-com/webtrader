@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-13 18:40\n"
+"PO-Revision-Date: 2019-02-13 18:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -166,7 +166,7 @@ msgid "8h"
 msgstr "8h"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "Accept"
 msgstr "Aceptar"
@@ -403,7 +403,7 @@ msgid "Close"
 msgstr "Cerrar"
 
 msgid "Close All"
-msgstr ""
+msgstr "Cerrar todo"
 
 msgid "Closes"
 msgstr "Cierra"
@@ -1963,7 +1963,7 @@ msgid "commission"
 msgstr "comisión"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "cree un token solo de lectura y compártalo con su(s) copiador(es)"
 
 msgid "customer support"
 msgstr "atención al cliente"
@@ -1975,7 +1975,7 @@ msgid "days"
 msgstr "días"
 
 msgid "deposits"
-msgstr ""
+msgstr "depósitos"
 
 msgid "end time"
 msgstr "hora de finalización"
@@ -1987,7 +1987,7 @@ msgid "exit spot"
 msgstr "punto de salida"
 
 msgid "for"
-msgstr ""
+msgstr "para"
 
 msgid "for mobile charts"
 msgstr "para los gráficos móviles"
@@ -2035,7 +2035,7 @@ msgid "main site"
 msgstr "sitio web principal"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "el mercado está actualmente cerrado."
 
 msgid "medium protection"
 msgstr "protección media"
@@ -2059,10 +2059,10 @@ msgid "points"
 msgstr "puntos"
 
 msgid "risk warning"
-msgstr ""
+msgstr "advertencia de riesgos"
 
 msgid "sec"
-msgstr ""
+msgstr "seg."
 
 msgid "second"
 msgstr "segundo"
@@ -2083,13 +2083,13 @@ msgid "thereafter"
 msgstr "después de eso"
 
 msgid "tick"
-msgstr ""
+msgstr "tick"
 
 msgid "ticks"
 msgstr "ticks"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "retiros"
 
 msgid "yes"
 msgstr "sí"
@@ -2098,7 +2098,7 @@ msgid "{agent.commission}%"
 msgstr "{agent.commission}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Ganancias"
 
 msgid "﻿"
 msgstr ""
