@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-13 18:00\n"
+"PO-Revision-Date: 2019-02-13 18:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -871,7 +871,7 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr ""
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Predicción del Último Dígito"
 
 msgid "Last Digit is Over"
 msgstr ""
@@ -979,7 +979,7 @@ msgid "Make sure that you have first agreed with the Agent on the terms of payme
 msgstr "Asegúrese de que está de acuerdo con las condiciones de pago del agente antes de enviar su solicitud. Una vez que haga clic en el botón 'Confirmar transferencia' los fondos serán retirados de su cuenta y se enviarán al agente de pago que haya elegido. El agente le enviará la cantidad retirada (menos la comisión) a través de su método de pago preferido"
 
 msgid "Manage"
-msgstr ""
+msgstr "Administrar"
 
 msgid "Mar"
 msgstr "Mar"
@@ -1042,7 +1042,7 @@ msgid "Minus the agent's commission"
 msgstr "Menos la comisión del agente"
 
 msgid "Minute"
-msgstr ""
+msgstr "Minuto"
 
 msgid "Minutes"
 msgstr "Minutos"
@@ -1072,7 +1072,7 @@ msgid "Ms"
 msgstr "Señorita"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplicador"
 
 msgid "Name"
 msgstr "Nombre"
@@ -1114,7 +1114,7 @@ msgid "No touch"
 msgstr "Sin Toque"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Nota: El contrato se venderá al precio de mercado vigente cuando nuestros servidores reciban la solicitud. Este precio puede diferir del precio indicado."
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Nota: la retirada vía agente de pago está disponible sólo si  deposita exclusivamente vía agente de pago"
@@ -1438,7 +1438,7 @@ msgid "Save changes"
 msgstr "Guardar cambios"
 
 msgid "Saved"
-msgstr ""
+msgstr "Guardado"
 
 msgid "Secondary"
 msgstr "Secundario"
@@ -1816,7 +1816,7 @@ msgid "Use the \"Save as ...\" button to save the chart settings, type, time per
 msgstr "Utilice el botón de \"Guardar como...\" para guardar los ajustes del gráfico, el tipo, el período de tiempo, los indicadores y las comparaciones"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
-msgstr ""
+msgstr "Utilice el botón \"Guardar...\" para guardar la configuración comercial"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
 msgstr ""
