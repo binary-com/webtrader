@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-07 19:40\n"
+"PO-Revision-Date: 2019-02-13 18:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -760,7 +760,7 @@ msgid "High"
 msgstr "Máximo"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Barrera Alta"
 
 msgid "High barrier"
 msgstr "Límite alto"
@@ -1672,7 +1672,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Para retirar fondos, introduzca el token de verificación especial que le hemos enviado por correo electrónico"
 
 msgid "Today"
-msgstr ""
+msgstr "Hoy"
 
 msgid "Token"
 msgstr "Token"
@@ -2086,7 +2086,7 @@ msgid "tick"
 msgstr ""
 
 msgid "ticks"
-msgstr ""
+msgstr "ticks"
 
 msgid "withdrawals"
 msgstr ""
