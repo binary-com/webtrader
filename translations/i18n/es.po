@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-02-13 18:50\n"
+"PO-Revision-Date: 2019-02-13 19:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -418,10 +418,10 @@ msgid "Confirm transfer"
 msgstr "Confirmar la transferencia"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Conexión cerrada."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Error de conexión."
 
 msgid "Construction"
 msgstr "Construcción"
@@ -436,7 +436,7 @@ msgid "Contract"
 msgstr "Contrato"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Confirmación del contrato"
 
 msgid "Contract Details"
 msgstr "Detalles del contrato"
@@ -490,7 +490,7 @@ msgid "Custom Theme"
 msgstr "Tema personalizado"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Personalizar la apariencia del gráfico"
 
 msgid "Daily limit on losses"
 msgstr "Límite diario de pérdidas"
@@ -604,7 +604,7 @@ msgid "Downloading template as"
 msgstr "Descargando plantilla como"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Descargando espacio de trabajo como %1"
 
 msgid "Drawing tools"
 msgstr "Herramientas para dibujar"
@@ -775,13 +775,13 @@ msgid "Historical Data"
 msgstr "Datos Históricos"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "Datos Históricos para"
 
 msgid "Horizontal line"
 msgstr "Línea horizontal"
 
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 msgid "Hours"
 msgstr "Horas"
@@ -904,10 +904,10 @@ msgid "Load trade template"
 msgstr "Cargar plantilla del contrato"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Cargando ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Cargando el Índice de activos..."
 
 msgid "Loading Copy Trade..."
 msgstr ""
@@ -919,10 +919,10 @@ msgid "Loading Password dialog ..."
 msgstr ""
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Cargando Tabla de Ganancias ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Cargando Autoexclusión ..."
 
 msgid "Loading Statement Table ..."
 msgstr ""
