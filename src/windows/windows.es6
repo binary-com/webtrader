@@ -331,9 +331,11 @@ export const createBlankWindow = function($html,options) {
    dialog.on('dragstop', () => {
       const top = dialog.offset().top;
       const left = dialog.offset().left;
-      if(top < 90) {
+      const nav_head = $('nav').height();
+      if(top < nav_head) {
          dialog.animate({ top: '100px' }, 300, dialog.trigger.bind(dialog, 'animated'));
-      } else if (left < 0) {
+      }
+      if (left < 0) {
          dialog.animate({ left: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
    });
