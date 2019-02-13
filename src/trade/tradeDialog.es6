@@ -457,13 +457,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
   state.date_expiry.update_times = function(){
       trading_times_for(state.date_expiry.value_date, state.proposal.symbol)
         .then(function(times) {
-          var expiry = state.date_expiry;
-          expiry.today_times.open = times.open;
-          expiry.today_times.close = times.close;
+          state.date_expiry.today_times.open = times.open;
+          state.date_expiry.today_times.close = times.close;
           var range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
-          expiry.today_times.disabled = !range;
+          state.date_expiry.today_times.disabled = !range;
           var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
-          expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
+          state.date_expiry.value_hour = value_hour;
           // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
           // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
           // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
@@ -578,25 +577,25 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
   }
 
   state.date_expiry.update = function (date_or_hour) {
-    var expiry = state.date_expiry;
     /* contracts that are more not today must end at the market close time */
-    var is_today = !moment.utc(expiry.value_date).isAfter(moment.utc(),'day');
-    if(!is_today){
-        expiry.today_times.disabled = true;
-        trading_times_for(expiry.value_date, state.proposal.symbol)
+    const { value_date } = state.date_expiry;
+    const is_today = !moment.utc(value_date).isAfter(moment.utc(), 'day');
+    if (!is_today) {
+      state.date_expiry.today_times.disabled = true;
+        trading_times_for(value_date, state.proposal.symbol)
           .then(function(times){
-            var value_hour = times.close !== '--' ? times.close : '00:00:00';
-            expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
-            expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
+            const value_hour = times.close !== '--' ? times.close : '23:59:59';
+            state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
+            state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + value_hour).unix();
             state.barriers.update();
-            debounce(expiry.value, state.proposal.onchange);
+            debounce(state.date_expiry.value, state.proposal.onchange);
           });
     }
     else {
-        if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
-        expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
+        if (date_or_hour !== state.date_expiry.value_hour) { state.date_expiry.update_times(); }
+        state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + state.date_expiry.value_hour).unix();
         state.barriers.update();
-        debounce(expiry.value, state.proposal.onchange);
+        debounce(state.date_expiry.value, state.proposal.onchange);
     }
   }
 

@@ -439,6 +439,9 @@ button.ui-datepicker-current {
 .ui-timepicker-title {
 	text-align: center;
 }
+.ui-timepicker-close {
+	display: none;
+}
 .ui-timepicker td {
 	border: none;
 }
