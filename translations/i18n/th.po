@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-02-08 04:00\n"
+"PO-Revision-Date: 2019-02-14 10:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -307,7 +307,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : เว็บเทรดเดอร์ (Webtrader)"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com เป็นผู้ให้บริการซื้อขายออนไลน์ที่ได้รับรางวัลที่ช่วยให้ลูกค้าได้ทำการซื้อขายในตลาดการเงินผ่านทางไบนารีออปชันและ CFD การซื้อขายไบนารีออปชันและ CFD บนดัชนีผันผวนถูกจัดให้เป็นกิจกรรมด้านการพนัน โปรดจำไว้ว่า การพนันอาจทำให้เกิดการเสพติด กรุณาดำเนินการซื้อขายด้วยความรับผิดชอบ ศึกษาเพิ่มเติมเกี่ยวกับ [_1]ความรับผิดชอบในการซื้อขาย[_2] ผลิตภัณฑ์บางรายการอาจไม่มีในทุกประเทศ การบริการทางเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง หรือไม่ได้ให้บริการแก่บุคคลที่อายุต่ำกว่า 18 ปี"
+msgstr "Binary.com เป็นผู้ให้บริการซื้อขายออนไลน์ที่ได้รับรางวัลที่ช่วยให้ลูกค้าได้ทำการซื้อขายในตลาดการเงินผ่านทางไบนารีออปชันและ CFD การซื้อขายไบนารีออปชันและ CFD บนดัชนีผันผวนถูกจัดให้เป็นกิจกรรมด้านการพนัน โปรดจำไว้ว่า การพนันอาจทำให้เกิดการเสพติด กรุณาดำเนินการซื้อขายด้วยความรับผิดชอบ ศึกษาเพิ่มเติมเกี่ยวกับ [_1]ความรับผิดชอบในการซื้อขาย[_2] ผลิตภัณฑ์บางรายการอาจไม่มีให้บริการในทุกประเทศ การบริการทางเว็บไซต์นี้อาจไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา คอสตาริกา ฮ่องกง หรือ ไม่ได้ให้บริการแก่บุคคลที่อายุต่ำกว่า 18 ปี"
 
 msgid "Blank window"
 msgstr "หน้าต่างว่าง"
@@ -331,7 +331,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "เมื่อท่านกดปุ่มตกลง (OK) ท่านยืนยันว่า ได้อ่านและยอมรับการแก้ไขดังกล่าว"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr "CFD คือเครื่องมือทางการเงินที่มีความซับซ้อน และมีความเสี่ยงสูงในการสูญเสียเงินอย่างรวดเร็วตามอัตราเลเวอเรจ ระหว่าง 74-89% ของบัญชีนักลงทุนรายย่อยขาดทุนเมื่อซื้อขาย CFD คุณจึงควรพิจารณาว่า คุณมีความเข้าใจในวิธีการทำงานของ CFD และคุณสามารถรับความเสี่ยงในอัตราสูงจากการขาดทุนได้หรือไม่"
+msgstr "CFD คือ เครื่องมือทางการเงินที่มีความซับซ้อน และมีความเสี่ยงสูงในการสูญเสียเงินอย่างรวดเร็วตามอัตราเลเวอเรจ ระหว่าง 74-89% ของบัญชีนักลงทุนรายย่อยขาดทุนเมื่อซื้อขาย CFD ท่านจึงควรพิจารณาให้ครอบคลุมหากว่า ท่านมีความเข้าใจในการซื้อขาย CFD และท่านมีศักยภาพในการรับความเสี่ยงในอัตราสูงจากการขาดทุนของท่าน"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "สามารถใช้ในการซื้อและขายสัญญาต่างๆ การต่ออายุ และการเติมเงินในบัญชีเงินเสมือนจริง"
@@ -2101,5 +2101,5 @@ msgid "| Return"
 msgstr "| ผลตอบแทน"
 
 msgid "﻿"
-msgstr ""
+msgstr "ช่องว่าง"
 
