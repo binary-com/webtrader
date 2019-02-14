@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-02-14 10:40\n"
+"PO-Revision-Date: 2019-02-14 10:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -811,7 +811,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "ที่เกาะ Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย ดักลาส IM2 4RW เกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Gambling Supervision Commission บนเกาะ Isle of Man (ใบอนุญาตปัจจุบันออกให้เมื่อวันที่ 31 สิงหาคม 2017) และโดย (2) Gambling Commission ในสหราชอาณาจักร (ใบอนุญาต[_1]หมายเลขอ้างอิง: 39172[_2])"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "ในส่วนอื่นของสหภาพยุโรป ดัชนีผันผวนให้บริการโดย Binary (Europe) Ltd. อาคาร Mompalao ห้อง 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้วันที่ 1 สิงหาคม 2018) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์"
+msgstr "ในประเทศอื่นๆ ของสหภาพยุโรป ดัชนีผันผวนให้บริการโดย Binary (Europe) Ltd. อาคาร Mompalao อาคารชุด 2 ถนนทาวเวอร์ Msida MSD1825 ประเทศมอลตา ได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Malta Gaming Authority ในประเทศมอลตา (หมายเลขใบอนุญาต MGA/B2C/102/2000 ออกให้เมื่อวันที่ 1 สิงหาคม พ.ศ. 2561 (ค.ศ.2018)) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (หมายเลขใบอนุญาต Remote Bookmaker 1010285 ออกให้วันที่ 1 กรกฎาคม พ.ศ. 2560 (2017)) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์"
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr "กรุณาจำกัดข้อความของคุณให้อยู่ในบรรทัดเดียว อย่ากดปุ่ม Enter"
+msgstr "โปรดจำกัดข้อความของท่านให้อยู่ในบรรทัดเดียว อย่ากดปุ่ม Enter"
 
 msgid "Please log in"
 msgstr "โปรดเข้าสู่ระบบ"
@@ -1606,7 +1606,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "บริษัทฯ ดูแลเงินทุนประกันของลูกค้าในบัญชีที่ถูกจัดสรรแยกเพื่อการปฏิบัติการ และการจัดการเพื่อให้แน่ใจว่า สินทรัพย์ของบัญชีลูกค้ามีการถูกจำหน่ายหากมีกรณีล้มละลาย ซึ่งเป็นไปตามข้อกำหนดของ Gambling Commission ในการแยกเงินทุนลูกค้าโดยเป็นมาตรการการป้องกันระดับ: "
 
 msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr "ผลิตภัณฑ์ทางการเงินที่ให้บริการในเว็บไซต์นี้ ได้แก่ ไบนารีออปชั่น สัญญาการซื้อขายส่วนต่าง (\"CFD\") อนุพันธ์และผลิตภัณฑ์ทางการเงินที่มีความซับซ้อนอื่นๆ การซื้อขายไบนารีออปชั่นอาจไม่เหมาะกับทุกคน การซื้อขาย CFD มีความเสี่ยงสูงเพราะเลเวอรเรจจะส่งผลทั้งดีและเสียให้คุณ ดังนั้น ผลิตภัณฑ์ในเว็บไซต์นี้จึงอาจจะไม่เหมาะสมกับนักลงทุนทุกคน เนื่องจากความเสี่ยงที่อาจสูญเสียเงินลงทุนทั้งหมด คุณไม่ควรลงทุน หากไม่สามารถรับภาวะการขาดทุน และต้องไม่ซื้อขายด้วยเงินที่ยืมมา ก่อนการซื้อขายผลิตภัณฑ์ทางการเงินที่มีความซับซ้อน โปรดทำความเข้าใจต่อความเสี่ยงที่เกี่ยวข้องและศึกษาเกี่ยวกับ [_1]การซื้อขายด้วยความรับผิดชอบ[_2]"
+msgstr "ผลิตภัณฑ์ทางการเงินที่ให้บริการในเว็บไซต์นี้ ได้แก่ ไบนารีออปชั่น สัญญาการซื้อขายส่วนต่าง (\"CFD\") อนุพันธ์และผลิตภัณฑ์ทางการเงินที่มีความซับซ้อนอื่นๆ การซื้อขายไบนารีออปชั่นอาจไม่เหมาะกับทุกคน การซื้อขาย CFD มีความเสี่ยงสูงเพราะเลเวอรเรจจะส่งผลทั้งดีและเสียให้ท่าน ดังนั้น ผลิตภัณฑ์ในเว็บไซต์นี้จึงอาจจะไม่เหมาะสมกับนักลงทุนทุกคน เนื่องจากความเสี่ยงที่อาจสูญเสียเงินลงทุนทั้งหมด ท่านไม่ควรลงทุน หากไม่สามารถรับภาวะการขาดทุน และต้องไม่ซื้อขายด้วยเงินที่ยืมมา ก่อนการซื้อขายผลิตภัณฑ์ทางการเงินที่มีความซับซ้อน โปรดทำความเข้าใจต่อความเสี่ยงที่เกี่ยวข้องและศึกษาเกี่ยวกับ [_1]การซื้อขายด้วยความรับผิดชอบ[_2]"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "มีการหยุดชะงักของข้อมูลตลาดในช่วงระยะเวลาของสัญญา สำหรับบัญชีเงินจริง เราจะพยายามแก้ไขและชำระสัญญาอย่างเหมาะสม มิเช่นนั้นสัญญาจะถูกยกเลิกและคืนเงิน สัญญาเงินเสมือนจะถูกยกเลิกและคืนเงิน"
@@ -2059,7 +2059,7 @@ msgid "points"
 msgstr "จุด"
 
 msgid "risk warning"
-msgstr "การแจ้งเตือนระดับความเสี่ยง"
+msgstr "การแจ้งเตือนเกี่ยวกับความเสี่ยง"
 
 msgid "sec"
 msgstr "วินาที"
