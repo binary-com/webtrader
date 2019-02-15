@@ -345,7 +345,7 @@ export const createBlankWindow = function($html,options) {
    });
    dialog.bind('dialogextendrestore', () => {
       dialog.css({ zIndex: 100 });
-      dialog.draggable( "option", "containment", false );
+      dialog.draggable('option', 'containment', false);
    })
 
    if(options.destroy) { /* register for destroy event which have been patched */
