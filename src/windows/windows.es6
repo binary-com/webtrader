@@ -340,6 +340,10 @@ export const createBlankWindow = function($html,options) {
       }
    });
 
+   dialog.bind('dialogextendmaximize', () => {
+      dialog.css({ zIndex: 99999 });
+   });
+
    if(options.destroy) { /* register for destroy event which have been patched */
       blankWindow.on('dialogdestroy', options.destroy);
    }
