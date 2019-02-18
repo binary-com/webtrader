@@ -586,6 +586,9 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
           .then(function(times){
             const value_hour = times.close !== '--' ? times.close : '23:59:59';
             state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
+            if (state.duration.value === 'Duration') {
+              state.date_expiry.value_date = moment.utc().format('YYYY-MM-DD');
+            }
             state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + value_hour).unix();
             state.barriers.update();
             debounce(state.date_expiry.value, state.proposal.onchange);
