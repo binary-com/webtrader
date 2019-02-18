@@ -24,7 +24,7 @@
     </ul>
 
     <ul class="contract-displays fill-bg-color"
-        rv-data="category_displays.selected | notify date_start.update duration_unit.update basis.update_limit digits.update | debounce proposal.onchange">
+        rv-data="category_displays.selected | notify date_start.update duration_unit.update basis.update_limit digits.update date_expiry.update | debounce proposal.onchange">
         <li rv-each-row="category_displays.array"
             rv-on-click="category_displays.onclick"
             rv-data-name="row.name"
@@ -100,6 +100,7 @@
         <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="date-expiry-date" readonly
                    numberOfMonths="1" marginTop="0px" marginLeft="-100px"
+                   rv-mindatepicker="date_expiry.min_date"
                    rv-datepicker="date_expiry.value_date | notify date_expiry.update" />
         </li>
         <li rv-if="duration.value | eq 'End Time' ">

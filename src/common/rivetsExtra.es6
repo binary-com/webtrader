@@ -432,6 +432,10 @@ rv.binders.slider = {
    }
 }
 
+rv.binders.mindatepicker = {
+   routine: (el, value) => $(el).datepicker('option', 'minDate', value)
+}
+
 /* trun input element in jquery-ui-datepicker */
 rv.binders.datepicker = {
    priority: 94,

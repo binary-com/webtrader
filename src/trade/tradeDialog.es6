@@ -286,6 +286,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       value_hour: moment.utc().format('HH:mm'), /* now utc in hh:mm format */
       value: 0,    /* epoch value of date+hour */
       today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
+      min_date: 0,
       onHourShow: function(hour) { /* for timepicker */
         return validateHour({
           hour,
@@ -580,10 +581,16 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     /* contracts that are more not today must end at the market close time */
     const { value_date } = state.date_expiry;
     const is_today = !moment.utc(value_date).isAfter(moment.utc(), 'day');
+
     if (!is_today) {
       state.date_expiry.today_times.disabled = true;
         trading_times_for(value_date, state.proposal.symbol)
           .then(function(times){
+            if (state.duration_unit.array[0] && !hasIntradayUnit(state.duration_unit.array)) {
+              state.date_expiry.min_date = 1;
+            } else {
+              state.date_expiry.min_date = 0;
+            }
             const value_hour = times.close !== '--' ? times.close : '23:59:59';
             state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
             if (state.duration.value === 'Duration') {
@@ -596,6 +603,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     }
     else {
         if (date_or_hour !== state.date_expiry.value_hour) { state.date_expiry.update_times(); }
+        if (state.duration_unit.array[0] && !hasIntradayUnit(state.duration_unit.array)) {
+          state.date_expiry.min_date = 1;
+          state.date_expiry.value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
+        }
         state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + state.date_expiry.value_hour).unix();
         state.barriers.update();
         debounce(state.date_expiry.value, state.proposal.onchange);
@@ -914,6 +925,10 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
 
   function is_offset(barrier) {
     return barrier && (barrier.startsWith('+') || barrier.startsWith('-')) ? true : false;
+  }
+
+  function hasIntradayUnit(duration_unit_array) {
+    return duration_unit_array.some(unit => ['minutes', 'hours'].indexOf(unit) !== -1)
   }
 
   state.purchase.onclick = async function() {
