@@ -581,16 +581,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     /* contracts that are more not today must end at the market close time */
     const { value_date } = state.date_expiry;
     const is_today = !moment.utc(value_date).isAfter(moment.utc(), 'day');
+    const is_daily_contracts = state.duration_unit.array[0] && !hasIntradayUnit(state.duration_unit.array);
 
     if (!is_today) {
       state.date_expiry.today_times.disabled = true;
         trading_times_for(value_date, state.proposal.symbol)
           .then(function(times){
-            if (state.duration_unit.array[0] && !hasIntradayUnit(state.duration_unit.array)) {
-              state.date_expiry.min_date = 1;
-            } else {
-              state.date_expiry.min_date = 0;
-            }
+            state.date_expiry.min_date = is_daily_contracts ? 1 : 0;
             const value_hour = times.close !== '--' ? times.close : '23:59:59';
             state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
             if (state.duration.value === 'Duration') {
@@ -603,7 +600,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     }
     else {
         if (date_or_hour !== state.date_expiry.value_hour) { state.date_expiry.update_times(); }
-        if (state.duration_unit.array[0] && !hasIntradayUnit(state.duration_unit.array)) {
+        if (is_daily_contracts) {
           state.date_expiry.min_date = 1;
           state.date_expiry.value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
         }

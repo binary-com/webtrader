@@ -24,7 +24,7 @@
     </ul>
 
     <ul class="contract-displays fill-bg-color"
-        rv-data="category_displays.selected | notify date_start.update duration_unit.update basis.update_limit digits.update date_expiry.update | debounce proposal.onchange">
+        rv-data="category_displays.selected | notify date_start.update duration_unit.update basis.update_limit digits.update | debounce proposal.onchange">
         <li rv-each-row="category_displays.array"
             rv-on-click="category_displays.onclick"
             rv-data-name="row.name"
