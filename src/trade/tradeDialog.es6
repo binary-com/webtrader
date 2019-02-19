@@ -930,8 +930,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     return barrier && (barrier.startsWith('+') || barrier.startsWith('-')) ? true : false;
   }
 
-
-
   state.purchase.onclick = async function() {
     const categories_with_tick_chart = ['digits', 'callput', 'callputequal', 'asian', 'touchnotouch'];
     state.purchase.loading = true;
