@@ -432,7 +432,7 @@ rv.binders.slider = {
    }
 }
 
-rv.binders.mindatepicker = {
+rv.binders.datepicker_mindate = {
    routine: (el, value) => $(el).datepicker('option', 'minDate', value)
 }
 
