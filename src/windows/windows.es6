@@ -347,6 +347,8 @@ export const createBlankWindow = function($html,options) {
       if (dialog.closest('.ui-dialog').css('z-index') > 3000) {
          dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 - 3000 });
          dialog.draggable('option', 'containment', false);
+      } else {
+         dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 1 });
       }
    });
 
