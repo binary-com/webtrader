@@ -100,6 +100,7 @@
         <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="date-expiry-date" readonly
                    numberOfMonths="1" marginTop="0px" marginLeft="-100px"
+                   rv-datepicker_mindate="date_expiry.min_date"
                    rv-datepicker="date_expiry.value_date | notify date_expiry.update" />
         </li>
         <li rv-if="duration.value | eq 'End Time' ">
