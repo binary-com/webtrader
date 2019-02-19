@@ -243,6 +243,10 @@ function validateMinute({ hour, minute, today_times, selected_date_unix }) {
   return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
 }
 
+function hasIntradayUnit(duration_unit_array) {
+  return duration_unit_array.some(unit => ['minutes', 'hours'].indexOf(unit) !== -1);
+}
+
 function init_state(available,root, dialog, symbol, contracts_for_spot) {
   var state = {
     duration: {
@@ -587,14 +591,16 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       state.date_expiry.today_times.disabled = true;
         trading_times_for(value_date, state.proposal.symbol)
           .then(function(times){
-            state.date_expiry.min_date = is_daily_contracts ? 1 : 0;
-            const value_hour = times.close !== '--' ? times.close : '23:59:59';
-            state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
             if (state.duration.value === 'Duration') {
               state.date_expiry.value_date = moment.utc().format('YYYY-MM-DD');
             }
+
+            const value_hour = times.close !== '--' ? times.close : '23:59:59';
+            state.date_expiry.min_date = is_daily_contracts ? 1 : 0;
+            state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
             state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + value_hour).unix();
             state.barriers.update();
+
             debounce(state.date_expiry.value, state.proposal.onchange);
           });
     }
@@ -924,9 +930,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     return barrier && (barrier.startsWith('+') || barrier.startsWith('-')) ? true : false;
   }
 
-  function hasIntradayUnit(duration_unit_array) {
-    return duration_unit_array.some(unit => ['minutes', 'hours'].indexOf(unit) !== -1)
-  }
+
 
   state.purchase.onclick = async function() {
     const categories_with_tick_chart = ['digits', 'callput', 'callputequal', 'asian', 'touchnotouch'];
