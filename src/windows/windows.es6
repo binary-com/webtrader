@@ -341,16 +341,11 @@ export const createBlankWindow = function($html,options) {
    });
 
    dialog.bind('dialogextendmaximize', () => {
-      dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 3000 });
+      dialog.css({ top: $('nav').height() });
    });
    dialog.bind('dialogextendrestore', () => {
-      if (dialog.closest('.ui-dialog').css('z-index') > 3000) {
-         dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 - 3000 });
-         dialog.draggable('option', 'containment', false);
-      } else {
-         dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 1 });
-      }
-   });
+      dialog.draggable( 'option', 'containment', false );
+   })
 
    if(options.destroy) { /* register for destroy event which have been patched */
       blankWindow.on('dialogdestroy', options.destroy);
