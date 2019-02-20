@@ -331,24 +331,12 @@ export const createBlankWindow = function($html,options) {
    dialog.on('dragstop', () => {
       const top = dialog.offset().top;
       const left = dialog.offset().left;
-      const nav_head = $('nav').height();
-      if(top < nav_head) {
-         dialog.animate({ top: nav_head }, 300, dialog.trigger.bind(dialog, 'animated'));
+
+      if (top < 0) {
+         dialog.animate({ top: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
       if (left < 0) {
          dialog.animate({ left: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
-      }
-   });
-
-   dialog.bind('dialogextendmaximize', () => {
-      dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 3000 });
-   });
-   dialog.bind('dialogextendrestore', () => {
-      if (dialog.closest('.ui-dialog').css('z-index') > 3000) {
-         dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 - 3000 });
-         dialog.draggable('option', 'containment', false);
-      } else {
-         dialog.css({ zIndex: dialog.closest('.ui-dialog').css('z-index')*1 + 1 });
       }
    });
 
