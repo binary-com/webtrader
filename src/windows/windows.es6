@@ -331,21 +331,14 @@ export const createBlankWindow = function($html,options) {
    dialog.on('dragstop', () => {
       const top = dialog.offset().top;
       const left = dialog.offset().left;
-      const nav_head = $('nav').height();
-      if(top < nav_head) {
-         dialog.animate({ top: nav_head }, 300, dialog.trigger.bind(dialog, 'animated'));
+
+      if (top < 0) {
+         dialog.animate({ top: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
       if (left < 0) {
          dialog.animate({ left: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
    });
-
-   dialog.bind('dialogextendmaximize', () => {
-      dialog.css({ top: $('nav').height() });
-   });
-   dialog.bind('dialogextendrestore', () => {
-      dialog.draggable( 'option', 'containment', false );
-   })
 
    if(options.destroy) { /* register for destroy event which have been patched */
       blankWindow.on('dialogdestroy', options.destroy);

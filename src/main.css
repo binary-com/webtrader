@@ -603,6 +603,10 @@ label.checkbox input:checked ~ span.check {
     z-index: +1;
 }
 
+.ui-icon-caret-1-e {
+    left: auto !important;
+}
+
 .ui-icon-caret-1-e:after {
     content: "»";
     font-family: roboto, sans-serif !important;
