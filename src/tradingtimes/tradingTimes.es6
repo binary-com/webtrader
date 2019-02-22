@@ -6,7 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
-import { getMarketsSubmarkets, getOrderedMarkets } from '../common/marketUtils';
+import { getMarketsSubmarkets, getOrderedMarkets, sortSubmarkets } from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
@@ -153,7 +153,7 @@ const initTradingWin = ($html) => {
         function changed() {
           const val = $(this).val();
 
-          if (header[val]) submarket_names.update_list(Object.keys(header[val]));
+          if (header[val]) submarket_names.update_list(sortSubmarkets(Object.keys(header[val])));
 
           updateTable(result, market_names.val(), submarket_names.val());
         };
@@ -177,14 +177,14 @@ const initTradingWin = ($html) => {
               const sub_select = $('<select />');
               sub_select.appendTo(subheader);
               submarket_names = windows.makeSelectmenu(sub_select, {
-                list: Object.keys(header[market_names.val()]),
+                list: sortSubmarkets(Object.keys(header[market_names.val()])),
                 inx: 0,
                 changed: changedFn,
               });
               submarket_names.off('selectmenuchange', changed);
               submarket_names.on('selectmenuchange', changed);
             } else {
-            submarket_names.update_list(Object.keys(header[market_names.val()]));
+            submarket_names.update_list(sortSubmarkets(Object.keys(header[market_names.val()])));
             submarket_names.off('selectmenuchange', changed);
             submarket_names.on('selectmenuchange', changed);
         }

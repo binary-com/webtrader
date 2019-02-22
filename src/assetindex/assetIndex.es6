@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import { getMarketsSubmarkets, getOrderedMarkets } from '../common/marketUtils';
+import { getMarketsSubmarkets, getOrderedMarkets, sortSubmarkets } from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -167,7 +167,7 @@ const initTable = () => {
                         list: markets_sorted_list,
                         inx: 0,
                         changed: (val) => {
-                            const submarket_list = Object.keys(market_submarkets[val]);
+                            const submarket_list = sortSubmarkets(Object.keys(market_submarkets[val]));
                             state.dropdown.display_submarkets.update_list(submarket_list);
                             updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
                         },
@@ -180,10 +180,13 @@ const initTable = () => {
         }
 
         function submarketsDropdown(market_submarkets) {
+            const submarkets = Object.keys(market_submarkets[state.dropdown.display_markets.val()]);
+            const sorted_submarkets = sortSubmarkets(submarkets);
+
             if (!state.dropdown.display_submarkets) {
                 state.dropdown.display_submarkets = windows
                     .makeSelectmenu($('<select />').insertAfter(asset_win_el), {
-                        list: Object.keys(market_submarkets[state.dropdown.display_markets.val()]),
+                        list: sorted_submarkets,
                         inx: 0,
                         changed: (val) => {
                             updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
@@ -192,7 +195,7 @@ const initTable = () => {
                     });
                 state.dropdown.display_submarkets.selectmenu('widget').addClass('asset-index-selectmenu');
             } else {
-                state.dropdown.display_submarkets.update_list(Object.keys(market_submarkets[state.dropdown.display_markets.val()]));
+                state.dropdown.display_submarkets.update_list(sorted_submarkets);
             }
         }
     }
