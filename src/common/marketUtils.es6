@@ -46,6 +46,7 @@ const getMarketsSubmarkets = (active_symbols) => {
 const getOrderedMarkets = (active_symbols) => {
     const unsorted_markets = getMarkets(active_symbols);
     const sorted_markets_order = getMarketPosition(Object.keys(unsorted_markets));
+
     return sorted_markets_order.map(market_id => unsorted_markets[market_id].toString());
 };
 
