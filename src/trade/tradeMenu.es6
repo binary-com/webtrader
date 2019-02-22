@@ -32,7 +32,7 @@ const refresh_active_symbols = () => {
             market.is_disabled = _.every(market.submarkets, 'is_disabled');
             return market;
          }).value();
-         markets = getMarketChildSorted(markets)
+         markets = getMarketChildSorted(markets);
 
          const trade = $("#nav-menu").find(".trade");
          menu.refreshMenu(trade, markets, (symbol, display_name, pip) => {
