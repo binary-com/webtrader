@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import { getMarketsSubmarkets, getSortedMarkets, getSortedSubmarkets } from '../common/marketUtils';
+import { getObjectMarketSubmarkets, getSortedMarkets, getSortedSubmarkets } from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -85,7 +85,7 @@ const initTable = () => {
 
         if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
 
-        state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
+        state.dropdown.market_submarkets = getObjectMarketSubmarkets(active_symbols_data);
         state.dropdown.sorted_markets = getSortedMarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
 
