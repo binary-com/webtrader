@@ -4,7 +4,7 @@ import liveapi from '../websockets/binary_websockets';
 import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
-import { getMarketsSubmarkets, getOrderedMarkets, sortSubmarkets } from '../common/marketUtils';
+import { getMarketsSubmarkets, getSortedMarkets, getSortedSubmarkets } from '../common/marketUtils';
 
 let table_el = null;
 let asset_win_el = null;
@@ -86,7 +86,7 @@ const initTable = () => {
         if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
 
         state.dropdown.market_submarkets = getMarketsSubmarkets(active_symbols_data);
-        state.dropdown.sorted_markets = getOrderedMarkets(active_symbols_data);
+        state.dropdown.sorted_markets = getSortedMarkets(active_symbols_data);
         state.table.asset_data = asset_index_data;
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');
@@ -167,7 +167,7 @@ const initTable = () => {
                         list: markets_sorted_list,
                         inx: 0,
                         changed: (val) => {
-                            const submarket_list = sortSubmarkets(Object.keys(market_submarkets[val]));
+                            const submarket_list = getSortedSubmarkets(Object.keys(market_submarkets[val]));
                             state.dropdown.display_submarkets.update_list(submarket_list);
                             updateTable(state.dropdown.display_markets.val(), state.dropdown.display_submarkets.val());
                         },
@@ -181,7 +181,7 @@ const initTable = () => {
 
         function submarketsDropdown(market_submarkets) {
             const submarkets = Object.keys(market_submarkets[state.dropdown.display_markets.val()]);
-            const sorted_submarkets = sortSubmarkets(submarkets);
+            const sorted_submarkets = getSortedSubmarkets(submarkets);
 
             if (!state.dropdown.display_submarkets) {
                 state.dropdown.display_submarkets = windows

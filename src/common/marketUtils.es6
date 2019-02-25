@@ -24,13 +24,14 @@ const sortMarketSubmarkets = ([...markets]) => {
     })
 }
 
-const getMarketChildSorted = (markets) => {
-    const sorted_markets_order = getMarketPosition(markets);
+const getSortedMarketSubmarkets = (markets_submarkets) => {
+    const sorted_markets_order = getMarketPosition(markets_submarkets);
     const sorted_market_child = sortMarketSubmarkets(sorted_markets_order);
 
     return sorted_market_child
 }
 
+// get market submarket -> object
 const getMarketsSubmarkets = (active_symbols) => {
     return active_symbols.reduce((market_result, markets) => {
         const { market_display_name, submarket_display_name, display_name } = markets;
@@ -43,15 +44,9 @@ const getMarketsSubmarkets = (active_symbols) => {
     }, {});
 };
 
-const getOrderedMarkets = (active_symbols) => {
-    const unsorted_markets = getMarkets(active_symbols);
-    const sorted_markets_order = getMarketPosition(Object.keys(unsorted_markets));
-
-    return sorted_markets_order.map(market_id => unsorted_markets[market_id].toString());
-};
-
-const getMarkets = (active_symbols) => {
-    return active_symbols.reduce((market_result, markets) => {
+// sort market -> array
+const getSortedMarkets = (active_symbols) => {
+    const unsorted_markets = active_symbols.reduce((market_result, markets) => {
         const { market, market_display_name } = markets;
 
         market_result[market] = market_result[market] || [];
@@ -59,9 +54,14 @@ const getMarkets = (active_symbols) => {
 
         return market_result;
     }, {});
+
+    const sorted_markets_order = getMarketPosition(Object.keys(unsorted_markets));
+
+    return sorted_markets_order.map(market_id => unsorted_markets[market_id].toString());
 };
 
-function sortSubmarkets([...submarkets]) {
+// sort submarkets -> array
+function getSortedSubmarkets([...submarkets]) {
     return submarkets.sort((a, b) => {
         if (a < b) return -1;
         if (a > b) return 1;
@@ -70,7 +70,7 @@ function sortSubmarkets([...submarkets]) {
 
 export {
     getMarketsSubmarkets,
-    getOrderedMarkets,
-    getMarketChildSorted,
-    sortSubmarkets,
+    getSortedMarkets,
+    getSortedMarketSubmarkets,
+    getSortedSubmarkets,
 };

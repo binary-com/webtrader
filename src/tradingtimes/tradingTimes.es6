@@ -6,7 +6,7 @@ import 'datatables';
 import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
-import { getMarketsSubmarkets, getOrderedMarkets, sortSubmarkets } from '../common/marketUtils';
+import { getMarketsSubmarkets, getSortedMarkets, getSortedSubmarkets } from '../common/marketUtils';
 
 let table = null;
 let tradingWin = null;
@@ -146,14 +146,14 @@ const initTradingWin = ($html) => {
         const result = processData(menu.extractFilteredMarkets(data[0]));
         const active_symbols = local_storage.get('active_symbols')
         const header = getMarketsSubmarkets(active_symbols);
-        const markets_sorted_list = getOrderedMarkets(active_symbols);
+        const markets_sorted_list = getSortedMarkets(active_symbols);
         
         if($.isEmptyObject(header)) return;
 
         function changed() {
           const val = $(this).val();
 
-          if (header[val]) submarket_names.update_list(sortSubmarkets(Object.keys(header[val])));
+          if (header[val]) submarket_names.update_list(getSortedSubmarkets(Object.keys(header[val])));
 
           updateTable(result, market_names.val(), submarket_names.val());
         };
@@ -177,14 +177,14 @@ const initTradingWin = ($html) => {
               const sub_select = $('<select />');
               sub_select.appendTo(subheader);
               submarket_names = windows.makeSelectmenu(sub_select, {
-                list: sortSubmarkets(Object.keys(header[market_names.val()])),
+                list: getSortedSubmarkets(Object.keys(header[market_names.val()])),
                 inx: 0,
                 changed: changedFn,
               });
               submarket_names.off('selectmenuchange', changed);
               submarket_names.on('selectmenuchange', changed);
             } else {
-            submarket_names.update_list(sortSubmarkets(Object.keys(header[market_names.val()])));
+            submarket_names.update_list(getSortedSubmarkets(Object.keys(header[market_names.val()])));
             submarket_names.off('selectmenuchange', changed);
             submarket_names.on('selectmenuchange', changed);
         }
