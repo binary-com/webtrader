@@ -144,14 +144,15 @@ const initTradingWin = ($html) => {
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
       const refresh = (data) => {
         const result = processData(menu.extractFilteredMarkets(data[0]));
-        const active_symbols = local_storage.get('active_symbols')
-        const header = getObjectMarketSubmarkets(active_symbols);
+        const active_symbols = local_storage.get('active_symbols');
+        let header = getObjectMarketSubmarkets(active_symbols);
         const markets_sorted_list = getSortedMarkets(active_symbols);
         
         if($.isEmptyObject(header)) return;
 
         function changed() {
           const val = $(this).val();
+          header = getObjectMarketSubmarkets(local_storage.get('active_symbols'));
 
           if (header[val]) submarket_names.update_list(getSortedSubmarkets(Object.keys(header[val])));
 
