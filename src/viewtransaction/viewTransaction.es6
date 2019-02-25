@@ -221,8 +221,8 @@ const updateIndicative = (data, state) => {
     return;
   }
 
-  updateStateSell(contract, state);
-  handleForwardStarting(contract, state);
+  updateStateSell();
+  handleForwardStarting();
   state.chart.manualReflow();
 
   function updateState(contract, state) {
@@ -249,14 +249,14 @@ const updateIndicative = (data, state) => {
     state.note = makeNote(contract);
   }
 
-  function updateStateSell(contract, state) {
+  function updateStateSell() {
     if (contract.bid_price) {
       state.sell.bid_price.value = contract.bid_price;
-      [state.sell.bid_price.unit, state.sell.bid_price.cent] = String(contract.bid_price).split(/[\.,]+/);
+      [state.sell.bid_price.unit, state.sell.bid_price.cent] = contract.bid_price.toString().split(/[\.,]+/);
     }
   }
 
-  function handleForwardStarting(contract, state) {
+  function handleForwardStarting() {
     const constract_is_forward_starting = contract.is_forward_starting && +contract.date_start > +contract.current_spot_time;
     if (constract_is_forward_starting) {
       state.fwd_starting = '* Contract has not started yet'.i18n();
