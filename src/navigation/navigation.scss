@@ -1,120 +1,128 @@
-#topbar {
+nav {
    width: 100%;
-   line-height: 1;
-   font-size: 100%;
-   text-align: right;
-   padding: 3px 0;
-   height: 23px;
-   min-width: 1150px;
-   span.time {
-      color: white;
-      float: right;
-      padding-right: 35px;
-      padding-top: 5px;
-      font-size: 12px;
-   }
-   span.contact-us {
-      color: white;
-      float: right;
-      padding-right: 25px;
-      padding-top: 5px;
-      font-weight: 900;
-      font-size: 12px;
-   }
 
-   #select_language {
-      top:-3px;
-      z-index: 999999;/*should be at the top of other dialogs*/
-   }
-}
+   #topbar {
+      width: 100%;
+      line-height: 1;
+      font-size: 100%;
+      text-align: right;
+      padding: 3px 0;
+      height: 23px;
 
-#nav-menu {
-  min-width: 1150px;
-  .trade, .instruments, .resources, .workspace {
-      > ul {
-         border: none;
-         visibility: hidden;
-         z-index: 999999;
-         opacity: 0;
-         transition: visibility 0.5s, opacity 0.1s linear 0.1s;
-      }
-      &:hover > ul {
-         visibility: visible;
-         opacity: 1;
-         transition: visibility 0s 0.1s;
-      }
-   }
-  .resources {
-    .ui-icon { left: 10px; }
-  }
-  .trade, .instruments, .resources {
-      .ui-menu .ui-menu-item {
-         list-style-image: none !important;
-         white-space: nowrap;
-         .ui-menu-item-wrapper {
-            padding: 7px 1em 7px .4em;
-         }
-        div {
-          font-size: 1rem;
-          text-align: left;
-        }
-      }
-      .ui-widget.ui-widget-content {
-         border: none !important;
-      }
-      li {
-         min-width: 130px;
-         background: #2A3052;
+      span.time {
          color: white;
-         a {
-            &:hover { opacity: 1; }
-            color: white;
-            padding-left: 30px !important;
+         float: right;
+         padding-right: 35px;
+         padding-top: 5px;
+         font-size: 12px;
+      }
+      span.contact-us {
+         color: white;
+         float: right;
+         padding-right: 25px;
+         padding-top: 5px;
+         font-weight: 900;
+         font-size: 12px;
+      }
+   
+      #select_language {
+         top:-3px;
+         z-index: 999999;/*should be at the top of other dialogs*/
+      }
+   }
+   
+   #nav-menu {
+      width: 100%;
+   
+     .trade, .instruments, .resources, .workspace {
+         > ul {
+            border: none;
+            visibility: hidden;
+            z-index: 999999;
+            opacity: 0;
+            transition: visibility 0.5s, opacity 0.1s linear 0.1s;
+         }
+         &:hover > ul {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s 0.1s;
          }
       }
-      .ui-state-active {
-         margin: 0 !important;
-         background: #E98024;
-      }
-  }
-}
-
-#nav-menu .container {
-  text-align: center;
-  display: flex;
-
-  .account-menu {
+     .resources {
+       .ui-icon { left: 10px; }
+     }
+     .trade, .instruments, .resources {
+         .ui-menu .ui-menu-item {
+            list-style-image: none !important;
+            white-space: nowrap;
+            .ui-menu-item-wrapper {
+               padding: 8px 30px;
+               font-size: 14px;
+            }
+           div {
+             font-size: 1rem;
+             text-align: left;
+           }
+         }
+         .ui-widget.ui-widget-content {
+            border: none !important;
+            font-size: 14px;
+         }
+         li {
+            min-width: 130px;
+            background: #2A3052;
+            color: white;
+            a {
+               &:hover { opacity: 1; }
+               color: white;
+               padding-left: 30px !important;
+            }
+         }
+         .ui-state-active {
+            margin: 0 !important;
+            background: #E98024;
+         }
+     }
+   }
+   
+   #nav-menu .container {
+     text-align: center;
+     display: flex;
+   
+     .account-menu {
+        height: 70px;
+     }
+   }
+   .top-nav-menu {
+     margin: 0 auto 0 auto;
+   }
+   
+   #topbar #select_language.visible, #all-accounts-top.visible{
+     display: block;
+     visibility: visible;
+     opacity: 1;
+   }
+   
+   .top-nav-menu > li > a { font-size: 18px; color: white; }
+   .nav-menu > li > ul { max-height: 80vh; overflow: auto; }
+   
+   .login button {
+     margin: 15px 0;
+   }
+   
+   #main-account {
+     top: -2px;
+   } 
+   
+   .main-nav .nav-caret {
+     position: absolute;
+     top: 30px;
+     right: 15px;
+   }
+   
+   .logo-wrapper {
+     float: left;
      height: 70px;
-  }
-}
-.top-nav-menu {
-  margin: 0 auto 0 auto;
-}
-
-#topbar #select_language.visible, #all-accounts-top.visible{
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-
-.top-nav-menu > li > a { font-size: 18px; color: white; }
-
-.login button {
-  margin: 15px 0;
-}
-
-#main-account {
-  top: -2px;
-} 
-
-.main-nav .nav-caret {
-  position: absolute;
-  top: 30px;
-  right: 15px;
-}
-
-.logo-wrapper {
-  float: left;
-  height: 70px;
-  margin-left: 5px;
+     margin-left: 5px;
+   }   
 }
