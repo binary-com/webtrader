@@ -51,13 +51,14 @@ nav {
      .resources {
        .ui-icon { left: 10px; }
      }
-     .trade, .instruments, .resources {
+     .trade, .instruments, .resources, .workspace {
          .ui-menu .ui-menu-item {
             list-style-image: none !important;
             white-space: nowrap;
             .ui-menu-item-wrapper {
                padding: 8px 30px;
                font-size: 14px;
+               cursor: pointer;
             }
            div {
              font-size: 1rem;

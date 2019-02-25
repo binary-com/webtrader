@@ -2,7 +2,7 @@ import $ from "jquery";
 import liveapi from "websockets/binary_websockets";
 import menu from "navigation/menu";
 import chartWindow from "charts/chartWindow";
-import { getMarketPosition } from '../common/marketUtils';
+import { getSortedMarketSubmarkets } from '../common/marketUtils';
 import "jquery-growl";
 import "common/util";
 
@@ -48,7 +48,7 @@ function refresh_active_symbols() {
                 return m.submarkets.length !== 0;
             });
 
-            markets = getMarketPosition(markets);
+            markets = getSortedMarketSubmarkets(markets);
 
             const instruments = $("#nav-menu").find(".instruments");
             instruments.find('> ul').remove();

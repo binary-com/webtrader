@@ -1,7 +1,7 @@
 ﻿import $ from 'jquery';
 import liveapi from '../websockets/binary_websockets';
 import menu from '../navigation/menu';
-import { getMarketPosition } from '../common/marketUtils';
+import { getSortedMarketSubmarkets } from '../common/marketUtils';
 import "jquery-growl";
 
 const show_error = (err) => {
@@ -32,7 +32,7 @@ const refresh_active_symbols = () => {
             market.is_disabled = _.every(market.submarkets, 'is_disabled');
             return market;
          }).value();
-         markets = getMarketPosition(markets);
+         markets = getSortedMarketSubmarkets(markets);
 
          const trade = $("#nav-menu").find(".trade");
          menu.refreshMenu(trade, markets, (symbol, display_name, pip) => {
