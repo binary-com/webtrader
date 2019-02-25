@@ -11,7 +11,7 @@ const getMarketPosition = (() => {
     };
 })();
 
-const getMarketChild = (markets) => {
+const getMarketChild = ([...markets]) => {
     return markets.map((market) => {
         if (market.submarkets) {
             const submarkets_sort = market.submarkets.sort((a, b) => {
@@ -61,7 +61,7 @@ const getMarkets = (active_symbols) => {
     }, {});
 };
 
-function sortSubmarkets(submarkets) {
+function sortSubmarkets([...submarkets]) {
     return submarkets.sort((a, b) => {
         if (a < b) return -1;
         if (a > b) return 1;
