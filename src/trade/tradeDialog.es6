@@ -248,6 +248,8 @@ function hasIntradayUnit(duration_unit_array) {
 }
 
 function init_state(available,root, dialog, symbol, contracts_for_spot) {
+  const include_list = ['up/down', 'touch/no touch', 'in/out', 'digits', 'asians', 'rise/fall equal', 'lookbacks'];
+
   var state = {
     duration: {
       array: ['Duration', 'End Time'],
@@ -1014,12 +1016,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     .uniq()
     .value()
     // TODO: Remove this filter after implementing reset, high/low, spread, runs contracts.
-    .filter(f => !/reset|high\/low|spread|run/.test(f.toLowerCase()))
+    .filter(f => include_list.includes(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
       let contract_object = _.find(available, {contract_category_display: x});
-      if(contract_object){
+      if (contract_object) {
         y.contract_category = contract_object.contract_category;
         state.categories.array.push(y);
       }
