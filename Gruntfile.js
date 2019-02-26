@@ -11,10 +11,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg,
-        //Executing this task will populate grunt.config.gitinfo with repository data below
-        gitinfo: {
-            local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
-            remote: { origin: { url: "" } }
+        githash: {
+            main: {
+                options: {},
+            },
         },
         jshint: {
             options: {
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
             compressed: ["dist/compressed"],
             uncompressed: ["dist/uncompressed"],
             branches:[ "dist/branches"],
-            current_branch: [ "dist/branches/compressed/<%= gitinfo.local.branch.current.name %>"],
+            current_branch: [ "dist/branches/compressed/<%= githash.main.branch %>"],
             dist: ["dist"],
         },
         copy: {
@@ -107,7 +107,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: "dist/compressed",
                         src: [ "**"],
-                        dest: "dist/branches/compressed/<%= gitinfo.local.branch.current.name %>"
+                        dest: "dist/branches/compressed/<%= githash.main.branch %>"
                     }
                 ]
             },
@@ -211,7 +211,7 @@ module.exports = function (grunt) {
                 options: {
                     base: "dist/branches/compressed",
                     add: true,
-                    message: "Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= gitinfo.local.branch.current.name %>"
+                    message: "Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= githash.main.branch %>"
                 },
                 src: ["**/*"]
             },
@@ -376,7 +376,7 @@ module.exports = function (grunt) {
     //Meant for local development use ONLY - for pushing to individual forks
     /* Deploy to a sub-folder of gh-pages with the name of current branch,
        This is only for developers working on different branches in their forks. */
-    grunt.registerTask("deploy-branch", ["default","gitinfo", "clean:current_branch", "copy:copy_current_branch", "gh-pages:deploy-branch"]);
+    grunt.registerTask("deploy-branch", ["default","githash", "clean:current_branch", "copy:copy_current_branch", "gh-pages:deploy-branch"]);
     /* clean all the files in gh-pages branch */
     grunt.registerTask("gh-pages-clean", ["gh-pages:clean"]);
 
