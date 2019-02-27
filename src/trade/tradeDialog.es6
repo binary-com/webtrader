@@ -3,6 +3,7 @@ import $ from 'jquery';
 import moment from 'moment';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
+import { SUPPORTED_CONTRACT_TYPES } from 'common/common';
 import liveapi from 'websockets/binary_websockets';
 import chartingRequestMap from 'charts/chartingRequestMap';
 import html from 'text!trade/tradeDialog.html';
@@ -248,8 +249,6 @@ function hasIntradayUnit(duration_unit_array) {
 }
 
 function init_state(available,root, dialog, symbol, contracts_for_spot) {
-  const include_list = ['up/down', 'touch/no touch', 'in/out', 'digits', 'asians', 'rise/fall equal', 'lookbacks'];
-
   var state = {
     duration: {
       array: ['Duration', 'End Time'],
@@ -1016,7 +1015,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     .uniq()
     .value()
     // TODO: Remove this filter after implementing reset, high/low, spread, runs contracts.
-    .filter(f => include_list.includes(f.toLowerCase()))
+    .filter(f => SUPPORTED_CONTRACT_TYPES.includes(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
