@@ -3,6 +3,7 @@ import $ from 'jquery';
 import moment from 'moment';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
+import { SUPPORTED_CONTRACT_TYPES } from 'common/common';
 import liveapi from 'websockets/binary_websockets';
 import chartingRequestMap from 'charts/chartingRequestMap';
 import html from 'text!trade/tradeDialog.html';
@@ -1014,12 +1015,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     .uniq()
     .value()
     // TODO: Remove this filter after implementing reset, high/low, spread, runs contracts.
-    .filter(f => !/reset|high\/low|spread|run/.test(f.toLowerCase()))
+    .filter(f => SUPPORTED_CONTRACT_TYPES.includes(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
       let contract_object = _.find(available, {contract_category_display: x});
-      if(contract_object){
+      if (contract_object) {
         y.contract_category = contract_object.contract_category;
         state.categories.array.push(y);
       }
