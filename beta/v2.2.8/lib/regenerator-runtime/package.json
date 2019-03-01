@@ -15,8 +15,4 @@
     "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime"
   },
   "license": "MIT"
-
-,"_resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz"
-,"_integrity": "sha1-M2w+/BIgrc7dosn6tntaeVWjNlg="
-,"_from": "regenerator-runtime@0.10.5"
 }

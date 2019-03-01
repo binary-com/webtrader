@@ -47,8 +47,4 @@
     "type": "git",
     "url": "https://github.com/harvesthq/chosen.git"
   }
-
-,"_resolved": "https://registry.npmjs.org/chosen-js/-/chosen-js-1.8.7.tgz"
-,"_integrity": "sha512-eVdrZJ2U5ISdObkgsi0od5vIJdLwq1P1Xa/Vj/mgxkMZf14DlgobfB6nrlFi3kW4kkvKLsKk4NDqZj1MU1DCpw=="
-,"_from": "chosen-js@1.8.7"
 }
