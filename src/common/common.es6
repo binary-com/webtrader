@@ -66,7 +66,8 @@ const trade_types = [{
 const SUPPORTED_CONTRACT_TYPES = Object.freeze([
   'up/down',
   'touch/no touch',
-  'in/out', 'digits',
+  'in/out',
+  'digits',
   'asians',
   'rise/fall equal',
   'lookbacks'
