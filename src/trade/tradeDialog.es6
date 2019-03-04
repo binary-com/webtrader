@@ -3,6 +3,7 @@ import $ from 'jquery';
 import moment from 'moment';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
+import { SUPPORTED_CONTRACT_TYPES } from 'common/common';
 import liveapi from 'websockets/binary_websockets';
 import chartingRequestMap from 'charts/chartingRequestMap';
 import html from 'text!trade/tradeDialog.html';
@@ -244,7 +245,7 @@ function validateMinute({ hour, minute, today_times, selected_date_unix }) {
 }
 
 function hasIntradayUnit(duration_unit_array) {
-  return duration_unit_array.some(unit => ['minutes', 'hours'].indexOf(unit) !== -1);
+  return duration_unit_array.some(unit => ['ticks', 'seconds', 'minutes', 'hours'].indexOf(unit) !== -1);
 }
 
 function init_state(available,root, dialog, symbol, contracts_for_spot) {
@@ -585,13 +586,14 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     /* contracts that are more not today must end at the market close time */
     const { value_date } = state.date_expiry;
     const is_today = !moment.utc(value_date).isAfter(moment.utc(), 'day');
+    const is_duration = state.duration.value === 'Duration';
     const is_daily_contracts = state.duration_unit.array[0] && !hasIntradayUnit(state.duration_unit.array);
 
     if (!is_today) {
       state.date_expiry.today_times.disabled = true;
         trading_times_for(value_date, state.proposal.symbol)
           .then(function(times){
-            if (state.duration.value === 'Duration') {
+            if (is_duration) {
               state.date_expiry.value_date = moment.utc().format('YYYY-MM-DD');
             }
 
@@ -606,7 +608,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     }
     else {
         if (date_or_hour !== state.date_expiry.value_hour) { state.date_expiry.update_times(); }
-        if (is_daily_contracts) {
+        if (is_daily_contracts && !is_duration) {
           state.date_expiry.min_date = 1;
           state.date_expiry.value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
         }
@@ -1014,12 +1016,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     .uniq()
     .value()
     // TODO: Remove this filter after implementing reset, high/low, spread, runs contracts.
-    .filter(f => !/reset|high\/low|spread|run/.test(f.toLowerCase()))
+    .filter(f => SUPPORTED_CONTRACT_TYPES.includes(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
       let contract_object = _.find(available, {contract_category_display: x});
-      if(contract_object){
+      if (contract_object) {
         y.contract_category = contract_object.contract_category;
         state.categories.array.push(y);
       }
