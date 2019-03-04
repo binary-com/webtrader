@@ -245,7 +245,7 @@ function validateMinute({ hour, minute, today_times, selected_date_unix }) {
 }
 
 function hasIntradayUnit(duration_unit_array) {
-  return duration_unit_array.some(unit => ['minutes', 'hours'].indexOf(unit) !== -1);
+  return duration_unit_array.some(unit => ['ticks', 'seconds', 'minutes', 'hours'].indexOf(unit) !== -1);
 }
 
 function init_state(available,root, dialog, symbol, contracts_for_spot) {
