@@ -28,7 +28,11 @@ rv.formatters['i18n'] = (value) => {
    return value;
 };
 rv.formatters['sanitize'] = (value) => {
-   return value.replace(/<|>/g, '&lt;').replace(/"|'/g, '&quot;').replace(/&/g, '&amp');
+   return value
+      .replace(/<|>/g, '&lt;')
+      .replace(/"|'/g, '&quot;')
+      .replace(/&/g, '&amp')
+      .replace(/(|)/g, '&brack');
 };
 /* rivets formatter to get the property value of an object */
 rv.formatters['prop'] = (value, prop) => {
