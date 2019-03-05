@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2019-03-05 23:00\n"
+"PO-Revision-Date: 2019-03-05 23:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Outro"
 
 msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
-msgstr ""
+msgstr "Fora da UE, os produtos financeiros são disponibilizados pela Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulamentada pela Vanuatu Financial Services Commission (Comissão de Serviços Financeiros de Vanuatu - [_1]ver licença[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, Ilhas Virgens Britânicas, regulamentada pela British Virgin Islands Financial Services Commission (Comissão de Serviços Financeiros das Ilhas Virgens Britânicas - [_3]licença n.º SIBA/L/18/1114[_4]) e Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malásia, regulamentada pela Labuan Financial Services Authority (Autoridade de Serviços Financeiro de Labuan) para exercer a atividade de corretagem monetária ([_5]licença n.º MB/18/0024[_6])"
 
 msgid "Over"
 msgstr "Acima"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Instale a versão mais recente de um destes navegadores"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr ""
+msgstr "Limite a sua mensagem a uma única linha. Não pressione ENTER"
 
 msgid "Please log in"
 msgstr "Conecte-se"
@@ -1351,7 +1351,7 @@ msgid "Purchase Price"
 msgstr "Preço de compra"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Hora de compra"
 
 msgid "Read"
 msgstr "Ler"
@@ -1606,7 +1606,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "A empresa mantém fundos de clientes em contas bancárias separadas das contas operacionais, que, no caso de insolvência, não fariam parte dos ativos da empresa. Isso atende aos requisitos da Comissão de Jogos da segregação dos fundos de clientes ao nível "
 
 msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "Os produtos financeiros disponibilizados através deste site incluem opções binárias, contratos por diferenças (\"CFDs\") e outros derivados e produtos financeiros. A negociação de opções binárias pode não ser adequada para todos. A negociação de CFDs implica um elevado grau de risco, uma vez que a alavancagem pode trabalhar tanto para a sua vantagem como para a sua desvantagem. Como resultado, os produtos disponibilizados neste site podem não ser adequados para todo o tipo de investidor, devido ao risco de se perder todo o capital investido. Nunca se deve investir dinheiro que precisa e nunca se deve negociar com dinheiro emprestado. Antes de negociar os complexos produtos financeiros disponibilizados, certifique-se de que compreenda os riscos envolvidos e aprenda mais sobre a [_1]negociação responsável[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Houve uma interrupção nos dados de mercado durante o período do contrato. Em contas de dinheiro real, iremos tentar corrigir isto e liquidar o contrato de forma correta. Caso contrário, o contrato será cancelado e reembolsado. Contratos de dinheiro virtual serão cancelados e reembolsados."
