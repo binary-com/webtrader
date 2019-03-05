@@ -20,10 +20,8 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
-const sanitize = value => value.replace(/<|>/g, '&lt;')
-   .replace(/"|'/g, '&quot;')
-   .replace(/&/g, '&amp')
-   .replace(/\(\)/g, '&brc');
+const sanitize = value => value
+   .replace(/("|'|\&|\(|\)|\<|\>)/g, '');
 
 const state = {
    route: 'active', // one of ['active', 'saved', 'rename', 'saveas']
