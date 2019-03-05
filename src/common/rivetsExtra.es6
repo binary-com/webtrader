@@ -32,7 +32,7 @@ rv.formatters['sanitize'] = (value) => {
       .replace(/<|>/g, '&lt;')
       .replace(/"|'/g, '&quot;')
       .replace(/&/g, '&amp')
-      .replace(/(|)/g, '&brc');
+      .replace(/\(\)/g, '&brc');
 };
 /* rivets formatter to get the property value of an object */
 rv.formatters['prop'] = (value, prop) => {

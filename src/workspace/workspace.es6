@@ -23,7 +23,7 @@ const clone = obj => JSON.parse(JSON.stringify(obj));
 const sanitize = value => value.replace(/<|>/g, '&lt;')
    .replace(/"|'/g, '&quot;')
    .replace(/&/g, '&amp')
-   .replace(/(|)/g, '&brack');
+   .replace(/\(\)/g, '&brc');
 
 const state = {
    route: 'active', // one of ['active', 'saved', 'rename', 'saveas']
