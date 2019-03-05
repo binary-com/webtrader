@@ -4,20 +4,21 @@ matrix:
   fast_finish: true
 language: node_js
 node_js:
-- '9'
+- '10'
 dist: trusty
 branches:
   only:
   - master
   - development
 before_install:
-- yarn
+- npm i -g npm@6.7.0
+- npm ci
 install:
-- yarn build
+- npm run build
 after_success:
 - git config --global user.email "oskar@binary.com"
 - git config --global user.name "OskarAhl"
-- yarn deploy-gh-pages
+- npm run deploy-gh-pages
 env:
   global:
   - secure: VkC8JcM0fpaYehywEI5kiP/1Ui+lfVfHRWSNMAbJqIeumpzdYLc8x9ws3DJLkufiohmDv+e2lArpwU5rMTKCELquhdWzKPKQT4Dkt58CC45TggE6rEDqeR9lNQpvNwircJ3y4rvlDrpPNuZ2G7HH+2l+JUrwAOwS1/UOKdSkghci1eGX/OlqyE84nEKHBlD0JnvkS7tQquhhAtMtT/+1ENK4Ku6oMUQpgABjaxoquCCOnzFvTYJKa3aPQ6p1yNQgP9KJCnMTjvJ+1p8RngunnYbeT5Eyvndb7IY68/3uFQgJTenfGA9sT3Nh5Roy6sO7Sk/jhqndxPXmku50otW0XwMPC+lHmBNi9u+5k3NwVzGfho9/vwdr1M9sRd9PWx1OjOcwsXw7xu6pU541pgGEbsW0qBKZ9gt3atR3EBsseovCQUagORtpb4GcXJRShrnrRlPIq6iZNIs+CQVy9iJqQEz+6UODJNNFL5NuhTvfgdw1qrHqO0gUybXcDC6HZPVJx0NqrM6F2TgLnusN5HaO7PEiPM90DCkwSpyKFyx7O4GUw8vGPQG2AYzUitO5pyUc4sLRX7v/MsU9kypqa8UWONam7DhofHJonLhbNpnS2yeSrGZ+DRJlIhmOX7FWpJooSZoi/hZoW8Mt3uGYgSMIe6IRu+cJXwJHGa9lAkKLrTU=
