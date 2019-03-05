@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-01-29 06:30\n"
+"PO-Revision-Date: 2019-03-05 01:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -307,7 +307,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com︰ Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com 是多次获奖的在线交易提供商，帮助客户通过二元期权和差价合约在金融市场进行交易。 基于波动率指数的二元期权和差价合约交易被归类为博彩活动。请记住博彩活动可能会上瘾，并提醒自己要承担责任。查阅[_1]负责任交易[_2]的详细信息。一些产品在所有国家都不可用。本网站不向一些国家如美国、加拿大、哥斯达黎加、香港、或18岁以下的用户提供服务。"
 
 msgid "Blank window"
 msgstr "空白窗口"
@@ -331,7 +331,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "通过点击OK键，您确认已经阅读并接受更新的"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr ""
+msgstr "差价合约是复杂的工具, 并且由于杠杆作用，资金迅速亏损的风险很高。进行差价合约交易时有大约 74-89% 的零售投资者账户蒙受亏损。 您必须考虑自己是否了解差价合约的运作方式, 以及是否能够承担资金亏损的高风险。"
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "可用于合同购入与售出，给到期的购入合同延期，以及给虚拟金钱账户存入资金。"
@@ -802,16 +802,16 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由马耳他金融服务机构授予牌照及监管为3级投资服务提供商([_1]牌照号码为 IS/70156[_2])。"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由马耳他金融服务机构监管为3级投资服务提供商，([_1]牌照号码为 IS/70156[_2])。"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛博彩监管委员会授予牌照和监管（当前在线牌照于2012 年8 月31 日颁发）及(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39172[_2])。"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "欧盟其它国家的波动率指数交易由Binary (Europe) Ltd提供，地址为 Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta。由(1) 马耳他的马耳他博彩局授予牌照并受其监管（牌照号MGA/B2C/102/2000, 发照日期为2018年8月01日）。英国客户由(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39495[_2])， 及爱尔兰客户由(3) 爱尔兰的税务局授予牌照和监管 (远程博彩公司牌照号: 1010285，发照日期为2017年7月1日)。查阅完整的 [_3]监管信息[_4]。"
 
 msgid "In/Out"
 msgstr "“范围之内/之外”"
