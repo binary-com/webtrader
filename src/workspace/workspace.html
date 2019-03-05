@@ -13,7 +13,8 @@
                rv-dom-select='route | eq "rename"'
                rv-dom-blur='route | not-eq "rename"'
                rv-input-enter='update_route | bind "active"'
-               rv-on-focusout='rename.apply' />
+               rv-on-focusout='rename.apply'
+               rv-on-keypress='rename.change' />
         <div class='icon-confirm'></div>
       </div>
       <div class='name' rv-show='route | eq "saveas"'>
