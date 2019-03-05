@@ -20,6 +20,11 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
+const sanitize = value => value.replace(/<|>/g, '&lt;')
+   .replace(/"|'/g, '&quot;')
+   .replace(/&/g, '&amp')
+   .replace(/(|)/g, '&brack');
+
 const state = {
    route: 'active', // one of ['active', 'saved', 'rename', 'saveas']
    closeAll: () => $('.webtrader-dialog').dialog('close'),
@@ -50,7 +55,7 @@ const state = {
          }, 500);
       },
       perv_name: '',
-      save_name: w => state.workspace.perv_name = w.name,
+      save_name: w => state.workspace.perv_name = sanitize(w.name),
       blur: el => el.blur(),
       rename: w => {
         const perv_name = state.workspace.perv_name;
@@ -62,7 +67,7 @@ const state = {
           current_workspace.name = w.name;
 
           const states = local_storage.get('states');
-          states.name = w.name;
+          states.name = sanitize(w.name);
           local_storage.set('states', states);
         }
       }
@@ -80,7 +85,7 @@ const state = {
             return state.saveas.show();
          }
          const workspace = local_storage.get('states');
-         workspace.name = name;
+         workspace.name = sanitize(name);
          const inx = _.findIndex(state.workspaces, {name: workspace.name});
          state.workspaces[inx] = workspace;
          state.workspaces = clone(state.workspaces);
