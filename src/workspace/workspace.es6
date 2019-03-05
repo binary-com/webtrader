@@ -51,16 +51,16 @@ const state = {
             tracker.reopen(clone(w));
          }, 500);
       },
-      perv_name: '',
-      save_name: w => state.workspace.perv_name = sanitize(w.name),
+      prev_name: '',
+      save_name: w => state.workspace.prev_name = sanitize(w.name),
       blur: el => el.blur(),
       rename: w => {
-        const perv_name = sanitize(state.workspace.perv_name);
+        const prev_name = sanitize(state.workspace.prev_name);
         const current_workspace = state.current_workspace;
         if(!w.name || state.workspaces.filter(wk => wk.name === w.name).length >= 2)
-          w.name = state.workspace.perv_name;
+          w.name = state.workspace.prev_name;
         local_storage.set('workspaces', state.workspaces);
-        if(current_workspace.name === perv_name) {
+        if(current_workspace.name === prev_name) {
           current_workspace.name = sanitize(w.name);
 
           const states = local_storage.get('states');
@@ -71,7 +71,7 @@ const state = {
    },
    current_workspace: {
       name: sanitize((local_storage.get('states') || {  }).name || 'workspace-1'),
-      name_perv_value: '',
+      name_prev_value: '',
       is_saved: () => {
          const result = _.findIndex(state.workspaces, {name: sanitize(state.current_workspace.name)}) !== -1;
          return result;
@@ -92,12 +92,12 @@ const state = {
    },
    rename: {
       show: () => {
-         state.current_workspace.name_perv_value = sanitize(state.current_workspace.name);
+         state.current_workspace.name_prev_value = sanitize(state.current_workspace.name);
          state.route = 'rename';
       },
       apply: () => { 
-         let {name, name_perv_value} = state.current_workspace;
-         if(!name || name === name_perv_value) { 
+         let {name, name_prev_value} = state.current_workspace;
+         if(!name || name === name_prev_value) { 
             return state.rename.cancel();
          }
          if(_.find(state.workspaces, {name: name})) {
@@ -108,7 +108,7 @@ const state = {
                number += 1;
             name = name + number;
          }
-         const workspace = _.find(state.workspaces, {name: name_perv_value});
+         const workspace = _.find(state.workspaces, {name: name_prev_value});
          if(workspace) {
             workspace.name = name;
             state.workspaces = state.workspaces;
@@ -125,14 +125,14 @@ const state = {
          state.current_workspace.name = sanitize(state.current_workspace.name);
       },
       cancel: () => {
-         state.current_workspace.name = sanitize(state.current_workspace.name_perv_value);
+         state.current_workspace.name = sanitize(state.current_workspace.name_prev_value);
          state.route = 'active';
       }
    },
    saveas: {
       show: () => {
         if (state.route !== 'saveas') {
-          state.current_workspace.name_perv_value = sanitize(state.current_workspace.name);
+          state.current_workspace.name_prev_value = sanitize(state.current_workspace.name);
           state.route = 'saveas';
         }
         else {
@@ -140,7 +140,7 @@ const state = {
         }
       },
       apply: () => { 
-         let {name, name_perv_value} = state.current_workspace;
+         let {name, name_prev_value} = state.current_workspace;
          if(!name) { 
             return state.saveas.cancel();
          }
