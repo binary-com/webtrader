@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2019-03-05 22:50\n"
+"PO-Revision-Date: 2019-03-05 23:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -811,7 +811,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "Na Ilha de Man e no Reino Unido, os índices Volatility são disponibilizados pela Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Ilha de Man, Ilhas Britânicas, licenciada e regulamentada, respectivamente, pela (1) Comissão de Supervisão de Jogos de Azar na Ilha de Man (licença atual emitida a 31 de agosto de 2017) e pela (2) Comissão de Jogos de Azar no Reino Unido (licença com [_1]referência n.º: 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "No resto da UE, os índices Volatility são disponibilizados pela Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licenciada e regulamentada (1) Autoridade de Jogos de Malta (licença n.º MGA/B2C/102/2000 emitida a 01 de agosto de 2018), para clientes do Reino Unido pela (2) Comissão de Jogos de Azar do Reino Unido (licença com [_1]referência n.º: 39495[_2]) e para clientes irlandeses pelo (3) Departamento de Impostos da Irlanda (licença de casa de apostas remota n.º: 1010285 emitida a 1 de julho de 2017). Ver [_3]informações regulamentares[_4] completas."
 
 msgid "In/Out"
 msgstr "Dentro/Fora"
