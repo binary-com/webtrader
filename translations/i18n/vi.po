@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-13 10:10\n"
+"PO-Revision-Date: 2019-03-13 10:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -331,7 +331,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Bằng cách nhấn OK, bạn xác nhận rằng bạn đã đọc và chấp nhận phần đã cập nhật"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr ""
+msgstr "CFDs là công cụ phức tạp và đi kèm với rủi ro cao do áp dụng đòn bẩy tài chính. Khoảng 74-89% các tài khoản đầu tư lẻ đều mất tiền khi giao dịch CFDs. bạn nên cân nhắc kỹ lưỡng liệu mình đã đủ am hiểu về CFDs và sãn sàng chấp nhận rủi ro thua lỗ cao."
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Có thể được sử dụng để mua và bán hợp đồng, làm mới mua đã hết hạn, và các tài khoản tiền ảo top-up."
@@ -418,10 +418,10 @@ msgid "Confirm transfer"
 msgstr "Xác nhận chuyển khoản"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Kết nối đã ngắt."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Lỗi kết nối."
 
 msgid "Construction"
 msgstr "Xây dựng"
@@ -436,10 +436,10 @@ msgid "Contract"
 msgstr "Hợp đồng"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Xác nhận Hợp đồng"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Chi tiết hợp đồng"
 
 msgid "Contracts"
 msgstr "Hợp đồng"
@@ -490,7 +490,7 @@ msgid "Custom Theme"
 msgstr "Chủ đề tùy chỉnh"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Tùy chỉnh giao diện của biểu đồ"
 
 msgid "Daily limit on losses"
 msgstr "Giới hạn hàng ngày cho thua"
@@ -541,7 +541,7 @@ msgid "Description"
 msgstr "Mô tả"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Bỏ chọn"
 
 msgid "Differs"
 msgstr "Khác với"
@@ -556,7 +556,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Chưa có tài khoản? Đăng ký và nhận $10,000 cho tài khoản ảo"
 
 msgid "Done"
-msgstr ""
+msgstr "Hoàn tất"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Đã hoàn tất. Tiền đang được chuyển giao cho đại lý thanh toán"
