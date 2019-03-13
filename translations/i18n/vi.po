@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-01-29 06:31\n"
+"PO-Revision-Date: 2019-03-13 09:51\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -19,16 +19,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(nếu thời hạn ít hơn một ngày), hoặc vào cuối ngày giao dịch (nếu thời hạn một ngày hoặc nhiều hơn)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Hợp đồng chưa được bắt đầu"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "Mật khẩu phải có tối thiểu 6 ký tự"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "Mật khẩu phải bao gồm chữ hoa và số"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "Vui lòng nhập mật khẩu mới của bạn"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "-Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng và Đại Lý Thanh Toán"
@@ -166,19 +166,19 @@ msgid "8h"
 msgstr "8 giờ"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "Accept"
 msgstr "Chấp nhận"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Dễ dàng truy cập từ bất kỳ trình duyệt web nào với 13 ngôn ngữ"
 
 msgid "Account balance"
 msgstr "Số dư tài khoản"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Số dư tài khoản:"
 
 msgid "Account id not found."
 msgstr ""
