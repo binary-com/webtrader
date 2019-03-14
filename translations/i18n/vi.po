@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 07:40\n"
+"PO-Revision-Date: 2019-03-14 07:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1279,16 +1279,16 @@ msgid "Please select a date for time out until."
 msgstr ""
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Vui lòng chọn một đại lý thanh toán"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Vui lòng đặt [_1]đơn vị tiền tệ[_2] cho tài khoản"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Xin vui lòng thử lại sau 1 phút."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Vui lòng sử dụng mật khẩu bạn mới đổi để đăng nhập."
 
 msgid "Plot"
 msgstr "Vẽ"
@@ -1333,7 +1333,7 @@ msgid "Profit"
 msgstr "Lợi nhuận"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Bảng lợi nhuận"
 
 msgid "Profit table"
 msgstr "Bảng lợi nhuận"
@@ -1351,25 +1351,25 @@ msgid "Purchase Price"
 msgstr "Giá mua"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Thời gian Mua"
 
 msgid "Read"
 msgstr "Đọc"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Kiểm tra tính xác thực"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Chuyển hướng đến trang chứng thực đăng nhập,"
 
 msgid "Ref"
 msgstr "REF"
 
 msgid "Ref."
-msgstr ""
+msgstr "Tham khảo."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Làm mới thất bại"
 
 msgid "Register free account"
 msgstr "Đăng ký tài khoản miễn phí"
@@ -1444,7 +1444,7 @@ msgid "Secondary"
 msgstr "Thứ cấp"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Dườn như máy chủ đang gặp sự cố, chúng tôi đang làm việc để giải quyết vấn đề trong khoảng thời gian sớm nhất."
 
 msgid "Self-Employed"
 msgstr "Tự làm"
@@ -1471,7 +1471,7 @@ msgid "Session"
 msgstr "Phiên"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Thời hạn phiên"
 
 msgid "Session duration limit, in minutes"
 msgstr "Giới hạn thời lượng phiên, bằng phút"
