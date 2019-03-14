@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 07:20\n"
+"PO-Revision-Date: 2019-03-14 07:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1012,7 +1012,7 @@ msgid "Maximum aggregate loss per day"
 msgstr "Tổng tối đa thua mỗi ngày"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Số dư tối đa"
 
 msgid "Maximum number of open positions"
 msgstr "Số vị trí mở tối đa"
@@ -1030,13 +1030,13 @@ msgid "Memorable town/city"
 msgstr "Thị trấn/thành phố đáng nhớ"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Chỉ số rủi ro giao dịch thấp nhất phải cao hơn chỉ số rủi ro giao dịch cao nhất."
 
 msgid "Min. Trade Stake"
 msgstr "Thương mại cổ phần tối thiểu"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Phải có tối thiểu 6 ký tự bao gồm chữ thường, hoa và số"
 
 msgid "Minus the agent's commission"
 msgstr "Trừ đi Hoa hồng của đại lý"
@@ -1183,7 +1183,7 @@ msgid "Overlap Studies"
 msgstr "nghiên cứu chồng chéo"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Password successfully updated."
 msgstr ""
@@ -1627,7 +1627,7 @@ msgid "This field is required"
 msgstr "Trường này là bắt buộc"
 
 msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "Dịch vụ của trang web này không có sẵn ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, Nhật bản, hoặc cho những người dưới 18 tuổi."
 
 msgid "Thu"
 msgstr "Thứ năm"
@@ -1654,7 +1654,7 @@ msgid "Time out until"
 msgstr "Thời gian ra đến khi"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Thời gian chờ cho yêu cầu websocket"
 
 msgid "Title"
 msgstr "Tiêu đề"
@@ -1672,7 +1672,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Để rút tiền xin vui lòng nhập mã xác minh token đặc biệt mà chúng tôi vừa gửi qua email cho bạn"
 
 msgid "Today"
-msgstr ""
+msgstr "Hôm nay"
 
 msgid "Token"
 msgstr "Token"
@@ -1681,7 +1681,7 @@ msgid "Token Management"
 msgstr "Quản lý Token"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token đã được nạp"
 
 msgid "Token management"
 msgstr "Quản lý Token"
@@ -1822,7 +1822,7 @@ msgid "Various customisable features like loading and arranging assets, charting
 msgstr "Các tính năng tuỳ chỉnh như tải và sắp xếp các tài sản, xếp hạng và các tài nguyên khác tùy theo cách mà bạn thấy phù hợp"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Mã xác nhận đã được gửi tới"
 
 msgid "Verification token"
 msgstr "Xác nhận Token"
