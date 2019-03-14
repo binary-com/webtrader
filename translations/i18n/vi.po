@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 07:10\n"
+"PO-Revision-Date: 2019-03-14 07:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -664,13 +664,13 @@ msgid "Exclude time"
 msgstr "Thời gian nghỉ"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Vào thời gian nghỉ ngay sau hôm nay."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "Từ thời gian nghỉ đến thời gian tham gia giao dịch trở lại không được phép ngắn hơn 6 tháng."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "Từ thời gian nghỉ đến thời gian tham gia giao dịch trở lại không được phép kéo dài hơn 5 năm."
 
 msgid "Exit Spot"
 msgstr "Điểm chốt"
@@ -910,19 +910,19 @@ msgid "Loading Asset Index ..."
 msgstr "Đang tải chỉ số tài sản ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Đang tải các bản sao giao dịch..."
 
 msgid "Loading Download/View Data ..."
 msgstr "Đang tải dữ liệu tải về/xem dữ liệu ..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Đang tải Mật Khẩu hội thoại ..."
 
 msgid "Loading Profit Table ..."
 msgstr "Đang tải bảng lợi nhuận ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Đang tải Thời gian nghỉ..."
 
 msgid "Loading Statement Table ..."
 msgstr "Đang tải bảng kê khai ..."
@@ -934,16 +934,16 @@ msgid "Loading Trading Times ..."
 msgstr "Đang tải thời gian giao dịch ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Đang tải biểu đồ và các mục lục giao dịch ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Đang tải các chủ đề cấu hình tùy chọn..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Đang tải danh mục đầu tư ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Đang tải các tùy chọn về thời gian nghỉ."
 
 msgid "Loading..."
 msgstr "Đang tải..."
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Thời gian đăng nhập"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Đang đăng xuất để bắt đầu vào thời gian nghỉ!"
 
 msgid "Login"
 msgstr "Đăng nhập"
@@ -1042,7 +1042,7 @@ msgid "Minus the agent's commission"
 msgstr "Trừ đi Hoa hồng của đại lý"
 
 msgid "Minute"
-msgstr ""
+msgstr "Phút"
 
 msgid "Minutes"
 msgstr "Phút"
@@ -1072,7 +1072,7 @@ msgid "Ms"
 msgstr "Cô"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Cấp nhân"
 
 msgid "Name"
 msgstr "Tên"
