@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 06:50\n"
+"PO-Revision-Date: 2019-03-14 07:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -802,13 +802,13 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn muốn tiếp tục không?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta. Được cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
+msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta. Được quản lý và cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta, được cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Ở Isle of Man và UK, các Chỉ Số Biến Động được cung cấp bởi Binary (IOM) Ltd., tầng 1, Millennium House, đường Victoria, Douglas, IM2 4RW, Isle of Man, British Isles; được quản lý và cấp phép bởi (1) Ủy ban giám sát cờ bạc ở Isle of Man (giấy phép hiện hành được cấp ngày 31 tháng 8 năm 2017) cũng như (2) Ủy ban cờ bạc ở Vương quốc Anh (giấy phép [_1] số: 39172 [_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
 msgstr ""
