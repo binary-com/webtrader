@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 06:40\n"
+"PO-Revision-Date: 2019-03-14 06:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -211,13 +211,13 @@ msgid "Add/remove indicators"
 msgstr "Thêm/loại bỏ các chỉ số"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Workspace mới thêm vào được %"
 
 msgid "Admin"
 msgstr "Quản trị viên"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Tất cả các trường là tùy chọn. Nếu bạn muốn sao chép tất cả các tài sản và loại giao dịch, xin vui lòng không tích vào trường nào"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tất cả thời gian ở GMT (Thời gian trung bình Greenwich )"
@@ -604,7 +604,7 @@ msgid "Downloading template as"
 msgstr "Tải về mẫu như là"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Workspace tải được %1"
 
 msgid "Drawing tools"
 msgstr "Công cụ vẽ"
@@ -685,7 +685,7 @@ msgid "Explanation"
 msgstr "Lời giải thích"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Cập nhật mật khẩu thất bại"
 
 msgid "Fall"
 msgstr "Giảm"
@@ -802,7 +802,7 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn muốn tiếp tục không?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta. Được cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr ""
