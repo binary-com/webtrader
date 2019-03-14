@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 07:50\n"
+"PO-Revision-Date: 2019-03-14 08:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1489,7 +1489,7 @@ msgid "Sold"
 msgstr "Đã bán"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Một số chỉ số ngẫu nhiên"
 
 msgid "Spline"
 msgstr "Chốt"
@@ -1552,7 +1552,7 @@ msgid "Submit"
 msgstr "Gửi"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Token mới đã được nạp vào thành công"
 
 msgid "Successfully added workspace as"
 msgstr ""
@@ -1573,10 +1573,10 @@ msgid "Tel"
 msgstr "Điện thoại"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Biểu mẫu đã được lưu lại dưới dạng"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Một phần biểu mẫu đã được áp dụng."
 
 msgid "Template changes saved"
 msgstr "Thay đổi mẫu đã được lưu lại"
@@ -1594,7 +1594,7 @@ msgid "Terms"
 msgstr "Điều khoản"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Điều Khoản và Điều Kiện sử dụng dịch vụ"
 
 msgid "Tertiary"
 msgstr "Cấp 3"
@@ -1606,7 +1606,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "Công ty giữ tiền khách hàng trong tài khoản ngân hàng tách biệt với tài khoản ngân hàng vận hành, trong trường hợp phá sản, nó sẽ không thuộc tài sản của Công ty. Điều này đáp ứng các yêu cầu của Ủy ban Cờ bạc để cách ly các tiền của khách hàng ở cấp độ"
 
 msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "Các dịch vụ tài chính được cung cấp thông qua trang web này bao gồm các tùy chọn nhị phân, hợp đồng chênh lệch (\"CFDs\") và các sản phẩm tài chính và chứng khoán phái sinh phức tạp khác. Các tùy chọn giao dịch nhị phân có thể không phù hợp với tất cả mọi người. Giao dịch CFD mang mức độ rủi ro cao vì đòn bẩy có thể mang đến lợi thế cũng như bất lợi cho bạn. Do đó, các sản phẩm được cung cấp trên trang web này có thể không phù hợp với tất cả các nhà đầu tư vì bạn có thể gặp rủi ro mất hết vốn của mình. Bạn nên đầu tư khi không có đủ khả năng để chấp nhận thua lỗ, và không bao giờ giao dịch bằng tiền đi vay. Trước khi giao dịch trong các sản phẩm tài chính phức tạp được cung cấp, vui lòng đảm bảo bạn đã hiểu các rủi ro có liên quan và tìm hiểu kỹ về %1 Giao Dịch Có Trách Nhiệm%2."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr ""
