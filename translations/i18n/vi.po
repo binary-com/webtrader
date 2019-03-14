@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 07:00\n"
+"PO-Revision-Date: 2019-03-14 07:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -184,7 +184,7 @@ msgid "Account id not found."
 msgstr "Không tìm thấy tên tài khoản đăng nhập."
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Không tìm thấy token trong tài khoản."
 
 msgid "Action"
 msgstr "Hành động"
@@ -277,7 +277,7 @@ msgid "August"
 msgstr "Tháng tám"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Thời gian trung bình cho các vị trí trống"
 
 msgid "Avg. Loss"
 msgstr "Lỗ trung bình"
@@ -640,7 +640,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Thưởng thức một giao diện giao dịch trực quan với chức năng nâng cao cho phép bạn theo dõi tất cả các tài sản yêu thích và các thị trường của bạn tại cùng một lúc, cũng như các biểu đồ thiết yếu, các chỉ số tài sản, thời gian giao dịch, và lịch sử dữ liệu. Quan trọng nhất, bạn có thể chọn những gì bạn muốn nhìn thấy trên màn hình của bạn"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Nhập vào một số token khả dụng"
 
 msgid "Enter your current password"
 msgstr "Nhập mật khẩu hiện tại của bạn"
@@ -661,7 +661,7 @@ msgid "Exclude me from the website until"
 msgstr "Loại bỏ tôi khỏi trang web cho đến khi"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Thời gian nghỉ"
 
 msgid "Exclude time must be after today."
 msgstr ""
@@ -811,13 +811,13 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "Ở Isle of Man và UK, các Chỉ Số Biến Động được cung cấp bởi Binary (IOM) Ltd., tầng 1, Millennium House, đường Victoria, Douglas, IM2 4RW, Isle of Man, British Isles; được quản lý và cấp phép bởi (1) Ủy ban giám sát cờ bạc ở Isle of Man (giấy phép hiện hành được cấp ngày 31 tháng 8 năm 2017) cũng như (2) Ủy ban cờ bạc ở Vương quốc Anh (giấy phép [_1] số: 39172 [_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "Đối với các khu vực còn lại trong EU, các Chỉ Số Biến Động được cung cấp bởi Binary (Europe) Ltd., Mompalao Building, Suite 2, đường Tower, Msida MSD1825, Malta; được quản lý và cấp phép bởi(1) Ủy ban giải trí Malta (giấy phép số. MGA / B2C / 102/2000 được ban hành vào ngày 01 tháng 8 năm 2018), đối với các khách hàng ở Anh, (2) Ủy ban cờ bạc Vương quốc Anh (giấy phép %1 số: 39495 %2), và khách hàng Ai-len, (3) Ủy viên Doanh thu ở Ireland (Giấy phép của Người lập sổ từ xa số 1010285 cấp ngày 1 tháng 7 năm 2017). Xem thêm%3Thông tin pháp lý %2."
 
 msgid "In/Out"
 msgstr "Vào/Ra"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Chỉ thị"
 
 msgid "Indicative Price"
 msgstr "Giá biểu thị"
@@ -838,7 +838,7 @@ msgid "Invalid template type"
 msgstr "Kiểu mẫu không hợp lệ"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Kiểu mẫu không hợp lệ."
 
 msgid "Investments & Dividends"
 msgstr "Đầu tư & Cổ tức"
@@ -850,7 +850,7 @@ msgid "January"
 msgstr "Tháng một"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Không hỗ trợ các tài khoản đến từ Nhật Bản."
 
 msgid "Jul"
 msgstr "Tháng bảy"
@@ -859,7 +859,7 @@ msgid "July"
 msgstr "Tháng bảy"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Chuyển tới:"
 
 msgid "Jun"
 msgstr "Tháng sáu"
@@ -871,7 +871,7 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Các giao dịch kéo dài 12 phút có lợi nhuận"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Dự đoán chỉ số cuối"
 
 msgid "Last Digit is Over"
 msgstr ""
@@ -904,34 +904,34 @@ msgid "Load trade template"
 msgstr "Tải mẫu giao dịch"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Đang tải ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Đang tải chỉ số tài sản ..."
 
 msgid "Loading Copy Trade..."
 msgstr ""
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Đang tải dữ liệu tải về/xem dữ liệu ..."
 
 msgid "Loading Password dialog ..."
 msgstr ""
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Đang tải bảng lợi nhuận ..."
 
 msgid "Loading Self-Exclusion ..."
 msgstr ""
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Đang tải bảng kê khai ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Đang tải quản lý Token ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Đang tải thời gian giao dịch ..."
 
 msgid "Loading chart and trade menus ..."
 msgstr ""
