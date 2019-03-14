@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 07:30\n"
+"PO-Revision-Date: 2019-03-14 07:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1114,7 +1114,7 @@ msgid "No touch"
 msgstr "Không chạm"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Hợp đồng được bán sẽ chỉ hiện giá đang phổ biến trên thị trường khi máy chủ nhận được yêu cầu. Giá này có thể khác với giá chỉ định."
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Lưu ý: Rút tiền thông qua đại lý thanh toán sẽ chỉ khả dụng nếu bạn gửi tiền duy nhất thông qua đại lý thanh toán"
@@ -1186,7 +1186,7 @@ msgid "PM"
 msgstr "PM"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Cập nhật mật khẩu thành công."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Mật khẩu không khớp. Vui lòng nhập lại"
@@ -1216,16 +1216,16 @@ msgid "Permissions"
 msgstr "Cấp phép"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Xin %1 vui lòng chấp nhận cập nhật các Điều Khoản và Điều Kiện sử dụng dịch vụ [_2] để nâng mức tiền rút và giới hạn giao dịch."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Xin %1 vui lòng hoàn thành hồ sơ tài khoản [_2] của bạn để nâng mức rút tiền và loại bỏ các giới hạn giao dịch."
 
 msgid "Please choose at least one token scope"
 msgstr ""
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Xin vui lòng hoàn tất [_1] mẫu đánh giá tài chính [_2] để nâng giới hạn rút tiền và giao dịch của bạn."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Vui lòng xác nhận các chi tiết sau để hoàn thành việc chuyển khoản"
@@ -1234,10 +1234,10 @@ msgid "Please enter a number between"
 msgstr ""
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Vui lòng nhập một giá trị hợp lệ cho"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Vui lòng nhập một giá trị trong khoảng từ 0 và"
 
 msgid "Please enter a value greater than 0"
 msgstr "Vui lòng nhập một giá trị lớn hơn 0"
@@ -1267,13 +1267,13 @@ msgid "Please keep your message to a single line, don’t press enter"
 msgstr ""
 
 msgid "Please log in"
-msgstr ""
+msgstr "Vui lòng đăng nhập"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Vui lòng đăng nhập để xem các workspace đã được lưu."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Vui lòng đăng nhập."
 
 msgid "Please select a date for time out until."
 msgstr ""
