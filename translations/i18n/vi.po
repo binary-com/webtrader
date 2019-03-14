@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-13 10:30\n"
+"PO-Revision-Date: 2019-03-14 06:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -775,13 +775,13 @@ msgid "Historical Data"
 msgstr "Dữ liệu lịch sử"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "Lịch sử dữ liệu của"
 
 msgid "Horizontal line"
 msgstr "Đường ngang"
 
 msgid "Hour"
-msgstr ""
+msgstr "Giờ"
 
 msgid "Hours"
 msgstr "Giờ"
