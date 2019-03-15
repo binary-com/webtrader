@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-14 08:10\n"
+"PO-Revision-Date: 2019-03-15 06:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -310,7 +310,7 @@ msgid "Binary.com is an award-winning online trading provider that helps its cli
 msgstr "Binary.com là một trang cung cấp dịch vụ kinh doanh trực tuyến hỗ trợ khách hàng của mình giao dịch trên các thị trường tài chính thông qua Binary Options và CFDs. Giao dịch Binary Options và CFDs theo Chỉ Số Biến Động được phân loại như là một hoạt động cờ bạc. Hãy nhớ rằng cờ bạc có thể gây nghiện-hãy có trách nhiệm khi chơi. Tìm hiểu thêm về %1 Giao Dịch Có Trách Nhiệm%2. Một số sản phẩm sẽ không có sẵn ở tất cả mọi nước. Dịch vụ của trang web không hoạt động ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, hoặc những người dưới 18 tuổi."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Cửa sổ trống"
 
 msgid "Bought"
 msgstr "Đã mua"
@@ -760,7 +760,7 @@ msgid "High"
 msgstr "Cao"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Barie cao"
 
 msgid "High barrier"
 msgstr "Hàng rào cao"
@@ -874,10 +874,10 @@ msgid "Last Digit Prediction"
 msgstr "Dự đoán chỉ số cuối"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Chỉ số cuối vượt ngưỡng"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Chỉ số cuối dưới ngưỡng"
 
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
@@ -1018,7 +1018,7 @@ msgid "Maximum number of open positions"
 msgstr "Số vị trí mở tối đa"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Số phiên được mở tối đa"
 
 msgid "May"
 msgstr "Tháng năm"
