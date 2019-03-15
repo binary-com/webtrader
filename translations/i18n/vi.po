@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-15 06:50\n"
+"PO-Revision-Date: 2019-03-15 07:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1249,7 +1249,7 @@ msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Vui lòng nhập ngày theo định dạng YYYY-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Vui lòng nhập tên token"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Vui lòng nhập thời gian với định dạng HH:MM"
@@ -1384,7 +1384,7 @@ msgid "Rename"
 msgstr "Đổi tên"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Hợp đồng chưa được đề nghị bán lại"
 
 msgid "Reset zoom"
 msgstr "Đặt lại phóng to"
@@ -1690,7 +1690,7 @@ msgid "Token name"
 msgstr "Tên Token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Tên token có thể chứa các ký tự chữ-số với dấu cách và gạch chân"
 
 msgid "Token name can have a maximum of 32 characters"
 msgstr "Tên của token có tối đa 32 ký tự"
