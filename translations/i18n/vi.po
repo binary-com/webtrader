@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-15 07:00\n"
+"PO-Revision-Date: 2019-03-15 07:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1609,7 +1609,7 @@ msgid "The financial products offered via this website include binary options, c
 msgstr "Các dịch vụ tài chính được cung cấp thông qua trang web này bao gồm các tùy chọn nhị phân, hợp đồng chênh lệch (\"CFDs\") và các sản phẩm tài chính và chứng khoán phái sinh phức tạp khác. Các tùy chọn giao dịch nhị phân có thể không phù hợp với tất cả mọi người. Giao dịch CFD mang mức độ rủi ro cao vì đòn bẩy có thể mang đến lợi thế cũng như bất lợi cho bạn. Do đó, các sản phẩm được cung cấp trên trang web này có thể không phù hợp với tất cả các nhà đầu tư vì bạn có thể gặp rủi ro mất hết vốn của mình. Bạn nên đầu tư khi không có đủ khả năng để chấp nhận thua lỗ, và không bao giờ giao dịch bằng tiền đi vay. Trước khi giao dịch trong các sản phẩm tài chính phức tạp được cung cấp, vui lòng đảm bảo bạn đã hiểu các rủi ro có liên quan và tìm hiểu kỹ về %1 Giao Dịch Có Trách Nhiệm%2."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Có một sự dán đoạn dữ liệu thị trường trong lúc hợp đồng đang thực thi. Đối với các tài khoản tiền thật chúng tôi sẽ cố gắng khắc phục lỗi điều chỉnh hợp đồng cho phù hợp, hoặc hợp đồng sẽ được hủy và hoàn lại tiền. Các hợp đồng tiền ảo sẽ được hủy và hoàn tiền."
 
 msgid "There was an error"
 msgstr "Đã có lỗi xảy ra"
