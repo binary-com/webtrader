@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-15 06:40\n"
+"PO-Revision-Date: 2019-03-15 06:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1954,16 +1954,16 @@ msgid "Zoom"
 msgstr "Phóng to"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Xác thực tài khoản của bạn[_2] ngay bây giờ để tận dụng đầy đủ các tùy chọn rút tiền có sẵn."
 
 msgid "and"
-msgstr ""
+msgstr "và"
 
 msgid "commission"
 msgstr "Hoa hồng"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "tạo ra một token chỉ cho phép đọc, và chia sẻ token đó với những người bắt trước bạn"
 
 msgid "customer support"
 msgstr "hỗ trợ khách hàng"
@@ -2035,7 +2035,7 @@ msgid "main site"
 msgstr "Trang web chính"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "thị trường hiện đã đóng cửa."
 
 msgid "medium protection"
 msgstr "Bảo vệ trung bình"
@@ -2059,10 +2059,10 @@ msgid "points"
 msgstr "điểm số"
 
 msgid "risk warning"
-msgstr ""
+msgstr "cảnh báo rủi ro"
 
 msgid "sec"
-msgstr ""
+msgstr "giây"
 
 msgid "second"
 msgstr "giây"
@@ -2098,8 +2098,8 @@ msgid "{agent.commission}%"
 msgstr "{hoa hồng cho đại lý}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Lợi nhuận"
 
 msgid "﻿"
-msgstr ""
+msgstr "dấu cách"
 
