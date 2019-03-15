@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-15 06:20\n"
+"PO-Revision-Date: 2019-03-15 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Khác"
 
 msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
-msgstr ""
+msgstr "Ngoài EU, các sản phẩm tài chính được cung cấp bởi Binary (CR) SA, Tầng 5, Tòa nhà 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Tòa nhà Govant, Port Vila, PO Box 1276, Vanuatu, được cấp phép bởi Ủy ban Dịch vụ Tài chính Vanuatu (%1view giấy phép%2), Binary (BVI) Ltd, Tầng 2, O'Neal Marketing Associates Building, Wickham's Cay II, PO Box 3174, Road Town, Tortola VB1110, Quần đảo Virgin thuộc Anh, được quy định bởi Ủy ban Dịch vụ Tài chính Quần đảo Virgin thuộc Anh (%3licence no. SIBA / L / 18/1114%4) và Binary (FX) Ltd., Lô số F16, Tầng 1, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, do Cơ quan dịch vụ tài chính Labuan quy định để thực hiện công việc kinh doanh tiền tệ (%5 giấy phép số. MB / 18/0024%6)"
 
 msgid "Over"
 msgstr "Qua"
@@ -1231,7 +1231,7 @@ msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Vui lòng xác nhận các chi tiết sau để hoàn thành việc chuyển khoản"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Vui lòng nhập một số trong khoảng"
 
 msgid "Please enter a valid value for"
 msgstr "Vui lòng nhập một giá trị hợp lệ cho"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr ""
+msgstr "Xin vui lòng giữ tin nhắn của bạn chỉ ở trong dòng duy nhất, đừng bấm xuống dòng"
 
 msgid "Please log in"
 msgstr "Vui lòng đăng nhập"
@@ -1612,10 +1612,10 @@ msgid "There was a market data disruption during the contract period. For real-m
 msgstr ""
 
 msgid "There was an error"
-msgstr ""
+msgstr "Đã có lỗi xảy ra"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Hợp đồng đã hết hạn"
 
 msgid "This contract lost"
 msgstr ""
