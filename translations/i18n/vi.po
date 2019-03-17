@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-15 07:10\n"
+"PO-Revision-Date: 2019-03-17 10:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1222,7 +1222,7 @@ msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and 
 msgstr "Xin %1 vui lòng hoàn thành hồ sơ tài khoản [_2] của bạn để nâng mức rút tiền và loại bỏ các giới hạn giao dịch."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Vui lòng chọn ít nhất một phạm vi token"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
 msgstr "Xin vui lòng hoàn tất [_1] mẫu đánh giá tài chính [_2] để nâng giới hạn rút tiền và giao dịch của bạn."
@@ -1243,7 +1243,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Vui lòng nhập một giá trị lớn hơn 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Vui lòng nhập một giá trị tối thiểu 6 tuần trước trước khi thời gian loại trừ kết thúc."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Vui lòng nhập ngày theo định dạng YYYY-MM-DD"
@@ -1276,7 +1276,7 @@ msgid "Please log in."
 msgstr "Vui lòng đăng nhập."
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Vui lòng chọn một ngày đến khi thời gian loại trừ kết thúc."
 
 msgid "Please select a payment agent"
 msgstr "Vui lòng chọn một đại lý thanh toán"
@@ -1453,7 +1453,7 @@ msgid "Self-Exclusion"
 msgstr "Tự Loại Trừ"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Công Cụ Tự Loại Trừ"
 
 msgid "Sell At Market"
 msgstr "Bán tại thị trường"
@@ -1555,7 +1555,7 @@ msgid "Successfully added new token"
 msgstr "Token mới đã được nạp vào thành công"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Thành công việc thêm workspace như"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Áp dụng các bản mẫu và lưu nó như là đã thành công"
@@ -1582,7 +1582,7 @@ msgid "Template changes saved"
 msgstr "Thay đổi mẫu đã được lưu lại"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Mẫu không thể áp dụng."
 
 msgid "Template name"
 msgstr "Tên mẫu"
@@ -1903,7 +1903,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Bạn chưa sao chép bất kỳ (những) giao dịch nào"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Bạn đã loại trừ bản thân cho đến khi"
 
 msgid "You have sold the following contract"
 msgstr "Bạn đã bán hợp đồng sau"
