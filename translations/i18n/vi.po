@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-17 10:40\n"
+"PO-Revision-Date: 2019-03-19 07:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1975,7 +1975,7 @@ msgid "days"
 msgstr "ngày"
 
 msgid "deposits"
-msgstr ""
+msgstr "gửi tiền"
 
 msgid "end time"
 msgstr "thời gian kết thúc"
@@ -1987,7 +1987,7 @@ msgid "exit spot"
 msgstr "Điểm chốt"
 
 msgid "for"
-msgstr ""
+msgstr "cho"
 
 msgid "for mobile charts"
 msgstr "dành cho bảng điện thoại di động"
@@ -2089,7 +2089,7 @@ msgid "ticks"
 msgstr "đánh dấu"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "rút tiền"
 
 msgid "yes"
 msgstr "Có"
