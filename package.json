@@ -61,9 +61,7 @@
     "Webtrader"
   ],
   "author": {
-    "name": "Oskar Ahlroth",
-    "email": "oskar@binary.com",
-    "url": "http://webtrader.binary.com/"
+    "name": "Binary.com"
   },
   "license": "MIT",
   "bugs": {
