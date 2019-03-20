@@ -4,15 +4,15 @@ matrix:
   fast_finish: true
 language: node_js
 node_js:
-- '10'
+- '11.12.0'
 dist: trusty
 branches:
   only:
   - master
   - development
 before_install:
-- npm i -g npm@6.7.0
-- npm ci
+- npm install -g npm@6.7.0
+- npm install
 install:
 - npm run build
 after_success:

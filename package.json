@@ -36,10 +36,11 @@
     "grunt-po2json": "^0.3.0",
     "grunt-remove-logging": "ehynds/grunt-remove-logging",
     "grunt-rename": "^0.1.4",
-    "grunt-sass": "^2.1.0",
+    "grunt-sass": "^3.0.2",
     "grunt-shell": "^1.1.2",
     "grunt-text-replace": "^0.4.0",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "node-sass": "^4.11.0"
   },
   "scripts": {
     "deploy-gh-pages": "grunt deploy",
