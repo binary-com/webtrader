@@ -8,6 +8,13 @@ import workspace from '../workspace/workspace.js';
 import '../common/util';
 import 'css!navigation/navigation.css';
 
+const menu_selectors = [
+   '.trade',
+   '.instruments',
+   '.resources',
+   '.workspace',
+]
+
 const getType = (acc) => {
    let id = acc.loginid || acc.id;
    if(!acc || !id) return;
@@ -355,6 +362,15 @@ export const init = (callback) => {
    if (is_beta()) {
       root.find("a.config").closest('li').show();
    }
+      const nav_selector = 'nav #nav-menu';
+      const dialog_selector = `${nav_selector} .trade > ul`;
+      const visible = { 'visibility': 'visible', 'opacity': 1 };
+      const invisible = { 'visibility': 'invisible', 'opacity': 0 };
+      $(`${nav_selector} .trade`).click(() => {
+         $(dialog_selector).toggle( 'fast',
+            () => {$(dialog_selector).css(visible)}
+         );
+      });
 }
 
 export default {
