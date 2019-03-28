@@ -363,6 +363,7 @@ export const init = (callback) => {
       root.find("a.config").closest('li').show();
    }
 
+   // Handle click navigation to show menu dialog
    menu_selectors.forEach((selector) => {
       const nav_selector = 'nav #nav-menu';
       const dialog_selector = `${nav_selector} ${selector} > ul`;
