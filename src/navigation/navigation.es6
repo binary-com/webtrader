@@ -373,7 +373,7 @@ export const init = (callback) => {
       });
       $(document).mouseup((e) => {
          if (!$(dialog_selector).is(e.target) && $(dialog_selector).has(e.target).length === 0) {
-            $(dialog_selector).css(invisible);
+            $(dialog_selector).hide();
          }
       })
 }
