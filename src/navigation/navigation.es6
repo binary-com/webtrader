@@ -362,20 +362,27 @@ export const init = (callback) => {
    if (is_beta()) {
       root.find("a.config").closest('li').show();
    }
+
+   menu_selectors.forEach((selector) => {
       const nav_selector = 'nav #nav-menu';
-      const dialog_selector = `${nav_selector} .trade > ul`;
-      const visible = { 'visibility': 'visible', 'opacity': 1 };
-      const invisible = { 'visibility': 'invisible', 'opacity': 0 };
-      $(`${nav_selector} .trade`).click(() => {
-         $(dialog_selector).toggle( 'fast',
-            () => {$(dialog_selector).css(visible)}
+      const dialog_selector = `${nav_selector} ${selector} > ul`;
+      const visible = {
+         'visibility': 'visible',
+         'opacity': 1
+      };
+      $(`${nav_selector} ${selector}`).click(() => {
+         $(dialog_selector).toggle('fast',
+            () => {
+               $(dialog_selector).css(visible)
+            }
          );
       });
       $(document).mouseup((e) => {
          if (!$(dialog_selector).is(e.target) && $(dialog_selector).has(e.target).length === 0) {
             $(dialog_selector).hide();
          }
-      })
+      });
+   });
 }
 
 export default {
