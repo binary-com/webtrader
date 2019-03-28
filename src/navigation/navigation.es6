@@ -367,19 +367,20 @@ export const init = (callback) => {
    menu_selectors.forEach((selector) => {
       const nav_selector = 'nav #nav-menu';
       const dialog_selector = `${nav_selector} ${selector} > ul`;
+      const current_selector = `${nav_selector} ${selector}`;
       const visible = {
          'visibility': 'visible',
          'opacity': 1
       };
-      $(`${nav_selector} ${selector}`).click(() => {
-         $(dialog_selector).toggle('fast',
+      $(current_selector).click((e) => {
+            $(dialog_selector).toggle('fast',
             () => {
                $(dialog_selector).css(visible)
             }
          );
       });
       $(document).mouseup((e) => {
-         if (!$(dialog_selector).is(e.target) && $(dialog_selector).has(e.target).length === 0) {
+         if (!$(current_selector).is(e.target) && $(current_selector).has(e.target).length === 0) {
             $(dialog_selector).hide();
          }
       });
