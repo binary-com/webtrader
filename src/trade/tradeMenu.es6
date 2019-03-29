@@ -55,8 +55,6 @@ export const init = () => {
       liveapi.events.on('login', refresh_active_symbols);
       liveapi.events.on('logout', refresh_active_symbols);
    });
-   /* refresh menu on mouse leave */
-   const trade = $("#nav-menu").find(".trade").on('mouseleave', refresh_active_symbols);
 }
 
 export default  { init };

@@ -8,6 +8,13 @@ import workspace from '../workspace/workspace.js';
 import '../common/util';
 import 'css!navigation/navigation.css';
 
+const menu_selectors = [
+   '.trade',
+   '.instruments',
+   '.resources',
+   '.workspace',
+]
+
 const getType = (acc) => {
    let id = acc.loginid || acc.id;
    if(!acc || !id) return;
@@ -355,6 +362,29 @@ export const init = (callback) => {
    if (is_beta()) {
       root.find("a.config").closest('li').show();
    }
+
+   // Handle click navigation to show menu dialog
+   menu_selectors.forEach((selector) => {
+      const nav_selector = 'nav #nav-menu';
+      const dialog_selector = `${nav_selector} ${selector} > ul`;
+      const current_selector = `${nav_selector} ${selector}`;
+      const visible = {
+         'visibility': 'visible',
+         'opacity': 1
+      };
+      $(current_selector).click((e) => {
+            $(dialog_selector).toggle('fast',
+            () => {
+               $(dialog_selector).css(visible)
+            }
+         );
+      });
+      $(document).mouseup((e) => {
+         if (!$(current_selector).is(e.target) && $(current_selector).has(e.target).length === 0) {
+            $(dialog_selector).hide();
+         }
+      });
+   });
 }
 
 export default {
