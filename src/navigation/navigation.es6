@@ -1,9 +1,9 @@
-import $ from 'jquery';
-import moment from 'moment';
-import _ from 'lodash';
-import liveapi from '../websockets/binary_websockets';
-import rv from '../common/rivetsExtra';
-import $navHtml from 'text!./navigation.html';
+import $         from 'jquery';
+import moment    from 'moment';
+import _         from 'lodash';
+import liveapi   from '../websockets/binary_websockets';
+import rv        from '../common/rivetsExtra';
+import $navHtml  from 'text!./navigation.html';
 import workspace from '../workspace/workspace.js';
 import '../common/util';
 import 'css!navigation/navigation.css';
@@ -41,7 +41,7 @@ const initLoginButton = (root) => {
          type:'',
          id:'',
          balance: '',
-         is_virtual:0
+         is_virtual:0,
       },
       show_submenu: false,
       show_new_account_link: false,
