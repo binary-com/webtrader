@@ -371,12 +371,12 @@ export const init = (callback) => {
       const current_selector = `${nav_selector} ${selector}`;
       const visible = {
          'visibility': 'visible',
-         'opacity': 1
+         'opacity': 1,
       };
       $(current_selector).click((e) => {
             $(dialog_selector).toggle('fast',
             () => {
-               $(dialog_selector).css(visible)
+               $(dialog_selector).css(visible);
             }
          );
       });
