@@ -24,7 +24,9 @@ const getType = (acc) => {
          VRTC:"Virtual",
          REAL:(acc.currency || '').toUpperCase() || 'Real',
    };
+
    id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
+
    return type[id]+" Account";
 };
 
@@ -55,15 +57,15 @@ const initLoginButton = (root) => {
       }
    };
 
-const destroy_windows = (data_attribute) => {
-  $(`.webtrader-dialog[${data_attribute}]`).each((inx, elm) => {
-    const dlg = $(elm);
-    dlg.dialog('close');
-    dlg.one('dialogclose', () => {
-      _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
-    });
-});
-}
+   const destroy_windows = (data_attribute) => {
+      $(`.webtrader-dialog[${data_attribute}]`).each((inx, elm) => {
+         const dlg = $(elm);
+         dlg.dialog('close');
+         dlg.one('dialogclose', () => {
+            _.defer(() => dlg.dialog('instance') && dlg.dialog('destroy') && dlg.remove());
+         });
+      });
+   }
 
    state.oauth = local_storage.get('oauth') || [];
    state.oauth = state.oauth.map((e) => {
@@ -93,7 +95,7 @@ const destroy_windows = (data_attribute) => {
          .catch((err) => {
             $.growl.error({message: err.message});
             // logout user if he decided to self exclude himself.
-            if(err.code==="SelfExclusion"){
+            if(err.code==="SelfExclusion") {
                console.log("logging out because of self exclude");
                liveapi.invalidate();
             }
