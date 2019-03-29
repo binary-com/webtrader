@@ -13,7 +13,7 @@ const menu_selectors = [
    '.instruments',
    '.resources',
    '.workspace',
-]
+];
 
 const getType = (acc) => {
    let id = acc.loginid || acc.id;
@@ -22,12 +22,11 @@ const getType = (acc) => {
          MLT:"Gaming", 
          MF:"Investment",
          VRTC:"Virtual",
-         REAL:(acc.currency || '').toUpperCase() || 'Real'
+         REAL:(acc.currency || '').toUpperCase() || 'Real',
    };
    id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
    return type[id]+" Account";
 };
-
 
 const initLoginButton = (root) => {
    const account_menu = root.find('.account-menu');
@@ -55,6 +54,7 @@ const initLoginButton = (root) => {
          window.open(financial_account_binary_url, '_blank')
       }
    };
+
 const destroy_windows = (data_attribute) => {
   $(`.webtrader-dialog[${data_attribute}]`).each((inx, elm) => {
     const dlg = $(elm);
