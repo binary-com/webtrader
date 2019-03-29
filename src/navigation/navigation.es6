@@ -12,22 +12,22 @@ const menu_selectors = [
    '.trade',
    '.instruments',
    '.resources',
-   '.workspace',
+   '.workspace'
 ];
 
 const getType = (acc) => {
    let id = acc.loginid || acc.id;
    if(!acc || !id) return;
    const type = {
-         MLT:"Gaming", 
-         MF:"Investment",
-         VRTC:"Virtual",
+         MLT:'Gaming', 
+         MF:'Investment',
+         VRTC:'Virtual',
          REAL:(acc.currency || '').toUpperCase() || 'Real',
    };
 
-   id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : "REAL";
+   id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : 'REAL';
 
-   return type[id]+" Account";
+   return type[id]+' Account';
 };
 
 const initLoginButton = (root) => {
@@ -95,8 +95,7 @@ const initLoginButton = (root) => {
          .catch((err) => {
             $.growl.error({message: err.message});
             // logout user if he decided to self exclude himself.
-            if(err.code==="SelfExclusion") {
-               console.log("logging out because of self exclude");
+            if (err.code === 'SelfExclusion') {
                liveapi.invalidate();
             }
          });
@@ -107,8 +106,8 @@ const initLoginButton = (root) => {
    const update_balance = (data) => {
       if (!state.currency) {
          /* We're not going to set currency automatically, since the user might select a different currency  */
-         if (local_storage.get("currency")){
-            state.currency = local_storage.get("currency");
+         if (local_storage.get('currency')){
+            state.currency = local_storage.get('currency');
           } else 
             return;
       }
@@ -135,7 +134,7 @@ const initLoginButton = (root) => {
       state.account.type = '';
       state.currency = '';
 
-      local_storage.remove("currency");
+      local_storage.remove('currency');
    });
 
    liveapi.events.on('login', (data) => {
@@ -153,7 +152,7 @@ const initLoginButton = (root) => {
       state.account.type = getType(data.authorize);
 
       state.currency = data.authorize.currency;
-      local_storage.set("currency", state.currency);
+      local_storage.set('currency', state.currency);
       update_balance(data);
       const is_current_account_real = data.authorize.is_virtual === 0;
 
@@ -172,7 +171,7 @@ const initLoginButton = (root) => {
             $.growl.error({
                fixed: true,
                message:`<a href='${getBinaryUrl('contact.html')}' target='_blank'>
-                ${"Your account (%) is locked, please contact customer support for more info.".i18n().replace('%', lockedIds)}
+                ${'Your account (%) is locked, please contact customer support for more info.'.i18n().replace('%', lockedIds)}
                </a>`
             });
          }
@@ -180,8 +179,8 @@ const initLoginButton = (root) => {
    });
 
    // Restore login-button in case of login-error
-   $('.login').on("login-error", (e) => {
-      console.log("Encountered login error");
+   $('.login').on('login-error', (e) => {
+      console.log('Encountered login error');
       state.show_login = true;
    });
 
@@ -300,7 +299,7 @@ export const getLandingCompany = () => {
             const financial = data.landing_company.financial_company;
             const gaming = data.landing_company.gaming_company;
             const loginIds = loginids();
-            const curr_login = local_storage.get("oauth")[0];
+            const curr_login = local_storage.get('oauth')[0];
             curr_login.is_mlt = /MLT/.test(curr_login.id);
             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
                if (_.some(loginIds, {is_mlt: true}) && (_.some(loginIds, {is_mf: true}) || !curr_login.is_mlt)) // 1-c
@@ -321,7 +320,7 @@ export const getLandingCompany = () => {
             // 5:
             const cr_accts = _.filter(loginIds, {is_cr: true});
             if( cr_accts.length && landing_company_details.legal_allowed_currencies) {
-               const currencies_config = local_storage.get("currencies_config") || {};
+               const currencies_config = local_storage.get('currencies_config') || {};
                const has_fiat = _.some(cr_accts, {type: 'fiat'});
                const crypto_currencies = _.difference(
                   landing_company_details.legal_allowed_currencies.filter((curr) => {
@@ -345,7 +344,7 @@ export const getLandingCompany = () => {
 
 export const init = (callback) => {
    const root = $($navHtml).i18n();
-   $("body").prepend(root);
+   $('body').prepend(root);
 
    initLoginButton(root);
    initLang(root);
@@ -357,12 +356,12 @@ export const init = (callback) => {
    workspace.init($('#nav-menu .workspace'));
 
    if (callback) {
-      callback($("#nav-menu"));
+      callback($('#nav-menu'));
    }
 
    //Show config <LI> if its production and not BETA
    if (is_beta()) {
-      root.find("a.config").closest('li').show();
+      root.find('a.config').closest('li').show();
    }
 
    // Handle click navigation to show menu dialog
