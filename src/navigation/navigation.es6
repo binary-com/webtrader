@@ -287,8 +287,8 @@ const initLang = (root) => {
 export const getLandingCompany = () => {
    return liveapi.cached.authorize().then((data) => {
       return Promise.all([
-            liveapi.cached.send({landing_company: data.authorize.country }),
-            liveapi.cached.send({landing_company_details: data.authorize.landing_company_name})
+            liveapi.cached.send({ landing_company: data.authorize.country }),
+            liveapi.cached.send({ landing_company_details: data.authorize.landing_company_name })
          ])
          .then((results) => {
             const data = results[0];
@@ -301,26 +301,26 @@ export const getLandingCompany = () => {
             const curr_login = local_storage.get('oauth')[0];
             curr_login.is_mlt = /MLT/.test(curr_login.id);
             if (gaming && financial && financial.shortcode === 'maltainvest') { // 1:
-               if (_.some(loginIds, {is_mlt: true}) && (_.some(loginIds, {is_mf: true}) || !curr_login.is_mlt)) // 1-c
+               if (_.some(loginIds, { is_mlt: true }) && (_.some(loginIds, { is_mf: true }) || !curr_login.is_mlt)) // 1-c
                   return 'do-nothing';
-               if (_.some(loginIds, {is_mlt: true})) // 1-b
+               if (_.some(loginIds, { is_mlt: true })) // 1-b
                   return 'upgrade-mf';
                return 'upgrade-mlt'; // 1-a
             }
             if (financial && financial.shortcode === 'maltainvest' && !gaming) { // 2:
-               if (_.some(loginIds, {is_mf: true})) // 2-b
+               if (_.some(loginIds, { is_mf: true })) // 2-b
                   return 'do-nothing';
                return 'upgrade-mf'; // 2-a
             }
             // 3:
-            if (_.some(loginIds, {is_mlt: true}) || _.some(loginIds, {is_mx: true}))
+            if (_.some(loginIds, { is_mlt: true }) || _.some(loginIds, { is_mx: true }))
                return 'do-nothing'; // 3-b
             // 4: never happens, japan accounts are not able to log into webtrader.
             // 5:
-            const cr_accts = _.filter(loginIds, {is_cr: true});
+            const cr_accts = _.filter(loginIds, { is_cr: true });
             if( cr_accts.length && landing_company_details.legal_allowed_currencies) {
                const currencies_config = local_storage.get('currencies_config') || {};
-               const has_fiat = _.some(cr_accts, {type: 'fiat'});
+               const has_fiat = _.some(cr_accts, { type: 'fiat' });
                const crypto_currencies = _.difference(
                   landing_company_details.legal_allowed_currencies.filter((curr) => {
                      return currencies_config[curr].type === 'crypto';
