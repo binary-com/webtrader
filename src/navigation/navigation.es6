@@ -27,7 +27,7 @@ const getType = (acc) => {
 
    id = id.match(/^(MLT|MF|VRTC)/i) ? id.match(/^(MLT|MF|VRTC)/i)[0] : 'REAL';
 
-   return type[id]+' Account';
+   return type[id] + ' Account';
 };
 
 const initLoginButton = (root) => {
