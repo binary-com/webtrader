@@ -39,11 +39,11 @@ const initLoginButton = (root) => {
       currency: '',
       logout_disabled: false,
       account: {
-         show:false,
-         type:'',
-         id:'',
+         show: false,
+         type: '',
+         id: '',
          balance: '',
-         is_virtual:0,
+         is_virtual: 0,
       },
       show_submenu: false,
       show_new_account_link: false,
@@ -53,7 +53,7 @@ const initLoginButton = (root) => {
       },
       openFinancialAccountMF: () => {
          const financial_account_binary_url = getBinaryUrl('new_account/maltainvestws');
-         window.open(financial_account_binary_url, '_blank')
+         window.open(financial_account_binary_url, '_blank');
       }
    };
 
@@ -93,7 +93,7 @@ const initLoginButton = (root) => {
       destroy_windows('data-account-specific=true');
       liveapi.switch_account(id)
          .catch((err) => {
-            $.growl.error({message: err.message});
+            $.growl.error({ message: err.message });
             // logout user if he decided to self exclude himself.
             if (err.code === 'SelfExclusion') {
                liveapi.invalidate();
@@ -160,14 +160,14 @@ const initLoginButton = (root) => {
          state.show_financial_link = (what_todo === 'upgrade-mf');
          state.show_realaccount_link = (what_todo === 'upgrade-mlt');
          const loginIds = loginids();
-         state.has_real_account = _.some(loginIds, {is_real: true});
-         state.has_mf_or_mlt = _.some(loginIds, {is_mf: true}) || _.some(loginIds, {is_mlt: true});
+         state.has_real_account = _.some(loginIds, { is_real: true });
+         state.has_mf_or_mlt = _.some(loginIds, { is_mf: true }) || _.some(loginIds, { is_mlt: true });
          state.show_new_account_link = what_todo === 'new-account';
-         state.has_disabled_account =  _.some(loginIds, {is_disabled: true});
+         state.has_disabled_account =  _.some(loginIds, { is_disabled: true });
          // https://trello.com/c/9PCHncnx/5146-8-raunak-accountlistordering
          // https://trello.com/c/fNZ1Zkbb/2529-negar-accountlistauthorize
-         if(_.some(oAuthLoginIds(), {is_disabled: true})) {
-            const lockedIds = _.filter(loginIds, {is_disabled:true}).map(acc => acc.id).join(',');
+         if(_.some(oAuthLoginIds(), { is_disabled: true })) {
+            const lockedIds = _.filter(loginIds, { s_disabled:true }).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
                message:`<a href='${getBinaryUrl('contact.html')}' target='_blank'>
@@ -219,11 +219,11 @@ const initLang = (root) => {
 
    state.onclick = (value) => {
       state.confirm.visible = false;
-      const lang = _.find(state.languages, {value: value});
+      const lang = _.find(state.languages, { value: value });
       if(lang && state.lang && lang.value == state.lang.value)
          return;
 
-      local_storage.set('i18n', {value: lang.value});
+      local_storage.set('i18n', { value: lang.value });
       window.location.reload();
    };
 
@@ -231,8 +231,8 @@ const initLang = (root) => {
       state.confirm.visible = visible;
    }
 
-   const lang = (local_storage.get('i18n') || {value: 'en'}).value;
-   state.lang = _.find(state.languages, {value: lang}); // set the initial state.
+   const lang = (local_storage.get('i18n') || { value: 'en' }).value;
+   state.lang = _.find(state.languages, { value: lang }); // set the initial state.
 
    const contact_us_el = document.getElementById('contact-us');
    const logo_container = document.getElementById('logo-container');
@@ -248,15 +248,14 @@ const initLang = (root) => {
       .send({website_status: 1})
       .then((data) => {
          let supported_languages = (data.website_status || {}).supported_languages || [];
-         supported_languages = _.map(supported_languages, (m) => ({value: m.toLowerCase()}));
+         supported_languages = _.map(supported_languages, (m) => ({ value: m.toLowerCase() }));
          const newList = _.intersectionBy(state.languages, supported_languages, 'value') || [];
          state.languages.length = 0;
          newList.forEach(
             (e) => state.languages.push(e)
          );
       })
-      .catch(console.error)
-
+      .catch(console.error);
 }
 
 /*
