@@ -135,9 +135,6 @@ body {
         display: flex;
         flex-wrap: wrap;
 
-        @media screen and (max-width: 609px)  {
-            justify-content: center;
-        }
     }
     &__regulatory-icons {
         display: flex;
@@ -145,6 +142,10 @@ body {
 
         > * {
             margin-right: 20px;
+        }
+        @media screen and (max-width: 800px)  {
+            margin: 20px 0;
+            justify-content: center;
         }
     }
 
@@ -163,8 +164,8 @@ body {
             width: 35px;
         }
 
-        @media screen and (max-width: 609px)  {
-            margin: 20px 0;
+        @media screen and (max-width: 800px)  {
+            margin-bottom: 10vh;
             justify-content: center;
         }
     }
