@@ -15,7 +15,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "concurrently": "^3.3.0",
     "connect": "^3.6.1",
-    "grunt": "^1.0.4",
+    "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
     "grunt-bump": "^0.3.0",
     "grunt-cli": "^1.2.0",
