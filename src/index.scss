@@ -98,10 +98,12 @@ body {
             .lga_icon {
                 align-self: flex-start;
                 max-width: 70px;
+                min-width: 70;
                 width: 100%;
             }
             .gamstop_icon {
                 max-width: 120px;
+                min-width: 100px;
                 width: 100%;
             }
             .age-restriction {
@@ -112,15 +114,19 @@ body {
         #footer-non-eu {
             .vanuatu-icon {
                 width: 100px;
+                min-width: 80px;
             }
             .bvi-icon {
                 width: 75px;
+                min-width: 70px;
             }
             .labuan-icon {
                 width: 120px;
+                min-width: 100px;
             }
             .age-restriction {
                 width: 50px;
+                min-width: 50px;
             }
         }
 
