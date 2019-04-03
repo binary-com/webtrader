@@ -105,7 +105,7 @@ body {
                 width: 100%;
             }
             .age-restriction {
-                width: 50px;
+                min-width: 50px;
             }
         }
     
@@ -144,7 +144,8 @@ body {
             margin-right: 20px;
         }
         @media screen and (max-width: 800px)  {
-            margin: 20px 0;
+            margin-top: 50px;
+            margin-bottom: 30ox;
             justify-content: center;
         }
     }
@@ -165,7 +166,7 @@ body {
         }
 
         @media screen and (max-width: 800px)  {
-            margin-bottom: 10vh;
+            margin-bottom: 30px;
             justify-content: center;
         }
     }
