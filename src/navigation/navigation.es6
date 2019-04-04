@@ -273,7 +273,7 @@ const initLang = (root) => {
      b: has MLT, MX ==> do nothing
   4: company shortcode == japan
      a: do nothing and show an error message
-  5: shortcode = costarica
+  5: shortcode = svg
      a: No currency
        I: Do nothing.
      b: Fiat currency && Not all crypto currency account
