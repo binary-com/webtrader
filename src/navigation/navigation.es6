@@ -373,7 +373,7 @@ export const init = (callback) => {
          'opacity': 1,
       };
       $(current_selector).click((e) => {
-            $(dialog_selector).toggle('fast',
+            $(dialog_selector).fadeToggle('fast',
             () => {
                $(dialog_selector).css(visible);
             }
