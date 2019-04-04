@@ -4,7 +4,7 @@
   "description": "Webtrader for Binary.com",
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -20,7 +20,6 @@
     "grunt-bump": "^0.3.0",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-compress": "^1.0.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^0.8.0",
@@ -36,10 +35,11 @@
     "grunt-po2json": "^0.3.0",
     "grunt-remove-logging": "ehynds/grunt-remove-logging",
     "grunt-rename": "^0.1.4",
-    "grunt-sass": "^1.2.0",
+    "grunt-sass": "^3.0.2",
     "grunt-shell": "^1.1.2",
     "grunt-text-replace": "^0.4.0",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "node-sass": "^4.11.0"
   },
   "scripts": {
     "deploy-gh-pages": "grunt deploy",
@@ -61,9 +61,7 @@
     "Webtrader"
   ],
   "author": {
-    "name": "Arnab Karmakar",
-    "email": "arnab@binary.com",
-    "url": "http://webtrader.binary.com/"
+    "name": "Binary.com"
   },
   "license": "MIT",
   "bugs": {

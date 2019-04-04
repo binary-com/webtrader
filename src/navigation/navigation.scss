@@ -40,12 +40,7 @@ nav {
             visibility: hidden;
             z-index: 999999;
             opacity: 0;
-            transition: visibility 0.5s, opacity 0.1s linear 0.1s;
-         }
-         &:hover > ul {
-            visibility: visible;
-            opacity: 1;
-            transition: visibility 0s 0.1s;
+            transition: visibility 0.2s;
          }
       }
      .resources {

@@ -1,4 +1,5 @@
 "use strict";
+const sass = require('node-sass');
 
 module.exports = function (grunt) {
 
@@ -328,18 +329,20 @@ module.exports = function (grunt) {
           }
         },
         sass: {
-          // options: { sourceMap: true },
-          dist: {
-            files: [
-              {
-                expand: true,
-                cwd: "src/",
-                src: ["**/*.scss"],
-                dest: "dist/uncompressed/v<%=pkg.version%>",
-                ext: ".css"
-              }
-            ]
-          }
+            options: {
+                implementation: sass
+            },
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "src/",
+                        src: ["**/*.scss"],
+                        dest: "dist/uncompressed/v<%=pkg.version%>",
+                        ext: ".css"
+                    }
+                ]
+            }
         },
         babel: {
           options: {
