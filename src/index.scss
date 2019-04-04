@@ -98,23 +98,31 @@ body {
             .lga_icon {
                 align-self: flex-start;
                 max-width: 70px;
+                min-width: 70;
                 width: 100%;
             }
             .gamstop_icon {
                 max-width: 120px;
+                min-width: 100px;
                 width: 100%;
+            }
+            .age-restriction {
+                min-width: 50px;
             }
         }
     
         #footer-non-eu {
             .vanuatu-icon {
                 width: 100px;
+                min-width: 80px;
             }
             .bvi-icon {
                 width: 75px;
+                min-width: 70px;
             }
             .labuan-icon {
                 width: 120px;
+                min-width: 100px;
             }
         }
 
@@ -129,9 +137,6 @@ body {
         display: flex;
         flex-wrap: wrap;
 
-        @media screen and (max-width: 609px)  {
-            justify-content: center;
-        }
     }
     &__regulatory-icons {
         display: flex;
@@ -139,6 +144,11 @@ body {
 
         > * {
             margin-right: 20px;
+        }
+        @media screen and (max-width: 800px)  {
+            margin-top: 50px;
+            margin-bottom: 30ox;
+            justify-content: center;
         }
     }
 
@@ -157,8 +167,8 @@ body {
             width: 35px;
         }
 
-        @media screen and (max-width: 609px)  {
-            margin: 20px 0;
+        @media screen and (max-width: 800px)  {
+            margin-bottom: 30px;
             justify-content: center;
         }
     }
