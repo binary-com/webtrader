@@ -43,7 +43,7 @@ class AccountStatus {
     this.financial_assessment_submitted = true;
     this.is_mlt = /^malta$/gi.test(response.authorize.landing_company_name);
     this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
-    this.is_cr = /^svg$/gi.test(response.authorize.landing_company_name);
+    this.is_cr = /^svg|costarica$/gi.test(response.authorize.landing_company_name);
     this.has_mt5_account = mt5_account.mt5_login_list.length > 0;
     this.is_authenticated = !account_status.get_account_status.prompt_client_to_authenticate;
     // Check whether the user has accepted the T&C.
