@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-03-05 02:00\n"
+"PO-Revision-Date: 2019-04-05 14:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1657,7 +1657,7 @@ msgid "Timeout for websocket request"
 msgstr "Websocket请求超时"
 
 msgid "Title"
-msgstr "职务"
+msgstr "称谓"
 
 msgid "To"
 msgstr "到"
