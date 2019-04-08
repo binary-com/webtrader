@@ -141,11 +141,13 @@ body {
     &__regulatory-icons {
         display: flex;
         align-items: center;
+        max-width: 400px;
 
         > * {
             margin-right: 20px;
         }
         @media screen and (max-width: 800px)  {
+            max-width: 800px;
             margin-top: 50px;
             margin-bottom: 30ox;
             justify-content: center;
