@@ -111,7 +111,7 @@ function checkRedirectToken(params_str) {
 
 function checkWindowSize() {
     if (isSmallView()) {
-        window.location.assign(VERSION + "unsupported_browsers/unsupported_browsers.html");
+        window.location.assign(VERSION + 'unsupported_browsers/unsupported_browsers.html');
         return;
     }
 }
