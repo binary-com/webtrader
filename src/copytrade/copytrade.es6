@@ -44,7 +44,7 @@ const defaultTraderDetails = (traderApiToken, loginid) => ({
 
 const validate_min_max_stake = (yourCopySettingsData) => {
   const { min_trade_stake, max_trade_stake } = yourCopySettingsData;
-  if (min_trade_stake > max_trade_stake) {
+  if (+min_trade_stake > +max_trade_stake) {
     return false;
   }
   return true;
