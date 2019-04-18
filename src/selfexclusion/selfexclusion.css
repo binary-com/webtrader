@@ -42,3 +42,11 @@
     text-align: center;
     margin-top: 5px;
 }
+
+.selfexclusion_notice {
+    margin: 10px auto;
+    color: #000;
+    background-color: #fef1cf;
+    padding: 10px;
+    overflow: hidden;
+}
