@@ -9,6 +9,10 @@
     }
     &_header {
         padding: 10px;
+
+        p {
+            margin-top: 0;
+        }
     }
     &_body {
         margin: auto;
