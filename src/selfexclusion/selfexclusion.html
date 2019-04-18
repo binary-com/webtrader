@@ -3,12 +3,12 @@
         Online trading can become addictive. Fill in the form below
         to limit your participation on the website or send a signed letter or fax to
         our customer support team. Once set, you can only tighten your limits. Limits
-        will only be removed or loosened after 7 days with the exception of the self--
-        exclusion date, which cannot be removed or altered once you have confirmed it.
+        will only be removed or loosened after 7 days with the exception of the
+        self-exclusion date, which cannot be removed or altered once you have confirmed it.
         To remove or increase your limits, please contact
         <a rv-attr-href='binary_url_contact' target="_blank">customer support</a>.
     </div>
-    <div id='gamstop_info_top' class='self-exclusion_header'>
+    <div id='gamstop_info_top' class='self-exclusion_header' rv-show='is_gamstop_client'>
         <p>If you are considering self-exclusion, you may wish to register with GAMSTOP.</p>
         <p>GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain.</p>
         <p>To find out more and to sign up with GAMSTOP, please visit <a target="_blank" rel="noopener noreferrer" href="https://www.gamstop.co.uk">www.gamstop.co.uk</a>.</p>
@@ -106,13 +106,13 @@
         </div>
     </div>
     <div>
-        <div class="self-exclusion_update-btn-container" rv-hide='exclude_until'>
+        <div class="self-exclusion_update-btn-container" rv-hide='has_exclude_until'>
             <button class="self-exclusion_update-btn text-vertical-align" rv-on-click="update">Update Settings</button>
         </div>
-        <div id='ukgc_requirement_notice' class='self-exclusion_notice' rv-show='exclude_until'>
+        <div id='ukgc_requirement_notice' class='self-exclusion_notice' rv-show='has_exclude_until'>
             <p>Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites.</p>
             <p>Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for.</p>
-            <p id='gamstop_info_bottom'>To self-exclude from all online gambling companies licensed in Great Britain, you may go to <a target='_blank' rel='noopener noreferrer' href='https://www.gamstop.co.uk'>www.gamstop.co.uk</a>.</p>
+            <p id='gamstop_info_bottom' rv-show='is_gamstop_client'>To self-exclude from all online gambling companies licensed in Great Britain, you may go to <a target='_blank' rel='noopener noreferrer' href='https://www.gamstop.co.uk'>www.gamstop.co.uk</a>.</p>
         </div>
     </div>
 </div>

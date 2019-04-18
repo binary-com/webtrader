@@ -31,5 +31,3 @@ const set_currency_config = (website_status) => {
     }
 };
 
-liveapi.events.on('website_status', website_status);
-liveapi.cached.send({ website_status: 1, subscribe: 1 }).then(website_status);

@@ -85,6 +85,7 @@ const settingsData = {
     max_open_bets: null,
     session_duration_limit: null,
     exclude_until: null,
+    has_exclude_until: null,
     is_gamstop_client: null,
     timeout_until_date: null,
     timeout_until_time: null,
@@ -172,6 +173,7 @@ const settingsData = {
                 $.growl.notice({ message: 'Your changes have been updated'.i18n() });
                 logoutBasedOnExcludeDateAndTimeOut();
                 setOrRefreshTimer();
+                refreshData();
             })
             .catch(function(err) {
                 $.growl.error({ message: err.message });
@@ -245,7 +247,8 @@ const refreshData = function() {
                         limits[index].set = true;
                     }
                 });
-
+                settingsData.has_exclude_until = response.get_self_exclusion.exclude_until;
+                settingsData.is_gamstop_client = isGamstopClient();
                 logoutBasedOnExcludeDateAndTimeOut();
             }
         })
@@ -256,7 +259,8 @@ const refreshData = function() {
 };
 
 const isGamstopClient = function() {
-    
+    const authorize = local_storage.get('authorize');
+    return /gb/.test(authorize.country) && /iom|malta/.test(authorize.landing_company_name);
 }
 
 const setOrRefreshTimer = function() {
