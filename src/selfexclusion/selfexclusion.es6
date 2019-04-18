@@ -85,6 +85,7 @@ const settingsData = {
     max_open_bets: null,
     session_duration_limit: null,
     exclude_until: null,
+    is_gamstop_client: null,
     timeout_until_date: null,
     timeout_until_time: null,
     binary_url_contact: getBinaryUrl('contact.html'),
@@ -109,7 +110,6 @@ const settingsData = {
                 const time = moment(scope.timeout_until_time, "HH:mm");
                 time_out.add(time.format('HH'), 'hours')
                     .add(time.format('mm'), 'minutes');
-                console.log(time_out, time.format('HH'),time.format('mm'));
             }
             if (time_out.isAfter(moment().add(6, "weeks"))) {
                 message.push("Please enter a value less than 6 weeks for time out until.".i18n());
@@ -254,6 +254,10 @@ const refreshData = function() {
             console.error(err);
         });
 };
+
+const isGamstopClient = function() {
+    
+}
 
 const setOrRefreshTimer = function() {
 
