@@ -176,8 +176,10 @@ const settingsData = {
                 refreshData();
             })
             .catch(function(err) {
-                $.growl.error({ message: err.message });
-                console.error(err);
+                $.growl.error({ 
+                    message: err.message,
+                    duration: 7000,
+                });
             });
     }
 };
