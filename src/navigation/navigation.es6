@@ -241,6 +241,7 @@ const initLang = (root) => {
    logo_container.href = getBinaryUrl('home.html');
 
    rv.bind(root[0], state);
+
    //Init the trigger of loading language list from server
    liveapi
       .cached

@@ -429,7 +429,7 @@ export const cached  = {
        * assume P is in pending state, when P is fullfiled all attached .then() calls will run.
        * assume P is in rejected state (or in fullfiled state), the changed .then() calls will be immediately rejected(or fullfiled).  */   
        if (cached_promises[key])
-                    return cached_promises[key].promise;
+         return cached_promises[key].promise;
       /* We don't want to cache promises that are rejected,
                    Clear the cache in case of promise rejection */
       cached_promises[key] = { data: data, promise: null };
