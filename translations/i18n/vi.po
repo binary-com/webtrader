@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom <jy@binary.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-01-29 06:31\n"
+"PO-Revision-Date: 2019-03-19 07:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -19,16 +19,16 @@ msgid "(if less than one day in duration), or at the end of the trading day (if 
 msgstr "(nếu thời hạn ít hơn một ngày), hoặc vào cuối ngày giao dịch (nếu thời hạn một ngày hoặc nhiều hơn)"
 
 msgid "* Contract has not started yet"
-msgstr ""
+msgstr "* Hợp đồng chưa được bắt đầu"
 
 msgid "* Password must be 6 characters minimum"
-msgstr ""
+msgstr "Mật khẩu phải có tối thiểu 6 ký tự"
 
 msgid "* Password must contain uppercase letters and numbers"
-msgstr ""
+msgstr "Mật khẩu phải bao gồm chữ hoa và số"
 
 msgid "* Please enter your new password"
-msgstr ""
+msgstr "Vui lòng nhập mật khẩu mới của bạn"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
 msgstr "-Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng và Đại Lý Thanh Toán"
@@ -166,25 +166,25 @@ msgid "8h"
 msgstr "8 giờ"
 
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 msgid "Accept"
 msgstr "Chấp nhận"
 
 msgid "Accessible from any web browser in 13 languages"
-msgstr ""
+msgstr "Dễ dàng truy cập từ bất kỳ trình duyệt web nào với 13 ngôn ngữ"
 
 msgid "Account balance"
 msgstr "Số dư tài khoản"
 
 msgid "Account balance:"
-msgstr ""
+msgstr "Số dư tài khoản:"
 
 msgid "Account id not found."
-msgstr ""
+msgstr "Không tìm thấy tên tài khoản đăng nhập."
 
 msgid "Account token not found."
-msgstr ""
+msgstr "Không tìm thấy token trong tài khoản."
 
 msgid "Action"
 msgstr "Hành động"
@@ -211,13 +211,13 @@ msgid "Add/remove indicators"
 msgstr "Thêm/loại bỏ các chỉ số"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Workspace mới thêm vào được %"
 
 msgid "Admin"
 msgstr "Quản trị viên"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Tất cả các trường là tùy chọn. Nếu bạn muốn sao chép tất cả các tài sản và loại giao dịch, xin vui lòng không tích vào trường nào"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Tất cả thời gian ở GMT (Thời gian trung bình Greenwich )"
@@ -277,7 +277,7 @@ msgid "August"
 msgstr "Tháng tám"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Thời gian trung bình cho các vị trí trống"
 
 msgid "Avg. Loss"
 msgstr "Lỗ trung bình"
@@ -307,10 +307,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com là một trang cung cấp dịch vụ kinh doanh trực tuyến hỗ trợ khách hàng của mình giao dịch trên các thị trường tài chính thông qua Binary Options và CFDs. Giao dịch Binary Options và CFDs theo Chỉ Số Biến Động được phân loại như là một hoạt động cờ bạc. Hãy nhớ rằng cờ bạc có thể gây nghiện-hãy có trách nhiệm khi chơi. Tìm hiểu thêm về %1 Giao Dịch Có Trách Nhiệm%2. Một số sản phẩm sẽ không có sẵn ở tất cả mọi nước. Dịch vụ của trang web không hoạt động ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, hoặc những người dưới 18 tuổi."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Cửa sổ trống"
 
 msgid "Bought"
 msgstr "Đã mua"
@@ -331,7 +331,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Bằng cách nhấn OK, bạn xác nhận rằng bạn đã đọc và chấp nhận phần đã cập nhật"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr ""
+msgstr "CFDs là công cụ phức tạp và đi kèm với rủi ro cao do áp dụng đòn bẩy tài chính. Khoảng 74-89% các tài khoản đầu tư lẻ đều mất tiền khi giao dịch CFDs. bạn nên cân nhắc kỹ lưỡng liệu mình đã đủ am hiểu về CFDs và sãn sàng chấp nhận rủi ro thua lỗ cao."
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Có thể được sử dụng để mua và bán hợp đồng, làm mới mua đã hết hạn, và các tài khoản tiền ảo top-up."
@@ -418,10 +418,10 @@ msgid "Confirm transfer"
 msgstr "Xác nhận chuyển khoản"
 
 msgid "Connection closed."
-msgstr ""
+msgstr "Kết nối đã ngắt."
 
 msgid "Connection error."
-msgstr ""
+msgstr "Lỗi kết nối."
 
 msgid "Construction"
 msgstr "Xây dựng"
@@ -436,10 +436,10 @@ msgid "Contract"
 msgstr "Hợp đồng"
 
 msgid "Contract Confirmation"
-msgstr ""
+msgstr "Xác nhận Hợp đồng"
 
 msgid "Contract Details"
-msgstr ""
+msgstr "Chi tiết hợp đồng"
 
 msgid "Contracts"
 msgstr "Hợp đồng"
@@ -490,7 +490,7 @@ msgid "Custom Theme"
 msgstr "Chủ đề tùy chỉnh"
 
 msgid "Customize chart appearance"
-msgstr ""
+msgstr "Tùy chỉnh giao diện của biểu đồ"
 
 msgid "Daily limit on losses"
 msgstr "Giới hạn hàng ngày cho thua"
@@ -541,7 +541,7 @@ msgid "Description"
 msgstr "Mô tả"
 
 msgid "Deselect"
-msgstr ""
+msgstr "Bỏ chọn"
 
 msgid "Differs"
 msgstr "Khác với"
@@ -556,7 +556,7 @@ msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
 msgstr "Chưa có tài khoản? Đăng ký và nhận $10,000 cho tài khoản ảo"
 
 msgid "Done"
-msgstr ""
+msgstr "Hoàn tất"
 
 msgid "Done. The funds are being transferred to the payment agent"
 msgstr "Đã hoàn tất. Tiền đang được chuyển giao cho đại lý thanh toán"
@@ -604,7 +604,7 @@ msgid "Downloading template as"
 msgstr "Tải về mẫu như là"
 
 msgid "Downloading workspace as %1"
-msgstr ""
+msgstr "Workspace tải được %1"
 
 msgid "Drawing tools"
 msgstr "Công cụ vẽ"
@@ -640,7 +640,7 @@ msgid "Enjoy an intuitive trading interface with advanced functionality that let
 msgstr "Thưởng thức một giao diện giao dịch trực quan với chức năng nâng cao cho phép bạn theo dõi tất cả các tài sản yêu thích và các thị trường của bạn tại cùng một lúc, cũng như các biểu đồ thiết yếu, các chỉ số tài sản, thời gian giao dịch, và lịch sử dữ liệu. Quan trọng nhất, bạn có thể chọn những gì bạn muốn nhìn thấy trên màn hình của bạn"
 
 msgid "Enter a valid trader token"
-msgstr ""
+msgstr "Nhập vào một số token khả dụng"
 
 msgid "Enter your current password"
 msgstr "Nhập mật khẩu hiện tại của bạn"
@@ -661,16 +661,16 @@ msgid "Exclude me from the website until"
 msgstr "Loại bỏ tôi khỏi trang web cho đến khi"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Thời gian nghỉ"
 
 msgid "Exclude time must be after today."
-msgstr ""
+msgstr "Vào thời gian nghỉ ngay sau hôm nay."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "Từ thời gian nghỉ đến thời gian tham gia giao dịch trở lại không được phép ngắn hơn 6 tháng."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "Từ thời gian nghỉ đến thời gian tham gia giao dịch trở lại không được phép kéo dài hơn 5 năm."
 
 msgid "Exit Spot"
 msgstr "Điểm chốt"
@@ -685,7 +685,7 @@ msgid "Explanation"
 msgstr "Lời giải thích"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Cập nhật mật khẩu thất bại"
 
 msgid "Fall"
 msgstr "Giảm"
@@ -760,7 +760,7 @@ msgid "High"
 msgstr "Cao"
 
 msgid "High Barrier"
-msgstr ""
+msgstr "Barie cao"
 
 msgid "High barrier"
 msgstr "Hàng rào cao"
@@ -775,13 +775,13 @@ msgid "Historical Data"
 msgstr "Dữ liệu lịch sử"
 
 msgid "Historical Data For"
-msgstr ""
+msgstr "Lịch sử dữ liệu của"
 
 msgid "Horizontal line"
 msgstr "Đường ngang"
 
 msgid "Hour"
-msgstr ""
+msgstr "Giờ"
 
 msgid "Hours"
 msgstr "Giờ"
@@ -802,22 +802,22 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn muốn tiếp tục không?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta. Được quản lý và cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta, được cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
-msgstr ""
+msgstr "Ở Isle of Man và UK, các Chỉ Số Biến Động được cung cấp bởi Binary (IOM) Ltd., tầng 1, Millennium House, đường Victoria, Douglas, IM2 4RW, Isle of Man, British Isles; được quản lý và cấp phép bởi (1) Ủy ban giám sát cờ bạc ở Isle of Man (giấy phép hiện hành được cấp ngày 31 tháng 8 năm 2017) cũng như (2) Ủy ban cờ bạc ở Vương quốc Anh (giấy phép [_1] số: 39172 [_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "Đối với các khu vực còn lại trong EU, các Chỉ Số Biến Động được cung cấp bởi Binary (Europe) Ltd., Mompalao Building, Suite 2, đường Tower, Msida MSD1825, Malta; được quản lý và cấp phép bởi(1) Ủy ban giải trí Malta (giấy phép số. MGA / B2C / 102/2000 được ban hành vào ngày 01 tháng 8 năm 2018), đối với các khách hàng ở Anh, (2) Ủy ban cờ bạc Vương quốc Anh (giấy phép %1 số: 39495 %2), và khách hàng Ai-len, (3) Ủy viên Doanh thu ở Ireland (Giấy phép của Người lập sổ từ xa số 1010285 cấp ngày 1 tháng 7 năm 2017). Xem thêm%3Thông tin pháp lý %2."
 
 msgid "In/Out"
 msgstr "Vào/Ra"
 
 msgid "Indicative"
-msgstr ""
+msgstr "Chỉ thị"
 
 msgid "Indicative Price"
 msgstr "Giá biểu thị"
@@ -838,7 +838,7 @@ msgid "Invalid template type"
 msgstr "Kiểu mẫu không hợp lệ"
 
 msgid "Invalid template type."
-msgstr ""
+msgstr "Kiểu mẫu không hợp lệ."
 
 msgid "Investments & Dividends"
 msgstr "Đầu tư & Cổ tức"
@@ -850,7 +850,7 @@ msgid "January"
 msgstr "Tháng một"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Không hỗ trợ các tài khoản đến từ Nhật Bản."
 
 msgid "Jul"
 msgstr "Tháng bảy"
@@ -859,7 +859,7 @@ msgid "July"
 msgstr "Tháng bảy"
 
 msgid "Jump to:"
-msgstr ""
+msgstr "Chuyển tới:"
 
 msgid "Jun"
 msgstr "Tháng sáu"
@@ -871,13 +871,13 @@ msgid "Last 12 mnts Profitable Trades"
 msgstr "Các giao dịch kéo dài 12 phút có lợi nhuận"
 
 msgid "Last Digit Prediction"
-msgstr ""
+msgstr "Dự đoán chỉ số cuối"
 
 msgid "Last Digit is Over"
-msgstr ""
+msgstr "Chỉ số cuối vượt ngưỡng"
 
 msgid "Last Digit is Under"
-msgstr ""
+msgstr "Chỉ số cuối dưới ngưỡng"
 
 msgid "Last used"
 msgstr "Lần sử dụng cuối"
@@ -904,46 +904,46 @@ msgid "Load trade template"
 msgstr "Tải mẫu giao dịch"
 
 msgid "Loading ..."
-msgstr ""
+msgstr "Đang tải ..."
 
 msgid "Loading Asset Index ..."
-msgstr ""
+msgstr "Đang tải chỉ số tài sản ..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Đang tải các bản sao giao dịch..."
 
 msgid "Loading Download/View Data ..."
-msgstr ""
+msgstr "Đang tải dữ liệu tải về/xem dữ liệu ..."
 
 msgid "Loading Password dialog ..."
-msgstr ""
+msgstr "Đang tải Mật Khẩu hội thoại ..."
 
 msgid "Loading Profit Table ..."
-msgstr ""
+msgstr "Đang tải bảng lợi nhuận ..."
 
 msgid "Loading Self-Exclusion ..."
-msgstr ""
+msgstr "Đang tải Thời gian nghỉ..."
 
 msgid "Loading Statement Table ..."
-msgstr ""
+msgstr "Đang tải bảng kê khai ..."
 
 msgid "Loading Token management ..."
-msgstr ""
+msgstr "Đang tải quản lý Token ..."
 
 msgid "Loading Trading Times ..."
-msgstr ""
+msgstr "Đang tải thời gian giao dịch ..."
 
 msgid "Loading chart and trade menus ..."
-msgstr ""
+msgstr "Đang tải biểu đồ và các mục lục giao dịch ..."
 
 msgid "Loading custom theme configuration..."
-msgstr ""
+msgstr "Đang tải các chủ đề cấu hình tùy chọn..."
 
 msgid "Loading portfolio ..."
-msgstr ""
+msgstr "Đang tải danh mục đầu tư ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Đang tải các tùy chọn về thời gian nghỉ."
 
 msgid "Loading..."
 msgstr "Đang tải..."
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Thời gian đăng nhập"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Đang đăng xuất để bắt đầu vào thời gian nghỉ!"
 
 msgid "Login"
 msgstr "Đăng nhập"
@@ -1012,13 +1012,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Tổng tối đa thua mỗi ngày"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Số dư tối đa"
 
 msgid "Maximum number of open positions"
 msgstr "Số vị trí mở tối đa"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Số phiên được mở tối đa"
 
 msgid "May"
 msgstr "Tháng năm"
@@ -1030,19 +1030,19 @@ msgid "Memorable town/city"
 msgstr "Thị trấn/thành phố đáng nhớ"
 
 msgid "Min trade stake should be lower than max trade stake."
-msgstr ""
+msgstr "Chỉ số rủi ro giao dịch thấp nhất phải cao hơn chỉ số rủi ro giao dịch cao nhất."
 
 msgid "Min. Trade Stake"
 msgstr "Thương mại cổ phần tối thiểu"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
-msgstr ""
+msgstr "Phải có tối thiểu 6 ký tự bao gồm chữ thường, hoa và số"
 
 msgid "Minus the agent's commission"
 msgstr "Trừ đi Hoa hồng của đại lý"
 
 msgid "Minute"
-msgstr ""
+msgstr "Phút"
 
 msgid "Minutes"
 msgstr "Phút"
@@ -1072,7 +1072,7 @@ msgid "Ms"
 msgstr "Cô"
 
 msgid "Multiplier"
-msgstr ""
+msgstr "Cấp nhân"
 
 msgid "Name"
 msgstr "Tên"
@@ -1114,7 +1114,7 @@ msgid "No touch"
 msgstr "Không chạm"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr ""
+msgstr "Hợp đồng được bán sẽ chỉ hiện giá đang phổ biến trên thị trường khi máy chủ nhận được yêu cầu. Giá này có thể khác với giá chỉ định."
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
 msgstr "Lưu ý: Rút tiền thông qua đại lý thanh toán sẽ chỉ khả dụng nếu bạn gửi tiền duy nhất thông qua đại lý thanh toán"
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Khác"
 
 msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
-msgstr ""
+msgstr "Ngoài EU, các sản phẩm tài chính được cung cấp bởi Binary (CR) SA, Tầng 5, Tòa nhà 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Tòa nhà Govant, Port Vila, PO Box 1276, Vanuatu, được cấp phép bởi Ủy ban Dịch vụ Tài chính Vanuatu (%1view giấy phép%2), Binary (BVI) Ltd, Tầng 2, O'Neal Marketing Associates Building, Wickham's Cay II, PO Box 3174, Road Town, Tortola VB1110, Quần đảo Virgin thuộc Anh, được quy định bởi Ủy ban Dịch vụ Tài chính Quần đảo Virgin thuộc Anh (%3licence no. SIBA / L / 18/1114%4) và Binary (FX) Ltd., Lô số F16, Tầng 1, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, do Cơ quan dịch vụ tài chính Labuan quy định để thực hiện công việc kinh doanh tiền tệ (%5 giấy phép số. MB / 18/0024%6)"
 
 msgid "Over"
 msgstr "Qua"
@@ -1183,10 +1183,10 @@ msgid "Overlap Studies"
 msgstr "nghiên cứu chồng chéo"
 
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 msgid "Password successfully updated."
-msgstr ""
+msgstr "Cập nhật mật khẩu thành công."
 
 msgid "Passwords didn't match. Please type them again"
 msgstr "Mật khẩu không khớp. Vui lòng nhập lại"
@@ -1216,40 +1216,40 @@ msgid "Permissions"
 msgstr "Cấp phép"
 
 msgid "Please [_1]accept the updated Terms and Conditions[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Xin %1 vui lòng chấp nhận cập nhật các Điều Khoản và Điều Kiện sử dụng dịch vụ [_2] để nâng mức tiền rút và giới hạn giao dịch."
 
 msgid "Please [_1]complete your account profile[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Xin %1 vui lòng hoàn thành hồ sơ tài khoản [_2] của bạn để nâng mức rút tiền và loại bỏ các giới hạn giao dịch."
 
 msgid "Please choose at least one token scope"
-msgstr ""
+msgstr "Vui lòng chọn ít nhất một phạm vi token"
 
 msgid "Please complete the [_1]financial assessment form[_2] to lift your withdrawal and trading limits."
-msgstr ""
+msgstr "Xin vui lòng hoàn tất [_1] mẫu đánh giá tài chính [_2] để nâng giới hạn rút tiền và giao dịch của bạn."
 
 msgid "Please confirm the following details in order to complete the transfer"
 msgstr "Vui lòng xác nhận các chi tiết sau để hoàn thành việc chuyển khoản"
 
 msgid "Please enter a number between"
-msgstr ""
+msgstr "Vui lòng nhập một số trong khoảng"
 
 msgid "Please enter a valid value for"
-msgstr ""
+msgstr "Vui lòng nhập một giá trị hợp lệ cho"
 
 msgid "Please enter a value between 0 and"
-msgstr ""
+msgstr "Vui lòng nhập một giá trị trong khoảng từ 0 và"
 
 msgid "Please enter a value greater than 0"
 msgstr "Vui lòng nhập một giá trị lớn hơn 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Vui lòng nhập một giá trị tối thiểu 6 tuần trước trước khi thời gian loại trừ kết thúc."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Vui lòng nhập ngày theo định dạng YYYY-MM-DD"
 
 msgid "Please enter the token name"
-msgstr ""
+msgstr "Vui lòng nhập tên token"
 
 msgid "Please enter time in the format HH:MM"
 msgstr "Vui lòng nhập thời gian với định dạng HH:MM"
@@ -1264,31 +1264,31 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
 
 msgid "Please keep your message to a single line, don’t press enter"
-msgstr ""
+msgstr "Xin vui lòng giữ tin nhắn của bạn chỉ ở trong dòng duy nhất, đừng bấm xuống dòng"
 
 msgid "Please log in"
-msgstr ""
+msgstr "Vui lòng đăng nhập"
 
 msgid "Please log in to see your saved workspace."
-msgstr ""
+msgstr "Vui lòng đăng nhập để xem các workspace đã được lưu."
 
 msgid "Please log in."
-msgstr ""
+msgstr "Vui lòng đăng nhập."
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Vui lòng chọn một ngày đến khi thời gian loại trừ kết thúc."
 
 msgid "Please select a payment agent"
-msgstr ""
+msgstr "Vui lòng chọn một đại lý thanh toán"
 
 msgid "Please set the [_1]currency[_2] of your account"
-msgstr ""
+msgstr "Vui lòng đặt [_1]đơn vị tiền tệ[_2] cho tài khoản"
 
 msgid "Please try again after 1 minute."
-msgstr ""
+msgstr "Xin vui lòng thử lại sau 1 phút."
 
 msgid "Please use your new password to login."
-msgstr ""
+msgstr "Vui lòng sử dụng mật khẩu bạn mới đổi để đăng nhập."
 
 msgid "Plot"
 msgstr "Vẽ"
@@ -1333,7 +1333,7 @@ msgid "Profit"
 msgstr "Lợi nhuận"
 
 msgid "Profit Table"
-msgstr ""
+msgstr "Bảng lợi nhuận"
 
 msgid "Profit table"
 msgstr "Bảng lợi nhuận"
@@ -1351,25 +1351,25 @@ msgid "Purchase Price"
 msgstr "Giá mua"
 
 msgid "Purchase Time"
-msgstr ""
+msgstr "Thời gian Mua"
 
 msgid "Read"
 msgstr "Đọc"
 
 msgid "Reality check"
-msgstr ""
+msgstr "Kiểm tra tính xác thực"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Chuyển hướng đến trang chứng thực đăng nhập,"
 
 msgid "Ref"
 msgstr "REF"
 
 msgid "Ref."
-msgstr ""
+msgstr "Tham khảo."
 
 msgid "Refresh failed"
-msgstr ""
+msgstr "Làm mới thất bại"
 
 msgid "Register free account"
 msgstr "Đăng ký tài khoản miễn phí"
@@ -1384,7 +1384,7 @@ msgid "Rename"
 msgstr "Đổi tên"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "Hợp đồng chưa được đề nghị bán lại"
 
 msgid "Reset zoom"
 msgstr "Đặt lại phóng to"
@@ -1444,7 +1444,7 @@ msgid "Secondary"
 msgstr "Thứ cấp"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "Dườn như máy chủ đang gặp sự cố, chúng tôi đang làm việc để giải quyết vấn đề trong khoảng thời gian sớm nhất."
 
 msgid "Self-Employed"
 msgstr "Tự làm"
@@ -1453,7 +1453,7 @@ msgid "Self-Exclusion"
 msgstr "Tự Loại Trừ"
 
 msgid "Self-Exclusion Facilities"
-msgstr ""
+msgstr "Công Cụ Tự Loại Trừ"
 
 msgid "Sell At Market"
 msgstr "Bán tại thị trường"
@@ -1471,7 +1471,7 @@ msgid "Session"
 msgstr "Phiên"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Thời hạn phiên"
 
 msgid "Session duration limit, in minutes"
 msgstr "Giới hạn thời lượng phiên, bằng phút"
@@ -1489,7 +1489,7 @@ msgid "Sold"
 msgstr "Đã bán"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Một số chỉ số ngẫu nhiên"
 
 msgid "Spline"
 msgstr "Chốt"
@@ -1552,10 +1552,10 @@ msgid "Submit"
 msgstr "Gửi"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Token mới đã được nạp vào thành công"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Thành công việc thêm workspace như"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Áp dụng các bản mẫu và lưu nó như là đã thành công"
@@ -1573,16 +1573,16 @@ msgid "Tel"
 msgstr "Điện thoại"
 
 msgid "Template already saved as"
-msgstr ""
+msgstr "Biểu mẫu đã được lưu lại dưới dạng"
 
 msgid "Template applied partially."
-msgstr ""
+msgstr "Một phần biểu mẫu đã được áp dụng."
 
 msgid "Template changes saved"
 msgstr "Thay đổi mẫu đã được lưu lại"
 
 msgid "Template is not applicable."
-msgstr ""
+msgstr "Mẫu không thể áp dụng."
 
 msgid "Template name"
 msgstr "Tên mẫu"
@@ -1594,7 +1594,7 @@ msgid "Terms"
 msgstr "Điều khoản"
 
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Điều Khoản và Điều Kiện sử dụng dịch vụ"
 
 msgid "Tertiary"
 msgstr "Cấp 3"
@@ -1606,28 +1606,28 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "Công ty giữ tiền khách hàng trong tài khoản ngân hàng tách biệt với tài khoản ngân hàng vận hành, trong trường hợp phá sản, nó sẽ không thuộc tài sản của Công ty. Điều này đáp ứng các yêu cầu của Ủy ban Cờ bạc để cách ly các tiền của khách hàng ở cấp độ"
 
 msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "Các dịch vụ tài chính được cung cấp thông qua trang web này bao gồm các tùy chọn nhị phân, hợp đồng chênh lệch (\"CFDs\") và các sản phẩm tài chính và chứng khoán phái sinh phức tạp khác. Các tùy chọn giao dịch nhị phân có thể không phù hợp với tất cả mọi người. Giao dịch CFD mang mức độ rủi ro cao vì đòn bẩy có thể mang đến lợi thế cũng như bất lợi cho bạn. Do đó, các sản phẩm được cung cấp trên trang web này có thể không phù hợp với tất cả các nhà đầu tư vì bạn có thể gặp rủi ro mất hết vốn của mình. Bạn nên đầu tư khi không có đủ khả năng để chấp nhận thua lỗ, và không bao giờ giao dịch bằng tiền đi vay. Trước khi giao dịch trong các sản phẩm tài chính phức tạp được cung cấp, vui lòng đảm bảo bạn đã hiểu các rủi ro có liên quan và tìm hiểu kỹ về %1 Giao Dịch Có Trách Nhiệm%2."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Có một sự dán đoạn dữ liệu thị trường trong lúc hợp đồng đang thực thi. Đối với các tài khoản tiền thật chúng tôi sẽ cố gắng khắc phục lỗi điều chỉnh hợp đồng cho phù hợp, hoặc hợp đồng sẽ được hủy và hoàn lại tiền. Các hợp đồng tiền ảo sẽ được hủy và hoàn tiền."
 
 msgid "There was an error"
-msgstr ""
+msgstr "Đã có lỗi xảy ra"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Hợp đồng đã hết hạn"
 
 msgid "This contract lost"
-msgstr ""
+msgstr "Hợp đồng này đã thất bại"
 
 msgid "This contract won"
-msgstr ""
+msgstr "Hợp đồng này đã thành công"
 
 msgid "This field is required"
 msgstr "Trường này là bắt buộc"
 
 msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "Dịch vụ của trang web này không có sẵn ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, Nhật bản, hoặc cho những người dưới 18 tuổi."
 
 msgid "Thu"
 msgstr "Thứ năm"
@@ -1654,7 +1654,7 @@ msgid "Time out until"
 msgstr "Thời gian ra đến khi"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Thời gian chờ cho yêu cầu websocket"
 
 msgid "Title"
 msgstr "Tiêu đề"
@@ -1672,7 +1672,7 @@ msgid "To withdraw funds please enter the special verification token we have jus
 msgstr "Để rút tiền xin vui lòng nhập mã xác minh token đặc biệt mà chúng tôi vừa gửi qua email cho bạn"
 
 msgid "Today"
-msgstr ""
+msgstr "Hôm nay"
 
 msgid "Token"
 msgstr "Token"
@@ -1681,7 +1681,7 @@ msgid "Token Management"
 msgstr "Quản lý Token"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token đã được nạp"
 
 msgid "Token management"
 msgstr "Quản lý Token"
@@ -1690,16 +1690,16 @@ msgid "Token name"
 msgstr "Tên Token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "Tên token có thể chứa các ký tự chữ-số với dấu cách và gạch chân"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "Tên của token có tối đa 32 ký tự"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "Tên Token phải có chứa ít nhất 2 ký tự"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "Tên token phải bắt đầu với ký tự từ bảng chữ cái"
 
 msgid "Token permissions"
 msgstr "Cấp phép Token"
@@ -1756,7 +1756,7 @@ msgid "Trading Times"
 msgstr "Thời Gian Giao Dịch"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr ""
+msgstr "Giao dịch binary options có thể không phù hợp với mọi người, vì vậy hãy đảm bảo rằng bạn hiểu đầy đủ các rủi ro liên quan. Khoản lỗ của bạn có thể vượt quá khoản tiền gửi ban đầu của bạn và bạn không sở hữu hoặc có bất kỳ lợi ích nào trong tài sản cơ sở."
 
 msgid "Tradingview for Binary.com"
 msgstr "Xem giao dịch cho Binary.com"
@@ -1822,7 +1822,7 @@ msgid "Various customisable features like loading and arranging assets, charting
 msgstr "Các tính năng tuỳ chỉnh như tải và sắp xếp các tài sản, xếp hạng và các tài nguyên khác tùy theo cách mà bạn thấy phù hợp"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Mã xác nhận đã được gửi tới"
 
 msgid "Verification token"
 msgstr "Xác nhận Token"
@@ -1864,7 +1864,7 @@ msgid "Welcome to Binary.com Webtrader"
 msgstr "Chào mừng đến với Binary.com Webtrader"
 
 msgid "When you click \"Ok\" you will be excluded from trading on the site until the selected date."
-msgstr ""
+msgstr "Khi bạn nhấp vào \"Ok\" bạn sẽ bị loại bỏ khỏi giao dịch trên trang web tới ngày được chọn."
 
 msgid "While on the go, you can"
 msgstr "Khi đang tiến hành, bạn có thể"
@@ -1879,7 +1879,7 @@ msgid "Workspace"
 msgstr "Không gian làm việc"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Thay đổi workspace đã được lưu"
 
 msgid "X-axis labels"
 msgstr "Nhãn X-axis"
@@ -1903,7 +1903,7 @@ msgid "You are not copying any trade(s) yet"
 msgstr "Bạn chưa sao chép bất kỳ (những) giao dịch nào"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Bạn đã loại trừ bản thân cho đến khi"
 
 msgid "You have sold the following contract"
 msgstr "Bạn đã bán hợp đồng sau"
@@ -1927,16 +1927,16 @@ msgid "Your account (%) is locked, please contact customer support for more info
 msgstr "Tài khoản của bạn (%) bị khóa, xin vui lòng liên hệ với hỗ trợ khách hàng để xem thêm thông tin."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Tài khoản của bạn bị hạn chế. [_1] vui lòng liên hệ với đơn vị hỗ trợ khách hàng [_2] để được trợ giúp."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Trình duyệt của bạn không hỗ trợ sao chép vào bộ nhớ tạm (clipboard)"
 
 msgid "Your browser is not supported"
 msgstr "Trình duyệt của bạn không được hỗ trợ"
 
 msgid "Your changes have been updated"
-msgstr ""
+msgstr "Những thay đổi của bạn đã được cập nhật"
 
 msgid "Your copying settings"
 msgstr "Cài đặt sao chép của bạn"
@@ -1954,16 +1954,16 @@ msgid "Zoom"
 msgstr "Phóng to"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
-msgstr ""
+msgstr "[_1]Xác thực tài khoản của bạn[_2] ngay bây giờ để tận dụng đầy đủ các tùy chọn rút tiền có sẵn."
 
 msgid "and"
-msgstr ""
+msgstr "và"
 
 msgid "commission"
 msgstr "Hoa hồng"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "tạo ra một token chỉ cho phép đọc, và chia sẻ token đó với những người bắt trước bạn"
 
 msgid "customer support"
 msgstr "hỗ trợ khách hàng"
@@ -1975,7 +1975,7 @@ msgid "days"
 msgstr "ngày"
 
 msgid "deposits"
-msgstr ""
+msgstr "gửi tiền"
 
 msgid "end time"
 msgstr "thời gian kết thúc"
@@ -1987,7 +1987,7 @@ msgid "exit spot"
 msgstr "Điểm chốt"
 
 msgid "for"
-msgstr ""
+msgstr "cho"
 
 msgid "for mobile charts"
 msgstr "dành cho bảng điện thoại di động"
@@ -2035,7 +2035,7 @@ msgid "main site"
 msgstr "Trang web chính"
 
 msgid "market is presently closed."
-msgstr ""
+msgstr "thị trường hiện đã đóng cửa."
 
 msgid "medium protection"
 msgstr "Bảo vệ trung bình"
@@ -2059,10 +2059,10 @@ msgid "points"
 msgstr "điểm số"
 
 msgid "risk warning"
-msgstr ""
+msgstr "cảnh báo rủi ro"
 
 msgid "sec"
-msgstr ""
+msgstr "giây"
 
 msgid "second"
 msgstr "giây"
@@ -2089,7 +2089,7 @@ msgid "ticks"
 msgstr "đánh dấu"
 
 msgid "withdrawals"
-msgstr ""
+msgstr "rút tiền"
 
 msgid "yes"
 msgstr "Có"
@@ -2098,8 +2098,8 @@ msgid "{agent.commission}%"
 msgstr "{hoa hồng cho đại lý}%"
 
 msgid "| Return"
-msgstr ""
+msgstr "| Lợi nhuận"
 
 msgid "﻿"
-msgstr ""
+msgstr "dấu cách"
 
