@@ -157,7 +157,7 @@ const settingsData = {
 
         if (message.length > 0) {
             message.forEach(function(msg, i) {
-                $.growl.error({ message: msg });
+                $.growl.error({ message: msg, fixed: true });
             })
             return;
         }
@@ -176,10 +176,7 @@ const settingsData = {
                 refreshData();
             })
             .catch(function(err) {
-                $.growl.error({ 
-                    message: err.message,
-                    duration: 7000,
-                });
+                $.growl.error({ message: err.message, fixed: true });
             });
     }
 };
@@ -255,7 +252,7 @@ const refreshData = function() {
             }
         })
         .catch(function(err) {
-            $.growl.error({ message: err.message });
+            $.growl.error({ message: err.message, fixed: true });
             console.error(err);
         });
 };
