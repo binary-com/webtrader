@@ -86,6 +86,7 @@ const settingsData = {
     session_duration_limit: null,
     exclude_until: null,
     has_exclude_until: null,
+    is_iom_malta: null,
     is_gamstop_client: null,
     timeout_until_date: null,
     timeout_until_time: null,
@@ -247,7 +248,9 @@ const refreshData = function() {
                     }
                 });
                 settingsData.has_exclude_until = response.get_self_exclusion.exclude_until;
-                settingsData.is_gamstop_client = isGamstopClient();
+                const country_status = getCountryStatus();
+                settingsData.is_iom_malta = country_status.has_iom_malta;
+                settingsData.is_gamstop_client = country_status.has_uk && country_status.has_iom_malta;
                 logoutBasedOnExcludeDateAndTimeOut();
             }
         })
@@ -257,9 +260,12 @@ const refreshData = function() {
         });
 };
 
-const isGamstopClient = function() {
+const getCountryStatus = function() {
     const authorize = local_storage.get('authorize');
-    return /gb/.test(authorize.country) && /iom|malta/.test(authorize.landing_company_name);
+    return {
+        has_iom_malta: /iom|malta/.test(authorize.landing_company_name),
+        has_uk: /gb/.test(authorize.country),
+    };
 }
 
 const setOrRefreshTimer = function() {

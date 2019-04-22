@@ -109,7 +109,7 @@
         <div class="self-exclusion_update-btn-container" rv-hide='has_exclude_until'>
             <button class="self-exclusion_update-btn text-vertical-align" rv-on-click="update">Update Settings</button>
         </div>
-        <div id='ukgc_requirement_notice' class='self-exclusion_notice' rv-show='has_exclude_until'>
+        <div id='ukgc_requirement_notice' class='self-exclusion_notice' rv-show='has_exclude_until | and is_iom_malta'>
             <p>Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites.</p>
             <p>Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for.</p>
             <p id='gamstop_info_bottom' rv-show='is_gamstop_client'>To self-exclude from all online gambling companies licensed in Great Britain, you may go to <a target='_blank' rel='noopener noreferrer' href='https://www.gamstop.co.uk'>www.gamstop.co.uk</a>.</p>
