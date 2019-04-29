@@ -136,7 +136,7 @@ function init_state(root) {
     deposit_win_view = rv.bind(root[0], state);
 
     /* get the cashier_url */
-    liveapi.send({
+    liveapi.cached.send({
         cashier: 'deposit'
     }).then(function(data) {
         state.user.cashier_url = data.cashier;
@@ -154,7 +154,7 @@ function init_state(root) {
     });
 
     /* get the residence field and its states */
-    var residence_promise = liveapi.send({ get_settings: 1 })
+    var residence_promise = liveapi.cached.send({ get_settings: 1 })
         .then(function(data) {
             state.user.residence = data.get_settings.country_code;
             state.user.residence_name = data.get_settings.country;
@@ -165,7 +165,7 @@ function init_state(root) {
     residence_promise.then(function() {
         if (!state.user.residence)
             return { paymentagent_list: { list: [] } };
-        return liveapi.send({ paymentagent_list: state.user.residence, currency: state.user.currency });
+        return liveapi.cached.send({ paymentagent_list: state.user.residence, currency: state.user.currency });
     }).then((data) => {
         const pa_list = data.paymentagent_list.list
             .map((agent) => {

@@ -63,7 +63,7 @@ const proposalOpenContract = (command) => {
     if(command === 'subscribe') {
         ++subscribers;
         if(!subscribed_before && subscribers > 0) {
-            liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
+            liveapi.cached.send({ proposal_open_contract: 1,subscribe: 1 })
                 .then((data) => { subscribed_before = true; })
                 .catch((err) => {
                     console.error(err);
@@ -74,7 +74,7 @@ const proposalOpenContract = (command) => {
     else if(command === 'forget') {
         --subscribers;
         if(subscribed_before && subscribers === 0) {
-            liveapi.send({ forget_all: 'proposal_open_contract' })
+            liveapi.cached.send({ forget_all: 'proposal_open_contract' })
                 .then((data) => {
                     subscribed_before = false;
                 })
@@ -85,7 +85,7 @@ const proposalOpenContract = (command) => {
         }
     }
     else if( command === 'resubscribe' ) {
-        liveapi.send({ forget_all: 'proposal_open_contract' })
+        liveapi.cached.send({ forget_all: 'proposal_open_contract' })
             .then((data) => {
                 subscribed_before = false;
                 --subscribers;
@@ -157,7 +157,7 @@ const initPortfolioWin = () => {
         }
     });
 
-    liveapi.send({ balance: 1 })
+    liveapi.cached.send({ balance: 1 })
         .then((data) => {
             currency = data.balance.currency;
             portfolioWin = windows.createBlankWindow($('<div/>'), {
@@ -183,7 +183,7 @@ const initPortfolioWin = () => {
                     liveapi.events.off('transaction', on_transaction);
                 },
                 refresh: () => {
-                    liveapi.send({ balance: 1 }).catch((err) => { console.error(err); $.growl.error({ message: err.message }); });
+                    liveapi.cached.send({ balance: 1 }).catch((err) => { console.error(err); $.growl.error({ message: err.message }); });
                     forget_the_contracts(subscribed_contracts).then(init_table);
                 }
             });
@@ -262,7 +262,7 @@ const forget_the_contracts = (contracts) => {
 const init_table = async () => {
     const processing_msg = $('#' + table.attr('id') + '_processing').show();   
     try {
-        const data = await liveapi.send({ portfolio: 1 });
+        const data = await liveapi.cached.send({ portfolio: 1 });
         const contracts = (data.portfolio && data.portfolio.contracts);
             //|| [
             //    {

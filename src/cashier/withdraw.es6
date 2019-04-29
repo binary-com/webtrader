@@ -177,7 +177,7 @@ class Withdraw {
             }
 
             agent.hint = `Min: ${agent.min_amount} Max: ${agent.max_amount}`.i18n();
-            liveapi.send({
+            liveapi.cached.send({
                     verify_email: email,
                     type: type
                 })
@@ -205,7 +205,7 @@ class Withdraw {
 
             if (menu.choice === 'standard') {
                 verify.disabled = true;
-                liveapi.send({
+                liveapi.cached.send({
                         cashier: 'withdraw',
                         verification_code: verify.token
                     })
@@ -283,7 +283,7 @@ class Withdraw {
                 verification_code: verify.code
             };
             agent.disabled = true;
-            liveapi.send(request)
+            liveapi.cached.send(request)
                 .then(data => {
                     route.update('agent-done')
                     agent.disabled = false;
@@ -297,7 +297,6 @@ class Withdraw {
 
         transfer.submit = () => {
             if (transfer.account === '' || transfer.amount === '') {
-                console.log(transfer);
                 empty_fields.show();
                 return;
             }
@@ -309,7 +308,7 @@ class Withdraw {
                 amount: transfer.amount
             };
             transfer.disabled = true;
-            liveapi.send(req)
+            liveapi.cached.send(req)
                 .then(data => {
                     transfer.account = transfer.account.split("_to_")[1];
                     route.update('transfer-done');
@@ -344,7 +343,7 @@ class Withdraw {
             }
         }
 
-        liveapi.send({ get_settings: 1 })
+        liveapi.cached.send({ get_settings: 1 })
             .then(data => {
                 agent.residence = data.get_settings.country_code;
                 const currency = local_storage.get('currency');
@@ -355,7 +354,7 @@ class Withdraw {
             })
             .catch(error_handler);
 
-        liveapi.send({ payout_currencies: 1 })
+        liveapi.cached.send({ payout_currencies: 1 })
             .then(data => {
                 agent.currency = data.payout_currencies[0];
             }).catch(err => console.error(err));

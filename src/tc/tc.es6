@@ -27,7 +27,7 @@ export const init = () => {
         const div = $(html).i18n();
         div.find('.tc_landing_comp_name').html(landing_company_name);
         div.find('.button').click(() => {
-            liveapi.send({ "tnc_approval": 1 }).then(_ => window.location.reload()); // Reload page to remove previous notification message
+            liveapi.cached.send({ "tnc_approval": 1 }).then(_ => window.location.reload()); // Reload page to remove previous notification message
             win.dialog('destroy');
         });
         win = windows.createBlankWindow($('<div/>'), {

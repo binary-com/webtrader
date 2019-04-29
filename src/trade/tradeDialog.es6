@@ -440,7 +440,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
   var update_currency = function() {
     /* change currency on user login */
     if(liveapi.is_authenticated()) {
-      liveapi.send({payout_currencies: 1})
+      liveapi.cached.send({payout_currencies: 1})
              .then(function(data){
                state.currency.value = data.payout_currencies[0];
                state.currency.array = data.payout_currencies;
@@ -882,7 +882,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     if(state.proposal.last_promise) {
       state.proposal.last_promise.then(function(data){
         var id = data && data.proposal && data.proposal.id;
-        id && liveapi.send({forget: id});
+        id && liveapi.cached.send({forget: id});
       });
     }
 
@@ -890,7 +890,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       let response;
       for (let i = 0; i < times_to_retry; i++) {
         try {
-          response = await liveapi.send(request);
+          response = await liveapi.cached.send(request);
           state.proposal.error = '';
           state.proposal.id = response.proposal && response.proposal.id;
           break;
@@ -986,7 +986,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     }
     try {
         const [tradeConf] = await require(['trade/tradeConf']);
-        const data = await liveapi.send({
+        const data = await liveapi.cached.send({
                 buy: state.proposal.id,
                 price: state.proposal.ask_price * 1,
              });
@@ -1108,7 +1108,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
           if(state.proposal.last_promise) {
             state.proposal.last_promise.then(function(data){
               var id = data && data.proposal && data.proposal.id;
-              id && liveapi.send({forget: id});
+              id && liveapi.cached.send({forget: id});
             });
           }
           chartingRequestMap.unregister(key);

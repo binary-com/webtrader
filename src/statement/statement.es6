@@ -84,7 +84,9 @@ const refreshTable  = (yyy_mm_dd) => {
 
    if(!loading) {
          loading = true;
-         liveapi.send(request)
+         liveapi
+            .cached
+            .send(request)
             .then(refresh)
             .catch((err) => {
                   refresh({});

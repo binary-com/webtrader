@@ -185,7 +185,7 @@ export const init = (contract_id, transaction_id) => {
          resolve();
          return;
       }
-      liveapi.send({proposal_open_contract: 1, contract_id})
+      liveapi.cached.send({proposal_open_contract: 1, contract_id})
         .then((data) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */
@@ -418,7 +418,7 @@ const init_dialog = (proposal) => {
 const sellAtMarket = (state, root) => {
    state.sell.sell_at_market_enabled = false;
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
-   liveapi.send({ sell: state.proposal_open_contract.contract_id, price: 0 })
+   liveapi.cached.send({ sell: state.proposal_open_contract.contract_id, price: 0 })
       .then((data) => {
          state.proposal_open_contract.is_sold_before_expiry = true;
          const { sell } = data;
@@ -657,7 +657,7 @@ const setupChart = (state, root) => {
   // setup tick/candle stream for chart
   if (!state.proposal_open_contract.is_ended) updateLiveChart(state, granularity);
 
-  liveapi.send(tick_history_request)
+  liveapi.cached.send(tick_history_request)
     .then((data) => {
       onTickHistorySuccess(data);
       getContractData(state, state.proposal_open_contract);

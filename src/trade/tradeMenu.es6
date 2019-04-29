@@ -37,6 +37,7 @@ const refresh_active_symbols = () => {
          const trade = $("#nav-menu").find(".trade");
          menu.refreshMenu(trade, markets, (symbol, display_name, pip) => {
             liveapi
+               .cached
                .send({ contracts_for: symbol })
                .then((res) => {
                   require(['trade/tradeDialog'],

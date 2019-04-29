@@ -85,6 +85,7 @@ const reopen_dialogs = (symbols, saved_states) => {
             when_authenticated().then(() => {
                   data.data.tracker_id = ++counter;
                   liveapi
+                  .cached
                   .send({contracts_for: data.data.symbol.symbol})
                   .then((res) => {
                         require(['trade/tradeDialog'], (tradeDialog) => {

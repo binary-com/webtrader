@@ -87,6 +87,7 @@ instrumentPromise().then(instruments => {
 const refreshTraderStats = (loginid, token, scope) => {
   return new Promise((resolve, reject) => {
     liveapi
+      .cached
       .send({
         copytrading_statistics: 1,
         trader_id: loginid,
@@ -134,6 +135,7 @@ const state = {
     state.is_loading = true;
 
     liveapi
+      .cached
       .send({
         set_settings: 1,
         allow_copiers,
@@ -174,6 +176,7 @@ const state = {
             if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
 
             liveapi
+              .cached
               .send(settingsToSend)
               .then(() => {
                 newObj.disableStart = false;
@@ -192,7 +195,7 @@ const state = {
       }
     } else {
       //Stop copying
-      liveapi.send({
+      liveapi.cached.send({
           copy_stop: state.traderTokens[index].yourCopySettings.copy_start
         })
         .then(() => {
@@ -211,7 +214,7 @@ const state = {
     const toBeRemovedItem = state.traderTokens[index];
     state.traderTokens.splice(index, 1);
     updateLocalStorage(state);
-    liveapi.send({
+    liveapi.cached.send({
       copy_stop: toBeRemovedItem.yourCopySettings.copy_start
     })
     .catch(e => {});
@@ -331,6 +334,7 @@ const initConfigWindow = () => {
         state.allowCopy.allow_copiers = 0;
       } else {
         liveapi
+        .cached
         .send({ get_settings: 1 })
         .then((settings) => {
           state.is_loading = false;

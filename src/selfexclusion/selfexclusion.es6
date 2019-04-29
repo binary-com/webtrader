@@ -167,7 +167,7 @@ const settingsData = {
             }
         }
 
-        liveapi.send(data)
+        liveapi.cached.send(data)
             .then(function(response) {
                 $.growl.notice({ message: 'Your changes have been updated'.i18n() });
                 logoutBasedOnExcludeDateAndTimeOut();
@@ -235,6 +235,7 @@ function logoutBasedOnExcludeDateAndTimeOut() {
 const refreshData = function() {
     $.growl.notice({ message: 'Loading self-exclusion settings.'.i18n() });
     return liveapi
+        .cached
         .send({ get_self_exclusion: 1 })
         .then(function(response) {
             if (response.get_self_exclusion) {

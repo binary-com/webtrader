@@ -22,7 +22,7 @@ export const init_win = () => new Promise((resolve, reject) => {
     });
     const state = {};
     state.accept = () => {
-        liveapi.send({
+        liveapi.cached.send({
             "tnc_approval": 1,
             "ukgc_funds_protection": 1
         }).then(resolve,reject).then(()=>{

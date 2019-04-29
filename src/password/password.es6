@@ -95,7 +95,7 @@ const init_state = (root) => {
          new_password: state.account.new_password
       };
       state.btn.disabled = true;
-      liveapi.send(request)
+      liveapi.cached.send(request)
          .then((data) =>{
             if(data.change_password !== 1){
                throw { message: 'Failed to update the password'.i18n()};

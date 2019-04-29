@@ -91,7 +91,7 @@ const refreshTable = (yyyy_mm_dd) => {
       processing_msg.hide();
    };
 
-   liveapi.send(request)
+   liveapi.cached.send(request)
       .then(refresh)
       .catch((err) => {
          refresh({});
