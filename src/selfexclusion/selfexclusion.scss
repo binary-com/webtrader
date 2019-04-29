@@ -1,0 +1,51 @@
+.self-exclusion {
+    padding-bottom: 20px;
+
+    .webtrader-dialog {
+        width: auto !important;
+    }
+    .text-vertical-align {
+        line-height: 2em;
+    }
+    &_header {
+        padding: 10px;
+
+        p {
+            margin-top: 0;
+        }
+    }
+    &_body {
+        margin: auto;
+        padding: 10px;
+        border: solid 1px #E5E5E5;
+        display: table;
+    }
+    &_row {
+        display: table-row;
+    }
+    &_col {
+        display: table-cell;
+        padding: 5px 5px 10px 5px;
+    }
+    &_input {
+        width : 270px;
+
+        &-hint {
+            font-size: 11px;
+        }
+    }
+    &_update-btn {
+        &-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    &_notice {
+        margin: 10px auto;
+        color: #000;
+        background-color: #fef1cf;
+        padding: 10px;
+        overflow: hidden;
+        font-size: 16px;
+    }
+}
