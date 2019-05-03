@@ -185,7 +185,7 @@ export const init = (contract_id, transaction_id) => {
          resolve();
          return;
       }
-      liveapi.cached.send({proposal_open_contract: 1, contract_id})
+      liveapi.send({proposal_open_contract: 1, contract_id})
         .then((data) => {
             const proposal = data.proposal_open_contract;
             /* check for market data disruption error */

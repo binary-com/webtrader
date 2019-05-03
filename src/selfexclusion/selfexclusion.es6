@@ -237,7 +237,6 @@ function logoutBasedOnExcludeDateAndTimeOut() {
 const refreshData = function() {
     $.growl.notice({ message: 'Loading self-exclusion settings.'.i18n() });
     return liveapi
-        .cached
         .send({ get_self_exclusion: 1 })
         .then(function(response) {
             if (response.get_self_exclusion) {

@@ -157,7 +157,7 @@ const initPortfolioWin = () => {
         }
     });
 
-    liveapi.cached.send({ balance: 1 })
+    liveapi.send({ balance: 1 })
         .then((data) => {
             currency = data.balance.currency;
             portfolioWin = windows.createBlankWindow($('<div/>'), {
@@ -183,7 +183,7 @@ const initPortfolioWin = () => {
                     liveapi.events.off('transaction', on_transaction);
                 },
                 refresh: () => {
-                    liveapi.cached.send({ balance: 1 }).catch((err) => { console.error(err); $.growl.error({ message: err.message }); });
+                    liveapi.send({ balance: 1 }).catch((err) => { console.error(err); $.growl.error({ message: err.message }); });
                     forget_the_contracts(subscribed_contracts).then(init_table);
                 }
             });

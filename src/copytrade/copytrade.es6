@@ -87,7 +87,6 @@ instrumentPromise().then(instruments => {
 const refreshTraderStats = (loginid, token, scope) => {
   return new Promise((resolve, reject) => {
     liveapi
-      .cached
       .send({
         copytrading_statistics: 1,
         trader_id: loginid,
