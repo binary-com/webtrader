@@ -96,7 +96,7 @@ const init_state = (root) => {
     state.confirm.yes = () => {
         const token = state.confirm.token;
         state.confirm.visible = false;
-        liveapi.cached.send({ api_token: 1, delete_token: token.token })
+        liveapi.send({ api_token: 1, delete_token: token.token })
             .then((data) => {
                 const tokens = (data.api_token && data.api_token.tokens) || [];
                 state.update_tokens(tokens);

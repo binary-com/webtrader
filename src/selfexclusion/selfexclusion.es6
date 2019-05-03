@@ -169,7 +169,7 @@ const settingsData = {
             }
         }
 
-        liveapisend(data)
+        liveapi.send(data)
             .then(function(response) {
                 $.growl.notice({ message: 'Your changes have been updated'.i18n() });
                 logoutBasedOnExcludeDateAndTimeOut();

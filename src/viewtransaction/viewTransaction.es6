@@ -418,7 +418,7 @@ const init_dialog = (proposal) => {
 const sellAtMarket = (state, root) => {
    state.sell.sell_at_market_enabled = false;
    require(['text!viewtransaction/viewTransactionConfirm.html', 'css!viewtransaction/viewTransactionConfirm.css']);
-   liveapi.cached.send({ sell: state.proposal_open_contract.contract_id, price: 0 })
+   liveapi.send({ sell: state.proposal_open_contract.contract_id, price: 0 })
       .then((data) => {
          state.proposal_open_contract.is_sold_before_expiry = true;
          const { sell } = data;
