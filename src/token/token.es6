@@ -152,7 +152,7 @@ const init_state = (root) => {
         }
 
         state.token.btn_disabled = true;
-        liveapi.cached.send(request).then((data) => {
+        liveapi.send(request).then((data) => {
             state.token.name = '';
             state.token.btn_disabled = false;
             $.growl.notice({ message: `${'Successfully added new token '.i18n()} ${request.new_token}` });
@@ -170,7 +170,7 @@ const init_state = (root) => {
     }
 
     token_win_view = rv.bind(root[0], state);
-    return liveapi.cached.send({ api_token: 1 })
+    return liveapi.send({ api_token: 1 })
         .then((data) => {
             const tokens = (data.api_token && data.api_token.tokens) || [];
             state.update_tokens(tokens);

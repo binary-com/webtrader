@@ -882,7 +882,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     if(state.proposal.last_promise) {
       state.proposal.last_promise.then(function(data){
         var id = data && data.proposal && data.proposal.id;
-        id && liveapi.cached.send({forget: id});
+        id && liveapi.send({forget: id});
       });
     }
 
@@ -986,7 +986,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     }
     try {
         const [tradeConf] = await require(['trade/tradeConf']);
-        const data = await liveapi.cached.send({
+        const data = await liveapi.send({
                 buy: state.proposal.id,
                 price: state.proposal.ask_price * 1,
              });
@@ -1108,7 +1108,7 @@ export function init(symbol, contracts_for, saved_template, isTrackerInitiated) 
           if(state.proposal.last_promise) {
             state.proposal.last_promise.then(function(data){
               var id = data && data.proposal && data.proposal.id;
-              id && liveapi.cached.send({forget: id});
+              id && liveapi.send({forget: id});
             });
           }
           chartingRequestMap.unregister(key);

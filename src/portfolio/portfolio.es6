@@ -63,7 +63,7 @@ const proposalOpenContract = (command) => {
     if(command === 'subscribe') {
         ++subscribers;
         if(!subscribed_before && subscribers > 0) {
-            liveapi.cached.send({ proposal_open_contract: 1,subscribe: 1 })
+            liveapi.send({ proposal_open_contract: 1,subscribe: 1 })
                 .then((data) => { subscribed_before = true; })
                 .catch((err) => {
                     console.error(err);
@@ -74,7 +74,7 @@ const proposalOpenContract = (command) => {
     else if(command === 'forget') {
         --subscribers;
         if(subscribed_before && subscribers === 0) {
-            liveapi.cached.send({ forget_all: 'proposal_open_contract' })
+            liveapi.send({ forget_all: 'proposal_open_contract' })
                 .then((data) => {
                     subscribed_before = false;
                 })
@@ -85,7 +85,7 @@ const proposalOpenContract = (command) => {
         }
     }
     else if( command === 'resubscribe' ) {
-        liveapi.cached.send({ forget_all: 'proposal_open_contract' })
+        liveapi.send({ forget_all: 'proposal_open_contract' })
             .then((data) => {
                 subscribed_before = false;
                 --subscribers;
@@ -262,7 +262,7 @@ const forget_the_contracts = (contracts) => {
 const init_table = async () => {
     const processing_msg = $('#' + table.attr('id') + '_processing').show();   
     try {
-        const data = await liveapi.cached.send({ portfolio: 1 });
+        const data = await liveapi.send({ portfolio: 1 });
         const contracts = (data.portfolio && data.portfolio.contracts);
             //|| [
             //    {

@@ -95,7 +95,7 @@ export const register = function(options) {
 
     map[key] = { symbol: options.symbol, granularity: granularity, subscribers: 0, chartIDs: [] };
     if (req.subscribe) map[key].subscribers = 1; // how many charts have subscribed for a stream
-    return liveapi.cached.send(req, /*timeout:*/ 30 * 1000) // 30 second timeout
+    return liveapi.send(req, /*timeout:*/ 30 * 1000) // 30 second timeout
         .catch((up) => {
             /* if the market is closed try the same request without subscribing */
             if (req.subscribe && up.code === 'MarketIsClosed') {

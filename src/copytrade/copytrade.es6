@@ -135,7 +135,6 @@ const state = {
     state.is_loading = true;
 
     liveapi
-      .cached
       .send({
         set_settings: 1,
         allow_copiers,
@@ -176,7 +175,6 @@ const state = {
             if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
 
             liveapi
-              .cached
               .send(settingsToSend)
               .then(() => {
                 newObj.disableStart = false;
@@ -195,7 +193,7 @@ const state = {
       }
     } else {
       //Stop copying
-      liveapi.cached.send({
+      liveapi.send({
           copy_stop: state.traderTokens[index].yourCopySettings.copy_start
         })
         .then(() => {
@@ -214,7 +212,7 @@ const state = {
     const toBeRemovedItem = state.traderTokens[index];
     state.traderTokens.splice(index, 1);
     updateLocalStorage(state);
-    liveapi.cached.send({
+    liveapi.send({
       copy_stop: toBeRemovedItem.yourCopySettings.copy_start
     })
     .catch(e => {});

@@ -177,7 +177,7 @@ class Withdraw {
             }
 
             agent.hint = `Min: ${agent.min_amount} Max: ${agent.max_amount}`.i18n();
-            liveapi.cached.send({
+            liveapi.send({
                     verify_email: email,
                     type: type
                 })
@@ -283,7 +283,7 @@ class Withdraw {
                 verification_code: verify.code
             };
             agent.disabled = true;
-            liveapi.cached.send(request)
+            liveapi.send(request)
                 .then(data => {
                     route.update('agent-done')
                     agent.disabled = false;
@@ -308,7 +308,7 @@ class Withdraw {
                 amount: transfer.amount
             };
             transfer.disabled = true;
-            liveapi.cached.send(req)
+            liveapi.send(req)
                 .then(data => {
                     transfer.account = transfer.account.split("_to_")[1];
                     route.update('transfer-done');

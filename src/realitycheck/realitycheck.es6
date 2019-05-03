@@ -67,7 +67,6 @@ const setOrRefreshTimer = (timeOutInMins) => {
    const logoutAfter_ms = timeOutInMins * 60 * 1000;
    timerHandler = setTimeout(() => {
       liveapi
-         .cached
          .send({ reality_check : 1 })
          .then((data) => {
             /*
