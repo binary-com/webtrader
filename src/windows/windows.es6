@@ -185,7 +185,6 @@ export const init = function($parentObj) {
             const pip = '0.001';
 
             liveapi
-              .cached
               .send({ contracts_for: sym.symbol })
               .then((res) => {
                   // open chart window and tradeDialog

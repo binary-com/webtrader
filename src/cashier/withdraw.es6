@@ -354,7 +354,7 @@ class Withdraw {
             })
             .catch(error_handler);
 
-        liveapi.cached.send({ payout_currencies: 1 })
+        liveapi.send({ payout_currencies: 1 })
             .then(data => {
                 agent.currency = data.payout_currencies[0];
             }).catch(err => console.error(err));
