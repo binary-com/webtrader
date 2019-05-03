@@ -205,7 +205,7 @@ class Withdraw {
 
             if (menu.choice === 'standard') {
                 verify.disabled = true;
-                liveapi.cached.send({
+                liveapi.send({
                         cashier: 'withdraw',
                         verification_code: verify.token
                     })

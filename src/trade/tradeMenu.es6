@@ -10,6 +10,7 @@ const show_error = (err) => {
 };
 const refresh_active_symbols = () => {
    liveapi
+      .cached
       .send({ active_symbols: 'brief' })
       .then((data) => {
          /* clean up the data! */
