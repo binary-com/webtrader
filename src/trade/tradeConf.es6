@@ -258,7 +258,7 @@ const registerTicks = (state, extra) => {
     });
 
     function getTickHistory(start, ticks_history) {
-      liveapi.cached.send({ ticks_history, end: 'latest', start, style: 'ticks', count: 5000})
+      liveapi.send({ ticks_history, end: 'latest', start, style: 'ticks', count: 5000})
             .then((data) => {
                   is_getting_history = false;
                   data.history.prices.forEach((price, idx) => {

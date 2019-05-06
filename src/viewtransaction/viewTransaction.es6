@@ -657,7 +657,7 @@ const setupChart = (state, root) => {
   // setup tick/candle stream for chart
   if (!state.proposal_open_contract.is_ended) updateLiveChart(state, granularity);
 
-  liveapi.cached.send(tick_history_request)
+  liveapi.send(tick_history_request)
     .then((data) => {
       onTickHistorySuccess(data);
       getContractData(state, state.proposal_open_contract);
