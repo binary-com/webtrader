@@ -331,6 +331,7 @@ const initConfigWindow = () => {
         state.allowCopy.allow_copiers = 0;
       } else {
         liveapi
+        .cached
         .send({ get_settings: 1 })
         .then((settings) => {
           state.is_loading = false;
