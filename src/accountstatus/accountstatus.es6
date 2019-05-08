@@ -64,7 +64,7 @@ class AccountStatus {
     return Promise.all([
       liveapi.send({ get_account_status: 1 }),
       liveapi.cached.send({ website_status: 1 }),
-      liveapi.send({ 'get_settings': 1 }),
+      liveapi.cached.send({ 'get_settings': 1 }),
       liveapi.cached.send({ get_financial_assessment: 1 }),
       liveapi.send({ mt5_login_list: 1 })
     ]);
