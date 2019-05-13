@@ -8,17 +8,18 @@
     <div class='current-workspace'>
       <div class='name' rv-show='route | one-of "active" "rename"'>
         <input maxlength="24"
-               rv-value='current_workspace.name'
+               rv-value='current_workspace.name | sanitize'
                rv-on-focusin='rename.show'
                rv-dom-select='route | eq "rename"'
                rv-dom-blur='route | not-eq "rename"'
                rv-input-enter='update_route | bind "active"'
-               rv-on-focusout='rename.apply' />
+               rv-on-focusout='rename.apply'
+               rv-on-keypress='rename.change' />
         <div class='icon-confirm'></div>
       </div>
       <div class='name' rv-show='route | eq "saveas"'>
         <input maxlength="24"
-               rv-value='current_workspace.name'
+               rv-value='current_workspace.name | sanitize'
                rv-dom-select='route | eq "saveas"'
                rv-dom-blur='route | not-eq "saveas"'
                rv-input-enter='update_route | bind "active"'
@@ -63,7 +64,7 @@
              rv-if='row.name | eq current_workspace.name'></div>
         <div class='name'>
           <input maxlength="24"
-               rv-value='row.name'
+               rv-value='row.name | sanitize'
                rv-on-focusin='workspace.save_name | bind row'
                rv-input-enter='workspace.blur'
                rv-on-focusout='workspace.rename | bind row' />

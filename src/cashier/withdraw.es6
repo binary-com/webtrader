@@ -168,7 +168,7 @@ class Withdraw {
             const email = local_storage.get('authorize').email;
             const type = choice === 'agent' ? 'paymentagent_withdraw' : 'payment_withdraw';
 
-            if(isCrypto() && (agent.currency !== 'DAI' || agent.currency !== 'UST')) {
+            if(isCryptoCurrency(agent.currency) && (agent.currency !== 'DAI' || agent.currency !== 'UST')) {
                 agent.min_amount = 0.002;
                 agent.max_amount = 5;
             } else {
@@ -297,7 +297,6 @@ class Withdraw {
 
         transfer.submit = () => {
             if (transfer.account === '' || transfer.amount === '') {
-                console.log(transfer);
                 empty_fields.show();
                 return;
             }
@@ -344,7 +343,7 @@ class Withdraw {
             }
         }
 
-        liveapi.send({ get_settings: 1 })
+        liveapi.cached.send({ get_settings: 1 })
             .then(data => {
                 agent.residence = data.get_settings.country_code;
                 const currency = local_storage.get('currency');
