@@ -23,7 +23,7 @@ window.requirejs.config({
         "moment-locale":"lib/moment/locale",
         "clipboard": "lib/clipboard/dist/clipboard.min",
         "indicator_levels": "charts/indicators/level",
-        "binary-style": "lib/@binary-com/binary-style/binary",
+        "binary-style": "lib/binary-style/binary",
         "babel-runtime/regenerator": "lib/regenerator-runtime/runtime",
         "webtrader-charts" : "lib/@binary-com/webtrader-charts/dist/webtrader-charts.iife",
         "chosen": "lib/chosen-js/chosen.jquery",

@@ -237,7 +237,7 @@ const registerTicks = (state, extra) => {
             return;
       }
 
-      const has_missing_ticks = (+first_tick_epoch > +entry_tick_time);
+      const has_missing_ticks = (first_tick_epoch > entry_tick_time);
       if (has_missing_ticks) {
             is_getting_history = true;
             first_tick_epoch = entry_tick_time;

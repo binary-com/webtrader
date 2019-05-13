@@ -154,7 +154,7 @@ function init_state(root) {
     });
 
     /* get the residence field and its states */
-    var residence_promise = liveapi.cached.send({ get_settings: 1 })
+    var residence_promise = liveapi.send({ get_settings: 1 })
         .then(function(data) {
             state.user.residence = data.get_settings.country_code;
             state.user.residence_name = data.get_settings.country;

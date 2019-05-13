@@ -100,7 +100,7 @@ const onopen = () => {
    /**
     * First thing to do -> subscribe to website_status
     */
-   socket.send(JSON.stringify({ website_status: 1, subscribe: 1 }));
+   socket.send(JSON.stringify({website_status:1, subscribe:1}));
    /* send buffered sends */
    while (buffered_sends.length > 0) {
       const data = buffered_sends.shift();
@@ -427,9 +427,9 @@ export const cached  = {
       const key = JSON.stringify(data);
       /* if there is a cached promise for this key (let say P), return P.
        * assume P is in pending state, when P is fullfiled all attached .then() calls will run.
-       * assume P is in rejected state (or in fullfiled state), the changed .then() calls will be immediately rejected(or fullfiled).  */   
-       if (cached_promises[key])
-         return cached_promises[key].promise;
+       * assume P is in rejected state (or in fullfiled state), the changed .then() calls will be immediately rejected(or fullfiled).  */
+                if (cached_promises[key])
+                    return cached_promises[key].promise;
       /* We don't want to cache promises that are rejected,
                    Clear the cache in case of promise rejection */
       cached_promises[key] = { data: data, promise: null };

@@ -43,7 +43,7 @@ class AccountStatus {
     this.financial_assessment_submitted = true;
     this.is_mlt = /^malta$/gi.test(response.authorize.landing_company_name);
     this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
-    this.is_cr = /^svg|costarica$/gi.test(response.authorize.landing_company_name);
+    this.is_cr = /^costarica$/gi.test(response.authorize.landing_company_name);
     this.has_mt5_account = mt5_account.mt5_login_list.length > 0;
     this.is_authenticated = !account_status.get_account_status.prompt_client_to_authenticate;
     // Check whether the user has accepted the T&C.
@@ -63,8 +63,8 @@ class AccountStatus {
     // Getting account status, website status, account settings and financial assessment.
     return Promise.all([
       liveapi.send({ get_account_status: 1 }),
-      liveapi.cached.send({ website_status: 1 }),
-      liveapi.cached.send({ 'get_settings': 1 }),
+      liveapi.send({ 'website_status': 1 }),
+      liveapi.send({ 'get_settings': 1 }),
       liveapi.cached.send({ get_financial_assessment: 1 }),
       liveapi.send({ mt5_login_list: 1 })
     ]);

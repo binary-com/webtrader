@@ -63,14 +63,4 @@ const trade_types = [{
     name: 'Goes Outside'
   }];
 
-const SUPPORTED_CONTRACT_TYPES = Object.freeze([
-  'up/down',
-  'touch/no touch',
-  'in/out',
-  'digits',
-  'asians',
-  'rise/fall equal',
-  'lookbacks'
-]);
-
-export { trade_types, SUPPORTED_CONTRACT_TYPES };
+export { trade_types };

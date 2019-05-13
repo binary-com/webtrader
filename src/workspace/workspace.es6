@@ -20,8 +20,6 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
-const sanitize = value => value.replace(/("|'|\&|\(|\)|\<|\>)/g, '');
-
 const state = {
    route: 'active', // one of ['active', 'saved', 'rename', 'saveas']
    closeAll: () => $('.webtrader-dialog').dialog('close'),
@@ -46,34 +44,34 @@ const state = {
          state.closeAll();
          manager_win.dialog('close');
          _.delay(() => {
-            state.current_workspace.name = sanitize(w.name);
+            state.current_workspace.name = w.name;
             local_storage.set('states', w);
             tracker.reopen(clone(w));
          }, 500);
       },
-      prev_name: '',
-      save_name: w => state.workspace.prev_name = sanitize(w.name),
+      perv_name: '',
+      save_name: w => state.workspace.perv_name = w.name,
       blur: el => el.blur(),
       rename: w => {
-        const prev_name = sanitize(state.workspace.prev_name);
+        const perv_name = state.workspace.perv_name;
         const current_workspace = state.current_workspace;
         if(!w.name || state.workspaces.filter(wk => wk.name === w.name).length >= 2)
-          w.name = state.workspace.prev_name;
+          w.name = state.workspace.perv_name;
         local_storage.set('workspaces', state.workspaces);
-        if(current_workspace.name === prev_name) {
-          current_workspace.name = sanitize(w.name);
+        if(current_workspace.name === perv_name) {
+          current_workspace.name = w.name;
 
           const states = local_storage.get('states');
-          states.name = sanitize(w.name);
+          states.name = w.name;
           local_storage.set('states', states);
         }
       }
    },
    current_workspace: {
-      name: sanitize((local_storage.get('states') || {  }).name || 'workspace-1'),
-      name_prev_value: '',
+      name: (local_storage.get('states') || {  }).name || 'workspace-1',
+      name_perv_value: '',
       is_saved: () => {
-         const result = _.findIndex(state.workspaces, {name: sanitize(state.current_workspace.name)}) !== -1;
+         const result = _.findIndex(state.workspaces, {name: state.current_workspace.name}) !== -1;
          return result;
       },
       save: () => {
@@ -82,7 +80,7 @@ const state = {
             return state.saveas.show();
          }
          const workspace = local_storage.get('states');
-         workspace.name = sanitize(name);
+         workspace.name = name;
          const inx = _.findIndex(state.workspaces, {name: workspace.name});
          state.workspaces[inx] = workspace;
          state.workspaces = clone(state.workspaces);
@@ -92,12 +90,12 @@ const state = {
    },
    rename: {
       show: () => {
-         state.current_workspace.name_prev_value = sanitize(state.current_workspace.name);
+         state.current_workspace.name_perv_value = state.current_workspace.name;
          state.route = 'rename';
       },
       apply: () => { 
-         let {name, name_prev_value} = state.current_workspace;
-         if(!name || name === name_prev_value) { 
+         let {name, name_perv_value} = state.current_workspace;
+         if(!name || name === name_perv_value) { 
             return state.rename.cancel();
          }
          if(_.find(state.workspaces, {name: name})) {
@@ -108,7 +106,7 @@ const state = {
                number += 1;
             name = name + number;
          }
-         const workspace = _.find(state.workspaces, {name: name_prev_value});
+         const workspace = _.find(state.workspaces, {name: name_perv_value});
          if(workspace) {
             workspace.name = name;
             state.workspaces = state.workspaces;
@@ -118,21 +116,18 @@ const state = {
          states.name = name;
          local_storage.set('states', states);
 
-         state.current_workspace.name = sanitize(name);
+         state.current_workspace.name = name;
          state.route = 'active';
       },
-      change: () => {
-         state.current_workspace.name = sanitize(state.current_workspace.name);
-      },
       cancel: () => {
-         state.current_workspace.name = sanitize(state.current_workspace.name_prev_value);
+         state.current_workspace.name = state.current_workspace.name_perv_value;
          state.route = 'active';
       }
    },
    saveas: {
       show: () => {
         if (state.route !== 'saveas') {
-          state.current_workspace.name_prev_value = sanitize(state.current_workspace.name);
+          state.current_workspace.name_perv_value = state.current_workspace.name;
           state.route = 'saveas';
         }
         else {
@@ -140,7 +135,7 @@ const state = {
         }
       },
       apply: () => { 
-         let {name, name_prev_value} = state.current_workspace;
+         let {name, name_perv_value} = state.current_workspace;
          if(!name) { 
             return state.saveas.cancel();
          }
@@ -182,7 +177,6 @@ const state = {
             let data = null;
             try{
                data = JSON.parse(contents);
-               data.name = sanitize(data.name);
                const hash = data.random;
                delete data.random;
                if(hash !== state.file.hash_code(data)){ throw "Invalid JSON file".i18n(); }

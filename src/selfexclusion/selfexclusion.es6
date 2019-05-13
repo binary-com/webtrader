@@ -85,9 +85,6 @@ const settingsData = {
     max_open_bets: null,
     session_duration_limit: null,
     exclude_until: null,
-    has_exclude_until: null,
-    is_iom_malta: null,
-    is_gamstop_client: null,
     timeout_until_date: null,
     timeout_until_time: null,
     binary_url_contact: getBinaryUrl('contact.html'),
@@ -112,6 +109,7 @@ const settingsData = {
                 const time = moment(scope.timeout_until_time, "HH:mm");
                 time_out.add(time.format('HH'), 'hours')
                     .add(time.format('mm'), 'minutes');
+                console.log(time_out, time.format('HH'),time.format('mm'));
             }
             if (time_out.isAfter(moment().add(6, "weeks"))) {
                 message.push("Please enter a value less than 6 weeks for time out until.".i18n());
@@ -158,7 +156,7 @@ const settingsData = {
 
         if (message.length > 0) {
             message.forEach(function(msg, i) {
-                $.growl.error({ message: msg, fixed: true });
+                $.growl.error({ message: msg });
             })
             return;
         }
@@ -174,10 +172,10 @@ const settingsData = {
                 $.growl.notice({ message: 'Your changes have been updated'.i18n() });
                 logoutBasedOnExcludeDateAndTimeOut();
                 setOrRefreshTimer();
-                refreshData();
             })
             .catch(function(err) {
-                $.growl.error({ message: err.message, fixed: true });
+                $.growl.error({ message: err.message });
+                console.error(err);
             });
     }
 };
@@ -247,26 +245,15 @@ const refreshData = function() {
                         limits[index].set = true;
                     }
                 });
-                settingsData.has_exclude_until = response.get_self_exclusion.exclude_until;
-                const country_status = getCountryStatus();
-                settingsData.is_iom_malta = country_status.has_iom_malta;
-                settingsData.is_gamstop_client = country_status.has_uk && country_status.has_iom_malta;
+
                 logoutBasedOnExcludeDateAndTimeOut();
             }
         })
         .catch(function(err) {
-            $.growl.error({ message: err.message, fixed: true });
+            $.growl.error({ message: err.message });
             console.error(err);
         });
 };
-
-const getCountryStatus = function() {
-    const authorize = local_storage.get('authorize');
-    return {
-        has_iom_malta: /iom|malta/.test(authorize.landing_company_name),
-        has_uk: /gb/.test(authorize.country),
-    };
-}
 
 const setOrRefreshTimer = function() {
 

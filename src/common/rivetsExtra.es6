@@ -27,7 +27,6 @@ rv.formatters['i18n'] = (value) => {
    if(typeof value === 'string') return value.i18n();
    return value;
 };
-rv.formatters['sanitize'] = (value) => value.replace(/("|'|\&|\(|\)|\<|\>)/g, '');
 /* rivets formatter to get the property value of an object */
 rv.formatters['prop'] = (value, prop) => {
    return value && value[prop];
@@ -431,10 +430,6 @@ rv.binders.slider = {
       $(el).slider('value', value);
       $(el).find('> div').text(value);
    }
-}
-
-rv.binders.datepicker_mindate = {
-   routine: (el, value) => $(el).datepicker('option', 'minDate', value)
 }
 
 /* trun input element in jquery-ui-datepicker */

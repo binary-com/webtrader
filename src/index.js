@@ -19,8 +19,6 @@ checkRedirectToken(params_str);
 setLanguage(lang);
 clearUrlQuerystring(href);
 
-checkWindowSize();
-
 processPageLanguage();
 
 function loadAppId(callback) {
@@ -106,13 +104,6 @@ function checkRedirectToken(params_str) {
         function matchRegex(regex) {
             return (params_str.match(regex) || []).map(function (val) { return val.split('=')[1] })
         }
-    }
-}
-
-function checkWindowSize() {
-    if (isSmallView()) {
-        window.location.assign(VERSION + 'unsupported_browsers/unsupported_browsers.html');
-        return;
     }
 }
 

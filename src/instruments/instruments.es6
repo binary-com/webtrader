@@ -1,14 +1,17 @@
+/**
+ * Created by arnab on 2/12/15.
+ */
+
 import $ from "jquery";
+import $ui from "jquery-ui";
 import liveapi from "websockets/binary_websockets";
 import menu from "navigation/menu";
 import chartWindow from "charts/chartWindow";
-import { getSortedMarketSubmarkets } from '../common/marketUtils';
 import "jquery-growl";
 import "common/util";
 
 function refresh_active_symbols() {
     liveapi
-        .cached
         .send({ active_symbols: 'brief' })
         .then(function(data) {
             local_storage.set('active_symbols', data.active_symbols);
@@ -49,7 +52,8 @@ function refresh_active_symbols() {
                 return m.submarkets.length !== 0;
             });
 
-            markets = getSortedMarketSubmarkets(markets);
+            //console.warn(markets, chartable_markets);
+            markets = menu.sortMenu(markets);
 
             const instruments = $("#nav-menu").find(".instruments");
             instruments.find('> ul').remove();
@@ -70,16 +74,10 @@ let markets = [];
 let chartable_markets = [];
 
 export const init = function() {
-    return liveapi
-        .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-        .then(function(data) {
-            chartable_markets = menu.extractChartableMarkets(data);
-            refresh_active_symbols();
-            liveapi.events.on('login', refresh_active_symbols);
-            liveapi.events.on('logout', refresh_active_symbols);
+    refresh_active_symbols();
+    liveapi.events.on('login', refresh_active_symbols);
+    liveapi.events.on('logout', refresh_active_symbols);
 
-            return chartable_markets;
-        });
 }
 
 export const getMarketData = function() {

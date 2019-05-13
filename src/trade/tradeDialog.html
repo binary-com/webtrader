@@ -41,21 +41,16 @@
         <li rv-on-click="date_start.update">
             <select class="date-start-select"
                     rv-jq-class="'trade-dialog-date-start-ul'"
-                    rv-chosen="date_start.value 
-                        | notify duration_unit.update
-                        | debounce proposal.onchange"
+                    rv-chosen="date_start.value | notify duration_unit.update | debounce proposal.onchange"
                     rv-chosenrefresh="date_start.array"
                     style="width: 100px"
                     >
                     <option rv-each-row="date_start.array" rv-value="row.value">{row.text | i18n}</option>
            </select>
         </li>
-        <li class="future-timepicker-wrapper" rv-if="date_start.value | not-eq 'now'">
-            <input type="text"
-                rv-value="selected_future_timepicker"
-                rv-timepicker="date_start.hour_minute | notify setDateStartHourMinute" />
-        </li>
+        <li><span></span></li>
     </ul>
+
     <ul class="digits-row"
         rv-css-padding-top="categories.paddingTop < value"
         rv-show="digits.visible">
@@ -100,11 +95,10 @@
         <li rv-show="duration.value | eq 'End Time' ">
             <input type="text" class="date-expiry-date" readonly
                    numberOfMonths="1" marginTop="0px" marginLeft="-100px"
-                   rv-datepicker_mindate="date_expiry.min_date"
                    rv-datepicker="date_expiry.value_date | notify date_expiry.update" />
         </li>
         <li rv-if="duration.value | eq 'End Time' ">
-            <input type="text" class="date-expiry-hour" rv-hide="date_expiry.today_times.disabled"
+            <input type="text" class="date-expiry-hour"
                    marginTop="0px" marginLeft="-255px"
                    rv-disabled="date_expiry.today_times.disabled"
                    rv-css-opacity="date_expiry.today_times.disabled | ternary 0.8 1"

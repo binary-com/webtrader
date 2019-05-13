@@ -57,7 +57,7 @@ const initChart = (root, state, options) => {
 
       for (let i = 0; i < times.length; ++i) {
          data.push([times[i] * 1000, prices[i] * 1]);
-         display_decimals = Math.max(display_decimals, prices[i].toString().substring(prices[i].toString().indexOf('.') + 1).length);
+         display_decimals = Math.max(display_decimals, prices[i].substring(prices[i].indexOf('.') + 1).length);
       }
    }
 
