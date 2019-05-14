@@ -190,7 +190,7 @@ function processFooter(selected_language_name) {
                         TAGS: ['<a href="https://www.vfsc.vu/wp-content/uploads/2015/12/List-of-Licensees-under-Dealers-in-Securities-Licensing-Act-CAP-70-18.11.2016.pdf" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/download/regulation/BVI_license.pdf" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/download/regulation/Labuan-license.pdf" target="_blank">', '</a>'],
                     },
                     P3: {
-                        TEXT: 'This website\'s services are not made available in certain countries such as the USA, Canada, St. Vincent and the Grenadines, Hong Kong, Japan, or to persons under age 18.'.i18n()
+                        TEXT: 'This website\'s services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18.'.i18n()
                     },
                     P4: {
                         TEXT: 'The financial products offered via this website include binary options, contracts for difference ("CFDs") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2].'.i18n(),
