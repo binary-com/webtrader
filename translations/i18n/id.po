@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2019-02-13 05:40\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: id\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Indonesian\n"
-"Language: id_ID\n"
-"PO-Revision-Date: 2019-02-13 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -306,8 +306,8 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
-msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs ini tidak tersedia di beberapa negara seperti AS, Kanada, Kosta Rika, Hong Kong atau siapapun dibawah umur 18."
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
+msgstr ""
 
 msgid "Blank window"
 msgstr "Jendela kosong"
@@ -801,17 +801,17 @@ msgstr "Jika Anda memilih"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Untuk menggunakan tema dengan benar, merefresh halaman adalah penting. Apa Anda ingin melanjutkan?"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "Di negara Uni Eropa, produk finansial disediakan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai Kategori 3 oleh Otoritas Jasa Keuangan Malta ([_1]lisensi no. IS/70156[_2])."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "Di Uni Eropa, produk keuangan ditawarkan oleh Binary Investments (Eropa) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, yang diatur sebagai penyedia Layanan Investasi Kategori 3 oleh Otoritas Jasa Keuangan Malta ([_1]lisensi no. IS/70156[_2])."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "Di negara Isle of Man dan Inggris, Indeks Volatilitas disediakan oleh Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; berlisensi dan diatur."
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "Di seluruh Uni Eropa, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; berlisensi dan diatur."
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr ""
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -1170,8 +1170,8 @@ msgstr "Opsi trading dapat menyebabkan ketagihan seperti kegiatan lain yang dila
 msgid "Other"
 msgstr "Lain"
 
-msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
-msgstr "Di luar Uni Eropa, produk-produk keuangan ditawarkan oleh Binary (C.R.) S.A., Lantai 5, Gedung 6 Pusat Eksekutif La Sabana, Savannah Selatan, San Jose, Kosta Rika, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, diatur oleh Komisi Layanan Keuangan Vanuatu ([_1]lihat lisensi([_2], Binary (BVI) Ltd, Lantai 2, Gedung Periklanan Pemasaran Nasional, Wickham's Cay II, P.O. Box 3174, Road Town, Tortola VB1110, Kepulauan Virgin Inggris, diatur oleh Komisi Layanan Keuangan Kepulauan Virgin Inggris ([_3]no lisensi SIBA/L/18/1114([_4], dan Binary (FX) Ltd., Lot No. F16, Lantai Satu, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, diatur oleh Otoritas Jasa Keuangan Labuan untuk melakukan bisnis pialang ([_5]no lisensi MB/18/0024([_6]"
+msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
+msgstr ""
 
 msgid "Over"
 msgstr "Lebih"
@@ -1263,8 +1263,8 @@ msgstr "Silakan masukan token yang benar"
 msgid "Please install the latest version of one of these browsers"
 msgstr "Silahkan install versi terbaru dari salah satu browser ini"
 
-msgid "Please keep your message to a single line, don’t press enter"
-msgstr "Pastikan pesan Anda hanya satu baris, jangan tekan masuk"
+msgid "Please keep your message to a single line, don't press enter"
+msgstr ""
 
 msgid "Please log in"
 msgstr "Silahkan masuk"
@@ -1605,8 +1605,8 @@ msgstr "Itu"
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "Perusahaan menyimpan dana Pelanggan pada rekening yang berbeda dengan rekening untuk biaya oprasional yang bukan merupakan bagian dari aset Perusahaan jika terjadi kebangkrutan. Hal ini adalah merupakan syarat yang harus dipenuhi dalam hal pemisahan dana pelanggan pada tingkat"
 
-msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr "Produk keuangan yang ditawarkan melalui situs web ini adalah termasuk opsi binary, kontrak untuk perbedaan (\"CFD\") dan derivatif kompleks lainnya dan produk keuangan. Trading opsi binary mungkin tidak cocok untuk semua orang. Trading CFD memiliki tingkat risiko yang tinggi karena leverage dapat bekerja baik untuk memperoleh keuntungan begitu juga kerugian. Akibatnya, produk yang ditawarkan pada situs web ini mungkin tidak cocok untuk semua investor berhubuhg risiko dimana Anda akan kehilangan semua modal yang telah Anda investasikan. Pastikan untuk tidak menginvestasikan dana dimana Anda tidak sanggup untuk kehilangannya dan jangan pernah bertrading menggunakan dana pinjaman. Sebelum bertrading produk keuangan yang ditawarkan, mohon pastikan untuk memahami risiko yang terlibat dan pelajari lebih lanjut tentang [_1]Tanggung Jawab Trading[_2]."
+msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+msgstr ""
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Terdapat gangguan data pasar selama periode kontrak berlangsung. Untuk akun uang riil, kami akan berusaha memperbaiki masalah ini dan menyelesaikan kontrak dengan benar, jika tidak, kontrak akan dibatalkan dan dikembalikan. Untuk kontrak uang virtual akan dibatalkan dan dikembalikan."
@@ -1626,8 +1626,8 @@ msgstr "Kontrak ini untung"
 msgid "This field is required"
 msgstr "Bagian ini diperlukan"
 
-msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
-msgstr "Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Kanada, Kosta Rika, Hong Kong, Jepang, atau orang-orang di bawah usia 18 tahun."
+msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
+msgstr ""
 
 msgid "Thu"
 msgstr "Kms"
@@ -2103,3 +2103,26 @@ msgstr "| Laba"
 msgid "﻿"
 msgstr "﻿"
 
+#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+#~ msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs ini tidak tersedia di beberapa negara seperti AS, Kanada, Kosta Rika, Hong Kong atau siapapun dibawah umur 18."
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+#~ msgstr "Di negara Uni Eropa, produk finansial disediakan oleh Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, berlisensi dan diatur sebagai Kategori 3 oleh Otoritas Jasa Keuangan Malta ([_1]lisensi no. IS/70156[_2])."
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+#~ msgstr "Di Uni Eropa, produk keuangan ditawarkan oleh Binary Investments (Eropa) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, yang diatur sebagai penyedia Layanan Investasi Kategori 3 oleh Otoritas Jasa Keuangan Malta ([_1]lisensi no. IS/70156[_2])."
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+#~ msgstr "Di seluruh Uni Eropa, Indeks Volatilitas ditawarkan oleh Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; berlisensi dan diatur."
+
+#~ msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
+#~ msgstr "Di luar Uni Eropa, produk-produk keuangan ditawarkan oleh Binary (C.R.) S.A., Lantai 5, Gedung 6 Pusat Eksekutif La Sabana, Savannah Selatan, San Jose, Kosta Rika, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, diatur oleh Komisi Layanan Keuangan Vanuatu ([_1]lihat lisensi([_2], Binary (BVI) Ltd, Lantai 2, Gedung Periklanan Pemasaran Nasional, Wickham's Cay II, P.O. Box 3174, Road Town, Tortola VB1110, Kepulauan Virgin Inggris, diatur oleh Komisi Layanan Keuangan Kepulauan Virgin Inggris ([_3]no lisensi SIBA/L/18/1114([_4], dan Binary (FX) Ltd., Lot No. F16, Lantai Satu, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, diatur oleh Otoritas Jasa Keuangan Labuan untuk melakukan bisnis pialang ([_5]no lisensi MB/18/0024([_6]"
+
+#~ msgid "Please keep your message to a single line, don’t press enter"
+#~ msgstr "Pastikan pesan Anda hanya satu baris, jangan tekan masuk"
+
+#~ msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+#~ msgstr "Produk keuangan yang ditawarkan melalui situs web ini adalah termasuk opsi binary, kontrak untuk perbedaan (\"CFD\") dan derivatif kompleks lainnya dan produk keuangan. Trading opsi binary mungkin tidak cocok untuk semua orang. Trading CFD memiliki tingkat risiko yang tinggi karena leverage dapat bekerja baik untuk memperoleh keuntungan begitu juga kerugian. Akibatnya, produk yang ditawarkan pada situs web ini mungkin tidak cocok untuk semua investor berhubuhg risiko dimana Anda akan kehilangan semua modal yang telah Anda investasikan. Pastikan untuk tidak menginvestasikan dana dimana Anda tidak sanggup untuk kehilangannya dan jangan pernah bertrading menggunakan dana pinjaman. Sebelum bertrading produk keuangan yang ditawarkan, mohon pastikan untuk memahami risiko yang terlibat dan pelajari lebih lanjut tentang [_1]Tanggung Jawab Trading[_2]."
+
+#~ msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
+#~ msgstr "Layanan situs web ini tidak tersedia di negara-negara tertentu seperti Amerika Serikat, Kanada, Kosta Rika, Hong Kong, Jepang, atau orang-orang di bawah usia 18 tahun."

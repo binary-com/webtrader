@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: webtrader\n"
+"PO-Revision-Date: 2019-03-19 07:00\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
-"Project-Id-Version: webtrader\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi_VN\n"
-"PO-Revision-Date: 2019-03-19 07:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -306,8 +306,8 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
-msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
-msgstr "Binary.com là một trang cung cấp dịch vụ kinh doanh trực tuyến hỗ trợ khách hàng của mình giao dịch trên các thị trường tài chính thông qua Binary Options và CFDs. Giao dịch Binary Options và CFDs theo Chỉ Số Biến Động được phân loại như là một hoạt động cờ bạc. Hãy nhớ rằng cờ bạc có thể gây nghiện-hãy có trách nhiệm khi chơi. Tìm hiểu thêm về %1 Giao Dịch Có Trách Nhiệm%2. Một số sản phẩm sẽ không có sẵn ở tất cả mọi nước. Dịch vụ của trang web không hoạt động ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, hoặc những người dưới 18 tuổi."
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
+msgstr ""
 
 msgid "Blank window"
 msgstr "Cửa sổ trống"
@@ -801,17 +801,17 @@ msgstr "Nếu bạn chọn một cụ thể"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn muốn tiếp tục không?"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta. Được quản lý và cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta, được cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgstr ""
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "Ở Isle of Man và UK, các Chỉ Số Biến Động được cung cấp bởi Binary (IOM) Ltd., tầng 1, Millennium House, đường Victoria, Douglas, IM2 4RW, Isle of Man, British Isles; được quản lý và cấp phép bởi (1) Ủy ban giám sát cờ bạc ở Isle of Man (giấy phép hiện hành được cấp ngày 31 tháng 8 năm 2017) cũng như (2) Ủy ban cờ bạc ở Vương quốc Anh (giấy phép [_1] số: 39172 [_2])."
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "Đối với các khu vực còn lại trong EU, các Chỉ Số Biến Động được cung cấp bởi Binary (Europe) Ltd., Mompalao Building, Suite 2, đường Tower, Msida MSD1825, Malta; được quản lý và cấp phép bởi(1) Ủy ban giải trí Malta (giấy phép số. MGA / B2C / 102/2000 được ban hành vào ngày 01 tháng 8 năm 2018), đối với các khách hàng ở Anh, (2) Ủy ban cờ bạc Vương quốc Anh (giấy phép %1 số: 39495 %2), và khách hàng Ai-len, (3) Ủy viên Doanh thu ở Ireland (Giấy phép của Người lập sổ từ xa số 1010285 cấp ngày 1 tháng 7 năm 2017). Xem thêm%3Thông tin pháp lý %2."
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgstr ""
 
 msgid "In/Out"
 msgstr "Vào/Ra"
@@ -1170,8 +1170,8 @@ msgstr "Giao dịch quyền chọn có thể thực sự gây nghiện, cũng nh
 msgid "Other"
 msgstr "Khác"
 
-msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
-msgstr "Ngoài EU, các sản phẩm tài chính được cung cấp bởi Binary (CR) SA, Tầng 5, Tòa nhà 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Tòa nhà Govant, Port Vila, PO Box 1276, Vanuatu, được cấp phép bởi Ủy ban Dịch vụ Tài chính Vanuatu (%1view giấy phép%2), Binary (BVI) Ltd, Tầng 2, O'Neal Marketing Associates Building, Wickham's Cay II, PO Box 3174, Road Town, Tortola VB1110, Quần đảo Virgin thuộc Anh, được quy định bởi Ủy ban Dịch vụ Tài chính Quần đảo Virgin thuộc Anh (%3licence no. SIBA / L / 18/1114%4) và Binary (FX) Ltd., Lô số F16, Tầng 1, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, do Cơ quan dịch vụ tài chính Labuan quy định để thực hiện công việc kinh doanh tiền tệ (%5 giấy phép số. MB / 18/0024%6)"
+msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
+msgstr ""
 
 msgid "Over"
 msgstr "Qua"
@@ -1263,8 +1263,8 @@ msgstr "Xin vui lòng nhập chính xác mã thông báo"
 msgid "Please install the latest version of one of these browsers"
 msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
 
-msgid "Please keep your message to a single line, don’t press enter"
-msgstr "Xin vui lòng giữ tin nhắn của bạn chỉ ở trong dòng duy nhất, đừng bấm xuống dòng"
+msgid "Please keep your message to a single line, don't press enter"
+msgstr ""
 
 msgid "Please log in"
 msgstr "Vui lòng đăng nhập"
@@ -1605,8 +1605,8 @@ msgstr "Các"
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "Công ty giữ tiền khách hàng trong tài khoản ngân hàng tách biệt với tài khoản ngân hàng vận hành, trong trường hợp phá sản, nó sẽ không thuộc tài sản của Công ty. Điều này đáp ứng các yêu cầu của Ủy ban Cờ bạc để cách ly các tiền của khách hàng ở cấp độ"
 
-msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr "Các dịch vụ tài chính được cung cấp thông qua trang web này bao gồm các tùy chọn nhị phân, hợp đồng chênh lệch (\"CFDs\") và các sản phẩm tài chính và chứng khoán phái sinh phức tạp khác. Các tùy chọn giao dịch nhị phân có thể không phù hợp với tất cả mọi người. Giao dịch CFD mang mức độ rủi ro cao vì đòn bẩy có thể mang đến lợi thế cũng như bất lợi cho bạn. Do đó, các sản phẩm được cung cấp trên trang web này có thể không phù hợp với tất cả các nhà đầu tư vì bạn có thể gặp rủi ro mất hết vốn của mình. Bạn nên đầu tư khi không có đủ khả năng để chấp nhận thua lỗ, và không bao giờ giao dịch bằng tiền đi vay. Trước khi giao dịch trong các sản phẩm tài chính phức tạp được cung cấp, vui lòng đảm bảo bạn đã hiểu các rủi ro có liên quan và tìm hiểu kỹ về %1 Giao Dịch Có Trách Nhiệm%2."
+msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+msgstr ""
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Có một sự dán đoạn dữ liệu thị trường trong lúc hợp đồng đang thực thi. Đối với các tài khoản tiền thật chúng tôi sẽ cố gắng khắc phục lỗi điều chỉnh hợp đồng cho phù hợp, hoặc hợp đồng sẽ được hủy và hoàn lại tiền. Các hợp đồng tiền ảo sẽ được hủy và hoàn tiền."
@@ -1626,8 +1626,8 @@ msgstr "Hợp đồng này đã thành công"
 msgid "This field is required"
 msgstr "Trường này là bắt buộc"
 
-msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
-msgstr "Dịch vụ của trang web này không có sẵn ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, Nhật bản, hoặc cho những người dưới 18 tuổi."
+msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
+msgstr ""
 
 msgid "Thu"
 msgstr "Thứ năm"
@@ -2103,3 +2103,26 @@ msgstr "| Lợi nhuận"
 msgid "﻿"
 msgstr "dấu cách"
 
+#~ msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
+#~ msgstr "Binary.com là một trang cung cấp dịch vụ kinh doanh trực tuyến hỗ trợ khách hàng của mình giao dịch trên các thị trường tài chính thông qua Binary Options và CFDs. Giao dịch Binary Options và CFDs theo Chỉ Số Biến Động được phân loại như là một hoạt động cờ bạc. Hãy nhớ rằng cờ bạc có thể gây nghiện-hãy có trách nhiệm khi chơi. Tìm hiểu thêm về %1 Giao Dịch Có Trách Nhiệm%2. Một số sản phẩm sẽ không có sẵn ở tất cả mọi nước. Dịch vụ của trang web không hoạt động ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, hoặc những người dưới 18 tuổi."
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+#~ msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta. Được quản lý và cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
+
+#~ msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+#~ msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), tòa nhà Mompalao, Phòng 2, Đường Tower, Msida MSD1825, Malta, được cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta (giấy phép số IS/70156)."
+
+#~ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+#~ msgstr "Đối với các khu vực còn lại trong EU, các Chỉ Số Biến Động được cung cấp bởi Binary (Europe) Ltd., Mompalao Building, Suite 2, đường Tower, Msida MSD1825, Malta; được quản lý và cấp phép bởi(1) Ủy ban giải trí Malta (giấy phép số. MGA / B2C / 102/2000 được ban hành vào ngày 01 tháng 8 năm 2018), đối với các khách hàng ở Anh, (2) Ủy ban cờ bạc Vương quốc Anh (giấy phép %1 số: 39495 %2), và khách hàng Ai-len, (3) Ủy viên Doanh thu ở Ireland (Giấy phép của Người lập sổ từ xa số 1010285 cấp ngày 1 tháng 7 năm 2017). Xem thêm%3Thông tin pháp lý %2."
+
+#~ msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
+#~ msgstr "Ngoài EU, các sản phẩm tài chính được cung cấp bởi Binary (CR) SA, Tầng 5, Tòa nhà 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Tòa nhà Govant, Port Vila, PO Box 1276, Vanuatu, được cấp phép bởi Ủy ban Dịch vụ Tài chính Vanuatu (%1view giấy phép%2), Binary (BVI) Ltd, Tầng 2, O'Neal Marketing Associates Building, Wickham's Cay II, PO Box 3174, Road Town, Tortola VB1110, Quần đảo Virgin thuộc Anh, được quy định bởi Ủy ban Dịch vụ Tài chính Quần đảo Virgin thuộc Anh (%3licence no. SIBA / L / 18/1114%4) và Binary (FX) Ltd., Lô số F16, Tầng 1, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, do Cơ quan dịch vụ tài chính Labuan quy định để thực hiện công việc kinh doanh tiền tệ (%5 giấy phép số. MB / 18/0024%6)"
+
+#~ msgid "Please keep your message to a single line, don’t press enter"
+#~ msgstr "Xin vui lòng giữ tin nhắn của bạn chỉ ở trong dòng duy nhất, đừng bấm xuống dòng"
+
+#~ msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+#~ msgstr "Các dịch vụ tài chính được cung cấp thông qua trang web này bao gồm các tùy chọn nhị phân, hợp đồng chênh lệch (\"CFDs\") và các sản phẩm tài chính và chứng khoán phái sinh phức tạp khác. Các tùy chọn giao dịch nhị phân có thể không phù hợp với tất cả mọi người. Giao dịch CFD mang mức độ rủi ro cao vì đòn bẩy có thể mang đến lợi thế cũng như bất lợi cho bạn. Do đó, các sản phẩm được cung cấp trên trang web này có thể không phù hợp với tất cả các nhà đầu tư vì bạn có thể gặp rủi ro mất hết vốn của mình. Bạn nên đầu tư khi không có đủ khả năng để chấp nhận thua lỗ, và không bao giờ giao dịch bằng tiền đi vay. Trước khi giao dịch trong các sản phẩm tài chính phức tạp được cung cấp, vui lòng đảm bảo bạn đã hiểu các rủi ro có liên quan và tìm hiểu kỹ về %1 Giao Dịch Có Trách Nhiệm%2."
+
+#~ msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
+#~ msgstr "Dịch vụ của trang web này không có sẵn ở một số quốc gia như Mỹ, Canada, Costa Rica, Hồng Kông, Nhật bản, hoặc cho những người dưới 18 tuổi."
