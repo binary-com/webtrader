@@ -739,15 +739,16 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.proposal.onchange = function () {
-    var unit = state.duration_unit.value;
-    var expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+    const unit = state.duration_unit.value;
+    let expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+    const subcat = state.category_displays.selected.sentiment;
     if(state.categories.value.contract_category === 'spreads') expiry_type = 'intraday';
-    var row = _(available).filter({
+    const row = _(available).filter({
       'contract_category_display': state.categories.value.contract_category_display,
       'contract_display': state.category_displays.selected.name,
       'expiry_type': expiry_type
     }).head();
-    var request = {
+    const request = {
       proposal: 1,
       subscribe: 1,
       contract_type: row.contract_type,
@@ -772,7 +773,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     add_barriers_to_request(state, request);
     set_is_barrier_offset(state);
 
-    if (state.categories.value.contract_category === 'digits') {
+    if (state.categories.value.contract_category === 'digits' && !(subcat === 'odd' || subcat === 'even')) {
       request.barrier = state.digits.value + '';
     }
     if (state.date_start.value !== 'now') {
