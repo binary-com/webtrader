@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-05-15 14:00\n"
+"PO-Revision-Date: 2019-05-16 10:29\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -249,6 +249,9 @@ msgstr "确定删除此令牌？"
 msgid "Are you sure you want to overwrite current template?"
 msgstr "确定覆盖当前模板？"
 
+msgid "Arrange"
+msgstr ""
+
 msgid "Asian down"
 msgstr "亚洲下跌"
 
@@ -303,7 +306,7 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com︰ Webtrader"
 
-msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
 msgstr ""
 
 msgid "Blank window"
@@ -398,6 +401,9 @@ msgstr "点击登录Binary.com账户"
 
 msgid "Close"
 msgstr "关"
+
+msgid "Close All"
+msgstr ""
 
 msgid "Closes"
 msgstr "关"
@@ -729,9 +735,6 @@ msgstr "全屏幕交易界面"
 msgid "Further instructions"
 msgstr "详细说明"
 
-msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "获取交易者的 API 令牌, 并将其添加到您的列表中"
 
@@ -789,9 +792,6 @@ msgstr "重要免责声明"
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr "重要免责声明 - Binary.com与上述所有支付代理不存在附属关系。各支付代理均以独立服务提供商的身份运营，未由Binary.com支持、担保或经其他方式批准。客户与支付代理的业务往来，风险自负。我们建议客户在向支付代理汇款前，应事先查询其信用状况。在任何情况下，Binary.com都不对客户与支付代理之间的交易承担责任"
 
-msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
-
 msgid "If you select a"
 msgstr "如您选择"
 
@@ -801,16 +801,16 @@ msgstr "如您选择特定的"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "必须完整更新页面才能正确启用主题。确定要继续？"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr ""
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr ""
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛博彩监管委员会授予牌照和监管（当前在线牌照于2012 年8 月31 日颁发）及(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39172[_2])。"
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
 msgstr ""
 
 msgid "In/Out"
@@ -1149,7 +1149,7 @@ msgstr "确定"
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "达到此限额后，您不能再存款"
 
-msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr ""
 
 msgid "Open"
@@ -1170,7 +1170,7 @@ msgstr "二元期权交易和其他类似活动一样，过于沉迷可能会上
 msgid "Other"
 msgstr "其它"
 
-msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
+msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
 msgstr ""
 
 msgid "Over"
@@ -1263,7 +1263,7 @@ msgstr "请输入正确的令牌"
 msgid "Please install the latest version of one of these browsers"
 msgstr "以下浏览器请选择一个并安装最新版本"
 
-msgid "Please keep your message to a single line, don't press enter"
+msgid "Please keep your message to a single line, don’t press enter"
 msgstr ""
 
 msgid "Please log in"
@@ -1455,9 +1455,6 @@ msgstr "自我禁止"
 msgid "Self-Exclusion Facilities"
 msgstr "自我禁止工具"
 
-msgid "Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites"
-msgstr ""
-
 msgid "Sell At Market"
 msgstr "按市价卖出"
 
@@ -1487,9 +1484,6 @@ msgstr "分享"
 
 msgid "Share chart"
 msgstr "分享图表"
-
-msgid "Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for"
-msgstr ""
 
 msgid "Sold"
 msgstr "已卖出"
@@ -1611,7 +1605,7 @@ msgstr "关于"
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "公司把客户资金存在独立的银行账户，与运营账户分开，因此如果公司破产，客户资金不会成为公司资产的一部分。这符合博彩委员会关于客户资金独立管理的要求，级别为"
 
-msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
 msgstr ""
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
@@ -1632,7 +1626,7 @@ msgstr "此合约获利"
 msgid "This field is required"
 msgstr "此为必填项"
 
-msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
+msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
 msgstr ""
 
 msgid "Thu"
@@ -1671,14 +1665,8 @@ msgstr "到"
 msgid "To deposit money please contact the payment agent directly"
 msgstr "如要存款请直接联系支付代理"
 
-msgid "To find out more and to sign up with GAMSTOP, please visit"
-msgstr ""
-
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
 msgstr "对于Binary.com不支持的支付方式或货币， 您可以联系支付代理处理存款和取款"
-
-msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr ""
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "要取款前请输入刚发送到您邮箱的特殊验证令牌码"
@@ -2102,9 +2090,6 @@ msgstr "跳动点"
 
 msgid "withdrawals"
 msgstr "提款"
-
-msgid "www.gamstop.co.uk"
-msgstr ""
 
 msgid "yes"
 msgstr "是"
