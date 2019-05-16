@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2019-05-15 14:00\n"
+"PO-Revision-Date: 2019-05-16 09:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -304,7 +304,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com adalah pemenang penghargaan sebagai penyedia trading online yang membantu para pelanggan untuk bertrading pada pasar finansial melalui opsi binary dan CFD. Ingat, trading dapat menimbulkan efek ketagihan – bertradinglah dengan penuh tanggung jawab. Pelajari lebih lanjut mengenai [_1]Tanggung jawab Trading[_2]. Beberapa produk mungkin tidak tersedia di semua negara. Fasilitas situs web ini tidak tersedia di beberapa negara seperti AS, Kanada, Hong Kong atau siapapun dibawah umur 18."
 
 msgid "Blank window"
 msgstr "Jendela kosong"
@@ -2104,7 +2104,7 @@ msgid "withdrawals"
 msgstr "pencairan"
 
 msgid "www.gamstop.co.uk"
-msgstr ""
+msgstr "www.gamstop.co.uk"
 
 msgid "yes"
 msgstr "iya"
