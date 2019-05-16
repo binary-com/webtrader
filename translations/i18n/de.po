@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: webtrader\n"
-"PO-Revision-Date: 2019-01-29 06:30\n"
-"Last-Translator: binarycom <jy@binary.com>\n"
-"Language-Team: German\n"
-"Language: de_DE\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: webtrader\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /development/translations/i18n/messages.pot\n"
+"Project-Id-Version: webtrader\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: binarycom <jy@binary.com>\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"PO-Revision-Date: 2019-01-29 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -249,6 +249,9 @@ msgstr "Sind Sie sicher, dass Sie diesen Token löschen wollen?"
 msgid "Are you sure you want to overwrite current template?"
 msgstr "Sind Sie sicher, dass Sie die aktuelle Vorlage überschreiben wollen?"
 
+msgid "Arrange"
+msgstr "Vereinbaren"
+
 msgid "Asian down"
 msgstr "Asiatisches Tief"
 
@@ -303,7 +306,7 @@ msgstr "Binary.com"
 msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
-msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
+msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive – please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, or to persons under age 18."
 msgstr ""
 
 msgid "Blank window"
@@ -398,6 +401,9 @@ msgstr "Anklicken, um sich mit Ihrem Binary.com Konto anzumelden"
 
 msgid "Close"
 msgstr "Schluss"
+
+msgid "Close All"
+msgstr "Alle schließen"
 
 msgid "Closes"
 msgstr "Schließt"
@@ -729,9 +735,6 @@ msgstr "Vollbild-Handels-Schnittstelle"
 msgid "Further instructions"
 msgstr "Weitere Anweisungen"
 
-msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
-
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "Erhalten Sie API Token von Händlern und fügen Sie sie zu Ihrer Liste hinzu"
 
@@ -789,9 +792,6 @@ msgstr "WICHTIGER RECHTLICHER HINWEIS"
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr "- Binary.com ist kein Geschäftspartner einer der oben aufgeführten Zahlungsagenten. Jeder Zahlungsagent arbeitet als eigenständiger Dienstleister und wird nicht von Binary.com empfohlen, garantiert oder anderweitig genehmigt. DIE KUNDEN HANDELN MIT ZAHLUNGSAGENTEN AUF IHR EIGENES RISIKO UND IHRE EIGENE GEFAHR. Den Kunden wird empfohlen, die Angaben der Zahlungsagenten zu überprüfen, bevor sie Geld überweisen. Binary.com kann für Transaktionen zwischen Kunden und Zahlungsagenten nicht haftbar gemacht werden"
 
-msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
-
 msgid "If you select a"
 msgstr "Wenn Sie einen auswählen"
 
@@ -801,16 +801,16 @@ msgstr "Wenn Sie einen speziellen auswählen"
 msgid "In order to properly apply theme, a full refresh of page is required. Are you sure you want to proceed?"
 msgstr "Um das Thema richtig anzuwenden, ist es erforderlich, die Seite neu zu laden. Sind Sie sicher, dass Sie fortfahren möchten?"
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr ""
 
-msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
+msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr ""
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "Auf der Isle of Man und in Großbritannien werden Volatilität Indizes von Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man angeboten; lizensiert und reguliert von (1) der Gambling Supervision Commission (Glücksspielbehörde) (die aktuelle Lizenz wurde am 31. August 2017 ausgestellt), und von der (2) Gambling Commission in Großbritannien (Lizenz [_1] Referenznummer 39172[_2])."
 
-msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
+msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., Mompalao Building, Suite 2, Tower Road, Msida MSD1825, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
 msgstr ""
 
 msgid "In/Out"
@@ -1149,8 +1149,8 @@ msgstr "Ok"
 msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Wenn dieses Limit erreicht wird, können Sie keine weiteren Einzahlungen mehr vornehmen"
 
-msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
+msgstr "Onlinehandel kann abhängig machen. Füllen Sie das Formular im Anschluss aus, um Ihre Teilnahme auf der Website zu begrenzen oder schicken Sie einen unterschriebenen Brief oder ein Fax an unser Kundenbetreuungsteam. Einmal eingerichtet, können Ihre Limits nur herabgesetzt werden. Die Limits, mit Ausnahme des Datums für den Selbstausschluss, das nicht aufgehoben oder geändert werden kann, sobald Sie dies bestätigt haben, können nur nach Ablauf von 7 Tagen aufgehoben oder gelockert werden. Um Ihre Limits zu löschen oder zu erhöhen, setzen Sie sich bitte in Verbindung mit"
 
 msgid "Open"
 msgstr "Offen"
@@ -1170,7 +1170,7 @@ msgstr "Der Optionenhandel kann zu einer wirklichen Abhängigkeit führen, so wi
 msgid "Other"
 msgstr "Andere"
 
-msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
+msgid "Outside the EU, financial products are offered by Binary (C.R.) S.A., 5th Floor, Building 6 Centro Ejecutivo La Sabana, Sabana Sur, San José, Costa Rica, Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]), Binary (BVI) Ltd, 2nd Floor, O’Neal Marketing Associates Building, Wickham’s Cay II, P.O. Box 3174, Road Town, Tortola VB1110, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]), and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])"
 msgstr ""
 
 msgid "Over"
@@ -1263,7 +1263,7 @@ msgstr "Bitte geben Sie den richtigen Token ein"
 msgid "Please install the latest version of one of these browsers"
 msgstr "Bitte installieren Sie die letzte Version einer dieser Browser"
 
-msgid "Please keep your message to a single line, don't press enter"
+msgid "Please keep your message to a single line, don’t press enter"
 msgstr ""
 
 msgid "Please log in"
@@ -1455,9 +1455,6 @@ msgstr "Selbstausschluss"
 msgid "Self-Exclusion Facilities"
 msgstr "Selbstausschluss Hilfen"
 
-msgid "Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites"
-msgstr ""
-
 msgid "Sell At Market"
 msgstr "Zum Börsenkurs verkaufen"
 
@@ -1487,9 +1484,6 @@ msgstr "Teilen"
 
 msgid "Share chart"
 msgstr "Chart teilen"
-
-msgid "Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for"
-msgstr ""
 
 msgid "Sold"
 msgstr "Verkauft"
@@ -1611,7 +1605,7 @@ msgstr "Die"
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
 msgstr "Das Unternehmen unterhält Kundengelder auf von den betrieblichen Konten getrennten Bankkonten, die im Fall einer Insolvenz keinen Anteil am Firmenvermögen darstellen. Dies entspricht nach den Vorschriften der Glücksspielbehörden zur Abtrennung von Kundenvermögen dem Grad"
 
-msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
+msgid "The financial products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives and financial products. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex financial products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
 msgstr ""
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
@@ -1632,7 +1626,7 @@ msgstr "Dieser Kontrakt hat gewonnen"
 msgid "This field is required"
 msgstr "Dieses Feld ist erforderlich"
 
-msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
+msgid "This website’s services are not made available in certain countries such as the USA, Canada, Costa Rica, Hong Kong, Japan, or to persons under age 18."
 msgstr ""
 
 msgid "Thu"
@@ -1671,14 +1665,8 @@ msgstr "Zu"
 msgid "To deposit money please contact the payment agent directly"
 msgstr "Um Geld einzuzahlen, setzen Sie sich bitte direkt mit dem Zahlungsagenten in Verbindung"
 
-msgid "To find out more and to sign up with GAMSTOP, please visit"
-msgstr ""
-
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
 msgstr "Um Ein- und Auszahlungen für Zahlungsmethoden oder Landeswährungen zu bearbeiten, die von Binary.com nicht unterstützt werden, setzen Sie sich bitte mit einem Zahlungsagenten in Verbindung"
-
-msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr ""
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Um Gelder abzuheben, geben Sie bitte den speziellen Verifikationstoken, den wir gerade per E-Mail an Sie verschickt haben, ein"
@@ -2103,9 +2091,6 @@ msgstr "Ticks"
 msgid "withdrawals"
 msgstr "Behebungen"
 
-msgid "www.gamstop.co.uk"
-msgstr ""
-
 msgid "yes"
 msgstr "ja"
 
@@ -2118,11 +2103,3 @@ msgstr "| Rendite"
 msgid "﻿"
 msgstr ""
 
-#~ msgid "Arrange"
-#~ msgstr "Vereinbaren"
-
-#~ msgid "Close All"
-#~ msgstr "Alle schließen"
-
-#~ msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self- exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-#~ msgstr "Onlinehandel kann abhängig machen. Füllen Sie das Formular im Anschluss aus, um Ihre Teilnahme auf der Website zu begrenzen oder schicken Sie einen unterschriebenen Brief oder ein Fax an unser Kundenbetreuungsteam. Einmal eingerichtet, können Ihre Limits nur herabgesetzt werden. Die Limits, mit Ausnahme des Datums für den Selbstausschluss, das nicht aufgehoben oder geändert werden kann, sobald Sie dies bestätigt haben, können nur nach Ablauf von 7 Tagen aufgehoben oder gelockert werden. Um Ihre Limits zu löschen oder zu erhöhen, setzen Sie sich bitte in Verbindung mit"
