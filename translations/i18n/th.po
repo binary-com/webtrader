@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-05-17 07:11\n"
+"PO-Revision-Date: 2019-05-17 08:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1678,7 +1678,7 @@ msgid "To process deposits and withdrawals for payment methods or local currenci
 msgstr "เพื่อดำเนินฝากและถอนเงินสำหรับวิธีการชำระเงิน  หรือ สกุลเงินท้องถิ่นไม่รองรับ โดย Binary.com โปรดติดต่อตัวแทนรับชำระเงิน"
 
 msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr ""
+msgstr "การพักตัวเองจากเหล่าบริษัทการพนันออนไลน์ที่ได้รับใบอนุญาตในสหราชอาณาจักร โปรดดำเนินการที่"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "ในการถอนหลักประกัน โปรดป้อนรหัสโทเค่นเพื่อการยืนยัน ซึ่งเราได้ส่งให้ท่านทางอีเมล์แล้ว"
@@ -2104,7 +2104,7 @@ msgid "withdrawals"
 msgstr "การถอนเงิน"
 
 msgid "www.gamstop.co.uk"
-msgstr ""
+msgstr "www.gamstop.co.uk"
 
 msgid "yes"
 msgstr "ใช่"
