@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-05-17 08:00\n"
+"PO-Revision-Date: 2019-05-17 08:11\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -304,7 +304,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : เว็บเทรดเดอร์ (Webtrader)"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com เป็นผู้ให้บริการการซื้อขายออนไลน์ที่ได้รับรางวัลซึ่งทำให้ลูกค้าได้ทำการซื้อขายในตลาดการเงินผ่านทางไบนารีออปชันและ CFD การซื้อขายไบนารีออปชันและ CFD บนดัชนีผันผวนถูกจัดให้เป็นกิจกรรมด้านการพนัน โปรดจำไว้ว่า การพนันอาจทำให้เกิดการเสพติด กรุณาดำเนินการซื้อขายด้วยความรับผิดชอบ ศึกษาเพิ่มเติมเกี่ยวกับ [_1]ความรับผิดชอบในการซื้อขาย[_2] ผลิตภัณฑ์บางรายการยังไม่มีในทุกประเทศ การบริการทางเว็บไซต์นี้ไม่มีในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา ฮ่องกง หรือ ไม่ได้ให้บริการแก่บุคคลที่อายุต่ำกว่า 18 ปี"
 
 msgid "Blank window"
 msgstr "หน้าต่างว่าง"
@@ -730,7 +730,7 @@ msgid "Further instructions"
 msgstr "คำแนะนำเพิ่มเติม"
 
 msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
+msgstr "GAMSTOP เป็นบริการฟรีที่ช่วยให้ท่านสามารถพักตัวเองจากบริษัทที่ให้บริการด้านการพนันออน์ไลน์ทั้งหมด และได้รับอนุญาตในสหราชอาณาจักร"
 
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "ใช้ API โทเค่น จากนักลงทุน และเพิ่มเข้าในรายการของท่าน"
@@ -790,7 +790,7 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "ข้อสงวนสิทธิ์ที่สำคัญ - Binary.com ไม่ได้เข้าร่วมเป็นพันธมิตรกับตัวแทนรับชำระเงินที่แจกแจงข้างต้น ตัวแทนรับชำระเงินแต่ละรายดำเนินการในฐานะผู้ให้บริการอิสระ และไม่ได้รับการรับรอง รับประกัน หรืออนุมัติโดย Binary.com ลูกค้าที่ติดต่อกับตัวแทนรับชำระเงินจะต้องรับผิดชอบต่อความเสี่ยงต่างๆด้วยตัวเอง ขอแนะนำให้ลูกค้าตรวจสอบข้อมูลหลักฐานอ้างอิงของตัวแทนรับชำระเงินก่อนที่จะส่งเงินใดๆให้กับตัวแทน Binary.com ไม่ว่าในกรณีใดๆ ก็ตาม จะไม่รับผิดชอบต่อธุรกรรมที่กระทำขึ้นระหว่างลูกค้ากับตัวแทนรับชำระเงิน"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
+msgstr "หากท่านกำลังพิจารณาพักตัวเองจากการใช้งานระบบ ท่านอาจต้องการลงทะเบียนกับ GAMSTOP ด้วย"
 
 msgid "If you select a"
 msgstr "หากท่านเลือก"
@@ -802,16 +802,16 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "เพื่อการใช้งานธีมอย่างมีประสิทธิภาพ ต้องมีการรีเฟรชหน้าจอ ท่านต้องการดำเนินการหรือไม่?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "ในสหภาพยุโรป Binary Investments (Europe) Ltd ให้บริการผลิตภัณฑ์ทางการเงิน บริษัทฯ มีที่ตั้งสำนักงานอยู่ที่อาคาร W Business Centre ชั้น 3 Triq Dun Karm, Birkirkara, BKR 9033 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลในฐานะผู้ให้บริการทางการลงทุน ประเภทที่ 3 โดย Malta Financial Services Authority ([_1]ใบอนุญาตเลขที่ IS/70156[_2])"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "ในสหภาพยุโรป Binary Investments (Europe) Ltd ให้บริการผลิตภัณฑ์ทางการเงิน บริษัทฯ มีที่ตั้งสำนักงานอยู่ที่ อาคาร W Business Centre ชั้น 3 Triq Dun Karm, Birkirkara, BKR 9033 ประเทศมอลตา ได้รับใบอนุญาตและกำกับดูแลในฐานะผู้ให้บริการทางการลงทุน ประเภทที่ 3 โดย Malta Financial Services Authority ([_1]ใบอนุญาตเลขที่ IS/70156[_2])"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "ที่เกาะ Isle of Man และสหราชอาณาจักร ดัชนีผันผวนถูกเสนอโดย Binary (IOM) Ltd. ชั้นหนึ่ง อาคาร Millennium House ถนนวิคตอเรีย ดักลาส IM2 4RW เกาะ Isle of Man ในบริติชไอลส์ โดยได้รับใบอนุญาตและการควบคุมดูแลตามกฎหมายโดย (1) Gambling Supervision Commission บนเกาะ Isle of Man (ใบอนุญาตปัจจุบันออกให้เมื่อวันที่ 31 สิงหาคม 2017) และโดย (2) Gambling Commission ในสหราชอาณาจักร (ใบอนุญาต[_1]หมายเลขอ้างอิง: 39172[_2])"
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "ในประเทศอื่นๆ ของสหภาพยุโรป Binary (Europe) Ltd. ให้บริการดัชนีผันผวน บริษัทฯ มีที่ตั้งสำนักงานอยู่ที่ อาคาร W Business Centre ชั้น 3 Triq Dun Karm, Birkirkara, BKR 9033 ประเทศมอลตา บริษัทฯ ได้รับใบอนุญาตและกำกับดูแลตามกฎหมายโดย (1) Malta Gaming Authority ประเทศมอลตา (ใบอนุญาตเลขที่ MGA/B2C/102/2000 ออกให้เมื่อวันที่ 1 สิงหาคม ค.ศ. 2018) สำหรับลูกค้าสหราชอาณาจักร โดย (2) UK Gambling Commission (ใบอนุญาต [_1]หมายเลขอ้างอิง: 39495[_2]) และสำหรับลูกค้าไอร์แลนด์ โดย (3) Revenue Commissioners ในประเทศไอร์แลนด์ (ใบอนุญาต Remote Bookmaker เลขที่ 1010285 ออกให้เมื่อวันที่ 1 กรกฎาคม ค.ศ. 2017) ดู [_3]ข้อมูลด้านกฎหมาย[_4] ฉบับสมบูรณ์"
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "เมื่อวงเงินเต็ม ท่านไม่สามารถฝากเงินได้"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "การซื้อขายผลิตภัณฑ์ทางการเงินอาจทำให้ท่านเสพติดได้ โปรดกรอกข้อมูลในแบบฟอร์มด้านล่างเพื่อกำหนดเงื่อนไขการใช้เว็บไซต์ของท่าน หรือ โดยการส่งจดหมายที่มีการลงนามของท่าน หรือ ดำเนินการส่งโทรสารมายังฝ่ายลูกค้าสัมพันธ์ เมื่อมีการตั้งค่าดังกล่าวแล้ว ท่านจะทำได้เพียงลดวงเงินเท่านั้น วงเงินจะถูกปรับลด หรือ ผ่อนปรนหลังจาก 7 วัน ของวันที่กำหนดให้พัก แต่ท่านจะไม่สามารถทำการยกเลิก หรือ เปลี่ยนแปลงได้หลังจากได้ทำการยืนยันแล้ว หากท่านต้องการยกเลิก หรือ เพิ่มวงเงินของท่าน โปรดติดต่อ"
 
 msgid "Open"
 msgstr "เปิด"
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "อื่นๆ"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr ""
+msgstr "พื้นที่นอกสหภาพยุโรปนั้น บริษัท Binary (SVG) Ltd เป็นผู้ให้บริการผลิตภัณฑ์ทางการเงิน มีที่ตั้งอยู่ที่ อาคาร Hinds, คิงส์ทาวน์ เซนต์วินเซนต์และเกรนาดีนส์ บริษัท Binary (V) Ltd. ตั้งอยู่ที่อาคาร Govant, Port Vila ตู้ปณ. 1276 สาธารณรัฐวานูอาตู ซึ่งได้รับการรับรองจาก Vanuatu Financial Services Commission ([_1]ดูใบรับรอง[_2]) บริษัท Binary (BVI) Ltd มีที่ตั้งอยู่ที่ Kingston Chambers ตู้ปณ. 173 โรดทาวน์ ทอร์ทอลา หมู่เกาะบริติชเวอร์จิน ซึ่งได้รับการรับรองจาก British Virgin Islands Financial Services Commission ([_3]ใบรับรองเลขที่ SIBA/L/18/1114[_4]) และบริษัท Binary (FX) Ltd. ตั้งอยู่ที่ ห้อง F16 ชั้น 1 อาคาร Paragon Labuan ถนน Tun Mustapha 87000 ลาบวน ประเทศมาเลเซีย ซึ่งได้รับการรับรองจาก Labuan Financial Services Authority ในการดำเนินการธุรกิจตัวแทนด้านการเงิน ([_5]ใบรับรองเลขที่ MB/18/0024[_6])"
 
 msgid "Over"
 msgstr "มากกว่า"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "โปรดติดตั้งเบราเซอร์เวอร์ชันล่าสุดตัวใดตัวหนึ่ง"
 
 msgid "Please keep your message to a single line, don't press enter"
-msgstr ""
+msgstr "โปรดจำกัดข้อความของท่านให้อยู่ในบรรทัดเดียว อย่ากดปุ่ม Enter"
 
 msgid "Please log in"
 msgstr "โปรดเข้าสู่ระบบ"
@@ -1456,7 +1456,7 @@ msgid "Self-Exclusion Facilities"
 msgstr "เครื่องมือสำหรับพักการซื้อขาย"
 
 msgid "Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites"
-msgstr ""
+msgstr "การพักตัวเองบนเว็บไซต์นี้ใช้ได้กับบัญชี Binary.com ของท่านเท่านั้น และไม่รวมถึงบริษัทฯ อื่นๆ หรือ เว็บไซต์อื่นๆ"
 
 msgid "Sell At Market"
 msgstr "ขายที่ราคาตลาด"
@@ -1489,7 +1489,7 @@ msgid "Share chart"
 msgstr "แบ่งปันแผนภูมิ"
 
 msgid "Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for"
-msgstr ""
+msgstr "หากท่านรู้สึกว่า ท่านต้องการพักการใช้งาน เราแนะนำให้ท่านพักการใช้งานจากการบริการอื่นๆ ที่มีลักษณะเดียวกันที่ท่านได้ลงทะเบียนไว้"
 
 msgid "Sold"
 msgstr "ขาย"
@@ -1612,7 +1612,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "บริษัทฯ ดูแลเงินทุนประกันของลูกค้าในบัญชีที่ถูกจัดสรรแยกเพื่อการปฏิบัติการ และการจัดการเพื่อให้แน่ใจว่า สินทรัพย์ของบัญชีลูกค้ามีการถูกจำหน่ายหากมีกรณีล้มละลาย ซึ่งเป็นไปตามข้อกำหนดของ Gambling Commission ในการแยกเงินทุนลูกค้าโดยเป็นมาตรการการป้องกันระดับ: "
 
 msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "ผลิตภัณฑ์ที่ให้บริการในเว็บไซต์นี้ ได้แก่ ไบนารีออปชั่น สัญญาการซื้อขายส่วนต่าง (\"CFD\") และอนุพันธ์ที่มีความซับซ้อนอื่นๆ การซื้อขายไบนารีออปชั่นอาจไม่เหมาะกับทุกคน การซื้อขาย CFD มีความเสี่ยงสูงเพราะเลเวอรเรจจะส่งผลทั้งดีและเสียให้ท่าน ดังนั้น ผลิตภัณฑ์ในเว็บไซต์นี้จึงอาจจะไม่เหมาะสมกับนักลงทุนทุกคน เนื่องจากความเสี่ยงที่อาจสูญเสียเงินลงทุนทั้งหมด ท่านไม่ควรลงทุน หากไม่สามารถรับภาวะการขาดทุน และต้องไม่ซื้อขายด้วยเงินที่ยืมมา ก่อนการซื้อขายผลิตภัณฑ์ที่มีความซับซ้อน โปรดทำความเข้าใจต่อความเสี่ยงที่เกี่ยวข้องและศึกษาเกี่ยวกับ [_1]การซื้อขายด้วยความรับผิดชอบ[_2]"
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "มีการหยุดชะงักของข้อมูลตลาดในช่วงระยะเวลาของสัญญา สำหรับบัญชีเงินจริง เราจะพยายามแก้ไขและชำระสัญญาอย่างเหมาะสม มิเช่นนั้นสัญญาจะถูกยกเลิกและคืนเงิน สัญญาเงินเสมือนจะถูกยกเลิกและคืนเงิน"
