@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-05-21 12:57\n"
+"PO-Revision-Date: 2019-05-21 13:19\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1975,7 +1975,7 @@ msgid "commission"
 msgstr "commissione"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr ""
+msgstr "crea un token di sola lettura e condividi con la/e fotocopiatrice/i"
 
 msgid "customer support"
 msgstr "assistenza clienti"
