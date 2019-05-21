@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-05-21 07:11\n"
+"PO-Revision-Date: 2019-05-21 07:21\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -304,7 +304,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com là một trang cung cấp dịch vụ kinh doanh trực tuyến hỗ trợ khách hàng của mình giao dịch trên các thị trường tài chính thông qua Binary Options và CFDs. Giao dịch Binary Options và CFDs theo Chỉ Số Biến Động được phân loại như là một hoạt động cờ bạc. Hãy nhớ rằng cờ bạc có thể gây nghiện-hãy có trách nhiệm khi chơi. Tìm hiểu thêm về [_1]Giao Dịch Có Trách Nhiệm[_2]. Một số sản phẩm sẽ không có sẵn ở tất cả mọi nước. Dịch vụ của trang web không hoạt động ở một số quốc gia như Mỹ, Canada, Hồng Kông, hoặc những người dưới 18 tuổi."
 
 msgid "Blank window"
 msgstr "Cửa sổ trống"
@@ -802,16 +802,16 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Để áp dụng đúng chủ đề, việc làm mới lại trang là cần thiết. Bạn có chắc bạn muốn tiếp tục không?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Tại EU, các sản phẩm tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, được cấp phép và quy định như là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta ([_1]giấy phép số IS/70156[_2])."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Tại EU, các dịch vụ tài chính được cung cấp bởi Công Ty TNHH đầu tư Binary (Châu Âu), W Business Centre, Tầng 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, được cấp phép là một nhà cung cấp dịch vụ đầu tư loại 3 bởi Cơ Quan Dịch Vụ Tài Chính Malta ([_1]giấy phép số IS/70156[_2])."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "Ở Isle of Man và UK, các Chỉ Số Biến Động được cung cấp bởi Binary (IOM) Ltd., tầng 1, Millennium House, đường Victoria, Douglas, IM2 4RW, Isle of Man, British Isles; được quản lý và cấp phép bởi (1) Ủy ban giám sát cờ bạc ở Isle of Man (giấy phép hiện hành được cấp ngày 31 tháng 8 năm 2017) cũng như (2) Ủy ban cờ bạc ở Vương quốc Anh (giấy phép [_1] số: 39172 [_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "Đối với các khu vực còn lại trong EU, các Chỉ Số Biến Động được cung cấp bởi Binary (Europe) Ltd., W Business Centre, Tầng 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; được quản lý và cấp phép bởi(1) Ủy ban Quản Lý Cá Cược Malta (giấy phép số. MGA / B2C / 102/2000 được ban hành vào ngày 01 tháng 8 năm 2018), đối với các khách hàng ở Anh, (2) Ủy ban cờ bạc Vương quốc Anh (giấy phép [_1]số: 39495[_2]), và khách hàng Ai-len, (3) Ủy viên Doanh thu ở Ireland (Giấy phép của Người lập sổ từ xa số 1010285 cấp ngày 1 tháng 7 năm 2017). Xem hết các [_3]Thông tin pháp lý[_4]."
 
 msgid "In/Out"
 msgstr "Vào/Ra"
