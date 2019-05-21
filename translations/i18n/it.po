@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-05-17 07:11\n"
+"PO-Revision-Date: 2019-05-21 06:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -304,7 +304,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com è un fornitore di servizi online, premiato con vari riconoscimenti, che aiuta i clienti ad effettuare trading nei mercati finanziari attraverso opzioni binarie e CFD. Il trading di opzioni binarie e CFD sugli indici di volatilità è classificato come attività di gioco d'azzardo. È importante essere consapevoli che il gioco d'azzardo può creare dipendenza; ti invitiamo a giocare in modo responsabile. Scopri di più sul [_1]trading responsabile[_2]. Alcuni prodotti non sono disponibili in tutti i paesi. I servizi offerti su questo sito web non sono disponibili in alcuni paesi, come USA, Canada, Hong Kong, o per le persone di età inferiore ai 18 anni."
 
 msgid "Blank window"
 msgstr "Finestra vuota"
@@ -730,7 +730,7 @@ msgid "Further instructions"
 msgstr "Ulteriori istruzioni"
 
 msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
+msgstr "GAMSTOP è un servizio gratuito che ti permette di autoescluderti da qualsiasi società di gioco d'azzardo online autorizzata in Gran Bretagna"
 
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "Ottieni il token dell'API dal/i trader e aggiungilo alla tua lista"
@@ -790,7 +790,7 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "DISCLAIMER IMPORTANTE - Binary.com non è affiliato con alcun Agente di pagamento elencato qui sopra. Ogni Agente di pagamento opera come provider di servizi indipendente e non è in alcun modo sostenuto, garantito o approvato da Binary.com. I CLIENTI TRATTANO CON GLI AGENTI DI PAGAMENTO A PROPRIO RISCHIO E PERICOLO. Ai clienti si consiglia di controllare le credenziali degli Agenti di pagamento prima di inviare loro qualsiasi somma di denaro. Binary.com non è in alcun modo responsabile per le transazioni eseguite tra i clienti e gli Agenti di pagamento"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
+msgstr "Se stai valutando l'autoesclusione, potresti volere registrarti con GAMSTOP"
 
 msgid "If you select a"
 msgstr "Se selezioni un"
@@ -802,16 +802,16 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Per poter applicare lo sfondo in modo adeguato, è richiesto l'aggiornamento della pagina. Sei sicuro di voler procedere?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Nell'UE, i prodotti finanziari sono offerti da Binary Investments (Europe) Ltd., W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizzata e regolamentata come appartenente alla Categoria 3 dei fornitori di servizi di investimento dalla Malta Financial Services Authority ([_1]licenza n. IS/70156[_2])."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "Nell'UE, i prodotti finanziari sono offerti da Binary Investments (Europe) Ltd., W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regolamentata come appartenente alla Categoria 3 dei fornitori di servizi di investimento dalla Malta Financial Services Authority ([_1]licenza n. IS/70156[_2])."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "Nell'Isola di Man e nel Regno Unito, gli indici di volatilità sono offerti da Binary (IOM) Ltd., primo piano, Millennium House, Victoria Road, Douglas, IM2 4RW, Isola di Man, Isole Britanniche; autorizzata e regolamentata rispettivamente dalla (1) Gambling Supervision Commission dell'Isola di Man (licenza attuale emessa il 31 agosto 2017) e dalla (2) Gambling Commission del Regno Unito ([_1]licenza n. 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "Nel resto dell'UE, gli indici di volatilità sono offerti da Binary (Europe) Ltd., W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizzata e regolamentata dalla (1) Malta Gaming Authority di Malta (licenza n. MGA/B2C/102/2000 rilasciata l'1 agosto 2018); per i clienti nel Regno Unito dalla (2) UK Gambling Commission ( [_1]licenza n. 39495[_2]) e per i clienti irlandesi dalla (3) Revenue Commissioners di Irlanda (licenza del Remote Bookmaker n. 1010285 emessa l'1 luglio 2017). Consulta le [_3]informazioni complete sulla regolamentazione[_4]."
 
 msgid "In/Out"
 msgstr "In/Out"
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una volta raggiunto questo limite, non puoi più depositare"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione sul sito web, oppure invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta impostati i limiti, potrai solamente incrementarli; inoltre saranno rimossi o ridotti dopo 7 giorni a eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta confermata. Per rimuovere o aumentare i limiti, ti preghiamo di contattare l'assistenza clienti"
 
 msgid "Open"
 msgstr "Apri"
@@ -2071,7 +2071,7 @@ msgid "points"
 msgstr "punti"
 
 msgid "risk warning"
-msgstr ""
+msgstr "avviso di rischio"
 
 msgid "sec"
 msgstr "sec"
@@ -2104,7 +2104,7 @@ msgid "withdrawals"
 msgstr "prelievi"
 
 msgid "www.gamstop.co.uk"
-msgstr ""
+msgstr "www.gamstop.co.uk"
 
 msgid "yes"
 msgstr "sì"
