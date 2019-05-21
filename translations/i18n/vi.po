@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-05-21 07:21\n"
+"PO-Revision-Date: 2019-05-21 09:02\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Khác"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr ""
+msgstr "Ngoài EU, các sản phẩm tài chính được cung cấp bởi Binary (SVG) Ltd, Tòa Hinds, Kingstown, St.Vincent và Grenadines, Binary (V) Ltd, Tòa nhà Govant, Port Vila, PO Box 1276, Vanuatu, được quy định bởi Ủy ban Dịch vụ Tài chính Vanuatu (([_1]xem giấy phép([_1]), Binary (BVI) Ltd, Tầng 2, Kingston Chambers, PO Box 173, Road Town, Tortola, Quần đảo British Virgin, được quy định bởi Ủy ban Dịch vụ Tài chính Quần đảo British Virgin ([_3]giấy phép số. SIBA / L / 18/1114[_4]) và Binary (FX) Ltd., Lô số F16, Tầng 1, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, do Cơ quan dịch vụ tài chính Labuan quy định để thực hiện công việc kinh doanh tiền tệ ([_5] giấy phép số. MB / 18/0024[_6])."
 
 msgid "Over"
 msgstr "Qua"
@@ -1612,7 +1612,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "Công ty giữ tiền khách hàng trong tài khoản ngân hàng tách biệt với tài khoản ngân hàng vận hành, trong trường hợp phá sản, nó sẽ không thuộc tài sản của Công ty. Điều này đáp ứng các yêu cầu của Ủy ban Cờ bạc để cách ly các tiền của khách hàng ở cấp độ"
 
 msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "Các sản phẩm tài chính được cung cấp thông qua trang web này bao gồm các tùy chọn nhị phân, hợp đồng cho sự khác biệt (\"CFDs\") và các sản phẩm tài chính phái sinh phức tạp khác. Các tùy chọn nhị phân giao dịch có thể không phù hợp với mọi người. Giao dịch CFD mang mức độ rủi ro cao vì đòn bẩy có thể mang lải cả lợi thế và bất lợi cho bạn. Do đó, các sản phẩm được cung cấp trên trang web này có thể không phù hợp với tất cả các nhà đầu tư vì rủi ro mất tất cả vốn đầu tư của họ. Bạn không bao giờ nên đầu tư tiền mà bạn không đủ khả năng để đầu tư, và không bao giờ giao dịch bằng tiền vay. Trước khi giao dịch trong các sản phẩm tài chính phức tạp được cung cấp, vui lòng đảm bảo hiểu các rủi ro có liên quan và tìm hiểu về [_1]Giao Dịch Có Trách Nhiệm[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Có một sự dán đoạn dữ liệu thị trường trong lúc hợp đồng đang thực thi. Đối với các tài khoản tiền thật chúng tôi sẽ cố gắng khắc phục lỗi điều chỉnh hợp đồng cho phù hợp, hoặc hợp đồng sẽ được hủy và hoàn lại tiền. Các hợp đồng tiền ảo sẽ được hủy và hoàn tiền."
