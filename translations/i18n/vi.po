@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-05-17 07:11\n"
+"PO-Revision-Date: 2019-05-21 07:11\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -730,7 +730,7 @@ msgid "Further instructions"
 msgstr "Hướng dẫn thêm"
 
 msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
+msgstr "GAMSTOP là một dịch vụ miễn phí cho phép bạn tự loại trừ khỏi tất cả các công ty cờ bạc trực tuyến được cấp phép ở Vương Quốc Anh"
 
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "Lấy API token từ (các) nhà giao dịch và thêm nó vào danh sách của bạn"
@@ -790,7 +790,7 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "KHUYẾN CÁO QUAN TRỌNG - Binary.com không liên kết với bất kỳ Đại Lý Thanh Toán nào được liệt kê ở trên. Mỗi Đại Lý Thanh Toán hoạt động như một nhà cung cấp dịch vụ độc lập và không được thừa nhận, bảo đảm hoặc chấp thuận bởi Binary.com. KHÁCH HÀNG LÀM VIỆC VỚI CÁC ĐẠI LÝ THANH TOÁN VÀ TỰ CHỊU RỦI RO VÀ NGUY HIỂM. Khách hàng được khuyến cáo nên kiểm tra thông tin của Đại Lý Thanh Toán trước khi gửi cho họ bất kỳ khoản tiền nào. Binary.com trong bất kỳ trường hợp nào đều sẽ không chịu trách nhiệm cho các giao dịch được thực hiện giữa khách hàng và Đại Lý Thanh Toán"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
+msgstr "Nếu bạn đang cân nhắc việc tự loại trừ, bạn có thể muốn đăng ký với GAMSTOP"
 
 msgid "If you select a"
 msgstr "Nếu bạn chọn một"
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Một khi đã đạt đến giới hạn này, bạn sẽ không thể gửi tiền"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr ""
+msgstr "Giao dịch trực tuyến có thể gây nghiện. Điền thông tin vào mẫu dưới đây để giới hạn mức chơi trên trang web hoặc gửi thư đã được kí hoặc fax cho nhóm hỗ trợ khách hàng của chúng tôi. Khi được thiết lập, bạn có thể thắt chặt giới hạn của mình. Giới hạn này sẽ chỉ bị loại bỏ hoặc nới lỏng sau 7 ngày ngày tự loại trừ, không thể bị loại bỏ hoặc thay thế từ khi bạn đã xác nhận chúng. Để loại bỏ hoặc tăng giới hạn của bạn, vui lòng liên hệ"
 
 msgid "Open"
 msgstr "Mở"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Hãy cài đặt phiên bản mới nhất của một trong số các trình duyệt này"
 
 msgid "Please keep your message to a single line, don't press enter"
-msgstr ""
+msgstr "Xin vui lòng giữ tin nhắn của bạn chỉ ở trong dòng duy nhất, đừng bấm xuống dòng"
 
 msgid "Please log in"
 msgstr "Vui lòng đăng nhập"
@@ -1456,7 +1456,7 @@ msgid "Self-Exclusion Facilities"
 msgstr "Công Cụ Tự Loại Trừ"
 
 msgid "Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites"
-msgstr ""
+msgstr "Tự loại trừ trên trang web này chỉ áp dụng cho tài khoản %1 của bạn và không bao gồm các công ty hoặc trang web khác"
 
 msgid "Sell At Market"
 msgstr "Bán tại thị trường"
@@ -1489,7 +1489,7 @@ msgid "Share chart"
 msgstr "Chia sẻ biểu đồ"
 
 msgid "Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for"
-msgstr ""
+msgstr "Vì bạn cảm thấy cần tự loại trừ, chúng tôi thực sự khuyên bạn nên loại trừ bản thân khỏi các dịch vụ tương tự mà bạn có thể đã đăng ký"
 
 msgid "Sold"
 msgstr "Đã bán"
@@ -1633,7 +1633,7 @@ msgid "This field is required"
 msgstr "Trường này là bắt buộc"
 
 msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "Dịch vụ của trang web này không có sẵn ở một số quốc gia như Mỹ, Canada, Hồng Kông, Nhật bản, hoặc cho những người dưới 18 tuổi."
 
 msgid "Thu"
 msgstr "Thứ năm"
@@ -1672,13 +1672,13 @@ msgid "To deposit money please contact the payment agent directly"
 msgstr "Phải gửi tiền xin vui lòng liên hệ trực tiếp với đại lý thanh toán"
 
 msgid "To find out more and to sign up with GAMSTOP, please visit"
-msgstr ""
+msgstr "Để tìm hiểu thêm và đăng ký với GAMSTOP, xin vui lòng truy cập"
 
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
 msgstr "Để tiến hành gửi tiền và rút tiền cho các phương pháp thanh toán hoặc các loại tiền tệ địa phương mà không được hỗ trợ bởi Binary.com hãy liên hệ với một đại lý thanh toán"
 
 msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr ""
+msgstr "Để tự loại trừ khỏi tất cả công ty cờ bạc trực tuyến có giấy phép của Anh Quốc, đi tới"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Để rút tiền xin vui lòng nhập mã xác minh token đặc biệt mà chúng tôi vừa gửi qua email cho bạn"
@@ -2104,7 +2104,7 @@ msgid "withdrawals"
 msgstr "rút tiền"
 
 msgid "www.gamstop.co.uk"
-msgstr ""
+msgstr "www.gamstop.co.uk"
 
 msgid "yes"
 msgstr "Có"
