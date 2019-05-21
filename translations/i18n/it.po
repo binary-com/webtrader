@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-05-21 12:21\n"
+"PO-Revision-Date: 2019-05-21 12:37\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1360,7 +1360,7 @@ msgid "Reality check"
 msgstr "Verifica della realtà"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Ti stiamo reindirizzando a una pagina di login OAuth"
 
 msgid "Ref"
 msgstr "Rif"
@@ -1384,7 +1384,7 @@ msgid "Rename"
 msgstr "Rinomina"
 
 msgid "Resale of this contract is not offered"
-msgstr ""
+msgstr "La rivendita non è disponibile per questo contratto"
 
 msgid "Reset zoom"
 msgstr "Ripristina lo zoom"
@@ -1444,7 +1444,7 @@ msgid "Secondary"
 msgstr "Secondario"
 
 msgid "Seems like our servers are down, we are working on fixing it."
-msgstr ""
+msgstr "I nostri server non sono operativi, stiamo cercando di ripristinarli."
 
 msgid "Self-Employed"
 msgstr "Libero professionista"
@@ -1474,7 +1474,7 @@ msgid "Session"
 msgstr "Sessione"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Limite di durata della sessione"
 
 msgid "Session duration limit, in minutes"
 msgstr "Limite di durata della sessione, in minuti"
@@ -1495,7 +1495,7 @@ msgid "Sold"
 msgstr "Venduto"
 
 msgid "Some random index"
-msgstr ""
+msgstr "Indici casuali"
 
 msgid "Spline"
 msgstr "Spline"
@@ -1558,7 +1558,7 @@ msgid "Submit"
 msgstr "Invia"
 
 msgid "Successfully added new token"
-msgstr ""
+msgstr "Il nuovo token è stato aggiunto"
 
 msgid "Successfully added workspace as"
 msgstr "Area di lavoro aggiunta come"
