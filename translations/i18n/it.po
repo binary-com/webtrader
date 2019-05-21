@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-05-21 12:11\n"
+"PO-Revision-Date: 2019-05-21 12:21\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Orario di accesso"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "Disconnessione in corso per auto-esclusione!"
 
 msgid "Login"
 msgstr "Login"
@@ -1243,7 +1243,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Inserire un valore superiore a 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr ""
+msgstr "Inserisci un valore inferiore alle 6 settimane per il limite di tempo."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Inserisci la data nel formato AAAA-MM-GG"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
 
 msgid "Please keep your message to a single line, don't press enter"
-msgstr ""
+msgstr "Limitail messaggio a una sola riga, non premere invio"
 
 msgid "Please log in"
 msgstr "Effettua il login"
@@ -1276,7 +1276,7 @@ msgid "Please log in."
 msgstr "Effettua il login."
 
 msgid "Please select a date for time out until."
-msgstr ""
+msgstr "Seleziona la durata dell'auto-esclusione."
 
 msgid "Please select a payment agent"
 msgstr "Seleziona un agente di pagamento"
