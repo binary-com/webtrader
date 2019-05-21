@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-05-17 07:11\n"
+"PO-Revision-Date: 2019-05-21 05:51\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -304,7 +304,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com ist ein preisgekrönter Onlinehandels-Anbieter, der seinen Kunden hilft binäre Optionen und CDFs auf den Finanzmärkten zu handeln. Der Handel mit binären Optionen und CFDs auf Volatilitätsindizes wird als Glücksspiel-Tätigkeit eingestuft. Denken Sie daran, dass Glücksspiel süchtig machen kann – spielen Sie bitte verantwortungsvoll. Erfahren Sie mehr über den [_1]verantwortungsbewussten Handel[_2]. Einige Produkte sind nicht in allen Ländern verfügbar. Die Dienstleistungen dieser Website sind in einigen Ländern wie den USA, Kanada, Hongkong oder Personen unter 18 Jahren nicht zugänglich gemacht."
 
 msgid "Blank window"
 msgstr "Leeres Fenster"
@@ -328,7 +328,7 @@ msgid "By clicking OK, you confirm that you have read and accepted the updated"
 msgstr "Wenn Sie auf OK klicken, bestätigen Sie, dass Sie die aktualisierten gelesen haben und diesen zustimmen"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr ""
+msgstr "CFDs sind komplexe Instrumente und kommen mit einem hohen Risiko des Geldverlustes, aufgrund der Hebelwirkung. Zwischen 74-89 % der Einzelhändler- Konten verlieren Geld beim Handel mit CFDs. Sie sollten sich überlegen, ob Sie verstehen, wie CFDs funktionieren, und ob Sie sich das hohe Risiko, Ihr Geld zu verlieren, leisten können."
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
 msgstr "Kann verwendet werden, um Kontrakte zu kaufen und zu verkaufen, abgelaufene Kontrakte zu erneuern, und um virtuelle Konten aufzustocken."
@@ -730,7 +730,7 @@ msgid "Further instructions"
 msgstr "Weitere Anweisungen"
 
 msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
+msgstr "GAMSTOP ist ein kostenloser Service, der es Ihnen ermöglicht, sich aus allen Online-Glücksspiel-Unternehmen, die in Großbritannien zugelassen sind, selbst auszuschließen"
 
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "Erhalten Sie API Token von Händlern und fügen Sie sie zu Ihrer Liste hinzu"
@@ -790,7 +790,7 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "- Binary.com ist kein Geschäftspartner einer der oben aufgeführten Zahlungsagenten. Jeder Zahlungsagent arbeitet als eigenständiger Dienstleister und wird nicht von Binary.com empfohlen, garantiert oder anderweitig genehmigt. DIE KUNDEN HANDELN MIT ZAHLUNGSAGENTEN AUF IHR EIGENES RISIKO UND IHRE EIGENE GEFAHR. Den Kunden wird empfohlen, die Angaben der Zahlungsagenten zu überprüfen, bevor sie Geld überweisen. Binary.com kann für Transaktionen zwischen Kunden und Zahlungsagenten nicht haftbar gemacht werden"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
+msgstr "Wenn Sie einen Selbstausschluss erwägen, können Sie sich bei GAMSTOP registrieren"
 
 msgid "If you select a"
 msgstr "Wenn Sie einen auswählen"
@@ -802,7 +802,7 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Um das Thema richtig anzuwenden, ist es erforderlich, die Seite neu zu laden. Sind Sie sicher, dass Sie fortfahren möchten?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "In der EU werden Finanzprodukte von Binary Investments (Europe) Ltd, W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta angeboten, einem Unternehmen, das als Kategorie 3 Investment Dienstleistungsanbieter von der Malta Financial Services Authority ([_1]Lizenz Nr. IS/70156[_2]) reguliert wird."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr ""
