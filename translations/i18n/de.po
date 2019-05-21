@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-05-21 06:01\n"
+"PO-Revision-Date: 2019-05-21 06:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Bitte installieren Sie die letzte Version einer dieser Browser"
 
 msgid "Please keep your message to a single line, don't press enter"
-msgstr ""
+msgstr "Bitte halten Sie Ihre Nachricht auf einer einzigen Zeile, drücken Sie nicht die Eingabetaste"
 
 msgid "Please log in"
 msgstr "Melden Sie sich bitte an"
@@ -1633,7 +1633,7 @@ msgid "This field is required"
 msgstr "Dieses Feld ist erforderlich"
 
 msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "Die Dienstleistungen dieser Website werden in manchen Ländern wie den USA, Kanada, Hong Kong, Japan, oder an Personen unter 18 Jahren nicht angeboten."
 
 msgid "Thu"
 msgstr "Do"
@@ -1672,13 +1672,13 @@ msgid "To deposit money please contact the payment agent directly"
 msgstr "Um Geld einzuzahlen, setzen Sie sich bitte direkt mit dem Zahlungsagenten in Verbindung"
 
 msgid "To find out more and to sign up with GAMSTOP, please visit"
-msgstr ""
+msgstr "Um mehr zu erfahren und um sich mit GAMSTOP zu registrieren, besuchen Sie bitte"
 
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
 msgstr "Um Ein- und Auszahlungen für Zahlungsmethoden oder Landeswährungen zu bearbeiten, die von Binary.com nicht unterstützt werden, setzen Sie sich bitte mit einem Zahlungsagenten in Verbindung"
 
 msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr ""
+msgstr "Um sich von allen Online-Glücksspiel-Unternehmen, die in Großbritannien lizenziert sind, selbst auszuschließen, gehen Sie bitte zu"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Um Gelder abzuheben, geben Sie bitte den speziellen Verifikationstoken, den wir gerade per E-Mail an Sie verschickt haben, ein"
@@ -2071,7 +2071,7 @@ msgid "points"
 msgstr "Punkte"
 
 msgid "risk warning"
-msgstr ""
+msgstr "risikowarnung"
 
 msgid "sec"
 msgstr "Sek"
@@ -2104,7 +2104,7 @@ msgid "withdrawals"
 msgstr "Behebungen"
 
 msgid "www.gamstop.co.uk"
-msgstr ""
+msgstr "www.gamstop.co.uk"
 
 msgid "yes"
 msgstr "ja"
@@ -2116,5 +2116,5 @@ msgid "| Return"
 msgstr "| Rendite"
 
 msgid "﻿"
-msgstr ""
+msgstr "﻿"
 
