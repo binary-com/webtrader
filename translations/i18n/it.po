@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-05-21 12:37\n"
+"PO-Revision-Date: 2019-05-21 12:57\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1615,13 +1615,13 @@ msgid "The products offered via this website include binary options, contracts f
 msgstr "I prodotti offerti tramite il presente sito web includono opzioni binarie, contratti per differenza (CFD) e altri complessi strumenti derivati. Il trading di opzioni binarie non è adatto a tutti. Il trading di CFD implica un elevato livello di rischio, poiché la leva finanziaria può agire sia a vantaggio che a svantaggio del Cliente. Di conseguenza, i prodotti finanziari offerti su questo sito web potrebbero non essere idonei per tutti gli investitori a causa del rischio di perdere l'intero capitale investito. È raccomandabile che i clienti non investano denaro che non possono permettersi di perdere e non effettuino trade con denaro prestato. Prima di fare trading con gli strumenti complessi resi disponibili, suggeriamo di accertarsi di comprendere i rischi potenziali e approfondire il tema del [_1]trading responsabile[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Si è verificata un'interruzione dei dati durante la durata del contratto. Per i conti reali, cercheremo di correggerla e ristabilire correttamente il contratto, pena l'annullamento e il rimborso del contratto; i contratti di denaro virtuali verranno invece annullati e rimborsati."
 
 msgid "There was an error"
 msgstr "Si è verificato un errore"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Questo contratto è scaduto"
 
 msgid "This contract lost"
 msgstr "Questo contratto ha perso"
