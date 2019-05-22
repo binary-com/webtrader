@@ -1,4 +1,5 @@
 "use strict";
+const sass = require('node-sass');
 
 module.exports = function (grunt) {
 
@@ -11,10 +12,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg,
-        //Executing this task will populate grunt.config.gitinfo with repository data below
-        gitinfo: {
-            local: { branch: { current: { SHA: "", name: "", currentUser: "", } } },
-            remote: { origin: { url: "" } }
+        githash: {
+            main: {
+                options: {},
+            },
         },
         jshint: {
             options: {
@@ -28,7 +29,7 @@ module.exports = function (grunt) {
             compressed: ["dist/compressed"],
             uncompressed: ["dist/uncompressed"],
             branches:[ "dist/branches"],
-            current_branch: [ "dist/branches/compressed/<%= gitinfo.local.branch.current.name %>"],
+            current_branch: [ "dist/branches/compressed/<%= githash.main.branch %>"],
             dist: ["dist"],
         },
         copy: {
@@ -53,9 +54,9 @@ module.exports = function (grunt) {
                             "!binary-com-jquery-dialogextended/**", "binary-com-jquery-dialogextended/jquery.dialogextend.min.js",
                             "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.js", "binary-com-jquery-ui-timepicker/jquery.ui.timepicker.css",
                             "binary-com-longcode/dist/main.js",
-                            "binary-style/binary.css",
-                            "binary-style/binary.js",
-                            "binary-style/src/images/favicons/**",
+                            "@binary-com/binary-style/binary.css",
+                            "@binary-com/binary-style/binary.js",
+                            "@binary-com/binary-style/src/images/favicons/**",
                             "!highstock-release/**", "highstock-release/highstock.js", "highstock-release/themes/**", "highstock-release/modules/exporting.js", "highstock-release/modules/offline-exporting.js", "highstock-release/highcharts-more.js",
                             "moment/min/moment.min.js", "moment/locale/**",
                             "text/text.js",
@@ -107,7 +108,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: "dist/compressed",
                         src: [ "**"],
-                        dest: "dist/branches/compressed/<%= gitinfo.local.branch.current.name %>"
+                        dest: "dist/branches/compressed/<%= githash.main.branch %>"
                     }
                 ]
             },
@@ -211,7 +212,7 @@ module.exports = function (grunt) {
                 options: {
                     base: "dist/branches/compressed",
                     add: true,
-                    message: "Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= gitinfo.local.branch.current.name %>"
+                    message: "Grunt deploy-branch v<%=pkg.version%> to $username.github.io/webtrader/<%= githash.main.branch %>"
                 },
                 src: ["**/*"]
             },
@@ -318,30 +319,6 @@ module.exports = function (grunt) {
                 command: "mkdir beta; mv dist/compressed/* beta; mv beta dist/compressed"
             }
         },
-        if: {
-            live: {
-                // Target-specific file lists and/or options go here.
-                options: {
-                    // execute test function(s)
-                    test() {
-                        return process.env.TRAVIS_BRANCH === "master";
-                    }
-                },
-                //array of tasks to execute if all tests pass
-                ifTrue: [ "gh-pages:travis-deploy" ]
-            },
-            beta: {
-                // Target-specific file lists and/or options go here.
-                options: {
-                    // execute test function(s)
-                    test: function() {
-                        return process.env.TRAVIS_BRANCH === "development";
-                    }
-                },
-                //array of tasks to execute if all tests pass
-                ifTrue: [ "shell:moveEverythingToBETA_folder", "gh-pages:travis-deploy" ]
-            }
-        },
         po2json: {
           options: {
             format: "raw"
@@ -352,18 +329,20 @@ module.exports = function (grunt) {
           }
         },
         sass: {
-          // options: { sourceMap: true },
-          dist: {
-            files: [
-              {
-                expand: true,
-                cwd: "src/",
-                src: ["**/*.scss"],
-                dest: "dist/uncompressed/v<%=pkg.version%>",
-                ext: ".css"
-              }
-            ]
-          }
+            options: {
+                implementation: sass
+            },
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "src/",
+                        src: ["**/*.scss"],
+                        dest: "dist/uncompressed/v<%=pkg.version%>",
+                        ext: ".css"
+                    }
+                ]
+            }
         },
         babel: {
           options: {
@@ -400,7 +379,16 @@ module.exports = function (grunt) {
     //Meant for local development use ONLY - for pushing to individual forks
     /* Deploy to a sub-folder of gh-pages with the name of current branch,
        This is only for developers working on different branches in their forks. */
-    grunt.registerTask("deploy-branch", ["default","gitinfo", "clean:current_branch", "copy:copy_current_branch", "gh-pages:deploy-branch"]);
+    grunt.registerTask("deploy-branch", ["default","githash", "clean:current_branch", "copy:copy_current_branch", "gh-pages:deploy-branch"]);
     /* clean all the files in gh-pages branch */
     grunt.registerTask("gh-pages-clean", ["gh-pages:clean"]);
+
+    // conditional switch for deployment
+    grunt.registerTask("deploy", function () {
+        if (process.env.TRAVIS_BRANCH === "master") {
+            grunt.task.run(["gh-pages:travis-deploy"]);
+        } else if (process.env.TRAVIS_BRANCH === "development") {
+            grunt.task.run(["shell:moveEverythingToBETA_folder", "gh-pages:travis-deploy"]);
+        }
+    });
 };
