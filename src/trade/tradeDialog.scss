@@ -249,7 +249,6 @@
 }
 
 .trade-fields ul li:nth-child(1) > span {
-  min-width: 130px;
   line-height: 28px;
   display: inline-block;
   white-space: nowrap;
@@ -302,20 +301,24 @@
 
 .trade-fields ul li:nth-child(2n) input:not([step]),
 .trade-fields ul li:nth-child(2n+3) input:not([step]) {
-  width: 95px;
+  width: 100px;
 }
 
 .trade-fields ul li select.date-start-select + .chosen-container {
-  width: 115px !important;
+  width: 167px !important;
   .chosen-search { display: none; }
   ul.chosen-results {
     flex-direction: column;
     max-height: 250px;
+    margin: 0px;
+    padding: 0px;
     li {
-      width: calc(100% - 10px);
+      width: 100%;
       text-align: center;
-      line-height: 18px;
       display: block;
+      height: 100%;
+      padding: 5px 0;
+      line-height: 18px;
     }
   }
 
@@ -333,6 +336,9 @@
     background-image: none;
     border-radius: 2px;
     font-weight: normal;
+    height: 100%;
+    padding: 1px 2px;
+    text-align: center;
     position: relative;
     box-shadow: none;
   }
@@ -341,11 +347,7 @@
     .chosen-single {
       box-shadow: none;
       border: 1px solid #F2F2F2;
-      text-align: center;
       padding: 0;
-      > span {
-        width: calc(100% - 10px);
-      }
       > div {
         position: absolute;
         right: 0;
@@ -439,5 +441,17 @@
       align-items: center;
       margin-left: auto !important;
     }
+  }
+}
+
+.future-timepicker-wrapper {
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0;
+    padding-left: 5px;
+  }
+  input {
+    padding-left: 8px;
   }
 }

@@ -3,6 +3,7 @@ import $ from 'jquery';
 import moment from 'moment';
 import windows from 'windows/windows';
 import rv from 'common/rivetsExtra';
+import { SUPPORTED_CONTRACT_TYPES } from 'common/common';
 import liveapi from 'websockets/binary_websockets';
 import chartingRequestMap from 'charts/chartingRequestMap';
 import html from 'text!trade/tradeDialog.html';
@@ -131,10 +132,11 @@ function set_current_template(state, tpl) {
     _.defer(function() {
       if(state.date_start.visible) {
         _.defer(function() {
-          if(tpl.date_start_value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1}))
+          if (state.date_start.value !== 'now' && _.some(state.date_start.array, {value: tpl.date_start_value*1})) {
             state.date_start.value = tpl.date_start_value*1;
-          else
+          } else {
             state.date_start.value = 'now';
+          }
         });
       }
       if(state.digits.visible) {
@@ -197,8 +199,56 @@ function set_current_template(state, tpl) {
   })
 }
 
-function init_state(available,root, dialog, symbol, contracts_for_spot){
+function validateHour({ hour, today_times, selected_date_unix }) {
+  const formatted = moment.unix(+selected_date_unix).format('YYYY-MM-DD');
+  const is_today = !moment.utc(formatted).isAfter(moment.utc(),'day');
+  if (!is_today) return true;
 
+  const { close, open } = today_times;
+  if (open === '--') return true;
+
+  const now        = moment.utc();
+  const close_hour = moment(close, 'HH:mm:ss').hour();
+  let   open_hour  = moment(open, 'HH:mm:ss').hour();
+
+  if (now.hour() >= open_hour && now.hour() <= close_hour) {
+    open_hour = now.hour();
+  }
+
+  return (hour >= open_hour && hour <= close_hour) ||
+         (hour <= close_hour && close_hour <= open_hour) ||
+         (hour >= open_hour && open_hour >= close_hour);
+}
+
+function validateMinute({ hour, minute, today_times, selected_date_unix }) {
+  const formatted = moment.unix(+selected_date_unix).format('YYYY-MM-DD');
+  const is_today = !moment.utc(formatted).isAfter(moment.utc(),'day');
+  if (!is_today) return true;
+
+  const { close, open } = today_times;
+  if (open === '--') return true;
+
+  const now          = moment.utc(),
+        close_hour   = moment(close, 'HH:mm:ss').hour(),
+        close_minute = moment(close, 'HH:mm:ss').minute();
+  let open_hour      = moment(open, 'HH:mm:ss').hour(),
+      open_minute    = moment(open, 'HH:mm:ss').minute();
+
+  if (now.hour() >= open_hour && now.hour() <= close_hour) {
+    open_hour =  now.hour();
+    open_minute = now.minute();
+  }
+  if (open_hour === hour) return minute >= open_minute;
+  if (close_hour === hour) return minute <= close_minute;
+
+  return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
+}
+
+function hasIntradayUnit(duration_unit_array) {
+  return duration_unit_array.some(unit => ['ticks', 'seconds', 'minutes', 'hours'].indexOf(unit) !== -1);
+}
+
+function init_state(available,root, dialog, symbol, contracts_for_spot) {
   var state = {
     duration: {
       array: ['Duration', 'End Time'],
@@ -218,38 +268,44 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
       value: 'now', /* epoch value if selected */
       array: [{ text: 'Now', value: 'now' } ],
       visible: false,
+      hour_minute: '',
+      today_times: { open: '--', close: '--' }, /* trading times for today */
+      onHourShow: function(hour) { /* for timepicker */
+        return validateHour({
+          hour,
+          today_times: state.date_start.today_times,
+          selected_date_unix: state.date_start.value,
+        });
+      },
+      onMinuteShow: function(hour, minute) {
+        return validateMinute({
+          hour,
+          minute,
+          today_times: state.date_start.today_times,
+          selected_date_unix: state.date_start.value,
+        });
+      }
     },
     date_expiry: {
       value_date: moment.utc().format('YYYY-MM-DD'), /* today utc in yyyy-mm-dd format */
       value_hour: moment.utc().format('HH:mm'), /* now utc in hh:mm format */
       value: 0,    /* epoch value of date+hour */
       today_times: { open: '--', close: '--', disabled: false }, /* trading times for today */
+      min_date: 0,
       onHourShow: function(hour) { /* for timepicker */
-        var times = state.date_expiry.today_times;
-        if(times.open === '--') return true;
-        var now = moment.utc();
-        var close_hour = moment(times.close, "HH:mm:ss").hour();
-        var open_hour = moment(times.open, "HH:mm:ss").hour();
-        if(now.hour() >= open_hour && now.hour() <= close_hour ) { open_hour =  now.hour(); }
-        return (hour >= open_hour && hour <= close_hour) ||
-               (hour <= close_hour && close_hour <= open_hour) ||
-               (hour >= open_hour && open_hour >= close_hour);
+        return validateHour({
+          hour,
+          today_times: state.date_expiry.today_times,
+          selected_date_unix: state.date_expiry.value,
+        });
       },
-      onMinuteShow: function(hour,minute){
-        var times = state.date_expiry.today_times;
-        if(times.open === '--') return true;
-        var now = moment.utc();
-        var close_hour = moment(times.close, "HH:mm:ss").hour(),
-            close_minute = moment(times.close, "HH:mm:ss").minute();
-        var open_hour = moment(times.open, "HH:mm:ss").hour(),
-            open_minute = moment(times.open, "HH:mm:ss").minute();
-        if(now.hour() >= open_hour && now.hour() <= close_hour ) {
-          open_hour =  now.hour();
-          open_minute = now.minute();
-        }
-        if(open_hour === hour) return minute >= open_minute;
-        if(close_hour === hour) return minute <= close_minute;
-        return (hour > open_hour && hour < close_hour) || hour < close_hour || hour > open_hour;
+      onMinuteShow: function(hour, minute) {
+        return validateMinute({
+          hour,
+          minute,
+          today_times: state.date_expiry.today_times,
+          selected_date_unix: state.date_expiry.value,
+        });
       }
     },
     categories: {
@@ -384,7 +440,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   var update_currency = function() {
     /* change currency on user login */
     if(liveapi.is_authenticated()) {
-      liveapi.send({payout_currencies: 1})
+      liveapi.send({ payout_currencies: 1 })
              .then(function(data){
                state.currency.value = data.payout_currencies[0];
                state.currency.array = data.payout_currencies;
@@ -407,13 +463,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   state.date_expiry.update_times = function(){
       trading_times_for(state.date_expiry.value_date, state.proposal.symbol)
         .then(function(times) {
-          var expiry = state.date_expiry;
-          expiry.today_times.open = times.open;
-          expiry.today_times.close = times.close;
+          state.date_expiry.today_times.open = times.open;
+          state.date_expiry.today_times.close = times.close;
           var range = _(state.duration_unit.ranges).filter(['type', 'minutes']).head();
-          expiry.today_times.disabled = !range;
+          state.date_expiry.today_times.disabled = !range;
           var value_hour = range ? moment.utc().add(range.min+1, 'm').format('HH:mm') : "00:00";
-          expiry.value_hour = value_hour > expiry.value_hour ? value_hour : expiry.value_hour;
+          state.date_expiry.value_hour = value_hour;
           // /* avoid 'Contract may not expire within the last 1 minute of trading.' */
           // value_hour = moment(times.close, 'HH:mm:ss').subtract(1, 'minutes').format('HH:mm');
           // expiry.value_hour = value_hour < expiry.value_hour ? value_hour : expiry.value_hour;
@@ -459,70 +514,107 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.date_start.update = function () {
-    var forward_starting_options = _(available).filter({
-      'contract_category_display': state.categories.value.contract_category_display,
-      'contract_display': state.category_displays.selected.name,
-      'start_type': 'forward'
-    }).head();
-    // For markets with spot start_type
-    var spot_starting_options = _(available).filter({
-      'contract_category_display': state.categories.value.contract_category_display,
-      'contract_display': state.category_displays.selected.name,
-      'start_type': 'spot'
-    }).head();
+    const forward_starting_market = 
+      _(available)
+        .filter({
+          'contract_category_display': state.categories.value.contract_category_display,
+          'contract_display': state.category_displays.selected.name,
+          'start_type': 'forward'
+        })
+        .head();
 
-    if (!forward_starting_options) {
+    if (!forward_starting_market) {
       _.assign(state.date_start, { visible: false, array: [], value: 'now' });
       return;
     };
 
-    forward_starting_options = forward_starting_options.forward_starting_options
-    var model = state.date_start;
-    var array = [];
-    // Add 'NOW' to start time only if the market contains spot start_type.
-    if(spot_starting_options){
-      array = [{ text: 'Now', value: 'now' }];
-    }
-    var later = (new Date().getTime() + 5*60*1000)/1000; // 5 minute from now
-    for(var i = 0; i < forward_starting_options.length; i++){
-      var row = forward_starting_options[i];
-      var step = 5 * 60; // 5 minutes step
-      var from = Math.ceil(Math.max(later, row.open) / step) * step;
-      for (var epoch = from; epoch < row.close; epoch += step) {
-        var d = new Date(epoch * 1000);
-        var text = ("00" + d.getUTCHours()).slice(-2) + ":" +
-        ("00" + d.getUTCMinutes()).slice(-2) + ' ' +
-        ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][d.getUTCDay()];
-        array.push({ text: text, value: epoch });
-      }
-    }
-    var options = { value: array[0].value, array: array, visible: true };
-    if(_.some(array, {value: state.date_start.value*1})) {
-      options.value = state.date_start.value;
-    }
+    const spot_starting_options = 
+      _(available)
+        .filter({
+          'contract_category_display': state.categories.value.contract_category_display,
+          'contract_display': state.category_displays.selected.name,
+          'start_type': 'spot'
+        })
+        .head();
+
+    const start_dates = forward_starting_market.forward_starting_options.map((available_day) => {
+      const { date } = available_day;
+      const text = moment.unix(date).format('ddd - MMMM Do, YYYY');
+      return { text, value: date };
+    });
+
+    if (spot_starting_options) start_dates.unshift({ text: 'Now', value: 'now' });
+
+    const { value: selected_date } = state.date_start;
+  
+    const options = { 
+      value: selected_date, 
+      array: [...start_dates], 
+      visible: true 
+    };
+
     _.assign(state.date_start, options);
+
+    if (selected_date === 'now') {
+      state.date_start.hour_minute = '00:00';
+    } else {
+      state.setDateStartHourMinute(state.date_start.hour_minute);
+    }
   };
 
+  state.setDateStartHourMinute = (hour_minute) => {
+    const date_start_formatted                 = moment.unix(+state.date_start.value).format('YYYY-MM-DD');
+    const date_start_with_selected_hour_minute = moment.utc(`${date_start_formatted} ${hour_minute}`).unix();
+    const is_today                             = !moment.utc(date_start_formatted).isAfter(moment.utc(), 'day');
+
+    trading_times_for(date_start_formatted, state.proposal.symbol).then(data => {
+      state.date_start.today_times.open = data.open;
+      state.date_start.today_times.close = data.close;
+
+      if (is_today) {
+        const now_hour_minute = moment.utc().format('HH:mm');
+        state.date_start.hour_minute = now_hour_minute > hour_minute ? now_hour_minute : hour_minute;
+      } else {
+        state.date_start.hour_minute = hour_minute;
+      }
+
+      state.date_start.value = date_start_with_selected_hour_minute;
+    });
+  }
+
   state.date_expiry.update = function (date_or_hour) {
-    var expiry = state.date_expiry;
     /* contracts that are more not today must end at the market close time */
-    var is_today = !moment.utc(expiry.value_date).isAfter(moment.utc(),'day');
-    if(!is_today){
-        expiry.today_times.disabled = true;
-        trading_times_for(expiry.value_date, state.proposal.symbol)
+    const { value_date } = state.date_expiry;
+    const is_today = !moment.utc(value_date).isAfter(moment.utc(), 'day');
+    const is_duration = state.duration.value === 'Duration';
+    const is_daily_contracts = state.duration_unit.array[0] && !hasIntradayUnit(state.duration_unit.array);
+
+    if (!is_today) {
+      state.date_expiry.today_times.disabled = true;
+        trading_times_for(value_date, state.proposal.symbol)
           .then(function(times){
-            var value_hour = times.close !== '--' ? times.close : '00:00:00';
-            expiry.value_hour = moment(value_hour, "HH:mm:ss").format('HH:mm');
-            expiry.value = moment.utc(expiry.value_date + " " + value_hour).unix();
+            if (is_duration) {
+              state.date_expiry.value_date = moment.utc().format('YYYY-MM-DD');
+            }
+
+            const value_hour = times.close !== '--' ? times.close : '23:59:59';
+            state.date_expiry.min_date = is_daily_contracts ? 1 : 0;
+            state.date_expiry.value_hour = moment.utc(value_hour, 'HH:mm:ss').format('HH:mm');
+            state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + value_hour).unix();
             state.barriers.update();
-            debounce(expiry.value, state.proposal.onchange);
+
+            debounce(state.date_expiry.value, state.proposal.onchange);
           });
     }
     else {
-        if(date_or_hour !== expiry.value_hour) { expiry.update_times(); }
-        expiry.value = moment.utc(expiry.value_date + " " + expiry.value_hour).unix();
+        if (date_or_hour !== state.date_expiry.value_hour) { state.date_expiry.update_times(); }
+        if (is_daily_contracts && !is_duration) {
+          state.date_expiry.min_date = 1;
+          state.date_expiry.value_date = moment.utc().add(1, 'days').format('YYYY-MM-DD');
+        }
+        state.date_expiry.value = moment.utc(state.date_expiry.value_date + ' ' + state.date_expiry.value_hour).unix();
         state.barriers.update();
-        debounce(expiry.value, state.proposal.onchange);
+        debounce(state.date_expiry.value, state.proposal.onchange);
     }
   }
 
@@ -541,7 +633,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
 
   state.duration_unit.update = function () {
     var start_type = state.date_start.value !== 'now' ? 'forward' : 'spot';
-
     var durations = _(available).filter({
       'contract_category_display': state.categories.value.contract_category_display,
       'contract_display': state.category_displays.selected.name,
@@ -613,7 +704,6 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     }
 
     state.duration_unit.array = array;
-
     /* manualy notify 'duration_count' and 'barriers' to update themselves */
     state.barriers.update();
     state.date_expiry.update_times();
@@ -739,15 +829,16 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
   };
 
   state.proposal.onchange = function () {
-    var unit = state.duration_unit.value;
-    var expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+    const unit = state.duration_unit.value;
+    let expiry_type = _(['seconds', 'minutes', 'hours']).includes(unit) ? 'intraday' : unit === 'days' ? 'daily' : 'tick';
+    const subcat = state.category_displays.selected.sentiment;
     if(state.categories.value.contract_category === 'spreads') expiry_type = 'intraday';
-    var row = _(available).filter({
+    const row = _(available).filter({
       'contract_category_display': state.categories.value.contract_category_display,
       'contract_display': state.category_displays.selected.name,
       'expiry_type': expiry_type
     }).head();
-    var request = {
+    const request = {
       proposal: 1,
       subscribe: 1,
       contract_type: row.contract_type,
@@ -772,7 +863,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     add_barriers_to_request(state, request);
     set_is_barrier_offset(state);
 
-    if (state.categories.value.contract_category === 'digits') {
+    if (state.categories.value.contract_category === 'digits' && !(subcat === 'odd' || subcat === 'even')) {
       request.barrier = state.digits.value + '';
     }
     if (state.date_start.value !== 'now') {
@@ -926,12 +1017,12 @@ function init_state(available,root, dialog, symbol, contracts_for_spot){
     .uniq()
     .value()
     // TODO: Remove this filter after implementing reset, high/low, spread, runs contracts.
-    .filter(f => !/reset|high\/low|spread|runs/.test(f.toLowerCase()))
+    .filter(f => SUPPORTED_CONTRACT_TYPES.includes(f.toLowerCase()))
     .forEach(x => {
       let y = {};
       y.contract_category_display = x;
       let contract_object = _.find(available, {contract_category_display: x});
-      if(contract_object){
+      if (contract_object) {
         y.contract_category = contract_object.contract_category;
         state.categories.array.push(y);
       }
