@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2019-05-22 22:30\n"
+"PO-Revision-Date: 2019-05-22 22:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Po osiągnięciu tego limitu nie można dokonywać dalszych wpłat"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr "Handlowanie online może być uzależniające. Wypełnij poniższy formularz, aby ograniczyć swoją działalność na portalu lub wyślij podpisany list lub faks do naszego działu obsługi klienta. Po ustanowieniu limitów, możesz je tylko zwiększać. Limity zostaną usunięte lub zmienione dopiero po 7 dniach, chyba że obowiązuje okres samodzielnego wyłączenia, który nie może zostać usunięty, ani zmieniony, jeśli został wcześniej potwierdzony. Aby znieść lub zwiększyć limity, proszę skontaktować się z"
+msgstr "Handlowanie online może być uzależniające. Wypełnij poniższy formularz, aby ograniczyć swoją działalność na portalu lub wyślij podpisany list lub faks do naszego działu obsługi klienta. Po ustanowieniu limitów, możesz je tylko zmniejszać. Limity zostaną usunięte lub zmienione dopiero po 7 dniach, chyba że obowiązuje okres samodzielnego wykluczenia, który nie może zostać usunięty, ani zmieniony, jeśli został wcześniej potwierdzony. Aby znieść lub zwiększyć limity, proszę skontaktować się z"
 
 msgid "Open"
 msgstr "Otwórz"
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Inne"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr "Poza terytorium UE produkty finansowe są oferowane przez spółkę Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, za której regulacje odpowiada Komisja ds. usług finansowych Vanuatu (Vanuatu Financial Services Commission) – [_1]zobacz licencję[_2] Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Brytyjskie Wyspy Dziewicze, za której regulacje odpowiada Komisja Brytyjskich Wysp Dziewiczych ds. Usług Finansowych (British Virgin Islands Financial Services Commission) – ([_3]licencja o numerze SIBA/L/18/1114[_4]), oraz Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malezja, za regulacje w zakresie prowadzenia usług brokerskich odpowiada Urząd ds. Usług Finansowych na Labuanie (Labuan Financial Services Authority) – [_5]licencja o numerze MB/18/0024[_6]."
+msgstr "Poza terytorium UE produkty finansowe są oferowane przez spółkę Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, za której regulacje odpowiada Komisja ds. usług finansowych Vanuatu (Vanuatu Financial Services Commission) – [_1]zobacz licencję[_2], Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Brytyjskie Wyspy Dziewicze, za której regulacje odpowiada Komisja Brytyjskich Wysp Dziewiczych ds. Usług Finansowych (British Virgin Islands Financial Services Commission) – ([_3]licencja o numerze SIBA/L/18/1114[_4]), oraz Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malezja, za regulacje w zakresie prowadzenia usług brokerskich odpowiada Urząd ds. Usług Finansowych na Labuanie (Labuan Financial Services Authority) – [_5]licencja o numerze MB/18/0024[_6]."
 
 msgid "Over"
 msgstr "Ponad"
@@ -1612,7 +1612,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "Firma przechowuje środki klientów na innych rachunkach bankowych niż rachunek operacyjny. W przypadku niewypłacalności firmy rachunki te nie będą stanowiły jej aktywów. Tym samym spełnione zostają wymagania instytucji Gambling Commission dotyczące oddzielenia funduszy klientów na następującym poziomie"
 
 msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr "Produkty oferowane za pośrednictwem tej witryny internetowej obejmują opcje binarne, kontrakty na różnice kursowe (kontrakty CFD) i inne złożone instrumenty pochodne. Handlowanie opcjami binarnymi nie jest odpowiednie dla każdego. Handel kontraktami na różnice kursowe wiąże się z wysokim ryzykiem, gdyż dźwignia finansowa może przynieść zarówno korzyści, jak i straty. W związku z tym, produkty oferowane na tej witrynie internetowej mogą być nieodpowiednie dla niektórych inwestorów i wiążą się z ryzykiem utraty całego zainwestowanego kapitału. Nigdy nie inwestuj środków finansowych, na stratę których nie możesz sobie pozwolić, ani pożyczonych środków. Przed rozpoczęciem handlowania oferowanymi przez nas złożonymi produktami upewnij się, że rozumiesz ryzyko z nimi związane i zapoznaj się z zasadami [_1]odpowiedzialnego handlowania[_2]."
+msgstr "Produkty oferowane za pośrednictwem tej witryny internetowej obejmują opcje binarne, kontrakty na różnice kursowe (kontrakty CFD) i inne złożone instrumenty pochodne. Handlowanie opcjami binarnymi nie jest odpowiednie dla każdego. Handel kontraktami na różnice kursowe wiąże się z wysokim ryzykiem, gdyż dźwignia finansowa może przynieść zarówno korzyści, jak i straty. W związku z tym, produkty oferowane na tej witrynie internetowej mogą być nieodpowiednie dla niektórych inwestorów i wiążą się z ryzykiem utraty całego zainwestowanego kapitału. Nigdy nie inwestuj środków finansowych, na stratę których nie możesz sobie pozwolić, ani pożyczonych środków. Przed rozpoczęciem handlowania oferowanymi przez nas złożonymi produktami upewnij się, że rozumiesz ryzyko z nimi związane i zapoznaj się z zasadami [_1]Odpowiedzialnego Handlowania[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "W okresie kontraktu wystąpiły zakłócenia w przesyłaniu danych rynkowych. W przypadku kont z prawdziwymi pieniędzmi spróbujemy to poprawić i rozliczyć kontrakt poprawnie. Jeśli nie będzie to możliwe, kontrakty zostaną anulowane, a kwota ich zakupu zwrócona. Kontrakty w pieniądzach wirtualnych zostaną anulowane, a kwota ich zakupu zwrócona."
@@ -1678,7 +1678,7 @@ msgid "To process deposits and withdrawals for payment methods or local currenci
 msgstr "Możesz skorzystać z usług pośrednika płatności oferującego metody płatności i lokalne waluty nieobsługiwane przez Binary.com"
 
 msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr "Aby dokonać samo-wyłączenia ze wszystkich firm oferujących handel online w Wielkiej Brytanii, przejdź do"
+msgstr "Aby dokonać samo-wykluczenia ze wszystkich firm oferujących handel online w Wielkiej Brytanii, przejdź do"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Aby wypłacić środki, wpisz specjalny kod weryfikacyjny wysłany na Twój adres e-mail"
@@ -2104,7 +2104,7 @@ msgid "withdrawals"
 msgstr "wypłaty"
 
 msgid "www.gamstop.co.uk"
-msgstr ""
+msgstr "www.gamstop.co.uk"
 
 msgid "yes"
 msgstr "tak"
