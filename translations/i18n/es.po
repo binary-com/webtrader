@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 00:10\n"
+"PO-Revision-Date: 2019-05-23 00:26\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -655,16 +655,16 @@ msgid "Exclude me from the website until"
 msgstr "Excluirme del sitio web hasta que"
 
 msgid "Exclude time"
-msgstr "Excluir el tiempo"
+msgstr "Tiempo de exclusión"
 
 msgid "Exclude time must be after today."
 msgstr "El tiempo de exclusión debe ser después de hoy."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr ""
+msgstr "El tiempo de exclusión no puede ser menor que 6 meses."
 
 msgid "Exclude until time cannot be more than 5 years."
-msgstr ""
+msgstr "El tiempo de exclusión no puede ser mayor que 5 años."
 
 msgid "Exit Spot"
 msgstr "Punto de Salida"
@@ -679,7 +679,7 @@ msgid "Explanation"
 msgstr "Explicación"
 
 msgid "Failed to update the password"
-msgstr ""
+msgstr "Error al actualizar la contraseña"
 
 msgid "Fall"
 msgstr "Baja"
@@ -730,13 +730,13 @@ msgid "Further instructions"
 msgstr "Otras instrucciones"
 
 msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
+msgstr "GAMSTOP es un servicio gratuito que le permite autoexcluirse de todas las empresas de apuestas en línea con licencia en Gran Bretaña"
 
 msgid "Get API token from trader(s) and add it in your list"
-msgstr ""
+msgstr "Obtenga el token de API de trader (s) y agréguelos a su lista"
 
 msgid "Go to"
-msgstr ""
+msgstr "Ir a"
 
 msgid "Goes out"
 msgstr "Sale"
@@ -790,7 +790,7 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "AVISO IMPORTANTE - Binary.com no está afiliado con ninguno de los agentes de pago mencionados anteriormente. Cada agente de pago opera como un proveedor de servicios independiente y no es avalado, garantizado o de lo contrario aprobado por Binary.com. LOS CLIENTES TRATAN CON AGENTES DE PAGO A SU EXCLUSIVO RIESGO Y PELIGRO. Se recomienda a los clientes verificar las credenciales de los agentes de pago antes de enviarles dinero. Binary.com no será responsable en ninguna circunstancia por las transacciones realizadas entre los clientes y los agentes de pago"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
+msgstr "Si está considerando la autoexclusión, le recomendamos registrarse en GAMSTOP"
 
 msgid "If you select a"
 msgstr "Si selecciona un"
@@ -802,16 +802,16 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Para aplicar correctamente el tema, se requiere una actualización completa de la página. ¿Está seguro que desea proceder?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizado y regulado como proveedor de servicios de inversión de categoría 3, por la Autoridad de Servicios Financieros de Malta [_1](número de licencia IS/70156)[_2]."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulado como proveedor de servicios de categoría 3, por la Autoridad de Servicios Financieros de Malta ([_1]cencia n° IS/70156[_2])."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "En la Isla de Man y el Reino Unido, los índices de volatilidad se ofrecen a través de Binary (IOM) Ltd., Primer Piso, Millennium House, Victoria Road, Douglas, IM2 4RW, Isla de Man, Islas Británica, licenciado y regulado respectivamente por (1) la Comisión Supervisora de Apuestas de la Isla de Man (licencia actual otorgada el 31 de agosto de 2017) y por (2) la Comisión de Apuestas del Reino Unido (número de [_1]referencia de licencia 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr ""
+msgstr "En el resto de la Unión Europea, los índices de volatilidad se ofrecen a través de Binary (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; autorizado y regulado por (1) la Autoridad de Juegos de Azar en Malta (licencia n° MGA/B2C/102/2000 emitida en agosto 1 de 2018), para clientes del Reino Unido por (2) la Comisión de Apuesta de Reino Unido (licencia [_1]1referencia n°: 39495[_2]), y para clientes irlandeses por (3) la Administración Tributaria de Irlanda (Licencia de Corredor Remoto de Apuestas n° 1010285 emitida en Julio 1 de 2017). Ver [_3]Información Regulatoria[_4] completa."
 
 msgid "In/Out"
 msgstr "Dentro/Fuera"
@@ -850,7 +850,7 @@ msgid "January"
 msgstr "Enero"
 
 msgid "Japan accounts are not supported."
-msgstr ""
+msgstr "Las cuentas de Japón no son compatibles."
 
 msgid "Jul"
 msgstr "Jul"
