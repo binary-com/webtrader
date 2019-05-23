@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 02:00\n"
+"PO-Revision-Date: 2019-05-23 05:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1672,13 +1672,13 @@ msgid "To deposit money please contact the payment agent directly"
 msgstr "Para depositar dinero por favor, póngase en contacto con el agente de pago directamente"
 
 msgid "To find out more and to sign up with GAMSTOP, please visit"
-msgstr ""
+msgstr "Para más detalles e inscribirse en GAMSTOP, por favor visite"
 
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
 msgstr "Para procesar depósitos y retiradas para métodos de pago o monedas locales no admitidas por Binary.com póngase en contacto con un agente de pago"
 
 msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr ""
+msgstr "Para autoexcluirse de todas las empresas de apuestas online licenciadas en Gran Bretaña, diríjase a"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Para retirar fondos, introduzca el token de verificación especial que le hemos enviado por correo electrónico"
