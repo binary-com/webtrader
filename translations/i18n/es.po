@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-22 09:53\n"
+"PO-Revision-Date: 2019-05-23 00:06\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -211,13 +211,13 @@ msgid "Add/remove indicators"
 msgstr "Agregar o quitar indicadores"
 
 msgid "Added new workspace %"
-msgstr ""
+msgstr "Agregado nuevo espacio de trabajo %"
 
 msgid "Admin"
 msgstr "Administrador"
 
 msgid "All fields are optional. If you wish to copy all assets and trade types, please leave all fields empty"
-msgstr ""
+msgstr "Todos los campos son opcionales. Si desea copiar todos los activos y tipos de operaciones, deje todos los campos en blanco"
 
 msgid "All times are in GMT (Greenwich Mean Time)"
 msgstr "Todas las horas están en GMT (Greenwich Mean Time)"
@@ -274,13 +274,13 @@ msgid "August"
 msgstr "Agosto"
 
 msgid "Avg. Duration of Open Positions"
-msgstr ""
+msgstr "Duración media de las posiciones abiertas"
 
 msgid "Avg. Loss"
-msgstr ""
+msgstr "Pérdida media"
 
 msgid "Avg. Profit"
-msgstr ""
+msgstr "Ganancia media"
 
 msgid "Back"
 msgstr "Atrás"
