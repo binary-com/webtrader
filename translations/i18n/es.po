@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 00:46\n"
+"PO-Revision-Date: 2019-05-23 00:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -910,7 +910,7 @@ msgid "Loading Asset Index ..."
 msgstr "Cargando el Índice de activos..."
 
 msgid "Loading Copy Trade..."
-msgstr ""
+msgstr "Cargando Copy Trade..."
 
 msgid "Loading Download/View Data ..."
 msgstr "Cargando Descargar/Ver Datos ..."
@@ -943,7 +943,7 @@ msgid "Loading portfolio ..."
 msgstr "Cargando cartera ..."
 
 msgid "Loading self-exclusion settings."
-msgstr ""
+msgstr "Cargando configuraciones de autoexclusión."
 
 msgid "Loading..."
 msgstr "Cargando..."
