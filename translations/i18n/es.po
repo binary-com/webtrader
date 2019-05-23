@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 05:40\n"
+"PO-Revision-Date: 2019-05-23 15:21\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1690,10 +1690,10 @@ msgid "Token"
 msgstr "Token"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Gestión de token"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token ya añadido"
 
 msgid "Token management"
 msgstr "Gestión de token"
@@ -1702,7 +1702,7 @@ msgid "Token name"
 msgstr "Nombre de token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "El nombre del token puede contener caracteres alfanuméricos con espacios y guiones bajos"
 
 msgid "Token name can have a maximum of 32 characters"
 msgstr ""
@@ -1723,7 +1723,7 @@ msgid "Tooltip text"
 msgstr "Texto del Tooltip"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Número de Copiadores"
 
 msgid "Total Cost"
 msgstr "Coste Total"
@@ -1732,7 +1732,7 @@ msgid "Total Profit/Loss"
 msgstr "Ganancia/Pérdida Total"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Número de operaciones"
 
 msgid "Touch"
 msgstr "Toca"
@@ -1756,13 +1756,13 @@ msgid "Trade using"
 msgstr "Comercie usando"
 
 msgid "Trader"
-msgstr ""
+msgstr "Operador"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Estadística de Operador"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Rentabilidad de las operaciones"
 
 msgid "Trading Times"
 msgstr "Horario de Comercio"
@@ -1834,7 +1834,7 @@ msgid "Various customisable features like loading and arranging assets, charting
 msgstr ""
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Código de verificación enviado a"
 
 msgid "Verification token"
 msgstr "Token de verificación"
@@ -1891,7 +1891,7 @@ msgid "Workspace"
 msgstr "Espacio de trabajo"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Cambios en el espacio de trabajo guardados"
 
 msgid "X-axis labels"
 msgstr "Etiquetas de eje-x"
