@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2019-05-22 09:02\n"
+"PO-Revision-Date: 2019-05-23 05:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -304,7 +304,7 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com 是多次獲獎的線上交易提供商，幫助客戶通過二元期權和差價合約在金融市場進行交易。基於波動率指數的二元期權和差價合約交易被歸類為博彩活動。請記住博彩活動可能會上癮，並提醒自己要承擔責任。查閱[_1]負責任交易[_2]的詳細資訊。一些產品在所有國家都不可用。本網站不向一些國家如美國、加拿大、香港、或18歲以下的使用者提供服務。"
 
 msgid "Blank window"
 msgstr "空白視窗"
@@ -730,7 +730,7 @@ msgid "Further instructions"
 msgstr "詳細說明"
 
 msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr ""
+msgstr "GAMSTOP 免費提供服務, 使您能夠自我禁止在英國授權的所有線上博彩公司交易"
 
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "獲取交易者的 API 權杖, 並將其添加到您的清單中"
@@ -790,7 +790,7 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "重要免責聲明 - Binary.com與上述所有支付代理不存在附屬關係。各支付代理均以獨立服務提供商的身份運營，未由Binary.com支持、擔保或經其它方式批准。客戶與支付代理的業務往來，風險自負。我們建議客戶在向支付代理匯款前，應事先查詢其信用狀況。在任何情況下，Binary.com都不對客戶與支付代理之間的交易承擔責任"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr ""
+msgstr "如果您要自我禁止, 您可考慮在 GAMSTOP 註冊"
 
 msgid "If you select a"
 msgstr "如您選擇"
@@ -802,10 +802,10 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "必須完全重新整理頁面才能正確啟用主題。確定要繼續?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "歐盟國家的金融產品交易由Binary Investments (Europe) Ltd提供，地址為W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta，由馬爾他金融服務機構授予執照及監管為3級投資服務提供商 ([_1]執照號碼為IS/70156[_2])。"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr ""
+msgstr "歐盟國家的金融產品交易由Binary Investments (Europe) Ltd提供，地址為W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta，由馬爾他金融服務機構監管為3級投資服務提供商 ([_1]執照號碼為IS/70156[_2])。"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "英國和曼島的波動率指數交易由Binary (IOM) Ltd. 提供，地址為：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；(1) 由不列顛群島曼島博彩監管委員會授予執照和監管，目前線上博彩執照於2017 年8 月31 日頒發；及(2) 由英國博彩委員會授予執照和監管(執照 [_1]編號: 39172[_2])。"
