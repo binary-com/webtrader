@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 15:21\n"
+"PO-Revision-Date: 2019-05-23 15:32\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1705,13 +1705,13 @@ msgid "Token name can contain alphanumeric characters with spaces and underscore
 msgstr "El nombre del token puede contener caracteres alfanuméricos con espacios y guiones bajos"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "El nombre del token puede tener un máximo de 32 caracteres"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "El nombre del token debe contener al menos 2 caracteres"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "El nombre del token debe comenzar con caracteres alfanuméricos solamente"
 
 msgid "Token permissions"
 msgstr "Permisos del tokens"
@@ -1831,7 +1831,7 @@ msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr "Utilice el botón \"Guardar...\" para guardar la configuración comercial"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "Varias funciones personalizables, así como cargar y organizar activos, crear gráficos y otros recursos como usted considere conveniente"
 
 msgid "Verification code sent to"
 msgstr "Código de verificación enviado a"
@@ -1912,10 +1912,10 @@ msgid "Yes"
 msgstr "Sí"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Usted no está copiando ningúna operación todavía"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Se ha excluido hasta"
 
 msgid "You have sold the following contract"
 msgstr "Han vendido el siguiente contrato"
@@ -1930,16 +1930,16 @@ msgid "You will be automatically logged out after such time"
 msgstr "Usted será deconectado automáticamente después de esa hora"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "Quiere permitir que otros operadores copien sus operaciones"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "Quiere copiar las operaciones de otro operador"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Su cuenta (%) está bloqueada, póngase en contacto con el servicio de atención al cliente para más información."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Su cuenta está restringida. Por favor, [_1]contacte con atención al cliente[_2] para asistencia."
 
 msgid "Your browser doesn't support copy to clipboard"
 msgstr ""
