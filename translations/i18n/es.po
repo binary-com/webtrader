@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 15:47\n"
+"PO-Revision-Date: 2019-05-23 23:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1660,7 +1660,7 @@ msgid "Time out until"
 msgstr "Pausa hasta"
 
 msgid "Timeout for websocket request"
-msgstr "Tiempo de espera para solicitud de websocket"
+msgstr "Tiempo limite de solicitud de la websocket"
 
 msgid "Title"
 msgstr "Título"
