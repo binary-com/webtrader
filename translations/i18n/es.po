@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 15:32\n"
+"PO-Revision-Date: 2019-05-23 15:47\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1660,7 +1660,7 @@ msgid "Time out until"
 msgstr "Pausa hasta"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Tiempo de espera para solicitud de websocket"
 
 msgid "Title"
 msgstr "Título"
@@ -1942,7 +1942,7 @@ msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for a
 msgstr "Su cuenta está restringida. Por favor, [_1]contacte con atención al cliente[_2] para asistencia."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Tu navegador no soporta copiar al portapapeles"
 
 msgid "Your browser is not supported"
 msgstr "Su navegador no es compatible"
@@ -1951,7 +1951,7 @@ msgid "Your changes have been updated"
 msgstr "Sus cambios se han actualizado"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Sus ajustes de copiar"
 
 msgid "Your new account balance is"
 msgstr "El nuevo saldo de su cuenta es"
