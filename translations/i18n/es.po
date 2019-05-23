@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 01:40\n"
+"PO-Revision-Date: 2019-05-23 01:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1360,13 +1360,13 @@ msgid "Reality check"
 msgstr "Verificación de la realidad"
 
 msgid "Redirecting to oauth login page,"
-msgstr ""
+msgstr "Redirigiendo a una página Oauth de inicio de sesión,"
 
 msgid "Ref"
 msgstr "Ref."
 
 msgid "Ref."
-msgstr ""
+msgstr "Ref."
 
 msgid "Refresh failed"
 msgstr "Actualización fallida"
@@ -1456,7 +1456,7 @@ msgid "Self-Exclusion Facilities"
 msgstr "Características de auto-exclusión"
 
 msgid "Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites"
-msgstr ""
+msgstr "La autoexclusión en este sitio web solo se aplica a su cuenta de Binary.com y no incluye otras empresas o sitios web"
 
 msgid "Sell At Market"
 msgstr "Vender en el Mercado"
@@ -1474,7 +1474,7 @@ msgid "Session"
 msgstr "Sesión"
 
 msgid "Session duration limit"
-msgstr ""
+msgstr "Límite de duración de la sesión"
 
 msgid "Session duration limit, in minutes"
 msgstr "Límite de duración de la sesión, en minutos"
@@ -1489,7 +1489,7 @@ msgid "Share chart"
 msgstr "Compartir gráfico"
 
 msgid "Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for"
-msgstr ""
+msgstr "Dado que siente la necesidad de autoexcluirse, le recomendamos encarecidamente que también se autoexcluya de servicios similares en los que se haya inscrito"
 
 msgid "Sold"
 msgstr "Vendido"
@@ -1561,7 +1561,7 @@ msgid "Successfully added new token"
 msgstr "Un nuevo token agregado con éxito"
 
 msgid "Successfully added workspace as"
-msgstr ""
+msgstr "Espacio de trabajo agregado exitosamente como"
 
 msgid "Successfully applied the template and saved it as"
 msgstr "Plantilla aplicada y guardada como"
@@ -1612,7 +1612,7 @@ msgid "The company holds customer funds in separate bank accounts to the operati
 msgstr "La Compañía mantiene los fondos de los clientes en cuentas bancarias separadas de las cuentas operativas, las cuales, en caso de insolvencia, no formarán parte de los activos de la compañía. Esto cumple con los requisitos de la Comisión de Juego para la segregación de los recursos de clientes a un nivel de: protección media"
 
 msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr ""
+msgstr "Los productos ofrecidos a través de este sitio web incluyen opciones binarias, contratos por diferencias (\"CFDs\" en inglés) y otros derivados complejos. La operación con opciones binarias puede no ser adecuada para todos. La operación con CFDs conlleva un alto nivel de riesgo ya que el apalancamiento puede funcionar tanto en contra como a su favor. Como resultado, los productos ofrecidos en este sitio web pueden no ser adecuados para todos los inversionistas debido al riesgo de perder todo el capital invertido. Nunca debe invertir dinero que no pueda permitirse perder, y nunca debe operar con dinero prestado. Antes de operar con los productos complejos que se ofrecen, asegúrese de comprender los riesgos involucrados y de obtener información acerca de [_1]Comercio Responsable[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr ""
