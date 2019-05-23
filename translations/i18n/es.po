@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 00:50\n"
+"PO-Revision-Date: 2019-05-23 01:25\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -955,7 +955,7 @@ msgid "Log in time"
 msgstr "Tiempo de inicio de sesión"
 
 msgid "Logging out because of self-exclusion session time out!"
-msgstr ""
+msgstr "¡Cierre de sesión debido a autoexclusión!"
 
 msgid "Login"
 msgstr "Iniciar sesión"
@@ -991,7 +991,7 @@ msgid "Matches"
 msgstr "Coincidencias"
 
 msgid "Max. Trade Stake"
-msgstr ""
+msgstr "Inversión Máxima"
 
 msgid "Maximum account cash balance"
 msgstr "Saldo máximo de la cuenta"
@@ -1012,13 +1012,13 @@ msgid "Maximum aggregate loss per day"
 msgstr "Pérdida total máxima por día"
 
 msgid "Maximum balance"
-msgstr ""
+msgstr "Saldo máximo"
 
 msgid "Maximum number of open positions"
 msgstr "Número máximo de posiciones abiertas"
 
 msgid "Maximum open positions"
-msgstr ""
+msgstr "Posiciones máximas abiertas"
 
 msgid "May"
 msgstr "Mayo"
