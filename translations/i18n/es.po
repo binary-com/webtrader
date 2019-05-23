@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 00:06\n"
+"PO-Revision-Date: 2019-05-23 00:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -304,10 +304,10 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com: Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr ""
+msgstr "Binary.com es un proveedor de servicios comerciales en línea galardonado, que ayuda a sus clientes a operar en mercados financieros a través de opciones binarias y CFD. Operar con opciones binarias y CFDs en Índices de Volatilidad está clasificado como un juego de azar. Recuerde que los juegos de azar pueden ser adictivos – por favor juegue con responsabilidad. Aprenda más acerca de [_1]Comercio responsable[_2]. Algunos productos no se encuentran disponibles en todos los países. Los servicios de este sitio web no están disponibles en algunos países como los Estados Unidos, Canadá, Costa Rica, Hong Kong, o para menores de 18 años."
 
 msgid "Blank window"
-msgstr ""
+msgstr "Ventana en blanco"
 
 msgid "Bought"
 msgstr "Comprado"
@@ -655,7 +655,7 @@ msgid "Exclude me from the website until"
 msgstr "Excluirme del sitio web hasta que"
 
 msgid "Exclude time"
-msgstr ""
+msgstr "Excluir el tiempo"
 
 msgid "Exclude time must be after today."
 msgstr "El tiempo de exclusión debe ser después de hoy."
