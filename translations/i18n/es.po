@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 01:50\n"
+"PO-Revision-Date: 2019-05-23 02:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1615,13 +1615,13 @@ msgid "The products offered via this website include binary options, contracts f
 msgstr "Los productos ofrecidos a través de este sitio web incluyen opciones binarias, contratos por diferencias (\"CFDs\" en inglés) y otros derivados complejos. La operación con opciones binarias puede no ser adecuada para todos. La operación con CFDs conlleva un alto nivel de riesgo ya que el apalancamiento puede funcionar tanto en contra como a su favor. Como resultado, los productos ofrecidos en este sitio web pueden no ser adecuados para todos los inversionistas debido al riesgo de perder todo el capital invertido. Nunca debe invertir dinero que no pueda permitirse perder, y nunca debe operar con dinero prestado. Antes de operar con los productos complejos que se ofrecen, asegúrese de comprender los riesgos involucrados y de obtener información acerca de [_1]Comercio Responsable[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Ocurrió una interrupción de datos del mercado durante el período del contrato. Para las cuentas de dinero real, intentaremos corregir esto y liquidar el contrato correctamente, de lo contrario, el contrato será cancelado y reembolsado. Los contratos de dinero virtual serán cancelados y reembolsados."
 
 msgid "There was an error"
 msgstr "Hubo un error"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Este contrato ha expirado"
 
 msgid "This contract lost"
 msgstr "Este contrato perdió"
@@ -1633,7 +1633,7 @@ msgid "This field is required"
 msgstr "Este campo es requerido"
 
 msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "Los servicios de este sitio web no están disponibles en ciertos países como los Estados Unidos, Canadá, Hong Kong, Japón, ni tampoco para personas menores de 18 años."
 
 msgid "Thu"
 msgstr "Jue"
