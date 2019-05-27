@@ -331,12 +331,17 @@ export const createBlankWindow = function($html,options) {
    dialog.on('dragstop', () => {
       const top = dialog.offset().top;
       const left = dialog.offset().left;
+      const dialogWidth = blankWindow.dialog( "option", "width" );
+      const windowWidth = $(window).width();
 
-      if (top < 0) {
-         dialog.animate({ top: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
+      if (top < 106) {
+         dialog.animate({ top: '106px' }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
       if (left < 0) {
          dialog.animate({ left: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
+      }
+      if (left + dialogWidth > windowWidth) {
+         dialog.animate({ left: `${windowWidth - dialogWidth - 20}px` }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
    });
 
