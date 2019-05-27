@@ -329,19 +329,20 @@ export const createBlankWindow = function($html,options) {
      dialog.draggable( "option", "scroll", true );
    }
    dialog.on('dragstop', () => {
-      const top = dialog.offset().top;
-      const left = dialog.offset().left;
+      const top         = dialog.offset().top;
+      const left        = dialog.offset().left;
       const dialogWidth = blankWindow.dialog( "option", "width" );
       const windowWidth = $(window).width();
+      const navHeight   = $('#nav-menu .container').height();
 
-      if (top < 106) {
-         dialog.animate({ top: '106px' }, 300, dialog.trigger.bind(dialog, 'animated'));
+      if (top < navHeight + 36) {
+         dialog.animate({ top: `${navHeight + 36}px` }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
       if (left < 0) {
          dialog.animate({ left: '0px' }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
       if (left + dialogWidth > windowWidth) {
-         dialog.animate({ left: `${windowWidth - dialogWidth - 20}px` }, 300, dialog.trigger.bind(dialog, 'animated'));
+         dialog.animate({ left: `${windowWidth - dialogWidth - 10}px` }, 300, dialog.trigger.bind(dialog, 'animated'));
       }
    });
 
