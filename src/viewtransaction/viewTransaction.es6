@@ -240,9 +240,9 @@ const updateIndicative = (data, state) => {
     state.proposal_open_contract.exit_tick = contract.exit_tick;
     state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
     state.proposal_open_contract.date_expiry = contract.date_expiry;
-    state.proposal_open_contract.sell_price = contract.sell_price.toString();
+    state.proposal_open_contract.sell_price = contract.sell_price;
     state.proposal_open_contract.is_valid_to_sell = contract.is_valid_to_sell;
-    state.proposal_open_contract.barrier = parseFloat(contract.barrier);
+    state.proposal_open_contract.barrier = contract.barrier;
     state.proposal_open_contract.high_barrier = contract.high_barrier;
     state.proposal_open_contract.low_barrier = contract.low_barrier;
 
@@ -487,8 +487,7 @@ const initState = (proposal, root) => {
       },
       proposal_open_contract: {
         ...proposal,
-        sell_price: proposal.sell_price.toString(),
-        barrier: parseFloat(proposal.barrier),
+        sell_price: proposal.sell_price,
         currency: (proposal.currency ||  'USD') + ' ',
         is_ended: proposal.is_settleable || proposal.is_sold || proposal.status !== 'open',
         is_sold_at_market: false,

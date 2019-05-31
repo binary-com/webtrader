@@ -60,10 +60,12 @@ rv.formatters['and-not'] = (vlaue, other) => vlaue && !other;
 rv.formatters['gt'] = (vlaue, other) => vlaue > other;
 /* rivets formatter for < operator  */
 rv.formatters['lt'] = (vlaue, other) => vlaue < other;
+/* rivets formatter to check if a variable has value */
+rv.formatters['has-value'] = (value) => value != null;
 /* localise price format*/
-rv.formatters['format-price'] = (value, currency) => (value) ?  formatPrice(value, currency) : undefined;
+rv.formatters['format-price'] = (value, currency) => (value != null) ?  formatPrice(value, currency) : undefined;
 /* comma added format*/
-rv.formatters['add-comma'] = (value, decimal_points) => (value) ?  addComma(value, decimal_points) : undefined;
+rv.formatters['add-comma'] = (value, decimal_points) => (parseFloat(value)) ?  addComma(value, decimal_points) : undefined;
 /* rivets formater to capitalize string */
 rv.formatters.capitalize = {
    read: (value) => _.capitalize(value),
@@ -151,7 +153,7 @@ rv.formatters['bold-last-character'] = (str) => {
 }
 /* formatter to calcualte the percent of a value of another value */
 rv.formatters['percent-of'] = (changed, original) => {
-   if(!changed || !original) return undefined;
+   if(!(changed != null) || !original) return undefined;
    const percentage_of_amount = (100*(changed - original)/original).toFixed(2);
    if (percentage_of_amount > 0) {
      return `+${percentage_of_amount}%`;
