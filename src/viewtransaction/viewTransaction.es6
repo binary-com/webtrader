@@ -487,7 +487,6 @@ const initState = (proposal, root) => {
       },
       proposal_open_contract: {
         ...proposal,
-        sell_price: proposal.sell_price,
         currency: (proposal.currency ||  'USD') + ' ',
         is_ended: proposal.is_settleable || proposal.is_sold || proposal.status !== 'open',
         is_sold_at_market: false,
