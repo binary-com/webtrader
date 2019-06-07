@@ -24,7 +24,7 @@ rivets._.View.prototype.observe = function (keypath, callback) {
 
 /* rivets formatter to translate strings to 18n */
 rv.formatters['i18n'] = (value) => {
-   if(typeof value === 'string') return value.i18n();
+   if (typeof value === 'string') return value.i18n();
    return value;
 };
 rv.formatters['sanitize'] = (value) => value.replace(/("|'|\&|\(|\)|\<|\>)/g, '');
@@ -36,7 +36,7 @@ rv.formatters['prop'] = (value, prop) => {
 rv.formatters['one-of'] = (...args) => {
    const value = args[0];
    for (let i = 1; i < args.length ; ++i)
-      if(args[i] === value)
+      if (args[i] === value)
          return true;
    return false;
 }
@@ -61,9 +61,9 @@ rv.formatters['gt'] = (vlaue, other) => vlaue > other;
 /* rivets formatter for < operator  */
 rv.formatters['lt'] = (vlaue, other) => vlaue < other;
 /* rivets formatter to check if a variable has value */
-rv.formatters['has-value'] = (value) => value != null;
+rv.formatters['has-value'] = (value) => value === 0 ? true : Boolean(value);
 /* localise price format*/
-rv.formatters['format-price'] = (value, currency) => (value != null) ?  formatPrice(value, currency) : undefined;
+rv.formatters['format-price'] = (value, currency) => (!isNaN(value)) ?  formatPrice(value, currency) : undefined;
 /* comma added format*/
 rv.formatters['add-comma'] = (value, decimal_points) => (parseFloat(value)) ?  addComma(value, decimal_points) : undefined;
 /* rivets formater to capitalize string */
@@ -73,7 +73,7 @@ rv.formatters.capitalize = {
 };
 /* call toFixed on a fload number */
 rv.formatters['to-fixed'] = (value, digits) => {
-   if(!$.isNumeric(value) || !$.isNumeric(digits)){
+   if (!$.isNumeric(value) || !$.isNumeric(digits)){
       return;
    }
    return (value * 1).toFixed(digits || 2);
@@ -111,7 +111,7 @@ rv.formatters.currency = (value, currency) => {
       'PYG': '₲', /* Paraguayan Guarani */ 'THB': '฿', /* Thai Baht */
       'UAH': '₴', /* Ukrainian Hryvnia */ 'VND': '₫', /* Vietnamese Dong */
    };
-   if(value)
+   if (value)
       return (currency_symbols[currency] || currency) + value;
    return value;
 }
@@ -128,7 +128,7 @@ rv.formatters['moment'] = (epoch, format) => {
 }
 /* human readable difference of two epoch values */
 rv.formatters['moment-humanize'] = (from_epoch, till_epoch) => {
-   if(!from_epoch || !till_epoch) {
+   if (!from_epoch || !till_epoch) {
       return undefined;
    }
 
@@ -153,7 +153,7 @@ rv.formatters['bold-last-character'] = (str) => {
 }
 /* formatter to calcualte the percent of a value of another value */
 rv.formatters['percent-of'] = (changed, original) => {
-   if(!(changed != null) || !original) return undefined;
+   if (!(changed != null) || !original) return undefined;
    const percentage_of_amount = (100*(changed - original)/original).toFixed(2);
    if (percentage_of_amount > 0) {
      return `+${percentage_of_amount}%`;
@@ -193,7 +193,7 @@ rv.binders.selectmenu = {
    routine: (el, value) => {
       el = $(el);
       el.val(value);
-      if(el.find("option[value='" + value + "']").length > 0)
+      if (el.find("option[value='" + value + "']").length > 0)
          el.selectmenu('refresh');
    }
 };
@@ -221,7 +221,7 @@ rv.binders['is-valid-number'] = {
 /* bindar for jqueyr ui selectmenu options */
 rv.binders['dom-*'] = function (el, value) {
    const method = this.args[0];
-   if(value)
+   if (value)
       setTimeout(() => el[method](), 0);
 };
 
@@ -240,9 +240,9 @@ rv.binders.selectrefresh = {
    priority: 99,
    routine: (el,array_or_value) => {
       el = $(el);
-      if(typeof array_or_value === 'string') {
+      if (typeof array_or_value === 'string') {
          el.val(array_or_value);
-         if(el.find("option[value='" + array_or_value+ "']").length === 0)
+         if (el.find("option[value='" + array_or_value+ "']").length === 0)
             return;
       }
       el.selectmenu('refresh');
@@ -277,7 +277,7 @@ rv.binders.chosendisable = (el, value) => {
   const inputElement = chosenContainer.find('.chosen-choices input');
   const chosenDrop = chosenContainer.find('.chosen-drop');
   const chosenDisableElement = chosenContainer.find('.webtrader-chosen-disable');
-  if(value) {
+  if (value) {
     inputElement.attr('disabled', value);
     chosenDrop.hide();
     chosenDisableElement.addClass('chosen-disable');
@@ -345,7 +345,7 @@ rv.binders['input-enter'] = {
    publishes: false,
    routine: (el, callback) => {
       $(el).keyup(function(event){
-         if(event.keyCode == 13){
+         if (event.keyCode == 13){
             callback(el);
          }
       });
@@ -462,7 +462,7 @@ rv.binders.datepicker = {
          closeText: 'Done'.i18n(),
          currentText: 'Today'.i18n()
       };
-      if(model.yearRange)
+      if (model.yearRange)
          options.yearRange = model.yearRange;
       else {
          options.maxDate = model.maxDate || null;
@@ -537,7 +537,7 @@ rv.binders['jq-class'] = {
 /* rv binder to active click event on another button when Enter key is pressed */
 rv.binders['input-default-btn'] = (el, jquery_selector) => {
    $(el).keyup((event) => {
-      if(event.keyCode == 13) {
+      if (event.keyCode == 13) {
          $(jquery_selector).click();
       }
    });
@@ -579,7 +579,7 @@ rv.binders['visible'] = (el, value) => {
 };
 /* binder to add or remove disabled attribute */
 rv.binders.disabled = (el,value) => {
-   if(value) $(el).attr('disabled', 'disabled');
+   if (value) $(el).attr('disabled', 'disabled');
    else $(el).removeAttr('disabled');
 }
 
@@ -691,10 +691,10 @@ rv.binders['indicative-color'] = (el, value) => {
    const red = '#d71818';
    const green = '#02920e';
    const black = 'black';
-   if(!$.isNumeric(value)) {
+   if (!$.isNumeric(value)) {
       $(el).css({color: black});
    }
-   else if(perv !== value*1) {
+   else if (perv !== value*1) {
       $(el).css({color: perv < value*1 ? green : red});
    }
    el._perv_indicative_color = value;
@@ -708,7 +708,7 @@ const component_twoway_bind = (self, data, keypathes) => {
          const keypath = keypathes[i];
          const key = _.last(keypath.split('.'));
          const observer = self.observers[key];
-         if(observer) {
+         if (observer) {
             observer.options.adapters['.'].observe(observer.target, _.last(observer.keypath.split('.')), () => {
                const updated = observer.target[_.last(observer.keypath.split('.'))];
                data[key] = updated;
