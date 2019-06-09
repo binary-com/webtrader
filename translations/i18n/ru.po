@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-05-23 05:30\n"
+"PO-Revision-Date: 2019-06-09 22:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -730,7 +730,7 @@ msgid "Further instructions"
 msgstr "Дальнейшие инструкции"
 
 msgid "GAMSTOP is a free service that enables you to self-exclude from all online gambling companies licensed in Great Britain"
-msgstr "GAMSTOP − это бесплатный сервис, позволяющий Вам самоисключаться из торговли на сайтах любых компаний, лицензированных в рамках Великобритании"
+msgstr "GAMSTOP − это бесплатный сервис, позволяющий Вам самоисключаться из торговли на сайтах любых компаний, лицензированных в Великобритании"
 
 msgid "Get API token from trader(s) and add it in your list"
 msgstr "Получите токены API от трейдера (трейдеров) и добавьте их в свой список"
