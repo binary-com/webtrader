@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2019-06-09 22:50\n"
+"PO-Revision-Date: 2019-06-09 23:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Когда данный лимит будет достигнут, Вы не сможете вносить средства"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr "Онлайн торговля может перерасти в зависимость. Заполните форму для ограничения Вашей работы на сайте или отправьте службе поддержки подписанное письмо (в отсканированном виде или по факсу). После установления ограничений Вы можете только усилить их. Ограничения могут быть сняты или смягчены по истечении 7 дней, за исключением даты самоисключения, которая не может быть изменена или отменена после её подтверждения. Для снятия или увеличения лимитов ограничения, пожалуйста, свяжитесь со следующим отделом"
+msgstr "Онлайн торговля может перерасти в зависимость. Заполните форму для ограничения Вашей работы на сайте или отправьте службе поддержки подписанное письмо (в отсканированном виде или по факсу). После установления ограничений Вы можете только усилить их. Ограничения могут быть сняты или смягчены по истечении 7 дней, за исключением даты самоисключения, которая не может быть изменена или отменена после её подтверждения. Для снятия или увеличения ограничений, пожалуйста, свяжитесь со следующим отделом"
 
 msgid "Open"
 msgstr "Открыто"
@@ -1456,7 +1456,7 @@ msgid "Self-Exclusion Facilities"
 msgstr "Услуги самоограничения"
 
 msgid "Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites"
-msgstr "Самоисключение на данном сайте применимо лишь к Вашему счёту Binary.com и не распространяется на другие сайты компании"
+msgstr "Самоисключение на данном сайте применимо лишь к Вашему счёту Binary.com и не распространяется на другие сайты и компании"
 
 msgid "Sell At Market"
 msgstr "Продать по текущей цене"
