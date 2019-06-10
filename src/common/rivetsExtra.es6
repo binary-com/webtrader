@@ -63,7 +63,7 @@ rv.formatters['gt'] = (vlaue, other) => vlaue > other;
 /* rivets formatter for < operator  */
 rv.formatters['lt'] = (vlaue, other) => vlaue < other;
 /* rivets formatter to check if a variable has value */
-rv.formatters['has-value'] = (value) => hasValue(value);
+rv.formatters['has-value'] = hasValue;
 /* localise price format*/
 rv.formatters['format-price'] = (value, currency) => hasValue(value) ? formatPrice(value, currency) : undefined;
 /* comma added format*/
