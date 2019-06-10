@@ -7,6 +7,8 @@ import 'jquery-sparkline';
 import 'chosen';
 import 'color-picker';
 
+const hasValue = value => value === 0 ? true : Boolean(value);
+
 /* Rivets js does not allow manually observing properties from javascript,
        Use "rv.bind().observe('path.to.object', callback)" to subscribe */
 rivets._.View.prototype.observe = function (keypath, callback) {
@@ -61,9 +63,9 @@ rv.formatters['gt'] = (vlaue, other) => vlaue > other;
 /* rivets formatter for < operator  */
 rv.formatters['lt'] = (vlaue, other) => vlaue < other;
 /* rivets formatter to check if a variable has value */
-rv.formatters['has-value'] = (value) => value === 0 ? true : Boolean(value);
+rv.formatters['has-value'] = (value) => hasValue(value);
 /* localise price format*/
-rv.formatters['format-price'] = (value, currency) => (!isNaN(value)) ?  formatPrice(value, currency) : undefined;
+rv.formatters['format-price'] = (value, currency) => hasValue(value) ? formatPrice(value, currency) : undefined;
 /* comma added format*/
 rv.formatters['add-comma'] = (value, decimal_points) => (parseFloat(value)) ?  addComma(value, decimal_points) : undefined;
 /* rivets formater to capitalize string */
