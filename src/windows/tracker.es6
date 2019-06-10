@@ -225,6 +225,7 @@ export const track = (options, blankWindow) => {
       save_states();
    });
    blankWindow.on('dialogextendrestore',() => {
+      dialog.draggable({ containment: false })
       state.position.offset = dialog.offset();
       state.position.mode = 'normal';
       save_states();

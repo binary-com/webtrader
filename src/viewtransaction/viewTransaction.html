@@ -95,7 +95,7 @@
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-if="proposal_open_contract.sell_price">
+      <div rv-if="proposal_open_contract.sell_price | has-value">
         <div rv-class-center="proposal_open_contract.user_sold | or proposal_open_contract.barrier_count | eq 2"> <p>Final Price</p>
           <span rv-html="proposal_open_contract.sell_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
