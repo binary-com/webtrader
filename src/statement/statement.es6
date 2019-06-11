@@ -30,6 +30,7 @@ export const init = ($menuLink) => {
 
 let loading = false;
 let is_specific_date_shown = false; /* is data for a specific date is shown */
+let api_limit_reached = false;
 
 const refreshTable  = (yyy_mm_dd) => {
    const processing_msg = $('#' + table.attr('id') + '_processing').css('top','200px').show();
@@ -89,6 +90,7 @@ const refreshTable  = (yyy_mm_dd) => {
             .then(refresh)
             .catch((err) => {
                   refresh({});
+                  api_limit_reached = true;
                   $.growl.error({ message: err.message });
                   console.error(err);
                   loading = false;
@@ -173,7 +175,7 @@ const initStatement = () => {
          innerHeight = statement.innerHeight(),
          scrollHeight = statement[0].scrollHeight,
          postion = (scrollTop + innerHeight) / scrollHeight;
-      if(postion > 0.75 && !loading && !is_specific_date_shown){
+      if(postion > 0.75 && !loading && !is_specific_date_shown && !api_limit_reached){
          refreshTable({clear:false});
       }
    });
