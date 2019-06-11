@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 01:50\n"
+"PO-Revision-Date: 2019-05-23 23:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1615,13 +1615,13 @@ msgid "The products offered via this website include binary options, contracts f
 msgstr "Los productos ofrecidos a través de este sitio web incluyen opciones binarias, contratos por diferencias (\"CFDs\" en inglés) y otros derivados complejos. La operación con opciones binarias puede no ser adecuada para todos. La operación con CFDs conlleva un alto nivel de riesgo ya que el apalancamiento puede funcionar tanto en contra como a su favor. Como resultado, los productos ofrecidos en este sitio web pueden no ser adecuados para todos los inversionistas debido al riesgo de perder todo el capital invertido. Nunca debe invertir dinero que no pueda permitirse perder, y nunca debe operar con dinero prestado. Antes de operar con los productos complejos que se ofrecen, asegúrese de comprender los riesgos involucrados y de obtener información acerca de [_1]Comercio Responsable[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr ""
+msgstr "Ocurrió una interrupción de datos del mercado durante el período del contrato. Para las cuentas de dinero real, intentaremos corregir esto y liquidar el contrato correctamente, de lo contrario, el contrato será cancelado y reembolsado. Los contratos de dinero virtual serán cancelados y reembolsados."
 
 msgid "There was an error"
 msgstr "Hubo un error"
 
 msgid "This contract has expired"
-msgstr ""
+msgstr "Este contrato ha expirado"
 
 msgid "This contract lost"
 msgstr "Este contrato perdió"
@@ -1633,7 +1633,7 @@ msgid "This field is required"
 msgstr "Este campo es requerido"
 
 msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
-msgstr ""
+msgstr "Los servicios de este sitio web no están disponibles en ciertos países como los Estados Unidos, Canadá, Hong Kong, Japón, ni tampoco para personas menores de 18 años."
 
 msgid "Thu"
 msgstr "Jue"
@@ -1660,7 +1660,7 @@ msgid "Time out until"
 msgstr "Pausa hasta"
 
 msgid "Timeout for websocket request"
-msgstr ""
+msgstr "Tiempo limite de solicitud de la websocket"
 
 msgid "Title"
 msgstr "Título"
@@ -1672,13 +1672,13 @@ msgid "To deposit money please contact the payment agent directly"
 msgstr "Para depositar dinero por favor, póngase en contacto con el agente de pago directamente"
 
 msgid "To find out more and to sign up with GAMSTOP, please visit"
-msgstr ""
+msgstr "Para más detalles e inscribirse en GAMSTOP, por favor visite"
 
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
 msgstr "Para procesar depósitos y retiradas para métodos de pago o monedas locales no admitidas por Binary.com póngase en contacto con un agente de pago"
 
 msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr ""
+msgstr "Para autoexcluirse de todas las empresas de apuestas online licenciadas en Gran Bretaña, diríjase a"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Para retirar fondos, introduzca el token de verificación especial que le hemos enviado por correo electrónico"
@@ -1690,10 +1690,10 @@ msgid "Token"
 msgstr "Token"
 
 msgid "Token Management"
-msgstr ""
+msgstr "Gestión de token"
 
 msgid "Token already added"
-msgstr ""
+msgstr "Token ya añadido"
 
 msgid "Token management"
 msgstr "Gestión de token"
@@ -1702,16 +1702,16 @@ msgid "Token name"
 msgstr "Nombre de token"
 
 msgid "Token name can contain alphanumeric characters with spaces and underscores"
-msgstr ""
+msgstr "El nombre del token puede contener caracteres alfanuméricos con espacios y guiones bajos"
 
 msgid "Token name can have a maximum of 32 characters"
-msgstr ""
+msgstr "El nombre del token puede tener un máximo de 32 caracteres"
 
 msgid "Token name must contain atleast 2 characters"
-msgstr ""
+msgstr "El nombre del token debe contener al menos 2 caracteres"
 
 msgid "Token name should begin with alphanumeric characters only"
-msgstr ""
+msgstr "El nombre del token debe comenzar con caracteres alfanuméricos solamente"
 
 msgid "Token permissions"
 msgstr "Permisos del tokens"
@@ -1723,7 +1723,7 @@ msgid "Tooltip text"
 msgstr "Texto del Tooltip"
 
 msgid "Total Copiers"
-msgstr ""
+msgstr "Número de Copiadores"
 
 msgid "Total Cost"
 msgstr "Coste Total"
@@ -1732,7 +1732,7 @@ msgid "Total Profit/Loss"
 msgstr "Ganancia/Pérdida Total"
 
 msgid "Total Trades"
-msgstr ""
+msgstr "Número de operaciones"
 
 msgid "Touch"
 msgstr "Toca"
@@ -1756,13 +1756,13 @@ msgid "Trade using"
 msgstr "Comercie usando"
 
 msgid "Trader"
-msgstr ""
+msgstr "Operador"
 
 msgid "Trader's Statistics"
-msgstr ""
+msgstr "Estadística de Operador"
 
 msgid "Trades Profitability"
-msgstr ""
+msgstr "Rentabilidad de las operaciones"
 
 msgid "Trading Times"
 msgstr "Horario de Comercio"
@@ -1831,10 +1831,10 @@ msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr "Utilice el botón \"Guardar...\" para guardar la configuración comercial"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr ""
+msgstr "Varias funciones personalizables, así como cargar y organizar activos, crear gráficos y otros recursos como usted considere conveniente"
 
 msgid "Verification code sent to"
-msgstr ""
+msgstr "Código de verificación enviado a"
 
 msgid "Verification token"
 msgstr "Token de verificación"
@@ -1891,7 +1891,7 @@ msgid "Workspace"
 msgstr "Espacio de trabajo"
 
 msgid "Workspace changes saved"
-msgstr ""
+msgstr "Cambios en el espacio de trabajo guardados"
 
 msgid "X-axis labels"
 msgstr "Etiquetas de eje-x"
@@ -1912,10 +1912,10 @@ msgid "Yes"
 msgstr "Sí"
 
 msgid "You are not copying any trade(s) yet"
-msgstr ""
+msgstr "Usted no está copiando ningúna operación todavía"
 
 msgid "You have excluded yourself until"
-msgstr ""
+msgstr "Se ha excluido hasta"
 
 msgid "You have sold the following contract"
 msgstr "Han vendido el siguiente contrato"
@@ -1930,19 +1930,19 @@ msgid "You will be automatically logged out after such time"
 msgstr "Usted será deconectado automáticamente después de esa hora"
 
 msgid "You wish to allow other traders to copy your trades"
-msgstr ""
+msgstr "Quiere permitir que otros operadores copien sus operaciones"
 
 msgid "You wish to copy another trader's trades"
-msgstr ""
+msgstr "Quiere copiar las operaciones de otro operador"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr ""
+msgstr "Su cuenta (%) está bloqueada, póngase en contacto con el servicio de atención al cliente para más información."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
-msgstr ""
+msgstr "Su cuenta está restringida. Por favor, [_1]contacte con atención al cliente[_2] para asistencia."
 
 msgid "Your browser doesn't support copy to clipboard"
-msgstr ""
+msgstr "Tu navegador no soporta copiar al portapapeles"
 
 msgid "Your browser is not supported"
 msgstr "Su navegador no es compatible"
@@ -1951,7 +1951,7 @@ msgid "Your changes have been updated"
 msgstr "Sus cambios se han actualizado"
 
 msgid "Your copying settings"
-msgstr ""
+msgstr "Sus ajustes de copiar"
 
 msgid "Your new account balance is"
 msgstr "El nuevo saldo de su cuenta es"
