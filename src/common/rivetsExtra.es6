@@ -67,7 +67,7 @@ rv.formatters['has-value'] = hasValue;
 /* localise price format*/
 rv.formatters['format-price'] = (value, currency) => hasValue(value) ? formatPrice(value, currency) : undefined;
 /* comma added format*/
-rv.formatters['add-comma'] = (value, decimal_points) => (parseFloat(value)) ?  addComma(value, decimal_points) : undefined;
+rv.formatters['add-comma'] = (value, decimal_points) => value ?  addComma(value, decimal_points) : undefined;
 /* rivets formater to capitalize string */
 rv.formatters.capitalize = {
    read: (value) => _.capitalize(value),
