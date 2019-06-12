@@ -99,6 +99,7 @@ const refreshTable  = (yyy_mm_dd) => {
 }
 
 const initStatement = () => {
+   scroll_end_reached = false;
    statement = windows.createBlankWindow($('<div/>'), {
       title: 'Statement'.i18n(),
       dialogClass: 'statement',
