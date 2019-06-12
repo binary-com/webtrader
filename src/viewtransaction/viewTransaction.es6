@@ -45,6 +45,12 @@ const showMarketDataDisruptionWindow = () => {
    window.dd = market_data_disruption_win;
 };
 
+const countDecimals = (value) => { 
+  if ((value % 1) != 0) 
+      return value.toString().split(".")[1].length;  
+  return 0;
+};
+
 const initChart = (root, state, options) => {
    let data = [];
    let type = '';
@@ -233,11 +239,11 @@ const updateIndicative = (data, state) => {
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.proposal_open_contract.bid_price = contract.bid_price;
-    state.proposal_open_contract.entry_tick = contract.entry_tick;
+    state.proposal_open_contract.entry_tick = countDecimals(contract.entry_tick) < 3 ? contract.entry_tick.toFixed(3) : contract.entry_tick;
     state.proposal_open_contract.entry_tick_time = contract.entry_tick_time;
     state.proposal_open_contract.status = contract.status;
     state.proposal_open_contract.is_sold = contract.is_sold;
-    state.proposal_open_contract.exit_tick = contract.exit_tick;
+    state.proposal_open_contract.exit_tick = countDecimals(contract.exit_tick) < 3 ? contract.exit_tick.toFixed(3) : contract.exit_tick;
     state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
     state.proposal_open_contract.date_expiry = contract.date_expiry;
     state.proposal_open_contract.sell_price = contract.sell_price;
