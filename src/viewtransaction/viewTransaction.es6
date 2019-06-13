@@ -45,8 +45,8 @@ const showMarketDataDisruptionWindow = () => {
    window.dd = market_data_disruption_win;
 };
 
-const countDecimals = (value) => { 
-  if ((value % 1) != 0) 
+const countDecimals = (value) => {
+  if ((value % 1) !== 0) 
       return value.toString().split(".")[1].length;  
   return 0;
 };
