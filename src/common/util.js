@@ -131,6 +131,16 @@ function addComma(num, decimal_points, is_crypto) {
     });
 };
 
+function setSymbolDecimalPlace(current_value, symbol) {
+  var active_symbol = local_storage.get('active_symbols').find(function(item) {
+    item.symbol === symbol
+  });
+  var pip = active_symbol.pip.toString();
+  var decimals = pip.substring(pip.indexOf(".") + 1).length || 4;
+
+  return addComma(current_value, decimals);
+};
+
 function sortAlphaNum(property) {
     "use strict";
     var reA = /[^a-zA-Z]/g;
