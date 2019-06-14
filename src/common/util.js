@@ -132,9 +132,9 @@ function addComma(num, decimal_points, is_crypto) {
 };
 
 function setSymbolDecimalPlace(current_value, symbol) {
-  const active_symbol = local_storage.get('active_symbols').find((item) => item.symbol === symbol);
-  const pip = active_symbol.pip.toString();
-  const decimals = pip.substring(pip.indexOf(".") + 1).length || 4;
+  var active_symbol = local_storage.get('active_symbols').find((item) => item.symbol === symbol);
+  var pip = active_symbol.pip.toString();
+  var decimals = pip.substring(pip.indexOf(".") + 1).length || 4;
 
   return addComma(current_value, decimals);
 };
