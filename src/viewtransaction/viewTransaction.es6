@@ -230,16 +230,16 @@ const updateIndicative = (data, state) => {
     const pip_value = getSymbolPipValue(contract.underlying);
 
     // note: cannot use spread operator - rivets.js 2-way data-binding breaks if new object
-    state.proposal_open_contract.pip = pip_value
+    state.proposal_open_contract.pip = pip_value;
     state.proposal_open_contract.is_sold_before_expiry = sell_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.proposal_open_contract.bid_price = contract.bid_price;
-    state.proposal_open_contract.entry_tick = contract.entry_tick
+    state.proposal_open_contract.entry_tick = contract.entry_tick;
     state.proposal_open_contract.entry_tick_time = contract.entry_tick_time;
     state.proposal_open_contract.status = contract.status;
     state.proposal_open_contract.is_sold = contract.is_sold;
-    state.proposal_open_contract.exit_tick = contract.exit_tick
+    state.proposal_open_contract.exit_tick = contract.exit_tick;
     state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
     state.proposal_open_contract.date_expiry = contract.date_expiry;
     state.proposal_open_contract.sell_price = contract.sell_price;
