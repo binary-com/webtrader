@@ -227,8 +227,10 @@ const updateIndicative = (data, state) => {
 
   function updateState(contract, state) {
     const sell_time = contract.is_path_dependent && contract.status !== 'sold' ? contract.exit_tick_time : parseInt(contract.sell_time);
+    const pip_value = getSymbolPipValue(contract.underlying);
 
     // note: cannot use spread operator - rivets.js 2-way data-binding breaks if new object
+    state.proposal_open_contract.pip = pip_value;
     state.proposal_open_contract.is_sold_before_expiry = sell_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
@@ -493,6 +495,7 @@ const initState = (proposal, root) => {
         is_sold_before_expiry: sell_time < proposal.date_expiry,
         isLookback: Lookback.isLookback(proposal.contract_type),
         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
+        pip: 0,
       },
       sell: {
          bid_prices: [],

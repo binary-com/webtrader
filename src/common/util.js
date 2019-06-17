@@ -131,6 +131,21 @@ function addComma(num, decimal_points, is_crypto) {
     });
 };
 
+function getSymbolPipValue(symbol) {
+  var active_symbols = local_storage.get('active_symbols');
+  var pip_value = 4;
+  var selected_symbol = active_symbols.find(function(item) {
+    return item.symbol === symbol;
+  });
+
+  if (selected_symbol) {
+    var symbol_pip = selected_symbol.pip.toString();
+    pip_value = symbol_pip.substring(symbol_pip.indexOf(".") + 1).length;
+  }
+
+  return pip_value;
+};
+
 function sortAlphaNum(property) {
     "use strict";
     var reA = /[^a-zA-Z]/g;

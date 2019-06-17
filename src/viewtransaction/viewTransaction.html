@@ -51,18 +51,18 @@
         <p>Entry Spot</p>
           <span rv-data-balloon="proposal_open_contract.entry_tick_time | moment | or '-'"
                 rv-if="proposal_open_contract.entry_tick_time"
-                rv-text="proposal_open_contract.entry_tick | add-comma | or '-'"
+                rv-text="proposal_open_contract.entry_tick | add-comma proposal_open_contract.pip | or '-'"
                 class="dotted-underline entry-spot"></span>
       </div>
       <div rv-if="proposal_open_contract.user_sold | not-eq true | and proposal_open_contract.exit_tick | eq undefined"> <p>Current Spot</p>
-          <span rv-text="proposal_open_contract.current_spot | or '-'" rv-indicative-color="proposal_open_contract.current_spot"></span>
+          <span rv-text="proposal_open_contract.current_spot | add-comma proposal_open_contract.pip | or '-'" rv-indicative-color="proposal_open_contract.current_spot"></span>
       </div>
       <div rv-if="proposal_open_contract.user_sold | not-eq true | and proposal_open_contract.exit_tick | and proposal_open_contract.isLookback | eq false"> <p>Exit Spot</p>
-          <span rv-text="proposal_open_contract.exit_tick | add-comma | or '-'"></span>
+          <span rv-text="proposal_open_contract.exit_tick | add-comma proposal_open_contract.pip | or '-'"></span>
       </div>
       <div rv-if="proposal_open_contract.isLookback">
         <p>Close</p>
-        <span rv-text="proposal_open_contract.exit_tick | add-comma | or '-'"></span>
+        <span rv-text="proposal_open_contract.exit_tick | add-comma proposal_open_contract.pip | or '-'"></span>
       </div>
       <div rv-if="proposal_open_contract.multiplier">
         <p>Multiplier</p>
@@ -95,7 +95,7 @@
                 rv-data-balloon='"return"'
                 class="dotted-underline smaller"></span>
       </div>
-      <div rv-if="proposal_open_contract.sell_price">
+      <div rv-if="proposal_open_contract.sell_price | has-value">
         <div rv-class-center="proposal_open_contract.user_sold | or proposal_open_contract.barrier_count | eq 2"> <p>Final Price</p>
           <span rv-html="proposal_open_contract.sell_price | format-price proposal_open_contract.currency | or '-'"></span>
           <br/>
@@ -113,7 +113,7 @@
       <div> <p>Entry Spot</p>
         <span rv-data-balloon="proposal_open_contract.entry_tick_time | moment | or '-'"
                 rv-if="proposal_open_contract.entry_tick_time"
-                rv-text="proposal_open_contract.entry_tick | add-comma | or '-'"
+                rv-text="proposal_open_contract.entry_tick | add-comma proposal_open_contract.pip | or '-'"
                 class="dotted-underline">
         </span>
         <span rv-data-balloon="proposal_open_contract.purchase_time | moment | or '-'"
@@ -124,8 +124,8 @@
       </div>
       <div rv-if="proposal_open_contract.is_sold | eq 1"> <p>Exit Spot</p>
           <span rv-data-balloon="proposal_open_contract.exit_tick_time | moment | or '-'"
-                rv-text="proposal_open_contract.exit_tick | add-comma | or '-'"
-                rv-class-dotted-underline="proposal_open_contract.exit_tick | add-comma"></span>
+                rv-text="proposal_open_contract.exit_tick | add-comma proposal_open_contract.pip | or '-'"
+                rv-class-dotted-underline="proposal_open_contract.exit_tick | add-comma proposal_open_contract.pip"></span>
       </div>
       <div rv-if="proposal_open_contract.is_sold | eq 0"> <p>Current Level</p>
           <span rv-data-balloon="proposal_open_contract.current_spot_time | moment | or '-'"
