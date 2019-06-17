@@ -45,12 +45,6 @@ const showMarketDataDisruptionWindow = () => {
    window.dd = market_data_disruption_win;
 };
 
-const countDecimals = (value) => {
-  if ((value % 1) !== 0) 
-      return value.toString().split(".")[1].length;  
-  return 0;
-};
-
 const initChart = (root, state, options) => {
    let data = [];
    let type = '';
@@ -233,17 +227,19 @@ const updateIndicative = (data, state) => {
 
   function updateState(contract, state) {
     const sell_time = contract.is_path_dependent && contract.status !== 'sold' ? contract.exit_tick_time : parseInt(contract.sell_time);
+    const pip_value = getSymbolPipValue(contract.underlying);
 
     // note: cannot use spread operator - rivets.js 2-way data-binding breaks if new object
+    state.proposal_open_contract.pip = pip_value;
     state.proposal_open_contract.is_sold_before_expiry = sell_time < contract.date_expiry;
     state.proposal_open_contract.current_spot = contract.current_spot;
     state.proposal_open_contract.current_spot_time = contract.current_spot_time;
     state.proposal_open_contract.bid_price = contract.bid_price;
-    state.proposal_open_contract.entry_tick = countDecimals(contract.entry_tick) < 3 ? contract.entry_tick.toFixed(3) : contract.entry_tick;
+    state.proposal_open_contract.entry_tick = contract.entry_tick;
     state.proposal_open_contract.entry_tick_time = contract.entry_tick_time;
     state.proposal_open_contract.status = contract.status;
     state.proposal_open_contract.is_sold = contract.is_sold;
-    state.proposal_open_contract.exit_tick = countDecimals(contract.exit_tick) < 3 ? contract.exit_tick.toFixed(3) : contract.exit_tick;
+    state.proposal_open_contract.exit_tick = contract.exit_tick;
     state.proposal_open_contract.exit_tick_time = contract.exit_tick_time;
     state.proposal_open_contract.date_expiry = contract.date_expiry;
     state.proposal_open_contract.sell_price = contract.sell_price;
@@ -499,6 +495,7 @@ const initState = (proposal, root) => {
         is_sold_before_expiry: sell_time < proposal.date_expiry,
         isLookback: Lookback.isLookback(proposal.contract_type),
         lb_formula: Lookback.formula(proposal.contract_type, proposal.multiplier && formatPrice(proposal.multiplier, proposal.currency ||  'USD')),
+        pip: 0,
       },
       sell: {
          bid_prices: [],

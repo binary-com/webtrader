@@ -399,7 +399,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       multiplier: "0",
       error: '',
       loading: true, /* the proposal request state */
-
+      pip: getSymbolPipValue(symbol.symbol),
       /* computed properties */
       netprofit_: function () {
         const {contract_type} = state.category_displays.selected;
