@@ -45,7 +45,7 @@ class AccountStatus {
     this.is_mf = /^maltainvest$/gi.test(response.authorize.landing_company_name);
     this.is_cr = /^svg|costarica$/gi.test(response.authorize.landing_company_name);
     this.has_mt5_account = mt5_account.mt5_login_list.length > 0;
-    this.is_authenticated = !account_status.get_account_status.prompt_client_to_authenticate;
+    this.is_authenticated = parseInt(account_status.get_account_status.prompt_client_to_authenticate);
     // Check whether the user has accepted the T&C.
     if (website_status && website_status.website_status && get_settings && get_settings.get_settings) {
       this.tc_accepted = website_status.website_status.terms_conditions_version === get_settings.get_settings.client_tnc_status;
