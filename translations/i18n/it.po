@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-05-23 05:30\n"
+"PO-Revision-Date: 2019-06-21 05:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Altro"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr "Al di fuori dell'UE, i prodotti finanziari sono offerti da Binary (SVG) Ltd, Hinds Building, Kingstown, San Vincenzo e Grenadine; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regolamentata dalla Vanuatu Financial Services Commission ([_1]vedi licenza[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Isole Vergini britanniche, regolamentata dalla British Virgin Islands Financial Services Commission ([_3]licenza n. SIBA/L/18/1114[_4]); e Binary (FX) Ltd., lotto n. F16, primo piano, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malesia, regolamentata dalla Labuan Financial Services Authority per svolgere attività di intermediazione nel mercato finanziario([_5]licenza n. MB/18/0024[_6])."
+msgstr "Al di fuori dell'UE, i prodotti finanziari sono offerti da Binary (SVG) Ltd, Hinds Building, Kingstown, San Vincenzo e Grenadine; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regolamentata dalla Vanuatu Financial Services Commission ([_1]vedi licenza[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Isole Vergini britanniche, regolamentata dalla British Virgin Islands Financial Services Commission ([_3]licenza n. SIBA/L/18/1114[_4]); e Binary (FX) Ltd., lotto n. F16, primo piano, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malesia, regolamentata dalla Labuan Financial Services Authority per svolgere attività di intermediazione nel mercato finanziario ([_5]licenza n. MB/18/0024[_6])."
 
 msgid "Over"
 msgstr "Su"
