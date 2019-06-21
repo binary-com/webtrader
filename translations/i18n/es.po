@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-06-21 05:50\n"
+"PO-Revision-Date: 2019-06-21 08:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -802,7 +802,7 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Para aplicar correctamente el tema, se requiere una actualización completa de la página. ¿Está seguro que desea proceder?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizado y regulado como proveedor de servicios de inversión de categoría 3, por la Autoridad de Servicios Financieros de Malta [_1](número de licencia IS/70156)[_2]."
+msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizado y regulado como proveedor de servicios de inversión de categoría 3, por la Autoridad de Servicios Financieros de Malta ([_1]número de licencia IS/70156[_2])."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
 msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulado como proveedor de servicios de categoría 3, por la Autoridad de Servicios Financieros de Malta ([_1]cencia n° IS/70156[_2])."
