@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-05-23 23:00\n"
+"PO-Revision-Date: 2019-06-21 08:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -802,10 +802,10 @@ msgid "In order to properly apply theme, a full refresh of page is required. Are
 msgstr "Para aplicar correctamente el tema, se requiere una actualización completa de la página. ¿Está seguro que desea proceder?"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizado y regulado como proveedor de servicios de inversión de categoría 3, por la Autoridad de Servicios Financieros de Malta [_1](número de licencia IS/70156)[_2]."
+msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizado y regulado como proveedor de servicios de inversión de categoría 3, por la Autoridad de Servicios Financieros de Malta ([_1]licencia núm. IS/70156[_2])."
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulado como proveedor de servicios de categoría 3, por la Autoridad de Servicios Financieros de Malta ([_1]cencia n° IS/70156[_2])."
+msgstr "En la Unión Europea, los productos de inversión se ofrecen a través de Binary Investments (Europe) Ltd., W Business Centre, Nivel 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulado como proveedor de servicios de categoría 3, por la Autoridad de Servicios Financieros de Malta ([_1]licencia núm. IS/70156[_2])."
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "En la Isla de Man y el Reino Unido, los índices de volatilidad se ofrecen a través de Binary (IOM) Ltd., Primer Piso, Millennium House, Victoria Road, Douglas, IM2 4RW, Isla de Man, Islas Británica, licenciado y regulado respectivamente por (1) la Comisión Supervisora de Apuestas de la Isla de Man (licencia actual otorgada el 31 de agosto de 2017) y por (2) la Comisión de Apuestas del Reino Unido (número de [_1]referencia de licencia 39172[_2])."
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Otro"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr "Fuera de la UE, los productos financieros son ofrecidos por Binary (SVG) Ltd, Edificio Hinds, Kingstown, San Vicente y las Granadinas; Binary (V) Ltd, Edificio Govant, Port Vila, PO Box 1276, Vanuatu, regulada por la Comisión de Servicios Financieros de Vanuatu ([_1]1ver licencia[_2])]; Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Islas Vírgenes Británicas, regulada por la Comisión de Servicios Financieros de las Islas Vírgenes Británicas ([_3]licencia núm. SIBA/L/18/1114[_4]); y Binary (FX) Ltd, Lote Núm. F16, Primer Piso, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malasia, regulada por la Autoridad de Servicios Financieros de Labuan para realización de un negocio de corretaje de cambios ([_5]5licencia núm. MB/18/0024[_6])."
+msgstr "Fuera de la UE, los productos financieros son ofrecidos por Binary (SVG) Ltd, Edificio Hinds, Kingstown, San Vicente y las Granadinas; Binary (V) Ltd, Edificio Govant, Port Vila, PO Box 1276, Vanuatu, regulada por la Comisión de Servicios Financieros de Vanuatu ([_1]ver licencia[_2])]; Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Islas Vírgenes Británicas, regulada por la Comisión de Servicios Financieros de las Islas Vírgenes Británicas ([_3]licencia núm. SIBA/L/18/1114[_4]); y Binary (FX) Ltd, Lote Núm. F16, Primer Piso, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malasia, regulada por la Autoridad de Servicios Financieros de Labuan para realización de un negocio de corretaje de cambios ([_5]licencia núm. MB/18/0024[_6])."
 
 msgid "Over"
 msgstr "Encima"

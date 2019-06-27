@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2019-05-23 05:20\n"
+"PO-Revision-Date: 2019-06-21 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -805,7 +805,7 @@ msgid "In the EU, financial products are offered by Binary Investments (Europe) 
 msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta。由马耳他金融服务机构授予牌照及监管为3级投资服务提供商([_1]牌照号码为 IS/70156[_2])。"
 
 msgid "In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2])."
-msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta。由马耳他金融服务机构监管为3级投资服务提供商([_1]牌照号码为 IS/70156[_2])。"
+msgstr "欧盟国家的金融产品交易由Binary Investments (Europe) Ltd提供，地址为 W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta。由马耳他金融服务机构监管为3级投资服务提供商 ([_1]牌照号码为 IS/70156[_2])。"
 
 msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2])."
 msgstr "英国和马恩岛的波动率指数交易由Binary (IOM) Ltd. 提供，地址为：First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles；由(1) 不列颠群岛马恩岛博彩监管委员会授予牌照和监管（当前在线牌照于2012 年8 月31 日颁发）及(2) 英国博彩委员会授予牌照和监管 (牌照 [_1]编号: 39172[_2])。"
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "其它"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr "欧盟以外地区，金融产品由Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu提供服务，受瓦努阿图金融服务委员会监管（[_1]查看许可证[_2]），或由Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands 提供服务，受英属维尔京群岛金融服务委员会监管（[_3]许可证编号SIBA/L/18/1114[_4]），以及由Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia提供服务，受纳闽金融服务管理局监管，并开展货币经纪业务（[_5]许可证编号MB/18/0024[_6]）。"
+msgstr "欧盟以外地区，金融产品由Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines提供服务；Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu提供服务，受瓦努阿图金融服务委员会监管（[_1]查看许可证[_2]）；Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands 提供服务，受英属维尔京群岛金融服务委员会监管（[_3]许可证编号SIBA/L/18/1114[_4]）；Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia提供服务，受纳闽金融服务管理局监管，并开展货币经纪业务（[_5]许可证编号MB/18/0024[_6]）。"
 
 msgid "Over"
 msgstr "超过"

@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2019-05-23 05:40\n"
+"PO-Revision-Date: 2019-06-21 06:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-Funds.aspx\""
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "Khác"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr "Ngoài EU, các sản phẩm tài chính được cung cấp bởi Binary (SVG) Ltd, Tòa Hinds, Kingstown, St.Vincent và Grenadines, Binary (V) Ltd, Tòa nhà Govant, Port Vila, PO Box 1276, Vanuatu, được quy định bởi Ủy ban Dịch vụ Tài chính Vanuatu ([_1]xem giấy phép([_2]), Binary (BVI) Ltd, Tầng 2, Kingston Chambers, PO Box 173, Road Town, Tortola, Quần đảo British Virgin, được quy định bởi Ủy ban Dịch vụ Tài chính Quần đảo British Virgin ([_3]giấy phép số. SIBA/L/18/1114[_4]) và Binary (FX) Ltd., Lô số F16, Tầng 1, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, do Cơ quan dịch vụ tài chính Labuan quy định để thực hiện công việc kinh doanh tiền tệ ([_5] giấy phép số. MB/18/0024[_6])."
+msgstr "Ngoài EU, các sản phẩm tài chính được cung cấp bởi Binary (SVG) Ltd, Tòa Hinds, Kingstown, St.Vincent và Grenadines, Binary (V) Ltd, Tòa nhà Govant, Port Vila, PO Box 1276, Vanuatu, được quy định bởi Ủy ban Dịch vụ Tài chính Vanuatu ([_1]xem giấy phép[_2]), Binary (BVI) Ltd, Tầng 2, Kingston Chambers, PO Box 173, Road Town, Tortola, Quần đảo British Virgin, được quy định bởi Ủy ban Dịch vụ Tài chính Quần đảo British Virgin ([_3]giấy phép số. SIBA/L/18/1114[_4]) và Binary (FX) Ltd., Lô số F16, Tầng 1, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, do Cơ quan dịch vụ tài chính Labuan quy định để thực hiện công việc kinh doanh tiền tệ ([_5]giấy phép số. MB/18/0024[_6])."
 
 msgid "Over"
 msgstr "Qua"
