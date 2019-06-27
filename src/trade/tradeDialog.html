@@ -299,13 +299,13 @@
         rv-if="categories.value.contract_category | not-eq 'spreads' | and proposal.error | eq ''"
         rv-css-opacity="proposal.loading | or purchase.loading | ternary 0.5 1">
         <li class="message-row-wrapper__container">
-          <span rv-show='proposal.netprofit_ < ask_price payout'>
+          <span rv-if='proposal.netprofit_ < ask_price payout'>
             Net Profit: <span rv-html="proposal.netprofit_ < ask_price payout"> </span> |
           </span>
           <span>
             Payout: <span rv-html="proposal.payout_ | call proposal.payout proposal.ask_price proposal.multiplier category_displays.selected.contract_type"> </span>
           </span>
-          <span rv-show="proposal.return_ < ask_price payout">
+          <span rv-if="proposal.return_ < ask_price payout">
              | Return: <span rv-html="proposal.return_ < ask_price payout"> </span>
           </span>
         </li>
