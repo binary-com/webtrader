@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2019-05-23 05:30\n"
+"PO-Revision-Date: 2019-06-21 06:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1171,7 +1171,7 @@ msgid "Other"
 msgstr "其它"
 
 msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6])."
-msgstr "歐盟以外地區，金融產品由Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines 提供服務。Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu提供服務，受瓦努阿圖金融服務委員會監管（[_1]查看執照[_2]），或由Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands 提供服務，受英屬維爾京群島金融服務委員會監管（[_3]執照編號SIBA/L/18/1114[_4]）以及由Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia提供服務，受納閩金融服務管理局監管，並開展貨幣經紀業務（[_5]執照編號MB/18/0024[_6]）。"
+msgstr "歐盟以外地區，金融產品由Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines 提供服務；Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu提供服務，受瓦努阿圖金融服務委員會監管（[_1]查看執照[_2]）；Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands 提供服務，受英屬維爾京群島金融服務委員會監管（[_3]執照編號SIBA/L/18/1114[_4]）；Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia提供服務，受納閩金融服務管理局監管，並開展貨幣經紀業務（[_5]執照編號MB/18/0024[_6]）。"
 
 msgid "Over"
 msgstr "超過"

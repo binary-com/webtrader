@@ -97,24 +97,16 @@
   },
   "contributors": [
     {
-      "name": "Amin Roosta",
-      "email": "amin@binary.com"
+      "name": "Amin Roosta"
     },
     {
-      "name": "Apoorv Joshi",
-      "email": "apoorv@binary.com"
+      "name": "Apoorv Joshi"
     },
     {
-      "name": "Arnab Karmakar",
-      "email": "arnab@binary.com"
+      "name": "Oskar Ahlroth"
     },
     {
-      "name": "Oskar Ahlroth",
-      "email": "oskar@binary.com"
-    },
-    {
-      "name": "Amam Mustofa",
-      "email": "mustofa@binary.com"
+      "name": "Amam Mustofa"
     }
   ]
 }

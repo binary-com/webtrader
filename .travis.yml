@@ -16,8 +16,8 @@ before_install:
 install:
 - npm run build
 after_success:
-- git config --global user.email "oskar@binary.com"
-- git config --global user.name "OskarAhl"
+- git config --global user.email $GITHUB_EMAIL
+- git config --global user.name $GITHUB_USERNAME
 - npm run deploy-gh-pages
 env:
   global:
