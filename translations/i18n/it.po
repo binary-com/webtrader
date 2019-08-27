@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-06-21 05:50\n"
+"PO-Revision-Date: 2019-08-27 14:57\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -37,7 +37,7 @@ msgid "0-1 year"
 msgstr "0-1 anno"
 
 msgid "0-5 transactions in the past 12 months"
-msgstr "0-5 transazioni negli ultimi 12 mesi"
+msgstr "0-5 operazioni negli ultimi 12 mesi"
 
 msgid "1"
 msgstr "1"
@@ -115,7 +115,7 @@ msgid "30 Minutes"
 msgstr "30 minuti"
 
 msgid "30-day limit on losses"
-msgstr "limite delle perdite per 30 giorni"
+msgstr "limite di 30 giorni sulle perdite"
 
 msgid "30-day turnover limit"
 msgstr "limite di turnover per 30 giorni"
@@ -133,7 +133,7 @@ msgid "4 Hours"
 msgstr "4 ore"
 
 msgid "40 transactions or more in the past 12 months"
-msgstr "40 transazioni o più negli ultimi 12 mesi"
+msgstr "40 o più operazioni negli ultimi 12 mesi"
 
 msgid "4h"
 msgstr "4h"
