@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
-"PO-Revision-Date: 2019-05-22 14:11\n"
+"PO-Revision-Date: 2019-08-21 04:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -229,7 +229,7 @@ msgid "Amount per point"
 msgstr "จำนวนต่อจุด"
 
 msgid "Apply"
-msgstr "สมัคร"
+msgstr "ใช้งาน"
 
 msgid "Apply to become a Binary.com"
 msgstr "สมัครเพื่อเป็นตัวแทนรับชำระเงินกับ Binary.com"
