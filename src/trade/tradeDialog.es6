@@ -891,7 +891,13 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       let response;
       for (let i = 0; i < times_to_retry; i++) {
         try {
-          response = await liveapi.send(request);
+          const { contract_type } = state.category_displays.selected;
+          if (Lookback.isLookback(contract_type)) {
+            const lookback_request = Lookback.makeLookbackRequest(request);
+            response = await liveapi.send(lookback_request);
+          } else {
+            response = await liveapi.send(request);
+          }
           state.proposal.error = '';
           state.proposal.id = response.proposal && response.proposal.id;
           break;
