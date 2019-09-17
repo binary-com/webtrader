@@ -19,8 +19,18 @@ export const barrierLabels = (type) => {
   return barrier_map[type];
 }
 
+export const makeLookbackRequest = req => {
+  const { amount } = req;
+  const multiplier = amount ? +amount : 0;
+  delete req.amount;
+  delete req.basis;
+
+  return { ...req, multiplier }
+}
+
 export default {
   isLookback,
   formula,
-  barrierLabels
+  barrierLabels,
+  makeLookbackRequest
 }

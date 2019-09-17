@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2019-05-23 05:20\n"
+"PO-Revision-Date: 2019-08-21 05:00\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -958,7 +958,7 @@ msgid "Logging out because of self-exclusion session time out!"
 msgstr "Keluar berhubung sesi waktu pengecualian diri!"
 
 msgid "Login"
-msgstr "Login"
+msgstr "Masuk"
 
 msgid "Logout"
 msgstr "Keluar"
