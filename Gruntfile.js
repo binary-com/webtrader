@@ -203,7 +203,7 @@ module.exports = function (grunt) {
                 options: {
                     base: "dist/compressed",
                     add: true,
-                    repo: "https://" + process.env.GIT_KEY + "@github.com/binary-com/webtrader.git",
+                    repo: "https://" + process.env.MY_SECRET_ENV + "@github.com/binary-com/webtrader.git",
                     message: "Commit v<%=pkg.version%> from TravisCI for [" + process.env.TRAVIS_BRANCH + "]"
                 },
                 src: ["**/*"]
