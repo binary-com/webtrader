@@ -3,7 +3,7 @@ const sortMarkets = (() => {
         forex: 1,
         indices: 2,
         commodities: 3,
-        synthetic_index: 4,
+        volidx: 4,
     };
 
     return function sortMarkets(markets) {
