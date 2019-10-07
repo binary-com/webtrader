@@ -10,13 +10,13 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-08-27 14:57\n"
+"PO-Revision-Date: 2019-10-07 14:21\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 
 msgid "(if less than one day in duration), or at the end of the trading day (if one day or more in duration)"
-msgstr "(se dura meno di un giorno), oppure alla fine della giornata di trading (se dura un giorno o più)"
+msgstr "(se la durata è inferiore a un giorno), oppure alla fine della giornata di trading (se la durata è equivalente o superiore a un giorno)"
 
 msgid "* Contract has not started yet"
 msgstr "* Il contratto non è ancora iniziato"
