@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-07 14:21\n"
+"PO-Revision-Date: 2019-10-07 14:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -175,7 +175,7 @@ msgid "Accessible from any web browser in 13 languages"
 msgstr "Accessibile da qualsiasi browser web in 13 lingue"
 
 msgid "Account balance"
-msgstr "Saldo dell'account"
+msgstr "Saldo del conto"
 
 msgid "Account balance:"
 msgstr "Saldo del conto:"
