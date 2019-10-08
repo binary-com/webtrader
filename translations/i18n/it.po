@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-08 08:42\n"
+"PO-Revision-Date: 2019-10-08 08:51\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -304,13 +304,13 @@ msgid "Binary.com : Webtrader"
 msgstr "Binary.com : Webtrader"
 
 msgid "Binary.com is an award-winning online trading provider that helps its clients to trade on financial markets through binary options and CFDs. Trading binary options and CFDs on Volatility Indices is classified as a gambling activity. Remember that gambling can be addictive - please play responsibly. Learn more about [_1]Responsible Trading[_2]. Some products are not available in all countries. This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
-msgstr "Binary.com è un fornitore di servizi online, premiato con vari riconoscimenti, che aiuta i clienti ad effettuare trading nei mercati finanziari attraverso opzioni binarie e CFD. Il trading di opzioni binarie e CFD sugli indici di volatilità è classificato come attività di gioco d'azzardo. È importante essere consapevoli che il gioco d'azzardo può creare dipendenza; ti invitiamo a giocare in modo responsabile. Scopri di più sul [_1]trading responsabile[_2]. Alcuni prodotti non sono disponibili in tutti i paesi. I servizi offerti su questo sito web non sono disponibili in alcuni paesi, come USA, Canada, Hong Kong, o per le persone di età inferiore ai 18 anni."
+msgstr "Binary.com è un pluripremiato fornitore di servizi online che aiuta i clienti ad effettuare trading nei mercati finanziari attraverso opzioni binarie e CFD. Il trading di opzioni binarie e CFD sugli indici di volatilità è classificato come attività di gioco d'azzardo. È importante essere consapevoli che il gioco d'azzardo può creare dipendenza; ti invitiamo a giocare in modo responsabile. Scopri di più sul [_1]trading responsabile[_2]. Alcuni prodotti non sono disponibili in tutti i Paesi. I servizi offerti su questo sito web non sono disponibili in alcuni paesi, quali USA, Canada, Hong Kong, o per le persone di età inferiore ai 18 anni."
 
 msgid "Blank window"
 msgstr "Finestra vuota"
 
 msgid "Bought"
-msgstr "Comprato"
+msgstr "Acquistato"
 
 msgid "Brand of first car"
 msgstr "Marca della prima auto"
@@ -325,22 +325,22 @@ msgid "Buy price"
 msgstr "Prezzo d'acquisto"
 
 msgid "By clicking OK, you confirm that you have read and accepted the updated"
-msgstr "Cliccando OK, confermi di aver letto e accettato l'aggiornamento"
+msgstr "Facendo clic su OK, confermi di aver letto e accettato l'aggiornamento"
 
 msgid "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money."
-msgstr "I CFD sono strumenti complessi che implicano un rischio elevato di perdite rapide di denaro a causa della leva finanziaria. Il 74%-89% degli investitori al dettaglio subisce perdite effettuando trading su CFD. Ti invitiamo a valutare se sei effettivamente in grado di comprendere il funzionamento dei CFD e nelle condizioni di correre l'elevato rischio di perdere del denaro."
+msgstr "I CFD sono strumenti complessi che implicano un elevato rischio di perdita immediata di denaro a causa della leva finanziaria. Il 74%-89% degli investitori al dettaglio subisce perdite effettuando trading su CFD. Ti invitiamo a valutare se sei effettivamente in grado di comprendere il funzionamento dei CFD e se ti trovi nelle condizioni di correre l'elevato rischio di perdere del denaro."
 
 msgid "Can be used to buy and sell contracts, renew expired purchases, and top-up virtual-money accounts."
-msgstr "Può essere utilizzato per acquistare e vendere contratti, rinnovare acquisti scaduti e integrare account di moneta virtuale."
+msgstr "Può essere utilizzato per acquistare e vendere contratti, rinnovare acquisti scaduti ed effettuare versamenti su conti in moneta virtuale."
 
 msgid "Can be used to open accounts, set settings, manage token usage, and more."
-msgstr "Può essere utilizzato per aprire account, configurare le impostazioni, gestire l'uso dei token e altro."
+msgstr "Può essere utilizzato per aprire conti, configurare le impostazioni, gestire l'uso dei token e molto altro."
 
 msgid "Can be used to view account activity, including settings, limits, balance sheets, trade purchase history, and more."
-msgstr "Può essere utilizzato per visualizzare l'attività dell'account, incluse le impostazioni, limiti, bilanci, storico dei trade e altro."
+msgstr "Può essere utilizzato per visualizzare l'attività del conto, comprese le impostazioni, i limiti, i bilanci, lo storico dei trade e molto altro."
 
 msgid "Can be used to withdraw to payment agents, transfer funds between accounts, and set / clear cashier passwords."
-msgstr "Può essere utilizzato per prelevare dagli agenti di pagamento, trasferire fondi tra account e impostare / eliminare le password della cassa."
+msgstr "Può essere utilizzato per prelevare dagli agenti di pagamento, trasferire fondi tra conti e impostare/eliminare le password della cassa."
 
 msgid "Cancel"
 msgstr "Cancella"
@@ -394,7 +394,7 @@ msgid "Chrome"
 msgstr "Chrome"
 
 msgid "Click to log in with your Binary.com account"
-msgstr "Clicca per accedere con il tuo account Binary.com"
+msgstr "Fai clic per accedere con il tuo conto Binary.com"
 
 msgid "Close"
 msgstr "Chiudi"
@@ -412,7 +412,7 @@ msgid "Confirm transfer"
 msgstr "Conferma il trasferimento"
 
 msgid "Connection closed."
-msgstr "Connessione chiusa."
+msgstr "Connessione interrotta."
 
 msgid "Connection error."
 msgstr "Errore di connessione."
@@ -439,7 +439,7 @@ msgid "Contracts"
 msgstr "Contratti"
 
 msgid "Copier"
-msgstr "Copia"
+msgstr "Imitatore"
 
 msgid "Copy Trading"
 msgstr "Copy Trading"
