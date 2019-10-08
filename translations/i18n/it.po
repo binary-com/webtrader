@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-07 14:31\n"
+"PO-Revision-Date: 2019-10-08 08:42\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -31,7 +31,7 @@ msgid "* Please enter your new password"
 msgstr "* Inserisci la nuova password"
 
 msgid "- Binary.com is not affiliated with any of the Payment Agents listed above. Each Payment Agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of Payment Agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and Payment Agents"
-msgstr "- Binary.com non è affiliato con alcun Agente di pagamento elencato qui sopra. Ogni Agente di pagamento opera come provider di servizi indipendente e non è in alcun modo sostenuto, garantito o approvato da Binary.com. I CLIENTI TRATTANO CON GLI AGENTI DI PAGAMENTO A PROPRIO RISCHIO E PERICOLO. Ai clienti si consiglia di controllare le credenziali degli Agenti di pagamento prima di inviare loro qualsiasi somma di denaro. Binary.com non è in alcun modo responsabile per le transazioni eseguite tra i clienti e gli Agenti di pagamento"
+msgstr "- Binary.com non è affiliato con alcun Agente di pagamento elencato qui sopra. Ogni Agente di pagamento opera come fornitore di servizi indipendente e non è in alcun modo appoggiato o approvato da Binary.com, il quale tantomeno fa da garante. I CLIENTI TRATTANO CON GLI AGENTI DI PAGAMENTO A PROPRIO RISCHIO E PERICOLO. Ai clienti si consiglia di controllare le credenziali degli Agenti di pagamento prima di inviare loro qualsiasi somma di denaro. Binary.com non è in alcun modo responsabile per le transazioni eseguite tra i clienti e gli Agenti di pagamento"
 
 msgid "0-1 year"
 msgstr "0-1 anno"
@@ -187,7 +187,7 @@ msgid "Account token not found."
 msgstr "Token del conto non trovato."
 
 msgid "Action"
-msgstr "Azione"
+msgstr "Avviare"
 
 msgid "Active"
 msgstr "Attivo"
@@ -202,13 +202,13 @@ msgid "Add indicator"
 msgstr "Aggiungi indicatore"
 
 msgid "Add/Remove comparisons"
-msgstr "Aggiungi/Rimuovi i confronti"
+msgstr "Aggiungi/rimuovi confronti"
 
 msgid "Add/Remove indicators"
-msgstr "Aggiungi/Rimuovi gli indicatori"
+msgstr "Aggiungi/rimuovi indicatori"
 
 msgid "Add/remove indicators"
-msgstr "Aggiungi/Rimuovi indicatori"
+msgstr "Aggiungi/rimuovi indicatori"
 
 msgid "Added new workspace %"
 msgstr "Aggiunta nuova area di lavoro %"
@@ -292,7 +292,7 @@ msgid "Barrier"
 msgstr "Barriera"
 
 msgid "Barrier offset"
-msgstr "Offset di barriera"
+msgstr "Compensazione della barriera"
 
 msgid "Bill Williams"
 msgstr "Bill Williams"
