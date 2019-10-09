@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-08 09:14\n"
+"PO-Revision-Date: 2019-10-09 15:13\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -547,7 +547,7 @@ msgid "Do you want to install Webtrader chrome extension?"
 msgstr "Desideri installare l'estensione chrome di Webtrader?"
 
 msgid "Don't have an account yet? Sign up and get a $10,000 virtual account"
-msgstr "Non hai ancora un account? Registrati e otterrai un account virtuale di 10.000"
+msgstr "Non hai ancora un conto? Registrati e ricevi un conto virtuale di 10.000 $"
 
 msgid "Done"
 msgstr "Fatto"
@@ -562,7 +562,7 @@ msgid "Dot"
 msgstr "Punto"
 
 msgid "Double click the object to remove"
-msgstr "Doppio clic sull'oggetto per rimuovere"
+msgstr "Fai doppio clic sull'oggetto per rimuoverlo"
 
 msgid "Download"
 msgstr "Download"
@@ -574,7 +574,7 @@ msgid "Download JPEG image"
 msgstr "Download dell'immagine JPEG"
 
 msgid "Download PDF document"
-msgstr "Download del documento in PDF"
+msgstr "Download del documento PDF"
 
 msgid "Download PNG"
 msgstr "Download di PNG"
@@ -610,13 +610,13 @@ msgid "EURUSD"
 msgstr "EURUSD"
 
 msgid "Edge"
-msgstr "Vantaggio"
+msgstr "Edge"
 
 msgid "Education"
 msgstr "Istruzione"
 
 msgid "Embed code"
-msgstr "Codice inserito"
+msgstr "Codice incorporato"
 
 msgid "End Time"
 msgstr "Orario di fine"
