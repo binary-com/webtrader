@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-09 15:13\n"
+"PO-Revision-Date: 2019-10-10 16:11\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -631,7 +631,7 @@ msgid "English"
 msgstr "Inglese"
 
 msgid "Enjoy an intuitive trading interface with advanced functionality that lets you monitor all of your favourite assets and markets at the same time, as well as essential charts, the asset index, trading times, and historical data. Most importantly, you get to choose what you want to see on your screen"
-msgstr "Goditi un'interfaccia di trading intuitiva con funzionalità avanzate che ti consente di monitorare tutti i tuoi asset e mercati preferiti contemporaneamente, così come i grafici fondamentali, gli indici degli asset, gli orari di trading e i dati storici. La cosa più importante è che puoi scegliere che cosa desideri guardare sul tuo schermo"
+msgstr "Vivi l'esperienza del trading su un'interfaccia intuitiva con funzionalità avanzate che ti consente di monitorare tutti i tuoi asset e mercati preferiti contemporaneamente, così come i grafici fondamentali, gli indici degli asset, gli orari di trading e i dati storici. Oltretutto, hai la possibilità di scegliere cosa desideri vedere sul tuo schermo"
 
 msgid "Enter a valid trader token"
 msgstr "Inserisci un token per il trading valido"
@@ -661,7 +661,7 @@ msgid "Exclude time must be after today."
 msgstr "Il periodo di esclusione deve essere successivo a oggi."
 
 msgid "Exclude until time cannot be less than 6 months."
-msgstr "L'esclusione non può durare meno di 6 mesi."
+msgstr "Il periodo di esclusione non può essere inferiore a 6 mesi."
 
 msgid "Exclude until time cannot be more than 5 years."
 msgstr "L'esclusione non può durare più di 5 anni."
@@ -748,13 +748,13 @@ msgid "Grid"
 msgstr "Griglia"
 
 msgid "Grid Light"
-msgstr "Griglia light"
+msgstr "Luce griglia"
 
 msgid "Health"
 msgstr "Salute"
 
 msgid "High"
-msgstr "High"
+msgstr "Massimo"
 
 msgid "High Barrier"
 msgstr "Barriera superiore"
@@ -784,7 +784,7 @@ msgid "Hours"
 msgstr "Ore"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr "DISCLAIMER IMPORTANTE"
+msgstr "LIMITAZIONE DI RESPONSABILITÀ IMPORTANTE"
 
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
 msgstr "DISCLAIMER IMPORTANTE - Binary.com non è affiliato con alcun Agente di pagamento elencato qui sopra. Ogni Agente di pagamento opera come provider di servizi indipendente e non è in alcun modo sostenuto, garantito o approvato da Binary.com. I CLIENTI TRATTANO CON GLI AGENTI DI PAGAMENTO A PROPRIO RISCHIO E PERICOLO. Ai clienti si consiglia di controllare le credenziali degli Agenti di pagamento prima di inviare loro qualsiasi somma di denaro. Binary.com non è in alcun modo responsabile per le transazioni eseguite tra i clienti e gli Agenti di pagamento"
