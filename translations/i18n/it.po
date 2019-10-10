@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-10 16:11\n"
+"PO-Revision-Date: 2019-10-10 16:26\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -784,10 +784,10 @@ msgid "Hours"
 msgstr "Ore"
 
 msgid "IMPORTANT DISCLAIMER"
-msgstr "LIMITAZIONE DI RESPONSABILITÀ IMPORTANTE"
+msgstr "DISCLAIMER IMPORTANTE"
 
 msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payment agents listed above. Each payment agent operates as an independent service provider and is not endorsed, guaranteed or otherwise approved by Binary.com. CUSTOMERS DEAL WITH PAYMENT AGENTS AT THEIR SOLE RISK AND PERIL. Customers are advised to check the credentials of payment agents before sending them any money. Binary.com shall not in any circumstance be held responsible for transactions made between customers and payment agents"
-msgstr "DISCLAIMER IMPORTANTE - Binary.com non è affiliato con alcun Agente di pagamento elencato qui sopra. Ogni Agente di pagamento opera come provider di servizi indipendente e non è in alcun modo sostenuto, garantito o approvato da Binary.com. I CLIENTI TRATTANO CON GLI AGENTI DI PAGAMENTO A PROPRIO RISCHIO E PERICOLO. Ai clienti si consiglia di controllare le credenziali degli Agenti di pagamento prima di inviare loro qualsiasi somma di denaro. Binary.com non è in alcun modo responsabile per le transazioni eseguite tra i clienti e gli Agenti di pagamento"
+msgstr "DISCLAIMER IMPORTANTE - Binary.com non è affiliato con alcun Agente di pagamento elencato qui sopra. Ogni Agente di pagamento opera come fornitore di servizi indipendente e non è in alcun modo sostenuto, o approvato da Binary.com, il quale non è nemmeno suo garante. I CLIENTI TRATTANO CON GLI AGENTI DI PAGAMENTO A PROPRIO RISCHIO E PERICOLO. Ai clienti si consiglia di controllare le credenziali degli Agenti di pagamento prima di inviare loro qualsiasi somma di denaro. Binary.com non è in alcun modo responsabile per le transazioni eseguite tra i clienti e gli Agenti di pagamento"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
 msgstr "Se stai valutando l'autoesclusione, potresti volere registrarti con GAMSTOP"
@@ -814,7 +814,7 @@ msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) 
 msgstr "Nel resto dell'UE, gli indici di volatilità sono offerti da Binary (Europe) Ltd., W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizzata e regolamentata dalla (1) Malta Gaming Authority di Malta (licenza n. MGA/B2C/102/2000 rilasciata l'1 agosto 2018); per i clienti nel Regno Unito dalla (2) UK Gambling Commission ( [_1]licenza n. 39495[_2]) e per i clienti irlandesi dalla (3) Revenue Commissioners di Irlanda (licenza del Remote Bookmaker n. 1010285 emessa l'1 luglio 2017). Consulta le [_3]informazioni complete sulla regolamentazione[_4]."
 
 msgid "In/Out"
-msgstr "In/Out"
+msgstr "Dentro/Fuori"
 
 msgid "Indicative"
 msgstr "Indicativo"
@@ -1048,7 +1048,7 @@ msgid "Minutes"
 msgstr "Minuti"
 
 msgid "Miss"
-msgstr "Sig.ra"
+msgstr "Sig. ina"
 
 msgid "Momentum Indicators"
 msgstr "Indicatori Momentum"
@@ -1093,7 +1093,7 @@ msgid "Navigator mask-fill"
 msgstr "Schermata da riempire del navigatore"
 
 msgid "Navigator outline"
-msgstr "Profilo del navigatore"
+msgstr "Contorno navigatore"
 
 msgid "Navigator series color"
 msgstr "Colore di serie del navigatore"
@@ -1111,13 +1111,13 @@ msgid "No"
 msgstr "No"
 
 msgid "No touch"
-msgstr "No touch"
+msgstr "Non tocca"
 
 msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
-msgstr "Attenzione: il contratto verrá venduto al prezzo di mercato prevalente nel momento in cui i nostri server ricevono la richiesta. Tale prezzo può differire rispetto al prezzo indicato."
+msgstr "Attenzione: il contratto verrà venduto al prezzo di mercato prevalente nel momento in cui i nostri server ricevono la richiesta. Tale prezzo può differire dal prezzo indicato."
 
 msgid "Note: withdrawal via payment agent is available only if you deposit exclusively via payment agent"
-msgstr "Nota: il prelievo tramite agente di pagamento è disponibile solo se depositi esclusivamente tramite un agente di pagamento"
+msgstr "Attenzione: il prelievo tramite agente di pagamento è disponibile solo se depositi esclusivamente tramite un agente di pagamento"
 
 msgid "Nov"
 msgstr "Nov"
@@ -1126,7 +1126,7 @@ msgid "November"
 msgstr "Novembre"
 
 msgid "Now"
-msgstr "Ora"
+msgstr "Adesso"
 
 msgid "OHLC"
 msgstr "OHLC"
@@ -1147,7 +1147,7 @@ msgid "Ok"
 msgstr "Ok"
 
 msgid "Once this limit is reached, you may no longer deposit"
-msgstr "Una volta raggiunto questo limite, non puoi più depositare"
+msgstr "Una volta raggiunto questo limite, non potrai più depositare"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
 msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione sul sito web, oppure invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta impostati i limiti, potrai solamente incrementarli; inoltre saranno rimossi o ridotti dopo 7 giorni a eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta confermata. Per rimuovere o aumentare i limiti, ti preghiamo di contattare l'assistenza clienti"
@@ -1156,7 +1156,7 @@ msgid "Open"
 msgstr "Apri"
 
 msgid "Open a Financial Account"
-msgstr "Apri un account finanziario"
+msgstr "Apri un conto finanziario"
 
 msgid "Opens"
 msgstr "Apre"
@@ -1174,7 +1174,7 @@ msgid "Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds
 msgstr "Al di fuori dell'UE, i prodotti finanziari sono offerti da Binary (SVG) Ltd, Hinds Building, Kingstown, San Vincenzo e Grenadine; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regolamentata dalla Vanuatu Financial Services Commission ([_1]vedi licenza[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Isole Vergini britanniche, regolamentata dalla British Virgin Islands Financial Services Commission ([_3]licenza n. SIBA/L/18/1114[_4]); e Binary (FX) Ltd., lotto n. F16, primo piano, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malesia, regolamentata dalla Labuan Financial Services Authority per svolgere attività di intermediazione nel mercato finanziario ([_5]licenza n. MB/18/0024[_6])."
 
 msgid "Over"
-msgstr "Su"
+msgstr "Oltre"
 
 msgid "Over 3 years"
 msgstr "In 3 anni"
