@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-14 15:30\n"
+"PO-Revision-Date: 2019-10-14 15:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1000,16 +1000,16 @@ msgid "Maximum aggregate contract purchases over a 30-day period"
 msgstr "Totale massimo di acquisti di contratti per un periodo di 30 giorni"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
-msgstr "Contratto aggregato massimo acquistato in un periodo di 7 giorni"
+msgstr "Totale massimo di acquisti di contratti per un periodo di 7 giorni"
 
 msgid "Maximum aggregate contract purchases per day"
-msgstr "Contratto aggregato massimo acquistato al giorno"
+msgstr "Totale massimo di acquisti di contratti giornaliero"
 
 msgid "Maximum aggregate loss over a 30-day period"
-msgstr "Perdita aggregata massima in un periodo di 30 giorni"
+msgstr "Totale massimo di perdite per un periodo di 30 giorni"
 
 msgid "Maximum aggregate loss per day"
-msgstr "Perdita aggregata massima al giorno"
+msgstr "Totale massimo perdita giornaliera"
 
 msgid "Maximum balance"
 msgstr "Saldo massimo"
@@ -1033,7 +1033,7 @@ msgid "Min trade stake should be lower than max trade stake."
 msgstr "La puntata minima per il trade deve essere inferiore a quella massima."
 
 msgid "Min. Trade Stake"
-msgstr "Puntata minima per il trade"
+msgstr "Puntata min. per il trade"
 
 msgid "Minimum of six lower and uppercase letters with numbers"
 msgstr "Minimo di sei caratteri tra numeri e lettere maiuscole e minuscole"
@@ -1189,7 +1189,7 @@ msgid "Password successfully updated."
 msgstr "La password è stata aggiornata."
 
 msgid "Passwords didn't match. Please type them again"
-msgstr "Le password non corrispondono. Digitale di nuovo"
+msgstr "Le password non corrispondono. Digitarle nuovamente"
 
 msgid "Pattern Recognition"
 msgstr "Riconoscimento dei pattern"
