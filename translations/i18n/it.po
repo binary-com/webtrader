@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-14 15:21\n"
+"PO-Revision-Date: 2019-10-14 15:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -811,7 +811,7 @@ msgid "In the Isle of Man and the UK, Volatility Indices are offered by Binary (
 msgstr "Nell'Isola di Man e nel Regno Unito, gli indici di volatilità sono offerti da Binary (IOM) Ltd., primo piano, Millennium House, Victoria Road, Douglas, IM2 4RW, Isola di Man, Isole britanniche; autorizzata e regolamentata rispettivamente dalla (1) Gambling Supervision Commission dell'Isola di Man (licenza attuale emessa il 31 agosto 2017) e dalla (2) Gambling Commission del Regno Unito ([_1]licenza n. 39172[_2])."
 
 msgid "In the rest of the EU, Volatility Indices are offered by Binary (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta; licensed and regulated by (1) the Malta Gaming Authority in Malta (licence no. MGA/B2C/102/2000 issued on 01 August 2018), for UK clients by (2) the UK Gambling Commission (licence [_1]reference no: 39495[_2]), and for Irish clients by (3) the Revenue Commissioners in Ireland (Remote Bookmaker's Licence no. 1010285 issued on 1 July 2017). View complete [_3]Regulatory Information[_4]."
-msgstr "Nel resto dell'UE, gli indici di volatilità sono offerti da Binary (Europe) Ltd., W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizzata e regolamentata dalla (1) Malta Gaming Authority di Malta (licenza n. MGA/B2C/102/2000 rilasciata l'1 agosto 2018); per i clienti nel Regno Unito dalla (2) UK Gambling Commission ( [_1]licenza n. 39495[_2]) e per i clienti irlandesi dalla (3) Revenue Commissioners di Irlanda (licenza del Remote Bookmaker n. 1010285 emessa l'1 luglio 2017). Consulta le [_3]informazioni complete sulla regolamentazione[_4]."
+msgstr "Nel resto dell'UE, gli indici di volatilità sono offerti da Binary (Europe) Ltd., W Business Centre, terzo piano, Triq Dun Karm, Birkirkara, BKR 9033, Malta, autorizzata e regolamentata dalla (1) Malta Gaming Authority di Malta (licenza n. MGA/B2C/102/2000 rilasciata l'1 agosto 2018); per i clienti nel Regno Unito dalla (2) UK Gambling Commission ( [_1]licenza n. 39495[_2]) e per i clienti irlandesi dalla (3) Revenue Commissioners di Irlanda (licenza del Remote Bookmaker n. 1010285 emessa l'1 luglio 2017). Consulta le [_3]informazioni regolamentari[_4] complete."
 
 msgid "In/Out"
 msgstr "Dentro/Fuori"
@@ -964,19 +964,19 @@ msgid "Logout"
 msgstr "Logout"
 
 msgid "Low"
-msgstr "Low"
+msgstr "Minimo"
 
 msgid "Low barrier"
 msgstr "Barriera inferiore"
 
 msgid "Low barrier offset"
-msgstr "Offset della barriera inferiore"
+msgstr "Offset barriera inferiore"
 
 msgid "Lower"
 msgstr "Inferiore"
 
 msgid "Make sure that you have first agreed with the Agent on the terms of payment before submitting your request. Once you click the 'Confirm transfer' button the funds will be withdrawn from your account and will be sent to the Payment Agent you have chosen. The Agent will send you the withdrawal amount (minus the commission) via your preferred payment method"
-msgstr "Prima di inviare la richiesta, assicurati di aver prima preso accordi con l'Agente sui termini di pagamento. Dopo aver cliccato sul pulsante \"Conferma trasferimento\", i fondi verranno prelevati dal tuo account e inviati all'Agente di pagamento da te scelto. L'Agente ti invierà l'importo prelevato (al netto delle commissioni) tramite la modalità di pagamento da te preferita"
+msgstr "Prima di inviare la richiesta, assicurati di aver prima preso accordi con l'Agente sui termini di pagamento. Dopo aver cliccato sul pulsante \"Conferma trasferimento\", i fondi verranno prelevati dal tuo conto e inviati all'Agente di pagamento da te scelto, il quale ti invierà l'importo prelevato (al netto delle commissioni) tramite la modalità di pagamento da te preferita"
 
 msgid "Manage"
 msgstr "Gestisci"
@@ -991,13 +991,13 @@ msgid "Matches"
 msgstr "Corrisponde"
 
 msgid "Max. Trade Stake"
-msgstr "Puntata massima per il trade"
+msgstr "Puntata max. trade"
 
 msgid "Maximum account cash balance"
-msgstr "Saldo massimo della cassa dell'account"
+msgstr "Saldo massimo della cassa del conto"
 
 msgid "Maximum aggregate contract purchases over a 30-day period"
-msgstr "Contratto aggregato massimo acquistato negli ultimi 30 giorni"
+msgstr "Totale massimo di acquisti di contratti per un periodo di 30 giorni"
 
 msgid "Maximum aggregate contract purchases over a 7-day period"
 msgstr "Contratto aggregato massimo acquistato in un periodo di 7 giorni"
