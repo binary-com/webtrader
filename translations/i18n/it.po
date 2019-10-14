@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-10 16:26\n"
+"PO-Revision-Date: 2019-10-14 15:10\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -520,7 +520,7 @@ msgid "Delete"
 msgstr "Cancella"
 
 msgid "Demo for affiliates to access Webtrader charts"
-msgstr "Demo per gli affiliati per accedere ai grafici di Webtrader"
+msgstr "Demo dedicato agli affiliati per accedere ai grafici di Webtrader"
 
 msgid "Deposit funds"
 msgstr "Deposita fondi"
@@ -622,10 +622,10 @@ msgid "End Time"
 msgstr "Orario di fine"
 
 msgid "Ends in"
-msgstr "Ends in"
+msgstr "Termina dentro"
 
 msgid "Ends out"
-msgstr "Ends out"
+msgstr "Termina fuori"
 
 msgid "English"
 msgstr "Inglese"
@@ -739,7 +739,7 @@ msgid "Go to"
 msgstr "Vai a"
 
 msgid "Goes out"
-msgstr "Goes out"
+msgstr "Esce"
 
 msgid "Gray"
 msgstr "Grigio"
@@ -790,10 +790,10 @@ msgid "IMPORTANT DISCLAIMER - Binary.com is not affiliated with any of the payme
 msgstr "DISCLAIMER IMPORTANTE - Binary.com non è affiliato con alcun Agente di pagamento elencato qui sopra. Ogni Agente di pagamento opera come fornitore di servizi indipendente e non è in alcun modo sostenuto, o approvato da Binary.com, il quale non è nemmeno suo garante. I CLIENTI TRATTANO CON GLI AGENTI DI PAGAMENTO A PROPRIO RISCHIO E PERICOLO. Ai clienti si consiglia di controllare le credenziali degli Agenti di pagamento prima di inviare loro qualsiasi somma di denaro. Binary.com non è in alcun modo responsabile per le transazioni eseguite tra i clienti e gli Agenti di pagamento"
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP"
-msgstr "Se stai valutando l'autoesclusione, potresti volere registrarti con GAMSTOP"
+msgstr "Se stai valutando l'auto-esclusione, considera di iscriverti a GAMSTOP"
 
 msgid "If you select a"
-msgstr "Se selezioni un"
+msgstr "Se selezioni una delle opzioni seguenti:"
 
 msgid "If you select a specific"
 msgstr "Se selezioni uno specifico"
