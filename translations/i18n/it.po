@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-15 08:22\n"
+"PO-Revision-Date: 2019-10-15 08:30\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una volta raggiunto questo limite, non potrai più depositare"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione sul sito web, oppure invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta impostati, i limiti potranno solamente essere incrementati e saranno rimossi o ridotti dopo 7 giorni; a eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta confermata. Per rimuovere o aumentare i limiti, ti preghiamo di contattare"
+msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione sul sito web, oppure invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta impostati, i limiti potranno solamente essere incrementati e saranno rimossi o ridotti dopo 7 giorni; a eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta confermata. Per rimuovere o innalzare i limiti, ti preghiamo di contattare"
 
 msgid "Open"
 msgstr "Apri"
@@ -1264,7 +1264,7 @@ msgid "Please install the latest version of one of these browsers"
 msgstr "Installa l'ultima versione di uno di questi browser"
 
 msgid "Please keep your message to a single line, don't press enter"
-msgstr "Limitail messaggio a una sola riga, non premere invio"
+msgstr "Limita il messaggio a una sola riga, non premere invio"
 
 msgid "Please log in"
 msgstr "Effettua il login"
@@ -1315,7 +1315,7 @@ msgid "Pre-Defined"
 msgstr "Predefinito"
 
 msgid "Preferred reality-check interval"
-msgstr "Intervallo preferito per il controllo della situazione"
+msgstr "Intervallo preferito per il monitoraggio delle attività"
 
 msgid "Press Create token button on the right to create your first token"
 msgstr "Premi il pulsante Crea token sulla destra per creare il tuo primo token"
@@ -1333,7 +1333,7 @@ msgid "Profit"
 msgstr "Profitto"
 
 msgid "Profit Table"
-msgstr "Tabella dei rendimenti"
+msgstr "Tabella dei profitti"
 
 msgid "Profit table"
 msgstr "Tabella dei profitti"
