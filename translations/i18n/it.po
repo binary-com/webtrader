@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-14 15:40\n"
+"PO-Revision-Date: 2019-10-15 08:22\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1150,7 +1150,7 @@ msgid "Once this limit is reached, you may no longer deposit"
 msgstr "Una volta raggiunto questo limite, non potrai più depositare"
 
 msgid "Online trading can become addictive. Fill in the form below to limit your participation on the website or send a signed letter or fax to our customer support team. Once set, you can only tighten your limits. Limits will only be removed or loosened after 7 days with the exception of the self-exclusion date, which cannot be removed or altered once you have confirmed it. To remove or increase your limits, please contact"
-msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione sul sito web, oppure invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta impostati i limiti, potrai solamente incrementarli; inoltre saranno rimossi o ridotti dopo 7 giorni a eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta confermata. Per rimuovere o aumentare i limiti, ti preghiamo di contattare l'assistenza clienti"
+msgstr "Il trading online può creare dipendenza. Compila il modulo sottostante per limitare la tua partecipazione sul sito web, oppure invia una lettera o un fax firmato al nostro team di assistenza clienti. Una volta impostati, i limiti potranno solamente essere incrementati e saranno rimossi o ridotti dopo 7 giorni; a eccezione della data di auto-esclusione, che non può essere rimossa o modificata una volta confermata. Per rimuovere o aumentare i limiti, ti preghiamo di contattare"
 
 msgid "Open"
 msgstr "Apri"
@@ -1165,7 +1165,7 @@ msgid "Opera"
 msgstr "Opera"
 
 msgid "Option trading can become a real addiction, as can any other activity pushed to its limits. To avoid the danger of such addiction, we provide a reality-check that gives you a summary of your trades and accounts on a regular basis"
-msgstr "Il trading in opzioni può creare dipendenza così come una qualsiasi altra attività spinta al limite. Per evitare il pericolo di tale dipendenza, forniamo un controllo della situazione che ti fornisce un quadro generale dei tuoi trade e account su base regolare"
+msgstr "Il trading in opzioni può creare una vera e propria dipendenza, così come qualsiasi altra attività portata ai suoi estremi. Per evitare il pericolo di tale dipendenza, offriamo un monitoraggio delle attività che fornisce regolarmente un quadro generale dei tuoi trade e conti"
 
 msgid "Other"
 msgstr "Altro"
