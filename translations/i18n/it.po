@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-15 08:41\n"
+"PO-Revision-Date: 2019-10-17 16:06\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1351,13 +1351,13 @@ msgid "Purchase Price"
 msgstr "Prezzo d'acquisto"
 
 msgid "Purchase Time"
-msgstr "Orario dell'acquisto"
+msgstr "Orario di acquisto"
 
 msgid "Read"
 msgstr "Leggi"
 
 msgid "Reality check"
-msgstr "Verifica della realtà"
+msgstr "Monitoraggio della situazione"
 
 msgid "Redirecting to oauth login page,"
 msgstr "Ti stiamo reindirizzando a una pagina di login OAuth"
@@ -1372,7 +1372,7 @@ msgid "Refresh failed"
 msgstr "Aggiornamento non riuscito"
 
 msgid "Register free account"
-msgstr "Registra un account gratis"
+msgstr "Registra un conto gratuito"
 
 msgid "Remove"
 msgstr "Rimuovi"
@@ -1405,7 +1405,7 @@ msgid "Rise"
 msgstr "Aumenta"
 
 msgid "Robust and secure platform"
-msgstr "Piattaforma robusta e sicura"
+msgstr "Piattaforma solida e sicura"
 
 msgid "Safari"
 msgstr "Safari"
@@ -1435,7 +1435,7 @@ msgid "Save as"
 msgstr "Salva come"
 
 msgid "Save changes"
-msgstr "Salva le variazioni"
+msgstr "Salva le modifiche"
 
 msgid "Saved"
 msgstr "Salvato"
@@ -1450,19 +1450,19 @@ msgid "Self-Employed"
 msgstr "Libero professionista"
 
 msgid "Self-Exclusion"
-msgstr "Auto esclusione"
+msgstr "Auto-esclusione"
 
 msgid "Self-Exclusion Facilities"
-msgstr "Funzioni di auto esclusione"
+msgstr "Funzioni di auto-esclusione"
 
 msgid "Self-exclusion on this website only applies to your Binary.com account and does not include other companies or websites"
-msgstr "L'autoesclusione su questo sito web si applica solamente al conto Binary.com del Cliente e non include altri siti web o società"
+msgstr "L'auto-esclusione dal presente sito web si applica solamente al conto Binary.com del cliente e non include altri siti web o società"
 
 msgid "Sell At Market"
 msgstr "Vendere sul mercato"
 
 msgid "Sent to account"
-msgstr "Inviato sull'account"
+msgstr "Inviato al conto"
 
 msgid "Sep"
 msgstr "Set"
