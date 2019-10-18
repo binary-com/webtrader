@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-17 16:06\n"
+"PO-Revision-Date: 2019-10-18 12:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1489,7 +1489,7 @@ msgid "Share chart"
 msgstr "Condividi il grafico"
 
 msgid "Since you feel the need to self-exclude, we strongly encourage you to exclude yourself from similar services that you may have signed up for"
-msgstr "Dal momento che hai deciso di autoescluderti, ti consigliamo vivamente di autoescluderti anche da altri servizi simili ai quali sei iscritto"
+msgstr "Vista la tua esigenza di auto-esclusione, ti consigliamo vivamente di auto-escluderti anche da altri servizi similari ai quali sei iscritto"
 
 msgid "Sold"
 msgstr "Venduto"
