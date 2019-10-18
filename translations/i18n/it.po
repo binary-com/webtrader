@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-18 12:42\n"
+"PO-Revision-Date: 2019-10-18 12:51\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1615,7 +1615,7 @@ msgid "The products offered via this website include binary options, contracts f
 msgstr "I prodotti offerti sul presente sito web includono opzioni binarie, contratti per differenza (CFD) e altri complessi strumenti derivati. Il trading di opzioni binarie potrebbe non essere adatto a tutti. Il trading di CFD implica un elevato livello di rischio, poiché la leva finanziaria può agire sia a vantaggio che a svantaggio del cliente. Di conseguenza, i prodotti finanziari offerti su questo sito web potrebbero non essere idonei per tutti gli investitori a causa del rischio di perdita dell'intero capitale investito. È raccomandabile che i clienti non investano denaro che non possono permettersi di perdere e non effettuino trade con denaro prestato. Prima di effettuare trading con i complessi strumenti disponibili, suggeriamo di accertarsi di comprendere i rischi connessi e approfondire il tema del [_1]trading responsabile[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
-msgstr "Si è verificata un'interruzione dei dati durante la durata del contratto. Per i conti reali, cercheremo di correggerla e ristabilire correttamente il contratto, pena l'annullamento e il rimborso del contratto; i contratti di denaro virtuali verranno invece annullati e rimborsati."
+msgstr "Si è verificata un'interruzione dei dati di mercato durante la durata del contratto. Per i conti reali, cercheremo di correggerla e liquidare correttamente il contratto, pena l'annullamento e il rimborso del contratto. I contratti di denaro virtuali verranno invece annullati e rimborsati."
 
 msgid "There was an error"
 msgstr "Si è verificato un errore"
@@ -1633,7 +1633,7 @@ msgid "This field is required"
 msgstr "Questo campo è obbligatorio"
 
 msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18."
-msgstr "I servizi di questo sito web non sono disponibili in alcuni paesi quali USA, Canada, Hong Kong e Giappone, così come agli individui di età inferiore ai 18 anni."
+msgstr "I servizi del presente sito web non sono disponibili in alcuni paesi quali USA, Canada, Hong Kong e Giappone, così come agli individui di età inferiore ai 18 anni."
 
 msgid "Thu"
 msgstr "Gio"
@@ -1657,10 +1657,10 @@ msgid "Time interval"
 msgstr "Intervallo di tempo"
 
 msgid "Time out until"
-msgstr "Tempo scaduto fino a"
+msgstr "Durata tempo di esclusione"
 
 msgid "Timeout for websocket request"
-msgstr "Richiesta di websocket interrotta"
+msgstr "Richiesta di esclusione da websocket"
 
 msgid "Title"
 msgstr "Titolo"
