@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-18 12:31\n"
+"PO-Revision-Date: 2019-10-18 12:42\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1585,7 +1585,7 @@ msgid "Template applied partially."
 msgstr "Il modello è stato applicato parzialmente."
 
 msgid "Template changes saved"
-msgstr "Modifiche apportate al modello salvato"
+msgstr "Le modifiche al modello sono salvate"
 
 msgid "Template is not applicable."
 msgstr "Questo modello non è applicabile."
@@ -1594,7 +1594,7 @@ msgid "Template name"
 msgstr "Nome del modello"
 
 msgid "Template name already exists"
-msgstr "Il nome del modello esiste già"
+msgstr "Nome del modello già esistente"
 
 msgid "Terms"
 msgstr "Termini"
@@ -1606,13 +1606,13 @@ msgid "Tertiary"
 msgstr "Terziario"
 
 msgid "The"
-msgstr "Il/Lo/La/Gli/Le/I"
+msgstr "Il"
 
 msgid "The company holds customer funds in separate bank accounts to the operational accounts which would not, in the event of insolvency, form part of the Company's assets. This meets the Gambling Commission's requirements for the segregation of customer funds at the level"
-msgstr "La società detiene i fondi dei clienti in conti bancari separati da quelli operativi, i quali non faranno parte, in caso di insolvenza, dell'asset della Società. Ciò rispecchia i requisiti della Commissione sul gioco d'azzardo per la segregazione dei fondi dei clienti a livello"
+msgstr "La società detiene i fondi dei clienti in conti bancari separati da quelli operativi, i quali non faranno parte, in caso di insolvenza, degli asset della Società. Questa misura rispecchia i requisiti del livello di protezione medio della Commissione sul gioco d'azzardo per la segregazione dei fondi dei clienti."
 
 msgid "The products offered via this website include binary options, contracts for difference (\"CFDs\") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2]."
-msgstr "I prodotti offerti tramite il presente sito web includono opzioni binarie, contratti per differenza (CFD) e altri complessi strumenti derivati. Il trading di opzioni binarie non è adatto a tutti. Il trading di CFD implica un elevato livello di rischio, poiché la leva finanziaria può agire sia a vantaggio che a svantaggio del Cliente. Di conseguenza, i prodotti finanziari offerti su questo sito web potrebbero non essere idonei per tutti gli investitori a causa del rischio di perdere l'intero capitale investito. È raccomandabile che i clienti non investano denaro che non possono permettersi di perdere e non effettuino trade con denaro prestato. Prima di fare trading con gli strumenti complessi resi disponibili, suggeriamo di accertarsi di comprendere i rischi potenziali e approfondire il tema del [_1]trading responsabile[_2]."
+msgstr "I prodotti offerti sul presente sito web includono opzioni binarie, contratti per differenza (CFD) e altri complessi strumenti derivati. Il trading di opzioni binarie potrebbe non essere adatto a tutti. Il trading di CFD implica un elevato livello di rischio, poiché la leva finanziaria può agire sia a vantaggio che a svantaggio del cliente. Di conseguenza, i prodotti finanziari offerti su questo sito web potrebbero non essere idonei per tutti gli investitori a causa del rischio di perdita dell'intero capitale investito. È raccomandabile che i clienti non investano denaro che non possono permettersi di perdere e non effettuino trade con denaro prestato. Prima di effettuare trading con i complessi strumenti disponibili, suggeriamo di accertarsi di comprendere i rischi connessi e approfondire il tema del [_1]trading responsabile[_2]."
 
 msgid "There was a market data disruption during the contract period. For real-money accounts we will attempt to correct this and settle the contract properly, otherwise the contract will be cancelled and refunded. Virtual-money contracts will be cancelled and refunded."
 msgstr "Si è verificata un'interruzione dei dati durante la durata del contratto. Per i conti reali, cercheremo di correggerla e ristabilire correttamente il contratto, pena l'annullamento e il rimborso del contratto; i contratti di denaro virtuali verranno invece annullati e rimborsati."
