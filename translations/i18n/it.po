@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-22 09:30\n"
+"PO-Revision-Date: 2019-10-22 09:41\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1717,28 +1717,28 @@ msgid "Token permissions"
 msgstr "Autorizzazioni dei token"
 
 msgid "Tooltip background"
-msgstr "Sfondo della tooltip"
+msgstr "Sfondo del tooltip"
 
 msgid "Tooltip text"
-msgstr "Testo nella tooltip"
+msgstr "Testo del tooltip"
 
 msgid "Total Copiers"
-msgstr "Fotocopiatrici totali"
+msgstr "Repliche totali"
 
 msgid "Total Cost"
 msgstr "Costo totale"
 
 msgid "Total Profit/Loss"
-msgstr "Profitto/Perdita totale"
+msgstr "Profitto/perdita totale"
 
 msgid "Total Trades"
 msgstr "Trade totali"
 
 msgid "Touch"
-msgstr "Touch"
+msgstr "Tocca"
 
 msgid "Touch/No Touch"
-msgstr "Touch/No Touch"
+msgstr "Tocca/Non tocca"
 
 msgid "Tourism"
 msgstr "Turismo"
