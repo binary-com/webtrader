@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-22 09:41\n"
+"PO-Revision-Date: 2019-10-22 09:50\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -889,7 +889,7 @@ msgid "Line"
 msgstr "Linea"
 
 msgid "Line Dot"
-msgstr "Punto linea"
+msgstr "Linea punteggiata"
 
 msgid "Link"
 msgstr "Link"
@@ -1768,7 +1768,7 @@ msgid "Trading Times"
 msgstr "Orari di trading"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr "Il trading di opzioni binarie può non essere adatto a tutti, pertanto occorre assicurarsi di aver compreso appieno i rischi connessi. Le perdite possono superare il deposito iniziale, e il Cliente non è effettivamente in possesso degli asset sottostanti, né ha degli interessi su di essi."
+msgstr "Il trading di opzioni binarie potrebbe non essere adatto a tutti, pertanto occorre assicurarsi di aver compreso appieno i rischi connessi. Le perdite possono superare il deposito iniziale e il cliente non possiede l'asset sottostante né detiene interessi su di esso."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview per Binary.com"
@@ -1777,7 +1777,7 @@ msgid "Transfer"
 msgstr "Trasferisci"
 
 msgid "Transfer to another Binary account"
-msgstr "Trasferisci a un altro account Binary"
+msgstr "Trasferisci a un altro conto Binary"
 
 msgid "Try"
 msgstr "Prova"
@@ -1789,7 +1789,7 @@ msgid "Tuesday"
 msgstr "Martedì"
 
 msgid "Turnover"
-msgstr "Turnover"
+msgstr "Volume dei trade"
 
 msgid "USD"
 msgstr "USD"
