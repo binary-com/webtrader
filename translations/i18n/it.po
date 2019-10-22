@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-18 12:51\n"
+"PO-Revision-Date: 2019-10-22 09:20\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1243,7 +1243,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Inserire un valore superiore a 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr "Inserisci un valore inferiore alle 6 settimane per il limite di tempo."
+msgstr "Inserisci un valore inferiore alle 6 settimane per il periodo di esclusione."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Inserisci la data nel formato AAAA-MM-GG"
@@ -1360,7 +1360,7 @@ msgid "Reality check"
 msgstr "Monitoraggio della situazione"
 
 msgid "Redirecting to oauth login page,"
-msgstr "Ti stiamo reindirizzando a una pagina di login OAuth"
+msgstr "Ti stiamo reindirizzando a una pagina di login OAuth,"
 
 msgid "Ref"
 msgstr "Rif"
