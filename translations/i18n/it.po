@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-22 09:50\n"
+"PO-Revision-Date: 2019-10-30 15:24\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1801,13 +1801,13 @@ msgid "Under"
 msgstr "Sotto"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr "Purtroppo il tuo browser non li supporta"
+msgstr "Sfortunatamente il tuo browser non li supporta"
 
 msgid "Up/Down"
 msgstr "Up/Down"
 
 msgid "Upcoming Events"
-msgstr "Eventi in arrivo"
+msgstr "Eventi in programma"
 
 msgid "Update"
 msgstr "Aggiorna"
@@ -1816,7 +1816,7 @@ msgid "Update Settings"
 msgstr "Aggiorna impostazioni"
 
 msgid "Upgrade to a Real Account"
-msgstr "Passa a un account vero"
+msgstr "Passa a un conto reale"
 
 msgid "Upload template"
 msgstr "Carica modello"
@@ -1840,16 +1840,16 @@ msgid "Verification token"
 msgstr "Token di verifica"
 
 msgid "Verify new password"
-msgstr "Verifica nuova password"
+msgstr "Verifica la nuova password"
 
 msgid "Vertical line"
 msgstr "Linea verticale"
 
 msgid "View"
-msgstr "Mostra"
+msgstr "Visualizza"
 
 msgid "View Statement"
-msgstr "Mostra l'estratto"
+msgstr "Visualizza l'estratto"
 
 msgid "Volatility Indicators"
 msgstr "Indicatori di volatilità"
@@ -1879,7 +1879,7 @@ msgid "When you click \"Ok\" you will be excluded from trading on the site until
 msgstr "Cliccando su \"Ok\" verrai escluso dal trading sul sito fino alla data selezionata."
 
 msgid "While on the go, you can"
-msgstr "Mentre sei in movimento, puoi"
+msgstr "Ovunque ti trovi, potrai"
 
 msgid "Withdraw funds"
 msgstr "Preleva fondi"
@@ -2071,7 +2071,7 @@ msgid "points"
 msgstr "punti"
 
 msgid "risk warning"
-msgstr "avviso di rischio"
+msgstr "Avvertenza sul rischio"
 
 msgid "sec"
 msgstr "sec"
