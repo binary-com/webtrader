@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-30 15:24\n"
+"PO-Revision-Date: 2019-11-05 09:21\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -2002,7 +2002,7 @@ msgid "for"
 msgstr "per"
 
 msgid "for mobile charts"
-msgstr "per grafici mobili"
+msgstr "per grafici su cellulare"
 
 msgid "has updated its"
 msgstr "ha aggiornato i suoi"
