@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-11-05 09:31\n"
+"PO-Revision-Date: 2019-11-05 09:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1927,7 +1927,7 @@ msgid "You pay"
 msgstr "Paghi"
 
 msgid "You will be automatically logged out after such time"
-msgstr "Dopo questo tempo, verrai automaticamente loggato"
+msgstr "Al termine di tale periodo, verrà automaticamente eseguito il logout"
 
 msgid "You wish to allow other traders to copy your trades"
 msgstr "Vuoi consentire ad altri trader di copiare i tuoi trade"
