@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-11-05 09:21\n"
+"PO-Revision-Date: 2019-11-05 09:31\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1954,16 +1954,16 @@ msgid "Your copying settings"
 msgstr "Le tue impostazioni per la copia"
 
 msgid "Your new account balance is"
-msgstr "Il saldo del tuo nuovo account è"
+msgstr "Il nuovo saldo del conto è"
 
 msgid "Your transaction reference is"
-msgstr "Il riferimento della tua transazione è"
+msgstr "Il riferimento della transazione è"
 
 msgid "Your transaction reference number is"
-msgstr "Il numero di riferimento della tua transazione è"
+msgstr "Il numero di riferimento della transazione è"
 
 msgid "Zoom"
-msgstr "Zoom"
+msgstr "Zoomare"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
 msgstr "[_1]Autentica ora il tuo conto[_2] per accedere a tutte le opzioni di prelievo disponibili."
@@ -1975,7 +1975,7 @@ msgid "commission"
 msgstr "commissione"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr "crea un token di sola lettura e condividi con la/e fotocopiatrice/i"
+msgstr "crea un token di sola lettura e condividilo con i trader che ti seguono"
 
 msgid "customer support"
 msgstr "assistenza clienti"
@@ -2047,7 +2047,7 @@ msgid "main site"
 msgstr "sito principale"
 
 msgid "market is presently closed."
-msgstr "Il mercato è attualmente chiuso."
+msgstr "il mercato è chiuso al momento."
 
 msgid "medium protection"
 msgstr "protezione media"
