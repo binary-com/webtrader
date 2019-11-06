@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-11-06 10:40\n"
+"PO-Revision-Date: 2019-11-06 10:41\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1480,7 +1480,7 @@ msgid "Session duration limit, in minutes"
 msgstr "Limite di durata della sessione, in minuti"
 
 msgid "Settles"
-msgstr "Liquida"
+msgstr "Salda"
 
 msgid "Share"
 msgstr "Condividi"
