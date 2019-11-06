@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-11-05 09:40\n"
+"PO-Revision-Date: 2019-11-06 10:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1480,7 +1480,7 @@ msgid "Session duration limit, in minutes"
 msgstr "Limite di durata della sessione, in minuti"
 
 msgid "Settles"
-msgstr "Depositi"
+msgstr "Liquida"
 
 msgid "Share"
 msgstr "Condividi"
@@ -1861,7 +1861,7 @@ msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr "Webtrader è una piattaforma di trading avanzata, totalmente personalizzabile, in base alle tue preferenze personali"
+msgstr "Webtrader è una piattaforma di trading avanzata, totalmente personalizzabile in base alle tue preferenze personali"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilizza nuove tecnologie web per un'esperienza di trading ricca e piacevole"
@@ -1936,7 +1936,7 @@ msgid "You wish to copy another trader's trades"
 msgstr "Desideri copiare i trade di un altro trader"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr "Il tuo account (%) è bloccato. Per ulteriori informazioni, contatta l'assistenza clienti."
+msgstr "Il tuo conto (%) è bloccato. Per ulteriori informazioni, contatta l'assistenza clienti."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
 msgstr "Il tuo conto è sottoposto a limitazioni. [_1]Contatta l'assistenza clienti[_2] per ricevere supporto."
@@ -2017,7 +2017,7 @@ msgid "in the future, the"
 msgstr "nel futuro, il"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
-msgstr "è la piattaforma di trading avanzata per desktop di Binary. La sua interfaccia fornisce massima flessibilità e si adatta alle esigenze dei trader attivi che lavorano direttamente sui propri PC"
+msgstr "è la piattaforma di trading avanzata per desktop di Binary. La sua interfaccia con finestre multiple fornisce massima flessibilità e si adatta alle esigenze dei trader attivi che lavorano direttamente sui propri PC"
 
 msgid "is required. Current spread"
 msgstr "è richiesto. Spread attuale"
