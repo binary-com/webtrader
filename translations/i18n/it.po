@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-11-06 10:41\n"
+"PO-Revision-Date: 2019-11-11 15:40\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1804,7 +1804,7 @@ msgid "Unfortunately, your browser does not support them"
 msgstr "Sfortunatamente il tuo browser non li supporta"
 
 msgid "Up/Down"
-msgstr "Up/Down"
+msgstr "Alto/Basso"
 
 msgid "Upcoming Events"
 msgstr "Eventi in programma"
@@ -1825,7 +1825,7 @@ msgid "Use"
 msgstr "Usa"
 
 msgid "Use the \"Save as ...\" button to save the chart settings, type, time period, indicators and comparisons"
-msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del grafico, tipologia, periodo di tempo, indicatori e confronti"
+msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del grafico, la tipologia, il periodo di tempo, gli indicatori e i confronti"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del trade"
@@ -1855,7 +1855,7 @@ msgid "Volatility Indicators"
 msgstr "Indicatori di volatilità"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
-msgstr "In base alla nostra autorizzazione, siamo tenuti a informarti su cosa succede ai fondi che teniamo per tuo conto e sul livello di protezione dei fondi in caso di insolvenza"
+msgstr "In base alla nostra autorizzazione, siamo tenuti a informarti di cosa succede ai fondi che deteniamo per tuo conto e sul livello di protezione degli stessi in caso di insolvenza"
 
 msgid "Webtrader"
 msgstr "Webtrader"
