@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-11-11 15:40\n"
+"PO-Revision-Date: 2019-11-11 15:51\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -1831,7 +1831,7 @@ msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del trade"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr "Varie caratteristiche come il caricamento e la disposizione degli asset, la creazione di grafici e altre risorse personalizzabili in base alle tue preferenze"
+msgstr "Diverse funzioni personalizzabili in base alle tue preferenze come il caricamento e la disposizione degli asset, la creazione di grafici e altre risorse"
 
 msgid "Verification code sent to"
 msgstr "Codice di verifica inviato a"
