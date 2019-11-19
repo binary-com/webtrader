@@ -82,7 +82,7 @@ commands:
 jobs:
   release:
     docker:
-      - image: circleci/node:9.9.0-stretch
+      - image: node:12.13.0-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
