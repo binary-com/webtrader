@@ -85,8 +85,9 @@ jobs:
       - image: circleci/ruby:2.6.5
     steps:
       - git_checkout_from_cache
-      - docker_build
-      - docker_push
+      - npm_install
+      - build
+      - docker
       - k8s_deploy
       
 workflows:
