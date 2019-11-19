@@ -41,7 +41,7 @@ commands:
             - npm-v1-
       - run:
           name: Install npm modules
-          command: yarn
+          command: npm install
       - save_cache:
           name: Save NPM cache
           key: npm-v1-{{ checksum "package.json" }}
@@ -53,7 +53,7 @@ commands:
     steps:
       - run:
           name: "Grunt deploy"
-          command: npm run deploy-description
+          command: npm run deploy-ci
 
   docker:
     description: "Build and Push image to docker hub"
