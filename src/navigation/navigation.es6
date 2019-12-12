@@ -205,7 +205,7 @@ const initLang = (root) => {
          { value: 'de', name: 'Deutsch'},
          { value: 'es', name: 'Español'},
          { value: 'fr', name: 'Français'},
-         { value: 'id', name: 'Indonesia'},
+         // { value: 'id', name: 'Indonesia'},
          { value: 'it', name: 'Italiano'},
          { value: 'pl', name: 'Polish'},
          { value: 'pt', name: 'Português'},
