@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: binarycom\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-10-18 12:51\n"
+"PO-Revision-Date: 2019-11-11 15:51\n"
 
 msgid "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
 msgstr "\"http://www.gamblingcommission.gov.uk/Consumers/Protection-of-customer-funds.aspx\""
@@ -889,7 +889,7 @@ msgid "Line"
 msgstr "Linea"
 
 msgid "Line Dot"
-msgstr "Punto linea"
+msgstr "Linea punteggiata"
 
 msgid "Link"
 msgstr "Link"
@@ -1243,7 +1243,7 @@ msgid "Please enter a value greater than 0"
 msgstr "Inserire un valore superiore a 0"
 
 msgid "Please enter a value less than 6 weeks for time out until."
-msgstr "Inserisci un valore inferiore alle 6 settimane per il limite di tempo."
+msgstr "Inserisci un valore inferiore alle 6 settimane per il periodo di esclusione."
 
 msgid "Please enter date in the format YYYY-MM-DD"
 msgstr "Inserisci la data nel formato AAAA-MM-GG"
@@ -1360,7 +1360,7 @@ msgid "Reality check"
 msgstr "Monitoraggio della situazione"
 
 msgid "Redirecting to oauth login page,"
-msgstr "Ti stiamo reindirizzando a una pagina di login OAuth"
+msgstr "Ti stiamo reindirizzando a una pagina di login OAuth,"
 
 msgid "Ref"
 msgstr "Rif"
@@ -1480,7 +1480,7 @@ msgid "Session duration limit, in minutes"
 msgstr "Limite di durata della sessione, in minuti"
 
 msgid "Settles"
-msgstr "Depositi"
+msgstr "Salda"
 
 msgid "Share"
 msgstr "Condividi"
@@ -1498,7 +1498,7 @@ msgid "Some random index"
 msgstr "Indici casuali"
 
 msgid "Spline"
-msgstr "Spline"
+msgstr "Grafico spline"
 
 msgid "Spreads"
 msgstr "Spread"
@@ -1672,13 +1672,13 @@ msgid "To deposit money please contact the payment agent directly"
 msgstr "Per depositare fondi, contatta direttamente l'agente di pagamento"
 
 msgid "To find out more and to sign up with GAMSTOP, please visit"
-msgstr "Per saperne di più e per iscriverti con GAMSTOP, visita il sito"
+msgstr "Per ulteriori informazioni e per iscriversi a GAMSTOP, visita il sito"
 
 msgid "To process deposits and withdrawals for payment methods or local currencies not supported by Binary.com contact a payment agent"
-msgstr "Per elaborare i depositi e i prelievi per le modalità di pagamento o valute locali non supportate da Binary.com, contatta un agente di pagamento"
+msgstr "Per effettuare depositi e prelievi con modalità di pagamento o valute locali non supportate da Binary.com, contatta un agente di pagamento"
 
 msgid "To self-exclude from all online gambling companies licensed in Great Britain, you may go to"
-msgstr "Per autoescludersi da qualsiasi società di gioco d'azzardo online autorizzata in Gran Bretagna, aprire il link seguente"
+msgstr "Per auto-escludersi da qualsiasi società di gioco d'azzardo online autorizzata in Gran Bretagna, visita il sito"
 
 msgid "To withdraw funds please enter the special verification token we have just emailed you"
 msgstr "Per prelevare fondi, inserisci lo speciale token di verifica che ti abbiamo appena inviato tramite email"
@@ -1717,28 +1717,28 @@ msgid "Token permissions"
 msgstr "Autorizzazioni dei token"
 
 msgid "Tooltip background"
-msgstr "Sfondo della tooltip"
+msgstr "Sfondo del tooltip"
 
 msgid "Tooltip text"
-msgstr "Testo nella tooltip"
+msgstr "Testo del tooltip"
 
 msgid "Total Copiers"
-msgstr "Fotocopiatrici totali"
+msgstr "Repliche totali"
 
 msgid "Total Cost"
 msgstr "Costo totale"
 
 msgid "Total Profit/Loss"
-msgstr "Profitto/Perdita totale"
+msgstr "Profitto/perdita totale"
 
 msgid "Total Trades"
 msgstr "Trade totali"
 
 msgid "Touch"
-msgstr "Touch"
+msgstr "Tocca"
 
 msgid "Touch/No Touch"
-msgstr "Touch/No Touch"
+msgstr "Tocca/Non tocca"
 
 msgid "Tourism"
 msgstr "Turismo"
@@ -1768,7 +1768,7 @@ msgid "Trading Times"
 msgstr "Orari di trading"
 
 msgid "Trading binary options may not be suitable for everyone, so please ensure that you fully understand the risks involved. Your losses can exceed your initial deposit and you do not own or have any interest in the underlying asset."
-msgstr "Il trading di opzioni binarie può non essere adatto a tutti, pertanto occorre assicurarsi di aver compreso appieno i rischi connessi. Le perdite possono superare il deposito iniziale, e il Cliente non è effettivamente in possesso degli asset sottostanti, né ha degli interessi su di essi."
+msgstr "Il trading di opzioni binarie potrebbe non essere adatto a tutti, pertanto occorre assicurarsi di aver compreso appieno i rischi connessi. Le perdite possono superare il deposito iniziale e il cliente non possiede l'asset sottostante né detiene interessi su di esso."
 
 msgid "Tradingview for Binary.com"
 msgstr "Tradingview per Binary.com"
@@ -1777,7 +1777,7 @@ msgid "Transfer"
 msgstr "Trasferisci"
 
 msgid "Transfer to another Binary account"
-msgstr "Trasferisci a un altro account Binary"
+msgstr "Trasferisci a un altro conto Binary"
 
 msgid "Try"
 msgstr "Prova"
@@ -1789,7 +1789,7 @@ msgid "Tuesday"
 msgstr "Martedì"
 
 msgid "Turnover"
-msgstr "Turnover"
+msgstr "Volume dei trade"
 
 msgid "USD"
 msgstr "USD"
@@ -1801,13 +1801,13 @@ msgid "Under"
 msgstr "Sotto"
 
 msgid "Unfortunately, your browser does not support them"
-msgstr "Purtroppo il tuo browser non li supporta"
+msgstr "Sfortunatamente il tuo browser non li supporta"
 
 msgid "Up/Down"
-msgstr "Up/Down"
+msgstr "Alto/Basso"
 
 msgid "Upcoming Events"
-msgstr "Eventi in arrivo"
+msgstr "Eventi in programma"
 
 msgid "Update"
 msgstr "Aggiorna"
@@ -1816,7 +1816,7 @@ msgid "Update Settings"
 msgstr "Aggiorna impostazioni"
 
 msgid "Upgrade to a Real Account"
-msgstr "Passa a un account vero"
+msgstr "Passa a un conto reale"
 
 msgid "Upload template"
 msgstr "Carica modello"
@@ -1825,13 +1825,13 @@ msgid "Use"
 msgstr "Usa"
 
 msgid "Use the \"Save as ...\" button to save the chart settings, type, time period, indicators and comparisons"
-msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del grafico, tipologia, periodo di tempo, indicatori e confronti"
+msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del grafico, la tipologia, il periodo di tempo, gli indicatori e i confronti"
 
 msgid "Use the \"Save as ...\" button to save the trade settings"
 msgstr "Usa il pulsante \"Salva come...\" per salvare le impostazioni del trade"
 
 msgid "Various customisable features like loading and arranging assets, charting, and other resources however you see fit"
-msgstr "Varie caratteristiche come il caricamento e la disposizione degli asset, la creazione di grafici e altre risorse personalizzabili in base alle tue preferenze"
+msgstr "Diverse funzioni personalizzabili in base alle tue preferenze come il caricamento e la disposizione degli asset, la creazione di grafici e altre risorse"
 
 msgid "Verification code sent to"
 msgstr "Codice di verifica inviato a"
@@ -1840,28 +1840,28 @@ msgid "Verification token"
 msgstr "Token di verifica"
 
 msgid "Verify new password"
-msgstr "Verifica nuova password"
+msgstr "Verifica la nuova password"
 
 msgid "Vertical line"
 msgstr "Linea verticale"
 
 msgid "View"
-msgstr "Mostra"
+msgstr "Visualizza"
 
 msgid "View Statement"
-msgstr "Mostra l'estratto"
+msgstr "Visualizza l'estratto"
 
 msgid "Volatility Indicators"
 msgstr "Indicatori di volatilità"
 
 msgid "We are required by our license to inform you about what happens to funds which we hold on account for you, and the extent to which funds are protected in the event of insolvency"
-msgstr "In base alla nostra autorizzazione, siamo tenuti a informarti su cosa succede ai fondi che teniamo per tuo conto e sul livello di protezione dei fondi in caso di insolvenza"
+msgstr "In base alla nostra autorizzazione, siamo tenuti a informarti di cosa succede ai fondi che deteniamo per tuo conto e sul livello di protezione degli stessi in caso di insolvenza"
 
 msgid "Webtrader"
 msgstr "Webtrader"
 
 msgid "Webtrader is an advanced trading platform that's fully-customisable according to your personal preferences"
-msgstr "Webtrader è una piattaforma di trading avanzata, totalmente personalizzabile, in base alle tue preferenze personali"
+msgstr "Webtrader è una piattaforma di trading avanzata, totalmente personalizzabile in base alle tue preferenze personali"
 
 msgid "Webtrader uses new web technologies for rich and enjoyable trading experience"
 msgstr "Webtrader utilizza nuove tecnologie web per un'esperienza di trading ricca e piacevole"
@@ -1879,7 +1879,7 @@ msgid "When you click \"Ok\" you will be excluded from trading on the site until
 msgstr "Cliccando su \"Ok\" verrai escluso dal trading sul sito fino alla data selezionata."
 
 msgid "While on the go, you can"
-msgstr "Mentre sei in movimento, puoi"
+msgstr "Ovunque ti trovi, potrai"
 
 msgid "Withdraw funds"
 msgstr "Preleva fondi"
@@ -1927,7 +1927,7 @@ msgid "You pay"
 msgstr "Paghi"
 
 msgid "You will be automatically logged out after such time"
-msgstr "Dopo questo tempo, verrai automaticamente loggato"
+msgstr "Al termine di tale periodo, verrà automaticamente eseguito il logout"
 
 msgid "You wish to allow other traders to copy your trades"
 msgstr "Vuoi consentire ad altri trader di copiare i tuoi trade"
@@ -1936,7 +1936,7 @@ msgid "You wish to copy another trader's trades"
 msgstr "Desideri copiare i trade di un altro trader"
 
 msgid "Your account (%) is locked, please contact customer support for more info."
-msgstr "Il tuo account (%) è bloccato. Per ulteriori informazioni, contatta l'assistenza clienti."
+msgstr "Il tuo conto (%) è bloccato. Per ulteriori informazioni, contatta l'assistenza clienti."
 
 msgid "Your account is restricted. Kindly [_1]contact customer support[_2] for assistance."
 msgstr "Il tuo conto è sottoposto a limitazioni. [_1]Contatta l'assistenza clienti[_2] per ricevere supporto."
@@ -1954,16 +1954,16 @@ msgid "Your copying settings"
 msgstr "Le tue impostazioni per la copia"
 
 msgid "Your new account balance is"
-msgstr "Il saldo del tuo nuovo account è"
+msgstr "Il nuovo saldo del conto è"
 
 msgid "Your transaction reference is"
-msgstr "Il riferimento della tua transazione è"
+msgstr "Il riferimento della transazione è"
 
 msgid "Your transaction reference number is"
-msgstr "Il numero di riferimento della tua transazione è"
+msgstr "Il numero di riferimento della transazione è"
 
 msgid "Zoom"
-msgstr "Zoom"
+msgstr "Zoomare"
 
 msgid "[_1]Authenticate your account[_2] now to take full advantage of all withdrawal options available."
 msgstr "[_1]Autentica ora il tuo conto[_2] per accedere a tutte le opzioni di prelievo disponibili."
@@ -1975,7 +1975,7 @@ msgid "commission"
 msgstr "commissione"
 
 msgid "create a Read-only token, and share the token with your copier(s)"
-msgstr "crea un token di sola lettura e condividi con la/e fotocopiatrice/i"
+msgstr "crea un token di sola lettura e condividilo con i trader che ti seguono"
 
 msgid "customer support"
 msgstr "assistenza clienti"
@@ -2002,7 +2002,7 @@ msgid "for"
 msgstr "per"
 
 msgid "for mobile charts"
-msgstr "per grafici mobili"
+msgstr "per grafici su cellulare"
 
 msgid "has updated its"
 msgstr "ha aggiornato i suoi"
@@ -2017,7 +2017,7 @@ msgid "in the future, the"
 msgstr "nel futuro, il"
 
 msgid "is Binary's advanced desktop trading platform. Its multi-window interface provides maximum flexibility and suits the needs of active traders working on their desktop PCs"
-msgstr "è la piattaforma di trading avanzata per desktop di Binary. La sua interfaccia fornisce massima flessibilità e si adatta alle esigenze dei trader attivi che lavorano direttamente sui propri PC"
+msgstr "è la piattaforma di trading avanzata per desktop di Binary. La sua interfaccia con finestre multiple fornisce massima flessibilità e si adatta alle esigenze dei trader attivi che lavorano direttamente sui propri PC"
 
 msgid "is required. Current spread"
 msgstr "è richiesto. Spread attuale"
@@ -2047,7 +2047,7 @@ msgid "main site"
 msgstr "sito principale"
 
 msgid "market is presently closed."
-msgstr "Il mercato è attualmente chiuso."
+msgstr "il mercato è chiuso al momento."
 
 msgid "medium protection"
 msgstr "protezione media"
@@ -2071,7 +2071,7 @@ msgid "points"
 msgstr "punti"
 
 msgid "risk warning"
-msgstr "avviso di rischio"
+msgstr "Avvertenza sul rischio"
 
 msgid "sec"
 msgstr "sec"
