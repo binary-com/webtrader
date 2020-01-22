@@ -20,7 +20,7 @@ const INITIAL_WORKSPACE_NAME = 'my-workspace-1';
 
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
-const sanitize = value => value.replace(/("|'|\&|\(|\)|\<|\>)/g, '');
+const sanitize = value => value.replace(/("|'|\&|\(|\)|\<|\>|\;)/g, '');
 
 const state = {
    route: 'active', // one of ['active', 'saved', 'rename', 'saveas']
@@ -213,7 +213,7 @@ const state = {
          const {name} = w;
          const inx = _.findIndex(state.workspaces, {name: name});
          const workspace = inx !== -1 ? state.workspaces[inx] : local_storage.get('states');
-         workspace.name = name;
+         workspace.name = sanitize(name);
          workspace.template_type = 'workspace-template';
          workspace.random = state.file.hash_code(workspace)
          var json = JSON.stringify(workspace);

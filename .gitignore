@@ -28,3 +28,6 @@ reports
 selenium-debug.log
 test-config.js
 .vscode/launch.json
+
+.circleci
+Dockerfile
