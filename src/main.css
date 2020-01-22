@@ -495,28 +495,6 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable.no-footer {
 /* make dropdowns consistent with binary-style */
 select + .ui-selectmenu-button { border-radius: 3px;}
 
-#doorbell-button  {
-    right: -67px;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    font-size: inherit;
-    background-color: #2E8836;
-    bottom: 100px;
-    z-index: +1000;
-}
-#doorbell-button:hover {
-    right: -40px;
-    transition: right 100ms linear;
-}
-
-#doorbell-error { color: red; }
-#doorbell-form textarea { outline: 0; }
-#doorbell-container #doorbell-form legend { font-size: 1em; }
-#doorbell-container #doorbell-close.close { opacity: 1; }
-
 /*hide input buttons*/
 .ui-spinner-button {
   display: none;
