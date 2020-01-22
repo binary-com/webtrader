@@ -62,12 +62,12 @@ commands:
       - run: 
           name: Building docker image
           command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:beta-${CIRCLE_SHA1} .
+            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:${CIRCLE_SHA1} .
       - run: 
           name: Pushing Image to docker hub
           command: |
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-            docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader:beta-${CIRCLE_SHA1}
+            docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader:${CIRCLE_SHA1}
 
   k8s_deploy:
     description: "Deploy to k8s cluster"
@@ -77,7 +77,7 @@ commands:
           name: Deploying to k8s cluster for service binary-webtrader
           command: |
             echo $CA_CRT | base64 --decode > ca.crt
-            kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/webtrader-beta-binary-com webtrader-beta-binary-com=${DOCKHUB_ORGANISATION}/binary-static-webtrader:beta-${CIRCLE_SHA1}
+            kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/webtrader-binary-com webtrader-binary-com=${DOCKHUB_ORGANISATION}/binary-static-webtrader:${CIRCLE_SHA1}
 
 jobs:
   release:
@@ -96,5 +96,5 @@ workflows:
       - release:
           filters:
             branches:
-              only: /^development$/
+              only: /^master$/
 
