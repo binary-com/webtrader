@@ -51,9 +51,9 @@ commands:
   build:
     description: "Build"
     steps:
-      #- run:
-      #    name: "Grunt deploy"
-      #    command: npm run deploy-ci
+      - run:
+          name: "Compile project"
+          command: npm run build
       - store_artifacts:
           path: dist/
 
