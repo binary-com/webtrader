@@ -87,8 +87,8 @@ jobs:
       - git_checkout_from_cache
       - npm_install
       - build
-      - docker
-      - k8s_deploy
+        # - docker
+        #- k8s_deploy
       
 workflows:
   release:
