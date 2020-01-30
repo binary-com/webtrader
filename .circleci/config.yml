@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   k8s: circleci/kubernetes@0.7.0
+  s3: circleci/aws-s3@1.0.13
 commands:
   git_checkout_from_cache:
     description: "Git checkout and save cache"
@@ -56,18 +57,33 @@ commands:
           command: npm run build
 
   compress:
-    description: "Compress and move"
+    description: "Compress"
     steps:
       - run:
-          name: "Compress and Move Artifact"
+          name: "Compress"
           command: |
             pushd dist/compressed/
             tar -cvf artifact.tar *
             mv artifact.tar ${OLDPWD}/
-      - store_artifacts:
-          path: artifact.tar
-          destination: content.tar
-
+      #- store_artifacts:
+      #    path: artifact.tar
+      #    destination: content.tar
+  
+  upload_artifact:
+    description: "upload artifact to s3"
+    steps:
+      - s3/copy:    
+          from: artifact.tar
+          to: "s3://${ARTIFACT_S3_BUCKET}/latest/"
+          aws-access-key-id: ${ARTIFACT_S3_AWS_ACCESS_KEY_ID}
+          aws-secret-access-key: ${ARTIFACT_S3_AWS_SECRET_ACCESS_KEY}
+          aws-region: ${ARTIFACT_S3_AWS_REGION}
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          overwrite: true
+  
+  
   docker:
     description: "Build and Push image to docker hub"
     steps:
@@ -101,6 +117,7 @@ jobs:
       - npm_install
       - build
       - compress
+      - upload_artifact
         # - docker
         #- k8s_deploy
       
