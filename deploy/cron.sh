@@ -4,8 +4,8 @@ set -ex
 
 echo "downloading artifact and artifact-info.txt in filesystem from s3 bucket"
 
-aws s3 cp s3://binary-frontend-backup/webtrader/latest/artifact.tar /tmp/
-aws s3 cp s3://binary-frontend-backup/webtrader/latest/artifact-info.txt /tmp/
+aws s3 cp s3://xx/yy/latest/artifact.tar /tmp/
+aws s3 cp s3://xx/yy/latest/artifact-info.txt /tmp/
 
 echo "calculating checksum of artifact"
 
