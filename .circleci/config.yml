@@ -125,7 +125,7 @@ jobs:
       - build
       - compress
       - upload_artifact
-      #- upload_commit_id
+      - upload_commit_id
         # - docker
         #- k8s_deploy
       
