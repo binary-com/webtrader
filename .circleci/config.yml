@@ -76,14 +76,14 @@ commands:
           aws-secret-access-key: env_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_ARTIFACT_S3_AWS_REGION
 
-  upload_commit_id:
-    description: "upload commit id and checksum to s3"
+  upload_checksum:
+    description: "upload artifact checksum to s3"
     steps:
       - run: 
           name: 
           command: |
-            echo ${CIRCLE_SHA1} > artifact-info.txt
-          #  sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
+            sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
+          #  echo ${CIRCLE_SHA1} > artifact-info.txt
       - s3/copy:    
           from: artifact-info.txt
           to: 's3://${ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/latest/'
@@ -125,7 +125,7 @@ jobs:
       - build
       - compress
       - upload_artifact
-      - upload_commit_id
+      - upload_checksum
         # - docker
         #- k8s_deploy
       
