@@ -56,15 +56,17 @@ commands:
           command: npm run build
 
   compress:
-    description: "Compress"
+    description: "Compress and move"
     steps:
       - run:
-          name: "Compress Artifact"
+          name: "Compress and Move Artifact"
           command: |
-            cd dist/compressed/
+            pushd dist/compressed/
             tar -cvf myartifact.tar *
+            mv myartifact.tar ${OLDPWD}/
       - store_artifacts:
           path: myartifact.tar
+          destination: chaks.tar
 
   docker:
     description: "Build and Push image to docker hub"
