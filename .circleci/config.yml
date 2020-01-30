@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   k8s: circleci/kubernetes@0.7.0
-  aws-s3: circleci/aws-s3@1.0.13
+  s3: circleci/aws-s3@1.0.13
 commands:
   git_checkout_from_cache:
     description: "Git checkout and save cache"
@@ -65,20 +65,17 @@ commands:
             pushd dist/compressed/
             tar -cvf artifact.tar *
             mv artifact.tar ${OLDPWD}/
-      #- store_artifacts:
-      #    path: artifact.tar
-      #    destination: content.tar
-  
+      
   upload_artifact:
     description: "upload artifact to s3"
     steps:
-      - aws-s3/copy:    
+      - s3/copy:    
           from: artifact.tar
           to: 's3://${ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/latest/'
           aws-access-key-id: env_ARTIFACT_S3_AWS_ACCESS_KEY_ID
           aws-secret-access-key: env_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_ARTIFACT_S3_AWS_REGION
-          
+
   docker:
     description: "Build and Push image to docker hub"
     steps:
