@@ -75,9 +75,9 @@ commands:
       - s3/copy:    
           from: artifact.tar
           to: "s3://${ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/latest/"
-          aws-access-key-id: "${ARTIFACT_S3_AWS_ACCESS_KEY_ID}"
-          aws-secret-access-key: "${ARTIFACT_S3_AWS_SECRET_ACCESS_KEY}"
-          aws-region: ${ARTIFACT_S3_AWS_REGION}
+          aws-access-key-id: "$ARTIFACT_S3_AWS_ACCESS_KEY_ID"
+          aws-secret-access-key: "$ARTIFACT_S3_AWS_SECRET_ACCESS_KEY"
+          aws-region: $ARTIFACT_S3_AWS_REGION
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
