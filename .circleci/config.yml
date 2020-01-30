@@ -62,11 +62,11 @@ commands:
           name: "Compress and Move Artifact"
           command: |
             pushd dist/compressed/
-            tar -cvf myartifact.tar *
-            mv myartifact.tar ${OLDPWD}/
+            tar -cvf artifact.tar *
+            mv artifact.tar ${OLDPWD}/
       - store_artifacts:
-          path: myartifact.tar
-          destination: chaks.tar
+          path: artifact.tar
+          destination: content.tar
 
   docker:
     description: "Build and Push image to docker hub"
