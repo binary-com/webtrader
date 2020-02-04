@@ -83,7 +83,6 @@ commands:
           name: 
           command: |
             sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
-          #  echo ${CIRCLE_SHA1} > artifact-info.txt
       - s3/copy:    
           from: artifact-info.txt
           to: 's3://${ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/latest/'
@@ -126,8 +125,8 @@ jobs:
       - compress
       - upload_artifact
       - upload_checksum
-        # - docker
-        #- k8s_deploy
+      - docker
+      - k8s_deploy
       
 workflows:
   release:
