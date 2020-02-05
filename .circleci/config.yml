@@ -67,14 +67,14 @@ commands:
             mv artifact.tar ${OLDPWD}/
       
   upload_artifact:
-    description: "upload artifact to s3"
+    description: "upload build artifact to s3 bucket"
     steps:
       - s3/copy:    
           from: artifact.tar
-          to: 's3://${ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/latest/'
-          aws-access-key-id: env_ARTIFACT_S3_AWS_ACCESS_KEY_ID
-          aws-secret-access-key: env_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
-          aws-region: env_ARTIFACT_S3_AWS_REGION
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID        
+          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
+          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION                          
 
   upload_checksum:
     description: "upload artifact checksum to s3"
@@ -85,10 +85,10 @@ commands:
             sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
       - s3/copy:    
           from: artifact-info.txt
-          to: 's3://${ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/latest/'
-          aws-access-key-id: env_ARTIFACT_S3_AWS_ACCESS_KEY_ID
-          aws-secret-access-key: env_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
-          aws-region: env_ARTIFACT_S3_AWS_REGION
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID        
+          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
+          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION                      
 
   docker:
     description: "Build and Push image to docker hub"
@@ -123,8 +123,8 @@ jobs:
       - npm_install
       - build
       - compress
-      - upload_artifact
-      - upload_checksum
+      - upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
+      - upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint before actual deployment
       - docker
       - k8s_deploy
       
@@ -135,4 +135,5 @@ workflows:
           filters:
             branches:
               only: /^master$/
+          context: binary-frontend-artifact-upload  # using context to retrieve shared secret from circle ci
 
