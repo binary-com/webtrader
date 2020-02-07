@@ -74,6 +74,7 @@ commands:
           command: |
             sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
             export ARTIFACT_HASH=$(cat artifact-info.txt) >> $BASH_ENV
+            source $BASH_ENV
       - s3/copy:
           from: artifact.tar
           to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
