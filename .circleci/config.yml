@@ -75,7 +75,7 @@ commands:
           aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
           aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
-          arguments: '--metadata \"{\"x-amz-artifact-id\": \"chaks\" }\"'
+          arguments: '--metadata "{\"x-amz-artifact-id\"= \"chaks\" }"'
 
   upload_checksum:
     description: "upload artifact checksum to s3"
