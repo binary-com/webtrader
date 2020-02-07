@@ -65,17 +65,13 @@ commands:
             pushd dist/compressed/
             tar -cvf artifact.tar *
             mv artifact.tar ${OLDPWD}/
+      - run:
+          name: "Tag commit id as artifact identifer"
+          command: echo "${CIRCLE_SHA1}" > artifact-info.txt
 
   upload_artifact:
     description: "upload build artifact to s3 bucket"
     steps:
-      - run:
-          name:
-          command: |
-            #sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
-            echo "${CIRCLE_SHA1}" > artifact-info.txt
-            #export ARTIFACT_HASH=$(cat artifact-info.txt) >> $BASH_ENV
-            #source $BASH_ENV
       - s3/copy:
           from: artifact.tar
           to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
@@ -87,10 +83,6 @@ commands:
   upload_checksum:
     description: "upload artifact checksum to s3"
     steps:
-      #- run:
-      #    name:
-      #    command: |
-      #      sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
       - s3/copy:
           from: artifact-info.txt
           to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
