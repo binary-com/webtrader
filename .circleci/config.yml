@@ -72,16 +72,17 @@ commands:
       - run:
           name:
           command: |
-            sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
-            export ARTIFACT_HASH=$(cat artifact-info.txt) >> $BASH_ENV
-            source $BASH_ENV
+            #sha256sum artifact.tar | cut -d ' ' -f 1 >> artifact-info.txt
+            echo "${CIRCLE_SHA1}" > artifact-info.txt
+            #export ARTIFACT_HASH=$(cat artifact-info.txt) >> $BASH_ENV
+            #source $BASH_ENV
       - s3/copy:
           from: artifact.tar
           to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
           aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
           aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
-          arguments: '--metadata "{\"x-amz-artifact-id\": \"${ARTIFACT_HASH}\" }"'
+          arguments: '--metadata "{\"x-amz-artifact-id\": \"${CIRCLE_SHA1}\" }"'
 
   upload_checksum:
     description: "upload artifact checksum to s3"
