@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   k8s: circleci/kubernetes@0.7.0
+  s3: circleci/aws-s3@1.0.13
 commands:
   git_checkout_from_cache:
     description: "Git checkout and save cache"
@@ -11,8 +12,8 @@ commands:
             - source-v1-{{ .Branch }}-{{ .Revision }}
             - source-v1-{{ .Branch }}-
             - source-v1-
-      - run: 
-          name: Fetch git tags 
+      - run:
+          name: Fetch git tags
           command: |
             mkdir -p ~/.ssh
             echo 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ== ' >> ~/.ssh/known_hosts
@@ -23,7 +24,7 @@ commands:
             fi
       - checkout
       - run:
-          name: Compress git objects 
+          name: Compress git objects
           command: git gc
       - save_cache:
           name: Git save cache
@@ -52,18 +53,52 @@ commands:
     description: "Build"
     steps:
       - run:
-          name: "Grunt deploy"
-          command: npm run deploy-ci
+          name: "Compile project"
+          command: npm run build
+
+  compress:
+    description: "Compress"
+    steps:
+      - run:
+          name: "Compress"
+          command: |
+            pushd dist/compressed/
+            tar -cvf artifact.tar *
+            mv artifact.tar ${OLDPWD}/
+      - run:
+          name: "Tag commit id as artifact identifer"
+          command: echo "${CIRCLE_SHA1}" > artifact-info.txt
+
+  upload_artifact:
+    description: "upload build artifact to s3 bucket"
+    steps:
+      - s3/copy:
+          from: artifact.tar
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
+          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
+          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
+          arguments: '--metadata "{\"x-amz-artifact-id\": \"${CIRCLE_SHA1}\" }"'
+
+  upload_checksum:
+    description: "upload artifact checksum to s3"
+    steps:
+      - s3/copy:
+          from: artifact-info.txt
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
+          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
+          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
 
   docker:
     description: "Build and Push image to docker hub"
     steps:
       - setup_remote_docker
-      - run: 
+      - run:
           name: Building docker image
           command: |
             docker build -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:${CIRCLE_SHA1} .
-      - run: 
+      - run:
           name: Pushing Image to docker hub
           command: |
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
@@ -73,7 +108,7 @@ commands:
     description: "Deploy to k8s cluster"
     steps:
       - k8s/install-kubectl
-      - run: 
+      - run:
           name: Deploying to k8s cluster for service binary-webtrader
           command: |
             echo $CA_CRT | base64 --decode > ca.crt
@@ -87,9 +122,12 @@ jobs:
       - git_checkout_from_cache
       - npm_install
       - build
+      - compress
+      - upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
+      - upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint before actual deployment
       - docker
       - k8s_deploy
-      
+
 workflows:
   release:
     jobs:
@@ -97,4 +135,4 @@ workflows:
           filters:
             branches:
               only: /^master$/
-
+          context: binary-frontend-artifact-upload  # using context to retrieve shared secret from circle ci
