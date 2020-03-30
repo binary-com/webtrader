@@ -220,8 +220,7 @@ module.exports = function (grunt) {
             "clean": {
                 options: {
                     add: false /* remove existing files in gh-pages branch */,
-                    message: "Cleaning all files in gh-pages",
-                    only: ["!.gitlab-ci.yml"]
+                    message: "Cleaning all files in gh-pages"
                 },
                 src: [ "README.md"]
             }
