@@ -98,7 +98,7 @@ commands:
         default: "beta-${CIRCLE_SHA1}"
       docker_latest_tag:
         type: string
-        default: beta-latest"        
+        default: "beta-latest"        
     steps:
       - setup_remote_docker
       - run:
@@ -176,7 +176,11 @@ jobs:
 workflows:
   test:
     jobs:
-      - test  
+      - test:
+        filters:
+          ignore:
+            -  /^development$/
+            -  /^master$/
   release_development:
     jobs:  
       - release_development:
