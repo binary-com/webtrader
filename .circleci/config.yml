@@ -173,15 +173,7 @@ jobs:
           k8s_svc_name: "webtrader-binary-com"
           docker_tag: ${CIRCLE_SHA1}
 
-workflows:
-  test:
-    jobs:
-      - test:
-          filters:
-            branches:
-              ignore:
-                -  /^development$/
-                -  /^master$/  
+workflows: 
   release_development:
     jobs:  
       - release_development:
@@ -200,3 +192,6 @@ workflows:
               ignore: /.*/
             tags:
               only: /^master$/
+  test:
+    jobs:
+      - test              
