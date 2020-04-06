@@ -148,6 +148,14 @@ jobs:
       - git_checkout_from_cache
       - npm_install
       - build
+  docker_build_push:
+    docker:
+      - image: circleci/node:12.13.0-stretch
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - build
+      - docker_build_push
   release_development:
     docker:
       - image: circleci/node:12.13.0-stretch
@@ -157,7 +165,6 @@ jobs:
       - build
       - docker_build_push
       - k8s_deploy
-
   release_production:
     docker:
       - image: circleci/node:12.13.0-stretch
@@ -180,9 +187,9 @@ workflows:
       - test:
           filters:
             branches:
-              ignore: 
-                - /^master$/
-                - /^development$/    
+              ignore:
+                -  /^development$/
+                -  /^master$/  
   release_development:
     jobs:  
       - release_development:
