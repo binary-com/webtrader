@@ -177,15 +177,14 @@ jobs:
 workflows:
   test:
     jobs:
-      - test
-      filters:
-        branches:
-          ignore: 
-            - /^master$/
-            - /^development$/    
+      - test:
+          filters:
+            branches:
+              ignore: 
+                - /^master$/
+                - /^development$/    
   release_development:
-    jobs:
-      - test    
+    jobs:  
       - release_development:
           context: binary-frontend-artifact-upload
           filters:
