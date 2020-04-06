@@ -90,27 +90,40 @@ commands:
           aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
           aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
 
-  docker:
+  docker_build_push:
     description: "Build and Push image to docker hub"
+    parameters:
+      docker_tag:
+        type: string
+        default: beta-${CIRCLE_SHA1}"
+      docker_latest_tag:
+        type: string
+        default: beta-latest"        
     steps:
       - setup_remote_docker
       - run:
           name: Building docker image
           command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:${CIRCLE_SHA1} -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:latest .
+            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >> -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_latest_tag >> .
       - run:
           name: Pushing Image to docker hub
           command: |
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-            docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader:${CIRCLE_SHA1}
-            docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader:latest
+            docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader
 
   k8s_deploy:
     description: "Deploy to k8s cluster"
+    parameters:
+      k8s_svc_name:
+        type: string
+        default: "webtrader-beta-binary-com"
+      docker_tag:
+        type: string
+        default: "beta-${CIRCLE_SHA1}"        
     steps:
       - k8s/install-kubectl
       - run:
-          name: Deploying to k8s cluster for service binary-webtrader
+          name: Deploying to k8s cluster for service << parameters.k8s_svc_name >>
           command: |
             for SERVER_ID in {1..5}
             do
@@ -124,11 +137,28 @@ commands:
                 KUBE_SERVER="${!KUBE_SERVER_REF}"
                 SERVICEACCOUNT_TOKEN="${!SERVICEACCOUNT_TOKEN_REF}"
                 echo $CA_CRT | base64 --decode > ca.crt
-                kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/webtrader-binary-com webtrader-binary-com=${DOCKHUB_ORGANISATION}/binary-static-webtrader:${CIRCLE_SHA1}
+                kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/webtrader-binary-com webtrader-binary-com=${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >>
               fi
             done
 jobs:
-  release:
+  test:
+    docker:
+      - image: circleci/node:12.13.0-stretch
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - build
+  release_development:
+    docker:
+      - image: circleci/node:12.13.0-stretch
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - build
+      - docker_build_push
+      - k8s_deploy
+
+  release_production:
     docker:
       - image: circleci/node:12.13.0-stretch
     steps:
@@ -138,13 +168,31 @@ jobs:
       - compress
       - upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
       - upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint before actual deployment
-      - docker
-      - k8s_deploy
+      - docker_build_push:
+          docker_latest_tag: "latest"
+      - k8s_deploy:
+          k8s_svc_name: "webtrader-binary-com"
+          docker_tag: ${CIRCLE_SHA1}
 
 workflows:
-  release:
+  test:
     jobs:
-      - release:
+      - test:
+        filters:
+          branches:
+            ignore: /^master$/
+
+  release_development:
+    jobs:
+      - release_development:
+          context: binary-frontend-artifact-upload
+          filters:
+            branches:
+              only: /^development$/
+
+  release_production:
+    jobs:
+      - release_production:
           context: binary-frontend-artifact-upload
           filters:
             branches:
