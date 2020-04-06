@@ -165,13 +165,13 @@ jobs:
       - npm_install
       - build
       - compress
-      - upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
-      - upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint before actual deployment
+      #- upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
+      #- upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint before actual deployment
       - docker_build_push:
           docker_latest_tag: "latest"
       - k8s_deploy:
           k8s_svc_name: "webtrader-binary-com"
-          docker_tag: ${CIRCLE_SHA1}
+          docker_tag: "${CIRCLE_SHA1}"
 
 workflows:
   test:
