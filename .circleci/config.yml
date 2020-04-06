@@ -95,7 +95,7 @@ commands:
     parameters:
       docker_tag:
         type: string
-        default: beta-${CIRCLE_SHA1}"
+        default: "beta-${CIRCLE_SHA1}"
       docker_latest_tag:
         type: string
         default: beta-latest"        
@@ -188,7 +188,11 @@ workflows:
           context: binary-frontend-artifact-upload
           filters:
             branches:
-              only: /^development$/
+              ignore: /.*/
+            tags:
+              only: /^development$/  
+          requires:
+            - test
 
   release_production:
     jobs:
@@ -196,4 +200,8 @@ workflows:
           context: binary-frontend-artifact-upload
           filters:
             branches:
+              ignore: /.*/
+            tags:
               only: /^master$/
+          requires:
+            - test
