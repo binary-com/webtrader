@@ -182,8 +182,6 @@ workflows:
       - release_development:
           filters:
             branches:
-              ignore: /.*/
-            tags:
               only: /^development$/  
           context: binary-frontend-artifact-upload  
   release_production:
@@ -191,7 +189,5 @@ workflows:
       - release_production:
           filters:
             branches:
-              ignore: /.*/
-            tags:
               only: /^master$/
           context: binary-frontend-artifact-upload             
