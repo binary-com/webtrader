@@ -110,7 +110,6 @@ commands:
           command: |
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
             docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader
-
   k8s_deploy:
     description: "Deploy to k8s cluster"
     parameters:
@@ -196,4 +195,4 @@ workflows:
           filters:
             branches:
               only: /^master$/
-          context: binary-frontend-artifact-upload             
+          context: binary-frontend-artifact-upload
