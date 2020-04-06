@@ -141,13 +141,6 @@ commands:
               fi
             done
 jobs:
-  test:
-    docker:
-      - image: circleci/node:12.13.0-stretch
-    steps:
-      - git_checkout_from_cache
-      - npm_install
-      - build
   release_development:
     docker:
       - image: circleci/node:12.13.0-stretch
@@ -177,21 +170,18 @@ workflows:
   release_development:
     jobs:  
       - release_development:
-          context: binary-frontend-artifact-upload
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /^development$/  
+          context: binary-frontend-artifact-upload  
   release_production:
     jobs:      
       - release_production:
-          context: binary-frontend-artifact-upload
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /^master$/
-  test:
-    jobs:
-      - test              
+          context: binary-frontend-artifact-upload             
