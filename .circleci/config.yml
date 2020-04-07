@@ -143,13 +143,6 @@ commands:
               fi
             done
 jobs:
-  test:
-    docker:
-      - image: circleci/node:12.13.0-stretch
-    steps:
-      - git_checkout_from_cache
-      - npm_install
-      - build    
   release_development:
     docker:
       - image: circleci/node:12.13.0-stretch
@@ -178,14 +171,6 @@ jobs:
           docker_tag: "${CIRCLE_SHA1}"
 
 workflows:
-  test:
-    jobs:
-      - test:
-          filters:
-            branches:
-              ignore:
-                -  /^development$/
-                -  /^master$/
   release_development:
     jobs:  
       - release_development:
