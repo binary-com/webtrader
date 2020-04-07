@@ -99,12 +99,15 @@ commands:
       docker_latest_tag:
         type: string
         default: "beta-latest"        
+      nginx_location:
+        type: string
+        default: "/usr/share/nginx/html/beta"
     steps:
       - setup_remote_docker
       - run:
           name: Building docker image
           command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >> -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_latest_tag >> .
+            docker build --build-arg NGINX_LOCATION=<< parameters.nginx_location >> -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >> -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_latest_tag >> .
       - run:
           name: Pushing Image to docker hub
           command: |
@@ -169,6 +172,7 @@ jobs:
       - docker_build_push:
           docker_latest_tag: "latest"
           docker_tag: "${CIRCLE_SHA1}"
+          nginx_location: "/usr/share/nginx/html"
       - k8s_deploy:
           k8s_svc_name: "webtrader-binary-com"
           docker_tag: "${CIRCLE_SHA1}"
