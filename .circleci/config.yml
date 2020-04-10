@@ -122,6 +122,9 @@ commands:
       docker_tag:
         type: string
         default: "beta-${CIRCLE_SHA1}"        
+      k8s-deployment:
+        type: string
+        default: "webtrader-beta-binary-com"        
     steps:
       - k8s/install-kubectl
       - run:
@@ -139,7 +142,7 @@ commands:
                 KUBE_SERVER="${!KUBE_SERVER_REF}"
                 SERVICEACCOUNT_TOKEN="${!SERVICEACCOUNT_TOKEN_REF}"
                 echo $CA_CRT | base64 --decode > ca.crt
-                kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/webtrader-binary-com webtrader-binary-com=${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >>
+                kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/<< parameters.k8s-deployment >> << parameters.k8s-deployment >>=${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >>
               fi
             done
 jobs:
@@ -169,6 +172,7 @@ jobs:
       - k8s_deploy:
           k8s_svc_name: "webtrader-binary-com"
           docker_tag: "${CIRCLE_SHA1}"
+          k8s-deployment: "webtrader-binary-com"
 
 workflows:
   release_development:
