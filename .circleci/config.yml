@@ -38,14 +38,14 @@ commands:
       - restore_cache:
           name: Restore npm cache
           keys:
-            - npm-v1-{{ checksum "package.json" }}
+            - npm-v1-{{ checksum "package-lock.json" }}
             - npm-v1-
       - run:
           name: Install npm modules
           command: npm ci
       - save_cache:
           name: Save NPM cache
-          key: npm-v1-{{ checksum "package.json" }}
+          key: npm-v1-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
 
