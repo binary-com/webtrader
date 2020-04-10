@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   k8s: circleci/kubernetes@0.7.0
+  s3: circleci/aws-s3@1.0.13
 commands:
   git_checkout_from_cache:
     description: "Git checkout and save cache"
@@ -11,8 +12,8 @@ commands:
             - source-v1-{{ .Branch }}-{{ .Revision }}
             - source-v1-{{ .Branch }}-
             - source-v1-
-      - run: 
-          name: Fetch git tags 
+      - run:
+          name: Fetch git tags
           command: |
             mkdir -p ~/.ssh
             echo 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ== ' >> ~/.ssh/known_hosts
@@ -23,7 +24,7 @@ commands:
             fi
       - checkout
       - run:
-          name: Compress git objects 
+          name: Compress git objects
           command: git gc
       - save_cache:
           name: Git save cache
@@ -37,14 +38,14 @@ commands:
       - restore_cache:
           name: Restore npm cache
           keys:
-            - npm-v1-{{ checksum "package.json" }}
+            - npm-v1-{{ checksum "package-lock.json" }}
             - npm-v1-
       - run:
           name: Install npm modules
-          command: npm install
+          command: npm ci
       - save_cache:
           name: Save NPM cache
-          key: npm-v1-{{ checksum "package.json" }}
+          key: npm-v1-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
 
@@ -52,49 +53,135 @@ commands:
     description: "Build"
     steps:
       - run:
-          name: "Grunt deploy"
-          command: npm run deploy-ci
+          name: "Compile project"
+          command: npm run build
 
-  docker:
+  compress:
+    description: "Compress"
+    steps:
+      - run:
+          name: "Compress"
+          command: |
+            pushd dist/compressed/
+            tar -cvf artifact.tar *
+            mv artifact.tar ${OLDPWD}/
+      - run:
+          name: "Tag commit id as artifact identifer"
+          command: echo "${CIRCLE_SHA1}" > artifact-info.txt
+
+  upload_artifact:
+    description: "upload build artifact to s3 bucket"
+    steps:
+      - s3/copy:
+          from: artifact.tar
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
+          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
+          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
+          arguments: '--metadata "{\"x-amz-artifact-id\": \"${CIRCLE_SHA1}\" }"'
+
+  upload_checksum:
+    description: "upload artifact checksum to s3"
+    steps:
+      - s3/copy:
+          from: artifact-info.txt
+          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
+          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
+          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
+          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
+
+  docker_build_push:
     description: "Build and Push image to docker hub"
+    parameters:
+      docker_tag:
+        type: string
+        default: "beta-${CIRCLE_SHA1}"
+      docker_latest_tag:
+        type: string
+        default: "beta-latest"        
+      nginx_location:
+        type: string
+        default: "/usr/share/nginx/html/beta"
     steps:
       - setup_remote_docker
-      - run: 
+      - run:
           name: Building docker image
           command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:beta-${CIRCLE_SHA1} .
-      - run: 
+            docker build --build-arg NGINX_LOCATION=<< parameters.nginx_location >> -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >> -t ${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_latest_tag >> .
+      - run:
           name: Pushing Image to docker hub
           command: |
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-            docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader:beta-${CIRCLE_SHA1}
-
+            docker push ${DOCKHUB_ORGANISATION}/binary-static-webtrader
   k8s_deploy:
     description: "Deploy to k8s cluster"
+    parameters:
+      k8s_svc_name:
+        type: string
+        default: "webtrader-beta-binary-com"
+      docker_tag:
+        type: string
+        default: "beta-${CIRCLE_SHA1}"        
     steps:
       - k8s/install-kubectl
-      - run: 
-          name: Deploying to k8s cluster for service binary-webtrader
+      - run:
+          name: Deploying to k8s cluster for service << parameters.k8s_svc_name >>
           command: |
-            echo $CA_CRT | base64 --decode > ca.crt
-            kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/webtrader-beta-binary-com webtrader-beta-binary-com=${DOCKHUB_ORGANISATION}/binary-static-webtrader:beta-${CIRCLE_SHA1}
-
+            for SERVER_ID in {1..5}
+            do
+              KUBE_SERVER_REF="KUBE_SERVER_$SERVER_ID"
+              SERVICEACCOUNT_TOKEN_REF="SERVICEACCOUNT_TOKEN_$SERVER_ID"
+              CA_CRT_REF="CA_CRT_$SERVER_ID"
+              if [ ! -z "${!KUBE_SERVER_REF}" ]
+              then
+                echo "Deploying to cluster $SERVER_ID"
+                CA_CRT="${!CA_CRT_REF}"
+                KUBE_SERVER="${!KUBE_SERVER_REF}"
+                SERVICEACCOUNT_TOKEN="${!SERVICEACCOUNT_TOKEN_REF}"
+                echo $CA_CRT | base64 --decode > ca.crt
+                kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/webtrader-binary-com webtrader-binary-com=${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >>
+              fi
+            done
 jobs:
-  release:
+  release_development:
     docker:
       - image: circleci/node:12.13.0-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
       - build
-      - docker
+      - docker_build_push
       - k8s_deploy
-      
+  release_production:
+    docker:
+      - image: circleci/node:12.13.0-stretch
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - build
+      - compress
+      - upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
+      - upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint before actual deployment
+      - docker_build_push:
+          docker_latest_tag: "latest"
+          docker_tag: "${CIRCLE_SHA1}"
+          nginx_location: "/usr/share/nginx/html"
+      - k8s_deploy:
+          k8s_svc_name: "webtrader-binary-com"
+          docker_tag: "${CIRCLE_SHA1}"
+
 workflows:
-  release:
-    jobs:
-      - release:
+  release_development:
+    jobs:  
+      - release_development:
           filters:
             branches:
-              only: /^development$/
-
+              only: /^development$/  
+          context: binary-frontend-artifact-upload  
+  release_production:
+    jobs:      
+      - release_production:
+          filters:
+            branches:
+              only: /^master$/
+          context: binary-frontend-artifact-upload
