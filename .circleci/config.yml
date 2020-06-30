@@ -68,7 +68,7 @@ commands:
       - run:
           name: Install and configure dependencies
           command: |
-            sudo npm install -g gh-pages@2.0.1
+            npm install gh-pages@2.0.1
             git config user.email "ci-build@binary.com"
             git config user.name "ci-build"
       - add_ssh_keys:
@@ -76,7 +76,7 @@ commands:
             - "6e:e8:9f:f9:7e:9f:50:a4:84:ac:15:b9:32:54:9f:71"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages -d dist/compressed --branch << parameters.target_branch >> --message '[skip ci]'
+          command: node ./node_modules/gh-pages/bin/gh-pages -d dist/compressed --branch << parameters.target_branch >> --message '[skip ci]'
   docker_build_push:
     description: "Build and Push image to docker hub"
     parameters:
