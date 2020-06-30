@@ -141,6 +141,13 @@ commands:
           success_message: "Release succeeded for webtrader with version *$(cat dist/compressed/version)*"
           webhook: ${SLACK_WEBHOOK}
 jobs:
+  build:
+    docker:
+      - image: circleci/node:12.13.0-stretch
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - build
   release_staging:
     docker:
       - image: circleci/node:12.13.0-stretch
@@ -178,6 +185,12 @@ jobs:
           k8s-deployment: "webtrader-binary-com"
 
 workflows:
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: /^master$/
   release:
     jobs:
       - release_staging:
