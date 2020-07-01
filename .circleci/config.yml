@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   k8s: circleci/kubernetes@0.7.0
-  s3: circleci/aws-s3@1.0.13
+  slack: circleci/slack@3.4.2
 commands:
   git_checkout_from_cache:
     description: "Git checkout and save cache"
@@ -31,7 +31,6 @@ commands:
           key: source-v1-{{ .Branch }}-{{ .Revision }}
           paths:
             - ".git"
-
   npm_install:
     description: "Install npm modules"
     steps:
@@ -48,48 +47,36 @@ commands:
           key: npm-v1-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
-
   build:
     description: "Build"
     steps:
       - run:
           name: "Compile project"
           command: npm run build
-
-  compress:
-    description: "Compress"
+  deploy:
+    description: "Deploy to static branches"
+    parameters:
+      target_branch:
+        type: string
     steps:
+      - checkout
+      - attach_workspace:
+          at: dist/compressed
       - run:
-          name: "Compress"
+          name: Tag build
+          command: echo "<< parameters.target_branch >> $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/compressed/version
+      - run:
+          name: Install and configure dependencies
           command: |
-            pushd dist/compressed/
-            tar -cvf artifact.tar *
-            mv artifact.tar ${OLDPWD}/
+            npm install gh-pages@2.0.1
+            git config user.email "ci-build@binary.com"
+            git config user.name "ci-build"
+      - add_ssh_keys:
+          fingerprints:
+            - "01:67:4a:6d:26:9c:70:c4:1a:60:91:88:d9:dd:f0:83"
       - run:
-          name: "Tag commit id as artifact identifer"
-          command: echo "${CIRCLE_SHA1}" > artifact-info.txt
-
-  upload_artifact:
-    description: "upload build artifact to s3 bucket"
-    steps:
-      - s3/copy:
-          from: artifact.tar
-          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
-          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
-          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
-          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
-          arguments: '--metadata "{\"x-amz-artifact-id\": \"${CIRCLE_SHA1}\" }"'
-
-  upload_checksum:
-    description: "upload artifact checksum to s3"
-    steps:
-      - s3/copy:
-          from: artifact-info.txt
-          to: 's3://${CONTEXT_ARTIFACT_S3_BUCKET}/${CIRCLE_PROJECT_REPONAME}/'
-          aws-access-key-id: env_CONTEXT_ARTIFACT_S3_AWS_ACCESS_KEY_ID
-          aws-secret-access-key: env_CONTEXT_ARTIFACT_S3_AWS_SECRET_ACCESS_KEY
-          aws-region: env_CONTEXT_ARTIFACT_S3_AWS_REGION
-
+          name: Deploy docs to gh-pages branch
+          command: node ./node_modules/gh-pages/bin/gh-pages -d dist/compressed --branch << parameters.target_branch >> --message '[skip ci]'
   docker_build_push:
     description: "Build and Push image to docker hub"
     parameters:
@@ -145,16 +132,32 @@ commands:
                 kubectl --server=${KUBE_SERVER} --certificate-authority=ca.crt --token=$SERVICEACCOUNT_TOKEN set image deployment/<< parameters.k8s-deployment >> << parameters.k8s-deployment >>=${DOCKHUB_ORGANISATION}/binary-static-webtrader:<< parameters.docker_tag >>
               fi
             done
+  notify_slack:
+    description: "Notify slack"
+    steps:
+      - slack/status:
+          include_project_field: false
+          failure_message: "Release failed for webtrader with version *$(cat dist/compressed/version)*"
+          success_message: "Release succeeded for webtrader with version *$(cat dist/compressed/version)*"
+          webhook: ${SLACK_WEBHOOK}
 jobs:
-  release_development:
+  build:
     docker:
       - image: circleci/node:12.13.0-stretch
     steps:
       - git_checkout_from_cache
       - npm_install
       - build
-      - docker_build_push
-      - k8s_deploy
+  release_staging:
+    docker:
+      - image: circleci/node:12.13.0-stretch
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - build
+      - deploy:
+          target_branch: "staging"
+      - notify_slack
   release_production:
     docker:
       - image: circleci/node:12.13.0-stretch
@@ -162,9 +165,16 @@ jobs:
       - git_checkout_from_cache
       - npm_install
       - build
-      - compress
-      - upload_artifact  # uploading the built code to s3 to create a backup of key services separate from Kubernetes deployment
-      - upload_checksum  # uploading compressed artifact checksum to cross match artifact fingerprint before actual deployment
+      - deploy:
+          target_branch: "production"
+      - notify_slack
+  release_aws_production:
+    docker:
+      - image: circleci/node:12.13.0-stretch
+    steps:
+      - git_checkout_from_cache
+      - npm_install
+      - build
       - docker_build_push:
           docker_latest_tag: "latest"
           docker_tag: "${CIRCLE_SHA1}"
@@ -175,17 +185,28 @@ jobs:
           k8s-deployment: "webtrader-binary-com"
 
 workflows:
-  release_development:
-    jobs:  
-      - release_development:
+  build:
+    jobs:
+      - build:
           filters:
             branches:
-              only: /^development$/  
-          context: binary-frontend-artifact-upload  
-  release_production:
-    jobs:      
-      - release_production:
+              ignore: /^master$/
+  release:
+    jobs:
+      - release_staging:
           filters:
             branches:
               only: /^master$/
+      - release_production:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production.*/
+      - release_aws_production:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production.*/
           context: binary-frontend-artifact-upload
