@@ -45,7 +45,7 @@ export const extractFilteredMarkets = (trading_times_data, options) => {
 
 export const extractChartableMarkets = (trading_times_data) => {
    return extractFilteredMarkets(trading_times_data, {
-      filter: (sym) => (sym.feed_license !== 'chartonly')
+      filter: (sym) => (sym.feed_license !== 'chartonly') && !isCrashBoomSymbol(sym.symbol)
    }) || [];
 };
 

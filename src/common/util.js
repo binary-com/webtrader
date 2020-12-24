@@ -1,3 +1,7 @@
+function isCrashBoomSymbol(symbol) {
+  return /^(BOOM|CRASH).+/i.test(symbol)
+}
+
 function isTick(ohlc) {
     return ohlc.indexOf("t") !== -1;
 }

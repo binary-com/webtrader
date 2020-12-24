@@ -14,9 +14,13 @@ function refresh_active_symbols() {
             local_storage.set('active_symbols', data.active_symbols);
             const active_symbols = [];
             const active_markets = _(data.active_symbols).groupBy('market').map(function(symbols) {
-                const sym = _.head(symbols);
+             
+                const filtered_symbols = symbols.filter(item => !isCrashBoomSymbol(item.symbol))
+  
+                const sym = _.head(filtered_symbols);
+     
                 const market = { name: sym.market, display_name: sym.market_display_name };
-                market.submarkets = _(symbols).groupBy('submarket').map(function(symbols) {
+                market.submarkets = _(filtered_symbols).groupBy('submarket').map(function(symbols) {
                     const sym = _.head(symbols);
                     const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
                     submarket.instruments = _.map(symbols, function(sym) {

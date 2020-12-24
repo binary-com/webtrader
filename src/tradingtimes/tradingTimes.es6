@@ -7,6 +7,7 @@ import 'jquery-growl';
 import _ from 'lodash';
 import moment from 'moment';
 import { getObjectMarketSubmarkets, getSortedMarkets, getSortedSubmarkets } from '../common/marketUtils';
+import 'common/util'
 
 let table = null;
 let tradingWin = null;
@@ -48,7 +49,12 @@ const processData = (markets) => {
       market_names.push(market.display_name);
       submarket_names[market.display_name] = [];
       market.submarkets.forEach(
-        (submarket) => submarket_names[market.display_name].push(submarket.display_name)
+        (submarket) => {
+           if (!isCrashBoomSymbol(submarket.name)) {
+
+            submarket_names[market.display_name].push(submarket.display_name)
+           }
+         }
      )
    });
 
@@ -60,6 +66,7 @@ const processData = (markets) => {
       // TODO: comeback and use lodash once 'trade module' changes got merged.
       const market = markets.filter((m) => (m.display_name == marketname))[0];
       const symbols = market && market.submarkets.filter((s) => (s.display_name == submarket_name))[0].instruments;
+      console.log(symbols)
       const rows = (symbols || []).map((sym) => {
         return [
           sym.display_name,
@@ -153,8 +160,12 @@ const initTradingWin = ($html) => {
         function changed() {
           const val = $(this).val();
           header = getObjectMarketSubmarkets(local_storage.get('active_symbols'));
+          
 
-          if (header[val]) submarket_names.update_list(getSortedSubmarkets(Object.keys(header[val])));
+          if (header[val]) {
+             const cumulative_submarkets = Object.keys(header[val]).filter(item => !isCrashBoomSymbol(item))
+             submarket_names.update_list(getSortedSubmarkets(cumulative_submarkets))
+            };
 
           updateTable(result, market_names.val(), submarket_names.val());
         };
