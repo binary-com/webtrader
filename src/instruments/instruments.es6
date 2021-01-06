@@ -15,7 +15,7 @@ function refresh_active_symbols() {
             const active_symbols = [];
             const active_markets = _(data.active_symbols).groupBy('market').map(function(symbols) {
              
-                const filtered_symbols = symbols.filter(item => !isCrashBoomSymbol(item.symbol))
+                const filtered_symbols = symbols.filter(item => !isRestrictedSymbol(item.symbol))
   
                 const sym = _.head(filtered_symbols);
      

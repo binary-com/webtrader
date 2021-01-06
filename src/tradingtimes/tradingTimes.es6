@@ -50,7 +50,7 @@ const processData = (markets) => {
       submarket_names[market.display_name] = [];
       market.submarkets.forEach(
         (submarket) => {
-           if (!isCrashBoomSymbol(submarket.name)) {
+           if (!isRestrictedSymbol(submarket.name)) {
 
             submarket_names[market.display_name].push(submarket.display_name)
            }
@@ -163,7 +163,7 @@ const initTradingWin = ($html) => {
           
 
           if (header[val]) {
-             const cumulative_submarkets = Object.keys(header[val]).filter(item => !isCrashBoomSymbol(item))
+             const cumulative_submarkets = Object.keys(header[val]).filter(item => !isRestrictedSymbol(item))
              submarket_names.update_list(getSortedSubmarkets(cumulative_submarkets))
             };
 

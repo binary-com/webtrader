@@ -1,5 +1,5 @@
-function isCrashBoomSymbol(symbol) {
-  return /^(BOOM|CRASH).+/i.test(symbol)
+function isRestrictedSymbol(symbol) {
+  return /^(BOOM|CRASH|STEP).+/i.test(symbol)
 }
 
 function isTick(ohlc) {
