@@ -82,7 +82,7 @@ const initTable = () => {
 
     function populateTable(result) {
         const active_symbols_data = local_storage.get('active_symbols');
-        const filtered_active_symbols = active_symbols_data.filter(item => !isRestrictedSymbol(item.symbol))
+        const filtered_active_symbols = filterRestrictedSymbols(active_symbols_data);
         const asset_index_data = [...result[0].asset_index];
 
         if($.isEmptyObject(filtered_active_symbols) && $.isEmptyObject(asset_index_data)) return;

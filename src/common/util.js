@@ -1,5 +1,5 @@
-function isRestrictedSymbol(symbol) {
-  return /^(BOOM|CRASH|STEP).+/i.test(symbol)
+function filterRestrictedSymbols(active_symbols) {
+  return active_symbols.filter(function(item) { return !/^(BOOM|CRASH|STP).+/i.test(item.symbol)});
 }
 
 function isTick(ohlc) {
