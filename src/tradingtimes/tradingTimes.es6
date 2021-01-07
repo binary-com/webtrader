@@ -66,7 +66,7 @@ const processData = (markets) => {
       // TODO: comeback and use lodash once 'trade module' changes got merged.
       const market = markets.filter((m) => (m.display_name == marketname))[0];
       const symbols = market && market.submarkets.filter((s) => (s.display_name == submarket_name))[0].instruments;
-      console.log(symbols)
+
       const rows = (symbols || []).map((sym) => {
         return [
           sym.display_name,
