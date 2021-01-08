@@ -158,14 +158,13 @@ const initTradingWin = ($html) => {
         function changed() {
           const val = $(this).val();
           const new_active_symbols = local_storage.get('active_symbols');
-          const new_filtered_symbols = filterRestrictedSymbols(new_active_symbols)
+          const new_filtered_symbols = filterRestrictedSymbols(new_active_symbols);
           header = getObjectMarketSubmarkets(new_filtered_symbols);
-          
 
           if (header[val]) {
-             const cumulative_submarkets = Object.keys(header[val])
-             submarket_names.update_list(getSortedSubmarkets(cumulative_submarkets))
-            };
+             const cumulative_submarkets = Object.keys(header[val]);
+             submarket_names.update_list(getSortedSubmarkets(cumulative_submarkets));
+          };
 
           updateTable(result, market_names.val(), submarket_names.val());
         };
