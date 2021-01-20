@@ -5,6 +5,7 @@ import rv from 'common/rivetsExtra';
 import 'jquery-growl';
 import 'css!./assetIndex.css';
 import { getObjectMarketSubmarkets, getSortedMarkets, getSortedSubmarkets } from '../common/marketUtils';
+import 'common/util'
 
 let table_el = null;
 let asset_win_el = null;
@@ -81,12 +82,13 @@ const initTable = () => {
 
     function populateTable(result) {
         const active_symbols_data = local_storage.get('active_symbols');
+        const filtered_active_symbols = filterRestrictedSymbols(active_symbols_data);
         const asset_index_data = [...result[0].asset_index];
 
-        if($.isEmptyObject(active_symbols_data) && $.isEmptyObject(asset_index_data)) return;
+        if($.isEmptyObject(filtered_active_symbols) && $.isEmptyObject(asset_index_data)) return;
 
-        state.dropdown.market_submarkets = getObjectMarketSubmarkets(active_symbols_data);
-        state.dropdown.sorted_markets = getSortedMarkets(active_symbols_data);
+        state.dropdown.market_submarkets = getObjectMarketSubmarkets(filtered_active_symbols);
+        state.dropdown.sorted_markets = getSortedMarkets(filtered_active_symbols);
         state.table.asset_data = asset_index_data;
 
         header_el = asset_win_el.parent().find('.ui-dialog-title').addClass('with-content');

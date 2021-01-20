@@ -1,3 +1,7 @@
+function filterRestrictedSymbols(active_symbols) {
+  return active_symbols.filter(function(item) { return !/^(BOOM|CRASH|STP).+/i.test(item.symbol)});
+}
+
 function isTick(ohlc) {
     return ohlc.indexOf("t") !== -1;
 }

@@ -15,9 +15,10 @@ const refresh_active_symbols = () => {
       .then((data) => {
          /* clean up the data! */
          let markets = _(data.active_symbols).groupBy('market').map((symbols) => {
-            const sym = _.head(symbols);
+            const filtered_symbols = filterRestrictedSymbols(symbols);
+            const sym = _.head(filtered_symbols);
             const market = { name: sym.market, display_name: sym.market_display_name };
-            market.submarkets = _(symbols).groupBy('submarket').map((symbols) => {
+            market.submarkets = _(filtered_symbols).groupBy('submarket').map((symbols) => {  
                const sym = _.head(symbols);
                const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
                submarket.instruments = _.map(symbols,(sym) => ({
