@@ -47,7 +47,9 @@
   .error { background: #fef1cf; }
   ul.categories-row li select.contract-category-display + .ui-selectmenu-button { max-width: 145px; }
   .ui-selectmenu-text { margin-top: -4px; }
+  .duration-hint {font-style: italic;}
   .duration-row li,
+  .duration-hint li,
   .date-start-row li,
   .categories-row {
     justify-content: space-between;

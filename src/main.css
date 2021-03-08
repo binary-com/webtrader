@@ -598,3 +598,8 @@ label.checkbox input:checked ~ span.check {
     display: flex;
     align-items: center;
 }
+
+.error-field {
+    border-color: #c03!important;
+    color: #c03;
+} 
