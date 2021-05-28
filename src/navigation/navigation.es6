@@ -48,7 +48,7 @@ const initLoginButton = (root) => {
       show_submenu: false,
       show_new_account_link: false,
       openRealAccount: () => {
-         const real_account_binary_url = getBinaryUrl('new_account/realws');
+         const real_account_binary_url = getBinaryUrl('new_account/realws.html');
          window.open(real_account_binary_url, '_blank');
       },
       openFinancialAccountMF: () => {
