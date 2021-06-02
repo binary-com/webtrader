@@ -170,7 +170,7 @@ const initLoginButton = (root) => {
             const lockedIds = _.filter(loginIds, { s_disabled:true }).map(acc => acc.id).join(',');
             $.growl.error({
                fixed: true,
-               message:`<a href='${getBinaryUrl('contact.html')}' target='_blank'>
+               message:`<a href='${getBinaryUrl('contact')}' target='_blank'>
                 ${'Your account (%) is locked, please contact customer support for more info.'.i18n().replace('%', lockedIds)}
                </a>`
             });
@@ -237,8 +237,8 @@ const initLang = (root) => {
    const contact_us_el = document.getElementById('contact-us');
    const logo_container = document.getElementById('logo-container');
 
-   contact_us_el.href = getBinaryUrl('contact.html');
-   logo_container.href = getBinaryUrl('home.html');
+   contact_us_el.href = getBinaryUrl('contact');
+   logo_container.href = getBinaryUrl('home');
 
    rv.bind(root[0], state);
 

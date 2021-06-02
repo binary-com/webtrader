@@ -90,7 +90,7 @@ const settingsData = {
     is_gamstop_client: null,
     timeout_until_date: null,
     timeout_until_time: null,
-    binary_url_contact: getBinaryUrl('contact.html'),
+    binary_url_contact: getBinaryUrl('contact'),
     trimString: (event, scope) => {
         const $el = $(event.target),
             decimals = currencyFractionalDigits(),

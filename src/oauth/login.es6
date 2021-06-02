@@ -68,7 +68,7 @@ const init_state = (root, win) => {
          login();
       },
       onRegister: () => {
-         const register_link = getBinaryUrl('home.html');
+         const register_link = getBinaryUrl('home');
          window.open(register_link, '_blank');
       },
    };

@@ -11,8 +11,8 @@ var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
 
-contact_us_el.href = getBinaryUrl('contact.html');
-logo_el.href = getBinaryUrl('home.html');
+contact_us_el.href = getBinaryUrl('contact');
+logo_el.href = getBinaryUrl('home');
 
 checkRedirectToken(params_str);
 
