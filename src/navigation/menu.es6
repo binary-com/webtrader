@@ -50,8 +50,9 @@ export const extractChartableMarkets = (trading_times_data) => {
 };
 
 export const refreshMenu = (root, markets, callback) => {
+   const non_crypto_markets = markets.filter( m => m.name !== "cryptocurrency" && m.name !== "Cryptocurrencies")
    const menu = `<ul>${
-      markets.map(m => `<li><div>${m.display_name}</div><ul>${
+      non_crypto_markets.map(m => `<li><div>${m.display_name}</div><ul>${
          m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${
             s.instruments.map(i => `<li symbol='${i.symbol}' pip='${i.pip}'><div>${i.display_name}</div></li>`).join('')
          }</ul></li>`).join('')
