@@ -50,8 +50,8 @@ export const extractChartableMarkets = (trading_times_data) => {
 };
 
 export const refreshMenu = (root, markets, callback) => {
-   const non_crypto = symbol => !/^(cry|JD)/i.test(symbol);
-   const non_crypto_markets = markets.filter( m => non_crypto(m.name))
+   const is_not_crypto = symbol => !/^(cry|JD)/i.test(symbol);
+   const non_crypto_markets = markets.filter( m => is_not_crypto(m.name))
 
    const menu = `<ul>${
       non_crypto_markets.map(m => `<li><div>${m.display_name}</div><ul>${
