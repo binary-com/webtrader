@@ -322,8 +322,10 @@ const initConfigWindow = () => {
         state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
       }
       state.is_loading = true;
+
       liveapi
         .cached
+        .send({ get_settings: 1 })
         .then((settings) => {
           state.is_loading = false;
           state.allowCopy.allow_copiers = settings.get_settings.allow_copiers;
