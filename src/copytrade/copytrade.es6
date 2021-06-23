@@ -121,14 +121,12 @@ const state = {
   masterTradeTypeList: _.cloneDeep(TRADE_TYPES),
   groupedAssets: [],
   is_loading: true,
-  is_virtual: true,
   allowCopy: {
     allow_copiers: 0,
     onAllowCopyChangeCopierCellClick: () => state.onChangeCopytradeSettings(0),
     onAllowCopyChangeTraderCellClick: () => state.onChangeCopytradeSettings(1),
   },
   onChangeCopytradeSettings: _.debounce((allow_copiers) => {
-    if (state.is_virtual) return;
     if (state.allowCopy.allow_copiers === allow_copiers) return;
 
     state.is_loading = true;
@@ -324,13 +322,8 @@ const initConfigWindow = () => {
         state.traderTokens = _.cloneDeep(state.traderTokens); // This is needed to trigger rivetsjs render
       }
       state.is_loading = true;
-      state.is_virtual = isVirtual();
-      //VRTC can only be copiers
-      if (state.is_virtual) {
-        state.is_loading = false;
-        state.allowCopy.allow_copiers = 0;
-      } else {
-        liveapi
+
+      liveapi
         .cached
         .send({ get_settings: 1 })
         .then((settings) => {
@@ -341,7 +334,6 @@ const initConfigWindow = () => {
           state.is_loading = false;
           $.growl.error({ message: e.message });
         });
-      }
       //Refresh locally stored trader statistics
       if (copyTrade) {
         (async function () {
