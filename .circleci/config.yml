@@ -167,6 +167,7 @@ jobs:
       - k8s_deploy:
           k8s_namespace: "webtrader-binary-com-production"
           k8s_version: ${CIRCLE_TAG}
+      - notify_slack
 
 workflows:
   build:
