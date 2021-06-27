@@ -6,59 +6,67 @@ import { getSortedMarketSubmarkets } from '../common/marketUtils';
 import "jquery-growl";
 import "common/util";
 
-function refresh_active_symbols() {
+const get_active_symbol = () => {
     liveapi
         .cached
         .send({ active_symbols: 'brief' })
-        .then(function(data) {
-            local_storage.set('active_symbols', data.active_symbols);
-            const active_symbols = [];
-            const active_markets = _(data.active_symbols).groupBy('market').map(function(symbols) {
-             
-                const filtered_symbols = filterRestrictedSymbols(symbols)
-  
-                const sym = _.head(filtered_symbols);
-     
-                const market = { name: sym.market, display_name: sym.market_display_name };
-                market.submarkets = _(filtered_symbols).groupBy('submarket').map(function(symbols) {
-                    const sym = _.head(symbols);
-                    const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
-                    submarket.instruments = _.map(symbols, function(sym) {
-                        active_symbols.push(sym.symbol);
-                        return {
-                            symbol: sym.symbol,
-                            display_name: sym.display_name,
-                        };
-                    });
-                    return submarket;
+        .then(function (data) {
+                local_storage.set('active_symbols', data.active_symbols);
+                const active_symbols = [];
+                const active_markets = _(data.active_symbols).groupBy('market').map(function (symbols) {
+                            const filtered_symbols = filterRestrictedSymbols(symbols)
+                            const sym = _.head(filtered_symbols);
+                            const market = { name: sym.market, display_name: sym.market_display_name };
+                    market.submarkets = _(filtered_symbols).groupBy('submarket').map(function (symbols) {
+                        const sym = _.head(symbols);
+                        const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
+                        submarket.instruments = _.map(symbols, function (sym) {
+                            active_symbols.push(sym.symbol);
+                            return {
+                                symbol: sym.symbol,
+                                display_name: sym.display_name,
+                            };
+                        });
+                        return submarket;
+                    }).value();
+                    return market;
                 }).value();
-                return market;
-            }).value();
-            markets = chartable_markets.map(function(m) {
-                return {
-                    display_name: m.display_name,
-                    name: m.name,
-                    submarkets: m.submarkets.map(function(sm) {
-                        return {
-                            display_name: sm.display_name,
-                            instruments: sm.instruments.filter(function(ins) {
-                                return active_symbols.indexOf(ins.symbol) !== -1;
-                            })
-                        }
-                    }).filter(function(sm) {
-                        return sm.instruments.length !== 0;
-                    })
-                }
-            }).filter(function(m) {
-                return m.submarkets.length !== 0;
+                markets = chartable_markets.map(function (m) {
+                    return {
+                        display_name: m.display_name,
+                        name: m.name,
+                        submarkets: m.submarkets.map(function (sm) {
+                            return {
+                                display_name: sm.display_name,
+                                instruments: sm.instruments.filter(function (ins) {
+                                    return active_symbols.indexOf(ins.symbol) !== -1;
+                                })
+                            }
+                        }).filter(function (sm) {
+                            return sm.instruments.length !== 0;
+                        })
+                    }
+                }).filter(function (m) {
+                    return m.submarkets.length !== 0;
+                });
+                        markets = getSortedMarketSubmarkets(markets);
+                        const instruments = $("#nav-menu").find(".instruments");
+                instruments.find('> ul').remove();
+                menu.refreshMenu(instruments, markets, onMenuItemClick);
             });
+}
 
-            markets = getSortedMarketSubmarkets(markets);
-
-            const instruments = $("#nav-menu").find(".instruments");
-            instruments.find('> ul').remove();
-            menu.refreshMenu(instruments , markets, onMenuItemClick);
+function refresh_active_symbols() {
+    if (local_storage.get('oauth')) {
+        liveapi
+        .cached
+        .authorize()
+        .then(() => {
+            get_active_symbol();
         });
+    } else {
+        get_active_symbol();
+    }
 }
 
 function onMenuItemClick(symbol, displayName) {
@@ -73,10 +81,10 @@ function onMenuItemClick(symbol, displayName) {
 let markets = [];
 let chartable_markets = [];
 
-export const init = function() {
+export const init = function () {
     return liveapi
         .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
-        .then(function(data) {
+        .then(function (data) {
             chartable_markets = menu.extractChartableMarkets(data);
             refresh_active_symbols();
             liveapi.events.on('login', refresh_active_symbols);
@@ -86,18 +94,18 @@ export const init = function() {
         });
 }
 
-export const getMarketData = function() {
+export const getMarketData = function () {
     return markets;
 }
 
-export const isMarketDataPresent = function(marketDataDisplayName, marketData) {
+export const isMarketDataPresent = function (marketDataDisplayName, marketData) {
     let present = false;
     if (!marketData) {
         marketData = markets;
     }
 
     const instrumentObj = this;
-    $.each(marketData, function(key, value) {
+    $.each(marketData, function (key, value) {
         if (value.submarkets || value.instruments) {
             present = instrumentObj.isMarketDataPresent(marketDataDisplayName, value.submarkets || value.instruments);
         } else {
@@ -110,14 +118,14 @@ export const isMarketDataPresent = function(marketDataDisplayName, marketData) {
     return present;
 }
 
-export const getSpecificMarketData = function(marketDataDisplayName, marketData) {
+export const getSpecificMarketData = function (marketDataDisplayName, marketData) {
     let present = {};
     if (!marketData) {
         marketData = markets;
     }
 
     const instrumentObj = this;
-    $.each(marketData, function(key, value) {
+    $.each(marketData, function (key, value) {
         if (value.submarkets || value.instruments) {
             present = instrumentObj.getSpecificMarketData(marketDataDisplayName, value.submarkets || value.instruments);
         } else {
