@@ -13,8 +13,8 @@ const get_active_symbol = () => {
         .then(function (data) {
                 local_storage.set('active_symbols', data.active_symbols);
                 const active_symbols = [];
-                const active_markets = _(data.active_symbols).groupBy('market').map(function (symbols) {
-                            const filtered_symbols = filterRestrictedSymbols(symbols)
+                const active_markets = _(filterRestrictedSymbols(data.active_symbols)).groupBy('market').map(function (symbols) {
+                            const filtered_symbols = symbols;
                             const sym = _.head(filtered_symbols);
                             const market = { name: sym.market, display_name: sym.market_display_name };
                     market.submarkets = _(filtered_symbols).groupBy('submarket').map(function (symbols) {

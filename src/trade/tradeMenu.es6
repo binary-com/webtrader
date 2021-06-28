@@ -15,8 +15,8 @@ const get_active_symbol = () => {
       .send({ active_symbols: 'brief' })
       .then((data) => {
          /* clean up the data! */
-         let markets = _(data.active_symbols).groupBy('market').map((symbols) => {
-            const filtered_symbols = filterRestrictedSymbols(symbols);
+         let markets = _(filterRestrictedSymbols(data.active_symbols)).groupBy('market').map((symbols) => {
+            const filtered_symbols = symbols;
             const sym = _.head(filtered_symbols);
             const market = { name: sym.market, display_name: sym.market_display_name };
             market.submarkets = _(filtered_symbols).groupBy('submarket').map((symbols) => {
