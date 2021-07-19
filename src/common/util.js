@@ -1,7 +1,3 @@
-function filterRestrictedSymbols(active_symbols) {
-  return active_symbols;
-}
-
 function isTick(ohlc) {
     return ohlc.indexOf("t") !== -1;
 }
