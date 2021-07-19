@@ -149,17 +149,15 @@ const initTradingWin = ($html) => {
       const refresh = (data) => {
         const result = processData(menu.extractFilteredMarkets(data[0]));
         const active_symbols = local_storage.get('active_symbols');
-        const filtered_symbols = filterRestrictedSymbols(active_symbols)
-        let header = getObjectMarketSubmarkets(filtered_symbols);
-        const markets_sorted_list = getSortedMarkets(filtered_symbols);
+        let header = getObjectMarketSubmarkets(active_symbols);
+        const markets_sorted_list = getSortedMarkets(active_symbols);
         
         if($.isEmptyObject(header)) return;
 
         function changed() {
           const val = $(this).val();
           const new_active_symbols = local_storage.get('active_symbols');
-          const new_filtered_symbols = filterRestrictedSymbols(new_active_symbols);
-          header = getObjectMarketSubmarkets(new_filtered_symbols);
+          header = getObjectMarketSubmarkets(new_active_symbols);
 
           if (header[val]) {
              const cumulative_submarkets = Object.keys(header[val]);
