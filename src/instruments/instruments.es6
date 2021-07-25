@@ -6,14 +6,28 @@ import { getSortedMarketSubmarkets } from '../common/marketUtils';
 import "jquery-growl";
 import "common/util";
 
-const get_active_symbol = () => {
+const get_active_symbol = (landing_company, country) => {
+    const is_mf        = isMaltaInvest();
+    const is_mlt       = landing_company ? isMalta(landing_company) : false;
+    const is_uk        = country ? country === 'gb' : false;
+    const is_synthetic = symbol => /^(synthetic)/i.test(symbol);
+
     liveapi
-        .cached
         .send({ active_symbols: 'brief' })
-        .then(function (data) {
-                local_storage.set('active_symbols', data.active_symbols);
+        .then(function(data) {
                 const active_symbols = [];
-                const active_markets = _(filterRestrictedSymbols(data.active_symbols)).groupBy('market').map(function (symbols) {
+                let filtered_symbols;
+       
+                if (is_mf) {
+                   filtered_symbols = [];
+                } else if (is_uk || is_mlt) {
+                   filtered_symbols = data.active_symbols.filter(symbol => is_synthetic(symbol.market));
+                } else {
+                   filtered_symbols = data.active_symbols;
+                }
+                local_storage.set('active_symbols', filtered_symbols);
+
+                const active_markets = _(filtered_symbols).groupBy('market').map(function (symbols) {
                             const filtered_symbols = symbols;
                             const sym = _.head(filtered_symbols);
                             const market = { name: sym.market, display_name: sym.market_display_name };
@@ -49,7 +63,7 @@ const get_active_symbol = () => {
                 }).filter(function (m) {
                     return m.submarkets.length !== 0;
                 });
-                        markets = getSortedMarketSubmarkets(markets);
+                        markets = getSortedMarketSubmarkets(active_markets);
                         const instruments = $("#nav-menu").find(".instruments");
                 instruments.find('> ul').remove();
                 menu.refreshMenu(instruments, markets, onMenuItemClick);
@@ -62,7 +76,14 @@ function refresh_active_symbols() {
         .cached
         .authorize()
         .then(() => {
-            get_active_symbol();
+            const country = local_storage.get('authorize').country;
+            liveapi
+            .cached
+            .send({ landing_company: country })
+            .then((data) => {
+               const landing_company = data.landing_company
+               get_active_symbol(landing_company, country);
+            });
         });
     } else {
         get_active_symbol();
@@ -89,7 +110,7 @@ export const init = function () {
             refresh_active_symbols();
             liveapi.events.on('login', refresh_active_symbols);
             liveapi.events.on('logout', refresh_active_symbols);
-
+            
             return chartable_markets;
         });
 }

@@ -9,13 +9,31 @@ const show_error = (err) => {
    console.error(err);
 };
 
-const get_active_symbol = () => {
+const trade_messages = {
+   no_mf : () => "Binary options trading is not available in your financial account.".i18n(),
+};
+
+const get_active_symbol = (landing_company, country) => {
+   const is_mf        = isMaltaInvest();
+   const is_mlt       = landing_company ? isMalta(landing_company) : false;
+   const is_uk        = country ? country === 'gb' : false;
+   const is_synthetic = symbol => /^(synthetic)/i.test(symbol);
+
    liveapi
-      .cached
       .send({ active_symbols: 'brief' })
       .then((data) => {
          /* clean up the data! */
-         let markets = _(filterRestrictedSymbols(data.active_symbols)).groupBy('market').map((symbols) => {
+         const active_symbols = data.active_symbols;
+         let filtered_symbols;
+         if (is_mf) {
+            filtered_symbols = [];  
+         } else if (is_uk || is_mlt) {
+            filtered_symbols = active_symbols.filter(symbol => is_synthetic(symbol.market));
+         } else {
+            filtered_symbols = active_symbols;
+         }
+        
+         let markets = _(filtered_symbols).groupBy('market').map((symbols) => {
             const filtered_symbols = symbols;
             const sym = _.head(filtered_symbols);
             const market = { name: sym.market, display_name: sym.market_display_name };
@@ -56,7 +74,14 @@ const refresh_active_symbols = () => {
          .cached
          .authorize()
          .then(() => {
-            get_active_symbol();
+            const country = local_storage.get('authorize').country;
+            liveapi
+            .cached
+            .send({ landing_company: country })
+            .then((data) => {
+               const landing_company = data.landing_company
+               get_active_symbol(landing_company, country);
+            });
          })
    } else{
       get_active_symbol();

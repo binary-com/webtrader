@@ -1,11 +1,23 @@
 ﻿import $ from 'jquery';
 import '../common/util';
+import "jquery-growl";
 
 /* you can filter the symbols with the options parameter, for example:
    options: {
        filter: (sym) => (sym.feed_license !== 'realtime')
    }
 */
+const menu_config = {
+   trade : '.trade a',
+   instruments : '.instruments a',
+   assetIndex : '.assetIndex',
+   tradingTimes : '.tradingTimes',
+};
+
+const trade_messages = {
+   no_mf : () => "Binary options trading is not available in your financial account.".i18n(),
+};
+
 export const extractFilteredMarkets = (trading_times_data, options) => {
    const markets = trading_times_data.trading_times.markets.map((m) => {
       const market = {
@@ -50,11 +62,16 @@ export const extractChartableMarkets = (trading_times_data) => {
 };
 
 export const refreshMenu = (root, markets, callback) => {
-   const is_not_crypto = symbol => !/^(cry|JD)/i.test(symbol);
-   const non_crypto_markets = markets.filter( m => is_not_crypto(m.name))
+   
+   if(isMaltaInvest()){
+      Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
+      $.growl.error({message: trade_messages.no_mf()});
 
+   } else {
+      Object.values(menu_config).map( menu => $(menu).removeClass('disabled'));
+   }
    const menu = `<ul>${
-      non_crypto_markets.map(m => `<li><div>${m.display_name}</div><ul>${
+      markets.map(m => `<li><div>${m.display_name}</div><ul>${
          m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${
             s.instruments.map(i => `<li symbol='${i.symbol}' pip='${i.pip}'><div>${i.display_name}</div></li>`).join('')
          }</ul></li>`).join('')

@@ -1,5 +1,19 @@
-function filterRestrictedSymbols(active_symbols) {
-  return active_symbols.filter(function(item) { return !/^(BOOM|CRASH|STP|CRY).+/i.test(item.symbol)});
+function isMalta(landing_company){
+  if (landing_company) {
+     if (landing_company.gaming_company) {
+        return landing_company.gaming_company.shortcode === 'malta';
+     } else {
+        return false
+     }
+  }
+  return false;
+}
+
+function isMaltaInvest() {
+  if (local_storage.get('authorize')) {
+     return /^(MF)/i.test(local_storage.get('authorize').loginid);
+  }
+  return false
 }
 
 function isTick(ohlc) {
