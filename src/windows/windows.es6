@@ -233,6 +233,9 @@ export const init = function($parentObj) {
                   local_storage.set('oauth', oauth);
                   return is_jpy_account;
                })
+               .catch((err) => {
+                  $.growl.error({ message: err.message });
+               })
          )
          .then((is_jpy_account) => {
             /* Japan accounts should not be allowed to login to webtrader */

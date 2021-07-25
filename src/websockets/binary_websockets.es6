@@ -82,7 +82,10 @@ const onclose = () => {
                        tracker.reopen_trade_dialogs(trade_dialogs);
                        setTimeout( () => tracker.reopen_unique_dialogs(unique_dialogs), 0);
                  }
-              );
+              )
+            .catch((err) => {
+               $.growl.error({ message: err.message });
+            });;
             }
         }, 1000);
    });
@@ -415,7 +418,10 @@ export const switch_account = (id) => {
 
    return api.cached.authorize().then(
       (data) => fire_event("switch_account", data) 
-   );
+   )
+   .catch((err) => {
+      $.growl.error({ message: err.message });
+   });;
 }
 
 /* if you want a request to be cached, that is when multiple modules request
