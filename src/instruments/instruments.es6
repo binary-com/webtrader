@@ -7,9 +7,9 @@ import "jquery-growl";
 import "common/util";
 
 const get_active_symbol = (landing_company, country) => {
-    const is_mf        = isMaltaInvest();
-    const is_mlt       = landing_company ? isMalta(landing_company) : false;
-    const is_uk        = country ? country === 'gb' : false;
+    const is_mf_account  = isFinancialAccout();
+    const is_mlt_account = landing_company ? isGamingAccount(landing_company) : false;
+    const is_uk          = country ? country === 'gb' : false;
 
     liveapi
         .send({ active_symbols: 'brief' })
@@ -17,9 +17,9 @@ const get_active_symbol = (landing_company, country) => {
             const active_symbols = [];
             let filtered_symbols;
     
-            if (is_mf) {
+            if (is_mf_account) {
                filtered_symbols = [];
-            } else if (is_uk || is_mlt) {
+            } else if (is_uk || is_mlt_account) {
                filtered_symbols = data.active_symbols.filter(symbol => isSynthetic(symbol.market));
             } else {
                filtered_symbols = data.active_symbols;

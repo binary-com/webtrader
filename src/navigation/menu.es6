@@ -63,7 +63,7 @@ export const extractChartableMarkets = (trading_times_data) => {
 
 export const refreshMenu = (root, markets, callback) => {
    
-   if(isMaltaInvest()){
+   if(isFinancialAccout()){
       Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
       $.growl.error({message: trade_messages.no_mf()});
 

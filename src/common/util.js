@@ -1,4 +1,4 @@
-function isMalta(landing_company){
+function isGamingAccount(landing_company){
   if (landing_company) {
      if (landing_company.gaming_company) {
         return landing_company.gaming_company.shortcode === 'malta';
@@ -8,7 +8,7 @@ function isMalta(landing_company){
   return false;
 }
 
-function isMaltaInvest() {
+function isFinancialAccout() {
   if (local_storage.get('authorize')) {
      return /^(MF)/i.test(local_storage.get('authorize').loginid);
   }
