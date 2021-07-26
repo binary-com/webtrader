@@ -2,9 +2,8 @@ function isMalta(landing_company){
   if (landing_company) {
      if (landing_company.gaming_company) {
         return landing_company.gaming_company.shortcode === 'malta';
-     } else {
-        return false
      }
+    return false
   }
   return false;
 }
@@ -14,6 +13,10 @@ function isMaltaInvest() {
      return /^(MF)/i.test(local_storage.get('authorize').loginid);
   }
   return false
+}
+
+function isSynthetic(symbol) {
+  return /^(synthetic)/i.test(symbol);
 }
 
 function isTick(ohlc) {

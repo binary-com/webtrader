@@ -10,64 +10,63 @@ const get_active_symbol = (landing_company, country) => {
     const is_mf        = isMaltaInvest();
     const is_mlt       = landing_company ? isMalta(landing_company) : false;
     const is_uk        = country ? country === 'gb' : false;
-    const is_synthetic = symbol => /^(synthetic)/i.test(symbol);
 
     liveapi
         .send({ active_symbols: 'brief' })
         .then(function(data) {
-                const active_symbols = [];
-                let filtered_symbols;
-       
-                if (is_mf) {
-                   filtered_symbols = [];
-                } else if (is_uk || is_mlt) {
-                   filtered_symbols = data.active_symbols.filter(symbol => is_synthetic(symbol.market));
-                } else {
-                   filtered_symbols = data.active_symbols;
-                }
-                local_storage.set('active_symbols', filtered_symbols);
+            const active_symbols = [];
+            let filtered_symbols;
+    
+            if (is_mf) {
+               filtered_symbols = [];
+            } else if (is_uk || is_mlt) {
+               filtered_symbols = data.active_symbols.filter(symbol => isSynthetic(symbol.market));
+            } else {
+               filtered_symbols = data.active_symbols;
+            }
+            local_storage.set('active_symbols', filtered_symbols);
 
-                const active_markets = _(filtered_symbols).groupBy('market').map(function (symbols) {
-                            const filtered_symbols = symbols;
-                            const sym = _.head(filtered_symbols);
-                            const market = { name: sym.market, display_name: sym.market_display_name };
-                    market.submarkets = _(filtered_symbols).groupBy('submarket').map(function (symbols) {
-                        const sym = _.head(symbols);
-                        const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
-                        submarket.instruments = _.map(symbols, function (sym) {
-                            active_symbols.push(sym.symbol);
-                            return {
-                                symbol: sym.symbol,
-                                display_name: sym.display_name,
-                            };
-                        });
-                        return submarket;
-                    }).value();
-                    return market;
+            const active_markets = _(filtered_symbols).groupBy('market').map(function (symbols) {
+                const filtered_symbols = symbols;
+                const sym = _.head(filtered_symbols);
+                const market = { name: sym.market, display_name: sym.market_display_name };
+                market.submarkets = _(filtered_symbols).groupBy('submarket').map(function (symbols) {
+                    const sym = _.head(symbols);
+                    const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
+                    submarket.instruments = _.map(symbols, function (sym) {
+                        active_symbols.push(sym.symbol);
+                        return {
+                            symbol: sym.symbol,
+                            display_name: sym.display_name,
+                        };
+                    });
+                    return submarket;
                 }).value();
-                markets = chartable_markets.map(function (m) {
-                    return {
-                        display_name: m.display_name,
-                        name: m.name,
-                        submarkets: m.submarkets.map(function (sm) {
-                            return {
-                                display_name: sm.display_name,
-                                instruments: sm.instruments.filter(function (ins) {
-                                    return active_symbols.indexOf(ins.symbol) !== -1;
-                                })
-                            }
-                        }).filter(function (sm) {
-                            return sm.instruments.length !== 0;
-                        })
-                    }
-                }).filter(function (m) {
-                    return m.submarkets.length !== 0;
-                });
-                        markets = getSortedMarketSubmarkets(active_markets);
-                        const instruments = $("#nav-menu").find(".instruments");
-                instruments.find('> ul').remove();
-                menu.refreshMenu(instruments, markets, onMenuItemClick);
+                return market;
+            }).value();
+            markets = chartable_markets.map(function (m) {
+                return {
+                    display_name: m.display_name,
+                    name: m.name,
+                    submarkets: m.submarkets.map(function (sm) {
+                        return {
+                            display_name: sm.display_name,
+                            instruments: sm.instruments.filter(function (ins) {
+                                return active_symbols.indexOf(ins.symbol) !== -1;
+                            })
+                        }
+                    }).filter(function (sm) {
+                        return sm.instruments.length !== 0;
+                    })
+                }
+            }).filter(function (m) {
+                return m.submarkets.length !== 0;
             });
+            markets = getSortedMarketSubmarkets(active_markets);
+            const instruments = $("#nav-menu").find(".instruments");
+            instruments.find('> ul').remove();
+            menu.refreshMenu(instruments, markets, onMenuItemClick);
+        });
 }
 
 function refresh_active_symbols() {
@@ -110,7 +109,7 @@ export const init = function () {
             refresh_active_symbols();
             liveapi.events.on('login', refresh_active_symbols);
             liveapi.events.on('logout', refresh_active_symbols);
-            
+
             return chartable_markets;
         });
 }
