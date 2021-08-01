@@ -10,29 +10,16 @@ const show_error = (err) => {
 };
 
 const get_active_symbol = (landing_company, country) => {
-   const is_mf_account  = isFinancialAccout();
-   const is_mlt_account = landing_company ? isGamingAccount(landing_company) : false;
-   const is_uk          = country ? country === 'gb' : false;
-
    liveapi
       .send({ active_symbols: 'brief' })
       .then((data) => {
          /* clean up the data! */
          const active_symbols = data.active_symbols;
-         let filtered_symbols;
-         if (is_mf_account) {
-            filtered_symbols = [];  
-         } else if (is_uk || is_mlt_account) {
-            filtered_symbols = active_symbols.filter(symbol => isSynthetic(symbol.market));
-         } else {
-            filtered_symbols = active_symbols;
-         }
-        
-         let markets = _(filtered_symbols).groupBy('market').map((symbols) => {
-            const filtered_symbols = symbols;
-            const sym = _.head(filtered_symbols);
+         let markets = _(active_symbols).groupBy('market').map((symbols) => {
+            const active_symbols = symbols;
+            const sym = _.head(active_symbols);
             const market = { name: sym.market, display_name: sym.market_display_name };
-            market.submarkets = _(filtered_symbols).groupBy('submarket').map((symbols) => {
+            market.submarkets = _(active_symbols).groupBy('submarket').map((symbols) => {
                const sym = _.head(symbols);
                const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
                submarket.instruments = _.map(symbols, (sym) => ({

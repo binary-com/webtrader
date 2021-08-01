@@ -38,13 +38,6 @@ const processData = (markets) => {
    const market_names = [];
    const submarket_names = { };
    markets
-    .filter(eMarket => {
-      const loginId = (local_storage.get('authorize') || {}).loginid || '';
-      return (/MF/gi.test(loginId) && eMarket.name !== 'Synthetic Indices')
-        || (/MLT/gi.test(loginId) && eMarket.name === 'Synthetic Indices')
-        || (/MX/gi.test(loginId) && eMarket.name === 'Synthetic Indices')
-        || (!/MF/gi.test(loginId) && !/MLT/gi.test(loginId) && !/MX/gi.test(loginId));
-    })
     .forEach((market) => {
       market_names.push(market.display_name);
       submarket_names[market.display_name] = [];
@@ -146,59 +139,59 @@ const initTradingWin = ($html) => {
       }
 
       /* refresh the table with result of {trading_times:yyyy_mm_dd} from WS */
-      const refresh = (data) => {
-        const result = processData(menu.extractFilteredMarkets(data[0]));
-        const active_symbols = local_storage.get('active_symbols');
-        let header = getObjectMarketSubmarkets(active_symbols);
-        const markets_sorted_list = getSortedMarkets(active_symbols);
-        
-        if($.isEmptyObject(header)) return;
-
-        function changed() {
-          const val = $(this).val();
-          const new_active_symbols = local_storage.get('active_symbols');
-          header = getObjectMarketSubmarkets(new_active_symbols);
-
-          if (header[val]) {
-             const cumulative_submarkets = Object.keys(header[val]);
-             submarket_names.update_list(getSortedSubmarkets(cumulative_submarkets));
-          };
-
-          updateTable(result, market_names.val(), submarket_names.val());
-        };
-
-          if (market_names == null) {
-              const select = $('<select />');
-              select.appendTo(subheader);
-              market_names = windows.makeSelectmenu(select, {
-                list: markets_sorted_list,
-                inx: 0,
-              });
-              market_names.off('selectmenuchange', changed);
-              market_names.on('selectmenuchange', changed);
-          } else {
-            market_names.update_list(markets_sorted_list);
-            market_names.off('selectmenuchange', changed);
-            market_names.on('selectmenuchange', changed);
-        }
-
-          if (submarket_names == null) {
-              const sub_select = $('<select />');
-              sub_select.appendTo(subheader);
-              submarket_names = windows.makeSelectmenu(sub_select, {
-                list: getSortedSubmarkets(Object.keys(header[market_names.val()])),
-                inx: 0,
-                changed: changedFn,
-              });
-              submarket_names.off('selectmenuchange', changed);
-              submarket_names.on('selectmenuchange', changed);
-            } else {
-            submarket_names.update_list(getSortedSubmarkets(Object.keys(header[market_names.val()])));
-            submarket_names.off('selectmenuchange', changed);
-            submarket_names.on('selectmenuchange', changed);
-        }
-
-          updateTable(result, market_names.val(), submarket_names.val());
+      const refresh = (data, symbols) => {
+         const result = processData(menu.extractFilteredMarkets(data[0]));
+         const active_symbols = symbols;
+         let header = getObjectMarketSubmarkets(active_symbols);
+         const markets_sorted_list = getSortedMarkets(active_symbols);
+         
+         if($.isEmptyObject(header)) return;
+   
+         function changed() {
+           const val = $(this).val();
+           const new_active_symbols = symbols;
+           header = getObjectMarketSubmarkets(new_active_symbols);
+   
+           if (header[val]) {
+              const cumulative_submarkets = Object.keys(header[val]);
+              submarket_names.update_list(getSortedSubmarkets(cumulative_submarkets));
+           };
+   
+           updateTable(result, market_names.val(), submarket_names.val());
+         };
+   
+           if (market_names == null) {
+               const select = $('<select />');
+               select.appendTo(subheader);
+               market_names = windows.makeSelectmenu(select, {
+                 list: markets_sorted_list,
+                 inx: 0,
+               });
+               market_names.off('selectmenuchange', changed);
+               market_names.on('selectmenuchange', changed);
+           } else {
+             market_names.update_list(markets_sorted_list);
+             market_names.off('selectmenuchange', changed);
+             market_names.on('selectmenuchange', changed);
+         }
+   
+           if (submarket_names == null) {
+               const sub_select = $('<select />');
+               sub_select.appendTo(subheader);
+               submarket_names = windows.makeSelectmenu(sub_select, {
+                 list: getSortedSubmarkets(Object.keys(header[market_names.val()])),
+                 inx: 0,
+                 changed: changedFn,
+               });
+               submarket_names.off('selectmenuchange', changed);
+               submarket_names.on('selectmenuchange', changed);
+             } else {
+             submarket_names.update_list(getSortedSubmarkets(Object.keys(header[market_names.val()])));
+             submarket_names.off('selectmenuchange', changed);
+             submarket_names.on('selectmenuchange', changed);
+         }
+       
+         updateTable(result, market_names.val(), submarket_names.val());
       };
 
       const getCachedData = () => {
@@ -211,8 +204,12 @@ const initTradingWin = ($html) => {
                  liveapi.cached.send(trading_times_request),
              ])
              .then((results) => {
-                 refresh(results);
-                 $processing_msg.hide();
+               liveapi
+               .send({ active_symbols: "brief" })
+               .then(function (response) {
+                  refresh(results, response.active_symbols);
+               })
+               $processing_msg.hide();
              })
              .catch((error) => {
                  $.growl.error({ message: error.message });

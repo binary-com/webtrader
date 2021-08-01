@@ -1,22 +1,8 @@
-function isGamingAccount(landing_company){
-  if (landing_company) {
-     if (landing_company.gaming_company) {
-        return landing_company.gaming_company.shortcode === 'malta';
-     }
-    return false
-  }
-  return false;
-}
-
 function isFinancialAccout() {
   if (local_storage.get('authorize')) {
      return /^(MF)/i.test(local_storage.get('authorize').loginid);
   }
   return false
-}
-
-function isSynthetic(symbol) {
-  return /^(synthetic)/i.test(symbol);
 }
 
 function isTick(ohlc) {

@@ -73,15 +73,19 @@ const checkVolatility = (market_name, market_names) => {
 const initTable = () => {
     getActiveSymAndAssetsData()
         .then((result) => {
-            populateTable(result);
+            liveapi
+               .send({ active_symbols: "brief" })
+               .then(function (response) {
+                populateTable(result, response.active_symbols);
+               })
         })
         .catch((error) => {
             $.growl.error({ message: error.message });
             console.error(error);
         });
 
-    function populateTable(result) {
-        const active_symbols_data = local_storage.get('active_symbols');
+    function populateTable(result, symbols) {
+        const active_symbols_data = symbols;
         const asset_index_data = [...result[0].asset_index];
 
         if($.isEmptyObject(active_symbols_data) || $.isEmptyObject(asset_index_data)) return;
