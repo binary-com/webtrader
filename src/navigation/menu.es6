@@ -15,7 +15,6 @@ const menu_config = {
 };
 
 const trade_messages = {
-   no_mf : () => "Binary options trading is not available in your financial account.".i18n(),
    no_symbol : () => "Binary options trading is not available.".i18n(),
 };
 
@@ -66,12 +65,7 @@ export const refreshMenu = (root, markets, callback) => {
    
    if(markets.length == 0){
       Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
-      if(isFinancialAccout()) {
-         $.growl.error({message: trade_messages.no_mf()});
-      } else {
-         $.growl.error({message: trade_messages.no_symbol()});
-      }
-
+      $.growl.error({message: trade_messages.no_symbol()});
    } else {
       Object.values(menu_config).map( menu => $(menu).removeClass('disabled'));
    }
