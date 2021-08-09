@@ -8,25 +8,26 @@ const show_error = (err) => {
    $.growl.error({ message: err.message });
    console.error(err);
 };
-const refresh_active_symbols = () => {
+
+const get_active_symbol = () => {
    liveapi
       .cached
       .send({ active_symbols: 'brief' })
       .then((data) => {
          /* clean up the data! */
-         let markets = _(data.active_symbols).groupBy('market').map((symbols) => {
-            const filtered_symbols = filterRestrictedSymbols(symbols);
+         let markets = _(filterRestrictedSymbols(data.active_symbols)).groupBy('market').map((symbols) => {
+            const filtered_symbols = symbols;
             const sym = _.head(filtered_symbols);
             const market = { name: sym.market, display_name: sym.market_display_name };
-            market.submarkets = _(filtered_symbols).groupBy('submarket').map((symbols) => {  
+            market.submarkets = _(filtered_symbols).groupBy('submarket').map((symbols) => {
                const sym = _.head(symbols);
                const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
-               submarket.instruments = _.map(symbols,(sym) => ({
-                     symbol: sym.symbol,
-                     display_name: sym.display_name,
-                     is_disabled: sym.is_trading_suspended || !sym.exchange_is_open,
-                     pip: sym.pip
-                  })
+               submarket.instruments = _.map(symbols, (sym) => ({
+                  symbol: sym.symbol,
+                  display_name: sym.display_name,
+                  is_disabled: sym.is_trading_suspended || !sym.exchange_is_open,
+                  pip: sym.pip
+               })
                );
                submarket.is_disabled = _.every(submarket.instruments, 'is_disabled');
                return submarket;
@@ -34,20 +35,32 @@ const refresh_active_symbols = () => {
             market.is_disabled = _.every(market.submarkets, 'is_disabled');
             return market;
          }).value();
-         markets = getSortedMarketSubmarkets(markets);
-
+         markets = getSortedMarketSubmarkets(markets);        
          const trade = $("#nav-menu").find(".trade");
          menu.refreshMenu(trade, markets, (symbol, display_name, pip) => {
             liveapi
                .send({ contracts_for: symbol })
                .then((res) => {
                   require(['trade/tradeDialog'],
-                     (tradeDialog) => tradeDialog.init({symbol, display_name, pip}, res.contracts_for)
+                     (tradeDialog) => tradeDialog.init({ symbol, display_name, pip }, res.contracts_for)
                   );
                }).catch(show_error);
          });
       })
       .catch(show_error);
+}
+
+const refresh_active_symbols = () => {
+   if (local_storage.get('oauth')) {
+      liveapi
+         .cached
+         .authorize()
+         .then(() => {
+            get_active_symbol();
+         })
+   } else{
+      get_active_symbol();
+   }
 }
 
 export const init = () => {
@@ -59,4 +72,4 @@ export const init = () => {
    });
 }
 
-export default  { init };
+export default { init };
