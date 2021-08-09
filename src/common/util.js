@@ -1,5 +1,8 @@
-function filterRestrictedSymbols(active_symbols) {
-  return active_symbols.filter(function(item) { return !/^(BOOM|CRASH|STP|CRY).+/i.test(item.symbol)});
+function isFinancialAccout() {
+  if (local_storage.get('authorize')) {
+     return /^(MF)/i.test(local_storage.get('authorize').loginid);
+  }
+  return false
 }
 
 function isTick(ohlc) {

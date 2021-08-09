@@ -6,54 +6,57 @@ import { getSortedMarketSubmarkets } from '../common/marketUtils';
 import "jquery-growl";
 import "common/util";
 
-const get_active_symbol = () => {
+const get_active_symbol = (landing_company, country) => {
+
     liveapi
-        .cached
         .send({ active_symbols: 'brief' })
-        .then(function (data) {
-                local_storage.set('active_symbols', data.active_symbols);
-                const active_symbols = [];
-                const active_markets = _(filterRestrictedSymbols(data.active_symbols)).groupBy('market').map(function (symbols) {
-                            const filtered_symbols = symbols;
-                            const sym = _.head(filtered_symbols);
-                            const market = { name: sym.market, display_name: sym.market_display_name };
-                    market.submarkets = _(filtered_symbols).groupBy('submarket').map(function (symbols) {
-                        const sym = _.head(symbols);
-                        const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
-                        submarket.instruments = _.map(symbols, function (sym) {
-                            active_symbols.push(sym.symbol);
-                            return {
-                                symbol: sym.symbol,
-                                display_name: sym.display_name,
-                            };
-                        });
-                        return submarket;
-                    }).value();
-                    return market;
+        .then(function(data) {
+            const active_symbols = [];
+            let filtered_symbols;
+    
+            local_storage.set('active_symbols', data.active_symbols);
+
+            const active_markets = _(data.active_symbols).groupBy('market').map(function (symbols) {
+                const filtered_symbols = symbols;
+                const sym = _.head(filtered_symbols);
+                const market = { name: sym.market, display_name: sym.market_display_name };
+                market.submarkets = _(filtered_symbols).groupBy('submarket').map(function (symbols) {
+                    const sym = _.head(symbols);
+                    const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
+                    submarket.instruments = _.map(symbols, function (sym) {
+                        active_symbols.push(sym.symbol);
+                        return {
+                            symbol: sym.symbol,
+                            display_name: sym.display_name,
+                        };
+                    });
+                    return submarket;
                 }).value();
-                markets = chartable_markets.map(function (m) {
-                    return {
-                        display_name: m.display_name,
-                        name: m.name,
-                        submarkets: m.submarkets.map(function (sm) {
-                            return {
-                                display_name: sm.display_name,
-                                instruments: sm.instruments.filter(function (ins) {
-                                    return active_symbols.indexOf(ins.symbol) !== -1;
-                                })
-                            }
-                        }).filter(function (sm) {
-                            return sm.instruments.length !== 0;
-                        })
-                    }
-                }).filter(function (m) {
-                    return m.submarkets.length !== 0;
-                });
-                        markets = getSortedMarketSubmarkets(markets);
-                        const instruments = $("#nav-menu").find(".instruments");
-                instruments.find('> ul').remove();
-                menu.refreshMenu(instruments, markets, onMenuItemClick);
+                return market;
+            }).value();
+            markets = chartable_markets.map(function (m) {
+                return {
+                    display_name: m.display_name,
+                    name: m.name,
+                    submarkets: m.submarkets.map(function (sm) {
+                        return {
+                            display_name: sm.display_name,
+                            instruments: sm.instruments.filter(function (ins) {
+                                return active_symbols.indexOf(ins.symbol) !== -1;
+                            })
+                        }
+                    }).filter(function (sm) {
+                        return sm.instruments.length !== 0;
+                    })
+                }
+            }).filter(function (m) {
+                return m.submarkets.length !== 0;
             });
+            markets = getSortedMarketSubmarkets(active_markets);
+            const instruments = $("#nav-menu").find(".instruments");
+            instruments.find('> ul').remove();
+            menu.refreshMenu(instruments, markets, onMenuItemClick);
+        });
 }
 
 function refresh_active_symbols() {
@@ -62,7 +65,14 @@ function refresh_active_symbols() {
         .cached
         .authorize()
         .then(() => {
-            get_active_symbol();
+            const country = local_storage.get('authorize').country;
+            liveapi
+            .cached
+            .send({ landing_company: country })
+            .then((data) => {
+               const landing_company = data.landing_company
+               get_active_symbol(landing_company, country);
+            });
         });
     } else {
         get_active_symbol();

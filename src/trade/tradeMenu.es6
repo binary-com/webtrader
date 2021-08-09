@@ -9,17 +9,17 @@ const show_error = (err) => {
    console.error(err);
 };
 
-const get_active_symbol = () => {
+const get_active_symbol = (landing_company, country) => {
    liveapi
-      .cached
       .send({ active_symbols: 'brief' })
       .then((data) => {
          /* clean up the data! */
-         let markets = _(filterRestrictedSymbols(data.active_symbols)).groupBy('market').map((symbols) => {
-            const filtered_symbols = symbols;
-            const sym = _.head(filtered_symbols);
+         const active_symbols = data.active_symbols;
+         let markets = _(active_symbols).groupBy('market').map((symbols) => {
+            const active_symbols = symbols;
+            const sym = _.head(active_symbols);
             const market = { name: sym.market, display_name: sym.market_display_name };
-            market.submarkets = _(filtered_symbols).groupBy('submarket').map((symbols) => {
+            market.submarkets = _(active_symbols).groupBy('submarket').map((symbols) => {
                const sym = _.head(symbols);
                const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
                submarket.instruments = _.map(symbols, (sym) => ({
@@ -56,7 +56,14 @@ const refresh_active_symbols = () => {
          .cached
          .authorize()
          .then(() => {
-            get_active_symbol();
+            const country = local_storage.get('authorize').country;
+            liveapi
+            .cached
+            .send({ landing_company: country })
+            .then((data) => {
+               const landing_company = data.landing_company
+               get_active_symbol(landing_company, country);
+            });
          })
    } else{
       get_active_symbol();
