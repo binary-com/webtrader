@@ -114,7 +114,8 @@ const initLoginButton = (root) => {
 
       let value = '0';
       if (data.authorize) value = data.authorize.balance;
-      else value = data.balance ? data.balance.balance : '0';
+      else if (data.balance) value =  data.balance.balance ;
+      else return;
 
       state.account.balance = formatPrice(value, state.currency);
    };
