@@ -1019,17 +1019,18 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
   };
 
   _(available)
-    .map('contract_category_display')
+    .map('contract_category')
     .uniq()
     .value()
     // TODO: Remove this filter after implementing reset, high/low, spread, runs contracts.
     .filter(f => SUPPORTED_CONTRACT_TYPES.includes(f.toLowerCase()))
     .forEach(x => {
       let y = {};
-      y.contract_category_display = x;
-      let contract_object = _.find(available, {contract_category_display: x});
+      y.contract_category = x;
+      let contract_object = _.find(available, {contract_category: x});
       if (contract_object) {
         y.contract_category = contract_object.contract_category;
+        y.contract_category_display = contract_object.contract_category_display
         state.categories.array.push(y);
       }
     });
