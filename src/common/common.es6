@@ -64,13 +64,13 @@ const trade_types = [{
   }];
 
 const SUPPORTED_CONTRACT_TYPES = Object.freeze([
-  'up/down',
-  'touch/no touch',
-  'in/out',
+  'callput',
+  'touchnotouch',
+  'endsinout',
   'digits',
-  'asians',
-  'rise/fall equal',
-  'lookbacks'
+  'asian',
+  'callputequal',
+  'lookback'
 ]);
 
 export { trade_types, SUPPORTED_CONTRACT_TYPES };
