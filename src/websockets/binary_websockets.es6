@@ -83,9 +83,9 @@ const onclose = () => {
                        setTimeout( () => tracker.reopen_unique_dialogs(unique_dialogs), 0);
                  }
               )
-            .catch((err) => {
-               $.growl.error({ message: err.message });
-            });;
+               .catch((err) => {
+                  $.growl.error({ message: err.message });
+               });
             }
         }, 1000);
    });
@@ -259,7 +259,10 @@ const send_authenticated_request = (data) => {
       const oauth = local_storage.get('oauth');
       let token = oauth[0].token;
       return authenticate(token)
-         .then(send_it);
+         .then(send_it)
+         .catch((err) => {
+            $.growl.error({ message: err.message });
+         });;
    }
    else
       return Promise.reject({ message: 'Please log in'.i18n()});
@@ -359,6 +362,9 @@ export const proposal_open_contract = {
                proposal_open_contract_forget[contract_id] = undefined;
                return data;
             })
+            .catch((err) => {
+               $.growl.error({ message: err.message });
+            });
       };
       if(proposal.stream_id) {
          proposal_open_contract_forget[contract_id] = forgetter();
@@ -369,6 +375,9 @@ export const proposal_open_contract = {
                if(proposal.stream_id) /* proposal request had not exceptions */
                   return forgetter();
                else return; /* no stream, no need to forget */
+            })
+            .catch((err) => {
+               $.growl.error({ message: err.message });
             });
       }
       return proposal_open_contract_forget[contract_id];
@@ -445,7 +454,10 @@ export const cached  = {
             (up) => {
                delete cached_promises[key]; throw up;
             } /* on reject: clear cache */
-         );
+         )
+         .catch((err) => {
+            $.growl.error({ message: err.message });
+         });
    },
    /* return the promise from last successfull authentication request,
                if the session is not already authorized will send an authentication request */
