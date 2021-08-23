@@ -78,6 +78,9 @@ const initTable = () => {
                .then(function (response) {
                 populateTable(result, response.active_symbols);
                })
+               .catch((err) => {
+                    $.growl.error({ message: err.message });
+               });
         })
         .catch((error) => {
             $.growl.error({ message: error.message });

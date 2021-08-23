@@ -209,6 +209,9 @@ const initTradingWin = ($html) => {
                .then(function (response) {
                   refresh(results, response.active_symbols);
                })
+               .catch((err) => {
+                  $.growl.error({ message: err.message });
+               });
                $processing_msg.hide();
              })
              .catch((error) => {

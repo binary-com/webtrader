@@ -337,11 +337,14 @@ export const getLandingCompany = () => {
                return 'do-nothing'; // 5-d
             }
             return 'upgrade-mlt'; // 3-a (calls the normal account opening api which creates an mlt, mx or cr account).
-         });
+         })
+         .catch((err) => {
+            $.growl.error({ message: err.message });
+         });;
    })
    .catch((err) => {
       $.growl.error({ message: err.message });
-   });;
+   });
 }
 
 export const init = (callback) => {

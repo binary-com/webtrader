@@ -56,6 +56,9 @@ const get_active_symbol = (landing_company, country) => {
             const instruments = $("#nav-menu").find(".instruments");
             instruments.find('> ul').remove();
             menu.refreshMenu(instruments, markets, onMenuItemClick);
+        })
+        .catch((err) => {
+            $.growl.error({ message: err.message });
         });
 }
 
@@ -73,7 +76,10 @@ function refresh_active_symbols() {
                const landing_company = data.landing_company
                get_active_symbol(landing_company, country);
             });
-        });
+        })
+        .catch((err) => {
+            $.growl.error({ message: err.message });
+         });
     } else {
         get_active_symbol();
     }
