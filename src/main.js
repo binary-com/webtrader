@@ -316,7 +316,7 @@ require(["jquery", "jquery-growl"], function($) {
     ["error", "notice", "warning"].forEach(function(name) {
         var perv = $.growl[name].bind($.growl);
         $.growl[name] = function(options) {
-            if (options.message.indexOf("rate limit") > -1) {
+            if (options.message && options.message.indexOf("rate limit") > -1) {
                 options.message += " Please try again after 1 minute.".i18n();
             }
             if (!options.title) { options.title = ""; /* remove title */ }
