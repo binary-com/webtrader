@@ -163,11 +163,15 @@ export const init = function($parentObj) {
    /* wrap jquery ui dialog('destory') to fire an event */
    var original = $.fn.dialog;
    $.fn.dialog = function(cmd) {
-      if(cmd === 'destroy') {
-         this.trigger('dialogdestroy');
-         return original.call(this, 'destroy'); // destroy and remove from dom
+      try {
+         if(cmd === 'destroy') {
+            this.trigger('dialogdestroy');
+            return original.call(this, 'destroy'); // destroy and remove from dom
+         }
+         return original.apply(this, arguments);
+      } catch (err) {
+         $.growl.error({ message: err.message });
       }
-      return original.apply(this, arguments);
    }
 
    require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu", "trade/tradeDialog"], (chartWindowObj,liveapi, menu, tradeDialog) => {

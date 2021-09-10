@@ -841,7 +841,7 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
     const request = {
       proposal: 1,
       subscribe: 1,
-      contract_type: row.contract_type,
+      contract_type: row ? row.contract_type : '',
       currency: state.currency.value, /* This can only be the account-holder's currency */
       symbol: state.proposal.symbol, /* Symbol code */
     };
