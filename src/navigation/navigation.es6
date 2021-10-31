@@ -108,8 +108,8 @@ const initLoginButton = (root) => {
          /* We're not going to set currency automatically, since the user might select a different currency  */
          if (local_storage.get('currency')){
             state.currency = local_storage.get('currency');
-          } else 
-            return;
+         } else 
+         return;
       }
 
       let value = '0';
@@ -121,7 +121,10 @@ const initLoginButton = (root) => {
    };
 
    /* update balance on change */
-   liveapi.events.on('balance', update_balance);
+   liveapi.events.on('balance', data => {
+      const loginId = local_storage.get('authorize').loginid;
+      if (data.balance && data.balance.loginid === loginId) update_balance(data);
+   });
 
    liveapi.events.on('logout', () => {
       destroy_windows('data-authorized=true');
