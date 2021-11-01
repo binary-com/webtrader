@@ -8,7 +8,7 @@ $COLOR_WHITE: #ffffff;
 	.instrument-dropdown {
 		position: absolute;
 		height: 36px;
-		width: 170px;
+		width: 195px;
 		left: 180px;
 		top: 2px;
 		color: $COLOR_WHITE;
@@ -22,7 +22,7 @@ $COLOR_WHITE: #ffffff;
 		.ui-menu .ui-menu-item {
 			list-style-image: none !important;
 			.ui-menu-item-wrapper {
-				padding: 5px 16px 5px 6.5px;
+				padding: 5px 24px 5px 6.5px;
 				margin: 0;
 			}
 		}
@@ -43,10 +43,10 @@ $COLOR_WHITE: #ffffff;
 			background-image: url('../images/thin-arrowheads-pointing-down.svg') !important;
 			padding-left: 7px;
 			line-height: 34px;
-			font-size: 18px;
+			font-size: 16px;
 			margin: auto;
 			background-size: 10px 10px !important;
-			background-position: 90px 50% !important;
+			background-position: 180px 50% !important;
 			background-repeat: no-repeat;
 			white-space: nowrap;
 		}
@@ -58,7 +58,7 @@ $COLOR_WHITE: #ffffff;
 	}
 	.date-time {
 		position: absolute;
-		left: 335px;
+		right: 95px;
 		top: 5px;
 		color: $COLOR_WHITE;
 		input {
