@@ -7,18 +7,18 @@ import 'modernizr';
 import 'common/util';
 import 'css!windows/windows.css';
 import moment from 'moment';
-import workspace from  '../workspace/workspace.js';
+import workspace from '../workspace/workspace.js';
 
 let dialogCounter = 0;
 
 let callbacks = {};
 /* fire a custom event and call registered callbacks(api.events.on(name)) */
-const fire_event = (name , ...args) => {
+const fire_event = (name, ...args) => {
    const fns = callbacks[name] || [];
    fns.forEach(function (cb) {
-      setTimeout(function(){
+      setTimeout(function () {
          cb.apply(undefined, args);
-      },0);
+      }, 0);
    });
 }
 
@@ -32,7 +32,7 @@ const fire_event = (name , ...args) => {
       var win = createBlankWindow(...);
       win.addDateToHeader({date:new Date(), title: 'sub header', changed: fn});
       */
-const addDateToHeader = function(mainOptions) {
+const addDateToHeader = function (mainOptions) {
    mainOptions = $.extend({
       title: 'title',
       date: null,
@@ -75,7 +75,7 @@ const addDateToHeader = function(mainOptions) {
       };
 
       /* use JQ-UI icon for datepicker */
-      dpicker .next('button') .text('')
+      dpicker.next('button').text('')
          .button({ icons: { primary: 'ui-icon-calendar' } });
 
       dpicker_input.on('change', function () {
@@ -109,19 +109,19 @@ const addDateToHeader = function(mainOptions) {
     Drop down was allowing certain dates to be selected whereas date picker was not.
     Such complexity is needed when I compared it with binary.com implementation.
    */
-  const addDateDropDowns = (dt) => {
-    let inputElementForDate = $('<input placeholder="Select date" readonly class="windows-dateInput" />').insertAfter(header);
-    inputElementForDate.on('click', () => dpicker.datepicker('show'));
-    if (dt) {
-      inputElementForDate.val(moment(dt).format('DD MMM, YYYY'));
-    }
-    return {
-      update: yyyy_mm_dd => inputElementForDate.val(moment.utc(yyyy_mm_dd, 'YYYY-MM-DD').format('DD MMM, YYYY')),
-      clear: () => inputElementForDate.val(''),
-    };
-  }
+   const addDateDropDowns = (dt) => {
+      let inputElementForDate = $('<input placeholder="Select date" readonly class="windows-dateInput" />').insertAfter(header);
+      inputElementForDate.on('click', () => dpicker.datepicker('show'));
+      if (dt) {
+         inputElementForDate.val(moment(dt).format('DD MMM, YYYY'));
+      }
+      return {
+         update: yyyy_mm_dd => inputElementForDate.val(moment.utc(yyyy_mm_dd, 'YYYY-MM-DD').format('DD MMM, YYYY')),
+         clear: () => inputElementForDate.val(''),
+      };
+   }
 
-   if(mainOptions.addDateDropDowns) {
+   if (mainOptions.addDateDropDowns) {
       dropdonws = addDateDropDowns(mainOptions.date);
    }
    else {
@@ -132,7 +132,7 @@ const addDateToHeader = function(mainOptions) {
    $('<span class="span-in-dialog-header">' + mainOptions.title + '</span>').insertAfter(header);
 
    return {
-      clear:() => dropdonws && dropdonws.clear()
+      clear: () => dropdonws && dropdonws.clear()
    };
 }
 
@@ -140,16 +140,16 @@ const getScrollHeight = (without_body) => {
    var bottoms = $('.ui-dialog').map((inx, d) => {
       const $d = $(d);
       const $w = $d.find('.webtrader-dialog');
-      if($w && $w.hasClass("ui-dialog-content") && !$w.hasClass('ui-dialog-minimized')) {
+      if ($w && $w.hasClass("ui-dialog-content") && !$w.hasClass('ui-dialog-minimized')) {
          const offset = $d.offset();
          return (offset && (offset.top + $d.height())) || 0;
       }
       return 0;
    });
-   if(!without_body) {
+   if (!without_body) {
       bottoms.push($('body').height());
    }
-   return  Math.max.apply(null, bottoms);
+   return Math.max.apply(null, bottoms);
 }
 
 const fixMinimizedDialogsPosition = () => {
@@ -159,12 +159,12 @@ const fixMinimizedDialogsPosition = () => {
 }
 
 
-export const init = function($parentObj) {
+export const init = function ($parentObj) {
    /* wrap jquery ui dialog('destory') to fire an event */
    var original = $.fn.dialog;
-   $.fn.dialog = function(cmd) {
+   $.fn.dialog = function (cmd) {
       try {
-         if(cmd === 'destroy') {
+         if (cmd === 'destroy') {
             this.trigger('dialogdestroy');
             return original.call(this, 'destroy'); // destroy and remove from dom
          }
@@ -174,13 +174,13 @@ export const init = function($parentObj) {
       }
    }
 
-   require(["charts/chartWindow","websockets/binary_websockets", "navigation/menu", "trade/tradeDialog"], (chartWindowObj,liveapi, menu, tradeDialog) => {
-      if(!tracker.is_empty()) {
+   require(["charts/chartWindow", "websockets/binary_websockets", "navigation/menu", "trade/tradeDialog"], (chartWindowObj, liveapi, menu, tradeDialog) => {
+      if (!tracker.is_empty()) {
          tracker.reopen();
          return;
       }
       liveapi
-         .cached.send({trading_times: new Date().toISOString().slice(0, 10)})
+         .cached.send({ trading_times: new Date().toISOString().slice(0, 10) })
          .then((markets) => {
             markets = menu.extractChartableMarkets(markets);
             const sym = markets[0].submarkets[0].instruments[0];
@@ -189,20 +189,20 @@ export const init = function($parentObj) {
             const pip = '0.001';
 
             liveapi
-              .send({ contracts_for: sym.symbol })
-              .then((res) => {
+               .send({ contracts_for: sym.symbol })
+               .then((res) => {
                   // open chart window and tradeDialog
                   chartWindowObj.addNewWindow({ instrumentCode: sym.symbol, instrumentName: sym.display_name, timePeriod, type, delayAmount: sym.delay_amount });
                   tradeDialog.init({ symbol: sym.symbol, display_name: sym.display_name, pip }, res.contracts_for);
                   workspace.tileDialogs();
-              })
-              .catch((err) => console.error(err));
+               })
+               .catch((err) => console.error(err));
          });
    });
 
    /* automatically log the user in if we have oauth_token in local_storage */
-   require(['websockets/binary_websockets' ], (liveapi) => {
-      if(!local_storage.get('oauth')) {
+   require(['websockets/binary_websockets'], (liveapi) => {
+      if (!local_storage.get('oauth')) {
          return;
       }
       /* query string parameters can tempered.
@@ -210,7 +210,7 @@ export const init = function($parentObj) {
       var oauth = local_storage.get('oauth');
       Promise.all(
          oauth.slice(1)
-            .map(acc => ({ authorize: acc.token}))
+            .map(acc => ({ authorize: acc.token }))
             .map(req => liveapi.send(req))
       )
          .then((results) =>
@@ -219,15 +219,15 @@ export const init = function($parentObj) {
                   const oauth = local_storage.get("oauth");
                   // Set currency for each account.
                   results.forEach((auth) => {
-                        if(auth.authorize) {
-                              const _curr = oauth.find((e) => e.id == auth.authorize.loginid);
-                              _curr.currency = auth.authorize.currency;
-                        }
+                     if (auth.authorize) {
+                        const _curr = oauth.find((e) => e.id == auth.authorize.loginid);
+                        _curr.currency = auth.authorize.currency;
+                     }
                   });
                   local_storage.set("oauth", oauth);
                   results.unshift(data);
                   let is_jpy_account = false;
-                  for(let i = 0; i < results.length; ++i) {
+                  for (let i = 0; i < results.length; ++i) {
                      oauth[i].id = results[i].authorize.loginid;
                      oauth[i].is_virtual = results[i].authorize.is_virtual;
                      if (results[i].authorize.landing_company_name.indexOf('japan') !== -1) {
@@ -243,19 +243,19 @@ export const init = function($parentObj) {
          )
          .then((is_jpy_account) => {
             /* Japan accounts should not be allowed to login to webtrader */
-            if(is_jpy_account && is_jpy_account === true) {
+            if (is_jpy_account && is_jpy_account === true) {
                liveapi.invalidate();
-               $.growl.error({message: 'Japan accounts are not supported.'.i18n(), duration: 6000 });
+               $.growl.error({ message: 'Japan accounts are not supported.'.i18n(), duration: 6000 });
                local_storage.remove('oauth');
                local_storage.remove('oauth-login');
             }
          })
          .catch((err) => {
             //Switch to virtual account on selfexclusion error.
-            if(err.code==="SelfExclusion"){
+            if (err.code === "SelfExclusion") {
                //Login to virtual account instead.
                oauth.forEach((ele, i) => {
-                  if(ele.id.match(/^VRTC/)){
+                  if (ele.id.match(/^VRTC/)) {
                      liveapi.switch_account(ele.id);
                      return;
                   }
@@ -263,7 +263,7 @@ export const init = function($parentObj) {
                return;
             }
             console.error(err.message);
-            $.growl.error({message: err.message});
+            $.growl.error({ message: err.message });
             //Remove token and trigger login-error event.
             local_storage.remove('oauth');
             $(".login").trigger("login-error");
@@ -296,7 +296,7 @@ notes:
     2- if autoOpen == false  use createBalnkWindow(...).dialog('open') to open the dialog
     2- if minWidth and minHeight are not specified the options.width and options.height will be used for minimums.
  */
-export const createBlankWindow = function($html,options) {
+export const createBlankWindow = function ($html, options) {
    $html = $($html);
    const id = "windows-dialog-" + ++dialogCounter;
    options = $.extend({
@@ -321,7 +321,7 @@ export const createBlankWindow = function($html,options) {
    options.minHeight = options.minHeight || options.height;
 
    if (options.resize)
-      options.maximize = options.minimize  = options.restore = options.resize;
+      options.maximize = options.minimize = options.restore = options.resize;
 
    const blankWindow = $html.attr("id", id);
    if (!options.ignoreTileAction) blankWindow.addClass('webtrader-dialog')
@@ -332,15 +332,15 @@ export const createBlankWindow = function($html,options) {
    dialog.addClass('webtrader-dialog-widget');
    /* allow dialogs to be moved though the bottom of the page */
    if (options.draggable !== false) {
-     dialog.draggable( "option", "containment", false );
-     dialog.draggable( "option", "scroll", true );
+      dialog.draggable("option", "containment", false);
+      dialog.draggable("option", "scroll", true);
    }
    dialog.on('dragstop', () => {
-      const top         = dialog.offset().top;
-      const left        = dialog.offset().left;
-      const dialogWidth = blankWindow.dialog( "option", "width" );
+      const top = dialog.offset().top;
+      const left = dialog.offset().left;
+      const dialogWidth = blankWindow.dialog("option", "width");
       const windowWidth = $(window).width();
-      const navHeight   = $('#nav-menu .container').height();
+      const navHeight = $('#nav-menu .container').height();
 
       if (top < navHeight + 36) {
          dialog.animate({ top: `${navHeight + 36}px` }, 300, dialog.trigger.bind(dialog, 'animated'));
@@ -353,18 +353,18 @@ export const createBlankWindow = function($html,options) {
       }
    });
 
-   if(options.destroy) { /* register for destroy event which have been patched */
+   if (options.destroy) { /* register for destroy event which have been patched */
       blankWindow.on('dialogdestroy', options.destroy);
    }
 
-   blankWindow.on('dialogopen', function() {
+   blankWindow.on('dialogopen', function () {
       _.defer(() => {
-         const top = ['#msg-notification', '#topbar', '#nav-menu'].map(selector => $(selector).outerHeight()).reduce((a,b) => a+b, 0);
+         const top = ['#msg-notification', '#topbar', '#nav-menu'].map(selector => $(selector).outerHeight()).reduce((a, b) => a + b, 0);
          const parent = $(this).parent();
-         if(parent.css('top').replace('px', '') * 1 <= top) {
+         if (parent.css('top') && parent.css('top').replace('px', '') * 1 <= top) {
             parent.animate({
-               top: top + (Math.random()*15 | 0),
-               left: `+=${(Math.random()*10 | 0) - 20}px`,
+               top: top + (Math.random() * 15 | 0),
+               left: `+=${(Math.random() * 10 | 0) - 20}px`,
             }, 300, dialog.trigger.bind(dialog, 'animated'));
          }
       });
@@ -381,7 +381,7 @@ export const createBlankWindow = function($html,options) {
       blankWindow.on('dialogclose', cleaner);
 
    };
-   if(!options.ignoreTileAction) {
+   if (!options.ignoreTileAction) {
       add_to_windows_menu();
    }
 
@@ -391,14 +391,14 @@ export const createBlankWindow = function($html,options) {
    blankWindow.addDateToHeader = addDateToHeader;
 
    /* set data-* attributes on created dialog */
-   const attributes = Object.keys(options).filter((key) =>  _.startsWith(key, 'data-') );
-   attributes.forEach((key) => blankWindow.attr(key, options[key]) );
+   const attributes = Object.keys(options).filter((key) => _.startsWith(key, 'data-'));
+   attributes.forEach((key) => blankWindow.attr(key, options[key]));
 
    /* check and add the refresh button if needed */
-   if(options.refresh){
+   if (options.refresh) {
       const header = blankWindow.parent().find('.ui-dialog-title');
       const refresh = header.append("<img class='reload' src='images/refresh.svg' title='reload'/>").find(".reload");
-      refresh.on('click',options.refresh);
+      refresh.on('click', options.refresh);
    }
 
    /* options: {
@@ -409,7 +409,7 @@ export const createBlankWindow = function($html,options) {
    blankWindow.track = (options) => tracker.track(options, blankWindow);
 
    blankWindow.destroy = () => {
-      if(blankWindow.data('ui-dialog')) {
+      if (blankWindow.data('ui-dialog')) {
          blankWindow.dialog('destroy');
       }
       blankWindow.remove();
@@ -435,25 +435,25 @@ export const makeSelectmenu = function (select, options) {
    options = $.extend({
       list: ['empty'],
       inx: 0,
-      changed:  () => { }
+      changed: () => { }
    }, options);
    options.changed = options.changed ? options.changed : () => { };
 
    var inx = options.inx, list = options.list;
    var update_select = (list) => {
       select.children().remove();
-      for(let i = 0; i < list.length; ++i)
+      for (let i = 0; i < list.length; ++i)
          $('<option/>').val(list[i]).text(list[i]).appendTo(select);
    }
    update_select(list);
    select.val(list[inx]);
 
-   select = select.selectmenu({ 
-         classes: {
-           "ui-selectmenu-button": "ui-selectmenu-button ui-state-default"
-         },
-         width: options.width 
-      });
+   select = select.selectmenu({
+      classes: {
+         "ui-selectmenu-button": "ui-selectmenu-button ui-state-default"
+      },
+      width: options.width
+   });
    select.on('selectmenuchange', function () {
       var val = $(this).val();
       options.changed(val);
@@ -473,7 +473,7 @@ export const event_on = (name, cb) => {
 }
 
 export const event_off = (name, cb) => {
-   if(callbacks[name]) {
+   if (callbacks[name]) {
       var index = callbacks[name].indexOf(cb);
       index !== -1 && callbacks[name].splice(index, 1);
    }
