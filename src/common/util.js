@@ -515,3 +515,12 @@ function getBinaryUrl(page) {
 
     return binary_url;
 }
+
+function getderivUrl(page) {
+  var hostname = new URL(window.location.href).hostname;
+  var lang = (local_storage.get('i18n') || {value: 'en'}).value;
+  var domain = hostname.includes('binary.me') ? '.me' : '.com';
+  var deriv_url = 'https://deriv' + domain + '/' + lang + '/' + page;
+
+  return deriv_url;
+}
