@@ -225,6 +225,7 @@ function processFooter(selected_language_name) {
                 var isEu = isEuCountry(data.landing_company);
                 var FOOTER_TEXT = isEu ? FOOTER_TEXT_EU : FOOTER_TEXT_NON_EU;
     
+                showBanner(isEu)
                 isEu ? footer_eu_el.classList.add('data-show') : footer_non_eu_el.classList.add('data-show');
     
                 for (var key in FOOTER_TEXT) {
@@ -259,4 +260,12 @@ function processFooter(selected_language_name) {
             }
         }
     })
+}
+
+function showBanner(isEu){
+    if (isEu) {
+        document.getElementById('close_banner_container').classList.remove('invisible')
+    } else {
+        document.getElementById('close_banner_container').classList.add('invisible')
+    }
 }
