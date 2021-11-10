@@ -516,7 +516,7 @@ function getBinaryUrl(page) {
     return binary_url;
 }
 
-function getderivUrl(page) {
+function getDerivUrl(page) {
   var hostname = new URL(window.location.href).hostname;
   var lang = (local_storage.get('i18n') || {value: 'en'}).value;
   var domain = hostname.includes('binary.me') ? '.me' : '.com';

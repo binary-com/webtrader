@@ -25,7 +25,7 @@ export const init = () => {
   const nav = $("body").find("nav");
   nav.after(banner);
   const go_to_deriv_el = document.getElementById("close_banner_btn_iom");
-  go_to_deriv_el.href = getderivUrl("");
+  go_to_deriv_el.href = getDerivUrl("");
   showBanner();
 };
 

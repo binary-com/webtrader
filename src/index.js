@@ -264,7 +264,7 @@ function processFooter(selected_language_name) {
 
 function showBanner(isEu){
     var go_to_deriv_el = document.getElementById("close_banner_btn_iom");
-    go_to_deriv_el.href = getderivUrl("");
+    go_to_deriv_el.href = getDerivUrl("");
     if (isEu) {
         document.getElementById('close_banner_container').classList.remove('invisible')
     } else {
