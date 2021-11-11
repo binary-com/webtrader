@@ -525,3 +525,58 @@ function getDerivUrl(page) {
 
   return deriv_url;
 }
+
+function isEuCountry(clients_country, landing_company) {
+  var eu_shortcode_regex = new RegExp("^(maltainvest|malta|iom)$");
+  var eu_excluded_regex = new RegExp("^mt$");
+  var financial_shortcode =
+    (landing_company && landing_company.financial_company)
+      ? landing_company.financial_company.shortcode
+      : "";
+  var gaming_shortcode =
+    (landing_company && landing_company.gaming_company)
+      ? landing_company.gaming_company.shortcode
+      : "";
+
+  return financial_shortcode || gaming_shortcode
+    ? eu_shortcode_regex.test(financial_shortcode) ||
+        eu_shortcode_regex.test(gaming_shortcode)
+    : eu_excluded_regex.test(clients_country);
+}
+
+function isEuCountrySelected(selected_country) {
+  return eu_countries.includes(selected_country)
+}
+
+var eu_countries = [
+  'it',
+  'de',
+  'fr',
+  'lu',
+  'gr',
+  'mf',
+  'es',
+  'sk',
+  'lt',
+  'nl',
+  'at',
+  'bg',
+  'si',
+  'cy',
+  'be',
+  'ro',
+  'hr',
+  'pt',
+  'pl',
+  'lv',
+  'ee',
+  'cz',
+  'fi',
+  'hu',
+  'dk',
+  'se',
+  'ie',
+  'im',
+  'gb',
+  'mt',
+];
