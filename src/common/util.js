@@ -384,6 +384,7 @@ function loginids() {
       is_mlt: /MLT/gi.test(parts.loginid),
       is_mx: /MX/gi.test(parts.loginid),
       is_cr: /CR/gi.test(parts.loginid),
+      is_virtual: /VRTC/gi.test(parts.loginid),
     };
   });
 }
