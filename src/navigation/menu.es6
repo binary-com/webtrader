@@ -62,9 +62,11 @@ export const extractChartableMarkets = (trading_times_data) => {
 };
 
 export const refreshMenu = (root, markets, callback) => {
-   
+   console.log("markets", markets)
    if(markets.length == 0){
       Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
+      $.growl.error({message: trade_messages.no_symbol()});
+   } else if(markets.length == 3) {
       $.growl.error({message: trade_messages.no_symbol()});
    } else {
       Object.values(menu_config).map( menu => $(menu).removeClass('disabled'));
