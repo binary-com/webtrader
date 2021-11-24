@@ -15,10 +15,11 @@ const menu_config = {
 };
 
 const trade_messages = {
-   no_symbol : () => "Binary options trading is not available.".i18n(),
+   no_symbol : () => "Trading options isn’t possible in your country.".i18n(),
 };
 
 export const extractFilteredMarkets = (trading_times_data, options) => {
+  if (trading_times_data) {
    const markets = trading_times_data.trading_times.markets.map((m) => {
       const market = {
          name: m.name,
@@ -53,6 +54,9 @@ export const extractFilteredMarkets = (trading_times_data, options) => {
    });
 
    return markets;
+ } else {
+      $.growl.error({message: "There are no valid trading times relating to your request"});
+ }
 };
 
 export const extractChartableMarkets = (trading_times_data) => {
@@ -65,6 +69,8 @@ export const refreshMenu = (root, markets, callback) => {
    
    if(markets.length == 0){
       Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
+      $.growl.error({message: trade_messages.no_symbol()});
+   } else if(markets.length == 3) {
       $.growl.error({message: trade_messages.no_symbol()});
    } else {
       Object.values(menu_config).map( menu => $(menu).removeClass('disabled'));
