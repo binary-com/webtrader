@@ -18,8 +18,8 @@ const trade_messages = {
    no_symbol : () => "Binary options trading is not available.".i18n(),
 };
 
-export const extractFilteredMarkets = (trading_times_data, options) => {
-   const markets = trading_times_data.trading_times.markets.map((m) => {
+export const extractFilteredMarkets = async (trading_times_data, options) => {
+   const markets = await trading_times_data.trading_times.markets.map((m) => {
       const market = {
          name: m.name,
          display_name: m.name
