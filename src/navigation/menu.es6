@@ -19,7 +19,7 @@ const trade_messages = {
 };
 
 export const extractFilteredMarkets = (trading_times_data, options) => {
-   if (trading_times_data.length !== 0) {
+   if (trading_times_data) {
    const markets = trading_times_data.trading_times.markets.map((m) => {
       const market = {
          name: m.name,
