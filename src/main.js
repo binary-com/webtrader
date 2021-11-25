@@ -293,6 +293,10 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                 $(".sk-spinner-container").parent().hide();
                 $("body > .footer").show();
             });
+
+            require(["banners/banners"], function(banner) {
+                banner.init();
+            });
         });
 
         /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/
