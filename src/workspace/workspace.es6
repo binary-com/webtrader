@@ -201,7 +201,6 @@ const state = {
             delete data.random;
             state.workspaces.push(data);
             local_storage.set('workspaces', state.workspaces);
-
             state.workspace.show(data);
 
             $.growl.notice({message: "Successfully added workspace as ".i18n() + "<b>" + data.name + "</b>"});
