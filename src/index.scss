@@ -209,3 +209,82 @@ body {
     }
   }
 }
+
+.sk-spinner-container {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 60px;
+  right: 0;
+  margin: auto auto;
+  -webkit-user-select: none;
+  display: block;
+  margin: auto auto;
+}
+
+
+.sk-spinner-wave.sk-spinner {
+  margin: 0 auto;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.sk-spinner-wave div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  margin-right: 3px;
+  -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+  animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+}
+
+.sk-spinner-wave .sk-rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.sk-spinner-wave .sk-rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.sk-spinner-wave .sk-rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.sk-spinner-wave .sk-rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-waveStretchDelay {
+  0%,
+  40%,
+  100% {
+      -webkit-transform: scaleY(0.4);
+      transform: scaleY(0.4);
+  }
+  20% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+  }
+}
+
+@keyframes sk-waveStretchDelay {
+  0%,
+  40%,
+  100% {
+      -webkit-transform: scaleY(0.4);
+      transform: scaleY(0.4);
+  }
+  20% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+  }
+}
