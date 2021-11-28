@@ -213,12 +213,14 @@ const state = {
          const {name} = w;
          const inx = _.findIndex(state.workspaces, {name: name});
          const workspace = inx !== -1 ? state.workspaces[inx] : local_storage.get('states');
-         workspace.name = sanitize(name);
-         workspace.template_type = 'workspace-template';
-         workspace.random = state.file.hash_code(workspace)
-         var json = JSON.stringify(workspace);
-         downloadFileInBrowser(workspace.name + '.json', 'text/json;charset=utf-8;', json);
-         $.growl.notice({message: "Downloading workspace as %1".i18n().replace("%1", `<b>${workspace.name}.json</b>`)});
+         if(workspace) {
+            workspace.name = sanitize(name);
+            workspace.template_type = 'workspace-template';
+            workspace.random = state.file.hash_code(workspace)
+            var json = JSON.stringify(workspace);
+            downloadFileInBrowser(workspace.name + '.json', 'text/json;charset=utf-8;', json);
+            $.growl.notice({message: "Downloading workspace as %1".i18n().replace("%1", `<b>${workspace.name}.json</b>`)});
+         }
       }
    }
 };
