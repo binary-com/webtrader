@@ -20,37 +20,37 @@ const trade_messages = {
 
 export const extractFilteredMarkets = (trading_times_data, options) => {
    if (trading_times_data) {
-   const markets = trading_times_data.trading_times.markets.map((m) => {
-      const market = {
-         name: m.name,
-         display_name: m.name
-      };
-      market.submarkets = m.submarkets.map((sm) => {
-         const submarket = {
-            name: sm.name,
-            display_name: sm.name
+      const markets = trading_times_data.trading_times.markets.map((m) => {
+         const market = {
+            name: m.name,
+            display_name: m.name
          };
-         let symbols = sm.symbols;
-         if (options && options.filter) /* filter the symbols */
-            symbols = symbols.filter(options.filter);
-         submarket.instruments = symbols.map((sym) => {
-            return {
-               symbol: sym.symbol,
-               display_name: sym.name,
-               delay_amount: sym.delay_amount || 0,
-               events: sym.events,
-               times: sym.times,
-               settlement: sym.settlement,
-               feed_license: sym.feed_license || 'realtime'
+         market.submarkets = m.submarkets.map((sm) => {
+            const submarket = {
+               name: sm.name,
+               display_name: sm.name
             };
-         });
-         return submarket;
-      })
-      /* there might be a submarket (e.g "Americas") which does not have any symbols after filtering */
-         .filter(
-            (sm) => (sm.instruments.length > 0)
-         );
-      return market;
+            let symbols = sm.symbols;
+            if (options && options.filter) /* filter the symbols */
+               symbols = symbols.filter(options.filter);
+            submarket.instruments = symbols.map((sym) => {
+               return {
+                  symbol: sym.symbol,
+                  display_name: sym.name,
+                  delay_amount: sym.delay_amount || 0,
+                  events: sym.events,
+                  times: sym.times,
+                  settlement: sym.settlement,
+                  feed_license: sym.feed_license || 'realtime'
+               };
+            });
+            return submarket;
+         })
+         /* there might be a submarket (e.g "Americas") which does not have any symbols after filtering */
+            .filter(
+               (sm) => (sm.instruments.length > 0)
+            );
+         return market;
    });
 
    return markets;
