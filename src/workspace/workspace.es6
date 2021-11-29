@@ -82,12 +82,14 @@ const state = {
             return state.saveas.show();
          }
          const workspace = local_storage.get('states');
-         workspace.name = sanitize(name);
-         const inx = _.findIndex(state.workspaces, {name: workspace.name});
-         state.workspaces[inx] = workspace;
-         state.workspaces = clone(state.workspaces);
-         local_storage.set('workspaces', state.workspaces);
-         $.growl.notice({ message: 'Workspace changes saved'.i18n() });
+         if (workspace) {
+            workspace.name = sanitize(name);
+            const inx = _.findIndex(state.workspaces, {name: workspace.name});
+            state.workspaces[inx] = workspace;
+            state.workspaces = clone(state.workspaces);
+            local_storage.set('workspaces', state.workspaces);
+            $.growl.notice({ message: 'Workspace changes saved'.i18n() });
+         }
       }
    },
    rename: {
