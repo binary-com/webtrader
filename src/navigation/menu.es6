@@ -52,11 +52,7 @@ export const extractFilteredMarkets = (trading_times_data, options) => {
             );
          return market;
    });
-
    return markets;
-   } else {
-      $.growl.error({message: "There are no valid trading times relating to your request"});
-   }
 };
 
 export const extractChartableMarkets = (trading_times_data) => {
