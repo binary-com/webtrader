@@ -40,163 +40,177 @@
 
 </head>
 
-<body style="display:none">
-    <div id="topbar" class="topbar primary-bg-color-dark">
-        <div class="fr ln29">
-            <span class="time"></span>
-            <a target="_blank" id="contact-us" href="#">
-                <b>Contact Us</b>
-            </a>
-            <div class="languages no-translation">
-                <ul id="display_language">
-                    <li class="EN">
-                        <span class="world world-white"></span>
-                        <span class="language">English</span>
-                        <span class="nav-caret"></span>
-                    </li>
-                </ul>
-                <ul id="select_language">
-                    <li class="current">
-                        <span class="world world-black"></span>
-                        <span class="language">English</span>
-                        <span class="nav-caret"></span>
-                    </li>
-                </ul>
+<body>
+    <div id="loading_container" class="ui-widget mainContainer">
+        <div class="sk-spinner-container">
+            <div class="sk-spinner sk-spinner-wave">
+                <div class="sk-rect1"></div>
+                <div class="sk-rect2"></div>
+                <div class="sk-rect3"></div>
+                <div class="sk-rect4"></div>
+                <div class="sk-rect5"></div>
             </div>
         </div>
     </div>
-    <div id="header">
-        <div id="container">
-            <div class="logo-parent">
-                <a id="logo">
-                    <div class="logo">
-                        <div></div>
+    <div id="main_container" style="display:none">
+        <div id="topbar" class="topbar primary-bg-color-dark">
+            <div class="fr ln29">
+                <span class="time"></span>
+                <a target="_blank" id="contact-us" href="#">
+                    <b>Contact Us</b>
+                </a>
+                <div class="languages no-translation">
+                    <ul id="display_language">
+                        <li class="EN">
+                            <span class="world world-white"></span>
+                            <span class="language">English</span>
+                            <span class="nav-caret"></span>
+                        </li>
+                    </ul>
+                    <ul id="select_language">
+                        <li class="current">
+                            <span class="world world-black"></span>
+                            <span class="language">English</span>
+                            <span class="nav-caret"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="header">
+            <div id="container">
+                <div class="logo-parent">
+                    <a id="logo">
+                        <div class="logo">
+                            <div></div>
+                        </div>
+                        <div class="binary-logo-text">
+                            <div></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id='close_banner_container' class='container invisible'>
+            <div class='close_banner_text'>
+                <img class='close_banner_img' src="v<version>/images/banner/icon_left.png"/>
+                <div class='close_banner_text_wrapper'>
+                    <h3>Binary.com is moving to Deriv on 30 November</h3>
+                    <p>Start using Deriv with your Binary.com email and password.</p>
+                </div>
+            </div>
+            <div class='close_banner_btn'>
+                <a id='close_banner_btn_iom' target="_blank" href="#">Trade on Deriv</a>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                <div class="text">
+                    <h1>Welcome to WebTrader</h1>
+                    <p class="paragraph">
+                        WebTrader is the platform that lets you trade and view multiple markets on one screen. Add dashboards and charts, and drag and drop them to create your own layout. Copy trades from successful traders and mirror their activity. 
+                    </p>
+                    <b>Customisable workspaces</b>
+                    <p class="paragraph">
+                        Create multiple custom screens and save each one as a workspace that you can view instantly later. 
+                    </p>
+                    <b>Trade multiple markets</b>
+                    <p class="paragraph">
+                        Trade a multitude of assets in forex, commodities, stock indices, and synthetic indices. 
+                    </p>
+                    <b>Add useful tools</b>
+                    <p class="paragraph">
+                        Use tools like historical data and the asset index on the same screen to inform your trading strategy. 
+                    </p>
+                    <b>Copy trading</b>
+                    <p class="paragraph--br">
+                        Replicate the trades of more experienced traders in your own account.
+                    </p>
+                   <button onclick="openTradingPage()">Start trading</button>
+                </div>
+                <div class="img">
+                   <img class="responsive" src="v<version>/images/webtrader.png">
+                </div>
+            </div>
+        </div>
+        <footer class="footer primary-bg-color-dark" id='footer'>
+            <div class="footer__container">
+                <div class="footer__social-icons">
+                    <a href="http://www.youtube.com/user/BinaryTradingVideos" target="_blank" rel="noopener noreferrer">
+                        <img class="responsive" alt="Youtube icon" src="v<version>/images/youtube.svg">
+                    </a>
+                    <a href="https://www.facebook.com/derivdotcom" target="_blank" rel="noopener noreferrer">
+                        <img class="responsive" alt="Facebook icon" src="v<version>/images/facebook.svg">
+                    </a>
+                    <a href="https://twitter.com/derivdotcom" target="_blank" rel="noopener noreferrer">
+                        <img class="responsive" alt="Twitter icon" src="v<version>/images/twitter.svg">
+                    </a>
+                    <a href="https://t.me/binarydotcom" target="_blank" rel="noopener noreferrer">
+                        <img class="responsive" alt="Telegram icon" src="v<version>/images/telegram.svg">
+                    </a>
+                    <a href="https://www.reddit.com/r/binarydotcom/" target="_blank" rel="noopener noreferrer">
+                        <img class="responsive" alt="Reddit icon" src="v<version>/images/reddit.svg">
+                    </a>
+                </div>
+                <div id="footer-eu">
+                    <div class="footer__regulatory-icons">
+                        <div class="iom_icon">
+                            <a href="http://www.gov.im/gambling/" target="_blank" rel="noopener noreferrer">
+                                <img class="responsive" alt="Isle of man logo" src="v<version>/images/isle-of-man.png">
+                            </a>
+                        </div>
+                        <div class="gamstop-lga-container">
+                            <div class="lga_icon">
+                                <a href="https://www.authorisation.mga.org.mt/verification.aspx?lang=EN&amp;company=a5fd1edc-d072-4c26-b0cd-ab3fa0f0cc40&amp;details=1"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img class="responsive" alt="MGA logo" src="v<version>/images/mga-logo-footer.svg">
+                                </a>
+                            </div>
+                            <div class="gamstop_icon">
+                                <a href="https://www.gamstop.co.uk/" target="_blank" rel="noopener noreferrer">
+                                    <img class="responsive" alt="Gamstop logo" src="v<version>/images/gamstop.svg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="age-restriction"> 
+                            <img class="responsive" src="v<version>/images/18+.svg"/>
+                        </div>
                     </div>
-                    <div class="binary-logo-text">
-                        <div></div>
+                    <div class="footer__text-container">
+                        <p class="p1"></p>
+                        <p class="p2"></p>
+                        <p class="p3 u-margin-bottom-small"></p>
+                        <p class="p4 about-binary"></p>
+                        <p class="p5"></p>
+                        <p class="p6"></p>
                     </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id='close_banner_container' class='container invisible'>
-        <div class='close_banner_text'>
-            <img class='close_banner_img' src="v<version>/images/banner/icon_left.png"/>
-            <div class='close_banner_text_wrapper'>
-                <h3>Binary.com is moving to Deriv on 30 November</h3>
-                <p>Start using Deriv with your Binary.com email and password.</p>
-            </div>
-        </div>
-        <div class='close_banner_btn'>
-            <a id='close_banner_btn_iom' target="_blank" href="#">Trade on Deriv</a>
-        </div>
-    </div>
-    <div id="content">
-        <div class="container">
-            <div class="text">
-                <h1>Welcome to WebTrader</h1>
-                <p class="paragraph">
-                    WebTrader is the platform that lets you trade and view multiple markets on one screen. Add dashboards and charts, and drag and drop them to create your own layout. Copy trades from successful traders and mirror their activity. 
-                </p>
-                <b>Customisable workspaces</b>
-                <p class="paragraph">
-                    Create multiple custom screens and save each one as a workspace that you can view instantly later. 
-                </p>
-                <b>Trade multiple markets</b>
-                <p class="paragraph">
-                    Trade a multitude of assets in forex, commodities, stock indices, and synthetic indices. 
-                </p>
-                <b>Add useful tools</b>
-                <p class="paragraph">
-                    Use tools like historical data and the asset index on the same screen to inform your trading strategy. 
-                </p>
-                <b>Copy trading</b>
-                <p class="paragraph--br">
-                    Replicate the trades of more experienced traders in your own account.
-                </p>
-               <button onclick="openTradingPage()">Start trading</button>
-            </div>
-            <div class="img">
-               <img class="responsive" src="v<version>/images/webtrader.png">
-            </div>
-        </div>
-    </div>
-    <footer class="footer primary-bg-color-dark" id='footer'>
-        <div class="footer__container">
-            <div class="footer__social-icons">
-                <a href="http://www.youtube.com/user/BinaryTradingVideos" target="_blank" rel="noopener noreferrer">
-                    <img class="responsive" alt="Youtube icon" src="v<version>/images/youtube.svg">
-                </a>
-                <a href="https://www.facebook.com/derivdotcom" target="_blank" rel="noopener noreferrer">
-                    <img class="responsive" alt="Facebook icon" src="v<version>/images/facebook.svg">
-                </a>
-                <a href="https://twitter.com/derivdotcom" target="_blank" rel="noopener noreferrer">
-                    <img class="responsive" alt="Twitter icon" src="v<version>/images/twitter.svg">
-                </a>
-                <a href="https://t.me/binarydotcom" target="_blank" rel="noopener noreferrer">
-                    <img class="responsive" alt="Telegram icon" src="v<version>/images/telegram.svg">
-                </a>
-                <a href="https://www.reddit.com/r/binarydotcom/" target="_blank" rel="noopener noreferrer">
-                    <img class="responsive" alt="Reddit icon" src="v<version>/images/reddit.svg">
-                </a>
-            </div>
-            <div id="footer-eu">
-                <div class="footer__regulatory-icons">
-                    <div class="iom_icon">
-                        <a href="http://www.gov.im/gambling/" target="_blank" rel="noopener noreferrer">
-                            <img class="responsive" alt="Isle of man logo" src="v<version>/images/isle-of-man.png">
+                </div>
+                <div id="footer-non-eu">
+                    <div class="footer__regulatory-icons">
+                        <a class="vanuatu-icon" href="https://www.vfsc.vu/" target="_blank" rel="noopener noreferrer">
+                            <img class="responsive" alt="Vanuatu logo" src="v<version>/images/vanuatu-logo.png">
+                        </a>
+                        <a class="bvi-icon" href="http://www.bvifsc.vg/" target="_blank" rel="noopener noreferrer">
+                            <img class="responsive" alt="BVI logo" src="v<version>/images/bvi.png">
+                        </a>
+                        <a class="labuan-icon" href="https://www.labuanibfc.com/" target="_blank" rel="noopener noreferrer">
+                            <img class="responsive" alt="Labuan FSA logo" src="v<version>/images/labuan_FSA.svg">
                         </a>
                     </div>
-                    <div class="gamstop-lga-container">
-                        <div class="lga_icon">
-                            <a href="https://www.authorisation.mga.org.mt/verification.aspx?lang=EN&amp;company=a5fd1edc-d072-4c26-b0cd-ab3fa0f0cc40&amp;details=1"
-                                target="_blank" rel="noopener noreferrer">
-                                <img class="responsive" alt="MGA logo" src="v<version>/images/mga-logo-footer.svg">
-                            </a>
-                        </div>
-                        <div class="gamstop_icon">
-                            <a href="https://www.gamstop.co.uk/" target="_blank" rel="noopener noreferrer">
-                                <img class="responsive" alt="Gamstop logo" src="v<version>/images/gamstop.svg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="age-restriction"> 
-                        <img class="responsive" src="v<version>/images/18+.svg"/>
+                    <div class="footer__text-container">
+                        <p class="p1"></p>
+                        <p class="p2"></p>
+                        <p class="p3"></p>
+                        <fieldset>
+                            <legend>risk warning</legend>
+                            <p class="p4"></p>
+                        </fieldset>
                     </div>
                 </div>
-                <div class="footer__text-container">
-                    <p class="p1"></p>
-                    <p class="p2"></p>
-                    <p class="p3 u-margin-bottom-small"></p>
-                    <p class="p4 about-binary"></p>
-                    <p class="p5"></p>
-                    <p class="p6"></p>
-                </div>
             </div>
-            <div id="footer-non-eu">
-                <div class="footer__regulatory-icons">
-                    <a class="vanuatu-icon" href="https://www.vfsc.vu/" target="_blank" rel="noopener noreferrer">
-                        <img class="responsive" alt="Vanuatu logo" src="v<version>/images/vanuatu-logo.png">
-                    </a>
-                    <a class="bvi-icon" href="http://www.bvifsc.vg/" target="_blank" rel="noopener noreferrer">
-                        <img class="responsive" alt="BVI logo" src="v<version>/images/bvi.png">
-                    </a>
-                    <a class="labuan-icon" href="https://www.labuanibfc.com/" target="_blank" rel="noopener noreferrer">
-                        <img class="responsive" alt="Labuan FSA logo" src="v<version>/images/labuan_FSA.svg">
-                    </a>
-                </div>
-                <div class="footer__text-container">
-                    <p class="p1"></p>
-                    <p class="p2"></p>
-                    <p class="p3"></p>
-                    <fieldset>
-                        <legend>risk warning</legend>
-                        <p class="p4"></p>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
 
     <!-- For accessing current app version from index.js -->
     <script> var VERSION = "v<version>/"; </script>

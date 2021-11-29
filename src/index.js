@@ -6,7 +6,7 @@ var footer_non_eu_el = document.getElementById('footer-non-eu');
 var href = window.location.href;
 var default_app_id = 11;
 
-//Remove the '#' check later once the backend changes are released TODO
+// Remove the '#' check later once the backend changes are released TODO
 var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
@@ -31,12 +31,82 @@ function loadAppId(callback) {
     });
 }
 
+function getUrl() {
+    var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
+    return 'wss://' + server_url + '/websockets/v3';
+}
+
+function processRedirect(selected_language_name) {
+    loadAppId(function(err, app_id_json) {
+        var ip_country;
+        var account_list;
+        var token = local_storage.get('oauth')[0].token;
+        var app_id = err ? default_app_id : getAppId(app_id_json);
+        var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id;
+        var ws = new WebSocket(api_url);
+        ws.onopen = sendWebsiteStatus;
+        ws.onmessage = processApiResponse;
+
+        function getAppId(app_id_json) {
+            var stored_app_id = '';
+
+            for(var url in app_id_json) {
+                if(href.lastIndexOf(url, 0) === 0) {
+                    stored_app_id = app_id_json[url];
+                }
+            }
+
+            return stored_app_id || default_app_id;
+        }
+        getUrl();
+
+        function sendApiRequest(request) {
+            ws.send(JSON.stringify(request));
+        }
+
+        function sendWebsiteStatus(evt) {
+            sendApiRequest({ website_status: 1 });
+        }
+
+        function sendAuthorize(token) {
+            sendApiRequest({ authorize: token });
+        }
+        
+        function processApiResponse(response) {
+            var data = JSON.parse(response.data);
+
+            if(data.website_status){
+                ip_country = data.website_status.clients_country;
+                sendAuthorize(token);
+
+            } else if (data.authorize){
+                var residence_country = data.authorize.country;
+                account_list = data.authorize.account_list
+                var has_mf = false;
+                for (var account in account_list){
+                    if (account.landing_company_name === 'maltainvest') {
+                        has_mf = true;
+                        return;
+                    }
+                }
+                if ((!isEuCountrySelected(ip_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1)){
+                    window.location.href = getBinaryUrl('move-to-deriv')
+                } else {
+                    window.location.href = VERSION + 'main.html';                    
+                }
+
+            }
+        }
+    })
+}
 function processPageLanguage() {
     populateLanguageDropdown();
 
     if (local_storage.get('oauth')) {
-        window.location.href = VERSION + 'main.html';
+        processRedirect();
     } else {
+        document.getElementById('loading_container').style.display="none"
+        document.getElementById('main_container').style.display="block"
         $(function () {
             $('body').css('display', 'block');
             setTime();
@@ -146,11 +216,7 @@ function processFooter(selected_language_name) {
             return stored_app_id || default_app_id;
         }
 
-        function getUrl() {
-            var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
-
-            return 'wss://' + server_url + '/websockets/v3';
-        }
+        getUrl();
 
         function sendApiRequest(request) {
             ws.send(JSON.stringify(request));
