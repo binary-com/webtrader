@@ -273,7 +273,13 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
             var shouldRedirectMf = function(ip_country, auth) {
                 var account_list = auth.account_list;
                 var residence_country = auth.country;
-                var has_mf = account_list.filter(account => account.landing_company_name === 'maltainvest').length;
+                var has_mf = false;
+                for (var account in account_list) {
+                    if (account.landing_company_name === 'maltainvest') {
+                        has_mf = true;
+                        return;
+                    }
+                };
                 
                 return ((!isEuCountrySelected(ip_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1))
             }
@@ -319,7 +325,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     }
                 } else {
                     var token = local_storage.get('oauth')[0].token;
-                    websockets.send({authorize: token}).then((auth) => {
+                    websockets.send({authorize: token}).then(function(auth) {
                         if (shouldRedirectMf(ip_country, auth.authorize)) {
                             window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
                         } else {
