@@ -90,7 +90,7 @@ function processRedirect(selected_language_name) {
                     }
                 }
                 if ((!isEuCountrySelected(ip_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1)){
-                    window.location.href = getBinaryUrl('move-to-deriv')
+                    window.location.href = getBinaryUrlWithoutLng('move-to-deriv')
                 } else {
                     window.location.href = VERSION + 'main.html';                    
                 }
@@ -101,9 +101,10 @@ function processRedirect(selected_language_name) {
 }
 function processPageLanguage() {
     populateLanguageDropdown();
+    var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
 
     if (local_storage.get('oauth')) {
-        processRedirect();
+        processRedirect(selected_language_name);
     } else {
         document.getElementById('loading_container').style.display="none"
         document.getElementById('main_container').style.display="block"
@@ -112,7 +113,6 @@ function processPageLanguage() {
             setTime();
             setInterval(setTime, 1000);
     
-            var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
             $.getJSON(VERSION + 'i18n/' + selected_language_name + '.json', function (data) {
                 setupi18nTranslation(data);
                 processFooter(selected_language_name);

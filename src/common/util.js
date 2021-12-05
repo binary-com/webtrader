@@ -517,6 +517,14 @@ function getBinaryUrl(page) {
     return binary_url;
 }
 
+function getBinaryUrlWithoutLng(page) {
+  var hostname = new URL(window.location.href).hostname;
+  var domain = hostname.includes('binary.me') ? '.me' : '.com';
+  var binary_url = 'https://binary' + domain + '/' + page;
+
+  return binary_url;
+}
+
 function getDerivUrl(page) {
   var hostname = new URL(window.location.href).hostname;
   var lang = (local_storage.get('i18n') || {value: 'en'}).value;
