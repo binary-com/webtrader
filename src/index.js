@@ -90,7 +90,7 @@ function processRedirect(selected_language_name) {
                     }
                 }
                 if ((!isEuCountrySelected(ip_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1)){
-                    window.location.href = getBinaryUrl('move-to-deriv')
+                    window.location.href = getBinaryUrlWithoutLng('move-to-deriv')
                 } else {
                     window.location.href = VERSION + 'main.html';                    
                 }
