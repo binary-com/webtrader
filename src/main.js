@@ -269,34 +269,66 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
               });
         };
         
-        require(["navigation/navigation", "jquery-ui", "css!main.css","css!binary-style"], function(navigation) {
-            navigation.init(registerMenusCallback);
+        require(["navigation/navigation", "websockets/binary_websockets", "jquery-ui", "css!main.css","css!binary-style"], function(navigation, websockets) {
+            var shouldRedirectMf = function(ip_country, auth) {
+                var account_list = auth.account_list;
+                var residence_country = auth.country;
+                var has_mf = account_list.filter(account => account.landing_company_name === 'maltainvest').length;
+                
+                return ((!isEuCountrySelected(ip_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1))
+            }
+            var showMainContent = function () {
+                navigation.init(registerMenusCallback);
+        
+                /* initialize the top menu because other dialogs
+                 * will assume an initialized top menu */
+                $("#menu").menu();
+    
+                //Trigger async loading of instruments and trade menu and refresh
+                require(["instruments/instruments", "trade/tradeMenu", "jquery-growl"], function(instruments, trade) {
+                    $.growl.notice({ message: "Loading chart and trade menus ...".i18n() });
+    
+                    instruments.init();
+                    trade.init();
+                });
+    
+                //Trigger async loading of window sub-menu
+                require(["windows/windows"], function(windows) {
+                    var $windowsLI = $("#nav-menu .windows");
+                    windows.init($windowsLI);
+                    // hide the main loading spinner,
+                    // after the `last module` has been loaded.
+                    $(".sk-spinner-container").parent().hide();
+                    $("body > .footer").show();
+                });
+    
+                require(["banners/banners"], function(banner) {
+                    banner.init();
+                });
+            };
 
-            /* initialize the top menu because other dialogs
-             * will assume an initialized top menu */
-            $("#menu").menu();
-
-            //Trigger async loading of instruments and trade menu and refresh
-            require(["instruments/instruments", "trade/tradeMenu", "jquery-growl"], function(instruments, trade) {
-                $.growl.notice({ message: "Loading chart and trade menus ...".i18n() });
-
-                instruments.init();
-                trade.init();
-            });
-
-            //Trigger async loading of window sub-menu
-            require(["windows/windows"], function(windows) {
-                var $windowsLI = $("#nav-menu .windows");
-                windows.init($windowsLI);
-                // hide the main loading spinner,
-                // after the `last module` has been loaded.
-                $(".sk-spinner-container").parent().hide();
-                $("body > .footer").show();
-            });
-
-            require(["banners/banners"], function(banner) {
-                banner.init();
-            });
+            websockets
+            .send({ website_status: 1 })
+            .then(function(data) {
+                var ip_country = data.website_status.clients_country;
+                if (!local_storage.get('oauth')) {
+                    if (isEuCountrySelected(ip_country)) {
+                        window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
+                    } else {
+                        showMainContent();
+                    }
+                } else {
+                    var token = local_storage.get('oauth')[0].token;
+                    websockets.send({authorize: token}).then((auth) => {
+                        if (shouldRedirectMf(ip_country, auth.authorize)) {
+                            window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
+                        } else {
+                            showMainContent();
+                        }
+                    })
+                }
+                
+            })
         });
 
         /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/

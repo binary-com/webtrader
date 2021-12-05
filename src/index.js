@@ -40,7 +40,6 @@ function processRedirect(selected_language_name) {
     loadAppId(function(err, app_id_json) {
         var ip_country;
         var account_list;
-        var token = local_storage.get('oauth')[0].token;
         var app_id = err ? default_app_id : getAppId(app_id_json);
         var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id;
         var ws = new WebSocket(api_url);
@@ -77,8 +76,30 @@ function processRedirect(selected_language_name) {
 
             if(data.website_status){
                 ip_country = data.website_status.clients_country;
-                sendAuthorize(token);
-
+                if (local_storage.get('oauth')) {
+                    var token = local_storage.get('oauth')[0].token;
+                    sendAuthorize(token);
+                } else {
+                    if(isEuCountrySelected(ip_country)) {
+                        window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
+                    } else {
+                        document.getElementById('loading_container').style.display="none"
+                        document.getElementById('main_container').style.display="block"
+                        $(function () {
+                            $('body').css('display', 'block');
+                            setTime();
+                            setInterval(setTime, 1000);
+                    
+                            var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
+                            $.getJSON(VERSION + 'i18n/' + selected_language_name + '.json', function (data) {
+                                setupi18nTranslation(data);
+                                processFooter(selected_language_name);
+                            });
+                    
+                            onChangeSelectLanguage(selected_language_name);
+                        });
+                    }
+                }
             } else if (data.authorize){
                 var residence_country = data.authorize.country;
                 account_list = data.authorize.account_list
@@ -100,27 +121,10 @@ function processRedirect(selected_language_name) {
     })
 }
 function processPageLanguage() {
-    populateLanguageDropdown();
+    var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
 
-    if (local_storage.get('oauth')) {
-        processRedirect();
-    } else {
-        document.getElementById('loading_container').style.display="none"
-        document.getElementById('main_container').style.display="block"
-        $(function () {
-            $('body').css('display', 'block');
-            setTime();
-            setInterval(setTime, 1000);
-    
-            var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
-            $.getJSON(VERSION + 'i18n/' + selected_language_name + '.json', function (data) {
-                setupi18nTranslation(data);
-                processFooter(selected_language_name);
-            });
-    
-            onChangeSelectLanguage(selected_language_name);
-        });
-    }
+    populateLanguageDropdown();
+    processRedirect(selected_language_name);
 
     function populateLanguageDropdown() {
         var language_arr = getSupportedLanguages();
@@ -134,27 +138,27 @@ function processPageLanguage() {
             ul_el.appendChild(li);
         });
     }
+}
 
-    function onChangeSelectLanguage(selected_language_name) {
-        $('#select_language').find('.invisible').removeClass('invisible');
-        var selected_lang = $('#select_language').find('.' + selected_language_name);
-        var curr_ele = $('#select_language .current .language');
-        var disp_lang = $("#display_language .language");
-        disp_lang.text(selected_lang.text());
-        curr_ele.text(selected_lang.text());
-        selected_lang.addClass('invisible');
+function onChangeSelectLanguage(selected_language_name) {
+    $('#select_language').find('.invisible').removeClass('invisible');
+    var selected_lang = $('#select_language').find('.' + selected_language_name);
+    var curr_ele = $('#select_language .current .language');
+    var disp_lang = $("#display_language .language");
+    disp_lang.text(selected_lang.text());
+    curr_ele.text(selected_lang.text());
+    selected_lang.addClass('invisible');
 
-        $('.languages #select_language li').each(function (i, el) {
-            $(el).click(function () {
-                var lang = $(el).find('a').data('lang');
-                if (lang) {
-                    local_storage.set('i18n', { value: lang });
-                    window.location.reload();
-                }
-                return false;
-            });
+    $('.languages #select_language li').each(function (i, el) {
+        $(el).click(function () {
+            var lang = $(el).find('a').data('lang');
+            if (lang) {
+                local_storage.set('i18n', { value: lang });
+                window.location.reload();
+            }
+            return false;
         });
-    }
+    });
 }
 
 function checkRedirectToken(params_str) {
