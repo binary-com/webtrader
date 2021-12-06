@@ -272,16 +272,18 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
         require(["navigation/navigation", "websockets/binary_websockets", "jquery-ui", "css!main.css","css!binary-style"], function(navigation, websockets) {
             var shouldRedirectMf = function(client_country, auth) {
                 var account_list = auth.account_list;
-                var residence_country = auth.country;
-                var has_mf = false;
+                var has_mf_mx_mlt = false;
                 for (var account in account_list) {
-                    if (account.landing_company_name === 'maltainvest') {
-                        has_mf = true;
+                    if (account.landing_company_name === 'maltainvest' 
+                        || account.landing_company_name === 'malta'
+                        || account.landing_company_name === 'iom') 
+                    {
+                        has_mf_mx_mlt = true;
                         return;
                     }
                 };
                 
-                return ((!isEuCountrySelected(client_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1))
+                return (has_mf_mx_mlt || (isEuCountrySelected(client_country) && account_list.length == 1))
             }
             var showMainContent = function () {
                 navigation.init(registerMenusCallback);
@@ -319,7 +321,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                 var client_country = data.website_status.clients_country;
                 if (!local_storage.get('oauth')) {
                     if (isEuCountrySelected(client_country)) {
-                        window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
+                        window.location.href = moveToDerivUrl();
                     } else {
                         showMainContent();
                     }
@@ -327,7 +329,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     var token = local_storage.get('oauth')[0].token;
                     websockets.send({authorize: token}).then(function(auth) {
                         if (shouldRedirectMf(client_country, auth.authorize)) {
-                            window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
+                            window.location.href = moveToDerivUrl();
                         } else {
                             showMainContent();
                         }

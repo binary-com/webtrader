@@ -81,7 +81,7 @@ function processRedirect(selected_language_name) {
                     sendAuthorize(token);
                 } else {
                     if(isEuCountrySelected(client_country)) {
-                        window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
+                        window.location.href = moveToDerivUrl();
                     } else {
                         document.getElementById('loading_container').style.display="none"
                         document.getElementById('main_container').style.display="block"
@@ -103,15 +103,18 @@ function processRedirect(selected_language_name) {
             } else if (data.authorize){
                 var residence_country = data.authorize.country;
                 account_list = data.authorize.account_list
-                var has_mf = false;
+                var has_mf_mx_mlt = false;
                 for (var account in account_list){
-                    if (account.landing_company_name === 'maltainvest') {
-                        has_mf = true;
+                    if (account.landing_company_name === 'maltainvest' 
+                        || account.landing_company_name === 'malta' 
+                        || account.landing_company_name === 'iom')
+                    {
+                        has_mf_mx_mlt = true;
                         return;
                     }
                 }
-                if ((!isEuCountrySelected(client_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1)){
-                    window.location.href = getBinaryUrlWithoutLng('move-to-deriv')
+                if (has_mf_mx_mlt || (isEuCountrySelected(client_country) && account_list.length == 1)){
+                    window.location.href = moveToDerivUrl();
                 } else {
                     window.location.href = VERSION + 'main.html';                    
                 }

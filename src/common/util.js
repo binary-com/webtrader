@@ -517,12 +517,12 @@ function getBinaryUrl(page) {
     return binary_url;
 }
 
-function getBinaryUrlWithoutLng(page) {
+function moveToDerivUrl() {
   var hostname = new URL(window.location.href).hostname;
   var domain = hostname.includes('binary.me') ? '.me' : '.com';
-  var binary_url = 'https://binary' + domain + '/' + page;
+  var move_to_deriv_url = 'https://binary' + domain + '/move-to-deriv';
 
-  return binary_url;
+  return move_to_deriv_url;
 }
 
 function getDerivUrl(page) {
