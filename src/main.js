@@ -270,7 +270,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
         };
         
         require(["navigation/navigation", "websockets/binary_websockets", "jquery-ui", "css!main.css","css!binary-style"], function(navigation, websockets) {
-            var shouldRedirectMf = function(ip_country, auth) {
+            var shouldRedirectMf = function(client_country, auth) {
                 var account_list = auth.account_list;
                 var residence_country = auth.country;
                 var has_mf = false;
@@ -281,7 +281,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                     }
                 };
                 
-                return ((!isEuCountrySelected(ip_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1))
+                return ((!isEuCountrySelected(client_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1))
             }
             var showMainContent = function () {
                 navigation.init(registerMenusCallback);
@@ -316,9 +316,9 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
             websockets
             .send({ website_status: 1 })
             .then(function(data) {
-                var ip_country = data.website_status.clients_country;
+                var client_country = data.website_status.clients_country;
                 if (!local_storage.get('oauth')) {
-                    if (isEuCountrySelected(ip_country)) {
+                    if (isEuCountrySelected(client_country)) {
                         window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
                     } else {
                         showMainContent();
@@ -326,7 +326,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                 } else {
                     var token = local_storage.get('oauth')[0].token;
                     websockets.send({authorize: token}).then(function(auth) {
-                        if (shouldRedirectMf(ip_country, auth.authorize)) {
+                        if (shouldRedirectMf(client_country, auth.authorize)) {
                             window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
                         } else {
                             showMainContent();

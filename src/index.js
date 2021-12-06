@@ -38,7 +38,7 @@ function getUrl() {
 
 function processRedirect(selected_language_name) {
     loadAppId(function(err, app_id_json) {
-        var ip_country;
+        var client_country;
         var account_list;
         var app_id = err ? default_app_id : getAppId(app_id_json);
         var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id;
@@ -75,12 +75,12 @@ function processRedirect(selected_language_name) {
             var data = JSON.parse(response.data);
 
             if(data.website_status){
-                ip_country = data.website_status.clients_country;
+                client_country = data.website_status.clients_country;
                 if (local_storage.get('oauth')) {
                     var token = local_storage.get('oauth')[0].token;
                     sendAuthorize(token);
                 } else {
-                    if(isEuCountrySelected(ip_country)) {
+                    if(isEuCountrySelected(client_country)) {
                         window.location.href = getBinaryUrlWithoutLng('move-to-deriv');
                     } else {
                         document.getElementById('loading_container').style.display="none"
@@ -110,7 +110,7 @@ function processRedirect(selected_language_name) {
                         return;
                     }
                 }
-                if ((!isEuCountrySelected(ip_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1)){
+                if ((!isEuCountrySelected(client_country) && has_mf) || (isEuCountrySelected(residence_country) && account_list.length == 1)){
                     window.location.href = getBinaryUrlWithoutLng('move-to-deriv')
                 } else {
                     window.location.href = VERSION + 'main.html';                    
