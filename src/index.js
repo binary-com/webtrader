@@ -102,7 +102,7 @@ function processRedirect(selected_language_name) {
                 }
             } else if (data.authorize){
                 var residence_country = data.authorize.country;
-                account_list = data.authorize.account_list
+                account_list = data.authorize.account_list;
                 var has_mf_mx_mlt = false;
                 for (var account in account_list){
                     if (account.landing_company_name === 'maltainvest' 
@@ -113,7 +113,7 @@ function processRedirect(selected_language_name) {
                         return;
                     }
                 }
-                if (has_mf_mx_mlt || (isEuCountrySelected(client_country) && account_list.length == 1)){
+                if (has_mf_mx_mlt || ((isEuCountrySelected(client_country) || isEuCountrySelected(residence_country)) && account_list.length == 1)){
                     window.location.href = moveToDerivUrl();
                 } else {
                     window.location.href = VERSION + 'main.html';                    
