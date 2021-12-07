@@ -31,14 +31,14 @@ export const init = () => {
 const showBanner = () => {
   const banner = document.getElementById("close_banner_container");
   liveapi.cached.send({ website_status: 1 }).then((status) => {
-    const ip_country = status.website_status.clients_country;
+    const client_country = status.website_status.clients_country;
       if (local_storage.get("oauth")) {
       liveapi.cached.authorize().then((res) => {
         const country = local_storage.get("authorize").country;
         liveapi.send({ landing_company: country }).then((data) => {
           const landing_company = data.landing_company;
           if ((isEuCountry(country, landing_company) && shouldShowBanner(res.authorize))
-          || (loginids().length == 1 && isEuCountrySelected(ip_country))) {
+          || (loginids().length == 1 && isEuCountrySelected(client_country))) {
             banner.classList.remove("invisible");
           } else {
             banner.classList.add("invisible");
@@ -46,9 +46,9 @@ const showBanner = () => {
         });
       });
     } else {
-      liveapi.send({ landing_company: ip_country }).then((response) => {
+      liveapi.send({ landing_company: client_country }).then((response) => {
         const landing_company = response.landing_company;
-        if (isEuCountry(ip_country, landing_company)) {
+        if (isEuCountry(client_country, landing_company)) {
           banner.classList.remove("invisible");
         } else {
           banner.classList.add("invisible");
