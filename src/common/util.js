@@ -429,7 +429,7 @@ function setupi18nTranslation(dict) {
       }
 
       function localize(node) {
-          if (node.className && node.className.includes('no-translation')) return;
+          if (node && node.className && node.className.includes('no-translation')) return;
 
           var c = node.childNodes ? node.childNodes : node, l = c.length, i;
           for( i=0; i<l; i++) {
