@@ -39,7 +39,6 @@ class Withdraw {
             height: 400,
             'data-authorized': true,
             close: () => {
-                win.dialog('destroy');
                 win.trigger('dialogclose'); // TODO: figure out why event is not fired.
                 win.remove();
                 win = null;

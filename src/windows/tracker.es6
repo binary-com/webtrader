@@ -246,6 +246,7 @@ export const track = (options, blankWindow) => {
       save_states();
    });
    blankWindow.on('dialogclose',() => {
+      blankWindow.dialogExtend("restore");
       state.position.mode = 'closed';
       save_states();
    });
