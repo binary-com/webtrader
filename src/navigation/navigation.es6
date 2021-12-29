@@ -122,8 +122,10 @@ const initLoginButton = (root) => {
 
    /* update balance on change */
    liveapi.events.on('balance', data => {
-      const loginId = local_storage.get('authorize').loginid;
-      if (data.balance && data.balance.loginid === loginId) update_balance(data);
+      if (local_storage.get("authorize")) {
+         const loginId = local_storage.get('authorize').loginid;
+         if (data.balance && data.balance.loginid === loginId) update_balance(data);
+      }
    });
 
    liveapi.events.on('logout', () => {
