@@ -543,8 +543,11 @@ function init_state(available,root, dialog, symbol, contracts_for_spot) {
       return { text, value: date };
     });
 
-    if (spot_starting_options) start_dates.unshift({ text: 'Now', value: 'now' });
-
+    if (spot_starting_options) {
+      start_dates.unshift({ text: 'Now', value: 'now' });
+    } else {
+      state.date_start.value = start_dates[0].value;
+    }
     const { value: selected_date } = state.date_start;
   
     const options = { 
