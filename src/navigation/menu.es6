@@ -15,7 +15,7 @@ const menu_config = {
 };
 
 const trade_messages = {
-   no_symbol : () => "Binary options trading is not available.".i18n(),
+   no_symbol : () => "Trading options isn’t possible in your country.".i18n(),
 };
 
 export const extractFilteredMarkets = (trading_times_data, options) => {
@@ -67,6 +67,8 @@ export const refreshMenu = (root, markets, callback) => {
    
    if(markets.length == 0){
       Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
+      $.growl.error({message: trade_messages.no_symbol()});
+   } else if(markets.length == 3) {
       $.growl.error({message: trade_messages.no_symbol()});
    } else {
       Object.values(menu_config).map( menu => $(menu).removeClass('disabled'));
