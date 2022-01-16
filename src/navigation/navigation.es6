@@ -159,7 +159,9 @@ const initLoginButton = (root) => {
 
       state.currency = data.authorize.currency;
       local_storage.set('currency', state.currency);
-      update_balance(data);
+      const loginId = local_storage.get('authorize').loginid;
+      if (data.authorize && data.authorize.loginid === loginId) update_balance(data);
+
       const is_current_account_real = data.authorize.is_virtual === 0;
 
       getLandingCompany().then((what_todo) => {
