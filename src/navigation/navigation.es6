@@ -21,7 +21,7 @@ const getType = (acc) => {
    const type = {
          MLT:'Gaming', 
          MF:'Investment',
-         VRTC:'Virtual',
+         VRTC:'Demo',
          REAL:(acc.currency || '').toUpperCase() || 'Real',
    };
 
