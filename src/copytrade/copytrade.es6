@@ -11,7 +11,7 @@ import validateToken from 'websockets/validateToken';
 import { init as instrumentPromise } from '../instruments/instruments';
 
 // While using copy trader, this cannot be NULL
-const getLoggedInUserId = local_storage.get("oauth")[0].id;
+const loggedInUserId = local_storage.get("oauth")[0].id;
 
 const TRADE_TYPES = trade_types;
 
@@ -22,7 +22,7 @@ const form_error_messages = {
     REFRESH_FAILED: 'Refresh failed'.i18n(),
 };
 
-const getStorageName = () => `copyTrade_${getLoggedInUserId}`;
+const getStorageName = () => `copyTrade_${loggedInUserId}`;
 
 const DEFAULT_TRADE_TYPES = TRADE_TYPES.slice(0, 2).map(m => m.api_code);
 
@@ -58,7 +58,7 @@ const updateLocalStorage = _.debounce(scope => {
 
 let GROUPED_INTRUMENTS = null; // For nice display purpose only
 let DEFAULT_ASSETS = null;
-//Get instrument list
+// Get instrument list
 instrumentPromise().then(instruments => {
   GROUPED_INTRUMENTS = _.flatten(instruments.map(m => {
     const displayName = m.display_name;
@@ -95,15 +95,15 @@ const refreshTraderStats = (loginid, token, scope, started = false) => {
         if (copyStatData.copytrading_statistics) {
           const traderTokenDetails = _.find(scope.traderTokens, f =>
             f.yourCopySettings && f.yourCopySettings.copy_start === token);
-          //Check if we already added this trader. If yes, then merge the changes
+          // Check if we already added this trader. If yes, then merge the changes
           if (traderTokenDetails) {
             _.merge(traderTokenDetails.traderStatistics, copyStatData.copytrading_statistics);
-            //check if copy trading is started
+            // check if copy trading is started
             if (started) {
               traderTokenDetails.started = true;
             }
           }
-          //If not added, then add this along with default yourCopySettings object
+          // If not added, then add this along with default yourCopySettings object
           else {
             scope.traderTokens.push(_.merge({
               traderStatistics: copyStatData.copytrading_statistics,
@@ -157,8 +157,8 @@ const state = {
     state.traderTokens[index].disableStart = true;
     const newStarted = !state.traderTokens[index].started;
     if (newStarted) {
-      //Start copying
-      //if started, revert back to last saved changes(in case user changed anything)
+      // Start copying
+      // If started, revert back to last saved changes(in case user changed anything)
       const fromLocalStorage = local_storage.get(getStorageName());
       if (fromLocalStorage) {
         const currentTraderTokenDetails_localSto = fromLocalStorage.traderTokens[index];
@@ -166,7 +166,7 @@ const state = {
           const newObj = {};
           _.merge(newObj, state.traderTokens[index], currentTraderTokenDetails_localSto);
           state.traderTokens.splice(index, 1);
-          //Have to apply this trick in order to trigger update of UI using rivetsjs.
+          // Have to apply this trick in order to trigger update of UI using rivetsjs.
           _.defer(() => {
             state.traderTokens.splice(index, 0, newObj);
             const settingsToSend = _.cloneDeep(newObj.yourCopySettings);
@@ -193,7 +193,7 @@ const state = {
         }
       }
     } else {
-      //Stop copying
+      // Stop copying
       liveapi.send({
           copy_stop: state.traderTokens[index].yourCopySettings.copy_start
         })
@@ -269,13 +269,13 @@ const state = {
       }
     },
     addToken: (event, scope) => {
-      //If searchToken.token is empty, do nothing
+      // If searchToken.token is empty, do nothing
       if (!scope.searchToken.token) {
         $.growl.error({ message: form_error_messages.ENTER_VALID_TOKEN });
         return;
       }
 
-      //If already added, throw error
+      // If already added, throw error
       if (_.some(state.traderTokens, f => f.yourCopySettings.copy_start === scope.searchToken.token)) {
         $.growl.error({ message: form_error_messages.TOKEN_ALREADY_ADDED });
         return;
@@ -330,7 +330,7 @@ const initConfigWindow = () => {
               if (settings.get_settings.allow_copiers) {
                 state.is_loading = false;
               } else {
-                //update trader tokens and Refresh locally stored trader statistics
+                // Update trader tokens and refresh locally stored trader statistics
                 getTraderList();
               }
             })
@@ -366,25 +366,25 @@ const getTraderList = () => {
   }).then(list => {
     const traderTokens = list.copytrading_list.traders;
     if (!traderTokens.length) {state.is_loading = false;}
-    for (let traderToken of traderTokens) {
       try {
-        const loginid = traderToken.loginid;
-        const token = traderToken.token;
-        refreshTraderStats(loginid, token, state, true)
-        .then(() => {
-          state.is_loading = false;
-        })
-        .catch((e)=> {
-          console.error(e)
-          state.is_loading = false;
-          $.growl.error({ message: form_error_messages.REFRESH_FAILED });
-        })
+        for (let traderToken of traderTokens) {
+          const loginid = traderToken.loginid;
+          const token = traderToken.token;
+          refreshTraderStats(loginid, token, state, true)
+          .then(() => {
+            state.is_loading = false;
+          })
+          .catch((e)=> {
+            console.error(e)
+            state.is_loading = false;
+            $.growl.error({ message: form_error_messages.REFRESH_FAILED });
+          })
+        }
       } catch (e) {
         state.is_loading = false;
         console.error(e);
         $.growl.error({ message: form_error_messages.REFRESH_FAILED });
       }
-    };
   }).catch(error => {
     console.log(error);
     state.is_loading = false;
@@ -412,8 +412,9 @@ export const init = ($menuLink) => {
     else { win.moveToTop(); }
   });
   liveapi.events.on("logout", () => {
-    if (getStorageName() && local_storage.get(getStorageName())) {
-      local_storage.remove(getStorageName());
+    const storageName = getStorageName();
+    if (storageName && local_storage.get(storageName)) {
+      local_storage.remove(storageName);
     }
   });
 };
