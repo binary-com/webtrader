@@ -323,7 +323,6 @@ const initConfigWindow = () => {
       liveapi.cached.authorize().then((data) => {
         if (data.authorize.loginid === local_storage.get('authorize').loginid) {
           liveapi
-            .cached
             .send({ get_settings: 1 })
             .then((settings) => {
               state.allowCopy.allow_copiers = settings.get_settings.allow_copiers;
@@ -360,7 +359,6 @@ const initConfigWindow = () => {
 
 const getTraderList = () => {
   liveapi
-  .cached
   .send({
     copytrading_list : 1
   }).then(list => {
