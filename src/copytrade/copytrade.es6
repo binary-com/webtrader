@@ -171,20 +171,22 @@ const state = {
             if (!settingsToSend.assets || settingsToSend.assets.length <= 0) delete settingsToSend.assets;
             if (!settingsToSend.trade_types || settingsToSend.trade_types.length <= 0) delete settingsToSend.trade_types;
 
-            liveapi
-              .send(settingsToSend)
-              .then(() => {
-                newObj.disableStart = false;
-                newObj.started = true;
-                disableKeypressChars('#max_trade_stake', '#min_trade_stake');
-                updateLocalStorage(state);
-              })
-              .catch(e => {
-                $.growl.error({ message: e.message });
-                newObj.disableStart = false;
-                disableKeypressChars('#max_trade_stake', '#min_trade_stake');
-                updateLocalStorage(state);
-              });
+            liveapi.cached.authorize().then(() => {
+              liveapi
+                .send(settingsToSend)
+                .then(() => {
+                  newObj.disableStart = false;
+                  newObj.started = true;
+                  disableKeypressChars('#max_trade_stake', '#min_trade_stake');
+                  updateLocalStorage(state);
+                })
+                .catch(e => {
+                  $.growl.error({ message: e.message });
+                  newObj.disableStart = false;
+                  disableKeypressChars('#max_trade_stake', '#min_trade_stake');
+                  updateLocalStorage(state);
+                });
+            })
           });
         }
       }
