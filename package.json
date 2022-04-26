@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "@binary-com/binary-style": "^0.2.18",
-    "@binary-com/webtrader-charts": "0.5.5",
+    "@binary-com/webtrader-charts": "0.5.21",
     "alameda": "^1.4.0",
     "binary-com-jquery-dialogextended": "github:binary-com/jquery-dialogextend#master",
     "binary-com-jquery-ui-timepicker": "^1.0.1",
