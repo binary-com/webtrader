@@ -200,7 +200,7 @@ function processFooter(selected_language_name) {
                 var FOOTER_TEXT_EU = {
                     P1: {
                         TEXT: 'In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2]).'.i18n(),
-                        TAGS: ['<a href="https://www.binary.com/download/WS-Binary-Investments-Europe-Limited.pdf" target="_blank" rel="noopener noreferrer">', '</a>'],
+                        TAGS: ['<a href="https://eu.deriv.com/regulatory/Deriv_Investments_(Europe)_Limited.pdf" target="_blank" rel="noopener noreferrer">', '</a>'],
                     },
                     P2: {
                         TEXT: 'In the Isle of Man and the UK, Synthetic Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2]).'.i18n(),
