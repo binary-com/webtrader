@@ -53,6 +53,7 @@ commands:
     steps:
       - run:
           name: "Compile project"
+          no_output_timeout: 30m
           command: npm run build
   deploy:
     description: "Deploy to static branches"
