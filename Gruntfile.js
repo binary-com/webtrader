@@ -60,7 +60,7 @@ module.exports = function (grunt) {
                             "@binary-com/binary-style/src/images/favicons/**",
                             "!highstock-release/**", "highstock-release/highstock.js", "highstock-release/themes/**", "highstock-release/modules/exporting.js", "highstock-release/modules/offline-exporting.js", "highstock-release/highcharts-more.js",
                             "moment/min/moment.min.js", "moment/locale/**",
-                            "text/text.js",
+                            "requirejs-text/text.js",
                             "@binary-com/webtrader-charts/dist/webtrader-charts.iife.js",
                             "regenerator-runtime/*",
                             "!jquery-ui-dist/**", "jquery-ui-dist/jquery-ui.min.css", "jquery-ui-dist/jquery-ui.min.js",
