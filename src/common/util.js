@@ -428,8 +428,7 @@ function setupi18nTranslation(dict) {
         return this;
       }
 
-  function localize(node) {
-        
+      function localize(node) {
           if (node && node.className !== undefined && node.className.includes('no-translation')) return;
 
           var c = node.childNodes ? node.childNodes : node, l = c.length, i;
