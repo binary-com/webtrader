@@ -435,7 +435,7 @@ function setupi18nTranslation(dict) {
           for( i=0; i<l; i++) {
               if( c[i].nodeType == 3) {
                 if(c[i].textContent){
-                  c[i].textContent = c[i].textContent.i18n(); 
+                  c[i].textContent = c[i].textContent.i18n();
                 }
               }
               if( c[i].nodeType == 1) {
