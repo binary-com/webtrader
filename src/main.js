@@ -33,7 +33,7 @@ window.requirejs.config({
     map: {
         "*": {
             "css": "lib/require-css/css.min",
-            "text": "lib/text/text.js"
+            "text": "lib/requirejs-text/text.js"
         }
     },
 
