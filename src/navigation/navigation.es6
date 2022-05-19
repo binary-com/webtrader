@@ -21,7 +21,7 @@ const getType = (acc) => {
    const type = {
          MLT:'Gaming', 
          MF:'Investment',
-         VRTC:'Virtual',
+         VRTC:'Demo',
          REAL:(acc.currency || '').toUpperCase() || 'Real',
    };
 
@@ -122,8 +122,10 @@ const initLoginButton = (root) => {
 
    /* update balance on change */
    liveapi.events.on('balance', data => {
-      const loginId = local_storage.get('authorize').loginid;
-      if (data.balance && data.balance.loginid === loginId) update_balance(data);
+      if (local_storage.get("authorize")) {
+         const loginId = local_storage.get('authorize').loginid;
+         if (data.balance && data.balance.loginid === loginId) update_balance(data);
+      }
    });
 
    liveapi.events.on('logout', () => {
@@ -157,7 +159,11 @@ const initLoginButton = (root) => {
 
       state.currency = data.authorize.currency;
       local_storage.set('currency', state.currency);
-      update_balance(data);
+      if (local_storage.get('authorize')) {
+         const loginId = local_storage.get('authorize').loginid;
+         if (data.authorize && data.authorize.loginid === loginId) update_balance(data);
+      }
+
       const is_current_account_real = data.authorize.is_virtual === 0;
 
       getLandingCompany().then((what_todo) => {

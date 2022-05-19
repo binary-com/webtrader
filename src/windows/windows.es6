@@ -377,7 +377,10 @@ export const createBlankWindow = function ($html, options) {
 
    // add an item to window menu
    const add_to_windows_menu = () => {
-      const cleaner = workspace.addDialog(options.title, blankWindow.moveToTop, () => blankWindow.dialog('close'));
+      const cleaner = () => {
+         blankWindow.dialogExtend('restore');
+         workspace.addDialog(options.title, blankWindow.moveToTop, () => blankWindow.dialog('close'));
+      }
       blankWindow.on('dialogclose', cleaner);
 
    };

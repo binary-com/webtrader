@@ -369,9 +369,18 @@ export const init = (data, extra, showCallback, hideCallback) => {
    };
 
    const view = rv.bind(root[0], state);
-
    if(!state.arrow.visible) { registerTicks(state, extra); }
-   else { state.back.visible = true; }
+   else {
+      state.back.visible = true; 
+      liveapi.events.on('balance', data => {
+         if (local_storage.get("authorize")) {
+            const loginId = local_storage.get('authorize').loginid;
+            if (data.balance && data.balance.loginid === loginId && state.buy.balance_after !== data.balance.balance ) {
+               state.buy.balance_after = data.balance.balance;
+            };
+         }
+      });
+   }
 
    showCallback(root);
 }

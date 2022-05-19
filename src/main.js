@@ -33,7 +33,7 @@ window.requirejs.config({
     map: {
         "*": {
             "css": "lib/require-css/css.min",
-            "text": "lib/text/text.js"
+            "text": "lib/requirejs-text/text.js"
         }
     },
 
@@ -269,30 +269,74 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
               });
         };
         
-        require(["navigation/navigation", "jquery-ui", "css!main.css","css!binary-style"], function(navigation) {
-            navigation.init(registerMenusCallback);
+        require(["navigation/navigation", "websockets/binary_websockets", "jquery-ui", "css!main.css","css!binary-style"], function(navigation, websockets) {
+            var shouldRedirectMf = function(client_country, auth) {
+                var account_list = auth.account_list;
+                var residence_country = auth.country;
+                var has_mf_mx_mlt = false;
+                account_list.forEach(function(account) {
+                    if (account.landing_company_name === 'maltainvest' 
+                        || account.landing_company_name === 'malta'
+                        || account.landing_company_name === 'iom') 
+                    {
+                        has_mf_mx_mlt = true;
+                        return;
+                    }
+                });
+                return (has_mf_mx_mlt || ((isEuCountrySelected(client_country) || isEuCountrySelected(residence_country)) && account_list.length == 1))
+            }
+            var showMainContent = function () {
+                navigation.init(registerMenusCallback);
+        
+                /* initialize the top menu because other dialogs
+                 * will assume an initialized top menu */
+                $("#menu").menu();
+    
+                //Trigger async loading of instruments and trade menu and refresh
+                require(["instruments/instruments", "trade/tradeMenu", "jquery-growl"], function(instruments, trade) {
+                    $.growl.notice({ message: "Loading chart and trade menus ...".i18n() });
+    
+                    instruments.init();
+                    trade.init();
+                });
+    
+                //Trigger async loading of window sub-menu
+                require(["windows/windows"], function(windows) {
+                    var $windowsLI = $("#nav-menu .windows");
+                    windows.init($windowsLI);
+                    // hide the main loading spinner,
+                    // after the `last module` has been loaded.
+                    $(".sk-spinner-container").parent().hide();
+                    $("body > .footer").show();
+                });
+    
+                require(["banners/banners"], function(banner) {
+                    banner.init();
+                });
+            };
 
-            /* initialize the top menu because other dialogs
-             * will assume an initialized top menu */
-            $("#menu").menu();
-
-            //Trigger async loading of instruments and trade menu and refresh
-            require(["instruments/instruments", "trade/tradeMenu", "jquery-growl"], function(instruments, trade) {
-                $.growl.notice({ message: "Loading chart and trade menus ...".i18n() });
-
-                instruments.init();
-                trade.init();
-            });
-
-            //Trigger async loading of window sub-menu
-            require(["windows/windows"], function(windows) {
-                var $windowsLI = $("#nav-menu .windows");
-                windows.init($windowsLI);
-                // hide the main loading spinner,
-                // after the `last module` has been loaded.
-                $(".sk-spinner-container").parent().hide();
-                $("body > .footer").show();
-            });
+            websockets
+            .send({ website_status: 1 })
+            .then(function(data) {
+                var client_country = data.website_status.clients_country;
+                if (!local_storage.get('oauth')) {
+                    if (isEuCountrySelected(client_country)) {
+                        window.location.href = moveToDerivUrl();
+                    } else {
+                        showMainContent();
+                    }
+                } else {
+                    var token = local_storage.get('oauth')[0].token;
+                    websockets.send({authorize: token}).then(function(auth) {
+                        if (shouldRedirectMf(client_country, auth.authorize)) {
+                            window.location.href = moveToDerivUrl();
+                        } else {
+                            showMainContent();
+                        }
+                    })
+                }
+                
+            })
         });
 
         /*Trigger T&C check, self-exclusion, reality check, csr_tax_information check*/

@@ -15,44 +15,46 @@ const menu_config = {
 };
 
 const trade_messages = {
-   no_symbol : () => "Binary options trading is not available.".i18n(),
+   no_symbol : () => "Trading options isn’t possible in your country.".i18n(),
 };
 
 export const extractFilteredMarkets = (trading_times_data, options) => {
-   const markets = trading_times_data.trading_times.markets.map((m) => {
-      const market = {
-         name: m.name,
-         display_name: m.name
-      };
-      market.submarkets = m.submarkets.map((sm) => {
-         const submarket = {
-            name: sm.name,
-            display_name: sm.name
+   if (trading_times_data) {
+      const markets = trading_times_data.trading_times.markets.map((m) => {
+         const market = {
+            name: m.name,
+            display_name: m.name
          };
-         let symbols = sm.symbols;
-         if (options && options.filter) /* filter the symbols */
-            symbols = symbols.filter(options.filter);
-         submarket.instruments = symbols.map((sym) => {
-            return {
-               symbol: sym.symbol,
-               display_name: sym.name,
-               delay_amount: sym.delay_amount || 0,
-               events: sym.events,
-               times: sym.times,
-               settlement: sym.settlement,
-               feed_license: sym.feed_license || 'realtime'
+         market.submarkets = m.submarkets.map((sm) => {
+            const submarket = {
+               name: sm.name,
+               display_name: sm.name
             };
-         });
-         return submarket;
-      })
-      /* there might be a submarket (e.g "Americas") which does not have any symbols after filtering */
-         .filter(
-            (sm) => (sm.instruments.length > 0)
-         );
-      return market;
-   });
+            let symbols = sm.symbols;
+            if (options && options.filter) /* filter the symbols */
+               symbols = symbols.filter(options.filter);
+            submarket.instruments = symbols.map((sym) => {
+               return {
+                  symbol: sym.symbol,
+                  display_name: sym.name,
+                  delay_amount: sym.delay_amount || 0,
+                  events: sym.events,
+                  times: sym.times,
+                  settlement: sym.settlement,
+                  feed_license: sym.feed_license || 'realtime'
+               };
+            });
+            return submarket;
+         })
+         /* there might be a submarket (e.g "Americas") which does not have any symbols after filtering */
+            .filter(
+               (sm) => (sm.instruments.length > 0)
+            );
+         return market;
+      });
 
-   return markets;
+      return markets;
+   }
 };
 
 export const extractChartableMarkets = (trading_times_data) => {
@@ -65,6 +67,8 @@ export const refreshMenu = (root, markets, callback) => {
    
    if(markets.length == 0){
       Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
+      $.growl.error({message: trade_messages.no_symbol()});
+   } else if(markets.length == 3) {
       $.growl.error({message: trade_messages.no_symbol()});
    } else {
       Object.values(menu_config).map( menu => $(menu).removeClass('disabled'));

@@ -384,6 +384,7 @@ function loginids() {
       is_mlt: /MLT/gi.test(parts.loginid),
       is_mx: /MX/gi.test(parts.loginid),
       is_cr: /CR/gi.test(parts.loginid),
+      is_virtual: /VRTC/gi.test(parts.loginid),
     };
   });
 }
@@ -428,7 +429,7 @@ function setupi18nTranslation(dict) {
       }
 
       function localize(node) {
-          if (node.className && node.className.includes('no-translation')) return;
+          if (node && node.className && node.className.includes('no-translation')) return;
 
           var c = node.childNodes ? node.childNodes : node, l = c.length, i;
           for( i=0; i<l; i++) {
@@ -515,3 +516,75 @@ function getBinaryUrl(page) {
 
     return binary_url;
 }
+
+function moveToDerivUrl() {
+  var hostname = new URL(window.location.href).hostname;
+  var domain = hostname.includes('binary.me') ? '.me' : '.com';
+  var move_to_deriv_url = 'https://binary' + domain + '/move-to-deriv';
+
+  return move_to_deriv_url;
+}
+
+function getDerivUrl(page) {
+  var hostname = new URL(window.location.href).hostname;
+  var lang = (local_storage.get('i18n') || {value: 'en'}).value;
+  var domain = hostname.includes('binary.me') ? '.me' : '.com';
+  var deriv_url = 'https://deriv' + domain + '/' + lang + '/' + page;
+
+  return deriv_url;
+}
+
+function isEuCountry(clients_country, landing_company) {
+  var eu_shortcode_regex = new RegExp("^(maltainvest|malta|iom)$");
+  var eu_excluded_regex = new RegExp("^mt$");
+  var financial_shortcode =
+    (landing_company && landing_company.financial_company)
+      ? landing_company.financial_company.shortcode
+      : "";
+  var gaming_shortcode =
+    (landing_company && landing_company.gaming_company)
+      ? landing_company.gaming_company.shortcode
+      : "";
+
+  return financial_shortcode || gaming_shortcode
+    ? eu_shortcode_regex.test(financial_shortcode) ||
+        eu_shortcode_regex.test(gaming_shortcode)
+    : eu_excluded_regex.test(clients_country);
+}
+
+function isEuCountrySelected(selected_country) {
+  return eu_countries.includes(selected_country)
+}
+
+var eu_countries = [
+  'it',
+  'de',
+  'fr',
+  'lu',
+  'gr',
+  'mf',
+  'es',
+  'sk',
+  'lt',
+  'nl',
+  'at',
+  'bg',
+  'si',
+  'cy',
+  'be',
+  'ro',
+  'hr',
+  'pt',
+  'pl',
+  'lv',
+  'ee',
+  'cz',
+  'fi',
+  'hu',
+  'dk',
+  'se',
+  'ie',
+  'im',
+  'gb',
+  'mt',
+];

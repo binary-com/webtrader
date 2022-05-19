@@ -231,6 +231,7 @@ export const track = (options, blankWindow) => {
       save_states();
    });
    blankWindow.on('dialogdestroy',() => {
+      blankWindow.dialogExtend("restore");
       if(state.is_unique){
          delete states[state.module_id];
       }
@@ -246,6 +247,7 @@ export const track = (options, blankWindow) => {
       save_states();
    });
    blankWindow.on('dialogclose',() => {
+      blankWindow.dialogExtend("restore");
       state.position.mode = 'closed';
       save_states();
    });

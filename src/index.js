@@ -6,7 +6,7 @@ var footer_non_eu_el = document.getElementById('footer-non-eu');
 var href = window.location.href;
 var default_app_id = 11;
 
-//Remove the '#' check later once the backend changes are released TODO
+// Remove the '#' check later once the backend changes are released TODO
 var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
 var lang = (params_str && params_str.match(/lang=[a-zA-Z]+/g) || []).map(function (val) { return val.split('=')[1] })[0] ||
     (local_storage.get('i18n') && local_storage.get('i18n').value) || 'en';
@@ -31,26 +31,103 @@ function loadAppId(callback) {
     });
 }
 
-function processPageLanguage() {
-    populateLanguageDropdown();
+function getUrl() {
+    var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
+    return 'wss://' + server_url + '/websockets/v3';
+}
 
-    if (local_storage.get('oauth')) {
-        window.location.href = VERSION + 'main.html';
-    } else {
-        $(function () {
-            $('body').css('display', 'block');
-            setTime();
-            setInterval(setTime, 1000);
-    
-            var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
-            $.getJSON(VERSION + 'i18n/' + selected_language_name + '.json', function (data) {
-                setupi18nTranslation(data);
-                processFooter(selected_language_name);
-            });
-    
-            onChangeSelectLanguage(selected_language_name);
-        });
-    }
+function processRedirect(selected_language_name) {
+    loadAppId(function(err, app_id_json) {
+        var client_country;
+        var account_list;
+        var app_id = err ? default_app_id : getAppId(app_id_json);
+        var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id;
+        var ws = new WebSocket(api_url);
+        ws.onopen = sendWebsiteStatus;
+        ws.onmessage = processApiResponse;
+
+        function getAppId(app_id_json) {
+            var stored_app_id = '';
+
+            for(var url in app_id_json) {
+                if(href.lastIndexOf(url, 0) === 0) {
+                    stored_app_id = app_id_json[url];
+                }
+            }
+
+            return stored_app_id || default_app_id;
+        }
+        getUrl();
+
+        function sendApiRequest(request) {
+            ws.send(JSON.stringify(request));
+        }
+
+        function sendWebsiteStatus(evt) {
+            sendApiRequest({ website_status: 1 });
+        }
+
+        function sendAuthorize(token) {
+            sendApiRequest({ authorize: token });
+        }
+        
+        function processApiResponse(response) {
+            var data = JSON.parse(response.data);
+
+            if(data.website_status){
+                client_country = data.website_status.clients_country;
+                if (local_storage.get('oauth')) {
+                    var token = local_storage.get('oauth')[0].token;
+                    sendAuthorize(token);
+                } else {
+                    if(isEuCountrySelected(client_country)) {
+                        window.location.href = moveToDerivUrl();
+                    } else {
+                        document.getElementById('loading_container').style.display="none"
+                        document.getElementById('main_container').style.display="block"
+                        $(function () {
+                            $('body').css('display', 'block');
+                            setTime();
+                            setInterval(setTime, 1000);
+                    
+                            var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
+                            $.getJSON(VERSION + 'i18n/' + selected_language_name + '.json', function (data) {
+                                setupi18nTranslation(data);
+                                processFooter(selected_language_name);
+                            });
+                    
+                            onChangeSelectLanguage(selected_language_name);
+                        });
+                    }
+                }
+            } else if (data.authorize){
+                var residence_country = data.authorize.country;
+                account_list = data.authorize.account_list;
+                var has_mf_mx_mlt = false;
+                for (var account in account_list){
+                    if (account.landing_company_name === 'maltainvest' 
+                        || account.landing_company_name === 'malta' 
+                        || account.landing_company_name === 'iom')
+                    {
+                        has_mf_mx_mlt = true;
+                        return;
+                    }
+                }
+                if (has_mf_mx_mlt || ((isEuCountrySelected(client_country) || isEuCountrySelected(residence_country)) && account_list.length == 1)){
+                    window.location.href = moveToDerivUrl();
+                } else {
+                    window.location.href = VERSION + 'main.html';                    
+                }
+
+            }
+        }
+    })
+}
+function processPageLanguage() {
+    var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
+
+    populateLanguageDropdown();
+    processRedirect(selected_language_name);
 
     function populateLanguageDropdown() {
         var language_arr = getSupportedLanguages();
@@ -64,27 +141,27 @@ function processPageLanguage() {
             ul_el.appendChild(li);
         });
     }
+}
 
-    function onChangeSelectLanguage(selected_language_name) {
-        $('#select_language').find('.invisible').removeClass('invisible');
-        var selected_lang = $('#select_language').find('.' + selected_language_name);
-        var curr_ele = $('#select_language .current .language');
-        var disp_lang = $("#display_language .language");
-        disp_lang.text(selected_lang.text());
-        curr_ele.text(selected_lang.text());
-        selected_lang.addClass('invisible');
+function onChangeSelectLanguage(selected_language_name) {
+    $('#select_language').find('.invisible').removeClass('invisible');
+    var selected_lang = $('#select_language').find('.' + selected_language_name);
+    var curr_ele = $('#select_language .current .language');
+    var disp_lang = $("#display_language .language");
+    disp_lang.text(selected_lang.text());
+    curr_ele.text(selected_lang.text());
+    selected_lang.addClass('invisible');
 
-        $('.languages #select_language li').each(function (i, el) {
-            $(el).click(function () {
-                var lang = $(el).find('a').data('lang');
-                if (lang) {
-                    local_storage.set('i18n', { value: lang });
-                    window.location.reload();
-                }
-                return false;
-            });
+    $('.languages #select_language li').each(function (i, el) {
+        $(el).click(function () {
+            var lang = $(el).find('a').data('lang');
+            if (lang) {
+                local_storage.set('i18n', { value: lang });
+                window.location.reload();
+            }
+            return false;
         });
-    }
+    });
 }
 
 function checkRedirectToken(params_str) {
@@ -146,11 +223,7 @@ function processFooter(selected_language_name) {
             return stored_app_id || default_app_id;
         }
 
-        function getUrl() {
-            var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
-
-            return 'wss://' + server_url + '/websockets/v3';
-        }
+        getUrl();
 
         function sendApiRequest(request) {
             ws.send(JSON.stringify(request));
@@ -225,6 +298,7 @@ function processFooter(selected_language_name) {
                 var isEu = isEuCountry(data.landing_company);
                 var FOOTER_TEXT = isEu ? FOOTER_TEXT_EU : FOOTER_TEXT_NON_EU;
     
+                showBanner(isEu);
                 isEu ? footer_eu_el.classList.add('data-show') : footer_non_eu_el.classList.add('data-show');
     
                 for (var key in FOOTER_TEXT) {
@@ -259,4 +333,14 @@ function processFooter(selected_language_name) {
             }
         }
     })
+}
+
+function showBanner(isEu){
+    var go_to_deriv_el = document.getElementById("close_banner_btn_iom");
+    go_to_deriv_el.href = getDerivUrl("");
+    if (isEu) {
+        document.getElementById('close_banner_container').classList.remove('invisible')
+    } else {
+        document.getElementById('close_banner_container').classList.add('invisible')
+    }
 }

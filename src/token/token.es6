@@ -152,21 +152,25 @@ const init_state = (root) => {
         }
 
         state.token.btn_disabled = true;
-        liveapi.send(request).then((data) => {
-            state.token.name = '';
-            state.token.btn_disabled = false;
-            $.growl.notice({ message: `${'Successfully added new token '.i18n()} ${request.new_token}` });
+        liveapi.cached.authorize().then(() => {
+            liveapi.send(request).then((data) => {
+                state.token.name = '';
+                state.token.btn_disabled = false;
+                $.growl.notice({ message: `${'Successfully added new token '.i18n()} ${request.new_token}` });
+    
+                const tokens = (data.api_token && data.api_token.tokens) || [];
+                state.update_tokens(tokens);
 
-            const tokens = (data.api_token && data.api_token.tokens) || [];
-            state.update_tokens(tokens);
-
-            state.change_route('token-list');
-        }).catch((err) => {
-            state.token.btn_disabled = false;
+                state.change_route('token-list');
+            }).catch((err) => {
+                state.token.btn_disabled = false;
+                $.growl.error({ message: err.message });
+                console.error(err);
+            });
+        })
+        .catch((err) => {
             $.growl.error({ message: err.message });
-            console.error(err);
         });
-
     }
 
     token_win_view = rv.bind(root[0], state);
