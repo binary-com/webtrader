@@ -267,9 +267,10 @@ export const init = (parent) => {
    parent.append(root);
    rv.bind(root[0], state);
 }
-export const addDialog = (name, clickCb, removeCb) => {
+export const addDialog = (name, id, clickCb, removeCb) => {
    const row = {
       name: name,
+      id: id,
       click: () => {
         manager_win && manager_win.dialog('close');
         clickCb();
@@ -282,6 +283,10 @@ export const addDialog = (name, clickCb, removeCb) => {
    }
    state.dialogs.push(row);
    return cleaner;
+}
+
+export const removeDialog = (id) => {
+   state.dialogs = state.dialogs.filter( item => item.id !== id);
 }
 
 export const events = $('<div/>');
@@ -396,4 +401,4 @@ export const tileDialogs = () => {
    setTimeout(() => events.trigger('tile'), 1600);
 }
 
-export default { init, addDialog, events, tileDialogs };
+export default { init, addDialog, removeDialog, events, tileDialogs };

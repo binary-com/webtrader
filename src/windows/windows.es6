@@ -310,6 +310,7 @@ export const createBlankWindow = function ($html, options) {
       at: 'center',
       of: window,
       title: 'Blank window'.i18n(),
+      id: dialogCounter,
       icons: {
          close: 'custom-icon-close',
          minimize: 'custom-icon-minimize',
@@ -368,6 +369,10 @@ export const createBlankWindow = function ($html, options) {
             }, 300, dialog.trigger.bind(dialog, 'animated'));
          }
       });
+      if (options.title !== 'Manage') {
+         workspace.addDialog(options.title, options.id, blankWindow.moveToTop, () => blankWindow.dialog('close'));
+      }
+
    });
    blankWindow.moveToTop = () => {
       blankWindow.dialog('open');
@@ -379,11 +384,11 @@ export const createBlankWindow = function ($html, options) {
    const add_to_windows_menu = () => {
       const cleaner = () => {
          blankWindow.dialogExtend('restore');
-         workspace.addDialog(options.title, blankWindow.moveToTop, () => blankWindow.dialog('close'));
+         workspace.removeDialog(options.id);
       }
       blankWindow.on('dialogclose', cleaner);
-
    };
+   
    if (!options.ignoreTileAction) {
       add_to_windows_menu();
    }
