@@ -256,11 +256,11 @@ function processFooter(selected_language_name) {
                 var FOOTER_TEXT_NON_EU = {
                     P1: {
                         TEXT: 'In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2]).'.i18n(),
-                        TAGS: ['<a href="https://www.binary.com/download/WS-Binary-Investments-Europe-Limited.pdf" target="_blank" rel="noopener noreferrer">', '</a>'],
+                        TAGS: ['<a href="https://eu.deriv.com/regulatory/Deriv_Investments_(Europe)_Limited.pdf" target="_blank" rel="noopener noreferrer">', '</a>'],
                     },
                     P2: {
                         TEXT: 'Outside the EU, financial products are offered by Binary (SVG) Ltd, Hinds Building, Kingstown, St. Vincent and the Grenadines; Binary (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission ([_1]view licence[_2]); Binary (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission ([_3]licence no. SIBA/L/18/1114[_4]); and Binary (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business ([_5]licence no. MB/18/0024[_6]).'.i18n(),
-                        TAGS: ['<a href="https://www.vfsc.vu/wp-content/uploads/2015/12/List-of-Licensees-under-Dealers-in-Securities-Licensing-Act-CAP-70-18.11.2016.pdf" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/download/regulation/BVI_license.pdf" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/download/regulation/Labuan-license.pdf" target="_blank">', '</a>'],
+                        TAGS: ['<a href="https://www.binary.com/download/regulation/Vanuatu-license.pdf" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/download/regulation/BVI_license.pdf" target="_blank" rel="noopener noreferrer">', '</a>', '<a href="https://www.binary.com/download/regulation/Labuan-license.pdf" target="_blank">', '</a>'],
                     },
                     P3: {
                         TEXT: 'This website\'s services are not made available in certain countries such as the USA, Canada, Hong Kong, Japan, or to persons under age 18.'.i18n()
@@ -273,7 +273,7 @@ function processFooter(selected_language_name) {
                 var FOOTER_TEXT_EU = {
                     P1: {
                         TEXT: 'In the EU, financial products are offered by Binary Investments (Europe) Ltd., W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta, licensed and regulated as a Category 3 Investment Services provider by the Malta Financial Services Authority ([_1]licence no. IS/70156[_2]).'.i18n(),
-                        TAGS: ['<a href="https://www.binary.com/download/WS-Binary-Investments-Europe-Limited.pdf" target="_blank" rel="noopener noreferrer">', '</a>'],
+                        TAGS: ['<a href="https://eu.deriv.com/regulatory/Deriv_Investments_(Europe)_Limited.pdf" target="_blank" rel="noopener noreferrer">', '</a>'],
                     },
                     P2: {
                         TEXT: 'In the Isle of Man and the UK, Synthetic Indices are offered by Binary (IOM) Ltd., First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW, Isle of Man, British Isles; licensed and regulated respectively by (1) the Gambling Supervision Commission in the Isle of Man (current licence issued on 31 August 2017) and by (2) the Gambling Commission in the UK (licence [_1]reference no: 39172[_2]).'.i18n(),
