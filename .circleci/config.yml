@@ -125,6 +125,27 @@ commands:
           failure_message: "Release failed for webtrader with version *$(cat dist/compressed/version)*"
           success_message: "Release succeeded for webtrader with version *$(cat dist/compressed/version)*"
           webhook: ${SLACK_WEBHOOK}
+
+  publish_to_pages_staging:
+    description: "Publish to cloudflare pages"
+    steps:
+      - run:
+          name: "Publish to cloudflare pages (staging)"
+          command: |
+            cd dist/compressed
+            npx wrangler pages publish . --project-name=webtrader-pages --branch=staging
+            echo "New staging website - http://staging.cf-pages-webtrader.deriv.com"
+
+  publish_to_pages_production:
+    description: "Publish to cloudflare pages"
+    steps:
+      - run:
+          name: "Publish to cloudflare pages (production)"
+          command: |
+            cd dist/compressed
+            npx wrangler pages publish . --project-name=webtrader-pages --branch=main
+            echo "New website - http://cf-pages-webtrader.deriv.com"
+
 jobs:
   build:
     docker:
@@ -140,6 +161,10 @@ jobs:
       - git_checkout_from_cache
       - npm_install
       - build
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - compressed
       - deploy:
           target_branch: "staging"
       - docker_build_push
@@ -152,6 +177,10 @@ jobs:
       - git_checkout_from_cache
       - npm_install
       - build
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - compressed
       - deploy:
           target_branch: "production"
       - notify_slack
@@ -169,6 +198,22 @@ jobs:
           k8s_namespace: "webtrader-binary-com-production"
           k8s_version: ${CIRCLE_TAG}
       - notify_slack
+ 
+  publish_cloudflare_staging:
+    docker:
+      - image: circleci/node:16.13.1-stretch
+    steps:
+      - attach_workspace:
+          at: dist/compressed
+      - publish_to_pages_staging
+
+  publish_cloudflare_production:
+    docker:
+      - image: circleci/node:16.13.1-stretch
+    steps:
+      - attach_workspace:
+          at: dist/compressed
+      - publish_to_pages_production
 
 workflows:
   build:
@@ -183,6 +228,13 @@ workflows:
           filters:
             branches:
               only: /^master$/
+      - publish_cloudflare_staging:
+          requires:
+            - release_staging
+          filters:
+            branches:
+              only: /^master$/
+          context: binary-frontend-artifact-upload
       - release_production:
           filters:
             branches:
@@ -190,6 +242,15 @@ workflows:
             tags:
               only: /^production.*/
       - release_aws_production:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production.*/
+          context: binary-frontend-artifact-upload
+      - publish_cloudflare_production:
+          requires:
+            - release_aws_production
           filters:
             branches:
               ignore: /.*/
