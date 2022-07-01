@@ -164,7 +164,7 @@ jobs:
       - persist_to_workspace:
           root: dist
           paths:
-            - compressed
+            - .
       - deploy:
           target_branch: "staging"
       - docker_build_push
@@ -180,7 +180,7 @@ jobs:
       - persist_to_workspace:
           root: dist
           paths:
-            - compressed
+            - .
       - deploy:
           target_branch: "production"
       - notify_slack
@@ -204,7 +204,7 @@ jobs:
       - image: circleci/node:16.13.1-stretch
     steps:
       - attach_workspace:
-          at: dist/compressed
+          at: dist
       - publish_to_pages_staging
 
   publish_cloudflare_production:
@@ -212,7 +212,7 @@ jobs:
       - image: circleci/node:16.13.1-stretch
     steps:
       - attach_workspace:
-          at: dist/compressed
+          at: dist
       - publish_to_pages_production
 
 workflows:
