@@ -132,6 +132,7 @@ commands:
       - run:
           name: "Publish to cloudflare pages (staging)"
           command: |
+            npm i wrangler@2.0.19
             cd dist/compressed
             npx wrangler pages publish . --project-name=webtrader-pages --branch=staging
             echo "New staging website - http://staging.cf-pages-webtrader.deriv.com"
@@ -142,6 +143,7 @@ commands:
       - run:
           name: "Publish to cloudflare pages (production)"
           command: |
+            npm i wrangler@2.0.19
             cd dist/compressed
             npx wrangler pages publish . --project-name=webtrader-pages --branch=main
             echo "New website - http://cf-pages-webtrader.deriv.com"
