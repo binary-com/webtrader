@@ -91,6 +91,9 @@ const initLoginButton = (root) => {
 
    state.switchAccount = (id) => {
       destroy_windows('data-account-specific=true');
+      if (state.account) {
+         state.account.show = false;
+      }
       liveapi.switch_account(id)
          .catch((err) => {
             $.growl.error({ message: err.message });
