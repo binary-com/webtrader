@@ -250,7 +250,7 @@ workflows:
           context: binary-frontend-artifact-upload
       - publish_cloudflare_production:
           requires:
-            - release_aws_production
+            - release_production
           filters:
             branches:
               ignore: /.*/
