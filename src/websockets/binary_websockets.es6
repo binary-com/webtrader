@@ -7,6 +7,7 @@ import app_ids_json from 'text!../oauth/app_id.json';
 import 'common/util';
 
 let is_authenitcated_session = false; /* wether or not the current websocket session is authenticated */
+let authentication_promise;
 let socket = null;
 let is_website_up = false;
 let queued_requests = {};
@@ -198,19 +199,22 @@ const authenticate = (token) => {
       key = JSON.stringify(data),
       promise = send_request(data);
 
+   authentication_promise = promise;
+
    return promise
       .then((val) => {
          is_authenitcated_session = true;
+         authentication_promise = undefined;
          local_storage.set('authorize', val.authorize); /* we can use the 'email' field retruned later */
          const is_jpy_account = val.authorize.landing_company_name.indexOf('japan') !== -1;
          if(!is_jpy_account) {
-            fire_event('login', val);
+            setTimeout(() => fire_event('login', val));
          }
          if(local_storage.get('oauth-login')) {
             const ok = local_storage.get('oauth-login').value;
             local_storage.remove('oauth-login');
             if(ok && !is_jpy_account) {
-               fire_event('oauth-login', val);
+               setTimeout(() => fire_event('oauth-login', val));
             }
          }
          auth_successfull = true;
@@ -221,9 +225,10 @@ const authenticate = (token) => {
       .catch((up) => {
          if (up.code!=="SelfExclusion" && !auth_successfull) {    /* authentication request is failed, clear local_storage */
             is_authenitcated_session = false;
-            fire_event('logout');
+            setTimeout(() => fire_event('logout'));
             local_storage.remove('oauth');
          }
+         authentication_promise = undefined;
          delete cached_promises[key];
          throw up; /* pass the exception to next catch */
       });
@@ -468,6 +473,10 @@ export const cached  = {
 
       if (is_authenitcated_session && token && cached_promises[key] && !re_authorize){
             return cached_promises[key].promise;
+      }
+
+      if (authentication_promise) {
+         return authentication_promise;
       }
 
       return token ? authenticate(token) : /* we have a token => autheticate */

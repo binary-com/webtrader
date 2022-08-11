@@ -207,40 +207,29 @@ export const init = function ($parentObj) {
       }
       /* query string parameters can tempered.
              make sure to get loginid from webapi instead */
-      var oauth = local_storage.get('oauth');
-      Promise.all(
-         oauth.slice(1)
-            .map(acc => ({ authorize: acc.token }))
-            .map(req => liveapi.send(req))
-      )
-         .then((results) =>
-            liveapi.cached.authorize()
-               .then((data) => {
-                  const oauth = local_storage.get("oauth");
-                  // Set currency for each account.
-                  results.forEach((auth) => {
-                     if (auth.authorize) {
-                        const _curr = oauth.find((e) => e.id == auth.authorize.loginid);
-                        _curr.currency = auth.authorize.currency;
-                     }
-                  });
-                  local_storage.set("oauth", oauth);
-                  results.unshift(data);
-                  let is_jpy_account = false;
-                  for (let i = 0; i < results.length; ++i) {
-                     oauth[i].id = results[i].authorize.loginid;
-                     oauth[i].is_virtual = results[i].authorize.is_virtual;
-                     if (results[i].authorize.landing_company_name.indexOf('japan') !== -1) {
-                        is_jpy_account = true;
-                     }
-                  }
-                  local_storage.set('oauth', oauth);
-                  return is_jpy_account;
-               })
-               .catch((err) => {
-                  $.growl.error({ message: err.message });
-               })
-         )
+      liveapi.cached.authorize()
+         .then((result) => {
+            const results = [result];
+            const oauth = local_storage.get("oauth");
+            // Set currency for each account.
+            results.forEach((auth) => {
+               if (auth.authorize) {
+                  const _curr = oauth.find((e) => e.id == auth.authorize.loginid);
+                  _curr.currency = auth.authorize.currency;
+               }
+            });
+            local_storage.set("oauth", oauth);
+            let is_jpy_account = false;
+            for (let i = 0; i < results.length; ++i) {
+               oauth[i].id = results[i].authorize.loginid;
+               oauth[i].is_virtual = results[i].authorize.is_virtual;
+               if (results[i].authorize.landing_company_name.indexOf('japan') !== -1) {
+                  is_jpy_account = true;
+               }
+            }
+            local_storage.set('oauth', oauth);
+            return is_jpy_account;
+         })
          .then((is_jpy_account) => {
             /* Japan accounts should not be allowed to login to webtrader */
             if (is_jpy_account && is_jpy_account === true) {

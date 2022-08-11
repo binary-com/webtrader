@@ -326,8 +326,7 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
                         showMainContent();
                     }
                 } else {
-                    var token = local_storage.get('oauth')[0].token;
-                    websockets.send({authorize: token}).then(function(auth) {
+                    websockets.cached.authorize().then(function(auth) {
                         if (shouldRedirectMf(client_country, auth.authorize)) {
                             window.location.href = moveToDerivUrl();
                         } else {

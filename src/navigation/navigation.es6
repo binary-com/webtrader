@@ -47,6 +47,7 @@ const initLoginButton = (root) => {
       },
       show_submenu: false,
       show_new_account_link: false,
+      is_login_in_progress: false,
       openRealAccount: () => {
          const real_account_binary_url = getBinaryUrl('new_account/realws.html');
          window.open(real_account_binary_url, '_blank');
@@ -84,6 +85,12 @@ const initLoginButton = (root) => {
       state.show_submenu = value;
    };
 
+   state.toggleSubMenu = (value) => {
+      if (!state.is_login_in_progress) {
+         state.show_submenu = value;
+      }
+   }
+
    state.logout = () => {
       liveapi.invalidate();
       state.logout_disabled = true;
@@ -91,8 +98,13 @@ const initLoginButton = (root) => {
 
    state.switchAccount = (id) => {
       destroy_windows('data-account-specific=true');
+      state.is_login_in_progress = true;
       liveapi.switch_account(id)
+         .then(() => {
+            state.is_login_in_progress = false;
+         })
          .catch((err) => {
+            state.is_login_in_progress = false;
             $.growl.error({ message: err.message });
             // logout user if he decided to self exclude himself.
             if (err.code === 'SelfExclusion') {
