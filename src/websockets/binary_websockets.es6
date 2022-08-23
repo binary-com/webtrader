@@ -14,7 +14,7 @@ let queued_requests = {};
 
 const get_app_id = () => {
   const app_ids = JSON.parse(app_ids_json);
-  const DEFAULT_APP_ID = 11;
+  const DEFAULT_APP_ID = 32657;
   const href = window.location.href;
   let stored_app_id = '';
 
