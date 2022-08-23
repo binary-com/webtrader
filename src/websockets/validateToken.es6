@@ -14,7 +14,7 @@ import 'common/util';
 import { socket_url, app_id } from 'websockets/binary_websockets';
 
 const lang = (local_storage.get('i18n') || {value:"en"}).value;
-const url = socket_url + '?app_id=' + app_id + '&l=' +lang;
+const url = socket_url + '?app_id=' + app_id + '&l=' +lang + '&brand=binary';
 
 export default (token) => {
   return new Promise((resolve, reject) => {
