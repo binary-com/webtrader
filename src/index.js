@@ -4,7 +4,7 @@ var footer_eu_el = document.getElementById('footer-eu');
 var footer_non_eu_el = document.getElementById('footer-non-eu');
 
 var href = window.location.href;
-var default_app_id = 32657;
+var default_app_id = 11;
 
 // Remove the '#' check later once the backend changes are released TODO
 var params_str = href.indexOf('#') != -1 ? href.split('#')[1] : href.split('?')[1];
