@@ -134,7 +134,7 @@ commands:
           command: |
             cd dist/compressed
             npx wrangler pages publish . --project-name=webtrader-pages --branch=staging
-            echo "New staging website - http://staging.cf-pages-webtrader.deriv.com"
+            echo "New staging website - http://staging.cf-pages-webtrader.binary.com"
 
   publish_to_pages_production:
     description: "Publish to cloudflare pages"
@@ -144,7 +144,7 @@ commands:
           command: |
             cd dist/compressed
             npx wrangler pages publish . --project-name=webtrader-pages --branch=main
-            echo "New website - http://cf-pages-webtrader.deriv.com"
+            echo "New website - http://cf-pages-webtrader.binary.com"
 
 jobs:
   build:
