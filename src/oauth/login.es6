@@ -14,7 +14,7 @@ export function login() {
       const domain_extension = hostname.includes('binary.me') ? '.me' : '.com';
       const login_url = liveapi.server_url.includes('qa') ? liveapi.server_url : `oauth.binary${domain_extension}`;
       const lang = (local_storage.get('i18n') || { value:'en' }).value;
-      const oauth_url = `https://${login_url}/oauth2/authorize?app_id=${app_id}&l=${lang}`;
+      const oauth_url = `https://${login_url}/oauth2/authorize?app_id=${app_id}&l=${lang}&brand=binary`;
       window.location = oauth_url;
 }
 

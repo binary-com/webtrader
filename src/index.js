@@ -41,7 +41,7 @@ function processRedirect(selected_language_name) {
         var client_country;
         var account_list;
         var app_id = err ? default_app_id : getAppId(app_id_json);
-        var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id;
+        var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id + '&brand=binary';
         var ws = new WebSocket(api_url);
         ws.onopen = sendWebsiteStatus;
         ws.onmessage = processApiResponse;
@@ -206,7 +206,7 @@ function processFooter(selected_language_name) {
     loadAppId(function(err, app_id_json) {
         var clients_country;
         var app_id = err ? default_app_id : getAppId(app_id_json);
-        var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id;
+        var api_url = getUrl() + '?l=' + selected_language_name + '&app_id=' + app_id + '&brand=binary';
         var ws = new WebSocket(api_url);
         ws.onopen = sendWebsiteStatus;
         ws.onmessage = processApiResponse;

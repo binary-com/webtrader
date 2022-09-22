@@ -45,7 +45,7 @@ export const server_url = get_server_url();
 
 const connect = () => {
    const i18n_name = (local_storage.get('i18n') || { value: 'en' }).value;
-   const api_url = `${socket_url}?l=${i18n_name}&app_id=${app_id}`;
+   const api_url = `${socket_url}?l=${i18n_name}&app_id=${app_id}&brand=binary`;
    const ws = new WebSocket(api_url);
 
    ws.addEventListener('open', onopen);
