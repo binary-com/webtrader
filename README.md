@@ -4,7 +4,7 @@
 
 Webtrader.binary.com - The goal of this project is to create a full-screen trading interface for [Binary.com](https://www.binary.com) according to the following design:
 
-![Webtrader](https://banners.binary.com/misc/webtrader-layout.jpg)
+![Webtrader](screenshots/webtrader-layout.jpg)
 
 ![Build Status](https://travis-ci.org/binary-com/webtrader.svg?branch=master) ![node](https://img.shields.io/badge/node-%3E%3D12.3.0-blue.svg) ![npm](https://img.shields.io/badge/npm-%3E%3D6.9.0-blue.svg)
 

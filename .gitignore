@@ -23,7 +23,6 @@ src/.vsdoc/
 jsconfig.json
 
 # Nightwatch files
-screenshots
 reports
 selenium-debug.log
 test-config.js
