@@ -64,6 +64,12 @@ export const extractChartableMarkets = (trading_times_data) => {
 };
 
 export const refreshMenu = (root, markets, callback) => {
+   let current_subgroup = 'none';
+
+   const setCurrentSubgroup = (subgroup) => {
+      current_subgroup = subgroup;
+      return true;
+   }
    
    if(markets.length == 0){
       Object.values(menu_config).map( menu => $(menu).addClass('disabled'));
@@ -75,7 +81,7 @@ export const refreshMenu = (root, markets, callback) => {
    }
    const menu = `<ul>${
       markets.map(m => `<li><div>${m.display_name}</div><ul>${
-         m.submarkets.map(s => `<li><div>${s.display_name}</div><ul>${
+         m.submarkets.map(s => `${s.subgroup !== current_subgroup && s.subgroup !== 'none' ? `<div class='subgroup'>${setCurrentSubgroup(s.subgroup) && s.subgroup_name}</div>` : ''}<li><div>${s.display_name}</div><ul>${
             s.instruments.map(i => `<li symbol='${i.symbol}' pip='${i.pip}'><div>${i.display_name}</div></li>`).join('')
          }</ul></li>`).join('')
       }</ul></li>`).join('')

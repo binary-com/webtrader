@@ -15,8 +15,8 @@ const sortSubmarkets = ([...markets]) => {
     return markets.map((market) => {
         if (market.submarkets) {
             const submarkets_sort = market.submarkets.sort((a, b) => {
-                if (a.display_name < b.display_name) return -1;
-                if (a.display_name > b.display_name) return 1;
+                if (a.subgroup < b.subgroup || a.subgroup === b.subgroup && a.display_name < b.display_name ) return -1;
+                if (a.subgroup > b.subgroup || a.subgroup === b.subgroup && a.display_name > b.display_name) return 1;
             });
             market.submarkets = submarkets_sort;
         }

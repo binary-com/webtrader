@@ -22,7 +22,7 @@ const get_active_symbol = (landing_company, country) => {
                 const market = { name: sym.market, display_name: sym.market_display_name };
                 market.submarkets = _(filtered_symbols).groupBy('submarket').map(function (symbols) {
                     const sym = _.head(symbols);
-                    const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
+                    const submarket = { name: sym.submarket, display_name: sym.submarket_display_name, subgroup_name: sym.subgroup_display_name, subgroup: sym.subgroup };
                     submarket.instruments = _.map(symbols, function (sym) {
                         active_symbols.push(sym.symbol);
                         return {
