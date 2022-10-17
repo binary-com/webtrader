@@ -64,7 +64,7 @@ export const extractChartableMarkets = (trading_times_data) => {
 };
 
 export const refreshMenu = (root, markets, callback) => {
-   let current_subgroup = 'none';
+   let current_subgroup;
 
    const setCurrentSubgroup = (subgroup) => {
       current_subgroup = subgroup;
