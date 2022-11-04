@@ -21,7 +21,7 @@ const get_active_symbol = (landing_company, country) => {
             const market = { name: sym.market, display_name: sym.market_display_name };
             market.submarkets = _(active_symbols).groupBy('submarket').map((symbols) => {
                const sym = _.head(symbols);
-               const submarket = { name: sym.submarket, display_name: sym.submarket_display_name };
+               const submarket = { name: sym.submarket, display_name: sym.submarket_display_name, subgroup_name: sym.subgroup_display_name, subgroup: sym.subgroup };
                submarket.instruments = _.map(symbols, (sym) => ({
                   symbol: sym.symbol,
                   display_name: sym.display_name,
@@ -35,7 +35,7 @@ const get_active_symbol = (landing_company, country) => {
             market.is_disabled = _.every(market.submarkets, 'is_disabled');
             return market;
          }).value();
-         markets = getSortedMarketSubmarkets(markets);        
+         markets = getSortedMarketSubmarkets(markets);
          const trade = $("#nav-menu").find(".trade");
          menu.refreshMenu(trade, markets, (symbol, display_name, pip) => {
             liveapi
