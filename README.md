@@ -152,6 +152,31 @@ Note\*: To see CrowdIn In-Context translations pass querystring `?lang=ach` (obs
 While submitting your PR, make sure that you deploy your code to your forked gh-pages by running following command, so that the reviewer can have a look at the deployed code at this url `{your-username}.github.io/webtrader/{your-branch-name}`:
 
         ```sh
-        $ grunt deploy-branch
+        $ npm run deploy-gh-pages
         ```
-After Completing the steps above, you will get a `Done.` in your terminal. Go to your browser and key in `{your-username}.github.io/webtrader/{your-branch-name}`. You should see the Testing page for Webtrader.
+
+The command above will create a new **gh-pages** branch and will likely deploy your page at the above url (look for correct url in your PR if the link above isn't working).
+
+Your deployed page will likely be blank because it's missing a few files during deployment in **gh-pages** branch. This is solely deployment issue. Do the following to get around the issue...
+
+### Use the following link to get missing files
+
+    ```sh
+    https://github.com/binary-com/webtrader/tree/gh-pages
+    ```
+
+1. Open inspect element of your deployed page 
+    1. Go to console tab.
+    2. Look at the error to see which file is missing.
+    3. Copy content of missing file from reference link above and ***manually*** add to {YOUR_BRANCH_NAME} folder in your **gh-pages** branch on your github repo. 
+    4. Ensure file name and file path match **exactly** as described in console error. Commit new file to your gh-pages branch.
+    5. Run ***npm run deploy-gh-pages***
+    6. Refresh your deployed link and repeat the step 1 through 6 until your deployed page is no longer blank and console errors are gone.
+
+2. Register your application [here](https://developers.binary.com/applications/). This will give you the ability to redirect back to your deployed page after login.
+    > Use `https://YOUR_DEPLOYED_LINK/en/logged_inws.html` for the Redirect URL and `https://YOUR_DEPLOYED_LINK/en/redirect.html` for the Verification URL.
+    >
+    > - Have api key ready from deriv app account in order to register
+    > - Make note of your App ID to update in redmine card
+
+
