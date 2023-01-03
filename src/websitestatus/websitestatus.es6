@@ -11,7 +11,12 @@ const reposition_dialogs = (min) => {
     });
 }
 const website_status = (data) => {
-    if (!data.website_status) { return; }
+    if (!data || 
+        Object.keys(data).length === 0 || 
+        !data.website_status || 
+        Object.keys(data.website_status).length === 0) 
+        return;
+        
     if (data.website_status.site_status.toLowerCase() === "up") {
         const $ele = $("#msg-notification");
         $ele.is(":visible") && !accountstatus.is_shown() && $ele.slideUp(500) && reposition_dialogs(110);
