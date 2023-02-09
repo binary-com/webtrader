@@ -242,6 +242,7 @@ workflows:
               ignore: /.*/
             tags:
               only: /^production.*/
+          context: binary-frontend-artifact-upload
       - release_aws_production:
           filters:
             branches:
