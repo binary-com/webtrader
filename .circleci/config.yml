@@ -3,35 +3,6 @@ orbs:
   k8s: circleci/kubernetes@0.7.0
   slack: circleci/slack@3.4.2
 commands:
-  git_checkout_from_cache:
-    description: "Git checkout and save cache"
-    steps:
-      - restore_cache:
-          name: Git restore cache
-          keys:
-            - source-v1-{{ .Branch }}-{{ .Revision }}
-            - source-v1-{{ .Branch }}-
-            - source-v1-
-      - run:
-          name: Fetch git tags
-          command: |
-            mkdir -p ~/.ssh
-            ssh-keyscan github.com >> ~/.ssh/known_hosts
-            echo 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ== ' >> ~/.ssh/known_hosts
-            # Fetch tags if git cache is present
-            if [ -e /home/circleci/project/.git ]
-            then
-              git fetch origin --tags
-            fi
-      - checkout
-      - run:
-          name: Compress git objects
-          command: git gc
-      - save_cache:
-          name: Git save cache
-          key: source-v1-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ".git"
   npm_install:
     description: "Install npm modules"
     steps:
@@ -54,30 +25,15 @@ commands:
       - run:
           name: "Compile project"
           command: npm run build
-  deploy:
-    description: "Deploy to static branches"
+  versioning:
+    description: "Add version to build"
     parameters:
       target_branch:
         type: string
     steps:
-      - checkout
-      - attach_workspace:
-          at: dist/compressed
       - run:
           name: Tag build
           command: echo "<< parameters.target_branch >> $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/compressed/version
-      - run:
-          name: Install and configure dependencies
-          command: |
-            npm install gh-pages@2.0.1
-            git config user.email "ci-build@binary.com"
-            git config user.name "ci-build"
-      - add_ssh_keys:
-          fingerprints:
-            - "01:67:4a:6d:26:9c:70:c4:1a:60:91:88:d9:dd:f0:83"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: node ./node_modules/gh-pages/bin/gh-pages -d dist/compressed --branch << parameters.target_branch >> --message '[skip ci]'
   docker_build_push:
     description: "Build and Push image to docker hub"
     parameters:
@@ -143,7 +99,7 @@ commands:
           name: "Publish to cloudflare pages (production)"
           command: |
             cd dist/compressed
-            npx wrangler pages publish . --project-name=webtrader-pages --branch=main
+            npx wrangler pages publish . --project-name=webtrader-pages --branch=main-test
             echo "New website - http://cf-pages-webtrader.binary.com"
 
 jobs:
@@ -151,22 +107,22 @@ jobs:
     docker:
       - image: circleci/node:12.13.0-stretch
     steps:
-      - git_checkout_from_cache
+      - checkout
       - npm_install
       - build
   release_staging:
     docker:
       - image: circleci/node:12.13.0-stretch
     steps:
-      - git_checkout_from_cache
+      - checkout
       - npm_install
       - build
+      - versioning:
+          target_branch: "staging"
       - persist_to_workspace:
           root: dist
           paths:
             - .
-      - deploy:
-          target_branch: "staging"
       - docker_build_push
       - k8s_deploy
       - notify_slack
@@ -174,23 +130,15 @@ jobs:
     docker:
       - image: circleci/node:12.13.0-stretch
     steps:
-      - git_checkout_from_cache
+      - checkout
       - npm_install
       - build
+      - versioning:
+          target_branch: "production"
       - persist_to_workspace:
           root: dist
           paths:
             - .
-      - deploy:
-          target_branch: "production"
-      - notify_slack
-  release_aws_production:
-    docker:
-      - image: circleci/node:12.13.0-stretch
-    steps:
-      - git_checkout_from_cache
-      - npm_install
-      - build
       - docker_build_push:
           docker_image_latest_tag: "latest"
           docker_image_tag: ${CIRCLE_TAG}
@@ -237,13 +185,6 @@ workflows:
               only: /^master$/
           context: binary-frontend-artifact-upload
       - release_production:
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^production.*/
-          context: binary-frontend-artifact-upload
-      - release_aws_production:
           filters:
             branches:
               ignore: /.*/
