@@ -99,7 +99,7 @@ commands:
           name: "Publish to cloudflare pages (production)"
           command: |
             cd dist/compressed
-            npx wrangler pages publish . --project-name=webtrader-pages --branch=main
+            npx wrangler pages publish . --project-name=webtrader-pages --branch=main-test
             echo "New website - http://cf-pages-webtrader.binary.com"
 
 jobs:
