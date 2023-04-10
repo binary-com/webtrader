@@ -113,7 +113,7 @@ require(["modernizr"], function() {
     var Modernizr = window.Modernizr;
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && window.isSmallView()) || 
         !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
-        window.location.assign("unsupported_browsers/unsupported_browsers.html");
+        window.location.href = moveToDerivUrl();
         return;
     }
 });
