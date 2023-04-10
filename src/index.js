@@ -32,7 +32,7 @@ function loadAppId(callback) {
 }
 
 function getUrl() {
-    var server_url = localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
+    var server_url = localStorage.getItem('config.server_url') || 'red.binaryws.com';
     return 'wss://' + server_url + '/websockets/v3';
 }
 
@@ -80,28 +80,9 @@ function processRedirect(selected_language_name) {
                     var token = local_storage.get('oauth')[0].token;
                     sendAuthorize(token);
                 } else {
-                    if(isEuCountrySelected(client_country)) {
-                        window.location.href = moveToDerivUrl();
-                    } else {
-                        document.getElementById('loading_container').style.display="none"
-                        document.getElementById('main_container').style.display="block"
-                        $(function () {
-                            $('body').css('display', 'block');
-                            setTime();
-                            setInterval(setTime, 1000);
-                    
-                            var selected_language_name = (window.local_storage.get('i18n') || { value: 'en' }).value;
-                            $.getJSON(VERSION + 'i18n/' + selected_language_name + '.json', function (data) {
-                                setupi18nTranslation(data);
-                                processFooter(selected_language_name);
-                            });
-                    
-                            onChangeSelectLanguage(selected_language_name);
-                        });
-                    }
+                    window.location.href = moveToDerivUrl();
                 }
             } else if (data.authorize){
-                var residence_country = data.authorize.country;
                 account_list = data.authorize.account_list;
                 var has_mf_mx_mlt = false;
                 for (var account in account_list){
@@ -113,12 +94,7 @@ function processRedirect(selected_language_name) {
                         return;
                     }
                 }
-                if (has_mf_mx_mlt || ((isEuCountrySelected(client_country) || isEuCountrySelected(residence_country)) && account_list.length == 1)){
-                    window.location.href = moveToDerivUrl();
-                } else {
-                    window.location.href = VERSION + 'main.html';                    
-                }
-
+                window.location.href = moveToDerivUrl();
             }
         }
     })

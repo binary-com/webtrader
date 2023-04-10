@@ -32,7 +32,7 @@ const get_app_id = () => {
   return app_id;
 };
 
-const get_server_url = () => localStorage.getItem('config.server_url') || 'frontend.binaryws.com';
+const get_server_url = () => localStorage.getItem('config.server_url') || 'red.binaryws.com';
 
 const get_socket_url = () => {
    const server_url = get_server_url();
