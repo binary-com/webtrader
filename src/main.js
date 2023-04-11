@@ -113,7 +113,7 @@ require(["modernizr"], function() {
     var Modernizr = window.Modernizr;
     if (!Modernizr.svg || !Modernizr.websockets || (Modernizr.touch && window.isSmallView()) || 
         !Modernizr.localstorage || !Modernizr.webworkers || !Object.defineProperty) {
-        window.location.assign("unsupported_browsers/unsupported_browsers.html");
+        window.location.href = moveToDerivUrl();
         return;
     }
 });
@@ -320,18 +320,10 @@ require(["jquery", "text!i18n/" + i18n_name + ".json"], function($, lang_json) {
             .then(function(data) {
                 var client_country = data.website_status.clients_country;
                 if (!local_storage.get('oauth')) {
-                    if (isEuCountrySelected(client_country)) {
-                        window.location.href = moveToDerivUrl();
-                    } else {
-                        showMainContent();
-                    }
+                    window.location.href = moveToDerivUrl();
                 } else {
                     websockets.cached.authorize().then(function(auth) {
-                        if (shouldRedirectMf(client_country, auth.authorize)) {
-                            window.location.href = moveToDerivUrl();
-                        } else {
-                            showMainContent();
-                        }
+                        window.location.href = moveToDerivUrl();
                     })
                 }
                 
