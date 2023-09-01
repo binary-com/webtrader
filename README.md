@@ -72,7 +72,7 @@ Before running or contribute to this project, you need to have the setup of the 
     Your site is now running at `http://localhost:9001`!
 
 
-Note\*: Since backend needs an https web address for **oauth app register** if you intend to debug oauth login on localhost, you need to modify your `/etc/hosts` file. For example the `https://webtrader.local/` token in `src/oauth/app_id.josn` is registered to `https://webtrader.local/` address, you need to do the following in order to use it locally.
+Note\*: Since the backend needs an https web address for **oauth app register** if you intend to debug oauth login on localhost, you need to modify your `/etc/hosts` file. For example the `https://webtrader.local/` token in `src/oauth/app_id.josn` is registered to `https://webtrader.local/` address, you need to do the following in order to use it locally.
 
 _Add this line to your /etc/hosts file._
 
