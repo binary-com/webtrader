@@ -117,7 +117,8 @@ function get_current_template(state) {
 function set_current_template(state, tpl) {
   state.template.name = tpl.name;
   var warn = function(msg) { $.growl.warning({ message: msg || 'Template applied partially.'.i18n() }); }
-  if(!_.find(state.categories.array, tpl.categories_value)) {
+  const doesTemplateExist = (_.some(state.categories.array, { contract_category: tpl.categories_value.contract_category }));
+  if(!doesTemplateExist) {
     $.growl.error({ message: 'Template is not applicable.'.i18n() });
     return;
   }
