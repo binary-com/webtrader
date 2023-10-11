@@ -101,7 +101,7 @@ function init_state(root) {
             list: [],
             current: {},
         },
-        binary_url: getBinaryUrl('payment-agent.html'),
+        binary_url: getBinaryUrl('payment-agent'),
     };
 
     state.route.update = route => { state.route.value = route; };
